@@ -1,0 +1,8 @@
+# Netlify redirects file
+# This helps Netlify understand the project structure
+
+# API routes
+/api/*  /.netlify/functions/:splat  200
+
+# Next.js dynamic routes handled by framework
+/*  /index.html  200

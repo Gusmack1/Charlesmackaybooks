@@ -1,0 +1,81 @@
+{
+  "name": "Charles E. MacKay Aviation Books",
+  "short_name": "MacKay Books",
+  "description": "Authentic aviation history books by renowned historian Charles E. MacKay. Scottish aviation heritage, WWI & WWII aircraft books.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2a384a",
+  "theme_color": "#2a384a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-GB",
+  "dir": "ltr",
+  "categories": ["books", "education", "shopping"],
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Charles MacKay Aviation Books - Desktop View"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Charles MacKay Aviation Books - Mobile View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Books",
+      "short_name": "Books",
+      "description": "Browse all aviation history books",
+      "url": "/#books",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Contact Charles",
+      "short_name": "Contact",
+      "description": "Contact Charles E. MacKay directly",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://charlesmackaybooks.com"
+    }
+  ]
+}
