@@ -1,0 +1,100 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Production builds
+out/
+build/
+dist/
+
+# Next.js
+.next/
+.vercel/
+
+# Environment variables (SECURITY)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Security files
+*.key
+*.pem
+*.p12
+*.crt
+.env.*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Deployment artifacts
+*.zip
+*.tar.gz
+
+# Cache
+.cache/
+.temp/
+.tmp/
+
+# TypeScript
+*.tsbuildinfo
+
+# Debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Same IDE specific
+.same/
+uploads/
+deploy-clean/
+netlify-deploy/
+temp-extract/
+deployment/
+output/
+
+# Deployment zips (don't commit these)
+*deployment*.zip
+*netlify*.zip
+*charles*.zip
+CHARLES-MACKAY-*.zip
+final-deployment.zip
+production.zip
