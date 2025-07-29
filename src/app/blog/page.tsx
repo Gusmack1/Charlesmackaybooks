@@ -121,13 +121,51 @@ const blogCategories = {
       readTime: '15 min'
     }
   ],
+  'Cold War Aviation': [
+    {
+      title: 'Korean War Air Combat: The First Jet vs Jet Battles That Shaped Modern Aviation',
+      slug: 'korean-war-air-combat',
+      excerpt: 'F-86 Sabre vs MiG-15 battles over MiG Alley that established modern jet warfare principles and launched the supersonic age.',
+      date: 'January 29, 2025',
+      image: '/blog-images/korean-war-aviation.jpg',
+      tags: ['Korean War', 'F-86 Sabre', 'MiG-15', 'Jet Combat'],
+      readTime: '11 min'
+    },
+    {
+      title: 'V-Force: Britain\'s Nuclear Deterrent Bombers That Defended the Free World',
+      slug: 'british-nuclear-deterrent-v-force',
+      excerpt: 'The complete story of Britain\'s V-Force nuclear deterrent - Vulcan, Victor, and Valiant bombers that maintained Cold War peace.',
+      date: 'January 29, 2025',
+      image: '/blog-images/vulcan-bomber-formation.jpg',
+      tags: ['Cold War', 'V-Force', 'Nuclear Deterrent', 'Strategic Bombers'],
+      readTime: '12 min'
+    }
+  ],
   'Jet Age Aviation': [
+    {
+      title: 'English Electric Lightning: Britain\'s Supersonic Interceptor Revolution',
+      slug: 'english-electric-lightning-development',
+      excerpt: 'The extraordinary development of Britain\'s first supersonic fighter that could climb to 60,000 feet in under three minutes.',
+      date: 'January 29, 2025',
+      image: '/blog-images/english-electric-lightning-f6.jpg',
+      tags: ['Jet Age', 'Lightning', 'Supersonic Fighter', 'Cold War'],
+      readTime: '12 min'
+    },
+    {
+      title: 'Messerschmitt Me 262: Revolutionary Jet Fighter That Changed Aerial Warfare',
+      slug: 'me262-jet-fighter-revolution',
+      excerpt: 'The world\'s first operational jet fighter that introduced the jet age and transformed aerial combat during WWII\'s final phase.',
+      date: 'January 29, 2025',
+      image: '/blog-images/me262-jet-fighter-historical.jpg',
+      tags: ['WWII Aviation', 'Me 262', 'Jet Fighter', 'German Innovation'],
+      readTime: '13 min'
+    },
     {
       title: 'The Jet Age Revolution: Cold War Aviation Development',
       slug: 'jet-age-aviation-cold-war-development',
       excerpt: 'How the Cold War drove rapid jet development from primitive jets to supersonic fighters.',
       date: 'January 25, 2024',
-      image: '/blog-images/english-electric-lightning-f6.jpg',
+      image: '/blog-images/lightning-f6-supersonic.jpg',
       tags: ['Jet Age', 'Cold War', 'Supersonic Flight', 'Fighter Development'],
       readTime: '17 min'
     },
@@ -139,6 +177,17 @@ const blogCategories = {
       image: '/blog-images/rcaf-sabre-formation-golden-hawks.jpg',
       tags: ['Jet Age', 'F-86 Sabre', 'Cold War', 'Fighter Aircraft'],
       readTime: '12 min'
+    }
+  ],
+  'Aviation Racing': [
+    {
+      title: 'Schneider Trophy Racing: High-Speed Seaplane Development That Shaped Fighter Aviation',
+      slug: 'schneider-trophy-racing-development',
+      excerpt: 'How high-speed seaplane competition drove aviation innovation from 1913-1931 and led directly to Spitfire development.',
+      date: 'January 29, 2025',
+      image: '/blog-images/supermarine-s6b-schneider-trophy.jpg',
+      tags: ['Aviation Racing', 'Schneider Trophy', 'Seaplanes', 'Innovation'],
+      readTime: '14 min'
     }
   ],
   'Aviation Biography': [
@@ -163,6 +212,24 @@ const blogCategories = {
   ],
   'Helicopter History': [
     {
+      title: 'Sikorsky VS-300: The Helicopter Breakthrough That Started the Vertical Flight Revolution',
+      slug: 'sikorsky-vs300-helicopter-breakthrough',
+      excerpt: 'The complete story of Igor Sikorsky\'s VS-300 - the helicopter that proved practical vertical flight was possible.',
+      date: 'January 29, 2025',
+      image: '/blog-images/sikorsky-vs300-helicopter.jpg',
+      tags: ['Helicopter History', 'Sikorsky VS-300', 'Igor Sikorsky', 'Vertical Flight'],
+      readTime: '11 min'
+    },
+    {
+      title: 'Bristol Sycamore: Britain\'s First Production Helicopter Revolution',
+      slug: 'bristol-sycamore-helicopter-development',
+      excerpt: 'The complete development story of Britain\'s first production helicopter that established British helicopter manufacturing.',
+      date: 'January 29, 2025',
+      image: '/blog-images/bristol-sycamore.jpg',
+      tags: ['Helicopter History', 'Bristol Sycamore', 'British Aviation', 'Rotorcraft'],
+      readTime: '12 min'
+    },
+    {
       title: 'Helicopter Development: From Autogyros to Modern Rotorcraft',
       slug: 'helicopter-development-pioneers',
       excerpt: 'From spinning maple seeds to modern rotorcraft - the evolution of vertical flight technology.',
@@ -176,7 +243,7 @@ const blogCategories = {
       slug: 'sycamore-seeds-helicopter-evolution',
       excerpt: 'How nature\'s spinning sycamore seeds revealed the fundamental principles of autorotation and inspired generations of helicopter pioneers.',
       date: 'January 18, 2024',
-      image: '/blog-images/bristol-sycamore.jpg',
+      image: '/blog-images/sycamore-seeds-helicopter.jpg',
       tags: ['Helicopter History', 'Biomimicry', 'Autorotation', 'Natural Flight'],
       readTime: '14 min'
     }
