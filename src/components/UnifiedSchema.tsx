@@ -135,7 +135,7 @@ export default function UnifiedSchema({
 
   // Add book-specific schema only when needed
   if (pageType === 'book-detail' && bookData) {
-    unifiedSchema["@graph"].push({
+    (unifiedSchema["@graph"] as any[]).push({
       "@type": "Product",
       "@id": `${baseUrl}/books/${bookData.id}#product`,
       "name": bookData.title,
@@ -188,7 +188,7 @@ export default function UnifiedSchema({
 
   // Add ItemList for books collection pages
   if (pageType === 'books' && books.length > 0) {
-    unifiedSchema["@graph"].push({
+    (unifiedSchema["@graph"] as any[]).push({
       "@type": "ItemList",
       "@id": `${baseUrl}/books#itemlist`,
       "name": "Aviation History Books",
@@ -241,7 +241,7 @@ export default function UnifiedSchema({
       id="unified-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(unifiedSchema)
+        __html: JSON.stringify(unifiedSchema as any)
       }}
     />
   );

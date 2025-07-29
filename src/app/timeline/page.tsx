@@ -49,6 +49,13 @@ const timelineEras = [
         subtitle: 'Percy Pilcher wants to Fly',
         price: '£15.01',
         description: 'The untold story of Scotland\'s forgotten aviation pioneer'
+      },
+      {
+        id: 'beardmore-aviation',
+        title: 'Beardmore Aviation',
+        subtitle: 'Early Scottish Aviation',
+        price: '£12.76',
+        description: 'William Beardmore\'s pioneering entry into aviation manufacturing'
       }
     ],
     relatedBlogs: [
@@ -105,6 +112,16 @@ const timelineEras = [
         slug: 'german-aircraft-great-war-development',
         title: 'German Aircraft Great War Development',
         excerpt: 'Revolutionary German aviation development from Albatros to Fokker.'
+      },
+      {
+        slug: 'beardmore-aviation-scottish-industrial-giant',
+        title: 'Beardmore Aviation: Great War Production',
+        excerpt: 'How Scottish shipbuilders became aircraft manufacturers during WWI.'
+      },
+      {
+        slug: 'clydeside-aviation-wartime-production',
+        title: 'Clydeside Aviation: The Great War Years',
+        excerpt: 'Scottish aviation manufacturing boom during the First World War.'
       }
     ]
   },
@@ -113,7 +130,7 @@ const timelineEras = [
     title: 'Golden Age',
     subtitle: 'Between the Wars',
     description: 'Commercial aviation flourished as airlines connected the world and aircraft technology advanced rapidly.',
-    image: '/blog-images/schneider-s6b-schneider-trophy.jpg',
+    image: '/blog-images/supermarine-s6b-schneider-trophy.jpg',
     gradient: 'from-blue-600 via-indigo-500 to-purple-500',
     textColor: 'text-white',
     keyEvents: [
@@ -142,6 +159,20 @@ const timelineEras = [
         subtitle: 'Scottish Industrial Giant',
         price: '£12.76',
         description: 'The complete story of Scotland\'s aviation empire'
+      },
+      {
+        id: 'rohrbach-roland',
+        title: 'Rohrbach Roland',
+        subtitle: 'German Flying Boat',
+        price: '£12.92',
+        description: 'Advanced flying boat development between the wars'
+      },
+      {
+        id: 'sycamore-seeds',
+        title: 'The Sycamore Seeds',
+        subtitle: 'Early Helicopter History',
+        price: '£12.86',
+        description: 'From nature\'s inspiration to rotorcraft development'
       }
     ],
     relatedBlogs: [
@@ -154,6 +185,21 @@ const timelineEras = [
         slug: 'lucy-lady-houston-schneider-trophy',
         title: 'Lucy Lady Houston: Mother of the Few',
         excerpt: 'How Lady Houston\'s £100,000 donation saved the Schneider Trophy.'
+      },
+      {
+        slug: 'schneider-trophy-racing-development',
+        title: 'Schneider Trophy: Racing to Victory',
+        excerpt: 'High-speed seaplane racing that shaped fighter development.'
+      },
+      {
+        slug: 'clydeside-aviation-between-wars',
+        title: 'Clydeside Aviation: Between the Wars',
+        excerpt: 'Scottish aviation transitions from war to peace and back to war preparation.'
+      },
+      {
+        slug: 'rohrbach-roland-flying-boat',
+        title: 'Rohrbach Roland: Advanced Flying Boat',
+        excerpt: 'German engineering excellence in inter-war flying boat design.'
       }
     ]
   },
@@ -184,6 +230,20 @@ const timelineEras = [
         subtitle: 'Test Pilot Biography',
         price: '£6.98',
         description: 'Britain\'s greatest test pilot story'
+      },
+      {
+        id: 'formidable-fighter',
+        title: 'Formidable Fighter',
+        subtitle: 'HMS Formidable Operations',
+        price: '£12.86',
+        description: 'Pacific War carrier operations and fighter squadrons'
+      },
+      {
+        id: 'naval-aviation-evolution',
+        title: 'Naval Aviation Evolution',
+        subtitle: 'Carrier Development',
+        price: '£13.93',
+        description: 'Evolution of naval aviation from WWI to modern carriers'
       }
     ],
     relatedBlogs: [
@@ -201,6 +261,21 @@ const timelineEras = [
         slug: 'luftwaffe-1945-final-year',
         title: 'Luftwaffe 1945: The Final Year',
         excerpt: 'The desperate final months of the German air force.'
+      },
+      {
+        slug: 'eric-brown-test-pilot-legend',
+        title: 'Eric Brown: Britain\'s Greatest Test Pilot',
+        excerpt: 'The man who flew more aircraft types than anyone in history.'
+      },
+      {
+        slug: 'hms-formidable-pacific-war',
+        title: 'HMS Formidable: Pacific War Operations',
+        excerpt: 'British carrier operations in the Pacific Theatre.'
+      },
+      {
+        slug: 'me262-jet-fighter-revolution',
+        title: 'Me 262: The Jet Fighter Revolution',
+        excerpt: 'Germany\'s revolutionary jet fighter that changed aerial warfare.'
       }
     ]
   },
@@ -231,6 +306,13 @@ const timelineEras = [
         subtitle: 'British Nuclear Deterrent',
         price: '£13.95',
         description: 'Evolution of Britain\'s nuclear aviation strategy'
+      },
+      {
+        id: 'lightning-interceptor',
+        title: 'Lightning Interceptor',
+        subtitle: 'Britain\'s Supersonic Fighter',
+        price: '£14.26',
+        description: 'English Electric Lightning development and operations'
       }
     ],
     relatedBlogs: [
@@ -243,6 +325,21 @@ const timelineEras = [
         slug: 'jet-age-aviation-cold-war-development',
         title: 'The Jet Age Revolution',
         excerpt: 'How the Cold War drove rapid jet development.'
+      },
+      {
+        slug: 'english-electric-lightning-development',
+        title: 'English Electric Lightning: Supersonic Interceptor',
+        excerpt: 'Britain\'s fastest fighter and its development challenges.'
+      },
+      {
+        slug: 'british-nuclear-deterrent-v-force',
+        title: 'V-Force: Britain\'s Nuclear Deterrent',
+        excerpt: 'Vulcan, Victor, and Valiant bombers defending Britain.'
+      },
+      {
+        slug: 'korean-war-air-combat',
+        title: 'Korean War: Jet vs Jet Combat',
+        excerpt: 'First jet-age air war between F-86s and MiG-15s.'
       }
     ]
   },
@@ -266,6 +363,13 @@ const timelineEras = [
         subtitle: 'Early History of the Helicopter',
         price: '£12.86',
         description: 'From nature\'s inspiration to flying machines'
+      },
+      {
+        id: 'bristol-sycamore',
+        title: 'Bristol Sycamore',
+        subtitle: 'Britain\'s First Helicopter',
+        price: '£13.48',
+        description: 'The complete story of Britain\'s first production helicopter'
       }
     ],
     relatedBlogs: [
@@ -278,6 +382,21 @@ const timelineEras = [
         slug: 'sycamore-seeds-helicopter-evolution',
         title: 'Sycamore Seeds and Helicopter Evolution',
         excerpt: 'How nature\'s spinning seeds revealed the principles of autorotation.'
+      },
+      {
+        slug: 'bristol-sycamore-helicopter-development',
+        title: 'Bristol Sycamore: Britain\'s First Production Helicopter',
+        excerpt: 'From autogyro experience to helicopter production.'
+      },
+      {
+        slug: 'sikorsky-vs300-helicopter-breakthrough',
+        title: 'Sikorsky VS-300: The Helicopter Breakthrough',
+        excerpt: 'Igor Sikorsky\'s successful helicopter design principles.'
+      },
+      {
+        slug: 'rotorcraft-military-applications',
+        title: 'Military Helicopters: Transforming Warfare',
+        excerpt: 'How helicopters revolutionized military operations.'
       }
     ]
   }
