@@ -20,15 +20,9 @@ const nextConfig = {
     ],
   },
 
-  // Redirect configuration
+  // Redirect configuration - removed problematic redirect causing infinite loop
   async redirects() {
-    return [
-      {
-        source: '/blog/:slug*',
-        destination: '/blog/:slug*',
-        permanent: false,
-      },
-    ]
+    return []
   },
 
   // Headers for security and caching
