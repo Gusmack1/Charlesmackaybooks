@@ -199,22 +199,22 @@ export default function SycamoreSeedsPage() {
               </div>
             </Link>
 
-            <Link href="/books/helicopter-development" className="group">
+            <Link href="/books/sycamore-seeds" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
                 <div className="flex gap-4">
                   <Image
-                    src="/book-covers/helicopter-pioneers.jpg"
-                    alt="Helicopter Pioneers book cover"
+                    src="/book-covers/sycamore-seeds.jpg"
+                    alt="The Sycamore Seeds book cover"
                     width={80}
                     height={120}
                     className="rounded"
                   />
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
-                      Helicopter Pioneers: From Dreams to Reality
+                      The Sycamore Seeds: The Early History of the Helicopter
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">
-                      The story of helicopter development from early experiments to modern rotorcraft achievements.
+                      Early British helicopter development focusing on Cierva autogyros and other rotorcraft pioneers.
                     </p>
                     <div className="text-green-600 text-sm mt-2">Read more →</div>
                   </div>
