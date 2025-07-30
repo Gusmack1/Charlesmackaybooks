@@ -41,13 +41,13 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="#books"
+              <Link
+                href="/books"
                 className="inline-flex items-center justify-center bg-green-600 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-green-700 transition-all duration-300 shadow-lg text-sm"
               >
                 <span className="mr-2">🛒</span>
                 Shop Aviation Books
-              </a>
+              </Link>
               <Link
                 href="/blog"
                 className="inline-flex items-center justify-center bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-all duration-300 text-sm"

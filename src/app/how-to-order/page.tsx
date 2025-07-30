@@ -136,7 +136,7 @@ export default function HowToOrderPage() {
               </ul>
               <div className="text-center">
                 <Link
-                  href="/#books"
+                  href="/books"
                   className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors inline-block"
                 >
                   Browse Books →
@@ -284,7 +284,7 @@ export default function HowToOrderPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/#books"
+                href="/books"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 📚 Browse Books

@@ -177,7 +177,7 @@ export default function CheckoutPage() {
             </div>
 
             <Link
-              href="/#books"
+              href="/books"
               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Browse Aviation Books

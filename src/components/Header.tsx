@@ -54,7 +54,7 @@ export default function Header() {
             <Link href="/" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
               🏠 Home
             </Link>
-            <Link href="/#books" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
+            <Link href="/books" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
               📚 Shop Books
             </Link>
             <Link href="/about" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
