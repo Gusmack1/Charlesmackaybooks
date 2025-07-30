@@ -12,12 +12,12 @@ export default function Header() {
       <div className="bg-slate-800">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            {/* Logo and Author Info */}
-            <div>
+            {/* Logo and Author Info - Clickable */}
+            <Link href="/" className="hover:opacity-80 transition-opacity cursor-pointer">
               <h1 className="text-xl font-bold">Charles E. MacKay</h1>
               <p className="text-sm text-gray-300">Aviation Historian & Author</p>
               <p className="text-xs text-gray-400">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
-            </div>
+            </Link>
 
             {/* Contact Info and Basket */}
             <div className="text-right hidden md:block">
