@@ -174,6 +174,31 @@ export default function AboutPage() {
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 As an alumnus of the University of Glasgow, MacKay brings academic rigor to his historical research while maintaining a passionate commitment to preserving Scotland's aviation legacy for future generations.
               </p>
+
+              {/* Personal Aviation Memory */}
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-3">A Personal Aviation Memory</h3>
+                <div className="flex gap-4 items-start">
+                  <Image
+                    src="/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg"
+                    alt="Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield, February 13, 1971"
+                    width={120}
+                    height={80}
+                    className="rounded shadow-lg flex-shrink-0"
+                  />
+                  <div>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Charles with De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971. This personal connection to aviation history reflects his lifelong passion for preserving the stories of aircraft and the people who flew them.
+                    </p>
+                    <Link
+                      href="/blog/de-havilland-chipmunk-wp808-turnhouse"
+                      className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                    >
+                      Read the full story →
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
