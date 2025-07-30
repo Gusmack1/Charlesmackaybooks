@@ -219,6 +219,15 @@ const blogCategories = {
   ],
   'Aviation Biography': [
     {
+      title: 'De Havilland Chipmunk WP808 at Turnhouse: A Personal Aviation Memory',
+      slug: 'de-havilland-chipmunk-wp808-turnhouse',
+      excerpt: 'A personal account of the De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971. Discover the story behind this beloved training aircraft and its role in RAF pilot education.',
+      date: 'January 30, 2025',
+      image: '/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg',
+      tags: ['Aviation Biography', 'Training Aircraft', 'RAF', 'Personal Memory'],
+      readTime: '10 min'
+    },
+    {
       title: 'Captain Eric Brown: Britain\'s Greatest Test Pilot',
       slug: 'test-pilot-biography-eric-brown',
       excerpt: 'The extraordinary life of the test pilot who flew 487 different aircraft types.',
