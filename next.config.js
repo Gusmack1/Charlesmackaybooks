@@ -20,9 +20,25 @@ const nextConfig = {
     ],
   },
 
-  // Redirect configuration - removed problematic redirect causing infinite loop
+  // Redirect configuration - aircraft pages moved to blog
   async redirects() {
-    return []
+    return [
+      {
+        source: '/aircraft/bristol-fighter',
+        destination: '/blog/bristol-fighter-f2b-brisfit',
+        permanent: true,
+      },
+      {
+        source: '/aircraft/hawker-hurricane',
+        destination: '/blog/hawker-hurricane-fighter-development',
+        permanent: true,
+      },
+      {
+        source: '/aircraft/sopwith-camel',
+        destination: '/blog/sopwith-camel-legendary-fighter',
+        permanent: true,
+      },
+    ]
   },
 
   // Headers for security and caching

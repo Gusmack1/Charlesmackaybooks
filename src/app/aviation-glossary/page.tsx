@@ -1,5 +1,6 @@
 import PageSEO from '@/components/PageSEO'
 import type { Metadata } from 'next';
+import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   title: 'Aviation Glossary | Complete Aviation Terms Dictionary | Charles E. MacKay',
@@ -233,6 +234,8 @@ export default function AviationGlossaryPage() {
 
   return (
     <>
+      <Header />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
