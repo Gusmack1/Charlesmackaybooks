@@ -3,8 +3,8 @@
 import Script from 'next/script'
 import { useEffect } from 'react'
 
-// Replace with your actual GA4 Measurement ID
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX'
+// Your actual GA4 Measurement ID for Charles Mackay Books
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-RJS2CCBSJP'
 
 declare global {
   interface Window {

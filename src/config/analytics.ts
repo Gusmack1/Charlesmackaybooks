@@ -3,7 +3,7 @@
 
 export const GA4_CONFIG = {
   // Your Google Analytics 4 Measurement ID
-  MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'GA-XXXXXXXXXX',
+  MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-RJS2CCBSJP',
 
   // Enhanced Ecommerce Settings
   ENHANCED_ECOMMERCE: true,
