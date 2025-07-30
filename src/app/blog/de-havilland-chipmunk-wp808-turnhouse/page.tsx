@@ -559,7 +559,7 @@ export default function ChipmunkPage() {
 
               <div>
                 <h4 className="font-semibold text-gray-800 mb-3">Advanced Training Elements</h4>
-                <ol className="space-y-2 text-gray-700 text-sm" start="9">
+                <ol className="space-y-2 text-gray-700 text-sm" start={9}>
                   <li>9. <strong>Navigation:</strong> Cross-country flying skills</li>
                   <li>10. <strong>Aerobatics:</strong> Advanced handling and confidence</li>
                   <li>11. <strong>Instrument Flying:</strong> Basic instrument procedures</li>
