@@ -3,13 +3,7 @@
 import { useEffect } from 'react'
 import { useCart } from '@/context/CartContext'
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void
-    dataLayer?: any[]
-    fbq?: (...args: any[]) => void
-  }
-}
+// Global declarations moved to GoogleAnalytics.tsx to avoid conflicts
 
 export default function Analytics() {
   const { cartItems, getTotalItems, getTotal } = useCart()

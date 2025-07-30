@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useCart } from '@/context/CartContext'
-import { useAnalytics } from '@/components/Analytics'
+import { useAnalytics } from '@/hooks/useAnalytics'
 import { Lock, CreditCard, ShoppingBag, Truck, Gift } from 'lucide-react'
 
 interface PaymentMethod {
@@ -57,7 +57,7 @@ const paymentMethods: PaymentMethod[] = [
 
 export default function CheckoutComponent() {
   const { cartItems, getTotal, getTotalItems, clearCart } = useCart()
-  const { trackPurchaseIntent } = useAnalytics()
+  const { trackBookPurchase } = useAnalytics()
 
   const [selectedPayment, setSelectedPayment] = useState<string>('paypal')
   const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
@@ -116,7 +116,14 @@ export default function CheckoutComponent() {
     if (!validateForm()) return
 
     setIsProcessing(true)
-    trackPurchaseIntent(selectedPayment)
+    // Track checkout intent
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'begin_checkout', {
+        currency: 'GBP',
+        value: getTotal(),
+        checkout_method: selectedPayment
+      })
+    }
 
     try {
       switch (selectedPayment) {
