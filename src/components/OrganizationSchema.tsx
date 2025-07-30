@@ -120,7 +120,6 @@ export default function OrganizationSchema() {
       itemOffered: {
         '@type': 'Product',
         category: 'Books',
-<<<<<<< HEAD
         name: 'Aviation History Books',
         description: 'Specialized aviation history books by Charles E. MacKay covering Scottish aviation heritage, WWI & WWII aircraft, military aviation, and helicopter development',
         brand: {
@@ -159,9 +158,6 @@ export default function OrganizationSchema() {
             reviewBody: 'Excellent reference material for aviation history research'
           }
         ]
-=======
-        name: 'Aviation History Books'
->>>>>>> 34395328601da8cc7b68982178717aa98709f789
       },
       availability: 'https://schema.org/InStock',
       priceCurrency: 'GBP',
