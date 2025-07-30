@@ -3,37 +3,35 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import SocialShare from '@/components/SocialShare'
-import PageSEO from '@/components/PageSEO'
-
 
 export const metadata: Metadata = {
-  title: 'Naval Aviation History: From Seaplanes to Supercarriers - Evolution of Maritime Air Power | Charles E. MacKay',
-  description: 'The complete evolution of naval aviation from early seaplane experiments to modern supercarriers. Discover how maritime air power transformed naval warfare and established carrier aviation as the dominant force at sea.',
+  title: 'Naval Aviation History: From First Flights to Modern Carrier Operations | Charles E. MacKay',
+  description: 'The complete history of naval aviation from early seaplane experiments to modern carrier strike groups. Discover how naval aviation evolved from experimental flights to the dominant force in maritime warfare.',
   keywords: [
     'naval aviation history',
     'aircraft carrier development',
-    'maritime aviation evolution',
-    'naval air power',
-    'carrier aviation history',
-    'seaplane development',
     'naval aircraft evolution',
+    'carrier aviation history',
+    'naval aviation pioneers',
     'fleet air arm history',
     'carrier operations',
-    'naval aviation pioneers',
-    'maritime aircraft',
-    'carrier-based aviation',
-    'naval aviation technology',
-    'fleet aviation history',
-    'aircraft carrier warfare',
-    'Charles MacKay aviation books',
+    'naval fighter aircraft',
+    'maritime aviation',
     'naval aviation development',
-    'maritime air operations',
+    'carrier-based aircraft',
+    'naval air service history',
+    'Fleet Air Arm',
+    'naval aviation technology',
     'carrier aviation evolution',
-    'naval air warfare'
+    'Charles MacKay aviation books',
+    'maritime air power',
+    'naval aircraft carriers',
+    'carrier strike groups',
+    'naval aviation warfare'
   ],
   openGraph: {
-    title: 'Naval Aviation History: From Seaplanes to Supercarriers - Evolution of Maritime Air Power',
-    description: 'The complete evolution of naval aviation from early seaplane experiments to modern supercarriers that dominate the seas.',
+    title: 'Naval Aviation History: From First Flights to Modern Carrier Operations',
+    description: 'The complete history of naval aviation from early seaplane experiments to modern carrier strike groups.',
     url: 'https://charlesmackaybooks.com/blog/naval-aviation-history',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [
@@ -41,7 +39,7 @@ export const metadata: Metadata = {
         url: '/blog-images/uss-lexington-aircraft-operations.jpg',
         width: 1200,
         height: 630,
-        alt: 'USS Lexington aircraft operations showing the evolution of naval aviation and carrier-based air power'
+        alt: 'USS Lexington aircraft carrier operations showing the evolution of naval aviation from experimental flights to dominant maritime force'
       }
     ],
     locale: 'en_US',
@@ -49,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Naval Aviation History: From Seaplanes to Supercarriers - Evolution of Maritime Air Power',
-    description: 'The complete evolution of naval aviation from early seaplane experiments to modern supercarriers.',
+    title: 'Naval Aviation History: From First Flights to Modern Carrier Operations',
+    description: 'The complete history of naval aviation from early seaplane experiments to modern carrier strike groups.',
     images: ['/blog-images/uss-lexington-aircraft-operations.jpg'],
   },
 }
@@ -58,8 +56,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Naval Aviation History: From Seaplanes to Supercarriers - Evolution of Maritime Air Power',
-  description: 'The complete evolution of naval aviation from early seaplane experiments to modern supercarriers. Discover how maritime air power transformed naval warfare and established carrier aviation as the dominant force at sea.',
+  headline: 'Naval Aviation History: From First Flights to Modern Carrier Operations',
+  description: 'The complete history of naval aviation from early seaplane experiments to modern carrier strike groups. Discover how naval aviation evolved from experimental flights to the dominant force in maritime warfare.',
   image: '/blog-images/uss-lexington-aircraft-operations.jpg',
   author: {
     '@type': 'Person',
@@ -72,34 +70,27 @@ const jsonLd = {
     name: 'Charles E. MacKay Aviation Books',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://charlesmackaybooks.com/book-covers/naval-aviation-history.jpg'
+      url: 'https://charlesmackaybooks.com/book-covers/naval-aviation.jpg'
     }
   },
-  datePublished: '2025-01-28T00:00:00.000Z',
-  dateModified: '2025-01-28T00:00:00.000Z',
+  datePublished: '2025-01-30T10:00:00.000Z',
+  dateModified: '2025-01-30T10:00:00.000Z',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://charlesmackaybooks.com/blog/naval-aviation-history'
   },
   articleSection: 'Naval Aviation History',
-  keywords: 'naval aviation, aircraft carriers, maritime aviation, naval air power, carrier operations',
-  wordCount: 4200,
-  readingTime: 'PT17M'
+  keywords: 'naval aviation, aircraft carriers, carrier operations, Fleet Air Arm, maritime aviation',
+  wordCount: 4500,
+  readingTime: 'PT18M'
 }
 
 export default function NavalAviationHistoryPage() {
   const pageUrl = 'https://charlesmackaybooks.com/blog/naval-aviation-history'
-  const pageTitle = 'Naval Aviation History: From Seaplanes to Supercarriers - Evolution of Maritime Air Power'
+  const pageTitle = 'Naval Aviation History: From First Flights to Modern Carrier Operations'
 
   return (
     <div className="min-h-screen bg-slate-50">
-
-      <PageSEO
-        title="Naval Aviation History: From HMS Argus to Modern Carriers | Charles E. MacKay"
-        description="Complete history of naval aviation development from the first aircraft carriers to modern naval air power, including carrier operations and naval aircraft evolution."
-        path="/blog/naval-aviation-history"
-        type="article"
-      />
       <Header />
 
       <script
@@ -114,26 +105,26 @@ export default function NavalAviationHistoryPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Naval Aviation
-                <span className="block text-blue-300">Maritime Air Power Evolution</span>
+                Naval Aviation History
+                <span className="block text-blue-300">From Sea to Sky</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                The complete story of naval aviation's evolution from early seaplane experiments to modern supercarriers. Discover how maritime air power transformed naval warfare and established carrier aviation as the dominant force commanding the world's oceans.
+                The evolution of maritime air power from pioneering seaplane flights to modern carrier strike groups. Discover how naval aviation transformed from experimental curiosity to the backbone of naval warfare and maritime security.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm text-blue-200 mb-6">
                 <span>By Charles E. MacKay</span>
                 <span>•</span>
                 <span>Aviation Historian</span>
                 <span>•</span>
-                <span>17 minute read</span>
+                <span>18 minute read</span>
                 <span>•</span>
-                <span>January 28, 2025</span>
+                <span>January 30, 2025</span>
               </div>
             </div>
             <div>
               <Image
                 src="/blog-images/uss-lexington-aircraft-operations.jpg"
-                alt="USS Lexington aircraft operations showing the evolution of naval aviation and carrier-based air power that transformed maritime warfare"
+                alt="USS Lexington aircraft carrier operations showing the evolution of naval aviation from experimental flights to dominant maritime force"
                 width={600}
                 height={400}
                 className="w-full h-auto rounded-lg shadow-2xl"
@@ -173,12 +164,12 @@ export default function NavalAviationHistoryPage() {
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-12">
           <h2 className="text-xl font-bold text-blue-900 mb-4">📖 Article Contents</h2>
           <div className="grid md:grid-cols-2 gap-2 text-sm">
-            <a href="#early-pioneers" className="text-blue-700 hover:text-blue-900 py-1">→ Early Pioneers</a>
-            <a href="#seaplane-era" className="text-blue-700 hover:text-blue-900 py-1">→ The Seaplane Era</a>
-            <a href="#carrier-revolution" className="text-blue-700 hover:text-blue-900 py-1">→ Carrier Revolution</a>
-            <a href="#wwii-dominance" className="text-blue-700 hover:text-blue-900 py-1">→ WWII Dominance</a>
-            <a href="#jet-age-carriers" className="text-blue-700 hover:text-blue-900 py-1">→ Jet Age Carriers</a>
-            <a href="#modern-supercarriers" className="text-blue-700 hover:text-blue-900 py-1">→ Modern Supercarriers</a>
+            <a href="#early-pioneers" className="text-blue-700 hover:text-blue-900 py-1">→ Early Aviation Pioneers</a>
+            <a href="#wwi-development" className="text-blue-700 hover:text-blue-900 py-1">→ WWI Naval Aviation</a>
+            <a href="#carrier-evolution" className="text-blue-700 hover:text-blue-900 py-1">→ Aircraft Carrier Evolution</a>
+            <a href="#wwii-dominance" className="text-blue-700 hover:text-blue-900 py-1">→ WWII Naval Dominance</a>
+            <a href="#jet-age-transformation" className="text-blue-700 hover:text-blue-900 py-1">→ Jet Age Transformation</a>
+            <a href="#modern-operations" className="text-blue-700 hover:text-blue-900 py-1">→ Modern Naval Aviation</a>
           </div>
         </div>
 
@@ -186,40 +177,40 @@ export default function NavalAviationHistoryPage() {
         <div className="prose prose-lg max-w-none mb-12">
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 mb-8">
             <p className="text-xl leading-relaxed text-gray-800 m-0">
-              <strong>Maritime Transformation:</strong> Naval aviation evolved from experimental seaplanes in 1910 to modern supercarriers projecting air power globally. Today's carrier strike groups, centered on nuclear-powered supercarriers operating 80+ aircraft, represent the ultimate expression of maritime air power that traces its origins to early aviation pioneers who first took flight from ships.
+              <strong>Maritime Revolution:</strong> Naval aviation transformed maritime warfare from battleship-dominated surface actions to three-dimensional operations where control of the air became essential for naval supremacy. From the first tentative flights off ship platforms to modern nuclear-powered supercarriers, naval aviation represents one of the most dramatic technological and tactical evolutions in military history.
             </p>
           </div>
 
           <p className="text-xl leading-relaxed text-gray-700 mb-6">
-            The history of naval aviation represents one of the most dramatic transformations in military affairs, fundamentally altering the nature of naval warfare and establishing air power as the decisive factor in maritime conflicts. From the first tentative experiments with seaplanes operating from ship platforms to today's nuclear-powered supercarriers capable of projecting air power anywhere in the world, naval aviation has consistently pushed the boundaries of technology, tactics, and strategic thinking to become the dominant force on the world's oceans.
+            The story of naval aviation is one of visionary thinking, technological innovation, and tactical evolution that transformed navies from primarily surface-based forces to integrated air-sea combat systems. Beginning with early experiments in launching aircraft from ships, naval aviation evolved through two world wars to become the dominant force projection capability that defines modern maritime power. This transformation required not just advances in aircraft and ship design, but fundamental changes in naval doctrine, training, and operational concepts that continue to shape naval warfare today.
           </p>
         </div>
 
         {/* Early Pioneers Section */}
         <section id="early-pioneers" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-4">
-            🛩️ Early Pioneers: Aviation Meets the Sea (1910-1914)
+            🛩️ Early Aviation Pioneers: Taking Flight from the Sea (1903-1918)
           </h2>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-8">
             <div className="lg:col-span-2">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">First Flights from Ships</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">First Naval Flight Experiments</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Naval aviation began in 1910 when Eugene Ely successfully flew a Curtiss biplane from a platform built on the cruiser USS Birmingham, proving that aircraft could operate from ships. This historic first flight, lasting just 2.5 minutes, established the fundamental concept that would evolve into modern carrier aviation. Ely's achievement demonstrated the potential for extending naval air operations beyond the limitations of land-based airfields.
+                Naval aviation began with visionary officers who recognized that the airplane could extend the reach and effectiveness of naval forces. As early as 1910, American naval officers were experimenting with aircraft operations from ships, leading to the first successful takeoff from a naval vessel by Eugene Ely from USS Birmingham in November 1910, followed by the first ship landing on USS Pennsylvania in January 1911.
               </p>
 
               <p className="text-gray-700 mb-4 leading-relaxed">
-                The early pioneers recognized that combining aviation with naval operations could revolutionize maritime warfare by extending the reach of naval forces far beyond the horizon. These visionaries understood that aircraft could provide reconnaissance capabilities, offensive striking power, and defensive protection that would transform naval strategy and tactics fundamentally.
+                These early experiments, while crude by later standards, demonstrated the potential for aircraft to serve naval missions including reconnaissance, spotting for naval gunfire, and eventually offensive operations. The challenge was developing aircraft capable of operating in the marine environment and ship designs that could accommodate aviation operations.
               </p>
 
               <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                <h4 className="font-semibold text-gray-800 mb-2">Pioneer Achievements (1910-1914)</h4>
+                <h4 className="font-semibold text-gray-800 mb-2">Naval Aviation Firsts (1910-1918)</h4>
                 <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• <strong>1910:</strong> Eugene Ely's first ship takeoff from USS Birmingham</li>
-                  <li>• <strong>1911:</strong> First ship landing on USS Pennsylvania</li>
-                  <li>• <strong>1912:</strong> Royal Navy begins seaplane experiments</li>
-                  <li>• <strong>1913:</strong> First naval aviation units established</li>
-                  <li>• <strong>1914:</strong> Naval air stations operational worldwide</li>
+                  <li>• <strong>1910:</strong> First takeoff from ship (Eugene Ely)</li>
+                  <li>• <strong>1911:</strong> First landing on ship (Eugene Ely)</li>
+                  <li>• <strong>1912:</strong> First aircraft catapult tested</li>
+                  <li>• <strong>1916:</strong> Royal Naval Air Service formed</li>
+                  <li>• <strong>1918:</strong> HMS Argus - first full aircraft carrier</li>
                 </ul>
               </div>
             </div>
@@ -227,299 +218,266 @@ export default function NavalAviationHistoryPage() {
             <div>
               <Image
                 src="/blog-images/curtiss-nc4-flying-boat.jpg"
-                alt="Curtiss NC-4 flying boat representing the early era of naval aviation and seaplane development"
+                alt="Curtiss NC-4 flying boat representing early naval aviation development and long-range maritime flight capabilities"
                 width={400}
                 height={300}
                 className="w-full h-auto rounded-lg shadow-lg mb-4"
               />
               <p className="text-sm text-gray-600 italic">
-                Curtiss NC-4 flying boat - Pioneer of naval aviation that proved aircraft could operate effectively over water
+                Curtiss NC-4 flying boat - Early naval aviation focused on seaplane operations for reconnaissance and patrol
               </p>
             </div>
           </div>
         </section>
 
-        {/* Seaplane Era Section */}
-        <section id="seaplane-era" className="mb-16">
+        {/* WWI Development Section */}
+        <section id="wwi-development" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-4">
-            🌊 The Seaplane Era: Maritime Aviation Takes Flight (1914-1920)
+            ⚔️ WWI Naval Aviation: From Experiment to Necessity (1914-1918)
           </h2>
 
           <div className="bg-white border border-gray-200 rounded-lg p-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-6">World War I Development</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-6">Wartime Acceleration</h3>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-semibold text-green-700 mb-3">✅ Seaplane Advantages</h4>
+                <h4 className="font-semibold text-green-700 mb-3">✅ Operational Roles</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>Water landing capability:</strong> Operated from any suitable water surface</li>
-                  <li>• <strong>Extended range:</strong> Not limited by airfield locations</li>
-                  <li>• <strong>Naval integration:</strong> Natural fit with naval operations</li>
-                  <li>• <strong>Reconnaissance value:</strong> Long-range maritime patrol</li>
-                  <li>• <strong>Flexibility:</strong> Operated from ships, harbors, or open water</li>
+                  <li>• <strong>Reconnaissance:</strong> Long-range maritime patrol</li>
+                  <li>• <strong>Anti-submarine warfare:</strong> U-boat detection and attack</li>
+                  <li>• <strong>Naval gunfire spotting:</strong> Artillery direction</li>
+                  <li>• <strong>Fleet air defense:</strong> Protection from enemy aircraft</li>
+                  <li>• <strong>Bombing operations:</strong> Attacks on enemy ports and bases</li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-semibold text-blue-700 mb-3">🎯 Operational Roles</h4>
+                <h4 className="font-semibold text-blue-700 mb-3">🚁 Technical Advances</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>Maritime patrol:</strong> Anti-submarine warfare</li>
-                  <li>• <strong>Reconnaissance:</strong> Fleet and coastal surveillance</li>
-                  <li>• <strong>Bombing missions:</strong> Anti-ship and coastal targets</li>
-                  <li>• <strong>Fighter operations:</strong> Air defense over water</li>
-                  <li>• <strong>Rescue operations:</strong> Search and rescue at sea</li>
+                  <li>• <strong>Seaplane development:</strong> Purpose-built naval aircraft</li>
+                  <li>• <strong>Ship modifications:</strong> Platform installations</li>
+                  <li>• <strong>Navigation equipment:</strong> Maritime flying instruments</li>
+                  <li>• <strong>Radio communications:</strong> Air-to-ship coordination</li>
+                  <li>• <strong>Specialized weapons:</strong> Depth charges and naval bombs</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <p className="text-gray-700 leading-relaxed mb-6">
-            World War I accelerated seaplane development as navies recognized their value for maritime operations. The ability to operate from water eliminated the need for prepared airfields and allowed naval aviation to support fleet operations anywhere there was suitable water surface. This flexibility made seaplanes the dominant form of naval aviation through the 1920s.
+            World War I transformed naval aviation from experimental curiosity to operational necessity. The German U-boat threat demanded long-range maritime patrol aircraft, while the need for fleet reconnaissance drove development of carrier-capable aircraft. By 1918, both Britain and the United States had established naval air services with thousands of aircraft and personnel.
           </p>
         </section>
 
-        {/* Carrier Revolution Section */}
-        <section id="carrier-revolution" className="mb-16">
+        {/* Carrier Evolution Section */}
+        <section id="carrier-evolution" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-4">
-            🚢 Carrier Revolution: The Flat-Top Era Begins (1918-1930)
+            🚢 Aircraft Carrier Evolution: Platforms for Power Projection (1918-1941)
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Aircraft Carrier Development</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Interwar Development</h3>
 
               <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                <h4 className="font-bold text-blue-800 mb-3">Carrier Evolution</h4>
+                <h4 className="font-bold text-blue-800 mb-3">Carrier Milestones</h4>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
-                    <span>HMS Argus (1918):</span>
-                    <span className="font-semibold">First full-deck carrier</span>
+                    <span>HMS Argus:</span>
+                    <span className="font-semibold">First flush-deck carrier</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>USS Langley (1922):</span>
-                    <span className="font-semibold">First US Navy carrier</span>
+                    <span>HMS Eagle/Hermes:</span>
+                    <span className="font-semibold">First purpose-built carriers</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>HMS Eagle (1924):</span>
-                    <span className="font-semibold">Purpose-built carrier</span>
+                    <span>USS Lexington/Saratoga:</span>
+                    <span className="font-semibold">Large fleet carriers</span>
                   </div>
                   <div className="flex justify-between border-t pt-2">
-                    <span>Carrier aircraft:</span>
-                    <span className="font-semibold text-blue-600">15-20 per ship</span>
+                    <span>Aircraft evolution:</span>
+                    <span className="font-semibold text-blue-600">Biplane to monoplane</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Operating range:</span>
-                    <span className="font-semibold text-blue-600">Global</span>
+                    <span>Operational doctrine:</span>
+                    <span className="font-semibold text-blue-600">Strike force concept</span>
                   </div>
                 </div>
               </div>
 
               <p className="text-gray-700 leading-relaxed">
-                The development of aircraft carriers represented a revolutionary leap in naval capability, providing a mobile airfield that could project air power anywhere in the world. Early carriers like HMS Argus proved the concept, while subsequent designs refined carrier operations and established the principles that would guide carrier development for decades.
+                The interwar period saw rapid evolution in carrier design and aircraft capabilities. Nations developed carrier aviation doctrines, trained specialized pilots and crews, and experimented with different carrier designs and aircraft types. By 1941, carriers had evolved from experimental platforms to the backbone of naval aviation.
               </p>
             </div>
 
             <div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h4 className="font-bold text-green-800 mb-3">🎖️ Strategic Impact</h4>
+                <h4 className="font-bold text-green-800 mb-3">🎖️ Design Innovations</h4>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Aircraft carriers fundamentally changed naval strategy by providing unprecedented mobility and striking power. Unlike land-based aircraft tied to fixed airfields, carrier aviation could deploy rapidly to any ocean area, providing flexible response to global crises and conflicts.
+                  Carrier design evolved rapidly as navies learned from operational experience. Key innovations included angled flight decks, steam catapults, optical landing systems, and radar-controlled air traffic management. Each generation of carriers incorporated lessons from previous designs and operational experience.
                 </p>
 
-                <h5 className="font-semibold text-green-700 mb-2">Key Capabilities:</h5>
+                <h5 className="font-semibold text-green-700 mb-2">Key Developments:</h5>
                 <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Mobile air base capability</li>
-                  <li>• Power projection beyond gun range</li>
-                  <li>• Flexible deployment worldwide</li>
-                  <li>• Combined arms operations</li>
-                  <li>• Strategic deterrence value</li>
+                  <li>• Island superstructure placement and design</li>
+                  <li>• Aircraft elevator systems and hangar layout</li>
+                  <li>• Catapult and arresting gear technology</li>
+                  <li>• Fuel and ordnance handling systems</li>
+                  <li>• Damage control and fire suppression</li>
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div>
-            <Image
-              src="/blog-images/naval-aviation-evolution.jpg"
-              alt="Naval aviation evolution diagram showing the progression from seaplanes to modern carriers"
-              width={800}
-              height={400}
-              className="w-full h-auto rounded-lg shadow-lg mb-4"
-            />
-            <p className="text-sm text-gray-600 italic text-center">
-              Naval aviation evolution: From experimental seaplanes to sophisticated carrier strike groups
-            </p>
           </div>
         </section>
 
         {/* WWII Dominance Section */}
         <section id="wwii-dominance" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-4">
-            ⚔️ WWII Dominance: Carrier Aviation Proves Decisive (1941-1945)
+            ⚡ WWII Naval Dominance: Carriers Rule the Seas (1941-1945)
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">Pearl Harbor</div>
-              <div className="text-sm text-gray-600">Carrier Aviation's Debut</div>
+              <div className="text-3xl font-bold text-red-600 mb-2">Pearl Harbor</div>
+              <div className="text-sm text-gray-600">Carrier warfare arrives</div>
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">Midway</div>
-              <div className="text-sm text-gray-600">Decisive Carrier Battle</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">Midway</div>
+              <div className="text-sm text-gray-600">Decisive carrier battle</div>
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
-              <div className="text-sm text-gray-600">Carriers Built</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">Pacific Victory</div>
+              <div className="text-sm text-gray-600">Carrier-dominated war</div>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-6">Pacific War Transformation</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-6">Pacific Theater Dominance</h3>
 
               <div className="space-y-4">
                 <div className="bg-white border border-gray-200 rounded-lg p-4">
                   <h4 className="font-semibold text-gray-800 mb-2">Pearl Harbor (1941)</h4>
-                  <p className="text-sm text-gray-700">Japanese carrier aviation demonstrated devastating striking power, sinking battleships and establishing carriers as the new capital ships.</p>
+                  <p className="text-sm text-gray-700">Japanese carrier strike demonstrated devastating potential of carrier aviation, changing naval warfare forever.</p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">Battle of Midway (1942)</h4>
-                  <p className="text-sm text-gray-700">Carrier-versus-carrier combat proved decisive, with four Japanese carriers lost and Pacific War momentum shifted to Allies.</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">Coral Sea & Midway (1942)</h4>
+                  <p className="text-sm text-gray-700">First all-carrier battles proved that carriers had replaced battleships as decisive naval weapons.</p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-4">
                   <h4 className="font-semibold text-gray-800 mb-2">Fast Carrier Task Forces</h4>
-                  <p className="text-sm text-gray-700">Multiple carrier groups operating together created unprecedented concentrated air power for offensive operations.</p>
+                  <p className="text-sm text-gray-700">Massed carrier operations enabled rapid advance across the Pacific, providing air superiority and close support.</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-800 mb-3">WWII Innovations</h4>
+              <h4 className="font-semibold text-gray-800 mb-3">WWII Naval Aviation Impact</h4>
               <ul className="space-y-2 text-gray-700 mb-6">
-                <li>• <strong>Fast carrier task forces:</strong> Multiple carriers operating together</li>
-                <li>• <strong>Improved aircraft:</strong> F6F Hellcat, SB2C Helldiver, TBF Avenger</li>
-                <li>• <strong>Radar systems:</strong> Enhanced detection and navigation</li>
-                <li>• <strong>Combat air patrol:</strong> Defensive fighter screen</li>
-                <li>• <strong>Night operations:</strong> Around-the-clock flight capability</li>
-                <li>• <strong>Damage control:</strong> Enhanced survival systems</li>
-                <li>• <strong>Amphibious support:</strong> Close air support for landings</li>
-                <li>• <strong>Fleet defense:</strong> Anti-aircraft coordination</li>
+                <li>• <strong>Strategic mobility:</strong> Carrier task forces project power globally</li>
+                <li>• <strong>Combined operations:</strong> Air-sea integration becomes standard</li>
+                <li>• <strong>Technological acceleration:</strong> Rapid aircraft and ship development</li>
+                <li>• <strong>Tactical innovation:</strong> New combat techniques and procedures</li>
+                <li>• <strong>Personnel expansion:</strong> Massive pilot and crew training programs</li>
+                <li>• <strong>Industrial mobilization:</strong> Mass production of carriers and aircraft</li>
+                <li>• <strong>Doctrine evolution:</strong> Carrier operations become primary naval strategy</li>
+                <li>• <strong>Global reach:</strong> Naval aviation enables worldwide operations</li>
               </ul>
 
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                <h4 className="font-bold text-amber-800 mb-2">🎯 Strategic Dominance</h4>
+                <h4 className="font-bold text-amber-800 mb-2">🎯 Strategic Revolution</h4>
                 <p className="text-gray-700 text-sm leading-relaxed">
-                  WWII proved that carrier aviation had become the decisive factor in naval warfare, with traditional battleship-centered fleets vulnerable to air attack and carrier task forces capable of projecting power across vast ocean distances.
+                  WWII proved that carrier aviation had fundamentally changed naval warfare. Surface fleets without air cover were vulnerable, while carrier task forces could operate effectively across vast ocean distances, making naval aviation the dominant force in maritime warfare.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Jet Age Carriers Section */}
-        <section id="jet-age-carriers" className="mb-16">
+        {/* Jet Age Transformation Section */}
+        <section id="jet-age-transformation" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-4">
-            🚀 Jet Age Carriers: Nuclear Power and Supersonic Flight (1945-1975)
+            🚀 Jet Age Transformation: Nuclear Power and Supersonic Flight
           </h2>
 
           <div className="bg-gray-50 p-8 rounded-lg mb-8">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The post-war introduction of jet aircraft required fundamental changes to carrier design and operations. Jets demanded longer flight decks, more powerful catapults, and improved arresting gear to handle higher landing speeds. The development of nuclear propulsion eliminated fuel limitations and provided virtually unlimited range, while angled flight decks and improved safety systems enabled more intensive flight operations.
+              The introduction of jet aircraft and nuclear propulsion revolutionized naval aviation in the 1950s and 1960s. Nuclear-powered carriers provided unlimited range and endurance, while jet aircraft offered unprecedented speed and capability. The combination created naval aviation forces capable of sustained global operations with performance that rivaled land-based aviation.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Nuclear-powered carriers like USS Enterprise (1961) represented the ultimate expression of naval aviation technology, capable of operating anywhere in the world for extended periods without refueling. These ships established the template for modern supercarriers and demonstrated the strategic value of nuclear-powered naval aviation.
+              This transformation required extensive modifications to carrier designs, including stronger catapults, improved arresting gear, angled flight decks, and enhanced aircraft handling systems. The complexity and cost of these new systems led to larger, more sophisticated carriers that became the centerpieces of naval task forces.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-3">Jet Age Innovations</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>• <strong>Angled flight decks:</strong> Safer landing operations</li>
-                <li>• <strong>Steam catapults:</strong> Launching heavier aircraft</li>
-                <li>• <strong>Mirror landing systems:</strong> Precision approach guidance</li>
-                <li>• <strong>Nuclear propulsion:</strong> Unlimited range and endurance</li>
-                <li>• <strong>Jet aircraft:</strong> F-4 Phantom, A-4 Skyhawk, F-8 Crusader</li>
-                <li>• <strong>Supersonic capability:</strong> High-speed air operations</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-3">Cold War Operations</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>• <strong>Global deployment:</strong> Continuous worldwide presence</li>
-                <li>• <strong>Crisis response:</strong> Rapid deployment capability</li>
-                <li>• <strong>Strategic deterrence:</strong> Nuclear strike capability</li>
-                <li>• <strong>Power projection:</strong> Extended reach operations</li>
-                <li>• <strong>Alliance support:</strong> NATO and Pacific partnerships</li>
-                <li>• <strong>Technological leadership:</strong> Advanced systems development</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Modern Supercarriers Section */}
-        <section id="modern-supercarriers" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-4">
-            🌊 Modern Supercarriers: Ultimate Naval Aviation (1975-Present)
-          </h2>
-
-          <div className="bg-gray-50 p-8 rounded-lg mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Today's supercarriers represent the pinnacle of naval aviation technology, combining nuclear propulsion, advanced electronics, and sophisticated aircraft to create the most powerful warships ever built. These floating cities, displacing over 100,000 tons and operating 80+ aircraft, project American air power globally and maintain freedom of navigation on the world's oceans.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Modern carrier aviation continues to evolve with stealth aircraft, unmanned systems, and advanced sensors that extend striking power and surveillance capabilities. The integration of fifth-generation fighters and emerging unmanned aircraft ensures that carrier aviation will remain the dominant force in maritime warfare for decades to come.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
               <Image
-                src="/blog-images/modern-carrier-operations.jpg"
-                alt="Modern aircraft carrier operations showing contemporary naval aviation capabilities"
+                src="/blog-images/naval-aviation-evolution.jpg"
+                alt="Naval aviation evolution showing the progression from early biplanes to modern jet fighters on aircraft carriers"
                 width={600}
                 height={400}
                 className="w-full h-auto rounded-lg shadow-lg"
               />
               <p className="text-sm text-gray-600 mt-3 italic">
-                Modern carrier operations: The ultimate expression of naval aviation power projection
+                Naval aviation evolution - From early carrier biplanes to modern supersonic jet fighters
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-800 mb-3">Modern Capabilities</h4>
-              <ul className="space-y-2 text-gray-700 mb-6">
-                <li>• <strong>Nuclear propulsion:</strong> 25+ year fuel cycles</li>
-                <li>• <strong>Advanced aircraft:</strong> F/A-18 Super Hornet, F-35C Lightning II</li>
-                <li>• <strong>Stealth operations:</strong> Fifth-generation fighter capability</li>
-                <li>• <strong>Unmanned systems:</strong> MQ-25 Stingray refueling drones</li>
-                <li>• <strong>Precision weapons:</strong> GPS-guided munitions</li>
-                <li>• <strong>Global reach:</strong> Worldwide deployment capability</li>
-                <li>• <strong>Network operations:</strong> Integrated command and control</li>
-                <li>• <strong>Rapid response:</strong> Crisis intervention anywhere</li>
+              <h4 className="font-semibold text-gray-800 mb-3">Jet Age Naval Aviation</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li>• <strong>Nuclear carriers:</strong> USS Enterprise and follow-on classes</li>
+                <li>• <strong>Supersonic fighters:</strong> F-4 Phantom, F-14 Tomcat development</li>
+                <li>• <strong>Advanced systems:</strong> Radar, missiles, and electronic warfare</li>
+                <li>• <strong>Global operations:</strong> Extended deployment capabilities</li>
+                <li>• <strong>Strike aircraft:</strong> Nuclear-capable attack aircraft</li>
+                <li>• <strong>Support aircraft:</strong> AEW, ASW, and logistics aircraft</li>
+                <li>• <strong>Precision weapons:</strong> Guided bombs and missiles</li>
+                <li>• <strong>Digital systems:</strong> Computer-aided flight and combat systems</li>
               </ul>
-
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <h4 className="font-bold text-blue-800 mb-2">🌐 Global Impact</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Modern supercarriers serve as floating embassies, disaster relief platforms, and deterrent forces that maintain global stability while providing unmatched flexibility for responding to crises anywhere in the world.
-                </p>
-              </div>
             </div>
+          </div>
+        </section>
+
+        {/* Modern Operations Section */}
+        <section id="modern-operations" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-4">
+            🌊 Modern Naval Aviation: 21st Century Capabilities
+          </h2>
+
+          <div className="bg-gray-50 p-8 rounded-lg mb-8">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Modern naval aviation represents the culmination of over a century of development, combining nuclear-powered supercarriers with advanced multirole aircraft, precision weapons, and sophisticated command and control systems. Today's carrier strike groups can project power globally, providing governments with flexible response options for crisis management and sustained operations.
+            </p>
+
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The integration of unmanned aircraft, advanced sensors, and network-centric warfare capabilities has further enhanced naval aviation effectiveness. Modern carriers operate as mobile airbases capable of sustained operations independent of shore-based facilities, making them invaluable for forward presence and crisis response in an interconnected but unstable world.
+            </p>
           </div>
 
           <div className="bg-blue-900 text-white p-8 rounded-lg">
-            <h3 className="text-xl font-bold mb-4">⚓ Naval Aviation's Future</h3>
+            <h3 className="text-xl font-bold mb-4">⚓ Naval Aviation Today</h3>
             <p className="leading-relaxed mb-4">
-              From Eugene Ely's pioneer flights to today's nuclear supercarriers, naval aviation has continuously evolved to meet new challenges and exploit emerging technologies. The integration of artificial intelligence, hypersonic weapons, and advanced unmanned systems promises to extend naval aviation's reach and effectiveness even further.
+              From Eugene Ely's first tentative flight from USS Birmingham to modern supercarriers launching F/A-18 Super Hornets and F-35 Lightning IIs, naval aviation has evolved into the most versatile and powerful force projection capability available to maritime nations. The ability to position a mobile airfield anywhere in international waters provides unmatched strategic flexibility.
             </p>
             <p className="leading-relaxed">
-              As maritime commerce continues to expand and international tensions require flexible response capabilities, naval aviation remains the ultimate expression of naval power—providing unmatched mobility, striking power, and strategic presence that no other military system can match. The legacy of those early aviation pioneers lives on in every carrier operation, every successful mission, and every demonstration of naval aviation's continuing evolution and effectiveness.
+              As naval aviation enters its second century, new challenges including hypersonic weapons, advanced air defenses, and space-based systems are driving continued innovation. The fundamental concept pioneered by early naval aviators—extending the reach and effectiveness of naval forces through aviation—remains as relevant today as it was when the first aircraft lifted off from a ship's deck over a century ago.
+            </p>
+          </div>
+
+          <div className="mt-8">
+            <Image
+              src="/blog-images/modern-carrier-operations.jpg"
+              alt="Modern aircraft carrier flight operations showing the current state of naval aviation with advanced jet fighters and sophisticated deck operations"
+              width={800}
+              height={400}
+              className="w-full h-auto rounded-lg shadow-lg mb-4"
+            />
+            <p className="text-sm text-gray-600 italic text-center">
+              Modern carrier operations - Today's naval aviation combines advanced aircraft, precision weapons, and sophisticated systems
             </p>
           </div>
         </section>
@@ -534,7 +492,7 @@ export default function NavalAviationHistoryPage() {
                 <div className="flex gap-4">
                   <Image
                     src="/book-covers/aircraft-carrier-argus.jpg"
-                    alt="Aircraft Carrier Argus book cover"
+                    alt="Aircraft Carrier HMS Argus book cover"
                     width={80}
                     height={120}
                     className="rounded"
@@ -544,7 +502,7 @@ export default function NavalAviationHistoryPage() {
                       Aircraft Carrier - Beardmore's HMS Argus
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">
-                      The story of HMS Argus, the world's first true aircraft carrier, converted by Beardmore from the liner Conte Rosso.
+                      The complete history of HMS Argus, the world's first true aircraft carrier and pioneer of naval aviation operations.
                     </p>
                     <div className="text-blue-600 text-sm mt-2">Read more →</div>
                   </div>
@@ -552,22 +510,22 @@ export default function NavalAviationHistoryPage() {
               </div>
             </Link>
 
-            <Link href="/books/british-aircraft-great-war" className="group">
+            <Link href="/books/fleet-air-arm" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
                 <div className="flex gap-4">
                   <Image
-                    src="/book-covers/british-aircraft-great-war.jpg"
-                    alt="British Aircraft Great War book cover"
+                    src="/book-covers/fleet-air-arm.jpg"
+                    alt="Fleet Air Arm book cover"
                     width={80}
                     height={120}
                     className="rounded"
                   />
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                      British Aircraft of the Great War
+                      Royal Navy Fleet Air Arm History
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">
-                      Complete coverage of British naval aircraft including seaplanes and early carrier operations during WWI.
+                      The complete history of the Royal Navy's Fleet Air Arm from formation to modern carrier operations.
                     </p>
                     <div className="text-blue-600 text-sm mt-2">Read more →</div>
                   </div>
@@ -586,7 +544,7 @@ export default function NavalAviationHistoryPage() {
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Charles E. MacKay</h3>
               <p className="text-gray-700 mb-3">
-                Aviation historian specializing in naval aviation development and maritime air power evolution. Author of authoritative works on the complete history of naval aviation from early experiments to modern supercarriers and the strategic impact of carrier-based air power.
+                Aviation historian specializing in naval aviation development and maritime air power evolution. Author of authoritative works on aircraft carrier development, Fleet Air Arm history, and the technological innovations that transformed naval warfare.
               </p>
               <div className="flex gap-4 text-sm">
                 <Link href="/about" className="text-blue-600 hover:text-blue-800">About the Author</Link>
@@ -608,8 +566,8 @@ export default function NavalAviationHistoryPage() {
                 article_title: 'Naval Aviation History',
                 article_category: 'Naval Aviation History',
                 author: 'Charles E. MacKay',
-                reading_time: 17,
-                topic: 'Maritime Aviation Evolution'
+                reading_time: 18,
+                topic: 'Maritime Aviation Development'
               });
             }
           `

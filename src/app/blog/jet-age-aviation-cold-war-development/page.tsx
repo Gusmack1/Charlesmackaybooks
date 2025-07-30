@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [
       {
-        url: '/blog-images/f104-starfighter-supersonic.jpg',
+        url: '/blog-images/f86-vs-mig15-combat.jpg',
         width: 1200,
         height: 630,
-        alt: 'F-104 Starfighter supersonic jet fighter showing the advanced Cold War aviation technology that revolutionized flight'
+        alt: 'F-86 Sabre vs MiG-15 Cold War aerial combat showing the iconic rivalry that defined jet fighter development'
       }
     ],
     locale: 'en_US',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Jet Age Aviation: Cold War Supersonic Revolution 1945-1991',
     description: 'How the Cold War rivalry between East and West accelerated jet aviation development, producing supersonic aircraft.',
-    images: ['/blog-images/f104-starfighter-supersonic.jpg'],
+    images: ['/blog-images/f86-vs-mig15-combat.jpg'],
   },
 }
 
@@ -58,7 +58,7 @@ const jsonLd = {
   '@type': 'Article',
   headline: 'Jet Age Aviation: Cold War Supersonic Revolution 1945-1991',
   description: 'How the Cold War rivalry between East and West accelerated jet aviation development, producing supersonic fighters, spy planes, and revolutionary aircraft that transformed military and civilian aviation forever.',
-  image: '/blog-images/f104-starfighter-supersonic.jpg',
+  image: '/blog-images/f86-vs-mig15-combat.jpg',
   author: {
     '@type': 'Person',
     name: 'Charles E. MacKay',
@@ -123,8 +123,8 @@ export default function JetAgeAviationPage() {
             </div>
             <div>
               <Image
-                src="/blog-images/f104-starfighter-supersonic.jpg"
-                alt="F-104 Starfighter supersonic jet fighter showing the advanced Cold War aviation technology that revolutionized flight and established supersonic capabilities"
+                src="/blog-images/f86-vs-mig15-combat.jpg"
+                alt="F-86 Sabre vs MiG-15 Cold War aerial combat showing the iconic East vs West rivalry that drove jet fighter development"
                 width={600}
                 height={400}
                 className="w-full h-auto rounded-lg shadow-2xl"
