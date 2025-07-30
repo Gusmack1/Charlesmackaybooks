@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import ClientWrapper from '@/components/ClientWrapper'
 import UnifiedSchema from '@/components/UnifiedSchema'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 import { CartProvider } from '@/context/CartContext'
 import { WishlistProvider } from '@/context/WishlistContext'
 
@@ -122,6 +123,9 @@ export default function RootLayout({
         <UnifiedSchema pageType="homepage" />
       </head>
       <body className={inter.className}>
+        {/* Google Analytics 4 Tracking */}
+        <GoogleAnalytics />
+
         <CartProvider>
           <WishlistProvider>
             <ClientWrapper>

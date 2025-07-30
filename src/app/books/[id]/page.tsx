@@ -12,6 +12,7 @@ import BookSEOContent from '@/components/BookSEOContent';
 import BookDetailNavigation from '@/components/BookDetailNavigation';
 import RelatedBooks from '@/components/RelatedBooks';
 import MobileFooterNav from '@/components/MobileFooterNav';
+import BookAnalytics from '@/components/BookAnalytics';
 
 // Function to get category-specific gradient colors
 function getCategoryGradient(category: string): string {
@@ -424,6 +425,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         pageUrl={`/books/${book.id}`}
         bookData={book}
       />
+
+      <BookAnalytics book={book} />
 
       <div className="min-h-screen bg-slate-50">
         <Header />

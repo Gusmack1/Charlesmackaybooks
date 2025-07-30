@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 interface BookDetailClientProps {
   book: Book;
@@ -11,6 +12,7 @@ interface BookDetailClientProps {
 export default function BookDetailClient({ book }: BookDetailClientProps) {
   const { addToCart, openBasket } = useCart();
   const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const { trackEbayRedirect, trackContactEmail } = useAnalytics();
 
   const handleAddToCart = () => {
     setIsAddingToCart(true);
@@ -19,6 +21,16 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
       setIsAddingToCart(false);
       openBasket(); // Open basket sidebar after adding item
     }, 500);
+  };
+
+  const handleEbayClick = () => {
+    // Track eBay redirect analytics
+    trackEbayRedirect(book.title);
+  };
+
+  const handleEmailClick = () => {
+    // Track email click analytics
+    trackContactEmail();
   };
 
   const generatePayPalUrl = (book: Book) => {
@@ -44,8 +56,6 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
     });
     return `${baseUrl}?${params.toString()}`;
   };
-
-  // Simplified direct purchase approach
 
   return (
     <div className="space-y-4">
@@ -78,6 +88,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               href="https://www.ebay.co.uk/usr/chaza87"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleEbayClick}
               className="block w-full bg-yellow-500 text-black text-center px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
             >
               🛒 Buy on eBay Store
@@ -95,8 +106,6 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         )}
       </div>
 
-
-
       {/* Shipping Information */}
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center mt-4">
         <div className="font-bold text-blue-800 mb-2">📦 Shipping Costs</div>
@@ -110,6 +119,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
       <div className="text-center pt-3 border-t">
         <a
           href="mailto:charlese1mackay@hotmail.com"
+          onClick={handleEmailClick}
           className="text-blue-600 hover:text-blue-800 text-sm font-medium"
         >
           📧 Contact Charles for bulk orders

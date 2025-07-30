@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Book } from '@/types/book';
+import { trackAddToCart } from '@/components/GoogleAnalytics';
 
 interface CartItem {
   book: Book;
@@ -33,12 +34,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [isBasketOpen, setIsBasketOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
-  // Ensure we're on the client side
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  // Load cart from localStorage on mount
   useEffect(() => {
     if (isClient && typeof window !== 'undefined') {
       const savedCart = localStorage.getItem('charles_mackay_cart');
@@ -52,11 +51,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [isClient]);
 
-  // Save to localStorage whenever items change
   useEffect(() => {
     if (isClient && typeof window !== 'undefined') {
       localStorage.setItem('charles_mackay_cart', JSON.stringify(items));
-      // Dispatch custom event for header to listen to
       window.dispatchEvent(new CustomEvent('cartUpdated', { detail: items }));
     }
   }, [items, isClient]);
@@ -66,6 +63,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
     setItems(currentItems => {
       const existingItem = currentItems.find(item => item.book.id === book.id);
+
+      // Track Google Analytics add to cart event
+      trackAddToCart({
+        item_id: book.id,
+        item_name: book.title,
+        category: book.category || 'Aviation Books',
+        quantity: 1,
+        price: book.price
+      });
+
       if (existingItem) {
         return currentItems.map(item =>
           item.book.id === book.id
@@ -166,7 +173,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
 export function useCart() {
   const context = useContext(CartContext);
   if (context === undefined) {
-    // Return a safe default during SSR
     if (typeof window === 'undefined') {
       return {
         items: [],
