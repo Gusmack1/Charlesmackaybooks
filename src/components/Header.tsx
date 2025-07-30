@@ -72,8 +72,8 @@ export default function Header() {
             <Link href="/blog" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
               📝 Blog
             </Link>
-            <Link href="/timeline" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-              📅 Timeline
+            <Link href="/scottish-aviation-timeline" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
+              🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Timeline
             </Link>
           </div>
         </div>

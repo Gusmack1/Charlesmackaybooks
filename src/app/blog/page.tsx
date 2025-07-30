@@ -83,6 +83,15 @@ const blogCategories = {
       readTime: '17 min'
     },
     {
+      title: 'Bristol Fighter F2B: The Legendary Brisfit of the Great War',
+      slug: 'bristol-fighter-f2b-brisfit',
+      excerpt: 'The two-seat fighter that became one of the most successful British aircraft of WWI, transforming from initial disaster to aerial supremacy.',
+      date: 'January 25, 2025',
+      image: '/blog-images/bristol-fighter-f2b-flying.jpg',
+      tags: ['WWI Aviation', 'Bristol Fighter', 'F2B', 'British Aircraft'],
+      readTime: '14 min'
+    },
+    {
       title: 'British Aircraft Great War: RFC & RNAS Development',
       slug: 'british-aircraft-great-war-rfc-rnas',
       excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters.',
@@ -110,6 +119,15 @@ const blogCategories = {
       image: '/blog-images/spitfire-k5054-prototype.jpg',
       tags: ['WWII Aviation', 'Spitfire', 'Fighter Aircraft', 'R.J. Mitchell'],
       readTime: '16 min'
+    },
+    {
+      title: 'Supermarine Spitfire Evolution: From Prototype to Legend',
+      slug: 'supermarine-spitfire-development-evolution',
+      excerpt: 'The complete evolution of the Spitfire from K5054 prototype through all variants, examining how continuous development kept this fighter competitive throughout WWII.',
+      date: 'January 22, 2025',
+      image: '/blog-images/spitfire-prototype-k5054-historical.jpg',
+      tags: ['WWII Aviation', 'Spitfire Evolution', 'Aircraft Development', 'Fighter Variants'],
+      readTime: '18 min'
     },
     {
       title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
@@ -239,6 +257,15 @@ const blogCategories = {
       readTime: '12 min'
     },
     {
+      title: 'Rotorcraft Military Applications: From Search and Rescue to Combat Operations',
+      slug: 'rotorcraft-military-applications',
+      excerpt: 'How helicopters transformed military operations from battlefield medical evacuation to special forces insertion and modern combat roles.',
+      date: 'January 20, 2025',
+      image: '/blog-images/helicopter-development-timeline.jpg',
+      tags: ['Helicopter History', 'Military Aviation', 'Combat Helicopters', 'Search and Rescue'],
+      readTime: '15 min'
+    },
+    {
       title: 'Helicopter Development: From Autogyros to Modern Rotorcraft',
       slug: 'helicopter-development-pioneers',
       excerpt: 'From spinning maple seeds to modern rotorcraft - the evolution of vertical flight technology.',
@@ -275,6 +302,15 @@ const blogCategories = {
       image: '/blog-images/hms-argus-aircraft-carrier.jpg',
       tags: ['Naval Aviation', 'HMS Argus', 'Aircraft Carriers', 'Naval History'],
       readTime: '11 min'
+    },
+    {
+      title: 'HMS Argus Carrier Operations: Pioneering Naval Aviation Procedures',
+      slug: 'hms-argus-first-aircraft-carrier-operations',
+      excerpt: 'Detailed examination of the operational procedures, deck operations, and pioneering flight operations that made HMS Argus the template for all future aircraft carriers.',
+      date: 'January 18, 2025',
+      image: '/blog-images/hms-argus-dazzle-camouflage.jpg',
+      tags: ['Naval Aviation', 'HMS Argus', 'Carrier Operations', 'Flight Deck Procedures'],
+      readTime: '13 min'
     }
   ],
   'Industrial History': [
@@ -295,6 +331,15 @@ const blogCategories = {
       image: '/blog-images/rohrbach-roland.jpg',
       tags: ['Industrial History', 'Aircraft Construction', 'Metal Aircraft', 'Engineering Innovation'],
       readTime: '13 min'
+    },
+    {
+      title: 'Adolf Rohrbach Metal Aircraft Revolution: Engineering the Future',
+      slug: 'adolf-rohrbach-metal-aircraft-revolution',
+      excerpt: 'How Adolf Rohrbach\'s innovative metal aircraft construction techniques revolutionized aviation manufacturing and influenced modern aircraft design principles.',
+      date: 'January 12, 2025',
+      image: '/blog-images/rohrbach-ro-ix-aircraft.jpg',
+      tags: ['Industrial History', 'Rohrbach Revolution', 'Metal Construction', 'Aviation Engineering'],
+      readTime: '15 min'
     }
   ]
 }

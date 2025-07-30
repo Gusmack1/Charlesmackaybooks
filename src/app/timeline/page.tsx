@@ -551,7 +551,7 @@ export default function AviationTimelinePage() {
 
                     {/* Related Blogs */}
                     {era.relatedBlogs && era.relatedBlogs.length > 0 && (
-                      <div className="space-y-3">
+                      <div className="space-y-3 mb-6">
                         <h5 className="font-semibold text-gray-800">📖 Expert Articles:</h5>
                         {era.relatedBlogs.map((blog) => (
                           <Link
@@ -568,6 +568,24 @@ export default function AviationTimelinePage() {
                         ))}
                       </div>
                     )}
+
+                    {/* Era Guide Link */}
+                    <div className="mt-6">
+                      <Link
+                        href={
+                          era.period === '1895-1914' ? '/pioneer-era-1895-1914' :
+                          era.period === '1914-1918' ? '/great-war-1914-1918' :
+                          era.period === '1918-1939' ? '/golden-age-1918-1939' :
+                          '#'
+                        }
+                        className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                      >
+                        📚 Complete {era.title} Era Guide
+                        <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
