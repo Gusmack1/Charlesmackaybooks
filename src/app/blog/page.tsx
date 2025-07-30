@@ -74,6 +74,15 @@ const blogCategories = {
   ],
   'WWI Aviation': [
     {
+      title: 'Sopwith Camel: The WWI Fighter That Won Air Superiority',
+      slug: 'sopwith-camel-wwi-fighter',
+      excerpt: 'The most successful Allied fighter of the Great War. Discover how this tricky but effective aircraft shot down more enemy planes than any other Allied fighter.',
+      date: 'January 30, 2025',
+      image: '/blog-images/sopwith-camel-historical-1918.jpg',
+      tags: ['WWI Aviation', 'Sopwith Camel', 'Fighter Aircraft', 'Great War'],
+      readTime: '17 min'
+    },
+    {
       title: 'British Aircraft Great War: RFC & RNAS Development',
       slug: 'british-aircraft-great-war-rfc-rnas',
       excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters.',
