@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [
       {
-        url: '/blog-images/hms-argus-aircraft-carrier.jpg',
+        url: '/blog-images/hms-argus-dazzle-camouflage.jpg',
         width: 1200,
         height: 630,
-        alt: 'HMS Argus - the world\'s first true aircraft carrier with full-length flight deck that revolutionized naval aviation'
+        alt: 'HMS Argus in dazzle camouflage - the world\'s first true aircraft carrier with full-length flight deck that revolutionized naval aviation'
       }
     ],
     locale: 'en_GB',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'HMS Argus: The First True Aircraft Carrier - Revolutionary Naval Aviation Pioneer',
     description: 'The extraordinary story of HMS Argus - the world\'s first aircraft carrier with a full-length flight deck.',
-    images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
+    images: ['/blog-images/hms-argus-dazzle-camouflage.jpg'],
   },
 }
 
@@ -59,7 +59,7 @@ const jsonLd = {
   '@type': 'Article',
   headline: 'HMS Argus: The First True Aircraft Carrier - Revolutionary Naval Aviation Pioneer',
   description: 'The extraordinary story of HMS Argus - the world\'s first aircraft carrier with a full-length flight deck. Discover how this converted liner revolutionized naval warfare and established the foundation for modern carrier operations.',
-  image: '/blog-images/hms-argus-aircraft-carrier.jpg',
+  image: '/blog-images/hms-argus-dazzle-camouflage.jpg',
   author: {
     '@type': 'Person',
     name: 'Charles E. MacKay',
@@ -125,8 +125,8 @@ export default function HMSArgusPage() {
             </div>
             <div>
               <Image
-                src="/blog-images/hms-argus-aircraft-carrier.jpg"
-                alt="HMS Argus - the world's first true aircraft carrier with full-length flight deck that revolutionized naval aviation and established modern carrier operations"
+                src="/blog-images/hms-argus-dazzle-camouflage.jpg"
+                alt="HMS Argus in dazzle camouflage - the world's first true aircraft carrier with full-length flight deck that revolutionized naval aviation and established modern carrier operations"
                 width={600}
                 height={400}
                 className="w-full h-auto rounded-lg shadow-2xl"

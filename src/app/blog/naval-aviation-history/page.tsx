@@ -510,22 +510,22 @@ export default function NavalAviationHistoryPage() {
               </div>
             </Link>
 
-            <Link href="/books/fleet-air-arm" className="group">
+            <Link href="/books/captain-eric-brown" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
                 <div className="flex gap-4">
                   <Image
-                    src="/book-covers/fleet-air-arm.jpg"
-                    alt="Fleet Air Arm book cover"
+                    src="/book-covers/captain-eric-brown.jpg"
+                    alt="Captain Eric Brown book cover"
                     width={80}
                     height={120}
                     className="rounded"
                   />
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                      Royal Navy Fleet Air Arm History
+                      Captain Eric Brown: Naval Test Pilot
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">
-                      The complete history of the Royal Navy's Fleet Air Arm from formation to modern carrier operations.
+                      The extraordinary story of Captain Eric Brown, the world's most experienced naval test pilot and carrier aviation pioneer.
                     </p>
                     <div className="text-blue-600 text-sm mt-2">Read more →</div>
                   </div>

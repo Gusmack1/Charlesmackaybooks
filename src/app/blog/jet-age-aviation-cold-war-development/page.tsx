@@ -474,22 +474,22 @@ export default function JetAgeAviationPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Related Charles MacKay Books</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/books/jet-age-aviation" className="group">
+            <Link href="/books/captain-eric-brown" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
                 <div className="flex gap-4">
                   <Image
-                    src="/book-covers/jet-age-aviation.jpg"
-                    alt="Jet Age Aviation book cover"
+                    src="/book-covers/captain-eric-brown.jpg"
+                    alt="Captain Eric Brown book cover"
                     width={80}
                     height={120}
                     className="rounded"
                   />
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
-                      Jet Age Aviation: The Cold War Revolution
+                      Captain Eric Brown: Test Pilot
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">
-                      The complete technical and political history of Cold War aviation development, from first jets to supersonic aircraft.
+                      The extraordinary career of the world's most experienced test pilot, including his pioneering work with early jet aircraft.
                     </p>
                     <div className="text-purple-600 text-sm mt-2">Read more →</div>
                   </div>
@@ -497,22 +497,22 @@ export default function JetAgeAviationPage() {
               </div>
             </Link>
 
-            <Link href="/books/supersonic-aircraft" className="group">
+            <Link href="/books/british-aircraft-great-war" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
                 <div className="flex gap-4">
                   <Image
-                    src="/book-covers/supersonic-aircraft.jpg"
-                    alt="Supersonic Aircraft book cover"
+                    src="/book-covers/british-aircraft-great-war.jpg"
+                    alt="British Aircraft Great War book cover"
                     width={80}
                     height={120}
                     className="rounded"
                   />
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
-                      Breaking the Sound Barrier: Supersonic Flight Development
+                      British Aircraft of the Great War
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">
-                      The story of supersonic flight from the Bell X-1 to modern military and civilian aircraft development.
+                      The evolution of British military aviation from the Wright Flyer to the jets that followed the Great War.
                     </p>
                     <div className="text-purple-600 text-sm mt-2">Read more →</div>
                   </div>
