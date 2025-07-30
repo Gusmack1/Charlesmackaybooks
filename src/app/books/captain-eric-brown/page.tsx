@@ -60,7 +60,7 @@ const jsonLd = {
       name: 'Charles E. MacKay'
     }
   },
-  image: book.imageUrl || '/book-covers/captain-clouds.jpg',
+  image: book.imageUrl || '/book-covers/captain-eric-brown.jpg',
   genre: 'Aviation Biography',
   about: [
     'Captain Eric Brown Biography',
@@ -96,7 +96,7 @@ export default function CaptainEricBrownPage() {
             <div className="flex justify-center lg:justify-start">
               <div className="relative">
                 <Image
-                  src={book.imageUrl || '/book-covers/captain-clouds.jpg'}
+                  src={book.imageUrl || '/book-covers/captain-eric-brown.jpg'}
                   alt={`${book.title} by Charles E. MacKay`}
                   width={450}
                   height={675}
