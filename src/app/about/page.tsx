@@ -104,9 +104,14 @@ export default function AboutPage() {
             {/* Author Image */}
             <div className="flex justify-center lg:justify-start">
               <div className="relative">
-                <div className="w-96 h-96 bg-blue-600 rounded-full flex items-center justify-center text-6xl font-bold text-white shadow-2xl">
-                  CM
-                </div>
+                <Image
+                  src="/charles-mackay-aviation-historian.jpg"
+                  alt="Charles E. MacKay - Aviation Historian & Author"
+                  width={384}
+                  height={384}
+                  className="w-96 h-96 rounded-full object-cover shadow-2xl"
+                  priority
+                />
               </div>
             </div>
 

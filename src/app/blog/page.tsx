@@ -219,13 +219,13 @@ const blogCategories = {
   ],
   'Aviation Biography': [
     {
-      title: 'De Havilland Chipmunk WP808 at Turnhouse: A Personal Aviation Memory',
+      title: 'De Havilland Chipmunk: The RAF Training Aircraft That Shaped British Aviation',
       slug: 'de-havilland-chipmunk-wp808-turnhouse',
-      excerpt: 'A personal account of the De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971. Discover the story behind this beloved training aircraft and its role in RAF pilot education.',
+      excerpt: 'The comprehensive story of the De Havilland Chipmunk - Britain\'s most successful training aircraft that trained over 100,000 RAF pilots from 1950 to 1996. Discover the technical excellence and service legacy of this beloved trainer.',
       date: 'January 30, 2025',
-      image: '/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg',
-      tags: ['Aviation Biography', 'Training Aircraft', 'RAF', 'Personal Memory'],
-      readTime: '10 min'
+      image: '/blog-images/de-havilland-chipmunk-formation.jpg',
+      tags: ['Aviation Biography', 'Training Aircraft', 'RAF', 'De Havilland'],
+      readTime: '12 min'
     },
     {
       title: 'Captain Eric Brown: Britain\'s Greatest Test Pilot',
