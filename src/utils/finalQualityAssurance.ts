@@ -665,6 +665,24 @@ export class FinalQualityAssurance {
 
     return nextSteps;
   }
+
+  async runCompleteQA(): Promise<{
+    overallScore: number;
+    summary: any;
+    recommendations: string[];
+    criticalActions: string[];
+  }> {
+    console.log('✅ Starting Complete Quality Assurance...');
+
+    const report = await this.runFullQualityAssurance();
+    
+    return {
+      overallScore: report.overallScore,
+      summary: report.summary,
+      recommendations: report.recommendations,
+      criticalActions: report.nextSteps.filter(step => step.includes('critical') || step.includes('immediate'))
+    };
+  }
 }
 
 // ===== DEFAULT CONFIGURATION =====

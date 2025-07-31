@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
+import { ReactNode } from 'react';
 
 interface ResponsiveTypographyProps {
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'lead' | 'small' | 'caption';
   className?: string;
   as?: keyof JSX.IntrinsicElements;

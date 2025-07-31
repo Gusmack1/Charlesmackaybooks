@@ -32,7 +32,7 @@ export default function RecentlyViewed() {
           {recentlyViewed.slice(0, 4).map(book => (
             <div key={book.id} className="bg-white rounded-lg shadow-md overflow-hidden">
               {/* Book Image */}
-              <Link href={`/book/${book.id}`} className="block">
+              <Link href={`/books/${book.id}`} className="block">
                 <div className="relative h-48 bg-gray-100 flex items-center justify-center p-4">
                   {book.imageUrl ? (
                     <Image
@@ -54,7 +54,7 @@ export default function RecentlyViewed() {
 
               {/* Book Details */}
               <div className="p-4">
-                <Link href={`/book/${book.id}`}>
+                <Link href={`/books/${book.id}`}>
                   <h3 className="font-bold text-sm mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     {book.title}
                   </h3>

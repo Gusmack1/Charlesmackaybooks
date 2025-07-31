@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
+import { ReactNode } from 'react';
 
 interface ResponsiveGridProps {
-  children: React.ReactNode;
+  children: ReactNode;
   cols?: {
     mobile?: number;
     tablet?: number;
@@ -81,7 +81,7 @@ export default function ResponsiveGrid({
 }
 
 // Predefined grid layouts for common use cases
-export const BookGrid = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
+export const BookGrid = ({ children, className = '' }: { children: ReactNode; className?: string }) => (
   <ResponsiveGrid
     cols={{ mobile: 1, tablet: 2, desktop: 3, large: 4 }}
     gap={{ mobile: '1rem', tablet: '1.5rem', desktop: '2rem' }}
@@ -91,7 +91,7 @@ export const BookGrid = ({ children, className = '' }: { children: React.ReactNo
   </ResponsiveGrid>
 );
 
-export const BlogGrid = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
+export const BlogGrid = ({ children, className = '' }: { children: ReactNode; className?: string }) => (
   <ResponsiveGrid
     cols={{ mobile: 1, tablet: 2, desktop: 2, large: 3 }}
     gap={{ mobile: '1.5rem', tablet: '2rem', desktop: '2.5rem' }}
@@ -101,7 +101,7 @@ export const BlogGrid = ({ children, className = '' }: { children: React.ReactNo
   </ResponsiveGrid>
 );
 
-export const FeatureGrid = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
+export const FeatureGrid = ({ children, className = '' }: { children: ReactNode; className?: string }) => (
   <ResponsiveGrid
     cols={{ mobile: 1, tablet: 2, desktop: 3, large: 4 }}
     gap={{ mobile: '1.5rem', tablet: '2rem', desktop: '2.5rem' }}
@@ -111,7 +111,7 @@ export const FeatureGrid = ({ children, className = '' }: { children: React.Reac
   </ResponsiveGrid>
 );
 
-export const HeroGrid = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
+export const HeroGrid = ({ children, className = '' }: { children: ReactNode; className?: string }) => (
   <ResponsiveGrid
     cols={{ mobile: 1, tablet: 1, desktop: 2, large: 2 }}
     gap={{ mobile: '1rem', tablet: '2rem', desktop: '3rem' }}

@@ -21,7 +21,7 @@ export default function Analytics() {
 
       // Initialize GA4
       window.gtag('js', new Date())
-      window.gtag('config', 'G-XXXXXXXXXX') // Replace with actual GA4 ID
+      window.gtag('config', 'G-RJS2CCBSJP') // Charles Mackay Books GA4 ID
 
       // Track page view
       window.gtag('event', 'page_view', {

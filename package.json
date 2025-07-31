@@ -2,7 +2,6 @@
   "name": "charles-mackay-books",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev -H 0.0.0.0 --turbopack",
     "build": "SKIP_ENV_VALIDATION=true next build --no-lint",

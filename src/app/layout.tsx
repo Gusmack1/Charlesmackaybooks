@@ -127,6 +127,36 @@ export default function RootLayout({
         {/* Google Analytics 4 Tracking */}
         <GoogleAnalytics />
 
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Charles E. MacKay Aviation Books",
+              "url": "https://charlesmackaybooks.com",
+              "logo": "https://charlesmackaybooks.com/charles-mackay-aviation-historian.jpg",
+              "description": "Published aviation books by renowned historian Charles E. MacKay. Specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history.",
+              "founder": {
+                "@type": "Person",
+                "name": "Charles E. MacKay",
+                "jobTitle": "Aviation Historian",
+                "description": "Renowned aviation historian specializing in Scottish aviation heritage"
+              },
+              "sameAs": [
+                "https://twitter.com/CharlesMacKayAviation"
+              ],
+              "publishingPrinciples": "https://charlesmackaybooks.com/about",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "url": "https://charlesmackaybooks.com/contact"
+              }
+            })
+          }}
+        />
+
         <CartProvider>
           <WishlistProvider>
             <PerformanceOptimizer>

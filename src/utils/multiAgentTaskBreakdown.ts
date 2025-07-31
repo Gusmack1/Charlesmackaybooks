@@ -894,6 +894,91 @@ export class MultiAgentTaskBreakdown {
   getCoordinationProtocol(): CoordinationProtocol {
     return this.coordinationProtocol;
   }
+
+  async runCompleteTaskBreakdown(): Promise<{
+    status: string;
+    tasksCreated: number;
+    tasksCompleted: number;
+    summary: any;
+    recommendations: string[];
+    criticalActions: string[];
+  }> {
+    console.log('📊 Starting Complete Multi-Agent Task Breakdown...');
+
+    // Create sample tasks for website improvement
+    const sampleTasks = [
+      {
+        title: 'Implement Book Sales Template',
+        description: 'Create high-converting book sales page template with social proof elements',
+        type: 'development' as TaskType,
+        priority: 'high' as Priority,
+        estimatedDuration: 240,
+        requirements: ['Design mockups', 'Content strategy', 'E-commerce integration'],
+        deliverables: ['React component', 'CSS styles', 'Documentation'],
+        acceptanceCriteria: ['Mobile responsive', 'SEO optimized', 'Conversion tested']
+      },
+      {
+        title: 'Optimize Image Loading',
+        description: 'Implement lazy loading and responsive images for better performance',
+        type: 'optimization' as TaskType,
+        priority: 'medium' as Priority,
+        estimatedDuration: 120,
+        requirements: ['Image optimization tools', 'Performance testing'],
+        deliverables: ['Optimized images', 'Lazy loading implementation'],
+        acceptanceCriteria: ['LCP < 2.5s', 'Images under 100KB', 'Responsive variants']
+      },
+      {
+        title: 'Enhance Cross-Linking System',
+        description: 'Improve internal linking structure for better SEO and user experience',
+        type: 'seo' as TaskType,
+        priority: 'high' as Priority,
+        estimatedDuration: 180,
+        requirements: ['Content analysis', 'SEO guidelines'],
+        deliverables: ['Link suggestions', 'Breadcrumb navigation'],
+        acceptanceCriteria: ['Related content sections', 'Improved crawlability']
+      }
+    ];
+
+    // Create tasks
+    const createdTasks = sampleTasks.map(taskData => this.createTask(taskData));
+    
+    // Assign tasks to agents
+    createdTasks.forEach(task => {
+      const bestAgent = this.findBestAgentForTask(task);
+      if (bestAgent) {
+        this.assignTask(task.id, bestAgent);
+      }
+    });
+
+    // Simulate task completion
+    const completedTasks = createdTasks.slice(0, 2);
+    completedTasks.forEach(task => {
+      this.updateTaskStatus(task.id, 'completed');
+    });
+
+    return {
+      status: 'completed',
+      tasksCreated: createdTasks.length,
+      tasksCompleted: completedTasks.length,
+      summary: {
+        totalTasks: this.getTasks().length,
+        activeTasks: this.getTasks().filter(t => t.status === 'in_progress').length,
+        completedTasks: this.getTasks().filter(t => t.status === 'completed').length,
+        availableAgents: this.getAgents().filter(a => a.availability).length
+      },
+      recommendations: [
+        'Implement automated task assignment based on agent skills',
+        'Add real-time progress tracking and notifications',
+        'Create task templates for common website improvements',
+        'Implement quality gates between workflow phases'
+      ],
+      criticalActions: [
+        'Complete high-priority development tasks',
+        'Assign critical SEO tasks to specialized agents',
+        'Implement automated testing for completed tasks'
+      ]
+    };
+  }
 }
 
 // ===== REACT HOOKS =====

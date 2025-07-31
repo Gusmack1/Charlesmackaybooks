@@ -1,9 +1,10 @@
-import React from 'react'
+
+import { FC } from 'react';
 import BlogPostTemplate from './BlogPostTemplate'
 import Header from './Header'
 
 // Example usage of the BlogPostTemplate component
-const BlogPostExample: React.FC = () => {
+const BlogPostExample: FC = () => {
   // Example blog post data
   const blogPostData = {
     title: "The Evolution of Aircraft Construction: From Wood to Metal",

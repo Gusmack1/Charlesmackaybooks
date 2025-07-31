@@ -281,7 +281,7 @@ export const books: Book[] = [
     condition: 'Very Good',
     inStock: true,
     description: 'Biography of a prominent test pilot covering his career testing experimental and military aircraft. Personal accounts of dangerous test flights and aircraft development programs. Rare insights into test pilot operations, experimental aircraft development, and aviation safety evolution.',
-    imageUrl: '/book-covers/captain-clouds.jpg',
+    imageUrl: '/book-covers/captain-eric-brown.jpg',
     tags: ['Test Pilot', 'Eric Brown', 'Biography'],
     pageCount: 192,
     publicationYear: 2020,

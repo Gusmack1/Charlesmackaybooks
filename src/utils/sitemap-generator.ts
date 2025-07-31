@@ -1,0 +1,168 @@
+// Sitemap generator for Charles Mackay Books
+
+export interface SitemapEntry {
+  url: string;
+  lastModified?: Date;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
+}
+
+export function generateSitemap(): string {
+  const baseUrl = 'https://charlesmackaybooks.com';
+  const now = new Date().toISOString();
+
+  const pages: SitemapEntry[] = [
+    // Main pages
+    { url: '/', changeFrequency: 'weekly', priority: 1.0 },
+    { url: '/books', changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/blog', changeFrequency: 'daily', priority: 0.9 },
+    { url: '/about', changeFrequency: 'monthly', priority: 0.8 },
+    { url: '/contact', changeFrequency: 'monthly', priority: 0.7 },
+    { url: '/how-to-order', changeFrequency: 'monthly', priority: 0.6 },
+    { url: '/academic-resources', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/aviation-bibliography', changeFrequency: 'monthly', priority: 0.7 },
+    { url: '/aviation-glossary', changeFrequency: 'monthly', priority: 0.6 },
+    { url: '/timeline', changeFrequency: 'monthly', priority: 0.7 },
+    { url: '/scottish-aviation-timeline', changeFrequency: 'monthly', priority: 0.7 },
+    { url: '/for-researchers', changeFrequency: 'monthly', priority: 0.8 },
+    { url: '/research-guides', changeFrequency: 'monthly', priority: 0.7 },
+
+    // Era pages
+    { url: '/pioneer-era-1895-1914', changeFrequency: 'monthly', priority: 0.7 },
+    { url: '/great-war-1914-1918', changeFrequency: 'monthly', priority: 0.8 },
+    { url: '/golden-age-1918-1939', changeFrequency: 'monthly', priority: 0.7 },
+
+    // Book pages
+    { url: '/books/beardmore-aviation', changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/books/aircraft-carrier-argus', changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/books/adolf-rohrbach', changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/books/british-aircraft-great-war', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/books/captain-eric-brown', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/books/clydeside-aviation-vol1', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/books/birth-atomic-bomb', changeFrequency: 'weekly', priority: 0.7 },
+
+    // Blog posts
+    { url: '/blog/beardmore-aviation-scottish-industrial-giant', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/blog/hms-argus-first-aircraft-carrier', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/blog/hms-argus-first-aircraft-carrier-operations', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/blog/adolf-rohrbach-metal-aircraft-revolution', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/blog/adolf-rohrbach-metal-aircraft-construction', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/blog/clydeside-aviation-revolution', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/blog/bristol-fighter-f2b-brisfit', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/hawker-hurricane-fighter-development', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/sopwith-camel-wwi-fighter', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/supermarine-spitfire-development-evolution', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/supermarine-spitfire-development-history', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/test-pilot-biography-eric-brown', changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/blog/de-havilland-chipmunk-wp808-turnhouse', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/bristol-sycamore-helicopter-development', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/helicopter-development-pioneers', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/sycamore-seeds-helicopter-evolution', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/sikorsky-vs300-helicopter-breakthrough', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/rotorcraft-military-applications', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/percy-pilcher-scotland-aviation-pioneer', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/lucy-lady-houston-schneider-trophy', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/schneider-trophy-racing-development', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/british-aircraft-great-war-rfc-rnas', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/german-aircraft-great-war-development', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/aviation-manufacturing-wartime-production', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/naval-aviation-history', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/jet-age-aviation-cold-war-development', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/blog/english-electric-lightning-development', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/f86-sabre-cold-war-fighter', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/korean-war-air-combat', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/me262-jet-fighter-revolution', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/luftwaffe-1945-final-year', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/blog/british-nuclear-deterrent-v-force', changeFrequency: 'weekly', priority: 0.6 },
+
+    // Aircraft pages
+    { url: '/aircraft/bristol-fighter', changeFrequency: 'monthly', priority: 0.6 },
+    { url: '/aircraft/hawker-hurricane', changeFrequency: 'monthly', priority: 0.6 },
+    { url: '/aircraft/sopwith-camel', changeFrequency: 'monthly', priority: 0.6 },
+
+    // Partnership pages
+    { url: '/partnerships/imperial-war-museum', changeFrequency: 'monthly', priority: 0.7 }
+  ];
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>${baseUrl}${page.url}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>${page.changeFrequency || 'weekly'}</changefreq>
+    <priority>${page.priority || 0.5}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+  return sitemap;
+}
+
+export function generateImageSitemap(): string {
+  const baseUrl = 'https://charlesmackaybooks.com';
+  
+  const images = [
+    {
+      url: '/charles-mackay-aviation-historian.jpg',
+      caption: 'Charles E. MacKay Aviation Historian',
+      title: 'Charles E. MacKay - Aviation Historian'
+    },
+    {
+      url: '/book-covers/beardmore-aviation.jpg',
+      caption: 'Beardmore Aviation Book Cover',
+      title: 'Beardmore Aviation: The Story of a Scottish Industrial Giant'
+    },
+    {
+      url: '/book-covers/aircraft-carrier-argus.jpg',
+      caption: 'HMS Argus Aircraft Carrier Book Cover',
+      title: 'HMS Argus: The First Aircraft Carrier'
+    },
+    {
+      url: '/book-covers/adolf-rohrbach.jpg',
+      caption: 'Adolf Rohrbach Book Cover',
+      title: 'Adolf Rohrbach and His Flying Machines'
+    }
+  ];
+
+  const imageSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${images.map(image => `  <url>
+    <loc>${baseUrl}/</loc>
+    <image:image>
+      <image:loc>${baseUrl}${image.url}</image:loc>
+      <image:caption>${image.caption}</image:caption>
+      <image:title>${image.title}</image:title>
+    </image:image>
+  </url>`).join('\n')}
+</urlset>`;
+
+  return imageSitemap;
+}
+
+export function generateRobotsTxt(): string {
+  const baseUrl = 'https://charlesmackaybooks.com';
+  
+  return `User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /checkout/
+Disallow: /order-complete/
+
+# Allow important static files
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /favicon.ico
+Allow: /*.css
+Allow: /*.js
+
+# Sitemaps
+Sitemap: ${baseUrl}/sitemap.xml
+Sitemap: ${baseUrl}/sitemap-images.xml
+
+# Crawl-delay for bots (optional)
+Crawl-delay: 1`;
+}

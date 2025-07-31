@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { useImageManager, ImageMetadata, ImageCategory } from '../utils/imageManagement';
 
 interface ImageUploadManagerProps {

@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-import { CartProvider } from '@/context/CartContext';
+import { ReactNode } from 'react';
 import { RecentlyViewedProvider } from '@/context/RecentlyViewedContext';
 import BasketSidebar from '@/components/BasketSidebar';
 import Analytics from '@/components/Analytics';
@@ -13,18 +12,16 @@ function BasketSidebarWrapper() {
 }
 
 interface ClientWrapperProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   pageType?: string;
 }
 
 export default function ClientWrapper({ children, pageType }: ClientWrapperProps) {
   return (
-    <CartProvider>
-      <RecentlyViewedProvider>
-        {children}
-        <BasketSidebarWrapper />
-        <Analytics />
-      </RecentlyViewedProvider>
-    </CartProvider>
+    <RecentlyViewedProvider>
+      {children}
+      <BasketSidebarWrapper />
+      <Analytics />
+    </RecentlyViewedProvider>
   );
 }
