@@ -1,0 +1,444 @@
+import PageSEO from '@/components/PageSEO'
+import type { Metadata } from 'next';
+import Header from '@/components/Header';
+
+export const metadata: Metadata = {
+  title: 'Aviation News & Research Updates | Latest Discoveries | Charles E. MacKay',
+  description: 'Latest aviation history discoveries, research updates, museum exhibitions, and archaeological findings. Expert analysis and commentary by aviation historian Charles E. MacKay.',
+  keywords: [
+    'aviation news',
+    'aviation history discoveries',
+    'aircraft archaeology',
+    'aviation museum news',
+    'aviation research updates',
+    'aircraft restoration news',
+    'aviation conference news',
+    'historical aircraft discoveries',
+    'aviation exhibition news',
+    'aircraft wreck discoveries',
+    'aviation archive discoveries',
+    'military aviation news',
+    'Scottish aviation news',
+    'aviation book releases'
+  ],
+  openGraph: {
+    title: 'Aviation News & Research Updates | Latest Discoveries',
+    description: 'Latest aviation history discoveries and research updates with expert analysis.',
+    type: 'website',
+  },
+};
+
+interface NewsArticle {
+  id: string;
+  headline: string;
+  summary: string;
+  fullContent: string;
+  publishDate: string;
+  category: 'Discovery' | 'Exhibition' | 'Research' | 'Archaeology' | 'Book Release' | 'Conference';
+  tags: string[];
+  location?: string;
+  readTime: number;
+  authorCommentary: string;
+  relatedLinks: {
+    title: string;
+    url: string;
+  }[];
+}
+
+interface UpcomingEvent {
+  title: string;
+  date: string;
+  location: string;
+  type: 'Conference' | 'Exhibition' | 'Lecture' | 'Book Launch';
+  description: string;
+  registrationUrl?: string;
+}
+
+const latestNews: NewsArticle[] = [
+  {
+    id: 'wwi-fighter-discovery-scotland-2024',
+    headline: 'WWI Fighter Aircraft Wreckage Discovered in Scottish Highlands',
+    summary: 'Archaeologists uncover remarkably preserved remains of a WWI-era aircraft in the Scottish Highlands, potentially solving a century-old mystery.',
+    fullContent: `A team of aviation archaeologists has made a significant discovery in the remote Scottish Highlands, uncovering the wreckage of what appears to be a World War I fighter aircraft. The find, located near Cairngorms National Park, includes substantial portions of the airframe, engine components, and personal effects of the pilot.
+
+Initial analysis suggests the aircraft may be a Royal Flying Corps machine that disappeared during a training flight in 1918. The preservation quality is exceptional due to the remote, high-altitude location and Scotland's climate conditions.
+
+The discovery team, working with Forestry and Land Scotland, has carefully excavated personal items including pilot's wings, a compass, and fragments of a leather flying helmet. These artifacts are providing crucial clues to the identity of both the aircraft and its pilot.
+
+Dr. Sarah Mitchell, leading the archaeological team, noted: "This discovery offers a unique window into the final days of the Great War's aviation operations. The level of preservation allows us to examine construction techniques and materials that are rarely seen in museum pieces."
+
+The wreckage site has been cordoned off while investigations continue. The team is working closely with the Commonwealth War Graves Commission to potentially identify the pilot and provide closure to any living relatives.`,
+    publishDate: '2024-01-22',
+    category: 'Discovery',
+    tags: ['WWI Aviation', 'Scotland', 'Archaeology', 'Royal Flying Corps'],
+    location: 'Scottish Highlands',
+    readTime: 4,
+    authorCommentary: 'This discovery exemplifies the ongoing importance of aviation archaeology in preserving our aviation heritage. Such finds provide invaluable primary source material that complements archival research and helps fill gaps in our historical understanding.',
+    relatedLinks: [
+      { title: 'WWI Aviation in Scotland', url: '/scottish-aviation-timeline' },
+      { title: 'Aviation Archaeology Guide', url: '/aviation-bibliography' }
+    ]
+  },
+  {
+    id: 'imperial-war-museum-helicopter-exhibition-2024',
+    headline: 'Imperial War Museum Unveils Major Helicopter Development Exhibition',
+    summary: 'New exhibition showcases the complete history of helicopter development, featuring rare prototypes and personal accounts from test pilots.',
+    fullContent: `The Imperial War Museum has opened a groundbreaking exhibition tracing the complete history of helicopter development from early experiments to modern rotorcraft. "Vertical Flight: The Helicopter Story" features over 50 aircraft and prototypes, many displayed publicly for the first time.
+
+The exhibition highlights British contributions to helicopter development, with particular focus on the Bristol Sycamore program and the work of test pilots who risked their lives proving these revolutionary machines. Interactive displays allow visitors to experience the challenges faced by early helicopter designers.
+
+A centerpiece of the exhibition is a fully restored Bristol Sycamore Mk 4, accompanied by video testimonies from surviving test pilots and engineers who worked on the program. The display includes original technical drawings, test flight reports, and previously classified documentation.
+
+The exhibition also features a section on helicopter operations in various conflicts, from Korea to the Falklands, demonstrating how these versatile machines revolutionized military operations and civilian rescue services.
+
+Special lectures and workshops will accompany the exhibition, including presentations on helicopter archaeology and the preservation of rotorcraft heritage. The exhibition runs through December 2024.`,
+    publishDate: '2024-01-18',
+    category: 'Exhibition',
+    tags: ['Helicopter History', 'Imperial War Museum', 'Bristol Sycamore', 'Exhibition'],
+    location: 'London, England',
+    readTime: 3,
+    authorCommentary: 'This exhibition represents a significant milestone in helicopter history preservation. The IWM\'s commitment to showcasing British helicopter development aligns perfectly with our research into early rotorcraft programs documented in "The Sycamore Seeds."',
+    relatedLinks: [
+      { title: 'The Sycamore Seeds Book', url: '/books/sycamore-seeds' },
+      { title: 'IWM Partnership', url: '/partnerships/imperial-war-museum' }
+    ]
+  },
+  {
+    id: 'beardmore-aviation-archive-discovery-2024',
+    headline: 'Lost Beardmore Aviation Archive Discovered in Glasgow',
+    summary: 'Construction workers discover a sealed vault containing thousands of Beardmore Aviation documents thought lost for decades.',
+    fullContent: `A remarkable discovery in Glasgow has yielded thousands of previously unknown Beardmore Aviation Company documents, providing unprecedented insight into Scotland's aviation heritage. The documents were found in a sealed vault during renovation work at a former Beardmore facility.
+
+The archive contains technical drawings, correspondence, production records, and photographs spanning Beardmore Aviation's entire operational period from 1913 to 1930. Among the most significant finds are detailed records of the R101 airship project and previously unknown aircraft designs that never reached production.
+
+Glasgow City Archives has taken custody of the collection, which includes over 3,000 technical drawings, 5,000 photographs, and extensive correspondence between Beardmore executives and government officials. The documents provide crucial missing pieces in understanding Scotland's role in early aviation development.
+
+Of particular interest are personal letters from William Beardmore himself, discussing the challenges of transitioning from traditional shipbuilding to aircraft manufacturing. The correspondence reveals the financial and technical struggles that ultimately led to the division's closure.
+
+Dr. James MacPherson of Glasgow City Archives commented: "This discovery fundamentally changes our understanding of Beardmore Aviation's operations and Scotland's contribution to early aviation. The level of detail in these documents is extraordinary."
+
+The archive is currently being cataloged and digitized, with plans for public access through Glasgow City Archives' online portal by mid-2024.`,
+    publishDate: '2024-01-15',
+    category: 'Discovery',
+    tags: ['Beardmore Aviation', 'Scotland', 'Archives', 'Glasgow'],
+    location: 'Glasgow, Scotland',
+    readTime: 5,
+    authorCommentary: 'This discovery validates much of the research methodology used in my Beardmore Aviation book. The newly found documents will provide researchers with primary source material that will undoubtedly lead to revised understanding of this crucial period in Scottish aviation history.',
+    relatedLinks: [
+      { title: 'Beardmore Aviation Book', url: '/books/beardmore-aviation' },
+      { title: 'Scottish Aviation Timeline', url: '/scottish-aviation-timeline' }
+    ]
+  },
+  {
+    id: 'international-aviation-history-conference-2024',
+    headline: 'International Aviation History Conference Announces 2024 Program',
+    summary: 'Leading aviation historians to gather in London for premier academic conference featuring latest research and discoveries.',
+    fullContent: `The International Aviation History Society has announced the program for its 2024 conference, scheduled for September in London. The three-day event will bring together leading aviation historians, museum curators, and researchers from around the world.
+
+This year's theme, "Primary Sources and Preservation," emphasizes the importance of archival research and the challenges of preserving aviation heritage in the digital age. Over 60 presentations will cover topics ranging from early aviation pioneers to modern military aircraft development.
+
+Keynote speakers include Dr. Richard Hallion, former Air Force Historian, and Dr. Christina Goulter from the University of New South Wales. Special sessions will focus on aviation archaeology, digital preservation techniques, and collaborative research methods.
+
+A highlight of the conference will be the "Future of Aviation History" panel, discussing how new technologies and research methods are changing the field. The event will also feature exhibitions of rare aviation artifacts and guided tours of London's aviation heritage sites.
+
+The conference provides an excellent opportunity for early-career researchers to present their work and network with established scholars. Student presentation awards will be given in several categories, encouraging the next generation of aviation historians.
+
+Registration is now open, with early-bird rates available through March 2024. The conference will be held at the Royal Aeronautical Society headquarters in London.`,
+    publishDate: '2024-01-12',
+    category: 'Conference',
+    tags: ['Aviation History', 'Conference', 'Academic Research', 'London'],
+    location: 'London, England',
+    readTime: 3,
+    authorCommentary: 'This conference represents the premier gathering for serious aviation history research. The focus on primary sources aligns perfectly with the methodology we advocate. I look forward to presenting our latest research on Scottish aviation heritage.',
+    relatedLinks: [
+      { title: 'Research Methodology Guide', url: '/academic-resources' },
+      { title: 'Aviation Bibliography', url: '/aviation-bibliography' }
+    ]
+  }
+];
+
+const upcomingEvents: UpcomingEvent[] = [
+  {
+    title: 'Charles E. MacKay Guest Lecture: "Hidden Stories of Scottish Aviation"',
+    date: '2024-02-15',
+    location: 'University of Glasgow',
+    type: 'Lecture',
+    description: 'Guest lecture exploring untold stories from Scotland\'s aviation heritage, including recently discovered archival materials.',
+    registrationUrl: 'https://glasgow.ac.uk/events/aviation-lecture'
+  },
+  {
+    title: 'RAF Museum "Battle of Britain 84th Anniversary" Exhibition Opening',
+    date: '2024-03-08',
+    location: 'RAF Museum London',
+    type: 'Exhibition',
+    description: 'New exhibition featuring Hurricane and Spitfire aircraft with emphasis on Scottish squadrons and pilots.'
+  },
+  {
+    title: 'Aviation Archaeology Symposium',
+    date: '2024-04-22',
+    location: 'Imperial War Museum Duxford',
+    type: 'Conference',
+    description: 'International symposium on aviation archaeology methods and recent discoveries.',
+    registrationUrl: 'https://iwm.org.uk/events/aviation-archaeology'
+  },
+  {
+    title: 'New Book Launch: "Clydeside Aviation Volume Three"',
+    date: '2024-05-10',
+    location: 'Glasgow, Scotland',
+    type: 'Book Launch',
+    description: 'Launch event for the third volume covering post-war Scottish aviation development.'
+  }
+];
+
+const researchHighlights = [
+  {
+    title: 'Digital Archive Expansion',
+    description: 'Over 2,000 new documents added to our digital aviation archive this quarter',
+    metric: '2,147 documents',
+    period: 'Q4 2023'
+  },
+  {
+    title: 'Academic Citations',
+    description: 'Our research has been cited in academic papers and dissertations worldwide',
+    metric: '89 citations',
+    period: 'Last 6 months'
+  },
+  {
+    title: 'Museum Partnerships',
+    description: 'Active collaborations with major aviation museums for research and exhibitions',
+    metric: '7 active partnerships',
+    period: 'Current'
+  },
+  {
+    title: 'Student Resources',
+    description: 'Downloads of our academic research guides and citation templates',
+    metric: '1,834 downloads',
+    period: 'This quarter'
+  }
+];
+
+export default function AviationNewsPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "Charles E. MacKay Aviation News",
+    "description": "Latest aviation history discoveries, research updates, and expert analysis",
+    "author": {
+      "@type": "Person",
+      "name": "Charles E. MacKay",
+      "url": "https://charlesmackaybooks.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Charles E. MacKay Aviation Research"
+    }
+  };
+
+  return (
+    <>
+      <Header />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="container mx-auto px-4 py-12">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+              Aviation News & Updates
+            </h1>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              Latest discoveries, research developments, and expert analysis in aviation history.
+              Stay informed about new findings, exhibitions, and academic developments in the field.
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+              <span>📰 Latest Discoveries</span>
+              <span>🏛️ Exhibition News</span>
+              <span>🔍 Research Updates</span>
+              <span>📚 Expert Analysis</span>
+            </div>
+          </div>
+
+          {/* Research Highlights */}
+          <div className="mb-12 bg-white rounded-xl shadow-sm p-8">
+            <h2 className="text-3xl font-bold text-slate-800 mb-6 text-center">Research Highlights</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {researchHighlights.map((highlight, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{highlight.metric}</div>
+                  <div className="font-semibold text-slate-800 mb-1">{highlight.title}</div>
+                  <div className="text-sm text-slate-600 mb-2">{highlight.description}</div>
+                  <div className="text-xs text-slate-500">{highlight.period}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Latest News */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-800 mb-8">Latest News</h2>
+            <div className="space-y-8">
+              {latestNews.map((article, index) => (
+                <article key={article.id} className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
+                  <div className="flex flex-wrap items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-800 mb-2">{article.headline}</h3>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                          article.category === 'Discovery' ? 'bg-green-100 text-green-800' :
+                          article.category === 'Exhibition' ? 'bg-purple-100 text-purple-800' :
+                          article.category === 'Research' ? 'bg-blue-100 text-blue-800' :
+                          article.category === 'Archaeology' ? 'bg-amber-100 text-amber-800' :
+                          article.category === 'Book Release' ? 'bg-indigo-100 text-indigo-800' :
+                          'bg-slate-100 text-slate-800'
+                        }`}>
+                          {article.category}
+                        </span>
+                        {article.location && (
+                          <span className="px-2 py-1 bg-slate-100 text-slate-700 rounded-full text-xs">
+                            📍 {article.location}
+                          </span>
+                        )}
+                        <span className="px-2 py-1 bg-slate-100 text-slate-700 rounded-full text-xs">
+                          {article.readTime} min read
+                        </span>
+                      </div>
+                    </div>
+                    <div className="text-sm text-slate-500">
+                      {new Date(article.publishDate).toLocaleDateString('en-GB', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </div>
+                  </div>
+
+                  <p className="text-slate-700 mb-4 text-lg">{article.summary}</p>
+
+                  <div className="prose max-w-none text-slate-700 mb-6">
+                    {article.fullContent.split('\n\n').map((paragraph, i) => (
+                      <p key={i} className="mb-4">{paragraph}</p>
+                    ))}
+                  </div>
+
+                  <div className="bg-blue-50 p-4 rounded-lg mb-4">
+                    <h4 className="font-semibold text-blue-800 mb-2">Expert Commentary:</h4>
+                    <p className="text-blue-700 italic">{article.authorCommentary}</p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4 items-center justify-between">
+                    <div className="flex flex-wrap gap-2">
+                      {article.tags.map((tag) => (
+                        <span key={tag} className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-sm">
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex gap-3">
+                      {article.relatedLinks.map((link) => (
+                        <a key={link.title} href={link.url} className="text-blue-600 hover:underline text-sm">
+                          {link.title} →
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          {/* Upcoming Events */}
+          <div className="mb-12 bg-white rounded-xl shadow-sm p-8">
+            <h2 className="text-3xl font-bold text-slate-800 mb-6">Upcoming Events</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {upcomingEvents.map((event, index) => (
+                <div key={index} className="border border-slate-200 rounded-lg p-4">
+                  <div className="flex justify-between items-start mb-3">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-slate-800">{event.title}</h3>
+                      <div className="text-slate-600 text-sm">{event.location}</div>
+                    </div>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                      event.type === 'Conference' ? 'bg-blue-100 text-blue-800' :
+                      event.type === 'Exhibition' ? 'bg-purple-100 text-purple-800' :
+                      event.type === 'Lecture' ? 'bg-green-100 text-green-800' :
+                      'bg-amber-100 text-amber-800'
+                    }`}>
+                      {event.type}
+                    </span>
+                  </div>
+
+                  <div className="text-slate-500 text-sm mb-3">
+                    📅 {new Date(event.date).toLocaleDateString('en-GB', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </div>
+
+                  <p className="text-slate-700 mb-3">{event.description}</p>
+
+                  {event.registrationUrl && (
+                    <a
+                      href={event.registrationUrl}
+                      className="text-blue-600 hover:underline text-sm font-medium"
+                    >
+                      Register Now →
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Newsletter Subscription */}
+          <div className="bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-8">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+              <p className="text-green-100 max-w-2xl mx-auto">
+                Subscribe to receive the latest aviation history discoveries, research updates,
+                and exclusive insights delivered directly to your inbox.
+              </p>
+            </div>
+
+            <div className="max-w-md mx-auto">
+              <div className="flex gap-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="flex-1 px-4 py-2 rounded-lg text-slate-800"
+                />
+                <button className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-400 transition-colors">
+                  Subscribe
+                </button>
+              </div>
+              <p className="text-green-200 text-sm mt-3 text-center">
+                Join 2,500+ aviation enthusiasts and researchers. Unsubscribe anytime.
+              </p>
+            </div>
+
+            <div className="mt-8 grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-2xl font-bold text-green-200">Weekly</div>
+                <div className="text-green-100">News Updates</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-green-200">Monthly</div>
+                <div className="text-green-100">Research Roundup</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-green-200">Exclusive</div>
+                <div className="text-green-100">Behind-the-Scenes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
