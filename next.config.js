@@ -12,12 +12,18 @@ const nextConfig = {
   output: undefined,
   distDir: '.next',
 
-  // Image configuration
+  // Image configuration with performance optimization
   images: {
     domains: [
       'charlesmackaybooks.com',
       'same-assets.com'
     ],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
   // Redirect configuration - aircraft pages moved to blog
@@ -72,6 +78,33 @@ const nextConfig = {
       },
       {
         source: '/blog-images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/styles/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/scripts/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/fonts/:path*',
         headers: [
           {
             key: 'Cache-Control',

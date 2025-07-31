@@ -7,7 +7,7 @@ export default function Header() {
   const { getTotalItems, openBasket } = useCart();
 
   return (
-    <header className="bg-slate-800 text-white">
+    <header className="bg-slate-800 text-white sticky top-0 z-50 shadow-lg">
       {/* Top Header Bar */}
       <div className="bg-slate-800">
         <div className="container mx-auto px-4 py-4">
