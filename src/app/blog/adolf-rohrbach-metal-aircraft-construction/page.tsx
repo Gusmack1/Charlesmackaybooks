@@ -207,14 +207,14 @@ export default function AdolfRohrbachPage() {
           {/* Rohrbach Aircraft Image */}
           <div className="mb-12">
             <Image
-              src="/blog-images/rohrbach-roland-flying-boat.jpg"
-              alt="Rohrbach Roland flying boat showcasing all-metal construction techniques"
+              src="/blog-images/rohrbach-ro-ix-aircraft.jpg"
+              alt="Rohrbach Ro IX aircraft showcasing all-metal construction techniques"
               width={800}
               height={600}
               className="w-full rounded-lg shadow-lg"
             />
             <p className="text-sm text-slate-600 text-center mt-2 italic">
-              The Rohrbach Roland flying boat, demonstrating advanced all-metal construction techniques in maritime aviation
+              The Rohrbach Ro IX aircraft, demonstrating advanced all-metal construction techniques in aviation design
             </p>
           </div>
 
@@ -258,17 +258,17 @@ export default function AdolfRohrbachPage() {
             </div>
           </section>
 
-          {/* Rohrbach Ro IX Image */}
+          {/* Aircraft Manufacturing Image */}
           <div className="mb-12">
             <Image
-              src="/blog-images/rohrbach-ro-ix-aircraft.jpg"
-              alt="Rohrbach Ro IX aircraft displaying advanced metal construction techniques"
+              src="/blog-images/aircraft-factory-assembly-line.jpg"
+              alt="Aircraft factory assembly line showcasing modern manufacturing techniques"
               width={800}
               height={600}
               className="w-full rounded-lg shadow-lg"
             />
             <p className="text-sm text-slate-600 text-center mt-2 italic">
-              The Rohrbach Ro IX, showcasing the evolution of all-metal construction techniques in aircraft design
+              Modern aircraft manufacturing assembly line, demonstrating the legacy of Rohrbach's production innovations
             </p>
           </div>
 
