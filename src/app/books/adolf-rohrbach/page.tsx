@@ -459,6 +459,57 @@ export default function AdolfRohrbachPage() {
             </Link>
           </div>
         </section>
+
+        {/* Related Blog Posts */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-slate-800 mb-8">Related Blog Posts</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link href="/blog/adolf-rohrbach-metal-aircraft-construction" className="group">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
+                <div className="flex gap-4">
+                  <Image
+                    src="/blog-images/metal-aircraft-construction.jpg"
+                    alt="Metal aircraft construction"
+                    width={80}
+                    height={60}
+                    className="rounded flex-shrink-0"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
+                      Adolf Rohrbach: Metal Aircraft Revolution
+                    </h3>
+                    <p className="text-sm text-gray-600 mt-2">
+                      The visionary engineer who transformed aviation through revolutionary all-metal construction and stressed-skin monocoque design.
+                    </p>
+                    <div className="text-orange-600 text-sm mt-2">Read more →</div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/german-aircraft-great-war-development" className="group">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
+                <div className="flex gap-4">
+                  <Image
+                    src="/blog-images/german-aircraft-albatros-d3-historical.jpg"
+                    alt="German Albatros D3 aircraft"
+                    width={80}
+                    height={60}
+                    className="rounded flex-shrink-0"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
+                      German Aircraft Development in the Great War
+                    </h3>
+                    <p className="text-sm text-gray-600 mt-2">
+                      How German aviation innovation during WWI laid the foundation for post-war aircraft construction techniques.
+                    </p>
+                    <div className="text-orange-600 text-sm mt-2">Read more →</div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
       </div>
     </div>
   )

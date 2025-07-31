@@ -390,6 +390,59 @@ export default function BristolFighterPage() {
           </div>
         </section>
 
+        {/* Related Books */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Related Charles MacKay Books</h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/books/british-aircraft-great-war" className="group">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
+                <div className="flex gap-4">
+                  <Image
+                    src="/book-covers/british-aircraft-great-war.jpg"
+                    alt="British Aircraft in the Great War book cover"
+                    width={80}
+                    height={120}
+                    className="rounded"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                      British Aircraft in the Great War
+                    </h3>
+                    <p className="text-sm text-gray-600 mt-2">
+                      Comprehensive coverage of British aviation during WWI, including detailed analysis of the Bristol Fighter and other iconic aircraft.
+                    </p>
+                    <div className="text-blue-600 text-sm mt-2">Read more →</div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/books/beardmore-aviation" className="group">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
+                <div className="flex gap-4">
+                  <Image
+                    src="/book-covers/beardmore-aviation.jpg"
+                    alt="Beardmore Aviation book cover"
+                    width={80}
+                    height={120}
+                    className="rounded"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                      Beardmore Aviation: Scottish Industrial Giant
+                    </h3>
+                    <p className="text-sm text-gray-600 mt-2">
+                      The story of Beardmore's aviation manufacturing, including their role in WWI aircraft production and development.
+                    </p>
+                    <div className="text-blue-600 text-sm mt-2">Read more →</div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+
         {/* Author Bio */}
         <section className="bg-slate-100 rounded-lg p-8">
           <div className="flex items-start gap-6">

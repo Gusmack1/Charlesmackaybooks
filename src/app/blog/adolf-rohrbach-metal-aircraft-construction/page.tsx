@@ -361,6 +361,59 @@ export default function AdolfRohrbachPage() {
             </div>
           </div>
 
+          {/* Related Blog Posts */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 mb-12">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">
+              📖 Related Blog Posts
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link href="/blog/german-aircraft-great-war-development" className="group">
+                <div className="bg-white rounded-lg p-6 shadow-md group-hover:shadow-lg transition-shadow">
+                  <div className="flex gap-4">
+                    <Image
+                      src="/blog-images/german-aircraft-albatros-d3-historical.jpg"
+                      alt="German Albatros D3 aircraft"
+                      width={80}
+                      height={60}
+                      className="rounded flex-shrink-0"
+                    />
+                    <div>
+                      <h3 className="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">
+                        German Aircraft Development in the Great War
+                      </h3>
+                      <p className="text-slate-700 text-sm">
+                        How German aviation innovation during WWI laid the foundation for post-war aircraft construction techniques.
+                      </p>
+                      <div className="text-blue-600 text-sm mt-2">Read more →</div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/aviation-manufacturing-wartime-production" className="group">
+                <div className="bg-white rounded-lg p-6 shadow-md group-hover:shadow-lg transition-shadow">
+                  <div className="flex gap-4">
+                    <Image
+                      src="/blog-images/aircraft-factory-assembly-line.jpg"
+                      alt="Aircraft factory assembly line"
+                      width={80}
+                      height={60}
+                      className="rounded flex-shrink-0"
+                    />
+                    <div>
+                      <h3 className="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">
+                        Aviation Manufacturing: Wartime Production
+                      </h3>
+                      <p className="text-slate-700 text-sm">
+                        The evolution of aircraft manufacturing techniques from wartime production to modern aerospace.
+                      </p>
+                      <div className="text-blue-600 text-sm mt-2">Read more →</div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+
           {/* Social Share */}
           <div className="mb-12">
             <SocialShare
