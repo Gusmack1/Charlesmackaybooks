@@ -120,7 +120,6 @@ export const codeSplittingConfig = {
     'BlogPostTemplate': () => import('../components/BlogPostTemplate'),
     'OptimizedImage': () => import('../components/OptimizedImage'),
     'SocialShare': () => import('../components/SocialShare'),
-    'ReadingProgress': () => import('../components/ReadingProgress'),
   },
   
   // Lazy load thresholds
