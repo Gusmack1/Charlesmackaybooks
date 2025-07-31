@@ -115,6 +115,36 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Personal Aviation Memory - Hero Section */}
+            <div className="lg:col-span-2 mt-8">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-white mb-3">A Personal Aviation Memory</h3>
+                <div className="flex gap-4 items-start">
+                  <Image
+                    src="/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg"
+                    alt="Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield, February 13, 1971"
+                    width={120}
+                    height={80}
+                    className="rounded shadow-lg flex-shrink-0"
+                  />
+                  <div>
+                    <p className="text-sm text-blue-100 mb-2">
+                      <strong>Charles with De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971.</strong> This iconic photograph captures a pivotal moment in Charles MacKay's aviation journey, standing beside the very aircraft that would later become the subject of his comprehensive research. The Chipmunk WP808 represents the bridge between wartime training aircraft and post-war aviation development, embodying the transition from military to civilian aviation that has been a central theme in MacKay's historical work.
+                    </p>
+                    <p className="text-sm text-blue-100 mb-2">
+                      This personal connection to aviation history reflects his lifelong passion for preserving the stories of aircraft and the people who flew them. The image symbolizes the hands-on approach that characterizes MacKay's research methodology - combining archival investigation with personal experience and direct engagement with aviation heritage.
+                    </p>
+                    <Link
+                      href="/blog/de-havilland-chipmunk-wp808-turnhouse"
+                      className="text-blue-200 hover:text-blue-100 text-sm font-medium underline"
+                    >
+                      Read the full story of WP808 and Turnhouse airfield →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* About Content */}
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -179,34 +209,6 @@ export default function AboutPage() {
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 As an alumnus of the University of Glasgow, MacKay brings academic rigor to his historical research while maintaining a passionate commitment to preserving Scotland's aviation legacy for future generations.
               </p>
-
-              {/* Personal Aviation Memory */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-3">A Personal Aviation Memory</h3>
-                <div className="flex gap-4 items-start">
-                  <Image
-                    src="/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg"
-                    alt="Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield, February 13, 1971"
-                    width={120}
-                    height={80}
-                    className="rounded shadow-lg flex-shrink-0"
-                  />
-                  <div>
-                    <p className="text-sm text-gray-700 mb-2">
-                      <strong>Charles with De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971.</strong> This iconic photograph captures a pivotal moment in Charles MacKay's aviation journey, standing beside the very aircraft that would later become the subject of his comprehensive research. The Chipmunk WP808 represents the bridge between wartime training aircraft and post-war aviation development, embodying the transition from military to civilian aviation that has been a central theme in MacKay's historical work.
-                    </p>
-                    <p className="text-sm text-gray-700 mb-2">
-                      This personal connection to aviation history reflects his lifelong passion for preserving the stories of aircraft and the people who flew them. The image symbolizes the hands-on approach that characterizes MacKay's research methodology - combining archival investigation with personal experience and direct engagement with aviation heritage.
-                    </p>
-                    <Link
-                      href="/blog/de-havilland-chipmunk-wp808-turnhouse"
-                      className="text-blue-600 hover:text-blue-800 text-sm font-medium"
-                    >
-                      Read the full story of WP808 and Turnhouse airfield →
-                    </Link>
-                  </div>
-                </div>
-              </div>
             </div>
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
