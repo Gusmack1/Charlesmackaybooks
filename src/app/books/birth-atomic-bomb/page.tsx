@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       alt: bookData.title
     }],
     locale: 'en_GB',
-    type: 'product',
+    type: 'book',
   },
   twitter: {
     card: 'summary_large_image',
