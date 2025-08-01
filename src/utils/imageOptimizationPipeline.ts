@@ -214,7 +214,7 @@ class ImageOptimizationPipeline {
    */
   private optimizeAltText(originalAlt: string, category: string): string {
     // Remove redundant words
-    let optimized = originalAlt
+    const optimized = originalAlt
       .replace(/\b(image|picture|photo|illustration)\b/gi, '')
       .replace(/\s+/g, ' ')
       .trim();

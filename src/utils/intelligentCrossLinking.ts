@@ -76,7 +76,7 @@ class IntelligentCrossLinkingSystem {
     const relationships = this.relationships.get(contentId) || [];
     
     // Filter and rank suggestions
-    let suggestions = relationships
+    const suggestions = relationships
       .filter(rel => {
         const targetContent = this.contentIndex.get(rel.targetId);
         if (!targetContent) return false;

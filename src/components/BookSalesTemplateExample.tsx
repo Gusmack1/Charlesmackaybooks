@@ -25,9 +25,18 @@ const BookSalesTemplateExample: FC = () => {
     plotSummary: 'This groundbreaking study traces the evolution of metal aircraft construction through the lens of Adolf Rohrbach\'s revolutionary designs. From his early experiments with all-metal construction to the development of the iconic Rohrbach Roland flying boat, the book examines how Rohrbach\'s engineering innovations shaped the future of aviation.',
     authorBio: 'Charles E. MacKay is a distinguished aviation historian with over three decades of research experience in early 20th-century aircraft development. His expertise spans the technical, social, and economic aspects of aviation history, with particular focus on German aircraft manufacturers and their contributions to aeronautical engineering.',
     editorialReviews: [
-      'A masterful examination of one of aviation\'s most influential designers. MacKay\'s research is impeccable and his narrative compelling.' - Aviation History Magazine',
-      'Essential reading for anyone interested in the development of metal aircraft construction. This book fills a significant gap in aviation literature.' - Journal of Aeronautical History',
-      'MacKay brings Rohrbach\'s story to life with vivid detail and technical accuracy. A must-have for aviation enthusiasts and historians alike.' - Flight International'
+      {
+        source: 'Aviation History Magazine',
+        quote: 'A masterful examination of one of aviation\'s most influential designers. MacKay\'s research is impeccable and his narrative compelling.'
+      },
+      {
+        source: 'Journal of Aeronautical History',
+        quote: 'Essential reading for anyone interested in the development of metal aircraft construction. This book fills a significant gap in aviation literature.'
+      },
+      {
+        source: 'Flight International',
+        quote: 'MacKay brings Rohrbach\'s story to life with vivid detail and technical accuracy. A must-have for aviation enthusiasts and historians alike.'
+      }
     ],
     readerTestimonials: [
       {
