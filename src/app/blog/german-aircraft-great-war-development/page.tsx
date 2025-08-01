@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'german-aircraft-great-war-development',
   title: `German Aircraft Great War Development`,
-  excerpt: `Comprehensive analysis of German aircraft development during World War I, from early Taube monoplanes to advanced Albatros and Fokker fighters that dominated the skies.`,
+  subtitle: `Comprehensive analysis of German aircraft development during World War I, from early Taube monoplanes to advanced Albatros and Fokker fighters that dominated the skies.`,
   content: `
     <h2 id="introduction">Introduction: German Aviation Innovation</h2>
     <p>German aircraft development during World War I represents one of aviation history's most dynamic and innovative periods. From the pre-war Taube monoplanes to the sophisticated Albatros fighters and revolutionary Fokker triplanes, German aviation evolved rapidly under the pressures of aerial warfare, establishing design principles and manufacturing techniques that influenced global aviation development.</p>
@@ -103,72 +104,57 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `Comprehensive analysis of German aircraft development during World War I, from early Taube monoplanes to advanced Albatros and Fokker fighters that dominated the skies.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/albatros-dva-german-fighter.jpg',
+    alt: 'German Aircraft Great War Development',
+    caption: 'German Aircraft Great War Development - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
-  tags: ["german","aircraft","great","war","development"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/german-aircraft-great-war-development-featured.jpg","alt":"Featured image for German Aircraft Great War Development","caption":"Historical photograph related to German Aircraft Great War Development"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["german","aircraft","great","war","development","wwi","fighter"],
+  relatedBooks: [
+    {
+      id: 'german-aircraft-great-war',
+      title: 'German Aircraft in the Great War 1914-1918',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/german-aircraft-great-war.jpg',
+      price: 13.93
+    },
+    {
+      id: 'british-aircraft-great-war',
+      title: 'British Aircraft of the Great War',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/british-aircraft-great-war.jpg',
+      price: 12.91
+    }
+  ],
+  relatedPosts: [
+    {
+      id: 'sopwith-camel-wwi-fighter',
+      title: 'Sopwith Camel: The WWI Fighter That Won Air Superiority',
+      excerpt: 'The most successful Allied fighter of the Great War.',
+      image: '/blog-images/fokker-dr1-red-baron-replica.jpg',
+      readingTime: 17
+    },
+    {
+      id: 'bristol-fighter-f2b-brisfit',
+      title: 'Bristol Fighter F2B: The Legendary Brisfit',
+      excerpt: 'The two-seat fighter that became one of the most successful British aircraft of WWI.',
+      image: '/blog-images/bristol-fighter-f2b-flying.jpg',
+      readingTime: 14
+    }
+  ]
 }
 
-const relatedBooks = [
-  {
-    id: 'german-aircraft-great-war',
-    title: 'German Aircraft in the Great War 1914-1918',
-    price: 13.93,
-    description: 'Comprehensive study of German military aircraft during WWI (1914-1918). Covers fighters, bombers, seaplanes, and trainers used by the German Air Force and Navy. Detailed technical specifications and operational history with rare photographs. Essential reference for WWI aviation historians, German aviation development, and Great War aircraft research.',
-    imageUrl: '/book-covers/german-aircraft-great-war.jpg',
-    relevantContent: 'The definitive reference for this blog post topic, providing detailed technical specifications and operational histories of all major German aircraft types during the Great War.'
-  },
-  {
-    id: 'british-aircraft-great-war',
-    title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats',
-    price: 12.91,
-    description: 'Complete overview of British military aircraft during the Great War (1914-1918). Detailed coverage of all aircraft types used by the RFC, RNAS, and early RAF with technical data and operational histories. Comprehensive reference for British WWI aviation, RFC history, RNAS operations, and early RAF aircraft development.',
-    imageUrl: '/book-covers/british-aircraft-great-war.jpg',
-    relevantContent: 'Essential companion providing the Allied perspective on WWI aviation, showing the aircraft that German fighters faced in combat and competed against for air superiority.'
-  },
-  {
-    id: 'clydeside-aviation-vol1',
-    title: 'Clydeside Aviation Volume One: The Great War',
-    price: 16.08,
-    description: 'First volume covering aviation activities on the Clyde during WWI (1914-1918). Detailed account of aircraft manufacturing, pilot training, and military aviation operations in Scotland during the Great War period. ⬢ ACADEMIC REFERENCE - Cited by British Aviation historians. Covers RFC, RNAS, and early RAF operations in Scotland, aircraft production facilities, and wartime aviation development.',
-    imageUrl: '/book-covers/clydeside-aviation-vol1.jpg',
-    relevantContent: 'Provides insight into Allied aircraft production and pilot training that German aviation had to compete against during the Great War period.'
-  }
-]
 
-const relatedPosts = [
-  {
-    title: 'Sopwith Camel: The WWI Fighter That Won Air Superiority',
-    slug: 'sopwith-camel-wwi-fighter',
-    excerpt: 'The most successful Allied fighter of the Great War. Discover how this tricky but effective aircraft shot down more enemy planes than any other Allied fighter.',
-    imageUrl: '/blog-images/fokker-dr1-red-baron-replica.jpg',
-    readTime: '17 min'
-  },
-  {
-    title: 'Bristol Fighter F2B: The Legendary Brisfit of the Great War',
-    slug: 'bristol-fighter-f2b-brisfit',
-    excerpt: 'The two-seat fighter that became one of the most successful British aircraft of WWI, transforming from initial disaster to aerial supremacy.',
-    imageUrl: '/blog-images/bristol-fighter-f2b-flying.jpg',
-    readTime: '14 min'
-  },
-  {
-    title: 'British Aircraft Great War: RFC & RNAS Development',
-    slug: 'british-aircraft-great-war-rfc-rnas',
-    excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters.',
-    imageUrl: '/blog-images/rfc-pilots-no32-squadron-1916.jpg',
-    readTime: '14 min'
-  },
-  {
-    title: 'Messerschmitt Me 262: Revolutionary Jet Fighter That Changed Aerial Warfare',
-    slug: 'me262-jet-fighter-revolution',
-    excerpt: 'The world\'s first operational jet fighter that introduced the jet age and transformed aerial combat during WWII\'s final phase.',
-    imageUrl: '/blog-images/me262-jet-fighter-historical.jpg',
-    readTime: '13 min'
-  }
-]
 
 export const metadata: Metadata = {
   title: `German Aircraft Great War Development | Charles E. MacKay`,
