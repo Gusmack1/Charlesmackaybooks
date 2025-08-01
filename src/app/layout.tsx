@@ -4,7 +4,6 @@ import './globals.css'
 import ClientWrapper from '@/components/ClientWrapper'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
-import PerformanceOptimizer from '@/components/PerformanceOptimizer'
 import { CartProvider } from '@/context/CartContext'
 import { WishlistProvider } from '@/context/WishlistContext'
 
@@ -159,11 +158,9 @@ export default function RootLayout({
 
         <CartProvider>
           <WishlistProvider>
-            <PerformanceOptimizer>
-              <ClientWrapper>
-                {children}
-              </ClientWrapper>
-            </PerformanceOptimizer>
+            <ClientWrapper>
+              {children}
+            </ClientWrapper>
           </WishlistProvider>
         </CartProvider>
       </body>
