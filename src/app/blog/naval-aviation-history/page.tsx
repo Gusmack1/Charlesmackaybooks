@@ -3,11 +3,23 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 const post = {
   id: 'naval-aviation-history',
-  title: `Naval Aviation History`,
-  subtitle: `Comprehensive analysis of naval aviation history with expert historical research and technical details.`,
+  title: `Naval Aviation History: From Seaplanes to Supercarriers`,
+  subtitle: `The complete evolution of naval aviation from its pioneering days to modern carrier operations.`,
   content: `
     <h2 id="introduction">Introduction: The Story Begins</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <div class="my-8">
+      <img src="/blog-images/hms-argus-aircraft-carrier.jpg" alt="HMS Argus, the world's first true aircraft carrier" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus established the template for all future aircraft carriers with its full-length flight deck.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/carrier-evolution-diagram.jpg" alt="Evolution of aircraft carrier design" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The progression from early seaplane carriers to modern supercarriers.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/modern-carrier-operations.jpg" alt="Modern aircraft carrier operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Contemporary carrier operations demonstrate the culmination of over a century of naval aviation development.</p>
+    </div>
     
     <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
 
@@ -102,7 +114,29 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["naval","aviation","history","military","maritime"],
-  relatedBooks: [],
+  relatedBooks: [
+  {
+    "id": "aircraft-carrier-argus",
+    "title": "Aircraft Carrier Argus: The World's First True Aircraft Carrier",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/aircraft-carrier-argus.jpg",
+    "price": 22.99
+  },
+  {
+    "id": "beardmore-aviation",
+    "title": "Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/beardmore-aviation.jpg",
+    "price": 12.76
+  },
+  {
+    "id": "british-aircraft-great-war",
+    "title": "British Aircraft of the Great War",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/british-aircraft-great-war.jpg",
+    "price": 22.99
+  }
+],
   relatedPosts: []
 }
 

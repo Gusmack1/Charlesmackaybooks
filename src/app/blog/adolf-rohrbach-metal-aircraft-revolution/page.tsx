@@ -3,11 +3,23 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 const post = {
   id: 'adolf-rohrbach-metal-aircraft-revolution',
-  title: `Adolf Rohrbach: The Metal Aircraft Revolution That Changed Aviation`,
-  subtitle: `How German engineer Adolf Rohrbach's revolutionary metal aircraft construction techniques transformed aviation design and established manufacturing principles still used today.`,
+  title: `Adolf Rohrbach: The Metal Aircraft Revolution`,
+  subtitle: `How Adolf Rohrbach's revolutionary metal aircraft construction techniques transformed aviation design and manufacturing.`,
   content: `
     <h2 id="introduction">Introduction: The Engineering Visionary</h2>
     <p>In the early 1920s, when most aircraft were still constructed from wood and fabric, a German engineer named Adolf Rohrbach was quietly revolutionizing aviation with metal construction techniques that would transform the industry. His innovative approaches to aircraft design and manufacturing established principles that remain fundamental to modern aviation, yet his contributions have often been overlooked in aviation history.</p>
+    <div class="my-8">
+      <img src="/blog-images/metal-aircraft-construction.jpg" alt="Metal aircraft construction" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Revolutionary metal construction techniques that changed aircraft design forever.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/beardmore-aviation-factory.jpg" alt="Beardmore aviation factory" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Modern aviation manufacturing facilities that benefited from Rohrbach's innovations.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/curtiss-nc4-flying-boat.jpg" alt="Early flying boat design" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Early flying boat designs that influenced Rohrbach's metal construction approach.</p>
+    </div>
     
     <p>Rohrbach's work extended far beyond simple material substitution - he developed entirely new approaches to aircraft design that leveraged metal's unique properties while solving fundamental problems of strength, weight, and manufacturing efficiency. This comprehensive analysis reveals how this pioneering engineer's innovations influenced aircraft development worldwide and established manufacturing techniques still used today.</p>
 
@@ -92,7 +104,29 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["adolf","rohrbach","metal","aircraft","revolution"],
-  relatedBooks: [],
+  relatedBooks: [
+  {
+    "id": "adolf-rohrbach",
+    "title": "Adolf Rohrbach: Pioneer of Metal Aircraft Construction",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/adolf-rohrbach.jpg",
+    "price": 27.99
+  },
+  {
+    "id": "beardmore-aviation",
+    "title": "Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/beardmore-aviation.jpg",
+    "price": 12.76
+  },
+  {
+    "id": "german-aircraft-great-war",
+    "title": "German Aircraft of the Great War",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/german-aircraft-great-war.jpg",
+    "price": 22.99
+  }
+],
   relatedPosts: []
 }
 

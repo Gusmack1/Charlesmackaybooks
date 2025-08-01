@@ -3,11 +3,23 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 const post = {
   id: 'me262-jet-fighter-revolution',
-  title: `Messerschmitt Me 262: The World First Operational Jet Fighter`,
-  subtitle: `The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.`,
+  title: `Me 262: The Jet Fighter Revolution`,
+  subtitle: `The revolutionary Messerschmitt Me 262 that introduced the jet age to aerial combat and changed warfare forever.`,
   content: `
     <h2 id="introduction">Introduction: The World's First Operational Jet Fighter</h2>
     <p>The Messerschmitt Me 262 stands as one of aviation history's most revolutionary aircraft - the world's first operational jet fighter that fundamentally changed the nature of air combat. First flying in 1942 and entering service in 1944, the Me 262 introduced jet propulsion to military aviation and established design principles that would influence fighter development for decades to come.</p>
+    <div class="my-8">
+      <img src="/blog-images/me262-jet-fighter-historical.jpg" alt="Messerschmitt Me 262 jet fighter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The revolutionary Messerschmitt Me 262, the world's first operational jet fighter.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/me262-luftwaffe-historical.jpg" alt="Me 262 in Luftwaffe service" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Me 262 aircraft in Luftwaffe service during the final months of World War II.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Post-war jet fighters that evolved from the Me 262's revolutionary design.</p>
+    </div>
     
     <div class="my-8">
       <img src="/blog-images/me262-jet-fighter-historical.jpg" alt="Messerschmitt Me 262 jet fighter in historical photograph" class="w-full h-auto rounded-lg shadow-lg"/>
@@ -107,7 +119,29 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["me262","jet","fighter","revolution"],
-  relatedBooks: [],
+  relatedBooks: [
+  {
+    "id": "enemy-luftwaffe-1945",
+    "title": "Enemy in the Sky: The Luftwaffe in 1945",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/enemy-luftwaffe-1945.jpg",
+    "price": 23.99
+  },
+  {
+    "id": "german-aircraft-great-war",
+    "title": "German Aircraft of the Great War",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/german-aircraft-great-war.jpg",
+    "price": 22.99
+  },
+  {
+    "id": "sonic-to-standoff",
+    "title": "From Sonic to Standoff: The Evolution of Air Combat",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/sonic-to-standoff.jpg",
+    "price": 28.99
+  }
+],
   relatedPosts: []
 }
 

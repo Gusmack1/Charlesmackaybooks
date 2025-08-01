@@ -3,11 +3,23 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 const post = {
   id: 'korean-war-air-combat',
-  title: `Korean War Air Combat: MiG Alley and the Jet Age`,
-  subtitle: `The first jet-versus-jet air battles over Korea, where F-86 Sabres clashed with MiG-15s in the world's first supersonic air war.`,
+  title: `Korean War Air Combat: The Jet Age in Battle`,
+  subtitle: `The intense aerial battles of the Korean War that proved the effectiveness of jet fighters in modern warfare.`,
   content: `
     <h2 id="introduction">Introduction: The World's First Jet War</h2>
     <p>The Korean War marked a revolutionary turning point in military aviation - the world's first conflict where jets clashed in large-scale air combat. Over the skies of North Korea, particularly in the infamous "MiG Alley," American F-86 Sabres engaged Soviet-built MiG-15s in supersonic duels that established the template for modern air warfare.</p>
+    <div class="my-8">
+      <img src="/blog-images/f86-sabre-fighter-jet.jpg" alt="F-86 Sabre fighter jet" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The F-86 Sabre, America's premier jet fighter of the Korean War.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/mig15-korean-war-fighter.jpg" alt="MiG-15 Korean War fighter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The MiG-15, the Soviet jet fighter that challenged American air superiority.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/f86-vs-mig15-combat.jpg" alt="F-86 vs MiG-15 combat" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The epic jet fighter battles that defined air combat in the Korean War.</p>
+    </div>
     
     <div class="my-8">
       <img src="/blog-images/korean-war-aviation.jpg" alt="Korean War aviation showing F-86 and MiG aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
@@ -112,7 +124,29 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["korean","war","air","combat"],
-  relatedBooks: [],
+  relatedBooks: [
+  {
+    "id": "sabres-from-north",
+    "title": "Sabres from the North: The RCAF and the Korean War",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/sabres-from-north.jpg",
+    "price": 21.99
+  },
+  {
+    "id": "enemy-luftwaffe-1945",
+    "title": "Enemy in the Sky: The Luftwaffe in 1945",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/enemy-luftwaffe-1945.jpg",
+    "price": 23.99
+  },
+  {
+    "id": "sonic-to-standoff",
+    "title": "From Sonic to Standoff: The Evolution of Air Combat",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/sonic-to-standoff.jpg",
+    "price": 28.99
+  }
+],
   relatedPosts: []
 }
 

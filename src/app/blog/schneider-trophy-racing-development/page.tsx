@@ -3,11 +3,23 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 const post = {
   id: 'schneider-trophy-racing-development',
-  title: `Schneider Trophy Racing Development`,
-  subtitle: `Comprehensive analysis of schneider trophy racing development with expert historical research and technical details.`,
+  title: `Schneider Trophy Racing: The Golden Age of Aviation Speed`,
+  subtitle: `The thrilling story of the Schneider Trophy races that pushed aviation technology to new heights and influenced military aircraft development.`,
   content: `
     <h2 id="introduction">Introduction: The Story Begins</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <div class="my-8">
+      <img src="/blog-images/supermarine-spitfire-development.jpg" alt="Supermarine racing aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Supermarine racing aircraft that dominated the Schneider Trophy contests.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/lucy-lady-houston.jpg" alt="Lady Lucy Houston portrait" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Lady Lucy Houston, whose funding saved Britain's 1931 Schneider Trophy entry.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/schneider-trophy-racing.jpg" alt="Schneider Trophy racing scene" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">High-speed racing aircraft competing in the prestigious Schneider Trophy contests.</p>
+    </div>
     
     <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
 
@@ -102,7 +114,29 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["schneider","trophy","racing","development"],
-  relatedBooks: [],
+  relatedBooks: [
+  {
+    "id": "mother-of-the-few",
+    "title": "Mother of the Few: The Story of the Spitfire",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/mother-of-the-few.jpg",
+    "price": 25.99
+  },
+  {
+    "id": "soaring-with-wings",
+    "title": "Soaring with Wings: The History of Gliding",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/soaring-with-wings.jpg",
+    "price": 18.99
+  },
+  {
+    "id": "british-aircraft-great-war",
+    "title": "British Aircraft of the Great War",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/british-aircraft-great-war.jpg",
+    "price": 22.99
+  }
+],
   relatedPosts: []
 }
 

@@ -3,11 +3,23 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 const post = {
   id: 'aviation-manufacturing-wartime-production',
-  title: `Aviation Manufacturing Wartime Production`,
-  subtitle: `Comprehensive analysis of aviation manufacturing wartime production with expert historical research and technical details.`,
+  title: `Aviation Manufacturing: Wartime Production Revolution`,
+  subtitle: `The incredible story of how aviation manufacturing was revolutionized during wartime, leading to mass production techniques that changed industry forever.`,
   content: `
     <h2 id="introduction">Introduction: The Story Begins</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <div class="my-8">
+      <img src="/blog-images/boeing-b17-assembly-line.jpg" alt="Boeing B-17 assembly line" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Mass production techniques revolutionized aircraft manufacturing during wartime.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/willow-run-assembly-line.jpg" alt="Willow Run assembly line" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Willow Run plant demonstrated the power of assembly line production for aircraft.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/b24-liberator-production.jpg" alt="B-24 Liberator production" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">B-24 Liberator production showcased the efficiency of wartime manufacturing methods.</p>
+    </div>
     
     <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
 
@@ -102,7 +114,29 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["aviation","manufacturing","wartime","production"],
-  relatedBooks: [],
+  relatedBooks: [
+  {
+    "id": "beardmore-aviation",
+    "title": "Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/beardmore-aviation.jpg",
+    "price": 12.76
+  },
+  {
+    "id": "birth-atomic-bomb",
+    "title": "The Birth of the Atomic Bomb: Aviation's Role",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/birth-atomic-bomb.jpg",
+    "price": 26.99
+  },
+  {
+    "id": "british-aircraft-great-war",
+    "title": "British Aircraft of the Great War",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/british-aircraft-great-war.jpg",
+    "price": 22.99
+  }
+],
   relatedPosts: []
 }
 

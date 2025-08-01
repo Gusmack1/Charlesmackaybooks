@@ -8,6 +8,18 @@ const post = {
   content: `
     <h2 id="introduction">Introduction:  Revolutionary Metal Aircraft Designer</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <div class="my-8">
+      <img src="/blog-images/metal-aircraft-construction.jpg" alt="Early metal aircraft construction techniques" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Revolutionary metal construction techniques pioneered by Adolf Rohrbach.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/curtiss-nc4-flying-boat.jpg" alt="Early flying boat design" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Early flying boat designs that influenced Rohrbach's metal construction approach.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/beardmore-aviation-factory.jpg" alt="Aviation manufacturing facility" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Modern aviation manufacturing facilities that benefited from Rohrbach's innovations.</p>
+    </div>
     
     <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
 

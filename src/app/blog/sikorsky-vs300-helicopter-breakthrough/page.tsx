@@ -3,11 +3,23 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 const post = {
   id: 'sikorsky-vs300-helicopter-breakthrough',
-  title: `Sikorsky VS-300: The Helicopter Breakthrough That Changed Aviation`,
-  subtitle: `Igor Sikorsky's VS-300 achieved the world's first practical helicopter flight, establishing the single-rotor configuration that became the standard for modern helicopters.`,
+  title: `Sikorsky VS-300: The Helicopter Breakthrough`,
+  subtitle: `The revolutionary Sikorsky VS-300 that established the modern helicopter configuration and changed aviation forever.`,
   content: `
     <h2 id="introduction">Introduction: The Breakthrough That Defined Modern Helicopters</h2>
     <p>The Sikorsky VS-300 achieved what aviation pioneers had dreamed of for centuries - practical, controlled vertical flight. On September 14, 1939, Igor Sikorsky himself piloted this revolutionary aircraft on its first tethered flight, marking the beginning of the modern helicopter era and establishing the single-rotor configuration that would become the worldwide standard.</p>
+    <div class="my-8">
+      <img src="/blog-images/helicopter-development-timeline.jpg" alt="Helicopter development timeline" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The evolution of helicopter technology leading to the Sikorsky VS-300.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/sycamore-seeds-helicopter-evolution.jpg" alt="Helicopter evolution diagram" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The progression from early rotorcraft to modern helicopter design.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/bristol-sycamore.jpg" alt="Bristol Sycamore helicopter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">British helicopter development that followed Sikorsky's pioneering work.</p>
+    </div>
     
     <div class="my-8">
       <img src="/blog-images/cierva-autogyro-c4.jpg" alt="Cierva C.4 autogyro showing early rotorcraft development" class="w-full h-auto rounded-lg shadow-lg"/>
@@ -112,7 +124,29 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["sikorsky","vs300","helicopter","breakthrough"],
-  relatedBooks: [],
+  relatedBooks: [
+  {
+    "id": "sycamore-seeds",
+    "title": "Sycamore Seeds: The Evolution of the Helicopter",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/sycamore-seeds.jpg",
+    "price": 19.99
+  },
+  {
+    "id": "captain-eric-brown",
+    "title": "Captain Eric Brown: The World's Greatest Test Pilot",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/captain-eric-brown.jpg",
+    "price": 24.99
+  },
+  {
+    "id": "british-aircraft-great-war",
+    "title": "British Aircraft of the Great War",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/british-aircraft-great-war.jpg",
+    "price": 22.99
+  }
+],
   relatedPosts: []
 }
 

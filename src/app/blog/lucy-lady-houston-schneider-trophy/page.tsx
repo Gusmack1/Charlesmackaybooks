@@ -4,10 +4,22 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 const post = {
   id: 'lucy-lady-houston-schneider-trophy',
   title: `Lucy Lady Houston: The Woman Who Saved the Schneider Trophy`,
-  subtitle: `The remarkable story of Lucy Lady Houston, the wealthy patron who single-handedly funded Britain's 1931 Schneider Trophy victory when the government withdrew support.`,
+  subtitle: `The remarkable story of Lucy Lady Houston, the wealthy patron who single-handedly funded Britain's 1931 Schneider Trophy victory.`,
   content: `
     <h2 id="introduction">Introduction: The Woman Who Saved the Schneider Trophy</h2>
     <p>Lady Lucy Houston stands as one of aviation history's most remarkable patrons - a wealthy British widow whose personal intervention saved Britain's participation in the 1931 Schneider Trophy race and, in doing so, preserved the development program that would lead directly to the Supermarine Spitfire. When the government withdrew funding, Houston stepped forward with £100,000 to ensure British aviation supremacy.</p>
+    <div class="my-8">
+      <img src="/blog-images/lucy-lady-houston.jpg" alt="Portrait of Lady Lucy Houston" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Lady Lucy Houston, the patriotic benefactor whose financial support saved Britain's Schneider Trophy program.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/supermarine-spitfire-development.jpg" alt="Supermarine Spitfire development" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Supermarine Spitfire development that benefited from Schneider Trophy technology.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/schneider-trophy-racing.jpg" alt="Schneider Trophy racing aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">High-speed racing aircraft that competed in the Schneider Trophy contests.</p>
+    </div>
     
     <div class="my-8">
       <img src="/blog-images/lucy-lady-houston.jpg" alt="Portrait of Lady Lucy Houston" class="w-full h-auto rounded-lg shadow-lg"/>
@@ -112,7 +124,29 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["lucy","lady","houston","schneider","trophy","aviation","history","british"],
-  relatedBooks: [],
+  relatedBooks: [
+  {
+    "id": "mother-of-the-few",
+    "title": "Mother of the Few: The Story of the Spitfire",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/mother-of-the-few.jpg",
+    "price": 25.99
+  },
+  {
+    "id": "soaring-with-wings",
+    "title": "Soaring with Wings: The History of Gliding",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/soaring-with-wings.jpg",
+    "price": 18.99
+  },
+  {
+    "id": "british-aircraft-great-war",
+    "title": "British Aircraft of the Great War",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/british-aircraft-great-war.jpg",
+    "price": 22.99
+  }
+],
   relatedPosts: []
 }
 

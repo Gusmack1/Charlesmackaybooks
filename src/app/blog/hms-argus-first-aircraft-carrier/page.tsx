@@ -3,11 +3,23 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 const post = {
   id: 'hms-argus-first-aircraft-carrier',
-  title: `HMS Argus: The World First True Aircraft Carrier`,
-  subtitle: `The pioneering story of HMS Argus, converted from an ocean liner to become the world first aircraft carrier with a full-length flight deck.`,
+  title: `HMS Argus: The World's First True Aircraft Carrier`,
+  subtitle: `The pioneering story of HMS Argus, converted from an ocean liner to become the world's first aircraft carrier with a full-length flight deck.`,
   content: `
     <h2 id="introduction">Introduction: The World's First True Aircraft Carrier</h2>
     <p>HMS Argus stands as one of naval aviation's most significant milestones - the world's first aircraft carrier with a full-length, unobstructed flight deck. Converted from the Italian ocean liner Conte Rosso during World War I, Argus established the fundamental design principles that would define aircraft carriers for the next century.</p>
+    <div class="my-8">
+      <img src="/blog-images/hms-argus-aircraft-carrier.jpg" alt="HMS Argus showing the full-length flight deck" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus with its revolutionary full-length flight deck, establishing the template for all future aircraft carriers.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/hms-argus-dazzle-camouflage.jpg" alt="HMS Argus with distinctive dazzle camouflage" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus with its distinctive dazzle camouflage scheme, designed to confuse enemy submarines.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/carrier-landing-without-wheels.jpg" alt="Early carrier landing operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Early carrier landing techniques that evolved from HMS Argus's pioneering operations.</p>
+    </div>
     
     <div class="my-8">
       <img src="/blog-images/hms-argus-aircraft-carrier.jpg" alt="HMS Argus showing the full-length flight deck" class="w-full h-auto rounded-lg shadow-lg"/>

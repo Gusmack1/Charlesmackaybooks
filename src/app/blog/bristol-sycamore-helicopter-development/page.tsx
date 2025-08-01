@@ -4,10 +4,22 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 const post = {
   id: 'bristol-sycamore-helicopter-development',
   title: `Bristol Sycamore: British Helicopter Development Pioneer`,
-  subtitle: `The development story of the Bristol Sycamore, Britain's first production helicopter and the aircraft that established British rotorcraft capabilities in the 1950s.`,
+  subtitle: `The development story of the Bristol Sycamore, Britain's first production helicopter and the aircraft that established British rotorcraft capabilities.`,
   content: `
     <h2 id="introduction">Introduction: Britain's First Production Helicopter</h2>
     <p>The Bristol Sycamore holds a unique place in British aviation history as the nation's first production helicopter and the aircraft that established Britain as a serious player in rotorcraft development. First flying in 1947 and entering service in 1953, the Sycamore bridged the gap between experimental rotorcraft and practical operational helicopters.</p>
+    <div class="my-8">
+      <img src="/blog-images/bristol-sycamore-formation.jpg" alt="Bristol Sycamore helicopters in formation flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Bristol Sycamore helicopters in formation, demonstrating Britain's first successful production helicopter design.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/bristol-sycamore.jpg" alt="Close-up of Bristol Sycamore showing rotor configuration" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Bristol Sycamore's conventional single-rotor configuration became the standard for British helicopter development.</p>
+    </div>
+    <div class="my-8">
+      <img src="/blog-images/helicopter-development-timeline.jpg" alt="Helicopter development timeline" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The evolution of helicopter technology that led to the Bristol Sycamore.</p>
+    </div>
     
     <div class="my-8">
       <img src="/blog-images/bristol-sycamore-formation.jpg" alt="Bristol Sycamore helicopters in formation flight" class="w-full h-auto rounded-lg shadow-lg"/>
@@ -112,7 +124,29 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["bristol","sycamore","helicopter","development","aviation","history","british"],
-  relatedBooks: [],
+  relatedBooks: [
+  {
+    "id": "sycamore-seeds",
+    "title": "Sycamore Seeds: The Evolution of the Helicopter",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/sycamore-seeds.jpg",
+    "price": 19.99
+  },
+  {
+    "id": "captain-eric-brown",
+    "title": "Captain Eric Brown: The World's Greatest Test Pilot",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/captain-eric-brown.jpg",
+    "price": 24.99
+  },
+  {
+    "id": "british-aircraft-great-war",
+    "title": "British Aircraft of the Great War",
+    "author": "Charles E. MacKay",
+    "cover": "/book-covers/british-aircraft-great-war.jpg",
+    "price": 22.99
+  }
+],
   relatedPosts: []
 }
 
