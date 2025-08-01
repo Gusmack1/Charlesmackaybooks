@@ -114,7 +114,7 @@ const blogData = {
 
 const relatedBooks = [{"id":"captain-eric-brown","title":"Captain Eric Brown","price":22.99,"imageUrl":"/book-covers/captain-eric-brown.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
 
-const relatedPosts = []
+const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `Captain Eric Brown: The World Most Experienced Test Pilot | Charles E. MacKay`,

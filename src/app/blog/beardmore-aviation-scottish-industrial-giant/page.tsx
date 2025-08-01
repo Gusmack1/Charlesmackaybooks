@@ -96,7 +96,7 @@ const blogData = {
 
 const relatedBooks = [{"id":"beardmore-aviation","title":"Beardmore Aviation","price":22.99,"imageUrl":"/book-covers/beardmore-aviation.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"},{"id":"clydeside-aviation-vol1","title":"Clydeside Aviation Volume 1: The Pioneer Years 1909-1914","price":19.99,"imageUrl":"/book-covers/clydeside-aviation-vol1.jpg","description":"The first comprehensive study of aviation development on Clydeside, covering the pioneering efforts from 1909 to the outbreak of World War I.","relevantContent":"Detailed coverage with archival research and technical analysis"}]
 
-const relatedPosts = []
+const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `William Beardmore & Company: Scottish Aviation Pioneer | Charles E. MacKay`,

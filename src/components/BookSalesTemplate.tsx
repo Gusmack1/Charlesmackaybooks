@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useCart } from '@/context/CartContext'
+import { Book } from '@/types/book'
 
 export interface BookData {
   id: string
@@ -47,14 +48,13 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
   const { addToCart } = useCart()
 
   const handleAddToCart = () => {
-    addToCart({
-      id: book.id,
-      title: book.title,
-      price: book.price,
-      imageUrl: book.imageUrl,
-      category: book.category,
-      description: book.description
-    })
+    // Convert BookData to Book format for cart
+    const bookForCart: Book = {
+      ...book,
+      condition: 'New' as const,
+      inStock: true
+    }
+    addToCart(bookForCart)
   }
 
   useEffect(() => {

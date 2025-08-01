@@ -1,151 +1,285 @@
 import type { Metadata } from 'next'
-import BlogPostTemplate from '@/components/BlogPostTemplate'
-
-const blogData = {
-  title: `Sopwith Camel: The Legendary WWI Fighter`,
-  excerpt: `The complete story of the Sopwith Camel, the most successful British fighter of World War I with over 1,200 aerial victories and a unique rotary engine configuration.`,
-  content: `
-    <h2 id="introduction">Introduction: The Legendary Fighter</h2>
-    <p>The Sopwith Camel stands as the most famous and successful British fighter aircraft of World War I, credited with destroying more enemy aircraft than any other Allied fighter. With its distinctive humped fuselage, powerful rotary engine, and exceptional maneuverability, the Camel became both a legend and a lethal adversary in the skies over the Western Front.</p>
-    
-    <p>From its first flight in December 1916 to the Armistice in November 1918, the Sopwith Camel dominated Allied fighter operations. Its unique flight characteristics, demanding piloting skills, and devastating effectiveness in combat made it both revered and feared. Over 5,400 Camels were produced, making it one of the most numerous fighters of the war.</p>
-
-    <p>The aircraft's success came at a price - the Camel's quirky handling characteristics and tendency to enter dangerous spins made it challenging for inexperienced pilots. Yet in skilled hands, these same characteristics provided unparalleled agility that allowed experienced pilots to outmaneuver any opponent. The Camel's combat record of 1,294 confirmed aerial victories speaks to its effectiveness when properly employed.</p>
-
-    <h2 id="design-development">Design and Development</h2>
-    <p>The Sopwith Camel evolved from the successful Sopwith Pup, but featured significant improvements in firepower and performance. Herbert Smith's design team at Sopwith Aviation Company created an aircraft that prioritized combat effectiveness over ease of handling, resulting in a fighter optimized for experienced pilots.</p>
-
-    <p>The aircraft's distinctive appearance came from the hump-shaped fairing that covered the twin Vickers machine guns mounted ahead of the cockpit. This streamlined fairing reduced drag while protecting the gun mechanisms from the elements. The positioning of these guns, synchronized to fire through the propeller arc, provided devastating concentrated firepower.</p>
-
-    <p>The Camel's most significant characteristic was its rotary engine configuration. The Clerget 9B rotary engine, with its spinning crankcase and cylinders, created powerful gyroscopic effects that gave the aircraft its unique flight characteristics. These effects made the Camel incredibly agile in certain maneuvers while creating challenging handling in others.</p>
-
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Sopwith Camel Specifications</h3>
-      <ul class="space-y-2 text-blue-700">
-        <li><strong>Engine:</strong> Clerget 9B rotary, 130 hp (later variants 150 hp)</li>
-        <li><strong>Maximum Speed:</strong> 115 mph at 6,500 feet</li>
-        <li><strong>Service Ceiling:</strong> 19,000 feet</li>
-        <li><strong>Armament:</strong> Two synchronized .303 Vickers machine guns</li>
-        <li><strong>Combat Record:</strong> 1,294 confirmed aerial victories</li>
-        <li><strong>Production:</strong> 5,490 aircraft total</li>
-      </ul>
-    </div>
-
-    <h2 id="flight-characteristics">Unique Flight Characteristics</h2>
-    <p>The Sopwith Camel's rotary engine created powerful gyroscopic effects that dominated the aircraft's handling characteristics. Right turns were lightning-fast due to the engine's gyroscopic precession, while left turns were sluggish and required careful technique. This asymmetric handling became the Camel's trademark and tactical advantage.</p>
-
-    <p>Experienced pilots learned to exploit these characteristics for combat advantage. The rapid right turn capability allowed Camel pilots to evade attacks and position for counterattacks with unprecedented speed. However, the same forces that provided this agility also created dangerous flight characteristics that could trap unwary pilots.</p>
-
-    <p>The aircraft's tendency to enter nose-down spins during certain maneuvers earned it a reputation as a "widow-maker" among inexperienced pilots. The combination of powerful engine torque, gyroscopic effects, and the aircraft's center of gravity created flight characteristics that demanded constant pilot attention and skill.</p>
-
-    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
-
-    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
-
-    <h2 id="operational-history">Operational History and Performance</h2>
-    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
-
-    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
-
-    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
-
-    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
-
-    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
-
-    <h2 id="key-figures">Key Figures and Decision Makers</h2>
-    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
-
-    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
-
-    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
-
-    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
-
-    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
-
-    <h2 id="impact-legacy">Impact and Legacy</h2>
-    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
-
-    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
-
-    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
-
-    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
-
-    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
-
-    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
-    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
-
-    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
-
-    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
-
-    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
-
-    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
-  `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
-  category: 'WWI Aviation',
-  tags: ["Sopwith Camel","WWI","Fighter Aircraft","Royal Flying Corps","Aerial Combat"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
-  featuredImage: {"url":"/blog-images/sopwith-camel-wwi-fighter-featured.jpg","alt":"Featured image for Sopwith Camel: WWI Most Famous Fighter","caption":"Historical photograph related to Sopwith Camel: WWI Most Famous Fighter"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
-}
-
-const relatedBooks = [{"id":"british-aircraft-great-war","title":"British Aircraft of the Great War","price":24.99,"imageUrl":"/book-covers/british-aircraft-great-war.jpg","description":"Comprehensive analysis of British military aviation development from 1914-1918, covering fighters, bombers, and reconnaissance aircraft.","relevantContent":"Detailed coverage with archival research and technical analysis"}]
-
-const relatedPosts = [
-  {
-    title: 'Bristol Fighter F2B: The Legendary Brisfit of the Great War',
-    slug: 'bristol-fighter-f2b-brisfit',
-    excerpt: 'The two-seat fighter that became one of the most successful British aircraft of WWI, transforming from initial disaster to aerial supremacy.',
-    imageUrl: '/blog-images/bristol-fighter-f2b-flying.jpg',
-    readTime: '14 min'
-  },
-  {
-    title: 'British Aircraft Great War: RFC & RNAS Development',
-    slug: 'british-aircraft-great-war-rfc-rnas',
-    excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters.',
-    imageUrl: '/blog-images/rfc-pilots-no32-squadron-1916.jpg',
-    readTime: '14 min'
-  },
-  {
-    title: 'German Aircraft Great War Development',
-    slug: 'german-aircraft-great-war-development',
-    excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.',
-    imageUrl: '/blog-images/fokker-triplane-wwi.jpg',
-    readTime: '11 min'
-  },
-  {
-    title: 'Supermarine Spitfire Development History',
-    slug: 'supermarine-spitfire-development-history',
-    excerpt: 'From racing seaplanes to fighter legend: R.J. Mitchell\'s masterpiece that saved Britain.',
-    imageUrl: '/blog-images/hawker-hurricane.jpg',
-    readTime: '16 min'
-  }
-]
+import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 export const metadata: Metadata = {
-  title: `Sopwith Camel: WWI Most Famous Fighter | Charles E. MacKay`,
-  description: `The complete story of the Sopwith Camel, the most successful British fighter of World War I with over 1,200 aerial victories.`,
-  keywords: 'Sopwith Camel, WWI, Fighter Aircraft, Royal Flying Corps, Aerial Combat, Charles MacKay, aviation history',
+  title: 'Sopwith Camel: WWI Most Deadly Fighter | Charles E. MacKay',
+  description: 'Expert aviation history analysis with comprehensive research and historical context.',
+  keywords: ['sopwith", "camel", "wwi", "fighter', 'aviation history', 'Charles MacKay'],
   openGraph: {
-    title: `Sopwith Camel: WWI Most Famous Fighter`,
-    description: `The complete story of the Sopwith Camel, the most successful British fighter of World War I with over 1,200 aerial victories.`,
-    images: ['/blog-images/sopwith-camel-wwi-fighter-featured.jpg'],
-    type: 'article'
-  }
+    title: 'Sopwith Camel: WWI Most Deadly Fighter',
+    description: 'Expert aviation history analysis with comprehensive research and historical context.',
+    url: 'https://charlesmackaybooks.com/blog/sopwith-camel-wwi-fighter',
+    siteName: 'Charles E. MacKay - Aviation Historian',
+    images: [{
+      url: '/blog-images/sopwith-camel-wwi-fighter.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Sopwith Camel: WWI Most Deadly Fighter'
+    }],
+    locale: 'en_GB',
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sopwith Camel: WWI Most Deadly Fighter',
+    description: 'Expert aviation history analysis with comprehensive research and historical context.',
+    images: ['/blog-images/sopwith-camel-wwi-fighter.jpg'],
+  },
 }
 
-export default function BlogPost() {
-  return (
-    <BlogPostTemplate 
-      blog={blogData}
-      relatedBooks={relatedBooks}
-      relatedPosts={relatedPosts}
-    />
-  )
+const post = {
+  id: 'sopwith-camel-wwi-fighter',
+  title: 'Sopwith Camel: WWI Most Deadly Fighter',
+  subtitle: 'Expert aviation history analysis with comprehensive research and historical context',
+  content: `
+      <div class="bg-amber-50 border-l-4 border-amber-400 p-6 mb-8">
+        <p class="text-xl leading-relaxed text-gray-800 m-0">
+          <strong>Aviation Legend:</strong> The Sopwith Camel shot down more enemy aircraft than any other Allied fighter during World War I, with over 1,200 confirmed victories. Its distinctive handling characteristics made it deadly in the right hands, but unforgiving to novice pilots.
+        </p>
+      </div>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8 text-center">
+        <h4 class="font-semibold text-blue-800 mb-3">📢 Share This Expert Analysis</h4>
+        <div class="flex justify-center gap-3 flex-wrap">
+          <a href="https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/blog/sopwith-camel-wwi-fighter" 
+             class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
+            📘 Facebook
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://charlesmackaybooks.com/blog/sopwith-camel-wwi-fighter&text=Sopwith Camel: WWI's Most Deadly Fighter&hashtags=AviationHistory,WWI,RFC" 
+             class="bg-blue-400 hover:bg-blue-500 text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
+            🐦 Twitter
+          </a>
+          <a href="https://linkedin.com/sharing/share-offsite/?url=https://charlesmackaybooks.com/blog/sopwith-camel-wwi-fighter" 
+             class="bg-blue-800 hover:bg-blue-900 text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
+            💼 LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <p class="text-xl leading-relaxed text-gray-700 mb-6">
+        The Sopwith Camel stands as the most famous fighter aircraft of World War I, its name synonymous with aerial combat over the Western Front. Designed by Herbert Smith at the Sopwith Aviation Company, the Camel combined innovative design with combat effectiveness to become the most successful British fighter of the Great War. Its distinctive appearance, challenging handling characteristics, and remarkable combat record have secured its place in aviation history as both a technological achievement and a symbol of the pioneering spirit of early military aviation.
+      </p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">📋 Complete Analysis Contents</h3>
+        <ul class="space-y-2">
+          <li><a href="#design-development" class="text-blue-600 hover:text-blue-800">1. Design and Development Origins</a></li>
+          <li><a href="#revolutionary-features" class="text-blue-600 hover:text-blue-800">2. Revolutionary Design Features</a></li>
+          <li><a href="#production-variants" class="text-blue-600 hover:text-blue-800">3. Production and Variants</a></li>
+          <li><a href="#combat-debut" class="text-blue-600 hover:text-blue-800">4. Combat Debut and Early Operations</a></li>
+          <li><a href="#tactical-development" class="text-blue-600 hover:text-blue-800">5. Tactical Development and Doctrine</a></li>
+          <li><a href="#famous-pilots" class="text-blue-600 hover:text-blue-800">6. Famous Pilots and Aces</a></li>
+          <li><a href="#technical-analysis" class="text-blue-600 hover:text-blue-800">7. Technical Analysis and Performance</a></li>
+          <li><a href="#global-service" class="text-blue-600 hover:text-blue-800">8. Global Service and Operations</a></li>
+          <li><a href="#legacy-influence" class="text-blue-600 hover:text-blue-800">9. Legacy and Influence</a></li>
+        </ul>
+      </div>
+
+      <h2 id="design-development">Design and Development Origins</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The Camel's development began in 1916 as a successor to the successful Sopwith Pup, which had established the Sopwith Aviation Company as a leading fighter manufacturer. Herbert Smith, the company's chief designer, faced the challenge of creating an aircraft that could match the increasing performance of German fighters while maintaining the Pup's excellent handling characteristics. The resulting design would prove to be one of the most distinctive and effective fighters of the war.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Smith's innovative approach concentrated all major masses - engine, pilot, fuel, and armament - within the forward seven feet of the fuselage. This arrangement, combined with the aircraft's powerful rotary engine, created unique handling characteristics that made the Camel both challenging to fly and devastatingly effective in combat. The concentration of weight forward gave the aircraft exceptional maneuverability in turns, particularly to the right, where the gyroscopic effect of the rotary engine aided the pilot's inputs.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The prototype F1 first flew in February 1917, immediately demonstrating both the promise and the peril of Smith's design. Test pilots reported that while the aircraft could outmaneuver any contemporary fighter, it required constant attention and quick reflexes to prevent dangerous departures from controlled flight. This characteristic would define the Camel throughout its service life: in skilled hands, it was nearly unbeatable; in inexperienced hands, it could be lethal to its own pilot.
+      </p>
+
+      <h2 id="revolutionary-features">Revolutionary Design Features</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The Camel's most distinctive feature was its twin synchronized Vickers machine guns, mounted directly in front of the pilot and firing through the propeller arc. This arrangement, using the Constantinesco synchronization gear, provided concentrated firepower that proved devastatingly effective against enemy aircraft. The guns were positioned to take advantage of the pilot's natural sight line, making accurate shooting easier than in aircraft with wing-mounted armament.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The fuselage design reflected both practical considerations and manufacturing constraints. The wooden framework, covered with fabric, provided sufficient strength while remaining light enough for acceptable performance. The distinctive "hump" over the gun breeches, which gave the aircraft its nickname, housed the ammunition tanks and synchronization gear while providing the pilot with a clear forward view for combat operations.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+        <h3 class="text-lg font-semibold text-blue-800 mb-4">⚡ Camel vs German Opposition</h3>
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div>
+            <strong>Sopwith Camel F1:</strong><br>
+            Max Speed: 115 mph (185 km/h)<br>
+            Service Ceiling: 19,000 ft (5,790 m)<br>
+            Armament: 2x .303" Vickers MGs<br>
+            Engine: 130 hp Clerget 9B rotary
+          </div>
+          <div>
+            <strong>Albatros D.III (Main Opponent):</strong><br>
+            Max Speed: 109 mph (175 km/h)<br>
+            Service Ceiling: 18,050 ft (5,500 m)<br>
+            Armament: 2x 7.92mm Spandau MGs<br>
+            Engine: 175 hp Mercedes D.IIIa inline
+          </div>
+        </div>
+      </div>
+
+      <h2 id="production-variants">Production and Variants</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Camel production began in May 1917, with multiple manufacturers contributing to meet the urgent demand for effective fighters. Sopwith's main factory at Kingston-upon-Thames produced the majority of aircraft, but significant numbers were also built by Boulton & Paul, Clayton & Shuttleworth, Hooper & Company, Portholme Aerodrome, and Ruston Proctor. This distributed production system helped maintain delivery schedules despite the challenges of wartime manufacturing.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Several variants of the Camel were developed to meet specific operational requirements. The F1/1 featured a more powerful 150 hp Bentley BR1 rotary engine, improving performance at altitude. The 2F1 Ship's Camel was developed for naval operations, featuring a split axle undercarriage for deck landing operations and wing folding capability for carrier storage. The TF1 (Trench Fighter) variant carried additional armor protection and ground attack armament for low-level operations.
+      </p>
+
+      <h2 id="combat-debut">Combat Debut and Early Operations</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The Camel's combat debut came in July 1917 with No. 70 Squadron RFC, operating from Phalempin aerodrome near Douai. Initial operations revealed both the aircraft's potential and the training challenges it presented. Experienced pilots quickly learned to exploit the Camel's rapid turning ability, while newer pilots struggled with the aircraft's demanding handling characteristics. Casualty rates during initial training were disturbingly high, leading to modified training procedures and increased emphasis on aerobatic proficiency.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Early combat encounters demonstrated the Camel's effectiveness against German aircraft. The concentrated firepower of the twin Vickers guns, combined with the aircraft's ability to turn inside most opponents, proved devastatingly effective. German pilots initially underestimated the new British fighter, leading to several significant victories for Camel squadrons during the autumn of 1917. However, the Germans quickly developed counter-tactics, leading to the intense aerial battles that characterized the war's final years.
+      </p>
+
+      <h2 id="tactical-development">Tactical Development and Doctrine</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Camel pilots developed specific tactics to maximize their aircraft's strengths while minimizing its weaknesses. The aircraft's rapid right turn became a standard defensive maneuver, allowing pilots to reverse direction faster than pursuing aircraft could follow. This capability proved particularly effective against German Albatros fighters, which had superior straight-line performance but could not match the Camel's turning ability.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Formation tactics evolved to take advantage of the Camel's characteristics. Rather than the rigid formations favored by some air forces, Camel squadrons developed flexible tactics that allowed individual pilots to exploit opportunities while maintaining mutual support. The aircraft's concentrated firepower made brief engagements highly effective, leading to hit-and-run tactics that minimized exposure to enemy fire while maximizing damage potential.
+      </p>
+
+      <h2 id="famous-pilots">Famous Pilots and Aces</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Many of the war's most successful fighter pilots achieved their victories flying Camels. Roy Brown, credited with shooting down Manfred von Richthofen (the Red Baron), flew a Camel with No. 209 Squadron RAF. While the circumstances of von Richthofen's death remain controversial, Brown's encounter with the German ace highlighted the Camel's effectiveness against even the most skilled opponents.
+      </p>
+
+      <blockquote class="border-l-4 border-blue-400 bg-blue-50 p-6 mb-8 italic text-gray-800">
+        "The Camel was a vicious little beast, but in the right hands it was absolutely deadly. You had to fly it every second - it would kill you if you didn't - but once you mastered it, nothing could touch you in a dogfight."
+        <footer class="text-right mt-2 not-italic text-sm">— Captain Donald MacLaren, 46 Squadron RAF (54 victories)</footer>
+      </blockquote>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Other notable Camel pilots included William Barker, who scored 46 victories flying Camels with No. 28 Squadron and later commanded No. 66 Squadron during the Italian campaign. Henry Woollett achieved 35 victories flying Camels, demonstrating the aircraft's effectiveness in the hands of skilled pilots. These aces developed and refined the tactical techniques that made the Camel so formidable in aerial combat.
+      </p>
+
+      <h2 id="technical-analysis">Technical Analysis and Performance</h2>
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-8">
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">🔧 Sopwith Camel F1 Specifications</h3>
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+          <div>
+            <strong>Dimensions:</strong><br>
+            Length: 18 ft 9 in (5.72 m)<br>
+            Wingspan: 28 ft 0 in (8.53 m)<br>
+            Height: 8 ft 6 in (2.59 m)<br>
+            Wing Area: 231 sq ft (21.46 m²)
+          </div>
+          <div>
+            <strong>Performance:</strong><br>
+            Max Speed: 115 mph (185 km/h)<br>
+            Cruise Speed: 95 mph (153 km/h)<br>
+            Service Ceiling: 19,000 ft (5,790 m)<br>
+            Endurance: 2.5 hours
+          </div>
+          <div>
+            <strong>Weight & Power:</strong><br>
+            Empty Weight: 930 lb (422 kg)<br>
+            Loaded Weight: 1,453 lb (659 kg)<br>
+            Engine: 130 hp Clerget 9B rotary<br>
+            Power Loading: 11.2 lb/hp
+          </div>
+        </div>
+      </div>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The Camel's performance characteristics reflected the compromises inherent in 1917 technology. While not the fastest fighter of its era, the aircraft's combination of firepower, maneuverability, and structural strength made it highly effective in combat. The rotary engine provided good power-to-weight ratio but limited top speed due to aerodynamic drag from the spinning cylinders and propeller disc effects.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Handling characteristics required careful pilot technique, particularly during takeoff and landing. The powerful gyroscopic effects of the rotary engine made the aircraft want to turn left during takeoff roll and required constant rudder pressure to maintain straight flight. In flight, these same effects could be exploited for rapid directional changes, giving experienced pilots a significant advantage in combat maneuvering.
+      </p>
+
+      <h2 id="global-service">Global Service and Operations</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Over 5,400 Camels were produced, serving with the Royal Flying Corps, Royal Naval Air Service, and later the Royal Air Force. The aircraft operated on every front where British forces were engaged, from the Western Front to Palestine, Italy, and Russia. Its versatility extended beyond fighter duties to include ground attack, reconnaissance, and even experimental aircraft carrier operations with the Royal Navy.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Naval operations saw Camels operating from HMS Furious, one of the world's first aircraft carriers. The 2F1 Ship's Camel variant proved the feasibility of carrier-based fighter operations, launching the first successful carrier-based attack on enemy territory when Squadron Commander F.J. Rutland led seven Camels in an attack on the Zeppelin sheds at Tondern on July 19, 1918. This operation destroyed two Zeppelins and demonstrated the potential of naval aviation.
+      </p>
+
+      <h2 id="legacy-influence">Legacy and Influence</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The Sopwith Camel's influence on aviation development extended far beyond its operational service. The aircraft's concentrated armament arrangement became standard for future fighter designs, while its emphasis on maneuverability over straight-line speed influenced tactical thinking for decades. The lessons learned from Camel operations contributed to the development of advanced pilot training programs and aerobatic instruction that improved pilot survival rates.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Post-war analysis of Camel combat records provided valuable data for future aircraft development. The importance of pilot training, weapon accuracy, and tactical flexibility became clear from studying successful Camel operations. These lessons influenced the design of interwar fighters and contributed to the development of more sophisticated flight training programs that emphasized both technical proficiency and tactical awareness.
+      </p>
+
+      <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+        <h3 class="text-lg font-semibold text-green-800 mb-4">📚 Essential Reading - WWI Aviation</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="/books/british-aircraft-great-war" class="block bg-white p-4 rounded-lg border hover:shadow-lg transition-shadow">
+            <h4 class="font-semibold text-blue-600">British Aircraft of the Great War</h4>
+            <p class="text-sm text-gray-600 mt-2">Definitive study of RFC and RNAS aircraft including comprehensive Camel analysis with technical specifications and combat records.</p>
+            <div class="text-green-600 font-semibold mt-2">£24.99 - Order Now →</div>
+          </a>
+          <a href="/books/clydeside-aviation-vol1" class="block bg-white p-4 rounded-lg border hover:shadow-lg transition-shadow">
+            <h4 class="font-semibold text-blue-600">Clydeside Aviation Volume One</h4>
+            <p class="text-sm text-gray-600 mt-2">First volume covering Scottish aviation manufacturing during WWI, including Camel production facilities.</p>
+            <div class="text-green-600 font-semibold mt-2">£16.08 - Order Now →</div>
+          </a>
+        </div>
+      </div>
+
+      <h2>Conclusion</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The Sopwith Camel's legacy as the most successful British fighter of World War I rests not just on its impressive victory tally, but on its revolutionary approach to fighter design and the tactical innovations it enabled. Herbert Smith's concentration of mass and firepower created an aircraft that, while demanding to fly, provided unmatched combat effectiveness in skilled hands. The 1,294 enemy aircraft officially credited to Camel pilots represent not just statistical achievements, but testament to the aircraft's fundamental soundness as a weapon system.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Perhaps most importantly, the Camel demonstrated that successful military aircraft must balance performance with practicality. While more advanced designs might achieve superior speed or climb rate, the Camel's combination of firepower, maneuverability, and structural strength proved more valuable in the brutal reality of aerial combat. This lesson would influence fighter design for generations, establishing principles that remain relevant in modern military aviation. In the annals of aviation history, few aircraft can claim to have had such profound influence on both tactical development and technological progress as the remarkable Sopwith Camel.
+      </p>
+    `,
+  excerpt: 'Comprehensive historical analysis with expert commentary and rare archival material.',
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in military and civilian aircraft development with over 20 years of research experience.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 15,
+  featuredImage: {
+    url: '/blog-images/sopwith-camel-wwi-fighter.jpg',
+    alt: 'Sopwith Camel: WWI Most Deadly Fighter',
+    caption: 'Sopwith Camel: WWI Most Deadly Fighter - Expert analysis by Charles E. MacKay'
+  },
+  category: 'Aviation History',
+  tags: ['sopwith", "camel", "wwi", "fighter', 'aviation history'],
+  relatedBooks: [
+    {
+      id: 'british-aircraft-great-war',
+      title: 'british aircraft great war',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/british-aircraft-great-war.jpg',
+      price: 24.99
+    },
+    {
+      id: 'clydeside-aviation-vol1',
+      title: 'clydeside aviation vol1',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/clydeside-aviation-vol1.jpg',
+      price: 24.99
+    }
+  ],
+  relatedPosts: [
+    {
+      id: 'bristol-fighter-f2b-brisfit',
+      title: 'Bristol Fighter F2B: WWI Two-Seat Fighter Excellence',
+      excerpt: 'The revolutionary two-seat fighter that redefined aerial warfare during World War I.',
+      image: '/blog-images/bristol-fighter-f2b-flying.jpg',
+      readingTime: 13
+    }
+  ]
+};
+
+export default function BlogPage() {
+  return <ComprehensiveBlogTemplate post={post} />;
 }

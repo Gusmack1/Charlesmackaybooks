@@ -96,7 +96,7 @@ const blogData = {
 
 const relatedBooks = [{"id":"adolf-rohrbach","title":"Adolf Rohrbach: Pioneer of Metal Aircraft Construction","price":27.99,"imageUrl":"/book-covers/adolf-rohrbach.jpg","description":"The definitive biography of Adolf Rohrbach, the German engineer who revolutionized aircraft construction with his metal flying boats and transport aircraft.","relevantContent":"Detailed coverage with archival research and technical analysis"}]
 
-const relatedPosts = []
+const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `Adolf Rohrbach: Revolutionary Metal Aircraft Designer | Charles E. MacKay`,

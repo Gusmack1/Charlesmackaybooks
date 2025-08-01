@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import ComprehensiveWebsiteFixer from '../../components/ComprehensiveWebsiteFixer';
+import ComprehensiveWebsiteFixer from '@/components/ComprehensiveWebsiteFixer';
 import PerformanceOptimizer from '../../components/PerformanceOptimizer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import MultiAgentAuditDeployment from '../../components/MultiAgentAuditDeployment';

@@ -106,7 +106,7 @@ const blogData = {
 
 const relatedBooks = [{"id":"aircraft-carrier-argus","title":"Aircraft Carrier Argus","price":22.99,"imageUrl":"/book-covers/aircraft-carrier-argus.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
 
-const relatedPosts = []
+const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `HMS Argus: The World First True Aircraft Carrier | Charles E. MacKay`,

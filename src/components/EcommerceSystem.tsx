@@ -694,4 +694,15 @@ export const PriceAlert: React.FC<{ bookId: string; currentPrice: number }> = ({
   );
 };
 
+// Main EcommerceSystem component that combines all ecommerce functionality
+const EcommerceSystem: React.FC = () => {
+  return (
+    <div className="ecommerce-system">
+      <ShoppingCart />
+      <Wishlist />
+      <RecentlyViewed />
+    </div>
+  );
+};
+
 export default EcommerceSystem; 

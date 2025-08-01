@@ -94,9 +94,9 @@ const blogData = {
   tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
 }
 
-const relatedBooks = []
+const relatedBooks: any[] = []
 
-const relatedPosts = []
+const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `Sycamore Seeds Helicopter Evolution | Charles E. MacKay`,

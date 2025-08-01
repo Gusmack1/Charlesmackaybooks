@@ -9,14 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.475.0",
     "next": "^15.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.69.5",
     "same-runtime": "^0.0.1",
+    "sass": "^1.69.5",
     "tailwind-merge": "^3.3.0",
     "tailwindcss-animate": "^1.0.7",
     "web-vitals": "^5.0.3"

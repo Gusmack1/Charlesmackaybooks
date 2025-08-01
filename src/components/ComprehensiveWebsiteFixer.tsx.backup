@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ComprehensiveWebsiteFixer as WebsiteFixerUtil, WebsiteFixResult, ComprehensiveFixReport } from '@/utils/comprehensiveWebsiteFixer';
+import { ComprehensiveWebsiteFixer, WebsiteFixResult, ComprehensiveFixReport } from '@/utils/comprehensiveWebsiteFixer';
 
 // Type definitions for event handlers
 interface PhaseStartData {
@@ -19,8 +19,8 @@ interface PhaseErrorData {
   error: any;
 }
 
-export default function ComprehensiveWebsiteFixer() {
-  const [fixer] = useState(() => new WebsiteFixerUtil());
+export default function ComprehensiveWebsiteFixerComponent() {
+  const [fixer] = useState(() => new ComprehensiveWebsiteFixer());
   const [report, setReport] = useState<ComprehensiveFixReport | null>(null);
   const [isRunning, setIsRunning] = useState(false);
   const [currentPhase, setCurrentPhase] = useState<number>(0);

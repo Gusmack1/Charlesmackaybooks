@@ -101,7 +101,7 @@ const blogData = {
 
 const relatedBooks = [{"id":"birth-atomic-bomb","title":"The Birth of the Atomic Bomb: From Scientific Discovery to Strategic Weapon","price":21.99,"imageUrl":"/book-covers/birth-atomic-bomb.jpg","description":"The complete story of the Manhattan Project, from early atomic research to the bombing of Japan and the dawn of the nuclear age.","relevantContent":"Detailed coverage with archival research and technical analysis"}]
 
-const relatedPosts = []
+const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `Messerschmitt Me 262: The World First Operational Jet Fighter | Charles E. MacKay`,

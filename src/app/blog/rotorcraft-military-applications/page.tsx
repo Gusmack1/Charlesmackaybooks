@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import BlogPostTemplate from '@/components/BlogPostTemplate'
 
 const blogData = {
-  title: `Rotorcraft Military Applications`,
-  excerpt: `Comprehensive analysis of rotorcraft military applications with expert historical research and technical details.`,
+  title: `Rotorcraft Military Applications: From Korea to Modern Warfare`,
+  excerpt: `The evolution of military helicopter operations from Korean War medevac missions to modern multi-role aircraft that revolutionized battlefield mobility and logistics.`,
   content: `
     <h2 id="introduction">Introduction: The Story Begins</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
@@ -94,9 +94,22 @@ const blogData = {
   tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
 }
 
-const relatedBooks = []
+const relatedBooks: Array<{
+  id: string
+  title: string
+  price: number
+  imageUrl: string
+  description: string
+  relevantContent: string
+}> = []
 
-const relatedPosts = []
+const relatedPosts: Array<{
+  slug: string
+  title: string
+  excerpt: string
+  imageUrl: string
+  readTime: string
+}> = []
 
 export const metadata: Metadata = {
   title: `Rotorcraft Military Applications | Charles E. MacKay`,
