@@ -21,7 +21,6 @@ interface ClientWrapperProps {
 export default function ClientWrapper({ children, pageType }: ClientWrapperProps) {
   return (
     <RecentlyViewedProvider>
-      <Header />
       <main className="min-h-screen">
         {children}
       </main>
