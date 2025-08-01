@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import BlogPostTemplate from '@/components/BlogPostTemplate'
+import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
-  title: `North American F-86 Sabre: Cold War Premier Fighter`,
-  excerpt: `The complete story of the F-86 Sabre, America answer to the MiG-15 and the most successful fighter of the Korean War.`,
+const post = {
+  id: 'f86-sabre-cold-war-fighter',
+  title: 'North American F-86 Sabre: Cold War Premier Fighter',
+  subtitle: 'The complete story of the F-86 Sabre, America answer to the MiG-15 and the most successful fighter of the Korean War.',
   content: `
     <h2 id="introduction">Introduction:  Cold War Premier Fighter</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
@@ -85,18 +86,33 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: 'The complete story of the F-86 Sabre, America answer to the MiG-15 and the most successful fighter of the Korean War.',
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/f86-sabre-cold-war-fighter.jpg',
+    alt: 'North American F-86 Sabre: Cold War Premier Fighter',
+    caption: 'North American F-86 Sabre: Cold War Premier Fighter - Expert analysis by Charles E. MacKay'
+  },
   category: 'Cold War Aviation',
   tags: ["F-86 Sabre","Korean War","USAF","Cold War","Jet Fighter"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
-  featuredImage: {"url":"/blog-images/f86-sabre-cold-war-fighter-featured.jpg","alt":"Featured image for North American F-86 Sabre: Cold War Premier Fighter","caption":"Historical photograph related to North American F-86 Sabre: Cold War Premier Fighter"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  relatedBooks: [
+    {
+      id: 'sabres-from-north',
+      title: 'Sabres from the North: F-86 Sabre in RAF, RCAF, Luftwaffe Service',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/sabres-from-north.jpg',
+      price: 12.92
+    }
+  ],
+  relatedPosts: []
 }
-
-const relatedBooks = [{"id":"captain-eric-brown","title":"Captain Eric Brown","price":22.99,"imageUrl":"/book-covers/captain-eric-brown.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
-
-const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `North American F-86 Sabre: Cold War Premier Fighter | Charles E. MacKay`,
@@ -111,11 +127,5 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  return (
-    <BlogPostTemplate 
-      blog={blogData}
-      relatedBooks={relatedBooks}
-      relatedPosts={relatedPosts}
-    />
-  )
+  return <ComprehensiveBlogTemplate post={post} />
 }

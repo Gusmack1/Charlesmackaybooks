@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogPostTemplate from '@/components/BlogPostTemplate'
+import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
 const blogData = {
   title: `Adolf Rohrbach: The Metal Aircraft Revolution That Changed Aviation`,
@@ -130,11 +130,5 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  return (
-    <BlogPostTemplate 
-      blog={blogData}
-      relatedBooks={relatedBooks}
-      relatedPosts={relatedPosts}
-    />
-  )
+  return <ComprehensiveBlogTemplate post={post} />
 }

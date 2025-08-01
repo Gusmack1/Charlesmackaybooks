@@ -1,9 +1,36 @@
 import type { Metadata } from 'next'
-import BlogPostTemplate from '@/components/BlogPostTemplate'
+import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
-  title: `William Beardmore & Company: Scottish Aviation Pioneer`,
-  excerpt: `The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.`,
+export const metadata: Metadata = {
+  title: `William Beardmore & Company: Scottish Aviation Pioneer | Charles E. MacKay`,
+  description: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
+  keywords: ["Beardmore","Scottish Aviation","Industrial History","Manufacturing","WWI"],
+  openGraph: {
+    title: `William Beardmore & Company: Scottish Aviation Pioneer`,
+    description: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
+    url: 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant',
+    siteName: 'Charles E. MacKay - Aviation Historian',
+    images: [{
+      url: '/blog-images/beardmore-aviation-scottish-industrial-giant.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'William Beardmore & Company: Scottish Aviation Pioneer'
+    }],
+    locale: 'en_GB',
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `William Beardmore & Company: Scottish Aviation Pioneer`,
+    description: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
+    images: ['/blog-images/beardmore-aviation-scottish-industrial-giant.jpg'],
+  },
+}
+
+const post = {
+  id: 'beardmore-aviation-scottish-industrial-giant',
+  title: 'William Beardmore & Company: Scottish Aviation Pioneer',
+  subtitle: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
   content: `
     <h2 id="introduction">Introduction:  Scottish Aviation Pioneer</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
@@ -85,37 +112,43 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/beardmore-aviation-scottish-industrial-giant.jpg',
+    alt: 'William Beardmore & Company: Scottish Aviation Pioneer',
+    caption: 'William Beardmore & Company: Scottish Aviation Pioneer - Expert analysis by Charles E. MacKay'
+  },
   category: 'Scottish Aviation',
   tags: ["Beardmore","Scottish Aviation","Industrial History","Manufacturing","WWI"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
-  featuredImage: {"url":"/blog-images/beardmore-aviation-scottish-industrial-giant-featured.jpg","alt":"Featured image for William Beardmore & Company: Scottish Aviation Pioneer","caption":"Historical photograph related to William Beardmore & Company: Scottish Aviation Pioneer"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  relatedBooks: [
+    {
+      id: 'beardmore-aviation',
+      title: 'Beardmore Aviation: The Story of a Scottish Industrial Giant\'s Aviation Activities',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/beardmore-aviation.jpg',
+      price: 12.76
+    },
+    {
+      id: 'clydeside-aviation-vol1',
+      title: 'Clydeside Aviation Volume One: The Great War',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/clydeside-aviation-vol1.jpg',
+      price: 16.08
+    }
+  ],
+  relatedPosts: []
 }
 
-const relatedBooks = [{"id":"beardmore-aviation","title":"Beardmore Aviation","price":22.99,"imageUrl":"/book-covers/beardmore-aviation.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"},{"id":"clydeside-aviation-vol1","title":"Clydeside Aviation Volume 1: The Pioneer Years 1909-1914","price":19.99,"imageUrl":"/book-covers/clydeside-aviation-vol1.jpg","description":"The first comprehensive study of aviation development on Clydeside, covering the pioneering efforts from 1909 to the outbreak of World War I.","relevantContent":"Detailed coverage with archival research and technical analysis"}]
 
-const relatedPosts: any[] = []
-
-export const metadata: Metadata = {
-  title: `William Beardmore & Company: Scottish Aviation Pioneer | Charles E. MacKay`,
-  description: `The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.`,
-  keywords: 'Beardmore, Scottish Aviation, Industrial History, Manufacturing, WWI, Charles MacKay, aviation history',
-  openGraph: {
-    title: `William Beardmore & Company: Scottish Aviation Pioneer`,
-    description: `The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.`,
-    images: ['/blog-images/beardmore-aviation-scottish-industrial-giant-featured.jpg'],
-    type: 'article'
-  }
-}
 
 export default function BlogPost() {
-  return (
-    <BlogPostTemplate 
-      blog={blogData}
-      relatedBooks={relatedBooks}
-      relatedPosts={relatedPosts}
-    />
-  )
+  return <ComprehensiveBlogTemplate post={post} />
 }

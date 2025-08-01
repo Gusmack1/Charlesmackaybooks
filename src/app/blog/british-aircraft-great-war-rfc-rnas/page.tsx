@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import BlogPostTemplate from '@/components/BlogPostTemplate'
+import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
-  title: `British Aircraft Great War: RFC & RNAS Development`,
-  excerpt: `From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters like the Sopwith Camel, Bristol Fighter, and S.E.5a that established Allied air superiority.`,
+const post = {
+  id: 'british-aircraft-great-war-rfc-rnas',
+  title: 'British Aircraft Great War: RFC & RNAS Development',
+  subtitle: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters like the Sopwith Camel, Bristol Fighter, and S.E.5a that established Allied air superiority.',
   content: `
     <h2 id="introduction">Introduction: The Birth of British Air Power</h2>
     <p>British aircraft development during the Great War represents one of aviation history's most remarkable transformations. From the early days of the Royal Flying Corps (RFC) in 1912 through the formation of the Royal Air Force in April 1918, British aircraft evolved from fragile reconnaissance machines to sophisticated fighting aircraft that would establish Allied air superiority over the Western Front.</p>
@@ -90,72 +91,40 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters like the Sopwith Camel, Bristol Fighter, and S.E.5a that established Allied air superiority.',
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/british-aircraft-great-war-rfc-rnas.jpg',
+    alt: 'British Aircraft Great War: RFC & RNAS Development',
+    caption: 'British Aircraft Great War: RFC & RNAS Development - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
   tags: ["british","aircraft","great","war","rfc","rnas"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/british-aircraft-great-war-rfc-rnas-featured.jpg","alt":"Featured image for British Aircraft Great War Rfc Rnas","caption":"Historical photograph related to British Aircraft Great War Rfc Rnas"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  relatedBooks: [
+    {
+      id: 'british-aircraft-great-war',
+      title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/british-aircraft-great-war.jpg',
+      price: 12.91
+    },
+    {
+      id: 'clydeside-aviation-vol1',
+      title: 'Clydeside Aviation Volume One: The Great War',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/clydeside-aviation-vol1.jpg',
+      price: 16.08
+    }
+  ],
+  relatedPosts: []
 }
-
-const relatedBooks = [
-  {
-    id: 'british-aircraft-great-war',
-    title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats',
-    price: 12.91,
-    description: 'Complete overview of British military aircraft during the Great War (1914-1918). Detailed coverage of all aircraft types used by the RFC, RNAS, and early RAF.',
-    imageUrl: '/book-covers/british-aircraft-great-war.jpg',
-    relevantContent: 'The definitive reference for this blog post topic, providing comprehensive coverage of RFC and RNAS aircraft development and operations during the Great War.'
-  },
-  {
-    id: 'clydeside-aviation-vol1',
-    title: 'Clydeside Aviation Volume One: The Great War',
-    price: 16.08,
-    description: 'First volume covering aviation activities on the Clyde during WWI (1914-1918). Detailed account of aircraft manufacturing, pilot training, and military aviation operations.',
-    imageUrl: '/book-covers/clydeside-aviation-vol1.jpg',
-    relevantContent: 'Detailed account of Scottish contributions to RFC and RNAS operations, including aircraft manufacturing and pilot training facilities on the Clyde.'
-  },
-  {
-    id: 'german-aircraft-great-war',
-    title: 'German Aircraft in the Great War 1914-1918',
-    price: 13.93,
-    description: 'Comprehensive study of German military aircraft during WWI (1914-1918). Covers fighters, bombers, seaplanes, and trainers used by the German Air Force and Navy.',
-    imageUrl: '/book-covers/german-aircraft-great-war.jpg',
-    relevantContent: 'Essential companion showing the German aircraft that RFC and RNAS pilots faced in combat, providing crucial context for understanding aerial warfare tactics.'
-  }
-]
-
-const relatedPosts = [
-  {
-    title: 'Sopwith Camel: The WWI Fighter That Won Air Superiority',
-    slug: 'sopwith-camel-wwi-fighter',
-    excerpt: 'The most successful Allied fighter of the Great War. Discover how this tricky but effective aircraft shot down more enemy planes than any other Allied fighter.',
-    imageUrl: '/blog-images/fokker-dr1-red-baron-replica.jpg',
-    readTime: '17 min'
-  },
-  {
-    title: 'Bristol Fighter F2B: The Legendary Brisfit of the Great War',
-    slug: 'bristol-fighter-f2b-brisfit',
-    excerpt: 'The two-seat fighter that became one of the most successful British aircraft of WWI, transforming from initial disaster to aerial supremacy.',
-    imageUrl: '/blog-images/bristol-fighter-f2b-flying.jpg',
-    readTime: '14 min'
-  },
-  {
-    title: 'German Aircraft Great War Development',
-    slug: 'german-aircraft-great-war-development',
-    excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.',
-    imageUrl: '/blog-images/fokker-triplane-wwi.jpg',
-    readTime: '11 min'
-  },
-  {
-    title: 'Clydeside Aviation Revolution',
-    slug: 'clydeside-aviation-revolution',
-    excerpt: 'How Scotland\'s industrial heartland became a powerhouse of aviation innovation and aircraft production.',
-    imageUrl: '/blog-images/clydeside-aircraft-factory.jpg',
-    readTime: '12 min'
-  }
-]
 
 export const metadata: Metadata = {
   title: `British Aircraft Great War Rfc Rnas | Charles E. MacKay`,
@@ -170,11 +139,5 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  return (
-    <BlogPostTemplate 
-      blog={blogData}
-      relatedBooks={relatedBooks}
-      relatedPosts={relatedPosts}
-    />
-  )
+  return <ComprehensiveBlogTemplate post={post} />
 }
