@@ -80,5 +80,4 @@ export async function runCompleteWebsiteFix() {
   }
 }
 
-// Export for use in components
-export { runCompleteWebsiteFix }; 
+// Export for use in components 

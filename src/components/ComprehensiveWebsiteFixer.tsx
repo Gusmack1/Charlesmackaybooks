@@ -70,8 +70,9 @@ class ComprehensiveWebsiteFixer {
     try {
       // Phase 1: System Audit
       await this.runPhase(0, 'System Audit', async () => {
-        // Import the website fixer dynamically to avoid import issues
-        const { websiteFixer } = await import('../utils/websiteFixes');
+              // Import the website fixer dynamically to avoid import issues
+      const { WebsiteFixer } = await import('../utils/websiteFixes');
+      const websiteFixer = new WebsiteFixer();
         const allFixes = websiteFixer.getAllFixes();
         const criticalFixes = websiteFixer.getFixesByPriority('critical');
         return {
@@ -92,7 +93,8 @@ class ComprehensiveWebsiteFixer {
 
       // Phase 2: SEO Fixes
       await this.runPhase(1, 'SEO Optimization', async () => {
-        const { websiteFixer } = await import('../utils/websiteFixes');
+        const { WebsiteFixer } = await import('../utils/websiteFixes');
+        const websiteFixer = new WebsiteFixer();
         const result = await websiteFixer.runFixesByCategory('seo');
         return {
           issuesFound: result.total,
@@ -112,7 +114,8 @@ class ComprehensiveWebsiteFixer {
 
       // Phase 3: Performance Fixes
       await this.runPhase(2, 'Performance Optimization', async () => {
-        const { websiteFixer } = await import('../utils/websiteFixes');
+        const { WebsiteFixer } = await import('../utils/websiteFixes');
+        const websiteFixer = new WebsiteFixer();
         const result = await websiteFixer.runFixesByCategory('performance');
         return {
           issuesFound: result.total,
@@ -132,7 +135,8 @@ class ComprehensiveWebsiteFixer {
 
       // Phase 4: Accessibility Fixes
       await this.runPhase(3, 'Accessibility Improvements', async () => {
-        const { websiteFixer } = await import('../utils/websiteFixes');
+        const { WebsiteFixer } = await import('../utils/websiteFixes');
+        const websiteFixer = new WebsiteFixer();
         const result = await websiteFixer.runFixesByCategory('accessibility');
         return {
           issuesFound: result.total,
@@ -152,7 +156,8 @@ class ComprehensiveWebsiteFixer {
 
       // Phase 5: Content Optimization
       await this.runPhase(4, 'Content Enhancement', async () => {
-        const { websiteFixer } = await import('../utils/websiteFixes');
+        const { WebsiteFixer } = await import('../utils/websiteFixes');
+        const websiteFixer = new WebsiteFixer();
         const result = await websiteFixer.runFixesByCategory('content');
         return {
           issuesFound: result.total,
@@ -172,7 +177,8 @@ class ComprehensiveWebsiteFixer {
 
       // Phase 6: Technical Improvements
       await this.runPhase(5, 'Technical Enhancements', async () => {
-        const { websiteFixer } = await import('../utils/websiteFixes');
+        const { WebsiteFixer } = await import('../utils/websiteFixes');
+        const websiteFixer = new WebsiteFixer();
         const result = await websiteFixer.runFixesByCategory('technical');
         return {
           issuesFound: result.total,
@@ -192,7 +198,8 @@ class ComprehensiveWebsiteFixer {
 
       // Phase 7: Final Quality Assurance
       await this.runPhase(6, 'Final Quality Assurance', async () => {
-        const { websiteFixer } = await import('../utils/websiteFixes');
+        const { WebsiteFixer } = await import('../utils/websiteFixes');
+        const websiteFixer = new WebsiteFixer();
         const allResults = await websiteFixer.runAllFixes();
         return {
           issuesFound: allResults.total,
