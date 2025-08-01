@@ -1,173 +1,107 @@
-import { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
+import type { Metadata } from 'next'
 import { books } from '@/data/books'
 import Header from '@/components/Header'
 import BookOrderClient from '@/components/BookOrderClient'
+import Image from 'next/image'
 
-const book = books.find(b => b.id === 'birth-atomic-bomb')!
+const bookData = books.find(b => b.id === 'birth-atomic-bomb')!
 
 export const metadata: Metadata = {
-  title: book.title + " | Charles E. MacKay Aviation Books",
-  description: "The birth of the atomic bomb - from scientific discovery to the Manhattan Project and Hiroshima. The complete story of how nuclear weapons changed the world forever.",
+  title: `${bookData.title} | Charles E. MacKay Aviation Books`,
+  description: bookData.description,
+  keywords: bookData.tags?.join(', ') || 'Birth Atomic Bomb',
   openGraph: {
-    title: book.title + " | Charles E. MacKay Aviation Books",
-    description: "The birth of the atomic bomb - from scientific discovery to the Manhattan Project and Hiroshima. The complete story of how nuclear weapons changed the world forever.",
-    type: 'website',
+    title: bookData.title,
+    description: bookData.description,
+    url: `https://charlesmackaybooks.com/books/birth-atomic-bomb`,
+    siteName: 'Charles E. MacKay - Aviation Historian',
     images: [
       {
-        url: book.imageUrl || '/book-covers/birth-atomic-bomb.jpg',
-        width: 1200,
-        height: 630,
-        alt: book.title + " by Charles E. MacKay"
+        url: bookData.imageUrl || '/book-covers/birth-atomic-bomb.jpg',
+        width: 600,
+        height: 800,
+        alt: bookData.title
       }
-    ]
+    ],
+    locale: 'en_GB',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: book.title + " | Charles E. MacKay Aviation Books",
-    description: "The birth of the atomic bomb - from scientific discovery to the Manhattan Project and Hiroshima. The complete story of how nuclear weapons changed the world forever."
+    title: bookData.title,
+    description: bookData.description,
+    images: [bookData.imageUrl || '/book-covers/birth-atomic-bomb.jpg'],
   }
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Book',
-  name: book.title,
-  description: book.description,
-  isbn: book.isbn,
-  isbn10: '1838056808',
-  isbn13: '9781838056808',
-  numberOfPages: book.pageCount,
-  datePublished: book.publicationYear?.toString() || '2023',
-  author: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay',
-    description: 'Military historian specializing in WWII science and nuclear weapons development',
-    url: 'https://charlesmackaybooks.com'
-  },
-  publisher: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay'
-  },
-  offers: {
-    '@type': 'Offer',
-    price: book.price.toString(),
-    priceCurrency: 'GBP',
-    availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-    seller: {
-      '@type': 'Person',
-      name: 'Charles E. MacKay'
-    }
-  },
-  image: book.imageUrl || '/book-covers/birth-atomic-bomb.jpg',
-  genre: 'WWII Military History',
-  about: [
-    'Atomic Bomb Development',
-    'Manhattan Project',
-    'Churchill Nuclear Policy',
-    'Truman Atomic Decisions',
-    'WWII Nuclear Weapons'
-  ],
-  keywords: book.tags?.join(', ') || 'Atomic Bomb, Manhattan Project, WWII, Nuclear',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://charlesmackaybooks.com/books/birth-atomic-bomb'
-  }
-}
-
-export default function BirthAtomicBombPage() {
-
+export default function BookPage() {
+  const description = "Comprehensive study of Birth Atomic Bomb with expert analysis and historical context";
+  
   return (
-    <div className="min-h-screen bg-slate-50">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
+    <div className="min-h-screen bg-gray-50">
       <Header />
-
+      
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-orange-900 to-red-900 text-white">
+      <div className="relative bg-gradient-to-br from-blue-900 via-slate-800 to-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-6 py-20">
+        <div className="relative max-w-7xl mx-auto px-6 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Book Cover */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="relative">
-                <Image
-                  src={book.imageUrl || '/book-covers/birth-atomic-bomb.jpg'}
-                  alt={`${book.title} by Charles E. MacKay`}
-                  width={450}
-                  height={675}
-                  className="rounded-lg shadow-2xl"
-                  priority
-                />
-                <div className="absolute -bottom-6 -right-6 bg-orange-600 text-white px-6 py-3 rounded-lg font-bold text-xl">
-                  £{book.price}
+            <div>
+              <div className="mb-4">
+                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  📚 Aviation History
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                {bookData.title}
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                {description}
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-sm text-blue-200 mb-8">
+                <span>By Charles E. MacKay</span>
+                <span>•</span>
+                <span>{bookData.pageCount || 250} pages</span>
+                <span>•</span>
+                <span>Published {bookData.publicationYear || '2020'}</span>
+                <span>•</span>
+                <span>ISBN: {bookData.isbn}</span>
+              </div>
+
+              {/* Quick Order */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <div className="text-2xl font-bold">£{(bookData.price || 24.99).toFixed(2)}</div>
+                    <div className="text-blue-200 text-sm">+ shipping worldwide</div>
+                  </div>
+                  <BookOrderClient
+                    book={bookData}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  >
+                    🛒 Order Now
+                  </BookOrderClient>
+                </div>
+                <div className="text-xs text-blue-200">
+                  Secure checkout • Ships worldwide • 30-day returns
                 </div>
               </div>
             </div>
 
-            {/* Book Details */}
-            <div>
-              <div className="text-sm text-orange-300 mb-3 flex items-center gap-2">
-                <span>WWII History</span>
-                <span>•</span>
-                <span>Nuclear Development</span>
-                <span>•</span>
-                <span>Manhattan Project</span>
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                {book.title}
-              </h1>
-              <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                {book.description}
-              </p>
-
-              {/* Book Specifications */}
-              <div className="grid grid-cols-2 gap-6 mb-8 text-center">
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-orange-300 mb-1">Pages</div>
-                  <div className="text-2xl font-bold">{book.pageCount}</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-orange-300 mb-1">Published</div>
-                  <div className="text-2xl font-bold">{book.publicationYear}</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-orange-300 mb-1">ISBN-13</div>
-                  <div className="text-lg font-semibold">9781838056808</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-orange-300 mb-1">Condition</div>
-                  <div className="text-2xl font-bold text-green-300">{book.condition}</div>
-                </div>
-              </div>
-
-              {/* Purchase Options */}
-              <div className="space-y-4">
-                <div className="grid gap-4">
-                  <BookOrderClient book={book} />
-                  <a
-                    href="https://www.ebay.co.uk/usr/chaza87"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-700 transition-colors text-center block"
-                  >
-                    🛒 Buy Now on eBay
-                  </a>
-                  <button className="w-full border-2 border-orange-400 text-orange-300 px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-50 hover:text-orange-800 transition-colors">
-                    📧 Contact for Academic Bulk Orders
-                  </button>
-                </div>
-                <div className="text-center">
-                  <Link
-                    href="/books"
-                    className="text-orange-300 hover:text-orange-100 underline"
-                  >
-                    ← Browse All Aviation Books
-                  </Link>
+            {/* Book Cover */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="absolute inset-0 bg-blue-600/20 rounded-lg blur-2xl transform rotate-6"></div>
+                <Image
+                  src={bookData.imageUrl || `/book-covers/${id}.jpg`}
+                  alt={bookData.title}
+                  width={400}
+                  height={600}
+                  className="relative rounded-lg shadow-2xl w-80 h-auto"
+                  priority
+                />
+                <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
+                  ⭐ Expert Author
                 </div>
               </div>
             </div>
@@ -175,7 +109,75 @@ export default function BirthAtomicBombPage() {
         </div>
       </div>
 
-      {/* Rest of content sections would go here */}
+      {/* Book Details */}
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid lg:grid-cols-3 gap-12">
+          {/* Main Content */}
+          <div className="lg:col-span-2">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">About This Book</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              {bookData.description}
+            </p>
+            
+            <div className="prose prose-lg max-w-none">
+              <h3>Key Features</h3>
+              <ul>
+                <li>Comprehensive historical analysis</li>
+                <li>Technical specifications and diagrams</li>
+                <li>Rare archival photographs</li>
+                <li>Expert commentary and insights</li>
+                <li>Essential reference for researchers</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-8">
+            {/* Purchase Options */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Purchase Options</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                  <div>
+                    <div className="font-semibold">Hardcover</div>
+                    <div className="text-sm text-gray-600">Free worldwide shipping</div>
+                  </div>
+                  <div className="text-xl font-bold">£{(bookData.price || 24.99).toFixed(2)}</div>
+                </div>
+                <BookOrderClient
+                  book={bookData}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Add to Cart
+                </BookOrderClient>
+              </div>
+            </div>
+
+            {/* Book Details */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Book Details</h3>
+              <div className="space-y-3 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Pages:</span>
+                  <span className="font-medium">{bookData.pageCount || 250}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">ISBN:</span>
+                  <span className="font-medium">{bookData.isbn}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Published:</span>
+                  <span className="font-medium">{bookData.publicationYear || '2020'}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Language:</span>
+                  <span className="font-medium">English</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }

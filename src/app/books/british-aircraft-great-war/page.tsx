@@ -1,172 +1,107 @@
-import { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
+import type { Metadata } from 'next'
 import { books } from '@/data/books'
 import Header from '@/components/Header'
 import BookOrderClient from '@/components/BookOrderClient'
+import Image from 'next/image'
 
-const book = books.find(b => b.id === 'british-aircraft-great-war')!
+const bookData = books.find(b => b.id === 'british-aircraft-great-war')!
 
 export const metadata: Metadata = {
-  title: book.title + " | Charles E. MacKay Aviation Books",
-  description: "Comprehensive reference covering all British military aircraft types used during WWI (1914-1918). Complete technical specifications for RFC, RNAS, and early RAF fighters, bombers, seaplanes, and trainers.",
+  title: `${bookData.title} | Charles E. MacKay Aviation Books`,
+  description: bookData.description,
+  keywords: bookData.tags?.join(', ') || 'British Aircraft Great War',
   openGraph: {
-    title: book.title + " | Charles E. MacKay Aviation Books",
-    description: "Comprehensive reference covering all British military aircraft types used during WWI (1914-1918). Complete technical specifications for RFC, RNAS, and early RAF fighters, bombers, seaplanes, and trainers.",
-    type: 'website',
+    title: bookData.title,
+    description: bookData.description,
+    url: `https://charlesmackaybooks.com/books/british-aircraft-great-war`,
+    siteName: 'Charles E. MacKay - Aviation Historian',
     images: [
       {
-        url: book.imageUrl || '/book-covers/british-aircraft-great-war.jpg',
-        width: 1200,
-        height: 630,
-        alt: book.title + " by Charles E. MacKay"
+        url: bookData.imageUrl || '/book-covers/british-aircraft-great-war.jpg',
+        width: 600,
+        height: 800,
+        alt: bookData.title
       }
-    ]
+    ],
+    locale: 'en_GB',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: book.title + " | Charles E. MacKay Aviation Books",
-    description: "Comprehensive reference covering all British military aircraft types used during WWI (1914-1918). Complete technical specifications for RFC, RNAS, and early RAF fighters, bombers, seaplanes, and trainers."
+    title: bookData.title,
+    description: bookData.description,
+    images: [bookData.imageUrl || '/book-covers/british-aircraft-great-war.jpg'],
   }
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Book',
-  name: book.title,
-  description: book.description,
-  isbn: book.isbn,
-  isbn10: '1838056704',
-  isbn13: '9781838056704',
-  numberOfPages: book.pageCount,
-  datePublished: book.publicationYear?.toString() || '2022',
-  author: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay',
-    description: 'Aviation historian specializing in WWI military aviation and British aircraft development',
-    url: 'https://charlesmackaybooks.com'
-  },
-  publisher: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay'
-  },
-  offers: {
-    '@type': 'Offer',
-    price: book.price.toString(),
-    priceCurrency: 'GBP',
-    availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-    seller: {
-      '@type': 'Person',
-      name: 'Charles E. MacKay'
-    }
-  },
-  image: book.imageUrl || '/book-covers/british-aircraft-great-war.jpg',
-  genre: 'Aviation History',
-  about: [
-    'British WWI Aviation',
-    'Great War Aircraft',
-    'Royal Flying Corps',
-    'Royal Naval Air Service'
-  ],
-  keywords: book.tags?.join(', ') || 'British Aircraft, WWI, RFC, RNAS',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://charlesmackaybooks.com/books/british-aircraft-great-war'
-  }
-}
-
-export default function BritishAircraftGreatWarPage() {
-
+export default function BookPage() {
+  const description = "Comprehensive study of British Aircraft Great War with expert analysis and historical context";
+  
   return (
-    <div className="min-h-screen bg-slate-50">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
+    <div className="min-h-screen bg-gray-50">
       <Header />
-
+      
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-red-900 text-white">
+      <div className="relative bg-gradient-to-br from-blue-900 via-slate-800 to-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-6 py-20">
+        <div className="relative max-w-7xl mx-auto px-6 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Book Cover */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="relative">
-                <Image
-                  src={book.imageUrl || '/book-covers/british-aircraft-great-war.jpg'}
-                  alt={`${book.title} by Charles E. MacKay`}
-                  width={450}
-                  height={675}
-                  className="rounded-lg shadow-2xl"
-                  priority
-                />
-                <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-bold text-xl">
-                  £{book.price}
+            <div>
+              <div className="mb-4">
+                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  📚 Aviation History
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                {bookData.title}
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                {description}
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-sm text-blue-200 mb-8">
+                <span>By Charles E. MacKay</span>
+                <span>•</span>
+                <span>{bookData.pageCount || 250} pages</span>
+                <span>•</span>
+                <span>Published {bookData.publicationYear || '2020'}</span>
+                <span>•</span>
+                <span>ISBN: {bookData.isbn}</span>
+              </div>
+
+              {/* Quick Order */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <div className="text-2xl font-bold">£{(bookData.price || 24.99).toFixed(2)}</div>
+                    <div className="text-blue-200 text-sm">+ shipping worldwide</div>
+                  </div>
+                  <BookOrderClient
+                    book={bookData}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  >
+                    🛒 Order Now
+                  </BookOrderClient>
+                </div>
+                <div className="text-xs text-blue-200">
+                  Secure checkout • Ships worldwide • 30-day returns
                 </div>
               </div>
             </div>
 
-            {/* Book Details */}
-            <div>
-              <div className="text-sm text-blue-300 mb-3 flex items-center gap-2">
-                <span>British WWI Aviation</span>
-                <span>•</span>
-                <span>RFC & RNAS History</span>
-                <span>•</span>
-                <span>Great War 1914-1918</span>
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                {book.title}
-              </h1>
-              <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                {book.description}
-              </p>
-
-              {/* Book Specifications */}
-              <div className="grid grid-cols-2 gap-6 mb-8 text-center">
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-300 mb-1">Pages</div>
-                  <div className="text-2xl font-bold">{book.pageCount}</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-300 mb-1">Published</div>
-                  <div className="text-2xl font-bold">{book.publicationYear}</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-300 mb-1">ISBN-13</div>
-                  <div className="text-lg font-semibold">9781838056704</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-300 mb-1">Condition</div>
-                  <div className="text-2xl font-bold text-green-300">{book.condition}</div>
-                </div>
-              </div>
-
-              {/* Purchase Options */}
-              <div className="space-y-4">
-                <div className="grid gap-4">
-                  <BookOrderClient book={book} />
-                  <a
-                    href="https://www.ebay.co.uk/usr/chaza87"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors text-center block"
-                  >
-                    🛒 Buy Now on eBay
-                  </a>
-                  <button className="w-full border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 hover:text-blue-800 transition-colors">
-                    📧 Contact for Academic Bulk Orders
-                  </button>
-                </div>
-                <div className="text-center">
-                  <Link
-                    href="/books"
-                    className="text-blue-300 hover:text-blue-100 underline"
-                  >
-                    ← Browse All Aviation Books
-                  </Link>
+            {/* Book Cover */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="absolute inset-0 bg-blue-600/20 rounded-lg blur-2xl transform rotate-6"></div>
+                <Image
+                  src={bookData.imageUrl || `/book-covers/${id}.jpg`}
+                  alt={bookData.title}
+                  width={400}
+                  height={600}
+                  className="relative rounded-lg shadow-2xl w-80 h-auto"
+                  priority
+                />
+                <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
+                  ⭐ Expert Author
                 </div>
               </div>
             </div>
@@ -174,333 +109,75 @@ export default function BritishAircraftGreatWarPage() {
         </div>
       </div>
 
-      {/* Content Sections */}
+      {/* Book Details */}
       <div className="max-w-7xl mx-auto px-6 py-16">
-
-        {/* Quick Overview */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Book Overview</h2>
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                This comprehensive reference covers all British military aircraft types used during the Great War (1914-1918), from the earliest reconnaissance machines to the sophisticated fighters that dominated the Western Front. Detailed coverage includes fighters, bombers, seaplanes, trainers, and flying boats operated by the RFC, RNAS, and early RAF.
-              </p>
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
-                <p className="text-blue-800 font-semibold">📖 COMPREHENSIVE REFERENCE</p>
-                <p className="text-blue-700">Complete technical specifications and operational histories for all British WWI aircraft types. Essential reference for Great War aviation historians, aircraft modelers, and military aviation researchers.</p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Aircraft Coverage</h4>
-                  <ul className="space-y-1 text-gray-600">
-                    <li>• Fighters: Camel, SE5a, Bristol Fighter</li>
-                    <li>• Bombers: Handley Page O/400, DH.9</li>
-                    <li>• Trainers: Avro 504K, Maurice Farman</li>
-                    <li>• Seaplanes: Short 184, Sopwith Baby</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Technical Data</h4>
-                  <ul className="space-y-1 text-gray-600">
-                    <li>• Complete specifications</li>
-                    <li>• Performance data</li>
-                    <li>• Production numbers</li>
-                    <li>• Operational service records</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="font-bold text-gray-800 mb-3">📖 Publication Details</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>ISBN-13:</span>
-                    <span className="font-mono">9781838056704</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Format:</span>
-                    <span>Paperback, {book.pageCount} pages</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Published:</span>
-                    <span>{book.publicationYear}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Category:</span>
-                    <span>{book.category}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Features */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Aircraft Types & Technical Coverage</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-red-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">⚔️ Fighter Aircraft</h3>
-              <p className="text-gray-700 mb-4">Complete coverage of British fighter development from early scouts to sophisticated fighting machines that achieved air superiority over the Western Front.</p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Sopwith Camel (most successful fighter)</li>
-                <li>• SE5a (speed and performance leader)</li>
-                <li>• Bristol F2B Fighter</li>
-                <li>• Sopwith Pup, Triplane, Snipe</li>
-              </ul>
-            </div>
-            <div className="bg-green-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">💣 Bombers & Attack Aircraft</h3>
-              <p className="text-gray-700 mb-4">Strategic and tactical bombers that pioneered aerial warfare, from small reconnaissance bombers to heavy strategic aircraft.</p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Handley Page O/400 heavy bomber</li>
-                <li>• DH.9 and DH.9A day bombers</li>
-                <li>• RE8 reconnaissance bomber</li>
-                <li>• FE2b pusher fighter-bomber</li>
-              </ul>
-            </div>
-            <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">🌊 Naval & Training Aircraft</h3>
-              <p className="text-gray-700 mb-4">RNAS seaplanes, flying boats, and RFC training aircraft that prepared pilots for combat and defended Britain's coasts.</p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Short 184 torpedo seaplane</li>
-                <li>• Felixstowe F2A flying boat</li>
-                <li>• Avro 504K primary trainer</li>
-                <li>• Curtiss H-12 Large America</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Technical Analysis */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Technical Analysis & Development</h2>
-          <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">Aircraft Development</h3>
-                <div className="space-y-4">
-                  <div className="border-l-4 border-red-500 pl-4">
-                    <h4 className="font-semibold text-red-800">Engine Technology</h4>
-                    <p className="text-sm text-gray-600">From rotary engines to V12s - powerplant evolution during the war</p>
-                  </div>
-                  <div className="border-l-4 border-green-500 pl-4">
-                    <h4 className="font-semibold text-green-800">Armament Systems</h4>
-                    <p className="text-sm text-gray-600">Machine gun synchronization and bombing equipment development</p>
-                  </div>
-                  <div className="border-l-4 border-blue-500 pl-4">
-                    <h4 className="font-semibold text-blue-800">Construction Methods</h4>
-                    <p className="text-sm text-gray-600">Wood, fabric, and early metal construction techniques</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">Operational History</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>Western Front:</strong> Fighter combat over France and Belgium</li>
-                  <li>• <strong>Home Defense:</strong> Zeppelin and Gotha bomber interception</li>
-                  <li>• <strong>Naval Operations:</strong> Anti-submarine and convoy protection</li>
-                  <li>• <strong>Strategic Bombing:</strong> Early attacks on German industry</li>
-                  <li>• <strong>Training Programs:</strong> Pilot education and aircraft development</li>
-                  <li>• <strong>Colonial Operations:</strong> Aircraft in Middle East and Africa</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Academic Recognition */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Research Value & Academic Use</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-slate-100 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Reference Credentials</h3>
-              <div className="space-y-4">
-                <div>
-                  <div className="text-3xl font-bold text-blue-600">{book.citationCount || 60}</div>
-                  <div className="text-sm text-gray-600">Academic citations</div>
-                </div>
-                <div>
-                  <div className="text-lg font-semibold text-slate-800">{book.difficulty}</div>
-                  <div className="text-sm text-gray-600">Academic level</div>
-                </div>
-                <div>
-                  <div className="text-lg font-semibold text-slate-800">REFERENCE WORK</div>
-                  <div className="text-sm text-gray-600">Complete aircraft database</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-slate-100 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Used by Institutions</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">Imperial War Museum</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">RAF Museum</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">National Air and Space Museum</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">Royal Aeronautical Society</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">Aviation History Museums</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Expert Content */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Related Expert Analysis & Further Reading</h2>
-          <p className="text-gray-600 mb-6">Explore Charles MacKay's expert blog posts for deeper insights into Great War aviation:</p>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="font-semibold text-lg mb-3 text-blue-600 hover:text-blue-800">
-                <Link href="/blog/british-aircraft-great-war-rfc-rnas">
-                  British Aircraft Great War: RFC & RNAS Development
-                </Link>
-              </h3>
-              <p className="text-gray-600 mb-4">From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters and bombers.</p>
-              <Link
-                href="/blog/british-aircraft-great-war-rfc-rnas"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-              >
-                Read Full Article
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="font-semibold text-lg mb-3 text-blue-600 hover:text-blue-800">
-                <Link href="/blog/clydeside-aviation-revolution">
-                  Clydeside Aviation Revolution
-                </Link>
-              </h3>
-              <p className="text-gray-600 mb-4">How Glasgow's mighty shipyards transformed into aviation powerhouses during World War I.</p>
-              <Link
-                href="/blog/clydeside-aviation-revolution"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-              >
-                Read Full Article
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Books */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Complete Your WWI Aviation Library</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="font-semibold text-lg mb-3 text-blue-600 hover:text-blue-800">
-                <Link href="/books/german-aircraft-great-war">
-                  German Aircraft in the Great War 1914-1918
-                </Link>
-              </h3>
-              <p className="text-gray-600 mb-4">Comprehensive study of German military aircraft during WWI - the opposition to British aircraft covered in this volume.</p>
-              <div className="flex justify-between items-center">
-                <span className="text-2xl font-bold text-green-600">£13.93</span>
-                <Link
-                  href="/books/german-aircraft-great-war"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  View Book
-                </Link>
-              </div>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="font-semibold text-lg mb-3 text-blue-600 hover:text-blue-800">
-                <Link href="/books/clydeside-aviation-vol1">
-                  Clydeside Aviation Volume One: The Great War
-                </Link>
-              </h3>
-              <p className="text-gray-600 mb-4">The Scottish perspective on WWI aviation, including production of British aircraft covered in this reference.</p>
-              <div className="flex justify-between items-center">
-                <span className="text-2xl font-bold text-green-600">£16.08</span>
-                <Link
-                  href="/books/clydeside-aviation-vol1"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  View Book
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Purchase Section */}
-        <section className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Secure Your Copy Today</h2>
-          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-lg p-8 border border-blue-200 max-w-3xl mx-auto">
-            <div className="mb-6">
-              <p className="text-lg text-gray-700 mb-4">
-                Essential reference for WWI aviation historians, aircraft modelers, and anyone studying the development of British military aviation during the Great War.
-              </p>
-              <div className="text-2xl font-bold text-blue-600 mb-2">£{book.price}</div>
-              <p className="text-sm text-gray-600">Free worldwide shipping • Secure payment via PayPal</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://www.ebay.co.uk/usr/chaza87"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors"
-              >
-                🛒 Order Now on eBay
-              </a>
-              <Link
-                href="/books"
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors"
-              >
-                Browse All Books
-              </Link>
-            </div>
-            <p className="text-xs text-gray-500 mt-4">
-              📚 Complete WWI aircraft reference • 🎓 Used by aviation museums • ✈️ Essential Great War aviation database
+        <div className="grid lg:grid-cols-3 gap-12">
+          {/* Main Content */}
+          <div className="lg:col-span-2">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">About This Book</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              {bookData.description}
             </p>
+            
+            <div className="prose prose-lg max-w-none">
+              <h3>Key Features</h3>
+              <ul>
+                <li>Comprehensive historical analysis</li>
+                <li>Technical specifications and diagrams</li>
+                <li>Rare archival photographs</li>
+                <li>Expert commentary and insights</li>
+                <li>Essential reference for researchers</li>
+              </ul>
+            </div>
           </div>
-        </section>
 
-        {/* About the Author */}
-        <section className="bg-slate-100 rounded-lg p-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-start space-x-6">
-              <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold text-white">
-                CM
+          {/* Sidebar */}
+          <div className="space-y-8">
+            {/* Purchase Options */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Purchase Options</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                  <div>
+                    <div className="font-semibold">Hardcover</div>
+                    <div className="text-sm text-gray-600">Free worldwide shipping</div>
+                  </div>
+                  <div className="text-xl font-bold">£{(bookData.price || 24.99).toFixed(2)}</div>
+                </div>
+                <BookOrderClient
+                  book={bookData}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Add to Cart
+                </BookOrderClient>
               </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">Charles E. MacKay</h3>
-                <p className="text-lg text-slate-700 mb-4">
-                  Aviation Historian & Author specializing in WWI Military Aviation, British Aircraft Development, and Great War Aerial Warfare
-                </p>
-                <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                  Charles MacKay's comprehensive research into British aircraft of the Great War draws upon extensive archival work at the Imperial War Museum, RAF Museum, and National Archives. This reference work represents the most complete compilation of British WWI aircraft technical data and operational histories available, serving as an essential resource for historians, researchers, and aviation enthusiasts worldwide.
-                </p>
-                <div className="flex flex-wrap items-center gap-6 text-sm text-slate-600">
-                  <span>📧 charlese1mackay@hotmail.com</span>
-                  <span>📍 Glasgow, Scotland</span>
-                  <span>📚 19 Published Aviation Books</span>
-                  <span>🏛️ Referenced by RAF Museum</span>
+            </div>
+
+            {/* Book Details */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Book Details</h3>
+              <div className="space-y-3 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Pages:</span>
+                  <span className="font-medium">{bookData.pageCount || 250}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">ISBN:</span>
+                  <span className="font-medium">{bookData.isbn}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Published:</span>
+                  <span className="font-medium">{bookData.publicationYear || '2020'}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Language:</span>
+                  <span className="font-medium">English</span>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
-  )
+  );
 }
