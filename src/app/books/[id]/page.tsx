@@ -435,9 +435,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         <div className={`relative bg-gradient-to-br ${gradientClass} text-white`}>
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="relative max-w-7xl mx-auto px-6 py-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Book Cover */}
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-start">
                 <div className="relative">
                   <Image
                     src={bookCoverSrc}
@@ -454,7 +454,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               </div>
 
               {/* Book Details */}
-              <div>
+              <div className="pt-0">
                 <div className={`text-sm ${accentClasses.textLight} mb-3 flex items-center gap-2`}>
                   <span>{book.category}</span>
                   {book.era && book.era[0] && (
