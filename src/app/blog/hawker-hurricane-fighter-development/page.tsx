@@ -5,36 +5,50 @@ const blogData = {
   title: `Hawker Hurricane: The Fighter That Saved Britain`,
   excerpt: `The complete development story of the Hawker Hurricane, the aircraft that bore the brunt of the Battle of Britain and saved the nation in its darkest hour.`,
   content: `
-    <h2 id="introduction">Introduction:  The Fighter That Saved Britain</h2>
-    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <h2 id="introduction">Introduction: The Fighter That Saved Britain</h2>
+    <p>The Hawker Hurricane stands as one of aviation history's most significant fighters - the aircraft that bore the brunt of the Battle of Britain and saved the nation in its darkest hour. While the Spitfire captured public imagination, it was the Hurricane that shot down more enemy aircraft during the battle, equipped the majority of Fighter Command squadrons, and provided the backbone of Britain's air defense.</p>
     
-    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+    <p>Designed by Sydney Camm and first flying in November 1935, the Hurricane represented Hawker's transition from fabric-covered biplanes to modern monoplane fighters. Its development bridged traditional construction methods with advanced aerodynamics, creating an aircraft that was both revolutionary and producible in the quantities needed for total war.</p>
 
-    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+    <p>The Hurricane's service record extends far beyond the Battle of Britain. From the opening campaigns in France through the Western Desert, Burma, and the Eastern Front, Hurricanes served in every theater of World War II. Over 14,500 were produced, making it the most numerous British fighter and one of the most important aircraft in RAF history.</p>
 
-    <h2 id="historical-background">Historical Background and Context</h2>
-    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+    <div class="my-8">
+      <img src="/blog-images/hawker-hurricane-formation-flight.jpg" alt="Formation of Hawker Hurricane fighters in flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Hurricane fighters in formation, demonstrating the aircraft that equipped the majority of Fighter Command squadrons during the Battle of Britain.</p>
+    </div>
 
-    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+    <h2 id="design-development">Design and Development Revolution</h2>
+    <p>Sydney Camm's Hurricane design represented a carefully balanced evolution from biplane to monoplane configuration. Rather than pursuing radical innovation, Camm applied proven Hawker construction techniques to a modern monoplane layout, ensuring the aircraft could be manufactured quickly using existing production capabilities and workforce skills.</p>
 
-    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+    <p>The Hurricane's mixed construction combined a steel tube framework with fabric covering aft of the cockpit and metal panels forward. This approach provided structural strength and damage resistance while enabling rapid production and field repairs. The design philosophy prioritized practicality and operational effectiveness over theoretical perfection.</p>
 
-    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
-
-    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
-    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
-
-    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+    <p>Engine selection proved crucial to the Hurricane's success. The Rolls-Royce Merlin provided excellent power-to-weight ratio and reliability, while its glycol cooling system enabled the streamlined nose profile essential for modern fighter performance. The close collaboration between Hawker and Rolls-Royce established patterns for future British aircraft development.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 text-blue-800">Hurricane Development Milestones</h3>
       <ul class="space-y-2 text-blue-700">
-        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
-        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
-        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
-        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
-        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+        <li><strong>1934:</strong> Air Ministry Specification F.36/34 issued for modern monoplane fighter</li>
+        <li><strong>November 1935:</strong> Hurricane prototype first flight with 1,025hp Merlin C</li>
+        <li><strong>June 1936:</strong> First production contract for 600 aircraft</li>
+        <li><strong>October 1937:</strong> First Hurricane Mk I enters service with No. 111 Squadron</li>
+        <li><strong>August 1940:</strong> Battle of Britain begins with 32 Hurricane squadrons operational</li>
+        <li><strong>1944:</strong> Final Hurricane variant (Mk IV) production ends</li>
       </ul>
+    </div>
+
+    <h2 id="battle-britain">Battle of Britain: The Hurricane's Finest Hour</h2>
+    <p>During the Battle of Britain, Hurricanes equipped 32 of Fighter Command's 52 operational squadrons, reflecting both the aircraft's numerical superiority and tactical importance. Hurricane pilots claimed approximately 60% of all enemy aircraft destroyed during the battle, establishing the type's reputation as a formidable air-to-air combat platform.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/hawker-hurricane-battle-britain-pilots.jpg" alt="Hurricane pilots during the Battle of Britain" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Hurricane pilots during the Battle of Britain, representing the brave aircrew who flew the majority of Fighter Command sorties.</p>
+    </div>
+
+    <p>The Hurricane's stable gun platform characteristics and robust construction made it particularly effective against bomber formations. Its eight .303 Browning machine guns provided concentrated firepower, while the aircraft's forgiving handling allowed pilots to maintain accurate fire during intense combat maneuvering.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/hurricane-development-workshop.jpg" alt="Hurricane aircraft under construction showing mixed construction methods" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Hurricane construction showing the mixed steel tube and fabric construction that enabled rapid production and field repairs.</p>
     </div>
 
     <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
@@ -94,7 +108,24 @@ const blogData = {
   tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
 }
 
-const relatedBooks = [{"id":"british-aircraft-great-war","title":"British Aircraft of the Great War","price":24.99,"imageUrl":"/book-covers/british-aircraft-great-war.jpg","description":"Comprehensive analysis of British military aviation development from 1914-1918, covering fighters, bombers, and reconnaissance aircraft.","relevantContent":"Detailed coverage with archival research and technical analysis"},{"id":"captain-eric-brown","title":"Captain Eric Brown","price":22.99,"imageUrl":"/book-covers/captain-eric-brown.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
+const relatedBooks = [
+  {
+    id: 'british-aircraft-great-war',
+    title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats',
+    price: 12.91,
+    description: 'Complete overview of British military aircraft during the Great War (1914-1918). Detailed coverage of all aircraft types used by the RFC, RNAS, and early RAF with technical data and operational histories. Comprehensive reference for British WWI aviation, RFC history, RNAS operations, and early RAF aircraft development.',
+    imageUrl: '/book-covers/british-aircraft-great-war.jpg',
+    relevantContent: 'Essential reference covering the evolution of British fighter design that led to the Hurricane development.'
+  },
+  {
+    id: 'captain-eric-brown',
+    title: 'Captain of the Clouds: Test Pilot Biography',
+    price: 6.98,
+    description: 'Biography of a prominent test pilot covering his career testing experimental and military aircraft. Personal accounts of dangerous test flights and aircraft development programs. Rare insights into test pilot operations, experimental aircraft development, and aviation safety evolution.',
+    imageUrl: '/book-covers/captain-eric-brown.jpg',
+    relevantContent: 'Insights into test pilot operations and aircraft development during the Hurricane era.'
+  }
+]
 
 const relatedPosts = []
 

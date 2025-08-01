@@ -5,12 +5,30 @@ const blogData = {
   title: `Captain Eric Brown: The World Most Experienced Test Pilot`,
   excerpt: `The extraordinary career of Captain Eric Brown, who flew more aircraft types than any pilot in history and pioneered carrier aviation.`,
   content: `
-    <h2 id="introduction">Introduction:  The World Most Experienced Test Pilot</h2>
-    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <h2 id="introduction">Introduction: The World's Most Experienced Test Pilot</h2>
+    <p>Captain Eric "Winkle" Brown stands as aviation history's most remarkable test pilot, holding world records that will likely never be equaled. Flying 487 different aircraft types - more than any pilot in history - Brown's extraordinary career spanned from World War II through the jet age, pioneering carrier aviation and testing captured enemy aircraft that advanced Allied aviation technology.</p>
     
-    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+    <div class="my-8">
+      <img src="/blog-images/eric-brown-official-portrait.jpg" alt="Captain Eric Brown in official RAF portrait" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Captain Eric "Winkle" Brown, the world's most experienced test pilot who flew 487 different aircraft types and made 2,407 aircraft carrier landings.</p>
+    </div>
+    
+    <p>Brown's achievements extend far beyond mere numbers. He was the first pilot to land a jet aircraft on an aircraft carrier, the first Allied pilot to fly the revolutionary Messerschmitt Me 163 rocket fighter, and the only pilot to fly every major German aircraft of World War II. His carrier landing record of 2,407 landings - including dangerous experimental aircraft - demonstrates extraordinary skill and courage.</p>
 
-    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+    <p>From testing captured German jets to pioneering helicopter operations aboard ships, Brown's career encompassed virtually every aspect of aviation development during the most dynamic period in flight history. His detailed test reports and fearless approach to experimental flight contributed immeasurably to aviation safety and aircraft development.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/eric-brown-sea-vampire-landing.jpg" alt="Eric Brown landing Sea Vampire jet on aircraft carrier" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Eric Brown making the first jet aircraft carrier landing in history, flying the Sea Vampire in December 1945.</p>
+    </div>
+
+    <h2 id="test-pilot-career">Legendary Test Pilot Career</h2>
+    <p>Brown's test pilot career began during World War II when he was selected for the elite Enemy Aircraft Flight, where he flew captured German aircraft to assess their capabilities and develop countermeasures. This dangerous assignment required extraordinary piloting skills and nerves of steel, as he flew unfamiliar aircraft with incomplete documentation and unknown flight characteristics.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/eric-brown-seafire-carrier.jpg" alt="Eric Brown with Seafire on aircraft carrier" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Eric Brown with a Seafire aboard an aircraft carrier, demonstrating his expertise in the dangerous art of carrier aviation.</p>
+    </div>
 
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
