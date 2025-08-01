@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'percy-pilcher-scotland-aviation-pioneer',
   title: `Percy Pilcher: Scotland's Forgotten Aviation Pioneer`,
-  excerpt: `The remarkable story of Percy Pilcher, the Scottish aviation pioneer who achieved powered flight before the Wright Brothers and whose tragic death robbed aviation of one of its greatest innovators.`,
+  subtitle: `The remarkable story of Percy Pilcher, the Scottish aviation pioneer who achieved powered flight before the Wright Brothers and whose tragic death robbed aviation of one of its greatest innovators.`,
   content: `
     <h2 id="introduction">Introduction: Scotland's Forgotten Aviation Pioneer</h2>
     <p>Percy Sinclair Pilcher stands as one of aviation's most tragic "what if" stories - a Scottish engineer and aviation pioneer who was on the verge of achieving powered flight before the Wright Brothers, only to have his career cut short by a fatal gliding accident in 1899. His innovative glider designs and planned powered aircraft represented some of the most advanced aeronautical thinking of the 1890s.</p>
@@ -100,18 +101,27 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `The remarkable story of Percy Pilcher, the Scottish aviation pioneer who achieved powered flight before the Wright Brothers and whose tragic death robbed aviation of one of its greatest innovators.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/percy-pilcher-hawk-glider-scotland.jpg',
+    alt: 'Percy Pilcher: Scotland\'s Forgotten Aviation Pioneer',
+    caption: 'Percy Pilcher: Scotland\'s Forgotten Aviation Pioneer - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
-  tags: ["percy","pilcher","scotland","aviation","pioneer"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/percy-pilcher-scotland-aviation-pioneer-featured.jpg","alt":"Featured image for Percy Pilcher Scotland Aviation Pioneer","caption":"Historical photograph related to Percy Pilcher Scotland Aviation Pioneer"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["percy","pilcher","scotland","aviation","pioneer","glider"],
+  relatedBooks: [],
+  relatedPosts: []
 }
 
-const relatedBooks: any[] = []
 
-const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `Percy Pilcher Scotland Aviation Pioneer | Charles E. MacKay`,
