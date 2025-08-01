@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'adolf-rohrbach-metal-aircraft-construction',
   title: `Adolf Rohrbach: Revolutionary Metal Aircraft Designer`,
-  excerpt: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
+  subtitle: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
   content: `
     <h2 id="introduction">Introduction:  Revolutionary Metal Aircraft Designer</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
@@ -85,13 +86,32 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/adolf-rohrbach-metal-aircraft-construction-featured.jpg',
+    alt: 'Adolf Rohrbach: Revolutionary Metal Aircraft Designer',
+    caption: 'Adolf Rohrbach: Revolutionary Metal Aircraft Designer - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation Engineering',
-  tags: ["Adolf Rohrbach","Metal Aircraft","Engineering","Aviation Design","German Aviation"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
-  featuredImage: {"url":"/blog-images/adolf-rohrbach-metal-aircraft-construction-featured.jpg","alt":"Featured image for Adolf Rohrbach: Revolutionary Metal Aircraft Designer","caption":"Historical photograph related to Adolf Rohrbach: Revolutionary Metal Aircraft Designer"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["adolf","rohrbach","metal","aircraft","engineering","aviation","design","german"],
+  relatedBooks: [
+    {
+      id: 'adolf-rohrbach',
+      title: 'Adolf Rohrbach: Pioneer of Metal Aircraft Construction',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/adolf-rohrbach.jpg',
+      price: 27.99
+    }
+  ],
+  relatedPosts: []
 }
 
 const relatedBooks = [{"id":"adolf-rohrbach","title":"Adolf Rohrbach: Pioneer of Metal Aircraft Construction","price":27.99,"imageUrl":"/book-covers/adolf-rohrbach.jpg","description":"The definitive biography of Adolf Rohrbach, the German engineer who revolutionized aircraft construction with his metal flying boats and transport aircraft.","relevantContent":"Detailed coverage with archival research and technical analysis"}]

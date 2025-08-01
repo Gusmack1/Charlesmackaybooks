@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'bristol-sycamore-helicopter-development',
   title: `Bristol Sycamore: British Helicopter Development Pioneer`,
-  excerpt: `The development story of the Bristol Sycamore, Britain's first production helicopter and the aircraft that established British rotorcraft capabilities in the 1950s.`,
+  subtitle: `The development story of the Bristol Sycamore, Britain's first production helicopter and the aircraft that established British rotorcraft capabilities in the 1950s.`,
   content: `
     <h2 id="introduction">Introduction: Britain's First Production Helicopter</h2>
     <p>The Bristol Sycamore holds a unique place in British aviation history as the nation's first production helicopter and the aircraft that established Britain as a serious player in rotorcraft development. First flying in 1947 and entering service in 1953, the Sycamore bridged the gap between experimental rotorcraft and practical operational helicopters.</p>
@@ -95,13 +96,24 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `The development story of the Bristol Sycamore, Britain's first production helicopter and the aircraft that established British rotorcraft capabilities in the 1950s.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/bristol-sycamore-helicopter-development-featured.jpg',
+    alt: 'Bristol Sycamore: British Helicopter Development Pioneer',
+    caption: 'Bristol Sycamore: British Helicopter Development Pioneer - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
-  tags: ["bristol","sycamore","helicopter","development"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/bristol-sycamore-helicopter-development-featured.jpg","alt":"Featured image for Bristol Sycamore Helicopter Development","caption":"Historical photograph related to Bristol Sycamore Helicopter Development"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["bristol","sycamore","helicopter","development","aviation","history","british"],
+  relatedBooks: [],
+  relatedPosts: []
 }
 
 const relatedBooks: any[] = []

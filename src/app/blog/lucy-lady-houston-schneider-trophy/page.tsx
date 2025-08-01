@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'lucy-lady-houston-schneider-trophy',
   title: `Lucy Lady Houston: The Woman Who Saved the Schneider Trophy`,
-  excerpt: `The remarkable story of Lucy Lady Houston, the wealthy patron who single-handedly funded Britain's 1931 Schneider Trophy victory when the government withdrew support.`,
+  subtitle: `The remarkable story of Lucy Lady Houston, the wealthy patron who single-handedly funded Britain's 1931 Schneider Trophy victory when the government withdrew support.`,
   content: `
     <h2 id="introduction">Introduction: The Woman Who Saved the Schneider Trophy</h2>
     <p>Lady Lucy Houston stands as one of aviation history's most remarkable patrons - a wealthy British widow whose personal intervention saved Britain's participation in the 1931 Schneider Trophy race and, in doing so, preserved the development program that would lead directly to the Supermarine Spitfire. When the government withdrew funding, Houston stepped forward with £100,000 to ensure British aviation supremacy.</p>
@@ -95,13 +96,24 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `The remarkable story of Lucy Lady Houston, the wealthy patron who single-handedly funded Britain's 1931 Schneider Trophy victory when the government withdrew support.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/lucy-lady-houston-schneider-trophy-featured.jpg',
+    alt: 'Lucy Lady Houston: The Woman Who Saved the Schneider Trophy',
+    caption: 'Lucy Lady Houston: The Woman Who Saved the Schneider Trophy - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
-  tags: ["lucy","lady","houston","schneider","trophy"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/lucy-lady-houston-schneider-trophy-featured.jpg","alt":"Featured image for Lucy Lady Houston Schneider Trophy","caption":"Historical photograph related to Lucy Lady Houston Schneider Trophy"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["lucy","lady","houston","schneider","trophy","aviation","history","british"],
+  relatedBooks: [],
+  relatedPosts: []
 }
 
 const relatedBooks: any[] = []

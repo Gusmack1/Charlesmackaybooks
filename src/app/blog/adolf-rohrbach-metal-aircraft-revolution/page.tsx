@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'adolf-rohrbach-metal-aircraft-revolution',
   title: `Adolf Rohrbach: The Metal Aircraft Revolution That Changed Aviation`,
-  excerpt: `How German engineer Adolf Rohrbach's revolutionary metal aircraft construction techniques transformed aviation design and established manufacturing principles still used today.`,
+  subtitle: `How German engineer Adolf Rohrbach's revolutionary metal aircraft construction techniques transformed aviation design and established manufacturing principles still used today.`,
   content: `
     <h2 id="introduction">Introduction: The Engineering Visionary</h2>
     <p>In the early 1920s, when most aircraft were still constructed from wood and fabric, a German engineer named Adolf Rohrbach was quietly revolutionizing aviation with metal construction techniques that would transform the industry. His innovative approaches to aircraft design and manufacturing established principles that remain fundamental to modern aviation, yet his contributions have often been overlooked in aviation history.</p>
@@ -75,13 +76,24 @@ const blogData = {
 
     <p>Today, as the aviation industry continues to evolve with new materials and manufacturing technologies, Adolf Rohrbach's legacy endures through the systematic approaches he established for aircraft design and construction. His vision of functional, efficient aircraft design continues to inspire engineers working to advance aviation technology for future generations.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
-  category: 'Aviation Engineering',
-  tags: ["Metal Aircraft","Aviation Technology","Engineering Innovation","Aircraft Design","Aviation History"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
-  featuredImage: {"url":"/blog-images/adolf-rohrbach-metal-aircraft-revolution-featured.jpg","alt":"Adolf Rohrbach metal aircraft construction techniques and the revolutionary Rohrbach Roland flying boat","caption":"The Rohrbach Roland flying boat demonstrating revolutionary metal aircraft construction techniques that transformed aviation"},
-  tableOfContents: [{"id":"introduction","title":"Introduction: The Engineering Visionary","level":2},{"id":"early-career","title":"Early Career and Naval Background","level":2},{"id":"metal-construction","title":"Revolutionary Metal Construction Techniques","level":2},{"id":"flying-boats","title":"Flying Boat Developments and the Rohrbach Roland","level":2},{"id":"technical-innovations","title":"Technical Innovations and Design Philosophy","level":2},{"id":"global-impact","title":"Global Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion: The Enduring Legacy","level":2}]
+  excerpt: `$2`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/adolf-rohrbach-metal-aircraft-revolution-featured.jpg',
+    alt: '$1',
+    caption: '$1 - Expert analysis by Charles E. MacKay'
+  },
+  category: 'Aviation History',
+  tags: ["adolf","rohrbach","metal","aircraft","revolution"],
+  relatedBooks: [],
+  relatedPosts: []
 }
 
 const relatedBooks = [{"id":"adolf-rohrbach","title":"Adolf Rohrbach: Pioneer of Metal Aircraft Construction","price":27.99,"imageUrl":"/book-covers/adolf-rohrbach.jpg","description":"The definitive biography of Adolf Rohrbach, the German engineer who revolutionized aircraft construction with his metal flying boats and transport aircraft.","relevantContent":"The complete Adolf Rohrbach story, featuring detailed analysis of his metal construction techniques, Rohrbach Roland flying boat, and lasting influence on modern aviation manufacturing."}]

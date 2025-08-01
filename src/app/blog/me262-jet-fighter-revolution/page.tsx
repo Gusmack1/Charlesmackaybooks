@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'me262-jet-fighter-revolution',
   title: `Messerschmitt Me 262: The World First Operational Jet Fighter`,
-  excerpt: `The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.`,
+  subtitle: `The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.`,
   content: `
     <h2 id="introduction">Introduction: The World's First Operational Jet Fighter</h2>
     <p>The Messerschmitt Me 262 stands as one of aviation history's most revolutionary aircraft - the world's first operational jet fighter that fundamentally changed the nature of air combat. First flying in 1942 and entering service in 1944, the Me 262 introduced jet propulsion to military aviation and established design principles that would influence fighter development for decades to come.</p>
@@ -90,13 +91,24 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
-  category: 'WWII Aviation',
-  tags: ["Me 262","Jet Fighter","Luftwaffe","WWII","Aviation Technology"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
-  featuredImage: {"url":"/blog-images/me262-jet-fighter-revolution-featured.jpg","alt":"Featured image for Messerschmitt Me 262: The World First Operational Jet Fighter","caption":"Historical photograph related to Messerschmitt Me 262: The World First Operational Jet Fighter"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  excerpt: `$2`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/me262-jet-fighter-revolution-featured.jpg',
+    alt: '$1',
+    caption: '$1 - Expert analysis by Charles E. MacKay'
+  },
+  category: 'Aviation History',
+  tags: ["me262","jet","fighter","revolution"],
+  relatedBooks: [],
+  relatedPosts: []
 }
 
 const relatedBooks = [{"id":"birth-atomic-bomb","title":"The Birth of the Atomic Bomb: From Scientific Discovery to Strategic Weapon","price":21.99,"imageUrl":"/book-covers/birth-atomic-bomb.jpg","description":"The complete story of the Manhattan Project, from early atomic research to the bombing of Japan and the dawn of the nuclear age.","relevantContent":"Detailed coverage with archival research and technical analysis"}]
