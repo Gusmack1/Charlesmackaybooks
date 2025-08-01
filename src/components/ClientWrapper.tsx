@@ -2,6 +2,8 @@
 
 import { ReactNode } from 'react';
 import { RecentlyViewedProvider } from '@/context/RecentlyViewedContext';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import BasketSidebar from '@/components/BasketSidebar';
 import Analytics from '@/components/Analytics';
 import { useCart } from '@/context/CartContext';
@@ -19,7 +21,11 @@ interface ClientWrapperProps {
 export default function ClientWrapper({ children, pageType }: ClientWrapperProps) {
   return (
     <RecentlyViewedProvider>
-      {children}
+      <Header />
+      <main className="min-h-screen">
+        {children}
+      </main>
+      <Footer />
       <BasketSidebarWrapper />
       <Analytics />
     </RecentlyViewedProvider>

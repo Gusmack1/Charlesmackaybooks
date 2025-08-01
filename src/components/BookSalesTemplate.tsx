@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useCart } from '@/context/CartContext'
 
 export interface BookData {
   id: string
@@ -43,6 +44,18 @@ interface BookSalesTemplateProps {
 export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: BookSalesTemplateProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [showMobileSticky, setShowMobileSticky] = useState(false)
+  const { addToCart } = useCart()
+
+  const handleAddToCart = () => {
+    addToCart({
+      id: book.id,
+      title: book.title,
+      price: book.price,
+      imageUrl: book.imageUrl,
+      category: book.category,
+      description: book.description
+    })
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,33 +94,7 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
   */
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Social Sharing Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex justify-center items-center gap-4 text-sm">
-            <span className="hidden md:inline">📢 Share this book:</span>
-            <div className="flex gap-3">
-              <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
-                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-                 aria-label="Share on Facebook">
-                📘 Facebook
-              </a>
-              <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
-                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-                 aria-label="Share on Twitter">
-                🐦 Twitter
-              </a>
-              <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
-                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-                 aria-label="Share on LinkedIn">
-                💼 LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="lg:grid lg:grid-cols-3 lg:gap-8">
           {/* Main Content */}
@@ -162,7 +149,9 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
                       <p className="text-sm text-blue-200">Free worldwide shipping</p>
                     </div>
                     <div className="flex gap-3">
-                      <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors min-h-[44px]">
+                      <button 
+                        onClick={handleAddToCart}
+                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors min-h-[44px]">
                         🛒 Add to Cart
                       </button>
                       {book.ebayLink && (
@@ -268,7 +257,9 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
                 </div>
 
                 <div className="space-y-3 mb-6">
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors">
+                  <button 
+                    onClick={handleAddToCart}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors">
                     🛒 Add to Cart
                   </button>
                   {book.ebayLink && (
@@ -339,7 +330,9 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
               <div className="text-sm text-gray-600">Free shipping</div>
             </div>
             <div className="flex gap-2">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold min-h-[44px] transition-colors">
+              <button 
+                onClick={handleAddToCart}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold min-h-[44px] transition-colors">
                 🛒 Cart
               </button>
               {book.ebayLink && (
