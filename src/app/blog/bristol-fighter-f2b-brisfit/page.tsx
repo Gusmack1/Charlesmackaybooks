@@ -94,63 +94,22 @@ const blogData = {
   tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
 }
 
-const relatedBooks = [
-  {
-    id: 'british-aircraft-great-war',
-    title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats',
-    price: 12.91,
-    description: 'Complete overview of British military aircraft during the Great War (1914-1918). Detailed coverage of all aircraft types used by the RFC, RNAS, and early RAF with technical data and operational histories.',
-    imageUrl: '/book-covers/british-aircraft-great-war.jpg',
-    relevantContent: 'Essential companion to understanding the Bristol Fighter F2B within the broader context of British WWI aviation development and RFC/RNAS operations.'
-  },
-  {
-    id: 'clydeside-aviation-vol1',
-    title: 'Clydeside Aviation Volume One: The Great War',
-    price: 16.08,
-    description: 'First volume covering aviation activities on the Clyde during WWI (1914-1918). Detailed account of aircraft manufacturing, pilot training, and military aviation operations in Scotland during the Great War period.',
-    imageUrl: '/book-covers/clydeside-aviation-vol1.jpg',
-    relevantContent: 'Explores the Scottish aviation industry during WWI, including production facilities that may have been involved in Bristol Fighter manufacturing and pilot training.'
-  },
-  {
-    id: 'german-aircraft-great-war',
-    title: 'German Aircraft in the Great War 1914-1918',
-    price: 13.93,
-    description: 'Comprehensive study of German military aircraft during WWI (1914-1918). Covers fighters, bombers, seaplanes, and trainers used by the German Air Force and Navy.',
-    imageUrl: '/book-covers/german-aircraft-great-war.jpg',
-    relevantContent: 'Provides crucial context on the German aircraft that the Bristol Fighter F2B faced in combat, including Albatros and Fokker fighters that challenged Allied air superiority.'
-  }
-]
+const relatedBooks: Array<{
+  id: string;
+  title: string;
+  price: number;
+  imageUrl: string;
+  description: string;
+  relevantContent: string;
+}> = []
 
-const relatedPosts = [
-  {
-    title: 'British Aircraft Great War: RFC & RNAS Development',
-    slug: 'british-aircraft-great-war-rfc-rnas',
-    excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters.',
-    imageUrl: '/blog-images/rfc-pilots-no32-squadron-1916.jpg',
-    readTime: '14 min'
-  },
-  {
-    title: 'Sopwith Camel: The WWI Fighter That Won Air Superiority',
-    slug: 'sopwith-camel-wwi-fighter',
-    excerpt: 'The most successful Allied fighter of the Great War. Discover how this tricky but effective aircraft shot down more enemy planes than any other Allied fighter.',
-    imageUrl: '/blog-images/fokker-dr1-red-baron-replica.jpg',
-    readTime: '17 min'
-  },
-  {
-    title: 'German Aircraft Great War Development',
-    slug: 'german-aircraft-great-war-development',
-    excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.',
-    imageUrl: '/blog-images/fokker-triplane-wwi.jpg',
-    readTime: '11 min'
-  },
-  {
-    title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
-    slug: 'hawker-hurricane-fighter-development',
-    excerpt: 'The workhorse fighter that shot down more German aircraft than any other during the Battle of Britain.',
-    imageUrl: '/blog-images/hawker-hurricane.jpg',
-    readTime: '13 min'
-  }
-]
+const relatedPosts: Array<{
+  slug: string;
+  title: string;
+  excerpt: string;
+  imageUrl: string;
+  readTime: string;
+}> = []
 
 export const metadata: Metadata = {
   title: `Bristol Fighter F2b Brisfit | Charles E. MacKay`,
