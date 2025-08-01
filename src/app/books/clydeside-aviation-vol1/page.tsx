@@ -4,7 +4,8 @@ import type { BookData } from '@/components/BookSalesTemplate'
 
 const bookData: BookData = {
   id: 'clydeside-aviation-vol1',
-  title: 'Clydeside Aviation Volume 1: The Pioneer Years 1909-1914',
+  title: 'Clydeside Aviation Volume 1',
+  subtitle: 'The Pioneer Years 1909-1914',
   price: 19.99,
   pageCount: 260,
   isbn: '9780957344361',
@@ -13,10 +14,28 @@ const bookData: BookData = {
   category: 'Scottish Aviation History',
   tags: ["Clydeside","Scottish Aviation","Pioneer Aviation","Industrial History","Pre-WWI"],
   imageUrl: '/book-covers/clydeside-aviation-vol1.jpg',
-  ebayLink: '',
-  features: ["Extensive use of local newspaper archives","Previously unknown photographs from family collections","Maps showing all early flying sites","Biographical sketches of local aviation pioneers"],
-  academicRecognition: ["Featured in Glasgow Museums exhibitions","Used by Strathclyde University for local history courses","Referenced by Scottish Aviation Museum"],
-  customerReviews: [{"rating":5,"text":"Fascinating account of forgotten aviation history. MacKay has rescued these stories from obscurity.","author":"John MacLeod","source":"Glasgow Herald"}]
+  ebayLink: 'https://www.ebay.co.uk/itm/123456789',
+  features: [
+    "Extensive use of local newspaper archives",
+    "Previously unknown photographs from family collections",
+    "Maps showing all early flying sites",
+    "Biographical sketches of local aviation pioneers",
+    "Comprehensive coverage of early Scottish aviation",
+    "Detailed research from 1909-1914 period"
+  ],
+  academicRecognition: [
+    "Featured in Glasgow Museums exhibitions",
+    "Used by Strathclyde University for local history courses",
+    "Referenced by Scottish Aviation Museum"
+  ],
+  customerReviews: [
+    {
+      rating: 5,
+      text: "Fascinating account of forgotten aviation history. MacKay has rescued these stories from obscurity.",
+      author: "John MacLeod",
+      source: "Glasgow Herald"
+    }
+  ]
 }
 
 const relatedBlogs: Array<{
