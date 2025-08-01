@@ -21,6 +21,17 @@
   to = "/blog-images/:splat"
   status = 200
 
+# Ensure homepage loads correctly (force refresh)
+[[redirects]]
+  from = "/performance-optimizer"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/performance-optimizer/*"
+  to = "/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
