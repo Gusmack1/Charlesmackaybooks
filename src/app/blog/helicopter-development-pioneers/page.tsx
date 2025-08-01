@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'helicopter-development-pioneers',
   title: `Helicopter Development Pioneers: From Cierva's Autogyros to Modern Rotorcraft`,
-  excerpt: `The pioneering engineers and inventors who solved the challenge of vertical flight, from Juan de la Cierva's autogyros to Igor Sikorsky's breakthrough helicopters.`,
+  subtitle: `The pioneering engineers and inventors who solved the challenge of vertical flight, from Juan de la Cierva's autogyros to Igor Sikorsky's breakthrough helicopters.`,
   content: `
     <h2 id="introduction">Introduction: The Visionaries Who Conquered Vertical Flight</h2>
     <p>Helicopter development represents one of aviation's greatest challenges - achieving practical, controllable vertical flight. The pioneers who solved this seemingly impossible problem were visionary engineers and inventors whose persistence, innovation, and courage transformed humanity's oldest flight dream into reality.</p>
@@ -95,18 +96,27 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `The pioneering engineers and inventors who solved the challenge of vertical flight, from Juan de la Cierva's autogyros to Igor Sikorsky's breakthrough helicopters.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/cierva-autogyro-historical.jpg',
+    alt: 'Helicopter Development Pioneers: From Cierva\'s Autogyros to Modern Rotorcraft',
+    caption: 'Helicopter Development Pioneers: From Cierva\'s Autogyros to Modern Rotorcraft - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
-  tags: ["helicopter","development","pioneers"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/helicopter-development-pioneers-featured.jpg","alt":"Featured image for Helicopter Development Pioneers","caption":"Historical photograph related to Helicopter Development Pioneers"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["helicopter","development","pioneers","cierva","sikorsky","autogyro"],
+  relatedBooks: [],
+  relatedPosts: []
 }
 
-const relatedBooks: any[] = []
 
-const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `Helicopter Development Pioneers | Charles E. MacKay`,
