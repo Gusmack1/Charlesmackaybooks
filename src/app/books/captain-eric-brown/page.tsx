@@ -3,28 +3,27 @@ import { books } from '@/data/books'
 import Header from '@/components/Header'
 import BookOrderClient from '@/components/BookOrderClient'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const bookData = books.find(b => b.id === 'captain-eric-brown')!
 
 export const metadata: Metadata = {
   title: `${bookData.title} | Charles E. MacKay Aviation Books`,
   description: bookData.description,
-  keywords: bookData.tags?.join(', ') || 'Captain Eric Brown',
+  keywords: bookData.tags?.join(', ') || 'aviation history',
   openGraph: {
     title: bookData.title,
     description: bookData.description,
     url: `https://charlesmackaybooks.com/books/captain-eric-brown`,
     siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: bookData.imageUrl || '/book-covers/captain-eric-brown.jpg',
-        width: 600,
-        height: 800,
-        alt: bookData.title
-      }
-    ],
+    images: [{
+      url: bookData.imageUrl || '/book-covers/captain-eric-brown.jpg',
+      width: 600,
+      height: 800,
+      alt: bookData.title
+    }],
     locale: 'en_GB',
-    type: 'website',
+    type: 'product',
   },
   twitter: {
     card: 'summary_large_image',
@@ -35,10 +34,45 @@ export const metadata: Metadata = {
 }
 
 export default function BookPage() {
-  const description = "Comprehensive study of Captain Eric Brown with expert analysis and historical context";
+  const description = "The extraordinary story of Captain Eric Brown, the world most experienced test pilot who flew more aircraft types than anyone in history.";
   
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Social Sharing Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-center items-center gap-4 text-sm">
+            <span className="hidden md:inline">📢 Share this book:</span>
+            <div className="flex gap-3">
+              <a 
+                href={`https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/books/captain-eric-brown`}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
+              >
+                📘 Facebook
+              </a>
+              <a 
+                href={`https://twitter.com/intent/tweet?url=https://charlesmackaybooks.com/books/captain-eric-brown&text=${bookData.title}`}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
+              >
+                🐦 Twitter
+              </a>
+              <a 
+                href={`https://linkedin.com/sharing/share-offsite/?url=https://charlesmackaybooks.com/books/captain-eric-brown`}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
+              >
+                💼 LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Header />
       
       {/* Hero Section */}
@@ -93,7 +127,7 @@ export default function BookPage() {
               <div className="relative">
                 <div className="absolute inset-0 bg-blue-600/20 rounded-lg blur-2xl transform rotate-6"></div>
                 <Image
-                  src={bookData.imageUrl || `/book-covers/${id}.jpg`}
+                  src={bookData.imageUrl || `/book-covers/captain-eric-brown.jpg`}
                   alt={bookData.title}
                   width={400}
                   height={600}
@@ -128,6 +162,14 @@ export default function BookPage() {
                 <li>Expert commentary and insights</li>
                 <li>Essential reference for researchers</li>
               </ul>
+              
+              <h3>Related Expert Analysis</h3>
+              <div className="grid md:grid-cols-2 gap-4 not-prose">
+                <Link href="/blog/test-pilot-biography-eric-brown" className="block bg-gray-100 p-4 rounded-lg hover:bg-gray-200">
+                  <h4 className="font-semibold text-blue-600">test pilot biography eric brown</h4>
+                  <p className="text-sm text-gray-600 mt-2">Read our detailed analysis...</p>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -150,6 +192,14 @@ export default function BookPage() {
                 >
                   Add to Cart
                 </BookOrderClient>
+                <a
+                  href="https://www.ebay.co.uk/usr/chaza87"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold transition-colors text-center block"
+                >
+                  🏪 Buy on eBay
+                </a>
               </div>
             </div>
 
@@ -175,6 +225,65 @@ export default function BookPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Sticky Mobile Cart */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:hidden z-50">
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="font-bold">£{(bookData.price || 24.99).toFixed(2)}</div>
+            <div className="text-sm text-gray-600">Free shipping</div>
+          </div>
+          <div className="flex gap-2">
+            <BookOrderClient
+              book={bookData}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold"
+            >
+              🛒 Cart
+            </BookOrderClient>
+            <a
+              href="https://www.ebay.co.uk/usr/chaza87"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-3 rounded-lg font-semibold"
+            >
+              🏪 eBay
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Social Sharing Footer */}
+      <div className="bg-gray-100 py-8">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h3 className="text-xl font-semibold mb-4">Share This Book</h3>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <a 
+              href={`https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/books/captain-eric-brown`}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📘 Facebook
+            </a>
+            <a 
+              href={`https://twitter.com/intent/tweet?url=https://charlesmackaybooks.com/books/captain-eric-brown&text=${bookData.title}`}
+              className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🐦 Twitter
+            </a>
+            <a 
+              href={`https://linkedin.com/sharing/share-offsite/?url=https://charlesmackaybooks.com/books/captain-eric-brown`}
+              className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg transition-colors" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💼 LinkedIn
+            </a>
           </div>
         </div>
       </div>

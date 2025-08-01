@@ -1,23 +1,32 @@
-import type { Metadata } from 'next'
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 FIXING TEMPLATE IMPORTS AND SIMPLIFYING');
+console.log('==========================================\n');
+
+// Simplified book template that uses existing components
+const generateSimpleBookTemplate = (bookId, description, relatedBlogs) => `import type { Metadata } from 'next'
 import { books } from '@/data/books'
 import Header from '@/components/Header'
 import BookOrderClient from '@/components/BookOrderClient'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const bookData = books.find(b => b.id === 'aircraft-carrier-argus')!
+const bookData = books.find(b => b.id === '${bookId}')!
 
 export const metadata: Metadata = {
-  title: `${bookData.title} | Charles E. MacKay Aviation Books`,
+  title: \`\${bookData.title} | Charles E. MacKay Aviation Books\`,
   description: bookData.description,
   keywords: bookData.tags?.join(', ') || 'aviation history',
   openGraph: {
     title: bookData.title,
     description: bookData.description,
-    url: `https://charlesmackaybooks.com/books/aircraft-carrier-argus`,
+    url: \`https://charlesmackaybooks.com/books/${bookId}\`,
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [{
-      url: bookData.imageUrl || '/book-covers/aircraft-carrier-argus.jpg',
+      url: bookData.imageUrl || '/book-covers/${bookId}.jpg',
       width: 600,
       height: 800,
       alt: bookData.title
@@ -29,12 +38,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: bookData.title,
     description: bookData.description,
-    images: [bookData.imageUrl || '/book-covers/aircraft-carrier-argus.jpg'],
+    images: [bookData.imageUrl || '/book-covers/${bookId}.jpg'],
   }
 }
 
 export default function BookPage() {
-  const description = "The complete story of HMS Argus, the world first aircraft carrier with a full-length flight deck, converted by Beardmore from the liner Conte Rosso.";
+  const description = "${description}";
   
   return (
     <div className="min-h-screen bg-gray-50">
@@ -45,7 +54,7 @@ export default function BookPage() {
             <span className="hidden md:inline">📢 Share this book:</span>
             <div className="flex gap-3">
               <a 
-                href={`https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/books/aircraft-carrier-argus`}
+                href={\`https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/books/${bookId}\`}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
@@ -53,7 +62,7 @@ export default function BookPage() {
                 📘 Facebook
               </a>
               <a 
-                href={`https://twitter.com/intent/tweet?url=https://charlesmackaybooks.com/books/aircraft-carrier-argus&text=${bookData.title}`}
+                href={\`https://twitter.com/intent/tweet?url=https://charlesmackaybooks.com/books/${bookId}&text=\${bookData.title}\`}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
@@ -61,7 +70,7 @@ export default function BookPage() {
                 🐦 Twitter
               </a>
               <a 
-                href={`https://linkedin.com/sharing/share-offsite/?url=https://charlesmackaybooks.com/books/aircraft-carrier-argus`}
+                href={\`https://linkedin.com/sharing/share-offsite/?url=https://charlesmackaybooks.com/books/${bookId}\`}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
@@ -127,7 +136,7 @@ export default function BookPage() {
               <div className="relative">
                 <div className="absolute inset-0 bg-blue-600/20 rounded-lg blur-2xl transform rotate-6"></div>
                 <Image
-                  src={bookData.imageUrl || `/book-covers/aircraft-carrier-argus.jpg`}
+                  src={bookData.imageUrl || \`/book-covers/${bookId}.jpg\`}
                   alt={bookData.title}
                   width={400}
                   height={600}
@@ -165,14 +174,10 @@ export default function BookPage() {
               
               <h3>Related Expert Analysis</h3>
               <div className="grid md:grid-cols-2 gap-4 not-prose">
-                <Link href="/blog/hms-argus-first-aircraft-carrier" className="block bg-gray-100 p-4 rounded-lg hover:bg-gray-200">
-                  <h4 className="font-semibold text-blue-600">hms argus first aircraft carrier</h4>
+${relatedBlogs.map(blogId => `                <Link href="/blog/${blogId}" className="block bg-gray-100 p-4 rounded-lg hover:bg-gray-200">
+                  <h4 className="font-semibold text-blue-600">${blogId.replace(/-/g, ' ').replace(/\\b\\w/g, l => l.toUpperCase())}</h4>
                   <p className="text-sm text-gray-600 mt-2">Read our detailed analysis...</p>
-                </Link>
-                <Link href="/blog/naval-aviation-history" className="block bg-gray-100 p-4 rounded-lg hover:bg-gray-200">
-                  <h4 className="font-semibold text-blue-600">naval aviation history</h4>
-                  <p className="text-sm text-gray-600 mt-2">Read our detailed analysis...</p>
-                </Link>
+                </Link>`).join('\n')}
               </div>
             </div>
           </div>
@@ -265,7 +270,7 @@ export default function BookPage() {
           <h3 className="text-xl font-semibold mb-4">Share This Book</h3>
           <div className="flex justify-center gap-4 flex-wrap">
             <a 
-              href={`https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/books/aircraft-carrier-argus`}
+              href={\`https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/books/${bookId}\`}
               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors" 
               target="_blank"
               rel="noopener noreferrer"
@@ -273,7 +278,7 @@ export default function BookPage() {
               📘 Facebook
             </a>
             <a 
-              href={`https://twitter.com/intent/tweet?url=https://charlesmackaybooks.com/books/aircraft-carrier-argus&text=${bookData.title}`}
+              href={\`https://twitter.com/intent/tweet?url=https://charlesmackaybooks.com/books/${bookId}&text=\${bookData.title}\`}
               className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors" 
               target="_blank"
               rel="noopener noreferrer"
@@ -281,7 +286,7 @@ export default function BookPage() {
               🐦 Twitter
             </a>
             <a 
-              href={`https://linkedin.com/sharing/share-offsite/?url=https://charlesmackaybooks.com/books/aircraft-carrier-argus`}
+              href={\`https://linkedin.com/sharing/share-offsite/?url=https://charlesmackaybooks.com/books/${bookId}\`}
               className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg transition-colors" 
               target="_blank"
               rel="noopener noreferrer"
@@ -293,4 +298,55 @@ export default function BookPage() {
       </div>
     </div>
   );
-}
+}`;
+
+// Book data
+const books = {
+  'beardmore-aviation': {
+    description: 'The definitive account of William Beardmore & Company ambitious venture into aviation manufacturing, from early experiments at Dalmuir to the tragic loss of R101.',
+    relatedBlogs: ['beardmore-aviation-scottish-industrial-giant', 'clydeside-aviation-revolution']
+  },
+  'british-aircraft-great-war': {
+    description: 'Comprehensive study of British military aviation during World War I, covering RFC, RNAS aircraft development, combat operations, and technological innovations.',
+    relatedBlogs: ['british-aircraft-great-war-rfc-rnas', 'sopwith-camel-wwi-fighter']
+  },
+  'captain-eric-brown': {
+    description: 'The extraordinary story of Captain Eric Brown, the world most experienced test pilot who flew more aircraft types than anyone in history.',
+    relatedBlogs: ['test-pilot-biography-eric-brown']
+  },
+  'clydeside-aviation-vol1': {
+    description: 'First volume covering aviation activities on the Clyde during WWI, including aircraft production, military contracts, and industrial development.',
+    relatedBlogs: ['clydeside-aviation-revolution', 'beardmore-aviation-scottish-industrial-giant']
+  },
+  'aircraft-carrier-argus': {
+    description: 'The complete story of HMS Argus, the world first aircraft carrier with a full-length flight deck, converted by Beardmore from the liner Conte Rosso.',
+    relatedBlogs: ['hms-argus-first-aircraft-carrier', 'naval-aviation-history']
+  },
+  'adolf-rohrbach': {
+    description: 'Biography of Adolf Rohrbach, the pioneering German aircraft designer who revolutionized metal aircraft construction and influenced aviation design worldwide.',
+    relatedBlogs: ['adolf-rohrbach-metal-aircraft-construction']
+  },
+  'birth-atomic-bomb': {
+    description: 'Comprehensive examination of the Manhattan Project and the development of atomic weapons, exploring the scientific, political, and military aspects.',
+    relatedBlogs: ['british-nuclear-deterrent-v-force']
+  }
+};
+
+console.log('📖 APPLYING FIXED BOOK TEMPLATES...');
+Object.entries(books).forEach(([bookId, data]) => {
+  const filePath = `src/app/books/${bookId}/page.tsx`;
+  
+  try {
+    fs.writeFileSync(filePath, generateSimpleBookTemplate(bookId, data.description, data.relatedBlogs));
+    console.log(`✅ Fixed: ${bookId}`);
+  } catch (error) {
+    console.log(`❌ Failed: ${bookId} - ${error.message}`);
+  }
+});
+
+console.log('\n🎉 FIXED TEMPLATES APPLIED!');
+console.log('✅ All book pages now use simplified comprehensive template');
+console.log('✅ Social sharing implemented');
+console.log('✅ Mobile sticky cart added');
+console.log('✅ Cross-linking to blogs');
+console.log('\n🚀 Ready for build!');
