@@ -2,4 +2,4 @@ import ComprehensiveWebsiteFixer from '../../components/ComprehensiveWebsiteFixe
 
 export default function ComprehensiveFixPage() {
   return <ComprehensiveWebsiteFixer />;
-} 
+}
