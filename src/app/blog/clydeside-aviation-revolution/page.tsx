@@ -5,12 +5,22 @@ const blogData = {
   title: `Clydeside Aviation: Scotland Industrial Flying Revolution`,
   excerpt: `How the River Clyde became the center of Scottish aviation manufacturing and changed the course of British aviation history.`,
   content: `
-    <h2 id="introduction">Introduction:  Scotland Industrial Flying Revolution</h2>
-    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <h2 id="introduction">Introduction: Scotland's Industrial Flying Revolution</h2>
+    <p>The River Clyde and its surrounding industrial heartland transformed from the world's premier shipbuilding center into one of Britain's most important aviation manufacturing regions. During two world wars, Clydeside companies leveraged their engineering expertise and industrial capacity to produce aircraft that changed aviation history, from the pioneering Beardmore aircraft to advanced wartime production.</p>
     
-    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+    <div class="my-8">
+      <img src="/blog-images/clydeside-aircraft-factory.jpg" alt="Clydeside aircraft factory showing aviation manufacturing" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">A Clydeside aircraft factory, demonstrating how Scotland's industrial infrastructure adapted to aviation manufacturing during wartime.</p>
+    </div>
+    
+    <p>The transition from ships to aircraft represented more than industrial conversion - it embodied Scotland's engineering heritage adapting to the demands of aviation warfare. Companies like William Beardmore & Company, Barclay, Curle & Co., and others brought shipbuilding precision and industrial scale to aircraft production.</p>
 
-    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+    <div class="my-8">
+      <img src="/blog-images/clydeside-aviation-dalmuir-1928.jpg" alt="Clydeside aviation works at Dalmuir in 1928" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Clydeside aviation works at Dalmuir in 1928, showing the scale of Scottish aircraft manufacturing operations.</p>
+    </div>
+
+    <p>From the early experiments with flying boats and fighters to massive wartime production programs, Clydeside aviation represented Scottish innovation, engineering excellence, and industrial determination. The legacy of this transformation influenced post-war aviation development and established Scotland as a permanent center for aerospace technology.</p>
 
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>

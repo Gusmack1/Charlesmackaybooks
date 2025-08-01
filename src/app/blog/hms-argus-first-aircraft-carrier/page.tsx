@@ -5,12 +5,22 @@ const blogData = {
   title: `HMS Argus: The World First True Aircraft Carrier`,
   excerpt: `The pioneering story of HMS Argus, converted from an ocean liner to become the world first aircraft carrier with a full-length flight deck.`,
   content: `
-    <h2 id="introduction">Introduction:  The World First True Aircraft Carrier</h2>
-    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <h2 id="introduction">Introduction: The World's First True Aircraft Carrier</h2>
+    <p>HMS Argus stands as one of naval aviation's most significant milestones - the world's first aircraft carrier with a full-length, unobstructed flight deck. Converted from the Italian ocean liner Conte Rosso during World War I, Argus established the fundamental design principles that would define aircraft carriers for the next century.</p>
     
-    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+    <div class="my-8">
+      <img src="/blog-images/hms-argus-aircraft-carrier.jpg" alt="HMS Argus showing the full-length flight deck" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus with its revolutionary full-length flight deck, establishing the template for all future aircraft carriers.</p>
+    </div>
+    
+    <p>Commissioned in September 1918, Argus introduced innovations that revolutionized naval warfare. Its flush deck design, internal hangar, and elevator systems created the template for modern carriers. Though arriving too late to see significant action in World War I, Argus proved the viability of large-scale naval aviation operations.</p>
 
-    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+    <div class="my-8">
+      <img src="/blog-images/hms-argus-dazzle-camouflage.jpg" alt="HMS Argus with distinctive dazzle camouflage" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus with its distinctive dazzle camouflage scheme, designed to confuse enemy submarines about the ship's speed and direction.</p>
+    </div>
+
+    <p>The development of Argus represented a paradigm shift from earlier carriers that retained traditional ship superstructures. By eliminating the superstructure entirely and creating an unobstructed flight deck running the ship's full length, Argus demonstrated the potential for intensive aircraft operations at sea.</p>
 
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>

@@ -2,15 +2,25 @@ import type { Metadata } from 'next'
 import BlogPostTemplate from '@/components/BlogPostTemplate'
 
 const blogData = {
-  title: `Helicopter Development Pioneers`,
-  excerpt: `Comprehensive analysis of helicopter development pioneers with expert historical research and technical details.`,
+  title: `Helicopter Development Pioneers: From Cierva's Autogyros to Modern Rotorcraft`,
+  excerpt: `The pioneering engineers and inventors who solved the challenge of vertical flight, from Juan de la Cierva's autogyros to Igor Sikorsky's breakthrough helicopters.`,
   content: `
-    <h2 id="introduction">Introduction: The Story Begins</h2>
-    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <h2 id="introduction">Introduction: The Visionaries Who Conquered Vertical Flight</h2>
+    <p>Helicopter development represents one of aviation's greatest challenges - achieving practical, controllable vertical flight. The pioneers who solved this seemingly impossible problem were visionary engineers and inventors whose persistence, innovation, and courage transformed humanity's oldest flight dream into reality.</p>
     
-    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+    <div class="my-8">
+      <img src="/blog-images/cierva-autogyro-historical.jpg" alt="Juan de la Cierva with his autogyro" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Juan de la Cierva with his revolutionary autogyro, which solved critical problems of rotorcraft flight and paved the way for helicopters.</p>
+    </div>
+    
+    <p>From Juan de la Cierva's autogyros that first achieved stable rotorcraft flight to Igor Sikorsky's breakthrough helicopters that established modern design principles, these pioneers overcame seemingly insurmountable technical challenges. Their innovations in rotor design, control systems, and flight dynamics established the foundation for the helicopter industry.</p>
 
-    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+    <div class="my-8">
+      <img src="/blog-images/autogyro-vs-helicopter-comparison.jpg" alt="Comparison diagram showing autogyro versus helicopter configurations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Technical comparison showing the evolution from autogyro to helicopter configuration, illustrating the key engineering breakthroughs.</p>
+    </div>
+
+    <p>These helicopter pioneers didn't just solve technical problems - they created entirely new possibilities for aviation. Their achievements revolutionized rescue operations, medical transport, military tactics, and civil aviation, establishing helicopters as indispensable tools that serve humanity in countless ways today.</p>
 
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>

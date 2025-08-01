@@ -2,15 +2,25 @@ import type { Metadata } from 'next'
 import BlogPostTemplate from '@/components/BlogPostTemplate'
 
 const blogData = {
-  title: `Korean War Air Combat`,
-  excerpt: `Comprehensive analysis of korean war air combat with expert historical research and technical details.`,
+  title: `Korean War Air Combat: MiG Alley and the Jet Age`,
+  excerpt: `The first jet-versus-jet air battles over Korea, where F-86 Sabres clashed with MiG-15s in the world's first supersonic air war.`,
   content: `
-    <h2 id="introduction">Introduction: The Story Begins</h2>
-    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <h2 id="introduction">Introduction: The World's First Jet War</h2>
+    <p>The Korean War marked a revolutionary turning point in military aviation - the world's first conflict where jets clashed in large-scale air combat. Over the skies of North Korea, particularly in the infamous "MiG Alley," American F-86 Sabres engaged Soviet-built MiG-15s in supersonic duels that established the template for modern air warfare.</p>
     
-    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+    <div class="my-8">
+      <img src="/blog-images/korean-war-aviation.jpg" alt="Korean War aviation showing F-86 and MiG aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Korean War aviation operations, where jets replaced propeller aircraft as the dominant force in air combat.</p>
+    </div>
+    
+    <p>This aerial confrontation between East and West introduced new tactical doctrines, technologies, and pilot training methods that would define air combat for the next half-century. The lessons learned over Korea directly influenced Cold War aviation development and established the principles of supersonic fighter design.</p>
 
-    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+    <div class="my-8">
+      <img src="/blog-images/f86-vs-mig15-combat.jpg" alt="F-86 Sabre versus MiG-15 combat illustration" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The classic F-86 Sabre versus MiG-15 confrontation that defined Korean War air combat and established jet fighter tactics.</p>
+    </div>
+
+    <p>Korean War air combat proved that jet fighters would dominate future conflicts and demonstrated the critical importance of pilot training, aircraft performance, and technological superiority in determining air superiority. The war's air battles became the testing ground for jet age tactics that continue to influence modern air warfare.</p>
 
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>

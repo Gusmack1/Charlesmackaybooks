@@ -2,15 +2,30 @@ import type { Metadata } from 'next'
 import BlogPostTemplate from '@/components/BlogPostTemplate'
 
 const blogData = {
-  title: `Percy Pilcher Scotland Aviation Pioneer`,
-  excerpt: `Comprehensive analysis of percy pilcher scotland aviation pioneer with expert historical research and technical details.`,
+  title: `Percy Pilcher: Scotland's Forgotten Aviation Pioneer`,
+  excerpt: `The remarkable story of Percy Pilcher, the Scottish aviation pioneer who achieved powered flight before the Wright Brothers and whose tragic death robbed aviation of one of its greatest innovators.`,
   content: `
-    <h2 id="introduction">Introduction: The Story Begins</h2>
-    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <h2 id="introduction">Introduction: Scotland's Forgotten Aviation Pioneer</h2>
+    <p>Percy Sinclair Pilcher stands as one of aviation's most tragic "what if" stories - a Scottish engineer and aviation pioneer who was on the verge of achieving powered flight before the Wright Brothers, only to have his career cut short by a fatal gliding accident in 1899. His innovative glider designs and planned powered aircraft represented some of the most advanced aeronautical thinking of the 1890s.</p>
     
-    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+    <div class="my-8">
+      <img src="/blog-images/percy-pilcher-hawk-glider-scotland.jpg" alt="Percy Pilcher with his Hawk glider in Scotland" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Percy Pilcher with his famous Hawk glider in the Scottish countryside, demonstrating his mastery of gliding flight years before powered aviation.</p>
+    </div>
+    
+    <p>Working initially with Otto Lilienthal in Germany, Pilcher returned to Scotland to develop his own series of increasingly sophisticated gliders. His Bat, Beetle, Gull, and Hawk designs demonstrated systematic engineering improvement and achieved flights of over 750 feet - remarkable distances for the 1890s.</p>
 
-    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+    <div class="my-8">
+      <img src="/blog-images/percy-pilcher-glider-experiments.jpg" alt="Percy Pilcher conducting glider experiments" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Pilcher conducting systematic glider experiments, applying scientific methodology to solve the problems of controlled flight.</p>
+    </div>
+
+    <p>At the time of his death, Pilcher was preparing to test a powered aircraft equipped with a lightweight engine. Had he survived, many aviation historians believe he might have achieved powered flight several years before the Wright Brothers, potentially establishing Britain as the birthplace of practical aviation.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/percy-pilcher-portrait-engineer.jpg" alt="Portrait of Percy Pilcher as engineer and aviation pioneer" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Percy Pilcher, the Scottish engineer whose systematic approach to flight problems brought him tantalizingly close to achieving powered flight.</p>
+    </div>
 
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>

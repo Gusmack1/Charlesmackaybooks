@@ -2,15 +2,25 @@ import type { Metadata } from 'next'
 import BlogPostTemplate from '@/components/BlogPostTemplate'
 
 const blogData = {
-  title: `English Electric Lightning Development`,
-  excerpt: `Comprehensive analysis of english electric lightning development with expert historical research and technical details.`,
+  title: `English Electric Lightning: Britain's Supersonic Interceptor`,
+  excerpt: `The development story of the English Electric Lightning, Britain's first supersonic fighter that could climb vertically and reach Mach 2, representing the pinnacle of British jet design.`,
   content: `
-    <h2 id="introduction">Introduction: The Story Begins</h2>
-    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    <h2 id="introduction">Introduction: Britain's Supersonic Interceptor</h2>
+    <p>The English Electric Lightning stands as the pinnacle of British fighter design - a supersonic interceptor capable of vertical climbs and Mach 2 speeds that defended British skies during the height of the Cold War. First flying in 1957, the Lightning represented Britain's answer to the Soviet bomber threat and established the RAF as operators of one of the world's most capable interceptors.</p>
     
-    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+    <div class="my-8">
+      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning F.6 in flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The English Electric Lightning F.6, showing its distinctive stacked engine configuration and swept wing design that enabled Mach 2+ performance.</p>
+    </div>
+    
+    <p>Designed by W.E.W. "Teddy" Petter's team at English Electric, the Lightning featured revolutionary stacked Rolls-Royce Avon engines that provided unprecedented thrust-to-weight ratio. This configuration enabled the Lightning to climb vertically from takeoff - a capability that impressed pilots and air show audiences worldwide.</p>
 
-    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+    <div class="my-8">
+      <img src="/blog-images/lightning-f6-supersonic.jpg" alt="Lightning climbing vertically demonstrating its exceptional performance" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Lightning demonstrating its famous vertical climb capability, made possible by its exceptional thrust-to-weight ratio.</p>
+    </div>
+
+    <p>The Lightning's development represented the culmination of British jet fighter evolution, incorporating lessons learned from earlier designs while pushing performance boundaries to their limits. Its service record includes numerous interceptions of Soviet reconnaissance aircraft and demonstration of Britain's commitment to maintaining advanced air defense capabilities.</p>
 
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
