@@ -9,14 +9,39 @@ export default function LiveChat() {
   const [email, setEmail] = useState('');
   const [institution, setInstitution] = useState('');
   const [inquiryType, setInquiryType] = useState('general');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateForm = () => {
+    const newErrors: {[key: string]: string} = {};
+
+    if (!name.trim()) newErrors.name = 'Name is required';
+    if (!email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    if (!message.trim()) newErrors.message = 'Message is required';
+    if (message.trim().length < 10) newErrors.message = 'Message must be at least 10 characters';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) return;
 
-    const emailBody = `
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const emailBody = `
 New Academic Inquiry from ${name}
 
-Institution: ${institution}
+Institution: ${institution || 'Not specified'}
 Email: ${email}
 Inquiry Type: ${inquiryType}
 
@@ -25,20 +50,37 @@ ${message}
 
 ---
 Sent from Charles MacKay Aviation Books website
+Time: ${new Date().toLocaleString()}
     `.trim();
 
-    const subject = `Academic Inquiry: ${inquiryType} - ${institution}`;
-    const mailto = `mailto:charlese1mackay@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      const subject = `Academic Inquiry: ${inquiryType}${institution ? ` - ${institution}` : ''}`;
+      const mailto = `mailto:charlese1mackay@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
-    window.open(mailto, '_self');
+      // Small delay to show loading state
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      window.open(mailto, '_self');
+      
+      setSubmitStatus('success');
+      
+      // Reset form after short delay
+      setTimeout(() => {
+        setName('');
+        setEmail('');
+        setInstitution('');
+        setMessage('');
+        setInquiryType('general');
+        setErrors({});
+        setSubmitStatus('idle');
+        setIsOpen(false);
+      }, 2000);
 
-    // Reset form
-    setName('');
-    setEmail('');
-    setInstitution('');
-    setMessage('');
-    setInquiryType('general');
-    setIsOpen(false);
+    } catch (error) {
+      console.error('Error submitting inquiry:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -83,16 +125,35 @@ Sent from Charles MacKay Aviation Books website
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="p-4 space-y-4 max-h-96 overflow-y-auto">
+              {/* Success Message */}
+              {submitStatus === 'success' && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-center">
+                  <div className="text-green-600 text-sm font-medium">✅ Inquiry sent successfully!</div>
+                  <div className="text-green-500 text-xs">Opening your email client...</div>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {submitStatus === 'error' && (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-center">
+                  <div className="text-red-600 text-sm font-medium">❌ Failed to send inquiry</div>
+                  <div className="text-red-500 text-xs">Please try again or email directly</div>
+                </div>
+              )}
+
               <div>
                 <label className="block text-sm font-medium mb-1">Name *</label>
                 <input
                   type="text"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-full box-border"
+                  onChange={(e) => {setName(e.target.value); if (errors.name) setErrors(prev => ({...prev, name: ''}));}}
+                  disabled={isSubmitting}
+                  className={`w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 max-w-full box-border ${
+                    errors.name ? 'border-red-300 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                  } ${isSubmitting ? 'bg-gray-50 cursor-not-allowed' : ''}`}
                   placeholder="Your full name"
                 />
+                {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
               </div>
 
               <div>
@@ -100,11 +161,14 @@ Sent from Charles MacKay Aviation Books website
                 <input
                   type="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-full box-border"
+                  onChange={(e) => {setEmail(e.target.value); if (errors.email) setErrors(prev => ({...prev, email: ''}));}}
+                  disabled={isSubmitting}
+                  className={`w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 max-w-full box-border ${
+                    errors.email ? 'border-red-300 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                  } ${isSubmitting ? 'bg-gray-50 cursor-not-allowed' : ''}`}
                   placeholder="your.email@institution.edu"
                 />
+                {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
               </div>
 
               <div>
@@ -113,7 +177,10 @@ Sent from Charles MacKay Aviation Books website
                   type="text"
                   value={institution}
                   onChange={(e) => setInstitution(e.target.value)}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-full box-border"
+                  disabled={isSubmitting}
+                  className={`w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-full box-border ${
+                    isSubmitting ? 'bg-gray-50 cursor-not-allowed' : ''
+                  }`}
                   placeholder="University, Museum, Library"
                 />
               </div>
@@ -123,7 +190,10 @@ Sent from Charles MacKay Aviation Books website
                 <select
                   value={inquiryType}
                   onChange={(e) => setInquiryType(e.target.value)}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-full box-border"
+                  disabled={isSubmitting}
+                  className={`w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-full box-border ${
+                    isSubmitting ? 'bg-gray-50 cursor-not-allowed' : ''
+                  }`}
                 >
                   <option value="general">General Inquiry</option>
                   <option value="bulk-order">Bulk Order (5+ books)</option>
@@ -138,23 +208,47 @@ Sent from Charles MacKay Aviation Books website
                 <label className="block text-sm font-medium mb-1">Message *</label>
                 <textarea
                   value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
+                  onChange={(e) => {setMessage(e.target.value); if (errors.message) setErrors(prev => ({...prev, message: ''}));}}
+                  disabled={isSubmitting}
                   rows={4}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-full box-border"
+                  className={`w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 max-w-full box-border ${
+                    errors.message ? 'border-red-300 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                  } ${isSubmitting ? 'bg-gray-50 cursor-not-allowed' : ''}`}
                   placeholder="Please describe your inquiry, research needs, or how we can help your institution..."
                 />
+                {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
+                <p className="text-xs text-gray-400 mt-1">{message.length}/10 characters minimum</p>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#2a384a] text-white py-2 rounded hover:bg-gray-800 transition-colors text-sm font-medium"
+                disabled={isSubmitting || submitStatus === 'success'}
+                className={`w-full py-2 rounded transition-colors text-sm font-medium ${
+                  isSubmitting || submitStatus === 'success'
+                    ? 'bg-gray-400 cursor-not-allowed text-gray-200'
+                    : 'bg-[#2a384a] text-white hover:bg-gray-800'
+                }`}
               >
-                Send Inquiry to Charles
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </span>
+                ) : submitStatus === 'success' ? (
+                  '✅ Sent Successfully'
+                ) : (
+                  'Send Inquiry to Charles'
+                )}
               </button>
 
               <p className="text-xs text-gray-500 text-center">
-                Your inquiry will open in your email client. Charles typically responds within 24 hours.
+                {submitStatus === 'success' 
+                  ? 'Thank you! Your email client should open shortly.'
+                  : 'Your inquiry will open in your email client. Charles typically responds within 24 hours.'
+                }
               </p>
             </form>
           </div>

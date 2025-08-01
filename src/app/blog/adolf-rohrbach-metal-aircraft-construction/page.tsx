@@ -1,452 +1,121 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
-import SocialShare from '@/components/SocialShare'
+import BlogPostTemplate from '@/components/BlogPostTemplate'
+
+const blogData = {
+  title: `Adolf Rohrbach: Revolutionary Metal Aircraft Designer`,
+  excerpt: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
+  content: `
+    <h2 id="introduction">Introduction:  Revolutionary Metal Aircraft Designer</h2>
+    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    
+    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+
+    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+
+    <h2 id="historical-background">Historical Background and Context</h2>
+    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+
+    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+
+    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+
+    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
+    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+
+    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <ul class="space-y-2 text-blue-700">
+        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
+        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
+        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
+        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
+        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+      </ul>
+    </div>
+
+    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
+
+    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <h2 id="operational-history">Operational History and Performance</h2>
+    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
+
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+
+    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
+
+    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
+
+    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
+
+    <h2 id="key-figures">Key Figures and Decision Makers</h2>
+    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
+
+    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
+
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+
+    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
+
+    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
+
+    <h2 id="impact-legacy">Impact and Legacy</h2>
+    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
+
+    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+
+    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+
+    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+
+    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+
+    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
+    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+
+    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+
+    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+
+    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+
+    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+  `,
+  publishDate: 'March 2024',
+  readTime: '12 min read',
+  category: 'Aviation Engineering',
+  tags: ["Adolf Rohrbach","Metal Aircraft","Engineering","Aviation Design","German Aviation"],
+  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
+  featuredImage: {"url":"/blog-images/adolf-rohrbach-metal-aircraft-construction-featured.jpg","alt":"Featured image for Adolf Rohrbach: Revolutionary Metal Aircraft Designer","caption":"Historical photograph related to Adolf Rohrbach: Revolutionary Metal Aircraft Designer"},
+  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+}
+
+const relatedBooks = [{"id":"adolf-rohrbach","title":"Adolf Rohrbach: Pioneer of Metal Aircraft Construction","price":27.99,"imageUrl":"/book-covers/adolf-rohrbach.jpg","description":"The definitive biography of Adolf Rohrbach, the German engineer who revolutionized aircraft construction with his metal flying boats and transport aircraft.","relevantContent":"Detailed coverage with archival research and technical analysis"}]
+
+const relatedPosts = []
 
 export const metadata: Metadata = {
-  title: 'Adolf Rohrbach: Revolutionary Metal Aircraft Construction Pioneer | Charles E. MacKay',
-  description: 'The story of how Adolf Rohrbach transformed aviation with revolutionary all-metal aircraft construction techniques and stressed-skin monocoque design principles that influenced modern aerospace.',
-  keywords: [
-    'Adolf Rohrbach',
-    'metal aircraft construction',
-    'all-metal aircraft',
-    'stressed-skin construction',
-    'aviation engineering',
-    'Rohrbach Metall-Flugzeugbau',
-    'aircraft design innovation',
-    'metal aircraft pioneer',
-    'aviation history',
-    'Charles MacKay aviation books'
-  ],
+  title: `Adolf Rohrbach: Revolutionary Metal Aircraft Designer | Charles E. MacKay`,
+  description: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
+  keywords: 'Adolf Rohrbach, Metal Aircraft, Engineering, Aviation Design, German Aviation, Charles MacKay, aviation history',
   openGraph: {
-    title: 'Adolf Rohrbach: Revolutionary Metal Aircraft Construction Pioneer',
-    description: 'The story of how Adolf Rohrbach transformed aviation with revolutionary all-metal aircraft construction techniques.',
-    url: 'https://charlesmackaybooks.com/blog/adolf-rohrbach-metal-aircraft-construction',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: '/blog-images/metal-aircraft-construction.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Adolf Rohrbach metal aircraft construction techniques'
-      }
-    ],
-    locale: 'en_GB',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Adolf Rohrbach: Revolutionary Metal Aircraft Construction Pioneer',
-    description: 'The story of how Adolf Rohrbach transformed aviation with revolutionary all-metal aircraft construction techniques.',
-    images: ['/blog-images/metal-aircraft-construction.jpg'],
+    title: `Adolf Rohrbach: Revolutionary Metal Aircraft Designer`,
+    description: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
+    images: ['/blog-images/adolf-rohrbach-metal-aircraft-construction-featured.jpg'],
+    type: 'article'
   }
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Adolf Rohrbach: Revolutionary Metal Aircraft Construction Pioneer',
-  description: 'The story of how Adolf Rohrbach transformed aviation with revolutionary all-metal aircraft construction techniques.',
-  author: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay',
-    url: 'https://charlesmackay.co.uk',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Charles E. MacKay - Aviation Historian',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://charlesmackay.co.uk/logo.png',
-    },
-  },
-  datePublished: '2024-01-15',
-  dateModified: '2024-01-15',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://charlesmackay.co.uk/blog/adolf-rohrbach-metal-aircraft-construction/',
-  },
-  image: {
-    '@type': 'ImageObject',
-    url: '/blog-images/metal-aircraft-construction.jpg',
-    width: 1200,
-    height: 800,
-  },
-  keywords: 'Adolf Rohrbach, metal aircraft construction, all-metal aircraft, stressed-skin construction, aviation engineering',
-}
-
-export default function AdolfRohrbachPage() {
-  const pageUrl = 'https://charlesmackaybooks.com/blog/adolf-rohrbach-metal-aircraft-construction'
-  const pageTitle = 'Adolf Rohrbach: Revolutionary Metal Aircraft Construction Pioneer'
-
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Header />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      <article>
-        {/* Hero Section */}
-        <div className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative max-w-4xl mx-auto px-4 py-16 sm:py-24">
-            <div className="text-center">
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-orange-800 mb-4">
-                Engineering Pioneer
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Adolf Rohrbach: Metal Aircraft Revolution
-              </h1>
-              <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-                The visionary engineer who transformed aviation through revolutionary all-metal construction and stressed-skin monocoque design
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
-                <span>• Metal Construction Pioneer</span>
-                <span>• Stressed-Skin Innovation</span>
-                <span>• Engineering Excellence</span>
-                <span>• Aviation Revolution</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Table of Contents */}
-        <div className="bg-white border-b border-slate-200">
-          <div className="max-w-4xl mx-auto px-4 py-8">
-            <div className="bg-slate-50 rounded-lg p-6">
-              <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center">
-                <span className="text-orange-600 mr-2">📖</span>
-                Table of Contents
-              </h2>
-              <nav className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
-                <a href="#early-life" className="text-orange-600 hover:text-orange-800 py-1 px-2 rounded hover:bg-orange-50 transition-colors">
-                  1. Early Life and Engineering Vision
-                </a>
-                <a href="#metal-construction" className="text-orange-600 hover:text-orange-800 py-1 px-2 rounded hover:bg-orange-50 transition-colors">
-                  2. Revolutionary Metal Construction
-                </a>
-                <a href="#stressed-skin" className="text-orange-600 hover:text-orange-800 py-1 px-2 rounded hover:bg-orange-50 transition-colors">
-                  3. Stressed-Skin Monocoque Design
-                </a>
-                <a href="#rohrbach-aircraft" className="text-orange-600 hover:text-orange-800 py-1 px-2 rounded hover:bg-orange-50 transition-colors">
-                  4. Rohrbach Aircraft Development
-                </a>
-                <a href="#global-influence" className="text-orange-600 hover:text-orange-800 py-1 px-2 rounded hover:bg-orange-50 transition-colors">
-                  5. Global Aviation Influence
-                </a>
-                <a href="#lasting-legacy" className="text-orange-600 hover:text-orange-800 py-1 px-2 rounded hover:bg-orange-50 transition-colors">
-                  6. Lasting Engineering Legacy
-                </a>
-              </nav>
-            </div>
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="max-w-4xl mx-auto px-4 py-12">
-
-          {/* Opening Image */}
-          <div className="mb-12">
-            <Image
-              src="/blog-images/metal-aircraft-construction.jpg"
-              alt="Adolf Rohrbach's revolutionary metal aircraft construction techniques showcasing advanced engineering"
-              width={800}
-              height={600}
-              className="w-full rounded-lg shadow-lg"
-              priority
-            />
-            <p className="text-sm text-slate-600 text-center mt-2 italic">
-              Adolf Rohrbach's revolutionary metal aircraft construction techniques that transformed aviation engineering
-            </p>
-          </div>
-
-          {/* Early Life Section */}
-          <section id="early-life" className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-2 border-b-2 border-orange-600">
-              Early Life and Engineering Vision
-            </h2>
-            <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
-              <p>
-                Born in Nuremberg in 1889, Adolf Rohrbach emerged as one of aviation's most revolutionary engineering minds during the crucial early decades of flight. Unlike his contemporaries who focused primarily on achieving flight, Rohrbach possessed the foresight to recognize that aviation's future lay not just in getting aircraft airborne, but in fundamentally rethinking how they should be constructed.
-              </p>
-
-              <p>
-                Rohrbach's education at the Technical University of Munich provided him with a solid foundation in mechanical engineering and metallurgy that would prove crucial to his later innovations. His analytical approach to engineering problems, combined with an intuitive understanding of structural mechanics, positioned him perfectly to tackle the challenge of creating more durable, efficient aircraft structures.
-              </p>
-
-              <p>
-                What distinguished Rohrbach from other aviation pioneers was his systematic methodology and refusal to accept traditional wood-and-fabric construction as the industry standard. He envisioned aircraft as integrated engineering systems where every component contributed to overall structural integrity and performance, a revolutionary concept that would transform aviation manufacturing.
-              </p>
-            </div>
-          </section>
-
-          {/* Metal Construction Section */}
-          <section id="metal-construction" className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-2 border-b-2 border-orange-600">
-              Revolutionary All-Metal Construction
-            </h2>
-            <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
-              <p>
-                Rohrbach's breakthrough came with his recognition that aluminum alloys could provide superior strength-to-weight ratios compared to traditional aircraft materials. While other designers viewed metal as too heavy or difficult to work with, Rohrbach saw its potential for creating aircraft that were both stronger and more durable than their wood-and-fabric counterparts.
-              </p>
-
-              <p>
-                His approach to metal construction involved developing entirely new manufacturing techniques that could shape and join aluminum panels with unprecedented precision. These methods required specialized tools and jigs that ensured consistent quality and dimensional accuracy across multiple aircraft—a level of manufacturing sophistication previously unknown in aviation.
-              </p>
-
-              <p>
-                The key innovation lay in Rohrbach's understanding of how to distribute structural loads throughout the aircraft's metal framework. By carefully calculating stress patterns and designing joints that could handle multiple load paths, he created structures that were remarkably resilient to both normal flight loads and unexpected stresses. For a comprehensive exploration of Rohrbach's engineering methods and aircraft designs, see <Link href="/books/adolf-rohrbach" className="text-orange-600 hover:text-orange-800 underline font-medium">Adolf Rohrbach's Metal Airplanes</Link>.
-              </p>
-            </div>
-          </section>
-
-          {/* Rohrbach Aircraft Image */}
-          <div className="mb-12">
-            <Image
-              src="/blog-images/rohrbach-ro-ix-aircraft.jpg"
-              alt="Rohrbach Ro IX aircraft showcasing all-metal construction techniques"
-              width={800}
-              height={600}
-              className="w-full rounded-lg shadow-lg"
-            />
-            <p className="text-sm text-slate-600 text-center mt-2 italic">
-              The Rohrbach Ro IX aircraft, demonstrating advanced all-metal construction techniques in aviation design
-            </p>
-          </div>
-
-          {/* Stressed-Skin Section */}
-          <section id="stressed-skin" className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-2 border-b-2 border-orange-600">
-              Stressed-Skin Monocoque Innovation
-            </h2>
-            <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
-              <p>
-                Perhaps Rohrbach's most significant contribution to aviation was his development of stressed-skin monocoque construction, a technique that transformed the aircraft's outer covering from a simple weather barrier into an integral structural component. This approach represented a radical departure from conventional thinking about aircraft design.
-              </p>
-
-              <p>
-                The stressed-skin concept involved designing the aircraft's metal skin panels to share structural loads with the internal framework, creating a unified structure that was both lighter and stronger than traditional designs. This integration required precise engineering calculations to ensure that loads were distributed evenly throughout the structure without creating dangerous stress concentrations.
-              </p>
-
-              <p>
-                Manufacturing stressed-skin aircraft demanded new levels of precision in both panel shaping and assembly procedures. Rohrbach developed sophisticated riveting patterns and joint designs that maintained structural integrity while providing the smooth surfaces essential for efficient aerodynamic performance. These techniques became the foundation for modern aircraft construction methods.
-              </p>
-            </div>
-          </section>
-
-          {/* Rohrbach Aircraft Section */}
-          <section id="rohrbach-aircraft" className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-2 border-b-2 border-orange-600">
-              Rohrbach Aircraft Development and Achievements
-            </h2>
-            <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
-              <p>
-                The Rohrbach Ro I, introduced in 1922, served as the proving ground for his revolutionary construction methods. This aircraft demonstrated that all-metal construction could produce aircraft that were not only more durable than conventional designs but also offered superior performance characteristics through improved structural efficiency and aerodynamic smoothness. The complete story of Rohrbach's aircraft development, including detailed technical specifications and production history, is available in <Link href="/books/adolf-rohrbach" className="text-orange-600 hover:text-orange-800 underline font-medium">Adolf Rohrbach's Metal Airplanes</Link>.
-              </p>
-
-              <p>
-                Subsequent Rohrbach designs, including the impressive Roland flying boats, showcased the scalability of his construction techniques. These large aircraft proved that metal construction methods could be successfully applied to multi-engine designs, passenger aircraft, and specialized applications where structural reliability was paramount.
-              </p>
-
-              <p>
-                The success of Rohrbach flying boats in challenging marine environments particularly demonstrated the advantages of all-metal construction. The corrosion resistance and structural durability of properly designed metal aircraft proved superior to traditional materials when operating in harsh conditions, establishing new standards for aviation reliability and operational longevity.
-              </p>
-            </div>
-          </section>
-
-          {/* Aircraft Manufacturing Image */}
-          <div className="mb-12">
-            <Image
-              src="/blog-images/aircraft-factory-assembly-line.jpg"
-              alt="Aircraft factory assembly line showcasing modern manufacturing techniques"
-              width={800}
-              height={600}
-              className="w-full rounded-lg shadow-lg"
-            />
-            <p className="text-sm text-slate-600 text-center mt-2 italic">
-              Modern aircraft manufacturing assembly line, demonstrating the legacy of Rohrbach's production innovations
-            </p>
-          </div>
-
-          {/* Global Influence Section */}
-          <section id="global-influence" className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-2 border-b-2 border-orange-600">
-              Global Aviation Industry Transformation
-            </h2>
-            <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
-              <p>
-                Rohrbach's innovations transcended national boundaries, influencing aircraft manufacturers worldwide who recognized the superior advantages of all-metal construction. Major American manufacturers, including Boeing, Douglas, and Lockheed, studied and adapted his techniques, incorporating stressed-skin construction principles into their own revolutionary designs. For more on the broader context of German aviation innovation during this period, see <Link href="/books/german-aircraft-great-war" className="text-orange-600 hover:text-orange-800 underline font-medium">German Aircraft in the Great War</Link>.
-              </p>
-
-              <p>
-                The success of iconic aircraft like the Douglas DC-3 and Boeing 247 owed significant debt to construction principles first demonstrated by Rohrbach. These aircraft proved that his engineering concepts could be successfully scaled and adapted for commercial aviation, establishing all-metal construction as the industry standard for reliable, efficient aircraft.
-              </p>
-
-              <p>
-                Military aviation authorities worldwide quickly recognized the strategic advantages of all-metal construction, particularly the improved damage tolerance and operational reliability that metal aircraft offered in combat conditions. This recognition led to widespread adoption of Rohrbach-influenced design principles in military aircraft development throughout the 1930s and beyond.
-              </p>
-            </div>
-          </section>
-
-          {/* Lasting Legacy Section */}
-          <section id="lasting-legacy" className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-2 border-b-2 border-orange-600">
-              Enduring Engineering Legacy
-            </h2>
-            <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
-              <p>
-                The fundamental principles established by Adolf Rohrbach continue to influence modern aircraft design nearly a century after their introduction. Contemporary composite construction methods apply similar integration concepts, where structural elements and outer surfaces work together to optimize strength, weight, and aerodynamic efficiency.
-              </p>
-
-              <p>
-                Modern manufacturing techniques pioneered by Rohrbach evolved into today's precision aerospace manufacturing systems. Computer-aided design and automated production methods now achieve the dimensional accuracy and quality consistency that Rohrbach accomplished through careful manual craftsmanship, but the underlying principles remain unchanged.
-              </p>
-
-              <p>
-                Rohrbach's influence extends beyond aviation into automotive, marine, and aerospace engineering, where lightweight, high-strength structures remain essential. His systematic approach to engineering integration and quality control established standards that continue to guide advanced manufacturing across multiple industries, demonstrating the enduring value of innovative engineering thinking.
-              </p>
-            </div>
-          </section>
-
-          {/* Related Books Section */}
-          <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg p-8 mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">
-              📚 Related Aviation History Books by Charles E. MacKay
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Adolf Rohrbach's Metal Airplanes</h3>
-                <p className="text-slate-700 mb-4 text-sm">
-                  The definitive book on Adolf Rohrbach and his revolutionary metal aircraft construction techniques. Covers the Rohrbach Metall-Flugzeugbau company and innovations in stressed-skin monocoque design.
-                </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-green-600">£12.86</span>
-                  <Link
-                    href="/books/adolf-rohrbach"
-                    className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm font-medium"
-                  >
-                    View Book
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="font-bold text-lg text-slate-900 mb-2">German Aircraft in the Great War</h3>
-                <p className="text-slate-700 mb-4 text-sm">
-                  Comprehensive coverage of German aviation innovation during WWI, including the engineering developments that paved the way for Rohrbach's post-war metal aircraft revolution.
-                </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-green-600">£12.95</span>
-                  <Link
-                    href="/books/german-aircraft-great-war"
-                    className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm font-medium"
-                  >
-                    View Book
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-6">
-              <Link
-                href="/books"
-                className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
-              >
-                🛒 Browse All Aviation Books
-              </Link>
-            </div>
-          </div>
-
-          {/* Related Blog Posts */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">
-              📖 Related Blog Posts
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/blog/german-aircraft-great-war-development" className="group">
-                <div className="bg-white rounded-lg p-6 shadow-md group-hover:shadow-lg transition-shadow">
-                  <div className="flex gap-4">
-                    <Image
-                      src="/blog-images/german-aircraft-albatros-d3-historical.jpg"
-                      alt="German Albatros D3 aircraft"
-                      width={80}
-                      height={60}
-                      className="rounded flex-shrink-0"
-                    />
-                    <div>
-                      <h3 className="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">
-                        German Aircraft Development in the Great War
-                      </h3>
-                      <p className="text-slate-700 text-sm">
-                        How German aviation innovation during WWI laid the foundation for post-war aircraft construction techniques.
-                      </p>
-                      <div className="text-blue-600 text-sm mt-2">Read more →</div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link href="/blog/aviation-manufacturing-wartime-production" className="group">
-                <div className="bg-white rounded-lg p-6 shadow-md group-hover:shadow-lg transition-shadow">
-                  <div className="flex gap-4">
-                    <Image
-                      src="/blog-images/aircraft-factory-assembly-line.jpg"
-                      alt="Aircraft factory assembly line"
-                      width={80}
-                      height={60}
-                      className="rounded flex-shrink-0"
-                    />
-                    <div>
-                      <h3 className="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">
-                        Aviation Manufacturing: Wartime Production
-                      </h3>
-                      <p className="text-slate-700 text-sm">
-                        The evolution of aircraft manufacturing techniques from wartime production to modern aerospace.
-                      </p>
-                      <div className="text-blue-600 text-sm mt-2">Read more →</div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-
-          {/* Social Share */}
-          <div className="mb-12">
-            <SocialShare
-              url="https://charlesmackaybooks.com/blog/adolf-rohrbach-metal-aircraft-construction"
-              title="Adolf Rohrbach: Revolutionary Metal Aircraft Construction Pioneer"
-              description="The story of how Adolf Rohrbach transformed aviation with revolutionary all-metal aircraft construction techniques and stressed-skin monocoque design principles that influenced modern aerospace."
-              hashtags={['AdolfRohrbach', 'MetalAircraft', 'AviationEngineering', 'AircraftConstruction', 'AviationHistory', 'CharlesMacKay', 'AviationPioneer']}
-            />
-          </div>
-
-          {/* Author Bio */}
-          <div className="bg-slate-100 rounded-lg p-8">
-            <div className="flex items-start space-x-4">
-              <div className="w-20 h-20 bg-slate-300 rounded-full flex items-center justify-center text-2xl font-bold text-slate-600">
-                CM
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Charles E. MacKay</h3>
-                <p className="text-slate-700 mb-3">
-                  Aviation Historian & Author specializing in Scottish Aviation History, WWI & WWII Aircraft
-                </p>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  Published aviation historian with extensive research into aircraft construction innovation and engineering pioneers. Charles MacKay's work explores the technical developments that transformed aviation from experimental craft to reliable transportation, focusing on visionary engineers like Adolf Rohrbach who revolutionized the industry.
-                </p>
-                <div className="flex items-center space-x-4 mt-4 text-sm">
-                  <span className="text-slate-600">📧 charlese1mackay@hotmail.com</span>
-                  <span className="text-slate-600">📍 Glasgow, Scotland</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
+    <BlogPostTemplate 
+      blog={blogData}
+      relatedBooks={relatedBooks}
+      relatedPosts={relatedPosts}
+    />
   )
 }

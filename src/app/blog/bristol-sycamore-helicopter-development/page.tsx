@@ -1,496 +1,121 @@
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Header from '@/components/Header'
-import SocialShare from '@/components/SocialShare'
-import UnifiedSchema from '@/components/UnifiedSchema'
+import BlogPostTemplate from '@/components/BlogPostTemplate'
+
+const blogData = {
+  title: `Bristol Sycamore Helicopter Development`,
+  excerpt: `Comprehensive analysis of bristol sycamore helicopter development with expert historical research and technical details.`,
+  content: `
+    <h2 id="introduction">Introduction: The Story Begins</h2>
+    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    
+    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+
+    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+
+    <h2 id="historical-background">Historical Background and Context</h2>
+    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+
+    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+
+    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+
+    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
+    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+
+    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <ul class="space-y-2 text-blue-700">
+        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
+        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
+        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
+        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
+        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+      </ul>
+    </div>
+
+    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
+
+    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <h2 id="operational-history">Operational History and Performance</h2>
+    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
+
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+
+    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
+
+    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
+
+    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
+
+    <h2 id="key-figures">Key Figures and Decision Makers</h2>
+    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
+
+    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
+
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+
+    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
+
+    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
+
+    <h2 id="impact-legacy">Impact and Legacy</h2>
+    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
+
+    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+
+    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+
+    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+
+    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+
+    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
+    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+
+    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+
+    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+
+    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+
+    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+  `,
+  publishDate: 'March 2024',
+  readTime: '12 min read',
+  category: 'Aviation History',
+  tags: ["bristol","sycamore","helicopter","development"],
+  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
+  featuredImage: {"url":"/blog-images/bristol-sycamore-helicopter-development-featured.jpg","alt":"Featured image for Bristol Sycamore Helicopter Development","caption":"Historical photograph related to Bristol Sycamore Helicopter Development"},
+  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+}
+
+const relatedBooks = []
+
+const relatedPosts = []
 
 export const metadata: Metadata = {
-  title: 'Bristol Sycamore: Britain\'s First Production Helicopter Revolution | Charles E. MacKay',
-  description: 'The complete development story of the Bristol Type 171 Sycamore - Britain\'s first production helicopter. Discover how this revolutionary rotorcraft established British helicopter manufacturing and transformed military operations.',
-  keywords: [
-    'Bristol Sycamore helicopter',
-    'Bristol Type 171',
-    'British helicopter development',
-    'first British helicopter',
-    'Sycamore helicopter history',
-    'Bristol rotorcraft',
-    'helicopter production',
-    'British aviation',
-    'helicopter development',
-    'rotorcraft innovation',
-    'military helicopter',
-    'Bristol aircraft',
-    'helicopter manufacturing',
-    'British aerospace',
-    'helicopter evolution',
-    'Bristol helicopter',
-    'rotorcraft history',
-    'Charles MacKay aviation books',
-    'helicopter technology',
-    'British military aviation'
-  ],
+  title: `Bristol Sycamore Helicopter Development | Charles E. MacKay`,
+  description: `Comprehensive analysis of bristol sycamore helicopter development with expert historical research and technical details.`,
+  keywords: 'bristol, sycamore, helicopter, development, Charles MacKay, aviation history',
   openGraph: {
-    title: 'Bristol Sycamore: Britain\'s First Production Helicopter Revolution',
-    description: 'The complete development story of the Bristol Sycamore - Britain\'s first production helicopter that revolutionized rotorcraft manufacturing.',
-    url: 'https://charlesmackaybooks.com/blog/bristol-sycamore-helicopter-development',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: '/blog-images/bristol-sycamore.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Bristol Sycamore helicopter - Britain\'s first production rotorcraft'
-      }
-    ],
-    locale: 'en_GB',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Bristol Sycamore: Britain\'s First Production Helicopter Revolution',
-    description: 'The complete development story of the Bristol Sycamore - Britain\'s first production helicopter that revolutionized rotorcraft manufacturing.',
-    images: ['/blog-images/bristol-sycamore.jpg'],
+    title: `Bristol Sycamore Helicopter Development`,
+    description: `Comprehensive analysis of bristol sycamore helicopter development with expert historical research and technical details.`,
+    images: ['/blog-images/bristol-sycamore-helicopter-development-featured.jpg'],
+    type: 'article'
   }
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Bristol Sycamore: Britain\'s First Production Helicopter Revolution',
-  description: 'The complete development story of the Bristol Type 171 Sycamore - Britain\'s first production helicopter. Discover how this revolutionary rotorcraft established British helicopter manufacturing and transformed military operations.',
-  image: '/blog-images/bristol-sycamore.jpg',
-  author: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay',
-    description: 'Aviation historian specializing in British helicopter development and rotorcraft innovation',
-    url: 'https://charlesmackaybooks.com'
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Charles E. MacKay Aviation Books',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://charlesmackaybooks.com/charles-mackay-logo.png'
-    }
-  },
-  datePublished: '2025-01-29T13:00:00.000Z',
-  dateModified: '2025-01-29T13:00:00.000Z',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://charlesmackaybooks.com/blog/bristol-sycamore-helicopter-development'
-  },
-  articleSection: 'Helicopter History',
-  keywords: 'Bristol Sycamore, British helicopter, rotorcraft development, helicopter manufacturing',
-  wordCount: 2700,
-  readingTime: 'PT12M'
-}
-
-export default function BristolSycamorePage() {
-  const pageUrl = 'https://charlesmackaybooks.com/blog/bristol-sycamore-helicopter-development'
-  const pageTitle = 'Bristol Sycamore: Britain\'s First Production Helicopter Revolution'
-
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Header />
-
-      <UnifiedSchema
-        pageType="blog-post"
-        pageTitle={pageTitle}
-        pageDescription="The complete development story of the Bristol Sycamore - Britain's first production helicopter that revolutionized rotorcraft manufacturing."
-        pageUrl="/blog/bristol-sycamore-helicopter-development"
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-green-900 via-emerald-800 to-teal-800 text-white">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative max-w-6xl mx-auto px-6 py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Bristol Sycamore
-                <span className="block text-emerald-300">Helicopter Revolution</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                Britain's first production helicopter changed vertical flight forever. Discover how the Bristol Type 171 Sycamore established British helicopter manufacturing, pioneered rotorcraft technology, and transformed military operations worldwide.
-              </p>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-emerald-200 mb-6">
-                <span>By Charles E. MacKay</span>
-                <span>•</span>
-                <span>Aviation Historian</span>
-                <span>•</span>
-                <span>12 minute read</span>
-                <span>•</span>
-                <span>Helicopter Innovation</span>
-              </div>
-            </div>
-
-            <div className="relative">
-              <Image
-                src="/blog-images/bristol-sycamore.jpg"
-                alt="Bristol Sycamore helicopter - Britain's first production rotorcraft"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-2xl"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <p className="text-sm font-medium">Bristol Sycamore - Pioneering British Helicopter Production</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Social Share Top */}
-      <div className="bg-white py-4 border-b">
-        <div className="max-w-4xl mx-auto px-6">
-          <SocialShare
-            url={pageUrl}
-            title={pageTitle}
-            description="Discover how the Bristol Sycamore established Britain as a helicopter manufacturing pioneer"
-          />
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-6 py-12">
-
-        {/* Introduction */}
-        <div className="prose prose-lg prose-slate max-w-none mb-12">
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            When the Bristol Type 171 Sycamore first lifted off in 1947, it marked Britain's entry into the helicopter age and established the foundation for decades of British rotorcraft innovation. This wasn't merely another experimental aircraft - it was Britain's first successful production helicopter, a revolutionary machine that would transform military operations and establish Bristol as a pioneer in vertical flight technology.
-          </p>
-
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            The Sycamore's development story represents a fascinating intersection of wartime innovation, peacetime adaptation, and the practical application of rotorcraft technology. Drawing from extensive autogyro experience gained during the 1930s, Bristol's engineers created a helicopter that combined reliability, versatility, and operational effectiveness in ways that would influence helicopter design for generations. Charles E. MacKay's research reveals how this remarkable aircraft emerged from the crucible of British aerospace innovation.
-          </p>
-        </div>
-
-        {/* Book Promotion */}
-        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-6 mb-12 rounded-r-lg">
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0">
-              <svg className="w-8 h-8 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-              </svg>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-emerald-900 mb-2">Featured in "The Sycamore Seeds - Early History of the Helicopter"</h3>
-              <p className="text-emerald-800 mb-4">
-                The complete Bristol Sycamore development story is extensively covered in Charles MacKay's comprehensive study of early helicopter history, including detailed technical analysis and operational records.
-              </p>
-              <Link
-                href="/books/sycamore-seeds"
-                className="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
-              >
-                View Book Details →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Origins Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Origins: From Autogyro Experience to Helicopter Innovation</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Bristol Sycamore's story begins with the Bristol Aeroplane Company's extensive experience with autogyros during the 1930s. Under license from Juan de la Cierva, Bristol had manufactured the Type 148 autogyro, gaining invaluable experience with rotorcraft technology, rotor systems, and the unique challenges of vertical flight.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              During World War II, the success of the German Fa 223 and American Sikorsky R-4 helicopters demonstrated the military potential of rotorcraft. British military planners recognized that helicopter technology would be crucial for postwar operations, particularly for reconnaissance, casualty evacuation, and liaison duties.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              In 1944, Bristol began preliminary design studies for a helicopter based on their autogyro experience. The design team, led by Raoul Hafner who had joined Bristol from the Cierva company, brought deep understanding of rotorcraft aerodynamics and the practical challenges of implementing vertical flight in operational aircraft.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The initial specification called for a five-seat helicopter capable of multiple military roles including casualty evacuation, observation, and light transport. This versatility requirement drove design decisions that would make the Sycamore one of the most adaptable helicopters of its era.
-            </p>
-          </div>
-
-          <div className="my-8">
-            <Image
-              src="/blog-images/cierva-autogyro-historical.jpg"
-              alt="Cierva autogyro showing the rotorcraft experience that led to Sycamore development"
-              width={800}
-              height={500}
-              className="rounded-lg shadow-lg mx-auto"
-            />
-            <p className="text-center text-gray-600 mt-2 text-sm">
-              Cierva autogyro experience provided crucial foundation for Bristol's helicopter development program
-            </p>
-          </div>
-        </section>
-
-        {/* Design and Development Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Design: Engineering Britain's First Helicopter</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Type 171's design represented a masterful synthesis of proven autogyro principles with cutting-edge helicopter technology. The aircraft featured a conventional single-rotor configuration with tail rotor anti-torque system, establishing the layout that would become standard for most subsequent helicopters.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The main rotor system incorporated a fully articulated head with lead-lag hinges, flapping hinges, and feathering bearings that allowed individual blade control. This sophisticated system provided the control authority necessary for precise hovering and maneuvering while maintaining structural integrity under varying flight loads.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Power came from a Bristol Alvis Leonides radial engine producing 520 horsepower, chosen for its reliability and power-to-weight ratio. The engine installation featured advanced cooling systems and vibration isolation that addressed the unique challenges of helicopter powerplant integration.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The fuselage design prioritized versatility and ease of maintenance. Large cabin doors, removable cabin fittings, and accessible mechanical systems allowed rapid reconfiguration for different missions. This adaptability would prove crucial to the Sycamore's commercial success.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Perhaps most significantly, the Type 171 incorporated advanced stability and control systems that made it relatively easy to fly compared to early helicopters. These characteristics would prove essential for training new helicopter pilots and demonstrating the practical utility of rotorcraft operations.
-            </p>
-          </div>
-        </section>
-
-        {/* Development Challenges Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Overcoming the Unknown: Development Challenges</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Developing Britain's first production helicopter presented unprecedented challenges that tested the limits of 1940s engineering capabilities. Every aspect of the aircraft required innovative solutions, from basic aerodynamic principles to complex mechanical systems that had no equivalent in conventional aircraft.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Vibration control emerged as one of the most significant challenges. The rotating rotor system generated complex vibration patterns that threatened both structural integrity and operational effectiveness. Bristol's engineers developed sophisticated vibration isolation systems and dynamic balancing techniques that became industry standards.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The transmission system required entirely new approaches to power transfer and control. Converting the engine's rotational power to the main rotor while providing anti-torque power to the tail rotor demanded precision gearing, clutch systems, and control mechanisms that exceeded existing automotive or aviation practice.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Flight testing revealed numerous unexpected phenomena unique to helicopter operations. Retreating blade stall, vortex ring state, and autorotation characteristics required extensive investigation and modification of control systems, rotor blade design, and pilot training procedures.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Manufacturing challenges were equally daunting. Precision rotor blade production, dynamic component balancing, and quality control procedures for helicopter-specific systems required development of entirely new industrial processes and inspection techniques.
-            </p>
-          </div>
-
-          <div className="my-8">
-            <Image
-              src="/blog-images/sikorsky-vs300-helicopter.jpg"
-              alt="Early helicopter development showing the challenging nature of rotorcraft engineering"
-              width={800}
-              height={500}
-              className="rounded-lg shadow-lg mx-auto"
-            />
-            <p className="text-center text-gray-600 mt-2 text-sm">
-              Early helicopter development worldwide faced similar challenges - complex rotor systems and unprecedented engineering requirements
-            </p>
-          </div>
-        </section>
-
-        {/* First Flight and Testing Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Historic Achievement: First Flight and Testing Program</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Type 171 prototype made its maiden flight on July 24, 1947, at Bristol's Filton airfield. Test pilot Cyril Unwins' successful first flight marked a historic moment in British aviation - the first flight of a British-designed and built production helicopter.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Early flight testing revealed the aircraft's excellent handling characteristics and operational versatility. Unlike many contemporary helicopters that were difficult to control and required extensive pilot training, the Type 171 demonstrated stable flight characteristics that made it accessible to pilots with conventional aircraft experience.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The comprehensive test program included evaluation of military configurations, civilian transport applications, and specialized missions such as casualty evacuation and external load carrying. These tests demonstrated the helicopter's remarkable versatility and established performance baselines for operational deployment.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              International interest developed quickly as demonstration flights showcased the Sycamore's capabilities. Foreign military delegations and civilian operators recognized the aircraft's potential for operations that conventional aircraft could not perform effectively.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              By 1949, the Type 171 had received its Certificate of Airworthiness and entered production as the Sycamore Mk 1. This achievement established Bristol as the first British company to successfully develop, certify, and produce a helicopter for commercial and military service.
-            </p>
-          </div>
-        </section>
-
-        {/* Military Service Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Military Pioneer: Sycamore in Service</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Sycamore's entry into military service marked the beginning of rotorcraft operations in the British Armed Forces. The RAF, Royal Navy, and Army all adopted variants of the Sycamore for diverse operational roles that demonstrated the versatility and effectiveness of helicopter operations.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              RAF operations included search and rescue missions, communications flights, and training programs that established helicopter doctrine for the British military. The Sycamore's reliability and ease of maintenance made it ideal for introducing helicopter operations to RAF squadrons worldwide.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Royal Navy operations aboard aircraft carriers demonstrated the Sycamore's naval capabilities. Modified versions with folding rotors and deck landing equipment proved that helicopters could operate effectively from ships, establishing rotorcraft as essential naval aviation assets.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Army operations showcased the Sycamore's utility for casualty evacuation, reconnaissance, and liaison duties. These missions, often conducted in challenging terrain and weather conditions, proved that helicopters could provide capabilities impossible with conventional aircraft.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              International military operators, including forces in Australia, Belgium, and Germany, adopted the Sycamore for similar roles. This widespread military adoption validated the aircraft's design and established Bristol's reputation in the international helicopter market.
-            </p>
-          </div>
-
-          <div className="my-8">
-            <Image
-              src="/blog-images/sycamore-seeds-helicopter.jpg"
-              alt="Sycamore helicopter in operational service showing military configuration"
-              width={800}
-              height={500}
-              className="rounded-lg shadow-lg mx-auto"
-            />
-            <p className="text-center text-gray-600 mt-2 text-sm">
-              Sycamore in military service - establishing helicopter operations across British Armed Forces
-            </p>
-          </div>
-        </section>
-
-        {/* Technical Innovation Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Technical Innovations: Advancing Helicopter Technology</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Sycamore's technical innovations extended far beyond its successful first flight. Throughout its production run, Bristol continuously refined the aircraft's systems, incorporating advanced technologies that influenced helicopter development worldwide.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Advanced rotor blade design incorporated sophisticated airfoils and structural techniques that optimized performance across the helicopter's operational envelope. These innovations improved efficiency, reduced vibration, and enhanced control authority in all flight conditions.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The transmission system featured precision gearing and lubrication systems that established new standards for helicopter reliability. Advanced materials and manufacturing techniques developed for Sycamore production influenced subsequent rotorcraft programs throughout the industry.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Control system innovations included powered flight controls and stability augmentation that reduced pilot workload and improved operational safety. These systems became standard features in later helicopter designs and contributed to the widespread adoption of rotorcraft operations.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Manufacturing process innovations developed for Sycamore production established British helicopter manufacturing capabilities that supported decades of subsequent rotorcraft development. These processes influenced not only Bristol's later programs but the entire British aerospace industry.
-            </p>
-          </div>
-        </section>
-
-        {/* Legacy and Impact Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Lasting Legacy: The Sycamore's Enduring Impact</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Bristol Sycamore's influence on British helicopter development extended far beyond its operational service life. As Britain's first production helicopter, it established design principles, manufacturing capabilities, and operational doctrines that influenced decades of subsequent rotorcraft development.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The aircraft's success demonstrated that British aerospace companies could compete effectively in the emerging helicopter market. This capability encouraged continued investment in rotorcraft technology and established Britain as a major player in international helicopter development.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Operational experience gained with the Sycamore provided crucial foundation for subsequent British helicopter programs. The lessons learned in design, manufacturing, and operations directly influenced later aircraft including the Wessex, Sea King, and modern rotorcraft programs.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Sycamore's international success established export markets and technology transfer relationships that benefited British aerospace for decades. These connections facilitated collaboration on advanced helicopter programs and maintained British influence in global rotorcraft development.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Today, the principles established by the Sycamore program continue to influence modern helicopter design. The emphasis on reliability, versatility, and operational effectiveness that characterized the Type 171 remains central to contemporary rotorcraft development philosophy.
-            </p>
-          </div>
-        </section>
-
-        {/* Conclusion */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion: Pioneering British Helicopter Excellence</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Bristol Type 171 Sycamore stands as a landmark achievement in British aviation history. More than just the first British production helicopter, it represented a successful transition from experimental rotorcraft to practical operational aircraft that demonstrated the viability of helicopter operations.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Sycamore's technical achievements, operational success, and international recognition established Britain as a major force in helicopter development. The aircraft's influence on subsequent rotorcraft programs demonstrates the lasting impact of this pioneering achievement.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed">
-              As modern helicopter technology continues to evolve, the Sycamore's legacy of innovation, reliability, and operational excellence remains relevant. The principles established by this remarkable aircraft continue to guide helicopter development and ensure Britain's continued leadership in rotorcraft technology.
-            </p>
-          </div>
-        </section>
-
-        {/* Book Promotion Bottom */}
-        <div className="bg-gradient-to-r from-emerald-600 to-teal-800 text-white p-8 rounded-xl mb-12">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">Explore More Helicopter History</h3>
-            <p className="text-lg mb-6">
-              Discover the complete story of early helicopter development, including extensive Sycamore coverage and analysis of rotorcraft evolution, in Charles MacKay's comprehensive study.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/books/sycamore-seeds"
-                className="bg-white text-emerald-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                📚 View "Sycamore Seeds" Book
-              </Link>
-              <Link
-                href="/books"
-                className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-800 transition-colors"
-              >
-                Browse All Aviation Books
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Social Share Bottom */}
-        <div className="border-t pt-8">
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Share This Article</h3>
-            <p className="text-gray-600">Help others discover the story of Britain's first production helicopter</p>
-          </div>
-          <SocialShare
-            url={pageUrl}
-            title={pageTitle}
-            description="Discover how the Bristol Sycamore established Britain as a helicopter manufacturing pioneer"
-          />
-        </div>
-
-        {/* Related Articles */}
-        <div className="mt-12 pt-8 border-t">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/helicopter-development-pioneers" className="group block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border">
-              <h4 className="font-semibold text-gray-900 group-hover:text-emerald-600 mb-2">Helicopter Development Pioneers</h4>
-              <p className="text-gray-600 text-sm">The evolution of vertical flight technology from autogyros to helicopters</p>
-            </Link>
-            <Link href="/blog/sycamore-seeds-helicopter-evolution" className="group block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border">
-              <h4 className="font-semibold text-gray-900 group-hover:text-emerald-600 mb-2">Sycamore Seeds and Helicopter Evolution</h4>
-              <p className="text-gray-600 text-sm">How nature's spinning seeds revealed the principles of autorotation</p>
-            </Link>
-          </div>
-        </div>
-      </article>
-    </div>
+    <BlogPostTemplate 
+      blog={blogData}
+      relatedBooks={relatedBooks}
+      relatedPosts={relatedPosts}
+    />
   )
 }

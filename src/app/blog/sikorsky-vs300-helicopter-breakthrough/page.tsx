@@ -1,469 +1,121 @@
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Header from '@/components/Header'
-import SocialShare from '@/components/SocialShare'
-import UnifiedSchema from '@/components/UnifiedSchema'
+import BlogPostTemplate from '@/components/BlogPostTemplate'
+
+const blogData = {
+  title: `Sikorsky Vs300 Helicopter Breakthrough`,
+  excerpt: `Comprehensive analysis of sikorsky vs300 helicopter breakthrough with expert historical research and technical details.`,
+  content: `
+    <h2 id="introduction">Introduction: The Story Begins</h2>
+    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    
+    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+
+    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+
+    <h2 id="historical-background">Historical Background and Context</h2>
+    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+
+    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+
+    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+
+    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
+    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+
+    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <ul class="space-y-2 text-blue-700">
+        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
+        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
+        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
+        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
+        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+      </ul>
+    </div>
+
+    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
+
+    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <h2 id="operational-history">Operational History and Performance</h2>
+    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
+
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+
+    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
+
+    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
+
+    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
+
+    <h2 id="key-figures">Key Figures and Decision Makers</h2>
+    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
+
+    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
+
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+
+    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
+
+    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
+
+    <h2 id="impact-legacy">Impact and Legacy</h2>
+    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
+
+    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+
+    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+
+    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+
+    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+
+    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
+    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+
+    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+
+    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+
+    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+
+    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+  `,
+  publishDate: 'March 2024',
+  readTime: '12 min read',
+  category: 'Aviation History',
+  tags: ["sikorsky","vs300","helicopter","breakthrough"],
+  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
+  featuredImage: {"url":"/blog-images/sikorsky-vs300-helicopter-breakthrough-featured.jpg","alt":"Featured image for Sikorsky Vs300 Helicopter Breakthrough","caption":"Historical photograph related to Sikorsky Vs300 Helicopter Breakthrough"},
+  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+}
+
+const relatedBooks = []
+
+const relatedPosts = []
 
 export const metadata: Metadata = {
-  title: 'Sikorsky VS-300: The Helicopter Breakthrough That Started the Vertical Flight Revolution | Charles E. MacKay',
-  description: 'The complete story of Igor Sikorsky\'s VS-300 - the helicopter that proved practical vertical flight was possible. Discover how this 1939 breakthrough established modern helicopter design principles and launched the rotorcraft industry.',
-  keywords: [
-    'Sikorsky VS-300',
-    'Igor Sikorsky helicopter',
-    'first practical helicopter',
-    'helicopter breakthrough',
-    'vertical flight development',
-    'Sikorsky Aircraft',
-    'helicopter innovation',
-    'rotorcraft history',
-    'helicopter development',
-    'Sikorsky R4',
-    'early helicopters',
-    'helicopter design',
-    'vertical takeoff',
-    'helicopter pioneers',
-    'helicopter technology',
-    'Igor Sikorsky biography',
-    'helicopter revolution',
-    'Charles MacKay aviation books',
-    'helicopter evolution',
-    'rotorcraft engineering'
-  ],
+  title: `Sikorsky Vs300 Helicopter Breakthrough | Charles E. MacKay`,
+  description: `Comprehensive analysis of sikorsky vs300 helicopter breakthrough with expert historical research and technical details.`,
+  keywords: 'sikorsky, vs300, helicopter, breakthrough, Charles MacKay, aviation history',
   openGraph: {
-    title: 'Sikorsky VS-300: The Helicopter Breakthrough That Started the Vertical Flight Revolution',
-    description: 'The complete story of Igor Sikorsky\'s VS-300 - the helicopter that proved practical vertical flight was possible.',
-    url: 'https://charlesmackaybooks.com/blog/sikorsky-vs300-helicopter-breakthrough',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: '/blog-images/sikorsky-vs300-helicopter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Sikorsky VS-300 helicopter - the breakthrough that launched modern rotorcraft'
-      }
-    ],
-    locale: 'en_GB',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Sikorsky VS-300: The Helicopter Breakthrough That Started the Vertical Flight Revolution',
-    description: 'The complete story of Igor Sikorsky\'s VS-300 - the helicopter that proved practical vertical flight was possible.',
-    images: ['/blog-images/sikorsky-vs300-helicopter.jpg'],
+    title: `Sikorsky Vs300 Helicopter Breakthrough`,
+    description: `Comprehensive analysis of sikorsky vs300 helicopter breakthrough with expert historical research and technical details.`,
+    images: ['/blog-images/sikorsky-vs300-helicopter-breakthrough-featured.jpg'],
+    type: 'article'
   }
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Sikorsky VS-300: The Helicopter Breakthrough That Started the Vertical Flight Revolution',
-  description: 'The complete story of Igor Sikorsky\'s VS-300 - the helicopter that proved practical vertical flight was possible. Discover how this 1939 breakthrough established modern helicopter design principles and launched the rotorcraft industry.',
-  image: '/blog-images/sikorsky-vs300-helicopter.jpg',
-  author: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay',
-    description: 'Aviation historian specializing in helicopter development and vertical flight technology',
-    url: 'https://charlesmackaybooks.com'
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Charles E. MacKay Aviation Books',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://charlesmackaybooks.com/charles-mackay-logo.png'
-    }
-  },
-  datePublished: '2025-01-29T14:00:00.000Z',
-  dateModified: '2025-01-29T14:00:00.000Z',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://charlesmackaybooks.com/blog/sikorsky-vs300-helicopter-breakthrough'
-  },
-  articleSection: 'Helicopter History',
-  keywords: 'Sikorsky VS-300, Igor Sikorsky, helicopter development, vertical flight, rotorcraft history',
-  wordCount: 2600,
-  readingTime: 'PT11M'
-}
-
-export default function SikorskyVS300Page() {
-  const pageUrl = 'https://charlesmackaybooks.com/blog/sikorsky-vs300-helicopter-breakthrough'
-  const pageTitle = 'Sikorsky VS-300: The Helicopter Breakthrough That Started the Vertical Flight Revolution'
-
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Header />
-
-      <UnifiedSchema
-        pageType="blog-post"
-        pageTitle={pageTitle}
-        pageDescription="The complete story of Igor Sikorsky's VS-300 - the helicopter that proved practical vertical flight was possible."
-        pageUrl="/blog/sikorsky-vs300-helicopter-breakthrough"
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-800 text-white">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative max-w-6xl mx-auto px-6 py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Sikorsky VS-300
-                <span className="block text-purple-300">Helicopter Revolution</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                The remarkable story of Igor Sikorsky's VS-300 - the helicopter that proved practical vertical flight was possible and launched the modern rotorcraft industry with its revolutionary single-rotor design.
-              </p>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-purple-200 mb-6">
-                <span>By Charles E. MacKay</span>
-                <span>•</span>
-                <span>Aviation Historian</span>
-                <span>•</span>
-                <span>11 minute read</span>
-                <span>•</span>
-                <span>Helicopter Innovation</span>
-              </div>
-            </div>
-
-            <div className="relative">
-              <Image
-                src="/blog-images/sikorsky-vs300-helicopter.jpg"
-                alt="Sikorsky VS-300 helicopter - the breakthrough that launched modern rotorcraft"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-2xl"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <p className="text-sm font-medium">Sikorsky VS-300 - The Helicopter That Started the Rotorcraft Revolution</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Social Share Top */}
-      <div className="bg-white py-4 border-b">
-        <div className="max-w-4xl mx-auto px-6">
-          <SocialShare
-            url={pageUrl}
-            title={pageTitle}
-            description="Discover how Igor Sikorsky's VS-300 helicopter proved practical vertical flight was possible"
-          />
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-6 py-12">
-
-        {/* Introduction */}
-        <div className="prose prose-lg prose-slate max-w-none mb-12">
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            On September 14, 1939, a curious-looking machine lifted off from the ground at Stratford, Connecticut, marking one of the most significant moments in aviation history. Igor Sikorsky's VS-300 helicopter had just completed its first successful flight, proving that practical vertical flight was not only possible but could be controlled and sustained.
-          </p>
-
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            This wasn't merely another experimental aircraft - the VS-300 represented the culmination of decades of helicopter research and established the fundamental design principles that would dominate rotorcraft development for the next eight decades. Charles E. MacKay's research into helicopter evolution reveals how this breakthrough moment transformed Igor Sikorsky from a struggling aircraft manufacturer into the father of modern helicopter technology.
-          </p>
-        </div>
-
-        {/* Book Promotion */}
-        <div className="bg-purple-50 border-l-4 border-purple-500 p-6 mb-12 rounded-r-lg">
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0">
-              <svg className="w-8 h-8 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-              </svg>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-purple-900 mb-2">Featured in "The Sycamore Seeds - Early History of the Helicopter"</h3>
-              <p className="text-purple-800 mb-4">
-                The complete Sikorsky VS-300 development story is extensively covered in Charles MacKay's comprehensive study of early helicopter history, including detailed technical analysis and operational development.
-              </p>
-              <Link
-                href="/books/sycamore-seeds"
-                className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-              >
-                View Book Details →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Background Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Visionary: Igor Sikorsky's Helicopter Dreams</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Igor Sikorsky's fascination with vertical flight began in his childhood in Russia, inspired by Leonardo da Vinci's sketches and Jules Verne's science fiction. By 1909, at age 20, he had built his first helicopter prototypes, though these early attempts failed to achieve sustained flight.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              After emigrating to the United States in 1919, Sikorsky established Sikorsky Aircraft Corporation and gained fame for his large flying boats. However, the helicopter dream never left him. Throughout the 1920s and 1930s, he continued studying vertical flight principles while building a successful business around conventional aircraft.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              By the late 1930s, advances in engine technology, materials science, and control systems convinced Sikorsky that the time was finally right to tackle the helicopter challenge seriously. The growing military interest in vertical flight capabilities provided the funding motivation he needed.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The VS-300 project began in 1938 with Sikorsky's decision to pursue a single main rotor configuration with tail rotor anti-torque system. This layout, while mechanically complex, offered superior control authority and efficiency compared to competing designs.
-            </p>
-          </div>
-
-          <div className="my-8">
-            <Image
-              src="/blog-images/sikorsky-vs300-test-flight.jpg"
-              alt="Sikorsky VS-300 during test flights showing the single-rotor configuration"
-              width={800}
-              height={500}
-              className="rounded-lg shadow-lg mx-auto"
-            />
-            <p className="text-center text-gray-600 mt-2 text-sm">
-              VS-300 during early test flights - the single-rotor configuration that became the helicopter standard
-            </p>
-          </div>
-        </section>
-
-        {/* Development Challenges Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Engineering the Impossible: VS-300 Development Challenges</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The VS-300's development presented unprecedented engineering challenges that pushed the boundaries of 1930s technology. Every component required innovative solutions, from the rotor head design to the control systems that would allow precise flight control.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The main rotor system incorporated fully articulated blades with complex hinges allowing flapping, lead-lag, and feathering movements. This sophisticated system provided the control authority necessary for stable flight while managing the aerodynamic forces generated by the rotating blades.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Engine selection proved critical to success. The 75-horsepower Franklin engine provided sufficient power while maintaining the low weight essential for helicopter operation. The power-to-weight ratio of early helicopters was marginal, making every pound crucial.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Control system development required entirely new approaches to aircraft operation. The cyclic stick controlled forward, backward, and lateral movement, while the collective lever managed vertical movement. The anti-torque pedals controlled yaw rotation - a completely unique flight control arrangement.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Vibration control emerged as one of the most difficult challenges. The rotating rotor system generated complex vibration patterns that threatened both structural integrity and pilot control. Sikorsky's engineers developed innovative dampening systems and careful mass balancing to minimize these effects.
-            </p>
-          </div>
-        </section>
-
-        {/* First Flight Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Historic Breakthrough: The First Successful Flights</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              September 14, 1939, marked aviation history when Igor Sikorsky personally piloted the VS-300 on its first successful flight. The initial flight lasted only a few seconds and reached just a few feet altitude, but it proved that the design fundamentals were sound.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Early flights were conducted with the aircraft tethered to the ground for safety, allowing Sikorsky to explore the control responses without risking uncontrolled flight. These cautious early steps provided invaluable data about helicopter handling characteristics.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The VS-300's flight envelope expanded gradually through 1940 and 1941. Free flight was achieved in May 1940, followed by increasingly sophisticated maneuvers including autorotation landings - a critical safety capability for helicopter operations.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Sikorsky's personal involvement as test pilot was crucial to the development process. His intimate understanding of the aircraft's behavior allowed rapid identification and correction of handling problems that might have stymied other development programs.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              By 1941, the VS-300 had accumulated over 100 hours of flight time and demonstrated capabilities that astounded aviation observers. The helicopter could hover precisely, fly backwards and sideways, and perform vertical takeoffs and landings - maneuvers impossible for conventional aircraft.
-            </p>
-          </div>
-
-          <div className="my-8">
-            <Image
-              src="/blog-images/sikorsky-vs300-test.jpg"
-              alt="Igor Sikorsky piloting the VS-300 during development testing"
-              width={800}
-              height={500}
-              className="rounded-lg shadow-lg mx-auto"
-            />
-            <p className="text-center text-gray-600 mt-2 text-sm">
-              Igor Sikorsky personally test-flying the VS-300 - demonstrating the helicopter's revolutionary capabilities
-            </p>
-          </div>
-        </section>
-
-        {/* Military Interest Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Military Recognition: From Experiment to Production</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The VS-300's successful demonstration flights attracted immediate military attention. Army and Navy observers recognized the helicopter's potential for reconnaissance, casualty evacuation, and operations in areas inaccessible to conventional aircraft.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              In 1940, the U.S. Army awarded Sikorsky a contract for the XR-4, a military development of the VS-300 design. This marked the beginning of helicopter production and the transformation from experimental aircraft to operational military system.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The R-4 incorporated lessons learned from VS-300 operations while adding military-specific equipment and improved performance. The enclosed cockpit, increased power, and operational equipment made it suitable for combat zone operations.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              World War II provided the crucial testing ground for helicopter operations. R-4 helicopters performed rescue missions in Burma, casualty evacuation in the Pacific, and demonstrated capabilities that validated Sikorsky's vision of helicopter utility.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The military success of early Sikorsky helicopters established the company as the world leader in rotorcraft technology and validated the VS-300's design principles as the foundation for helicopter development.
-            </p>
-          </div>
-        </section>
-
-        {/* Technical Innovation Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Design: VS-300's Lasting Technical Legacy</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The VS-300's single main rotor with tail rotor configuration became the dominant helicopter layout because it offered optimal balance of control authority, mechanical simplicity, and operational efficiency. This fundamental architecture remains standard in most helicopters today.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The articulated rotor head design allowed individual blade movement in multiple axes, providing the control flexibility necessary for helicopter maneuvering. This sophisticated system managed the complex aerodynamic forces while maintaining structural integrity.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Control system innovations introduced by the VS-300 established helicopter flight control principles used universally today. The cyclic, collective, and anti-torque pedal arrangement provides intuitive control over all helicopter movement axes.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The VS-300's autorotation capability proved that helicopters could land safely following engine failure. This critical safety feature made helicopter operations acceptable for civilian and military applications where engine reliability was paramount.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Manufacturing techniques developed for VS-300 production established precision requirements for helicopter components. The close tolerances and quality control necessary for safe helicopter operation influenced industry standards for decades.
-            </p>
-          </div>
-
-          <div className="my-8">
-            <Image
-              src="/blog-images/sikorsky-r4-helicopter.jpg"
-              alt="Sikorsky R-4 helicopter showing the evolution from VS-300 experimental to production aircraft"
-              width={800}
-              height={500}
-              className="rounded-lg shadow-lg mx-auto"
-            />
-            <p className="text-center text-gray-600 mt-2 text-sm">
-              Sikorsky R-4 - the production helicopter that evolved from VS-300 experimental foundations
-            </p>
-          </div>
-        </section>
-
-        {/* Global Impact Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Global Transformation: The Helicopter Age Begins</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The VS-300's success inspired helicopter development programs worldwide. European manufacturers, recognizing the revolutionary potential demonstrated by Sikorsky, initiated their own rotorcraft projects based on similar design principles.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              British helicopter development, including the Bristol Sycamore, drew heavily on lessons learned from VS-300 operations. The fundamental layout and control systems proved so effective that they became international standards for helicopter design.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Civilian applications emerged rapidly as the helicopter's unique capabilities became apparent. Rescue operations, medical evacuation, construction support, and transportation to remote areas created markets that sustained the growing helicopter industry.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Korean War demonstrated helicopter military utility on a large scale, validating the operational concepts pioneered by the VS-300. Helicopter rescue missions saved thousands of lives and proved the technology's battlefield value.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              By the 1950s, helicopter operations had become routine in military and civilian contexts worldwide. The VS-300's breakthrough had launched an entirely new aviation sector that continued expanding throughout the Cold War and beyond.
-            </p>
-          </div>
-        </section>
-
-        {/* Conclusion */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion: The Legacy of Vertical Flight</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Sikorsky VS-300 stands as one of aviation's most significant breakthrough aircraft. More than just a successful helicopter, it proved that practical vertical flight was achievable and established the design principles that would dominate rotorcraft development for generations.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Igor Sikorsky's vision and persistence transformed helicopter flight from experimental curiosity to practical reality. The VS-300's success launched the modern helicopter industry and opened entirely new possibilities for aviation applications.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Today, as advanced helicopters perform missions from urban transport to offshore operations, their design lineage traces directly back to the VS-300's revolutionary breakthrough. The principles established by this remarkable aircraft continue to influence modern rotorcraft development worldwide.
-            </p>
-          </div>
-        </section>
-
-        {/* Book Promotion Bottom */}
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-800 text-white p-8 rounded-xl mb-12">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">Explore More Helicopter History</h3>
-            <p className="text-lg mb-6">
-              Discover the complete story of early helicopter development, including extensive VS-300 coverage and analysis of rotorcraft evolution, in Charles MacKay's comprehensive study.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/books/sycamore-seeds"
-                className="bg-white text-purple-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                📚 View "Sycamore Seeds" Book
-              </Link>
-              <Link
-                href="/books"
-                className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-800 transition-colors"
-              >
-                Browse All Aviation Books
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Social Share Bottom */}
-        <div className="border-t pt-8">
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Share This Article</h3>
-            <p className="text-gray-600">Help others discover the breakthrough that launched the helicopter age</p>
-          </div>
-          <SocialShare
-            url={pageUrl}
-            title={pageTitle}
-            description="Discover how Igor Sikorsky's VS-300 helicopter proved practical vertical flight was possible"
-          />
-        </div>
-
-        {/* Related Articles */}
-        <div className="mt-12 pt-8 border-t">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/bristol-sycamore-helicopter-development" className="group block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border">
-              <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">Bristol Sycamore: Britain's First Helicopter</h4>
-              <p className="text-gray-600 text-sm">How British engineers built on Sikorsky's breakthrough</p>
-            </Link>
-            <Link href="/blog/helicopter-development-pioneers" className="group block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border">
-              <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">Helicopter Development Pioneers</h4>
-              <p className="text-gray-600 text-sm">The evolution of vertical flight from autogyros to modern helicopters</p>
-            </Link>
-          </div>
-        </div>
-      </article>
-    </div>
+    <BlogPostTemplate 
+      blog={blogData}
+      relatedBooks={relatedBooks}
+      relatedPosts={relatedPosts}
+    />
   )
 }

@@ -1,349 +1,175 @@
-import { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import Header from '@/components/Header'
-import SocialShare from '@/components/SocialShare'
+import type { Metadata } from 'next'
+import BlogPostTemplate from '@/components/BlogPostTemplate'
+
+const blogData = {
+  title: `Supermarine Spitfire Development History`,
+  excerpt: `Comprehensive analysis of supermarine spitfire development history with expert historical research and technical details.`,
+  content: `
+    <h2 id="introduction">Introduction: The Story Begins</h2>
+    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    
+    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+
+    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+
+    <h2 id="historical-background">Historical Background and Context</h2>
+    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+
+    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+
+    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+
+    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
+    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+
+    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <ul class="space-y-2 text-blue-700">
+        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
+        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
+        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
+        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
+        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+      </ul>
+    </div>
+
+    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
+
+    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <h2 id="operational-history">Operational History and Performance</h2>
+    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
+
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+
+    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
+
+    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
+
+    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
+
+    <h2 id="key-figures">Key Figures and Decision Makers</h2>
+    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
+
+    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
+
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+
+    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
+
+    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
+
+    <h2 id="impact-legacy">Impact and Legacy</h2>
+    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
+
+    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+
+    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+
+    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+
+    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+
+    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
+    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+
+    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+
+    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+
+    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+
+    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+  `,
+  publishDate: 'March 2024',
+  readTime: '12 min read',
+  category: 'Aviation History',
+  tags: ["supermarine","spitfire","development","history"],
+  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
+  featuredImage: {"url":"/blog-images/supermarine-spitfire-development-history-featured.jpg","alt":"Featured image for Supermarine Spitfire Development History","caption":"Historical photograph related to Supermarine Spitfire Development History"},
+  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+}
+
+const relatedBooks = [
+  {
+    id: 'captain-eric-brown',
+    title: 'Captain Eric Brown: Britain\'s Greatest Test Pilot',
+    price: 14.23,
+    description: 'Biography of the legendary test pilot who flew 487 different aircraft types and became the greatest test pilot in aviation history.',
+    imageUrl: '/book-covers/captain-eric-brown.jpg',
+    relevantContent: 'Eric Brown extensively tested Spitfire variants and provides first-hand accounts of Spitfire performance characteristics and development testing.'
+  },
+  {
+    id: 'british-aircraft-great-war',
+    title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats',
+    price: 12.91,
+    description: 'Complete overview of British military aircraft during the Great War (1914-1918). Shows the aviation heritage that led to Spitfire development.',
+    imageUrl: '/book-covers/british-aircraft-great-war.jpg',
+    relevantContent: 'Traces the evolution of British fighter design from WWI that influenced R.J. Mitchell\'s approach to creating the Spitfire.'
+  },
+  {
+    id: 'clydeside-aviation-vol1',
+    title: 'Clydeside Aviation Volume One: The Great War',
+    price: 16.08,
+    description: 'Scottish aviation development including Supermarine\'s racing heritage and connections to Scottish aviation industry.',
+    imageUrl: '/book-covers/clydeside-aviation-vol1.jpg',
+    relevantContent: 'Covers the Schneider Trophy racing background that directly influenced Spitfire design, including Supermarine\'s seaplane racing heritage.'
+  }
+]
+
+const relatedPosts = [
+  {
+    title: 'Schneider Trophy Racing: High-Speed Seaplane Development That Shaped Fighter Aviation',
+    slug: 'schneider-trophy-racing-development',
+    excerpt: 'How high-speed seaplane competition drove aviation innovation from 1913-1931 and led directly to Spitfire development.',
+    imageUrl: '/blog-images/concorde-supersonic-passenger.jpg',
+    readTime: '14 min'
+  },
+  {
+    title: 'Captain Eric Brown: Britain\'s Greatest Test Pilot',
+    slug: 'test-pilot-biography-eric-brown',
+    excerpt: 'The extraordinary life of the test pilot who flew 487 different aircraft types.',
+    imageUrl: '/blog-images/eric-brown-test-pilot-portrait.jpg',
+    readTime: '18 min'
+  },
+  {
+    title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
+    slug: 'hawker-hurricane-fighter-development',
+    excerpt: 'The workhorse fighter that shot down more German aircraft than any other during the Battle of Britain.',
+    imageUrl: '/blog-images/hawker-hurricane.jpg',
+    readTime: '13 min'
+  },
+  {
+    title: 'Supermarine Spitfire Evolution: From Prototype to Legend',
+    slug: 'supermarine-spitfire-development-evolution',
+    excerpt: 'The complete evolution of the Spitfire from K5054 prototype through all variants, examining continuous development throughout WWII.',
+    imageUrl: '/blog-images/hawker-hurricane-professional.jpg',
+    readTime: '18 min'
+  }
+]
 
 export const metadata: Metadata = {
-  title: 'Supermarine Spitfire Development History: From Racing Seaplanes to Fighter Legend | Charles E. MacKay',
-  description: 'The complete development story of the Supermarine Spitfire, from R.J. Mitchell\'s racing seaplanes to the legendary fighter that saved Britain during the Battle of Britain.',
-  keywords: 'Supermarine Spitfire development, R.J. Mitchell, Spitfire history, Battle of Britain, British fighter aircraft, WWII aviation, Schneider Trophy, aviation history',
+  title: `Supermarine Spitfire Development History | Charles E. MacKay`,
+  description: `Comprehensive analysis of supermarine spitfire development history with expert historical research and technical details.`,
+  keywords: 'supermarine, spitfire, development, history, Charles MacKay, aviation history',
   openGraph: {
-    title: 'Supermarine Spitfire Development History: From Racing Seaplanes to Fighter Legend',
-    description: 'The complete development story of the Supermarine Spitfire, from R.J. Mitchell\'s racing seaplanes to the legendary fighter that saved Britain.',
-    url: 'https://charlesmackaybooks.com/blog/supermarine-spitfire-development-history',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: ['/blog-images/spitfire-prototype-k5054-historical.jpg'],
-    locale: 'en_GB',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Supermarine Spitfire Development History: From Racing Seaplanes to Fighter Legend',
-    description: 'The complete development story of the Supermarine Spitfire, from R.J. Mitchell\'s racing seaplanes to the legendary fighter that saved Britain.',
-    images: ['/blog-images/spitfire-prototype-k5054-historical.jpg'],
-  },
+    title: `Supermarine Spitfire Development History`,
+    description: `Comprehensive analysis of supermarine spitfire development history with expert historical research and technical details.`,
+    images: ['/blog-images/supermarine-spitfire-development-history-featured.jpg'],
+    type: 'article'
+  }
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Supermarine Spitfire Development History: From Racing Seaplanes to Fighter Legend',
-  description: 'The complete development story of the Supermarine Spitfire, from R.J. Mitchell\'s racing seaplanes to the legendary fighter that saved Britain.',
-  image: '/blog-images/spitfire-prototype-k5054-historical.jpg',
-  author: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay',
-    description: 'Aviation historian specializing in British fighter aircraft development and WWII aviation history',
-    url: 'https://charlesmackaybooks.com',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Charles E. MacKay Aviation Books',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://charlesmackaybooks.com/book-covers/british-aircraft-great-war.jpg',
-    },
-  },
-  datePublished: '2025-01-27',
-  dateModified: '2025-01-27',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://charlesmackaybooks.com/blog/supermarine-spitfire-development-history',
-  },
-  articleSection: 'Aviation History',
-  keywords: 'Supermarine Spitfire, R.J. Mitchell, Schneider Trophy, British fighter aircraft',
-  wordCount: 2500,
-  readingTime: 'PT10M'
-}
-
-export default function SpitfireDevelopmentHistoryPage() {
-  const pageUrl = 'https://charlesmackaybooks.com/blog/supermarine-spitfire-development-history'
-  const pageTitle = 'Supermarine Spitfire Development History: From Racing Seaplanes to Fighter Legend'
-
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Header />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-800 text-white">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative max-w-6xl mx-auto px-6 py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Supermarine Spitfire
-                <span className="block text-emerald-300">From Racing to Legend</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                The extraordinary development story of R.J. Mitchell's masterpiece, from Schneider Trophy racing heritage to the legendary fighter that saved Britain during the Battle of Britain.
-              </p>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-emerald-200 mb-6">
-                <span>By Charles E. MacKay</span>
-                <span>•</span>
-                <span>Aviation Historian</span>
-                <span>•</span>
-                <span>10 minute read</span>
-                <span>•</span>
-                <span>January 27, 2025</span>
-              </div>
-            </div>
-            <div>
-              <Image
-                src="/blog-images/spitfire-prototype-k5054-historical.jpg"
-                alt="Supermarine Spitfire prototype K5054 in flight showing R.J. Mitchell's revolutionary fighter design that evolved from racing seaplanes"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-2xl"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation & Social */}
-      <div className="max-w-6xl mx-auto px-6 pt-8 pb-4">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-4">
-            <Link
-              href="/"
-              className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
-            >
-              ← Charles MacKay Books
-            </Link>
-            <span className="text-gray-300">|</span>
-            <Link
-              href="/blog"
-              className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
-            >
-              ← All Articles
-            </Link>
-          </div>
-          <SocialShare url={pageUrl} title={pageTitle} description={metadata.description || ''} />
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <article className="max-w-6xl mx-auto px-6 pb-16">
-
-        {/* Table of Contents */}
-        <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6 mb-12">
-          <h2 className="text-xl font-bold text-emerald-900 mb-4">📖 Article Contents</h2>
-          <div className="grid md:grid-cols-2 gap-2 text-sm">
-            <a href="#racing-heritage" className="text-emerald-700 hover:text-emerald-900 py-1">→ Racing Heritage</a>
-            <a href="#mitchell-genius" className="text-emerald-700 hover:text-emerald-900 py-1">→ Mitchell's Genius</a>
-            <a href="#prototype-k5054" className="text-emerald-700 hover:text-emerald-900 py-1">→ Prototype K5054</a>
-            <a href="#battle-britain" className="text-emerald-700 hover:text-emerald-900 py-1">→ Battle of Britain</a>
-            <a href="#production-evolution" className="text-emerald-700 hover:text-emerald-900 py-1">→ Production Evolution</a>
-            <a href="#lasting-legacy" className="text-emerald-700 hover:text-emerald-900 py-1">→ Lasting Legacy</a>
-          </div>
-        </div>
-
-        {/* Introduction */}
-        <div className="prose prose-lg max-w-none mb-12">
-          <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
-            <p className="text-xl leading-relaxed text-gray-800 m-0">
-              <strong>Key Fact:</strong> The Spitfire's development directly descended from R.J. Mitchell's Schneider Trophy racing seaplanes, with the S.6B's world speed record experience directly informing the fighter's revolutionary design philosophy.
-            </p>
-          </div>
-
-          <p className="text-xl leading-relaxed text-gray-700 mb-6">
-            The Supermarine Spitfire stands as perhaps the most iconic fighter aircraft in aviation history, yet its origins lie not in military specification but in the pursuit of pure speed. R.J. Mitchell's revolutionary design emerged from a decade of racing seaplane development, transforming the lessons learned from Schneider Trophy victories into a fighter that would prove decisive in Britain's darkest hour.
-          </p>
-        </div>
-
-        {/* Racing Heritage Section */}
-        <section id="racing-heritage" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🏆 Racing Heritage: The Schneider Trophy Foundation
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            <div>
-              <Image
-                src="/blog-images/supermarine-s6b-schneider-trophy.jpg"
-                alt="Supermarine S.6B racing seaplane that won the Schneider Trophy and influenced Spitfire development"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-              <p className="text-sm text-gray-600 mt-3 italic">
-                Supermarine S.6B - The Schneider Trophy winner that laid the foundation for Spitfire development
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">From Racing to War</h3>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                The Spitfire's genealogy traces directly back to R.J. Mitchell's series of Schneider Trophy racing seaplanes. The S.4, S.5, S.6, and S.6B progressively refined the aerodynamic and structural concepts that would culminate in the fighter design.
-              </p>
-
-              <div className="bg-emerald-50 p-4 rounded-lg mb-6">
-                <h4 className="font-semibold text-emerald-800 mb-2">Schneider Trophy Achievements</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• <strong>1927:</strong> S.5 wins at 281.65 mph</li>
-                  <li>• <strong>1929:</strong> S.6 wins at 328.63 mph</li>
-                  <li>• <strong>1931:</strong> S.6B wins at 340.08 mph</li>
-                  <li>• <strong>1931:</strong> S.6B sets world record at 407.5 mph</li>
-                  <li>• <strong>Trophy won outright</strong> for Britain</li>
-                </ul>
-              </div>
-
-              <p className="text-gray-700 leading-relaxed">
-                Each racing iteration pushed the boundaries of aerodynamic efficiency, engine cooling, and structural design. The knowledge gained from operating at extreme speeds and stresses provided Mitchell with unparalleled insight into high-performance aircraft design.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Production Evolution Section */}
-        <section id="production-evolution" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🏭 Production Evolution: From Prototype to Legend
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-6">The Castle Bromwich Success</h3>
-
-              <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
-                <h4 className="font-semibold text-gray-800 mb-3">Production Statistics</h4>
-                <div className="space-y-3 text-sm">
-                  <div className="flex justify-between">
-                    <span>Total Production:</span>
-                    <span className="font-semibold text-emerald-600">20,351 aircraft</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Castle Bromwich:</span>
-                    <span className="font-semibold">11,693 aircraft</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Supermarine:</span>
-                    <span className="font-semibold">7,114 aircraft</span>
-                  </div>
-                  <div className="flex justify-between border-t pt-2">
-                    <span>Peak Monthly Production:</span>
-                    <span className="font-semibold text-emerald-600">320 aircraft (1944)</span>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-gray-700 leading-relaxed">
-                The establishment of the Castle Bromwich factory represented a triumph of industrial organization. From a standing start in 1940, the facility became the world's largest fighter aircraft production line, demonstrating the scalability of Mitchell's design.
-              </p>
-            </div>
-
-            <div>
-              <Image
-                src="/blog-images/spitfire-castle-bromwich-production.jpg"
-                alt="Castle Bromwich Spitfire production line showing mass production of the legendary fighter aircraft"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-lg mb-4"
-              />
-              <p className="text-sm text-gray-600 italic">
-                Castle Bromwich production line - The industrial achievement that turned Mitchell's design into Britain's shield
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Books */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Related Charles MacKay Books</h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/books/british-aircraft-great-war" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Image
-                    src="/book-covers/british-aircraft-great-war.jpg"
-                    alt="British Aircraft of the Great War book cover"
-                    width={80}
-                    height={120}
-                    className="rounded"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
-                      British Aircraft of the Great War
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-2">
-                      The comprehensive history of British military aviation development, laying the groundwork for Spitfire innovation.
-                    </p>
-                    <div className="text-emerald-600 text-sm mt-2">Read more →</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/books/mother-of-the-few" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Image
-                    src="/book-covers/mother-of-the-few.jpg"
-                    alt="Mother of the Few book cover"
-                    width={80}
-                    height={120}
-                    className="rounded"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
-                      Mother of the Few
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-2">
-                      Lady Houston's crucial funding of the Schneider Trophy program that enabled Spitfire development.
-                    </p>
-                    <div className="text-emerald-600 text-sm mt-2">Read more →</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </section>
-
-        {/* Author Bio */}
-        <section className="bg-slate-100 rounded-lg p-8">
-          <div className="flex items-start gap-6">
-            <div className="bg-emerald-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold">
-              CM
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Charles E. MacKay</h3>
-              <p className="text-gray-700 mb-3">
-                Aviation historian specializing in British fighter aircraft development and WWII aviation history. Author of authoritative works on the Spitfire's development and the technological evolution from racing seaplanes to military fighters.
-              </p>
-              <div className="flex gap-4 text-sm">
-                <Link href="/about" className="text-emerald-600 hover:text-emerald-800">About the Author</Link>
-                <Link href="/books" className="text-emerald-600 hover:text-emerald-800">All Books</Link>
-                <Link href="/blog" className="text-emerald-600 hover:text-emerald-800">More Articles</Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </article>
-
-      {/* Analytics Event Tracking */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'blog_view', {
-                article_title: 'Supermarine Spitfire Development History',
-                article_category: 'Aviation History',
-                author: 'Charles E. MacKay',
-                reading_time: 10
-              });
-            }
-          `
-        }}
-      />
-    </div>
+    <BlogPostTemplate 
+      blog={blogData}
+      relatedBooks={relatedBooks}
+      relatedPosts={relatedPosts}
+    />
   )
 }

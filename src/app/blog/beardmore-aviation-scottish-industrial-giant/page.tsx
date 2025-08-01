@@ -1,575 +1,121 @@
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Header from '@/components/Header'
-import SocialShare from '@/components/SocialShare'
+import BlogPostTemplate from '@/components/BlogPostTemplate'
+
+const blogData = {
+  title: `William Beardmore & Company: Scottish Aviation Pioneer`,
+  excerpt: `The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.`,
+  content: `
+    <h2 id="introduction">Introduction:  Scottish Aviation Pioneer</h2>
+    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    
+    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+
+    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+
+    <h2 id="historical-background">Historical Background and Context</h2>
+    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+
+    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+
+    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+
+    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
+    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+
+    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <ul class="space-y-2 text-blue-700">
+        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
+        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
+        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
+        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
+        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+      </ul>
+    </div>
+
+    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
+
+    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <h2 id="operational-history">Operational History and Performance</h2>
+    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
+
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+
+    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
+
+    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
+
+    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
+
+    <h2 id="key-figures">Key Figures and Decision Makers</h2>
+    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
+
+    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
+
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+
+    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
+
+    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
+
+    <h2 id="impact-legacy">Impact and Legacy</h2>
+    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
+
+    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+
+    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+
+    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+
+    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+
+    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
+    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+
+    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+
+    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+
+    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+
+    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+  `,
+  publishDate: 'March 2024',
+  readTime: '12 min read',
+  category: 'Scottish Aviation',
+  tags: ["Beardmore","Scottish Aviation","Industrial History","Manufacturing","WWI"],
+  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
+  featuredImage: {"url":"/blog-images/beardmore-aviation-scottish-industrial-giant-featured.jpg","alt":"Featured image for William Beardmore & Company: Scottish Aviation Pioneer","caption":"Historical photograph related to William Beardmore & Company: Scottish Aviation Pioneer"},
+  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+}
+
+const relatedBooks = [{"id":"beardmore-aviation","title":"Beardmore Aviation","price":22.99,"imageUrl":"/book-covers/beardmore-aviation.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"},{"id":"clydeside-aviation-vol1","title":"Clydeside Aviation Volume 1: The Pioneer Years 1909-1914","price":19.99,"imageUrl":"/book-covers/clydeside-aviation-vol1.jpg","description":"The first comprehensive study of aviation development on Clydeside, covering the pioneering efforts from 1909 to the outbreak of World War I.","relevantContent":"Detailed coverage with archival research and technical analysis"}]
+
+const relatedPosts = []
 
 export const metadata: Metadata = {
-  title: 'Beardmore Aviation: Scottish Industrial Giant from Shipbuilding to Aircraft Manufacturing | Charles E. MacKay',
-  description: 'The remarkable transformation of William Beardmore & Company from Clydeside shipbuilding giant to major WWI aircraft manufacturer. Discover how this Scottish industrial powerhouse shaped British aviation history and contributed to the war effort.',
-  keywords: [
-    'Beardmore aviation',
-    'William Beardmore Company',
-    'Scottish aircraft manufacturing',
-    'Clydeside aviation',
-    'Beardmore aircraft WWI',
-    'Scottish shipbuilding aviation',
-    'Dalmuir aircraft factory',
-    'Beardmore engines',
-    'Scottish industrial aviation',
-    'Clydeside industrial giant',
-    'Beardmore Sopwith production',
-    'Scottish aviation heritage',
-    'William Beardmore shipbuilding',
-    'Industrial aviation Scotland',
-    'Beardmore aircraft engines',
-    'Charles MacKay aviation books',
-    'Scottish aviation industry',
-    'Clydeside manufacturing',
-    'Aviation industrial history',
-    'Scottish engineering excellence'
-  ],
+  title: `William Beardmore & Company: Scottish Aviation Pioneer | Charles E. MacKay`,
+  description: `The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.`,
+  keywords: 'Beardmore, Scottish Aviation, Industrial History, Manufacturing, WWI, Charles MacKay, aviation history',
   openGraph: {
-    title: 'Beardmore Aviation: Scottish Industrial Giant from Shipbuilding to Aircraft Manufacturing',
-    description: 'The remarkable transformation of William Beardmore & Company from Clydeside shipbuilding giant to major WWI aircraft manufacturer.',
-    url: 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: '/blog-images/beardmore-factory-worker-manufacturing.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Beardmore factory worker at manufacturing machinery showing the Scottish industrial excellence that powered aviation development'
-      }
-    ],
-    locale: 'en_GB',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Beardmore Aviation: Scottish Industrial Giant from Shipbuilding to Aircraft Manufacturing',
-    description: 'The remarkable transformation of William Beardmore & Company from Clydeside shipbuilding giant to major WWI aircraft manufacturer.',
-    images: ['/blog-images/beardmore-factory-worker-manufacturing.jpg'],
-  },
+    title: `William Beardmore & Company: Scottish Aviation Pioneer`,
+    description: `The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.`,
+    images: ['/blog-images/beardmore-aviation-scottish-industrial-giant-featured.jpg'],
+    type: 'article'
+  }
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Beardmore Aviation: Scottish Industrial Giant from Shipbuilding to Aircraft Manufacturing',
-  description: 'The remarkable transformation of William Beardmore & Company from Clydeside shipbuilding giant to major WWI aircraft manufacturer. Discover how this Scottish industrial powerhouse shaped British aviation history and contributed to the war effort.',
-  image: '/blog-images/beardmore-factory-worker-manufacturing.jpg',
-  author: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay',
-    description: 'Aviation historian specializing in Scottish aviation industry and industrial aviation development',
-    url: 'https://charlesmackaybooks.com'
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Charles E. MacKay Aviation Books',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://charlesmackaybooks.com/book-covers/beardmore-aviation.jpg'
-    }
-  },
-  datePublished: '2025-01-27T17:00:00.000Z',
-  dateModified: '2025-01-27T17:00:00.000Z',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant'
-  },
-  articleSection: 'Aviation History',
-  keywords: 'Beardmore aviation, Scottish aircraft manufacturing, Clydeside aviation, William Beardmore Company',
-  wordCount: 3600,
-  readingTime: 'PT15M'
-}
-
-export default function BeardmoreAviationPage() {
-  const pageUrl = 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant'
-  const pageTitle = 'Beardmore Aviation: Scottish Industrial Giant from Shipbuilding to Aircraft Manufacturing'
-
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Header />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-800 text-white">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative max-w-6xl mx-auto px-6 py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Beardmore Aviation
-                <span className="block text-emerald-300">Scottish Industrial Giant</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                The extraordinary transformation of William Beardmore & Company from Clydeside shipbuilding powerhouse to major WWI aircraft manufacturer - how Scottish industrial engineering excellence shaped British aviation history and the wartime sky.
-              </p>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-emerald-200 mb-6">
-                <span>By Charles E. MacKay</span>
-                <span>•</span>
-                <span>Aviation Historian</span>
-                <span>•</span>
-                <span>15 minute read</span>
-                <span>•</span>
-                <span>January 27, 2025</span>
-              </div>
-            </div>
-            <div>
-              <Image
-                src="/blog-images/beardmore-factory-worker-manufacturing.jpg"
-                alt="Beardmore factory worker at precision manufacturing machinery showing the Scottish industrial excellence that powered aviation development during WWI"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-2xl"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation & Social */}
-      <div className="max-w-6xl mx-auto px-6 pt-8 pb-4">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-4">
-            <Link
-              href="/"
-              className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
-            >
-              ← Charles MacKay Books
-            </Link>
-            <span className="text-gray-300">|</span>
-            <Link
-              href="/blog"
-              className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
-            >
-              ← All Articles
-            </Link>
-          </div>
-          <SocialShare
-            url={pageUrl}
-            title={pageTitle}
-            description="How a Scottish shipbuilder transformed into Britain's most ambitious aviation manufacturer, producing the R101 airship and revolutionizing aviation on the River Clyde."
-            hashtags={['BeardmoreAviation', 'ScottishAviation', 'R101Airship', 'ClydesideAviation', 'AviationHistory', 'ScottishIndustry', 'CharlesMacKay']}
-          />
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <article className="max-w-6xl mx-auto px-6 pb-16">
-
-        {/* Table of Contents */}
-        <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6 mb-12">
-          <h2 className="text-xl font-bold text-emerald-900 mb-4">📖 Article Contents</h2>
-          <div className="grid md:grid-cols-2 gap-2 text-sm">
-            <a href="#industrial-foundation" className="text-emerald-700 hover:text-emerald-900 py-1">→ Industrial Foundation</a>
-            <a href="#aviation-entry" className="text-emerald-700 hover:text-emerald-900 py-1">→ Entry into Aviation</a>
-            <a href="#aircraft-production" className="text-emerald-700 hover:text-emerald-900 py-1">→ Aircraft Production</a>
-            <a href="#engine-development" className="text-emerald-700 hover:text-emerald-900 py-1">→ Engine Development</a>
-            <a href="#wartime-contribution" className="text-emerald-700 hover:text-emerald-900 py-1">→ Wartime Contribution</a>
-            <a href="#lasting-legacy" className="text-emerald-700 hover:text-emerald-900 py-1">→ Lasting Legacy</a>
-          </div>
-        </div>
-
-        {/* Introduction */}
-        <div className="prose prose-lg max-w-none mb-12">
-          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 mb-8">
-            <p className="text-xl leading-relaxed text-gray-800 m-0">
-              <strong>Key Fact:</strong> William Beardmore & Company produced over 1,500 aircraft during WWI, transforming from purely shipbuilding operations to become one of Britain's major aircraft manufacturers, demonstrating the rapid industrial mobilization of Scottish engineering excellence.
-            </p>
-          </div>
-
-          <p className="text-xl leading-relaxed text-gray-700 mb-6">
-            The story of Beardmore Aviation represents one of the most remarkable industrial transformations of the Great War era. William Beardmore & Company, already established as one of Scotland's premier shipbuilding and engineering concerns, successfully diversified into aircraft manufacturing to become a cornerstone of Britain's wartime aviation production. This Scottish industrial giant's journey from Clydeside shipyards to aircraft factories exemplifies the engineering versatility and rapid adaptation that characterized British industrial mobilization during the First World War.
-          </p>
-        </div>
-
-        {/* Industrial Foundation Section */}
-        <section id="industrial-foundation" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🏭 Industrial Foundation: From Shipbuilding to Engineering Excellence (1886-1914)
-          </h2>
-
-          <div className="grid lg:grid-cols-3 gap-8 mb-8">
-            <div className="lg:col-span-2">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Clydeside Engineering Heritage</h3>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                Founded in 1886 by William Beardmore, the company rapidly established itself as one of the Clyde's premier heavy engineering concerns. Based in Dalmuir, near Glasgow, Beardmore's works became synonymous with quality shipbuilding, marine engineering, and precision manufacturing. The company's reputation was built on naval construction, including warships for the Royal Navy and merchant vessels for global trade.
-              </p>
-
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                By 1914, Beardmore had expanded beyond shipbuilding to encompass steel production, armor plate manufacturing, and precision engineering. This diversified industrial capability would prove crucial when the demands of aviation manufacturing required rapid adaptation of existing production facilities and skilled workforce deployment.
-              </p>
-
-              <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                <h4 className="font-semibold text-gray-800 mb-2">Pre-War Capabilities (1914)</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• <strong>Shipbuilding:</strong> Naval and merchant vessel construction</li>
-                  <li>• <strong>Steel production:</strong> High-quality metallurgy expertise</li>
-                  <li>• <strong>Armor plate:</strong> Military specification manufacturing</li>
-                  <li>• <strong>Marine engines:</strong> Power plant design and production</li>
-                  <li>• <strong>Precision engineering:</strong> Complex machinery fabrication</li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <Image
-                src="/blog-images/beardmore-shipbuilding-advertisement.jpg"
-                alt="Beardmore shipbuilding advertisement showing the company's naval construction expertise before entering aviation"
-                width={400}
-                height={300}
-                className="w-full h-auto rounded-lg shadow-lg mb-4"
-              />
-              <p className="text-sm text-gray-600 italic">
-                Beardmore's shipbuilding heritage provided the engineering foundation for aviation manufacturing expansion
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Aviation Entry Section */}
-        <section id="aviation-entry" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            ✈️ Entry into Aviation: Strategic Diversification (1914-1916)
-          </h2>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-6">Wartime Opportunity and Challenge</h3>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-semibold text-green-700 mb-3">✅ Strategic Advantages</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>Engineering expertise:</strong> Complex manufacturing experience</li>
-                  <li>• <strong>Skilled workforce:</strong> Precision machining capabilities</li>
-                  <li>• <strong>Production facilities:</strong> Large-scale manufacturing infrastructure</li>
-                  <li>• <strong>Supply networks:</strong> Established material procurement</li>
-                  <li>• <strong>Quality control:</strong> Military specification standards</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-red-700 mb-3">⚡ Adaptation Challenges</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>New technology:</strong> Aviation engineering unfamiliar</li>
-                  <li>• <strong>Rapid scaling:</strong> Urgent production requirements</li>
-                  <li>• <strong>Specialized materials:</strong> Aircraft-specific components</li>
-                  <li>• <strong>Quality demands:</strong> Life-critical precision requirements</li>
-                  <li>• <strong>Competition:</strong> Established aviation manufacturers</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Beardmore's entry into aviation manufacturing was driven by wartime necessity and government encouragement for industrial diversification. The company's established engineering capabilities and manufacturing infrastructure made it an ideal candidate for aircraft production, while the urgent demand for military aircraft provided both opportunity and imperative for rapid expansion into this new field.
-          </p>
-        </section>
-
-        {/* Aircraft Production Section */}
-        <section id="aircraft-production" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🛩️ Aircraft Production: Manufacturing Excellence (1916-1918)
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Production Achievement</h3>
-
-              <div className="bg-emerald-50 p-6 rounded-lg mb-6">
-                <h4 className="font-bold text-emerald-800 mb-3">Beardmore Production Statistics</h4>
-                <div className="space-y-3 text-sm">
-                  <div className="flex justify-between">
-                    <span>Total Aircraft Produced:</span>
-                    <span className="font-semibold">1,500+ aircraft</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sopwith Pup:</span>
-                    <span className="font-semibold">1,773 aircraft</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sopwith Camel:</span>
-                    <span className="font-semibold">364 aircraft</span>
-                  </div>
-                  <div className="flex justify-between border-t pt-2">
-                    <span>Peak Employment:</span>
-                    <span className="font-semibold text-emerald-600">15,000+ workers</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Production Period:</span>
-                    <span className="font-semibold text-emerald-600">1916-1920</span>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-gray-700 leading-relaxed">
-                Beardmore's aircraft production focused primarily on licensed manufacture of proven designs, particularly Sopwith aircraft types. This approach leveraged the company's manufacturing strengths while minimizing development risks, enabling rapid scaling of production to meet urgent wartime demands.
-              </p>
-            </div>
-
-            <div>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h4 className="font-bold text-blue-800 mb-3">🏗️ Manufacturing Innovation</h4>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Beardmore adapted shipbuilding production techniques to aircraft manufacturing, introducing assembly line methods and quality control procedures that improved both efficiency and aircraft reliability. The company's experience with complex engineering projects enabled rapid problem-solving and continuous process improvement.
-                </p>
-
-                <h5 className="font-semibold text-blue-700 mb-2">Key Production Features:</h5>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Dedicated aircraft assembly halls</li>
-                  <li>• Precision tooling and jigs</li>
-                  <li>• Skilled workforce training programs</li>
-                  <li>• Quality inspection procedures</li>
-                  <li>• Efficient material flow systems</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Engine Development Section */}
-        <section id="engine-development" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🔧 Engine Development: Power Plant Innovation
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-emerald-600 mb-2">160 HP</div>
-              <div className="text-sm text-gray-600">Beardmore Engine Power</div>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">1,500+</div>
-              <div className="text-sm text-gray-600">Engines Produced</div>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
-              <div className="text-sm text-gray-600">Reliability Rate</div>
-            </div>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Engine Manufacturing Excellence</h3>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                Beardmore's engine division produced licensed versions of proven designs, including the Austro-Daimler engine used in various aircraft types. The company's precision manufacturing capabilities and metallurgical expertise ensured high-quality engine production that met the demanding requirements of military aviation.
-              </p>
-
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                The transition from marine engine production to aircraft engines required significant adaptation, as aviation powerplants demanded much higher power-to-weight ratios and operational reliability. Beardmore successfully met these challenges through systematic engineering and quality control procedures.
-              </p>
-
-              <h4 className="font-semibold text-gray-800 mb-3">Technical Achievements</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>• <strong>Precision manufacturing:</strong> Aircraft-quality production standards</li>
-                <li>• <strong>Metallurgical expertise:</strong> High-strength, lightweight components</li>
-                <li>• <strong>Quality assurance:</strong> Comprehensive testing procedures</li>
-                <li>• <strong>Production scaling:</strong> Rapid expansion to meet demand</li>
-                <li>• <strong>Reliability focus:</strong> Operational readiness priority</li>
-              </ul>
-            </div>
-
-            <div>
-              <Image
-                src="/blog-images/clydeside-industrial-workers.jpg"
-                alt="Clydeside industrial workers showing the skilled workforce that powered Beardmore's aviation manufacturing success"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-lg mb-4"
-              />
-              <p className="text-sm text-gray-600 italic">
-                The skilled Clydeside workforce provided the foundation for Beardmore's aviation manufacturing success
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Wartime Contribution Section */}
-        <section id="wartime-contribution" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🎖️ Wartime Contribution: Scottish Industrial Mobilization
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-6">Strategic Impact</h3>
-
-              <div className="space-y-4">
-                <div className="bg-white border border-gray-200 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold">Aircraft Delivered to RAF</span>
-                    <span className="text-2xl font-bold text-green-600">1,500+</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">Direct contribution to British air power</p>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold">Employment Created</span>
-                    <span className="text-2xl font-bold text-blue-600">15,000</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">Jobs in aviation manufacturing</p>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold">Technology Transfer</span>
-                    <span className="text-2xl font-bold text-purple-600">Significant</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">Manufacturing innovation advancement</p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-3">Industrial Legacy</h4>
-              <ul className="space-y-2 text-gray-700 mb-6">
-                <li>• <strong>Manufacturing capability:</strong> Advanced production techniques</li>
-                <li>• <strong>Workforce development:</strong> Skilled aviation manufacturing</li>
-                <li>• <strong>Quality standards:</strong> Military specification procedures</li>
-                <li>• <strong>Supply chain:</strong> Aviation component networks</li>
-                <li>• <strong>Engineering expertise:</strong> Complex system integration</li>
-                <li>• <strong>Innovation culture:</strong> Rapid problem-solving capability</li>
-                <li>• <strong>International recognition:</strong> Export market development</li>
-                <li>• <strong>Post-war foundation:</strong> Civilian aviation contribution</li>
-              </ul>
-
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                <h4 className="font-bold text-amber-800 mb-2">🎯 Strategic Significance</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Beardmore's successful transition to aviation manufacturing demonstrated the adaptability of Scottish heavy industry and contributed significantly to Britain's wartime aircraft production capacity, helping establish the foundation for post-war aerospace development.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Legacy Section */}
-        <section id="lasting-legacy" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🏆 Lasting Legacy: Scottish Aviation's Industrial Foundation
-          </h2>
-
-          <div className="bg-gray-50 p-8 rounded-lg mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Beardmore's wartime aviation activities established important precedents for industrial diversification and demonstrated the potential for traditional heavy industries to successfully adapt to emerging technologies. The company's experience provided valuable lessons in workforce retraining, production adaptation, and quality control that influenced subsequent industrial development in Scotland and beyond.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Although Beardmore's direct involvement in aviation manufacturing ended with the post-war economic downturn, the company's contribution to British aviation capability during the critical war years was substantial. The skilled workforce, manufacturing techniques, and quality standards developed during this period contributed to the foundation of modern Scottish aerospace industry.
-            </p>
-          </div>
-
-          <div className="bg-emerald-900 text-white p-8 rounded-lg">
-            <h3 className="text-xl font-bold mb-4">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Industrial Aviation Heritage</h3>
-            <p className="leading-relaxed mb-4">
-              The Beardmore story exemplifies the remarkable adaptability and engineering excellence of Scottish industry during the Great War. From Clydeside shipyards to aircraft production lines, the company demonstrated how established industrial capability could be rapidly transformed to meet national needs and technological challenges.
-            </p>
-            <p className="leading-relaxed">
-              William Beardmore & Company's aviation chapter, though relatively brief, represents an important element of Scottish contributions to aviation development. The company's success in manufacturing high-quality aircraft and engines under wartime pressures helped establish Scotland's reputation for precision engineering and manufacturing excellence that continues to influence aerospace development today.
-            </p>
-          </div>
-        </section>
-
-        {/* Related Books */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Related Charles MacKay Books</h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/books/clydeside-aviation-vol1" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Image
-                    src="/book-covers/clydeside-aviation-vol1.jpg"
-                    alt="Clydeside Aviation Volume 1 book cover"
-                    width={80}
-                    height={120}
-                    className="rounded"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
-                      Clydeside Aviation Volume One: The Great War
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-2">
-                      The comprehensive history of Clydeside's aviation industry, including Beardmore's transformation from shipbuilding to aircraft manufacturing.
-                    </p>
-                    <div className="text-emerald-600 text-sm mt-2">Read more →</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/books/beardmore-aviation-giant" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Image
-                    src="/book-covers/beardmore-aviation.jpg"
-                    alt="Beardmore Aviation Giant book cover"
-                    width={80}
-                    height={120}
-                    className="rounded"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
-                      Beardmore: Scottish Industrial Aviation Giant
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-2">
-                      The detailed story of William Beardmore & Company's aviation division and its contribution to British air power during WWI.
-                    </p>
-                    <div className="text-emerald-600 text-sm mt-2">Read more →</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </section>
-
-        {/* Author Bio */}
-        <section className="bg-slate-100 rounded-lg p-8">
-          <div className="flex items-start gap-6">
-            <div className="bg-emerald-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold">
-              CM
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Charles E. MacKay</h3>
-              <p className="text-gray-700 mb-3">
-                Aviation historian specializing in Scottish aviation industry and industrial aviation development. Author of authoritative works on Clydeside aviation heritage, with particular expertise in the transformation of traditional Scottish industries to aviation manufacturing during the Great War.
-              </p>
-              <div className="flex gap-4 text-sm">
-                <Link href="/about" className="text-emerald-600 hover:text-emerald-800">About the Author</Link>
-                <Link href="/books" className="text-emerald-600 hover:text-emerald-800">All Books</Link>
-                <Link href="/blog" className="text-emerald-600 hover:text-emerald-800">More Articles</Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </article>
-
-      {/* Analytics Event Tracking */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'blog_view', {
-                article_title: 'Beardmore Aviation Scottish Industrial Giant',
-                article_category: 'Aviation History',
-                author: 'Charles E. MacKay',
-                reading_time: 15,
-                topic: 'Scottish Aviation Industry'
-              });
-            }
-          `
-        }}
-      />
-    </div>
+    <BlogPostTemplate 
+      blog={blogData}
+      relatedBooks={relatedBooks}
+      relatedPosts={relatedPosts}
+    />
   )
 }

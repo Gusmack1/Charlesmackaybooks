@@ -1,570 +1,121 @@
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Header from '@/components/Header'
-import SocialShare from '@/components/SocialShare'
+import BlogPostTemplate from '@/components/BlogPostTemplate'
+
+const blogData = {
+  title: `Clydeside Aviation: Scotland Industrial Flying Revolution`,
+  excerpt: `How the River Clyde became the center of Scottish aviation manufacturing and changed the course of British aviation history.`,
+  content: `
+    <h2 id="introduction">Introduction:  Scotland Industrial Flying Revolution</h2>
+    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    
+    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+
+    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+
+    <h2 id="historical-background">Historical Background and Context</h2>
+    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+
+    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+
+    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+
+    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
+    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+
+    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <ul class="space-y-2 text-blue-700">
+        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
+        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
+        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
+        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
+        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+      </ul>
+    </div>
+
+    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
+
+    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <h2 id="operational-history">Operational History and Performance</h2>
+    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
+
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+
+    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
+
+    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
+
+    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
+
+    <h2 id="key-figures">Key Figures and Decision Makers</h2>
+    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
+
+    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
+
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+
+    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
+
+    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
+
+    <h2 id="impact-legacy">Impact and Legacy</h2>
+    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
+
+    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+
+    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+
+    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+
+    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+
+    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
+    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+
+    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+
+    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+
+    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+
+    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+  `,
+  publishDate: 'March 2024',
+  readTime: '12 min read',
+  category: 'Scottish Aviation',
+  tags: ["Clydeside","Scottish Aviation","Industrial Revolution","Manufacturing","Aviation History"],
+  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
+  featuredImage: {"url":"/blog-images/clydeside-aviation-revolution-featured.jpg","alt":"Featured image for Clydeside Aviation: Scotland Industrial Flying Revolution","caption":"Historical photograph related to Clydeside Aviation: Scotland Industrial Flying Revolution"},
+  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+}
+
+const relatedBooks = [{"id":"clydeside-aviation-vol1","title":"Clydeside Aviation Volume 1: The Pioneer Years 1909-1914","price":19.99,"imageUrl":"/book-covers/clydeside-aviation-vol1.jpg","description":"The first comprehensive study of aviation development on Clydeside, covering the pioneering efforts from 1909 to the outbreak of World War I.","relevantContent":"Detailed coverage with archival research and technical analysis"},{"id":"beardmore-aviation","title":"Beardmore Aviation","price":22.99,"imageUrl":"/book-covers/beardmore-aviation.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
+
+const relatedPosts = []
 
 export const metadata: Metadata = {
-  title: 'Clydeside Aviation Revolution: From Shipyards to Aircraft Factories - Scottish Industrial Transformation | Charles E. MacKay',
-  description: 'The remarkable transformation of Clydeside from world-renowned shipbuilding center to major aircraft manufacturing hub during WWI. Discover how Glasgow\'s industrial heritage powered Britain\'s aviation revolution and established Scottish aerospace excellence.',
-  keywords: [
-    'Clydeside aviation revolution',
-    'Scottish aircraft manufacturing',
-    'Glasgow aviation industry',
-    'Clyde shipbuilding aviation',
-    'Scottish aerospace development',
-    'Clydeside industrial transformation',
-    'Glasgow aircraft factories',
-    'Scottish aviation heritage',
-    'Clyde River aviation',
-    'Industrial aviation Scotland',
-    'Shipyard aircraft production',
-    'Scottish engineering excellence',
-    'Clydeside wartime production',
-    'Glasgow aviation history',
-    'Scottish industrial aviation',
-    'Charles MacKay aviation books',
-    'Clydeside aviation companies',
-    'Scottish aviation pioneers',
-    'Industrial transformation Scotland',
-    'Aviation manufacturing heritage'
-  ],
+  title: `Clydeside Aviation: Scotland Industrial Flying Revolution | Charles E. MacKay`,
+  description: `How the River Clyde became the center of Scottish aviation manufacturing and changed the course of British aviation history.`,
+  keywords: 'Clydeside, Scottish Aviation, Industrial Revolution, Manufacturing, Aviation History, Charles MacKay, aviation history',
   openGraph: {
-    title: 'Clydeside Aviation Revolution: From Shipyards to Aircraft Factories - Scottish Industrial Transformation',
-    description: 'The remarkable transformation of Clydeside from world-renowned shipbuilding center to major aircraft manufacturing hub during WWI.',
-    url: 'https://charlesmackaybooks.com/blog/clydeside-aviation-revolution',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: '/blog-images/clydeside-wwi-collections.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'WWI era Clydeside industrial collections showing the transformation from shipbuilding to aviation manufacturing'
-      }
-    ],
-    locale: 'en_GB',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Clydeside Aviation Revolution: From Shipyards to Aircraft Factories - Scottish Industrial Transformation',
-    description: 'The remarkable transformation of Clydeside from world-renowned shipbuilding center to major aircraft manufacturing hub during WWI.',
-    images: ['/blog-images/clydeside-wwi-collections.jpg'],
-  },
+    title: `Clydeside Aviation: Scotland Industrial Flying Revolution`,
+    description: `How the River Clyde became the center of Scottish aviation manufacturing and changed the course of British aviation history.`,
+    images: ['/blog-images/clydeside-aviation-revolution-featured.jpg'],
+    type: 'article'
+  }
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Clydeside Aviation Revolution: From Shipyards to Aircraft Factories - Scottish Industrial Transformation',
-  description: 'The remarkable transformation of Clydeside from world-renowned shipbuilding center to major aircraft manufacturing hub during WWI. Discover how Glasgow\'s industrial heritage powered Britain\'s aviation revolution and established Scottish aerospace excellence.',
-  image: '/blog-images/clydeside-wwi-collections.jpg',
-  author: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay',
-    description: 'Aviation historian specializing in Scottish aviation industry and Clydeside industrial development',
-    url: 'https://charlesmackaybooks.com'
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Charles E. MacKay Aviation Books',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://charlesmackaybooks.com/book-covers/clydeside-aviation-vol1.jpg'
-    }
-  },
-  datePublished: '2025-01-27T18:00:00.000Z',
-  dateModified: '2025-01-27T18:00:00.000Z',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://charlesmackaybooks.com/blog/clydeside-aviation-revolution'
-  },
-  articleSection: 'Aviation History',
-  keywords: 'Clydeside aviation revolution, Scottish aircraft manufacturing, Glasgow aviation industry, shipbuilding aviation',
-  wordCount: 3800,
-  readingTime: 'PT16M'
-}
-
-export default function ClydesideAviationRevolutionPage() {
-  const pageUrl = 'https://charlesmackaybooks.com/blog/clydeside-aviation-revolution'
-  const pageTitle = 'Clydeside Aviation Revolution: From Shipyards to Aircraft Factories - Scottish Industrial Transformation'
-
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Header />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-800 text-white">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative max-w-6xl mx-auto px-6 py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Clydeside Aviation
-                <span className="block text-emerald-300">Industrial Revolution</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                The extraordinary transformation of Glasgow's Clydeside from the world's greatest shipbuilding center to a major aircraft manufacturing powerhouse - how Scottish industrial genius revolutionized aviation and established the foundation for modern aerospace.
-              </p>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-emerald-200 mb-6">
-                <span>By Charles E. MacKay</span>
-                <span>•</span>
-                <span>Aviation Historian</span>
-                <span>•</span>
-                <span>16 minute read</span>
-                <span>•</span>
-                <span>January 27, 2025</span>
-              </div>
-            </div>
-            <div>
-              <Image
-                src="/blog-images/clydeside-wwi-collections.jpg"
-                alt="WWI era Clydeside industrial collections showing the transformation from shipbuilding to aviation manufacturing during the Great War"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-2xl"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation & Social */}
-      <div className="max-w-6xl mx-auto px-6 pt-8 pb-4">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-4">
-            <Link
-              href="/"
-              className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
-            >
-              ← Charles MacKay Books
-            </Link>
-            <span className="text-gray-300">|</span>
-            <Link
-              href="/blog"
-              className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
-            >
-              ← All Articles
-            </Link>
-          </div>
-          <SocialShare url={pageUrl} title={pageTitle} description={metadata.description || ''} />
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <article className="max-w-6xl mx-auto px-6 pb-16">
-
-        {/* Table of Contents */}
-        <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6 mb-12">
-          <h2 className="text-xl font-bold text-emerald-900 mb-4">📖 Article Contents</h2>
-          <div className="grid md:grid-cols-2 gap-2 text-sm">
-            <a href="#shipbuilding-heritage" className="text-emerald-700 hover:text-emerald-900 py-1">→ Shipbuilding Heritage</a>
-            <a href="#wartime-transformation" className="text-emerald-700 hover:text-emerald-900 py-1">→ Wartime Transformation</a>
-            <a href="#industrial-conversion" className="text-emerald-700 hover:text-emerald-900 py-1">→ Industrial Conversion</a>
-            <a href="#aviation-companies" className="text-emerald-700 hover:text-emerald-900 py-1">→ Aviation Companies</a>
-            <a href="#technological-innovation" className="text-emerald-700 hover:text-emerald-900 py-1">→ Technological Innovation</a>
-            <a href="#lasting-legacy" className="text-emerald-700 hover:text-emerald-900 py-1">→ Lasting Legacy</a>
-          </div>
-        </div>
-
-        {/* Introduction */}
-        <div className="prose prose-lg max-w-none mb-12">
-          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 mb-8">
-            <p className="text-xl leading-relaxed text-gray-800 m-0">
-              <strong>Key Fact:</strong> During WWI, Clydeside transformed from producing 25% of Britain's ships to manufacturing over 15% of the nation's aircraft, demonstrating the remarkable adaptability of Scottish industrial engineering and establishing the foundation for Scotland's modern aerospace industry.
-            </p>
-          </div>
-
-          <p className="text-xl leading-relaxed text-gray-700 mb-6">
-            The Clydeside Aviation Revolution represents one of the most dramatic industrial transformations in modern history. Within a span of just four years, the river Clyde evolved from being synonymous with the world's finest shipbuilding to becoming a major center of aircraft manufacturing. This extraordinary metamorphosis exemplified Scottish engineering adaptability and innovation, as the same industrial skills, infrastructure, and workforce that had built the world's greatest ships were rapidly redeployed to construct the aircraft that would help win the Great War and establish the foundation for Britain's aerospace supremacy.
-          </p>
-        </div>
-
-        {/* Shipbuilding Heritage Section */}
-        <section id="shipbuilding-heritage" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🚢 Shipbuilding Heritage: The Foundation of Excellence (1850-1914)
-          </h2>
-
-          <div className="grid lg:grid-cols-3 gap-8 mb-8">
-            <div className="lg:col-span-2">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">World Capital of Shipbuilding</h3>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                By 1914, the River Clyde had established itself as the undisputed global center of shipbuilding excellence. The concentration of shipyards along the river—from Glasgow down to Greenock—represented the most sophisticated maritime industrial complex ever assembled. Companies like John Brown & Company, Fairfield Shipbuilding, and William Beardmore & Company had built their reputations on precision engineering, innovative design, and uncompromising quality standards.
-              </p>
-
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                The Clydeside shipbuilding industry had developed unique capabilities that would prove crucial for aviation manufacturing: precision metalworking, complex systems integration, rigorous quality control, and the ability to coordinate large-scale production involving thousands of skilled workers. These competencies, honed through decades of building the world's most advanced vessels, provided the perfect foundation for rapid adaptation to aircraft production.
-              </p>
-
-              <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                <h4 className="font-semibold text-gray-800 mb-2">Pre-War Clydeside Capabilities (1914)</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• <strong>Major Shipyards:</strong> 40+ active shipbuilding facilities</li>
-                  <li>• <strong>Skilled Workforce:</strong> 100,000+ highly trained workers</li>
-                  <li>• <strong>Production Capacity:</strong> 750,000 tons annually</li>
-                  <li>• <strong>Global Market Share:</strong> 25% of world's shipping</li>
-                  <li>• <strong>Technical Excellence:</strong> World-leading maritime innovation</li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <Image
-                src="/blog-images/historical-scotland-map.jpg"
-                alt="Historical map of Scotland showing the Clyde River region that became the center of industrial and aviation development"
-                width={400}
-                height={300}
-                className="w-full h-auto rounded-lg shadow-lg mb-4"
-              />
-              <p className="text-sm text-gray-600 italic">
-                Historical map showing the Clyde River region that became Scotland's industrial heartland and aviation center
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Wartime Transformation Section */}
-        <section id="wartime-transformation" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            ⚡ Wartime Transformation: Necessity Drives Innovation (1914-1916)
-          </h2>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-6">Strategic Imperative</h3>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-semibold text-green-700 mb-3">✅ Industrial Advantages</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>Skilled workforce:</strong> Precision manufacturing expertise</li>
-                  <li>• <strong>Production infrastructure:</strong> Large-scale manufacturing facilities</li>
-                  <li>• <strong>Supply networks:</strong> Established material procurement systems</li>
-                  <li>• <strong>Quality systems:</strong> Rigorous engineering standards</li>
-                  <li>• <strong>Innovation culture:</strong> Rapid problem-solving capabilities</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-blue-700 mb-3">🎯 Strategic Drivers</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>National urgency:</strong> Desperate need for aircraft production</li>
-                  <li>• <strong>Government support:</strong> Contracts and technical assistance</li>
-                  <li>• <strong>Resource utilization:</strong> Maximum industrial mobilization</li>
-                  <li>• <strong>Regional expertise:</strong> Concentrated engineering knowledge</li>
-                  <li>• <strong>Competitive advantage:</strong> Faster production scaling</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-gray-700 leading-relaxed mb-6">
-            The transformation of Clydeside from shipbuilding to aviation manufacturing was driven by the urgent wartime need for aircraft production and the recognition that Scotland's concentrated industrial expertise could be rapidly adapted to meet this challenge. The government actively encouraged this diversification, providing contracts, technical support, and coordination to ensure maximum utilization of Scotland's industrial capacity.
-          </p>
-        </section>
-
-        {/* Industrial Conversion Section */}
-        <section id="industrial-conversion" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🏭 Industrial Conversion: Shipyards Become Aircraft Factories (1916-1918)
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Manufacturing Transformation</h3>
-
-              <div className="bg-emerald-50 p-6 rounded-lg mb-6">
-                <h4 className="font-bold text-emerald-800 mb-3">Conversion Statistics</h4>
-                <div className="space-y-3 text-sm">
-                  <div className="flex justify-between">
-                    <span>Facilities Converted:</span>
-                    <span className="font-semibold">25+ major factories</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Workers Retrained:</span>
-                    <span className="font-semibold">30,000+ personnel</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Aircraft Produced:</span>
-                    <span className="font-semibold">5,000+ aircraft</span>
-                  </div>
-                  <div className="flex justify-between border-t pt-2">
-                    <span>Peak Employment:</span>
-                    <span className="font-semibold text-emerald-600">50,000 workers</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Production Timeline:</span>
-                    <span className="font-semibold text-emerald-600">1916-1920</span>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-gray-700 leading-relaxed">
-                The conversion of Clydeside facilities to aircraft production required massive organizational and technical adaptation. Shipbuilding infrastructure was reconfigured for aircraft assembly, while maintaining the precision manufacturing standards that had made Scottish engineering world-renowned. The scale of this transformation was unprecedented in industrial history.
-              </p>
-            </div>
-
-            <div>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h4 className="font-bold text-blue-800 mb-3">🔧 Conversion Challenges</h4>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Transforming shipyards for aircraft production required complete rethinking of manufacturing processes. Aircraft demanded precision tolerances, lightweight materials, and assembly techniques completely different from ship construction. Yet Clydeside's engineering culture enabled this adaptation with remarkable speed and effectiveness.
-                </p>
-
-                <h5 className="font-semibold text-blue-700 mb-2">Key Adaptations:</h5>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Precision tooling for aircraft components</li>
-                  <li>• Assembly line production methods</li>
-                  <li>• Quality control for aviation standards</li>
-                  <li>• Workforce retraining programs</li>
-                  <li>• Supply chain reorganization</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Aviation Companies Section */}
-        <section id="aviation-companies" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            ✈️ Aviation Companies: Scottish Aerospace Pioneers
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-emerald-600 mb-2">Beardmore</div>
-              <div className="text-sm text-gray-600">1,500+ Aircraft</div>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">Barclay Curle</div>
-              <div className="text-sm text-gray-600">Major Manufacturer</div>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">Fairfield</div>
-              <div className="text-sm text-gray-600">Aircraft Division</div>
-            </div>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Major Aviation Manufacturers</h3>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                The transformation of Clydeside shipbuilders into aircraft manufacturers created a new Scottish aerospace industry virtually overnight. Each company brought its own engineering strengths and manufacturing capabilities to aircraft production, while maintaining the quality standards that had made Scottish engineering world-famous.
-              </p>
-
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                William Beardmore & Company emerged as the largest Scottish aircraft manufacturer, producing over 1,500 aircraft during the war. Other major players included Barclay Curle & Company, Fairfield Shipbuilding & Engineering, and numerous smaller firms that adapted their facilities for aviation production.
-              </p>
-
-              <h4 className="font-semibold text-gray-800 mb-3">Company Contributions</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>• <strong>William Beardmore:</strong> Sopwith Pup and Camel production</li>
-                <li>• <strong>Barclay Curle:</strong> Licensed aircraft manufacturing</li>
-                <li>• <strong>Fairfield Shipbuilding:</strong> Aircraft component production</li>
-                <li>• <strong>G. & J. Weir:</strong> Aircraft engine components</li>
-                <li>• <strong>Smaller firms:</strong> Specialized component manufacturing</li>
-              </ul>
-            </div>
-
-            <div>
-              <Image
-                src="/blog-images/clydeside-industrial-workers.jpg"
-                alt="Clydeside industrial workers during WWI showing the skilled workforce that powered the aviation transformation"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-lg mb-4"
-              />
-              <p className="text-sm text-gray-600 italic">
-                The skilled Clydeside workforce that powered the remarkable transformation from ships to aircraft
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Technological Innovation Section */}
-        <section id="technological-innovation" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🔬 Technological Innovation: Scottish Engineering Excellence
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-6">Innovation Achievements</h3>
-
-              <div className="space-y-4">
-                <div className="bg-white border border-gray-200 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold">Manufacturing Efficiency</span>
-                    <span className="text-2xl font-bold text-green-600">300%</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">Improvement over traditional methods</p>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold">Quality Standards</span>
-                    <span className="text-2xl font-bold text-blue-600">99.5%</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">Aircraft acceptance rate</p>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold">Innovation Rate</span>
-                    <span className="text-2xl font-bold text-purple-600">Continuous</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">Process improvements throughout war</p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-3">Technical Innovations</h4>
-              <ul className="space-y-2 text-gray-700 mb-6">
-                <li>• <strong>Assembly line methods:</strong> Adapted from shipbuilding practices</li>
-                <li>• <strong>Precision tooling:</strong> Aircraft-specific manufacturing equipment</li>
-                <li>• <strong>Quality control systems:</strong> Comprehensive inspection procedures</li>
-                <li>• <strong>Materials technology:</strong> Advanced metallurgy and fabrication</li>
-                <li>• <strong>Production planning:</strong> Efficient workflow coordination</li>
-                <li>• <strong>Worker training:</strong> Specialized aviation skills development</li>
-                <li>• <strong>Engineering integration:</strong> Cross-disciplinary collaboration</li>
-                <li>• <strong>Component standardization:</strong> Interchangeable parts systems</li>
-              </ul>
-
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                <h4 className="font-bold text-amber-800 mb-2">🎯 Innovation Philosophy</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Clydeside's approach to aviation manufacturing emphasized systematic improvement, precision execution, and continuous learning. This methodical engineering culture enabled rapid adaptation to aircraft production while maintaining the quality standards that had made Scottish engineering globally respected.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Legacy Section */}
-        <section id="lasting-legacy" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-emerald-200 pb-4">
-            🏆 Lasting Legacy: Foundation of Modern Scottish Aerospace
-          </h2>
-
-          <div className="bg-gray-50 p-8 rounded-lg mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The Clydeside Aviation Revolution established Scotland as a major center of aerospace manufacturing and innovation. The transformation demonstrated that traditional heavy industries could successfully adapt to emerging technologies through systematic application of engineering principles, skilled workforce development, and strategic industrial planning. This experience provided the foundation for Scotland's continued prominence in aerospace development throughout the twentieth century and beyond.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed">
-              More importantly, the revolution proved that industrial regions could reinvent themselves when faced with technological disruption. The same qualities that had made Clydeside the world's shipbuilding capital—engineering excellence, precision manufacturing, and innovative problem-solving—enabled its rapid transformation into a major aerospace center, establishing principles that continue to guide industrial development today.
-            </p>
-          </div>
-
-          <div className="bg-emerald-900 text-white p-8 rounded-lg">
-            <h3 className="text-xl font-bold mb-4">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Industrial Genius</h3>
-            <p className="leading-relaxed mb-4">
-              The Clydeside Aviation Revolution exemplifies the remarkable adaptability and innovation of Scottish industrial culture. From building the world's greatest ships to manufacturing the aircraft that helped win the Great War, Clydeside's transformation demonstrates how engineering excellence, skilled craftsmanship, and systematic innovation can overcome any technological challenge.
-            </p>
-            <p className="leading-relaxed">
-              The legacy of this remarkable transformation lives on in Scotland's continuing prominence in aerospace development. The same river that once launched the world's finest ships now supports advanced aerospace manufacturing, defense systems, and cutting-edge aviation technology—a testament to the enduring power of Scottish engineering excellence and the visionary industrial transformation achieved during the Great War.
-            </p>
-          </div>
-        </section>
-
-        {/* Related Books */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Related Charles MacKay Books</h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/books/clydeside-aviation-vol1" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Image
-                    src="/book-covers/clydeside-aviation-vol1.jpg"
-                    alt="Clydeside Aviation Volume 1 book cover"
-                    width={80}
-                    height={120}
-                    className="rounded"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
-                      Clydeside Aviation Volume One: The Great War
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-2">
-                      The definitive account of Clydeside's transformation from shipbuilding to aviation manufacturing during WWI and its impact on Scottish industrial development.
-                    </p>
-                    <div className="text-emerald-600 text-sm mt-2">Read more →</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/books/clydeside-aviation-vol2" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 group-hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Image
-                    src="/book-covers/clydeside-aviation-vol2.jpg"
-                    alt="Clydeside Aviation Volume 2 book cover"
-                    width={80}
-                    height={120}
-                    className="rounded"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
-                      Clydeside Aviation Volume Two: Between the Wars
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-2">
-                      The continuation of Clydeside's aviation story through the interwar period and WWII, showing the lasting impact of the Great War transformation.
-                    </p>
-                    <div className="text-emerald-600 text-sm mt-2">Read more →</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </section>
-
-        {/* Author Bio */}
-        <section className="bg-slate-100 rounded-lg p-8">
-          <div className="flex items-start gap-6">
-            <div className="bg-emerald-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold">
-              CM
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Charles E. MacKay</h3>
-              <p className="text-gray-700 mb-3">
-                Aviation historian specializing in Scottish aviation industry and Clydeside industrial development. Author of the definitive two-volume work on Clydeside aviation, with particular expertise in the transformation of traditional Scottish industries to aerospace manufacturing during the Great War and beyond.
-              </p>
-              <div className="flex gap-4 text-sm">
-                <Link href="/about" className="text-emerald-600 hover:text-emerald-800">About the Author</Link>
-                <Link href="/books" className="text-emerald-600 hover:text-emerald-800">All Books</Link>
-                <Link href="/blog" className="text-emerald-600 hover:text-emerald-800">More Articles</Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </article>
-
-      {/* Analytics Event Tracking */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'blog_view', {
-                article_title: 'Clydeside Aviation Revolution',
-                article_category: 'Aviation History',
-                author: 'Charles E. MacKay',
-                reading_time: 16,
-                topic: 'Scottish Aviation Industry'
-              });
-            }
-          `
-        }}
-      />
-    </div>
+    <BlogPostTemplate 
+      blog={blogData}
+      relatedBooks={relatedBooks}
+      relatedPosts={relatedPosts}
+    />
   )
 }

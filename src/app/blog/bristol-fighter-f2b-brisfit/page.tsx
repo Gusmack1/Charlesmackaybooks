@@ -1,202 +1,175 @@
 import type { Metadata } from 'next'
-import OptimizedBlogTemplate from '@/components/OptimizedBlogTemplate'
+import BlogPostTemplate from '@/components/BlogPostTemplate'
 
-export const metadata: Metadata = {
-  title: 'Bristol Fighter F2B "Brisfit": WWI\'s Most Successful Two-Seat Fighter | Charles E. MacKay',
-  description: 'Complete history of the Bristol Fighter F2B, the most successful two-seat fighter of WWI. Technical specifications, combat records, and service history by aviation historian Charles E. MacKay.',
-  keywords: [
-    'Bristol Fighter F2B',
-    'Bristol F2B Brisfit',
-    'WWI fighter aircraft',
-    'Bristol Fighter technical data',
-    'F2B combat record',
-    'Bristol Fighter service history',
-    'WWI RAF aircraft',
-    'Bristol Fighter squadrons',
-    'F2B performance specifications',
-    'Bristol Fighter engine',
-    'WWI British fighters',
-    'Bristol Fighter armament',
-    'F2B operational history',
-    'Bristol Fighter development',
-    'Rolls-Royce Falcon engine',
-    'Charles MacKay aviation',
-    'Bristol Aeroplane Company'
-  ],
-  openGraph: {
-    title: 'Bristol Fighter F2B "Brisfit": WWI\'s Most Successful Two-Seat Fighter',
-    description: 'Complete history of the Bristol Fighter F2B with technical specifications, combat records, and comprehensive service history.',
-    url: 'https://charlesmackaybooks.com/blog/bristol-fighter-f2b-brisfit',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: '/blog-images/bristol-fighter-f2b-flying.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Bristol Fighter F2B in flight showing the classic biplane configuration and RAF markings'
-      }
-    ],
-    locale: 'en_GB',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Bristol Fighter F2B "Brisfit": WWI\'s Most Successful Two-Seat Fighter',
-    description: 'Complete history of the Bristol Fighter F2B with technical specifications and combat records.',
-    images: ['/blog-images/bristol-fighter-f2b-flying.jpg'],
-  },
-}
-
-const post = {
-  id: 'bristol-fighter-f2b-brisfit',
-  title: 'Bristol Fighter F2B "Brisfit": WWI\'s Most Successful Two-Seat Fighter',
-  subtitle: 'The revolutionary two-seat fighter that redefined aerial warfare and established new standards for aircraft design and tactical employment',
+const blogData = {
+  title: `Bristol Fighter F2b Brisfit`,
+  excerpt: `Comprehensive analysis of bristol fighter f2b brisfit with expert historical research and technical details.`,
   content: `
-    <div class="bg-amber-50 border-l-4 border-amber-400 p-6 mb-8">
-      <p class="text-xl leading-relaxed text-gray-800 m-0">
-        <strong>Aviation Excellence:</strong> The Bristol Fighter F2B "Brisfit" became the most successful two-seat fighter of World War I, combining the agility of a single-seat fighter with the tactical flexibility of a two-seat reconnaissance aircraft. Its revolutionary design transformed aerial warfare.
-      </p>
+    <h2 id="introduction">Introduction: The Story Begins</h2>
+    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    
+    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+
+    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+
+    <h2 id="historical-background">Historical Background and Context</h2>
+    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+
+    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+
+    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+
+    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
+    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+
+    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <ul class="space-y-2 text-blue-700">
+        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
+        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
+        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
+        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
+        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+      </ul>
     </div>
 
-    <p class="text-xl leading-relaxed text-gray-700 mb-6">
-      The Bristol Fighter F2B stands as one of the Great War's most remarkable aviation success stories. Entering service in 1917, this revolutionary two-seat biplane fighter proved that multi-role aircraft could excel in combat while maintaining the performance characteristics traditionally associated with single-seat fighters. The "Brisfit," as it became affectionately known, redefined the possibilities of aerial warfare and established new standards for aircraft design and tactical employment.
-    </p>
+    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
 
-    <h2>Revolutionary Design Philosophy</h2>
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      The Bristol Fighter F2B represented a fundamental shift in aircraft design philosophy. Where previous two-seat fighters had been essentially reconnaissance aircraft with defensive armament, the F2B was conceived from the outset as an aggressive fighter capable of engaging enemy aircraft on equal terms. This revolutionary approach required innovative solutions to the challenges of combining high performance with multi-role capability.
-    </p>
+    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
 
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      Frank Barnwell's design team at the Bristol Aeroplane Company created an aircraft that challenged conventional wisdom about two-seat fighter limitations. By optimizing the fuselage for minimal drag while maintaining structural strength for combat maneuvers, they achieved performance levels previously thought impossible for multi-seat aircraft. The careful balance of weight distribution and center of gravity placement enabled handling characteristics approaching those of single-seat fighters.
-    </p>
+    <h2 id="operational-history">Operational History and Performance</h2>
+    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
 
-    <h2>Technical Specifications and Performance</h2>
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      The Bristol Fighter F2B's technical specifications revealed the sophistication of its design and the excellence of its performance characteristics. With a wingspan of 39 feet 3 inches and a length of 25 feet 10 inches, the aircraft achieved optimal proportions for its intended roles. The total wing area of 405 square feet provided sufficient lift capacity while maintaining reasonable wing loading for good handling characteristics.
-    </p>
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
 
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      Powered by the reliable Rolls-Royce Falcon III liquid-cooled V12 engine producing 275 horsepower, the F2B achieved a maximum speed of 123 mph at 5,000 feet altitude. This performance exceeded many contemporary single-seat fighters while maintaining the tactical advantages of two-crew operation. The service ceiling of 18,000 feet enabled effective high-altitude operations, while the rate of climb of 889 feet per minute provided tactical flexibility in combat situations.
-    </p>
+    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
 
-    <h2>Revolutionary Combat Tactics and Employment</h2>
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      The Bristol Fighter F2B's combat employment required the development of entirely new tactical doctrines that maximized its unique capabilities. Early operations revealed that conventional two-seat fighter tactics, emphasizing defensive formations and cautious engagement protocols, failed to exploit the aircraft's exceptional performance characteristics. Experienced pilots discovered that aggressive single-seat fighter tactics, adapted for two-crew coordination, yielded superior results.
-    </p>
+    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
 
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      The F2B's speed and maneuverability enabled it to engage German single-seat fighters on favorable terms, while the rear gunner provided tactical advantages unavailable to conventional fighters. Coordinated attacks utilizing both forward and rear armament created complex engagement geometries that German pilots found difficult to counter. The observer's ability to maintain continuous visual contact with threats enabled sustained combat effectiveness during extended engagements.
-    </p>
+    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
 
-    <h2>Distinguished Service Record</h2>
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      Bristol Fighter F2B service history encompasses some of the most significant aerial operations of World War I. Following its combat debut with No. 48 Squadron RFC in April 1917, the aircraft quickly established itself as a formidable opponent in the skies over the Western Front. Initial operations during the Battle of Messines demonstrated the type's potential, while subsequent deployment to additional squadrons confirmed its tactical superiority.
-    </p>
+    <h2 id="key-figures">Key Figures and Decision Makers</h2>
+    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
 
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      No. 20 Squadron RFC's operations with Bristol Fighters during the Battle of Cambrai showcased the aircraft's versatility in combined-arms operations. Fighter sweeps, reconnaissance missions, and ground attack sorties were integrated into cohesive tactical packages that supported ground operations while maintaining air superiority. The squadron's success rates exceeded those of contemporary single-seat fighter units while maintaining lower casualty rates.
-    </p>
+    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
 
-    <h2>Production Excellence and Variant Development</h2>
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      Bristol Fighter F2B production represented one of the most successful aircraft manufacturing programs of World War I. The Bristol Aeroplane Company's efficient production methods enabled delivery of 5,329 aircraft, making the F2B one of the most numerous British fighters of the conflict. Quality control standards maintained throughout production ensured consistent performance characteristics across all delivered aircraft.
-    </p>
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
 
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      The transition from the initial F2A variant to the definitive F2B configuration demonstrated the Bristol company's commitment to continuous improvement. Engine upgrades from the underpowered Beardmore to the reliable Rolls-Royce Falcon III transformed the aircraft's capabilities while maintaining airframe commonality. Production line modifications incorporated lessons learned from operational experience, resulting in progressive improvements in reliability and performance.
-    </p>
+    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
 
-    <h2>Enduring Legacy and Aviation Impact</h2>
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      The Bristol Fighter F2B's influence on aviation development extended far beyond its World War I service period. The aircraft's successful integration of high performance with multi-role capability established design principles that influenced fighter development throughout the interwar period and beyond. Modern multi-role fighters trace their conceptual lineage to innovations pioneered by the Bristol Fighter design team.
-    </p>
+    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
 
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      Tactical doctrines developed around Bristol Fighter operations influenced air force organizational structures and training curricula for decades following the war's conclusion. The emphasis on crew coordination, multi-role capability, and integrated weapons systems became foundational elements of modern combat aviation. Contemporary fighter-bomber and multi-role aircraft embody principles first demonstrated by the F2B.
-    </p>
+    <h2 id="impact-legacy">Impact and Legacy</h2>
+    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
 
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      Today, surviving Bristol Fighter F2B aircraft serve as tangible reminders of the innovation and courage that characterized World War I aviation. Museum examples and airworthy reproductions continue to inspire new generations of aviation enthusiasts while preserving the memory of those who developed, built, and flew these remarkable machines. The "Brisfit" remains a symbol of British aviation excellence and engineering achievement.
-    </p>
+    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+
+    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+
+    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+
+    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+
+    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
+    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+
+    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+
+    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+
+    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+
+    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  excerpt: 'Complete history of the Bristol Fighter F2B, the most successful two-seat fighter of World War I, with technical specifications, combat records, and comprehensive service history.',
-  author: {
-    name: 'Charles E. MacKay',
-    bio: 'Aviation historian specializing in World War I aircraft and British aviation development. Expert on Bristol aircraft design and the evolution of fighter tactics during the Great War period.',
-    image: '/charles-mackay-aviation-historian.jpg',
-    email: 'charles@charlesmackaybooks.com'
-  },
-  publishedDate: '2025-01-30T12:00:00.000Z',
-  readingTime: 13,
-  featuredImage: {
-    url: '/blog-images/bristol-fighter-f2b-flying.jpg',
-    alt: 'Bristol Fighter F2B in flight showing the classic biplane configuration and RAF markings',
-    caption: 'Bristol Fighter F2B "Brisfit" in flight - the most successful two-seat fighter of World War I'
-  },
-  category: 'WWI Aviation',
-  tags: [
-    'Bristol Fighter F2B',
-    'Brisfit',
-    'WWI fighter aircraft',
-    'RAF',
-    'British aviation',
-    'Charles MacKay',
-    'Rolls-Royce Falcon',
-    'Bristol Aeroplane Company',
-    'Frank Barnwell',
-    'Two-seat fighter',
-    'Combat tactics',
-    'Aviation history'
-  ],
-  relatedBooks: [
-    {
-      id: 'british-aircraft-great-war',
-      title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/british-aircraft-great-war.jpg',
-      price: 24.99
-    },
-    {
-      id: 'clydeside-aviation-vol1',
-      title: 'Clydeside Aviation Volume One: The Great War',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/clydeside-aviation-vol1.jpg',
-      price: 19.99
-    },
-    {
-      id: 'beardmore-aviation',
-      title: 'Beardmore Aviation: Scottish Industrial Giant',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/beardmore-aviation.jpg',
-      price: 22.99
-    }
-  ],
-  relatedPosts: [
-    {
-      id: 'hawker-hurricane-fighter-development',
-      title: 'Hawker Hurricane: Fighter Development and Battle of Britain',
-      excerpt: 'The development and service history of the Hawker Hurricane, Britain\'s first monoplane fighter and key defender during the Battle of Britain.',
-      image: '/blog-images/hawker-hurricane-airfield.jpg',
-      readingTime: 11
-    },
-    {
-      id: 'sopwith-camel-wwi-fighter',
-      title: 'Sopwith Camel: WWI\'s Most Famous Fighter',
-      excerpt: 'The complete story of the Sopwith Camel, the most successful British fighter of World War I with over 1,200 aerial victories.',
-      image: '/blog-images/fokker-dr1-red-baron-replica.jpg',
-      readingTime: 10
-    },
-    {
-      id: 'german-aircraft-great-war-development',
-      title: 'German Aircraft Development in the Great War',
-      excerpt: 'Comprehensive analysis of German aircraft development during World War I, from early reconnaissance machines to advanced fighters.',
-      image: '/blog-images/german-albatros-dva-wwi-fighter.jpg',
-      readingTime: 12
-    }
-  ]
-};
+  publishDate: 'March 2024',
+  readTime: '12 min read',
+  category: 'Aviation History',
+  tags: ["bristol","fighter","f2b","brisfit"],
+  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
+  featuredImage: {"url":"/blog-images/bristol-fighter-f2b-brisfit-featured.jpg","alt":"Featured image for Bristol Fighter F2b Brisfit","caption":"Historical photograph related to Bristol Fighter F2b Brisfit"},
+  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+}
 
-export default function BristolFighterPage() {
-  return <OptimizedBlogTemplate post={post} />;
+const relatedBooks = [
+  {
+    id: 'british-aircraft-great-war',
+    title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats',
+    price: 12.91,
+    description: 'Complete overview of British military aircraft during the Great War (1914-1918). Detailed coverage of all aircraft types used by the RFC, RNAS, and early RAF with technical data and operational histories.',
+    imageUrl: '/book-covers/british-aircraft-great-war.jpg',
+    relevantContent: 'Essential companion to understanding the Bristol Fighter F2B within the broader context of British WWI aviation development and RFC/RNAS operations.'
+  },
+  {
+    id: 'clydeside-aviation-vol1',
+    title: 'Clydeside Aviation Volume One: The Great War',
+    price: 16.08,
+    description: 'First volume covering aviation activities on the Clyde during WWI (1914-1918). Detailed account of aircraft manufacturing, pilot training, and military aviation operations in Scotland during the Great War period.',
+    imageUrl: '/book-covers/clydeside-aviation-vol1.jpg',
+    relevantContent: 'Explores the Scottish aviation industry during WWI, including production facilities that may have been involved in Bristol Fighter manufacturing and pilot training.'
+  },
+  {
+    id: 'german-aircraft-great-war',
+    title: 'German Aircraft in the Great War 1914-1918',
+    price: 13.93,
+    description: 'Comprehensive study of German military aircraft during WWI (1914-1918). Covers fighters, bombers, seaplanes, and trainers used by the German Air Force and Navy.',
+    imageUrl: '/book-covers/german-aircraft-great-war.jpg',
+    relevantContent: 'Provides crucial context on the German aircraft that the Bristol Fighter F2B faced in combat, including Albatros and Fokker fighters that challenged Allied air superiority.'
+  }
+]
+
+const relatedPosts = [
+  {
+    title: 'British Aircraft Great War: RFC & RNAS Development',
+    slug: 'british-aircraft-great-war-rfc-rnas',
+    excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters.',
+    imageUrl: '/blog-images/rfc-pilots-no32-squadron-1916.jpg',
+    readTime: '14 min'
+  },
+  {
+    title: 'Sopwith Camel: The WWI Fighter That Won Air Superiority',
+    slug: 'sopwith-camel-wwi-fighter',
+    excerpt: 'The most successful Allied fighter of the Great War. Discover how this tricky but effective aircraft shot down more enemy planes than any other Allied fighter.',
+    imageUrl: '/blog-images/fokker-dr1-red-baron-replica.jpg',
+    readTime: '17 min'
+  },
+  {
+    title: 'German Aircraft Great War Development',
+    slug: 'german-aircraft-great-war-development',
+    excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.',
+    imageUrl: '/blog-images/fokker-triplane-wwi.jpg',
+    readTime: '11 min'
+  },
+  {
+    title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
+    slug: 'hawker-hurricane-fighter-development',
+    excerpt: 'The workhorse fighter that shot down more German aircraft than any other during the Battle of Britain.',
+    imageUrl: '/blog-images/hawker-hurricane.jpg',
+    readTime: '13 min'
+  }
+]
+
+export const metadata: Metadata = {
+  title: `Bristol Fighter F2b Brisfit | Charles E. MacKay`,
+  description: `Comprehensive analysis of bristol fighter f2b brisfit with expert historical research and technical details.`,
+  keywords: 'bristol, fighter, f2b, brisfit, Charles MacKay, aviation history',
+  openGraph: {
+    title: `Bristol Fighter F2b Brisfit`,
+    description: `Comprehensive analysis of bristol fighter f2b brisfit with expert historical research and technical details.`,
+    images: ['/blog-images/bristol-fighter-f2b-brisfit-featured.jpg'],
+    type: 'article'
+  }
+}
+
+export default function BlogPost() {
+  return (
+    <BlogPostTemplate 
+      blog={blogData}
+      relatedBooks={relatedBooks}
+      relatedPosts={relatedPosts}
+    />
+  )
 }

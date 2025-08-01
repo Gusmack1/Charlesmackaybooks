@@ -1,577 +1,376 @@
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { StarIcon, ShoppingCartIcon, HeartIcon, ShareIcon, CheckIcon, ShieldCheckIcon, TruckIcon, ClockIcon } from '@heroicons/react/24/solid';
-import { StarIcon as StarOutlineIcon } from '@heroicons/react/24/outline';
+'use client'
 
-interface BookSalesTemplateProps {
-  book: {
-    id: string;
-    title: string;
-    subtitle?: string;
-    author: string;
-    isbn: string;
-    publicationDate: string;
-    pageCount: number;
-    dimensions: string;
-    coverImage: string;
-    price: {
-      hardcover?: number;
-      paperback?: number;
-      ebook?: number;
-      audiobook?: number;
-    };
-    description: string;
-    plotSummary: string;
-    authorBio: string;
-    editorialReviews: string[];
-    readerTestimonials: Array<{
-      name: string;
-      rating: number;
-      review: string;
-      date: string;
-    }>;
-    sampleContent: string;
-    series?: {
-      name: string;
-      books: Array<{
-        id: string;
-        title: string;
-        coverImage: string;
-      }>;
-    };
-    ratings: {
-      average: number;
-      count: number;
-    };
-    badges: string[];
-    stockCount?: number;
-    limitedOffer?: {
-      text: string;
-      endDate: string;
-    };
-  };
-  relatedBooks: Array<{
-    id: string;
-    title: string;
-    author: string;
-    coverImage: string;
-    price: number;
-  }>;
-  relatedBlogPosts: Array<{
-    id: string;
-    title: string;
-    excerpt: string;
-    image: string;
-    url: string;
-  }>;
-  schemaData: any;
+import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+
+interface BookData {
+  id: string
+  title: string
+  subtitle?: string
+  price: number
+  pageCount: number
+  isbn: string
+  publicationYear: number
+  description: string
+  category: string
+  tags: string[]
+  imageUrl: string
+  ebayLink?: string
+  features: string[]
+  academicRecognition: string[]
+  customerReviews: Array<{
+    rating: number
+    text: string
+    author: string
+    source: string
+  }>
 }
 
-const BookSalesTemplate: React.FC<BookSalesTemplateProps> = ({
-  book,
-  relatedBooks,
-  relatedBlogPosts,
-  schemaData
-}) => {
-  const [selectedFormat, setSelectedFormat] = useState<'hardcover' | 'paperback' | 'ebook' | 'audiobook'>('hardcover');
-  const [quantity, setQuantity] = useState(1);
-  const [isWishlisted, setIsWishlisted] = useState(false);
-  const [showSampleContent, setShowSampleContent] = useState(false);
-  const [isStickyBarVisible, setIsStickyBarVisible] = useState(false);
+interface RelatedBlog {
+  slug: string
+  title: string
+  excerpt: string
+  readTime: string
+}
 
-  // Sticky bar visibility on scroll
+interface BookSalesTemplateProps {
+  book: BookData
+  relatedBlogs: RelatedBlog[]
+  relatedBooks: BookData[]
+}
+
+export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: BookSalesTemplateProps) {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [showMobileSticky, setShowMobileSticky] = useState(false)
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsStickyBarVisible(window.scrollY > 300);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const currentPrice = book.price[selectedFormat];
-  const isInStock = !book.stockCount || book.stockCount > 0;
-  const isLimitedStock = book.stockCount && book.stockCount < 10;
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <StarIcon
-        key={i}
-        className={`w-4 h-4 ${
-          i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300'
-        }`}
-      />
-    ));
-  };
-
-  const handleAddToCart = () => {
-    // TODO: Implement cart functionality
-    console.log(`Added ${quantity} ${selectedFormat} of ${book.title} to cart`);
-  };
-
-  const handleBuyNow = () => {
-    // TODO: Implement direct purchase
-    console.log(`Buying ${quantity} ${selectedFormat} of ${book.title} now`);
-  };
-
-  const handleWishlist = () => {
-    setIsWishlisted(!isWishlisted);
-    // TODO: Implement wishlist functionality
-  };
-
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: book.title,
-        text: `Check out ${book.title} by ${book.author}`,
-        url: window.location.href,
-      });
-    } else {
-      // Fallback to copying URL
-      navigator.clipboard.writeText(window.location.href);
+      const scrolled = window.scrollY > 300
+      setIsScrolled(scrolled)
+      setShowMobileSticky(scrolled)
     }
-  };
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : ''
+  const shareTitle = `${book.title} by Charles E. MacKay`
+  const shareText = `Expert aviation history: ${book.title} - ${book.description.substring(0, 100)}...`
+
+  const socialShares = {
+    facebook: `https://facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
+    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}&hashtags=AviationHistory,Books`,
+    linkedin: `https://linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
+    pinterest: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${book.imageUrl}&description=${encodeURIComponent(shareTitle)}`,
+    email: `mailto:?subject=${encodeURIComponent(shareTitle)}&body=Check out this aviation history book: ${shareUrl}`
+  }
 
   return (
-    <>
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+    <div className="min-h-screen bg-white">
+      {/* Social Sharing Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex justify-center items-center gap-4 text-sm">
+            <span className="hidden md:inline">📢 Share this book:</span>
+            <div className="flex gap-3">
+              <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
+                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+                 aria-label="Share on Facebook">
+                📘 Facebook
+              </a>
+              <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
+                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+                 aria-label="Share on Twitter">
+                🐦 Twitter
+              </a>
+              <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
+                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+                 aria-label="Share on LinkedIn">
+                💼 LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-white">
-          <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Book Cover */}
-              <div className="flex justify-center lg:justify-start">
-                <div className="relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-2">
+            {/* Hero Section */}
+            <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white rounded-xl p-8 mb-8">
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="flex-shrink-0">
                   <Image
-                    src={book.coverImage}
-                    alt={`${book.title} by ${book.author}`}
-                    width={400}
-                    height={600}
-                    className="rounded-lg shadow-2xl"
-                    priority
+                    src={book.imageUrl}
+                    alt={`${book.title} book cover`}
+                    width={250}
+                    height={350}
+                    className="rounded-lg shadow-xl mx-auto"
                   />
-                  {book.badges.includes('bestseller') && (
-                    <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                      BESTSELLER
-                    </div>
-                  )}
                 </div>
-              </div>
-
-              {/* Book Details */}
-              <div className="space-y-6">
-                <div>
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-                    {book.title}
-                  </h1>
-                  {book.subtitle && (
-                    <p className="text-xl text-gray-600 mb-4">{book.subtitle}</p>
-                  )}
-                  <p className="text-lg text-gray-700">by {book.author}</p>
-                </div>
-
-                {/* Ratings */}
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-1">
-                    {renderStars(book.ratings.average)}
-                    <span className="ml-2 text-sm text-gray-600">
-                      {book.ratings.average.toFixed(1)} ({book.ratings.count} reviews)
+                <div className="flex-1">
+                  <div className="mb-4">
+                    <span className="bg-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                      {book.category}
                     </span>
                   </div>
+                  <h1 className="text-3xl md:text-4xl font-bold mb-3">{book.title}</h1>
+                  {book.subtitle && (
+                    <h2 className="text-xl text-blue-200 mb-4">{book.subtitle}</h2>
+                  )}
+                  <p className="text-lg text-blue-100 mb-4">By Charles E. MacKay</p>
+                  
+                  <div className="grid grid-cols-2 gap-4 text-sm mb-6">
+                    <div>
+                      <span className="text-blue-200">Pages:</span>
+                      <div className="font-semibold">{book.pageCount}</div>
+                    </div>
+                    <div>
+                      <span className="text-blue-200">Published:</span>
+                      <div className="font-semibold">{book.publicationYear}</div>
+                    </div>
+                    <div>
+                      <span className="text-blue-200">ISBN:</span>
+                      <div className="font-semibold">{book.isbn}</div>
+                    </div>
+                    <div>
+                      <span className="text-blue-200">Format:</span>
+                      <div className="font-semibold">Paperback</div>
+                    </div>
+                  </div>
+
+                  {/* Mobile Purchase Buttons */}
+                  <div className="md:hidden flex flex-col gap-3">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-green-400 mb-2">£{book.price}</div>
+                      <p className="text-sm text-blue-200">Free worldwide shipping</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors min-h-[44px]">
+                        🛒 Add to Cart
+                      </button>
+                      {book.ebayLink && (
+                        <a href={book.ebayLink} target="_blank" rel="noopener noreferrer"
+                           className="flex-1 bg-orange-600 hover:bg-orange-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors min-h-[44px] flex items-center justify-center">
+                          🏪 Buy on eBay
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
 
-                {/* Price and Format Selection */}
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Select Format
-                      </label>
-                      <div className="grid grid-cols-2 gap-3">
-                        {Object.entries(book.price).map(([format, price]) => (
-                          <button
-                            key={format}
-                            onClick={() => setSelectedFormat(format as any)}
-                            className={`p-3 rounded-lg border-2 text-left transition-colors ${
-                              selectedFormat === format
-                                ? 'border-blue-500 bg-blue-50'
-                                : 'border-gray-200 hover:border-gray-300'
-                            }`}
-                          >
-                            <div className="font-medium capitalize">{format}</div>
-                            <div className="text-lg font-bold text-blue-600">
-                              ${price?.toFixed(2)}
-                            </div>
-                          </button>
-                        ))}
-                      </div>
+            {/* Book Description */}
+            <div className="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">About This Book</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">{book.description}</p>
+              
+              {book.features.length > 0 && (
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features</h4>
+                  <ul className="space-y-2">
+                    {book.features.map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-green-600 mr-2">✓</span>
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* Academic Recognition */}
+            {book.academicRecognition.length > 0 && (
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+                <h3 className="text-xl font-semibold text-blue-800 mb-4">🎓 Academic Recognition</h3>
+                <div className="space-y-3">
+                  {book.academicRecognition.map((recognition, index) => (
+                    <div key={index} className="flex items-start">
+                      <span className="text-blue-600 mr-2">🏛️</span>
+                      <span className="text-blue-700">{recognition}</span>
                     </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Quantity
-                      </label>
-                      <div className="flex items-center space-x-3">
-                        <button
-                          onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50"
-                        >
-                          -
-                        </button>
-                        <span className="text-lg font-medium">{quantity}</span>
-                        <button
-                          onClick={() => setQuantity(quantity + 1)}
-                          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50"
-                        >
-                          +
-                        </button>
+            {/* Related Blog Posts */}
+            {relatedBlogs.length > 0 && (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+                <h3 className="text-xl font-semibold text-green-800 mb-4">📖 Expert Analysis</h3>
+                <p className="text-green-700 mb-4">Dive deeper with our comprehensive blog coverage:</p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {relatedBlogs.map((blog) => (
+                    <Link key={blog.slug} href={`/blog/${blog.slug}`} 
+                          className="block bg-white p-4 rounded-lg border hover:shadow-lg transition-shadow">
+                      <h4 className="font-semibold text-blue-600 mb-2">{blog.title}</h4>
+                      <p className="text-sm text-gray-600 mb-2">{blog.excerpt}</p>
+                      <div className="text-xs text-green-600 font-medium">
+                        📖 {blog.readTime} read →
                       </div>
-                    </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
-                    {/* Stock Status */}
-                    {isLimitedStock && (
-                      <div className="flex items-center space-x-2 text-orange-600">
-                        <ClockIcon className="w-4 h-4" />
-                        <span className="text-sm font-medium">
-                          Only {book.stockCount} left in stock
+            {/* Customer Reviews */}
+            {book.customerReviews.length > 0 && (
+              <div className="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">⭐ Customer Reviews</h3>
+                <div className="space-y-6">
+                  {book.customerReviews.map((review, index) => (
+                    <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
+                      <div className="flex items-center mb-3">
+                        <div className="flex text-yellow-400 mr-2">
+                          {[...Array(5)].map((_, i) => (
+                            <span key={i}>{i < review.rating ? '⭐' : '☆'}</span>
+                          ))}
+                        </div>
+                        <span className="text-sm text-gray-600">
+                          by {review.author} - {review.source}
                         </span>
                       </div>
-                    )}
-
-                    {/* Limited Offer */}
-                    {book.limitedOffer && (
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                        <div className="flex items-center space-x-2 text-red-700">
-                          <ClockIcon className="w-5 h-5" />
-                          <span className="font-medium">{book.limitedOffer.text}</span>
-                        </div>
-                        <p className="text-sm text-red-600 mt-1">
-                          Ends {new Date(book.limitedOffer.endDate).toLocaleDateString()}
-                        </p>
-                      </div>
-                    )}
-
-                    {/* Action Buttons */}
-                    <div className="space-y-3">
-                      <button
-                        onClick={handleBuyNow}
-                        disabled={!isInStock}
-                        className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
-                      >
-                        {isInStock ? 'Buy Now' : 'Out of Stock'}
-                      </button>
-                      <button
-                        onClick={handleAddToCart}
-                        disabled={!isInStock}
-                        className="w-full border border-blue-600 text-blue-600 py-3 px-6 rounded-lg font-semibold hover:bg-blue-50 disabled:border-gray-400 disabled:text-gray-400 disabled:cursor-not-allowed transition-colors"
-                      >
-                        Add to Cart
-                      </button>
+                      <p className="text-gray-700 italic">"{review.text}"</p>
                     </div>
-                  </div>
-                </div>
-
-                {/* Trust Elements */}
-                <div className="flex items-center justify-between text-sm text-gray-600">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex items-center space-x-1">
-                      <ShieldCheckIcon className="w-4 h-4" />
-                      <span>Secure Payment</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <TruckIcon className="w-4 h-4" />
-                      <span>Free Shipping</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <CheckIcon className="w-4 h-4" />
-                    <span>30-Day Returns</span>
-                  </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            )}
           </div>
-        </section>
 
-        {/* Sticky Buy Bar */}
-        {isStickyBarVisible && (
-          <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
-            <div className="container mx-auto px-4 py-3">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  <Image
-                    src={book.coverImage}
-                    alt={book.title}
-                    width={40}
-                    height={60}
-                    className="rounded"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-sm">{book.title}</h3>
-                    <p className="text-sm text-gray-600">by {book.author}</p>
-                  </div>
+          {/* Desktop Sticky Sidebar */}
+          <div className="hidden lg:block">
+            <div className={`sticky top-8 transition-all duration-300 ${isScrolled ? 'top-4' : 'top-8'}`}>
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-lg">
+                <div className="text-center mb-6">
+                  <div className="text-3xl font-bold text-green-600 mb-2">£{book.price}</div>
+                  <p className="text-sm text-gray-600">Free worldwide shipping</p>
+                  <p className="text-xs text-green-600 font-medium">✓ In Stock - Ships within 24 hours</p>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-lg font-bold text-blue-600">
-                    ${currentPrice?.toFixed(2)}
-                  </span>
-                  <button
-                    onClick={handleBuyNow}
-                    className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                  >
-                    Buy Now
+
+                <div className="space-y-3 mb-6">
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors">
+                    🛒 Add to Cart
                   </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Product Information */}
-        <section className="bg-white mt-8">
-          <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Main Content */}
-              <div className="lg:col-span-2 space-y-8">
-                {/* Description */}
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">About This Book</h2>
-                  <div className="prose max-w-none">
-                    <p className="text-gray-700 leading-relaxed">{book.description}</p>
-                  </div>
+                  {book.ebayLink && (
+                    <a href={book.ebayLink} target="_blank" rel="noopener noreferrer"
+                       className="block w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors">
+                      🏪 Buy on eBay
+                    </a>
+                  )}
                 </div>
 
-                {/* Plot Summary */}
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Plot Summary</h2>
-                  <div className="prose max-w-none">
-                    <p className="text-gray-700 leading-relaxed">{book.plotSummary}</p>
-                  </div>
-                </div>
-
-                {/* Sample Content */}
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Look Inside</h2>
-                  <div className="border border-gray-200 rounded-lg p-6">
-                    {showSampleContent ? (
-                      <div className="prose max-w-none">
-                        <p className="text-gray-700 leading-relaxed">{book.sampleContent}</p>
-                        <button
-                          onClick={() => setShowSampleContent(false)}
-                          className="text-blue-600 hover:text-blue-800 font-medium"
-                        >
-                          Show Less
-                        </button>
-                      </div>
-                    ) : (
-                      <div>
-                        <p className="text-gray-700 leading-relaxed">
-                          {book.sampleContent.substring(0, 300)}...
-                        </p>
-                        <button
-                          onClick={() => setShowSampleContent(true)}
-                          className="text-blue-600 hover:text-blue-800 font-medium"
-                        >
-                          Read More
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Editorial Reviews */}
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Editorial Reviews</h2>
-                  <div className="space-y-4">
-                    {book.editorialReviews.map((review, index) => (
-                      <div key={index} className="border-l-4 border-blue-500 pl-4">
-                        <p className="text-gray-700 italic">"{review}"</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Reader Testimonials */}
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Reader Reviews</h2>
-                  <div className="space-y-6">
-                    {book.readerTestimonials.map((testimonial, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-6">
-                        <div className="flex items-center space-x-2 mb-3">
-                          {renderStars(testimonial.rating)}
-                          <span className="text-sm text-gray-600">
-                            {testimonial.rating}/5
-                          </span>
-                        </div>
-                        <p className="text-gray-700 mb-3">"{testimonial.review}"</p>
-                        <div className="flex items-center justify-between text-sm text-gray-600">
-                          <span className="font-medium">{testimonial.name}</span>
-                          <span>{new Date(testimonial.date).toLocaleDateString()}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Sidebar */}
-              <div className="space-y-8">
-                {/* Book Details */}
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Book Details</h3>
-                  <dl className="space-y-3">
-                    <div>
-                      <dt className="text-sm font-medium text-gray-600">ISBN</dt>
-                      <dd className="text-sm text-gray-900">{book.isbn}</dd>
+                <div className="border-t border-gray-200 pt-4">
+                  <h4 className="font-semibold text-gray-900 mb-3">🔒 Secure Checkout</h4>
+                  <div className="space-y-2 text-sm text-gray-600">
+                    <div className="flex items-center">
+                      <span className="text-green-600 mr-2">✓</span>
+                      PayPal Secure Payment
                     </div>
-                    <div>
-                      <dt className="text-sm font-medium text-gray-600">Publication Date</dt>
-                      <dd className="text-sm text-gray-900">
-                        {new Date(book.publicationDate).toLocaleDateString()}
-                      </dd>
+                    <div className="flex items-center">
+                      <span className="text-green-600 mr-2">✓</span>
+                      30-Day Return Policy
                     </div>
-                    <div>
-                      <dt className="text-sm font-medium text-gray-600">Pages</dt>
-                      <dd className="text-sm text-gray-900">{book.pageCount}</dd>
+                    <div className="flex items-center">
+                      <span className="text-green-600 mr-2">✓</span>
+                      100% Positive Feedback
                     </div>
-                    <div>
-                      <dt className="text-sm font-medium text-gray-600">Dimensions</dt>
-                      <dd className="text-sm text-gray-900">{book.dimensions}</dd>
-                    </div>
-                  </dl>
+                  </div>
                 </div>
 
-                {/* Author Bio */}
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">About the Author</h3>
-                  <p className="text-sm text-gray-700 leading-relaxed">{book.authorBio}</p>
-                </div>
-
-                {/* Series Information */}
-                {book.series && (
-                  <div className="bg-gray-50 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                      {book.series.name} Series
-                    </h3>
+                {relatedBooks.length > 0 && (
+                  <div className="border-t border-gray-200 pt-4 mt-4">
+                    <h4 className="font-semibold text-gray-900 mb-3">📚 Complete Your Collection</h4>
                     <div className="space-y-3">
-                      {book.series.books.map((seriesBook) => (
-                        <Link
-                          key={seriesBook.id}
-                          href={`/books/${seriesBook.id}`}
-                          className="flex items-center space-x-3 hover:bg-white rounded-lg p-2 transition-colors"
-                        >
-                          <Image
-                            src={seriesBook.coverImage}
-                            alt={seriesBook.title}
-                            width={40}
-                            height={60}
-                            className="rounded"
-                          />
-                          <span className="text-sm font-medium text-gray-900">
-                            {seriesBook.title}
-                          </span>
+                      {relatedBooks.slice(0, 3).map((relatedBook) => (
+                        <Link key={relatedBook.id} href={`/books/${relatedBook.id}`}
+                              className="block p-3 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors">
+                          <div className="flex items-center gap-3">
+                            <Image
+                              src={relatedBook.imageUrl}
+                              alt={relatedBook.title}
+                              width={40}
+                              height={56}
+                              className="rounded"
+                            />
+                            <div className="flex-1 min-w-0">
+                              <h5 className="text-sm font-medium text-gray-900 truncate">
+                                {relatedBook.title}
+                              </h5>
+                              <p className="text-sm text-green-600 font-medium">£{relatedBook.price}</p>
+                            </div>
+                          </div>
                         </Link>
                       ))}
                     </div>
                   </div>
                 )}
-
-                {/* Action Buttons */}
-                <div className="space-y-3">
-                  <button
-                    onClick={handleWishlist}
-                    className={`w-full flex items-center justify-center space-x-2 py-3 px-6 rounded-lg border transition-colors ${
-                      isWishlisted
-                        ? 'border-red-500 text-red-600 bg-red-50'
-                        : 'border-gray-300 text-gray-700 hover:border-gray-400'
-                    }`}
-                  >
-                    <HeartIcon className={`w-5 h-5 ${isWishlisted ? 'fill-current' : ''}`} />
-                    <span>{isWishlisted ? 'Wishlisted' : 'Add to Wishlist'}</span>
-                  </button>
-                  <button
-                    onClick={handleShare}
-                    className="w-full flex items-center justify-center space-x-2 py-3 px-6 rounded-lg border border-gray-300 text-gray-700 hover:border-gray-400 transition-colors"
-                  >
-                    <ShareIcon className="w-5 h-5" />
-                    <span>Share</span>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Related Books */}
-        <section className="bg-gray-50 mt-8">
-          <div className="container mx-auto px-4 py-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">More Books by {book.author}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {relatedBooks.map((relatedBook) => (
-                <Link
-                  key={relatedBook.id}
-                  href={`/books/${relatedBook.id}`}
-                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                >
-                  <Image
-                    src={relatedBook.coverImage}
-                    alt={relatedBook.title}
-                    width={200}
-                    height={300}
-                    className="w-full h-48 object-cover rounded-t-lg"
-                  />
-                  <div className="p-4">
-                    <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2">
-                      {relatedBook.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-2">{relatedBook.author}</p>
-                    <p className="font-bold text-blue-600">${relatedBook.price.toFixed(2)}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Related Blog Posts */}
-        <section className="bg-white mt-8">
-          <div className="container mx-auto px-4 py-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {relatedBlogPosts.map((post) => (
-                <Link
-                  key={post.id}
-                  href={post.url}
-                  className="bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    width={300}
-                    height={200}
-                    className="w-full h-48 object-cover rounded-t-lg"
-                  />
-                  <div className="p-4">
-                    <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 line-clamp-3">{post.excerpt}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-    </>
-  );
-};
 
-export default BookSalesTemplate; 
+      {/* Mobile Sticky Purchase Bar */}
+      {showMobileSticky && (
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-50 shadow-lg">
+          <div className="flex justify-between items-center gap-4">
+            <div>
+              <div className="font-bold text-lg">£{book.price}</div>
+              <div className="text-sm text-gray-600">Free shipping</div>
+            </div>
+            <div className="flex gap-2">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold min-h-[44px] transition-colors">
+                🛒 Cart
+              </button>
+              {book.ebayLink && (
+                <a href={book.ebayLink} target="_blank" rel="noopener noreferrer"
+                   className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-3 rounded-lg font-semibold min-h-[44px] flex items-center transition-colors">
+                  🏪 eBay
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Bottom Social Sharing */}
+      <div className="bg-gray-800 text-white py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h3 className="text-2xl font-semibold mb-6">📢 Share This Book</h3>
+          <div className="flex justify-center gap-4 flex-wrap mb-6">
+            <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
+               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+              📘 Share on Facebook
+            </a>
+            <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
+               className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+              🐦 Share on Twitter
+            </a>
+            <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
+               className="bg-blue-800 hover:bg-blue-900 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+              💼 Share on LinkedIn
+            </a>
+            <a href={socialShares.pinterest} target="_blank" rel="noopener noreferrer"
+               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+              📌 Share on Pinterest
+            </a>
+            <a href={socialShares.email}
+               className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+              ✉️ Share via Email
+            </a>
+          </div>
+          <p className="text-gray-300 text-sm">
+            Help us reach more aviation enthusiasts by sharing this expert analysis!
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}

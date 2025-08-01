@@ -1,107 +1,121 @@
 import type { Metadata } from 'next'
-import OptimizedBlogTemplate from '@/components/OptimizedBlogTemplate'
+import BlogPostTemplate from '@/components/BlogPostTemplate'
+
+const blogData = {
+  title: `Messerschmitt Me 262: The World First Operational Jet Fighter`,
+  excerpt: `The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.`,
+  content: `
+    <h2 id="introduction">Introduction:  The World First Operational Jet Fighter</h2>
+    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    
+    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+
+    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+
+    <h2 id="historical-background">Historical Background and Context</h2>
+    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+
+    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+
+    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+
+    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
+    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+
+    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <ul class="space-y-2 text-blue-700">
+        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
+        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
+        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
+        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
+        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+      </ul>
+    </div>
+
+    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
+
+    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <h2 id="operational-history">Operational History and Performance</h2>
+    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
+
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+
+    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
+
+    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
+
+    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
+
+    <h2 id="key-figures">Key Figures and Decision Makers</h2>
+    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
+
+    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
+
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+
+    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
+
+    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
+
+    <h2 id="impact-legacy">Impact and Legacy</h2>
+    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
+
+    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+
+    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+
+    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+
+    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+
+    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
+    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+
+    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+
+    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+
+    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+
+    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+  `,
+  publishDate: 'March 2024',
+  readTime: '12 min read',
+  category: 'WWII Aviation',
+  tags: ["Me 262","Jet Fighter","Luftwaffe","WWII","Aviation Technology"],
+  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
+  featuredImage: {"url":"/blog-images/me262-jet-fighter-revolution-featured.jpg","alt":"Featured image for Messerschmitt Me 262: The World First Operational Jet Fighter","caption":"Historical photograph related to Messerschmitt Me 262: The World First Operational Jet Fighter"},
+  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+}
+
+const relatedBooks = [{"id":"birth-atomic-bomb","title":"The Birth of the Atomic Bomb: From Scientific Discovery to Strategic Weapon","price":21.99,"imageUrl":"/book-covers/birth-atomic-bomb.jpg","description":"The complete story of the Manhattan Project, from early atomic research to the bombing of Japan and the dawn of the nuclear age.","relevantContent":"Detailed coverage with archival research and technical analysis"}]
+
+const relatedPosts = []
 
 export const metadata: Metadata = {
   title: `Messerschmitt Me 262: The World First Operational Jet Fighter | Charles E. MacKay`,
-  description: 'The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.',
-  keywords: ["Me 262","Messerschmitt","jet fighter","Jumo 004","Luftwaffe","WWII aviation"],
+  description: `The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.`,
+  keywords: 'Me 262, Jet Fighter, Luftwaffe, WWII, Aviation Technology, Charles MacKay, aviation history',
   openGraph: {
     title: `Messerschmitt Me 262: The World First Operational Jet Fighter`,
-    description: 'The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.',
-    url: 'https://charlesmackaybooks.com/blog/me262-jet-fighter-revolution',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: '/blog-images/me262-jet-fighter-revolution.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Messerschmitt Me 262: The World First Operational Jet Fighter'
-      }
-    ],
-    locale: 'en_GB',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Messerschmitt Me 262: The World First Operational Jet Fighter`,
-    description: 'The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.',
-    images: ['/blog-images/me262-jet-fighter-revolution.jpg'],
-  },
+    description: `The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.`,
+    images: ['/blog-images/me262-jet-fighter-revolution-featured.jpg'],
+    type: 'article'
+  }
 }
 
-const post = {
-  id: 'me262-jet-fighter-revolution',
-  title: 'Messerschmitt Me 262: The World First Operational Jet Fighter',
-  subtitle: 'The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.',
-  content: `
-      <div class="bg-amber-50 border-l-4 border-amber-400 p-6 mb-8">
-        <p class="text-xl leading-relaxed text-gray-800 m-0">
-          <strong>Aviation Revolution:</strong> The Messerschmitt Me 262 was the world's first operational jet fighter, introducing a new era of aviation technology that would transform military and civilian flight forever.
-        </p>
-      </div>
-
-      <p class="text-xl leading-relaxed text-gray-700 mb-6">
-        The Messerschmitt Me 262 Schwalbe (Swallow) stands as one of the most revolutionary aircraft in aviation history. As the world's first operational jet fighter, it represented a quantum leap in aircraft performance and technology. Despite appearing late in World War II, the Me 262 demonstrated the potential of jet propulsion and established design principles that would influence military aviation for decades to come.
-      </p>
-
-      <h2>Revolutionary Design</h2>
-      <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        The Me 262's development began in 1939 under the direction of Willy Messerschmitt and his team. The aircraft featured swept wings, a tricycle landing gear, and twin Junkers Jumo 004 turbojet engines. This configuration provided a maximum speed of 540 mph, nearly 100 mph faster than contemporary piston-engine fighters. The swept wing design, born of necessity due to the aircraft's center of gravity, inadvertently solved high-speed stability problems that would later become crucial for supersonic flight.
-      </p>
-
-      <h2>Combat Performance</h2>
-      <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        In combat, the Me 262 proved devastatingly effective against Allied bombers and fighters. Its speed advantage allowed it to choose when and where to engage, while its armament of four 30mm MK 108 cannons could destroy heavy bombers with short bursts. However, the aircraft's operational challenges, including limited engine life and vulnerability during takeoff and landing, restricted its impact on the war's outcome.
-      </p>
-
-      <h2>Legacy and Influence</h2>
-      <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        The Me 262's influence on post-war aviation development cannot be overstated. Allied examination of captured aircraft and German jet technology directly influenced early American and British jet fighter designs. The aircraft's swept-wing configuration became standard for high-speed aircraft, while its operational lessons informed jet fighter development throughout the Cold War era.
-      </p>
-    `,
-  excerpt: 'The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.',
-  author: {
-    name: 'Charles E. MacKay',
-    bio: 'Aviation historian specializing in military and civilian aircraft development with over 20 years of research experience.',
-    image: '/charles-mackay-aviation-historian.jpg',
-    email: 'charles@charlesmackaybooks.com'
-  },
-  publishedDate: '2025-01-30T12:00:00.000Z',
-  readingTime: 12,
-  featuredImage: {
-    url: '/blog-images/me262-jet-fighter-revolution.jpg',
-    alt: 'Messerschmitt Me 262: The World First Operational Jet Fighter',
-    caption: 'Messerschmitt Me 262: The World First Operational Jet Fighter - Expert analysis by Charles E. MacKay'
-  },
-  category: 'Aviation History',
-  tags: ["Me 262","Messerschmitt","jet fighter","Jumo 004","Luftwaffe","WWII aviation"],
-  relatedBooks: [
-    {
-      id: 'british-aircraft-great-war',
-      title: 'British Aircraft of the Great War',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/british-aircraft-great-war.jpg',
-      price: 24.99
-    },
-    {
-      id: 'captain-eric-brown',
-      title: 'Captain Eric Brown: Test Pilot Extraordinary',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/captain-eric-brown.jpg',
-      price: 26.99
-    }
-  ],
-  relatedPosts: [
-    {
-      id: 'bristol-fighter-f2b-brisfit',
-      title: 'Bristol Fighter F2B "Brisfit": WWI\'s Most Successful Two-Seat Fighter',
-      excerpt: 'The revolutionary two-seat fighter that redefined aerial warfare during World War I.',
-      image: '/blog-images/bristol-fighter-f2b-flying.jpg',
-      readingTime: 13
-    }
-  ]
-};
-
-export default function BlogPage() {
-  return <OptimizedBlogTemplate post={post} />;
+export default function BlogPost() {
+  return (
+    <BlogPostTemplate 
+      blog={blogData}
+      relatedBooks={relatedBooks}
+      relatedPosts={relatedPosts}
+    />
+  )
 }

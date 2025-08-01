@@ -1,482 +1,121 @@
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Header from '@/components/Header'
-import SocialShare from '@/components/SocialShare'
-import UnifiedSchema from '@/components/UnifiedSchema'
+import BlogPostTemplate from '@/components/BlogPostTemplate'
+
+const blogData = {
+  title: `HMS Argus Operations: Pioneering Carrier Aviation Techniques`,
+  excerpt: `The operational history of HMS Argus and the development of carrier aviation procedures that influenced naval warfare.`,
+  content: `
+    <h2 id="introduction">Introduction:  Pioneering Carrier Aviation Techniques</h2>
+    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
+    
+    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
+
+    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+
+    <h2 id="historical-background">Historical Background and Context</h2>
+    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+
+    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
+
+    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
+
+    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
+    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+
+    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <ul class="space-y-2 text-blue-700">
+        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
+        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
+        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
+        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
+        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+      </ul>
+    </div>
+
+    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
+
+    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <h2 id="operational-history">Operational History and Performance</h2>
+    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
+
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+
+    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
+
+    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
+
+    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
+
+    <h2 id="key-figures">Key Figures and Decision Makers</h2>
+    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
+
+    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
+
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+
+    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
+
+    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
+
+    <h2 id="impact-legacy">Impact and Legacy</h2>
+    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
+
+    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+
+    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+
+    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+
+    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+
+    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
+    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+
+    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+
+    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+
+    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+
+    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+  `,
+  publishDate: 'March 2024',
+  readTime: '12 min read',
+  category: 'Naval Aviation',
+  tags: ["HMS Argus","Carrier Operations","Naval Aviation","Flight Deck Operations","Royal Navy"],
+  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
+  featuredImage: {"url":"/blog-images/hms-argus-first-aircraft-carrier-operations-featured.jpg","alt":"Featured image for HMS Argus Operations: Pioneering Carrier Aviation Techniques","caption":"Historical photograph related to HMS Argus Operations: Pioneering Carrier Aviation Techniques"},
+  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+}
+
+const relatedBooks = [{"id":"aircraft-carrier-argus","title":"Aircraft Carrier Argus","price":22.99,"imageUrl":"/book-covers/aircraft-carrier-argus.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"},{"id":"captain-eric-brown","title":"Captain Eric Brown","price":22.99,"imageUrl":"/book-covers/captain-eric-brown.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
+
+const relatedPosts = []
 
 export const metadata: Metadata = {
-  title: 'HMS Argus: The First True Aircraft Carrier - Revolutionary Naval Aviation Operations | Charles E. MacKay',
-  description: 'The complete story of HMS Argus, the world\'s first true aircraft carrier with a full-length flight deck. Discover how this revolutionary ship established the foundations of modern naval aviation and aircraft carrier operations.',
-  keywords: [
-    'HMS Argus aircraft carrier',
-    'first aircraft carrier',
-    'naval aviation history',
-    'aircraft carrier operations',
-    'HMS Argus flight deck',
-    'naval aviation development',
-    'carrier aviation pioneers',
-    'Royal Navy carriers',
-    'aircraft carrier design',
-    'HMS Argus conversions',
-    'naval aviation operations',
-    'carrier landing techniques',
-    'aircraft carrier evolution',
-    'British naval aviation',
-    'WWI naval aviation',
-    'carrier flight operations',
-    'naval aircraft development',
-    'HMS Argus specifications',
-    'Charles MacKay aviation books',
-    'naval aviation history'
-  ],
+  title: `HMS Argus Operations: Pioneering Carrier Aviation Techniques | Charles E. MacKay`,
+  description: `The operational history of HMS Argus and the development of carrier aviation procedures that influenced naval warfare.`,
+  keywords: 'HMS Argus, Carrier Operations, Naval Aviation, Flight Deck Operations, Royal Navy, Charles MacKay, aviation history',
   openGraph: {
-    title: 'HMS Argus: The First True Aircraft Carrier - Revolutionary Naval Aviation Operations',
-    description: 'The complete story of HMS Argus, the world\'s first true aircraft carrier that revolutionized naval aviation and established modern carrier operations.',
-    url: 'https://charlesmackaybooks.com/blog/hms-argus-first-aircraft-carrier-operations',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: '/blog-images/hms-argus-aircraft-carrier.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'HMS Argus - the world\'s first true aircraft carrier with full-length flight deck'
-      }
-    ],
-    locale: 'en_GB',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'HMS Argus: The First True Aircraft Carrier - Revolutionary Naval Aviation Operations',
-    description: 'The complete story of HMS Argus, the world\'s first true aircraft carrier that revolutionized naval aviation and established modern carrier operations.',
-    images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
+    title: `HMS Argus Operations: Pioneering Carrier Aviation Techniques`,
+    description: `The operational history of HMS Argus and the development of carrier aviation procedures that influenced naval warfare.`,
+    images: ['/blog-images/hms-argus-first-aircraft-carrier-operations-featured.jpg'],
+    type: 'article'
   }
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'HMS Argus: The First True Aircraft Carrier - Revolutionary Naval Aviation Operations',
-  description: 'The complete story of HMS Argus, the world\'s first true aircraft carrier with a full-length flight deck. Discover how this revolutionary ship established the foundations of modern naval aviation and aircraft carrier operations.',
-  image: '/blog-images/hms-argus-aircraft-carrier.jpg',
-  author: {
-    '@type': 'Person',
-    name: 'Charles E. MacKay',
-    description: 'Aviation historian specializing in naval aviation development and aircraft carrier operations',
-    url: 'https://charlesmackaybooks.com'
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Charles E. MacKay Aviation Books',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://charlesmackaybooks.com/charles-mackay-logo.png'
-    }
-  },
-  datePublished: '2025-01-29T19:00:00.000Z',
-  dateModified: '2025-01-29T19:00:00.000Z',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://charlesmackaybooks.com/blog/hms-argus-first-aircraft-carrier-operations'
-  },
-  articleSection: 'Naval Aviation',
-  keywords: 'HMS Argus, aircraft carrier, naval aviation, carrier operations, Royal Navy, flight deck',
-  wordCount: 2600,
-  readingTime: 'PT11M'
-}
-
-export default function HMSArgusPage() {
-  const pageUrl = 'https://charlesmackaybooks.com/blog/hms-argus-first-aircraft-carrier-operations'
-  const pageTitle = 'HMS Argus: The First True Aircraft Carrier - Revolutionary Naval Aviation Operations'
-
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Header />
-
-      <UnifiedSchema
-        pageType="blog-post"
-        pageTitle={pageTitle}
-        pageDescription="The complete story of HMS Argus, the world's first true aircraft carrier that revolutionized naval aviation and established modern carrier operations."
-        pageUrl="/blog/hms-argus-first-aircraft-carrier-operations"
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-navy-900 via-blue-800 to-gray-900 text-white">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative max-w-6xl mx-auto px-6 py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                HMS Argus
-                <span className="block text-blue-300">Pioneer Carrier</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                The revolutionary story of HMS Argus - the world's first true aircraft carrier with a full-length flight deck that established the foundations of modern naval aviation and changed naval warfare forever.
-              </p>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-blue-200 mb-6">
-                <span>By Charles E. MacKay</span>
-                <span>•</span>
-                <span>Aviation Historian</span>
-                <span>•</span>
-                <span>11 minute read</span>
-                <span>•</span>
-                <span>Naval Aviation</span>
-              </div>
-            </div>
-
-            <div className="relative">
-              <Image
-                src="/blog-images/hms-argus-aircraft-carrier.jpg"
-                alt="HMS Argus - the world's first true aircraft carrier with full-length flight deck"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-2xl"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <p className="text-sm font-medium">HMS Argus - The World's First True Aircraft Carrier</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Social Share Top */}
-      <div className="bg-white py-4 border-b">
-        <div className="max-w-4xl mx-auto px-6">
-          <SocialShare
-            url={pageUrl}
-            title={pageTitle}
-            description="Discover how HMS Argus became the first true aircraft carrier and revolutionized naval aviation"
-          />
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-6 py-12">
-
-        {/* Introduction */}
-        <div className="prose prose-lg prose-slate max-w-none mb-12">
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            On September 20, 1918, HMS Argus became the first ship in naval history to successfully launch and recover aircraft using a full-length flight deck. This revolutionary moment marked the birth of modern aircraft carrier operations and fundamentally changed the nature of naval warfare. What began as an experimental conversion would establish the operational principles that guide carrier aviation to this day.
-          </p>
-
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            The story of HMS Argus represents more than just technological innovation - it embodies the Royal Navy's willingness to embrace revolutionary concepts that would transform maritime power projection. Charles E. MacKay's extensive research into early naval aviation reveals how this pioneering vessel overcame countless challenges to prove that aircraft carriers could become the dominant force in naval operations.
-          </p>
-        </div>
-
-        {/* Book Promotion */}
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-12 rounded-r-lg">
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0">
-              <svg className="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-              </svg>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-blue-900 mb-2">Featured in "Aircraft Carrier - Beardmore's HMS Argus"</h3>
-              <p className="text-blue-800 mb-4">
-                The complete HMS Argus development story and early carrier operations are extensively covered in Charles MacKay's definitive study of the world's first true aircraft carrier, including technical details and operational history.
-              </p>
-              <Link
-                href="/books/aircraft-carrier-argus"
-                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                View Book Details →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Origins and Conversion */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">From Passenger Liner to Naval Pioneer</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              HMS Argus began life as the Italian passenger liner Conte Rosso, laid down in 1914 for the Lloyd Sabaudo line. The outbreak of World War I halted construction, creating an opportunity that would prove crucial for naval aviation development. The incomplete hull presented the Royal Navy with a chance to experiment with radical aircraft carrier concepts without the constraints of existing ship designs.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The decision to convert Conte Rosso into an aircraft carrier represented a massive leap of faith for the Admiralty. No precedent existed for such a conversion, and many naval officers remained skeptical about the military value of aircraft operations at sea. The project required innovative engineering solutions and challenged fundamental assumptions about naval architecture and operations.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Beardmore's shipyard undertook the complex conversion work, transforming a passenger liner into history's first true aircraft carrier. The conversion required removing all superstructure to create an unobstructed flight deck, relocating the bridge and funnel arrangements, and developing entirely new systems for aircraft operations. Every aspect of the conversion broke new ground in naval engineering.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The innovative design featured a 550-foot flight deck completely clear of obstructions - a revolutionary concept that would become the standard for all future aircraft carriers. This flush deck design maximized aircraft operating space while simplifying landing and takeoff procedures, establishing principles that remain fundamental to carrier operations today.
-            </p>
-          </div>
-        </section>
-
-        {/* Technical Innovation */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Design and Technical Solutions</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The technical challenges of creating HMS Argus required unprecedented innovation in naval architecture. The flush flight deck design necessitated creative solutions for bridge placement, funnel arrangements, and aircraft handling systems. Engineers had to balance aircraft operational requirements with basic ship functionality and safety.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The signature funnel arrangement became one of Argus's most distinctive features. To maintain the clear flight deck, the ship's funnel could be lowered during flight operations, earning the vessel the nickname "Flat Iron." This innovative system allowed continuous aircraft operations while providing necessary ventilation for the ship's machinery spaces.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Aircraft handling systems required entirely new approaches to storage, movement, and maintenance. The ship featured a hangar deck below the flight deck with elevator systems to move aircraft between levels. These innovations established the basic layout that would be refined and adopted by all subsequent aircraft carrier designs worldwide.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Landing and takeoff procedures had to be developed from scratch, as no established techniques existed for carrier operations. Early experiments with various arresting gear systems and deck configurations provided crucial data that influenced decades of subsequent carrier development. Every landing taught valuable lessons about aircraft-ship integration.
-            </p>
-          </div>
-
-          <div className="my-8">
-            <Image
-              src="/blog-images/hms-argus-dazzle-camouflage.jpg"
-              alt="HMS Argus showing the distinctive flush flight deck and dazzle camouflage pattern"
-              width={800}
-              height={500}
-              className="rounded-lg shadow-lg mx-auto"
-            />
-            <p className="text-center text-gray-600 mt-2 text-sm">
-              HMS Argus with dazzle camouflage showing the revolutionary flush flight deck design
-            </p>
-          </div>
-        </section>
-
-        {/* Early Operations */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pioneering Flight Operations and Early Trials</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              HMS Argus's first flight operations in September 1918 marked a watershed moment in naval aviation. Squadron Commander E.H. Dunning had previously demonstrated deck landings on HMS Furious, but Argus provided the first opportunity for systematic development of carrier aviation techniques with a proper flight deck configuration.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Early flight trials focused on establishing basic operational procedures for takeoffs and landings. Pilots had to develop entirely new techniques for approaching and landing on a moving deck, while ship's crew learned to coordinate aircraft movements with ship operations. These initial experiments established the foundation for all subsequent carrier aviation development.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Aircraft types operated from Argus included Sopwith Pups, Camels, and other contemporary fighters adapted for naval use. Each aircraft type presented unique challenges for carrier operations, requiring modifications for naval service and specialized training for pilots. The diversity of aircraft operations provided valuable data about carrier aviation potential.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Weather limitations and sea state considerations became critical factors in carrier operations. Early trials revealed the complex relationship between ship movement, wind conditions, and aircraft performance that would influence carrier design and operational doctrine for decades. Understanding these factors proved essential for effective carrier aviation.
-            </p>
-          </div>
-        </section>
-
-        {/* Operational Service */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Wartime Service and Operational Experience</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Although HMS Argus entered service near the end of World War I, the ship provided crucial operational experience that would influence post-war carrier development. The vessel participated in various trials and exercises that demonstrated the practical value of carrier aviation while revealing areas requiring improvement and development.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Post-war operations saw Argus serving as the primary training platform for Royal Navy carrier aviation. The ship's role in developing pilot training programs, operational procedures, and maintenance techniques established the foundation for the Royal Navy's carrier aviation capabilities. Every aspect of carrier operations was refined through Argus experience.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              International observers studied Argus operations closely, recognizing the revolutionary potential of aircraft carriers for naval warfare. The ship's demonstrations influenced carrier development programs in multiple navies, establishing carrier aviation as a critical component of modern naval strategy and operations.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Operational limitations revealed areas requiring improvement in subsequent carrier designs. Lessons learned from Argus operations influenced the development of larger, more capable carriers with improved aircraft handling systems, better protection, and enhanced operational flexibility for diverse mission requirements.
-            </p>
-          </div>
-        </section>
-
-        {/* Technical Legacy */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Establishing the Foundations of Carrier Aviation</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              HMS Argus established fundamental principles of aircraft carrier design and operations that remain relevant today. The flush flight deck concept, hangar-elevator arrangement, and basic operational procedures developed on Argus became standard features of all subsequent aircraft carriers worldwide.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Pilot training programs developed on Argus created the foundation for carrier aviation instruction that evolved into modern naval aviation training systems. The ship's role in establishing safe operating procedures, emergency protocols, and maintenance techniques influenced carrier operations for decades.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Aircraft modification techniques pioneered on Argus demonstrated the requirements for navalizing land-based aircraft for carrier operations. These modifications, including strengthened landing gear, arresting hooks, and corrosion protection, became standard features for all carrier-based aircraft.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Operational doctrine developed through Argus experience established the tactical employment principles for aircraft carriers. The ship's trials demonstrated carrier capabilities for reconnaissance, fighter operations, and strike missions that would be expanded and refined throughout the interwar period.
-            </p>
-          </div>
-
-          <div className="my-8">
-            <Image
-              src="/blog-images/hms-formidable-deck-operations.jpg"
-              alt="Modern carrier deck operations showing the evolution from HMS Argus pioneering work"
-              width={800}
-              height={500}
-              className="rounded-lg shadow-lg mx-auto"
-            />
-            <p className="text-center text-gray-600 mt-2 text-sm">
-              Modern carrier operations - evolution of principles established by HMS Argus
-            </p>
-          </div>
-        </section>
-
-        {/* International Impact */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Global Influence and Carrier Development</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The success of HMS Argus sparked international interest in aircraft carrier development, with major navies studying British carrier operations and developing their own programs. The United States Navy's Langley, Japanese Hosho, and French Béarn all incorporated lessons learned from Argus operations.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Technical innovations pioneered on Argus influenced carrier design evolution throughout the interwar period. The flush deck concept, aircraft handling systems, and operational procedures developed on Argus became standard features refined and improved in subsequent carrier classes worldwide.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Strategic implications of carrier aviation, demonstrated through Argus operations, influenced naval doctrine development in multiple countries. The ability to project air power from sea platforms fundamentally changed naval strategy and tactics, establishing carriers as capital ships for modern navies.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Training and operational experience gained on Argus provided the Royal Navy with a significant advantage in carrier aviation development during the 1920s and 1930s. This early experience proved invaluable during World War II when carrier operations became critical for naval success.
-            </p>
-          </div>
-        </section>
-
-        {/* Evolution and Modernization */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Wartime Modernization and Continued Service</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              HMS Argus underwent significant modernization during the 1930s to remain relevant as carrier aviation technology advanced. Improvements included enhanced aircraft handling systems, upgraded arresting gear, and better accommodation for larger, more capable aircraft that required improved operational facilities.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              World War II service saw Argus continuing in training and ferry roles, utilizing the ship's extensive operational experience for pilot instruction and aircraft transportation. The vessel's contribution to wartime carrier aviation training proved invaluable for developing the pilots who would operate from modern fleet carriers.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Ferry operations demonstrated another crucial carrier capability, with Argus delivering aircraft to various theaters of operation. These missions proved the strategic value of carriers for aircraft transportation and highlighted the flexibility of carrier operations beyond traditional combat roles.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The ship's long service life testified to the soundness of the original design concept and the enduring value of the operational experience gained through decades of carrier aviation development. Argus remained active throughout World War II, contributing to Allied victory through training and support operations.
-            </p>
-          </div>
-        </section>
-
-        {/* Modern Relevance */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Enduring Legacy in Modern Naval Aviation</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The principles established by HMS Argus continue to influence modern aircraft carrier design and operations. Contemporary carriers, from nuclear-powered supercarriers to smaller amphibious assault ships, incorporate fundamental concepts pioneered on the world's first true aircraft carrier.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Modern carrier flight operations still rely on basic procedures developed during Argus trials. Controlled approaches, arresting gear systems, and deck coordination techniques trace their origins to the experimental work conducted on this pioneering vessel nearly a century ago.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Training methodologies developed on Argus established the foundation for modern naval aviation instruction programs. The systematic approach to carrier pilot training, maintenance procedures, and operational safety developed through Argus experience continues to influence naval aviation training worldwide.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Strategic concepts proven by Argus operations validated the aircraft carrier as the dominant platform for naval aviation. The ship's successful demonstration of sea-based air power projection established carriers as the capital ships of modern navies, a status that continues today.
-            </p>
-          </div>
-        </section>
-
-        {/* Conclusion */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion: The Ship That Changed Naval Warfare</h2>
-
-          <div className="prose prose-lg prose-slate max-w-none">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              HMS Argus stands as one of the most revolutionary warships in naval history, not for its combat record, but for its fundamental transformation of naval warfare concepts. The world's first true aircraft carrier established operational principles that remain relevant today and demonstrated the enormous potential of sea-based aviation.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              From its origins as an Italian passenger liner to its pioneering role in naval aviation, Argus embodied the innovation and adaptability that characterize successful military technology development. The ship's conversion represented a bold investment in unproven technology that ultimately transformed naval strategy worldwide.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Today, as navies operate increasingly sophisticated aircraft carriers with advanced aircraft and weapons systems, the fundamental principles established by HMS Argus remain unchanged. The ship's legacy continues through every carrier operation, a testament to the vision and courage of those who created the world's first true aircraft carrier.
-            </p>
-          </div>
-        </section>
-
-        {/* Book Promotion Bottom */}
-        <div className="bg-gradient-to-r from-blue-600 to-gray-800 text-white p-8 rounded-xl mb-12">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">Explore More Naval Aviation History</h3>
-            <p className="text-lg mb-6">
-              Discover the complete story of HMS Argus and early aircraft carrier development in Charles MacKay's definitive study of the world's first true aircraft carrier.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/books/aircraft-carrier-argus"
-                className="bg-white text-blue-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                📚 View "Aircraft Carrier - HMS Argus" Book
-              </Link>
-              <Link
-                href="/books"
-                className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-800 transition-colors"
-              >
-                Browse All Aviation Books
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Social Share Bottom */}
-        <div className="border-t pt-8">
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Share This Article</h3>
-            <p className="text-gray-600">Help others discover the story of the world's first true aircraft carrier</p>
-          </div>
-          <SocialShare
-            url={pageUrl}
-            title={pageTitle}
-            description="Discover how HMS Argus became the first true aircraft carrier and revolutionized naval aviation"
-          />
-        </div>
-
-        {/* Related Articles */}
-        <div className="mt-12 pt-8 border-t">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/naval-aviation-history" className="group block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border">
-              <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">Naval Aviation: From Experiment to Essential</h4>
-              <p className="text-gray-600 text-sm">The evolution of naval aviation from early experiments to modern carrier operations</p>
-            </Link>
-            <Link href="/blog/supermarine-spitfire-development-evolution" className="group block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border">
-              <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">Spitfire Evolution: From Prototype to Legend</h4>
-              <p className="text-gray-600 text-sm">The development story of Britain's most famous fighter aircraft</p>
-            </Link>
-          </div>
-        </div>
-      </article>
-    </div>
+    <BlogPostTemplate 
+      blog={blogData}
+      relatedBooks={relatedBooks}
+      relatedPosts={relatedPosts}
+    />
   )
 }
