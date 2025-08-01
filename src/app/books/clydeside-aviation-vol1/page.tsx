@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import BookSalesTemplate from '@/components/BookSalesTemplate'
+import type { BookData } from '@/components/BookSalesTemplate'
 
-const bookData = {
+const bookData: BookData = {
   id: 'clydeside-aviation-vol1',
   title: 'Clydeside Aviation Volume 1: The Pioneer Years 1909-1914',
   price: 19.99,
@@ -18,9 +19,27 @@ const bookData = {
   customerReviews: [{"rating":5,"text":"Fascinating account of forgotten aviation history. MacKay has rescued these stories from obscurity.","author":"John MacLeod","source":"Glasgow Herald"}]
 }
 
-const relatedBlogs = [{"slug":"clydeside-aviation-revolution","title":"Clydeside Aviation Revolution","excerpt":"Expert analysis and historical research","readTime":"12 min read"},{"slug":"percy-pilcher-scotland-aviation-pioneer","title":"Percy Pilcher Scotland Aviation Pioneer","excerpt":"Expert analysis and historical research","readTime":"12 min read"}]
+const relatedBlogs: Array<{
+  slug: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+}> = [
+  {
+    slug: "clydeside-aviation-revolution",
+    title: "Clydeside Aviation Revolution",
+    excerpt: "Expert analysis and historical research",
+    readTime: "12 min read"
+  },
+  {
+    slug: "percy-pilcher-scotland-aviation-pioneer",
+    title: "Percy Pilcher Scotland Aviation Pioneer",
+    excerpt: "Expert analysis and historical research",
+    readTime: "12 min read"
+  }
+]
 
-const relatedBooks = []
+const relatedBooks: Array<BookData> = []
 
 export const metadata: Metadata = {
   title: 'Clydeside Aviation Volume 1: The Pioneer Years 1909-1914 | Charles E. MacKay Books',
@@ -30,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Clydeside Aviation Volume 1: The Pioneer Years 1909-1914',
     description: `The first comprehensive study of aviation development on Clydeside, covering the pioneering efforts from 1909 to the outbreak of World War I.`,
     images: ['/book-covers/clydeside-aviation-vol1.jpg'],
-    type: 'product'
+    type: 'book'
   }
 }
 

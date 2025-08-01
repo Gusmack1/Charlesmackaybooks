@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import BookSalesTemplate from '@/components/BookSalesTemplate'
+import type { BookData } from '@/components/BookSalesTemplate'
 
-const bookData = {
+const bookData: BookData = {
   id: 'aircraft-carrier-argus',
   title: 'Aircraft Carrier Argus',
   price: 22.99,
@@ -18,9 +19,14 @@ const bookData = {
   customerReviews: [{"rating":5,"text":"Excellent historical analysis with comprehensive research.","author":"Aviation Historian","source":"Academic Review"}]
 }
 
-const relatedBlogs = [{"slug":"aircraft-carrier-argus-history","title":"Aircraft Carrier Argus History","excerpt":"Expert analysis and historical research","readTime":"12 min read"}]
+const relatedBlogs: Array<{
+  slug: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+}> = []
 
-const relatedBooks = []
+const relatedBooks: Array<any> = []
 
 export const metadata: Metadata = {
   title: 'Aircraft Carrier Argus | Charles E. MacKay Books',
@@ -30,7 +36,7 @@ export const metadata: Metadata = {
     title: 'Aircraft Carrier Argus',
     description: `Expert analysis and historical research on aircraft carrier argus.`,
     images: ['/book-covers/aircraft-carrier-argus.jpg'],
-    type: 'product'
+    type: 'book'
   }
 }
 

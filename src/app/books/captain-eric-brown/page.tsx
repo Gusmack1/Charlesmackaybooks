@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import BookSalesTemplate from '@/components/BookSalesTemplate'
+import type { BookData } from '@/components/BookSalesTemplate'
 
-const bookData = {
+const bookData: BookData = {
   id: 'captain-eric-brown',
   title: 'Captain Eric Brown',
   price: 22.99,
@@ -18,9 +19,21 @@ const bookData = {
   customerReviews: [{"rating":5,"text":"Excellent historical analysis with comprehensive research.","author":"Aviation Historian","source":"Academic Review"}]
 }
 
-const relatedBlogs = [{"slug":"captain-eric-brown-history","title":"Captain Eric Brown History","excerpt":"Expert analysis and historical research","readTime":"12 min read"}]
+const relatedBlogs: Array<{
+  slug: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+}> = [
+  {
+    slug: "test-pilot-biography-eric-brown",
+    title: "Captain Eric Brown: The World's Most Experienced Test Pilot",
+    excerpt: "The extraordinary career of Captain Eric Brown, who flew more aircraft types than any pilot in history",
+    readTime: "18 min read"
+  }
+]
 
-const relatedBooks = []
+const relatedBooks: Array<any> = []
 
 export const metadata: Metadata = {
   title: 'Captain Eric Brown | Charles E. MacKay Books',
@@ -30,7 +43,7 @@ export const metadata: Metadata = {
     title: 'Captain Eric Brown',
     description: `Expert analysis and historical research on captain eric brown.`,
     images: ['/book-covers/captain-eric-brown.jpg'],
-    type: 'product'
+    type: 'book'
   }
 }
 

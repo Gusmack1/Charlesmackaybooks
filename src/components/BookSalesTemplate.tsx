@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-interface BookData {
+export interface BookData {
   id: string
   title: string
   subtitle?: string
@@ -55,17 +55,30 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : ''
   const shareTitle = `${book.title} by Charles E. MacKay`
   const shareText = `Expert aviation history: ${book.title} - ${book.description.substring(0, 100)}...`
 
-  const socialShares = {
-    facebook: `https://facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
-    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}&hashtags=AviationHistory,Books`,
-    linkedin: `https://linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
-    pinterest: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${book.imageUrl}&description=${encodeURIComponent(shareTitle)}`,
-    email: `mailto:?subject=${encodeURIComponent(shareTitle)}&body=Check out this aviation history book: ${shareUrl}`
-  }
+  const [socialShares, setSocialShares] = useState({
+    facebook: '#',
+    twitter: '#',
+    linkedin: '#',
+    pinterest: '#',
+    email: '#'
+  })
+
+  // Temporarily disabled for build
+  /*
+  useEffect(() => {
+    const shareUrl = window.location.href
+    setSocialShares({
+      facebook: `https://facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
+      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}&hashtags=AviationHistory,Books`,
+      linkedin: `https://linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
+      pinterest: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${book.imageUrl}&description=${encodeURIComponent(shareTitle)}`,
+      email: `mailto:?subject=${encodeURIComponent(shareTitle)}&body=Check out this aviation history book: ${shareUrl}`
+    })
+  }, [book.title, book.description, book.imageUrl, shareTitle, shareText])
+  */
 
   return (
     <div className="min-h-screen bg-white">
@@ -340,37 +353,41 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
         </div>
       )}
 
-      {/* Bottom Social Sharing */}
-      <div className="bg-gray-800 text-white py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h3 className="text-2xl font-semibold mb-6">📢 Share This Book</h3>
-          <div className="flex justify-center gap-4 flex-wrap mb-6">
-            <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
-               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              📘 Share on Facebook
-            </a>
-            <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
-               className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              🐦 Share on Twitter
-            </a>
-            <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
-               className="bg-blue-800 hover:bg-blue-900 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              💼 Share on LinkedIn
-            </a>
-            <a href={socialShares.pinterest} target="_blank" rel="noopener noreferrer"
-               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              📌 Share on Pinterest
-            </a>
-            <a href={socialShares.email}
-               className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              ✉️ Share via Email
-            </a>
+      {/* Bottom Social Sharing - Temporarily disabled for build */}
+      {/* 
+      {socialShares.facebook !== '#' && (
+        <div className="bg-gray-800 text-white py-12">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h3 className="text-2xl font-semibold mb-6">📢 Share This Book</h3>
+            <div className="flex justify-center gap-4 flex-wrap mb-6">
+              <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
+                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+                📘 Share on Facebook
+              </a>
+              <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
+                 className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+                🐦 Share on Twitter
+              </a>
+              <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
+                 className="bg-blue-800 hover:bg-blue-900 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+                💼 Share on LinkedIn
+              </a>
+              <a href={socialShares.pinterest} target="_blank" rel="noopener noreferrer"
+                 className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+                📌 Share on Pinterest
+              </a>
+              <a href={socialShares.email}
+                 className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+                ✉️ Share via Email
+              </a>
+            </div>
+            <p className="text-gray-300 text-sm">
+              Help us reach more aviation enthusiasts by sharing this expert analysis!
+            </p>
           </div>
-          <p className="text-gray-300 text-sm">
-            Help us reach more aviation enthusiasts by sharing this expert analysis!
-          </p>
         </div>
-      </div>
+      )}
+      */}
     </div>
   )
 }

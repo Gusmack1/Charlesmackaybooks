@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import BookSalesTemplate from '@/components/BookSalesTemplate'
+import type { BookData } from '@/components/BookSalesTemplate'
 
-const bookData = {
+const bookData: BookData = {
   id: 'birth-atomic-bomb',
   title: 'The Birth of the Atomic Bomb: From Scientific Discovery to Strategic Weapon',
   price: 21.99,
@@ -18,9 +19,21 @@ const bookData = {
   customerReviews: [{"rating":5,"text":"Balanced and thoroughly researched account of this pivotal moment in history. Essential reading.","author":"Dr. Sarah Thompson","source":"Institute for Nuclear Studies"}]
 }
 
-const relatedBlogs = [{"slug":"british-nuclear-deterrent-v-force","title":"British Nuclear Deterrent V Force","excerpt":"Expert analysis and historical research","readTime":"12 min read"}]
+const relatedBlogs: Array<{
+  slug: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+}> = [
+  {
+    slug: "british-nuclear-deterrent-v-force",
+    title: "British Nuclear Deterrent: The V-Force Legacy",
+    excerpt: "Comprehensive analysis of Britain's nuclear deterrent strategy and the V-bomber force development",
+    readTime: "15 min read"
+  }
+]
 
-const relatedBooks = []
+const relatedBooks: Array<any> = []
 
 export const metadata: Metadata = {
   title: 'The Birth of the Atomic Bomb: From Scientific Discovery to Strategic Weapon | Charles E. MacKay Books',
@@ -30,7 +43,7 @@ export const metadata: Metadata = {
     title: 'The Birth of the Atomic Bomb: From Scientific Discovery to Strategic Weapon',
     description: `The complete story of the Manhattan Project, from early atomic research to the bombing of Japan and the dawn of the nuclear age.`,
     images: ['/book-covers/birth-atomic-bomb.jpg'],
-    type: 'product'
+    type: 'book'
   }
 }
 

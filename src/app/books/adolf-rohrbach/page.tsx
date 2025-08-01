@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import BookSalesTemplate from '@/components/BookSalesTemplate'
+import type { BookData } from '@/components/BookSalesTemplate'
 
-const bookData = {
+const bookData: BookData = {
   id: 'adolf-rohrbach',
   title: 'Adolf Rohrbach: Pioneer of Metal Aircraft Construction',
   price: 27.99,
@@ -18,9 +19,27 @@ const bookData = {
   customerReviews: [{"rating":5,"text":"Exceptional technical detail combined with engaging biographical narrative. Essential for understanding early metal aircraft development.","author":"Prof. Dr. Heinrich Weber","source":"Technical University of Munich"}]
 }
 
-const relatedBlogs = [{"slug":"adolf-rohrbach-metal-aircraft-construction","title":"Adolf Rohrbach Metal Aircraft Construction","excerpt":"Expert analysis and historical research","readTime":"12 min read"},{"slug":"adolf-rohrbach-metal-aircraft-revolution","title":"Adolf Rohrbach Metal Aircraft Revolution","excerpt":"Expert analysis and historical research","readTime":"12 min read"}]
+const relatedBlogs: Array<{
+  slug: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+}> = [
+  {
+    slug: "adolf-rohrbach-metal-aircraft-construction",
+    title: "Adolf Rohrbach: Revolutionary Metal Aircraft Designer",
+    excerpt: "Comprehensive analysis of Adolf Rohrbach's pioneering metal aircraft construction techniques",
+    readTime: "14 min read"
+  },
+  {
+    slug: "adolf-rohrbach-metal-aircraft-revolution",
+    title: "Adolf Rohrbach: The Metal Aircraft Revolution That Changed Aviation",
+    excerpt: "How Adolf Rohrbach's innovative metal aircraft construction techniques revolutionized aviation manufacturing",
+    readTime: "16 min read"
+  }
+]
 
-const relatedBooks = []
+const relatedBooks: Array<any> = []
 
 export const metadata: Metadata = {
   title: 'Adolf Rohrbach: Pioneer of Metal Aircraft Construction | Charles E. MacKay Books',
@@ -30,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Adolf Rohrbach: Pioneer of Metal Aircraft Construction',
     description: `The definitive biography of Adolf Rohrbach, the German engineer who revolutionized aircraft construction with his metal flying boats and transport aircraft.`,
     images: ['/book-covers/adolf-rohrbach.jpg'],
-    type: 'product'
+    type: 'book'
   }
 }
 
