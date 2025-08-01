@@ -54,7 +54,7 @@ const post = {
             💼 LinkedIn
           </a>
         </div>
-      </div>
+    </div>
 
       <p class="text-xl leading-relaxed text-gray-700 mb-6">
         The Hawker Hurricane stands as one of the most underrated fighters in aviation history. While the Supermarine Spitfire captured headlines and public imagination, it was the Hurricane that bore the brunt of aerial combat during the Battle of Britain, destroying more enemy aircraft than any other fighter. Sydney Camm's robust design proved perfectly suited to the demands of air warfare, combining reliability, firepower, and ease of maintenance in a package that saved Britain from invasion.
@@ -72,8 +72,8 @@ const post = {
           <li><a href="#combat-effectiveness" class="text-blue-600 hover:text-blue-800">7. Combat Effectiveness Analysis</a></li>
           <li><a href="#pilot-accounts" class="text-blue-600 hover:text-blue-800">8. Pilot Accounts and Testimonies</a></li>
           <li><a href="#legacy-impact" class="text-blue-600 hover:text-blue-800">9. Legacy and Impact</a></li>
-        </ul>
-      </div>
+      </ul>
+    </div>
 
       <h2 id="origins-development">Origins and Development (1934-1937)</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
@@ -115,7 +115,7 @@ const post = {
             Armament: 2x 20mm cannons, 2x MGs
           </div>
         </div>
-      </div>
+    </div>
 
       <h2 id="production-deployment">Production and Deployment</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
@@ -174,7 +174,7 @@ const post = {
             Power: 1,030 hp (768 kW)
           </div>
         </div>
-      </div>
+    </div>
 
       <h2 id="combat-effectiveness">Combat Effectiveness Analysis</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
@@ -250,15 +250,15 @@ const post = {
   category: 'Aviation History',
   tags: ['hawker", "hurricane", "fighter", "development', 'aviation history'],
   relatedBooks: [
-    {
-      id: 'british-aircraft-great-war',
+  {
+    id: 'british-aircraft-great-war',
       title: 'british aircraft great war',
       author: 'Charles E. MacKay',
       cover: '/book-covers/british-aircraft-great-war.jpg',
       price: 24.99
-    },
-    {
-      id: 'captain-eric-brown',
+  },
+  {
+    id: 'captain-eric-brown',
       title: 'captain eric brown',
       author: 'Charles E. MacKay',
       cover: '/book-covers/captain-eric-brown.jpg',
