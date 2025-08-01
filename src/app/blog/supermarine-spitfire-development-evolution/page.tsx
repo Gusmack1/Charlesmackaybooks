@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'supermarine-spitfire-development-evolution',
   title: `Supermarine Spitfire Development: Evolution of a Legend`,
-  excerpt: `The complete development story of the Supermarine Spitfire, from R.J. Mitchell's racing seaplanes to the legendary fighter that became the symbol of British aerial victory.`,
+  subtitle: `The complete development story of the Supermarine Spitfire, from R.J. Mitchell's racing seaplanes to the legendary fighter that became the symbol of British aerial victory.`,
   content: `
     <h2 id="introduction">Introduction: Evolution of a Legend</h2>
     <p>The Supermarine Spitfire stands as perhaps the most iconic fighter aircraft in aviation history - a symbol of British determination, engineering excellence, and aerial supremacy. From R.J. Mitchell's early racing seaplanes to the legendary fighter that helped win the Battle of Britain, the Spitfire's development represents one of aviation's greatest success stories.</p>
@@ -95,13 +96,24 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `The complete development story of the Supermarine Spitfire, from R.J. Mitchell's racing seaplanes to the legendary fighter that became the symbol of British aerial victory.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/hawker-hurricane-professional.jpg',
+    alt: 'Supermarine Spitfire Development: Evolution of a Legend',
+    caption: 'Supermarine Spitfire Development: Evolution of a Legend - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
-  tags: ["supermarine","spitfire","development","evolution"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/supermarine-spitfire-development-evolution-featured.jpg","alt":"Featured image for Supermarine Spitfire Development Evolution","caption":"Historical photograph related to Supermarine Spitfire Development Evolution"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["supermarine","spitfire","development","evolution","fighter","wwii"],
+  relatedBooks: [],
+  relatedPosts: []
 }
 
 const relatedBooks: any[] = []

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'bristol-fighter-f2b-brisfit',
   title: `Bristol Fighter F2B: The Brisfit's Combat Legacy`,
-  excerpt: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters, combining exceptional maneuverability with devastating firepower.`,
+  subtitle: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters, combining exceptional maneuverability with devastating firepower.`,
   content: `
     <h2 id="introduction">Introduction: The Revolutionary Two-Seat Fighter</h2>
     <p>The Bristol Fighter F2B, affectionately known as the "Brisfit," emerged in 1917 as one of World War I's most innovative and successful aircraft designs. Unlike conventional two-seat reconnaissance aircraft that relied on defensive tactics, the Bristol Fighter was designed as an aggressive combat aircraft that could outfight single-seat fighters while maintaining its reconnaissance capabilities.</p>
@@ -89,31 +90,27 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters, combining exceptional maneuverability with devastating firepower.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/bristol-f2b-fighter-replica.jpg',
+    alt: 'Bristol Fighter F2B: The Brisfit\'s Combat Legacy',
+    caption: 'Bristol Fighter F2B: The Brisfit\'s Combat Legacy - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
-  tags: ["bristol","fighter","f2b","brisfit"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/bristol-fighter-f2b-brisfit-featured.jpg","alt":"Featured image for Bristol Fighter F2b Brisfit","caption":"Historical photograph related to Bristol Fighter F2b Brisfit"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["bristol","fighter","f2b","brisfit","wwi","combat"],
+  relatedBooks: [],
+  relatedPosts: []
 }
 
-const relatedBooks: Array<{
-  id: string;
-  title: string;
-  price: number;
-  imageUrl: string;
-  description: string;
-  relevantContent: string;
-}> = []
 
-const relatedPosts: Array<{
-  slug: string;
-  title: string;
-  excerpt: string;
-  imageUrl: string;
-  readTime: string;
-}> = []
 
 export const metadata: Metadata = {
   title: `Bristol Fighter F2b Brisfit | Charles E. MacKay`,

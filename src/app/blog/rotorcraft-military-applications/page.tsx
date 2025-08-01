@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'rotorcraft-military-applications',
   title: `Rotorcraft Military Applications: From Korea to Modern Warfare`,
-  excerpt: `The evolution of military helicopter operations from Korean War medevac missions to modern multi-role aircraft that revolutionized battlefield mobility and logistics.`,
+  subtitle: `The evolution of military helicopter operations from Korean War medevac missions to modern multi-role aircraft that revolutionized battlefield mobility and logistics.`,
   content: `
     <h2 id="introduction">Introduction: The Story Begins</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
@@ -85,31 +86,27 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `The evolution of military helicopter operations from Korean War medevac missions to modern multi-role aircraft that revolutionized battlefield mobility and logistics.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/bristol-sycamore.jpg',
+    alt: 'Rotorcraft Military Applications: From Korea to Modern Warfare',
+    caption: 'Rotorcraft Military Applications: From Korea to Modern Warfare - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
-  tags: ["rotorcraft","military","applications"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/rotorcraft-military-applications-featured.jpg","alt":"Featured image for Rotorcraft Military Applications","caption":"Historical photograph related to Rotorcraft Military Applications"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["rotorcraft","military","applications","helicopter","korea"],
+  relatedBooks: [],
+  relatedPosts: []
 }
 
-const relatedBooks: Array<{
-  id: string
-  title: string
-  price: number
-  imageUrl: string
-  description: string
-  relevantContent: string
-}> = []
 
-const relatedPosts: Array<{
-  slug: string
-  title: string
-  excerpt: string
-  imageUrl: string
-  readTime: string
-}> = []
 
 export const metadata: Metadata = {
   title: `Rotorcraft Military Applications | Charles E. MacKay`,

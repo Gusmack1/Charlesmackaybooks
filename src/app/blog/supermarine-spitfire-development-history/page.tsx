@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'supermarine-spitfire-development-history',
   title: `Supermarine Spitfire Development History`,
-  excerpt: `Comprehensive analysis of supermarine spitfire development history with expert historical research and technical details.`,
+  subtitle: `Comprehensive analysis of supermarine spitfire development history with expert historical research and technical details.`,
   content: `
     <h2 id="introduction">Introduction: The Story Begins</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
@@ -85,72 +86,35 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `Comprehensive analysis of supermarine spitfire development history with expert historical research and technical details.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/hawker-hurricane-professional.jpg',
+    alt: 'Supermarine Spitfire Development History',
+    caption: 'Supermarine Spitfire Development History - Expert analysis by Charles E. MacKay'
+  },
   category: 'Aviation History',
-  tags: ["supermarine","spitfire","development","history"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK"]},
-  featuredImage: {"url":"/blog-images/supermarine-spitfire-development-history-featured.jpg","alt":"Featured image for Supermarine Spitfire Development History","caption":"Historical photograph related to Supermarine Spitfire Development History"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["supermarine","spitfire","development","history","fighter","wwii"],
+  relatedBooks: [
+    {
+      id: 'captain-eric-brown',
+      title: 'Captain Eric Brown: Britain\'s Greatest Test Pilot',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/captain-eric-brown.jpg',
+      price: 14.23
+    }
+  ],
+  relatedPosts: []
 }
 
-const relatedBooks = [
-  {
-    id: 'captain-eric-brown',
-    title: 'Captain Eric Brown: Britain\'s Greatest Test Pilot',
-    price: 14.23,
-    description: 'Biography of the legendary test pilot who flew 487 different aircraft types and became the greatest test pilot in aviation history.',
-    imageUrl: '/book-covers/captain-eric-brown.jpg',
-    relevantContent: 'Eric Brown extensively tested Spitfire variants and provides first-hand accounts of Spitfire performance characteristics and development testing.'
-  },
-  {
-    id: 'british-aircraft-great-war',
-    title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats',
-    price: 12.91,
-    description: 'Complete overview of British military aircraft during the Great War (1914-1918). Shows the aviation heritage that led to Spitfire development.',
-    imageUrl: '/book-covers/british-aircraft-great-war.jpg',
-    relevantContent: 'Traces the evolution of British fighter design from WWI that influenced R.J. Mitchell\'s approach to creating the Spitfire.'
-  },
-  {
-    id: 'clydeside-aviation-vol1',
-    title: 'Clydeside Aviation Volume One: The Great War',
-    price: 16.08,
-    description: 'Scottish aviation development including Supermarine\'s racing heritage and connections to Scottish aviation industry.',
-    imageUrl: '/book-covers/clydeside-aviation-vol1.jpg',
-    relevantContent: 'Covers the Schneider Trophy racing background that directly influenced Spitfire design, including Supermarine\'s seaplane racing heritage.'
-  }
-]
 
-const relatedPosts = [
-  {
-    title: 'Schneider Trophy Racing: High-Speed Seaplane Development That Shaped Fighter Aviation',
-    slug: 'schneider-trophy-racing-development',
-    excerpt: 'How high-speed seaplane competition drove aviation innovation from 1913-1931 and led directly to Spitfire development.',
-    imageUrl: '/blog-images/concorde-supersonic-passenger.jpg',
-    readTime: '14 min'
-  },
-  {
-    title: 'Captain Eric Brown: Britain\'s Greatest Test Pilot',
-    slug: 'test-pilot-biography-eric-brown',
-    excerpt: 'The extraordinary life of the test pilot who flew 487 different aircraft types.',
-    imageUrl: '/blog-images/eric-brown-test-pilot-portrait.jpg',
-    readTime: '18 min'
-  },
-  {
-    title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
-    slug: 'hawker-hurricane-fighter-development',
-    excerpt: 'The workhorse fighter that shot down more German aircraft than any other during the Battle of Britain.',
-    imageUrl: '/blog-images/hawker-hurricane.jpg',
-    readTime: '13 min'
-  },
-  {
-    title: 'Supermarine Spitfire Evolution: From Prototype to Legend',
-    slug: 'supermarine-spitfire-development-evolution',
-    excerpt: 'The complete evolution of the Spitfire from K5054 prototype through all variants, examining continuous development throughout WWII.',
-    imageUrl: '/blog-images/hawker-hurricane-professional.jpg',
-    readTime: '18 min'
-  }
-]
 
 export const metadata: Metadata = {
   title: `Supermarine Spitfire Development History | Charles E. MacKay`,

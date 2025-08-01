@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'clydeside-aviation-revolution',
   title: `Clydeside Aviation: Scotland Industrial Flying Revolution`,
-  excerpt: `How the River Clyde became the center of Scottish aviation manufacturing and changed the course of British aviation history.`,
+  subtitle: `How the River Clyde became the center of Scottish aviation manufacturing and changed the course of British aviation history.`,
   content: `
     <h2 id="introduction">Introduction: Scotland's Industrial Flying Revolution</h2>
     <p>The River Clyde and its surrounding industrial heartland transformed from the world's premier shipbuilding center into one of Britain's most important aviation manufacturing regions. During two world wars, Clydeside companies leveraged their engineering expertise and industrial capacity to produce aircraft that changed aviation history, from the pioneering Beardmore aircraft to advanced wartime production.</p>
@@ -95,18 +96,35 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `How the River Clyde became the center of Scottish aviation manufacturing and changed the course of British aviation history.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/clydeside-aviation-dalmuir.jpg',
+    alt: 'Clydeside Aviation: Scotland Industrial Flying Revolution',
+    caption: 'Clydeside Aviation: Scotland Industrial Flying Revolution - Expert analysis by Charles E. MacKay'
+  },
   category: 'Scottish Aviation',
-  tags: ["Clydeside","Scottish Aviation","Industrial Revolution","Manufacturing","Aviation History"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
-  featuredImage: {"url":"/blog-images/clydeside-aviation-revolution-featured.jpg","alt":"Featured image for Clydeside Aviation: Scotland Industrial Flying Revolution","caption":"Historical photograph related to Clydeside Aviation: Scotland Industrial Flying Revolution"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["clydeside","scottish","aviation","industrial","revolution","manufacturing"],
+  relatedBooks: [
+    {
+      id: 'clydeside-aviation-vol1',
+      title: 'Clydeside Aviation Volume 1: The Pioneer Years 1909-1914',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/clydeside-aviation-vol1.jpg',
+      price: 19.99
+    }
+  ],
+  relatedPosts: []
 }
 
-const relatedBooks = [{"id":"clydeside-aviation-vol1","title":"Clydeside Aviation Volume 1: The Pioneer Years 1909-1914","price":19.99,"imageUrl":"/book-covers/clydeside-aviation-vol1.jpg","description":"The first comprehensive study of aviation development on Clydeside, covering the pioneering efforts from 1909 to the outbreak of World War I.","relevantContent":"Detailed coverage with archival research and technical analysis"},{"id":"beardmore-aviation","title":"Beardmore Aviation","price":22.99,"imageUrl":"/book-covers/beardmore-aviation.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
 
-const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `Clydeside Aviation: Scotland Industrial Flying Revolution | Charles E. MacKay`,

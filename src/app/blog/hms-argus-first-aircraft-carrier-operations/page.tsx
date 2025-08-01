@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'hms-argus-first-aircraft-carrier-operations',
   title: `HMS Argus Operations: Pioneering Carrier Aviation Techniques`,
-  excerpt: `The operational history of HMS Argus and the development of carrier aviation procedures that influenced naval warfare.`,
+  subtitle: `The operational history of HMS Argus and the development of carrier aviation procedures that influenced naval warfare.`,
   content: `
     <h2 id="introduction">Introduction:  Pioneering Carrier Aviation Techniques</h2>
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
@@ -85,18 +86,35 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `The operational history of HMS Argus and the development of carrier aviation procedures that influenced naval warfare.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/hms-argus-aircraft-carrier.jpg',
+    alt: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques',
+    caption: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques - Expert analysis by Charles E. MacKay'
+  },
   category: 'Naval Aviation',
-  tags: ["HMS Argus","Carrier Operations","Naval Aviation","Flight Deck Operations","Royal Navy"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
-  featuredImage: {"url":"/blog-images/hms-argus-first-aircraft-carrier-operations-featured.jpg","alt":"Featured image for HMS Argus Operations: Pioneering Carrier Aviation Techniques","caption":"Historical photograph related to HMS Argus Operations: Pioneering Carrier Aviation Techniques"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["hms","argus","carrier","operations","naval","aviation","royal","navy"],
+  relatedBooks: [
+    {
+      id: 'aircraft-carrier-argus',
+      title: 'Aircraft Carrier Argus',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/aircraft-carrier-argus.jpg',
+      price: 22.99
+    }
+  ],
+  relatedPosts: []
 }
 
-const relatedBooks = [{"id":"aircraft-carrier-argus","title":"Aircraft Carrier Argus","price":22.99,"imageUrl":"/book-covers/aircraft-carrier-argus.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"},{"id":"captain-eric-brown","title":"Captain Eric Brown","price":22.99,"imageUrl":"/book-covers/captain-eric-brown.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
 
-const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `HMS Argus Operations: Pioneering Carrier Aviation Techniques | Charles E. MacKay`,

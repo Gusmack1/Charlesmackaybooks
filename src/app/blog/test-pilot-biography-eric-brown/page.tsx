@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 
-const blogData = {
+const post = {
+  id: 'test-pilot-biography-eric-brown',
   title: `Captain Eric Brown: The World Most Experienced Test Pilot`,
-  excerpt: `The extraordinary career of Captain Eric Brown, who flew more aircraft types than any pilot in history and pioneered carrier aviation.`,
+  subtitle: `The extraordinary career of Captain Eric Brown, who flew more aircraft types than any pilot in history and pioneered carrier aviation.`,
   content: `
     <h2 id="introduction">Introduction: The World's Most Experienced Test Pilot</h2>
     <p>Captain Eric "Winkle" Brown stands as aviation history's most remarkable test pilot, holding world records that will likely never be equaled. Flying 487 different aircraft types - more than any pilot in history - Brown's extraordinary career spanned from World War II through the jet age, pioneering carrier aviation and testing captured enemy aircraft that advanced Allied aviation technology.</p>
@@ -103,18 +104,35 @@ const blogData = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  publishDate: 'March 2024',
-  readTime: '12 min read',
+  excerpt: `The extraordinary career of Captain Eric Brown, who flew more aircraft types than any pilot in history and pioneered carrier aviation.`,
+  author: {
+    name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
+    image: '/charles-mackay-aviation-historian.jpg',
+    email: 'charlese1mackay@hotmail.com'
+  },
+  publishedDate: '2025-01-30T12:00:00.000Z',
+  readingTime: 12,
+  featuredImage: {
+    url: '/blog-images/eric-brown-test-pilot-portrait.jpg',
+    alt: 'Captain Eric Brown: The World Most Experienced Test Pilot',
+    caption: 'Captain Eric Brown: The World Most Experienced Test Pilot - Expert analysis by Charles E. MacKay'
+  },
   category: 'Test Pilot Biography',
-  tags: ["Eric Brown","Test Pilot","Carrier Aviation","Flight Testing","Royal Navy"],
-  author: {"name":"Charles E. MacKay","bio":"Aviation historian specializing in military aircraft development, with over 20 years of research experience and 19 published books.","credentials":["Author of 19+ aviation history books","Referenced by Imperial War Museum and RAF Museum","Guest lecturer at universities across the UK","Member of the Royal Aeronautical Society"]},
-  featuredImage: {"url":"/blog-images/test-pilot-biography-eric-brown-featured.jpg","alt":"Featured image for Captain Eric Brown: The World Most Experienced Test Pilot","caption":"Historical photograph related to Captain Eric Brown: The World Most Experienced Test Pilot"},
-  tableOfContents: [{"id":"introduction","title":"Introduction","level":2},{"id":"historical-background","title":"Historical Background","level":2},{"id":"technical-analysis","title":"Technical Analysis","level":2},{"id":"operational-history","title":"Operational History","level":2},{"id":"key-figures","title":"Key Figures","level":2},{"id":"impact-legacy","title":"Impact and Legacy","level":2},{"id":"conclusion","title":"Conclusion","level":2}]
+  tags: ["eric","brown","test","pilot","carrier","aviation","flight","testing"],
+  relatedBooks: [
+    {
+      id: 'captain-eric-brown',
+      title: 'Captain Eric Brown',
+      author: 'Charles E. MacKay',
+      cover: '/book-covers/captain-eric-brown.jpg',
+      price: 22.99
+    }
+  ],
+  relatedPosts: []
 }
 
-const relatedBooks = [{"id":"captain-eric-brown","title":"Captain Eric Brown","price":22.99,"imageUrl":"/book-covers/captain-eric-brown.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
 
-const relatedPosts: any[] = []
 
 export const metadata: Metadata = {
   title: `Captain Eric Brown: The World Most Experienced Test Pilot | Charles E. MacKay`,
