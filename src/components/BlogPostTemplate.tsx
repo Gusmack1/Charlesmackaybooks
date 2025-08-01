@@ -99,7 +99,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       {/* Reading Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
         <div 
@@ -108,37 +108,11 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
         />
       </div>
 
-      {/* Social Sharing Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex justify-center items-center gap-4 text-sm">
-            <span className="hidden md:inline">📢 Share this expert analysis:</span>
-            <div className="flex gap-3">
-              <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
-                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-                 aria-label="Share on Facebook">
-                📘 Facebook
-              </a>
-              <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
-                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-                 aria-label="Share on Twitter">
-                🐦 Twitter
-              </a>
-              <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
-                 className="hover:bg-blue-800 px-3 py-1 rounded transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-                 aria-label="Share on LinkedIn">
-                💼 LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="lg:grid lg:grid-cols-4 lg:gap-8">
           {/* Table of Contents Sidebar */}
           <div className="hidden lg:block lg:col-span-1">
-            <div className="sticky top-24 pt-8">
+            <div className="sticky top-32 pt-4">
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
                 <h3 className="font-semibold text-gray-900 mb-4">📋 Table of Contents</h3>
                 <nav className="space-y-2">
