@@ -185,7 +185,11 @@ const BlogPostExample: FC = () => {
   return (
     <div className="min-h-screen bg-slate-50">
       <Header />
-      <BlogPostTemplate {...blogPostData} />
+      <BlogPostTemplate 
+        blog={blogPostData}
+        relatedBooks={[]}
+        relatedPosts={[]}
+      />
     </div>
   )
 }

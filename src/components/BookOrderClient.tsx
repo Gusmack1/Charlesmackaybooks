@@ -6,9 +6,11 @@ import { Book } from '@/types/book'
 
 interface BookOrderClientProps {
   book: Book
+  children?: React.ReactNode
+  className?: string
 }
 
-export default function BookOrderClient({ book }: BookOrderClientProps) {
+export default function BookOrderClient({ book, children, className }: BookOrderClientProps) {
   const { addToCart, openBasket } = useCart()
   const [isAddingToCart, setIsAddingToCart] = useState(false)
 
@@ -37,13 +39,13 @@ export default function BookOrderClient({ book }: BookOrderClientProps) {
           <button
             onClick={handleAddToCart}
             disabled={isAddingToCart}
-            className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
+            className={className || `w-full py-3 px-4 rounded-lg font-medium transition-colors ${
               isAddingToCart
                 ? 'bg-gray-400 cursor-not-allowed'
                 : 'bg-green-600 hover:bg-green-700'
             } text-white`}
           >
-            {isAddingToCart ? 'Adding...' : 'Add to Basket'}
+            {isAddingToCart ? 'Adding...' : (children || 'Add to Basket')}
           </button>
 
           <button

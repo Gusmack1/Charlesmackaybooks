@@ -12,9 +12,13 @@ const BookSalesTemplateExample: FC = () => {
     author: 'Charles E. MacKay',
     isbn: '978-1-234567-89-0',
     publicationDate: '2023-06-15',
+    publicationYear: 2023,
     pageCount: 320,
     dimensions: '6.1 x 9.2 x 1.1 inches',
     coverImage: '/book-covers/adolf-rohrbach-metal-airplanes.jpg',
+    imageUrl: '/book-covers/adolf-rohrbach-metal-airplanes.jpg',
+    category: 'Aviation History',
+    tags: ['Aviation History', 'Engineering', 'Metal Aircraft', 'German Aviation'],
     price: {
       hardcover: 49.99,
       paperback: 29.99,
@@ -22,6 +26,8 @@ const BookSalesTemplateExample: FC = () => {
       audiobook: 24.99
     },
     description: 'A comprehensive examination of Adolf Rohrbach\'s pioneering work in metal aircraft construction during the 1920s and 1930s. This meticulously researched volume explores how Rohrbach\'s innovative designs influenced the development of modern aviation technology.',
+    features: ['Comprehensive technical analysis', 'Rare historical photographs', 'Detailed engineering drawings', 'Expert research'],
+    academicRecognition: ['Recommended by Aviation History Society', 'Cited in Engineering journals', 'Used in university courses'],
     plotSummary: 'This groundbreaking study traces the evolution of metal aircraft construction through the lens of Adolf Rohrbach\'s revolutionary designs. From his early experiments with all-metal construction to the development of the iconic Rohrbach Roland flying boat, the book examines how Rohrbach\'s engineering innovations shaped the future of aviation.',
     authorBio: 'Charles E. MacKay is a distinguished aviation historian with over three decades of research experience in early 20th-century aircraft development. His expertise spans the technical, social, and economic aspects of aviation history, with particular focus on German aircraft manufacturers and their contributions to aeronautical engineering.',
     editorialReviews: [
@@ -38,7 +44,7 @@ const BookSalesTemplateExample: FC = () => {
         quote: 'MacKay brings Rohrbach\'s story to life with vivid detail and technical accuracy. A must-have for aviation enthusiasts and historians alike.'
       }
     ],
-    readerTestimonials: [
+    customerReviews: [
       {
         name: 'Dr. Sarah Johnson',
         rating: 5,
@@ -202,8 +208,7 @@ const BookSalesTemplateExample: FC = () => {
       <BookSalesTemplate
         book={bookData}
         relatedBooks={relatedBooks}
-        relatedBlogPosts={relatedBlogPosts}
-        schemaData={schemaData}
+        relatedBlogs={relatedBlogPosts}
       />
     </div>
   );
