@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'helicopter-development-pioneers',
@@ -51,6 +52,11 @@ const post = {
     <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
 
     <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg" alt="Sikorsky VS300 helicopter breakthrough" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Igor Sikorsky's VS300, the breakthrough helicopter that established modern rotorcraft design principles.</p>
+    </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>
     <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
@@ -112,7 +118,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["helicopter","development","pioneers","cierva","sikorsky","autogyro"],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['sycamore-seeds', 'sikorsky-vs300', 'helicopter-development-pioneers']),
   relatedPosts: []
 }
 
