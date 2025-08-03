@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 export const metadata: Metadata = {
   title: 'Sopwith Camel: WWI Most Deadly Fighter | Charles E. MacKay',
@@ -88,6 +89,11 @@ const post = {
         The prototype F1 first flew in February 1917, immediately demonstrating both the promise and the peril of Smith's design. Test pilots reported that while the aircraft could outmaneuver any contemporary fighter, it required constant attention and quick reflexes to prevent dangerous departures from controlled flight. This characteristic would define the Camel throughout its service life: in skilled hands, it was nearly unbeatable; in inexperienced hands, it could be lethal to its own pilot.
       </p>
 
+      <div class="my-8">
+        <img src="/blog-images/sopwith-camel-prototype.jpg" alt="Sopwith Camel prototype F1" class="w-full h-auto rounded-lg shadow-lg"/>
+        <p class="text-sm text-gray-600 mt-2 text-center italic">The Sopwith Camel prototype F1, demonstrating the revolutionary design that would become the most successful British fighter of World War I.</p>
+      </div>
+
       <h2 id="revolutionary-features">Revolutionary Design Features</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
         The Camel's most distinctive feature was its twin synchronized Vickers machine guns, mounted directly in front of the pilot and firing through the propeller arc. This arrangement, using the Constantinesco synchronization gear, provided concentrated firepower that proved devastatingly effective against enemy aircraft. The guns were positioned to take advantage of the pilot's natural sight line, making accurate shooting easier than in aircraft with wing-mounted armament.
@@ -96,6 +102,11 @@ const post = {
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
         The fuselage design reflected both practical considerations and manufacturing constraints. The wooden framework, covered with fabric, provided sufficient strength while remaining light enough for acceptable performance. The distinctive "hump" over the gun breeches, which gave the aircraft its nickname, housed the ammunition tanks and synchronization gear while providing the pilot with a clear forward view for combat operations.
       </p>
+
+      <div class="my-8">
+        <img src="/blog-images/sopwith-camel-cockpit.jpg" alt="Sopwith Camel cockpit and armament" class="w-full h-auto rounded-lg shadow-lg"/>
+        <p class="text-sm text-gray-600 mt-2 text-center italic">The Sopwith Camel's distinctive cockpit arrangement with twin synchronized Vickers machine guns mounted directly in front of the pilot.</p>
+      </div>
 
       <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
         <h3 class="text-lg font-semibold text-blue-800 mb-4">⚡ Camel vs German Opposition</h3>
@@ -253,22 +264,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ['sopwith", "camel", "wwi", "fighter', 'aviation history'],
-  relatedBooks: [
-    {
-      id: 'british-aircraft-great-war',
-      title: 'british aircraft great war',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/british-aircraft-great-war.jpg',
-      price: 24.99
-    },
-    {
-      id: 'clydeside-aviation-vol1',
-      title: 'clydeside aviation vol1',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/clydeside-aviation-vol1.jpg',
-      price: 24.99
-    }
-  ],
+  relatedBooks: getBooksData(['british-aircraft-great-war', 'clydeside-aviation-vol1', 'german-aircraft-great-war']),
   relatedPosts: [
     {
       id: 'bristol-fighter-f2b-brisfit',

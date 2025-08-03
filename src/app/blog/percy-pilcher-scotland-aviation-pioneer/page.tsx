@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'percy-pilcher-scotland-aviation-pioneer',
@@ -28,6 +29,8 @@ const post = {
       <p class="text-sm text-gray-600 mt-2 text-center italic">Percy Pilcher, the Scottish engineer whose systematic approach to flight problems brought him tantalizingly close to achieving powered flight.</p>
     </div>
 
+    <p>Pilcher's work in Scotland represented the intersection of engineering innovation and aviation pioneering. His systematic approach to solving flight problems, combined with his engineering background, positioned him uniquely to advance the cause of powered flight. The tragic loss of this brilliant mind in 1899 robbed aviation of one of its most promising innovators.</p>
+
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
 
@@ -36,6 +39,11 @@ const post = {
     <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
 
     <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/percy-pilcher-glider-designs.jpg" alt="Percy Pilcher's innovative glider designs" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Percy Pilcher's innovative glider designs demonstrated systematic engineering improvement and achieved remarkable flight distances for the 1890s.</p>
+    </div>
 
     <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
     <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
@@ -117,7 +125,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["percy","pilcher","scotland","aviation","pioneer","glider"],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['clydeside-aviation-vol1', 'british-aircraft-great-war', 'soaring-with-wings']),
   relatedPosts: []
 }
 

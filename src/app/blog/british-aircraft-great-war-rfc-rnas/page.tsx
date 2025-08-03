@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'british-aircraft-great-war-rfc-rnas',
@@ -17,6 +18,11 @@ const post = {
     <p>The Royal Naval Air Service (RNAS) and Royal Flying Corps pursued parallel development paths that would converge in 1918 to form the world's first independent air force. This organizational evolution reflected the growing importance of aviation in modern warfare and Britain's commitment to achieving aerial dominance through superior aircraft design and pilot training.</p>
 
     <p>British manufacturers including Sopwith, Bristol, Royal Aircraft Factory, Avro, and Vickers created aircraft that not only won the war but established design principles that influenced aviation development worldwide. The rapid evolution from early reconnaissance aircraft to advanced fighters like the Sopwith Camel and Bristol Fighter demonstrates British aviation's remarkable capacity for innovation under wartime pressure.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/sopwith-camel-formation.jpg" alt="Sopwith Camel formation flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Sopwith Camel formation flight, demonstrating the advanced fighter capabilities that established Allied air superiority.</p>
+    </div>
 
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
@@ -46,6 +52,11 @@ const post = {
     <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
 
     <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/bristol-fighter-f2b-flying.jpg" alt="Bristol Fighter F2B in flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Bristol Fighter F2B in flight, representing the revolutionary two-seat fighter design that redefined aerial warfare.</p>
+    </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>
     <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
@@ -107,22 +118,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["british","aircraft","great","war","rfc","rnas"],
-  relatedBooks: [
-    {
-      id: 'british-aircraft-great-war',
-      title: 'British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/british-aircraft-great-war.jpg',
-      price: 12.91
-    },
-    {
-      id: 'clydeside-aviation-vol1',
-      title: 'Clydeside Aviation Volume One: The Great War',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/clydeside-aviation-vol1.jpg',
-      price: 16.08
-    }
-  ],
+  relatedBooks: getBooksData(['british-aircraft-great-war', 'clydeside-aviation-vol1', 'german-aircraft-great-war']),
   relatedPosts: []
 }
 

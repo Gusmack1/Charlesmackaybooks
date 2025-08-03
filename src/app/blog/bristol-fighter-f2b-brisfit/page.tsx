@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'bristol-fighter-f2b-brisfit',
@@ -11,6 +12,11 @@ const post = {
     
     <p>This revolutionary approach to two-seat fighter design represented a fundamental shift in military aviation thinking. The Bristol Fighter demonstrated that properly designed multi-seat aircraft could match or exceed the performance of single-seat fighters while providing additional tactical capabilities through its observer/gunner position.</p>
 
+    <div class="my-8">
+      <img src="/blog-images/bristol-f2b-fighter-flying.jpg" alt="Bristol Fighter F2B in flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Bristol Fighter F2B in flight, demonstrating its exceptional maneuverability and combat effectiveness.</p>
+    </div>
+
     <p>From its combat debut in April 1917 through the Armistice and beyond, the Bristol Fighter established itself as one of the war's most versatile and effective aircraft. Its influence extended far beyond World War I, establishing design principles for multi-seat fighters that would persist throughout aviation history.</p>
 
     <h2 id="design-development">Design and Development</h2>
@@ -19,6 +25,11 @@ const post = {
     <p>Frank Barnwell's design team faced the challenge of creating an aircraft that could compete with German Albatros and Halberstadt fighters while carrying a second crew member and additional equipment. The solution involved innovative structural design, careful weight distribution, and the selection of an exceptionally powerful engine.</p>
 
     <p>The Rolls-Royce Falcon engine provided the Bristol Fighter with a significant power advantage over most contemporary aircraft. This 275-horsepower V-12 engine enabled performance levels that surprised both allies and enemies when the aircraft entered combat service.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/bristol-fighter-ground.jpg" alt="Bristol Fighter F2B on the ground" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Bristol Fighter F2B on the ground, showing its distinctive two-seat configuration and robust construction.</p>
+    </div>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
       <h3 class="font-semibold mb-4 text-blue-800">Bristol Fighter F2B Specifications</h3>
@@ -38,6 +49,11 @@ const post = {
     <p>The breakthrough came when pilots began employing the Bristol Fighter as an aggressive single-seat fighter, using the forward-firing Vickers gun as the primary weapon while the rear gunner provided additional protection and firepower. This tactical evolution transformed the aircraft from a vulnerable target into a formidable opponent.</p>
 
     <p>Experienced Bristol Fighter crews developed sophisticated combat techniques that maximized the aircraft's unique capabilities. The pilot could engage enemy fighters with forward-firing armament while the observer covered the aircraft's blind spots and engaged additional targets with the flexible Lewis gun mounting.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/bristol-fighter-technical-side.jpg" alt="Bristol Fighter F2B technical side view" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Technical side view of the Bristol Fighter F2B, showing its aerodynamic design and construction details.</p>
+    </div>
 
     <h2 id="operational-history">Operational History and Service</h2>
     <p>Following its troubled combat debut with No. 48 Squadron in April 1917, the Bristol Fighter underwent rapid tactical evolution. By late 1917, properly employed Bristol Fighters were achieving remarkable success against German fighters, often outperforming single-seat aircraft in aerial combat.</p>
@@ -106,7 +122,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["bristol","fighter","f2b","brisfit","wwi","combat"],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['british-aircraft-great-war', 'german-aircraft-great-war', 'clydeside-aviation-vol1']),
   relatedPosts: []
 }
 
