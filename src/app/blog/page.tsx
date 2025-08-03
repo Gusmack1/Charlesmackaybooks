@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: 'Aviation History Blog | Expert Insights by Charles E. MacKay | Charles E. MacKay Aviation Books',
@@ -356,8 +355,6 @@ const blogCategories = {
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
