@@ -48,6 +48,14 @@ export default function AIPromptSystemPage() {
     bestPractices: 96
   });
 
+  const handleMetricsUpdate = (newMetrics: any) => {
+    // Update metrics based on performance data
+    setMetrics(prev => ({
+      ...prev,
+      performance: newMetrics.lcp ? (newMetrics.lcp < 2500 ? 95 : 85) : prev.performance
+    }));
+  };
+
   // Sample book data for demonstration
   const sampleBook = {
     id: 'sample-book',
@@ -119,9 +127,9 @@ export default function AIPromptSystemPage() {
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-6">
-            <h1 className="text-3xl font-bold text-gray-900">
-              AI Prompt System Implementation
-            </h1>
+                         <h1 className="text-3xl font-bold text-gray-900">
+               AI Prompt System Implementation - Live
+             </h1>
             <p className="mt-2 text-gray-600">
               Comprehensive website optimization based on advanced AI prompt engineering
             </p>
@@ -325,7 +333,7 @@ export default function AIPromptSystemPage() {
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-sm border p-6">
               <h2 className="text-xl font-semibold mb-4">Performance Monitoring</h2>
-              <PerformanceMonitor showMetrics={true} onMetricsUpdate={setMetrics} />
+                             <PerformanceMonitor showMetrics={true} onMetricsUpdate={handleMetricsUpdate} />
             </div>
           </div>
         )}
