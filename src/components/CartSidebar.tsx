@@ -31,8 +31,8 @@ export default function CartSidebar() {
           {/* Header */}
           <div className="flex items-center justify-between border-b px-6 py-4">
             <div className="flex items-center gap-2">
-              <ShoppingBag className="h-5 w-5" />
-              <h2 className="text-lg font-semibold">Your Basket</h2>
+              <ShoppingBag className="h-5 w-5 text-gray-900" />
+              <h2 className="text-lg font-semibold text-gray-900">Your Basket</h2>
               <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">
                 {getTotalItems()}
               </span>
@@ -41,7 +41,7 @@ export default function CartSidebar() {
               onClick={() => setIsCartOpen(false)}
               className="rounded-lg p-2 hover:bg-gray-100"
             >
-              <X className="h-5 w-5" />
+              <X className="h-5 w-5 text-gray-900" />
             </button>
           </div>
 
@@ -65,7 +65,7 @@ export default function CartSidebar() {
                       className="rounded object-cover"
                     />
                     <div className="flex-1">
-                      <h3 className="font-medium text-sm">{item.book.title}</h3>
+                      <h3 className="font-medium text-sm text-gray-900">{item.book.title}</h3>
                       <p className="text-xs text-gray-600">by Charles E. MacKay</p>
                       <p className="text-xs text-gray-500">{item.book.condition} condition</p>
                       
@@ -78,7 +78,7 @@ export default function CartSidebar() {
                         >
                           -
                         </button>
-                        <span className="text-sm font-medium w-8 text-center">{item.quantity}</span>
+                        <span className="text-sm font-medium w-8 text-center text-gray-900">{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
                           className="w-6 h-6 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 text-sm"
@@ -106,8 +106,8 @@ export default function CartSidebar() {
             <div className="border-t px-6 py-4">
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span>Subtotal:</span>
-                  <span>£{total.toFixed(2)}</span>
+                  <span className="text-gray-900">Subtotal:</span>
+                  <span className="text-gray-900">£{total.toFixed(2)}</span>
                 </div>
                 {discount > 0 && (
                   <div className="flex justify-between text-green-600">
@@ -116,17 +116,16 @@ export default function CartSidebar() {
                   </div>
                 )}
                 <div className="flex justify-between font-semibold text-lg border-t pt-2">
-                  <span>Total:</span>
-                  <span>£{finalTotal.toFixed(2)}</span>
+                  <span className="text-gray-900">Total:</span>
+                  <span className="text-gray-900">£{finalTotal.toFixed(2)}</span>
                 </div>
               </div>
 
               <div className="mt-4 space-y-2">
                 <button
                   onClick={() => {
-                    // This would navigate to checkout page
-                    console.log('Navigating to checkout...')
-                    alert('✅ Advanced checkout available!\n\n• PayPal integration\n• Stripe payment processing\n• Bank transfer option\n• Academic discounts\n• International shipping\n• Analytics tracking\n• Conversion optimization')
+                    // Navigate to checkout page
+                    window.location.href = '/checkout'
                   }}
                   className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                 >
