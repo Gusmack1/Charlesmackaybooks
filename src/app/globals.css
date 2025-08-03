@@ -380,6 +380,24 @@
   display: none !important;
 }
 
+/* Additional specificity to ensure header is hidden */
+.blog-page header,
+.blog-page .header-container,
+.blog-page .header-container * {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Force hide any header elements on blog pages */
+.blog-page [class*="header"],
+.blog-page [class*="Header"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
 /* Ensure blog content starts at the top */
 .blog-page main {
   padding-top: 0 !important;
