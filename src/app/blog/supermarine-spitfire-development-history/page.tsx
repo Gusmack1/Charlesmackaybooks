@@ -11,8 +11,8 @@ const post = {
     <p>The Supermarine Spitfire stands as one of the most iconic aircraft in aviation history, its elegant elliptical wings and distinctive silhouette becoming the symbol of British resistance during World War II. The story of its development is a remarkable journey from the high-speed Schneider Trophy racing aircraft to the most successful British fighter of the war, a transformation that would change the course of aviation history.</p>
     
     <div class="my-8">
-      <img src="/blog-images/supermarine-spitfire-development.jpg" alt="Supermarine Spitfire development" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Supermarine Spitfire, Britain's most iconic fighter aircraft, evolved from Schneider Trophy racing technology.</p>
+      <img src="/blog-images/hawker-hurricane-professional.jpg" alt="Hawker Hurricane - contemporary British fighter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Hawker Hurricane, a contemporary British fighter that served alongside the Spitfire during the Battle of Britain.</p>
     </div>
     
     <p>Reginald Joseph Mitchell, Supermarine's chief designer, brought his experience from designing the Schneider Trophy-winning S.6B to create an aircraft that would revolutionize fighter design. The Spitfire's development was driven by the urgent need for a modern fighter to counter the growing threat from Nazi Germany, but its roots lay in the high-speed racing technology that had dominated international aviation competitions in the 1920s and 1930s.</p>
@@ -25,8 +25,8 @@ const post = {
     <p>The key innovation that would carry over to the Spitfire was the elliptical wing design. This shape, refined through years of racing experience, provided the optimal balance of lift, drag, and structural efficiency. The elliptical wing would become the Spitfire's most distinctive feature and a key factor in its exceptional performance.</p>
 
     <div class="my-8">
-      <img src="/blog-images/supermarine-s6b-schneider-trophy.jpg" alt="Supermarine S6B Schneider Trophy winner" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Supermarine S6B that won the 1931 Schneider Trophy, establishing the aerodynamic principles that would influence Spitfire design.</p>
+      <img src="/blog-images/lucy-lady-houston.jpg" alt="Lady Lucy Houston - Schneider Trophy benefactor" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Lady Lucy Houston, whose funding saved Britain's Schneider Trophy program and influenced Spitfire development.</p>
     </div>
 
     <p>Mitchell's design philosophy emphasized clean aerodynamics and attention to detail. Every component of the Spitfire was carefully considered for its contribution to overall performance. The aircraft's streamlined fuselage, retractable undercarriage, and flush-riveted construction represented the latest advances in aircraft design technology.</p>
@@ -55,8 +55,8 @@ const post = {
     <p>Flight testing revealed both the Spitfire's strengths and areas for improvement. The aircraft's handling was superb, with excellent maneuverability and responsive controls. However, early versions suffered from some stability issues and the need for improved visibility from the cockpit. These issues would be addressed in subsequent development.</p>
 
     <div class="my-8">
-      <img src="/blog-images/supermarine-spitfire-development-evolution.jpg" alt="Supermarine Spitfire development evolution" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The evolution of Spitfire design through various marks, showing the continuous development and improvement of the aircraft.</p>
+      <img src="/blog-images/hawker-hurricane-formation-flight.jpg" alt="British fighter formation" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">British fighter formation showing the evolution of aircraft design and tactics during the Battle of Britain.</p>
     </div>
 
     <p>The Air Ministry was impressed with the Spitfire's performance and ordered 310 aircraft in June 1936. This was a significant commitment for an untested design, but the urgency of the international situation demanded rapid action. The order would prove to be one of the most important decisions in British aviation history.</p>
@@ -106,7 +106,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 15,
   featuredImage: {
-    url: '/blog-images/supermarine-spitfire-development-history.jpg',
+    url: '/blog-images/hawker-hurricane-professional.jpg',
     alt: 'Supermarine Spitfire: The Complete Development History',
     caption: 'Supermarine Spitfire: The Complete Development History - Expert analysis by Charles E. MacKay'
   },
