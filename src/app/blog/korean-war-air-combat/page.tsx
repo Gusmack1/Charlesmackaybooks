@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'korean-war-air-combat',
@@ -21,17 +22,7 @@ const post = {
       <p class="text-sm text-gray-600 mt-2 text-center italic">The epic jet fighter battles that defined air combat in the Korean War.</p>
     </div>
     
-    <div class="my-8">
-      <img src="/blog-images/korean-war-aviation.jpg" alt="Korean War aviation showing F-86 and MiG aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Korean War aviation operations, where jets replaced propeller aircraft as the dominant force in air combat.</p>
-    </div>
-    
     <p>This aerial confrontation between East and West introduced new tactical doctrines, technologies, and pilot training methods that would define air combat for the next half-century. The lessons learned over Korea directly influenced Cold War aviation development and established the principles of supersonic fighter design.</p>
-
-    <div class="my-8">
-      <img src="/blog-images/f86-vs-mig15-combat.jpg" alt="F-86 Sabre versus MiG-15 combat illustration" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The classic F-86 Sabre versus MiG-15 confrontation that defined Korean War air combat and established jet fighter tactics.</p>
-    </div>
 
     <p>Korean War air combat proved that jet fighters would dominate future conflicts and demonstrated the critical importance of pilot training, aircraft performance, and technological superiority in determining air superiority. The war's air battles became the testing ground for jet age tactics that continue to influence modern air warfare.</p>
 
@@ -108,7 +99,7 @@ const post = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  excerpt: `$2`,
+  excerpt: `The intense aerial battles of the Korean War that proved the effectiveness of jet fighters in modern warfare.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -119,34 +110,12 @@ const post = {
   readingTime: 12,
   featuredImage: {
     url: '/blog-images/korean-war-air-combat-featured.jpg',
-    alt: '$1',
-    caption: '$1 - Expert analysis by Charles E. MacKay'
+    alt: 'Korean War Air Combat: The Jet Age in Battle',
+    caption: 'Korean War Air Combat: The Jet Age in Battle - Expert analysis by Charles E. MacKay'
   },
   category: 'Aviation History',
   tags: ["korean","war","air","combat"],
-  relatedBooks: [
-  {
-    "id": "sabres-from-north",
-    "title": "Sabres from the North: The RCAF and the Korean War",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/sabres-from-north.jpg",
-    "price": 21.99
-  },
-  {
-    "id": "enemy-luftwaffe-1945",
-    "title": "Enemy in the Sky: The Luftwaffe in 1945",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/enemy-luftwaffe-1945.jpg",
-    "price": 23.99
-  },
-  {
-    "id": "sonic-to-standoff",
-    "title": "From Sonic to Standoff: The Evolution of Air Combat",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/sonic-to-standoff.jpg",
-    "price": 28.99
-  }
-],
+  relatedBooks: getBooksData(['sabres-from-north', 'enemy-luftwaffe-1945', 'sonic-to-standoff']),
   relatedPosts: []
 }
 

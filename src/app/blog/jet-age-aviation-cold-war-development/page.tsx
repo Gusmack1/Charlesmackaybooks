@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'jet-age-aviation-cold-war-development',
@@ -13,6 +14,11 @@ const post = {
 
     <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
 
+    <div class="my-8">
+      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning F6" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The English Electric Lightning F6, Britain's premier supersonic interceptor during the Cold War jet age.</p>
+    </div>
+
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
 
@@ -21,6 +27,11 @@ const post = {
     <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
 
     <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/me262-jet-fighter-historical.jpg" alt="Messerschmitt Me 262 jet fighter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Messerschmitt Me 262, the world's first operational jet fighter, which revolutionized aerial warfare during WWII.</p>
+    </div>
 
     <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
     <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
@@ -41,6 +52,11 @@ const post = {
     <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
 
     <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/f86-sabre-cold-war-fighter.jpg" alt="F-86 Sabre Cold War fighter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The North American F-86 Sabre, America's premier jet fighter during the Korean War and early Cold War period.</p>
+    </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>
     <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
@@ -102,7 +118,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["jet","age","aviation","cold","war","development","fighter"],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['sonic-to-standoff', 'me262-jet-fighter-revolution', 'f86-sabre-cold-war-fighter']),
   relatedPosts: []
 }
 
