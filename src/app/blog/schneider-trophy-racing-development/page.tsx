@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'schneider-trophy-racing-development',
@@ -98,7 +99,7 @@ const post = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  excerpt: `$2`,
+  excerpt: `The thrilling story of the Schneider Trophy races that pushed aviation technology to new heights and influenced military aircraft development.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -109,34 +110,12 @@ const post = {
   readingTime: 12,
   featuredImage: {
     url: '/blog-images/schneider-trophy-racing-development-featured.jpg',
-    alt: '$1',
-    caption: '$1 - Expert analysis by Charles E. MacKay'
+    alt: 'Schneider Trophy Racing: The Golden Age of Aviation Speed',
+    caption: 'Schneider Trophy Racing: The Golden Age of Aviation Speed - Expert analysis by Charles E. MacKay'
   },
   category: 'Aviation History',
   tags: ["schneider","trophy","racing","development"],
-  relatedBooks: [
-  {
-    "id": "mother-of-the-few",
-    "title": "Mother of the Few: The Story of the Spitfire",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/mother-of-the-few.jpg",
-    "price": 25.99
-  },
-  {
-    "id": "soaring-with-wings",
-    "title": "Soaring with Wings: The History of Gliding",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/soaring-with-wings.jpg",
-    "price": 18.99
-  },
-  {
-    "id": "british-aircraft-great-war",
-    "title": "British Aircraft of the Great War",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/british-aircraft-great-war.jpg",
-    "price": 22.99
-  }
-],
+  relatedBooks: getBooksData(['mother-of-the-few', 'soaring-with-wings', 'british-aircraft-great-war']),
   relatedPosts: []
 }
 

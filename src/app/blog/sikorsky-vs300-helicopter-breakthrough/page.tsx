@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'sikorsky-vs300-helicopter-breakthrough',
@@ -8,29 +9,11 @@ const post = {
   content: `
     <h2 id="introduction">Introduction: The Breakthrough That Defined Modern Helicopters</h2>
     <p>The Sikorsky VS-300 achieved what aviation pioneers had dreamed of for centuries - practical, controlled vertical flight. On September 14, 1939, Igor Sikorsky himself piloted this revolutionary aircraft on its first tethered flight, marking the beginning of the modern helicopter era and establishing the single-rotor configuration that would become the worldwide standard.</p>
-    <div class="my-8">
-      <img src="/blog-images/helicopter-development-timeline.jpg" alt="Helicopter development timeline" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The evolution of helicopter technology leading to the Sikorsky VS-300.</p>
-    </div>
-    <div class="my-8">
-      <img src="/blog-images/sycamore-seeds-helicopter-evolution.jpg" alt="Helicopter evolution diagram" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The progression from early rotorcraft to modern helicopter design.</p>
-    </div>
-    <div class="my-8">
-      <img src="/blog-images/bristol-sycamore.jpg" alt="Bristol Sycamore helicopter" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">British helicopter development that followed Sikorsky's pioneering work.</p>
-    </div>
-    
-    <div class="my-8">
-      <img src="/blog-images/cierva-autogyro-c4.jpg" alt="Cierva C.4 autogyro showing early rotorcraft development" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Cierva C.4 autogyro represented earlier rotorcraft development that influenced Sikorsky's helicopter design approach.</p>
-    </div>
-    
     <p>Unlike earlier helicopter attempts that struggled with control and stability, the VS-300's innovative single main rotor with anti-torque tail rotor configuration solved the fundamental problems that had plagued rotorcraft development. This breakthrough design established principles that remain standard in modern helicopter engineering.</p>
 
     <div class="my-8">
-      <img src="/blog-images/helicopter-development-timeline.jpg" alt="Timeline showing helicopter development milestones" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Helicopter development timeline showing the VS-300's pivotal role in achieving practical rotorcraft flight.</p>
+      <img src="/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg" alt="Sikorsky VS-300 helicopter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The revolutionary Sikorsky VS-300, the first practical helicopter that established the modern rotorcraft configuration.</p>
     </div>
 
     <p>The VS-300's success launched the modern helicopter industry and established Sikorsky Aircraft as the leading helicopter manufacturer. Its influence extended far beyond aviation, revolutionizing rescue operations, medical transport, military tactics, and countless civilian applications that define the helicopter's role in modern society.</p>
@@ -43,6 +26,11 @@ const post = {
     <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
 
     <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/cierva-autogyro-c4.jpg" alt="Cierva C.4 autogyro" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Cierva C.4 autogyro represented earlier rotorcraft development that influenced Sikorsky's helicopter design approach.</p>
+    </div>
 
     <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
     <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
@@ -63,6 +51,11 @@ const post = {
     <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
 
     <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/bristol-sycamore.jpg" alt="Bristol Sycamore helicopter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">British helicopter development that followed Sikorsky's pioneering work, including the Bristol Sycamore.</p>
+    </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>
     <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
@@ -108,7 +101,7 @@ const post = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  excerpt: `$2`,
+  excerpt: `The revolutionary Sikorsky VS-300 that established the modern helicopter configuration and changed aviation forever.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -119,34 +112,12 @@ const post = {
   readingTime: 12,
   featuredImage: {
     url: '/blog-images/sikorsky-vs300-helicopter-breakthrough-featured.jpg',
-    alt: '$1',
-    caption: '$1 - Expert analysis by Charles E. MacKay'
+    alt: 'Sikorsky VS-300: The Helicopter Breakthrough',
+    caption: 'Sikorsky VS-300: The Helicopter Breakthrough - Expert analysis by Charles E. MacKay'
   },
   category: 'Aviation History',
   tags: ["sikorsky","vs300","helicopter","breakthrough"],
-  relatedBooks: [
-  {
-    "id": "sycamore-seeds",
-    "title": "Sycamore Seeds: The Evolution of the Helicopter",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/sycamore-seeds.jpg",
-    "price": 19.99
-  },
-  {
-    "id": "captain-eric-brown",
-    "title": "Captain Eric Brown: The World's Greatest Test Pilot",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/captain-eric-brown.jpg",
-    "price": 24.99
-  },
-  {
-    "id": "british-aircraft-great-war",
-    "title": "British Aircraft of the Great War",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/british-aircraft-great-war.jpg",
-    "price": 22.99
-  }
-],
+  relatedBooks: getBooksData(['sycamore-seeds', 'captain-eric-brown', 'british-aircraft-great-war']),
   relatedPosts: []
 }
 
