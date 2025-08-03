@@ -56,7 +56,7 @@ export default function Home() {
       <section className="py-12 bg-gray-100" id="books">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4 text-blue-800">
               📚 Aviation History Books - Ready to Ship
             </h2>
             <p className="text-center text-gray-600 mb-4">

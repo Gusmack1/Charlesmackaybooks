@@ -171,7 +171,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-GB" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en-GB" className={`${inter.variable} ${playfair.variable} font-sans`}>
       <head>
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
