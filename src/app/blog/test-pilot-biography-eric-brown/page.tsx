@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'test-pilot-biography-eric-brown',
@@ -120,15 +121,7 @@ const post = {
   },
   category: 'Test Pilot Biography',
   tags: ["eric","brown","test","pilot","carrier","aviation","flight","testing"],
-  relatedBooks: [
-    {
-      id: 'captain-eric-brown',
-      title: 'Captain Eric Brown',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/captain-eric-brown.jpg',
-      price: 22.99
-    }
-  ],
+  relatedBooks: getBooksData(['captain-eric-brown', 'british-aircraft-great-war', 'supermarine-spitfire-development']),
   relatedPosts: []
 }
 
