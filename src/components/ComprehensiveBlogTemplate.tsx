@@ -74,7 +74,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 blog-page">
       {/* Reading Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
         <div 

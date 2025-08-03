@@ -208,7 +208,7 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/playfair-display-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <ClientBody>
-        <Header />
+        <div className="header-container"><Header /></div>
         <main className="min-h-screen">
           {children}
         </main>

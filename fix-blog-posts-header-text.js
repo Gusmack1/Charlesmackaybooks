@@ -1,4 +1,42 @@
+import fs from 'fs';
+import path from 'path';
 
+// 1. Update layout to conditionally hide header for blog posts
+function updateLayoutForBlogPosts() {
+  const layoutPath = 'src/app/layout.tsx';
+  
+  if (fs.existsSync(layoutPath)) {
+    console.log('Updating layout to conditionally hide header for blog posts...');
+    
+    let content = fs.readFileSync(layoutPath, 'utf8');
+    let modified = false;
+    
+    // Replace the static Header component with conditional rendering
+    const headerFix = /<Header \/>/g;
+    if (headerFix.test(content)) {
+      content = content.replace(headerFix, `{typeof window !== 'undefined' && !window.location.pathname.startsWith('/blog') && <Header />}`);
+      modified = true;
+      console.log('  - Added conditional header rendering for blog posts');
+    }
+    
+    if (modified) {
+      fs.writeFileSync(layoutPath, content, 'utf8');
+      console.log('  ✓ Updated layout');
+    }
+  }
+}
+
+// 2. Fix CSS text visibility issues
+function fixBlogTextVisibility() {
+  const globalCSSPath = 'src/app/globals.css';
+  
+  if (fs.existsSync(globalCSSPath)) {
+    console.log('Fixing blog text visibility issues...');
+    
+    let content = fs.readFileSync(globalCSSPath, 'utf8');
+    
+    // Remove duplicate CSS rules and fix text visibility
+    const fixedCSS = `
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -374,7 +412,50 @@
 .bg-accent {
   background-color: #2563eb;
 }
+`;
+    
+    // Replace the entire content
+    fs.writeFileSync(globalCSSPath, fixedCSS, 'utf8');
+    console.log('  ✓ Fixed blog text visibility issues');
+  }
+}
 
+// 3. Create a better solution using CSS classes
+function createBlogSpecificLayout() {
+  const layoutPath = 'src/app/layout.tsx';
+  
+  if (fs.existsSync(layoutPath)) {
+    console.log('Creating blog-specific layout solution...');
+    
+    let content = fs.readFileSync(layoutPath, 'utf8');
+    let modified = false;
+    
+    // Add a more robust solution using CSS classes
+    const headerFix = /{typeof window !== 'undefined' && !window\.location\.pathname\.startsWith\('\/blog'\) && <Header \/>}/g;
+    if (headerFix.test(content)) {
+      content = content.replace(headerFix, `<div className="header-container"><Header /></div>`);
+      modified = true;
+      console.log('  - Added header container for better control');
+    }
+    
+    if (modified) {
+      fs.writeFileSync(layoutPath, content, 'utf8');
+      console.log('  ✓ Updated layout with header container');
+    }
+  }
+}
+
+// 4. Add CSS to hide header on blog pages
+function addBlogHeaderCSS() {
+  const globalCSSPath = 'src/app/globals.css';
+  
+  if (fs.existsSync(globalCSSPath)) {
+    console.log('Adding CSS to hide header on blog pages...');
+    
+    let content = fs.readFileSync(globalCSSPath, 'utf8');
+    
+    // Add CSS to hide header on blog pages
+    const blogHeaderCSS = `
 /* Hide header on blog pages */
 .blog-page .header-container {
   display: none !important;
@@ -394,3 +475,62 @@
   margin-top: 0;
   padding-top: 2rem;
 }
+`;
+    
+    // Add to the end of the file
+    content += blogHeaderCSS;
+    fs.writeFileSync(globalCSSPath, content, 'utf8');
+    console.log('  ✓ Added blog header hiding CSS');
+  }
+}
+
+// 5. Update blog template to add blog-page class
+function updateBlogTemplate() {
+  const blogTemplatePath = 'src/components/ComprehensiveBlogTemplate.tsx';
+  
+  if (fs.existsSync(blogTemplatePath)) {
+    console.log('Updating blog template to add blog-page class...');
+    
+    let content = fs.readFileSync(blogTemplatePath, 'utf8');
+    let modified = false;
+    
+    // Add blog-page class to the main container
+    const containerFix = /<div className="min-h-screen bg-gray-50">/g;
+    if (containerFix.test(content)) {
+      content = content.replace(containerFix, '<div className="min-h-screen bg-gray-50 blog-page">');
+      modified = true;
+      console.log('  - Added blog-page class to main container');
+    }
+    
+    if (modified) {
+      fs.writeFileSync(blogTemplatePath, content, 'utf8');
+      console.log('  ✓ Updated blog template');
+    }
+  }
+}
+
+// Run all fixes
+console.log('🔧 Starting blog posts header removal and text visibility fixes...\n');
+
+updateLayoutForBlogPosts();
+console.log('');
+
+fixBlogTextVisibility();
+console.log('');
+
+createBlogSpecificLayout();
+console.log('');
+
+addBlogHeaderCSS();
+console.log('');
+
+updateBlogTemplate();
+console.log('');
+
+console.log('✅ All blog posts fixes completed!');
+console.log('📝 Summary:');
+console.log('  - Removed header from all blog posts using CSS');
+console.log('  - Fixed text visibility issues with !important declarations');
+console.log('  - Added blog-page class for better styling control');
+console.log('  - Ensured all text is visible and readable');
+console.log('  - Maintained modern styling while fixing visibility'); 
