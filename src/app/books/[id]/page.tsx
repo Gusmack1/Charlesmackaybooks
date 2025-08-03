@@ -73,11 +73,11 @@ function getCategoryAccentClasses(category: string): {
       linkHover: 'hover:text-purple-100'
     },
     'Helicopter History': {
-      textLight: 'text-green-300',
+      textLight: 'text-green-200',
       textDark: 'text-green-700',
       bg: 'bg-green-600',
       badge: 'bg-green-600',
-      link: 'text-green-300',
+      link: 'text-green-200',
       linkHover: 'hover:text-green-100'
     },
     'Jet Age Aviation': {
@@ -430,7 +430,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
         {/* Hero Section */}
         <div className={`relative bg-gradient-to-br ${gradientClass} text-white`}>
-          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
           <div className="relative max-w-7xl mx-auto px-6 py-20">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Book Cover */}
@@ -470,7 +470,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                   {book.title}
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+                <p className="text-xl text-gray-100 mb-8 leading-relaxed">
                   {book.description}
                 </p>
 
@@ -490,7 +490,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className={`text-sm ${accentClasses.textLight} mb-1`}>Condition</div>
-                    <div className="text-2xl font-bold text-green-300">{book.condition}</div>
+                    <div className="text-2xl font-bold text-green-200">{book.condition}</div>
                   </div>
                 </div>
 

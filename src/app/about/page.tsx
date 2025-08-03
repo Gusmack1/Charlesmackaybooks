@@ -146,25 +146,25 @@ export default function AboutPage() {
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                 About Charles E. MacKay
               </h1>
-              <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-100 mb-8 leading-relaxed">
                 Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history. With 19 published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8 text-center">
                 <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-300 mb-1">Published Books</div>
+                  <div className="text-sm text-blue-200 mb-1">Published Books</div>
                   <div className="text-2xl font-bold">19</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-300 mb-1">Years Research</div>
+                  <div className="text-sm text-blue-200 mb-1">Years Research</div>
                   <div className="text-2xl font-bold">25+</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-300 mb-1">Specialty</div>
+                  <div className="text-sm text-blue-200 mb-1">Specialty</div>
                   <div className="text-lg font-semibold">Scottish Aviation</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-300 mb-1">Location</div>
+                  <div className="text-sm text-blue-200 mb-1">Location</div>
                   <div className="text-lg font-semibold">Glasgow, Scotland</div>
                 </div>
               </div>
@@ -178,7 +178,7 @@ export default function AboutPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="border border-blue-400 text-blue-300 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 hover:text-blue-800 transition-colors text-center"
+                  className="border border-blue-400 text-blue-200 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 hover:text-blue-800 transition-colors text-center"
                 >
                   Contact Author
                 </Link>

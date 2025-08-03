@@ -64,7 +64,7 @@ export default function ContactPage() {
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Contact Charles E. MacKay
             </h1>
-            <p className="text-xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto">
               Get in touch for academic collaboration, research inquiries, bulk book orders, or historical consultancy services.
             </p>
           </div>
@@ -253,7 +253,7 @@ export default function ContactPage() {
             </a>
             <Link
               href="/books"
-              className="border border-blue-400 text-blue-300 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 hover:text-blue-800 transition-colors"
+              className="border border-blue-400 text-blue-200 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 hover:text-blue-800 transition-colors"
             >
               📚 Browse Books
             </Link>

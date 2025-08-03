@@ -132,7 +132,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         {post.featuredImage?.url && (
           <div className="absolute inset-0">
             <Image
@@ -151,7 +151,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                 📚 {post.category}
               </span>
-              <div className="flex justify-center items-center gap-4 mt-4 text-blue-200 text-sm">
+              <div className="flex justify-center items-center gap-4 mt-4 text-blue-100 text-sm">
                 <span>By {post.author.name}</span>
                 <span>•</span>
                 <span>📖 {post.readingTime} min read</span>
@@ -164,12 +164,12 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               {post.title}
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
               {post.subtitle}
             </p>
 
             {/* Reading Stats */}
-            <div className="flex justify-center items-center gap-6 text-sm text-blue-200">
+            <div className="flex justify-center items-center gap-6 text-sm text-blue-100">
               <span>⭐ Expert Analysis</span>
               <span>📖 {post.readingTime} min read</span>
               <span>🎯 2000+ words</span>

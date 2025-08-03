@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function HeroSection() {
   return (
     <section className="relative bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-12">
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
       <div className="relative container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Content Side */}
@@ -13,29 +13,29 @@ export default function HeroSection() {
 
             <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
               Authentic Aviation
-              <span className="block text-blue-300">History Books</span>
+              <span className="block text-blue-200">History Books</span>
             </h1>
-            <p className="text-lg text-gray-200 mb-3 leading-relaxed">
+            <p className="text-lg text-gray-100 mb-3 leading-relaxed">
               Published by renowned aviation historian Charles E. MacKay.{' '}
-              <strong className="text-blue-300">Used as primary references by aviation researchers worldwide.</strong>
+              <strong className="text-blue-200">Used as primary references by aviation researchers worldwide.</strong>
             </p>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-200 mb-6">
               Specializing in Scottish aviation heritage, World War aircraft, and military aviation history.
             </p>
 
             {/* Trust Indicators */}
             <div className="grid grid-cols-3 gap-3 mb-6">
               <div className="text-center">
-                <div className="text-xl font-bold text-green-300">1,700+</div>
-                <div className="text-xs text-gray-300">Customers</div>
+                <div className="text-xl font-bold text-green-200">1,700+</div>
+                <div className="text-xs text-gray-200">Customers</div>
               </div>
               <div className="text-center">
-                <div className="text-sm font-bold text-green-300">Academic</div>
-                <div className="text-xs text-gray-300">References</div>
+                <div className="text-sm font-bold text-green-200">Academic</div>
+                <div className="text-xs text-gray-200">References</div>
               </div>
               <div className="text-center">
-                <div className="text-sm font-bold text-green-300">Worldwide</div>
-                <div className="text-xs text-gray-300">Shipping</div>
+                <div className="text-sm font-bold text-green-200">Worldwide</div>
+                <div className="text-xs text-gray-200">Shipping</div>
               </div>
             </div>
 
