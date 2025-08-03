@@ -6,8 +6,9 @@ import Image from 'next/image'
 
 export default function CartSidebar() {
   const {
-    cartItems,
+    items,
     removeFromCart,
+    updateQuantity,
     getTotal,
     getTotalItems,
     isCartOpen,
@@ -46,7 +47,7 @@ export default function CartSidebar() {
 
           {/* Content */}
           <div className="flex-1 overflow-y-auto px-6 py-4">
-            {cartItems.length === 0 ? (
+            {items.length === 0 ? (
               <div className="flex h-full flex-col items-center justify-center text-gray-500">
                 <ShoppingBag className="h-12 w-12 mb-4" />
                 <p className="text-lg font-medium">Your basket is empty</p>
@@ -54,27 +55,45 @@ export default function CartSidebar() {
               </div>
             ) : (
               <div className="space-y-4">
-                {cartItems.map((item) => (
-                  <div key={item.id} className="flex gap-4 border-b pb-4">
+                {items.map((item) => (
+                  <div key={item.book.id} className="flex gap-4 border-b pb-4">
                     <Image
-                      src={item.imageUrl || '/book-covers/placeholder.jpg'}
-                      alt={item.title}
+                      src={item.book.imageUrl || '/book-covers/placeholder.jpg'}
+                      alt={item.book.title}
                       width={60}
                       height={90}
                       className="rounded object-cover"
                     />
                     <div className="flex-1">
-                      <h3 className="font-medium text-sm">{item.title}</h3>
+                      <h3 className="font-medium text-sm">{item.book.title}</h3>
                       <p className="text-xs text-gray-600">by Charles E. MacKay</p>
-                      <div className="flex items-center justify-between mt-2">
-                        <span className="font-semibold text-green-600">£{item.price}</span>
+                      <p className="text-xs text-gray-500">{item.book.condition} condition</p>
+                      
+                      {/* Quantity Controls */}
+                      <div className="flex items-center gap-2 mt-2">
                         <button
-                          onClick={() => removeFromCart(item.id)}
-                          className="text-red-500 hover:text-red-700 text-sm"
+                          onClick={() => updateQuantity(item.book.id, item.quantity - 1)}
+                          className="w-6 h-6 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 text-sm"
+                          disabled={item.quantity <= 1}
                         >
-                          Remove
+                          -
                         </button>
+                        <span className="text-sm font-medium w-8 text-center">{item.quantity}</span>
+                        <button
+                          onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
+                          className="w-6 h-6 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 text-sm"
+                        >
+                          +
+                        </button>
+                        <span className="font-semibold text-green-600 ml-auto">£{item.book.price.toFixed(2)}</span>
                       </div>
+                      
+                      <button
+                        onClick={() => removeFromCart(item.book.id)}
+                        className="text-red-500 hover:text-red-700 text-xs mt-1"
+                      >
+                        Remove
+                      </button>
                     </div>
                   </div>
                 ))}
@@ -83,7 +102,7 @@ export default function CartSidebar() {
           </div>
 
           {/* Footer */}
-          {cartItems.length > 0 && (
+          {items.length > 0 && (
             <div className="border-t px-6 py-4">
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
