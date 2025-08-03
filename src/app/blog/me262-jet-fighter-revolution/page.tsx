@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'me262-jet-fighter-revolution',
@@ -8,25 +9,12 @@ const post = {
   content: `
     <h2 id="introduction">Introduction: The World's First Operational Jet Fighter</h2>
     <p>The Messerschmitt Me 262 stands as one of aviation history's most revolutionary aircraft - the world's first operational jet fighter that fundamentally changed the nature of air combat. First flying in 1942 and entering service in 1944, the Me 262 introduced jet propulsion to military aviation and established design principles that would influence fighter development for decades to come.</p>
+    <p>Despite entering the war too late and in insufficient numbers to alter Germany's fate, the Me 262's technological superiority demonstrated the immense potential of jet propulsion. With a top speed of 540 mph - nearly 100 mph faster than the fastest Allied fighters - the Me 262 could outrun and outclimb any piston-engine aircraft, fundamentally changing the tactical equation of aerial combat.</p>
+
     <div class="my-8">
       <img src="/blog-images/me262-jet-fighter-historical.jpg" alt="Messerschmitt Me 262 jet fighter" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm text-gray-600 mt-2 text-center italic">The revolutionary Messerschmitt Me 262, the world's first operational jet fighter.</p>
     </div>
-    <div class="my-8">
-      <img src="/blog-images/me262-luftwaffe-historical.jpg" alt="Me 262 in Luftwaffe service" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Me 262 aircraft in Luftwaffe service during the final months of World War II.</p>
-    </div>
-    <div class="my-8">
-      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Post-war jet fighters that evolved from the Me 262's revolutionary design.</p>
-    </div>
-    
-    <div class="my-8">
-      <img src="/blog-images/me262-jet-fighter-historical.jpg" alt="Messerschmitt Me 262 jet fighter in historical photograph" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Messerschmitt Me 262, showing its advanced swept-wing design and revolutionary twin-jet configuration that made it 100 mph faster than any Allied fighter.</p>
-    </div>
-    
-    <p>Despite entering the war too late and in insufficient numbers to alter Germany's fate, the Me 262's technological superiority demonstrated the immense potential of jet propulsion. With a top speed of 540 mph - nearly 100 mph faster than the fastest Allied fighters - the Me 262 could outrun and outclimb any piston-engine aircraft, fundamentally changing the tactical equation of aerial combat.</p>
 
     <p>The Me 262's development story encompasses advanced German engineering, wartime resource constraints, and strategic decisions that ultimately limited its impact. However, its technological legacy profoundly influenced post-war jet development in both East and West, establishing the foundation for the jet age that followed.</p>
 
@@ -38,6 +26,11 @@ const post = {
     <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
 
     <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/me262-luftwaffe-historical.jpg" alt="Me 262 in Luftwaffe service" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Me 262 aircraft in Luftwaffe service during the final months of World War II.</p>
+    </div>
 
     <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
     <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
@@ -58,6 +51,11 @@ const post = {
     <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
 
     <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Post-war jet fighters that evolved from the Me 262's revolutionary design principles.</p>
+    </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>
     <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
@@ -103,7 +101,7 @@ const post = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  excerpt: `$2`,
+  excerpt: `The revolutionary Messerschmitt Me 262 that introduced the jet age to aerial combat and changed warfare forever.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -114,34 +112,12 @@ const post = {
   readingTime: 12,
   featuredImage: {
     url: '/blog-images/me262-jet-fighter-revolution-featured.jpg',
-    alt: '$1',
-    caption: '$1 - Expert analysis by Charles E. MacKay'
+    alt: 'Me 262: The Jet Fighter Revolution',
+    caption: 'Me 262: The Jet Fighter Revolution - Expert analysis by Charles E. MacKay'
   },
   category: 'Aviation History',
   tags: ["me262","jet","fighter","revolution"],
-  relatedBooks: [
-  {
-    "id": "enemy-luftwaffe-1945",
-    "title": "Enemy in the Sky: The Luftwaffe in 1945",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/enemy-luftwaffe-1945.jpg",
-    "price": 23.99
-  },
-  {
-    "id": "german-aircraft-great-war",
-    "title": "German Aircraft of the Great War",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/german-aircraft-great-war.jpg",
-    "price": 22.99
-  },
-  {
-    "id": "sonic-to-standoff",
-    "title": "From Sonic to Standoff: The Evolution of Air Combat",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/sonic-to-standoff.jpg",
-    "price": 28.99
-  }
-],
+  relatedBooks: getBooksData(['enemy-luftwaffe-1945', 'german-aircraft-great-war', 'sonic-to-standoff']),
   relatedPosts: []
 }
 

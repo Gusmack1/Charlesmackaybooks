@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'rotorcraft-military-applications',
@@ -13,6 +14,11 @@ const post = {
 
     <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
 
+    <div class="my-8">
+      <img src="/blog-images/bristol-sycamore.jpg" alt="Bristol Sycamore helicopter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Bristol Sycamore, Britain's first helicopter to enter military service, which pioneered military rotorcraft operations.</p>
+    </div>
+
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
 
@@ -21,6 +27,11 @@ const post = {
     <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
 
     <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg" alt="Sikorsky VS300 helicopter breakthrough" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Sikorsky VS300, the breakthrough helicopter that established modern rotorcraft design principles for military applications.</p>
+    </div>
 
     <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
     <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
@@ -41,6 +52,11 @@ const post = {
     <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
 
     <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/bristol-sycamore-formation.jpg" alt="Bristol Sycamore formation" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Military helicopter formations demonstrating the evolution of rotorcraft tactics and operational procedures.</p>
+    </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>
     <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
@@ -102,7 +118,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["rotorcraft","military","applications","helicopter","korea"],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['sycamore-seeds', 'sikorsky-vs300', 'helicopter-development-pioneers']),
   relatedPosts: []
 }
 
