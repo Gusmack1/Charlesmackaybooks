@@ -561,3 +561,54 @@
     color: #e5e7eb;
   }
 } 
+/* Explicit text color overrides for blog content */
+.blog-content {
+  color: #111827 !important;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  color: #111827 !important;
+}
+
+.blog-content p {
+  color: #374151 !important;
+}
+
+.blog-content li {
+  color: #374151 !important;
+}
+
+.blog-content blockquote {
+  color: #6b7280 !important;
+}
+
+/* Ensure prose classes don't override our colors */
+.prose.blog-content {
+  color: #111827 !important;
+}
+
+.prose.blog-content h1,
+.prose.blog-content h2,
+.prose.blog-content h3,
+.prose.blog-content h4,
+.prose.blog-content h5,
+.prose.blog-content h6 {
+  color: #111827 !important;
+}
+
+.prose.blog-content p {
+  color: #374151 !important;
+}
+
+.prose.blog-content li {
+  color: #374151 !important;
+}
+
+.prose.blog-content blockquote {
+  color: #6b7280 !important;
+}

@@ -4,8 +4,6 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { books } from '@/data/books';
 import { Book } from '@/types/book';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import BookDetailClient from '@/components/BookDetailClient';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookSEOContent from '@/components/BookSEOContent';
@@ -429,7 +427,6 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       <BookAnalytics book={book} />
 
       <div className="min-h-screen bg-slate-50">
-        <Header />
 
         {/* Hero Section */}
         <div className={`relative bg-gradient-to-br ${gradientClass} text-white`}>
@@ -724,7 +721,6 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           </div>
         </main>
 
-        <Footer />
         <MobileFooterNav />
       </div>
     </>

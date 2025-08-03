@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
-
 export const metadata: Metadata = {
   title: 'Contact Charles E. MacKay - Aviation Historian & Author | Charles E. MacKay Aviation Books',
   description: 'Contact Charles E. MacKay for academic collaboration, research inquiries, bulk book orders, or historical consultancy. Based in Glasgow, Scotland.',
@@ -57,8 +55,6 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-
-      <Header />
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">

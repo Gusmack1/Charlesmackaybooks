@@ -164,7 +164,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               {post.title}
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed max-w-3xl mx-auto">
               {post.subtitle}
             </p>
 
@@ -181,7 +181,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-6 py-16">
-        <article className="prose prose-lg max-w-none">
+        <article className="prose prose-lg max-w-none text-gray-900">
           {/* Featured Image Caption */}
           {post.featuredImage?.caption && (
             <div className="text-center mb-8">
@@ -193,7 +193,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
           {/* Article Content */}
           <div 
-            className="blog-content"
+            className="blog-content text-gray-900"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </article>

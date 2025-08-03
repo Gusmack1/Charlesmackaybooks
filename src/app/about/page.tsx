@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
-
 export const metadata: Metadata = {
   title: 'About Charles E. MacKay - Aviation Historian & Author | Charles E. MacKay Aviation Books',
   description: 'Meet Charles E. MacKay, renowned aviation historian specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history. Based in Glasgow, Scotland.',
@@ -93,8 +91,6 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-
-      <Header />
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
