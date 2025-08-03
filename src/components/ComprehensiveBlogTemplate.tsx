@@ -160,16 +160,16 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
               {post.title}
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed max-w-3xl mx-auto">
               {post.subtitle}
             </p>
 
             {/* Reading Stats */}
-            <div className="flex justify-center items-center gap-6 text-sm text-blue-100">
+            <div className="flex justify-center items-center gap-6 text-sm text-white">
               <span>⭐ Expert Analysis</span>
               <span>📖 {post.readingTime} min read</span>
               <span>🎯 2000+ words</span>

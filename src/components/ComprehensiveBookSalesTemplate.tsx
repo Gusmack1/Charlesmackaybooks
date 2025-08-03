@@ -114,9 +114,9 @@ export default function ComprehensiveBookSalesTemplate({
                 {book.title}
               </h1>
               
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                {book.description}
-              </p>
+                          <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+              {book.description}
+            </p>
               
               <div className="flex flex-wrap items-center gap-4 text-sm text-blue-200 mb-8">
                 <span>By Charles E. MacKay</span>

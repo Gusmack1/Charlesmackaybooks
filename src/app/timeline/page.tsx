@@ -431,7 +431,7 @@ export default function AviationTimelinePage() {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-white mb-12 leading-relaxed max-w-4xl mx-auto">
               Journey through aviation history with <strong>Charles E. MacKay's acclaimed book collection</strong>.
               From Scottish pioneers to jet-age warriors, discover the untold stories that shaped modern flight.
             </p>

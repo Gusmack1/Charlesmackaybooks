@@ -128,7 +128,7 @@ export default function GreatWarPage() {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-white mb-12 leading-relaxed max-w-4xl mx-auto">
               Four years that revolutionized aviation forever. From reconnaissance scouts to deadly fighters,
               discover how the Great War transformed aircraft into weapons of war and created modern air power.
             </p>

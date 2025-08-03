@@ -364,7 +364,7 @@ export default function BlogPage() {
               Aviation History Blog
               <span className="block text-blue-300 text-3xl md:text-4xl mt-2">Expert Insights & Heritage</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
               Expert insights into Scottish aviation history, WWI & WWII aircraft, helicopter development,
               jet age aviation, and military aviation heritage.
             </p>

@@ -108,7 +108,7 @@ export default function PioneerEraPage() {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-white mb-12 leading-relaxed max-w-4xl mx-auto">
               The extraordinary two decades when human flight transformed from impossible dream to reality.
               Discover the visionaries, experiments, and breakthroughs that launched the aviation age.
             </p>

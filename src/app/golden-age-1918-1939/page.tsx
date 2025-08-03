@@ -136,7 +136,7 @@ export default function GoldenAgePage() {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-white mb-12 leading-relaxed max-w-4xl mx-auto">
               The remarkable era when aviation blossomed from military necessity to commercial reality.
               Discover how airlines, racing, and innovation flourished between the Great War and World War II.
             </p>

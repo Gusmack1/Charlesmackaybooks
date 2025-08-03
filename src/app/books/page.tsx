@@ -56,7 +56,7 @@ export default function BooksPage() {
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
             Aviation History Books Collection
           </h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
             Discover {books.length} authoritative aviation history books by renowned historian Charles E. MacKay.
             From WWI fighters to modern jets, Scottish aviation heritage to global military aviation.
           </p>

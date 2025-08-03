@@ -11,31 +11,31 @@ export default function HeroSection() {
           <div>
 
 
-            <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+            <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight text-white">
               Authentic Aviation
-              <span className="block text-blue-200">History Books</span>
+              <span className="block text-white">History Books</span>
             </h1>
-            <p className="text-lg text-gray-100 mb-3 leading-relaxed">
+            <p className="text-lg text-white mb-3 leading-relaxed">
               Published by renowned aviation historian Charles E. MacKay.{' '}
-              <strong className="text-blue-200">Used as primary references by aviation researchers worldwide.</strong>
+              <strong className="text-white">Used as primary references by aviation researchers worldwide.</strong>
             </p>
-            <p className="text-gray-200 mb-6">
+            <p className="text-white mb-6">
               Specializing in Scottish aviation heritage, World War aircraft, and military aviation history.
             </p>
 
             {/* Trust Indicators */}
             <div className="grid grid-cols-3 gap-3 mb-6">
               <div className="text-center">
-                <div className="text-xl font-bold text-green-200">1,700+</div>
-                <div className="text-xs text-gray-200">Customers</div>
+                <div className="text-xl font-bold text-white">1,700+</div>
+                <div className="text-xs text-white">Customers</div>
               </div>
               <div className="text-center">
-                <div className="text-sm font-bold text-green-200">Academic</div>
-                <div className="text-xs text-gray-200">References</div>
+                <div className="text-sm font-bold text-white">Academic</div>
+                <div className="text-xs text-white">References</div>
               </div>
               <div className="text-center">
-                <div className="text-sm font-bold text-green-200">Worldwide</div>
-                <div className="text-xs text-gray-200">Shipping</div>
+                <div className="text-sm font-bold text-white">Worldwide</div>
+                <div className="text-xs text-white">Shipping</div>
               </div>
             </div>
 
