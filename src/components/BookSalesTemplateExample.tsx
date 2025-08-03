@@ -204,7 +204,6 @@ const BookSalesTemplateExample: FC = () => {
 
   return (
     <div>
-      <Header />
       <BookSalesTemplate
         book={bookData}
         relatedBooks={relatedBooks}

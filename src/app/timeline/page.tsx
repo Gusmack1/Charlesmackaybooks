@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { books } from '@/data/books'
 
@@ -405,7 +404,6 @@ const timelineEras = [
 export default function AviationTimelinePage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
 
       {/* Epic Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">

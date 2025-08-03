@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SocialShare from '@/components/SocialShare'
 import UnifiedSchema from '@/components/UnifiedSchema'
@@ -89,7 +88,6 @@ export default function PioneerEraPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
-      <Header />
 
       <UnifiedSchema
         pageType="page"

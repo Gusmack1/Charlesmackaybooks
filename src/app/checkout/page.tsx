@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useCart } from '@/context/CartContext';
-import Header from '@/components/Header';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -164,8 +163,6 @@ export default function CheckoutPage() {
   if (items.length === 0) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <Header />
-
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
@@ -190,8 +187,6 @@ export default function CheckoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           {/* Progress Bar */}

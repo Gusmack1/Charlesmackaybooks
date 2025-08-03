@@ -143,7 +143,7 @@ export default function AIPromptSystemPage() {
           <div className="space-y-8">
             {/* System Status */}
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4">System Status</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-900">System Status</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {features.map(feature => {
                   const Icon = feature.icon;
@@ -152,7 +152,7 @@ export default function AIPromptSystemPage() {
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center">
                           <Icon className="w-5 h-5 mr-2 text-blue-600" />
-                          <h3 className="font-medium">{feature.title}</h3>
+                          <h3 className="font-medium text-gray-900">{feature.title}</h3>
                         </div>
                         {feature.status ? (
                           <CheckCircle className="w-5 h-5 text-green-500" />
@@ -176,7 +176,7 @@ export default function AIPromptSystemPage() {
 
             {/* Performance Metrics */}
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4">Performance Metrics</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-900">Performance Metrics</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-600">{metrics.performance}</div>
@@ -199,12 +199,12 @@ export default function AIPromptSystemPage() {
 
             {/* Implementation Timeline */}
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4">Implementation Timeline</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-900">Implementation Timeline</h2>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <div className="font-medium">Phase 1: Foundation (Weeks 1-2)</div>
+                    <div className="font-medium text-gray-900">Phase 1: Foundation (Weeks 1-2)</div>
                     <div className="text-sm text-gray-600">Responsive design system, base templates, image optimization</div>
                   </div>
                   <CheckCircle className="w-5 h-5 text-green-500" />
@@ -212,7 +212,7 @@ export default function AIPromptSystemPage() {
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <div className="font-medium">Phase 2: E-commerce Integration (Weeks 3-4)</div>
+                    <div className="font-medium text-gray-900">Phase 2: E-commerce Integration (Weeks 3-4)</div>
                     <div className="text-sm text-gray-600">Shopping cart, payment processing, order management</div>
                   </div>
                   <CheckCircle className="w-5 h-5 text-green-500" />
@@ -220,7 +220,7 @@ export default function AIPromptSystemPage() {
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <div className="font-medium">Phase 3: Content & SEO (Weeks 5-6)</div>
+                    <div className="font-medium text-gray-900">Phase 3: Content & SEO (Weeks 5-6)</div>
                     <div className="text-sm text-gray-600">Cross-linking architecture, SEO optimization, analytics</div>
                   </div>
                   <Clock className="w-5 h-5 text-blue-500" />
@@ -228,7 +228,7 @@ export default function AIPromptSystemPage() {
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-gray-300 rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <div className="font-medium">Phase 4: Testing & Launch (Weeks 7-8)</div>
+                    <div className="font-medium text-gray-900">Phase 4: Testing & Launch (Weeks 7-8)</div>
                     <div className="text-sm text-gray-600">QA testing, accessibility audits, production deployment</div>
                   </div>
                   <div className="w-5 h-5"></div>
@@ -241,18 +241,18 @@ export default function AIPromptSystemPage() {
         {activeTab === 'ecommerce' && (
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4">Advanced E-commerce Features</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-900">Advanced E-commerce Features</h2>
               <div className="space-y-4">
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">Ajax Cart Updates</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">Ajax Cart Updates</h3>
                   <p className="text-sm text-gray-600">Real-time cart modifications without page reload</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">Personalization Engine</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">Personalization Engine</h3>
                   <p className="text-sm text-gray-600">Track browsing history and display recently viewed books</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">Inventory Management</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">Inventory Management</h3>
                   <p className="text-sm text-gray-600">Real-time stock status and low stock alerts</p>
                 </div>
               </div>
@@ -263,18 +263,18 @@ export default function AIPromptSystemPage() {
         {activeTab === 'crosslinking' && (
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4">Cross-Linking Architecture</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-900">Cross-Linking Architecture</h2>
               <div className="space-y-4">
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">Topic Modeling</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">Topic Modeling</h3>
                   <p className="text-sm text-gray-600">Intelligent content relationships and keyword extraction</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">Dynamic Linking</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">Dynamic Linking</h3>
                   <p className="text-sm text-gray-600">Automatically suggest relevant books within blog content</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">Reading Paths</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">Reading Paths</h3>
                   <p className="text-sm text-gray-600">Create guided reading sequences connecting related content</p>
                 </div>
               </div>
@@ -285,18 +285,18 @@ export default function AIPromptSystemPage() {
         {activeTab === 'images' && (
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4">Advanced Image Optimization</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-900">Advanced Image Optimization</h2>
               <div className="space-y-4">
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">WebP & AVIF Support</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">WebP & AVIF Support</h3>
                   <p className="text-sm text-gray-600">Modern image formats for faster loading</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">Lazy Loading</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">Lazy Loading</h3>
                   <p className="text-sm text-gray-600">Intersection observer for below-fold images</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">CDN Integration</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">CDN Integration</h3>
                   <p className="text-sm text-gray-600">Global edge caching for optimal delivery</p>
                 </div>
               </div>
@@ -307,18 +307,18 @@ export default function AIPromptSystemPage() {
         {activeTab === 'performance' && (
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4">Performance Monitoring</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-900">Performance Monitoring</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">LCP: 1.8s</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">LCP: 1.8s</h3>
                   <p className="text-sm text-green-600">Good</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">FID: 85ms</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">FID: 85ms</h3>
                   <p className="text-sm text-green-600">Good</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2">CLS: 0.05</h3>
+                  <h3 className="font-medium mb-2 text-gray-900">CLS: 0.05</h3>
                   <p className="text-sm text-green-600">Good</p>
                 </div>
               </div>
@@ -329,7 +329,7 @@ export default function AIPromptSystemPage() {
         {activeTab === 'analytics' && (
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4">Analytics Dashboard</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-900">Analytics Dashboard</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <div className="flex items-center">

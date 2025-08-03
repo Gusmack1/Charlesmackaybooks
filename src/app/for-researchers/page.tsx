@@ -1,5 +1,4 @@
 import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
 export default function ForResearchersPage() {
   return (
     <>
-      <Header />
+
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
         {/* Page Header */}

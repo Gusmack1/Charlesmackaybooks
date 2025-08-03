@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-
 export const metadata: Metadata = {
   title: 'How to Order Aviation History Books | Charles E. MacKay Aviation Books',
   description: 'Multiple secure purchasing options with fast worldwide shipping from Glasgow, Scotland. Order Charles E. MacKay aviation history books via eBay, PayPal, or direct contact.',
@@ -33,11 +31,10 @@ export const metadata: Metadata = {
   }
 };
 
-
 export default function HowToOrderPage() {
   return (
     <>
-      <Header />
+
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
         {/* Page Header */}

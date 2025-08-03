@@ -4,7 +4,6 @@ import { Suspense } from 'react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import Header from '@/components/Header';
 import { getOrder, updateOrderStatus, generateEmailReceipt, Order } from '@/utils/orderUtils';
 import { useCart } from '@/context/CartContext';
 
@@ -65,7 +64,7 @@ function OrderCompleteContent() {
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-50">
-        <Header />
+
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
@@ -79,7 +78,7 @@ function OrderCompleteContent() {
   if (!order) {
     return (
       <div className="min-h-screen bg-slate-50">
-        <Header />
+
         <div className="max-w-4xl mx-auto px-6 py-16">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-red-600 mb-4">Order Not Found</h1>
@@ -100,7 +99,6 @@ function OrderCompleteContent() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <Header />
 
       {/* Success Header */}
       <div className="bg-green-600 text-white py-8">
@@ -268,7 +266,7 @@ export default function OrderCompletePage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-slate-50">
-        <Header />
+
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
