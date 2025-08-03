@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'hms-argus-first-aircraft-carrier',
@@ -124,15 +125,7 @@ const post = {
   },
   category: 'Naval Aviation',
   tags: ["hms","argus","aircraft","carrier","naval","aviation","royal","navy"],
-  relatedBooks: [
-    {
-      id: 'aircraft-carrier-argus',
-      title: 'Aircraft Carrier Argus',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/aircraft-carrier-argus.jpg',
-      price: 22.99
-    }
-  ],
+  relatedBooks: getBooksData(['aircraft-carrier-argus', 'beardmore-aviation', 'british-aircraft-great-war']),
   relatedPosts: []
 }
 

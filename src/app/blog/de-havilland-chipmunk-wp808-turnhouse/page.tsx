@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'de-havilland-chipmunk-wp808-turnhouse',
@@ -107,29 +108,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["de","havilland","chipmunk","wp808","turnhouse","training","aircraft","raf","edinburgh"],
-  relatedBooks: [
-    {
-      id: 'captain-eric-brown',
-      title: 'Captain Eric Brown: The World\'s Greatest Test Pilot',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/captain-eric-brown.jpg',
-      price: 24.99
-    },
-    {
-      id: 'british-aircraft-great-war',
-      title: 'British Aircraft of the Great War',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/british-aircraft-great-war.jpg',
-      price: 22.99
-    },
-    {
-      id: 'clydeside-aviation-vol1',
-      title: 'Clydeside Aviation Volume One: The Great War',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/clydeside-aviation-vol1.jpg',
-      price: 16.08
-    }
-  ],
+  relatedBooks: getBooksData(['captain-eric-brown', 'british-aircraft-great-war', 'clydeside-aviation-vol1']),
   relatedPosts: []
 }
 

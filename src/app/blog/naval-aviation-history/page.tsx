@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'naval-aviation-history',
@@ -114,29 +115,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["naval","aviation","history","military","maritime"],
-  relatedBooks: [
-  {
-    "id": "aircraft-carrier-argus",
-    "title": "Aircraft Carrier Argus: The World's First True Aircraft Carrier",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/aircraft-carrier-argus.jpg",
-    "price": 22.99
-  },
-  {
-    "id": "beardmore-aviation",
-    "title": "Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/beardmore-aviation.jpg",
-    "price": 12.76
-  },
-  {
-    "id": "british-aircraft-great-war",
-    "title": "British Aircraft of the Great War",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/british-aircraft-great-war.jpg",
-    "price": 22.99
-  }
-],
+  relatedBooks: getBooksData(['aircraft-carrier-argus', 'beardmore-aviation', 'british-aircraft-great-war']),
   relatedPosts: []
 }
 
