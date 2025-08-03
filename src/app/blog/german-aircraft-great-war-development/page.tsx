@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'german-aircraft-great-war-development',
@@ -59,6 +60,11 @@ const post = {
     <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
 
     <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/albatros-dva-flying-in-air.jpg" alt="Albatros D.Va flying in formation" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">Albatros D.Va fighters in formation, demonstrating the advanced German fighter design that dominated the skies in 1917-1918.</p>
+    </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>
     <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
@@ -120,22 +126,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["german","aircraft","great","war","development","wwi","fighter"],
-  relatedBooks: [
-    {
-      id: 'german-aircraft-great-war',
-      title: 'German Aircraft in the Great War 1914-1918',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/german-aircraft-great-war.jpg',
-      price: 13.93
-    },
-    {
-      id: 'british-aircraft-great-war',
-      title: 'British Aircraft of the Great War',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/british-aircraft-great-war.jpg',
-      price: 12.91
-    }
-  ],
+  relatedBooks: getBooksData(['german-aircraft-great-war', 'british-aircraft-great-war', 'clydeside-aviation-vol1']),
   relatedPosts: [
     {
       id: 'sopwith-camel-wwi-fighter',

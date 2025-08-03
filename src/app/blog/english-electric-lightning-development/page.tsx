@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'english-electric-lightning-development',
@@ -22,6 +23,11 @@ const post = {
     </div>
 
     <p>The Lightning's development represented the culmination of British jet fighter evolution, incorporating lessons learned from earlier designs while pushing performance boundaries to their limits. Its service record includes numerous interceptions of Soviet reconnaissance aircraft and demonstration of Britain's commitment to maintaining advanced air defense capabilities.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/lightning-cockpit-interior.jpg" alt="Lightning cockpit showing advanced avionics" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Lightning's advanced cockpit and avionics systems represented cutting-edge technology for supersonic interception missions.</p>
+    </div>
 
     <h2 id="historical-background">Historical Background and Context</h2>
     <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
@@ -112,7 +118,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["english","electric","lightning","development","supersonic","interceptor"],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['sonic-to-standoff', 'captain-eric-brown', 'british-aircraft-great-war']),
   relatedPosts: []
 }
 
