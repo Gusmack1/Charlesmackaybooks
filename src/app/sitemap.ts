@@ -100,6 +100,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95, // Product catalog - very high priority
     },
     {
+      url: `${baseUrl}/ai-prompt-system`,
+      lastModified: lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.8, // AI Prompt System - high priority
+    },
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
