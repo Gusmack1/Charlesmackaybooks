@@ -374,23 +374,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
             Help us reach more aviation enthusiasts by sharing this expert analysis!
           </p>
           
-          {/* Newsletter Signup */}
-          <div className="bg-gray-700 rounded-lg p-6 max-w-md mx-auto">
-            <h4 className="font-semibold mb-3">📬 Get More Expert Analysis</h4>
-            <p className="text-sm text-gray-300 mb-4">
-              Subscribe for weekly aviation history insights and book updates
-            </p>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 px-3 py-2 rounded text-gray-900 text-sm"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-sm font-semibold transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
+
         </div>
       </div>
 

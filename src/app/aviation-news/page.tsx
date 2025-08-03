@@ -396,47 +396,7 @@ export default function AviationNewsPage() {
             </div>
           </div>
 
-          {/* Newsletter Subscription */}
-          <div className="bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-8">
-            <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-              <p className="text-green-100 max-w-2xl mx-auto">
-                Subscribe to receive the latest aviation history discoveries, research updates,
-                and exclusive insights delivered directly to your inbox.
-              </p>
-            </div>
 
-            <div className="max-w-md mx-auto">
-              <div className="flex gap-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-4 py-2 rounded-lg text-slate-800"
-                />
-                <button className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-400 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-              <p className="text-green-200 text-sm mt-3 text-center">
-                Join 2,500+ aviation enthusiasts and researchers. Unsubscribe anytime.
-              </p>
-            </div>
-
-            <div className="mt-8 grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-2xl font-bold text-green-200">Weekly</div>
-                <div className="text-green-100">News Updates</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-green-200">Monthly</div>
-                <div className="text-green-100">Research Roundup</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-green-200">Exclusive</div>
-                <div className="text-green-100">Behind-the-Scenes</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </>
