@@ -82,7 +82,6 @@ interface OptimizedBookSalesTemplateProps {
 export default function OptimizedBookSalesTemplate({ book }: OptimizedBookSalesTemplateProps) {
   const [selectedFormat, setSelectedFormat] = useState(book.formats[0]);
   const [quantity, setQuantity] = useState(1);
-  const [isWishlisted, setIsWishlisted] = useState(false);
   const [cartItemCount, setCartItemCount] = useState(0);
   const [showSample, setShowSample] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
@@ -220,18 +219,6 @@ export default function OptimizedBookSalesTemplate({ book }: OptimizedBookSalesT
             
             {/* Quick Actions */}
             <div className="flex justify-center gap-4">
-              <button
-                onClick={() => setIsWishlisted(!isWishlisted)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
-                  isWishlisted 
-                    ? 'border-red-500 text-red-500 bg-red-50' 
-                    : 'border-gray-300 text-gray-700 hover:border-gray-400'
-                }`}
-              >
-                <Heart className={`w-4 h-4 ${isWishlisted ? 'fill-current' : ''}`} />
-                {isWishlisted ? 'In Wishlist' : 'Add to Wishlist'}
-              </button>
-              
               <button
                 onClick={() => handleShare('facebook')}
                 className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-gray-400 transition-colors"

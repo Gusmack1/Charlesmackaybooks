@@ -3,9 +3,7 @@
 import { useEffect } from "react";
 import { CartProvider } from '@/context/CartContext';
 import { RecentlyViewedProvider } from '@/context/RecentlyViewedContext';
-import { WishlistProvider } from '@/context/WishlistContext';
 import CartSidebar from '@/components/CartSidebar';
-import WishlistSidebar from '@/components/WishlistSidebar';
 import LiveChat from '@/components/LiveChat';
 
 export default function ClientBody({
@@ -22,14 +20,11 @@ export default function ClientBody({
   return (
     <body suppressHydrationWarning className="antialiased">
       <CartProvider>
-        <WishlistProvider>
-          <RecentlyViewedProvider>
-            {children}
-            <CartSidebar />
-            <WishlistSidebar />
-            <LiveChat />
-          </RecentlyViewedProvider>
-        </WishlistProvider>
+        <RecentlyViewedProvider>
+          {children}
+          <CartSidebar />
+          <LiveChat />
+        </RecentlyViewedProvider>
       </CartProvider>
     </body>
   );

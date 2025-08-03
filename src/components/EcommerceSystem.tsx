@@ -13,14 +13,7 @@ interface CartItem {
   addedAt: Date;
 }
 
-interface WishlistItem {
-  id: string;
-  title: string;
-  author: string;
-  coverImage: string;
-  price: number;
-  addedAt: Date;
-}
+
 
 interface RecentlyViewed {
   id: string;
@@ -69,12 +62,6 @@ interface EcommerceContextType {
   cartTotal: number;
   cartItemCount: number;
   
-  // Wishlist functionality
-  wishlist: WishlistItem[];
-  addToWishlist: (item: Omit<WishlistItem, 'addedAt'>) => void;
-  removeFromWishlist: (id: string) => void;
-  isInWishlist: (id: string) => boolean;
-  
   // Recently viewed
   recentlyViewed: RecentlyViewed[];
   addToRecentlyViewed: (item: Omit<RecentlyViewed, 'viewedAt'>) => void;
@@ -121,7 +108,6 @@ interface EcommerceProviderProps {
 export const EcommerceProvider: React.FC<EcommerceProviderProps> = ({ children }) => {
   // State management
   const [cart, setCart] = useState<CartItem[]>([]);
-  const [wishlist, setWishlist] = useState<WishlistItem[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<RecentlyViewed[]>([]);
   const [userPreferences, setUserPreferences] = useState<UserPreferences>({
     genres: [],
@@ -136,7 +122,6 @@ export const EcommerceProvider: React.FC<EcommerceProviderProps> = ({ children }
   // Load data from localStorage on mount
   useEffect(() => {
     const savedCart = localStorage.getItem('charles-mackay-cart');
-    const savedWishlist = localStorage.getItem('charles-mackay-wishlist');
     const savedRecentlyViewed = localStorage.getItem('charles-mackay-recently-viewed');
     const savedPreferences = localStorage.getItem('charles-mackay-preferences');
     const savedPriceAlerts = localStorage.getItem('charles-mackay-price-alerts');
@@ -153,17 +138,7 @@ export const EcommerceProvider: React.FC<EcommerceProviderProps> = ({ children }
       }
     }
 
-    if (savedWishlist) {
-      try {
-        const parsedWishlist = JSON.parse(savedWishlist);
-        setWishlist(parsedWishlist.map((item: any) => ({
-          ...item,
-          addedAt: new Date(item.addedAt)
-        })));
-      } catch (error) {
-        console.error('Error parsing saved wishlist:', error);
-      }
-    }
+
 
     if (savedRecentlyViewed) {
       try {
@@ -199,9 +174,7 @@ export const EcommerceProvider: React.FC<EcommerceProviderProps> = ({ children }
     localStorage.setItem('charles-mackay-cart', JSON.stringify(cart));
   }, [cart]);
 
-  useEffect(() => {
-    localStorage.setItem('charles-mackay-wishlist', JSON.stringify(wishlist));
-  }, [wishlist]);
+
 
   useEffect(() => {
     localStorage.setItem('charles-mackay-recently-viewed', JSON.stringify(recentlyViewed));
@@ -271,27 +244,7 @@ export const EcommerceProvider: React.FC<EcommerceProviderProps> = ({ children }
   const cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
   const cartItemCount = cart.reduce((count, item) => count + item.quantity, 0);
 
-  // Wishlist functionality
-  const addToWishlist = useCallback((item: Omit<WishlistItem, 'addedAt'>) => {
-    setWishlist(prevWishlist => {
-      const exists = prevWishlist.some(wishlistItem => wishlistItem.id === item.id);
-      if (!exists) {
-        return [...prevWishlist, { ...item, addedAt: new Date() }];
-      }
-      return prevWishlist;
-    });
 
-    trackEvent('add_to_wishlist', { book_id: item.id });
-  }, []);
-
-  const removeFromWishlist = useCallback((id: string) => {
-    setWishlist(prevWishlist => prevWishlist.filter(item => item.id !== id));
-    trackEvent('remove_from_wishlist', { book_id: id });
-  }, []);
-
-  const isInWishlist = useCallback((id: string) => {
-    return wishlist.some(item => item.id === id);
-  }, [wishlist]);
 
   // Recently viewed functionality
   const addToRecentlyViewed = useCallback((item: Omit<RecentlyViewed, 'viewedAt'>) => {
@@ -390,10 +343,6 @@ export const EcommerceProvider: React.FC<EcommerceProviderProps> = ({ children }
     clearCart,
     cartTotal,
     cartItemCount,
-    wishlist,
-    addToWishlist,
-    removeFromWishlist,
-    isInWishlist,
     recentlyViewed,
     addToRecentlyViewed,
     userPreferences,
@@ -532,62 +481,7 @@ export const ShoppingCart: React.FC = () => {
   );
 };
 
-// Wishlist Component
-export const Wishlist: React.FC = () => {
-  const { wishlist, removeFromWishlist } = useEcommerce();
-  const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <div className="relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="relative p-2 text-gray-600 hover:text-gray-900 transition-colors"
-      >
-        <HeartIcon className="w-6 h-6" />
-        {wishlist.length > 0 && (
-          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-            {wishlist.length}
-          </span>
-        )}
-      </button>
-
-      {isOpen && (
-        <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 p-4 z-50">
-          <h3 className="text-lg font-semibold mb-4">Wishlist</h3>
-          
-          {wishlist.length === 0 ? (
-            <p className="text-gray-500 text-center py-8">Your wishlist is empty</p>
-          ) : (
-            <div className="space-y-3 max-h-64 overflow-y-auto">
-              {wishlist.map((item) => (
-                <div key={item.id} className="flex items-center space-x-3">
-                  <img
-                    src={item.coverImage}
-                    alt={item.title}
-                    className="w-12 h-16 object-cover rounded"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-sm font-medium text-gray-900 truncate">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs text-gray-600">{item.author}</p>
-                    <p className="text-sm font-medium text-blue-600">${item.price.toFixed(2)}</p>
-                  </div>
-                  <button
-                    onClick={() => removeFromWishlist(item.id)}
-                    className="text-red-600 hover:text-red-800"
-                  >
-                    <HeartIcon className="w-5 h-5 fill-current" />
-                  </button>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-};
 
 // Recently Viewed Component
 export const RecentlyViewed: React.FC = () => {
@@ -699,7 +593,6 @@ const EcommerceSystem: React.FC = () => {
   return (
     <div className="ecommerce-system">
       <ShoppingCart />
-      <Wishlist />
       <RecentlyViewed />
     </div>
   );
