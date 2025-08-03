@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'clydeside-aviation-revolution',
@@ -112,15 +113,7 @@ const post = {
   },
   category: 'Scottish Aviation',
   tags: ["clydeside","scottish","aviation","industrial","revolution","manufacturing"],
-  relatedBooks: [
-    {
-      id: 'clydeside-aviation-vol1',
-      title: 'Clydeside Aviation Volume 1: The Pioneer Years 1909-1914',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/clydeside-aviation-vol1.jpg',
-      price: 19.99
-    }
-  ],
+  relatedBooks: getBooksData(['clydeside-aviation-vol1', 'beardmore-aviation', 'british-aircraft-great-war']),
   relatedPosts: []
 }
 
