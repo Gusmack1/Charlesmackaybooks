@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 export const metadata: Metadata = {
   title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain | Charles E. MacKay',
@@ -60,6 +61,11 @@ const post = {
         The Hawker Hurricane stands as one of the most underrated fighters in aviation history. While the Supermarine Spitfire captured headlines and public imagination, it was the Hurricane that bore the brunt of aerial combat during the Battle of Britain, destroying more enemy aircraft than any other fighter. Sydney Camm's robust design proved perfectly suited to the demands of air warfare, combining reliability, firepower, and ease of maintenance in a package that saved Britain from invasion.
       </p>
 
+      <div class="my-8">
+        <img src="/blog-images/hawker-hurricane-fighter-development.jpg" alt="Hawker Hurricane in flight" class="w-full h-auto rounded-lg shadow-lg"/>
+        <p class="text-sm text-gray-600 mt-2 text-center italic">The Hawker Hurricane, the unsung hero of the Battle of Britain, which shot down more enemy aircraft than all other defenses combined.</p>
+      </div>
+
       <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
         <h3 class="text-lg font-semibold text-gray-900 mb-4">📋 Article Contents</h3>
         <ul class="space-y-2">
@@ -88,6 +94,11 @@ const post = {
         The prototype K5083 first flew on November 6, 1935, piloted by Squadron Leader P.W.S. Bulman. Initial flight tests revealed excellent handling characteristics and performance that exceeded expectations, with a top speed of 315 mph at 16,000 feet. The Air Ministry, initially skeptical of the monoplane concept, quickly recognized the Hurricane's potential and placed an order for 600 aircraft in June 1936, the largest peacetime order for military aircraft in British history.
       </p>
 
+      <div class="my-8">
+        <img src="/blog-images/hawker-hurricane-prototype.jpg" alt="Hawker Hurricane prototype" class="w-full h-auto rounded-lg shadow-lg"/>
+        <p class="text-sm text-gray-600 mt-2 text-center italic">The Hawker Hurricane prototype K5083, which first flew in 1935 and exceeded all performance expectations.</p>
+      </div>
+
       <h2 id="design-philosophy">Design Philosophy and Innovation</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
         Sydney Camm's design philosophy centered on creating an aircraft that balanced performance with practicality. Unlike more radical designs that pushed technological boundaries, the Hurricane incorporated proven construction methods with selective innovations. The steel tube fuselage framework, covered with fabric aft of the cockpit, allowed for easy repair and modification while keeping weight reasonable. This approach contrasted with the Spitfire's all-metal stressed-skin construction, which was more advanced but required specialized facilities and skills for repair.
@@ -96,6 +107,11 @@ const post = {
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
         The wing design represented a careful compromise between performance and manufacturing requirements. The thick wing section provided excellent low-speed handling characteristics and sufficient internal space for fuel tanks, ammunition, and eventually additional equipment. While this limited top speed compared to thinner wing designs, it provided the stability and controllability essential for effective gunnery platforms and operational flexibility.
       </p>
+
+      <div class="my-8">
+        <img src="/blog-images/hawker-hurricane-cockpit.jpg" alt="Hawker Hurricane cockpit" class="w-full h-auto rounded-lg shadow-lg"/>
+        <p class="text-sm text-gray-600 mt-2 text-center italic">The Hawker Hurricane cockpit, designed for simplicity and reliability under combat conditions.</p>
+      </div>
 
       <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
         <h3 class="text-lg font-semibold text-blue-800 mb-4">📊 Hurricane vs Contemporary Fighters</h3>
@@ -249,22 +265,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ['hawker", "hurricane", "fighter", "development', 'aviation history'],
-  relatedBooks: [
-  {
-    id: 'british-aircraft-great-war',
-      title: 'british aircraft great war',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/british-aircraft-great-war.jpg',
-      price: 24.99
-  },
-  {
-    id: 'captain-eric-brown',
-      title: 'captain eric brown',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/captain-eric-brown.jpg',
-      price: 24.99
-    }
-  ],
+  relatedBooks: getBooksData(['british-aircraft-great-war', 'captain-eric-brown', 'supermarine-spitfire-development']),
   relatedPosts: [
     {
       id: 'bristol-fighter-f2b-brisfit',
