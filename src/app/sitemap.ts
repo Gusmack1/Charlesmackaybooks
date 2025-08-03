@@ -105,7 +105,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8, // AI Prompt System - high priority
     },
-    },
     {
       url: `${baseUrl}/blog`,
       lastModified: lastModified,
