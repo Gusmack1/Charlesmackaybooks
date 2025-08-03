@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'bristol-sycamore-helicopter-development',
@@ -21,17 +22,7 @@ const post = {
       <p class="text-sm text-gray-600 mt-2 text-center italic">The evolution of helicopter technology that led to the Bristol Sycamore.</p>
     </div>
     
-    <div class="my-8">
-      <img src="/blog-images/bristol-sycamore-formation.jpg" alt="Bristol Sycamore helicopters in formation flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Bristol Sycamore helicopters in formation, demonstrating Britain's first successful production helicopter design.</p>
-    </div>
-    
     <p>Developed by Bristol Helicopter Division under the leadership of Raoul Hafner, the Sycamore represented a systematic approach to helicopter design that contrasted with the more experimental efforts of earlier pioneers. Its robust construction and reliable operation made it suitable for both military and civilian applications, establishing the foundation for Britain's helicopter industry.</p>
-
-    <div class="my-8">
-      <img src="/blog-images/bristol-sycamore.jpg" alt="Close-up of Bristol Sycamore showing rotor configuration" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Bristol Sycamore's conventional single-rotor configuration became the standard for British helicopter development.</p>
-    </div>
 
     <p>The Sycamore's development encompassed crucial advances in rotor design, control systems, and powerplant integration that influenced subsequent British helicopters. Its service with the RAF, Royal Navy, and civilian operators demonstrated the practical utility of rotorcraft for roles ranging from rescue operations to agricultural work, establishing helicopters as essential aviation tools.</p>
 
@@ -124,29 +115,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["bristol","sycamore","helicopter","development","aviation","history","british"],
-  relatedBooks: [
-  {
-    "id": "sycamore-seeds",
-    "title": "Sycamore Seeds: The Evolution of the Helicopter",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/sycamore-seeds.jpg",
-    "price": 19.99
-  },
-  {
-    "id": "captain-eric-brown",
-    "title": "Captain Eric Brown: The World's Greatest Test Pilot",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/captain-eric-brown.jpg",
-    "price": 24.99
-  },
-  {
-    "id": "british-aircraft-great-war",
-    "title": "British Aircraft of the Great War",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/british-aircraft-great-war.jpg",
-    "price": 22.99
-  }
-],
+  relatedBooks: getBooksData(['sycamore-seeds', 'captain-eric-brown', 'british-aircraft-great-war']),
   relatedPosts: []
 }
 

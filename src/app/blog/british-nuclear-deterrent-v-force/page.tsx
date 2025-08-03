@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'british-nuclear-deterrent-v-force',
@@ -22,6 +23,11 @@ const post = {
     </div>
 
     <p>The V-Force story encompasses more than aircraft development - it represents Britain's Cold War strategy, nuclear doctrine evolution, and the technological challenges of maintaining credible deterrence in an era of rapidly advancing missile technology. From Blue Steel standoff weapons to low-level penetration tactics, the V-Force adapted continuously to changing strategic requirements.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning F6" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The English Electric Lightning F6, which provided air defense support for V-Force operations during the Cold War.</p>
+    </div>
 
     <h2 id="historical-background">Historical Background: Britain's Nuclear Ambition</h2>
     <p>The origins of the V-Force can be traced to Britain's determination to maintain its status as a world power in the post-war era. Following the successful development of atomic weapons in 1952, Britain needed a credible delivery system to establish its nuclear deterrent. The Royal Air Force's Bomber Command, which had played a crucial role in the Second World War, was tasked with developing this new capability.</p>
@@ -118,15 +124,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["british","nuclear","deterrent","v","force","cold","war","vulcan","victor","valiant"],
-  relatedBooks: [
-    {
-      id: 'enemy-luftwaffe-1945',
-      title: 'This Was the Enemy: The Luftwaffe 1945',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/enemy-luftwaffe-1945.jpg',
-      price: 16.08
-    }
-  ],
+  relatedBooks: getBooksData(['enemy-luftwaffe-1945', 'birth-atomic-bomb', 'sonic-to-standoff']),
   relatedPosts: []
 }
 
