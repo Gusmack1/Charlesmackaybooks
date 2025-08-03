@@ -1,0 +1,247 @@
+Charles Mackay Books - Blog Analysis & AI Prompt System
+Current Blog Issues Identified
+Based on your description, here are the primary issues to address across your 33 blog posts:
+
+1. Image Problems
+Images not displaying properly
+Poor image spacing and layout
+Images may be broken links or incorrect file paths
+Inconsistent image sizing and alignment
+2. Content Quality Issues
+Content doesn't make logical sense
+Poor readability and structure
+Inconsistent tone and style
+Aviation history content may lack proper context
+3. Professional Appearance
+Inconsistent formatting across posts
+Poor typography and spacing
+No standardized blog template structure
+Unprofessional visual presentation
+4. Template Consistency
+Posts don't follow the established blog template
+Inconsistent header/footer structure
+Varying post layouts and formatting
+AI Prompt System for Blog Fixes
+MASTER PROMPT - Blog Content Optimization
+You are an expert aviation history content editor and web developer specializing in Charles E. MacKay's aviation books website. Your task is to fix and optimize blog posts to match the professional standards of an aviation historian's website.
+
+CONTEXT:
+- Website: charlesmackaybooks.com
+- Author: Charles E. MacKay, aviation historian from Glasgow, Scotland
+- Specialization: Scottish aviation heritage, WWI & WWII aircraft, military aviation
+- Target audience: Aviation historians, researchers, academic institutions, enthusiasts
+- Current issues: Poor content structure, broken images, unprofessional formatting
+
+OBJECTIVES:
+1. Create professional, coherent aviation history content
+2. Fix image placement and ensure proper alt text
+3. Maintain consistency with the established blog template
+4. Ensure content supports Charles MacKay's expertise and book sales
+5. Optimize for SEO and academic credibility
+
+TEMPLATE STRUCTURE TO FOLLOW:
+[Provide the specific blog template structure you've established]
+PROMPT 1: Content Analysis & Restructuring
+TASK: Analyze and restructure this blog post for Charles MacKay's aviation history website.
+
+BLOG POST CONTENT:
+[Insert current blog post content here]
+
+REQUIREMENTS:
+1. **Content Analysis:**
+   - Identify the main aviation topic/theme
+   - Assess current readability and logical flow
+   - Note any factual errors or inconsistencies
+   - Identify missing context or background information
+
+2. **Content Restructuring:**
+   - Create a compelling, SEO-optimized title related to aviation history
+   - Write an engaging introduction that hooks readers
+   - Organize content into logical sections with clear headings
+   - Ensure historical accuracy and proper context
+   - Add relevant connections to Charles MacKay's book topics when appropriate
+
+3. **Tone & Style:**
+   - Professional, authoritative tone suitable for aviation historians
+   - Educational yet accessible to aviation enthusiasts
+   - Include specific technical details and historical context
+   - Maintain credibility as an expert source
+
+OUTPUT FORMAT:
+- Optimized title
+- Meta description (150-160 characters)
+- Structured content with H2/H3 headings
+- Word count: 800-1200 words
+- Include 2-3 internal links to relevant Charles MacKay books
+PROMPT 2: Image Optimization & Placement
+TASK: Fix and optimize images for this Charles MacKay aviation blog post.
+
+CURRENT IMAGE ISSUES:
+[List specific image problems found]
+
+REQUIREMENTS:
+1. **Image Audit:**
+   - Identify broken or missing images
+   - Check image file paths and accessibility
+   - Assess image relevance to aviation content
+   - Note poor sizing or placement issues
+
+2. **Image Optimization:**
+   - Suggest relevant aviation images (aircraft, historical photos, technical diagrams)
+   - Provide proper alt text for accessibility and SEO
+   - Recommend optimal image sizes (e.g., 800x600px for featured images)
+   - Suggest image placement within content for better flow
+
+3. **Technical Specifications:**
+   - File format recommendations (WebP, JPG, PNG)
+   - Proper naming conventions (descriptive, SEO-friendly)
+   - Responsive image sizing for mobile/desktop
+   - Image compression guidelines
+
+OUTPUT:
+- List of required images with descriptions
+- Alt text for each image
+- Placement recommendations within the blog post
+- Technical specifications for each image
+- File naming suggestions
+PROMPT 3: Template Consistency & Formatting
+TASK: Apply consistent template formatting to this Charles MacKay aviation blog post.
+
+BLOG TEMPLATE REQUIREMENTS:
+1. **Header Section:**
+   - Consistent navigation matching main website
+   - Blog title with aviation focus
+   - Author byline: "By Charles E. MacKay, Aviation Historian"
+   - Publication date and reading time
+
+2. **Content Structure:**
+   - Featured image with caption
+   - Introduction paragraph (2-3 sentences)
+   - Main content with H2/H3 subheadings
+   - Proper paragraph spacing
+   - Quote boxes for historical excerpts
+   - Bullet points for technical specifications
+
+3. **Footer Section:**
+   - Related Charles MacKay books section
+   - "Buy on eBay" or "Pay with PayPal" CTAs
+   - Social sharing buttons
+   - "About the Author" section
+   - Navigation to other blog posts
+
+4. **SEO Elements:**
+   - Meta title and description
+   - Schema markup for articles
+   - Internal linking to book pages
+   - External links to credible aviation sources
+
+APPLY THIS TEMPLATE TO:
+[Insert blog post content]
+
+OUTPUT: Complete HTML/Markdown formatted blog post following the template.
+PROMPT 4: SEO & Academic Optimization
+TASK: Optimize this aviation history blog post for search engines and academic credibility.
+
+CONTENT: [Insert blog post]
+
+OPTIMIZATION REQUIREMENTS:
+1. **SEO Optimization:**
+   - Primary keyword: [aviation-related term]
+   - Secondary keywords: Scottish aviation, WWI aircraft, WWII aviation, etc.
+   - Meta title (50-60 characters)
+   - Meta description (150-160 characters)
+   - Header tags (H1, H2, H3) with keywords
+   - Internal links to Charles MacKay book pages
+
+2. **Academic Credibility:**
+   - Add historical dates and specific details
+   - Include references to primary sources when possible
+   - Mention relevant aircraft specifications
+   - Connect to Charles MacKay's expertise areas
+   - Add context about Scottish aviation heritage
+
+3. **User Engagement:**
+   - Compelling introduction hook
+   - Clear value proposition for readers
+   - Call-to-action to explore Charles MacKay's books
+   - Related post suggestions
+
+OUTPUT: SEO-optimized blog post with academic credibility markers.
+PROMPT 5: Bulk Blog Processing
+TASK: Process multiple Charles MacKay aviation blog posts for consistency and quality.
+
+BATCH PROCESSING REQUIREMENTS:
+1. **Content Audit:**
+   - Identify posts with similar topics for consolidation
+   - Flag posts with factual errors or poor content
+   - Categorize posts by aviation era/topic (WWI, WWII, Scottish aviation, etc.)
+   - Priority ranking for fixes (high/medium/low importance)
+
+2. **Standardization:**
+   - Apply consistent formatting across all posts
+   - Ensure uniform image placement and sizing
+   - Standardize author bylines and publication info
+   - Create consistent category and tag structure
+
+3. **Quality Control:**
+   - Fact-check historical information
+   - Ensure content supports Charles MacKay's expertise
+   - Verify all internal links to book pages work
+   - Check mobile responsiveness
+
+BLOG POSTS TO PROCESS: [List of blog post titles/URLs]
+
+OUTPUT: 
+- Priority ranking of posts needing fixes
+- Standardized content for each post
+- Quality control checklist
+- Recommended posting schedule for updates
+Implementation Strategy
+Phase 1: Assessment (Posts 1-11)
+Use Content Analysis prompt on first 11 posts
+Identify most critical issues
+Create priority fix list
+Phase 2: Template Implementation (Posts 12-22)
+Apply Template Consistency prompt
+Fix image issues using Image Optimization prompt
+Establish pattern for remaining posts
+Phase 3: SEO & Polish (Posts 23-33)
+Use SEO Optimization prompt
+Final quality control
+Cross-reference all internal links
+Tools & Resources Needed
+Images:
+Aviation photo databases
+Historical aircraft images
+Scottish aviation archive photos
+Technical diagrams and schematics
+Content Research:
+Aviation history databases
+Charles MacKay's book contents for cross-referencing
+Technical specifications databases
+Historical timeline references
+Technical:
+Image editing software
+SEO analysis tools
+Content management system access
+Template files
+Quality Control Checklist
+ Content makes logical sense and flows well
+ All images display properly with appropriate alt text
+ Professional formatting consistent across posts
+ Internal links to Charles MacKay books included
+ SEO elements optimized
+ Mobile-responsive design
+ Fast loading times
+ Academic credibility maintained
+ Consistent author branding
+ Clear calls-to-action for book purchases
+Expected Outcomes
+After implementing this prompt system across all 33 blog posts:
+
+Professional Appearance: Consistent, clean design matching the main website
+Improved User Experience: Better readability, navigation, and engagement
+SEO Benefits: Higher search rankings for aviation history terms
+Increased Book Sales: More effective integration of book promotion
+Academic Credibility: Enhanced reputation as authoritative aviation history source
+Technical Performance: Faster loading, mobile-friendly, accessible design
