@@ -11,22 +11,22 @@ const post = {
     <p>Britain's V-Force represented one of the Cold War's most sophisticated nuclear deterrent systems - a trinity of advanced jet bombers designed to maintain Britain's position as a nuclear power and guarantee the nation's security through strategic deterrence. The Vickers Valiant, Avro Vulcan, and Handley Page Victor formed the backbone of British nuclear strategy from the 1950s through the 1980s.</p>
     
     <div class="my-8">
-      <img src="/blog-images/blue-steel-missile.jpg" alt="Blue Steel standoff missile under Vulcan bomber" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Blue Steel standoff missile, which allowed V-Force bombers to attack targets from safe distances beyond enemy air defenses.</p>
+      <img src="/blog-images/vickers-valiant-bomber.jpg" alt="Vickers Valiant B1 bomber - the first V-Force aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Vickers Valiant B1, the first V-Force aircraft to enter service in 1955, featuring a conservative straight-wing design for reliability.</p>
     </div>
     
     <p>Developed during the height of Cold War tensions, these aircraft embodied cutting-edge aerodynamics, advanced nuclear delivery systems, and sophisticated electronic countermeasures. Their design reflected Britain's determination to maintain independent nuclear capability while operating within NATO's strategic framework.</p>
 
     <div class="my-8">
-      <img src="/blog-images/victor-bomber-formation.jpg" alt="Handley Page Victor bombers showing their distinctive crescent wing design" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Handley Page Victor bombers with their distinctive crescent wing design, optimized for high-altitude nuclear delivery missions.</p>
+      <img src="/blog-images/handley-page-victor-bomber.jpg" alt="Handley Page Victor bomber with distinctive crescent wing" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Handley Page Victor with its distinctive crescent wing design, combining high-speed and high-altitude capabilities for nuclear delivery.</p>
     </div>
 
     <p>The V-Force story encompasses more than aircraft development - it represents Britain's Cold War strategy, nuclear doctrine evolution, and the technological challenges of maintaining credible deterrence in an era of rapidly advancing missile technology. From Blue Steel standoff weapons to low-level penetration tactics, the V-Force adapted continuously to changing strategic requirements.</p>
 
     <div class="my-8">
-      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning F6" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The English Electric Lightning F6, which provided air defense support for V-Force operations during the Cold War.</p>
+      <img src="/blog-images/avro-vulcan-bomber.jpg" alt="Avro Vulcan delta-wing bomber" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm text-gray-600 mt-2 text-center italic">The Avro Vulcan with its revolutionary delta-wing design, optimized for high-altitude performance and the most recognizable symbol of the V-Force.</p>
     </div>
 
     <h2 id="historical-background">Historical Background: Britain's Nuclear Ambition</h2>
