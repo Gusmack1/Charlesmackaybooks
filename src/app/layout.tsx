@@ -1,46 +1,60 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
-import ClientWrapper from '@/components/ClientWrapper'
-import UnifiedSchema from '@/components/UnifiedSchema'
-import GoogleAnalytics from '@/components/GoogleAnalytics'
-import { CartProvider } from '@/context/CartContext'
-import { WishlistProvider } from '@/context/WishlistContext'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
-const inter = Inter({
+const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
-  preload: true
+  variable: '--font-inter'
 })
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair'
+})
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#1f2937',
+  colorScheme: 'light dark'
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://charlesmackaybooks.com'),
   title: {
-    default: 'Charles E. MacKay Aviation Books - Scottish Aviation History Specialist',
+    default: 'Charles E. MacKay - Aviation History Books & Research',
     template: '%s | Charles E. MacKay Aviation Books'
   },
-  description: 'Published aviation books by renowned historian Charles E. MacKay. Specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history. Used as primary references by aviation researchers worldwide.',
+  description: 'Expert aviation history books by Charles E. MacKay. Comprehensive research on Scottish aviation, World War aircraft, helicopter development, and military aviation history. Academic resources for researchers and aviation enthusiasts.',
   keywords: [
-    'Charles MacKay aviation books',
+    'aviation history books',
+    'Charles E. MacKay',
     'Scottish aviation history',
-    'WWI aircraft books',
-    'WWII aviation history',
-    'Beardmore aviation',
-    'Clydeside aviation',
-    'military aviation books',
-    'aviation historian Charles MacKay',
-    'helicopter history books',
+    'World War aircraft',
+    'helicopter development',
+    'military aviation',
+    'aviation research',
+    'aviation books',
+    'aircraft history',
+    'aviation biography',
+    'naval aviation',
     'jet age aviation',
-    'naval aviation history',
-    'aviation biography books',
-    'aircraft development history',
-    'Scottish aircraft manufacturing',
-    'aviation research books',
-    'Glasgow aviation history'
+    'aviation timeline',
+    'aviation bibliography',
+    'aviation glossary',
+    'aviation academic resources'
   ],
   authors: [{ name: 'Charles E. MacKay' }],
   creator: 'Charles E. MacKay',
-  publisher: 'Charles E. MacKay',
+  publisher: 'Charles Mackay Books',
   formatDetection: {
     email: false,
     address: false,
@@ -50,24 +64,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     url: 'https://charlesmackaybooks.com',
-    siteName: 'Charles E. MacKay Aviation Books',
-    title: 'Charles E. MacKay Aviation Books - Scottish Aviation History Specialist',
-    description: 'Published aviation books by renowned historian Charles E. MacKay. Specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history.',
+    siteName: 'Charles Mackay Books',
+    title: 'Charles E. MacKay - Aviation History Books & Research',
+    description: 'Expert aviation history books by Charles E. MacKay. Comprehensive research on Scottish aviation, World War aircraft, helicopter development, and military aviation history.',
     images: [
       {
-        url: 'https://charlesmackaybooks.com/charles-mackay-aviation-historian.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Charles E. MacKay Aviation Books - Scottish Aviation History Specialist',
-      }
+        alt: 'Charles E. MacKay Aviation History Books',
+      },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Charles E. MacKay Aviation Books - Scottish Aviation History',
-    description: 'Published aviation books by renowned historian Charles E. MacKay. Specializing in Scottish aviation heritage, WWI & WWII aircraft.',
-    images: ['https://charlesmackaybooks.com/charles-mackay-aviation-historian.jpg'],
-    creator: '@CharlesMacKayAviation',
+    title: 'Charles E. MacKay - Aviation History Books & Research',
+    description: 'Expert aviation history books by Charles E. MacKay. Comprehensive research on Scottish aviation, World War aircraft, helicopter development, and military aviation history.',
+    images: ['/og-image.jpg'],
+    creator: '@charlesmackaybooks',
   },
   robots: {
     index: true,
@@ -75,24 +89,79 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
   verification: {
-    google: 'a7ce294f58dd63f7',
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
   },
   alternates: {
     canonical: 'https://charlesmackaybooks.com',
     languages: {
       'en-GB': 'https://charlesmackaybooks.com',
-      'en-US': 'https://charlesmackaybooks.com',
     },
   },
-  category: 'Aviation History',
-  referrer: 'origin-when-cross-origin',
+  category: 'Books & Literature',
+  classification: 'Aviation History',
+  other: {
+    'google-site-verification': 'your-google-verification-code',
+    'msvalidate.01': 'your-bing-verification-code',
+    'yandex-verification': 'your-yandex-verification-code',
+  }
+}
+
+// Structured data for organization
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Charles Mackay Books',
+  url: 'https://charlesmackaybooks.com',
+  logo: 'https://charlesmackaybooks.com/logo.png',
+  description: 'Expert aviation history books and research by Charles E. MacKay',
+  founder: {
+    '@type': 'Person',
+    name: 'Charles E. MacKay',
+    jobTitle: 'Aviation Historian and Author',
+    description: 'Expert aviation historian specializing in Scottish aviation, World War aircraft, and military aviation history'
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    email: 'contact@charlesmackaybooks.com',
+    availableLanguage: 'English'
+  },
+  sameAs: [
+    'https://twitter.com/charlesmackaybooks',
+    'https://www.linkedin.com/company/charles-mackay-books'
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'GB',
+    addressRegion: 'Scotland'
+  }
+}
+
+// Structured data for website
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Charles Mackay Books',
+  url: 'https://charlesmackaybooks.com',
+  description: 'Expert aviation history books and research by Charles E. MacKay',
+  author: {
+    '@type': 'Person',
+    name: 'Charles E. MacKay',
+    jobTitle: 'Aviation Historian and Author'
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://charlesmackaybooks.com/search?q={search_term_string}',
+    'query-input': 'required name=search_term_string'
+  }
 }
 
 export default function RootLayout({
@@ -101,68 +170,50 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-GB" className="scroll-smooth">
+    <html lang="en-GB" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        {/* Performance and SEO optimizations */}
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://upload.wikimedia.org" />
-        <link rel="preconnect" href="https://c8.alamy.com" />
+        
+        {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="//upload.wikimedia.org" />
-        <link rel="dns-prefetch" href="//c8.alamy.com" />
-
-        {/* Additional SEO meta tags */}
-        <meta name="google-site-verification" content="a7ce294f58dd63f7" />
-        <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
-
-        {/* Single unified structured data */}
-        <UnifiedSchema pageType="homepage" />
-      </head>
-      <body className={inter.className}>
-        {/* Google Analytics 4 Tracking */}
-        <GoogleAnalytics />
-
-        {/* Structured Data for SEO */}
+        
+        {/* Structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Charles E. MacKay Aviation Books",
-              "url": "https://charlesmackaybooks.com",
-              "logo": "https://charlesmackaybooks.com/charles-mackay-aviation-historian.jpg",
-              "description": "Published aviation books by renowned historian Charles E. MacKay. Specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history.",
-              "founder": {
-                "@type": "Person",
-                "name": "Charles E. MacKay",
-                "jobTitle": "Aviation Historian",
-                "description": "Renowned aviation historian specializing in Scottish aviation heritage"
-              },
-              "sameAs": [
-                "https://twitter.com/CharlesMacKayAviation"
-              ],
-              "publishingPrinciples": "https://charlesmackaybooks.com/about",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "url": "https://charlesmackaybooks.com/contact"
-              }
-            })
+            __html: JSON.stringify(organizationSchema)
           }}
         />
-
-        <CartProvider>
-          <WishlistProvider>
-            <ClientWrapper>
-              {children}
-            </ClientWrapper>
-          </WishlistProvider>
-        </CartProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema)
+          }}
+        />
+        
+        {/* Security headers */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        
+        {/* Performance optimizations */}
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/playfair-display-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
+      <body className={`${inter.className} antialiased`}>
+        <Header />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
