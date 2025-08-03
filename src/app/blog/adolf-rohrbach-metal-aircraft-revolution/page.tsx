@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'adolf-rohrbach-metal-aircraft-revolution',
@@ -88,7 +89,7 @@ const post = {
 
     <p>Today, as the aviation industry continues to evolve with new materials and manufacturing technologies, Adolf Rohrbach's legacy endures through the systematic approaches he established for aircraft design and construction. His vision of functional, efficient aircraft design continues to inspire engineers working to advance aviation technology for future generations.</p>
   `,
-  excerpt: `$2`,
+  excerpt: `How Adolf Rohrbach's revolutionary metal aircraft construction techniques transformed aviation design and manufacturing.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -99,34 +100,12 @@ const post = {
   readingTime: 12,
   featuredImage: {
     url: '/blog-images/adolf-rohrbach-metal-aircraft-revolution-featured.jpg',
-    alt: '$1',
-    caption: '$1 - Expert analysis by Charles E. MacKay'
+    alt: 'Adolf Rohrbach: The Metal Aircraft Revolution',
+    caption: 'Adolf Rohrbach: The Metal Aircraft Revolution - Expert analysis by Charles E. MacKay'
   },
   category: 'Aviation History',
   tags: ["adolf","rohrbach","metal","aircraft","revolution"],
-  relatedBooks: [
-  {
-    "id": "adolf-rohrbach",
-    "title": "Adolf Rohrbach: Pioneer of Metal Aircraft Construction",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/adolf-rohrbach.jpg",
-    "price": 27.99
-  },
-  {
-    "id": "beardmore-aviation",
-    "title": "Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/beardmore-aviation.jpg",
-    "price": 12.76
-  },
-  {
-    "id": "german-aircraft-great-war",
-    "title": "German Aircraft of the Great War",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/german-aircraft-great-war.jpg",
-    "price": 22.99
-  }
-],
+  relatedBooks: getBooksData(['adolf-rohrbach', 'beardmore-aviation', 'german-aircraft-great-war']),
   relatedPosts: []
 }
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'aviation-manufacturing-wartime-production',
@@ -98,7 +99,7 @@ const post = {
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
-  excerpt: `$2`,
+  excerpt: `The incredible story of how aviation manufacturing was revolutionized during wartime, leading to mass production techniques that changed industry forever.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -109,34 +110,12 @@ const post = {
   readingTime: 12,
   featuredImage: {
     url: '/blog-images/aviation-manufacturing-wartime-production-featured.jpg',
-    alt: '$1',
-    caption: '$1 - Expert analysis by Charles E. MacKay'
+    alt: 'Aviation Manufacturing: Wartime Production Revolution',
+    caption: 'Aviation Manufacturing: Wartime Production Revolution - Expert analysis by Charles E. MacKay'
   },
   category: 'Aviation History',
   tags: ["aviation","manufacturing","wartime","production"],
-  relatedBooks: [
-  {
-    "id": "beardmore-aviation",
-    "title": "Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/beardmore-aviation.jpg",
-    "price": 12.76
-  },
-  {
-    "id": "birth-atomic-bomb",
-    "title": "The Birth of the Atomic Bomb: Aviation's Role",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/birth-atomic-bomb.jpg",
-    "price": 26.99
-  },
-  {
-    "id": "british-aircraft-great-war",
-    "title": "British Aircraft of the Great War",
-    "author": "Charles E. MacKay",
-    "cover": "/book-covers/british-aircraft-great-war.jpg",
-    "price": 22.99
-  }
-],
+  relatedBooks: getBooksData(['beardmore-aviation', 'birth-atomic-bomb', 'british-aircraft-great-war']),
   relatedPosts: []
 }
 

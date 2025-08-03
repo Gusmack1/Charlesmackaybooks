@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'adolf-rohrbach-metal-aircraft-construction',
@@ -114,15 +115,7 @@ const post = {
   },
   category: 'Aviation Engineering',
   tags: ["adolf","rohrbach","metal","aircraft","engineering","aviation","design","german"],
-  relatedBooks: [
-    {
-      id: 'adolf-rohrbach',
-      title: 'Adolf Rohrbach: Pioneer of Metal Aircraft Construction',
-      author: 'Charles E. MacKay',
-      cover: '/book-covers/adolf-rohrbach.jpg',
-      price: 27.99
-    }
-  ],
+  relatedBooks: getBooksData(['adolf-rohrbach', 'beardmore-aviation', 'german-aircraft-great-war']),
   relatedPosts: []
 }
 
