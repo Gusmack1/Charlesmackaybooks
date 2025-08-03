@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import AcademicAuthority from '@/components/AcademicAuthority';
 import BookCard from '@/components/BookCard';
 import Testimonials from '@/components/Testimonials';
-import RecentlyViewed from '@/components/RecentlyViewed';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -81,7 +80,6 @@ export default function Home() {
 
         {/* Customer Testimonials */}
         <Testimonials />
-        <RecentlyViewed />
         <Footer />
       </div>
     </>
