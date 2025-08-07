@@ -243,18 +243,18 @@ export default function AviationNewsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-12">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+            <h1 className="content h1 text-primary mb-6">
               Aviation News & Updates
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
               Latest discoveries, research developments, and expert analysis in aviation history.
               Stay informed about new findings, exhibitions, and academic developments in the field.
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted">
               <span>📰 Latest Discoveries</span>
               <span>🏛️ Exhibition News</span>
               <span>🔍 Research Updates</span>
@@ -263,7 +263,7 @@ export default function AviationNewsPage() {
           </div>
 
           {/* Research Highlights */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-8">
+          <div className="mb-12 card p-8">
             <h2 className="text-3xl font-bold text-slate-800 mb-6 text-center">Research Highlights</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {researchHighlights.map((highlight, index) => (
@@ -351,7 +351,7 @@ export default function AviationNewsPage() {
           </div>
 
           {/* Upcoming Events */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-8">
+          <div className="mb-12 card p-8">
             <h2 className="text-3xl font-bold text-slate-800 mb-6">Upcoming Events</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {upcomingEvents.map((event, index) => (

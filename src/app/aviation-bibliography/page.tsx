@@ -161,18 +161,18 @@ export default function AviationBibliographyPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-12">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+            <h1 className="content h1 text-primary mb-6">
               Aviation History Bibliography
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
               Comprehensive research database featuring primary sources, academic references, and historical documents
               essential for aviation history research. Curated by historian Charles E. MacKay.
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted">
               <span>📚 150+ Primary Sources</span>
               <span>🎓 Academic References</span>
               <span>🏛️ Archive Collections</span>
@@ -181,8 +181,8 @@ export default function AviationBibliographyPage() {
           </div>
 
           {/* Search and Filter Section */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-6">
-            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Research Categories</h2>
+          <div className="mb-12 card p-6">
+            <h2 className="content h2 text-primary mb-4">Research Categories</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {['Primary Sources', 'Academic Papers', 'Government Documents', 'Archive Collections'].map((category) => (
                 <div key={category} className="text-center p-4 bg-blue-50 rounded-lg">

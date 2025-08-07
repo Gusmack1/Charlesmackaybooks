@@ -215,18 +215,18 @@ export default function ImperialWarMuseumPartnershipPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-12">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+            <h1 className="content h1 text-primary mb-6">
               Imperial War Museum Partnership
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
               Official collaboration between Charles E. MacKay Aviation Research and the Imperial War Museum
               to advance aviation history research, create innovative exhibitions, and develop educational programs.
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted">
               <span>🏛️ Museum Partnership</span>
               <span>📚 Research Collaboration</span>
               <span>🎓 Educational Programs</span>
