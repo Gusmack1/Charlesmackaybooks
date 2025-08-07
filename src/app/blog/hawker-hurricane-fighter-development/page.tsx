@@ -33,7 +33,7 @@ const post = {
   title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
   subtitle: 'Expert aviation history analysis with comprehensive research and historical context',
   content: `
-      <div class="bg-amber-50 border-l-4 border-amber-400 p-6 mb-8">
+      <div class="card-compact bg-accent-amber text-white border-l-4 border-amber-300 p-6 mb-8">
         <p class="text-xl leading-relaxed  m-0">
           <strong>Historical Fact:</strong> While the Spitfire gets the glory, the Hawker Hurricane shot down more enemy aircraft during the Battle of Britain than all other defenses combined. This is the story of Sydney Camm's masterpiece that truly won Britain's finest hour.
         </p>
@@ -43,15 +43,15 @@ const post = {
         <h4 class="font-semibold  mb-3">📢 Share This Article</h4>
         <div class="flex justify-center gap-3 flex-wrap">
           <a href="https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development" 
-             class="bg-accent-blue hover:bg-blue-700 text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
+             class="badge badge-blue text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
             📘 Facebook
           </a>
           <a href="https://twitter.com/intent/tweet?url=https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development&text=Hawker Hurricane: The Forgotten Hero of the Battle of Britain&hashtags=AviationHistory,BattleOfBritain,RAF" 
-             class="bg-blue-400 hover:bg-blue-500 text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
+             class="badge badge-blue text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
             🐦 Twitter
           </a>
           <a href="https://linkedin.com/sharing/share-offsite/?url=https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development" 
-             class="bg-blue-800 hover:bg-blue-900 text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
+             class="badge badge-blue text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
             💼 LinkedIn
           </a>
         </div>

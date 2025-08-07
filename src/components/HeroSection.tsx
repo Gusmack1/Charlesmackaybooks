@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function HeroSection() {
   return (
-    <section className="homepage-hero relative bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16 lg:py-24">
+    <section className="hero-section relative bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16 lg:py-24">
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -43,16 +43,14 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 href="/books"
-                className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition-all duration-300 shadow-xl text-lg min-h-[60px]"
-                style={{ color: '#ffffff !important' }}
+                className="inline-flex items-center justify-center badge badge-green px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-lg min-h-[60px]"
               >
                 <span className="mr-3 text-xl">🛒</span>
                 Shop Aviation Books
               </Link>
               <Link
                 href="/blog"
-                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-xl text-lg min-h-[60px]"
-                style={{ color: '#ffffff !important' }}
+                className="inline-flex items-center justify-center badge badge-blue px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-lg min-h-[60px]"
               >
                 <span className="mr-3 text-xl">📝</span>
                 Expert Insights

@@ -69,8 +69,8 @@ export default function BooksPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Complete Book Collection</h2>
-            <p className="text-gray-600 mb-6">
+            <h2 className="content h2 text-primary mb-4">Complete Book Collection</h2>
+            <p className="text-secondary mb-6">
               Expert research • Academic references • FREE shipping worldwide
             </p>
           </div>
