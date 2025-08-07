@@ -91,11 +91,11 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
                     </div>
 
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-medium text-sm text-gray-800 line-clamp-2 mb-1">
+                      <h4 className="font-medium text-xs text-primary line-clamp-2 mb-1">
                         {item.book.title}
                       </h4>
-                      <p className="text-sm text-green-600 font-semibold">£{item.book.price.toFixed(2)}</p>
-                      <p className="text-xs text-gray-500">{item.book.condition} condition</p>
+                      <p className="text-xs text-accent-green font-semibold">£{item.book.price.toFixed(2)}</p>
+                      <p className="text-xs text-muted">{item.book.condition} condition</p>
 
                       {/* Quantity Controls */}
                       <div className="flex items-center gap-2 mt-2">
@@ -129,13 +129,13 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
 
           {/* Footer */}
           {items.length > 0 && (
-            <div className="border-t bg-slate-50 p-4 space-y-4">
+            <div className="border-t bg-gray-50 p-4 space-y-4">
               <div className="flex justify-between text-lg font-semibold">
                 <span>Total ({getTotalItems()} item{getTotalItems() !== 1 ? 's' : ''}):</span>
-                <span className="text-green-600">£{getTotalPrice().toFixed(2)}</span>
+                <span className="text-accent-green">£{getTotalPrice().toFixed(2)}</span>
               </div>
 
-              <div className="text-xs text-gray-600 text-center">
+              <div className="text-xs text-secondary text-center">
                 <div className="font-semibold mb-1">📦 Shipping:</div>
                 <div>FREE shipping worldwide</div>
               </div>
@@ -144,7 +144,7 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
                 <Link
                   href="/checkout"
                   onClick={onClose}
-                  className="block w-full bg-green-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  className="block w-full badge badge-green text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   Proceed to Checkout
                 </Link>
@@ -152,7 +152,7 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
                 <div className="flex gap-2">
                   <button
                     onClick={onClose}
-                    className="flex-1 bg-gray-200 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm"
+                    className="flex-1 bg-gray-200 text-secondary py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm"
                   >
                     Continue Shopping
                   </button>

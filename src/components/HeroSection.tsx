@@ -9,16 +9,16 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
           <div className="text-center lg:text-left">
-            <h1 className="hero-section text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Authentic Aviation
               <span className="block">History Books</span>
             </h1>
             
-            <p className="hero-section text-white">
-              Published by renowned aviation historian <strong className="text-white font-bold">Charles E. MacKay</strong>
+            <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed">
+              Published by renowned aviation historian <strong className="font-bold">Charles E. MacKay</strong>
             </p>
             
-            <p className="hero-section text-white">
+            <p className="text-lg md:text-xl text-white mb-8 leading-relaxed">
               <strong>Used as primary references by aviation researchers worldwide.</strong><br />
               Specializing in Scottish aviation heritage, World War aircraft, and military aviation history.
             </p>
