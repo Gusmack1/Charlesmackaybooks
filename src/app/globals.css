@@ -395,25 +395,42 @@
   background-color: #2563eb;
 }
 
-/* Show header on all pages except blog posts */
-.blog-page .header-container {
-  display: block !important;
-}
-
-/* Ensure header is visible on all pages */
-header,
-.header-container,
-.header-container * {
+/* Ensure header is always visible and properly styled */
+header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  height: auto !important;
-  overflow: visible !important;
 }
 
-/* Ensure blog content has proper spacing */
-.blog-page main {
-  padding-top: 1rem !important;
+.header-container {
+  display: block !important;
+  visibility: visible !important;
+  width: 100% !important;
+}
+
+/* Ensure proper text color in header */
+header * {
+  color: inherit !important;
+}
+
+header .text-white {
+  color: white !important;
+}
+
+header .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+header .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* Ensure main content has proper spacing */
+main {
+  padding-top: 0 !important;
 }
 
 /* Blog-specific styling */

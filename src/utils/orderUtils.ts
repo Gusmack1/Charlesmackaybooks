@@ -35,22 +35,53 @@ export interface ShippingRates {
   [key: string]: number;
 }
 
+// Royal Mail weight-based shipping calculation
+export function calculateShippingByWeight(totalWeight: number, country: string): number {
+  // Royal Mail pricing based on weight and destination
+  if (country === 'GB') {
+    // UK Domestic (1st Class)
+    if (totalWeight <= 100) return 1.95; // Large Letter up to 100g
+    if (totalWeight <= 250) return 2.95; // Large Letter 101-250g
+    if (totalWeight <= 500) return 4.45; // Large Letter 251-500g
+    if (totalWeight <= 1000) return 4.79; // Small Parcel up to 1kg
+    if (totalWeight <= 2000) return 4.79; // Small Parcel up to 2kg
+    return 6.50; // For heavier parcels
+  } else if (['FR', 'DE', 'NL', 'BE', 'ES', 'IT', 'IE', 'AT', 'DK', 'FI', 'NO', 'SE', 'CH', 'PT', 'GR', 'PL', 'CZ', 'HU', 'RO', 'BG', 'HR', 'SI', 'SK', 'EE', 'LV', 'LT', 'MT', 'CY', 'LU'].includes(country)) {
+    // Europe
+    if (totalWeight <= 100) return 3.85; // Large Letter up to 100g
+    if (totalWeight <= 250) return 5.95; // Large Letter 101-250g
+    if (totalWeight <= 500) return 8.95; // Large Letter 251-500g
+    if (totalWeight <= 1000) return 15.85; // Small Parcel up to 1kg
+    if (totalWeight <= 2000) return 15.85; // Small Parcel up to 2kg
+    return 25.00; // For heavier parcels
+  } else {
+    // Rest of World
+    if (totalWeight <= 100) return 4.20; // Large Letter up to 100g
+    if (totalWeight <= 250) return 6.95; // Large Letter 101-250g
+    if (totalWeight <= 500) return 10.95; // Large Letter 251-500g
+    if (totalWeight <= 1000) return 18.85; // Small Parcel up to 1kg
+    if (totalWeight <= 2000) return 18.85; // Small Parcel up to 2kg
+    return 30.00; // For heavier parcels
+  }
+}
+
+// Legacy shipping rates for backwards compatibility (using average book weight of 350g)
 export const shippingRates: ShippingRates = {
-  'GB': 3.45, // UK
-  'FR': 4.95, 'DE': 4.95, 'NL': 4.95, 'BE': 4.95, 'ES': 4.95, 'IT': 4.95, // EU countries
-  'AT': 4.95, 'PT': 4.95, 'IE': 4.95, 'DK': 4.95, 'SE': 4.95, 'FI': 4.95,
-  'PL': 4.95, 'CZ': 4.95, 'HU': 4.95, 'SK': 4.95, 'SI': 4.95, 'HR': 4.95,
-  'EE': 4.95, 'LV': 4.95, 'LT': 4.95, 'LU': 4.95, 'MT': 4.95, 'CY': 4.95,
-  'BG': 4.95, 'RO': 4.95,
-  'US': 8.95, 'CA': 8.95, // North America
-  'AU': 12.95, 'NZ': 12.95, // Oceania
-  'worldwide': 12.95 // Default worldwide
+  'GB': 2.95, // UK - Average for 350g book
+  'FR': 5.95, 'DE': 5.95, 'NL': 5.95, 'BE': 5.95, 'ES': 5.95, 'IT': 5.95, // EU countries
+  'AT': 5.95, 'PT': 5.95, 'IE': 5.95, 'DK': 5.95, 'SE': 5.95, 'FI': 5.95,
+  'PL': 5.95, 'CZ': 5.95, 'HU': 5.95, 'SK': 5.95, 'SI': 5.95, 'HR': 5.95,
+  'EE': 5.95, 'LV': 5.95, 'LT': 5.95, 'LU': 5.95, 'MT': 5.95, 'CY': 5.95,
+  'BG': 5.95, 'RO': 5.95, 'NO': 5.95, 'CH': 5.95, 'GR': 5.95,
+  'US': 6.95, 'CA': 6.95, // North America
+  'AU': 10.95, 'NZ': 10.95, // Oceania
+  'worldwide': 10.95 // Default worldwide
 };
 
 export const euCountries = [
   'FR', 'DE', 'NL', 'BE', 'ES', 'IT', 'AT', 'PT', 'IE', 'DK', 'SE', 'FI',
   'PL', 'CZ', 'HU', 'SK', 'SI', 'HR', 'EE', 'LV', 'LT', 'LU', 'MT', 'CY',
-  'BG', 'RO'
+  'BG', 'RO', 'NO', 'CH', 'GR'
 ];
 
 export function calculateShipping(country: string): number {

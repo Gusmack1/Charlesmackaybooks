@@ -7,6 +7,7 @@ import Image from 'next/image';
 import {
   CustomerDetails,
   calculateShipping,
+  calculateShippingByWeight,
   generateOrderId,
   saveOrder,
   generatePayPalUrl,
@@ -30,7 +31,12 @@ export default function CheckoutPage() {
   });
   const [errors, setErrors] = useState<string[]>([]);
 
-  const shippingCost = calculateShipping(customerDetails.country);
+  // Calculate total weight of all items
+  const totalWeight = items.reduce((total, item) => {
+    return total + (((item.book as any).weight || 300) * item.quantity);
+  }, 0);
+  
+  const shippingCost = calculateShippingByWeight(totalWeight, customerDetails.country);
   const subtotal = getTotalPrice();
   const total = subtotal + shippingCost;
 
@@ -448,8 +454,27 @@ export default function CheckoutPage() {
 
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <div className="text-sm">
-                      <div className="font-semibold text-blue-800 mb-1">Shipping Cost for {customerDetails.country === 'GB' ? 'UK' : customerDetails.country}:</div>
-                      <div className="text-blue-700">£{shippingCost.toFixed(2)}</div>
+                      <div className="font-semibold text-blue-800 mb-2">📦 Royal Mail Shipping</div>
+                      <div className="space-y-1">
+                        <div className="flex justify-between">
+                          <span className="text-blue-700">Total Weight:</span>
+                          <span className="font-medium">{totalWeight}g</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-blue-700">Destination:</span>
+                          <span className="font-medium">{customerDetails.country === 'GB' ? 'United Kingdom' : customerDetails.country}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-blue-700">Service:</span>
+                          <span className="font-medium text-xs">
+                            {totalWeight <= 100 ? 'Large Letter' : totalWeight <= 500 ? 'Large Letter' : totalWeight <= 2000 ? 'Small Parcel' : 'Standard Parcel'}
+                          </span>
+                        </div>
+                        <div className="flex justify-between border-t pt-2">
+                          <span className="font-semibold text-blue-800">Shipping Cost:</span>
+                          <span className="font-bold text-green-600">£{shippingCost.toFixed(2)}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
 

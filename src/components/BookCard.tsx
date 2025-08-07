@@ -124,6 +124,10 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
             </span>
             <span>{book.condition}</span>
           </div>
+          
+          <div className="text-xs text-gray-500 mb-2">
+            📦 Weight: {(book as any).weight || 300}g • 📄 Pages: {book.pageCount || 'N/A'}
+          </div>
         </div>
       </Link>
 
