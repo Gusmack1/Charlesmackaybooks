@@ -49,18 +49,18 @@ export default function SocialShare({ url, title, description, hashtags = [], au
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-100">
+    <div className="card p-6">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-          <svg className="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <h3 className="text-lg font-semibold text-primary flex items-center">
+          <svg className="w-5 h-5 mr-2 text-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
           </svg>
           Share This Article
         </h3>
-        <span className="text-sm text-gray-500">by {author}</span>
+        <span className="text-sm text-muted">by {author}</span>
       </div>
 
-      <p className="text-sm text-gray-600 mb-4">
+      <p className="text-sm text-secondary mb-4">
         Found this aviation history article interesting? Share it with fellow aviation enthusiasts!
       </p>
 
@@ -185,7 +185,7 @@ export default function SocialShare({ url, title, description, hashtags = [], au
       {/* Hashtags Display */}
       {hashtags.length > 0 && (
         <div className="mt-4 pt-4 border-t border-blue-200">
-          <p className="text-xs text-gray-500 mb-2">Suggested hashtags:</p>
+          <p className="text-xs text-muted mb-2">Suggested hashtags:</p>
           <div className="flex flex-wrap gap-1">
             {hashtags.map((tag, index) => (
               <span key={index} className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">

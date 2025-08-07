@@ -70,13 +70,13 @@ export default function Testimonials() {
     <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-4">⬢ What Customers Say</h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-secondary mb-12 max-w-2xl mx-auto">
           Trusted by aviation historians, museum curators, and enthusiasts worldwide
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map(testimonial => (
-            <div key={testimonial.id} className="bg-gray-50 rounded-lg p-6 border-l-4 border-[#2a384a]">
+            <div key={testimonial.id} className="card-compact rounded-lg p-6 border-l-4 border-[#2a384a]">
               {/* Star Rating */}
               <div className="flex items-center mb-3">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -99,7 +99,7 @@ export default function Testimonials() {
               {/* Author Info */}
               <div className="border-t pt-3">
                 <p className="font-semibold text-sm">{testimonial.name}</p>
-                <p className="text-xs text-gray-600">{testimonial.title}</p>
+                <p className="text-xs text-secondary">{testimonial.title}</p>
                 {testimonial.source && (
                   <p className="text-xs text-blue-600 mt-1">Source: {testimonial.source}</p>
                 )}
@@ -113,15 +113,15 @@ export default function Testimonials() {
           <div className="inline-flex items-center gap-8 bg-blue-50 rounded-lg px-8 py-4">
             <div className="text-center">
               <p className="text-2xl font-bold text-[#2a384a]">1,718+</p>
-              <p className="text-sm text-gray-600">Items Sold on eBay</p>
+              <p className="text-sm text-secondary">Items Sold on eBay</p>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-[#2a384a]">100%</p>
-              <p className="text-sm text-gray-600">Positive Feedback</p>
+              <p className="text-sm text-secondary">Positive Feedback</p>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-[#2a384a]">12+</p>
-              <p className="text-sm text-gray-600">Years Experience</p>
+              <p className="text-sm text-secondary">Years Experience</p>
             </div>
           </div>
           <p className="text-xs text-gray-500 mt-3">
