@@ -98,7 +98,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 bg-white">
       {/* Reading Progress Bar */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gray-50 z-50">
+      <div className="fixed top-0 left-0 w-full h-1 bg-secondary z-50">
         <div 
           className="h-full bg-accent-blue transition-all duration-300"
           style={{ width: `${readingProgress}%` }}
@@ -106,7 +106,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       </div>
 
       {/* Sticky Navigation */}
-      <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 mb-8 z-40">
+      <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b py-4 mb-8 z-40">
         <div className="flex items-center justify-between max-w-4xl mx-auto px-4">
           <div className="flex items-center space-x-2 text-sm text-muted">
             <span>Books</span>
@@ -146,23 +146,23 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Article Header */}
       <header className="mb-8">
         <div className="mb-4">
-          <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+          <span className="inline-block badge badge-blue text-sm font-medium rounded-full">
             {post.category}
           </span>
         </div>
         
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+        <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-4 leading-tight">
           {post.title}
         </h1>
         
         {post.subtitle && (
-          <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+          <p className="text-xl text-secondary mb-6 leading-relaxed">
             {post.subtitle}
           </p>
         )}
 
         {/* Article Meta */}
-        <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
+        <div className="flex flex-wrap items-center gap-6 text-sm text-secondary mb-6">
           <div className="flex items-center gap-2">
             <User className="w-4 h-4" />
             <span>By {post.author.name}</span>
@@ -186,7 +186,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
           {post.tags.map((tag, index) => (
             <span 
               key={index}
-              className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md"
+              className="inline-flex items-center gap-1 px-2 py-1 badge badge-gray text-xs rounded-md"
             >
               <Tag className="w-3 h-3" />
               {tag}
@@ -216,7 +216,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
       {/* Table of Contents */}
       {tableOfContents.length > 0 && (
-        <div className="mb-8 p-6 bg-gray-50 rounded-lg">
+        <div className="mb-8 p-6 card-compact rounded-lg">
           <button
             onClick={() => setShowTableOfContents(!showTableOfContents)}
             className="flex items-center justify-between w-full text-left font-semibold text-gray-900 mb-2"
@@ -231,7 +231,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
                 <a
                   key={index}
                   href={`#${item.id}`}
-                  className={`block text-sm text-gray-600 hover:text-blue-600 transition-colors ${
+                  className={`block text-sm text-secondary hover:text-accent-blue transition-colors ${
                     item.level > 2 ? 'ml-4' : ''
                   }`}
                 >
@@ -244,16 +244,14 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       )}
 
       {/* Article Content */}
-      <div className="prose prose-lg max-w-none mb-12">
+      <div className="content max-w-none mb-12">
         <div 
           dangerouslySetInnerHTML={{ __html: post.content }}
-          className="leading-relaxed text-gray-800"
-          style={{ lineHeight: '1.6' }}
         />
       </div>
 
       {/* Author Bio */}
-      <div className="mb-12 p-6 bg-gray-50 rounded-lg">
+      <div className="mb-12 p-6 card-compact rounded-lg">
         <div className="flex items-start gap-4">
           <div className="relative w-16 h-16 flex-shrink-0">
             <Image
@@ -264,15 +262,15 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
             />
           </div>
           <div>
-            <h3 className="font-semibold text-lg text-gray-900 mb-2">
+            <h3 className="font-semibold text-lg text-primary mb-2">
               About {post.author.name}
             </h3>
-            <p className="text-gray-600 mb-3 leading-relaxed">
+            <p className="text-secondary mb-3 leading-relaxed">
               {post.author.bio}
             </p>
             <a 
               href={`mailto:${post.author.email}`}
-              className="text-blue-600 hover:text-blue-700 font-medium"
+              className="text-accent-blue hover:text-blue-700 font-medium"
             >
               Contact the author
             </a>
@@ -343,15 +341,15 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       )}
 
       {/* Social Sharing Footer */}
-      <div className="border-t border-gray-200 pt-8">
+      <div className="border-t pt-8">
         <div className="text-center">
-          <p className="text-gray-600 mb-4">Share this article</p>
+          <p className="text-secondary mb-4">Share this article</p>
           <div className="flex justify-center gap-4">
             {['twitter', 'facebook', 'linkedin', 'pinterest', 'email'].map((platform) => (
               <button
                 key={platform}
                 onClick={() => handleShare(platform)}
-                className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors capitalize"
+                className="px-4 py-2 badge badge-gray rounded-lg transition-colors capitalize"
               >
                 {platform}
               </button>

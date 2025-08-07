@@ -113,7 +113,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
           {/* Table of Contents Sidebar */}
           <div className="hidden lg:block lg:col-span-1">
             <div className="sticky top-32 pt-4">
-              <div className="card-compact border border-gray-200 rounded-lg p-4">
+              <div className="card-compact rounded-lg p-4 border">
                 <h3 className="font-semibold text-primary mb-4">📋 Table of Contents</h3>
                 <nav className="space-y-2">
                   {blog.tableOfContents.map((item) => (
@@ -192,7 +192,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                 <div className="grid md:grid-cols-2 gap-4">
                   {relatedBooks.slice(0, 2).map((book) => (
                     <Link key={book.id} href={`/books/${book.id}`} 
-                          className="block bg-white p-4 rounded-lg border hover:shadow-lg transition-shadow">
+                          className="block card hover:shadow-lg transition-shadow">
                       <div className="flex gap-4">
                         <Image
                           src={book.imageUrl}
@@ -202,9 +202,9 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                           className="rounded flex-shrink-0"
                         />
                         <div className="flex-1">
-                          <h4 className="font-semibold text-accent-blue mb-2">{book.title}</h4>
+                          <h4 className="font-semibold text-primary mb-2">{book.title}</h4>
                                                       <p className="text-sm text-secondary mb-2">{book.relevantContent}</p>
-                                                      <div className="text-accent-green font-semibold">£{book.price} - Order Now →</div>
+                          <div className="text-white font-semibold">£{book.price} - Order Now →</div>
                         </div>
                       </div>
                     </Link>
@@ -232,11 +232,16 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold text-white mb-2">{blog.author.name}</h4>
-                  <p className="text-white/90 mb-3">{blog.author bio}</p>
+                  <p className="text-white/90 mb-3">{blog.author.bio}</p>
                   <div className="space-y-1">
                     {blog.author.credentials.map((credential, index) => (
                       <div key={index} className="flex items-center text-sm text-accent-blue">
                         <span className="mr-2">🏛️</span>
+                        {credential}
+                      </div>
+                    ))}
+                  </div>
+                </div>
                         {credential}
                       </div>
                     ))}
