@@ -354,22 +354,21 @@ const blogCategories = {
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-6xl mx-auto px-6 py-24">
+      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="max-w-6xl mx-auto px-6 py-24">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Aviation History Blog
-              <span className="block text-blue-300 text-3xl md:text-4xl mt-2">Expert Insights & Heritage</span>
+              <span className="block text-white text-3xl md:text-4xl mt-2">Expert Insights & Heritage</span>
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
               Expert insights into Scottish aviation history, WWI & WWII aircraft, helicopter development,
               jet age aviation, and military aviation heritage.
             </p>
-            <p className="text-blue-200 text-lg">
-              By Aviation Historian <span className="font-semibold">Charles E. MacKay</span>
+            <p className="text-white text-lg">
+              By Aviation Historian <span className="font-semibold text-white">Charles E. MacKay</span>
             </p>
           </div>
         </div>
@@ -450,13 +449,13 @@ export default function BlogPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/books"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              className="badge badge-blue px-6 py-2 rounded-lg font-medium transition-colors"
             >
               View All Books
             </Link>
             <Link
               href="/contact"
-              className="border border-gray-300 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+              className="border border-gray-300 text-secondary px-6 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
               Contact Charles
             </Link>
