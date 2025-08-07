@@ -39,8 +39,8 @@ const post = {
         </p>
       </div>
 
-      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8 text-center">
-        <h4 class="font-semibold text-blue-800 mb-3">📢 Share This Article</h4>
+      <div class=" rounded-lg p-6 mb-8 text-center">
+        <h4 class="font-semibold  mb-3">📢 Share This Article</h4>
         <div class="flex justify-center gap-3 flex-wrap">
           <a href="https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development" 
              class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
@@ -63,21 +63,21 @@ const post = {
 
       <div class="my-8">
         <img src="/blog-images/hawker-hurricane-fighter-development.jpg" alt="Hawker Hurricane in flight" class="w-full h-auto rounded-lg shadow-lg"/>
-        <p class="text-sm text-gray-600 mt-2 text-center italic">The Hawker Hurricane, the unsung hero of the Battle of Britain, which shot down more enemy aircraft than all other defenses combined.</p>
+        <p class="text-sm  mt-2 text-center italic">The Hawker Hurricane, the unsung hero of the Battle of Britain, which shot down more enemy aircraft than all other defenses combined.</p>
       </div>
 
       <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
         <h3 class="text-lg font-semibold text-gray-900 mb-4">📋 Article Contents</h3>
         <ul class="space-y-2">
-          <li><a href="#origins-development" class="text-blue-600 hover:text-blue-800">1. Origins and Development (1934-1937)</a></li>
-          <li><a href="#design-philosophy" class="text-blue-600 hover:text-blue-800">2. Design Philosophy and Innovation</a></li>
-          <li><a href="#production-deployment" class="text-blue-600 hover:text-blue-800">3. Production and Deployment</a></li>
-          <li><a href="#battle-britain" class="text-blue-600 hover:text-blue-800">4. Battle of Britain Service</a></li>
-          <li><a href="#global-operations" class="text-blue-600 hover:text-blue-800">5. Global Operations and Variants</a></li>
-          <li><a href="#technical-specifications" class="text-blue-600 hover:text-blue-800">6. Technical Specifications</a></li>
-          <li><a href="#combat-effectiveness" class="text-blue-600 hover:text-blue-800">7. Combat Effectiveness Analysis</a></li>
-          <li><a href="#pilot-accounts" class="text-blue-600 hover:text-blue-800">8. Pilot Accounts and Testimonies</a></li>
-          <li><a href="#legacy-impact" class="text-blue-600 hover:text-blue-800">9. Legacy and Impact</a></li>
+          <li><a href="#origins-development" class="text-blue-600 hover:">1. Origins and Development (1934-1937)</a></li>
+          <li><a href="#design-philosophy" class="text-blue-600 hover:">2. Design Philosophy and Innovation</a></li>
+          <li><a href="#production-deployment" class="text-blue-600 hover:">3. Production and Deployment</a></li>
+          <li><a href="#battle-britain" class="text-blue-600 hover:">4. Battle of Britain Service</a></li>
+          <li><a href="#global-operations" class="text-blue-600 hover:">5. Global Operations and Variants</a></li>
+          <li><a href="#technical-specifications" class="text-blue-600 hover:">6. Technical Specifications</a></li>
+          <li><a href="#combat-effectiveness" class="text-blue-600 hover:">7. Combat Effectiveness Analysis</a></li>
+          <li><a href="#pilot-accounts" class="text-blue-600 hover:">8. Pilot Accounts and Testimonies</a></li>
+          <li><a href="#legacy-impact" class="text-blue-600 hover:">9. Legacy and Impact</a></li>
       </ul>
     </div>
 
@@ -96,7 +96,7 @@ const post = {
 
       <div class="my-8">
         <img src="/blog-images/hawker-hurricane-prototype.jpg" alt="Hawker Hurricane prototype" class="w-full h-auto rounded-lg shadow-lg"/>
-        <p class="text-sm text-gray-600 mt-2 text-center italic">The Hawker Hurricane prototype K5083, which first flew in 1935 and exceeded all performance expectations.</p>
+        <p class="text-sm  mt-2 text-center italic">The Hawker Hurricane prototype K5083, which first flew in 1935 and exceeded all performance expectations.</p>
       </div>
 
       <h2 id="design-philosophy">Design Philosophy and Innovation</h2>
@@ -110,11 +110,11 @@ const post = {
 
       <div class="my-8">
         <img src="/blog-images/hawker-hurricane-cockpit.jpg" alt="Hawker Hurricane cockpit" class="w-full h-auto rounded-lg shadow-lg"/>
-        <p class="text-sm text-gray-600 mt-2 text-center italic">The Hawker Hurricane cockpit, designed for simplicity and reliability under combat conditions.</p>
+        <p class="text-sm  mt-2 text-center italic">The Hawker Hurricane cockpit, designed for simplicity and reliability under combat conditions.</p>
       </div>
 
-      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-        <h3 class="text-lg font-semibold text-blue-800 mb-4">📊 Hurricane vs Contemporary Fighters</h3>
+      <div class=" rounded-lg p-6 mb-8">
+        <h3 class="text-lg font-semibold  mb-4">📊 Hurricane vs Contemporary Fighters</h3>
         <div class="grid md:grid-cols-2 gap-4 text-sm">
           <div>
             <strong>Hawker Hurricane Mk I:</strong><br>
@@ -229,12 +229,12 @@ const post = {
         <div class="grid md:grid-cols-2 gap-4">
           <a href="/books/british-aircraft-great-war" class="block bg-white p-4 rounded-lg border hover:shadow-lg transition-shadow">
             <h4 class="font-semibold text-blue-600">British Aircraft of the Great War</h4>
-            <p class="text-sm text-gray-600 mt-2">Comprehensive study of British military aviation during WWI, covering RFC and RNAS aircraft development.</p>
+            <p class="text-sm  mt-2">Comprehensive study of British military aviation during WWI, covering RFC and RNAS aircraft development.</p>
             <div class="text-green-600 font-semibold mt-2">£24.99 - Order Now →</div>
           </a>
           <a href="/books/captain-eric-brown" class="block bg-white p-4 rounded-lg border hover:shadow-lg transition-shadow">
             <h4 class="font-semibold text-blue-600">Captain Eric Brown: Test Pilot Extraordinary</h4>
-            <p class="text-sm text-gray-600 mt-2">The extraordinary story of the world's most experienced test pilot and his aircraft evaluations.</p>
+            <p class="text-sm  mt-2">The extraordinary story of the world's most experienced test pilot and his aircraft evaluations.</p>
             <div class="text-green-600 font-semibold mt-2">£26.99 - Order Now →</div>
           </a>
         </div>

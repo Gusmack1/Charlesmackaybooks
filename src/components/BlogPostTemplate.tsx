@@ -101,9 +101,9 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
   return (
     <div className="bg-white">
       {/* Reading Progress Bar */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-50 z-50">
         <div 
-          className="h-full bg-blue-600 transition-all duration-300 ease-out"
+          className="h-full bg-accent-blue transition-all duration-300 ease-out"
           style={{ width: `${readingProgress}%` }}
         />
       </div>

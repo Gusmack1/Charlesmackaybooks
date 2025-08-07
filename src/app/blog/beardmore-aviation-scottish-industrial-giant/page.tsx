@@ -42,7 +42,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/beardmore-aviation-factory.jpg" alt="Beardmore aviation factory" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Beardmore aviation factory, showing the scale of Scottish industrial aviation manufacturing.</p>
+      <p class="text-sm mt-2 text-center italic">Beardmore aviation factory, showing the scale of Scottish industrial aviation manufacturing.</p>
     </div>
 
     <h2 id="historical-background">Historical Background and Context</h2>

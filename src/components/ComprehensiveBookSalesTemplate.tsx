@@ -54,9 +54,9 @@ export default function ComprehensiveBookSalesTemplate({
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Social Sharing Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3">
+      <div className="hero-section bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 text-white py-3">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-center items-center gap-4 text-sm">
             <span className="hidden md:inline">📢 Share this book:</span>

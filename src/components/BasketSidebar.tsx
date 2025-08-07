@@ -49,11 +49,11 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b bg-slate-50">
-            <h2 className="text-xl font-bold text-gray-800">Shopping Basket</h2>
+          <div className="flex items-center justify-between p-4 border-b bg-gray-50">
+            <h2 className="text-xl font-bold text-primary">Shopping Basket</h2>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-gray-200 rounded-full transition-colors"
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
               aria-label="Close basket"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,11 +67,11 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
             {items.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-full p-8 text-center">
                 <div className="text-6xl mb-4">🛒</div>
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">Your basket is empty</h3>
-                <p className="text-gray-500 mb-6">Add some books to get started!</p>
+                <h3 className="text-lg font-semibold text-primary mb-2">Your basket is empty</h3>
+                <p className="text-secondary mb-6">Add some books to get started!</p>
                 <button
                   onClick={onClose}
-                  className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="badge badge-blue px-6 py-2"
                 >
                   Continue Shopping
                 </button>
@@ -79,7 +79,7 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
             ) : (
               <div className="p-4 space-y-4">
                 {items.map((item) => (
-                  <div key={item.book.id} className="flex gap-3 p-3 border rounded-lg bg-gray-50">
+                  <div key={item.book.id} className="card-compact flex gap-3">
                     <div className="w-16 h-20 flex-shrink-0">
                       <Image
                         src={item.book.imageUrl || '/book-covers/placeholder-book.svg'}

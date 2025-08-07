@@ -13,7 +13,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/lucy-lady-houston.jpg" alt="Portrait of Lady Lucy Houston" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Lady Lucy Houston, the patriotic benefactor whose financial support saved Britain's Schneider Trophy program.</p>
+      <p class="text-sm  mt-2 text-center italic">Lady Lucy Houston, the patriotic benefactor whose financial support saved Britain's Schneider Trophy program.</p>
     </div>
 
     <p>The story of Lady Houston and the Schneider Trophy illustrates how individual determination and vision can change the course of aviation history. Her decision to fund Britain's 1931 entry ultimately contributed to saving the nation during the Battle of Britain, as the Spitfire's development directly benefited from Schneider Trophy technology.</p>
@@ -29,7 +29,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/supermarine-s6b-schneider-trophy.jpg" alt="Supermarine S6B that won the 1931 Schneider Trophy" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Supermarine S6B that won the 1931 Schneider Trophy with Lady Houston's funding, reaching 407 mph and influencing Spitfire design.</p>
+      <p class="text-sm  mt-2 text-center italic">The Supermarine S6B that won the 1931 Schneider Trophy with Lady Houston's funding, reaching 407 mph and influencing Spitfire design.</p>
     </div>
 
     <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
@@ -37,9 +37,9 @@ const post = {
 
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
-      <ul class="space-y-2 text-blue-700">
+    <div class=" rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
+      <ul class="space-y-2 ">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
         <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
@@ -54,7 +54,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/supermarine-spitfire-development.jpg" alt="Supermarine Spitfire development" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Supermarine Spitfire development that benefited from Schneider Trophy technology and Lady Houston's funding.</p>
+      <p class="text-sm  mt-2 text-center italic">The Supermarine Spitfire development that benefited from Schneider Trophy technology and Lady Houston's funding.</p>
     </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>

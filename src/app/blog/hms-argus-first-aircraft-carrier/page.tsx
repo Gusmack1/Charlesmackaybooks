@@ -11,27 +11,27 @@ const post = {
     <p>HMS Argus stands as one of naval aviation's most significant milestones - the world's first aircraft carrier with a full-length, unobstructed flight deck. Converted from the Italian ocean liner Conte Rosso during World War I, Argus established the fundamental design principles that would define aircraft carriers for the next century.</p>
     <div class="my-8">
       <img src="/blog-images/hms-argus-aircraft-carrier.jpg" alt="HMS Argus showing the full-length flight deck" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus with its revolutionary full-length flight deck, establishing the template for all future aircraft carriers.</p>
+      <p class="text-sm  mt-2 text-center italic">HMS Argus with its revolutionary full-length flight deck, establishing the template for all future aircraft carriers.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/hms-argus-dazzle-camouflage.jpg" alt="HMS Argus with distinctive dazzle camouflage" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus with its distinctive dazzle camouflage scheme, designed to confuse enemy submarines.</p>
+      <p class="text-sm mt-2 text-center italic">HMS Argus with its distinctive dazzle camouflage scheme, designed to confuse enemy submarines.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/carrier-landing-without-wheels.jpg" alt="Early carrier landing operations" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Early carrier landing techniques that evolved from HMS Argus's pioneering operations.</p>
+      <p class="text-sm mt-2 text-center italic">Early carrier landing techniques that evolved from HMS Argus's pioneering operations.</p>
     </div>
     
     <div class="my-8">
       <img src="/blog-images/hms-argus-aircraft-carrier.jpg" alt="HMS Argus showing the full-length flight deck" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus with its revolutionary full-length flight deck, establishing the template for all future aircraft carriers.</p>
+      <p class="text-sm  mt-2 text-center italic">HMS Argus with its revolutionary full-length flight deck, establishing the template for all future aircraft carriers.</p>
     </div>
     
     <p>Commissioned in September 1918, Argus introduced innovations that revolutionized naval warfare. Its flush deck design, internal hangar, and elevator systems created the template for modern carriers. Though arriving too late to see significant action in World War I, Argus proved the viability of large-scale naval aviation operations.</p>
 
     <div class="my-8">
       <img src="/blog-images/hms-argus-dazzle-camouflage.jpg" alt="HMS Argus with distinctive dazzle camouflage" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus with its distinctive dazzle camouflage scheme, designed to confuse enemy submarines about the ship's speed and direction.</p>
+      <p class="text-sm  mt-2 text-center italic">HMS Argus with its distinctive dazzle camouflage scheme, designed to confuse enemy submarines about the ship's speed and direction.</p>
     </div>
 
     <p>The development of Argus represented a paradigm shift from earlier carriers that retained traditional ship superstructures. By eliminating the superstructure entirely and creating an unobstructed flight deck running the ship's full length, Argus demonstrated the potential for intensive aircraft operations at sea.</p>
@@ -50,9 +50,9 @@ const post = {
 
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
-      <ul class="space-y-2 text-blue-700">
+    <div class="rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4">Key Technical Innovations</h3>
+      <ul class="space-y-2">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
         <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>

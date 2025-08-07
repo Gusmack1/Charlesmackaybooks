@@ -98,36 +98,36 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 bg-white">
       {/* Reading Progress Bar */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-50 z-50">
         <div 
-          className="h-full bg-blue-600 transition-all duration-300"
+          className="h-full bg-accent-blue transition-all duration-300"
           style={{ width: `${readingProgress}%` }}
         />
       </div>
 
       {/* Sticky Navigation */}
-      <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 py-4 mb-8 z-40">
+      <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 mb-8 z-40">
         <div className="flex items-center justify-between max-w-4xl mx-auto px-4">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
+          <div className="flex items-center space-x-2 text-sm text-muted">
             <span>Books</span>
             <ChevronRight className="w-4 h-4" />
             <span>Blog</span>
             <ChevronRight className="w-4 h-4" />
-            <span className="text-blue-600">{post.category}</span>
+            <span className="text-accent-blue">{post.category}</span>
           </div>
           
           {/* Social Sharing Buttons */}
           <div className="flex items-center space-x-2">
             <button 
               onClick={() => handleShare('twitter')}
-              className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
+              className="p-2 text-muted hover:text-accent-blue transition-colors"
               aria-label="Share on Twitter"
             >
               <Share2 className="w-4 h-4" />
             </button>
             <button 
               onClick={() => handleShare('facebook')}
-              className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
+              className="p-2 text-muted hover:text-accent-blue transition-colors"
               aria-label="Share on Facebook"
             >
               <Share2 className="w-4 h-4" />

@@ -39,26 +39,26 @@ export default function CartSidebar() {
           {/* Header */}
           <div className="flex items-center justify-between border-b px-6 py-4">
             <div className="flex items-center gap-2">
-              <ShoppingBag className="h-5 w-5 text-gray-900" />
-              <h2 className="text-lg font-semibold text-gray-900">Your Basket</h2>
-              <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">
+              <ShoppingBag className="h-5 w-5 text-primary" />
+              <h2 className="text-lg font-semibold text-primary">Your Basket</h2>
+              <span className="badge badge-green text-xs">
                 {getTotalItems()}
               </span>
             </div>
             <button
               onClick={() => setIsCartOpen(false)}
-              className="rounded-lg p-2 hover:bg-gray-100"
+              className="rounded-lg p-2 hover:bg-gray-50"
             >
-              <X className="h-5 w-5 text-gray-900" />
+              <X className="h-5 w-5 text-primary" />
             </button>
           </div>
 
           {/* Content */}
           <div className="flex-1 overflow-y-auto px-6 py-4">
             {items.length === 0 ? (
-              <div className="flex h-full flex-col items-center justify-center text-gray-500">
+              <div className="flex h-full flex-col items-center justify-center text-muted">
                 <ShoppingBag className="h-12 w-12 mb-4" />
-                <p className="text-lg font-medium">Your basket is empty</p>
+                <p className="text-lg font-medium text-primary">Your basket is empty</p>
                 <p className="text-sm">Add some books to get started!</p>
               </div>
             ) : (
@@ -73,9 +73,9 @@ export default function CartSidebar() {
                       className="rounded object-cover"
                     />
                     <div className="flex-1">
-                      <h3 className="font-medium text-sm text-gray-900">{item.book.title}</h3>
-                      <p className="text-xs text-gray-600">by Charles E. MacKay</p>
-                      <p className="text-xs text-gray-500">{item.book.condition} condition • {(item.book as any).weight || 300}g</p>
+                      <h3 className="font-medium text-sm text-primary">{item.book.title}</h3>
+                      <p className="text-xs text-secondary">by Charles E. MacKay</p>
+                      <p className="text-xs text-muted">{item.book.condition} condition • {(item.book as any).weight || 300}g</p>
                       
                       {/* Quantity Controls */}
                       <div className="flex items-center gap-2 mt-2">
