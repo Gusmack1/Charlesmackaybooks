@@ -180,18 +180,18 @@ export default function FAQPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-12">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+            <h1 className="content h1 text-primary mb-6">
               Aviation History FAQ
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
               Expert answers to frequently asked questions about aviation history, Scottish aviation heritage,
               and historical aircraft research from renowned aviation historian Charles E. MacKay.
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted">
               <span>❓ Expert Answers</span>
               <span>📚 Research Guidance</span>
               <span>🎓 Academic Resources</span>
@@ -200,8 +200,8 @@ export default function FAQPage() {
           </div>
 
           {/* Category Filter */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-6">
-            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Browse by Category</h2>
+          <div className="mb-12 card p-6">
+            <h2 className="content h2 text-primary mb-4">Browse by Category</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {categories.map((category) => (
                 <div key={category} className="text-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors cursor-pointer">

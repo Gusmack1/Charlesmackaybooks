@@ -35,19 +35,19 @@ export default function ForResearchersPage() {
   return (
     <>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">For Researchers & Academic Institutions</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h1 className="content h1 text-primary mb-4">For Researchers & Academic Institutions</h1>
+          <p className="text-xl text-secondary max-w-3xl mx-auto">
             Academic resources, citation guides, and research collaboration opportunities
           </p>
         </div>
 
         {/* Citation Guide */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="card p-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">📚 How to Cite Charles E. MacKay's Books</h2>
 
             <div className="space-y-6">

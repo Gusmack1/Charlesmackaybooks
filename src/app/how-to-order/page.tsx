@@ -35,19 +35,19 @@ export default function HowToOrderPage() {
   return (
     <>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">How to Order Aviation History Books</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h1 className="content h1 text-primary mb-4">How to Order Aviation History Books</h1>
+          <p className="text-xl text-secondary max-w-3xl mx-auto">
             Multiple secure purchasing options with fast worldwide shipping from Glasgow, Scotland
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
           {/* Quick Start */}
-          <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-lg p-8 mb-12 text-center">
+          <div className="hero-section bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 text-white rounded-lg p-8 mb-12 text-center">
             <h2 className="text-2xl font-bold mb-4">🚀 Quick Start Guide</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div>
@@ -70,13 +70,13 @@ export default function HowToOrderPage() {
 
           {/* Payment Options */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="card p-6">
               <div className="text-center mb-4">
                 <div className="text-4xl mb-2">🛒</div>
-                <h3 className="text-xl font-bold text-gray-800">eBay Purchase</h3>
-                <p className="text-sm text-green-600 font-semibold">Most Popular</p>
+                <h3 className="text-xl font-bold text-primary">eBay Purchase</h3>
+                <p className="text-sm text-accent-green font-semibold">Most Popular</p>
               </div>
-              <ul className="space-y-2 text-sm text-gray-600 mb-4">
+              <ul className="space-y-2 text-sm text-secondary mb-4">
                 <li>✓ 100% buyer protection</li>
                 <li>✓ 1,700+ positive reviews</li>
                 <li>✓ Instant purchase</li>
@@ -88,20 +88,20 @@ export default function HowToOrderPage() {
                   href="https://www.ebay.co.uk/usr/chaza87"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors inline-block"
+                  className="badge badge-green px-4 py-2 rounded-lg transition-colors inline-block"
                 >
                   Visit eBay Store →
                 </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="card p-6">
               <div className="text-center mb-4">
                 <div className="text-4xl mb-2">💳</div>
-                <h3 className="text-xl font-bold text-gray-800">PayPal Direct</h3>
+                <h3 className="text-xl font-bold text-primary">PayPal Direct</h3>
                 <p className="text-sm text-blue-600 font-semibold">Fastest</p>
               </div>
-              <ul className="space-y-2 text-sm text-gray-600 mb-4">
+              <ul className="space-y-2 text-sm text-secondary mb-4">
                 <li>✓ Direct to Charles</li>
                 <li>✓ Personal service</li>
                 <li>✓ Custom requests welcome</li>
@@ -111,20 +111,20 @@ export default function HowToOrderPage() {
               <div className="text-center">
                 <a
                   href="mailto:charlese1mackay@hotmail.com?subject=Book Order Inquiry"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors inline-block"
+                  className="badge badge-blue px-4 py-2 rounded-lg transition-colors inline-block"
                 >
                   Email for PayPal →
                 </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="card p-6">
               <div className="text-center mb-4">
                 <div className="text-4xl mb-2">🛍️</div>
-                <h3 className="text-xl font-bold text-gray-800">Website Cart</h3>
+                <h3 className="text-xl font-bold text-primary">Website Cart</h3>
                 <p className="text-sm text-purple-600 font-semibold">Multiple Books</p>
               </div>
-              <ul className="space-y-2 text-sm text-gray-600 mb-4">
+              <ul className="space-y-2 text-sm text-secondary mb-4">
                 <li>✓ Add multiple books</li>
                 <li>✓ Save for later (wishlist)</li>
                 <li>✓ Combined shipping</li>
@@ -134,7 +134,7 @@ export default function HowToOrderPage() {
               <div className="text-center">
                 <Link
                   href="/books"
-                  className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors inline-block"
+                  className="badge badge-blue px-4 py-2 rounded-lg transition-colors inline-block"
                 >
                   Browse Books →
                 </Link>
@@ -152,7 +152,7 @@ export default function HowToOrderPage() {
                 <h3 className="font-bold text-gray-800 mb-2">UK Shipping</h3>
                 <p className="text-sm text-gray-600">Free delivery</p>
                 <p className="text-sm text-gray-600">1-3 business days</p>
-                <p className="text-sm text-green-600 font-semibold">£0.00</p>
+                <p className="text-sm text-accent-green font-semibold">£0.00</p>
               </div>
 
               <div className="text-center">
