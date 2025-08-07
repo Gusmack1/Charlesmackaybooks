@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Footer from '@/components/Footer'
 import BookCard from '@/components/BookCard'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
@@ -83,7 +82,7 @@ export default function BooksPage() {
         </div>
       </section>
 
-        <Footer />
+        {/* Footer is provided by root layout; avoid duplicate footer here */}
       </div>
     </>
   )
