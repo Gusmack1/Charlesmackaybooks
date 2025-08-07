@@ -106,26 +106,26 @@ export default function TimelinePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-4 py-12">
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto container-padding py-12">
         {/* Header */}
         <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+          <h1 className="content h1 text-primary mb-6">
             Aviation History Timeline
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="content text-secondary max-w-4xl mx-auto leading-relaxed">
             A comprehensive chronological journey through the development of aviation
           </p>
           <div className="mt-6">
             <Link
               href="/scottish-aviation-timeline"
-              className="inline-block bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors mr-4"
+              className="badge badge-amber mr-4"
             >
               🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Aviation Timeline
             </Link>
             <Link
               href="/books"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="badge badge-blue"
             >
               📚 Browse Aviation Books
             </Link>
@@ -135,7 +135,7 @@ export default function TimelinePage() {
         {/* Timeline */}
         <section className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-blue-300"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-accent-blue"></div>
 
           <div className="space-y-12">
             {timelineEvents.map((period, index) => (

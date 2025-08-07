@@ -69,21 +69,21 @@ export default function ResponsiveTypography({
   const getColorClasses = () => {
     switch (color) {
       case 'primary':
-        return 'text-gray-900 dark:text-white';
+        return 'text-primary';
       case 'secondary':
-        return 'text-gray-700 dark:text-gray-300';
+        return 'text-secondary';
       case 'muted':
-        return 'text-gray-500 dark:text-gray-400';
+        return 'text-muted';
       case 'accent':
-        return 'text-blue-600 dark:text-blue-400';
+        return 'text-accent-blue';
       case 'success':
-        return 'text-green-600 dark:text-green-400';
+        return 'text-accent-green';
       case 'warning':
-        return 'text-yellow-600 dark:text-yellow-400';
+        return 'text-accent-amber';
       case 'error':
-        return 'text-red-600 dark:text-red-400';
+        return 'text-red-600';
       default:
-        return 'text-gray-900 dark:text-white';
+        return 'text-primary';
     }
   };
 

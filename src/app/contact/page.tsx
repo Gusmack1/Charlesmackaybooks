@@ -50,7 +50,7 @@ const structuredData = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -64,7 +64,7 @@ export default function ContactPage() {
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Contact Charles E. MacKay
             </h1>
-            <p className="text-xl text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="hero-section text-white mb-8 leading-relaxed max-w-3xl mx-auto">
               Get in touch for academic collaboration, research inquiries, bulk book orders, or historical consultancy services.
             </p>
           </div>
@@ -78,8 +78,8 @@ export default function ContactPage() {
         <section className="mb-16">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-slate-800 mb-8">Get in Touch</h2>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              <h2 className="content h2 text-primary mb-8">Get in Touch</h2>
+              <p className="content text-secondary mb-8 leading-relaxed">
                 Charles E. MacKay welcomes inquiries from fellow researchers, academic institutions, museums, and aviation enthusiasts. Whether you're interested in collaboration, seeking historical information, or looking to acquire books for your institution, please don't hesitate to reach out.
               </p>
 
@@ -89,9 +89,9 @@ export default function ContactPage() {
                     <span className="text-2xl">📧</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-800 mb-2">Email</h3>
-                    <p className="text-gray-600">charlese1mackay@hotmail.com</p>
-                    <p className="text-sm text-gray-500 mt-1">Response time: Usually within 24-48 hours</p>
+                    <h3 className="font-semibold text-primary mb-2">Email</h3>
+                    <p className="text-secondary">charlese1mackay@hotmail.com</p>
+                    <p className="text-sm text-muted mt-1">Response time: Usually within 24-48 hours</p>
                   </div>
                 </div>
 

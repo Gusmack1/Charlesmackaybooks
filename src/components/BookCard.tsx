@@ -90,9 +90,9 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
   };
 
   return (
-    <div className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 overflow-hidden">
+    <div className="group card overflow-hidden hover:shadow-lg transition-shadow">
       <Link href={`/books/${book.id}`} onClick={handleBookClick} className="block">
-        <div className="relative h-72 overflow-hidden bg-gray-100">
+        <div className="relative h-72 overflow-hidden bg-gray-50">
           <Image
             src={imgSrc}
             alt={`${book.title} by Charles E. MacKay`}
@@ -103,29 +103,29 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
             priority={false}
           />
           <div className="absolute top-2 right-2">
-            <span className="bg-green-600 text-white px-2 py-1 rounded text-sm font-semibold">
+            <span className="badge badge-green text-sm">
               £{book.price}
             </span>
           </div>
         </div>
 
         <div className="p-4">
-          <h3 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+          <h3 className="font-bold text-lg mb-2 group-hover:text-accent-blue transition-colors line-clamp-2 text-primary">
             {book.title}
           </h3>
 
-          <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+          <p className="text-secondary text-sm mb-3 line-clamp-2">
             {book.description}
           </p>
 
-          <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-            <span className="bg-gray-100 px-2 py-1 rounded text-xs">
+          <div className="flex items-center justify-between text-sm text-muted mb-3">
+            <span className="bg-gray-50 px-2 py-1 rounded text-xs text-muted">
               {book.category}
             </span>
             <span>{book.condition}</span>
           </div>
           
-          <div className="text-xs text-gray-500 mb-2">
+          <div className="text-xs text-muted mb-2">
             📦 Weight: {(book as any).weight || 300}g • 🏷️ ISBN: {book.isbn || 'N/A'}
           </div>
         </div>
@@ -138,14 +138,14 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
             <button
               onClick={handleAddToCart}
               disabled={isAddingToCart}
-              className="w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-colors disabled:opacity-50 text-sm font-medium"
+              className="w-full badge badge-green py-2 px-4 disabled:opacity-50 text-sm font-medium"
             >
               {isAddingToCart ? '🔄 Adding...' : '🛒 Add to Basket'}
             </button>
 
             <button
               onClick={handleEbayClick}
-              className="w-full bg-yellow-500 text-black py-2 px-4 rounded hover:bg-yellow-600 transition-colors text-sm font-medium"
+              className="w-full badge badge-amber py-2 px-4 text-sm font-medium"
             >
               🛒 Buy on eBay
             </button>

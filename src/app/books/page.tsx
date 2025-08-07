@@ -46,7 +46,7 @@ export default function BooksPage() {
         books={books}
       />
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="hero-section bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -58,9 +58,9 @@ export default function BooksPage() {
             From WWI fighters to modern jets, Scottish aviation heritage to global military aviation.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <span className="bg-blue-600 px-4 py-2 rounded-lg text-white">📚 {books.length} Books Available</span>
-            <span className="bg-green-600 px-4 py-2 rounded-lg text-white">✅ In Stock & Ready to Ship</span>
-            <span className="bg-orange-600 px-4 py-2 rounded-lg text-white">🌍 Worldwide Shipping</span>
+            <span className="badge badge-blue">📚 {books.length} Books Available</span>
+            <span className="badge badge-green">✅ In Stock & Ready to Ship</span>
+            <span className="badge badge-amber">🌍 Worldwide Shipping</span>
           </div>
         </div>
       </section>

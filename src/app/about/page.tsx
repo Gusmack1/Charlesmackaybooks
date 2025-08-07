@@ -86,7 +86,7 @@ const structuredData = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -124,15 +124,15 @@ export default function AboutPage() {
                     className="rounded shadow-lg flex-shrink-0"
                   />
                   <div>
-                    <p className="text-sm text-blue-100 mb-2">
+                    <p className="text-sm text-white mb-2">
                       <strong>Charles with De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971.</strong> This iconic photograph captures a pivotal moment in Charles MacKay's aviation journey, standing beside the very aircraft that would later become the subject of his comprehensive research. The Chipmunk WP808 represents the bridge between wartime training aircraft and post-war aviation development, embodying the transition from military to civilian aviation that has been a central theme in MacKay's historical work.
                     </p>
-                    <p className="text-sm text-blue-100 mb-2">
+                    <p className="text-sm text-white mb-2">
                       This personal connection to aviation history reflects his lifelong passion for preserving the stories of aircraft and the people who flew them. The image symbolizes the hands-on approach that characterizes MacKay's research methodology - combining archival investigation with personal experience and direct engagement with aviation heritage.
                     </p>
                     <Link
                       href="/blog/de-havilland-chipmunk-wp808-turnhouse"
-                      className="text-blue-200 hover:text-blue-100 text-sm font-medium underline"
+                      className="text-white hover:text-gray-200 text-sm font-medium underline"
                     >
                       Read the full story of WP808 and Turnhouse airfield →
                     </Link>
@@ -146,7 +146,7 @@ export default function AboutPage() {
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                 About Charles E. MacKay
               </h1>
-              <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+              <p className="hero-section text-white mb-8 leading-relaxed">
                 Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history. With 19 published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
               </p>
 

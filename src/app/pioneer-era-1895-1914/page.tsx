@@ -87,7 +87,7 @@ export default function PioneerEraPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
+    <div className="min-h-screen bg-white">
 
       <UnifiedSchema
         pageType="page"

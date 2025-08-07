@@ -405,15 +405,15 @@ export default function BlogPage() {
 
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm text-gray-500">{post.date}</span>
-                        <span className="text-sm text-gray-500">{post.readTime}</span>
+                        <span className="text-sm text-muted">{post.date}</span>
+                        <span className="text-sm text-muted">{post.readTime}</span>
                       </div>
 
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                      <h3 className="text-lg font-semibold text-primary mb-3 group-hover:text-accent-blue transition-colors line-clamp-2">
                         {post.title}
                       </h3>
 
-                      <p className="text-gray-600 mb-4 line-clamp-3 text-sm leading-relaxed">
+                      <p className="text-secondary mb-4 line-clamp-3 text-sm leading-relaxed">
                         {post.excerpt}
                       </p>
 
@@ -421,14 +421,14 @@ export default function BlogPage() {
                         {post.tags.slice(0, 2).map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                            className="px-2 py-1 bg-gray-50 text-muted rounded text-xs"
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
 
-                      <div className="text-blue-600 font-medium text-sm">
+                      <div className="text-accent-blue font-medium text-sm">
                         Read Article →
                       </div>
                     </div>
@@ -440,9 +440,9 @@ export default function BlogPage() {
         ))}
 
         {/* Minimal Author Section */}
-        <section className="bg-white rounded-lg border border-gray-200 p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">About the Author</h3>
-          <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+        <section className="card p-8 text-center">
+          <h3 className="content h3 text-primary mb-4">About the Author</h3>
+          <p className="text-secondary mb-6 max-w-3xl mx-auto">
             <strong>Charles E. MacKay</strong> is a renowned aviation historian specializing in Scottish aviation heritage,
             WWI & WWII aircraft development, and military aviation history. His research provides unique insights into
             the personalities and technologies that shaped modern aviation.
