@@ -1,4 +1,5 @@
 // Sitemap generator for Charles Mackay Books
+import { books } from '@/data/books';
 
 export interface SitemapEntry {
   url: string;
@@ -32,14 +33,12 @@ export function generateSitemap(): string {
     { url: '/great-war-1914-1918', changeFrequency: 'monthly', priority: 0.8 },
     { url: '/golden-age-1918-1939', changeFrequency: 'monthly', priority: 0.7 },
 
-    // Book pages
-    { url: '/books/beardmore-aviation', changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/books/aircraft-carrier-argus', changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/books/adolf-rohrbach', changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/books/british-aircraft-great-war', changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/books/captain-eric-brown', changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/books/clydeside-aviation-vol1', changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/books/birth-atomic-bomb', changeFrequency: 'weekly', priority: 0.7 },
+    // All book pages - dynamically generated
+    ...books.map(book => ({
+      url: `/books/${book.id}`,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9
+    })),
 
     // Blog posts
     { url: '/blog/beardmore-aviation-scottish-industrial-giant', changeFrequency: 'weekly', priority: 0.8 },
@@ -106,21 +105,12 @@ export function generateImageSitemap(): string {
       caption: 'Charles E. MacKay Aviation Historian',
       title: 'Charles E. MacKay - Aviation Historian'
     },
-    {
-      url: '/book-covers/beardmore-aviation.jpg',
-      caption: 'Beardmore Aviation Book Cover',
-      title: 'Beardmore Aviation: The Story of a Scottish Industrial Giant'
-    },
-    {
-      url: '/book-covers/aircraft-carrier-argus.jpg',
-      caption: 'HMS Argus Aircraft Carrier Book Cover',
-      title: 'HMS Argus: The First Aircraft Carrier'
-    },
-    {
-      url: '/book-covers/adolf-rohrbach.jpg',
-      caption: 'Adolf Rohrbach Book Cover',
-      title: 'Adolf Rohrbach and His Flying Machines'
-    }
+    // All book covers - dynamically generated
+    ...books.map(book => ({
+      url: `/book-covers/${book.id}.jpg`,
+      caption: `${book.title} Book Cover`,
+      title: `${book.title} by Charles E. MacKay`
+    }))
   ];
 
   const imageSitemap = `<?xml version="1.0" encoding="UTF-8"?>

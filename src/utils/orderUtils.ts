@@ -174,6 +174,35 @@ export function generatePayPalUrl(order: Order): string {
   return `${baseUrl}?${params}`;
 }
 
+// Function to send email notification to admin about new order
+export function notifyAdminOfNewOrder(order: Order): void {
+  const subject = encodeURIComponent(`New Order - ${order.orderId} - £${order.total.toFixed(2)}`);
+  const body = encodeURIComponent(`
+NEW ORDER RECEIVED
+
+Order ID: ${order.orderId}
+Customer: ${order.customerDetails.firstName} ${order.customerDetails.lastName}
+Email: ${order.customerDetails.email}
+Total: £${order.total.toFixed(2)}
+Items: ${order.items.length}
+
+Full Details:
+${generateEmailReceipt(order)}
+  `);
+  
+  // Open email client with pre-filled notification
+  window.open(`mailto:charlese1mackay@hotmail.com?subject=${subject}&body=${body}`);
+}
+
+// Function to automatically send receipt to customer
+export function sendReceiptToCustomer(order: Order): void {
+  const subject = encodeURIComponent(`Order Confirmation - ${order.orderId} - Charles E. MacKay Aviation Books`);
+  const body = encodeURIComponent(generateEmailReceipt(order));
+  
+  // Open email client with pre-filled receipt
+  window.open(`mailto:${order.customerDetails.email}?subject=${subject}&body=${body}`);
+}
+
 export function generateEmailReceipt(order: Order): string {
   const itemsText = order.items.map(item =>
     `- ${item.title} (£${item.price.toFixed(2)} x ${item.quantity} = £${(item.price * item.quantity).toFixed(2)})`

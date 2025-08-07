@@ -151,15 +151,33 @@ export default function UnifiedSchema({
       "isbn": bookData.isbn,
       "category": bookData.category,
       "productID": bookData.id,
+      "sku": bookData.isbn || bookData.id,
+      "weight": {
+        "@type": "QuantitativeValue",
+        "value": (bookData as any).weight || 300,
+        "unitCode": "GRM"
+      },
       "offers": {
         "@type": "Offer",
         "url": `${baseUrl}/books/${bookData.id}`,
         "price": bookData.price.toFixed(2),
         "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
+        "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
         "seller": {
           "@id": `${baseUrl}/#organization`
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "3.45",
+            "currency": "GBP"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          }
         }
       },
       "aggregateRating": {
@@ -204,11 +222,20 @@ export default function UnifiedSchema({
           "description": book.description,
           "image": `${baseUrl}/book-covers/${book.id}.jpg`,
           "url": `${baseUrl}/books/${book.id}`,
+          "isbn": book.isbn,
+          "sku": book.isbn || book.id,
+          "category": book.category,
+          "weight": {
+            "@type": "QuantitativeValue",
+            "value": (book as any).weight || 300,
+            "unitCode": "GRM"
+          },
           "offers": {
             "@type": "Offer",
             "price": book.price.toFixed(2),
             "priceCurrency": "GBP",
-            "availability": "https://schema.org/InStock"
+            "availability": book.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+            "itemCondition": book.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition"
           },
           "aggregateRating": {
             "@type": "AggregateRating",

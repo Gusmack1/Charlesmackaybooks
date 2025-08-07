@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/Header'
+import ConditionalHeader from '@/components/ConditionalHeader'
 import Footer from '@/components/Footer'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -208,7 +208,7 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/playfair-display-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <ClientBody>
-        <div className="header-container"><Header /></div>
+        <ConditionalHeader />
         <main className="min-h-screen">
           {children}
         </main>

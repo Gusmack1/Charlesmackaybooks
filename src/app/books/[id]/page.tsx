@@ -309,7 +309,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     let description = book.description;
 
     // Add selling points
-    description += ` Written by renowned aviation historian Charles E. MacKay. ${book.pageCount} pages. ${book.condition} condition. ISBN: ${book.isbn}.`;
+    description += ` Written by renowned aviation historian Charles E. MacKay. ${book.condition} condition. ISBN: ${book.isbn}.`;
 
     // Add academic credentials if available
     if (book.citationCount && book.citationCount > 0) {
@@ -374,7 +374,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       site: '@charlesmackaybooks',
       creator: '@charlesmackay',
       title: `${book.title} | Aviation History Book`,
-      description: `${book.category} book by Charles E. MacKay. ${book.pageCount} pages. £${book.price}. UK £3.45 shipping.`,
+      description: `${book.category} book by Charles E. MacKay. £${book.price}. UK £3.45 shipping.`,
       images: {
         url: book.imageUrl || `/book-covers/${book.id}.jpg`,
         alt: `${book.title} - Aviation History Book Cover`,
@@ -477,8 +477,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 {/* Book Specifications */}
                 <div className="grid grid-cols-2 gap-6 mb-8 text-center">
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className={`text-sm ${accentClasses.textLight} mb-1`}>Pages</div>
-                    <div className="text-2xl font-bold">{book.pageCount}</div>
+                    <div className={`text-sm ${accentClasses.textLight} mb-1`}>Weight</div>
+                    <div className="text-2xl font-bold">{(book as any).weight || 300}g</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className={`text-sm ${accentClasses.textLight} mb-1`}>Published</div>
@@ -642,7 +642,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                   <h3 className="font-semibold text-blue-800 mb-2">Book Details</h3>
                   <div className="space-y-2 text-sm text-blue-700">
-                    <div>Pages: {book.pageCount || 'Not specified'}</div>
+                    <div>Weight: {(book as any).weight || 300}g</div>
                     <div>Category: {book.category}</div>
                     <div>Year: {book.publicationYear || 'Not specified'}</div>
                     {book.isbn && <div>ISBN: {book.isbn}</div>}

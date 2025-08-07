@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { getOrder, updateOrderStatus, generateEmailReceipt, Order } from '@/utils/orderUtils';
+import { getOrder, updateOrderStatus, generateEmailReceipt, notifyAdminOfNewOrder, sendReceiptToCustomer, Order } from '@/utils/orderUtils';
 import { useCart } from '@/context/CartContext';
 
 function OrderCompleteContent() {
@@ -55,9 +55,13 @@ function OrderCompleteContent() {
 
   const handleEmailReceipt = () => {
     if (order) {
-      const subject = encodeURIComponent(`Order Receipt - ${order.orderId}`);
-      const body = encodeURIComponent(generateEmailReceipt(order));
-      window.location.href = `mailto:${order.customerDetails.email}?subject=${subject}&body=${body}`;
+      sendReceiptToCustomer(order);
+    }
+  };
+
+  const handleNotifyAdmin = () => {
+    if (order) {
+      notifyAdminOfNewOrder(order);
     }
   };
 
@@ -236,10 +240,16 @@ function OrderCompleteContent() {
               onClick={handleEmailReceipt}
               className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
-              📧 Email Receipt
+              📧 Email Receipt to Customer
+            </button>
+            <button
+              onClick={handleNotifyAdmin}
+              className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+            >
+              📧 Notify Admin
             </button>
             <Link
-              href="/"
+              href="/books"
               className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
             >
               Continue Shopping
