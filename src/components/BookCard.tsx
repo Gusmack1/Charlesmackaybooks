@@ -119,7 +119,7 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
           </p>
 
           <div className="flex items-center justify-between text-sm text-muted mb-3">
-            <span className="bg-gray-50 px-2 py-1 rounded text-xs text-muted">
+            <span className="badge badge-gray text-xs px-2 py-1 rounded">
               {book.category}
             </span>
             <span>{book.condition}</span>

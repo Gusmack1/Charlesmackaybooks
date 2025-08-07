@@ -141,22 +141,22 @@ export default function TimelinePage() {
             {timelineEvents.map((period, index) => (
               <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-600 border-4 border-white rounded-full shadow-lg z-10"></div>
+                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-accent-blue border-4 border-white rounded-full shadow-lg z-10"></div>
 
                 {/* Content */}
                 <div className={`w-full md:w-5/12 ml-12 md:ml-0 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <div className="bg-white rounded-lg shadow-lg p-6">
+                  <div className="card p-6">
                     <div className="flex items-center mb-3">
-                      <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">
+                      <span className="badge badge-blue text-sm font-semibold px-3 py-1 rounded-full">
                         {period.period}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-slate-800 mb-2">{period.title}</h3>
-                    <p className="text-gray-600 mb-4">{period.description}</p>
+                    <h3 className="text-xl font-bold text-primary mb-2">{period.title}</h3>
+                    <p className="text-secondary mb-4">{period.description}</p>
                     <ul className="space-y-2">
                       {period.events.map((event, eventIndex) => (
-                        <li key={eventIndex} className="flex items-start text-sm text-gray-700">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <li key={eventIndex} className="flex items-start text-sm text-secondary">
+                          <span className="w-2 h-2 bg-accent-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>
                           <span>{event}</span>
                         </li>
                       ))}
