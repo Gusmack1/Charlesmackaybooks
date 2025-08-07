@@ -433,19 +433,19 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         <div className={`relative bg-gradient-to-br ${gradientClass} text-white`}>
           <div className="absolute inset-0 bg-black/30"></div>
           <div className="relative max-w-7xl mx-auto px-6 py-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="max-w-2xl mx-auto text-center">
               {/* Book Cover */}
-              <div className="flex justify-start">
+              <div className="flex justify-center mb-8">
                 <div className="relative">
                   <Image
                     src={bookCoverSrc}
                     alt={`${book.title} by Charles E. MacKay`}
-                    width={450}
-                    height={675}
+                    width={350}
+                    height={525}
                     className="rounded-lg shadow-2xl"
                     priority
                   />
-                  <div className={`absolute -bottom-6 -right-6 ${accentClasses.badge} text-white px-6 py-3 rounded-lg font-bold text-xl`}>
+                  <div className={`absolute -bottom-4 -right-4 ${accentClasses.badge} text-white px-4 py-2 rounded-lg font-bold text-lg`}>
                     £{book.price}
                   </div>
                 </div>
@@ -453,7 +453,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
               {/* Book Details */}
               <div className="pt-0">
-                <div className={`text-sm ${accentClasses.textLight} mb-3 flex items-center gap-2`}>
+                <div className={`text-sm ${accentClasses.textLight} mb-3 flex items-center gap-2 justify-center`}>
                   <span>{book.category}</span>
                   {book.era && book.era[0] && (
                     <>
@@ -468,37 +468,37 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                     </>
                   )}
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                <h1 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
                   {book.title}
                 </h1>
-                <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+                <p className="text-lg text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto">
                   {book.description}
                 </p>
 
                 {/* Book Specifications */}
-                <div className="grid grid-cols-2 gap-6 mb-8 text-center">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className={`text-sm ${accentClasses.textLight} mb-1`}>Weight</div>
-                    <div className="text-2xl font-bold">{(book as any).weight || 300}g</div>
+                    <div className="text-xl font-bold">{(book as any).weight || 300}g</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className={`text-sm ${accentClasses.textLight} mb-1`}>Published</div>
-                    <div className="text-2xl font-bold">{book.publicationYear}</div>
+                    <div className="text-xl font-bold">{book.publicationYear}</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className={`text-sm ${accentClasses.textLight} mb-1`}>ISBN-13</div>
-                    <div className="text-lg font-semibold">{book.isbn}</div>
+                    <div className="text-sm font-semibold">{book.isbn}</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className={`text-sm ${accentClasses.textLight} mb-1`}>Condition</div>
-                    <div className="text-2xl font-bold text-green-200">{book.condition}</div>
+                    <div className="text-xl font-bold text-green-200">{book.condition}</div>
                   </div>
                 </div>
 
                 {/* Purchase Options */}
-                <div className="space-y-4">
+                <div className="space-y-4 max-w-2xl mx-auto">
                   <BookDetailClient book={book} />
-                  <div className="text-center">
+                  <div className="text-center mt-6">
                     <Link
                       href="/books"
                       className={`${accentClasses.link} ${accentClasses.linkHover} underline`}

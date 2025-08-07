@@ -84,16 +84,16 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       </div>
 
       {/* Social Sharing Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3">
+      <div className="bg-white border-b border-gray-200 py-4">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex justify-center items-center gap-4 text-sm">
-            <span className="hidden md:inline">📢 Share this article:</span>
+            <span className="hidden md:inline text-gray-700 font-medium">📢 Share this article:</span>
             <div className="flex gap-3">
               <a 
                 href={socialLinks.facebook} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm"
                 aria-label="Share on Facebook"
               >
                 📘 Facebook
@@ -102,7 +102,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 href={socialLinks.twitter} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
+                className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm"
                 aria-label="Share on Twitter"
               >
                 🐦 Twitter
@@ -111,7 +111,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 href={socialLinks.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
+                className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm"
                 aria-label="Share on LinkedIn"
               >
                 💼 LinkedIn
@@ -120,7 +120,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 href={socialLinks.reddit} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:bg-blue-800 px-3 py-1 rounded transition-colors"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm"
                 aria-label="Share on Reddit"
               >
                 🤝 Reddit
@@ -137,10 +137,14 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           <div className="absolute inset-0">
             <Image
               src={post.featuredImage.url}
-              alt={post.featuredImage.alt}
+              alt={post.featuredImage.alt || post.title}
               fill
               className="object-cover opacity-30"
               priority
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+              }}
             />
           </div>
         )}
@@ -181,7 +185,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-6 py-16">
-        <article className="prose prose-lg max-w-none text-gray-900 modern-prose">
+        <article className="prose prose-lg max-w-none modern-prose bg-white rounded-lg shadow-lg p-8">
           {/* Featured Image Caption */}
           {post.featuredImage?.caption && (
             <div className="text-center mb-8">
@@ -193,7 +197,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
           {/* Article Content */}
           <div 
-            className="blog-content text-gray-900 modern-blog-content"
+            className="blog-content modern-blog-content"
+            style={{ color: '#1f2937' }}
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </article>
@@ -426,7 +431,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
         }
         
         .blog-content p {
-          @apply text-lg text-gray-700 leading-relaxed mb-6;
+          @apply text-lg text-gray-800 leading-relaxed mb-6;
+          color: #1f2937 !important;
         }
         
         .blog-content ul, .blog-content ol {
@@ -434,7 +440,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
         }
         
         .blog-content li {
-          @apply text-lg text-gray-700 leading-relaxed;
+          @apply text-lg text-gray-800 leading-relaxed;
+          color: #1f2937 !important;
         }
         
         .blog-content blockquote {
@@ -458,7 +465,17 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
         }
         
         .blog-content img {
-          @apply rounded-lg shadow-md mx-auto;
+          @apply rounded-lg shadow-md mx-auto block max-w-full h-auto;
+          width: 100%;
+          height: auto;
+        }
+
+        .blog-content img:first-child {
+          @apply mb-4;
+        }
+
+        .blog-content .image-caption {
+          @apply text-sm text-gray-600 text-center italic mt-2 mb-6;
         }
         
         @media (max-width: 768px) {
