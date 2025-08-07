@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import PostRelatedBooks from '@/components/PostRelatedBooks';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -327,6 +328,9 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
             </div>
           </section>
         )}
+
+        {/* Auto-related books by category/tags */}
+        <PostRelatedBooks category={post.category} tags={post.tags} />
 
         {/* Author Bio */}
         <section className="mt-16 card p-8">
