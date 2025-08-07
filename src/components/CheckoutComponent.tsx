@@ -250,7 +250,7 @@ export default function CheckoutComponent() {
               <div key={item.id} className="flex justify-between items-start">
                 <div className="flex-1">
                   <h3 className="font-medium text-sm">{item.title}</h3>
-                  <p className="text-xs text-gray-600">by Charles E. MacKay</p>
+                  <p className="text-xs text-secondary">by Charles E. MacKay</p>
                 </div>
                 <span className="font-semibold">£{item.price.toFixed(2)}</span>
               </div>
@@ -286,7 +286,7 @@ export default function CheckoutComponent() {
             </div>
 
             {processingFee > 0 && (
-              <div className="flex justify-between text-sm text-gray-600">
+              <div className="flex justify-between text-sm text-secondary">
                 <span>Processing Fee:</span>
                 <span>£{processingFee.toFixed(2)}</span>
               </div>
@@ -301,7 +301,7 @@ export default function CheckoutComponent() {
           {!showAcademicDiscount && (
             <button
               onClick={() => setShowAcademicDiscount(true)}
-              className="mt-4 text-sm text-blue-600 hover:text-blue-800 flex items-center gap-1"
+              className="mt-4 text-sm text-accent-blue hover:text-blue-800 flex items-center gap-1"
             >
               <Gift className="h-4 w-4" />
               Apply Academic Discount (10%)
@@ -418,10 +418,10 @@ export default function CheckoutComponent() {
                   <span className="text-lg mr-2">{method.icon}</span>
                   <div className="flex-1">
                     <div className="font-medium">{method.name}</div>
-                    <div className="text-sm text-gray-600">{method.description}</div>
+                    <div className="text-sm text-secondary">{method.description}</div>
                   </div>
                   {method.processingFee && (
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-muted">
                       +{(method.processingFee * 100).toFixed(1)}%
                     </div>
                   )}
@@ -440,7 +440,7 @@ export default function CheckoutComponent() {
             {isProcessing ? 'Processing...' : `Complete Order - £${totalAmount.toFixed(2)}`}
           </button>
 
-          <div className="mt-4 text-xs text-gray-600 text-center">
+          <div className="mt-4 text-xs text-secondary text-center">
             <Lock className="h-4 w-4 inline mr-1" />
             Your payment information is secure and encrypted
           </div>

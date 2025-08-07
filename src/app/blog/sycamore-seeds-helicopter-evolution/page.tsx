@@ -12,7 +12,7 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/bristol-sycamore.jpg" alt="Bristol Sycamore helicopter" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Bristol Sycamore, Britain's first helicopter to enter military service, marking a significant milestone in British aviation history.</p>
+      <p class="text-sm  mt-2 text-center italic">The Bristol Sycamore, Britain's first helicopter to enter military service, marking a significant milestone in British aviation history.</p>
     </div>
     
     <p>The Sycamore's development was driven by the urgent need for a reliable helicopter that could perform a variety of military roles, from search and rescue to reconnaissance and communications. At a time when helicopter technology was still in its infancy, the Sycamore represented a bold step forward for British aviation engineering and manufacturing capabilities.</p>
@@ -26,7 +26,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/bristol-sycamore-formation.jpg" alt="Bristol Sycamore formation" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Bristol Sycamore helicopters in formation, demonstrating the aircraft's reliability and operational capabilities.</p>
+      <p class="text-sm  mt-2 text-center italic">Bristol Sycamore helicopters in formation, demonstrating the aircraft's reliability and operational capabilities.</p>
     </div>
 
     <p>The aircraft's configuration featured a single main rotor with a tail rotor for anti-torque control, a design that had become standard for helicopters by the mid-1940s. The Sycamore's three-bladed main rotor provided good lift characteristics and stability, while its tail rotor ensured effective directional control.</p>
@@ -37,7 +37,7 @@ const post = {
     <p>The Sycamore's powerplant was the Alvis Leonides radial engine, which provided reliable power for the helicopter's operations. The engine's location in the nose of the aircraft provided good weight distribution and simplified maintenance access. The transmission system was designed for reliability and ease of maintenance, crucial factors for military operations.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Design Features</h3>
+      <h3 class="font-semibold mb-4 ">Key Design Features</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Three-Bladed Main Rotor:</strong> Excellent stability and lift characteristics</li>
         <li><strong>Alvis Leonides Engine:</strong> Reliable radial powerplant</li>
@@ -56,7 +56,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/sycamore-seeds-helicopter-evolution.jpg" alt="Sycamore seeds helicopter evolution" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The evolution of helicopter technology, from early rotorcraft concepts to the practical Bristol Sycamore design.</p>
+      <p class="text-sm  mt-2 text-center italic">The evolution of helicopter technology, from early rotorcraft concepts to the practical Bristol Sycamore design.</p>
     </div>
 
     <p>The helicopter also served with the Royal Navy, where it performed ship-based operations including search and rescue, reconnaissance, and communications. The Sycamore's ability to operate from small flight decks and its reliability in maritime conditions made it valuable for naval operations.</p>

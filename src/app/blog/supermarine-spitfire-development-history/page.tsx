@@ -12,7 +12,7 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/supermarine-spitfire-development.jpg" alt="Supermarine Spitfire development" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Supermarine Spitfire, Britain's most iconic fighter aircraft, evolved from Schneider Trophy racing technology.</p>
+      <p class="text-sm  mt-2 text-center italic">The Supermarine Spitfire, Britain's most iconic fighter aircraft, evolved from Schneider Trophy racing technology.</p>
     </div>
     
     <p>Reginald Joseph Mitchell, Supermarine's chief designer, brought his experience from designing the Schneider Trophy-winning S.6B to create an aircraft that would revolutionize fighter design. The Spitfire's development was driven by the urgent need for a modern fighter to counter the growing threat from Nazi Germany, but its roots lay in the high-speed racing technology that had dominated international aviation competitions in the 1920s and 1930s.</p>
@@ -26,7 +26,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/supermarine-s6b-schneider-trophy.jpg" alt="Supermarine S6B Schneider Trophy winner" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Supermarine S6B that won the 1931 Schneider Trophy, establishing the aerodynamic principles that would influence Spitfire design.</p>
+      <p class="text-sm  mt-2 text-center italic">The Supermarine S6B that won the 1931 Schneider Trophy, establishing the aerodynamic principles that would influence Spitfire design.</p>
     </div>
 
     <p>Mitchell's design philosophy emphasized clean aerodynamics and attention to detail. Every component of the Spitfire was carefully considered for its contribution to overall performance. The aircraft's streamlined fuselage, retractable undercarriage, and flush-riveted construction represented the latest advances in aircraft design technology.</p>
@@ -37,7 +37,7 @@ const post = {
     <p>The breakthrough came with the Rolls-Royce PV-12 engine, later known as the Merlin. This powerful inline engine provided the performance needed for a modern fighter, and Mitchell designed the Spitfire around it. The aircraft's narrow fuselage and elliptical wings were optimized for the Merlin's characteristics, creating a harmonious balance of power and aerodynamics.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Design Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Design Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Elliptical Wing Design:</strong> Optimized lift distribution and reduced drag</li>
         <li><strong>Merlin Engine Integration:</strong> Perfect balance of power and aerodynamics</li>
@@ -56,7 +56,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/supermarine-spitfire-development-evolution.jpg" alt="Supermarine Spitfire development evolution" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The evolution of Spitfire design through various marks, showing the continuous development and improvement of the aircraft.</p>
+      <p class="text-sm  mt-2 text-center italic">The evolution of Spitfire design through various marks, showing the continuous development and improvement of the aircraft.</p>
     </div>
 
     <p>The Air Ministry was impressed with the Spitfire's performance and ordered 310 aircraft in June 1936. This was a significant commitment for an untested design, but the urgency of the international situation demanded rapid action. The order would prove to be one of the most important decisions in British aviation history.</p>

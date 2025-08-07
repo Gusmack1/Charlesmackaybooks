@@ -12,7 +12,7 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/eric-brown-official-portrait.jpg" alt="Captain Eric Brown in official RAF portrait" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Captain Eric "Winkle" Brown, the world's most experienced test pilot who flew 487 different aircraft types and made 2,407 aircraft carrier landings.</p>
+      <p class="text-sm  mt-2 text-center italic">Captain Eric "Winkle" Brown, the world's most experienced test pilot who flew 487 different aircraft types and made 2,407 aircraft carrier landings.</p>
     </div>
     
     <p>Brown's achievements extend far beyond mere numbers. He was the first pilot to land a jet aircraft on an aircraft carrier, the first Allied pilot to fly the revolutionary Messerschmitt Me 163 rocket fighter, and the only pilot to fly every major German aircraft of World War II. His carrier landing record of 2,407 landings - including dangerous experimental aircraft - demonstrates extraordinary skill and courage.</p>
@@ -21,7 +21,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/eric-brown-sea-vampire-landing.jpg" alt="Eric Brown landing Sea Vampire jet on aircraft carrier" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Eric Brown making the first jet aircraft carrier landing in history, flying the Sea Vampire in December 1945.</p>
+      <p class="text-sm  mt-2 text-center italic">Eric Brown making the first jet aircraft carrier landing in history, flying the Sea Vampire in December 1945.</p>
     </div>
 
     <h2 id="test-pilot-career">Legendary Test Pilot Career</h2>
@@ -29,7 +29,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/eric-brown-seafire-carrier.jpg" alt="Eric Brown with Seafire on aircraft carrier" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Eric Brown with a Seafire aboard an aircraft carrier, demonstrating his expertise in the dangerous art of carrier aviation.</p>
+      <p class="text-sm  mt-2 text-center italic">Eric Brown with a Seafire aboard an aircraft carrier, demonstrating his expertise in the dangerous art of carrier aviation.</p>
     </div>
 
     <h2 id="historical-background">Historical Background and Context</h2>
@@ -47,7 +47,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>

@@ -11,15 +11,15 @@ const post = {
     <p>The Korean War marked a revolutionary turning point in military aviation - the world's first conflict where jets clashed in large-scale air combat. Over the skies of North Korea, particularly in the infamous "MiG Alley," American F-86 Sabres engaged Soviet-built MiG-15s in supersonic duels that established the template for modern air warfare.</p>
     <div class="my-8">
       <img src="/blog-images/f86-sabre-fighter-jet.jpg" alt="F-86 Sabre fighter jet" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The F-86 Sabre, America's premier jet fighter of the Korean War.</p>
+      <p class="text-sm  mt-2 text-center italic">The F-86 Sabre, America's premier jet fighter of the Korean War.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/mig15-korean-war-fighter.jpg" alt="MiG-15 Korean War fighter" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The MiG-15, the Soviet jet fighter that challenged American air superiority.</p>
+      <p class="text-sm  mt-2 text-center italic">The MiG-15, the Soviet jet fighter that challenged American air superiority.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/f86-vs-mig15-combat.jpg" alt="F-86 vs MiG-15 combat" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The epic jet fighter battles that defined air combat in the Korean War.</p>
+      <p class="text-sm  mt-2 text-center italic">The epic jet fighter battles that defined air combat in the Korean War.</p>
     </div>
     
     <p>This aerial confrontation between East and West introduced new tactical doctrines, technologies, and pilot training methods that would define air combat for the next half-century. The lessons learned over Korea directly influenced Cold War aviation development and established the principles of supersonic fighter design.</p>
@@ -41,7 +41,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
