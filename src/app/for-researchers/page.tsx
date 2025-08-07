@@ -247,40 +247,40 @@ export default function ForResearchersPage() {
         </div>
 
         {/* Research Areas */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
-          <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">🔬 Primary Research Areas</h2>
+        <div className="card p-8 mb-12">
+          <h2 className="text-2xl font-bold text-center text-primary mb-8">🔬 Primary Research Areas</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-4 border-2 border-blue-200 rounded-lg">
+            <div className="text-center p-4 card-compact bg-accent-blue text-white rounded-lg">
               <div className="text-3xl mb-2">⬢</div>
-              <h3 className="font-bold text-blue-800 mb-2">Scottish Aviation</h3>
-              <p className="text-sm text-blue-600">Beardmore Aviation, Clydeside manufacturers, industrial aviation</p>
+              <h3 className="font-bold text-white mb-2">Scottish Aviation</h3>
+              <p className="text-sm text-white">Beardmore Aviation, Clydeside manufacturers, industrial aviation</p>
             </div>
 
-            <div className="text-center p-4 border-2 border-green-200 rounded-lg">
+            <div className="text-center p-4 card-compact bg-accent-green text-white rounded-lg">
               <div className="text-3xl mb-2">✈️</div>
-              <h3 className="font-bold text-green-800 mb-2">WWI Aircraft</h3>
-              <p className="text-sm text-green-600">RFC, RNAS, early RAF operations, German aviation development</p>
+              <h3 className="font-bold text-white mb-2">WWI Aircraft</h3>
+              <p className="text-sm text-white">RFC, RNAS, early RAF operations, German aviation development</p>
             </div>
 
-            <div className="text-center p-4 border-2 border-red-200 rounded-lg">
+            <div className="text-center p-4 card-compact bg-accent-red text-white rounded-lg">
               <div className="text-3xl mb-2">🛩️</div>
-              <h3 className="font-bold text-red-800 mb-2">WWII Aviation</h3>
-              <p className="text-sm text-red-600">Luftwaffe operations, British military aviation, wartime production</p>
+              <h3 className="font-bold text-white mb-2">WWII Aviation</h3>
+              <p className="text-sm text-white">Luftwaffe operations, British military aviation, wartime production</p>
             </div>
 
-            <div className="text-center p-4 border-2 border-purple-200 rounded-lg">
+            <div className="text-center p-4 card-compact bg-accent-purple text-white rounded-lg">
               <div className="text-3xl mb-2">🎈</div>
-              <h3 className="font-bold text-purple-800 mb-2">Airship Development</h3>
-              <p className="text-sm text-purple-600">R101 project, British airship programs, commercial aviation</p>
+              <h3 className="font-bold text-white mb-2">Airship Development</h3>
+              <p className="text-sm text-white">R101 project, British airship programs, commercial aviation</p>
             </div>
           </div>
         </div>
 
         {/* Contact for Research */}
-        <div className="bg-blue-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-blue-800 mb-4">📞 Research Collaboration</h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        <div className="card-compact bg-accent-blue text-white rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-4">📞 Research Collaboration</h2>
+          <p className="text-white mb-6 max-w-2xl mx-auto">
             Interested in research collaboration, need assistance with aviation history research,
             or want to discuss academic partnerships? Charles is available for consultation.
           </p>
@@ -288,21 +288,19 @@ export default function ForResearchersPage() {
           <div className="space-y-4">
             <a
               href="mailto:charlese1mackay@hotmail.com?subject=Academic Research Collaboration"
-              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mr-4"
+              className="inline-block badge badge-blue px-8 py-3 rounded-lg font-semibold transition-colors mr-4"
             >
               📧 Research Collaboration
             </a>
             <a
               href="mailto:charlese1mackay@hotmail.com?subject=Bulk Academic Order"
-              className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              className="inline-block badge badge-green px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               📚 Bulk Order Inquiry
             </a>
           </div>
 
-          <p className="text-sm text-gray-500 mt-6">
-            📍 Based in Glasgow, Scotland • 📞 Response within 24 hours • 🌍 Available for international collaboration
-          </p>
+          <p className="text-sm text-white/80 mt-6">📍 Based in Glasgow, Scotland • 📞 Response within 24 hours • 🌍 Available for international collaboration</p>
         </div>
       </div>
 
