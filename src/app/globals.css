@@ -12,6 +12,9 @@
 /* Import timeline visibility fix */
 @import '../styles/timeline-visibility-fix.css';
 
+/* Import emergency text visibility fix */
+@import '../styles/text-visibility-emergency-fix.css';
+
 @layer base {
   body {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;

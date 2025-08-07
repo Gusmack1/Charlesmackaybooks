@@ -453,7 +453,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
               {/* Book Details */}
               <div className="pt-0">
-                <div className={`text-sm ${accentClasses.textLight} mb-3 flex items-center gap-2 justify-center`}>
+                <div className="text-sm text-white mb-3 flex items-center gap-2 justify-center" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>
                   <span>{book.category}</span>
                   {book.era && book.era[0] && (
                     <>
@@ -478,20 +478,20 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 {/* Book Specifications */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className={`text-sm ${accentClasses.textLight} mb-1`}>Weight</div>
-                    <div className="text-xl font-bold">{(book as any).weight || 300}g</div>
+                    <div className="text-sm text-white mb-1" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>Weight</div>
+                    <div className="text-xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>{(book as any).weight || 300}g</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className={`text-sm ${accentClasses.textLight} mb-1`}>Published</div>
-                    <div className="text-xl font-bold">{book.publicationYear}</div>
+                    <div className="text-sm text-white mb-1" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>Published</div>
+                    <div className="text-xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>{book.publicationYear}</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className={`text-sm ${accentClasses.textLight} mb-1`}>ISBN-13</div>
-                    <div className="text-sm font-semibold">{book.isbn}</div>
+                    <div className="text-sm text-white mb-1" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>ISBN-13</div>
+                    <div className="text-sm font-semibold text-white" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>{book.isbn}</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className={`text-sm ${accentClasses.textLight} mb-1`}>Condition</div>
-                    <div className="text-xl font-bold text-green-200">{book.condition}</div>
+                    <div className="text-sm text-white mb-1" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>Condition</div>
+                    <div className="text-xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>{book.condition}</div>
                   </div>
                 </div>
 

@@ -1,0 +1,263 @@
+/* 
+ * EMERGENCY TEXT VISIBILITY FIX
+ * Comprehensive solution for white-on-white text issues
+ * Forces high contrast on ALL text elements
+ */
+
+/* === UNIVERSAL TEXT VISIBILITY ENFORCEMENT === */
+
+/* Force dark text on light backgrounds */
+.bg-white *,
+.bg-gray-50 *,
+.bg-gray-100 *,
+.bg-blue-50 *,
+.bg-green-50 *,
+.bg-yellow-50 *,
+.bg-red-50 *,
+.bg-purple-50 *,
+.bg-indigo-50 *,
+.bg-orange-50 *,
+.bg-pink-50 *,
+.bg-teal-50 *,
+.bg-cyan-50 * {
+  color: #1f2937 !important;
+}
+
+/* Force white text on dark backgrounds */
+.bg-slate-800 *,
+.bg-slate-900 *,
+.bg-gray-800 *,
+.bg-gray-900 *,
+.bg-black * {
+  color: #ffffff !important;
+}
+
+/* === BOOK PAGES SPECIFIC FIXES === */
+
+/* Fix hero section text on gradient backgrounds */
+.bg-gradient-to-r * {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Fix book specifications text */
+.bg-white\/10 *,
+[class*="bg-white/"] * {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Book details text overrides */
+.text-amber-300,
+.text-red-300,
+.text-blue-300,
+.text-purple-300,
+.text-green-200,
+.text-indigo-300,
+.text-cyan-300,
+.text-orange-300 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* === TIMELINE PAGE SPECIFIC FIXES === */
+
+/* Timeline card content */
+.timeline-card *,
+[class*="timeline"] * {
+  color: #1f2937 !important;
+}
+
+/* Timeline card backgrounds */
+.timeline-card {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+/* Timeline descriptions and content */
+.timeline-card p,
+.timeline-card h1,
+.timeline-card h2,
+.timeline-card h3,
+.timeline-card h4,
+.timeline-card h5,
+.timeline-card h6,
+.timeline-card div,
+.timeline-card span {
+  color: #1f2937 !important;
+  background-color: transparent !important;
+}
+
+/* === HERO SECTIONS === */
+
+/* Hero text on gradients */
+[class*="bg-gradient"] h1,
+[class*="bg-gradient"] h2,
+[class*="bg-gradient"] h3,
+[class*="bg-gradient"] p,
+[class*="bg-gradient"] span,
+[class*="bg-gradient"] div {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* === CATEGORY ACCENT OVERRIDES === */
+
+/* Override all category accent classes that might cause visibility issues */
+.text-amber-300,
+.text-amber-200,
+.text-amber-100,
+.text-red-300,
+.text-red-200,
+.text-red-100,
+.text-blue-300,
+.text-blue-200,
+.text-blue-100,
+.text-purple-300,
+.text-purple-200,
+.text-purple-100,
+.text-green-300,
+.text-green-200,
+.text-green-100,
+.text-indigo-300,
+.text-indigo-200,
+.text-indigo-100,
+.text-cyan-300,
+.text-cyan-200,
+.text-cyan-100,
+.text-orange-300,
+.text-orange-200,
+.text-orange-100,
+.text-yellow-300,
+.text-yellow-200,
+.text-yellow-100 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* === CARD COMPONENTS === */
+
+/* Force proper contrast in cards */
+[class*="card"] *,
+[class*="Card"] * {
+  color: #1f2937 !important;
+}
+
+[class*="card"][class*="bg-white"] *,
+[class*="Card"][class*="bg-white"] * {
+  color: #1f2937 !important;
+  background-color: transparent !important;
+}
+
+/* === SPECIFIC PROBLEM ELEMENTS === */
+
+/* Book detail specifications */
+.bg-white\/10 .text-xl,
+.bg-white\/10 .text-sm,
+.bg-white\/10 div {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Timeline event cards */
+.bg-white.rounded-2xl *,
+.bg-white.rounded-lg * {
+  color: #1f2937 !important;
+}
+
+/* Timeline header text on gradients */
+.bg-gradient-to-r.from-blue-600 *,
+.bg-gradient-to-r.to-blue-700 * {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* === BUTTON AND INTERACTIVE ELEMENTS === */
+
+/* Ensure buttons have proper contrast */
+button *,
+.button *,
+[role="button"] * {
+  color: inherit !important;
+}
+
+/* Link text in cards */
+.bg-white a,
+.bg-gray-50 a,
+.bg-blue-50 a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+}
+
+.bg-white a:hover,
+.bg-gray-50 a:hover,
+.bg-blue-50 a:hover {
+  color: #1d4ed8 !important;
+}
+
+/* === EMERGENCY FALLBACKS === */
+
+/* If all else fails, force dark text on light elements */
+[class*="bg-white"] *:not([class*="bg-gradient"]):not([class*="bg-slate"]):not([class*="bg-gray-8"]):not([class*="bg-gray-9"]) {
+  color: #1f2937 !important;
+}
+
+/* Force white text on very dark elements */
+[class*="bg-slate-8"] *,
+[class*="bg-slate-9"] *,
+[class*="bg-gray-8"] *,
+[class*="bg-gray-9"] * {
+  color: #ffffff !important;
+}
+
+/* === ACCESSIBILITY COMPLIANCE === */
+
+/* Ensure minimum contrast ratios */
+.low-contrast-text {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+}
+
+/* Debug mode - uncomment to highlight problem areas */
+/*
+.text-amber-300,
+.text-red-300,
+.text-blue-300,
+.text-purple-300,
+.text-green-200,
+.text-indigo-300,
+.text-cyan-300,
+.text-orange-300 {
+  background-color: red !important;
+  color: white !important;
+  border: 2px solid yellow !important;
+}
+*/
+
+/* === PRINT STYLES === */
+@media print {
+  * {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    text-shadow: none !important;
+  }
+}
+
+/* === HIGH CONTRAST MODE === */
+@media (prefers-contrast: high) {
+  * {
+    text-shadow: none !important;
+  }
+  
+  .bg-white * {
+    color: #000000 !important;
+  }
+  
+  [class*="bg-gradient"] * {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  }
+}
