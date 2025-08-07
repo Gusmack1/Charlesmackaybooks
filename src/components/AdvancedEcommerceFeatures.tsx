@@ -121,7 +121,7 @@ export default function AdvancedEcommerceFeatures({
             />
           ))}
         </div>
-        <span className="text-sm text-gray-600">
+        <span className="text-sm text-secondary">
           {book.rating.toFixed(1)} ({book.reviewCount} reviews)
         </span>
       </div>
@@ -156,7 +156,7 @@ export default function AdvancedEcommerceFeatures({
           className={`flex items-center justify-center px-6 py-3 rounded-md font-medium transition-colors ${
             isOutOfStock
               ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              : 'bg-blue-600 text-white hover:bg-blue-700'
+              : 'badge badge-blue'
           }`}
         >
           <ShoppingCart className="w-4 h-4 mr-2" />

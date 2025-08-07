@@ -168,11 +168,11 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
   }, [books, onFilterChange]);
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+    <div className="card p-6 mb-8">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-800">🔍 Find Your Perfect Aviation Book</h2>
+          <h2 className="text-2xl font-bold text-primary">🔍 Find Your Perfect Aviation Book</h2>
           <p className="text-sm text-secondary">
             Found {searchResults.length} of {books.length} books
           </p>
