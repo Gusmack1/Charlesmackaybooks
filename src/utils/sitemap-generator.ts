@@ -23,15 +23,28 @@ export function generateSitemap(): string {
     { url: '/academic-resources', changeFrequency: 'weekly', priority: 0.8 },
     { url: '/aviation-bibliography', changeFrequency: 'monthly', priority: 0.7 },
     { url: '/aviation-glossary', changeFrequency: 'monthly', priority: 0.6 },
-    { url: '/timeline', changeFrequency: 'monthly', priority: 0.7 },
+    { url: '/timeline', changeFrequency: 'monthly', priority: 0.8 },
     { url: '/scottish-aviation-timeline', changeFrequency: 'monthly', priority: 0.7 },
     { url: '/for-researchers', changeFrequency: 'monthly', priority: 0.8 },
     { url: '/research-guides', changeFrequency: 'monthly', priority: 0.7 },
 
-    // Era pages
-    { url: '/pioneer-era-1895-1914', changeFrequency: 'monthly', priority: 0.7 },
-    { url: '/great-war-1914-1918', changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/golden-age-1918-1939', changeFrequency: 'monthly', priority: 0.7 },
+    // Category pages
+    { url: '/category/aviation-biography', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/category/aviation-history', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/category/helicopter-history', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/category/industrial-history', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/category/jet-age-aviation', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/category/military-history', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/category/naval-aviation', changeFrequency: 'weekly', priority: 0.6 },
+    { url: '/category/scottish-aviation-history', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/category/travel-literature', changeFrequency: 'weekly', priority: 0.5 },
+    { url: '/category/wwi-aviation', changeFrequency: 'weekly', priority: 0.7 },
+    { url: '/category/wwii-aviation', changeFrequency: 'weekly', priority: 0.7 },
+
+    // Aircraft pages
+    { url: '/aircraft/bristol-fighter', changeFrequency: 'monthly', priority: 0.6 },
+    { url: '/aircraft/hawker-hurricane', changeFrequency: 'monthly', priority: 0.6 },
+    { url: '/aircraft/sopwith-camel', changeFrequency: 'monthly', priority: 0.6 },
 
     // All book pages - dynamically generated
     ...books.map(book => ({
