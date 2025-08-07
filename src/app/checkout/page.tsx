@@ -454,7 +454,7 @@ export default function CheckoutPage() {
 
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <div className="text-sm">
-                      <div className="font-semibold text-blue-800 mb-2">📦 Royal Mail Shipping</div>
+                      <div className="font-semibold text-blue-800 mb-2">📦 FREE Shipping Worldwide</div>
                       <div className="space-y-1">
                         <div className="flex justify-between">
                           <span className="text-blue-700">Total Weight:</span>

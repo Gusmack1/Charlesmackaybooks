@@ -11,7 +11,7 @@ import BookDetailNavigation from '@/components/BookDetailNavigation';
 import RelatedBooks from '@/components/RelatedBooks';
 import MobileFooterNav from '@/components/MobileFooterNav';
 import BookAnalytics from '@/components/BookAnalytics';
-import StickyAddToCart from '@/components/StickyAddToCart';
+
 
 // Function to get category-specific gradient colors
 function getCategoryGradient(category: string): string {
@@ -323,7 +323,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     }
 
     // Add purchase info
-    description += ` Available for £${book.price}. UK £3.45, EU £4.95, USA £8.95, Worldwide £12.95 shipping.`;
+    description += ` Available for £${book.price}. FREE shipping worldwide.`;
 
     return description;
   };
@@ -658,7 +658,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   <ul className="text-sm text-green-700 space-y-1">
                     <li>✓ Written by renowned aviation historian</li>
                     <li>✓ {book.condition} condition guaranteed</li>
-                    <li>✓ UK £3.45 • EU £4.95 • USA £8.95 • Worldwide £12.95 shipping</li>
+                    <li>✓ FREE shipping worldwide</li>
                     <li>✓ Secure PayPal checkout</li>
                     {book.citationCount && <li>✓ {book.citationCount} academic citations</li>}
                     {book.academicInstitutions && book.academicInstitutions.length > 0 && (
@@ -724,8 +724,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
         <MobileFooterNav />
         
-        {/* Sticky Add to Cart */}
-        <StickyAddToCart book={book} />
+
       </div>
     </>
   );

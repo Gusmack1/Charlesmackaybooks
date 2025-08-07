@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
 import { useAnalytics } from '@/hooks/useAnalytics';
-import EnhancedShippingSection from '@/components/EnhancedShippingSection';
 
 interface BookDetailClientProps {
   book: Book;
@@ -106,13 +105,6 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
           </button>
         )}
       </div>
-
-      {/* Enhanced Shipping Information */}
-      <EnhancedShippingSection 
-        book={book}
-        totalWeight={book.weight || 300}
-        destination="UK"
-      />
 
       {/* Contact */}
       <div className="text-center pt-3 border-t">

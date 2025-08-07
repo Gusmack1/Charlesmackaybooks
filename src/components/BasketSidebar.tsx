@@ -137,7 +137,7 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
 
               <div className="text-xs text-gray-600 text-center">
                 <div className="font-semibold mb-1">📦 Shipping:</div>
-                <div>UK £3.45 • EU £4.95 • USA £8.95 • Worldwide £12.95</div>
+                <div>FREE shipping worldwide</div>
               </div>
 
               <div className="space-y-2">

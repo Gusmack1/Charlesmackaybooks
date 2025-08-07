@@ -71,7 +71,7 @@ export default function BooksPage() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4">Complete Book Collection</h2>
             <p className="text-gray-600 mb-6">
-              Expert research • Academic references • Worldwide shipping: UK £3.45 • EU £4.95 • USA £8.95 • Rest of World £12.95
+              Expert research • Academic references • FREE shipping worldwide
             </p>
           </div>
 

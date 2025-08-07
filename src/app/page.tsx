@@ -60,7 +60,7 @@ export default function Home() {
               📚 Aviation History Books - Ready to Ship
             </h2>
             <p className="text-center text-gray-600 mb-4">
-              {filteredBooks.length} books available • Instant purchase with PayPal or eBay • UK £3.45 • EU £4.95 • USA £8.95 • Worldwide £12.95
+              {filteredBooks.length} books available • Instant purchase with PayPal or eBay • FREE shipping worldwide
             </p>
           </div>
 

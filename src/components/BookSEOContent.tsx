@@ -35,7 +35,7 @@ export default function BookSEOContent({ book }: BookSEOContentProps) {
 
           <p>
             <strong>Fast Worldwide Delivery:</strong> Available for immediate shipping.
-            UK delivery £3.45, European Union £4.95, USA £8.95, Worldwide £12.95.
+            FREE shipping worldwide.
           </p>
         </div>
       </div>
