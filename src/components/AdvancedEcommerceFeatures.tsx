@@ -92,17 +92,17 @@ export default function AdvancedEcommerceFeatures({
       {/* Stock Status */}
       <div className="flex items-center space-x-2">
         {isOutOfStock ? (
-          <div className="flex items-center text-red-600">
+          <div className="flex items-center text-accent-red">
             <AlertCircle className="w-4 h-4 mr-1" />
             <span className="text-sm font-medium">Out of Stock</span>
           </div>
         ) : isLowStock ? (
-          <div className="flex items-center text-orange-600">
+          <div className="flex items-center text-accent-amber">
             <AlertCircle className="w-4 h-4 mr-1" />
             <span className="text-sm font-medium">Only {book.stock} left in stock</span>
           </div>
         ) : (
-          <div className="flex items-center text-green-600">
+          <div className="flex items-center text-accent-green">
             <CheckCircle className="w-4 h-4 mr-1" />
             <span className="text-sm font-medium">In Stock</span>
           </div>
@@ -132,7 +132,7 @@ export default function AdvancedEcommerceFeatures({
         <div className="flex items-center border rounded-md">
           <button
             onClick={() => setQuantity(Math.max(1, quantity - 1))}
-            className="px-3 py-1 border-r hover:bg-gray-50"
+            className="px-3 py-1 border-r hover:bg-secondary"
             disabled={isOutOfStock}
           >
             -
@@ -140,7 +140,7 @@ export default function AdvancedEcommerceFeatures({
           <span className="px-4 py-1">{quantity}</span>
           <button
             onClick={() => setQuantity(Math.min(book.stock, quantity + 1))}
-            className="px-3 py-1 border-l hover:bg-gray-50"
+            className="px-3 py-1 border-l hover:bg-secondary"
             disabled={isOutOfStock || quantity >= book.stock}
           >
             +
@@ -190,12 +190,12 @@ export default function AdvancedEcommerceFeatures({
       <div className="border-t pt-4">
         <button
           onClick={handlePriceAlert}
-          className="text-sm text-blue-600 hover:text-blue-700 underline"
+                     className="text-sm text-accent-blue hover:text-blue-700 underline"
         >
           Set price alert
         </button>
         {priceAlert && (
-          <div className="mt-2 text-sm text-green-600">
+                     <div className="mt-2 text-sm text-accent-green">
             ✓ Price alert set! We'll notify you when the price changes.
           </div>
         )}
@@ -209,7 +209,7 @@ export default function AdvancedEcommerceFeatures({
             {recentlyViewed.slice(1, 4).map((viewedBook) => (
               <div
                 key={viewedBook.id}
-                className="flex-shrink-0 w-16 h-20 bg-gray-100 rounded-md cursor-pointer hover:opacity-80"
+                className="flex-shrink-0 w-16 h-20 bg-secondary rounded-md cursor-pointer hover:opacity-80"
                 onClick={() => onViewBook(viewedBook)}
               >
                 <img

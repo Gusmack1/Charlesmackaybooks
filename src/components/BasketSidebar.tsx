@@ -53,7 +53,7 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
             <h2 className="text-xl font-bold text-primary">Shopping Basket</h2>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              className="p-2 hover:bg-secondary rounded-full transition-colors"
               aria-label="Close basket"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
                         <span className="text-sm font-medium w-8 text-center">{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
-                          className="w-6 h-6 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 text-sm"
+                          className="w-6 h-6 flex items-center justify-center bg-secondary rounded-full hover:bg-gray-300 text-sm"
                         >
                           +
                         </button>
@@ -129,7 +129,7 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
 
           {/* Footer */}
           {items.length > 0 && (
-            <div className="border-t bg-gray-50 p-4 space-y-4">
+            <div className="border-t card-compact p-4 space-y-4">
               <div className="flex justify-between text-lg font-semibold">
                 <span>Total ({getTotalItems()} item{getTotalItems() !== 1 ? 's' : ''}):</span>
                 <span className="text-accent-green">£{getTotalPrice().toFixed(2)}</span>
@@ -152,7 +152,7 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
                 <div className="flex gap-2">
                   <button
                     onClick={onClose}
-                    className="flex-1 bg-gray-200 text-secondary py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm"
+                    className="flex-1 bg-secondary text-secondary py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm"
                   >
                     Continue Shopping
                   </button>
