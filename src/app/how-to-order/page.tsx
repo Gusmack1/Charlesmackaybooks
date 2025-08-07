@@ -99,7 +99,7 @@ export default function HowToOrderPage() {
               <div className="text-center mb-4">
                 <div className="text-4xl mb-2">💳</div>
                 <h3 className="text-xl font-bold text-primary">PayPal Direct</h3>
-                <p className="text-sm text-blue-600 font-semibold">Fastest</p>
+                <p className="text-sm text-accent-blue font-semibold">Fastest</p>
               </div>
               <ul className="space-y-2 text-sm text-secondary mb-4">
                 <li>✓ Direct to Charles</li>
@@ -122,7 +122,7 @@ export default function HowToOrderPage() {
               <div className="text-center mb-4">
                 <div className="text-4xl mb-2">🛍️</div>
                 <h3 className="text-xl font-bold text-primary">Website Cart</h3>
-                <p className="text-sm text-purple-600 font-semibold">Multiple Books</p>
+                <p className="text-sm text-accent-purple font-semibold">Multiple Books</p>
               </div>
               <ul className="space-y-2 text-sm text-secondary mb-4">
                 <li>✓ Add multiple books</li>
@@ -143,46 +143,46 @@ export default function HowToOrderPage() {
           </div>
 
           {/* Shipping Information */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">🚚 Shipping & Delivery</h2>
+          <div className="card p-8 mb-12">
+            <h2 className="text-2xl font-bold text-center text-primary mb-8">🚚 Shipping & Delivery</h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl mb-3">🇬🇧</div>
-                <h3 className="font-bold text-gray-800 mb-2">UK Shipping</h3>
-                <p className="text-sm text-gray-600">Free delivery</p>
-                <p className="text-sm text-gray-600">1-3 business days</p>
+                <h3 className="font-bold text-primary mb-2">UK Shipping</h3>
+                <p className="text-sm text-secondary">Free delivery</p>
+                <p className="text-sm text-secondary">1-3 business days</p>
                 <p className="text-sm text-accent-green font-semibold">£0.00</p>
               </div>
 
               <div className="text-center">
                 <div className="text-3xl mb-3">🇪🇺</div>
-                <h3 className="font-bold text-gray-800 mb-2">Europe</h3>
-                <p className="text-sm text-gray-600">Tracked delivery</p>
-                <p className="text-sm text-gray-600">5-10 business days</p>
-                <p className="text-sm text-blue-600 font-semibold">£4.95</p>
+                <h3 className="font-bold text-primary mb-2">Europe</h3>
+                <p className="text-sm text-secondary">Tracked delivery</p>
+                <p className="text-sm text-secondary">5-10 business days</p>
+                <p className="text-sm text-accent-blue font-semibold">£4.95</p>
               </div>
 
               <div className="text-center">
                 <div className="text-3xl mb-3">🇺🇸</div>
-                <h3 className="font-bold text-gray-800 mb-2">North America</h3>
-                <p className="text-sm text-gray-600">Tracked delivery</p>
-                <p className="text-sm text-gray-600">7-14 business days</p>
-                <p className="text-sm text-blue-600 font-semibold">£8.95</p>
+                <h3 className="font-bold text-primary mb-2">North America</h3>
+                <p className="text-sm text-secondary">Tracked delivery</p>
+                <p className="text-sm text-secondary">7-14 business days</p>
+                <p className="text-sm text-accent-blue font-semibold">£8.95</p>
               </div>
 
               <div className="text-center">
                 <div className="text-3xl mb-3">🌍</div>
-                <h3 className="font-bold text-gray-800 mb-2">Worldwide</h3>
-                <p className="text-sm text-gray-600">Tracked delivery</p>
-                <p className="text-sm text-gray-600">10-21 business days</p>
-                <p className="text-sm text-blue-600 font-semibold">£12.95</p>
+                <h3 className="font-bold text-primary mb-2">Worldwide</h3>
+                <p className="text-sm text-secondary">Tracked delivery</p>
+                <p className="text-sm text-secondary">10-21 business days</p>
+                <p className="text-sm text-accent-blue font-semibold">£12.95</p>
               </div>
             </div>
 
-            <div className="mt-8 p-4 bg-green-50 rounded-lg">
-              <h3 className="font-bold text-green-800 mb-2">📦 Shipping Features</h3>
-              <div className="grid md:grid-cols-2 gap-4 text-sm text-green-700">
+            <div className="mt-8 p-4 card-compact bg-accent-green text-white rounded-lg">
+              <h3 className="font-bold text-white mb-2">📦 Shipping Features</h3>
+              <div className="grid md:grid-cols-2 gap-4 text-sm text-white">
                 <div>✓ All books carefully packaged</div>
                 <div>✓ Tracking number provided</div>
                 <div>✓ Insurance included</div>
@@ -193,9 +193,9 @@ export default function HowToOrderPage() {
 
           {/* Special Orders */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-blue-800 mb-4">🎓 Academic Orders</h3>
-              <ul className="space-y-2 text-blue-700 text-sm">
+            <div className="card-compact bg-accent-blue text-white p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-white mb-4">🎓 Academic Orders</h3>
+              <ul className="space-y-2 text-white text-sm">
                 <li>• University libraries: Purchase order accepted</li>
                 <li>• Bulk orders (5+ books): Special discounts</li>
                 <li>• Academic references: Citation support</li>
@@ -205,16 +205,16 @@ export default function HowToOrderPage() {
               <div className="mt-4">
                 <a
                   href="mailto:charlese1mackay@hotmail.com?subject=Academic Order Inquiry"
-                  className="text-blue-600 font-semibold hover:underline"
+                  className="text-white font-semibold hover:underline"
                 >
                   Contact for Academic Pricing →
                 </a>
               </div>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-amber-800 mb-4">📚 Special Requests</h3>
-              <ul className="space-y-2 text-amber-700 text-sm">
+            <div className="card-compact bg-accent-amber text-white p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-white mb-4">📚 Special Requests</h3>
+              <ul className="space-y-2 text-white text-sm">
                 <li>• Book signing: Personal messages available</li>
                 <li>• Gift wrapping: Free for holidays</li>
                 <li>• Express shipping: 2-3 day delivery</li>
@@ -224,7 +224,7 @@ export default function HowToOrderPage() {
               <div className="mt-4">
                 <a
                   href="mailto:charlese1mackay@hotmail.com?subject=Special Request"
-                  className="text-amber-600 font-semibold hover:underline"
+                  className="text-white font-semibold hover:underline"
                 >
                   Make Special Request →
                 </a>
@@ -233,41 +233,41 @@ export default function HowToOrderPage() {
           </div>
 
           {/* FAQ Section */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">❓ Frequently Asked Questions</h2>
+          <div className="card p-8">
+            <h2 className="text-2xl font-bold text-center text-primary mb-8">❓ Frequently Asked Questions</h2>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-2">How quickly do books ship?</h3>
-                  <p className="text-sm text-gray-600">All books ship within 1-2 business days from Glasgow, Scotland. Charles personally handles all orders.</p>
+                  <h3 className="font-bold text-primary mb-2">How quickly do books ship?</h3>
+                  <p className="text-sm text-secondary">All books ship within 1-2 business days from Glasgow, Scotland. Charles personally handles all orders.</p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-2">What payment methods are accepted?</h3>
-                  <p className="text-sm text-gray-600">PayPal, credit cards (via eBay), bank transfer, and checks. All major currencies accepted through PayPal.</p>
+                  <h3 className="font-bold text-primary mb-2">What payment methods are accepted?</h3>
+                  <p className="text-sm text-secondary">PayPal, credit cards (via eBay), bank transfer, and checks. All major currencies accepted through PayPal.</p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Are the books in good condition?</h3>
-                  <p className="text-sm text-gray-600">Most books are in "New" or "Very Good" condition. Condition is clearly marked on each listing. All books are carefully inspected.</p>
+                  <h3 className="font-bold text-primary mb-2">Are the books in good condition?</h3>
+                  <p className="text-sm text-secondary">Most books are in "New" or "Very Good" condition. Condition is clearly marked on each listing. All books are carefully inspected.</p>
                 </div>
               </div>
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Do you offer academic discounts?</h3>
-                  <p className="text-sm text-gray-600">Yes! Universities, libraries, and bulk orders qualify for special pricing. Contact Charles directly for academic rates.</p>
+                  <h3 className="font-bold text-primary mb-2">Do you offer academic discounts?</h3>
+                  <p className="text-sm text-secondary">Yes! Universities, libraries, and bulk orders qualify for special pricing. Contact Charles directly for academic rates.</p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Can I track my order?</h3>
-                  <p className="text-sm text-gray-600">Yes, tracking numbers are provided for all shipments. You'll receive tracking information within 24 hours of shipping.</p>
+                  <h3 className="font-bold text-primary mb-2">Can I track my order?</h3>
+                  <p className="text-sm text-secondary">Yes, tracking numbers are provided for all shipments. You'll receive tracking information within 24 hours of shipping.</p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-2">What if I have questions?</h3>
-                  <p className="text-sm text-gray-600">Charles personally responds to all inquiries within 24 hours. Email charlese1mackay@hotmail.com for any questions.</p>
+                  <h3 className="font-bold text-primary mb-2">What if I have questions?</h3>
+                  <p className="text-sm text-secondary">Charles personally responds to all inquiries within 24 hours. Email charlese1mackay@hotmail.com for any questions.</p>
                 </div>
               </div>
             </div>
@@ -275,20 +275,20 @@ export default function HowToOrderPage() {
 
           {/* Contact CTA */}
           <div className="text-center mt-12">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Ready to Order?</h2>
-            <p className="text-gray-600 mb-6">
+            <h2 className="text-2xl font-bold text-primary mb-4">Ready to Order?</h2>
+            <p className="text-secondary mb-6">
               Choose your preferred method or contact Charles directly for personalized service
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/books"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="badge badge-blue px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 📚 Browse Books
               </Link>
               <a
                 href="mailto:charlese1mackay@hotmail.com?subject=Book Order Inquiry"
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                className="badge badge-green px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 📧 Email Charles
               </a>
