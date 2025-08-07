@@ -13,7 +13,7 @@ import MobileFooterNav from '@/components/MobileFooterNav';
 import BookAnalytics from '@/components/BookAnalytics';
 
 
-// Function to get category-specific gradient colors
+// Simplified category gradient function - only used for hero backgrounds
 function getCategoryGradient(category: string): string {
   const gradients: Record<string, string> = {
     'Scottish Aviation History': 'from-slate-900 via-amber-900 to-slate-800',
@@ -29,116 +29,6 @@ function getCategoryGradient(category: string): string {
     'Travel Literature': 'from-slate-900 via-emerald-900 to-slate-800'
   };
   return gradients[category] || 'from-slate-900 via-gray-900 to-slate-800';
-}
-
-// Function to get category-specific accent classes
-function getCategoryAccentClasses(category: string): {
-  textLight: string;
-  textDark: string;
-  bg: string;
-  badge: string;
-  link: string;
-  linkHover: string;
-} {
-  const classes: Record<string, any> = {
-    'Scottish Aviation History': {
-      textLight: 'text-amber-300',
-      textDark: 'text-amber-700',
-      bg: 'bg-amber-600',
-      badge: 'bg-amber-600',
-      link: 'text-amber-300',
-      linkHover: 'hover:text-amber-100'
-    },
-    'WWI Aviation': {
-      textLight: 'text-red-300',
-      textDark: 'text-red-700',
-      bg: 'bg-red-600',
-      badge: 'bg-red-600',
-      link: 'text-red-300',
-      linkHover: 'hover:text-red-100'
-    },
-    'WWII Aviation': {
-      textLight: 'text-blue-300',
-      textDark: 'text-blue-700',
-      bg: 'bg-blue-600',
-      badge: 'bg-blue-600',
-      link: 'text-blue-300',
-      linkHover: 'hover:text-blue-100'
-    },
-    'Aviation Biography': {
-      textLight: 'text-purple-300',
-      textDark: 'text-purple-700',
-      bg: 'bg-purple-600',
-      badge: 'bg-purple-600',
-      link: 'text-purple-300',
-      linkHover: 'hover:text-purple-100'
-    },
-    'Helicopter History': {
-      textLight: 'text-green-200',
-      textDark: 'text-green-700',
-      bg: 'bg-green-600',
-      badge: 'bg-green-600',
-      link: 'text-green-200',
-      linkHover: 'hover:text-green-100'
-    },
-    'Jet Age Aviation': {
-      textLight: 'text-indigo-300',
-      textDark: 'text-indigo-700',
-      bg: 'bg-indigo-600',
-      badge: 'bg-indigo-600',
-      link: 'text-indigo-300',
-      linkHover: 'hover:text-indigo-100'
-    },
-    'Naval Aviation': {
-      textLight: 'text-cyan-300',
-      textDark: 'text-cyan-700',
-      bg: 'bg-cyan-600',
-      badge: 'bg-cyan-600',
-      link: 'text-cyan-300',
-      linkHover: 'hover:text-cyan-100'
-    },
-    'Aviation History': {
-      textLight: 'text-orange-300',
-      textDark: 'text-orange-700',
-      bg: 'bg-orange-600',
-      badge: 'bg-orange-600',
-      link: 'text-orange-300',
-      linkHover: 'hover:text-orange-100'
-    },
-    'Military History': {
-      textLight: 'text-gray-300',
-      textDark: 'text-gray-700',
-      bg: 'bg-gray-600',
-      badge: 'bg-gray-600',
-      link: 'text-gray-300',
-      linkHover: 'hover:text-gray-100'
-    },
-    'Industrial History': {
-      textLight: 'text-yellow-300',
-      textDark: 'text-yellow-700',
-      bg: 'bg-yellow-600',
-      badge: 'bg-yellow-600',
-      link: 'text-yellow-300',
-      linkHover: 'hover:text-yellow-100'
-    },
-    'Travel Literature': {
-      textLight: 'text-emerald-300',
-      textDark: 'text-emerald-700',
-      bg: 'bg-emerald-600',
-      badge: 'bg-emerald-600',
-      link: 'text-emerald-300',
-      linkHover: 'hover:text-emerald-100'
-    }
-  };
-
-  return classes[category] || {
-    textLight: 'text-gray-300',
-    textDark: 'text-gray-700',
-    bg: 'bg-gray-600',
-    badge: 'bg-gray-600',
-    link: 'text-gray-300',
-    linkHover: 'hover:text-gray-100'
-  };
 }
 
 // Generate static params for all books
@@ -410,7 +300,6 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   }
 
   const gradientClass = getCategoryGradient(book.category);
-  const accentClasses = getCategoryAccentClasses(book.category);
 
   // Get proper book cover image path - use book.imageUrl with fallback
   const bookCoverSrc = book.imageUrl || `/book-covers/${book.id}.jpg`;
@@ -427,7 +316,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
       <BookAnalytics book={book} />
 
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-white">
 
         {/* Hero Section - Completely Overhauled */}
         <div className={`hero-section relative bg-gradient-to-br ${gradientClass} text-white py-16 lg:py-24`}>
@@ -445,7 +334,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                     className="rounded-xl shadow-2xl"
                     priority
                   />
-                  <div className={`absolute -bottom-6 -right-6 ${accentClasses.badge} text-white px-6 py-3 rounded-xl font-bold text-2xl shadow-xl`} style={{ color: '#ffffff !important' }}>
+                  <div className="absolute -bottom-6 -right-6 badge badge-amber text-white px-6 py-3 rounded-xl font-bold text-2xl shadow-xl">
                     £{book.price}
                   </div>
                 </div>
@@ -453,7 +342,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
               {/* Book Details */}
               <div className="space-y-6">
-                <div className="text-lg font-semibold text-white mb-4 flex items-center gap-3 justify-center flex-wrap" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                <div className="text-lg font-semibold text-white mb-4 flex items-center gap-3 justify-center flex-wrap">
                   <span className="bg-white/20 px-4 py-2 rounded-full">{book.category}</span>
                   {book.era && book.era[0] && (
                     <span className="bg-white/20 px-4 py-2 rounded-full">{book.era[0]}</span>
@@ -463,31 +352,31 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   )}
                 </div>
                 
-                <h1 className="hero-section text-4xl lg:text-5xl font-extrabold mb-8 leading-tight" style={{ color: '#ffffff !important', textShadow: '0 3px 6px rgba(0, 0, 0, 0.9)' }}>
+                <h1 className="hero-section text-4xl lg:text-5xl font-extrabold mb-8 leading-tight text-white">
                   {book.title}
                 </h1>
                 
-                <p className="hero-section text-xl lg:text-2xl mb-10 leading-relaxed max-w-4xl mx-auto" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                <p className="hero-section text-xl lg:text-2xl mb-10 leading-relaxed max-w-4xl mx-auto text-white">
                   {book.description}
                 </p>
 
                 {/* Book Specifications - Enhanced */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                    <div className="text-lg font-semibold text-white mb-2" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>Weight</div>
-                    <div className="text-3xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>{(book as any).weight || 300}g</div>
+                    <div className="text-lg font-semibold text-white mb-2">Weight</div>
+                    <div className="text-3xl font-bold text-white">{(book as any).weight || 300}g</div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                    <div className="text-lg font-semibold text-white mb-2" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>Published</div>
-                    <div className="text-3xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>{book.publicationYear}</div>
+                    <div className="text-lg font-semibold text-white mb-2">Published</div>
+                    <div className="text-3xl font-bold text-white">{book.publicationYear}</div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                    <div className="text-lg font-semibold text-white mb-2" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>ISBN-13</div>
-                    <div className="text-lg font-bold text-white leading-tight" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>{book.isbn}</div>
+                    <div className="text-lg font-semibold text-white mb-2">ISBN-13</div>
+                    <div className="text-lg font-bold text-white leading-tight">{book.isbn}</div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                    <div className="text-lg font-semibold text-white mb-2" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>Condition</div>
-                    <div className="text-3xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>{book.condition}</div>
+                    <div className="text-lg font-semibold text-white mb-2">Condition</div>
+                    <div className="text-3xl font-bold text-white">{book.condition}</div>
                   </div>
                 </div>
 
@@ -497,7 +386,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   <div className="text-center mt-6">
                     <Link
                       href="/books"
-                      className={`${accentClasses.link} ${accentClasses.linkHover} underline`}
+                      className="text-white underline hover:text-gray-200"
                     >
                       ← Browse All Aviation Books
                     </Link>
@@ -509,53 +398,50 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         </div>
 
         {/* Content Sections */}
-        <main className="container mx-auto px-4 py-12">
+        <main className="container mx-auto container-padding section-padding">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Book Content */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="card card-large content">
                 <BookSEOContent book={book} />
 
-                {/* Enhanced table of contents */}
+                {/* Table of contents */}
                 {book.tableOfContents && (
-                  <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-4">Table of Contents</h3>
+                  <div className="mt-8 card-compact bg-gray-50">
+                    <h3 className="content h3">Table of Contents</h3>
                     <div className="grid md:grid-cols-2 gap-2">
                       {book.tableOfContents.map((chapter, index) => (
                         <div key={index} className="flex items-start">
-                          <span className="text-gray-500 mr-3 mt-1 text-sm font-mono">
+                          <span className="text-muted mr-3 mt-1 text-sm font-mono">
                             {(index + 1).toString().padStart(2, '0')}.
                           </span>
-                          <span className="text-gray-700">{chapter}</span>
+                          <span>{chapter}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
 
-                {/* Sample content preview */}
+                {/* Sample content */}
                 {book.sampleContent && book.sampleContent.length > 0 && (
-                  <div className="mt-8 p-6 bg-blue-50 rounded-lg border-l-4 border-blue-400">
-                    <h3 className="text-xl font-semibold mb-4 text-blue-800">Sample Content</h3>
+                  <div className="mt-8 card bg-accent-blue text-white">
+                    <h3 className="content h3 text-white">Sample Content</h3>
                     {book.sampleContent.map((sample, index) => (
                       <div key={index} className="mb-4 last:mb-0">
-                        <h4 className="font-semibold text-blue-700 mb-2">{sample.chapter}: {sample.title}</h4>
-                        <p className="text-blue-600 italic text-sm leading-relaxed">"{sample.excerpt}..."</p>
+                        <h4 className="font-semibold mb-2 text-white">{sample.chapter}: {sample.title}</h4>
+                        <p className="italic text-sm leading-relaxed text-white">"{sample.excerpt}..."</p>
                       </div>
                     ))}
                   </div>
                 )}
 
-                {/* Research themes and keywords */}
+                {/* Research themes */}
                 {book.researchThemes && book.researchThemes.length > 0 && (
                   <div className="mt-8">
-                    <h3 className="text-xl font-semibold mb-4">Key Research Topics</h3>
+                    <h3 className="content h3">Key Research Topics</h3>
                     <div className="flex flex-wrap gap-2">
                       {book.researchThemes.map((theme, index) => (
-                        <span
-                          key={index}
-                          className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors"
-                        >
+                        <span key={index} className="badge badge-blue">
                           {theme}
                         </span>
                       ))}
@@ -565,33 +451,33 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
                 {/* Academic information */}
                 {(book.academicLevel || book.academicInstitutions) && (
-                  <div className="mt-8 p-6 bg-amber-50 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-4 text-amber-800">Academic Information</h3>
+                  <div className="mt-8 card bg-accent-amber text-white">
+                    <h3 className="content h3 text-white">Academic Information</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       {book.academicLevel && (
                         <div>
-                          <h4 className="font-semibold text-amber-700 mb-2">Academic Level</h4>
+                          <h4 className="font-semibold mb-2 text-white">Academic Level</h4>
                           <div className="space-y-1">
                             {book.academicLevel.map((level, index) => (
-                              <span key={index} className="block text-amber-600 text-sm">• {level}</span>
+                              <span key={index} className="block text-sm text-white">• {level}</span>
                             ))}
                           </div>
                         </div>
                       )}
                       {book.academicInstitutions && book.academicInstitutions.length > 0 && (
                         <div>
-                          <h4 className="font-semibold text-amber-700 mb-2">Used by Institutions</h4>
+                          <h4 className="font-semibold mb-2 text-white">Used by Institutions</h4>
                           <div className="space-y-1">
                             {book.academicInstitutions.map((institution, index) => (
-                              <span key={index} className="block text-amber-600 text-sm">• {institution}</span>
+                              <span key={index} className="block text-sm text-white">• {institution}</span>
                             ))}
                           </div>
                         </div>
                       )}
                     </div>
                     {book.citationCount && (
-                      <div className="mt-4 pt-4 border-t border-amber-200">
-                        <span className="text-amber-700 font-semibold">Academic Citations: {book.citationCount}</span>
+                      <div className="mt-4 pt-4 border-t border-white/20">
+                        <span className="font-semibold text-white">Academic Citations: {book.citationCount}</span>
                       </div>
                     )}
                   </div>
@@ -599,8 +485,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
                 {/* Specifications */}
                 {book.specifications && (
-                  <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-4">Book Specifications</h3>
+                  <div className="mt-8 card-compact bg-gray-50">
+                    <h3 className="content h3">Book Specifications</h3>
                     <div className="grid md:grid-cols-2 gap-4 text-sm">
                       {book.specifications.format && (
                         <div><strong>Format:</strong> {book.specifications.format}</div>
@@ -625,7 +511,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="bg-white rounded-lg shadow-lg p-6 sticky top-8">
+              <div className="card sticky top-8">
                 <div className="aspect-[3/4] mb-6 relative">
                   <Image
                     src={bookCoverSrc}
@@ -636,9 +522,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   />
                 </div>
 
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                  <h3 className="font-semibold text-blue-800 mb-2">Book Details</h3>
-                  <div className="space-y-2 text-sm text-blue-700">
+                <div className="mt-6 card-compact bg-accent-blue text-white">
+                  <h3 className="font-semibold mb-2 text-white">Book Details</h3>
+                  <div className="space-y-2 text-sm text-white">
                     <div>Weight: {(book as any).weight || 300}g</div>
                     <div>Category: {book.category}</div>
                     <div>Year: {book.publicationYear || 'Not specified'}</div>
@@ -648,10 +534,10 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   </div>
                 </div>
 
-                {/* SEO-optimized trust signals */}
-                <div className="mt-4 p-4 bg-green-50 rounded-lg">
-                  <h4 className="font-semibold text-green-800 mb-2">Why Choose This Book</h4>
-                  <ul className="text-sm text-green-700 space-y-1">
+                {/* Trust signals */}
+                <div className="mt-4 card-compact bg-accent-green text-white">
+                  <h4 className="font-semibold mb-2 text-white">Why Choose This Book</h4>
+                  <ul className="text-sm space-y-1 text-white">
                     <li>✓ Written by renowned aviation historian</li>
                     <li>✓ {book.condition} condition guaranteed</li>
                     <li>✓ FREE shipping worldwide</li>
@@ -671,21 +557,21 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
           {/* Related Blog Posts */}
           {book.relatedBlogPosts && book.relatedBlogPosts.length > 0 && (
-            <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold mb-6">Related Expert Insights</h2>
-              <p className="text-gray-600 mb-6">Explore Charles MacKay's expert blog posts related to this book's topics:</p>
+            <div className="mt-12 card card-large content">
+              <h2 className="content h2">Related Expert Insights</h2>
+              <p>Explore Charles MacKay's expert blog posts related to this book's topics:</p>
               <div className="grid md:grid-cols-2 gap-6">
                 {book.relatedBlogPosts.map((post, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                    <h3 className="font-semibold text-lg mb-3 text-blue-600 hover:text-blue-800">
+                  <div key={index} className="card hover:shadow-lg transition-shadow">
+                    <h3 className="font-semibold text-lg mb-3 text-accent-blue">
                       <Link href={`/blog/${post.slug}`}>
                         {post.title}
                       </Link>
                     </h3>
-                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                    <p className="mb-4">{post.excerpt}</p>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                      className="inline-flex items-center text-accent-blue font-medium"
                     >
                       Read Article
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -698,23 +584,21 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             </div>
           )}
 
-          <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold mb-6">About Charles E. MacKay</h2>
-            <div className="prose max-w-none">
-              <p className="text-gray-700 leading-relaxed">
-                Charles E. MacKay is a renowned aviation historian and author specializing in Scottish aviation heritage,
-                military aviation history, and aircraft development. With over 19 published books and more than 1,700
-                satisfied customers worldwide, Charles has established himself as a leading authority on aviation history.
-                His works are used as primary references by aviation researchers, museums, and academic institutions
-                including the Imperial War Museum, RAF Museum, and major universities.
-              </p>
-              <p className="text-gray-700 leading-relaxed mt-4">
-                Based in Glasgow, Scotland, Charles conducts extensive archival research and has unprecedented access
-                to historical aviation documents, photographs, and company records. His books combine rigorous academic
-                research with engaging storytelling, making complex aviation history accessible to both scholars and
-                enthusiasts.
-              </p>
-            </div>
+          <div className="mt-12 card card-large content">
+            <h2 className="content h2">About Charles E. MacKay</h2>
+            <p>
+              Charles E. MacKay is a renowned aviation historian and author specializing in Scottish aviation heritage,
+              military aviation history, and aircraft development. With over 19 published books and more than 1,700
+              satisfied customers worldwide, Charles has established himself as a leading authority on aviation history.
+              His works are used as primary references by aviation researchers, museums, and academic institutions
+              including the Imperial War Museum, RAF Museum, and major universities.
+            </p>
+            <p>
+              Based in Glasgow, Scotland, Charles conducts extensive archival research and has unprecedented access
+              to historical aviation documents, photographs, and company records. His books combine rigorous academic
+              research with engaging storytelling, making complex aviation history accessible to both scholars and
+              enthusiasts.
+            </p>
           </div>
         </main>
 
