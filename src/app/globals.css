@@ -303,11 +303,31 @@
 .hero-section h6 {
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   font-family: 'Playfair Display', serif;
+  color: white !important;
 }
 
 .hero-section p {
   text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   font-family: 'Inter', sans-serif;
+  color: white !important;
+}
+
+/* Ensure all text in hero sections is white */
+.hero-section * {
+  color: white !important;
+}
+
+/* Force white text on dark backgrounds */
+.bg-gradient-to-br h1,
+.bg-gradient-to-br h2,
+.bg-gradient-to-br h3,
+.bg-gradient-to-br h4,
+.bg-gradient-to-br h5,
+.bg-gradient-to-br h6,
+.bg-gradient-to-br p,
+.bg-gradient-to-br span,
+.bg-gradient-to-br div {
+  color: white !important;
 }
 
 /* Modern enhanced button styling */
@@ -375,32 +395,25 @@
   background-color: #2563eb;
 }
 
-/* Hide header on blog pages */
+/* Show header on all pages except blog posts */
 .blog-page .header-container {
-  display: none !important;
+  display: block !important;
 }
 
-/* Additional specificity to ensure header is hidden */
-.blog-page header,
-.blog-page .header-container,
-.blog-page .header-container * {
-  display: none !important;
-  visibility: hidden !important;
+/* Ensure header is visible on all pages */
+header,
+.header-container,
+.header-container * {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  overflow: visible !important;
 }
 
-/* Force hide any header elements on blog pages */
-.blog-page [class*="header"],
-.blog-page [class*="Header"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-}
-
-/* Ensure blog content starts at the top */
+/* Ensure blog content has proper spacing */
 .blog-page main {
-  padding-top: 0 !important;
+  padding-top: 1rem !important;
 }
 
 /* Blog-specific styling */

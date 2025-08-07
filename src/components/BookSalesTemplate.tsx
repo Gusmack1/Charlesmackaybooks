@@ -12,6 +12,7 @@ export interface BookData {
   subtitle?: string
   price: number
   pageCount: number
+  weight?: number
   isbn: string
   publicationYear: number
   description: string
@@ -139,6 +140,14 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
                     <div>
                       <span className="text-blue-200">Format:</span>
                       <div className="font-semibold">Paperback</div>
+                    </div>
+                    <div>
+                      <span className="text-blue-200">Weight:</span>
+                      <div className="font-semibold">{book.weight ? `${book.weight}g` : 'N/A'}</div>
+                    </div>
+                    <div>
+                      <span className="text-blue-200">Shipping:</span>
+                      <div className="font-semibold">Free Worldwide</div>
                     </div>
                   </div>
 

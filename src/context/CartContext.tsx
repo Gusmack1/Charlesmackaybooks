@@ -20,6 +20,8 @@ interface CartContextType {
   getTotalPrice: () => number;
   getTotal: () => number;
   getBulkDiscount: () => number;
+  getShippingCost: () => number;
+  getFinalTotal: () => number;
   isBasketOpen: boolean;
   isCartOpen: boolean;
   openBasket: () => void;
@@ -123,9 +125,29 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const getBulkDiscount = () => {
     const total = getTotalItems();
-    if (total >= 5) return getTotalPrice() * 0.1; // 10% discount for 5+ books
-    if (total >= 3) return getTotalPrice() * 0.05; // 5% discount for 3+ books
+    if (total >= 5) return getTotalPrice() * 0.15; // 15% discount for 5+ books
+    if (total >= 3) return getTotalPrice() * 0.10; // 10% discount for 3+ books
+    if (total >= 2) return getTotalPrice() * 0.05; // 5% discount for 2+ books
     return 0;
+  };
+
+  const getShippingCost = () => {
+    const totalWeight = items.reduce((total, item) => {
+      return total + ((item.book.weight || 300) * item.quantity); // Default 300g if weight not set
+    }, 0);
+    
+    // Weight-based shipping calculation
+    if (totalWeight <= 500) return 0; // Free shipping for light orders
+    if (totalWeight <= 1000) return 2.50; // £2.50 for medium orders
+    if (totalWeight <= 2000) return 4.50; // £4.50 for heavy orders
+    return 6.50; // £6.50 for very heavy orders
+  };
+
+  const getFinalTotal = () => {
+    const subtotal = getTotalPrice();
+    const discount = getBulkDiscount();
+    const shipping = getShippingCost();
+    return subtotal - discount + shipping;
   };
 
   const cartItems = items.map(item => item.book);
@@ -158,6 +180,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
         getTotalPrice,
         getTotal,
         getBulkDiscount,
+        getShippingCost,
+        getFinalTotal,
         isBasketOpen,
         isCartOpen: isBasketOpen,
         openBasket,
@@ -185,6 +209,8 @@ export function useCart() {
         getTotalPrice: () => 0,
         getTotal: () => 0,
         getBulkDiscount: () => 0,
+        getShippingCost: () => 0,
+        getFinalTotal: () => 0,
         isBasketOpen: false,
         isCartOpen: false,
         openBasket: () => {},

@@ -9,18 +9,26 @@ export default function CartSidebar() {
     items,
     removeFromCart,
     updateQuantity,
-    getTotal,
+    getTotalPrice,
     getTotalItems,
     isCartOpen,
     setIsCartOpen,
-    getBulkDiscount
+    getBulkDiscount,
+    getShippingCost,
+    getFinalTotal
   } = useCart()
 
   if (!isCartOpen) return null
 
-  const total = getTotal()
+  const subtotal = getTotalPrice()
   const discount = getBulkDiscount()
-  const finalTotal = total - discount
+  const shipping = getShippingCost()
+  const finalTotal = getFinalTotal()
+  
+  // Calculate total weight
+  const totalWeight = items.reduce((total, item) => {
+    return total + (((item.book as any).weight || 300) * item.quantity);
+  }, 0);
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
@@ -67,7 +75,7 @@ export default function CartSidebar() {
                     <div className="flex-1">
                       <h3 className="font-medium text-sm text-gray-900">{item.book.title}</h3>
                       <p className="text-xs text-gray-600">by Charles E. MacKay</p>
-                      <p className="text-xs text-gray-500">{item.book.condition} condition</p>
+                      <p className="text-xs text-gray-500">{item.book.condition} condition • {(item.book as any).weight || 300}g</p>
                       
                       {/* Quantity Controls */}
                       <div className="flex items-center gap-2 mt-2">
@@ -107,14 +115,18 @@ export default function CartSidebar() {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-gray-900">Subtotal:</span>
-                  <span className="text-gray-900">£{total.toFixed(2)}</span>
+                  <span className="text-gray-900">£{subtotal.toFixed(2)}</span>
                 </div>
                 {discount > 0 && (
                   <div className="flex justify-between text-green-600">
-                    <span>Bulk Discount:</span>
+                    <span>Bulk Discount ({getTotalItems() >= 5 ? '15%' : getTotalItems() >= 3 ? '10%' : '5%'}):</span>
                     <span>-£{discount.toFixed(2)}</span>
                   </div>
                 )}
+                <div className="flex justify-between text-gray-600">
+                  <span>Shipping ({totalWeight}g):</span>
+                  <span>{shipping === 0 ? 'FREE' : `£${shipping.toFixed(2)}`}</span>
+                </div>
                 <div className="flex justify-between font-semibold text-lg border-t pt-2">
                   <span className="text-gray-900">Total:</span>
                   <span className="text-gray-900">£{finalTotal.toFixed(2)}</span>
