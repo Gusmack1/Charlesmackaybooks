@@ -48,6 +48,55 @@ interface ComprehensiveBlogTemplateProps {
 export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTemplateProps) {
   const [readingProgress, setReadingProgress] = useState(0);
   const [showSocialShare, setShowSocialShare] = useState(false);
+  const fallbackSvg = encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='%231e3a8a'/><stop offset='100%' stop-color='%230256d4'/></linearGradient></defs><rect width='600' height='400' fill='url(#g)'/><g fill='white' font-family='Source Sans 3, Arial' text-anchor='middle'><text x='300' y='185' font-size='28'>Image unavailable</text><text x='300' y='225' font-size='16'>Charles E. MacKay Aviation History</text></g></svg>`
+  );
+
+  const ensureThreeImages = (html: string): string => {
+    const imgMatches = html.match(/<img\s+[^>]*src=/gi) || [];
+    if (imgMatches.length >= 3) return html;
+
+    const candidates: string[] = [];
+    if (post.featuredImage?.url) candidates.push(post.featuredImage.url);
+    if (post.relatedBooks && post.relatedBooks.length > 0) {
+      const covers = post.relatedBooks.map((b) => b.cover).filter(Boolean);
+      candidates.push(...covers);
+    }
+    // ensure at least 3
+    while (candidates.length < 3) {
+      candidates.push(`data:image/svg+xml;utf8,${fallbackSvg}`);
+    }
+
+    const paragraphs = html.split(/(<\/p>)/i);
+    const insertAt = [2, Math.max(4, Math.floor(paragraphs.length / 2)), paragraphs.length - 1];
+    let injected = html;
+    let inserted = 0;
+    if (paragraphs.length > 1) {
+      const rebuilt: string[] = [];
+      for (let i = 0, p = 0; i < paragraphs.length; i++) {
+        rebuilt.push(paragraphs[i]);
+        if (/^<\/p>$/i.test(paragraphs[i])) {
+          // after a paragraph closes
+          if (insertAt.includes(p) && inserted < 3 - imgMatches.length) {
+            const src = candidates[inserted];
+            rebuilt.push(
+              `<figure class="my-6"><img src="${src}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
+            );
+            inserted++;
+          }
+          p++;
+        }
+      }
+      injected = rebuilt.join('');
+    } else {
+      // No paragraphs detected; append images at end
+      const blocks = Array.from({ length: 3 - imgMatches.length }).map((_, idx) =>
+        `<figure class="my-6"><img src="${candidates[idx]}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
+      );
+      injected = html + blocks.join('');
+    }
+    return injected;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,6 +121,20 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     reddit: `https://reddit.com/submit?url=${shareUrl}&title=${shareTitle}`,
     email: `mailto:?subject=${shareTitle}&body=I thought you might find this aviation history article interesting: ${shareUrl}`
   };
+
+  useEffect(() => {
+    // Attach error fallbacks for inline images inside blog content
+    const container = document.querySelector('.blog-content');
+    if (!container) return;
+    const imgs = Array.from(container.querySelectorAll('img')) as HTMLImageElement[];
+    imgs.forEach((img) => {
+      const handler = () => {
+        img.src = `data:image/svg+xml;utf8,${fallbackSvg}`;
+        img.removeEventListener('error', handler);
+      };
+      img.addEventListener('error', handler);
+    });
+  }, [post.id]);
 
   return (
     <div className="min-h-screen bg-white blog-page">
@@ -209,7 +272,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           {/* Article Content */}
           <div 
             className="blog-content content"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: ensureThreeImages(post.content) }}
           />
         </article>
 
