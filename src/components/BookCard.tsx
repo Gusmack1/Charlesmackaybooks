@@ -92,7 +92,7 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
   return (
     <div className="group card overflow-hidden hover:shadow-lg transition-shadow">
       <Link href={`/books/${book.id}`} onClick={handleBookClick} className="block">
-        <div className="relative h-72 overflow-hidden bg-gray-50">
+        <div className="relative h-72 overflow-hidden bg-secondary">
           <Image
             src={imgSrc}
             alt={`${book.title} by Charles E. MacKay`}

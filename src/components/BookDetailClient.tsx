@@ -61,13 +61,13 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
     <div className="space-y-4">
       {/* Price Display */}
       <div className="text-center">
-        <div className="text-3xl font-bold text-green-600 mb-2">£{book.price}</div>
+        <div className="text-3xl font-bold text-accent-green mb-2">£{book.price}</div>
         <div className="text-sm text-gray-600">{book.condition} condition</div>
         <div className="text-sm text-gray-600">
           {book.inStock ? (
-            <span className="text-green-600 font-semibold">✓ In Stock</span>
+            <span className="text-accent-green font-semibold">✓ In Stock</span>
           ) : (
-            <span className="text-red-600 font-semibold">✗ Out of Stock</span>
+                          <span className="text-accent-red font-semibold">✗ Out of Stock</span>
           )}
         </div>
       </div>
@@ -111,7 +111,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         <a
           href="mailto:charlese1mackay@hotmail.com"
           onClick={handleEmailClick}
-          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                        className="text-accent-blue hover:text-blue-800 text-sm font-medium"
         >
           📧 Contact Charles for bulk orders
         </a>

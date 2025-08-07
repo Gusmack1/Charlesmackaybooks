@@ -118,13 +118,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             </div>
           ) : (
             <div className="text-center py-16">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">No Books Found</h2>
+              <h2 className="text-2xl font-bold text-primary mb-4">No Books Found</h2>
               <p className="text-secondary mb-8">
                 No books are currently available in the {categoryName} category.
               </p>
               <Link
                 href="/books"
-                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="inline-block badge badge-blue px-6 py-3 rounded-lg font-semibold transition-colors"
               >
                 Browse All Books
               </Link>
