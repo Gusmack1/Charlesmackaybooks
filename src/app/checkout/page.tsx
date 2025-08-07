@@ -192,7 +192,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           {/* Progress Bar */}
@@ -226,7 +226,7 @@ export default function CheckoutPage() {
               {/* Cart Items */}
               <div className="lg:col-span-2">
                 <div className="bg-white rounded-lg shadow-md p-6">
-                  <h2 className="text-xl font-semibold mb-6">Your Books</h2>
+                  <h2 className="text-lg font-semibold mb-4 text-primary">Your Books</h2>
 
                   <div className="space-y-4">
                     {items.map(item => (
@@ -242,9 +242,9 @@ export default function CheckoutPage() {
                         </div>
 
                         <div className="flex-1">
-                          <h3 className="font-semibold text-gray-800">{item.book.title}</h3>
-                          <p className="text-sm text-gray-600">£{item.book.price.toFixed(2)}</p>
-                          <p className="text-xs text-gray-500">{item.book.condition} condition</p>
+                          <h3 className="font-medium text-sm text-primary line-clamp-2">{item.book.title}</h3>
+                          <p className="text-xs text-accent-green">£{item.book.price.toFixed(2)}</p>
+                          <p className="text-xs text-muted">{item.book.condition} condition</p>
                         </div>
 
                         <div className="flex items-center gap-2">
@@ -254,7 +254,7 @@ export default function CheckoutPage() {
                           >
                             -
                           </button>
-                          <span className="w-8 text-center">{item.quantity}</span>
+                          <span className="w-8 text-center text-sm text-primary">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
                             className="w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300"
@@ -264,10 +264,10 @@ export default function CheckoutPage() {
                         </div>
 
                         <div className="text-right">
-                          <div className="font-semibold">£{(item.book.price * item.quantity).toFixed(2)}</div>
+                          <div className="font-semibold text-sm text-primary">£{(item.book.price * item.quantity).toFixed(2)}</div>
                           <button
                             onClick={() => removeFromCart(item.book.id)}
-                            className="text-red-500 hover:text-red-700 text-sm"
+                            className="text-red-500 hover:text-red-700 text-xs"
                           >
                             Remove
                           </button>
@@ -281,14 +281,14 @@ export default function CheckoutPage() {
               {/* Order Summary */}
               <div className="lg:col-span-1">
                 <div className="bg-white rounded-lg shadow-md p-6">
-                  <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
+                  <h2 className="text-lg font-semibold mb-4 text-primary">Order Summary</h2>
 
-                  <div className="space-y-2 mb-4">
-                    <div className="flex justify-between">
+                  <div className="space-y-2 mb-4 text-sm">
+                    <div className="flex justify-between text-secondary">
                       <span>Subtotal ({items.reduce((sum, item) => sum + item.quantity, 0)} books)</span>
                       <span>£{subtotal.toFixed(2)}</span>
                     </div>
-                    <div className="flex justify-between text-sm text-gray-600">
+                    <div className="flex justify-between text-sm text-secondary">
                       <span>Shipping</span>
                       <span>Calculated at next step</span>
                     </div>
@@ -296,7 +296,7 @@ export default function CheckoutPage() {
 
                   <button
                     onClick={() => setStep('address')}
-                    className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    className="w-full badge badge-blue py-3 px-4 rounded-lg font-medium transition-colors"
                   >
                     Continue to Address
                   </button>
@@ -308,7 +308,7 @@ export default function CheckoutPage() {
           {step === 'address' && (
             <div className="max-w-2xl mx-auto">
               <div className="bg-white rounded-lg shadow-md p-6">
-                <h2 className="text-xl font-semibold mb-6">Shipping Address</h2>
+                <h2 className="text-lg font-semibold mb-4 text-primary">Shipping Address</h2>
 
                 {errors.length > 0 && (
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
@@ -324,7 +324,7 @@ export default function CheckoutPage() {
                 <form onSubmit={(e) => { e.preventDefault(); handleAddressSubmit(); }} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label className="block text-xs font-medium text-secondary mb-1">
                         First Name *
                       </label>
                       <input
@@ -337,7 +337,7 @@ export default function CheckoutPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label className="block text-xs font-medium text-secondary mb-1">
                         Last Name *
                       </label>
                       <input
@@ -351,7 +351,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-xs font-medium text-secondary mb-1">
                       Email Address *
                     </label>
                     <input
@@ -364,7 +364,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-xs font-medium text-secondary mb-1">
                       Phone Number
                     </label>
                     <input
@@ -376,7 +376,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-xs font-medium text-secondary mb-1">
                       Address Line 1 *
                     </label>
                     <input
@@ -389,7 +389,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-xs font-medium text-secondary mb-1">
                       Address Line 2
                     </label>
                     <input
@@ -402,7 +402,7 @@ export default function CheckoutPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label className="block text-xs font-medium text-secondary mb-1">
                         City *
                       </label>
                       <input
@@ -415,7 +415,7 @@ export default function CheckoutPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label className="block text-xs font-medium text-secondary mb-1">
                         Postcode/ZIP *
                       </label>
                       <input
@@ -429,7 +429,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-xs font-medium text-secondary mb-1">
                       Country *
                     </label>
                     <select
@@ -482,13 +482,13 @@ export default function CheckoutPage() {
                     <button
                       type="button"
                       onClick={() => setStep('basket')}
-                      className="flex-1 bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors"
+                      className="flex-1 bg-gray-200 text-secondary py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm"
                     >
                       Back to Basket
                     </button>
                     <button
                       type="submit"
-                      className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                      className="flex-1 badge badge-blue py-2 px-4 rounded-lg transition-colors text-sm"
                     >
                       Review Order
                     </button>
@@ -501,12 +501,12 @@ export default function CheckoutPage() {
           {step === 'review' && (
             <div className="max-w-2xl mx-auto">
               <div className="bg-white rounded-lg shadow-md p-6">
-                <h2 className="text-xl font-semibold mb-6">Review Your Order</h2>
+                <h2 className="text-lg font-semibold mb-4 text-primary">Review Your Order</h2>
 
                 {/* Customer Details */}
                 <div className="mb-6">
-                  <h3 className="font-semibold text-gray-800 mb-2">Shipping To:</h3>
-                  <div className="text-sm text-gray-600">
+                  <h3 className="font-medium text-primary mb-2 text-sm">Shipping To:</h3>
+                  <div className="text-xs text-secondary">
                     <div>{customerDetails.firstName} {customerDetails.lastName}</div>
                     <div>{customerDetails.email}</div>
                     <div>{customerDetails.address1}</div>
@@ -516,7 +516,7 @@ export default function CheckoutPage() {
                   </div>
                   <button
                     onClick={() => setStep('address')}
-                    className="text-blue-600 hover:text-blue-800 text-sm mt-2"
+                    className="text-accent-blue hover:text-blue-800 text-xs mt-2"
                   >
                     Edit Address
                   </button>
@@ -524,12 +524,12 @@ export default function CheckoutPage() {
 
                 {/* Order Items */}
                 <div className="mb-6">
-                  <h3 className="font-semibold text-gray-800 mb-2">Order Items:</h3>
+                  <h3 className="font-medium text-primary mb-2 text-sm">Order Items:</h3>
                   <div className="space-y-2">
                     {items.map(item => (
-                      <div key={item.book.id} className="flex justify-between text-sm">
-                        <span>{item.book.title} × {item.quantity}</span>
-                        <span>£{(item.book.price * item.quantity).toFixed(2)}</span>
+                      <div key={item.book.id} className="flex justify-between text-xs text-secondary">
+                        <span className="line-clamp-1">{item.book.title} × {item.quantity}</span>
+                        <span className="text-primary font-medium">£{(item.book.price * item.quantity).toFixed(2)}</span>
                       </div>
                     ))}
                   </div>
