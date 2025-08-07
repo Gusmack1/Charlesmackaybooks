@@ -53,6 +53,27 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='%231e3a8a'/><stop offset='100%' stop-color='%230256d4'/></linearGradient></defs><rect width='600' height='400' fill='url(#g)'/><g fill='white' font-family='Source Sans 3, Arial' text-anchor='middle'><text x='300' y='185' font-size='28'>Image unavailable</text><text x='300' y='225' font-size='16'>Charles E. MacKay Aviation History</text></g></svg>`
   );
 
+  const addFallbackToAllImages = (html: string): string => {
+    // add onerror fallback and tidy classes on every <img>
+    return html.replace(/<img\s+([^>]*?)>/gi, (match, attrs) => {
+      let updated = attrs
+      // ensure alt attribute
+      if (!/\balt\s*=/.test(updated)) {
+        updated += ' alt="Aviation history image"'
+      }
+      // remove inline shadow classes if present and ensure rounded
+      updated = updated.replace(/\bshadow-[^\s"]+/g, '')
+      if (!/\brounded/.test(updated)) {
+        updated += ' class="rounded-lg"'
+      }
+      // add onerror fallback
+      if (!/\bonerror=/.test(updated)) {
+        updated += ` onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'"`
+      }
+      return `<img ${updated}>`
+    })
+  }
+
   const ensureThreeImages = (html: string): string => {
     const imgMatches = html.match(/<img\s+[^>]*src=/gi) || [];
     if (imgMatches.length >= 3) return html;
@@ -98,6 +119,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     }
     return injected;
   };
+
+  const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html))
 
   useEffect(() => {
     const handleScroll = () => {
@@ -273,7 +296,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           {/* Article Content */}
           <div 
             className="blog-content content"
-            dangerouslySetInnerHTML={{ __html: ensureThreeImages(post.content) }}
+            dangerouslySetInnerHTML={{ __html: processContent(post.content) }}
           />
           {/* Breadcrumb JSON-LD */}
           <script
