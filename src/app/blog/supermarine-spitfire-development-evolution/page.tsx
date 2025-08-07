@@ -12,14 +12,14 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/supermarine-spitfire-prototype.jpg" alt="Supermarine Spitfire prototype showing the elegant elliptical wing design" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Supermarine Spitfire prototype, showing R.J. Mitchell's distinctive elliptical wing design that became legendary.</p>
+      <p class="text-sm  mt-2 text-center italic">The Supermarine Spitfire prototype, showing R.J. Mitchell's distinctive elliptical wing design that became legendary.</p>
     </div>
     
     <p>The Spitfire's development began not with military requirements, but with the pursuit of absolute speed in racing aircraft. Mitchell's experience with high-speed Schneider Trophy seaplanes provided the aerodynamic knowledge that would create the fastest, most maneuverable fighter of its era.</p>
 
     <div class="my-8">
       <img src="/blog-images/supermarine-s6b-schneider-trophy.jpg" alt="Supermarine S6B racing seaplane that influenced Spitfire design" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Supermarine S6B racing seaplane, winner of the 1931 Schneider Trophy, provided crucial design experience for the Spitfire.</p>
+      <p class="text-sm  mt-2 text-center italic">The Supermarine S6B racing seaplane, winner of the 1931 Schneider Trophy, provided crucial design experience for the Spitfire.</p>
     </div>
 
     <p>From its first flight in 1936 through numerous variants and improvements, the Spitfire evolved continuously throughout World War II and beyond. Its development story encompasses not just technical innovation, but the human drama of designers, pilots, and workers who created and operated one of history's most beloved aircraft.</p>
@@ -38,9 +38,9 @@ const post = {
 
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
-      <ul class="space-y-2 text-blue-700">
+    <div class=" rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
+      <ul class="space-y-2 ">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
         <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
@@ -55,7 +55,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/supermarine-spitfire-development-evolution.jpg" alt="Supermarine Spitfire development evolution" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The evolution of Spitfire design through various marks, showing the continuous development and improvement of the aircraft.</p>
+      <p class="text-sm  mt-2 text-center italic">The evolution of Spitfire design through various marks, showing the continuous development and improvement of the aircraft.</p>
     </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>

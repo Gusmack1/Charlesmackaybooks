@@ -12,14 +12,14 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/cierva-autogyro-historical.jpg" alt="Juan de la Cierva with his autogyro" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Juan de la Cierva with his revolutionary autogyro, which solved critical problems of rotorcraft flight and paved the way for helicopters.</p>
+      <p class="text-sm  mt-2 text-center italic">Juan de la Cierva with his revolutionary autogyro, which solved critical problems of rotorcraft flight and paved the way for helicopters.</p>
     </div>
     
     <p>From Juan de la Cierva's autogyros that first achieved stable rotorcraft flight to Igor Sikorsky's breakthrough helicopters that established modern design principles, these pioneers overcame seemingly insurmountable technical challenges. Their innovations in rotor design, control systems, and flight dynamics established the foundation for the helicopter industry.</p>
 
     <div class="my-8">
       <img src="/blog-images/autogyro-vs-helicopter-comparison.jpg" alt="Comparison diagram showing autogyro versus helicopter configurations" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Technical comparison showing the evolution from autogyro to helicopter configuration, illustrating the key engineering breakthroughs.</p>
+      <p class="text-sm  mt-2 text-center italic">Technical comparison showing the evolution from autogyro to helicopter configuration, illustrating the key engineering breakthroughs.</p>
     </div>
 
     <p>These helicopter pioneers didn't just solve technical problems - they created entirely new possibilities for aviation. Their achievements revolutionized rescue operations, medical transport, military tactics, and civil aviation, establishing helicopters as indispensable tools that serve humanity in countless ways today.</p>
@@ -39,7 +39,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
@@ -55,7 +55,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg" alt="Sikorsky VS300 helicopter breakthrough" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Igor Sikorsky's VS300, the breakthrough helicopter that established modern rotorcraft design principles.</p>
+      <p class="text-sm  mt-2 text-center italic">Igor Sikorsky's VS300, the breakthrough helicopter that established modern rotorcraft design principles.</p>
     </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>

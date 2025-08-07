@@ -12,21 +12,21 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/vickers-valiant-bomber.jpg" alt="Vickers Valiant B1 bomber - the first V-Force aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Vickers Valiant B1, the first V-Force aircraft to enter service in 1955, featuring a conservative straight-wing design for reliability.</p>
+      <p class="text-sm  mt-2 text-center italic">The Vickers Valiant B1, the first V-Force aircraft to enter service in 1955, featuring a conservative straight-wing design for reliability.</p>
     </div>
     
     <p>Developed during the height of Cold War tensions, these aircraft embodied cutting-edge aerodynamics, advanced nuclear delivery systems, and sophisticated electronic countermeasures. Their design reflected Britain's determination to maintain independent nuclear capability while operating within NATO's strategic framework.</p>
 
     <div class="my-8">
       <img src="/blog-images/handley-page-victor-bomber.jpg" alt="Handley Page Victor bomber with distinctive crescent wing" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Handley Page Victor with its distinctive crescent wing design, combining high-speed and high-altitude capabilities for nuclear delivery.</p>
+      <p class="text-sm  mt-2 text-center italic">The Handley Page Victor with its distinctive crescent wing design, combining high-speed and high-altitude capabilities for nuclear delivery.</p>
     </div>
 
     <p>The V-Force story encompasses more than aircraft development - it represents Britain's Cold War strategy, nuclear doctrine evolution, and the technological challenges of maintaining credible deterrence in an era of rapidly advancing missile technology. From Blue Steel standoff weapons to low-level penetration tactics, the V-Force adapted continuously to changing strategic requirements.</p>
 
     <div class="my-8">
       <img src="/blog-images/avro-vulcan-bomber.jpg" alt="Avro Vulcan delta-wing bomber" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Avro Vulcan with its revolutionary delta-wing design, optimized for high-altitude performance and the most recognizable symbol of the V-Force.</p>
+      <p class="text-sm  mt-2 text-center italic">The Avro Vulcan with its revolutionary delta-wing design, optimized for high-altitude performance and the most recognizable symbol of the V-Force.</p>
     </div>
 
     <h2 id="historical-background">Historical Background: Britain's Nuclear Ambition</h2>
@@ -40,7 +40,7 @@ const post = {
     <p>The V-Force comprised three radically different aircraft designs, each representing different engineering philosophies and operational concepts. This diversity provided operational flexibility and ensured that technological failures in one design would not compromise the entire deterrent force.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">The Three V-Force Aircraft</h3>
+      <h3 class="font-semibold mb-4 ">The Three V-Force Aircraft</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Vickers Valiant:</strong> Conservative design with straight wings, first to enter service in 1955</li>
         <li><strong>Avro Vulcan:</strong> Revolutionary delta-wing design, optimized for high-altitude performance</li>

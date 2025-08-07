@@ -12,7 +12,7 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/sopwith-camel-wwi-fighter.jpg" alt="Sopwith Camel in flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Sopwith Camel, the most successful British fighter of World War I, with over 1,200 confirmed victories to its credit.</p>
+      <p class="text-sm  mt-2 text-center italic">The Sopwith Camel, the most successful British fighter of World War I, with over 1,200 confirmed victories to its credit.</p>
     </div>
     
     <p>What made the Camel so deadly was not just its firepower or speed, but its revolutionary design philosophy that concentrated all major masses - engine, pilot, fuel, and armament - within the forward seven feet of the fuselage. This arrangement, combined with its powerful rotary engine, created unique handling characteristics that made the aircraft both challenging to fly and devastatingly effective in combat. In skilled hands, the Camel was nearly unbeatable; in inexperienced hands, it could be lethal to its own pilot.</p>
@@ -26,7 +26,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/sopwith-camel-prototype.jpg" alt="Sopwith Camel prototype" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Sopwith Camel prototype F1, demonstrating the revolutionary design that would become the most successful British fighter of World War I.</p>
+      <p class="text-sm  mt-2 text-center italic">The Sopwith Camel prototype F1, demonstrating the revolutionary design that would become the most successful British fighter of World War I.</p>
     </div>
 
     <p>The prototype F1 first flew in February 1917, immediately demonstrating both the promise and the peril of Smith's design. Test pilots reported that while the aircraft could outmaneuver any contemporary fighter, it required constant attention and quick reflexes to prevent dangerous departures from controlled flight. This characteristic would define the Camel throughout its service life.</p>
@@ -37,7 +37,7 @@ const post = {
     <p>The fuselage design reflected both practical considerations and manufacturing constraints. The wooden framework, covered with fabric, provided sufficient strength while remaining light enough for acceptable performance. The distinctive "hump" over the gun breeches, which gave the aircraft its nickname, housed the ammunition tanks and synchronization gear while providing the pilot with a clear forward view for combat operations.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Concentrated Mass Design:</strong> All major components within forward seven feet</li>
         <li><strong>Synchronized Armament:</strong> Twin Vickers guns firing through propeller arc</li>
@@ -54,7 +54,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/sopwith-camel-cockpit.jpg" alt="Sopwith Camel cockpit" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Sopwith Camel's distinctive cockpit arrangement with twin synchronized Vickers machine guns mounted directly in front of the pilot.</p>
+      <p class="text-sm  mt-2 text-center italic">The Sopwith Camel's distinctive cockpit arrangement with twin synchronized Vickers machine guns mounted directly in front of the pilot.</p>
     </div>
 
     <p>Camel pilots developed specific tactics to maximize their aircraft's strengths while minimizing its weaknesses. The aircraft's rapid right turn became a standard defensive maneuver, allowing pilots to reverse direction faster than pursuing aircraft could follow. This capability proved particularly effective against German Albatros fighters, which had superior straight-line performance but could not match the Camel's turning ability.</p>
@@ -68,7 +68,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/sopwith-camel-flying.jpg" alt="Sopwith Camel in flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Sopwith Camel in flight, showing its distinctive silhouette and the handling characteristics that made it deadly in combat.</p>
+      <p class="text-sm  mt-2 text-center italic">The Sopwith Camel in flight, showing its distinctive silhouette and the handling characteristics that made it deadly in combat.</p>
     </div>
 
     <h2 id="production-variants">Production and Variants</h2>

@@ -11,15 +11,15 @@ const post = {
     <p>In the early 1920s, when most aircraft were still constructed from wood and fabric, a German engineer named Adolf Rohrbach was quietly revolutionizing aviation with metal construction techniques that would transform the industry. His innovative approaches to aircraft design and manufacturing established principles that remain fundamental to modern aviation, yet his contributions have often been overlooked in aviation history.</p>
     <div class="my-8">
       <img src="/blog-images/metal-aircraft-construction.jpg" alt="Metal aircraft construction" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Revolutionary metal construction techniques that changed aircraft design forever.</p>
+      <p class="text-sm  mt-2 text-center italic">Revolutionary metal construction techniques that changed aircraft design forever.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/beardmore-aviation-factory.jpg" alt="Beardmore aviation factory" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Modern aviation manufacturing facilities that benefited from Rohrbach's innovations.</p>
+      <p class="text-sm  mt-2 text-center italic">Modern aviation manufacturing facilities that benefited from Rohrbach's innovations.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/curtiss-nc4-flying-boat.jpg" alt="Early flying boat design" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Early flying boat designs that influenced Rohrbach's metal construction approach.</p>
+      <p class="text-sm  mt-2 text-center italic">Early flying boat designs that influenced Rohrbach's metal construction approach.</p>
     </div>
     
     <p>Rohrbach's work extended far beyond simple material substitution - he developed entirely new approaches to aircraft design that leveraged metal's unique properties while solving fundamental problems of strength, weight, and manufacturing efficiency. This comprehensive analysis reveals how this pioneering engineer's innovations influenced aircraft development worldwide and established manufacturing techniques still used today.</p>
@@ -41,7 +41,7 @@ const post = {
     <p>The development of specialized joining techniques allowed Rohrbach to create seamless metal structures without the weight penalties and stress concentrations associated with bolted or welded joints. These innovations enabled smooth external surfaces while maintaining structural integrity under operational loads and environmental conditions.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Rohrbach's Key Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Rohrbach's Key Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Stressed-Skin Construction:</strong> Integrated structure and aerodynamic surface</li>
         <li><strong>Advanced Metal Joining:</strong> Specialized techniques for seamless construction</li>

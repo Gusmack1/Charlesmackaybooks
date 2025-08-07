@@ -14,7 +14,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/bristol-f2b-fighter-flying.jpg" alt="Bristol Fighter F2B in flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Bristol Fighter F2B in flight, demonstrating its exceptional maneuverability and combat effectiveness.</p>
+      <p class="text-sm  mt-2 text-center italic">The Bristol Fighter F2B in flight, demonstrating its exceptional maneuverability and combat effectiveness.</p>
     </div>
 
     <p>From its combat debut in April 1917 through the Armistice and beyond, the Bristol Fighter established itself as one of the war's most versatile and effective aircraft. Its influence extended far beyond World War I, establishing design principles for multi-seat fighters that would persist throughout aviation history.</p>
@@ -28,11 +28,11 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/bristol-fighter-ground.jpg" alt="Bristol Fighter F2B on the ground" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Bristol Fighter F2B on the ground, showing its distinctive two-seat configuration and robust construction.</p>
+      <p class="text-sm  mt-2 text-center italic">The Bristol Fighter F2B on the ground, showing its distinctive two-seat configuration and robust construction.</p>
     </div>
 
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Bristol Fighter F2B Specifications</h3>
+    <div class=" rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 ">Bristol Fighter F2B Specifications</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Engine:</strong> Rolls-Royce Falcon III, 275 hp V-12</li>
         <li><strong>Maximum Speed:</strong> 123 mph at 5,000 feet</li>
@@ -52,7 +52,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/bristol-fighter-technical-side.jpg" alt="Bristol Fighter F2B technical side view" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Technical side view of the Bristol Fighter F2B, showing its aerodynamic design and construction details.</p>
+      <p class="text-sm  mt-2 text-center italic">Technical side view of the Bristol Fighter F2B, showing its aerodynamic design and construction details.</p>
     </div>
 
     <h2 id="operational-history">Operational History and Service</h2>

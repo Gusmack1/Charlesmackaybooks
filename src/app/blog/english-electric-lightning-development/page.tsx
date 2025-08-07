@@ -12,21 +12,21 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning F.6 in flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The English Electric Lightning F.6, showing its distinctive stacked engine configuration and swept wing design that enabled Mach 2+ performance.</p>
+      <p class="text-sm  mt-2 text-center italic">The English Electric Lightning F.6, showing its distinctive stacked engine configuration and swept wing design that enabled Mach 2+ performance.</p>
     </div>
     
     <p>Designed by W.E.W. "Teddy" Petter's team at English Electric, the Lightning featured revolutionary stacked Rolls-Royce Avon engines that provided unprecedented thrust-to-weight ratio. This configuration enabled the Lightning to climb vertically from takeoff - a capability that impressed pilots and air show audiences worldwide.</p>
 
     <div class="my-8">
       <img src="/blog-images/lightning-f6-supersonic.jpg" alt="Lightning climbing vertically demonstrating its exceptional performance" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Lightning demonstrating its famous vertical climb capability, made possible by its exceptional thrust-to-weight ratio.</p>
+      <p class="text-sm  mt-2 text-center italic">Lightning demonstrating its famous vertical climb capability, made possible by its exceptional thrust-to-weight ratio.</p>
     </div>
 
     <p>The Lightning's development represented the culmination of British jet fighter evolution, incorporating lessons learned from earlier designs while pushing performance boundaries to their limits. Its service record includes numerous interceptions of Soviet reconnaissance aircraft and demonstration of Britain's commitment to maintaining advanced air defense capabilities.</p>
 
     <div class="my-8">
       <img src="/blog-images/lightning-cockpit-interior.jpg" alt="Lightning cockpit showing advanced avionics" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Lightning's advanced cockpit and avionics systems represented cutting-edge technology for supersonic interception missions.</p>
+      <p class="text-sm  mt-2 text-center italic">The Lightning's advanced cockpit and avionics systems represented cutting-edge technology for supersonic interception missions.</p>
     </div>
 
     <h2 id="historical-background">Historical Background and Context</h2>
@@ -44,7 +44,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>

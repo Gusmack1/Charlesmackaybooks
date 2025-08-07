@@ -16,7 +16,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/german-aircraft-albatros-d3-historical.jpg" alt="Albatros D.III historical photograph showing the streamlined fuselage design" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Albatros D.III demonstrated advanced German fighter design with its streamlined semi-monocoque fuselage and powerful Mercedes engine.</p>
+      <p class="text-sm  mt-2 text-center italic">The Albatros D.III demonstrated advanced German fighter design with its streamlined semi-monocoque fuselage and powerful Mercedes engine.</p>
     </div>
 
     <h2 id="early-development">Early Development: Taube and Pre-War Designs</h2>
@@ -33,11 +33,11 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/fokker-dr1-red-baron-replica.jpg" alt="Fokker Dr.I triplane replica showing the distinctive three-wing configuration" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Fokker Dr.I triplane, most famously flown by Manfred von Richthofen, represented the pinnacle of German fighter maneuverability.</p>
+      <p class="text-sm  mt-2 text-center italic">The Fokker Dr.I triplane, most famously flown by Manfred von Richthofen, represented the pinnacle of German fighter maneuverability.</p>
     </div>
 
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key German Aircraft Developments</h3>
+    <div class=" rounded-lg p-6 my-6">
+      <h3 class="font-semibold mb-4 ">Key German Aircraft Developments</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Rumpler Taube (1910-1915):</strong> Stable reconnaissance monoplane with bird-inspired design</li>
         <li><strong>Fokker Eindecker (1915-1916):</strong> First synchronized gun fighter, "Fokker Scourge" dominance</li>
@@ -54,7 +54,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/manfred-von-richthofen-portrait.jpg" alt="Portrait of Manfred von Richthofen, the Red Baron" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Manfred von Richthofen, the "Red Baron," became the most famous German ace, achieving 80 confirmed victories flying Albatros and Fokker fighters.</p>
+      <p class="text-sm  mt-2 text-center italic">Manfred von Richthofen, the "Red Baron," became the most famous German ace, achieving 80 confirmed victories flying Albatros and Fokker fighters.</p>
     </div>
 
     <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
@@ -63,7 +63,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/albatros-dva-flying-in-air.jpg" alt="Albatros D.Va flying in formation" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Albatros D.Va fighters in formation, demonstrating the advanced German fighter design that dominated the skies in 1917-1918.</p>
+      <p class="text-sm  mt-2 text-center italic">Albatros D.Va fighters in formation, demonstrating the advanced German fighter design that dominated the skies in 1917-1918.</p>
     </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>

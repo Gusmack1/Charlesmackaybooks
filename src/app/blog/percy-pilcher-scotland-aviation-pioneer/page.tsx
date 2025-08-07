@@ -12,21 +12,21 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/percy-pilcher-hawk-glider-scotland.jpg" alt="Percy Pilcher with his Hawk glider in Scotland" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Percy Pilcher with his famous Hawk glider in the Scottish countryside, demonstrating his mastery of gliding flight years before powered aviation.</p>
+      <p class="text-sm  mt-2 text-center italic">Percy Pilcher with his famous Hawk glider in the Scottish countryside, demonstrating his mastery of gliding flight years before powered aviation.</p>
     </div>
     
     <p>Working initially with Otto Lilienthal in Germany, Pilcher returned to Scotland to develop his own series of increasingly sophisticated gliders. His Bat, Beetle, Gull, and Hawk designs demonstrated systematic engineering improvement and achieved flights of over 750 feet - remarkable distances for the 1890s.</p>
 
     <div class="my-8">
       <img src="/blog-images/percy-pilcher-glider-experiments.jpg" alt="Percy Pilcher conducting glider experiments" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Pilcher conducting systematic glider experiments, applying scientific methodology to solve the problems of controlled flight.</p>
+      <p class="text-sm  mt-2 text-center italic">Pilcher conducting systematic glider experiments, applying scientific methodology to solve the problems of controlled flight.</p>
     </div>
 
     <p>At the time of his death, Pilcher was preparing to test a powered aircraft equipped with a lightweight engine. Had he survived, many aviation historians believe he might have achieved powered flight several years before the Wright Brothers, potentially establishing Britain as the birthplace of practical aviation.</p>
 
     <div class="my-8">
       <img src="/blog-images/percy-pilcher-portrait-engineer.jpg" alt="Portrait of Percy Pilcher as engineer and aviation pioneer" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Percy Pilcher, the Scottish engineer whose systematic approach to flight problems brought him tantalizingly close to achieving powered flight.</p>
+      <p class="text-sm  mt-2 text-center italic">Percy Pilcher, the Scottish engineer whose systematic approach to flight problems brought him tantalizingly close to achieving powered flight.</p>
     </div>
 
     <p>Pilcher's work in Scotland represented the intersection of engineering innovation and aviation pioneering. His systematic approach to solving flight problems, combined with his engineering background, positioned him uniquely to advance the cause of powered flight. The tragic loss of this brilliant mind in 1899 robbed aviation of one of its most promising innovators.</p>
@@ -42,7 +42,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/percy-pilcher-glider-designs.jpg" alt="Percy Pilcher's innovative glider designs" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Percy Pilcher's innovative glider designs demonstrated systematic engineering improvement and achieved remarkable flight distances for the 1890s.</p>
+      <p class="text-sm  mt-2 text-center italic">Percy Pilcher's innovative glider designs demonstrated systematic engineering improvement and achieved remarkable flight distances for the 1890s.</p>
     </div>
 
     <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
@@ -51,7 +51,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>

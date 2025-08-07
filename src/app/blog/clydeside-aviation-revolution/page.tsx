@@ -12,14 +12,14 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/clydeside-aircraft-factory.jpg" alt="Clydeside aircraft factory showing aviation manufacturing" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">A Clydeside aircraft factory, demonstrating how Scotland's industrial infrastructure adapted to aviation manufacturing during wartime.</p>
+      <p class="text-sm  mt-2 text-center italic">A Clydeside aircraft factory, demonstrating how Scotland's industrial infrastructure adapted to aviation manufacturing during wartime.</p>
     </div>
     
     <p>The transition from ships to aircraft represented more than industrial conversion - it embodied Scotland's engineering heritage adapting to the demands of aviation warfare. Companies like William Beardmore & Company, Barclay, Curle & Co., and others brought shipbuilding precision and industrial scale to aircraft production.</p>
 
     <div class="my-8">
       <img src="/blog-images/clydeside-aviation-dalmuir-1928.jpg" alt="Clydeside aviation works at Dalmuir in 1928" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Clydeside aviation works at Dalmuir in 1928, showing the scale of Scottish aircraft manufacturing operations.</p>
+      <p class="text-sm  mt-2 text-center italic">The Clydeside aviation works at Dalmuir in 1928, showing the scale of Scottish aircraft manufacturing operations.</p>
     </div>
 
     <p>From the early experiments with flying boats and fighters to massive wartime production programs, Clydeside aviation represented Scottish innovation, engineering excellence, and industrial determination. The legacy of this transformation influenced post-war aviation development and established Scotland as a permanent center for aerospace technology.</p>
@@ -39,7 +39,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
