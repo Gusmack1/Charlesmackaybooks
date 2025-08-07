@@ -94,6 +94,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-[#1877F2] hover:bg-[#166FE5] text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm flex items-center gap-2"
+                style={{ backgroundColor: '#1877F2 !important', color: 'white !important' }}
                 aria-label="Share on Facebook"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -106,6 +107,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-[#1DA1F2] hover:bg-[#1A91DA] text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm flex items-center gap-2"
+                style={{ backgroundColor: '#1DA1F2 !important', color: 'white !important' }}
                 aria-label="Share on Twitter"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -118,6 +120,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-[#0A66C2] hover:bg-[#0958A5] text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm flex items-center gap-2"
+                style={{ backgroundColor: '#0A66C2 !important', color: 'white !important' }}
                 aria-label="Share on LinkedIn"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -130,6 +133,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-[#FF4500] hover:bg-[#E03D00] text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm flex items-center gap-2"
+                style={{ backgroundColor: '#FF4500 !important', color: 'white !important' }}
                 aria-label="Share on Reddit"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
