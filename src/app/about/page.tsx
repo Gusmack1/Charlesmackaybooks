@@ -93,9 +93,8 @@ export default function AboutPage() {
       />
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-6 py-20">
+      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Author Image */}
             <div className="flex justify-center lg:justify-start">
@@ -143,42 +142,42 @@ export default function AboutPage() {
 
             {/* About Content */}
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                 About Charles E. MacKay
               </h1>
-              <p className="hero-section text-white mb-8 leading-relaxed">
+              <p className="text-xl text-white mb-8 leading-relaxed">
                 Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history. With 19 published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8 text-center">
                 <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-200 mb-1">Published Books</div>
-                  <div className="text-2xl font-bold">19</div>
+                  <div className="text-sm text-white mb-1">Published Books</div>
+                  <div className="text-2xl font-bold text-white">19</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-200 mb-1">Years Research</div>
-                  <div className="text-2xl font-bold">25+</div>
+                  <div className="text-sm text-white mb-1">Years Research</div>
+                  <div className="text-2xl font-bold text-white">25+</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-200 mb-1">Specialty</div>
-                  <div className="text-lg font-semibold">Scottish Aviation</div>
+                  <div className="text-sm text-white mb-1">Specialty</div>
+                  <div className="text-lg font-semibold text-white">Scottish Aviation</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-sm text-blue-200 mb-1">Location</div>
-                  <div className="text-lg font-semibold">Glasgow, Scotland</div>
+                  <div className="text-sm text-white mb-1">Location</div>
+                  <div className="text-lg font-semibold text-white">Glasgow, Scotland</div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/books"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors text-center"
+                  className="badge badge-blue px-8 py-3 rounded-lg font-bold transition-colors text-center"
                 >
                   Browse Books
                 </Link>
                 <Link
                   href="/contact"
-                  className="border border-blue-400 text-blue-200 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 hover:text-blue-800 transition-colors text-center"
+                  className="border border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary transition-colors text-center"
                 >
                   Contact Author
                 </Link>

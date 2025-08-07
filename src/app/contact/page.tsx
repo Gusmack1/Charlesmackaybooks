@@ -57,14 +57,13 @@ export default function ContactPage() {
       />
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-6 py-20">
+      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Contact Charles E. MacKay
             </h1>
-            <p className="hero-section text-white mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto">
               Get in touch for academic collaboration, research inquiries, bulk book orders, or historical consultancy services.
             </p>
           </div>
