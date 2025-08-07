@@ -173,15 +173,15 @@ export default function CheckoutPage() {
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
               <div className="text-6xl mb-4">🛒</div>
-              <h1 className="text-3xl font-bold text-gray-800 mb-4">Your Basket is Empty</h1>
-              <p className="text-gray-600 mb-8">
+              <h1 className="text-3xl font-bold text-primary mb-4">Your Basket is Empty</h1>
+              <p className="text-secondary mb-8">
                 Add some books to your basket to proceed with checkout.
               </p>
             </div>
 
             <Link
               href="/books"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="badge badge-blue px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Browse Aviation Books
             </Link>
@@ -225,7 +225,7 @@ export default function CheckoutPage() {
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Cart Items */}
               <div className="lg:col-span-2">
-                <div className="bg-white rounded-lg shadow-md p-6">
+                <div className="card p-6">
                   <h2 className="text-lg font-semibold mb-4 text-primary">Your Books</h2>
 
                   <div className="space-y-4">
@@ -280,7 +280,7 @@ export default function CheckoutPage() {
 
               {/* Order Summary */}
               <div className="lg:col-span-1">
-                <div className="bg-white rounded-lg shadow-md p-6">
+                <div className="card p-6">
                   <h2 className="text-lg font-semibold mb-4 text-primary">Order Summary</h2>
 
                   <div className="space-y-2 mb-4 text-sm">
@@ -307,7 +307,7 @@ export default function CheckoutPage() {
 
           {step === 'address' && (
             <div className="max-w-2xl mx-auto">
-              <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="card p-6">
                 <h2 className="text-lg font-semibold mb-4 text-primary">Shipping Address</h2>
 
                 {errors.length > 0 && (
@@ -500,7 +500,7 @@ export default function CheckoutPage() {
 
           {step === 'review' && (
             <div className="max-w-2xl mx-auto">
-              <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="card p-6">
                 <h2 className="text-lg font-semibold mb-4 text-primary">Review Your Order</h2>
 
                 {/* Customer Details */}
@@ -562,7 +562,7 @@ export default function CheckoutPage() {
                   </button>
                   <button
                     onClick={handlePayment}
-                    className="flex-1 bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                    className="flex-1 badge badge-green py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
                     Pay with PayPal
                   </button>

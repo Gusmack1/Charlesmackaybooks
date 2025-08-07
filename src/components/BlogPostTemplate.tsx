@@ -101,7 +101,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
   return (
     <div className="bg-white">
       {/* Reading Progress Bar */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gray-50 z-50">
+              <div className="fixed top-0 left-0 w-full h-1 bg-secondary z-50">
         <div 
           className="h-full bg-accent-blue transition-all duration-300 ease-out"
           style={{ width: `${readingProgress}%` }}
@@ -113,7 +113,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
           {/* Table of Contents Sidebar */}
           <div className="hidden lg:block lg:col-span-1">
             <div className="sticky top-32 pt-4">
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+              <div className="card-compact border border-gray-200 rounded-lg p-4">
                 <h3 className="font-semibold text-primary mb-4">📋 Table of Contents</h3>
                 <nav className="space-y-2">
                   {blog.tableOfContents.map((item) => (
@@ -202,9 +202,9 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                           className="rounded flex-shrink-0"
                         />
                         <div className="flex-1">
-                          <h4 className="font-semibold text-blue-600 mb-2">{book.title}</h4>
+                          <h4 className="font-semibold text-accent-blue mb-2">{book.title}</h4>
                           <p className="text-sm text-gray-600 mb-2">{book.relevantContent}</p>
-                          <div className="text-green-600 font-semibold">£{book.price} - Order Now →</div>
+                                                      <div className="text-accent-green font-semibold">£{book.price} - Order Now →</div>
                         </div>
                       </div>
                     </Link>
@@ -235,7 +235,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                   <p className="text-blue-700 mb-3">{blog.author.bio}</p>
                   <div className="space-y-1">
                     {blog.author.credentials.map((credential, index) => (
-                      <div key={index} className="flex items-center text-sm text-blue-600">
+                      <div key={index} className="flex items-center text-sm text-accent-blue">
                         <span className="mr-2">🏛️</span>
                         {credential}
                       </div>
@@ -250,7 +250,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
               <h4 className="font-semibold text-gray-900 mb-3">🏷️ Topics Covered</h4>
               <div className="flex flex-wrap gap-2">
                 {blog.tags.map((tag) => (
-                  <span key={tag} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                                          <span key={tag} className="badge badge-gray px-3 py-1 rounded-full text-sm">
                     {tag}
                   </span>
                 ))}
@@ -259,7 +259,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
 
             {/* Related Posts */}
             {relatedPosts.length > 0 && (
-              <div className="bg-gray-50 rounded-lg p-6 mb-8">
+              <div className="card-compact rounded-lg p-6 mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">📖 Related Articles</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {relatedPosts.map((post) => (
@@ -276,7 +276,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                         <div className="flex-1">
                           <h4 className="font-semibold text-gray-900 mb-2 line-clamp-2">{post.title}</h4>
                           <p className="text-sm text-gray-600 mb-2 line-clamp-2">{post.excerpt}</p>
-                          <div className="text-xs text-blue-600 font-medium">
+                          <div className="text-xs text-accent-blue font-medium">
                             📖 {post.readTime} read →
                           </div>
                         </div>
@@ -295,12 +295,12 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
         <div className="bg-white rounded-full shadow-lg p-3 border border-gray-200">
           <div className="flex gap-2">
             <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
-               className="text-blue-600 hover:text-blue-800 text-xl min-h-[44px] min-w-[44px] flex items-center justify-center" 
+                                 className="text-accent-blue hover:text-blue-800 text-xl min-h-[44px] min-w-[44px] flex items-center justify-center" 
                aria-label="Share on Facebook">
               📘
             </a>
             <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
-               className="text-blue-400 hover:text-blue-600 text-xl min-h-[44px] min-w-[44px] flex items-center justify-center" 
+                                 className="text-accent-blue hover:text-blue-600 text-xl min-h-[44px] min-w-[44px] flex items-center justify-center" 
                aria-label="Share on Twitter">
               🐦
             </a>
