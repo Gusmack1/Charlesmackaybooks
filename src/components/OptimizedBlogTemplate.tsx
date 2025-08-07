@@ -246,7 +246,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Article Content */}
       <div className="content max-w-none mb-12">
         <div 
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: processContent(post.content) }}
         />
       </div>
 
@@ -339,6 +339,9 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
           </div>
         </section>
       )}
+
+      {/* Auto-related books */}
+      <PostRelatedBooks category={post.category} tags={post.tags} />
 
       {/* Social Sharing Footer */}
       <div className="border-t pt-8">
