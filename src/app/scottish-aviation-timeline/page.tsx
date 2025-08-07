@@ -382,8 +382,8 @@ export default function ScottishAviationTimelinePage() {
                         
                         {/* Significance */}
                         <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                          <h5 className="font-semibold text-blue-800 mb-2">Historical Significance:</h5>
-                          <p className="text-blue-700">{event.significance}</p>
+                          <h5 className="font-semibold text-blue-800 mb-2" style={{ color: '#1e40af !important' }}>Historical Significance:</h5>
+                          <p className="text-blue-700" style={{ color: '#1d4ed8 !important' }}>{event.significance}</p>
                         </div>
 
                         {/* Technical Details */}
