@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useCart } from '@/context/CartContext'
 import { Book } from '@/types/book'
+import ShippingCalculator from './ShippingCalculator'
 
 export interface BookData {
   id: string
@@ -279,7 +280,7 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
                   )}
                 </div>
 
-                <div className="border-t border-gray-200 pt-4">
+                <div className="border-t border-gray-200 pt-4 mb-4">
                   <h4 className="font-semibold text-gray-900 mb-3">🔒 Secure Checkout</h4>
                   <div className="space-y-2 text-sm text-gray-600">
                     <div className="flex items-center">
@@ -296,6 +297,9 @@ export default function BookSalesTemplate({ book, relatedBlogs, relatedBooks }: 
                     </div>
                   </div>
                 </div>
+
+                {/* Shipping Calculator */}
+                <ShippingCalculator book={book as any} />
 
                 {relatedBooks.length > 0 && (
                   <div className="border-t border-gray-200 pt-4 mt-4">

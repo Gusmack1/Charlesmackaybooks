@@ -125,7 +125,10 @@ export default function CartSidebar() {
                 )}
                 <div className="flex justify-between text-gray-600">
                   <span>Shipping ({totalWeight}g):</span>
-                  <span>{shipping === 0 ? 'FREE' : `£${shipping.toFixed(2)}`}</span>
+                  <span>£{shipping.toFixed(2)}</span>
+                </div>
+                <div className="text-xs text-gray-500 text-center">
+                  {totalWeight <= 100 ? 'Large Letter' : totalWeight <= 2000 ? 'Small Parcel' : 'Standard Parcel'} • Royal Mail
                 </div>
                 <div className="flex justify-between font-semibold text-lg border-t pt-2">
                   <span className="text-gray-900">Total:</span>

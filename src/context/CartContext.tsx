@@ -20,7 +20,7 @@ interface CartContextType {
   getTotalPrice: () => number;
   getTotal: () => number;
   getBulkDiscount: () => number;
-  getShippingCost: () => number;
+  getShippingCost: (country?: string) => number;
   getFinalTotal: () => number;
   isBasketOpen: boolean;
   isCartOpen: boolean;
@@ -131,16 +131,37 @@ export function CartProvider({ children }: { children: ReactNode }) {
     return 0;
   };
 
-  const getShippingCost = () => {
+  const getShippingCost = (country: string = 'GB') => {
     const totalWeight = items.reduce((total, item) => {
-      return total + ((item.book.weight || 300) * item.quantity); // Default 300g if weight not set
+      return total + (((item.book as any).weight || 300) * item.quantity); // Default 300g if weight not set
     }, 0);
     
-    // Weight-based shipping calculation
-    if (totalWeight <= 500) return 0; // Free shipping for light orders
-    if (totalWeight <= 1000) return 2.50; // £2.50 for medium orders
-    if (totalWeight <= 2000) return 4.50; // £4.50 for heavy orders
-    return 6.50; // £6.50 for very heavy orders
+    // Royal Mail pricing based on weight and destination
+    if (country === 'GB') {
+      // UK Domestic (1st Class)
+      if (totalWeight <= 100) return 1.95; // Large Letter up to 100g
+      if (totalWeight <= 250) return 2.95; // Large Letter 101-250g
+      if (totalWeight <= 500) return 4.45; // Large Letter 251-500g
+      if (totalWeight <= 1000) return 4.79; // Small Parcel up to 1kg
+      if (totalWeight <= 2000) return 4.79; // Small Parcel up to 2kg
+      return 6.50; // For heavier parcels
+    } else if (['FR', 'DE', 'NL', 'BE', 'ES', 'IT', 'IE', 'AT', 'DK', 'FI', 'NO', 'SE', 'CH', 'PT', 'GR', 'PL', 'CZ', 'HU', 'RO', 'BG', 'HR', 'SI', 'SK', 'EE', 'LV', 'LT', 'MT', 'CY', 'LU'].includes(country)) {
+      // Europe
+      if (totalWeight <= 100) return 3.85; // Large Letter up to 100g
+      if (totalWeight <= 250) return 5.95; // Large Letter 101-250g
+      if (totalWeight <= 500) return 8.95; // Large Letter 251-500g
+      if (totalWeight <= 1000) return 15.85; // Small Parcel up to 1kg
+      if (totalWeight <= 2000) return 15.85; // Small Parcel up to 2kg
+      return 25.00; // For heavier parcels
+    } else {
+      // Rest of World
+      if (totalWeight <= 100) return 4.20; // Large Letter up to 100g
+      if (totalWeight <= 250) return 6.95; // Large Letter 101-250g
+      if (totalWeight <= 500) return 10.95; // Large Letter 251-500g
+      if (totalWeight <= 1000) return 18.85; // Small Parcel up to 1kg
+      if (totalWeight <= 2000) return 18.85; // Small Parcel up to 2kg
+      return 30.00; // For heavier parcels
+    }
   };
 
   const getFinalTotal = () => {
@@ -209,7 +230,7 @@ export function useCart() {
         getTotalPrice: () => 0,
         getTotal: () => 0,
         getBulkDiscount: () => 0,
-        getShippingCost: () => 0,
+        getShippingCost: (country?: string) => 0,
         getFinalTotal: () => 0,
         isBasketOpen: false,
         isCartOpen: false,
