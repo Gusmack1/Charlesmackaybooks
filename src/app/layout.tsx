@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClientBody from './ClientBody'
+import { performanceMonitor } from '@/utils/performanceMonitor'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -206,6 +207,23 @@ export default function RootLayout({
         {/* Performance optimizations */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/playfair-display-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        
+        {/* Core Web Vitals Monitoring */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Initialize performance monitoring
+              if (typeof window !== 'undefined') {
+                window.addEventListener('load', function() {
+                  // Import performance monitor after page load
+                  import('/utils/performanceMonitor.js').then(({ performanceMonitor }) => {
+                    console.log('Performance monitoring initialized');
+                  }).catch(e => console.log('Performance monitoring not available'));
+                });
+              }
+            `
+          }}
+        />
       </head>
       <ClientBody>
         <ConditionalHeader />
