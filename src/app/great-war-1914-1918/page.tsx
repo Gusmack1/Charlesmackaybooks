@@ -123,7 +123,7 @@ export default function GreatWarPage() {
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
               Great War Aviation
-              <span className="block text-3xl md:text-5xl text-red-300 font-normal mt-4">
+              <span className="block text-3xl md:text-5xl text-white font-normal mt-4">
                 1914-1918: Warfare Transformed
               </span>
             </h1>
@@ -135,20 +135,20 @@ export default function GreatWarPage() {
 
             <div className="flex flex-wrap justify-center gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
-                <div className="text-2xl font-bold text-red-300">4 Years</div>
-                <div className="text-sm text-gray-300">of Revolution</div>
+                <div className="text-2xl font-bold text-white">4 Years</div>
+                <div className="text-sm text-white">of Revolution</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
                 <div className="text-2xl font-bold text-orange-300">RFC to RAF</div>
-                <div className="text-sm text-gray-300">Service Evolution</div>
+                <div className="text-sm text-white">Service Evolution</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
                 <div className="text-2xl font-bold text-rose-300">Air Supremacy</div>
-                <div className="text-sm text-gray-300">New Doctrine</div>
+                <div className="text-sm text-white">New Doctrine</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
                 <div className="text-2xl font-bold text-red-400">Global</div>
-                <div className="text-sm text-gray-300">Industrial Impact</div>
+                <div className="text-sm text-white">Industrial Impact</div>
               </div>
             </div>
 

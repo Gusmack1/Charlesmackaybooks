@@ -103,7 +103,7 @@ export default function PioneerEraPage() {
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
               Pioneer Era
-              <span className="block text-3xl md:text-5xl text-amber-300 font-normal mt-4">
+              <span className="block text-3xl md:text-5xl text-white font-normal mt-4">
                 1895-1914: Dreams Take Flight
               </span>
             </h1>
@@ -115,16 +115,16 @@ export default function PioneerEraPage() {
 
             <div className="flex flex-wrap justify-center gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
-                <div className="text-2xl font-bold text-amber-300">19 Years</div>
-                <div className="text-sm text-gray-300">of Innovation</div>
+                <div className="text-2xl font-bold text-white">19 Years</div>
+                <div className="text-sm text-white">of Innovation</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
                 <div className="text-2xl font-bold text-orange-300">1903</div>
-                <div className="text-sm text-gray-300">First Powered Flight</div>
+                <div className="text-sm text-white">First Powered Flight</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
                 <div className="text-2xl font-bold text-red-300">Global</div>
-                <div className="text-sm text-gray-300">Pioneer Movement</div>
+                <div className="text-sm text-white">Pioneer Movement</div>
               </div>
             </div>
 
