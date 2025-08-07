@@ -114,14 +114,14 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
           <div className="hidden lg:block lg:col-span-1">
             <div className="sticky top-32 pt-4">
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 mb-4">📋 Table of Contents</h3>
+                <h3 className="font-semibold text-primary mb-4">📋 Table of Contents</h3>
                 <nav className="space-y-2">
                   {blog.tableOfContents.map((item) => (
                     <a
                       key={item.id}
                       href={`#${item.id}`}
-                      className={`block text-sm transition-colors hover:text-blue-600 ${
-                        activeSection === item.id ? 'text-blue-600 font-medium' : 'text-gray-600'
+                      className={`block text-sm transition-colors hover:text-accent-blue ${
+                        activeSection === item.id ? 'text-accent-blue font-medium' : 'text-secondary'
                       } ${item.level === 2 ? 'pl-0' : item.level === 3 ? 'pl-4' : 'pl-8'}`}
                     >
                       {item.title}
@@ -137,16 +137,16 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
             {/* Article Header */}
             <div className="mb-8">
               <div className="mb-4">
-                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                <span className="badge badge-blue px-3 py-1 rounded-full text-sm font-medium">
                   {blog.category}
                 </span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{blog.title}</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">{blog.title}</h1>
               {blog.subtitle && (
-                <h2 className="text-xl text-gray-600 mb-6">{blog.subtitle}</h2>
+                <h2 className="text-xl text-secondary mb-6">{blog.subtitle}</h2>
               )}
               
-              <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
+              <div className="flex flex-wrap items-center gap-4 text-sm text-secondary mb-6">
                 <div className="flex items-center">
                   <span className="font-medium">📅 Published:</span>
                   <span className="ml-1">{blog.publishDate}</span>

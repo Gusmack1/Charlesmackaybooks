@@ -102,10 +102,10 @@ export default function AIPromptSystemPage() {
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-6">
-            <h1 className="text-3xl font-bold text-gray-900">
+            <h1 className="text-3xl font-bold text-primary">
               AI Prompt System Implementation - Live
             </h1>
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-secondary">
               Comprehensive website optimization based on advanced AI prompt engineering
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function AIPromptSystemPage() {
           <div className="space-y-8">
             {/* System Status */}
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4 text-gray-900">System Status</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">System Status</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {features.map(feature => {
                   const Icon = feature.icon;
@@ -152,7 +152,7 @@ export default function AIPromptSystemPage() {
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center">
                           <Icon className="w-5 h-5 mr-2 text-blue-600" />
-                          <h3 className="font-medium text-gray-900">{feature.title}</h3>
+                          <h3 className="font-medium text-primary">{feature.title}</h3>
                         </div>
                         {feature.status ? (
                           <CheckCircle className="w-5 h-5 text-green-500" />
@@ -160,7 +160,7 @@ export default function AIPromptSystemPage() {
                           <AlertTriangle className="w-5 h-5 text-yellow-500" />
                         )}
                       </div>
-                      <p className="text-sm text-gray-600 mb-3">{feature.description}</p>
+                      <p className="text-sm text-secondary mb-3">{feature.description}</p>
                       <div className="flex justify-between text-xs text-gray-500">
                         {Object.entries(feature.metrics).map(([key, value]) => (
                           <span key={key}>
@@ -176,23 +176,23 @@ export default function AIPromptSystemPage() {
 
             {/* Performance Metrics */}
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4 text-gray-900">Performance Metrics</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Performance Metrics</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-600">{metrics.performance}</div>
-                  <div className="text-sm text-gray-600">Performance</div>
+                  <div className="text-sm text-secondary">Performance</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-600">{metrics.seo}</div>
-                  <div className="text-sm text-gray-600">SEO</div>
+                  <div className="text-sm text-secondary">SEO</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-600">{metrics.accessibility}</div>
-                  <div className="text-sm text-gray-600">Accessibility</div>
+                  <div className="text-sm text-secondary">Accessibility</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-orange-600">{metrics.bestPractices}</div>
-                  <div className="text-sm text-gray-600">Best Practices</div>
+                  <div className="text-sm text-secondary">Best Practices</div>
                 </div>
               </div>
             </div>
