@@ -40,9 +40,9 @@ const post = {
 
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+    <div class="card-compact bg-accent-blue text-white rounded-lg p-6 my-6">
       <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
-      <ul class="space-y-2 text-blue-700">
+      <ul class="space-y-2 text-white">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
         <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
