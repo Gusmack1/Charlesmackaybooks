@@ -8,17 +8,17 @@ interface ShippingRates {
 }
 
 const shippingRates: ShippingRates = {
-  'GB': 3.45, // UK
-  'FR': 4.95, // France
-  'DE': 4.95, // Germany
-  'NL': 4.95, // Netherlands
-  'BE': 4.95, // Belgium
-  'ES': 4.95, // Spain
-  'IT': 4.95, // Italy
-  'US': 8.95, // USA
-  'CA': 8.95, // Canada
-  'AU': 12.95, // Australia
-  'worldwide': 12.95 // Default worldwide
+  GB: 0,
+  FR: 0,
+  DE: 0,
+  NL: 0,
+  BE: 0,
+  ES: 0,
+  IT: 0,
+  US: 0,
+  CA: 0,
+  AU: 0,
+  worldwide: 0
 };
 
 const euCountries = ['FR', 'DE', 'NL', 'BE', 'ES', 'IT', 'AT', 'PT', 'IE', 'DK', 'SE', 'FI', 'PL', 'CZ', 'HU', 'SK', 'SI', 'HR', 'EE', 'LV', 'LT', 'LU', 'MT', 'CY', 'BG', 'RO'];
@@ -53,12 +53,7 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
     country: 'GB'
   });
 
-  const calculateShipping = (country: string): number => {
-    if (country === 'GB') return shippingRates.GB;
-    if (euCountries.includes(country)) return shippingRates.FR; // EU rate
-    if (country === 'US' || country === 'CA') return shippingRates.US;
-    return shippingRates.worldwide;
-  };
+  const calculateShipping = (country: string): number => 0;
 
   const generateOrderId = (): string => {
     const timestamp = Date.now();
@@ -68,7 +63,7 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
 
   const shippingCost = calculateShipping(customerDetails.country);
   const subtotal = getTotalPrice();
-  const total = subtotal + shippingCost;
+  const total = subtotal + 0;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -231,9 +226,9 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
             <span>Subtotal ({items.reduce((sum, item) => sum + item.quantity, 0)} books)</span>
             <span>£{subtotal.toFixed(2)}</span>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between text-accent-green">
             <span>Shipping to {customerDetails.country === 'GB' ? 'UK' : customerDetails.country}</span>
-            <span>£{shippingCost.toFixed(2)}</span>
+            <span>FREE</span>
           </div>
           <hr className="my-2" />
           <div className="flex justify-between font-semibold text-lg">
