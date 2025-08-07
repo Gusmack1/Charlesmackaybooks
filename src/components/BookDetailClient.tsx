@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
 import { useAnalytics } from '@/hooks/useAnalytics';
+import EnhancedShippingSection from '@/components/EnhancedShippingSection';
 
 interface BookDetailClientProps {
   book: Book;
@@ -106,19 +107,12 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         )}
       </div>
 
-      {/* Shipping Information */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center mt-4">
-        <div className="font-bold text-blue-800 mb-2">📦 Royal Mail Shipping</div>
-        <div className="text-sm text-blue-700 space-y-2">
-          <div className="bg-blue-100 border border-blue-300 rounded p-2" style={{ backgroundColor: '#dbeafe !important' }}>
-            <div className="font-semibold text-blue-900" style={{ color: '#1e3a8a !important' }}>Book Weight: {(book as any).weight || 300}g</div>
-          </div>
-          <div className="text-blue-800 font-medium">
-            <strong>UK</strong> £1.95-£4.79 • <strong>Europe</strong> £3.85-£15.85 • <strong>Rest of World</strong> £4.20-£18.85
-          </div>
-          <div className="text-blue-600 font-medium">🚚 Fast, secure shipping worldwide • Weight-based pricing</div>
-        </div>
-      </div>
+      {/* Enhanced Shipping Information */}
+      <EnhancedShippingSection 
+        book={book}
+        totalWeight={book.weight || 300}
+        destination="UK"
+      />
 
       {/* Contact */}
       <div className="text-center pt-3 border-t">

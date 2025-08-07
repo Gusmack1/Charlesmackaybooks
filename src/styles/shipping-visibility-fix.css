@@ -1,0 +1,210 @@
+/* 
+ * Emergency Shipping Text Visibility Fix
+ * Comprehensive CSS to resolve white-on-white text issues
+ * Based on Charles Mackay Books Website Analysis Report - Prompt 1
+ */
+
+/* High-Priority Shipping Information Visibility Fixes */
+[class*="shipping"],
+[class*="delivery"], 
+[class*="postal"],
+[class*="mail"],
+.shipping-info,
+.delivery-info,
+.postal-rates,
+.shipping-calculator,
+.shipping-methods,
+.delivery-options,
+.royal-mail,
+.book-weight,
+.shipping-cost,
+.delivery-time {
+  /* Force high-contrast colors */
+  color: #1a202c !important;
+  background-color: #ffffff !important;
+  
+  /* Remove problematic styling */
+  text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  
+  /* Ensure readable font size */
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  
+  /* WCAG AA contrast compliance */
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  padding: 12px !important;
+  margin: 8px 0 !important;
+}
+
+/* Specific targeting for Royal Mail shipping sections */
+.bg-blue-50 .font-semibold,
+.bg-blue-50 .text-blue-700,
+.bg-blue-50 .text-blue-800,
+.bg-blue-50 .text-blue-600,
+[class*="royal-mail"] *,
+[class*="book-weight"] * {
+  color: #1e40af !important;
+  background-color: #dbeafe !important;
+  text-shadow: none !important;
+}
+
+/* White background shipping text emergency fix */
+.bg-white .shipping-info,
+.bg-white .delivery-info,
+.bg-white [class*="shipping"],
+.bg-white [class*="delivery"] {
+  color: #1a202c !important;
+  background-color: #f8fafc !important;
+  border: 2px solid #cbd5e1 !important;
+}
+
+/* Book detail shipping sections */
+.book-detail .shipping,
+.product-shipping,
+.checkout-shipping {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+  border: 1px solid #94a3b8 !important;
+}
+
+/* Interactive elements */
+.shipping-calculator button,
+.delivery-options button,
+[class*="shipping"] button {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  border: 2px solid #1d4ed8 !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+}
+
+.shipping-calculator button:hover,
+.delivery-options button:hover,
+[class*="shipping"] button:hover {
+  background-color: #1d4ed8 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(29, 78, 216, 0.3) !important;
+}
+
+/* Focus states for accessibility */
+[class*="shipping"]:focus,
+[class*="delivery"]:focus,
+.shipping-info:focus,
+.delivery-info:focus {
+  outline: 3px solid #f59e0b !important;
+  outline-offset: 2px !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  [class*="shipping"],
+  [class*="delivery"],
+  .shipping-info,
+  .delivery-info {
+    font-size: 14px !important;
+    padding: 10px !important;
+    margin: 6px 0 !important;
+  }
+  
+  .shipping-calculator button,
+  .delivery-options button {
+    width: 100% !important;
+    margin: 4px 0 !important;
+    min-height: 44px !important; /* Touch target compliance */
+  }
+}
+
+/* Loading states */
+.shipping-loading {
+  background-color: #f1f5f9 !important;
+  color: #64748b !important;
+  position: relative !important;
+}
+
+.shipping-loading::after {
+  content: "Calculating shipping..." !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: #475569 !important;
+  font-weight: 600 !important;
+}
+
+/* Error states */
+.shipping-error {
+  background-color: #fef2f2 !important;
+  color: #dc2626 !important;
+  border: 2px solid #f87171 !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+}
+
+/* Success states */
+.shipping-success {
+  background-color: #f0fdf4 !important;
+  color: #16a34a !important;
+  border: 2px solid #4ade80 !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+}
+
+/* Diagnostic helper classes (remove after debugging) */
+.debug-shipping {
+  background-color: #fbbf24 !important;
+  color: #92400e !important;
+  border: 3px dashed #f59e0b !important;
+}
+
+/* Platform-specific overrides */
+/* WooCommerce */
+.woocommerce .shipping-calculator-form,
+.woocommerce .shipping-methods,
+.woocommerce-shipping-calculator {
+  color: #1a202c !important;
+  background-color: #ffffff !important;
+}
+
+/* Shopify */
+.shopify-section--shipping,
+.shipping-policy-section {
+  color: #1a202c !important;
+  background-color: #ffffff !important;
+}
+
+/* Custom e-commerce implementations */
+.cart-shipping,
+.checkout-shipping-options,
+.product-shipping-info {
+  color: #1a202c !important;
+  background-color: #f8fafc !important;
+  border: 1px solid #cbd5e1 !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+  margin: 12px 0 !important;
+}
+
+/* Ensure text is never invisible */
+* {
+  min-height: 1px;
+}
+
+*:empty::before {
+  content: " ";
+  visibility: hidden;
+}
+
+/* Anti-pattern prevention */
+.white-text-on-white,
+.invisible-text {
+  color: #1a202c !important;
+  background-color: #ffffff !important;
+  outline: 2px solid #dc2626 !important;
+}

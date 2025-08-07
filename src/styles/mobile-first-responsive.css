@@ -1,4 +1,5 @@
 /* Mobile-First Responsive CSS for Charles Mackay Books */
+/* Enhanced based on Website Analysis and Optimization Report - Prompt 4 */
 
 /* Base mobile-first breakpoints */
 :root {
@@ -6,6 +7,18 @@
   --tablet: 768px;
   --desktop: 1024px;
   --large-desktop: 1440px;
+  
+  /* Touch target sizes for mobile accessibility */
+  --touch-target-min: 44px;
+  --touch-target-preferred: 48px;
+  
+  /* Mobile-optimized spacing scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
 }
 
 /* Mobile-first responsive spacing */
@@ -223,5 +236,134 @@
 @media (min-width: 768px) {
   .mobile-success {
     padding: 1.5rem;
+  }
+}
+
+/* === ENHANCED MOBILE OPTIMIZATIONS === */
+/* Based on Website Analysis Report - Touch-Optimized Interface */
+
+/* Touch-optimized interface elements */
+.touch-target {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.touch-target:hover,
+.touch-target:focus {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.touch-target:active {
+  transform: scale(0.98);
+}
+
+/* Mobile-optimized buttons */
+.mobile-button {
+  min-height: var(--touch-target-preferred);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin: var(--spacing-xs) 0;
+  background-color: #3b82f6;
+  color: white;
+}
+
+.mobile-button:hover {
+  background-color: #2563eb;
+}
+
+.mobile-button:active {
+  transform: scale(0.98);
+  background-color: #1d4ed8;
+}
+
+.mobile-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Mobile form optimizations */
+.mobile-form-field {
+  width: 100%;
+  min-height: var(--touch-target-preferred);
+  padding: var(--spacing-md);
+  font-size: 16px; /* Prevents zoom on iOS */
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: var(--spacing-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-form-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Mobile shopping cart optimizations */
+.mobile-cart-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid #e5e7eb;
+  gap: var(--spacing-md);
+}
+
+.mobile-cart-button {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  border: 2px solid #3b82f6;
+  background: white;
+  color: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-cart-button:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Mobile accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+  .touch-target,
+  .mobile-button,
+  .mobile-form-field {
+    transition: none;
+  }
+  
+  .touch-target:hover,
+  .touch-target:focus {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .mobile-button {
+    border: 2px solid currentColor;
+  }
+  
+  .mobile-form-field {
+    border-width: 3px;
   }
 } 
