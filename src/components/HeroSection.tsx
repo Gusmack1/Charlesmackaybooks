@@ -9,16 +9,16 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
           <div className="text-center lg:text-left">
-            <h1 className="hero-section text-5xl lg:text-6xl font-extrabold mb-8 leading-tight" style={{ color: '#ffffff !important', textShadow: '0 3px 6px rgba(0, 0, 0, 0.9)' }}>
+            <h1 className="hero-section text-white">
               Authentic Aviation
-              <span className="block text-white">History Books</span>
+              <span className="block">History Books</span>
             </h1>
             
-            <p className="hero-section text-xl lg:text-2xl mb-6 leading-relaxed" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+            <p className="hero-section text-white">
               Published by renowned aviation historian <strong className="text-white font-bold">Charles E. MacKay</strong>
             </p>
             
-            <p className="hero-section text-lg lg:text-xl mb-8 leading-relaxed" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.7)' }}>
+            <p className="hero-section text-white">
               <strong>Used as primary references by aviation researchers worldwide.</strong><br />
               Specializing in Scottish aviation heritage, World War aircraft, and military aviation history.
             </p>
@@ -26,16 +26,16 @@ export default function HeroSection() {
             {/* Trust Indicators */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>1,700+</div>
-                <div className="text-lg font-semibold text-white" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)' }}>Happy Customers</div>
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">1,700+</div>
+                <div className="text-lg font-semibold text-white">Happy Customers</div>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>19</div>
-                <div className="text-lg font-semibold text-white" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)' }}>Published Books</div>
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">19</div>
+                <div className="text-lg font-semibold text-white">Published Books</div>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>FREE</div>
-                <div className="text-lg font-semibold text-white" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)' }}>Worldwide Shipping</div>
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">FREE</div>
+                <div className="text-lg font-semibold text-white">Worldwide Shipping</div>
               </div>
             </div>
 
