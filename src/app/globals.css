@@ -412,3 +412,27 @@
   margin-top: 0;
   padding-top: 2rem;
 }
+
+/* Checkout form input styling - ensure text is visible */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select,
+textarea {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Ensure form labels are visible */
+label {
+  color: #374151 !important;
+}

@@ -326,7 +326,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.firstName}
                         onChange={(e) => handleInputChange('firstName', e.target.value)}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                       />
                     </div>
 
@@ -339,7 +339,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.lastName}
                         onChange={(e) => handleInputChange('lastName', e.target.value)}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                       />
                     </div>
                   </div>
@@ -353,7 +353,7 @@ export default function CheckoutPage() {
                       required
                       value={customerDetails.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                     />
                   </div>
 
@@ -365,7 +365,7 @@ export default function CheckoutPage() {
                       type="tel"
                       value={customerDetails.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                     />
                   </div>
 
@@ -378,7 +378,7 @@ export default function CheckoutPage() {
                       required
                       value={customerDetails.address1}
                       onChange={(e) => handleInputChange('address1', e.target.value)}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                     />
                   </div>
 
@@ -390,7 +390,7 @@ export default function CheckoutPage() {
                       type="text"
                       value={customerDetails.address2}
                       onChange={(e) => handleInputChange('address2', e.target.value)}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                     />
                   </div>
 
@@ -404,7 +404,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.city}
                         onChange={(e) => handleInputChange('city', e.target.value)}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                       />
                     </div>
 
@@ -417,7 +417,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.postcode}
                         onChange={(e) => handleInputChange('postcode', e.target.value)}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                       />
                     </div>
                   </div>
@@ -430,7 +430,7 @@ export default function CheckoutPage() {
                       required
                       value={customerDetails.country}
                       onChange={(e) => handleInputChange('country', e.target.value)}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                     >
                       <option value="GB">United Kingdom</option>
                       <option value="US">United States</option>
