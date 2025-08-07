@@ -275,6 +275,21 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
             className="blog-content content"
             dangerouslySetInnerHTML={{ __html: ensureThreeImages(post.content) }}
           />
+          {/* Breadcrumb JSON-LD */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://charlesmackaybooks.com/' },
+                  { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://charlesmackaybooks.com/blog' },
+                  { '@type': 'ListItem', position: 3, name: post.title, item: `https://charlesmackaybooks.com/blog/${post.id}` }
+                ]
+              })
+            }}
+          />
         </article>
 
         {/* Related Books Section */}

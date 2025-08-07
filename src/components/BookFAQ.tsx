@@ -24,6 +24,21 @@ export default function BookFAQ({ title = 'Frequently Asked Questions' }: BookFA
           </div>
         ))}
       </div>
+      {/* FAQPage JSON-LD for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map(f => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a }
+            }))
+          })
+        }}
+      />
     </div>
   )
 }
