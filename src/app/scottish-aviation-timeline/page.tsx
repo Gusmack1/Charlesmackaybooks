@@ -474,7 +474,7 @@ export default function ScottishAviationTimelinePage() {
               className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Browse All 19 Books →
-            </p>
+            </Link>
           </div>
         </div>
         <Footer />
