@@ -72,7 +72,7 @@ export default function EnhancedShippingSection({
 }: EnhancedShippingSectionProps) {
   const [selectedMethod, setSelectedMethod] = useState<string>('standard');
   const [isCalculating, setIsCalculating] = useState(false);
-  const [calculatedCost, setCalculatedCost] = useState<string>('');
+  const [calculatedCost, setCalculatedCost] = useState<string>('FREE');
   const [showDetails, setShowDetails] = useState(false);
   const [errors, setErrors] = useState<string[]>([]);
 
@@ -90,19 +90,7 @@ export default function EnhancedShippingSection({
         throw new Error('Shipping method not found');
       }
       
-      let cost = '';
-      switch (destination.toLowerCase()) {
-        case 'uk':
-          cost = method.cost.uk;
-          break;
-        case 'europe':
-          cost = method.cost.europe;
-          break;
-        default:
-          cost = method.cost.international;
-      }
-      
-      setCalculatedCost(cost);
+      setCalculatedCost('FREE');
     } catch (error) {
       setErrors(['Unable to calculate shipping. Please try again.']);
     } finally {
@@ -215,7 +203,7 @@ export default function EnhancedShippingSection({
       {/* Calculated Cost Display */}
       <div className="calculated-cost">
         <div className="cost-header">
-          <h4 className="cost-title">Shipping Cost Calculation</h4>
+          <h4 className="cost-title">Shipping</h4>
           {isCalculating && (
             <div className="loading-indicator">
               <span className="loading-spinner"></span>
@@ -228,7 +216,7 @@ export default function EnhancedShippingSection({
           <div className="cost-result success">
             <div className="cost-summary">
               <span className="cost-label">Estimated Cost:</span>
-              <span className="cost-amount">{calculatedCost}</span>
+              <span className="cost-amount">FREE</span>
             </div>
             <div className="cost-details">
               <span>✓ Includes packaging and handling</span>

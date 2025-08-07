@@ -36,7 +36,7 @@ export default function CheckoutPage() {
     return total + (((item.book as any).weight || 300) * item.quantity);
   }, 0);
   
-  const shippingCost = calculateShippingByWeight(totalWeight, customerDetails.country);
+  const shippingCost = 0;
   const subtotal = getTotalPrice();
   const total = subtotal + shippingCost;
 
@@ -542,9 +542,9 @@ export default function CheckoutPage() {
                       <span>Subtotal:</span>
                       <span>£{subtotal.toFixed(2)}</span>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between text-accent-green">
                       <span>Shipping:</span>
-                      <span>£{shippingCost.toFixed(2)}</span>
+                      <span>FREE</span>
                     </div>
                     <div className="flex justify-between font-semibold text-lg border-t pt-2">
                       <span>Total:</span>

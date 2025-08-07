@@ -37,45 +37,21 @@ export interface ShippingRates {
 
 // Royal Mail weight-based shipping calculation
 export function calculateShippingByWeight(totalWeight: number, country: string): number {
-  // Royal Mail pricing based on weight and destination
-  if (country === 'GB') {
-    // UK Domestic (1st Class)
-    if (totalWeight <= 100) return 1.95; // Large Letter up to 100g
-    if (totalWeight <= 250) return 2.95; // Large Letter 101-250g
-    if (totalWeight <= 500) return 4.45; // Large Letter 251-500g
-    if (totalWeight <= 1000) return 4.79; // Small Parcel up to 1kg
-    if (totalWeight <= 2000) return 4.79; // Small Parcel up to 2kg
-    return 6.50; // For heavier parcels
-  } else if (['FR', 'DE', 'NL', 'BE', 'ES', 'IT', 'IE', 'AT', 'DK', 'FI', 'NO', 'SE', 'CH', 'PT', 'GR', 'PL', 'CZ', 'HU', 'RO', 'BG', 'HR', 'SI', 'SK', 'EE', 'LV', 'LT', 'MT', 'CY', 'LU'].includes(country)) {
-    // Europe
-    if (totalWeight <= 100) return 3.85; // Large Letter up to 100g
-    if (totalWeight <= 250) return 5.95; // Large Letter 101-250g
-    if (totalWeight <= 500) return 8.95; // Large Letter 251-500g
-    if (totalWeight <= 1000) return 15.85; // Small Parcel up to 1kg
-    if (totalWeight <= 2000) return 15.85; // Small Parcel up to 2kg
-    return 25.00; // For heavier parcels
-  } else {
-    // Rest of World
-    if (totalWeight <= 100) return 4.20; // Large Letter up to 100g
-    if (totalWeight <= 250) return 6.95; // Large Letter 101-250g
-    if (totalWeight <= 500) return 10.95; // Large Letter 251-500g
-    if (totalWeight <= 1000) return 18.85; // Small Parcel up to 1kg
-    if (totalWeight <= 2000) return 18.85; // Small Parcel up to 2kg
-    return 30.00; // For heavier parcels
-  }
+  // Site-wide policy: FREE worldwide shipping
+  return 0;
 }
 
 // Legacy shipping rates for backwards compatibility (using average book weight of 350g)
 export const shippingRates: ShippingRates = {
-  'GB': 2.95, // UK - Average for 350g book
-  'FR': 5.95, 'DE': 5.95, 'NL': 5.95, 'BE': 5.95, 'ES': 5.95, 'IT': 5.95, // EU countries
-  'AT': 5.95, 'PT': 5.95, 'IE': 5.95, 'DK': 5.95, 'SE': 5.95, 'FI': 5.95,
-  'PL': 5.95, 'CZ': 5.95, 'HU': 5.95, 'SK': 5.95, 'SI': 5.95, 'HR': 5.95,
-  'EE': 5.95, 'LV': 5.95, 'LT': 5.95, 'LU': 5.95, 'MT': 5.95, 'CY': 5.95,
-  'BG': 5.95, 'RO': 5.95, 'NO': 5.95, 'CH': 5.95, 'GR': 5.95,
-  'US': 6.95, 'CA': 6.95, // North America
-  'AU': 10.95, 'NZ': 10.95, // Oceania
-  'worldwide': 10.95 // Default worldwide
+  GB: 0,
+  FR: 0, DE: 0, NL: 0, BE: 0, ES: 0, IT: 0,
+  AT: 0, PT: 0, IE: 0, DK: 0, SE: 0, FI: 0,
+  PL: 0, CZ: 0, HU: 0, SK: 0, SI: 0, HR: 0,
+  EE: 0, LV: 0, LT: 0, LU: 0, MT: 0, CY: 0,
+  BG: 0, RO: 0, NO: 0, CH: 0, GR: 0,
+  US: 0, CA: 0,
+  AU: 0, NZ: 0,
+  worldwide: 0
 };
 
 export const euCountries = [
@@ -85,11 +61,7 @@ export const euCountries = [
 ];
 
 export function calculateShipping(country: string): number {
-  if (country === 'GB') return shippingRates.GB;
-  if (euCountries.includes(country)) return shippingRates.FR; // EU rate
-  if (country === 'US' || country === 'CA') return shippingRates.US;
-  if (country === 'AU' || country === 'NZ') return shippingRates.AU;
-  return shippingRates.worldwide;
+  return 0;
 }
 
 export function generateOrderId(): string {
@@ -163,7 +135,7 @@ export function generatePayPalUrl(order: Order): string {
     `custom=${order.orderId}`,
     'currency_code=GBP',
     'no_shipping=2',
-    `handling_cart=${order.shippingCost.toFixed(2)}`,
+    `handling_cart=0.00`,
     `return=${encodeURIComponent(window.location.origin + '/payment-success')}`,
     `cancel_return=${encodeURIComponent(window.location.origin + '/payment-cancelled')}`,
     `notify_url=${encodeURIComponent(window.location.origin + '/api/paypal-ipn')}`,

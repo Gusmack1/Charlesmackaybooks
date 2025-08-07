@@ -78,19 +78,11 @@ export default function CheckoutComponent() {
   const subtotal = getTotal()
   const bulkDiscount = getTotalItems() >= 3 ? subtotal * 0.05 : 0
   const academicDiscount = showAcademicDiscount ? subtotal * 0.1 : 0
-  const shippingCost = calculateShipping(customerDetails.country, getTotalItems())
+  const shippingCost = 0
   const processingFee = calculateProcessingFee(selectedPayment, subtotal)
   const totalAmount = subtotal - bulkDiscount - academicDiscount + shippingCost + processingFee
 
-  function calculateShipping(country: string, itemCount: number): number {
-    if (country === 'United Kingdom') {
-      return itemCount <= 2 ? 3.45 : 4.95
-    }
-    if (['France', 'Germany', 'Spain', 'Italy', 'Netherlands'].includes(country)) {
-      return itemCount <= 2 ? 4.95 : 8.95
-    }
-    return itemCount <= 2 ? 8.95 : 12.95
-  }
+  function calculateShipping(country: string, itemCount: number): number { return 0 }
 
   function calculateProcessingFee(method: string, amount: number): number {
     const paymentMethod = paymentMethods.find(pm => pm.id === method)
@@ -277,12 +269,12 @@ export default function CheckoutComponent() {
               </div>
             )}
 
-            <div className="flex justify-between">
+            <div className="flex justify-between text-accent-green">
               <span className="flex items-center gap-1">
                 <Truck className="h-4 w-4" />
                 Shipping:
               </span>
-              <span>£{shippingCost.toFixed(2)}</span>
+              <span>FREE</span>
             </div>
 
             {processingFee > 0 && (
