@@ -1,14 +1,12 @@
 'use client'
 
 import Link from 'next/link';
-import Header from '@/components/Header';
+
 import Footer from '@/components/Footer';
 
 export default function BookNotFound() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-
       <div className="container mx-auto px-4 py-16 text-center">
         <div className="max-w-2xl mx-auto">
           <div className="mb-8">

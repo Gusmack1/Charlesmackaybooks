@@ -1,6 +1,6 @@
 import PageSEO from '@/components/PageSEO'
 import type { Metadata } from 'next';
-import Header from '@/components/Header';
+
 
 export const metadata: Metadata = {
   title: 'Aviation News & Research Updates | Latest Discoveries | Charles E. MacKay',
@@ -236,8 +236,6 @@ export default function AviationNewsPage() {
 
   return (
     <>
-      <Header />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

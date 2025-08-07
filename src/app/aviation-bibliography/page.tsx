@@ -1,7 +1,7 @@
 import PageSEO from '@/components/PageSEO'
 import type { Metadata } from 'next';
 import { books } from '@/data/books';
-import Header from '@/components/Header';
+
 
 export const metadata: Metadata = {
   title: 'Aviation History Bibliography | Comprehensive Research Database | Charles E. MacKay',
@@ -154,8 +154,6 @@ export default function AviationBibliographyPage() {
 
   return (
     <>
-      <Header />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

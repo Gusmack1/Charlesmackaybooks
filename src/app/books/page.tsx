@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import BookCard from '@/components/BookCard'
 import UnifiedSchema from '@/components/UnifiedSchema'
@@ -48,8 +47,6 @@ export default function BooksPage() {
       />
 
       <div className="min-h-screen bg-gray-50">
-      <Header />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">

@@ -11,6 +11,7 @@ import BookDetailNavigation from '@/components/BookDetailNavigation';
 import RelatedBooks from '@/components/RelatedBooks';
 import MobileFooterNav from '@/components/MobileFooterNav';
 import BookAnalytics from '@/components/BookAnalytics';
+import StickyAddToCart from '@/components/StickyAddToCart';
 
 // Function to get category-specific gradient colors
 function getCategoryGradient(category: string): string {
@@ -722,6 +723,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         </main>
 
         <MobileFooterNav />
+        
+        {/* Sticky Add to Cart */}
+        <StickyAddToCart book={book} />
       </div>
     </>
   );
