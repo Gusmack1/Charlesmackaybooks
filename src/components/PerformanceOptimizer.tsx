@@ -378,7 +378,7 @@ export default function PerformanceOptimizer() {
       case 'completed': return 'text-green-600 bg-green-100';
       case 'running': return 'text-blue-600 bg-blue-100';
       case 'failed': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';
+      default: return 'text-secondary bg-gray-100';
     }
   };
 
@@ -387,7 +387,7 @@ export default function PerformanceOptimizer() {
       case 'high': return 'text-red-600 bg-red-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      default: return 'text-secondary bg-gray-100';
     }
   };
 
@@ -399,22 +399,22 @@ export default function PerformanceOptimizer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-primary mb-4">
             ⚡ Performance Optimizer
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-secondary max-w-3xl mx-auto">
             Comprehensive performance optimization system that improves Core Web Vitals and overall website speed.
           </p>
         </div>
 
         {/* Control Panel */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="card p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+              <h2 className="text-2xl font-semibold text-primary mb-2">
                 Performance Optimization Control
               </h2>
-              <p className="text-gray-600">
+              <p className="text-secondary">
                 Run comprehensive performance fixes to improve Core Web Vitals and user experience
               </p>
             </div>
@@ -433,8 +433,8 @@ export default function PerformanceOptimizer() {
         </div>
 
         {/* Performance Metrics */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <div className="card p-6 mb-8">
+          <h2 className="text-2xl font-semibold text-primary mb-4">
             Core Web Vitals
           </h2>
           
@@ -471,14 +471,14 @@ export default function PerformanceOptimizer() {
         </div>
 
         {/* Progress Overview */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <div className="card p-6 mb-8">
+          <h2 className="text-2xl font-semibold text-primary mb-4">
             Optimization Progress
           </h2>
           
           {/* Progress Bar */}
           <div className="mb-6">
-            <div className="flex justify-between text-sm text-gray-600 mb-2">
+            <div className="flex justify-between text-sm text-secondary mb-2">
               <span>Overall Progress</span>
               <span>{Math.round((completedFixes / totalFixes) * 100)}%</span>
             </div>
@@ -514,8 +514,8 @@ export default function PerformanceOptimizer() {
         </div>
 
         {/* Fix Details */}
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <div className="card p-6">
+          <h2 className="text-2xl font-semibold text-primary mb-4">
             Performance Fixes
           </h2>
           
@@ -526,10 +526,10 @@ export default function PerformanceOptimizer() {
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">{getStatusIcon(fix.status)}</span>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900">
+                      <h3 className="text-lg font-semibold text-primary">
                         {fix.name}
                       </h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-secondary">
                         {fix.description}
                       </p>
                     </div>
@@ -551,7 +551,7 @@ export default function PerformanceOptimizer() {
 
                 {fix.result && (
                   <div className="mt-3 p-3 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-700">
+                    <p className="text-sm text-secondary">
                       <strong>Result:</strong> {fix.result}
                     </p>
                   </div>
@@ -562,8 +562,8 @@ export default function PerformanceOptimizer() {
         </div>
 
         {/* Performance Recommendations */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mt-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <div className="card p-6 mt-8">
+          <h2 className="text-2xl font-semibold text-primary mb-4">
             Performance Recommendations
           </h2>
           
