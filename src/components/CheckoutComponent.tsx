@@ -231,7 +231,7 @@ export default function CheckoutComponent() {
     <div className="max-w-4xl mx-auto p-6">
       <div className="grid lg:grid-cols-2 gap-8">
         {/* Order Summary */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="card p-6">
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
             <ShoppingBag className="h-5 w-5" />
             Order Summary
@@ -398,7 +398,7 @@ export default function CheckoutComponent() {
             <h3 className="text-lg font-medium mb-3">Payment Method</h3>
             <div className="space-y-2">
               {paymentMethods.map((method) => (
-                <label key={method.id} className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
+                <label key={method.id} className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-secondary">
                   <input
                     type="radio"
                     name="payment"
@@ -426,7 +426,7 @@ export default function CheckoutComponent() {
           <button
             onClick={handlePayment}
             disabled={isProcessing || cartItems.length === 0}
-            className="w-full bg-green-600 text-white py-4 rounded-lg font-semibold hover:bg-green-700 disabled:opacity-50 flex items-center justify-center gap-2"
+            className="w-full badge badge-green py-4 rounded-lg font-semibold disabled:opacity-50 flex items-center justify-center gap-2"
           >
             <Lock className="h-5 w-5" />
             {isProcessing ? 'Processing...' : `Complete Order - £${totalAmount.toFixed(2)}`}
