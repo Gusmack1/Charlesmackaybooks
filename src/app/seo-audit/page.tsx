@@ -348,19 +348,19 @@ export default function SEOAuditPage() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'excellent': return 'text-green-600 bg-green-100'
-      case 'good': return 'text-blue-600 bg-blue-100'
-      case 'needs-improvement': return 'text-yellow-600 bg-yellow-100'
-      case 'critical': return 'text-red-600 bg-red-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'excellent': return 'badge badge-green'
+      case 'good': return 'badge badge-blue'
+      case 'needs-improvement': return 'badge badge-amber'
+      case 'critical': return 'badge badge-red'
+      default: return 'badge badge-gray'
     }
   }
 
   const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-600'
-    if (score >= 70) return 'text-blue-600'
-    if (score >= 50) return 'text-yellow-600'
-    return 'text-red-600'
+    if (score >= 90) return 'text-accent-green'
+    if (score >= 70) return 'text-accent-blue'
+    if (score >= 50) return 'text-accent-amber'
+    return 'text-accent-red'
   }
 
   return (
@@ -406,7 +406,7 @@ export default function SEOAuditPage() {
               <h2 className="content h2 text-primary mb-2">
                 SEO Audit Control
               </h2>
-              <p className="text-gray-600">
+              <p className="text-secondary">
                 Run comprehensive SEO audit across all categories
               </p>
             </div>
@@ -416,7 +416,7 @@ export default function SEOAuditPage() {
               className={`px-8 py-3 rounded-lg font-semibold text-white transition-colors ${
                 isRunning
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-blue-600 hover:bg-blue-700'
+                  : 'badge badge-blue'
               }`}
             >
               {isRunning ? `🔄 Running ${currentAudit}...` : '🚀 Start Comprehensive Audit'}
@@ -428,13 +428,13 @@ export default function SEOAuditPage() {
         {auditResults.length > 0 && (
           <div className="space-y-6">
             {auditResults.map((result, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+              <div key={index} className="card p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
+                    <h3 className="text-xl font-semibold text-primary">
                       {result.category}
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-secondary">
                       Score: {result.score}/{result.maxScore}
                     </p>
                   </div>
@@ -451,8 +451,8 @@ export default function SEOAuditPage() {
                 {/* Issues */}
                 {result.issues.length > 0 && (
                   <div className="mb-4">
-                    <h4 className="font-semibold text-red-600 mb-2">Issues Found:</h4>
-                    <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <h4 className="font-semibold text-accent-red mb-2">Issues Found:</h4>
+                    <ul className="list-disc list-inside text-sm text-secondary space-y-1">
                       {result.issues.map((issue, i) => (
                         <li key={i}>{issue}</li>
                       ))}
@@ -463,8 +463,8 @@ export default function SEOAuditPage() {
                 {/* Recommendations */}
                 {result.recommendations.length > 0 && (
                   <div>
-                    <h4 className="font-semibold text-green-600 mb-2">Recommendations:</h4>
-                    <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <h4 className="font-semibold text-accent-green mb-2">Recommendations:</h4>
+                    <ul className="list-disc list-inside text-sm text-secondary space-y-1">
                       {result.recommendations.map((rec, i) => (
                         <li key={i}>{rec}</li>
                       ))}

@@ -80,11 +80,11 @@ export default function GoogleIndexingPage() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'indexed': return 'text-green-600 bg-green-100'
-      case 'pending': return 'text-yellow-600 bg-yellow-100'
-      case 'not-indexed': return 'text-red-600 bg-red-100'
-      case 'error': return 'text-gray-600 bg-gray-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'indexed': return 'badge badge-green'
+      case 'pending': return 'badge badge-amber'
+      case 'not-indexed': return 'badge badge-red'
+      case 'error': return 'badge badge-gray'
+      default: return 'badge badge-gray'
     }
   }
 
@@ -129,10 +129,10 @@ export default function GoogleIndexingPage() {
             <h2 className="content h2 text-primary mb-4">
               Google Indexing Status
             </h2>
-            <div className={`text-6xl font-bold ${indexingRate >= 90 ? 'text-green-600' : indexingRate >= 70 ? 'text-blue-600' : indexingRate >= 50 ? 'text-yellow-600' : 'text-red-600'} mb-4`}>
+            <div className={`text-6xl font-bold ${indexingRate >= 90 ? 'text-accent-green' : indexingRate >= 70 ? 'text-accent-blue' : indexingRate >= 50 ? 'text-accent-amber' : 'text-accent-red'} mb-4`}>
               {indexingRate}%
             </div>
-            <p className="text-gray-600">
+            <p className="text-secondary">
               {indexedCount} of {totalCount} key pages indexed by Google
             </p>
           </div>
@@ -142,10 +142,10 @@ export default function GoogleIndexingPage() {
         <div className="card p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+              <h2 className="text-2xl font-semibold text-primary mb-2">
                 Indexing Check Control
               </h2>
-              <p className="text-gray-600">
+              <p className="text-secondary">
                 Check Google indexing status for all key pages
               </p>
             </div>
@@ -155,7 +155,7 @@ export default function GoogleIndexingPage() {
               className={`px-8 py-3 rounded-lg font-semibold text-white transition-colors ${
                 isChecking
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-blue-600 hover:bg-blue-700'
+                  : 'badge badge-blue'
               }`}
             >
               {isChecking ? `🔄 Checking ${currentCheck}...` : '🔍 Check Google Indexing'}
@@ -166,19 +166,19 @@ export default function GoogleIndexingPage() {
         {/* Indexing Results */}
         {indexingResults.length > 0 && (
           <div className="space-y-4 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-2xl font-semibold text-primary mb-4">
               Indexing Results
             </h2>
             {indexingResults.map((result, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+              <div key={index} className="card p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">{getStatusIcon(result.status)}</span>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900">
+                      <h3 className="text-lg font-semibold text-primary">
                         {result.url}
                       </h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-secondary">
                         Last checked: {new Date(result.lastChecked).toLocaleString()}
                       </p>
                     </div>
@@ -193,8 +193,8 @@ export default function GoogleIndexingPage() {
                 {/* Issues */}
                 {result.issues && result.issues.length > 0 && (
                   <div className="mb-4">
-                    <h4 className="font-semibold text-red-600 mb-2">Issues Found:</h4>
-                    <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <h4 className="font-semibold text-accent-red mb-2">Issues Found:</h4>
+                    <ul className="list-disc list-inside text-sm text-secondary space-y-1">
                       {result.issues.map((issue, i) => (
                         <li key={i}>{issue}</li>
                       ))}
@@ -205,8 +205,8 @@ export default function GoogleIndexingPage() {
                 {/* Recommendations */}
                 {result.recommendations && result.recommendations.length > 0 && (
                   <div>
-                    <h4 className="font-semibold text-green-600 mb-2">Recommendations:</h4>
-                    <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <h4 className="font-semibold text-accent-green mb-2">Recommendations:</h4>
+                    <ul className="list-disc list-inside text-sm text-secondary space-y-1">
                       {result.recommendations.map((rec, i) => (
                         <li key={i}>{rec}</li>
                       ))}
@@ -220,14 +220,14 @@ export default function GoogleIndexingPage() {
 
         {/* Google Indexing Strategies */}
         <div className="card p-6 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl font-semibold text-primary mb-4">
             🎯 Google Indexing Strategies
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-blue-800 mb-2">Technical Optimization</h3>
-              <ul className="text-sm text-blue-700 space-y-1">
+            <div className="card-compact bg-accent-blue text-white p-4 rounded-lg">
+              <h3 className="font-semibold text-white mb-2">Technical Optimization</h3>
+              <ul className="text-sm text-white space-y-1">
                 <li>• Submit XML sitemap to Google Search Console</li>
                 <li>• Request indexing for new/updated pages</li>
                 <li>• Fix any crawl errors in Search Console</li>
@@ -236,9 +236,9 @@ export default function GoogleIndexingPage() {
               </ul>
             </div>
             
-            <div className="bg-green-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-green-800 mb-2">Content Quality</h3>
-              <ul className="text-sm text-green-700 space-y-1">
+            <div className="card-compact bg-accent-green text-white p-4 rounded-lg">
+              <h3 className="font-semibold text-white mb-2">Content Quality</h3>
+              <ul className="text-sm text-white space-y-1">
                 <li>• Create unique, valuable content</li>
                 <li>• Use proper heading hierarchy</li>
                 <li>• Include relevant keywords naturally</li>
@@ -247,9 +247,9 @@ export default function GoogleIndexingPage() {
               </ul>
             </div>
             
-            <div className="bg-yellow-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-yellow-800 mb-2">Site Structure</h3>
-              <ul className="text-sm text-yellow-700 space-y-1">
+            <div className="card-compact bg-accent-amber text-white p-4 rounded-lg">
+              <h3 className="font-semibold text-white mb-2">Site Structure</h3>
+              <ul className="text-sm text-white space-y-1">
                 <li>• Implement logical URL structure</li>
                 <li>• Add breadcrumb navigation</li>
                 <li>• Create comprehensive internal linking</li>
@@ -258,9 +258,9 @@ export default function GoogleIndexingPage() {
               </ul>
             </div>
             
-            <div className="bg-purple-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-purple-800 mb-2">Monitoring & Maintenance</h3>
-              <ul className="text-sm text-purple-700 space-y-1">
+            <div className="card-compact bg-accent-purple text-white p-4 rounded-lg">
+              <h3 className="font-semibold text-white mb-2">Monitoring & Maintenance</h3>
+              <ul className="text-sm text-white space-y-1">
                 <li>• Regular Google Search Console monitoring</li>
                 <li>• Track indexing status changes</li>
                 <li>• Monitor crawl statistics</li>
@@ -273,14 +273,14 @@ export default function GoogleIndexingPage() {
 
         {/* Google Search Console Integration */}
         <div className="card p-6 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl font-semibold text-primary mb-4">
             🔧 Google Search Console Integration
           </h2>
           
           <div className="space-y-4">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-gray-800 mb-2">Essential Steps:</h3>
-              <ol className="list-decimal list-inside text-sm text-gray-700 space-y-2">
+            <div className="card-compact p-4 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">Essential Steps:</h3>
+              <ol className="list-decimal list-inside text-sm text-secondary space-y-2">
                 <li>Verify ownership of charlesmackaybooks.com in Google Search Console</li>
                 <li>Submit XML sitemap (https://charlesmackaybooks.com/sitemap.xml)</li>
                 <li>Request indexing for all new and updated pages</li>
@@ -290,9 +290,9 @@ export default function GoogleIndexingPage() {
               </ol>
             </div>
             
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-blue-800 mb-2">Key Metrics to Monitor:</h3>
-              <ul className="text-sm text-blue-700 space-y-1">
+            <div className="card-compact bg-accent-blue text-white p-4 rounded-lg">
+              <h3 className="font-semibold text-white mb-2">Key Metrics to Monitor:</h3>
+              <ul className="text-sm text-white space-y-1">
                 <li>• Pages indexed vs. pages submitted</li>
                 <li>• Crawl errors and warnings</li>
                 <li>• Mobile usability issues</li>
