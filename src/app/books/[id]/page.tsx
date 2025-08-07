@@ -14,6 +14,7 @@ import BookDetailNavigation from '@/components/BookDetailNavigation';
 import RelatedBooks from '@/components/RelatedBooks';
 import MobileFooterNav from '@/components/MobileFooterNav';
 import BookAnalytics from '@/components/BookAnalytics';
+import BundleOffers from '@/components/BundleOffers';
 
 
 // Simplified category gradient function - only used for hero backgrounds
@@ -563,6 +564,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
           {/* Enhanced related books section */}
           <RelatedBooks books={books} currentBook={book} />
+          <div className="mt-8">
+            <BundleOffers primary={book} related={books} />
+          </div>
 
           {/* Related Blog Posts */}
           {book.relatedBlogPosts && book.relatedBlogPosts.length > 0 && (
