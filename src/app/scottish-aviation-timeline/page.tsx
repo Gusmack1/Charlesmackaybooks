@@ -244,39 +244,39 @@ export default function ScottishAviationTimelinePage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="container mx-auto px-4 py-12">
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto container-padding section-padding">
           {/* Hero Header */}
           <div className="text-center mb-16">
             <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
               🏴󠁧󠁢󠁳󠁣󠁴󠁿 130 Years of Scottish Aviation Heritage
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6">
+            <h1 className="text-primary">
               Scottish Aviation Timeline
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-secondary max-w-4xl mx-auto leading-relaxed mb-8">
               From Percy Pilcher's pioneering glider experiments in 1895 to modern aerospace innovation. 
               Discover the remarkable story of Scottish aviation through comprehensive historical documentation.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <div className="bg-white rounded-lg px-4 py-2 shadow-sm">
-                <span className="text-2xl font-bold text-blue-600">{timelineEvents.length}</span>
-                <span className="text-slate-600 ml-2">Historical Events</span>
+              <div className="card">
+                <span className="text-2xl font-bold text-accent-blue">{timelineEvents.length}</span>
+                <span className="text-secondary ml-2">Historical Events</span>
               </div>
-              <div className="bg-white rounded-lg px-4 py-2 shadow-sm">
-                <span className="text-2xl font-bold text-green-600">130</span>
-                <span className="text-slate-600 ml-2">Years Covered</span>
+              <div className="card">
+                <span className="text-2xl font-bold text-accent-green">130</span>
+                <span className="text-secondary ml-2">Years Covered</span>
               </div>
-              <div className="bg-white rounded-lg px-4 py-2 shadow-sm">
-                <span className="text-2xl font-bold text-purple-600">19</span>
-                <span className="text-slate-600 ml-2">Related Books</span>
+              <div className="card">
+                <span className="text-2xl font-bold text-accent-amber">19</span>
+                <span className="text-secondary ml-2">Related Books</span>
               </div>
             </div>
           </div>
 
           {/* Era Navigation */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">Explore by Historical Era</h2>
+            <h2 className="text-primary mb-6 text-center">Explore by Historical Era</h2>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {eras.map((era) => (
                 <button
@@ -347,7 +347,7 @@ export default function ScottishAviationTimelinePage() {
 
           {/* Timeline */}
           <div className="relative">
-            <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Historical Timeline</h2>
+            <h2 className="text-primary mb-8 text-center">Historical Timeline</h2>
             
             {/* Vertical Timeline Line */}
             <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-purple-600 hidden lg:block"></div>
@@ -363,34 +363,34 @@ export default function ScottishAviationTimelinePage() {
                     </div>
 
                     {/* Event Card */}
-                    <div className="lg:ml-20 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div className="lg:ml-20 card card-large">
                       {/* Card Header */}
                       <div className={`bg-gradient-to-r ${eraColors[event.era]} p-6 text-white`}>
                         <div className="flex items-center justify-between mb-2">
-                          <h3 className="text-3xl font-bold">{event.year}</h3>
-                          <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+                          <h3 className="text-3xl font-bold text-white">{event.year}</h3>
+                          <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium text-white">
                             {categoryIcons[event.category]} {event.category}
                           </span>
                         </div>
-                        <h4 className="text-xl font-semibold mb-2">{event.title}</h4>
-                        <div className="text-sm opacity-90">📍 {event.location}</div>
+                        <h4 className="text-xl font-semibold mb-2 text-white">{event.title}</h4>
+                        <div className="text-sm opacity-90 text-white">📍 {event.location}</div>
                       </div>
 
                       {/* Card Content */}
-                      <div className="p-6">
-                        <p className="text-gray-700 text-lg leading-relaxed mb-6">{event.description}</p>
+                      <div className="content">
+                        <p>{event.description}</p>
                         
                         {/* Significance */}
-                        <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                          <h5 className="font-semibold text-blue-800 mb-2" style={{ color: '#1e40af !important' }}>Historical Significance:</h5>
-                          <p className="text-blue-700" style={{ color: '#1d4ed8 !important' }}>{event.significance}</p>
+                        <div className="card-compact bg-accent-blue text-white mb-6">
+                          <h5 className="font-semibold mb-2 text-white">Historical Significance:</h5>
+                          <p className="text-white">{event.significance}</p>
                         </div>
 
                         {/* Technical Details */}
                         {event.technicalDetails && (
-                          <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                            <h5 className="font-semibold text-gray-800 mb-2">Technical Details:</h5>
-                            <p className="text-gray-700">{event.technicalDetails}</p>
+                          <div className="card-compact bg-gray-50 mb-6">
+                            <h5 className="font-semibold text-primary mb-2">Technical Details:</h5>
+                            <p className="text-secondary">{event.technicalDetails}</p>
                           </div>
                         )}
 
@@ -399,15 +399,15 @@ export default function ScottishAviationTimelinePage() {
                           {/* Related Books */}
                           {event.relatedBooks && event.relatedBooks.length > 0 && (
                             <div>
-                              <h5 className="font-semibold text-gray-800 mb-3">📚 Related Books:</h5>
+                              <h5 className="font-semibold text-primary mb-3">📚 Related Books:</h5>
                               <div className="space-y-2">
                                 {event.relatedBooks.map((bookId) => (
                                   <Link
                                     key={bookId}
                                     href={`/books/${bookId}`}
-                                    className="block p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors group"
+                                    className="block card-compact bg-accent-green text-white hover:opacity-90 transition-colors group"
                                   >
-                                    <div className="text-green-800 font-medium group-hover:text-green-900">
+                                    <div className="text-white font-medium">
                                       📖 View Book →
                                     </div>
                                   </Link>
@@ -419,15 +419,15 @@ export default function ScottishAviationTimelinePage() {
                           {/* Related Blog Posts */}
                           {event.relatedBlogs && event.relatedBlogs.length > 0 && (
                             <div>
-                              <h5 className="font-semibold text-gray-800 mb-3">📝 Related Articles:</h5>
+                              <h5 className="font-semibold text-primary mb-3">📝 Related Articles:</h5>
                               <div className="space-y-2">
                                 {event.relatedBlogs.map((blogId) => (
                                   <Link
                                     key={blogId}
                                     href={`/blog/${blogId}`}
-                                    className="block p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors group"
+                                    className="block card-compact bg-accent-blue text-white hover:opacity-90 transition-colors group"
                                   >
-                                    <div className="text-blue-800 font-medium group-hover:text-blue-900">
+                                    <div className="text-white font-medium">
                                       📰 Read Article →
                                     </div>
                                   </Link>
@@ -443,14 +443,14 @@ export default function ScottishAviationTimelinePage() {
                             <div className="grid md:grid-cols-2 gap-4 text-sm">
                               {event.keyFigures && (
                                 <div>
-                                  <span className="font-medium text-gray-600">Key Figures:</span>
-                                  <div className="text-gray-700">{event.keyFigures.join(', ')}</div>
+                                  <span className="font-medium text-muted">Key Figures:</span>
+                                  <div className="text-secondary">{event.keyFigures.join(', ')}</div>
                                 </div>
                               )}
                               {event.aircraftTypes && (
                                 <div>
-                                  <span className="font-medium text-gray-600">Aircraft Types:</span>
-                                  <div className="text-gray-700">{event.aircraftTypes.join(', ')}</div>
+                                  <span className="font-medium text-muted">Aircraft Types:</span>
+                                  <div className="text-secondary">{event.aircraftTypes.join(', ')}</div>
                                 </div>
                               )}
                             </div>

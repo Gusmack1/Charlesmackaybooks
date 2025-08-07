@@ -63,7 +63,7 @@ export default function MobileFirstLayout({
   }, [isMobileMenuOpen]);
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-white">
       {/* Skip to main content link for accessibility */}
       <a href="#main-content" className="skip-link">
         Skip to main content

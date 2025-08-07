@@ -213,8 +213,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
           {/* Article Content */}
           <div 
-            className="blog-content modern-blog-content"
-            style={{ color: '#1f2937' }}
+            className="blog-content modern-blog-content content"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </article>
@@ -460,16 +459,30 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       {/* Custom Styles for Blog Content */}
       <style jsx global>{`
         .blog-content h2 {
-          @apply text-2xl font-bold text-gray-900 mt-12 mb-6 border-b border-gray-200 pb-2;
+          color: var(--color-text-primary) !important;
+          font-size: clamp(1.75rem, 3.5vw, 2rem) !important;
+          line-height: 1.25 !important;
+          margin-top: 3rem !important;
+          margin-bottom: 1.5rem !important;
+          border-bottom: 1px solid #e5e7eb !important;
+          padding-bottom: 0.5rem !important;
+          font-weight: 600 !important;
         }
         
         .blog-content h3 {
-          @apply text-xl font-semibold text-gray-800 mt-8 mb-4;
+          color: var(--color-text-primary) !important;
+          font-size: clamp(1.5rem, 3vw, 1.75rem) !important;
+          line-height: 1.3 !important;
+          margin-top: 2rem !important;
+          margin-bottom: 1rem !important;
+          font-weight: 600 !important;
         }
         
         .blog-content p {
-          @apply text-lg text-gray-800 leading-relaxed mb-6;
-          color: #1f2937 !important;
+          color: var(--color-text-secondary) !important;
+          font-size: 18px !important;
+          line-height: 1.6 !important;
+          margin-bottom: 1.5rem !important;
         }
         
         .blog-content ul, .blog-content ol {
@@ -477,8 +490,9 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
         }
         
         .blog-content li {
-          @apply text-lg text-gray-800 leading-relaxed;
-          color: #1f2937 !important;
+          color: var(--color-text-secondary) !important;
+          font-size: 18px !important;
+          line-height: 1.6 !important;
         }
         
         .blog-content blockquote {
@@ -512,7 +526,33 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
         }
 
         .blog-content .image-caption {
-          @apply text-sm text-gray-600 text-center italic mt-2 mb-6;
+          @apply text-sm text-center italic mt-2 mb-6;
+          color: var(--color-text-muted) !important;
+        }
+        
+        /* Override ALL hardcoded color classes in blog content */
+        .blog-content .text-gray-600,
+        .blog-content .text-gray-700,
+        .blog-content .text-gray-800,
+        .blog-content .text-slate-600,
+        .blog-content .text-slate-700,
+        .blog-content .text-slate-800 {
+          color: var(--color-text-secondary) !important;
+        }
+        
+        .blog-content .text-blue-800,
+        .blog-content .text-blue-700,
+        .blog-content .text-blue-600 {
+          color: var(--color-accent-blue) !important;
+        }
+        
+        /* Ensure proper colors on colored backgrounds */
+        .blog-content .bg-blue-50,
+        .blog-content .bg-green-50,
+        .blog-content .bg-amber-50 {
+          background-color: var(--color-bg-accent) !important;
+          border-radius: var(--border-radius) !important;
+          margin-bottom: 2rem !important;
         }
         
         @media (max-width: 768px) {
