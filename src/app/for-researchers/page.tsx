@@ -48,56 +48,56 @@ export default function ForResearchersPage() {
         {/* Citation Guide */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
           <div className="card p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">📚 How to Cite Charles E. MacKay's Books</h2>
+            <h2 className="text-2xl font-bold text-primary mb-6">📚 How to Cite Charles E. MacKay's Books</h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="font-bold text-blue-800 mb-2">Harvard Citation Style:</h3>
-                <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+                <h3 className="font-bold text-accent-blue mb-2">Harvard Citation Style:</h3>
+                <div className="card-compact p-4 rounded font-mono text-sm">
                   MacKay, C.E. (2023). <em>Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</em>. A MacKay: Glasgow.
                 </div>
               </div>
 
               <div>
-                <h3 className="font-bold text-blue-800 mb-2">APA Style:</h3>
-                <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+                <h3 className="font-bold text-accent-blue mb-2">APA Style:</h3>
+                <div className="card-compact p-4 rounded font-mono text-sm">
                   MacKay, C. E. (2023). <em>Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</em>. A MacKay.
                 </div>
               </div>
 
               <div>
-                <h3 className="font-bold text-blue-800 mb-2">Chicago Style:</h3>
-                <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+                <h3 className="font-bold text-accent-blue mb-2">Chicago Style:</h3>
+                <div className="card-compact p-4 rounded font-mono text-sm">
                   MacKay, Charles Edward. <em>Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</em>. Glasgow: A MacKay, 2023.
                 </div>
               </div>
 
               <div>
-                <h3 className="font-bold text-blue-800 mb-2">MLA Style:</h3>
-                <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+                <h3 className="font-bold text-accent-blue mb-2">MLA Style:</h3>
+                <div className="card-compact p-4 rounded font-mono text-sm">
                   MacKay, Charles E. <em>Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</em>. A MacKay, 2023.
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-blue-50 rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-blue-800 mb-6">🔗 Link to This Website</h2>
-            <p className="text-gray-700 mb-6">
+          <div className="card bg-accent-blue text-white p-8">
+            <h2 className="text-2xl font-bold text-white mb-6">🔗 Link to This Website</h2>
+            <p className="text-white mb-6">
               Academic institutions, researchers, and aviation historians are encouraged to link to this website as a reference source.
             </p>
 
             <div className="space-y-4">
               <div>
-                <h3 className="font-bold text-blue-700 mb-2">Website Citation:</h3>
-                <div className="bg-white p-4 rounded font-mono text-sm border">
+                <h3 className="font-bold text-white mb-2">Website Citation:</h3>
+                <div className="card-compact bg-white p-4 rounded font-mono text-sm border">
                   MacKay, Charles Edward. "Aviation History Books by Charles E. MacKay." <em>Charles E. MacKay Aviation Books</em>, 2024. https://charlesmackaybooks.com
                 </div>
               </div>
 
               <div>
-                <h3 className="font-bold text-blue-700 mb-2">Backlink Code:</h3>
-                <div className="bg-white p-4 rounded font-mono text-sm border">
+                <h3 className="font-bold text-white mb-2">Backlink Code:</h3>
+                <div className="card-compact bg-white p-4 rounded font-mono text-sm border">
                   &lt;a href="https://charlesmackaybooks.com"&gt;Charles E. MacKay Aviation Books&lt;/a&gt;
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function ForResearchersPage() {
             <div className="mt-6">
               <a
                 href="mailto:charlese1mackay@hotmail.com?subject=Research Collaboration Request"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+                className="badge badge-blue px-6 py-3 rounded-lg font-semibold transition-colors inline-block"
               >
                 📧 Request Research Collaboration
               </a>
@@ -115,7 +115,7 @@ export default function ForResearchersPage() {
         </div>
 
         {/* Academic Recognition */}
-        <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-lg p-8 mb-12">
+        <div className="hero-section bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 text-white rounded-lg p-8 mb-12">
           <h2 className="text-2xl font-bold text-center mb-8">🏛️ Academic Recognition & Usage</h2>
 
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -144,47 +144,47 @@ export default function ForResearchersPage() {
         </div>
 
         {/* Research Partnership Opportunities */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
-          <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">🤝 Research Partnership & Academic Outreach</h2>
+        <div className="card p-8 mb-12">
+          <h2 className="text-2xl font-bold text-center text-primary mb-8">🤝 Research Partnership & Academic Outreach</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-blue-50 rounded-lg">
+            <div className="text-center p-6 card-compact bg-accent-blue text-white rounded-lg">
               <div className="text-4xl mb-4">🏫</div>
-              <h3 className="text-xl font-bold text-blue-800 mb-3">University Libraries</h3>
-              <p className="text-blue-700 mb-4">
+              <h3 className="text-xl font-bold text-white mb-3">University Libraries</h3>
+              <p className="text-white mb-4">
                 Academic libraries can acquire Charles's books for their aviation history collections and reference sections.
               </p>
               <a
                 href="mailto:charlese1mackay@hotmail.com?subject=University Library Bulk Order Inquiry"
-                className="text-blue-600 font-semibold hover:underline"
+                className="text-white font-semibold hover:underline"
               >
                 Contact for Bulk Orders →
               </a>
             </div>
 
-            <div className="text-center p-6 bg-green-50 rounded-lg">
+            <div className="text-center p-6 card-compact bg-accent-green text-white rounded-lg">
               <div className="text-4xl mb-4">📝</div>
-              <h3 className="text-xl font-bold text-green-800 mb-3">Research Citations</h3>
-              <p className="text-green-700 mb-4">
+              <h3 className="text-xl font-bold text-white mb-3">Research Citations</h3>
+              <p className="text-white mb-4">
                 Researchers using Charles's books are encouraged to cite this website and link back for additional context.
               </p>
               <a
                 href="mailto:charlese1mackay@hotmail.com?subject=Research Citation Submission"
-                className="text-green-600 font-semibold hover:underline"
+                className="text-white font-semibold hover:underline"
               >
                 Submit Your Citation →
               </a>
             </div>
 
-            <div className="text-center p-6 bg-purple-50 rounded-lg">
+            <div className="text-center p-6 card-compact bg-accent-purple text-white rounded-lg">
               <div className="text-4xl mb-4">🎤</div>
-              <h3 className="text-xl font-bold text-purple-800 mb-3">Guest Lectures</h3>
-              <p className="text-purple-700 mb-4">
+              <h3 className="text-xl font-bold text-white mb-3">Guest Lectures</h3>
+              <p className="text-white mb-4">
                 Charles is available for guest lectures and presentations on Scottish aviation history and WWI/WWII aircraft.
               </p>
               <a
                 href="mailto:charlese1mackay@hotmail.com?subject=Guest Lecture/Presentation Booking"
-                className="text-purple-600 font-semibold hover:underline"
+                className="text-white font-semibold hover:underline"
               >
                 Book a Presentation →
               </a>
@@ -193,52 +193,52 @@ export default function ForResearchersPage() {
         </div>
 
         {/* Bulk Orders & Institutional Discounts */}
-        <div className="bg-gray-100 rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">🎓 Institutional Discounts & Bulk Orders</h2>
+        <div className="card p-8 mb-12">
+          <h2 className="text-2xl font-bold text-center text-primary mb-8">🎓 Institutional Discounts & Bulk Orders</h2>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">📚 Bulk Order Pricing</h3>
+            <div className="card p-6">
+              <h3 className="text-xl font-bold text-primary mb-4">📚 Bulk Order Pricing</h3>
               <div className="space-y-3">
-                <div className="flex justify-between items-center p-3 bg-blue-50 rounded">
-                  <span className="font-semibold">5-9 Books</span>
-                  <span className="text-blue-600 font-bold">10% Discount</span>
+                <div className="flex justify-between items-center p-3 card-compact bg-accent-blue text-white rounded">
+                  <span className="font-semibold text-white">5-9 Books</span>
+                  <span className="text-white font-bold">10% Discount</span>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-green-50 rounded">
-                  <span className="font-semibold">10-19 Books</span>
-                  <span className="text-green-600 font-bold">15% Discount</span>
+                <div className="flex justify-between items-center p-3 card-compact bg-accent-green text-white rounded">
+                  <span className="font-semibold text-white">10-19 Books</span>
+                  <span className="text-white font-bold">15% Discount</span>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-purple-50 rounded">
-                  <span className="font-semibold">20+ Books</span>
-                  <span className="text-purple-600 font-bold">20% Discount</span>
+                <div className="flex justify-between items-center p-3 card-compact bg-accent-purple text-white rounded">
+                  <span className="font-semibold text-white">20+ Books</span>
+                  <span className="text-white font-bold">20% Discount</span>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 mt-4">
+              <p className="text-sm text-secondary mt-4">
                 Perfect for university libraries, museum collections, and research institutions
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">🏛️ Institutional Benefits</h3>
-              <ul className="space-y-3 text-gray-700">
+            <div className="card p-6">
+              <h3 className="text-xl font-bold text-primary mb-4">🏛️ Institutional Benefits</h3>
+              <ul className="space-y-3 text-secondary">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-accent-blue font-bold">•</span>
                   <span>Invoice billing available for institutions</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-accent-blue font-bold">•</span>
                   <span>Priority shipping for academic orders</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-accent-blue font-bold">•</span>
                   <span>Custom citation and cataloging assistance</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-accent-blue font-bold">•</span>
                   <span>Direct author contact for questions</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-accent-blue font-bold">•</span>
                   <span>Guest lecture opportunities</span>
                 </li>
               </ul>
