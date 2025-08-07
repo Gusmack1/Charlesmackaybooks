@@ -48,12 +48,12 @@ export default function BooksPage() {
 
       <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="hero-section bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16">
+      <section className="hero-section bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="hero-section text-white">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Aviation History Books Collection
           </h1>
-          <p className="hero-section text-white mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
             Discover {books.length} authoritative aviation history books by renowned historian Charles E. MacKay.
             From WWI fighters to modern jets, Scottish aviation heritage to global military aviation.
           </p>
