@@ -101,7 +101,7 @@ export default function AcademicResourcesPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="font-semibold text-lg mb-3">Museums & Archives</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-secondary">
                 <li>• Imperial War Museum</li>
                 <li>• Royal Air Force Museum</li>
                 <li>• National Museum of Flight</li>
@@ -111,7 +111,7 @@ export default function AcademicResourcesPage() {
             </div>
             <div>
               <h3 className="font-semibold text-lg mb-3">Academic Institutions</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-secondary">
                 <li>• University of Glasgow</li>
                 <li>• Edinburgh University</li>
                 <li>• Royal Aeronautical Society</li>

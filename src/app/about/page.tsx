@@ -198,10 +198,10 @@ export default function AboutPage() {
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Charles E. MacKay is a distinguished aviation historian based in Glasgow, Scotland, whose extensive research has transformed our understanding of Scottish aviation heritage. Over the past 25 years, his meticulous archival work has uncovered previously unknown aspects of aviation development, particularly focusing on Scottish contributions to military and civilian aircraft advancement.
               </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-lg text-secondary mb-6 leading-relaxed">
                 His academic approach combines rigorous primary source research with accessible writing, making complex aviation history understandable for both scholars and enthusiasts. MacKay's work is particularly noted for its comprehensive coverage of industrial aviation development, from early pioneers through the jet age.
               </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-lg text-secondary mb-6 leading-relaxed">
                 As an alumnus of the University of Glasgow, MacKay brings academic rigor to his historical research while maintaining a passionate commitment to preserving Scotland's aviation legacy for future generations.
               </p>
             </div>
@@ -277,27 +277,27 @@ export default function AboutPage() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">Imperial War Museum</span>
+                  <span className="text-secondary">Imperial War Museum</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">Royal Air Force Museum</span>
+                  <span className="text-secondary">Royal Air Force Museum</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">University of Glasgow</span>
+                  <span className="text-secondary">University of Glasgow</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">Edinburgh University</span>
+                  <span className="text-secondary">Edinburgh University</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">National Museums Scotland</span>
+                  <span className="text-secondary">National Museums Scotland</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-blue-600">🏛️</span>
-                  <span className="text-gray-700">Royal Aeronautical Society</span>
+                  <span className="text-secondary">Royal Aeronautical Society</span>
                 </div>
               </div>
             </div>

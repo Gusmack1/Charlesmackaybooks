@@ -126,7 +126,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="card p-8">
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Quick Contact Form</h3>
               <p className="text-secondary mb-6">
                 Send me a message directly using your email client:
@@ -173,9 +173,9 @@ export default function ContactPage() {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-slate-800 mb-8">Services & Collaboration</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="card p-6">
               <h3 className="text-xl font-semibold text-slate-800 mb-4">🎓 Academic Services</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-secondary">
                 <li>• Research collaboration</li>
                 <li>• University course adoption</li>
                 <li>• Academic bulk orders</li>
@@ -185,9 +185,9 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="card p-6">
               <h3 className="text-xl font-semibold text-slate-800 mb-4">🏛️ Museum & Institution</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-secondary">
                 <li>• Exhibition historical support</li>
                 <li>• Artifact authentication</li>
                 <li>• Curatorial consultation</li>
@@ -197,9 +197,9 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="card p-6">
               <h3 className="text-xl font-semibold text-slate-800 mb-4">📺 Media & Publishing</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-secondary">
                 <li>• Documentary consultation</li>
                 <li>• Historical accuracy review</li>
                 <li>• Interview participation</li>
@@ -220,19 +220,19 @@ export default function ContactPage() {
               <p className="text-gray-700">For bulk academic orders, please email directly with your requirements. Special pricing may be available for educational institutions, and I can provide invoicing for institutional purchases.</p>
             </div>
 
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="card p-6">
               <h3 className="font-semibold text-slate-800 mb-2">Do you accept research collaboration requests?</h3>
-              <p className="text-gray-700">Yes, I welcome collaboration with fellow researchers, particularly on Scottish aviation history, WWI/WWII aircraft development, and industrial aviation heritage projects.</p>
+              <p className="text-secondary">Yes, I welcome collaboration with fellow researchers, particularly on Scottish aviation history, WWI/WWII aircraft development, and industrial aviation heritage projects.</p>
             </div>
 
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="card p-6">
               <h3 className="font-semibold text-slate-800 mb-2">Can you provide historical consultation for media projects?</h3>
-              <p className="text-gray-700">I offer consultation services for documentaries, films, books, and other media projects requiring historical accuracy in aviation history, particularly Scottish and British aviation development.</p>
+              <p className="text-secondary">I offer consultation services for documentaries, films, books, and other media projects requiring historical accuracy in aviation history, particularly Scottish and British aviation development.</p>
             </div>
 
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="card p-6">
               <h3 className="font-semibold text-slate-800 mb-2">Are your books available internationally?</h3>
-              <p className="text-gray-700">Yes, all books are available worldwide through the eBay store with tracked shipping. International delivery typically takes 7-14 business days depending on location.</p>
+              <p className="text-secondary">Yes, all books are available worldwide through the eBay store with tracked shipping. International delivery typically takes 7-14 business days depending on location.</p>
             </div>
           </div>
         </section>
@@ -246,7 +246,7 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:charlese1mackay@hotmail.com"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors"
+              className="badge badge-blue px-8 py-3 rounded-lg font-bold transition-colors"
             >
               📧 Send Email
             </a>
