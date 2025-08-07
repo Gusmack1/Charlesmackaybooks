@@ -235,39 +235,39 @@ export default function ImperialWarMuseumPartnershipPage() {
           </div>
 
           {/* Partnership Overview */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">Partnership Overview</h2>
+          <div className="mb-12 card p-8">
+            <h2 className="text-3xl font-bold text-primary mb-6">Partnership Overview</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <p className="text-slate-700 leading-relaxed mb-4">
+                <p className="text-secondary leading-relaxed mb-4">
                   The Imperial War Museum and Charles E. MacKay have established a formal partnership
                   to combine world-class museum resources with specialized aviation history expertise.
                   This collaboration leverages the IWM's extensive archives and MacKay's research
                   excellence to advance understanding of aviation heritage.
                 </p>
-                <p className="text-slate-700 leading-relaxed mb-4">
+                <p className="text-secondary leading-relaxed mb-4">
                   The partnership focuses on Scottish aviation history, WWI and WWII aircraft development,
                   and the preservation of aviation heritage for future generations. Joint projects include
                   exhibitions, research initiatives, and educational programs.
                 </p>
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-blue-800 mb-2">Partnership Established:</h3>
-                  <p className="text-blue-700">2022 - Ongoing collaboration</p>
+                <div className="card-compact bg-accent-blue text-white p-4 rounded-lg">
+                  <h3 className="font-semibold text-white mb-2">Partnership Established:</h3>
+                  <p className="text-white">2022 - Ongoing collaboration</p>
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <div className="font-semibold text-green-800">IWM Contribution</div>
-                  <ul className="text-green-700 text-sm mt-2 space-y-1">
+                <div className="card-compact bg-accent-green text-white p-4 rounded-lg">
+                  <div className="font-semibold text-white">IWM Contribution</div>
+                  <ul className="text-white text-sm mt-2 space-y-1">
                     <li>• World-class aviation archives</li>
                     <li>• Exhibition platforms</li>
                     <li>• Conservation expertise</li>
                     <li>• Global institutional network</li>
                   </ul>
                 </div>
-                <div className="bg-amber-50 p-4 rounded-lg">
-                  <div className="font-semibold text-amber-800">MacKay Contribution</div>
-                  <ul className="text-amber-700 text-sm mt-2 space-y-1">
+                <div className="card-compact bg-accent-amber text-white p-4 rounded-lg">
+                  <div className="font-semibold text-white">MacKay Contribution</div>
+                  <ul className="text-white text-sm mt-2 space-y-1">
                     <li>• Specialized research expertise</li>
                     <li>• Primary source documentation</li>
                     <li>• Academic methodology</li>
@@ -325,21 +325,21 @@ export default function ImperialWarMuseumPartnershipPage() {
           </div>
 
           {/* Museum Resources */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">Shared Research Resources</h2>
+          <div className="mb-12 card p-8">
+            <h2 className="text-3xl font-bold text-primary mb-6">Shared Research Resources</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {museumResources.map((resource, index) => (
-                <div key={index} className="border border-slate-200 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-slate-800 mb-2">{resource.category}</h3>
-                  <p className="text-slate-700 mb-3">{resource.description}</p>
+                <div key={index} className="border rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-primary mb-2">{resource.category}</h3>
+                  <p className="text-secondary mb-3">{resource.description}</p>
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-slate-600">Access Level:</span>
-                      <span className="text-sm text-slate-700">{resource.accessLevel}</span>
+                      <span className="text-sm font-medium text-secondary">Access Level:</span>
+                      <span className="text-sm text-secondary">{resource.accessLevel}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-slate-600">Research Value:</span>
-                      <span className="text-sm text-slate-700">{resource.researchValue}</span>
+                      <span className="text-sm font-medium text-secondary">Research Value:</span>
+                      <span className="text-sm text-secondary">{resource.researchValue}</span>
                     </div>
                   </div>
                 </div>
@@ -352,12 +352,12 @@ export default function ImperialWarMuseumPartnershipPage() {
             <h2 className="text-3xl font-bold text-slate-800 mb-8">Partnership Benefits</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {partnershipBenefits.map((category, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-sm p-6">
+                <div key={index} className="card p-6">
                   <h3 className="text-xl font-semibold text-slate-800 mb-4">{category.category}</h3>
                   <ul className="space-y-2">
                     {category.benefits.map((benefit) => (
-                      <li key={benefit} className="text-slate-700 flex items-start">
-                        <span className="text-green-500 mr-2">✓</span>
+                      <li key={benefit} className="text-secondary flex items-start">
+                        <span className="text-accent-green mr-2">✓</span>
                         {benefit}
                       </li>
                     ))}
@@ -368,23 +368,23 @@ export default function ImperialWarMuseumPartnershipPage() {
           </div>
 
           {/* Future Projects */}
-          <div className="mb-12 bg-slate-50 rounded-xl p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">Future Initiatives</h2>
+          <div className="mb-12 card p-8">
+            <h2 className="text-3xl font-bold text-primary mb-6">Future Initiatives</h2>
             <div className="space-y-6">
               {futureProjects.map((project, index) => (
-                <div key={index} className="bg-white rounded-lg p-6">
+                <div key={index} className="card p-6">
                   <div className="flex flex-wrap items-start justify-between mb-3">
-                    <h3 className="text-xl font-semibold text-slate-800">{project.title}</h3>
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <h3 className="text-xl font-semibold text-primary">{project.title}</h3>
+                    <span className="badge badge-blue px-3 py-1 rounded-full text-sm font-medium">
                       {project.timeline}
                     </span>
                   </div>
-                  <p className="text-slate-700 mb-4">{project.description}</p>
+                  <p className="text-secondary mb-4">{project.description}</p>
                   <div>
-                    <h4 className="font-semibold text-slate-700 mb-2">Project Goals:</h4>
+                    <h4 className="font-semibold text-secondary mb-2">Project Goals:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.goals.map((goal) => (
-                        <span key={goal} className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-sm">
+                        <span key={goal} className="badge badge-gray px-2 py-1 rounded text-sm">
                           {goal}
                         </span>
                       ))}

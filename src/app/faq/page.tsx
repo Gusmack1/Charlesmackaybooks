@@ -204,9 +204,9 @@ export default function FAQPage() {
             <h2 className="content h2 text-primary mb-4">Browse by Category</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {categories.map((category) => (
-                <div key={category} className="text-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors cursor-pointer">
-                  <div className="font-semibold text-blue-800">{category}</div>
-                  <div className="text-sm text-blue-600 mt-1">
+                <div key={category} className="text-center p-4 card-compact bg-accent-blue text-white rounded-lg hover:opacity-90 transition-opacity cursor-pointer">
+                  <div className="font-semibold text-white">{category}</div>
+                  <div className="text-sm text-white mt-1">
                     {faqItems.filter(item => item.category === category).length} questions
                   </div>
                 </div>
@@ -219,7 +219,7 @@ export default function FAQPage() {
             <h2 className="text-3xl font-bold text-slate-800">Frequently Asked Questions</h2>
 
             {categories.map((category) => (
-              <div key={category} className="bg-white rounded-xl shadow-sm p-6">
+              <div key={category} className="card p-6">
                 <h3 className="text-2xl font-semibold text-slate-800 mb-6 border-b border-slate-200 pb-2">
                   {category}
                 </h3>
@@ -244,7 +244,7 @@ export default function FAQPage() {
                             <h5 className="font-semibold text-slate-700 mb-2">Related Topics:</h5>
                             <div className="flex flex-wrap gap-2">
                               {faq.relatedTopics.map((topic) => (
-                                <span key={topic} className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">
+                                <span key={topic} className="px-3 py-1 badge badge-gray rounded-full text-sm">
                                   {topic}
                                 </span>
                               ))}
@@ -254,8 +254,8 @@ export default function FAQPage() {
 
                         {faq.relatedBooks && (
                           <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-                            <h5 className="font-semibold text-blue-800 mb-2">Recommended Reading:</h5>
-                            <div className="text-sm text-blue-700">
+                            <h5 className="font-semibold text-primary mb-2">Recommended Reading:</h5>
+                            <div className="text-sm text-secondary">
                               {faq.relatedBooks.join(', ')}
                             </div>
                           </div>

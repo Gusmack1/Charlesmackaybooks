@@ -264,14 +264,14 @@ export default function AviationNewsPage() {
 
           {/* Research Highlights */}
           <div className="mb-12 card p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6 text-center">Research Highlights</h2>
+                                                        <h2 className="text-3xl font-bold text-primary mb-6 text-center">Research Highlights</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {researchHighlights.map((highlight, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{highlight.metric}</div>
-                  <div className="font-semibold text-slate-800 mb-1">{highlight.title}</div>
-                  <div className="text-sm text-slate-600 mb-2">{highlight.description}</div>
-                  <div className="text-xs text-slate-500">{highlight.period}</div>
+                  <div className="text-3xl font-bold text-accent-blue mb-2">{highlight.metric}</div>
+                  <div className="font-semibold text-primary mb-1">{highlight.title}</div>
+                  <div className="text-sm text-secondary mb-2">{highlight.description}</div>
+                  <div className="text-xs text-muted">{highlight.period}</div>
                 </div>
               ))}
             </div>
@@ -279,35 +279,35 @@ export default function AviationNewsPage() {
 
           {/* Latest News */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-8">Latest News</h2>
+            <h2 className="text-3xl font-bold text-primary mb-8">Latest News</h2>
             <div className="space-y-8">
               {latestNews.map((article, index) => (
-                <article key={article.id} className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
+                <article key={article.id} className="card p-6 border-l-4 border-accent-blue">
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-slate-800 mb-2">{article.headline}</h3>
+                      <h3 className="text-2xl font-bold text-primary mb-2">{article.headline}</h3>
                       <div className="flex flex-wrap gap-2 mb-3">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          article.category === 'Discovery' ? 'bg-green-100 text-green-800' :
-                          article.category === 'Exhibition' ? 'bg-purple-100 text-purple-800' :
-                          article.category === 'Research' ? 'bg-blue-100 text-blue-800' :
-                          article.category === 'Archaeology' ? 'bg-amber-100 text-amber-800' :
-                          article.category === 'Book Release' ? 'bg-indigo-100 text-indigo-800' :
-                          'bg-slate-100 text-slate-800'
+                          article.category === 'Discovery' ? 'badge badge-green' :
+                          article.category === 'Exhibition' ? 'badge badge-purple' :
+                          article.category === 'Research' ? 'badge badge-blue' :
+                          article.category === 'Archaeology' ? 'badge badge-amber' :
+                          article.category === 'Book Release' ? 'badge badge-indigo' :
+                          'badge badge-gray'
                         }`}>
                           {article.category}
                         </span>
                         {article.location && (
-                          <span className="px-2 py-1 bg-slate-100 text-slate-700 rounded-full text-xs">
+                          <span className="px-2 py-1 badge badge-gray rounded-full text-xs">
                             📍 {article.location}
                           </span>
                         )}
-                        <span className="px-2 py-1 bg-slate-100 text-slate-700 rounded-full text-xs">
+                        <span className="px-2 py-1 badge badge-gray rounded-full text-xs">
                           {article.readTime} min read
                         </span>
                       </div>
                     </div>
-                    <div className="text-sm text-slate-500">
+                    <div className="text-sm text-muted">
                       {new Date(article.publishDate).toLocaleDateString('en-GB', {
                         year: 'numeric',
                         month: 'long',
@@ -316,30 +316,30 @@ export default function AviationNewsPage() {
                     </div>
                   </div>
 
-                  <p className="text-slate-700 mb-4 text-lg">{article.summary}</p>
+                  <p className="text-secondary mb-4 text-lg">{article.summary}</p>
 
-                  <div className="prose max-w-none text-slate-700 mb-6">
+                  <div className="prose max-w-none text-secondary mb-6">
                     {article.fullContent.split('\n\n').map((paragraph, i) => (
                       <p key={i} className="mb-4">{paragraph}</p>
                     ))}
                   </div>
 
-                  <div className="bg-blue-50 p-4 rounded-lg mb-4">
-                    <h4 className="font-semibold text-blue-800 mb-2">Expert Commentary:</h4>
-                    <p className="text-blue-700 italic">{article.authorCommentary}</p>
+                  <div className="card-compact bg-accent-blue text-white p-4 rounded-lg mb-4">
+                    <h4 className="font-semibold text-white mb-2">Expert Commentary:</h4>
+                    <p className="text-white italic">{article.authorCommentary}</p>
                   </div>
 
                   <div className="flex flex-wrap gap-4 items-center justify-between">
                     <div className="flex flex-wrap gap-2">
                       {article.tags.map((tag) => (
-                        <span key={tag} className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-sm">
+                        <span key={tag} className="badge badge-gray px-2 py-1 rounded text-sm">
                           #{tag}
                         </span>
                       ))}
                     </div>
                     <div className="flex gap-3">
                       {article.relatedLinks.map((link) => (
-                        <a key={link.title} href={link.url} className="text-blue-600 hover:underline text-sm">
+                        <a key={link.title} href={link.url} className="text-accent-blue hover:underline text-sm">
                           {link.title} →
                         </a>
                       ))}
@@ -352,26 +352,26 @@ export default function AviationNewsPage() {
 
           {/* Upcoming Events */}
           <div className="mb-12 card p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">Upcoming Events</h2>
+            <h2 className="text-3xl font-bold text-primary mb-6">Upcoming Events</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {upcomingEvents.map((event, index) => (
-                <div key={index} className="border border-slate-200 rounded-lg p-4">
+                <div key={index} className="border rounded-lg p-4">
                   <div className="flex justify-between items-start mb-3">
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-slate-800">{event.title}</h3>
-                      <div className="text-slate-600 text-sm">{event.location}</div>
+                      <h3 className="text-lg font-semibold text-primary">{event.title}</h3>
+                      <div className="text-secondary text-sm">{event.location}</div>
                     </div>
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      event.type === 'Conference' ? 'bg-blue-100 text-blue-800' :
-                      event.type === 'Exhibition' ? 'bg-purple-100 text-purple-800' :
-                      event.type === 'Lecture' ? 'bg-green-100 text-green-800' :
-                      'bg-amber-100 text-amber-800'
+                      event.type === 'Conference' ? 'badge badge-blue' :
+                      event.type === 'Exhibition' ? 'badge badge-purple' :
+                      event.type === 'Lecture' ? 'badge badge-green' :
+                      'badge badge-amber'
                     }`}>
                       {event.type}
                     </span>
                   </div>
 
-                  <div className="text-slate-500 text-sm mb-3">
+                  <div className="text-muted text-sm mb-3">
                     📅 {new Date(event.date).toLocaleDateString('en-GB', {
                       year: 'numeric',
                       month: 'long',
@@ -379,12 +379,12 @@ export default function AviationNewsPage() {
                     })}
                   </div>
 
-                  <p className="text-slate-700 mb-3">{event.description}</p>
+                  <p className="text-secondary mb-3">{event.description}</p>
 
                   {event.registrationUrl && (
                     <a
                       href={event.registrationUrl}
-                      className="text-blue-600 hover:underline text-sm font-medium"
+                      className="text-accent-blue hover:underline text-sm font-medium"
                     >
                       Register Now →
                     </a>
