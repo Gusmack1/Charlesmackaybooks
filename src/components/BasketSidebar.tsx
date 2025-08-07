@@ -161,7 +161,7 @@ export default function BasketSidebar({ isOpen, onClose }: BasketSidebarProps) {
                       clearCart();
                       onClose();
                     }}
-                    className="flex-1 bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors text-sm"
+                    className="flex-1 badge badge-red py-2 px-4 rounded-lg transition-colors text-sm"
                   >
                     Clear Basket
                   </button>

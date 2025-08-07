@@ -100,7 +100,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-2">Location</h3>
-                    <p className="text-gray-600">Glasgow, Scotland</p>
+                    <p className="text-secondary">Glasgow, Scotland</p>
                     <p className="text-sm text-gray-500 mt-1">Available for local meetings and archive research</p>
                   </div>
                 </div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-2">Book Orders</h3>
-                    <p className="text-gray-600">Available through eBay store</p>
+                    <p className="text-secondary">Available through eBay store</p>
                     <p className="text-sm text-gray-500 mt-1">Secure worldwide shipping with tracking</p>
                     <a
                       href="https://www.ebay.co.uk/usr/chaza87"
@@ -128,28 +128,28 @@ export default function ContactPage() {
 
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Quick Contact Form</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-secondary mb-6">
                 Send me a message directly using your email client:
               </p>
 
               <div className="space-y-4">
                 <a
                   href="mailto:charlese1mackay@hotmail.com?subject=Research Inquiry&body=Dear Charles MacKay,%0D%0A%0D%0AI am interested in..."
-                  className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  className="block w-full badge badge-blue text-center py-3 rounded-lg font-semibold transition-colors"
                 >
                   📧 Send Research Inquiry
                 </a>
 
                 <a
                   href="mailto:charlese1mackay@hotmail.com?subject=Academic Collaboration&body=Dear Charles MacKay,%0D%0A%0D%0AI would like to discuss..."
-                  className="block w-full bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  className="block w-full badge badge-green text-center py-3 rounded-lg font-semibold transition-colors"
                 >
                   🎓 Academic Collaboration
                 </a>
 
                 <a
                   href="mailto:charlese1mackay@hotmail.com?subject=Bulk Book Order&body=Dear Charles MacKay,%0D%0A%0D%0AI am interested in ordering..."
-                  className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  className="block w-full badge badge-purple text-center py-3 rounded-lg font-semibold transition-colors"
                 >
                   📚 Bulk Book Orders
                 </a>

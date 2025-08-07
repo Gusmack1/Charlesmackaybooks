@@ -207,7 +207,7 @@ export default function AboutPage() {
             </div>
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="font-bold text-gray-800 mb-3">Contact Information</h3>
+                <h3 className="font-bold text-primary mb-3">Contact Information</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
@@ -237,8 +237,8 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-blue-50 rounded-lg p-6">
               <h3 className="text-xl font-semibold text-slate-800 mb-4">Scottish Aviation Heritage</h3>
-              <p className="text-gray-700 mb-4">Comprehensive research into Scotland's contribution to aviation development, from early pioneers to modern aerospace.</p>
-              <ul className="text-sm text-gray-600 space-y-1">
+              <p className="text-secondary mb-4">Comprehensive research into Scotland's contribution to aviation development, from early pioneers to modern aerospace.</p>
+              <ul className="text-sm text-secondary space-y-1">
                 <li>• Clydeside aviation history</li>
                 <li>• Industrial aviation development</li>
                 <li>• Scottish aircraft manufacturers</li>
@@ -247,8 +247,8 @@ export default function AboutPage() {
             </div>
             <div className="bg-amber-50 rounded-lg p-6">
               <h3 className="text-xl font-semibold text-slate-800 mb-4">Military Aviation History</h3>
-              <p className="text-gray-700 mb-4">Detailed analysis of military aviation development through two world wars and the Cold War period.</p>
-              <ul className="text-sm text-gray-600 space-y-1">
+              <p className="text-secondary mb-4">Detailed analysis of military aviation development through two world wars and the Cold War period.</p>
+              <ul className="text-sm text-secondary space-y-1">
                 <li>• WWI aviation operations</li>
                 <li>• WWII aircraft development</li>
                 <li>• Cold War jet fighters</li>
@@ -257,8 +257,8 @@ export default function AboutPage() {
             </div>
             <div className="bg-green-50 rounded-lg p-6">
               <h3 className="text-xl font-semibold text-slate-800 mb-4">Aircraft Development</h3>
-              <p className="text-gray-700 mb-4">Technical and historical analysis of aircraft design evolution from early biplanes to modern jets.</p>
-              <ul className="text-sm text-gray-600 space-y-1">
+              <p className="text-secondary mb-4">Technical and historical analysis of aircraft design evolution from early biplanes to modern jets.</p>
+              <ul className="text-sm text-secondary space-y-1">
                 <li>• Test pilot biographies</li>
                 <li>• Helicopter development</li>
                 <li>• Jet age innovation</li>
@@ -306,15 +306,15 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="bg-slate-100 rounded-lg p-4">
                   <div className="text-2xl font-bold text-blue-600">500+</div>
-                  <div className="text-sm text-gray-600">Academic citations</div>
+                  <div className="text-sm text-secondary">Academic citations</div>
                 </div>
                 <div className="bg-slate-100 rounded-lg p-4">
                   <div className="text-2xl font-bold text-blue-600">15</div>
-                  <div className="text-sm text-gray-600">University courses using books</div>
+                  <div className="text-sm text-secondary">University courses using books</div>
                 </div>
                 <div className="bg-slate-100 rounded-lg p-4">
                   <div className="text-2xl font-bold text-blue-600">25+</div>
-                  <div className="text-sm text-gray-600">Years of research</div>
+                  <div className="text-sm text-secondary">Years of research</div>
                 </div>
               </div>
             </div>
@@ -331,7 +331,7 @@ export default function AboutPage() {
                   Beardmore Aviation: Scottish Industrial Giant
                 </Link>
               </h3>
-              <p className="text-gray-600 mb-4">Comprehensive history of Beardmore's transformation from shipbuilding to aviation manufacturing, including the R101 airship project.</p>
+              <p className="text-secondary mb-4">Comprehensive history of Beardmore's transformation from shipbuilding to aviation manufacturing, including the R101 airship project.</p>
               <Link
                 href="/books/beardmore-aviation"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
@@ -348,7 +348,7 @@ export default function AboutPage() {
                   Clydeside Aviation Volume One: The Great War
                 </Link>
               </h3>
-              <p className="text-gray-600 mb-4">First volume covering aviation activities on the Clyde during WWI, documenting Scotland's crucial role in early military aviation.</p>
+              <p className="text-secondary mb-4">First volume covering aviation activities on the Clyde during WWI, documenting Scotland's crucial role in early military aviation.</p>
               <Link
                 href="/books/clydeside-aviation-vol1"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
@@ -365,7 +365,7 @@ export default function AboutPage() {
                   Captain Eric Brown: Test Pilot Extraordinary
                 </Link>
               </h3>
-              <p className="text-gray-600 mb-4">Biography of the legendary test pilot who flew 487 different aircraft types and revolutionized test flying safety.</p>
+              <p className="text-secondary mb-4">Biography of the legendary test pilot who flew 487 different aircraft types and revolutionized test flying safety.</p>
               <Link
                 href="/books/captain-eric-brown"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
@@ -380,7 +380,7 @@ export default function AboutPage() {
           <div className="text-center mt-8">
             <Link
               href="/books"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors"
+              className="badge badge-blue px-8 py-3 rounded-lg font-bold transition-colors"
             >
               View All 19 Books
             </Link>

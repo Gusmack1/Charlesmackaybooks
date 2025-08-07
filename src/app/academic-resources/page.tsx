@@ -130,7 +130,7 @@ export default function AcademicResourcesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-block badge badge-blue px-6 py-3 rounded-lg font-semibold transition-colors"
           >
             Contact for Academic Inquiries
           </Link>
