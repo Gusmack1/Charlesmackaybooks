@@ -70,7 +70,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   )
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -102,7 +102,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             <span className="text-gray-400">/</span>
             <Link href="/books" className="text-blue-600 hover:text-blue-800">Books</Link>
             <span className="text-gray-400">/</span>
-            <span className="text-gray-600">{categoryName}</span>
+            <span className="text-secondary">{categoryName}</span>
           </nav>
         </div>
       </section>
@@ -119,7 +119,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           ) : (
             <div className="text-center py-16">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">No Books Found</h2>
-              <p className="text-gray-600 mb-8">
+              <p className="text-secondary mb-8">
                 No books are currently available in the {categoryName} category.
               </p>
               <Link
@@ -148,7 +148,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                   className="bg-white p-4 rounded-lg text-center hover:shadow-md transition-shadow"
                 >
                   <h3 className="font-semibold text-sm">{name}</h3>
-                  <p className="text-xs text-gray-500 mt-1">
+                  <p className="text-xs text-muted mt-1">
                     {books.filter(book => book.category === name).length} books
                   </p>
                 </Link>

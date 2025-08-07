@@ -76,29 +76,29 @@ export default function ResearchGuidesPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             Aviation Research Guides
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
             Comprehensive methodologies and best practices for aviation history research
           </p>
         </header>
 
         {/* Research Guides */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-slate-800 mb-8 text-center">Research Methodologies</h2>
+          <h2 className="text-2xl font-bold text-primary mb-8 text-center">Research Methodologies</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {guides.map((guide, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">{guide.title}</h3>
-                <p className="text-gray-600 mb-4">{guide.description}</p>
+                <h3 className="text-xl font-semibold text-primary mb-3">{guide.title}</h3>
+                <p className="text-secondary mb-4">{guide.description}</p>
                 <div className="space-y-2">
                   <h4 className="font-medium text-slate-700">Key Topics:</h4>
-                  <ul className="grid grid-cols-2 gap-1 text-sm text-gray-600">
+                  <ul className="grid grid-cols-2 gap-1 text-sm text-secondary">
                     {guide.topics.map((topic, topicIndex) => (
                       <li key={topicIndex} className="flex items-center">
                         <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
@@ -114,7 +114,7 @@ export default function ResearchGuidesPage() {
 
         {/* Archives Directory */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-slate-800 mb-8 text-center">Key Aviation Archives</h2>
+          <h2 className="text-2xl font-bold text-primary mb-8 text-center">Key Aviation Archives</h2>
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -155,11 +155,11 @@ export default function ResearchGuidesPage() {
         {/* Research Ethics */}
         <section className="mb-12">
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-slate-800 mb-6">Research Ethics & Best Practices</h2>
+            <h2 className="text-2xl font-bold text-primary mb-6">Research Ethics & Best Practices</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-slate-700 mb-4">Ethical Guidelines</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-secondary">
                   <li>• Respect copyright and intellectual property</li>
                   <li>• Obtain proper permissions for document use</li>
                   <li>• Acknowledge all sources and contributors</li>
@@ -169,7 +169,7 @@ export default function ResearchGuidesPage() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-slate-700 mb-4">Quality Standards</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-secondary">
                   <li>• Use multiple primary sources for verification</li>
                   <li>• Cross-reference information across archives</li>
                   <li>• Document research methodology clearly</li>
@@ -183,8 +183,8 @@ export default function ResearchGuidesPage() {
 
         {/* Contact */}
         <section className="text-center">
-          <h2 className="text-2xl font-bold text-slate-800 mb-4">Research Consultation</h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-primary mb-4">Research Consultation</h2>
+          <p className="text-secondary mb-6 max-w-2xl mx-auto">
             Charles E. MacKay is available for research consultation, methodology guidance, 
             and collaborative projects with academic institutions and fellow researchers.
           </p>

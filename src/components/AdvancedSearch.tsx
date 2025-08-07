@@ -173,13 +173,13 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-800">🔍 Find Your Perfect Aviation Book</h2>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-secondary">
             Found {searchResults.length} of {books.length} books
           </p>
         </div>
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          className="bg-accent-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
         >
           {isExpanded ? 'Hide Filters' : 'Show More Filters'}
         </button>
