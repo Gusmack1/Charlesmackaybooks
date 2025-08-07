@@ -39,8 +39,8 @@ const post = {
         </p>
       </div>
 
-      <div class=" rounded-lg p-6 mb-8 text-center">
-        <h4 class="font-semibold  mb-3">📢 Share This Article</h4>
+      <div class="card-compact rounded-lg p-6 mb-8 text-center">
+        <h4 class="font-semibold text-primary mb-3">📢 Share This Article</h4>
         <div class="flex justify-center gap-3 flex-wrap">
           <a href="https://facebook.com/sharer/sharer.php?u=https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development" 
              class="badge badge-blue text-white px-3 py-2 rounded text-sm transition-colors" target="_blank">
@@ -113,8 +113,8 @@ const post = {
         <p class="text-sm  mt-2 text-center italic">The Hawker Hurricane cockpit, designed for simplicity and reliability under combat conditions.</p>
       </div>
 
-      <div class=" rounded-lg p-6 mb-8">
-        <h3 class="text-lg font-semibold  mb-4">📊 Hurricane vs Contemporary Fighters</h3>
+      <div class="card-compact rounded-lg p-6 mb-8">
+        <h3 class="text-lg font-semibold text-primary mb-4">📊 Hurricane vs Contemporary Fighters</h3>
         <div class="grid md:grid-cols-2 gap-4 text-sm">
           <div>
             <strong>Hawker Hurricane Mk I:</strong><br>

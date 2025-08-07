@@ -15,8 +15,8 @@ export default function Header() {
             {/* Logo and Author Info - Clickable */}
             <Link href="/" className="hover:opacity-80 transition-opacity cursor-pointer">
               <h1 className="text-xl font-bold">Charles E. MacKay</h1>
-              <p className="text-sm text-gray-300">Aviation Historian & Author</p>
-              <p className="text-xs text-gray-400">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
+              <p className="text-sm text-gray-200">Aviation Historian & Author</p>
+              <p className="text-xs text-gray-300">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
             </Link>
 
             {/* Contact Info and Basket */}
@@ -24,14 +24,14 @@ export default function Header() {
               <div className="flex items-center gap-2 md:gap-4 mb-1">
                 <div className="hidden md:block">
                   <div className="text-sm">📧 charlese1mackay@hotmail.com</div>
-                  <div className="text-xs text-gray-300">Glasgow, Scotland</div>
-                  <div className="text-xs text-gray-300">Published Aviation Books</div>
+                  <div className="text-xs text-gray-200">Glasgow, Scotland</div>
+                  <div className="text-xs text-gray-200">Published Aviation Books</div>
                 </div>
 
                 {/* Basket Button - Always visible */}
                 <button
                   onClick={openBasket}
-                  className="relative bg-green-600 hover:bg-green-700 px-3 md:px-4 py-2 rounded text-sm font-medium transition-colors"
+                  className="relative badge badge-green px-3 md:px-4 py-2 rounded text-sm font-medium transition-colors"
                   title="Shopping Basket"
                 >
                   <span className="hidden sm:inline">🛒 Basket</span>
@@ -89,7 +89,7 @@ export default function Header() {
       </nav>
 
       {/* Trusted Seller Banner */}
-      <div className="bg-green-500 text-center py-2">
+              <div className="bg-accent-green text-center py-2">
         <div className="font-bold text-white">
           🏆 TRUSTED SELLER - 100% Positive Feedback
         </div>
