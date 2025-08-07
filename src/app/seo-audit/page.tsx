@@ -364,7 +364,7 @@ export default function SEOAuditPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-white py-8">
       <SEOOptimizer
         title="SEO Audit & Optimization - Charles Mackay Books"
         description="Comprehensive SEO audit and optimization system for achieving 100/100 Google SEO scores. Expert analysis of technical SEO, content quality, performance, and user experience."
@@ -376,18 +376,18 @@ export default function SEOAuditPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="content h1 text-primary mb-4">
             🔍 Comprehensive SEO Audit
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-secondary max-w-3xl mx-auto">
             Expert SEO analysis and optimization recommendations to achieve 100/100 Google SEO scores for Charles Mackay Books.
           </p>
         </div>
 
         {/* Overall Score */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="card p-6 mb-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="content h2 text-primary mb-4">
               Overall SEO Score
             </h2>
             <div className={`text-6xl font-bold ${getScoreColor(overallScore)} mb-4`}>
@@ -400,10 +400,10 @@ export default function SEOAuditPage() {
         </div>
 
         {/* Control Panel */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="card p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+              <h2 className="content h2 text-primary mb-2">
                 SEO Audit Control
               </h2>
               <p className="text-gray-600">

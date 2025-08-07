@@ -27,24 +27,24 @@ export default function TestSystemsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="content h1 text-primary mb-4">
             🧪 Test All Systems
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-secondary max-w-3xl mx-auto">
             Run the complete website fixer system and all available tools to test the entire infrastructure.
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="card p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+              <h2 className="content h2 text-primary mb-2">
                 System Test Control
               </h2>
-              <p className="text-gray-600">
+              <p className="text-secondary">
                 Execute all systems and generate comprehensive reports
               </p>
             </div>

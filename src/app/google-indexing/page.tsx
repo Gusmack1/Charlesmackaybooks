@@ -103,7 +103,7 @@ export default function GoogleIndexingPage() {
   const indexingRate = totalCount > 0 ? Math.round((indexedCount / totalCount) * 100) : 0
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-white py-8">
       <SEOOptimizer
         title="Google Indexing Optimization - Charles Mackay Books"
         description="Comprehensive Google indexing optimization tools and strategies to ensure all pages are properly indexed by Google search engine."
@@ -115,18 +115,18 @@ export default function GoogleIndexingPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="content h1 text-primary mb-4">
             🔍 Google Indexing Optimization
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-secondary max-w-3xl mx-auto">
             Comprehensive tools and strategies to ensure Charles Mackay Books pages are properly indexed by Google for maximum search visibility.
           </p>
         </div>
 
         {/* Indexing Overview */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="card p-6 mb-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="content h2 text-primary mb-4">
               Google Indexing Status
             </h2>
             <div className={`text-6xl font-bold ${indexingRate >= 90 ? 'text-green-600' : indexingRate >= 70 ? 'text-blue-600' : indexingRate >= 50 ? 'text-yellow-600' : 'text-red-600'} mb-4`}>
@@ -139,7 +139,7 @@ export default function GoogleIndexingPage() {
         </div>
 
         {/* Control Panel */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="card p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-2">
@@ -219,7 +219,7 @@ export default function GoogleIndexingPage() {
         )}
 
         {/* Google Indexing Strategies */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="card p-6 mb-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
             🎯 Google Indexing Strategies
           </h2>
@@ -272,7 +272,7 @@ export default function GoogleIndexingPage() {
         </div>
 
         {/* Google Search Console Integration */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="card p-6 mb-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
             🔧 Google Search Console Integration
           </h2>
