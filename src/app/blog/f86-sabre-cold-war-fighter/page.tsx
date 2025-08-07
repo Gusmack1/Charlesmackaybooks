@@ -16,7 +16,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/f86-sabre-cold-war-fighter.jpg" alt="F-86 Sabre in flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The North American F-86 Sabre, America's premier fighter during the Korean War and Cold War era.</p>
+      <p class="text-sm  mt-2 text-center italic">The North American F-86 Sabre, America's premier fighter during the Korean War and Cold War era.</p>
     </div>
 
     <h2 id="historical-background">Historical Background and Context</h2>
@@ -30,7 +30,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/chuck-yeager-sabre-pilot.jpg" alt="Chuck Yeager with F-86 Sabre" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Chuck Yeager, the legendary test pilot who helped develop and evaluate the F-86 Sabre's capabilities.</p>
+      <p class="text-sm  mt-2 text-center italic">Chuck Yeager, the legendary test pilot who helped develop and evaluate the F-86 Sabre's capabilities.</p>
     </div>
 
     <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
@@ -39,7 +39,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
@@ -55,7 +55,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/korean-war-air-combat.jpg" alt="Korean War air combat" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Korean War air combat scenes showing the F-86 Sabre in action against MiG-15 fighters.</p>
+      <p class="text-sm  mt-2 text-center italic">Korean War air combat scenes showing the F-86 Sabre in action against MiG-15 fighters.</p>
     </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>

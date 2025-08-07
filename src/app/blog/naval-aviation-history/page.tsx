@@ -11,15 +11,15 @@ const post = {
     <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
     <div class="my-8">
       <img src="/blog-images/hms-argus-aircraft-carrier.jpg" alt="HMS Argus, the world's first true aircraft carrier" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">HMS Argus established the template for all future aircraft carriers with its full-length flight deck.</p>
+      <p class="text-sm  mt-2 text-center italic">HMS Argus established the template for all future aircraft carriers with its full-length flight deck.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/carrier-evolution-diagram.jpg" alt="Evolution of aircraft carrier design" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The progression from early seaplane carriers to modern supercarriers.</p>
+      <p class="text-sm  mt-2 text-center italic">The progression from early seaplane carriers to modern supercarriers.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/modern-carrier-operations.jpg" alt="Modern aircraft carrier operations" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Contemporary carrier operations demonstrate the culmination of over a century of naval aviation development.</p>
+      <p class="text-sm  mt-2 text-center italic">Contemporary carrier operations demonstrate the culmination of over a century of naval aviation development.</p>
     </div>
     
     <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
@@ -41,7 +41,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>

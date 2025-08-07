@@ -12,21 +12,21 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg" alt="Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield, February 13, 1971" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971. This iconic photograph captures a pivotal moment in aviation history.</p>
+      <p class="text-sm  mt-2 text-center italic">Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971. This iconic photograph captures a pivotal moment in aviation history.</p>
     </div>
     
     <p>The Chipmunk WP808's service at Turnhouse coincided with a crucial period in British aviation history. As the RAF transitioned from piston-engine aircraft to jet fighters, the Chipmunk provided the essential foundation training that would prepare pilots for more advanced aircraft. Its reliability, excellent handling characteristics, and forgiving nature made it the perfect aircraft for teaching the fundamentals of flight.</p>
 
     <div class="my-8">
       <img src="/blog-images/de-havilland-chipmunk-formation.jpg" alt="De Havilland Chipmunks in formation flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">De Havilland Chipmunks in formation flight, demonstrating the aircraft's excellent formation flying capabilities and the training standards at RAF Turnhouse.</p>
+      <p class="text-sm  mt-2 text-center italic">De Havilland Chipmunks in formation flight, demonstrating the aircraft's excellent formation flying capabilities and the training standards at RAF Turnhouse.</p>
     </div>
 
     <p>Turnhouse airfield, with its strategic location near Edinburgh, was a key training base for the RAF. The airfield's proximity to both urban areas and open countryside provided ideal training conditions, allowing student pilots to experience various flying environments while remaining close to essential facilities and support services.</p>
 
     <div class="my-8">
       <img src="/blog-images/de-havilland-chipmunk-cockpit.jpg" alt="De Havilland Chipmunk cockpit showing training configuration" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The cockpit of a De Havilland Chipmunk, showing its dual-control training configuration that allowed instructors to safely teach student pilots.</p>
+      <p class="text-sm  mt-2 text-center italic">The cockpit of a De Havilland Chipmunk, showing its dual-control training configuration that allowed instructors to safely teach student pilots.</p>
     </div>
 
     <h2 id="historical-background">Historical Background: The Chipmunk's Development</h2>
@@ -40,7 +40,7 @@ const post = {
     <p>The De Havilland Chipmunk represented a significant advancement in training aircraft design. Its all-metal construction provided durability and longevity that far exceeded the wooden and fabric construction of earlier trainers. The aircraft's monoplane configuration offered better performance and handling characteristics than the biplane trainers it replaced.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Features</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Features</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>All-Metal Construction:</strong> Durable and long-lasting airframe design</li>
         <li><strong>Tandem Cockpit:</strong> Excellent visibility and dual-control training capability</li>

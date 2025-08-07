@@ -12,7 +12,7 @@ const post = {
     
     <div class="my-8">
       <img src="/blog-images/rfc-pilots-no32-squadron-1916.jpg" alt="RFC pilots from No. 32 Squadron in 1916" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">RFC pilots from No. 32 Squadron in 1916, representing the brave airmen who pioneered aerial warfare tactics and aircraft development.</p>
+      <p class="text-sm  mt-2 text-center italic">RFC pilots from No. 32 Squadron in 1916, representing the brave airmen who pioneered aerial warfare tactics and aircraft development.</p>
     </div>
     
     <p>The Royal Naval Air Service (RNAS) and Royal Flying Corps pursued parallel development paths that would converge in 1918 to form the world's first independent air force. This organizational evolution reflected the growing importance of aviation in modern warfare and Britain's commitment to achieving aerial dominance through superior aircraft design and pilot training.</p>
@@ -21,7 +21,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/sopwith-camel-formation.jpg" alt="Sopwith Camel formation flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Sopwith Camel formation flight, demonstrating the advanced fighter capabilities that established Allied air superiority.</p>
+      <p class="text-sm  mt-2 text-center italic">Sopwith Camel formation flight, demonstrating the advanced fighter capabilities that established Allied air superiority.</p>
     </div>
 
     <h2 id="historical-background">Historical Background and Context</h2>
@@ -39,7 +39,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
@@ -55,7 +55,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/bristol-fighter-f2b-flying.jpg" alt="Bristol Fighter F2B in flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Bristol Fighter F2B in flight, representing the revolutionary two-seat fighter design that redefined aerial warfare.</p>
+      <p class="text-sm  mt-2 text-center italic">Bristol Fighter F2B in flight, representing the revolutionary two-seat fighter design that redefined aerial warfare.</p>
     </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>

@@ -11,15 +11,15 @@ const post = {
     <p>The Bristol Sycamore holds a unique place in British aviation history as the nation's first production helicopter and the aircraft that established Britain as a serious player in rotorcraft development. First flying in 1947 and entering service in 1953, the Sycamore bridged the gap between experimental rotorcraft and practical operational helicopters.</p>
     <div class="my-8">
       <img src="/blog-images/bristol-sycamore-formation.jpg" alt="Bristol Sycamore helicopters in formation flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Bristol Sycamore helicopters in formation, demonstrating Britain's first successful production helicopter design.</p>
+      <p class="text-sm  mt-2 text-center italic">Bristol Sycamore helicopters in formation, demonstrating Britain's first successful production helicopter design.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/bristol-sycamore.jpg" alt="Close-up of Bristol Sycamore showing rotor configuration" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The Bristol Sycamore's conventional single-rotor configuration became the standard for British helicopter development.</p>
+      <p class="text-sm  mt-2 text-center italic">The Bristol Sycamore's conventional single-rotor configuration became the standard for British helicopter development.</p>
     </div>
     <div class="my-8">
       <img src="/blog-images/helicopter-development-timeline.jpg" alt="Helicopter development timeline" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">The evolution of helicopter technology that led to the Bristol Sycamore.</p>
+      <p class="text-sm  mt-2 text-center italic">The evolution of helicopter technology that led to the Bristol Sycamore.</p>
     </div>
     
     <p>Developed by Bristol Helicopter Division under the leadership of Raoul Hafner, the Sycamore represented a systematic approach to helicopter design that contrasted with the more experimental efforts of earlier pioneers. Its robust construction and reliable operation made it suitable for both military and civilian applications, establishing the foundation for Britain's helicopter industry.</p>
@@ -41,7 +41,7 @@ const post = {
     <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
 
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 text-blue-800">Key Technical Innovations</h3>
+      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
       <ul class="space-y-2 text-blue-700">
         <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
         <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
