@@ -14,28 +14,28 @@ export default function Header() {
           <div className="flex justify-between items-center">
             {/* Logo and Author Info - Clickable */}
             <Link href="/" className="hover:opacity-80 transition-opacity cursor-pointer">
-              <h1 className="text-xl font-bold">Charles E. MacKay</h1>
-              <p className="text-sm text-gray-200">Aviation Historian & Author</p>
-              <p className="text-xs text-gray-300">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
+              <h1 className="text-xl font-bold text-white">Charles E. MacKay</h1>
+              <p className="text-sm text-white">Aviation Historian & Author</p>
+              <p className="text-xs text-white">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
             </Link>
 
             {/* Contact Info and Basket */}
             <div className="text-right">
               <div className="flex items-center gap-2 md:gap-4 mb-1">
                 <div className="hidden md:block">
-                  <div className="text-sm">📧 charlese1mackay@hotmail.com</div>
-                  <div className="text-xs text-gray-200">Glasgow, Scotland</div>
-                  <div className="text-xs text-gray-200">Published Aviation Books</div>
+                  <div className="text-sm text-white">📧 charlese1mackay@hotmail.com</div>
+                  <div className="text-xs text-white">Glasgow, Scotland</div>
+                  <div className="text-xs text-white">Published Aviation Books</div>
                 </div>
 
                 {/* Basket Button - Always visible */}
                 <button
                   onClick={openBasket}
-                  className="relative badge badge-green px-3 md:px-4 py-2 rounded text-sm font-medium transition-colors"
+                  className="relative badge badge-green px-3 md:px-4 py-2 rounded text-sm font-medium transition-colors text-white"
                   title="Shopping Basket"
                 >
-                  <span className="hidden sm:inline">🛒 Basket</span>
-                  <span className="sm:hidden">🛒</span>
+                  <span className="hidden sm:inline text-white">🛒 Basket</span>
+                  <span className="sm:hidden text-white">🛒</span>
                   {getTotalItems() > 0 && (
                     <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                       {getTotalItems()}

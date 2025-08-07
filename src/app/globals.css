@@ -233,6 +233,14 @@
   /* Standard spacing */
   .section-padding { padding: 3rem 0; }
   .container-padding { padding-left: 1.5rem; padding-right: 1.5rem; }
+  
+  /* CRITICAL: Ensure header text is always white */
+  header h1,
+  header p,
+  header span,
+  header div {
+    color: white !important;
+  }
 }
 
 /* HERO SECTIONS - Only place where colors change based on content */
