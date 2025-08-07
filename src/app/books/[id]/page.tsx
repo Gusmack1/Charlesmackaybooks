@@ -5,6 +5,9 @@ import type { Metadata } from 'next';
 import { books } from '@/data/books';
 import { Book } from '@/types/book';
 import BookDetailClient from '@/components/BookDetailClient';
+import MobileBuyBar from '@/components/MobileBuyBar';
+import SamplePages from '@/components/SamplePages';
+import BookFAQ from '@/components/BookFAQ';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookSEOContent from '@/components/BookSEOContent';
 import BookDetailNavigation from '@/components/BookDetailNavigation';
@@ -401,6 +404,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               <div className="card card-large content">
                 <BookSEOContent book={book} />
 
+                {/* Sample Pages */}
+                <div className="mt-8">
+                  <SamplePages book={book} />
+                </div>
+
                 {/* Table of contents */}
                 {book.tableOfContents && (
                   <div className="mt-8 card-compact bg-gray-50">
@@ -502,6 +510,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                     </div>
                   </div>
                 )}
+
+                {/* FAQs */}
+                <div className="mt-8">
+                  <BookFAQ />
+                </div>
               </div>
             </div>
 
@@ -599,6 +612,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         </main>
 
         <MobileFooterNav />
+        {/* Sticky mobile buy bar */}
+        <MobileBuyBar book={book} />
         
 
       </div>
