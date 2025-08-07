@@ -165,8 +165,8 @@ const post = {
       </p>
 
       <h2 id="technical-specifications">Technical Specifications</h2>
-      <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-8">
-        <h3 class="text-lg font-semibold text-slate-800 mb-4">🔧 Hurricane Mk I Technical Data</h3>
+      <div class="card-compact rounded-lg p-6 mb-8">
+        <h3 class="text-lg font-semibold text-primary mb-4">🔧 Hurricane Mk I Technical Data</h3>
         <div class="grid md:grid-cols-3 gap-4 text-sm">
           <div>
             <strong>Dimensions:</strong><br>
@@ -202,7 +202,7 @@ const post = {
       </p>
 
       <h2 id="pilot-accounts">Pilot Accounts and Testimonies</h2>
-      <blockquote class="border-l-4 border-blue-400 bg-blue-50 p-6 mb-8 italic ">
+      <blockquote class="border-l-4 border-accent-blue card-compact bg-accent-blue text-white p-6 mb-8 italic ">
         "The Hurricane was an honest aeroplane. It did exactly what you asked of it, no more, no less. In combat, you knew exactly what it would do, and that predictability saved many lives. When you're fighting for your life at 20,000 feet, you want an aircraft you can trust completely."
         <footer class="text-right mt-2 not-italic text-sm">— Squadron Leader James Lacey, 501 Squadron</footer>
       </blockquote>
@@ -230,12 +230,12 @@ const post = {
           <a href="/books/british-aircraft-great-war" class="block bg-white p-4 rounded-lg border hover:shadow-lg transition-shadow">
             <h4 class="font-semibold ">British Aircraft of the Great War</h4>
             <p class="text-sm  mt-2">Comprehensive study of British military aviation during WWI, covering RFC and RNAS aircraft development.</p>
-            <div class="text-green-600 font-semibold mt-2">£24.99 - Order Now →</div>
+            <div class="text-accent-green font-semibold mt-2">£24.99 - Order Now →</div>
           </a>
           <a href="/books/captain-eric-brown" class="block bg-white p-4 rounded-lg border hover:shadow-lg transition-shadow">
             <h4 class="font-semibold ">Captain Eric Brown: Test Pilot Extraordinary</h4>
             <p class="text-sm  mt-2">The extraordinary story of the world's most experienced test pilot and his aircraft evaluations.</p>
-            <div class="text-green-600 font-semibold mt-2">£26.99 - Order Now →</div>
+            <div class="text-accent-green font-semibold mt-2">£26.99 - Order Now →</div>
           </a>
         </div>
       </div>

@@ -39,9 +39,9 @@ const post = {
     <h2 id="technical-analysis">Technical Analysis: The Chipmunk's Design Excellence</h2>
     <p>The De Havilland Chipmunk represented a significant advancement in training aircraft design. Its all-metal construction provided durability and longevity that far exceeded the wooden and fabric construction of earlier trainers. The aircraft's monoplane configuration offered better performance and handling characteristics than the biplane trainers it replaced.</p>
 
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+    <div class="card-compact bg-accent-blue text-white rounded-lg p-6 my-6">
       <h3 class="font-semibold mb-4 ">Key Technical Features</h3>
-      <ul class="space-y-2 text-blue-700">
+      <ul class="space-y-2 text-white">
         <li><strong>All-Metal Construction:</strong> Durable and long-lasting airframe design</li>
         <li><strong>Tandem Cockpit:</strong> Excellent visibility and dual-control training capability</li>
         <li><strong>Forgiving Flight Characteristics:</strong> Ideal for student pilot training</li>
