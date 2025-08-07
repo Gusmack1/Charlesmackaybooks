@@ -3,56 +3,58 @@ import Image from 'next/image'
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-12">
-      <div className="absolute inset-0 bg-black/30"></div>
-      <div className="relative container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+    <section className="homepage-hero relative bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16 lg:py-24">
+      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="relative container mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
-          <div>
-
-
-            <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight text-white">
+          <div className="text-center lg:text-left">
+            <h1 className="hero-section text-5xl lg:text-6xl font-extrabold mb-8 leading-tight" style={{ color: '#ffffff !important', textShadow: '0 3px 6px rgba(0, 0, 0, 0.9)' }}>
               Authentic Aviation
               <span className="block text-white">History Books</span>
             </h1>
-            <p className="text-lg text-white mb-3 leading-relaxed">
-              Published by renowned aviation historian Charles E. MacKay.{' '}
-              <strong className="text-white">Used as primary references by aviation researchers worldwide.</strong>
+            
+            <p className="hero-section text-xl lg:text-2xl mb-6 leading-relaxed" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+              Published by renowned aviation historian <strong className="text-white font-bold">Charles E. MacKay</strong>
             </p>
-            <p className="text-white mb-6">
+            
+            <p className="hero-section text-lg lg:text-xl mb-8 leading-relaxed" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.7)' }}>
+              <strong>Used as primary references by aviation researchers worldwide.</strong><br />
               Specializing in Scottish aviation heritage, World War aircraft, and military aviation history.
             </p>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-3 gap-3 mb-6">
-              <div className="text-center">
-                <div className="text-xl font-bold text-white">1,700+</div>
-                <div className="text-xs text-white">Customers</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>1,700+</div>
+                <div className="text-lg font-semibold text-white" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)' }}>Happy Customers</div>
               </div>
-              <div className="text-center">
-                <div className="text-sm font-bold text-white">Academic</div>
-                <div className="text-xs text-white">References</div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>19</div>
+                <div className="text-lg font-semibold text-white" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)' }}>Published Books</div>
               </div>
-              <div className="text-center">
-                <div className="text-sm font-bold text-white">Worldwide</div>
-                <div className="text-xs text-white">Shipping</div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>FREE</div>
+                <div className="text-lg font-semibold text-white" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)' }}>Worldwide Shipping</div>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 href="/books"
-                className="inline-flex items-center justify-center bg-green-600 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-green-700 transition-all duration-300 shadow-lg text-sm"
+                className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition-all duration-300 shadow-xl text-lg min-h-[60px]"
+                style={{ color: '#ffffff !important' }}
               >
-                <span className="mr-2">🛒</span>
+                <span className="mr-3 text-xl">🛒</span>
                 Shop Aviation Books
               </Link>
               <Link
                 href="/blog"
-                className="inline-flex items-center justify-center bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-all duration-300 text-sm"
+                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-xl text-lg min-h-[60px]"
+                style={{ color: '#ffffff !important' }}
               >
-                <span className="mr-2">📝</span>
+                <span className="mr-3 text-xl">📝</span>
                 Expert Insights
               </Link>
             </div>

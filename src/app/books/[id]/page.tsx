@@ -429,69 +429,65 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
       <div className="min-h-screen bg-slate-50">
 
-        {/* Hero Section */}
-        <div className={`relative bg-gradient-to-br ${gradientClass} text-white`}>
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="relative max-w-7xl mx-auto px-6 py-20">
-            <div className="max-w-2xl mx-auto text-center">
+        {/* Hero Section - Completely Overhauled */}
+        <div className={`hero-section relative bg-gradient-to-br ${gradientClass} text-white py-16 lg:py-24`}>
+          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
               {/* Book Cover */}
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-10">
                 <div className="relative">
                   <Image
                     src={bookCoverSrc}
                     alt={`${book.title} by Charles E. MacKay`}
-                    width={350}
-                    height={525}
-                    className="rounded-lg shadow-2xl"
+                    width={400}
+                    height={600}
+                    className="rounded-xl shadow-2xl"
                     priority
                   />
-                  <div className={`absolute -bottom-4 -right-4 ${accentClasses.badge} text-white px-4 py-2 rounded-lg font-bold text-lg`}>
+                  <div className={`absolute -bottom-6 -right-6 ${accentClasses.badge} text-white px-6 py-3 rounded-xl font-bold text-2xl shadow-xl`} style={{ color: '#ffffff !important' }}>
                     £{book.price}
                   </div>
                 </div>
               </div>
 
               {/* Book Details */}
-              <div className="pt-0">
-                <div className="text-sm text-white mb-3 flex items-center gap-2 justify-center" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>
-                  <span>{book.category}</span>
+              <div className="space-y-6">
+                <div className="text-lg font-semibold text-white mb-4 flex items-center gap-3 justify-center flex-wrap" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  <span className="bg-white/20 px-4 py-2 rounded-full">{book.category}</span>
                   {book.era && book.era[0] && (
-                    <>
-                      <span>•</span>
-                      <span>{book.era[0]}</span>
-                    </>
+                    <span className="bg-white/20 px-4 py-2 rounded-full">{book.era[0]}</span>
                   )}
                   {book.geographicFocus && book.geographicFocus[0] && (
-                    <>
-                      <span>•</span>
-                      <span>{book.geographicFocus[0]}</span>
-                    </>
+                    <span className="bg-white/20 px-4 py-2 rounded-full">{book.geographicFocus[0]}</span>
                   )}
                 </div>
-                <h1 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                
+                <h1 className="hero-section text-4xl lg:text-5xl font-extrabold mb-8 leading-tight" style={{ color: '#ffffff !important', textShadow: '0 3px 6px rgba(0, 0, 0, 0.9)' }}>
                   {book.title}
                 </h1>
-                <p className="text-lg text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto">
+                
+                <p className="hero-section text-xl lg:text-2xl mb-10 leading-relaxed max-w-4xl mx-auto" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
                   {book.description}
                 </p>
 
-                {/* Book Specifications */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-sm text-white mb-1" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>Weight</div>
-                    <div className="text-xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>{(book as any).weight || 300}g</div>
+                {/* Book Specifications - Enhanced */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                    <div className="text-lg font-semibold text-white mb-2" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>Weight</div>
+                    <div className="text-3xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>{(book as any).weight || 300}g</div>
                   </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-sm text-white mb-1" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>Published</div>
-                    <div className="text-xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>{book.publicationYear}</div>
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                    <div className="text-lg font-semibold text-white mb-2" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>Published</div>
+                    <div className="text-3xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>{book.publicationYear}</div>
                   </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-sm text-white mb-1" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>ISBN-13</div>
-                    <div className="text-sm font-semibold text-white" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>{book.isbn}</div>
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                    <div className="text-lg font-semibold text-white mb-2" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>ISBN-13</div>
+                    <div className="text-lg font-bold text-white leading-tight" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>{book.isbn}</div>
                   </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-sm text-white mb-1" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>Condition</div>
-                    <div className="text-xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 1px 2px rgba(0, 0, 0, 0.7)' }}>{book.condition}</div>
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                    <div className="text-lg font-semibold text-white mb-2" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>Condition</div>
+                    <div className="text-3xl font-bold text-white" style={{ color: '#ffffff !important', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>{book.condition}</div>
                   </div>
                 </div>
 
