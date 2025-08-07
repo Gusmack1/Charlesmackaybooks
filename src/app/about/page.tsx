@@ -195,7 +195,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-slate-800 mb-8">Biography</h2>
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-lg text-secondary mb-6 leading-relaxed">
                 Charles E. MacKay is a distinguished aviation historian based in Glasgow, Scotland, whose extensive research has transformed our understanding of Scottish aviation heritage. Over the past 25 years, his meticulous archival work has uncovered previously unknown aspects of aviation development, particularly focusing on Scottish contributions to military and civilian aircraft advancement.
               </p>
               <p className="text-lg text-secondary mb-6 leading-relaxed">

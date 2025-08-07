@@ -62,8 +62,8 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
       {/* Price Display */}
       <div className="text-center">
         <div className="text-3xl font-bold text-accent-green mb-2">£{book.price}</div>
-        <div className="text-sm text-gray-600">{book.condition} condition</div>
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-secondary">{book.condition} condition</div>
+        <div className="text-sm text-secondary">
           {book.inStock ? (
             <span className="text-accent-green font-semibold">✓ In Stock</span>
           ) : (
@@ -79,7 +79,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
             <button
               onClick={handleAddToCart}
               disabled={isAddingToCart}
-              className="block w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors disabled:opacity-50"
+              className="block w-full badge badge-green px-6 py-3 rounded-lg font-semibold transition-colors disabled:opacity-50"
             >
               {isAddingToCart ? '🔄 Adding...' : '🛒 Add to Basket'}
             </button>
@@ -89,7 +89,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleEbayClick}
-              className="block w-full bg-yellow-500 text-black text-center px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
+              className="block w-full badge badge-amber text-center px-6 py-3 rounded-lg font-semibold transition-colors"
             >
               🛒 Buy on eBay Store
             </a>
@@ -99,7 +99,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         {!book.inStock && (
           <button
             disabled
-            className="block w-full bg-gray-400 text-white px-6 py-3 rounded-lg font-semibold cursor-not-allowed"
+            className="block w-full bg-secondary text-white px-6 py-3 rounded-lg font-semibold cursor-not-allowed"
           >
             📋 Notify When Available
           </button>

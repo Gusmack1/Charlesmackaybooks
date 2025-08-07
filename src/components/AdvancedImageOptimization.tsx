@@ -88,7 +88,7 @@ export default function OptimizedImage({
 
   if (hasError) {
     return (
-      <div className={`flex items-center justify-center bg-gray-100 text-gray-500 ${className}`}>
+      <div className={`flex items-center justify-center bg-secondary text-muted ${className}`}>
         <AlertCircle className="w-6 h-6 mr-2" />
         <span>Image failed to load</span>
       </div>
@@ -99,8 +99,8 @@ export default function OptimizedImage({
     <div className={`relative overflow-hidden ${className}`}>
       {/* Loading placeholder */}
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-          <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
+        <div className="absolute inset-0 flex items-center justify-center bg-secondary">
+          <Loader2 className="w-6 h-6 animate-spin text-muted" />
         </div>
       )}
 

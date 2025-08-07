@@ -452,13 +452,13 @@ export default function ComprehensiveOptimizationSuite() {
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+        <div className="card p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              <h1 className="text-3xl font-bold text-primary mb-2">
                 Comprehensive Optimization Suite
               </h1>
-              <p className="text-gray-600">
+              <p className="text-secondary">
                 Complete website optimization according to AI prompts specifications
               </p>
             </div>
@@ -467,7 +467,7 @@ export default function ComprehensiveOptimizationSuite() {
               {comprehensiveReport && (
                 <button
                   onClick={exportReport}
-                  className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 badge badge-green rounded-lg transition-colors"
                 >
                   <Download className="w-4 h-4" />
                   Export Report
@@ -479,8 +479,8 @@ export default function ComprehensiveOptimizationSuite() {
                 disabled={isRunning}
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-colors ${
                   isRunning
-                    ? 'bg-gray-400 text-gray-700 cursor-not-allowed'
-                    : 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? 'bg-secondary text-muted cursor-not-allowed'
+                    : 'badge badge-blue'
                 }`}
               >
                 {isRunning ? (
@@ -502,14 +502,14 @@ export default function ComprehensiveOptimizationSuite() {
           {isRunning && (
             <div className="mt-6">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-secondary">
                   Overall Progress ({completedSystems}/{totalSystems} systems completed)
                 </span>
-                <span className="text-sm text-gray-600">{Math.round(overallProgress)}%</span>
+                <span className="text-sm text-secondary">{Math.round(overallProgress)}%</span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-secondary rounded-full h-2">
                 <div
-                  className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                  className="badge badge-blue h-2 rounded-full transition-all duration-300"
                   style={{ width: `${overallProgress}%` }}
                 />
               </div>
@@ -519,10 +519,10 @@ export default function ComprehensiveOptimizationSuite() {
 
         {/* Comprehensive Report */}
         {comprehensiveReport && (
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+          <div className="card p-6 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <Award className="w-6 h-6 text-yellow-500" />
-              <h2 className="text-2xl font-bold text-gray-900">Optimization Results</h2>
+                <h2 className="text-2xl font-bold text-primary">Optimization Results</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -570,36 +570,36 @@ export default function ComprehensiveOptimizationSuite() {
             {/* Detailed Metrics */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics</h3>
+                <h3 className="text-lg font-semibold text-primary mb-4">Performance Metrics</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Largest Contentful Paint</span>
-                    <span className="font-semibold text-green-600">{comprehensiveReport.performanceMetrics.lcp}s</span>
+                    <span className="text-secondary">Largest Contentful Paint</span>
+                    <span className="font-semibold text-accent-green">{comprehensiveReport.performanceMetrics.lcp}s</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">First Input Delay</span>
-                    <span className="font-semibold text-green-600">{comprehensiveReport.performanceMetrics.fid}ms</span>
+                    <span className="text-secondary">First Input Delay</span>
+                    <span className="font-semibold text-accent-green">{comprehensiveReport.performanceMetrics.fid}ms</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Cumulative Layout Shift</span>
-                    <span className="font-semibold text-green-600">{comprehensiveReport.performanceMetrics.cls}</span>
+                    <span className="text-secondary">Cumulative Layout Shift</span>
+                    <span className="font-semibold text-accent-green">{comprehensiveReport.performanceMetrics.cls}</span>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Content Metrics</h3>
+                <h3 className="text-lg font-semibold text-primary mb-4">Content Metrics</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Total Books</span>
+                    <span className="text-secondary">Total Books</span>
                     <span className="font-semibold">{comprehensiveReport.contentMetrics.totalBooks}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Blog Posts</span>
+                    <span className="text-secondary">Blog Posts</span>
                     <span className="font-semibold">{comprehensiveReport.contentMetrics.totalBlogPosts}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Avg. Reading Time</span>
+                    <span className="text-secondary">Avg. Reading Time</span>
                     <span className="font-semibold">{comprehensiveReport.contentMetrics.averageReadingTime} min</span>
                   </div>
                 </div>
@@ -613,11 +613,11 @@ export default function ComprehensiveOptimizationSuite() {
           {Object.entries(optimizationResults).map(([key, result]) => (
             <div
               key={key}
-              className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer"
+              className="card p-6 hover:shadow-md transition-shadow cursor-pointer"
               onClick={() => setSelectedSystem(selectedSystem === key ? null : key)}
             >
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">{result.system}</h3>
+                <h3 className="text-lg font-semibold text-primary">{result.system}</h3>
                 {result.status === 'completed' && (
                   <CheckCircle className="w-6 h-6 text-green-500" />
                 )}
@@ -635,15 +635,15 @@ export default function ComprehensiveOptimizationSuite() {
               {/* Progress Bar */}
               <div className="mb-4">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-gray-600">Progress</span>
+                  <span className="text-sm text-secondary">Progress</span>
                   <span className="text-sm font-medium">{Math.round(result.progress)}%</span>
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
+                <div className="w-full bg-secondary rounded-full h-2">
                   <div
                     className={`h-2 rounded-full transition-all duration-300 ${
-                      result.status === 'completed' ? 'bg-green-500' :
-                      result.status === 'running' ? 'bg-blue-500' :
-                      result.status === 'failed' ? 'bg-red-500' : 'bg-gray-300'
+                      result.status === 'completed' ? 'bg-accent-green' :
+                      result.status === 'running' ? 'bg-accent-blue' :
+                      result.status === 'failed' ? 'bg-accent-red' : 'bg-secondary'
                     }`}
                     style={{ width: `${result.progress}%` }}
                   />
@@ -654,8 +654,8 @@ export default function ComprehensiveOptimizationSuite() {
               {result.results && (
                 <div className="mb-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Optimization Score</span>
-                    <span className="text-2xl font-bold text-green-600">{result.results.score}/100</span>
+                    <span className="text-sm text-secondary">Optimization Score</span>
+                    <span className="text-2xl font-bold text-accent-green">{result.results.score}/100</span>
                   </div>
                 </div>
               )}
@@ -685,11 +685,11 @@ export default function ComprehensiveOptimizationSuite() {
                     )}
 
                     <div>
-                      <h4 className="font-semibold text-gray-700 mb-2">📊 Metrics</h4>
+                      <h4 className="font-semibold text-secondary mb-2">📊 Metrics</h4>
                       <div className="grid grid-cols-2 gap-2">
                         {Object.entries(result.results.metrics).map(([metric, value]) => (
                           <div key={metric} className="text-sm">
-                            <span className="text-gray-600 capitalize">{metric.replace(/([A-Z])/g, ' $1')}: </span>
+                            <span className="text-secondary capitalize">{metric.replace(/([A-Z])/g, ' $1')}: </span>
                             <span className="font-semibold">{value}{typeof value === 'number' && value <= 100 ? '%' : ''}</span>
                           </div>
                         ))}

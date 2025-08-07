@@ -97,7 +97,7 @@ export default function AIPromptSystemPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,13 +119,13 @@ export default function AIPromptSystemPage() {
             {tabs.map(tab => {
               const Icon = tab.icon;
               return (
-                <button
+    <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center py-4 px-1 border-b-2 font-medium text-sm ${
-                    activeTab === tab.id
-                      ? 'border-blue-500 text-blue-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+        activeTab === tab.id
+          ? 'border-accent-blue text-accent-blue'
+          : 'border-transparent text-muted hover:text-secondary hover:border-gray-300'
                   }`}
                 >
                   <Icon className="w-4 h-4 mr-2" />
@@ -142,7 +142,7 @@ export default function AIPromptSystemPage() {
         {activeTab === 'overview' && (
           <div className="space-y-8">
             {/* System Status */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
+            <div className="card p-6">
               <h2 className="text-xl font-semibold mb-4 text-primary">System Status</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {features.map(feature => {
@@ -151,7 +151,7 @@ export default function AIPromptSystemPage() {
                     <div key={feature.title} className="border rounded-lg p-4">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center">
-                          <Icon className="w-5 h-5 mr-2 text-blue-600" />
+                          <Icon className="w-5 h-5 mr-2 text-accent-blue" />
                           <h3 className="font-medium text-primary">{feature.title}</h3>
                         </div>
                         {feature.status ? (
@@ -161,7 +161,7 @@ export default function AIPromptSystemPage() {
                         )}
                       </div>
                       <p className="text-sm text-secondary mb-3">{feature.description}</p>
-                      <div className="flex justify-between text-xs text-gray-500">
+                       <div className="flex justify-between text-xs text-muted">
                         {Object.entries(feature.metrics).map(([key, value]) => (
                           <span key={key}>
                             {key}: <span className="font-medium text-green-600">{value}</span>
@@ -175,61 +175,61 @@ export default function AIPromptSystemPage() {
             </div>
 
             {/* Performance Metrics */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
+            <div className="card p-6">
               <h2 className="text-xl font-semibold mb-4 text-primary">Performance Metrics</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">{metrics.performance}</div>
+                   <div className="text-2xl font-bold text-accent-blue">{metrics.performance}</div>
                   <div className="text-sm text-secondary">Performance</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">{metrics.seo}</div>
+                   <div className="text-2xl font-bold text-accent-green">{metrics.seo}</div>
                   <div className="text-sm text-secondary">SEO</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">{metrics.accessibility}</div>
+                   <div className="text-2xl font-bold text-accent-purple">{metrics.accessibility}</div>
                   <div className="text-sm text-secondary">Accessibility</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">{metrics.bestPractices}</div>
+                   <div className="text-2xl font-bold text-accent-amber">{metrics.bestPractices}</div>
                   <div className="text-sm text-secondary">Best Practices</div>
                 </div>
               </div>
             </div>
 
             {/* Implementation Timeline */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4 text-gray-900">Implementation Timeline</h2>
+            <div className="card p-6">
+              <h2 className="text-xl font-semibold mb-4 text-primary">Implementation Timeline</h2>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <div className="font-medium text-gray-900">Phase 1: Foundation (Weeks 1-2)</div>
-                    <div className="text-sm text-gray-600">Responsive design system, base templates, image optimization</div>
+                    <div className="font-medium text-primary">Phase 1: Foundation (Weeks 1-2)</div>
+                    <div className="text-sm text-secondary">Responsive design system, base templates, image optimization</div>
                   </div>
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-accent-green" />
                 </div>
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <div className="font-medium text-gray-900">Phase 2: E-commerce Integration (Weeks 3-4)</div>
-                    <div className="text-sm text-gray-600">Shopping cart, payment processing, order management</div>
+                    <div className="font-medium text-primary">Phase 2: E-commerce Integration (Weeks 3-4)</div>
+                    <div className="text-sm text-secondary">Shopping cart, payment processing, order management</div>
                   </div>
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-accent-green" />
                 </div>
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                  <div className="w-3 h-3 bg-accent-blue rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <div className="font-medium text-gray-900">Phase 3: Content & SEO (Weeks 5-6)</div>
-                    <div className="text-sm text-gray-600">Cross-linking architecture, SEO optimization, analytics</div>
+                    <div className="font-medium text-primary">Phase 3: Content & SEO (Weeks 5-6)</div>
+                    <div className="text-sm text-secondary">Cross-linking architecture, SEO optimization, analytics</div>
                   </div>
-                  <Clock className="w-5 h-5 text-blue-500" />
+                  <Clock className="w-5 h-5 text-accent-blue" />
                 </div>
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-gray-300 rounded-full mr-3"></div>
+                  <div className="w-3 h-3 bg-secondary rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <div className="font-medium text-gray-900">Phase 4: Testing & Launch (Weeks 7-8)</div>
-                    <div className="text-sm text-gray-600">QA testing, accessibility audits, production deployment</div>
+                    <div className="font-medium text-primary">Phase 4: Testing & Launch (Weeks 7-8)</div>
+                    <div className="text-sm text-secondary">QA testing, accessibility audits, production deployment</div>
                   </div>
                   <div className="w-5 h-5"></div>
                 </div>
@@ -240,20 +240,20 @@ export default function AIPromptSystemPage() {
 
         {activeTab === 'ecommerce' && (
           <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4 text-gray-900">Advanced E-commerce Features</h2>
+            <div className="card p-6">
+              <h2 className="text-xl font-semibold mb-4 text-primary">Advanced E-commerce Features</h2>
               <div className="space-y-4">
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">Ajax Cart Updates</h3>
-                  <p className="text-sm text-gray-600">Real-time cart modifications without page reload</p>
+                  <h3 className="font-medium mb-2 text-primary">Ajax Cart Updates</h3>
+                  <p className="text-sm text-secondary">Real-time cart modifications without page reload</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">Personalization Engine</h3>
-                  <p className="text-sm text-gray-600">Track browsing history and display recently viewed books</p>
+                  <h3 className="font-medium mb-2 text-primary">Personalization Engine</h3>
+                  <p className="text-sm text-secondary">Track browsing history and display recently viewed books</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">Inventory Management</h3>
-                  <p className="text-sm text-gray-600">Real-time stock status and low stock alerts</p>
+                  <h3 className="font-medium mb-2 text-primary">Inventory Management</h3>
+                  <p className="text-sm text-secondary">Real-time stock status and low stock alerts</p>
                 </div>
               </div>
             </div>
@@ -262,20 +262,20 @@ export default function AIPromptSystemPage() {
 
         {activeTab === 'crosslinking' && (
           <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4 text-gray-900">Cross-Linking Architecture</h2>
+            <div className="card p-6">
+              <h2 className="text-xl font-semibold mb-4 text-primary">Cross-Linking Architecture</h2>
               <div className="space-y-4">
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">Topic Modeling</h3>
-                  <p className="text-sm text-gray-600">Intelligent content relationships and keyword extraction</p>
+                  <h3 className="font-medium mb-2 text-primary">Topic Modeling</h3>
+                  <p className="text-sm text-secondary">Intelligent content relationships and keyword extraction</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">Dynamic Linking</h3>
-                  <p className="text-sm text-gray-600">Automatically suggest relevant books within blog content</p>
+                  <h3 className="font-medium mb-2 text-primary">Dynamic Linking</h3>
+                  <p className="text-sm text-secondary">Automatically suggest relevant books within blog content</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">Reading Paths</h3>
-                  <p className="text-sm text-gray-600">Create guided reading sequences connecting related content</p>
+                  <h3 className="font-medium mb-2 text-primary">Reading Paths</h3>
+                  <p className="text-sm text-secondary">Create guided reading sequences connecting related content</p>
                 </div>
               </div>
             </div>
@@ -284,20 +284,20 @@ export default function AIPromptSystemPage() {
 
         {activeTab === 'images' && (
           <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4 text-gray-900">Advanced Image Optimization</h2>
+            <div className="card p-6">
+              <h2 className="text-xl font-semibold mb-4 text-primary">Advanced Image Optimization</h2>
               <div className="space-y-4">
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">WebP & AVIF Support</h3>
-                  <p className="text-sm text-gray-600">Modern image formats for faster loading</p>
+                  <h3 className="font-medium mb-2 text-primary">WebP & AVIF Support</h3>
+                  <p className="text-sm text-secondary">Modern image formats for faster loading</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">Lazy Loading</h3>
-                  <p className="text-sm text-gray-600">Intersection observer for below-fold images</p>
+                  <h3 className="font-medium mb-2 text-primary">Lazy Loading</h3>
+                  <p className="text-sm text-secondary">Intersection observer for below-fold images</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">CDN Integration</h3>
-                  <p className="text-sm text-gray-600">Global edge caching for optimal delivery</p>
+                  <h3 className="font-medium mb-2 text-primary">CDN Integration</h3>
+                  <p className="text-sm text-secondary">Global edge caching for optimal delivery</p>
                 </div>
               </div>
             </div>
@@ -306,20 +306,20 @@ export default function AIPromptSystemPage() {
 
         {activeTab === 'performance' && (
           <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4 text-gray-900">Performance Monitoring</h2>
+            <div className="card p-6">
+              <h2 className="text-xl font-semibold mb-4 text-primary">Performance Monitoring</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">LCP: 1.8s</h3>
-                  <p className="text-sm text-green-600">Good</p>
+                   <h3 className="font-medium mb-2 text-primary">LCP: 1.8s</h3>
+                   <p className="text-sm text-accent-green">Good</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">FID: 85ms</h3>
-                  <p className="text-sm text-green-600">Good</p>
+                   <h3 className="font-medium mb-2 text-primary">FID: 85ms</h3>
+                   <p className="text-sm text-accent-green">Good</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-medium mb-2 text-gray-900">CLS: 0.05</h3>
-                  <p className="text-sm text-green-600">Good</p>
+                   <h3 className="font-medium mb-2 text-primary">CLS: 0.05</h3>
+                   <p className="text-sm text-accent-green">Good</p>
                 </div>
               </div>
             </div>
@@ -329,14 +329,14 @@ export default function AIPromptSystemPage() {
         {activeTab === 'analytics' && (
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h2 className="text-xl font-semibold mb-4 text-gray-900">Analytics Dashboard</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Analytics Dashboard</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <div className="flex items-center">
                     <Activity className="w-8 h-8 text-blue-600 mr-3" />
                     <div>
-                      <div className="text-2xl font-bold text-blue-600">95%</div>
-                      <div className="text-sm text-blue-600">Performance Score</div>
+                  <div className="text-2xl font-bold text-accent-blue">95%</div>
+                  <div className="text-sm text-accent-blue">Performance Score</div>
                     </div>
                   </div>
                 </div>
@@ -344,8 +344,8 @@ export default function AIPromptSystemPage() {
                   <div className="flex items-center">
                     <TrendingUp className="w-8 h-8 text-green-600 mr-3" />
                     <div>
-                      <div className="text-2xl font-bold text-green-600">98%</div>
-                      <div className="text-sm text-green-600">SEO Score</div>
+                  <div className="text-2xl font-bold text-accent-green">98%</div>
+                  <div className="text-sm text-accent-green">SEO Score</div>
                     </div>
                   </div>
                 </div>
@@ -353,8 +353,8 @@ export default function AIPromptSystemPage() {
                   <div className="flex items-center">
                     <Users className="w-8 h-8 text-purple-600 mr-3" />
                     <div>
-                      <div className="text-2xl font-bold text-purple-600">92%</div>
-                      <div className="text-sm text-purple-600">Accessibility</div>
+                  <div className="text-2xl font-bold text-accent-purple">92%</div>
+                  <div className="text-sm text-accent-purple">Accessibility</div>
                     </div>
                   </div>
                 </div>
@@ -362,8 +362,8 @@ export default function AIPromptSystemPage() {
                   <div className="flex items-center">
                     <Target className="w-8 h-8 text-orange-600 mr-3" />
                     <div>
-                      <div className="text-2xl font-bold text-orange-600">96%</div>
-                      <div className="text-sm text-orange-600">Best Practices</div>
+                  <div className="text-2xl font-bold text-accent-amber">96%</div>
+                  <div className="text-sm text-accent-amber">Best Practices</div>
                     </div>
                   </div>
                 </div>

@@ -199,7 +199,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
       {/* Basic Filters */}
       <div className="grid md:grid-cols-4 gap-4 mb-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+          <label className="block text-sm font-medium text-secondary mb-2">Category</label>
           <select
             value={filters.category || ''}
             onChange={(e) => updateFilters({ category: e.target.value })}
@@ -213,7 +213,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Reading Level</label>
+          <label className="block text-sm font-medium text-secondary mb-2">Reading Level</label>
           <select
             value={filters.difficulty || ''}
             onChange={(e) => updateFilters({ difficulty: e.target.value })}
@@ -227,7 +227,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-secondary mb-2">
             Price Range: £{filters.priceRange?.[0]} - £{filters.priceRange?.[1]}
           </label>
           <div className="flex items-center space-x-2">
@@ -257,7 +257,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
         </div>
 
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-700">Book Features</label>
+          <label className="block text-sm font-medium text-secondary">Book Features</label>
           <label className="flex items-center">
             <input
               type="checkbox"
@@ -293,7 +293,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
         <div className="space-y-6 border-t pt-6">
           {/* Historical Era */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-3">Historical Period</label>
+            <label className="block text-sm font-medium text-secondary mb-3">Historical Period</label>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {eras.map(era => (
                 <label key={era} className="flex items-center">
@@ -311,7 +311,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
 
           {/* Geographic Focus */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-3">Geographic Region</label>
+            <label className="block text-sm font-medium text-secondary mb-3">Geographic Region</label>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {geographicFocus.map(geo => (
                 <label key={geo} className="flex items-center">
@@ -330,7 +330,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
           {/* Aircraft Types (if available) */}
           {aircraftTypes.length > 0 && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-3">Aircraft Types</label>
+              <label className="block text-sm font-medium text-secondary mb-3">Aircraft Types</label>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                 {aircraftTypes.slice(0, 12).map(type => ( // Limit to prevent overcrowding
                   <label key={type} className="flex items-center">
@@ -351,7 +351,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
           <div className="flex justify-center">
             <button
               onClick={clearFilters}
-              className="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+              className="badge badge-gray px-6 py-2 rounded-lg transition-colors"
             >
               Clear All Filters
             </button>

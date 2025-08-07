@@ -168,7 +168,7 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
@@ -198,22 +198,22 @@ export default function CheckoutPage() {
           {/* Progress Bar */}
           <div className="mb-8">
             <div className="flex items-center justify-center space-x-4">
-              <div className={`flex items-center ${step === 'basket' ? 'text-blue-600' : step === 'address' || step === 'review' ? 'text-green-600' : 'text-gray-400'}`}>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'basket' ? 'bg-blue-600 text-white' : step === 'address' || step === 'review' ? 'bg-green-600 text-white' : 'bg-gray-300'}`}>
+              <div className={`flex items-center ${step === 'basket' ? 'text-accent-blue' : step === 'address' || step === 'review' ? 'text-accent-green' : 'text-muted'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'basket' ? 'bg-accent-blue text-white' : step === 'address' || step === 'review' ? 'bg-accent-green text-white' : 'bg-secondary'}`}>
                   1
                 </div>
                 <span className="ml-2 font-medium">Basket</span>
               </div>
-              <div className="w-16 h-0.5 bg-gray-300"></div>
-              <div className={`flex items-center ${step === 'address' ? 'text-blue-600' : step === 'review' ? 'text-green-600' : 'text-gray-400'}`}>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'address' ? 'bg-blue-600 text-white' : step === 'review' ? 'bg-green-600 text-white' : 'bg-gray-300'}`}>
+              <div className="w-16 h-0.5 bg-secondary"></div>
+              <div className={`flex items-center ${step === 'address' ? 'text-accent-blue' : step === 'review' ? 'text-accent-green' : 'text-muted'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'address' ? 'bg-accent-blue text-white' : step === 'review' ? 'bg-accent-green text-white' : 'bg-secondary'}`}>
                   2
                 </div>
                 <span className="ml-2 font-medium">Address</span>
               </div>
-              <div className="w-16 h-0.5 bg-gray-300"></div>
-              <div className={`flex items-center ${step === 'review' ? 'text-blue-600' : 'text-gray-400'}`}>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'review' ? 'bg-blue-600 text-white' : 'bg-gray-300'}`}>
+              <div className="w-16 h-0.5 bg-secondary"></div>
+              <div className={`flex items-center ${step === 'review' ? 'text-accent-blue' : 'text-muted'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'review' ? 'bg-accent-blue text-white' : 'bg-secondary'}`}>
                   3
                 </div>
                 <span className="ml-2 font-medium">Payment</span>
@@ -250,14 +250,14 @@ export default function CheckoutPage() {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => updateQuantity(item.book.id, item.quantity - 1)}
-                            className="w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300"
+                            className="w-8 h-8 flex items-center justify-center bg-secondary rounded-full hover:bg-gray-300"
                           >
                             -
                           </button>
                           <span className="w-8 text-center text-sm text-primary">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
-                            className="w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300"
+                            className="w-8 h-8 flex items-center justify-center bg-secondary rounded-full hover:bg-gray-300"
                           >
                             +
                           </button>
@@ -311,7 +311,7 @@ export default function CheckoutPage() {
                 <h2 className="text-lg font-semibold mb-4 text-primary">Shipping Address</h2>
 
                 {errors.length > 0 && (
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                  <div className="card-compact bg-accent-red text-white rounded-lg p-4 mb-6">
                     <h3 className="font-semibold text-red-800 mb-2">Please correct the following errors:</h3>
                     <ul className="list-disc list-inside text-red-700 text-sm">
                       {errors.map((error, index) => (
@@ -452,7 +452,7 @@ export default function CheckoutPage() {
                     </select>
                   </div>
 
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div className="card-compact bg-accent-blue text-white rounded-lg p-4">
                     <div className="text-sm">
                       <div className="font-semibold text-blue-800 mb-2">📦 FREE Shipping Worldwide</div>
                       <div className="space-y-1">
@@ -482,7 +482,7 @@ export default function CheckoutPage() {
                     <button
                       type="button"
                       onClick={() => setStep('basket')}
-                      className="flex-1 bg-gray-200 text-secondary py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm"
+                      className="flex-1 bg-secondary text-secondary py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm"
                     >
                       Back to Basket
                     </button>
@@ -556,7 +556,7 @@ export default function CheckoutPage() {
                 <div className="flex gap-4">
                   <button
                     onClick={() => setStep('address')}
-                    className="flex-1 bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors"
+                    className="flex-1 bg-secondary text-secondary py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors"
                   >
                     Back
                   </button>

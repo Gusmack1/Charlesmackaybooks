@@ -380,7 +380,7 @@ export default function BlogPage() {
         {/* Blog Categories */}
         {Object.entries(blogCategories).map(([category, posts]) => (
           <section key={category} className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">
+            <h2 className="text-2xl font-bold text-primary mb-8">
               {category}
             </h2>
 

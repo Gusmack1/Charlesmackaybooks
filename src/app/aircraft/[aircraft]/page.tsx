@@ -99,7 +99,7 @@ export default async function AircraftPage({ params }: { params: Promise<{ aircr
   ].filter(post => post.aircraft === aircraft)
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16">
         <div className="container mx-auto px-4">
@@ -129,11 +129,11 @@ export default async function AircraftPage({ params }: { params: Promise<{ aircr
       <section className="bg-white border-b py-4">
         <div className="container mx-auto px-4">
           <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-blue-600 hover:text-blue-800">Home</Link>
+            <Link href="/" className="text-accent-blue hover:text-blue-800">Home</Link>
             <span className="text-gray-400">/</span>
-            <Link href="/aircraft" className="text-blue-600 hover:text-blue-800">Aircraft</Link>
+            <Link href="/aircraft" className="text-accent-blue hover:text-blue-800">Aircraft</Link>
             <span className="text-gray-400">/</span>
-            <span className="text-gray-600">{aircraftData.name}</span>
+            <span className="text-secondary">{aircraftData.name}</span>
           </nav>
         </div>
       </section>
@@ -144,16 +144,16 @@ export default async function AircraftPage({ params }: { params: Promise<{ aircr
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Content */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-slate-800 mb-6">Aircraft Overview</h2>
-                <p className="text-gray-700 leading-relaxed mb-6">
+              <div className="card p-8">
+                <h2 className="text-2xl font-bold text-primary mb-6">Aircraft Overview</h2>
+                <p className="text-secondary leading-relaxed mb-6">
                   The {aircraftData.name} represents a significant chapter in aviation history. 
                   {aircraftData.description} This aircraft played a crucial role during {aircraftData.period} 
                   and contributed to the evolution of {aircraftData.category.toLowerCase()} design and tactics.
                 </p>
                 
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">Historical Significance</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
+                <h3 className="text-xl font-semibold text-primary mb-4">Historical Significance</h3>
+                <p className="text-secondary leading-relaxed mb-6">
                   Aviation historian Charles E. MacKay has extensively researched the {aircraftData.name} 
                   and its impact on military aviation development. Through meticulous analysis of 
                   archival documents, technical specifications, and operational records, this research 
@@ -166,13 +166,13 @@ export default async function AircraftPage({ params }: { params: Promise<{ aircr
                     <h3 className="text-xl font-semibold text-slate-800 mb-4">Expert Analysis</h3>
                     <div className="space-y-4">
                       {relatedBlogPosts.map((post) => (
-                        <div key={post.slug} className="border border-gray-200 rounded-lg p-4">
+                      <div key={post.slug} className="card p-4">
                           <h4 className="font-semibold text-lg mb-2">
-                            <Link href={`/blog/${post.slug}`} className="text-blue-600 hover:text-blue-800">
+                          <Link href={`/blog/${post.slug}`} className="text-accent-blue hover:text-blue-800">
                               {post.title}
                             </Link>
                           </h4>
-                          <p className="text-gray-600 text-sm">
+                        <p className="text-secondary text-sm">
                             Expert insights and historical analysis by Charles E. MacKay
                           </p>
                         </div>
@@ -187,20 +187,20 @@ export default async function AircraftPage({ params }: { params: Promise<{ aircr
             <div className="lg:col-span-1">
               {/* Related Books */}
               {relatedBooks.length > 0 && (
-                <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <div className="card p-6 mb-6">
                   <h3 className="font-semibold text-lg mb-4">Related Books</h3>
                   <div className="space-y-4">
                     {relatedBooks.map((book) => (
                       <div key={book.id} className="border-b border-gray-200 pb-4 last:border-b-0">
                         <h4 className="font-semibold text-sm mb-1">
-                          <Link href={`/books/${book.id}`} className="text-blue-600 hover:text-blue-800">
+                          <Link href={`/books/${book.id}`} className="text-accent-blue hover:text-blue-800">
                             {book.title}
                           </Link>
                         </h4>
-                        <p className="text-gray-600 text-xs mb-2">{book.description}</p>
+                        <p className="text-secondary text-xs mb-2">{book.description}</p>
                         <div className="flex justify-between items-center text-xs">
-                          <span className="text-gray-500">{book.category}</span>
-                          <span className="font-semibold text-green-600">£{book.price}</span>
+                          <span className="text-muted">{book.category}</span>
+                          <span className="font-semibold text-accent-green">£{book.price}</span>
                         </div>
                       </div>
                     ))}
@@ -209,20 +209,20 @@ export default async function AircraftPage({ params }: { params: Promise<{ aircr
               )}
 
               {/* Quick Facts */}
-              <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="card p-6">
                 <h3 className="font-semibold text-lg mb-4">Quick Facts</h3>
                 <div className="space-y-3 text-sm">
                   <div>
-                    <span className="font-medium text-gray-700">Aircraft Type:</span>
-                    <span className="ml-2 text-gray-600">{aircraftData.category}</span>
+                    <span className="font-medium text-secondary">Aircraft Type:</span>
+                    <span className="ml-2 text-secondary">{aircraftData.category}</span>
                   </div>
                   <div>
-                    <span className="font-medium text-gray-700">Service Period:</span>
-                    <span className="ml-2 text-gray-600">{aircraftData.period}</span>
+                    <span className="font-medium text-secondary">Service Period:</span>
+                    <span className="ml-2 text-secondary">{aircraftData.period}</span>
                   </div>
                   <div>
-                    <span className="font-medium text-gray-700">Research Level:</span>
-                    <span className="ml-2 text-gray-600">Academic</span>
+                    <span className="font-medium text-secondary">Research Level:</span>
+                    <span className="ml-2 text-secondary">Academic</span>
                   </div>
                 </div>
               </div>

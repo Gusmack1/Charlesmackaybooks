@@ -161,7 +161,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                 </div>
               </div>
 
-              <p className="text-lg text-gray-700 leading-relaxed">{blog.excerpt}</p>
+              <p className="text-lg text-secondary leading-relaxed">{blog.excerpt}</p>
             </div>
 
             {/* Featured Image */}
@@ -176,7 +176,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                 />
               </div>
               {blog.featuredImage.caption && (
-                <p className="text-sm text-gray-600 mt-2 italic text-center">
+                <p className="text-sm text-secondary mt-2 italic text-center">
                   {blog.featuredImage.caption}
                 </p>
               )}
@@ -184,9 +184,9 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
 
             {/* Related Books Promotion - Early Placement */}
             {relatedBooks.length > 0 && (
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
-                <h3 className="text-xl font-semibold text-green-800 mb-4">📚 Learn More in Our Books</h3>
-                <p className="text-green-700 mb-4">
+              <div className="card-compact bg-accent-green text-white rounded-lg p-6 mb-8">
+                <h3 className="text-xl font-semibold text-white mb-4">📚 Learn More in Our Books</h3>
+                <p className="text-white mb-4">
                   This analysis is based on extensive research featured in Charles E. MacKay's authoritative books:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -203,7 +203,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                         />
                         <div className="flex-1">
                           <h4 className="font-semibold text-accent-blue mb-2">{book.title}</h4>
-                          <p className="text-sm text-gray-600 mb-2">{book.relevantContent}</p>
+                                                      <p className="text-sm text-secondary mb-2">{book.relevantContent}</p>
                                                       <div className="text-accent-green font-semibold">£{book.price} - Order Now →</div>
                         </div>
                       </div>
@@ -216,23 +216,23 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
             {/* Article Content */}
             <div className="prose prose-lg max-w-none mb-8">
               <div 
-                className="text-gray-800 leading-relaxed space-y-6"
+                className="text-primary leading-relaxed space-y-6"
                 dangerouslySetInnerHTML={{ __html: blog.content }}
               />
             </div>
 
             {/* Author Bio */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-              <h3 className="text-xl font-semibold text-blue-800 mb-4">👨‍🎓 About the Author</h3>
+            <div className="card-compact bg-accent-blue text-white rounded-lg p-6 mb-8">
+              <h3 className="text-xl font-semibold text-white mb-4">👨‍🎓 About the Author</h3>
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                  <div className="w-16 h-16 bg-accent-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
                     {blog.author.name.split(' ').map(n => n[0]).join('')}
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-semibold text-blue-800 mb-2">{blog.author.name}</h4>
-                  <p className="text-blue-700 mb-3">{blog.author.bio}</p>
+                  <h4 className="font-semibold text-white mb-2">{blog.author.name}</h4>
+                  <p className="text-white/90 mb-3">{blog.author bio}</p>
                   <div className="space-y-1">
                     {blog.author.credentials.map((credential, index) => (
                       <div key={index} className="flex items-center text-sm text-accent-blue">
@@ -247,7 +247,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
 
             {/* Tags */}
             <div className="mb-8">
-              <h4 className="font-semibold text-gray-900 mb-3">🏷️ Topics Covered</h4>
+                              <h4 className="font-semibold text-primary mb-3">🏷️ Topics Covered</h4>
               <div className="flex flex-wrap gap-2">
                 {blog.tags.map((tag) => (
                                           <span key={tag} className="badge badge-gray px-3 py-1 rounded-full text-sm">
@@ -260,7 +260,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
             {/* Related Posts */}
             {relatedPosts.length > 0 && (
               <div className="card-compact rounded-lg p-6 mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">📖 Related Articles</h3>
+                <h3 className="text-xl font-semibold text-primary mb-4">📖 Related Articles</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {relatedPosts.map((post) => (
                     <Link key={post.slug} href={`/blog/${post.slug}`}
@@ -274,8 +274,8 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                           className="rounded object-cover flex-shrink-0"
                         />
                         <div className="flex-1">
-                          <h4 className="font-semibold text-gray-900 mb-2 line-clamp-2">{post.title}</h4>
-                          <p className="text-sm text-gray-600 mb-2 line-clamp-2">{post.excerpt}</p>
+                                                      <h4 className="font-semibold text-primary mb-2 line-clamp-2">{post.title}</h4>
+                            <p className="text-sm text-secondary mb-2 line-clamp-2">{post.excerpt}</p>
                           <div className="text-xs text-accent-blue font-medium">
                             📖 {post.readTime} read →
                           </div>
@@ -305,7 +305,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
               🐦
             </a>
             <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
-               className="text-blue-800 hover:text-blue-900 text-xl min-h-[44px] min-w-[44px] flex items-center justify-center" 
+               className="text-accent-blue hover:text-blue-900 text-xl min-h-[44px] min-w-[44px] flex items-center justify-center" 
                aria-label="Share on LinkedIn">
               💼
             </a>
@@ -314,32 +314,32 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
       </div>
 
       {/* Bottom Social Sharing */}
-      <div className="bg-gray-800 text-white py-12">
+      <div className="bg-slate-900 text-white py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h3 className="text-2xl font-semibold mb-6">📢 Enjoyed this analysis? Share it!</h3>
           <div className="flex justify-center gap-4 flex-wrap mb-6">
             <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
-               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+               className="badge badge-blue px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
               📘 Share on Facebook
             </a>
             <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
-               className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+               className="badge badge-blue px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
               🐦 Share on Twitter
             </a>
             <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
-               className="bg-blue-800 hover:bg-blue-900 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+               className="badge badge-blue px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
               💼 Share on LinkedIn
             </a>
             <a href={socialShares.pinterest} target="_blank" rel="noopener noreferrer"
-               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+               className="badge badge-red px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
               📌 Share on Pinterest
             </a>
             <a href={socialShares.email}
-               className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
+               className="badge badge-gray px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
               ✉️ Share via Email
             </a>
           </div>
-          <p className="text-gray-300 text-sm">
+          <p className="text-white/70 text-sm">
             Help us reach more aviation enthusiasts by sharing this expert analysis!
           </p>
         </div>

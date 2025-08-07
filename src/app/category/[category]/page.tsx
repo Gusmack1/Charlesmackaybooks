@@ -98,9 +98,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       <section className="bg-white border-b py-4">
         <div className="container mx-auto px-4">
           <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-blue-600 hover:text-blue-800">Home</Link>
+            <Link href="/" className="text-accent-blue hover:text-blue-800">Home</Link>
             <span className="text-gray-400">/</span>
-            <Link href="/books" className="text-blue-600 hover:text-blue-800">Books</Link>
+            <Link href="/books" className="text-accent-blue hover:text-blue-800">Books</Link>
             <span className="text-gray-400">/</span>
             <span className="text-secondary">{categoryName}</span>
           </nav>
@@ -134,7 +134,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       </section>
 
       {/* Related Categories */}
-      <section className="bg-gray-100 py-12">
+      <section className="bg-white py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Explore Other Categories</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
