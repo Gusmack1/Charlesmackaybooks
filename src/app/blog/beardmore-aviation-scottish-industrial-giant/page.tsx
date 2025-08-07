@@ -41,7 +41,7 @@ const post = {
     <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
 
     <div class="my-8">
-      <img src="/blog-images/beardmore-aviation-factory.jpg" alt="Beardmore aviation factory" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/beardmore-aviation-factory.jpg" alt="Beardmore aviation factory" class="w-full h-auto rounded-lg" onerror="this.onerror=null;this.src='/book-covers/beardmore-aviation.jpg'"/>
       <p class="text-sm mt-2 text-center italic">Beardmore aviation factory, showing the scale of Scottish industrial aviation manufacturing.</p>
     </div>
 
@@ -55,8 +55,8 @@ const post = {
     <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
 
     <div class="my-8">
-      <img src="/blog-images/beardmore-factory-worker-manufacturing.jpg" alt="Beardmore factory worker manufacturing" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Beardmore factory workers demonstrating the precision manufacturing techniques that made Scottish aviation famous.</p>
+      <img src="/blog-images/beardmore-factory-worker-manufacturing.jpg" alt="Beardmore factory worker manufacturing" class="w-full h-auto rounded-lg" onerror="this.onerror=null;this.src='/book-covers/beardmore-aviation.jpg'"/>
+      <p class="text-sm mt-2 text-center italic">Beardmore factory workers demonstrating the precision manufacturing techniques that made Scottish aviation famous.</p>
     </div>
 
     <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
@@ -80,8 +80,8 @@ const post = {
     <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
 
     <div class="my-8">
-      <img src="/blog-images/beardmore-william-royal-visit.jpg" alt="Beardmore William Royal visit" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm text-gray-600 mt-2 text-center italic">Royal visit to Beardmore facilities, highlighting the importance of Scottish aviation manufacturing to the British war effort.</p>
+      <img src="/blog-images/beardmore-william-royal-visit.jpg" alt="Beardmore William Royal visit" class="w-full h-auto rounded-lg" onerror="this.onerror=null;this.src='/book-covers/beardmore-aviation.jpg'"/>
+      <p class="text-sm mt-2 text-center italic">Royal visit to Beardmore facilities, highlighting the importance of Scottish aviation manufacturing to the British war effort.</p>
     </div>
 
     <h2 id="operational-history">Operational History and Performance</h2>
@@ -138,9 +138,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/beardmore-aviation-scottish-industrial-giant.jpg',
-    alt: 'William Beardmore & Company: Scottish Aviation Pioneer',
-    caption: 'William Beardmore & Company: Scottish Aviation Pioneer - Expert analysis by Charles E. MacKay'
+  url: '/book-covers/beardmore-aviation.jpg',
+  alt: 'William Beardmore & Company: Scottish Aviation Pioneer',
+  caption: 'William Beardmore & Company: Scottish Aviation Pioneer - Expert analysis by Charles E. MacKay'
   },
   category: 'Scottish Aviation',
   tags: ["Beardmore","Scottish Aviation","Industrial History","Manufacturing","WWI"],
