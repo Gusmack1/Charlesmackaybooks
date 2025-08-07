@@ -318,7 +318,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
       <div className="min-h-screen bg-white">
 
-        {/* Hero Section - Completely Overhauled */}
+        {/* Hero Section - refined for clarity and unique per-book presentation */}
         <div className={`hero-section relative bg-gradient-to-br ${gradientClass} text-white py-16 lg:py-24`}>
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -334,30 +334,28 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                     className="rounded-xl shadow-2xl"
                     priority
                   />
-                  <div className="absolute -bottom-6 -right-6 badge badge-amber text-white px-6 py-3 rounded-xl font-bold text-2xl shadow-xl">
-                    £{book.price}
-                  </div>
                 </div>
               </div>
 
               {/* Book Details */}
               <div className="space-y-6">
-                <div className="text-lg font-semibold text-white mb-4 flex items-center gap-3 justify-center flex-wrap">
-                  <span className="bg-white/20 px-4 py-2 rounded-full">{book.category}</span>
+                <div className="text-sm font-semibold text-white mb-4 flex items-center gap-3 justify-center flex-wrap">
+                  <span className="badge badge-blue">{book.category}</span>
                   {book.era && book.era[0] && (
-                    <span className="bg-white/20 px-4 py-2 rounded-full">{book.era[0]}</span>
+                    <span className="badge badge-amber">{book.era[0]}</span>
                   )}
                   {book.geographicFocus && book.geographicFocus[0] && (
-                    <span className="bg-white/20 px-4 py-2 rounded-full">{book.geographicFocus[0]}</span>
+                    <span className="badge badge-green">{book.geographicFocus[0]}</span>
                   )}
+                  {book.isbn && <span className="badge badge-gray">ISBN: {book.isbn}</span>}
                 </div>
-                
-                <h1 className="hero-section text-4xl lg:text-5xl font-extrabold mb-8 leading-tight text-white">
+
+                <h1 className="text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
                   {book.title}
                 </h1>
                 
-                <p className="hero-section text-xl lg:text-2xl mb-10 leading-relaxed max-w-4xl mx-auto text-white">
-                  {book.description}
+                <p className="text-xl lg:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">
+                  {book.subtitle || (book.description?.length > 220 ? `${book.description.slice(0, 220)}…` : book.description)}
                 </p>
 
                 {/* Book Specifications - Enhanced */}
@@ -380,14 +378,12 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   </div>
                 </div>
 
-                {/* Purchase Options */}
+                {/* Purchase CTA */}
                 <div className="space-y-4 max-w-2xl mx-auto">
                   <BookDetailClient book={book} />
-                  <div className="text-center mt-6">
-                    <Link
-                      href="/books"
-                      className="text-white underline hover:text-gray-200"
-                    >
+                  <div className="text-center mt-2 text-white/90 text-sm">FREE worldwide shipping • Secure PayPal checkout</div>
+                  <div className="text-center mt-4">
+                    <Link href="/books" className="badge badge-white text-accent-blue">
                       ← Browse All Aviation Books
                     </Link>
                   </div>
