@@ -18,6 +18,13 @@ export default function UnifiedSchema({
 
   const baseUrl = 'https://charlesmackaybooks.com';
   const fullUrl = pageUrl ? `${baseUrl}${pageUrl}` : baseUrl;
+  const absoluteImage = (img?: string) => {
+    if (!img) return undefined as unknown as string;
+    if (img.startsWith('http')) return img;
+    // Ensure leading slash
+    const path = img.startsWith('/') ? img : `/${img}`;
+    return `${baseUrl}${path}`;
+  };
 
   // Single comprehensive schema covering all requirements
   const unifiedSchema = {
@@ -135,12 +142,13 @@ export default function UnifiedSchema({
 
   // Add book-specific schema only when needed
   if (pageType === 'book-detail' && bookData) {
+    // Book as Product (for offers/pricing)
     (unifiedSchema["@graph"] as any[]).push({
       "@type": "Product",
       "@id": `${baseUrl}/books/${bookData.id}#product`,
       "name": bookData.title,
       "description": bookData.description,
-      "image": `${baseUrl}/book-covers/${bookData.id}.jpg`,
+      "image": absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`),
       "brand": {
         "@type": "Brand",
         "name": "Charles E. MacKay Aviation Books"
@@ -171,13 +179,14 @@ export default function UnifiedSchema({
           "@type": "OfferShippingDetails",
           "shippingRate": {
             "@type": "MonetaryAmount",
-            "value": "3.45",
+            "value": "0.00",
             "currency": "GBP"
           },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": "GB"
-          }
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" }
+          },
+          "shippingLabel": "Free worldwide shipping"
         }
       },
       "aggregateRating": {
@@ -202,6 +211,32 @@ export default function UnifiedSchema({
         }
       ]
     });
+
+    // Explicit Book schema
+    (unifiedSchema["@graph"] as any[]).push({
+      "@type": "Book",
+      "@id": `${baseUrl}/books/${bookData.id}#book`,
+      "name": bookData.title,
+      "description": bookData.description,
+      "image": absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`),
+      "isbn": bookData.isbn,
+      "author": { "@id": `${baseUrl}/#person` },
+      "publisher": { "@id": `${baseUrl}/#organization` },
+      "inLanguage": "en-GB",
+      "workExample": {
+        "@type": "Book",
+        "bookFormat": "https://schema.org/Paperback",
+        "isbn": bookData.isbn
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": `${baseUrl}/books/${bookData.id}`,
+        "price": bookData.price.toFixed(2),
+        "priceCurrency": "GBP",
+        "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition"
+      }
+    });
   }
 
   // Add ItemList for books collection pages
@@ -220,7 +255,7 @@ export default function UnifiedSchema({
           "@id": `${baseUrl}/books/${book.id}#product`,
           "name": book.title,
           "description": book.description,
-          "image": `${baseUrl}/book-covers/${book.id}.jpg`,
+          "image": absoluteImage(book.imageUrl || `/book-covers/${book.id}.jpg`),
           "url": `${baseUrl}/books/${book.id}`,
           "isbn": book.isbn,
           "sku": book.isbn || book.id,
