@@ -79,7 +79,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
             <button
               onClick={handleAddToCart}
               disabled={isAddingToCart}
-              className="block w-full badge badge-green px-6 py-3 rounded-lg font-semibold transition-colors disabled:opacity-50"
+              className="block w-full badge badge-green px-8 py-4 rounded-xl font-semibold text-lg transition-colors disabled:opacity-50"
             >
               {isAddingToCart ? '🔄 Adding...' : '🛒 Add to Basket'}
             </button>
@@ -89,7 +89,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleEbayClick}
-              className="block w-full badge badge-amber text-center px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="block w-full badge badge-amber text-center px-8 py-4 rounded-xl font-semibold text-lg transition-colors"
             >
               🛒 Buy on eBay Store
             </a>
@@ -99,7 +99,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         {!book.inStock && (
           <button
             disabled
-            className="block w-full bg-secondary text-white px-6 py-3 rounded-lg font-semibold cursor-not-allowed"
+            className="block w-full bg-secondary text-white px-8 py-4 rounded-xl font-semibold text-lg cursor-not-allowed"
           >
             📋 Notify When Available
           </button>

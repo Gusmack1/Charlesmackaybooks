@@ -2,19 +2,15 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import path from 'path';
+import { promises as fs } from 'fs';
 import { books } from '@/data/books';
 import { Book } from '@/types/book';
 import BookDetailClient from '@/components/BookDetailClient';
 import MobileBuyBar from '@/components/MobileBuyBar';
-import SamplePages from '@/components/SamplePages';
-import BookFAQ from '@/components/BookFAQ';
 import UnifiedSchema from '@/components/UnifiedSchema';
-import BookSEOContent from '@/components/BookSEOContent';
-import BookDetailNavigation from '@/components/BookDetailNavigation';
-import RelatedBooks from '@/components/RelatedBooks';
 import MobileFooterNav from '@/components/MobileFooterNav';
 import BookAnalytics from '@/components/BookAnalytics';
-import BundleOffers from '@/components/BundleOffers';
 
 
 // Simplified category gradient function - only used for hero backgrounds
@@ -308,6 +304,41 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   // Get proper book cover image path - use book.imageUrl with fallback
   const bookCoverSrc = book.imageUrl || `/book-covers/${book.id}.jpg`;
 
+  // Parse Bookinfo.txt to extract authoritative descriptions and weights
+  const bookInfoPath = path.join(process.cwd(), 'Bookinfo.txt');
+  let fileText = '';
+  try {
+    fileText = await fs.readFile(bookInfoPath, 'utf8');
+  } catch {}
+
+  const parseEntries = (text: string) => {
+    const sections = text.split(/\*{10,}/g).map(s => s.trim()).filter(Boolean);
+    return sections.map(section => {
+      const lines = section.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
+      const titleLine = lines[0] || '';
+      const isbnMatch = section.match(/ISBN\s*[:]?\s*([0-9Xx\-]+)/);
+      const weightMatch = section.match(/(\d{2,4})\s*(?:gms|g)\b/i);
+      // Description: all lines after price/ISBN header block
+      // Find first blank line after first 2-3 lines, or fallback to remaining text
+      const body = lines.slice(1).join('\n');
+      return {
+        title: titleLine.replace(/\s+\.+$/, '').trim(),
+        isbn: isbnMatch ? isbnMatch[1].replace(/[^0-9Xx]/g, '') : '',
+        weightGrams: weightMatch ? parseInt(weightMatch[1], 10) : undefined,
+        description: body
+      };
+    });
+  };
+
+  const entries = fileText ? parseEntries(fileText) : [];
+  const normaliseIsbn = (s?: string) => (s ? s.replace(/[^0-9Xx]/g, '') : '');
+  const byIsbn = entries.find(e => e.isbn && e.isbn === normaliseIsbn(book.isbn));
+  const byTitle = entries.find(e => e.title.toLowerCase().includes(book.title.toLowerCase()) || book.title.toLowerCase().includes(e.title.toLowerCase()));
+  const info = byIsbn || byTitle;
+
+  const descriptionFromInfo = info?.description || book.description;
+  const weightFromInfo = info?.weightGrams;
+
   return (
     <>
       <UnifiedSchema
@@ -320,7 +351,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
       <BookAnalytics book={book} />
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-background">
 
         {/* Hero Section - refined for clarity and unique per-book presentation */}
         <div className={`hero-section relative bg-gradient-to-br ${gradientClass} text-white py-16 lg:py-24`}>
@@ -359,14 +390,14 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 </h1>
                 
                 <p className="text-xl lg:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">
-                  {book.subtitle || (book.description?.length > 220 ? `${book.description.slice(0, 220)}…` : book.description)}
+                  {(descriptionFromInfo?.length > 220 ? `${descriptionFromInfo.slice(0, 220)}…` : descriptionFromInfo)}
                 </p>
 
                 {/* Book Specifications - Enhanced */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                    <div className="text-lg font-semibold text-white mb-2">Weight</div>
-                    <div className="text-3xl font-bold text-white">{(book as any).weight || 300}g</div>
+                  <div className="text-lg font-semibold text-white mb-2">Weight</div>
+                    <div className="text-3xl font-bold text-white">{weightFromInfo || (book as any).weight || 300}g</div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                     <div className="text-lg font-semibold text-white mb-2">Published</div>
@@ -382,12 +413,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   </div>
                 </div>
 
-                {/* Purchase CTA */}
+                {/* Purchase Options */}
                 <div className="space-y-4 max-w-2xl mx-auto">
                   <BookDetailClient book={book} />
-                  <div className="text-center mt-2 text-white/90 text-sm">FREE worldwide shipping • Secure PayPal checkout</div>
-                  <div className="text-center mt-4">
-                    <Link href="/books" className="badge badge-white text-accent-blue">
+                  <div className="text-center mt-6">
+                    <Link href="/books" className="text-accent-blue hover:text-accent-blue underline">
                       ← Browse All Aviation Books
                     </Link>
                   </div>
@@ -397,221 +427,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           </div>
         </div>
 
-        {/* Content Sections */}
+        {/* Simplified Content: Book Description only */}
         <main className="container mx-auto container-padding section-padding">
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Book Content */}
-            <div className="lg:col-span-2">
-              <div className="card card-large content">
-                <BookSEOContent book={book} />
-
-                {/* Sample Pages */}
-                <div className="mt-8">
-                  <SamplePages book={book} />
-                </div>
-
-                {/* Table of contents */}
-                {book.tableOfContents && (
-                  <div className="mt-8 card-compact bg-gray-50">
-                    <h3 className="content h3">Table of Contents</h3>
-                    <div className="grid md:grid-cols-2 gap-2">
-                      {book.tableOfContents.map((chapter, index) => (
-                        <div key={index} className="flex items-start">
-                          <span className="text-muted mr-3 mt-1 text-sm font-mono">
-                            {(index + 1).toString().padStart(2, '0')}.
-                          </span>
-                          <span>{chapter}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Sample content */}
-                {book.sampleContent && book.sampleContent.length > 0 && (
-                  <div className="mt-8 card bg-accent-blue text-white">
-                    <h3 className="content h3 text-white">Sample Content</h3>
-                    {book.sampleContent.map((sample, index) => (
-                      <div key={index} className="mb-4 last:mb-0">
-                        <h4 className="font-semibold mb-2 text-white">{sample.chapter}: {sample.title}</h4>
-                        <p className="italic text-sm leading-relaxed text-white">"{sample.excerpt}..."</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {/* Research themes */}
-                {book.researchThemes && book.researchThemes.length > 0 && (
-                  <div className="mt-8">
-                    <h3 className="content h3">Key Research Topics</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {book.researchThemes.map((theme, index) => (
-                        <span key={index} className="badge badge-blue">
-                          {theme}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Academic information */}
-                {(book.academicLevel || book.academicInstitutions) && (
-                  <div className="mt-8 card bg-accent-amber text-white">
-                    <h3 className="content h3 text-white">Academic Information</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {book.academicLevel && (
-                        <div>
-                          <h4 className="font-semibold mb-2 text-white">Academic Level</h4>
-                          <div className="space-y-1">
-                            {book.academicLevel.map((level, index) => (
-                              <span key={index} className="block text-sm text-white">• {level}</span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                      {book.academicInstitutions && book.academicInstitutions.length > 0 && (
-                        <div>
-                          <h4 className="font-semibold mb-2 text-white">Used by Institutions</h4>
-                          <div className="space-y-1">
-                            {book.academicInstitutions.map((institution, index) => (
-                              <span key={index} className="block text-sm text-white">• {institution}</span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                    {book.citationCount && (
-                      <div className="mt-4 pt-4 border-t border-white/20">
-                        <span className="font-semibold text-white">Academic Citations: {book.citationCount}</span>
-                      </div>
-                    )}
-                  </div>
-                )}
-
-                {/* Specifications */}
-                {book.specifications && (
-                  <div className="mt-8 card-compact bg-gray-50">
-                    <h3 className="content h3">Book Specifications</h3>
-                    <div className="grid md:grid-cols-2 gap-4 text-sm">
-                      {book.specifications.format && (
-                        <div><strong>Format:</strong> {book.specifications.format}</div>
-                      )}
-                      {book.specifications.illustrations && (
-                        <div><strong>Illustrations:</strong> {book.specifications.illustrations}</div>
-                      )}
-                      {book.specifications.maps && (
-                        <div><strong>Maps:</strong> Included</div>
-                      )}
-                      {book.specifications.bibliography && (
-                        <div><strong>Bibliography:</strong> Comprehensive</div>
-                      )}
-                      {book.specifications.index && (
-                        <div><strong>Index:</strong> Detailed</div>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                {/* FAQs */}
-                <div className="mt-8">
-                  <BookFAQ />
-                </div>
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="card sticky top-8">
-                <div className="aspect-[3/4] mb-6 relative">
-                  <Image
-                    src={bookCoverSrc}
-                    alt={`${book.title} cover - Aviation history book by Charles E. MacKay`}
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
-                  />
-                </div>
-
-                <div className="mt-6 card-compact bg-accent-blue text-white">
-                  <h3 className="font-semibold mb-2 text-white">Book Details</h3>
-                  <div className="space-y-2 text-sm text-white">
-                    <div>Weight: {(book as any).weight || 300}g</div>
-                    <div>Category: {book.category}</div>
-                    <div>Year: {book.publicationYear || 'Not specified'}</div>
-                    {book.isbn && <div>ISBN: {book.isbn}</div>}
-                    {book.citationCount && <div>Citations: {book.citationCount}</div>}
-                    {book.difficulty && <div>Level: {book.difficulty}</div>}
-                  </div>
-                </div>
-
-                {/* Trust signals */}
-                <div className="mt-4 card-compact bg-accent-green text-white">
-                  <h4 className="font-semibold mb-2 text-white">Why Choose This Book</h4>
-                  <ul className="text-sm space-y-1 text-white">
-                    <li>✓ Written by renowned aviation historian</li>
-                    <li>✓ {book.condition} condition guaranteed</li>
-                    <li>✓ FREE shipping worldwide</li>
-                    <li>✓ Secure PayPal checkout</li>
-                    {book.citationCount && <li>✓ {book.citationCount} academic citations</li>}
-                    {book.academicInstitutions && book.academicInstitutions.length > 0 && (
-                      <li>✓ Used by {book.academicInstitutions[0]}</li>
-                    )}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Enhanced related books section */}
-          <RelatedBooks books={books} currentBook={book} />
-          <div className="mt-8">
-            <BundleOffers primary={book} related={books} />
-          </div>
-
-          {/* Related Blog Posts */}
-          {book.relatedBlogPosts && book.relatedBlogPosts.length > 0 && (
-            <div className="mt-12 card card-large content">
-              <h2 className="content h2">Related Expert Insights</h2>
-              <p>Explore Charles MacKay's expert blog posts related to this book's topics:</p>
-              <div className="grid md:grid-cols-2 gap-6">
-                {book.relatedBlogPosts.map((post, index) => (
-                  <div key={index} className="card hover:shadow-lg transition-shadow">
-                    <h3 className="font-semibold text-lg mb-3 text-accent-blue">
-                      <Link href={`/blog/${post.slug}`}>
-                        {post.title}
-                      </Link>
-                    </h3>
-                    <p className="mb-4">{post.excerpt}</p>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="inline-flex items-center text-accent-blue font-medium"
-                    >
-                      Read Article
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <div className="mt-12 card card-large content">
-            <h2 className="content h2">About Charles E. MacKay</h2>
-            <p>
-              Charles E. MacKay is a renowned aviation historian and author specializing in Scottish aviation heritage,
-              military aviation history, and aircraft development. With over 19 published books and more than 1,700
-              satisfied customers worldwide, Charles has established himself as a leading authority on aviation history.
-              His works are used as primary references by aviation researchers, museums, and academic institutions
-              including the Imperial War Museum, RAF Museum, and major universities.
-            </p>
-            <p>
-              Based in Glasgow, Scotland, Charles conducts extensive archival research and has unprecedented access
-              to historical aviation documents, photographs, and company records. His books combine rigorous academic
-              research with engaging storytelling, making complex aviation history accessible to both scholars and
-              enthusiasts.
-            </p>
+          <div className="card card-large content">
+            <h2 className="content h2">Description</h2>
+            <div className="whitespace-pre-line text-primary leading-relaxed">{descriptionFromInfo}</div>
           </div>
         </main>
 
