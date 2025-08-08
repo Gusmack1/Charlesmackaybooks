@@ -10,34 +10,36 @@ export default function Header() {
     <header className="bg-slate-800 text-white sticky top-0 z-50 shadow-lg">
       {/* Top Header Bar */}
       <div className="bg-slate-800">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
+        <div className="container max-w-7xl mx-auto px-4 py-3 md:py-4">
+          <div className="flex justify-between items-center gap-4">
             {/* Logo and Author Info - Clickable */}
-            <Link href="/" className="hover:opacity-80 transition-opacity cursor-pointer">
-              <h1 className="text-xl font-bold text-white">Charles E. MacKay</h1>
-              <p className="text-sm text-white">Aviation Historian & Author</p>
-              <p className="text-xs text-white">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
+            <Link href="/" className="hover:opacity-90 transition-opacity cursor-pointer group">
+              <h1 className="font-bold text-white tracking-tight text-2xl md:text-3xl lg:text-4xl leading-tight">Charles E. MacKay</h1>
+              <p className="text-white text-base md:text-lg">Aviation Historian & Author</p>
+              <p className="text-white/90 text-sm md:text-base">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
             </Link>
 
             {/* Contact Info and Basket */}
             <div className="text-right">
-              <div className="flex items-center gap-2 md:gap-4 mb-1">
-                <div className="hidden md:block">
-                  <div className="text-sm text-white">📧 charlese1mackay@hotmail.com</div>
-                  <div className="text-xs text-white">Glasgow, Scotland</div>
-                  <div className="text-xs text-white">Published Aviation Books</div>
+              <div className="flex items-center gap-3 md:gap-5 mb-1">
+                <div className="hidden md:block text-left">
+                  <div className="text-white text-sm md:text-base">📧 charlese1mackay@hotmail.com</div>
+                  <div className="text-white/90 text-xs md:text-sm">Glasgow, Scotland</div>
+                  <div className="text-white/90 text-xs md:text-sm">Published Aviation Books</div>
                 </div>
 
                 {/* Basket Button - Always visible */}
                 <button
                   onClick={openBasket}
-                  className="relative badge badge-green px-3 md:px-4 py-2 rounded text-sm font-medium transition-colors text-white"
+                  aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
+                  className="relative badge badge-green px-4 md:px-5 py-2 rounded text-base md:text-sm font-semibold transition-colors text-white min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
                   title="Shopping Basket"
                 >
                   <span className="hidden sm:inline text-white">🛒 Basket</span>
                   <span className="sm:hidden text-white">🛒</span>
                   {getTotalItems() > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" aria-hidden>
                       {getTotalItems()}
                     </span>
                   )}
@@ -89,8 +91,8 @@ export default function Header() {
       </nav>
 
       {/* Trusted Seller Banner */}
-              <div className="bg-accent-green text-center py-2">
-        <div className="font-bold text-white">
+      <div className="bg-accent-green text-center py-2">
+        <div className="font-bold text-white text-sm md:text-base">
           🏆 TRUSTED SELLER - 100% Positive Feedback
         </div>
       </div>
