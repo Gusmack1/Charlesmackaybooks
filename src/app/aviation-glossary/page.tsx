@@ -209,6 +209,243 @@ const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ['Bernoulli\'s Principle', 'Angle of Attack', 'Airfoil'],
     historicalContext: 'Fundamental principle of flight, scientifically understood through early aviation research and experimentation.'
   }
+  ,
+  // J Terms
+  {
+    term: 'Jet Blast',
+    definition: 'High-velocity exhaust stream produced by a jet engine that can cause structural damage and hazards behind the aircraft.',
+    category: 'Flight Operations',
+    relatedTerms: ['Thrust', 'Runway Safety', 'Engine Exhaust'],
+    historicalContext: 'Airport safety markings and procedures evolved to mitigate jet blast incidents as jet airliners entered service in the 1950s.'
+  },
+  {
+    term: 'Jet Stream',
+    definition: 'Narrow bands of strong winds in the upper atmosphere that significantly affect flight times and fuel planning.',
+    category: 'Weather',
+    relatedTerms: ['Winds Aloft', 'Flight Planning', 'Turbulence'],
+    historicalContext: 'First observed by military pilots in WWII; modern navigation exploits jet streams to reduce fuel burn on long-haul routes.'
+  },
+
+  // K Terms
+  {
+    term: 'Kármán Line',
+    definition: 'Internationally recognized boundary of space at 100 km (62 miles) above mean sea level.',
+    category: 'Historical',
+    relatedTerms: ['Atmosphere', 'Spaceflight'],
+    historicalContext: 'Named after Theodore von Kármán, who calculated the altitude where aerodynamic flight becomes impractical.'
+  },
+  {
+    term: 'Knot (kt)',
+    definition: 'Unit of speed equal to one nautical mile per hour, used universally in aviation and maritime operations.',
+    category: 'Flight Operations',
+    relatedTerms: ['Nautical Mile', 'IAS', 'TAS'],
+    historicalContext: 'Derived from maritime navigation; standardized in aviation for consistent global operations.'
+  },
+
+  // L already defined above
+
+  // M Terms
+  {
+    term: 'Mach Number',
+    definition: 'Ratio of an aircraft’s true airspeed to the local speed of sound.',
+    category: 'Aerodynamics',
+    relatedTerms: ['Transonic', 'Supersonic', 'TAS'],
+    historicalContext: 'Critical to jet development; Chuck Yeager first exceeded Mach 1 in level flight in 1947.'
+  },
+  {
+    term: 'Maximum Takeoff Weight (MTOW)',
+    definition: 'The maximum allowable weight at the start of the takeoff roll as certified by the manufacturer.',
+    category: 'Flight Operations',
+    relatedTerms: ['Weight and Balance', 'Payload', 'Fuel Planning']
+  },
+
+  // N Terms
+  {
+    term: 'Nacelle',
+    definition: 'Streamlined enclosure housing an engine or other equipment, typically attached to a wing or fuselage.',
+    category: 'Aircraft Components',
+    relatedTerms: ['Pylon', 'Engine Mount'],
+    historicalContext: 'Refined nacelle design reduces drag and noise in modern turbofan aircraft.'
+  },
+  {
+    term: 'NOTAM',
+    definition: 'Notice to Air Missions: time-critical aeronautical information affecting flight operations.',
+    category: 'Flight Operations',
+    relatedTerms: ['AIP', 'TFR', 'Flight Planning']
+  },
+
+  // O Terms
+  {
+    term: 'Outside Air Temperature (OAT)',
+    definition: 'Ambient air temperature measured outside the aircraft, used for performance calculations.',
+    category: 'Instruments',
+    relatedTerms: ['ISA', 'Density Altitude', 'Performance'],
+    historicalContext: 'Essential for piston and turbine engine performance and icing forecasts.'
+  },
+  {
+    term: 'Overrun Area',
+    definition: 'Paved or unpaved area beyond the runway end designed to reduce the risk of damage if an aircraft overruns.',
+    category: 'Flight Operations',
+    relatedTerms: ['RESA', 'Runway Safety Area']
+  },
+
+  // P Terms
+  {
+    term: 'Pitot Tube',
+    definition: 'Instrument probe measuring dynamic pressure to determine airspeed.',
+    category: 'Instruments',
+    relatedTerms: ['Airspeed Indicator', 'Static Port', 'IAS'],
+    historicalContext: 'Failures due to icing led to improved heating and maintenance procedures after several accidents.'
+  },
+  {
+    term: 'PAPI',
+    definition: 'Precision Approach Path Indicator: a visual aid providing glidepath guidance on final approach.',
+    category: 'Flight Operations',
+    relatedTerms: ['VASI', 'ILS', 'Approach Lighting']
+  },
+
+  // Q Terms
+  {
+    term: 'QNH',
+    definition: 'Altimeter subscale setting to indicate altitude above mean sea level at an aerodrome.',
+    category: 'Flight Operations',
+    relatedTerms: ['QFE', 'QNE', 'Altimeter Setting']
+  },
+  {
+    term: 'Quadcopter',
+    definition: 'Multi-rotor UAV with four rotors providing lift and control.',
+    category: 'Aircraft Components',
+    relatedTerms: ['UAV', 'VTOL', 'Drone']
+  },
+
+  // R Terms
+  {
+    term: 'Rudder',
+    definition: 'Vertical control surface that controls yaw about the vertical axis.',
+    category: 'Aircraft Components',
+    relatedTerms: ['Yaw', 'Vertical Stabilizer', 'Sideslip']
+  },
+  {
+    term: 'Required Navigation Performance (RNP)',
+    definition: 'Performance-based navigation specification with on-board monitoring and alerting.',
+    category: 'Navigation',
+    relatedTerms: ['RNAV', 'GNSS', 'PBN']
+  },
+
+  // S Terms
+  {
+    term: 'Stall',
+    definition: 'Loss of lift when a wing exceeds its critical angle of attack.',
+    category: 'Aerodynamics',
+    relatedTerms: ['Angle of Attack', 'Buffet', 'Spin'],
+    historicalContext: 'Training emphasizes recognition and recovery; high-lift devices delay stall onset.'
+  },
+  {
+    term: 'Spoiler',
+    definition: 'Wing device that disrupts airflow to reduce lift and increase drag for descent and landing.',
+    category: 'Aircraft Components',
+    relatedTerms: ['Speedbrake', 'Flaps']
+  },
+
+  // T Terms
+  {
+    term: 'Thrust',
+    definition: 'Propulsive force generated by an engine to move the aircraft forward.',
+    category: 'Engines',
+    relatedTerms: ['Turbofan', 'Propeller', 'Afterburner']
+  },
+  {
+    term: 'Transponder',
+    definition: 'Onboard device responding to radar interrogation with identification and altitude; Mode S supports ADS-B.',
+    category: 'Instruments',
+    relatedTerms: ['SSR', 'ADS-B', 'Squawk'],
+    historicalContext: 'Mandatory in most controlled airspace to enhance traffic surveillance.'
+  },
+
+  // U Terms
+  {
+    term: 'UAV (Unmanned Aerial Vehicle)',
+    definition: 'Aircraft without an onboard pilot, remotely piloted or autonomous.',
+    category: 'Aircraft Components',
+    relatedTerms: ['UAS', 'RPAS', 'Drone']
+  },
+  {
+    term: 'Uncontrolled Airspace',
+    definition: 'Airspace where ATC does not provide separation services; pilots remain responsible for see-and-avoid.',
+    category: 'Flight Operations',
+    relatedTerms: ['Class G', 'VMC', 'ATC']
+  },
+
+  // V Terms
+  {
+    term: 'V-speeds (V1/V2/Vr/Vref)',
+    definition: 'Standardized airspeeds defining critical phases of takeoff and landing performance.',
+    category: 'Flight Operations',
+    relatedTerms: ['Performance Charts', 'MTOW', 'Balanced Field Length']
+  },
+  {
+    term: 'VOR',
+    definition: 'VHF Omnidirectional Range: short-range radio navigation system providing bearing information.',
+    category: 'Navigation',
+    relatedTerms: ['DME', 'NDB', 'RNAV']
+  },
+
+  // W Terms
+  {
+    term: 'Wake Turbulence',
+    definition: 'Turbulence generated behind an aircraft, strongest from heavy, clean, slow configurations.',
+    category: 'Aerodynamics',
+    relatedTerms: ['Wingtip Vortices', 'Separation Minima']
+  },
+  {
+    term: 'Winglet',
+    definition: 'Upturned wingtip device reducing induced drag and improving fuel efficiency.',
+    category: 'Aircraft Components',
+    relatedTerms: ['Induced Drag', 'Wingtip Vortex', 'Fuel Burn']
+  },
+
+  // X Terms
+  {
+    term: 'Crosswind (X-wind)',
+    definition: 'Wind component blowing across the runway, affecting takeoff and landing control.',
+    category: 'Flight Operations',
+    relatedTerms: ['Runway Heading', 'Max Demonstrated Crosswind']
+  },
+  {
+    term: 'X-band Radar',
+    definition: 'Radar operating in the 8–12 GHz band, used for weather and surveillance applications.',
+    category: 'Instruments',
+    relatedTerms: ['Weather Radar', 'Doppler']
+  },
+
+  // Y Terms
+  {
+    term: 'Yaw',
+    definition: 'Rotation of an aircraft about its vertical axis.',
+    category: 'Aerodynamics',
+    relatedTerms: ['Rudder', 'Sideslip', 'Yaw Damper']
+  },
+  {
+    term: 'Yoke',
+    definition: 'Control column used in many aircraft to command pitch and roll.',
+    category: 'Aircraft Components',
+    relatedTerms: ['Sidestick', 'Elevator', 'Aileron']
+  },
+
+  // Z Terms
+  {
+    term: 'Zulu Time (UTC)',
+    definition: 'Coordinated Universal Time used as the standard time reference in aviation worldwide.',
+    category: 'Flight Operations',
+    relatedTerms: ['Local Time', 'Time Zone', 'ETD/ETA'],
+    historicalContext: 'Use of UTC avoids confusion across time zones for flight planning and ATC coordination.'
+  },
+  {
+    term: 'Zero Fuel Weight (ZFW)',
+    definition: 'Aircraft weight including all payload and crew but excluding usable fuel.',
+    category: 'Flight Operations',
+    relatedTerms: ['MTOW', 'Payload', 'Operating Empty Weight']
+  }
 ];
 
 const categories = [...new Set(glossaryTerms.map(term => term.category))];
