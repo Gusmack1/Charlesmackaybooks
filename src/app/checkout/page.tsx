@@ -226,7 +226,7 @@ export default function CheckoutPage() {
               {/* Cart Items */}
               <div className="lg:col-span-2">
                 <div className="card p-6">
-                  <h2 className="text-lg font-semibold mb-4 text-primary">Your Books</h2>
+                  <h2 className="text-2xl font-semibold mb-4 text-primary">Your Books</h2>
 
                   <div className="space-y-4">
                     {items.map(item => (
@@ -242,9 +242,9 @@ export default function CheckoutPage() {
                         </div>
 
                         <div className="flex-1">
-                          <h3 className="font-medium text-sm text-primary line-clamp-2">{item.book.title}</h3>
-                          <p className="text-xs text-accent-green">£{item.book.price.toFixed(2)}</p>
-                          <p className="text-xs text-muted">{item.book.condition} condition</p>
+                          <h3 className="font-medium text-base text-primary line-clamp-2">{item.book.title}</h3>
+                          <p className="text-sm text-accent-green">£{item.book.price.toFixed(2)}</p>
+                          <p className="text-sm text-muted">{item.book.condition} condition</p>
                         </div>
 
                         <div className="flex items-center gap-2">
@@ -254,7 +254,7 @@ export default function CheckoutPage() {
                           >
                             -
                           </button>
-                          <span className="w-8 text-center text-sm text-primary">{item.quantity}</span>
+                          <span className="w-8 text-center text-base text-primary">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
                           className="w-8 h-8 flex items-center justify-center bg-secondary rounded-full hover:bg-secondary"
@@ -264,7 +264,7 @@ export default function CheckoutPage() {
                         </div>
 
                         <div className="text-right">
-                          <div className="font-semibold text-sm text-primary">£{(item.book.price * item.quantity).toFixed(2)}</div>
+                          <div className="font-semibold text-base text-primary">£{(item.book.price * item.quantity).toFixed(2)}</div>
                           <button
                             onClick={() => removeFromCart(item.book.id)}
                             className="text-red-500 hover:text-red-700 text-xs"
@@ -281,9 +281,9 @@ export default function CheckoutPage() {
               {/* Order Summary */}
               <div className="lg:col-span-1">
                 <div className="card p-6">
-                  <h2 className="text-lg font-semibold mb-4 text-primary">Order Summary</h2>
+                   <h2 className="text-2xl font-semibold mb-4 text-primary">Order Summary</h2>
 
-                  <div className="space-y-2 mb-4 text-sm">
+                   <div className="space-y-2 mb-4 text-base">
                     <div className="flex justify-between text-secondary">
                       <span>Subtotal ({items.reduce((sum, item) => sum + item.quantity, 0)} books)</span>
                       <span>£{subtotal.toFixed(2)}</span>
@@ -296,7 +296,7 @@ export default function CheckoutPage() {
 
                   <button
                     onClick={() => setStep('address')}
-                    className="w-full badge badge-blue py-3 px-4 rounded-lg font-medium transition-colors"
+                    className="w-full badge badge-blue py-3 px-4 rounded-lg font-semibold text-base transition-colors"
                   >
                     Continue to Address
                   </button>
@@ -308,7 +308,7 @@ export default function CheckoutPage() {
           {step === 'address' && (
             <div className="max-w-2xl mx-auto">
               <div className="card p-6">
-                <h2 className="text-lg font-semibold mb-4 text-primary">Shipping Address</h2>
+                <h2 className="text-2xl font-semibold mb-4 text-primary">Shipping Address</h2>
 
                 {errors.length > 0 && (
                   <div className="card-compact bg-accent-red text-white rounded-lg p-4 mb-6">
@@ -324,7 +324,7 @@ export default function CheckoutPage() {
                 <form onSubmit={(e) => { e.preventDefault(); handleAddressSubmit(); }} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-secondary mb-1">
+                      <label className="block text-sm font-medium text-secondary mb-1">
                         First Name *
                       </label>
                       <input
@@ -337,7 +337,7 @@ export default function CheckoutPage() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-secondary mb-1">
+                      <label className="block text-sm font-medium text-secondary mb-1">
                         Last Name *
                       </label>
                       <input
@@ -351,7 +351,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-secondary mb-1">
+                    <label className="block text-sm font-medium text-secondary mb-1">
                       Email Address *
                     </label>
                     <input
@@ -364,7 +364,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-secondary mb-1">
+                    <label className="block text-sm font-medium text-secondary mb-1">
                       Phone Number
                     </label>
                     <input
@@ -376,7 +376,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-secondary mb-1">
+                    <label className="block text-sm font-medium text-secondary mb-1">
                       Address Line 1 *
                     </label>
                     <input
@@ -389,7 +389,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-secondary mb-1">
+                    <label className="block text-sm font-medium text-secondary mb-1">
                       Address Line 2
                     </label>
                     <input
@@ -402,7 +402,7 @@ export default function CheckoutPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-secondary mb-1">
+                      <label className="block text-sm font-medium text-secondary mb-1">
                         City *
                       </label>
                       <input
@@ -415,7 +415,7 @@ export default function CheckoutPage() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-secondary mb-1">
+                      <label className="block text-sm font-medium text-secondary mb-1">
                         Postcode/ZIP *
                       </label>
                       <input
@@ -429,7 +429,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-secondary mb-1">
+                    <label className="block text-sm font-medium text-secondary mb-1">
                       Country *
                     </label>
                     <select
@@ -453,26 +453,26 @@ export default function CheckoutPage() {
                   </div>
 
                   <div className="card-compact bg-accent-blue text-white rounded-lg p-4">
-                    <div className="text-sm">
-                      <div className="font-semibold text-blue-800 mb-2">📦 FREE Shipping Worldwide</div>
+                    <div className="text-base">
+                      <div className="font-semibold text-white mb-2">📦 FREE Shipping Worldwide</div>
                       <div className="space-y-1">
                         <div className="flex justify-between">
-                          <span className="text-blue-700">Total Weight:</span>
+                          <span className="text-white/90">Total Weight:</span>
                           <span className="font-medium">{totalWeight}g</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-blue-700">Destination:</span>
+                          <span className="text-white/90">Destination:</span>
                           <span className="font-medium">{customerDetails.country === 'GB' ? 'United Kingdom' : customerDetails.country}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-blue-700">Service:</span>
-                          <span className="font-medium text-xs">
+                          <span className="text-white/90">Service:</span>
+                          <span className="font-medium text-sm">
                             {totalWeight <= 100 ? 'Large Letter' : totalWeight <= 500 ? 'Large Letter' : totalWeight <= 2000 ? 'Small Parcel' : 'Standard Parcel'}
                           </span>
                         </div>
                         <div className="flex justify-between border-t pt-2">
-                          <span className="font-semibold text-blue-800">Shipping Cost:</span>
-                          <span className="font-bold text-green-600">£{shippingCost.toFixed(2)}</span>
+                          <span className="font-semibold text-white">Shipping Cost:</span>
+                          <span className="font-bold text-white">£{shippingCost.toFixed(2)}</span>
                         </div>
                       </div>
                     </div>
@@ -482,13 +482,13 @@ export default function CheckoutPage() {
                     <button
                       type="button"
                       onClick={() => setStep('basket')}
-                      className="flex-1 bg-secondary text-secondary py-2 px-4 rounded-lg hover:bg-secondary transition-colors text-sm"
+                      className="flex-1 bg-secondary text-secondary py-3 px-4 rounded-lg hover:bg-secondary transition-colors text-base"
                     >
                       Back to Basket
                     </button>
                     <button
                       type="submit"
-                      className="flex-1 badge badge-blue py-2 px-4 rounded-lg transition-colors text-sm"
+                      className="flex-1 badge badge-blue py-3 px-4 rounded-lg transition-colors text-base font-semibold"
                     >
                       Review Order
                     </button>
@@ -501,12 +501,12 @@ export default function CheckoutPage() {
           {step === 'review' && (
             <div className="max-w-2xl mx-auto">
               <div className="card p-6">
-                <h2 className="text-lg font-semibold mb-4 text-primary">Review Your Order</h2>
+                <h2 className="text-2xl font-semibold mb-4 text-primary">Review Your Order</h2>
 
                 {/* Customer Details */}
                 <div className="mb-6">
-                  <h3 className="font-medium text-primary mb-2 text-sm">Shipping To:</h3>
-                  <div className="text-xs text-secondary">
+                  <h3 className="font-medium text-primary mb-2 text-base">Shipping To:</h3>
+                  <div className="text-sm text-secondary">
                     <div>{customerDetails.firstName} {customerDetails.lastName}</div>
                     <div>{customerDetails.email}</div>
                     <div>{customerDetails.address1}</div>
@@ -516,7 +516,7 @@ export default function CheckoutPage() {
                   </div>
                   <button
                     onClick={() => setStep('address')}
-                    className="text-accent-blue hover:text-blue-800 text-xs mt-2"
+                    className="text-accent-blue hover:text-accent-blue text-sm mt-2"
                   >
                     Edit Address
                   </button>
@@ -524,10 +524,10 @@ export default function CheckoutPage() {
 
                 {/* Order Items */}
                 <div className="mb-6">
-                  <h3 className="font-medium text-primary mb-2 text-sm">Order Items:</h3>
+                  <h3 className="font-medium text-primary mb-2 text-base">Order Items:</h3>
                   <div className="space-y-2">
                     {items.map(item => (
-                      <div key={item.book.id} className="flex justify-between text-xs text-secondary">
+                      <div key={item.book.id} className="flex justify-between text-sm text-secondary">
                         <span className="line-clamp-1">{item.book.title} × {item.quantity}</span>
                         <span className="text-primary font-medium">£{(item.book.price * item.quantity).toFixed(2)}</span>
                       </div>
@@ -537,7 +537,7 @@ export default function CheckoutPage() {
 
                 {/* Order Summary */}
                 <div className="border-t pt-4 mb-6">
-                  <div className="space-y-2 text-sm">
+                  <div className="space-y-2 text-base">
                     <div className="flex justify-between">
                       <span>Subtotal:</span>
                       <span>£{subtotal.toFixed(2)}</span>
@@ -556,13 +556,13 @@ export default function CheckoutPage() {
                 <div className="flex gap-4">
                   <button
                     onClick={() => setStep('address')}
-                    className="flex-1 bg-secondary text-secondary py-3 px-4 rounded-lg hover:bg-secondary transition-colors"
+                    className="flex-1 bg-secondary text-secondary py-3 px-4 rounded-lg hover:bg-secondary transition-colors text-base"
                   >
                     Back
                   </button>
                   <button
                     onClick={handlePayment}
-                    className="flex-1 badge badge-green py-3 px-4 rounded-lg font-semibold transition-colors"
+                    className="flex-1 badge badge-green py-3 px-4 rounded-lg font-semibold transition-colors text-base"
                   >
                     Pay with PayPal
                   </button>
