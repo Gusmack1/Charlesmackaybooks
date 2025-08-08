@@ -101,7 +101,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-2">Location</h3>
                     <p className="text-secondary">Glasgow, Scotland</p>
-                    <p className="text-sm text-gray-500 mt-1">Available for local meetings and archive research</p>
+                    <p className="text-sm text-muted mt-1">Available for local meetings and archive research</p>
                   </div>
                 </div>
 
@@ -112,7 +112,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-2">Book Orders</h3>
                     <p className="text-secondary">Available through eBay store</p>
-                    <p className="text-sm text-gray-500 mt-1">Secure worldwide shipping with tracking</p>
+                    <p className="text-sm text-muted mt-1">Secure worldwide shipping with tracking</p>
                     <a
                       href="https://www.ebay.co.uk/usr/chaza87"
                       target="_blank"
@@ -162,7 +162,7 @@ export default function ContactPage() {
                 </a>
               </div>
 
-              <p className="text-xs text-gray-500 mt-4 text-center">
+              <p className="text-xs text-muted mt-4 text-center">
                 These links will open your default email client
               </p>
             </div>

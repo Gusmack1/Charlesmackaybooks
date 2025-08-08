@@ -420,7 +420,7 @@ export default function BlogPage() {
                         {post.tags.slice(0, 2).map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-1 bg-gray-50 text-muted rounded text-xs"
+                            className="px-2 py-1 badge badge-gray rounded text-xs"
                           >
                             {tag}
                           </span>
@@ -455,7 +455,7 @@ export default function BlogPage() {
             </Link>
             <Link
               href="/contact"
-              className="border border-gray-300 text-secondary px-6 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+              className="border text-secondary px-6 py-2 rounded-lg font-medium hover:bg-secondary transition-colors"
             >
               Contact Charles
             </Link>
@@ -465,3 +465,4 @@ export default function BlogPage() {
     </div>
   )
 }
+

@@ -315,7 +315,7 @@ export default function GoogleIndexingPage() {
               href="https://search.google.com/search-console"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white p-4 rounded-lg text-center hover:bg-blue-700 transition-colors"
+              className="badge badge-blue p-4 rounded-lg text-center"
             >
               <div className="text-2xl mb-2">🔍</div>
               <div className="font-semibold">Google Search Console</div>
@@ -326,7 +326,7 @@ export default function GoogleIndexingPage() {
               href="https://charlesmackaybooks.com/sitemap.xml"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 text-white p-4 rounded-lg text-center hover:bg-green-700 transition-colors"
+              className="badge badge-green p-4 rounded-lg text-center"
             >
               <div className="text-2xl mb-2">🗺️</div>
               <div className="font-semibold">XML Sitemap</div>
@@ -337,7 +337,7 @@ export default function GoogleIndexingPage() {
               href="https://charlesmackaybooks.com/robots.txt"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-yellow-600 text-white p-4 rounded-lg text-center hover:bg-yellow-700 transition-colors"
+              className="badge badge-amber p-4 rounded-lg text-center"
             >
               <div className="text-2xl mb-2">🤖</div>
               <div className="font-semibold">Robots.txt</div>
@@ -348,7 +348,7 @@ export default function GoogleIndexingPage() {
               href="https://pagespeed.web.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-purple-600 text-white p-4 rounded-lg text-center hover:bg-purple-700 transition-colors"
+              className="badge badge-purple p-4 rounded-lg text-center"
             >
               <div className="text-2xl mb-2">⚡</div>
               <div className="font-semibold">PageSpeed Insights</div>
@@ -359,7 +359,7 @@ export default function GoogleIndexingPage() {
               href="https://search.google.com/test/mobile-friendly"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-indigo-600 text-white p-4 rounded-lg text-center hover:bg-indigo-700 transition-colors"
+              className="badge badge-indigo p-4 rounded-lg text-center"
             >
               <div className="text-2xl mb-2">📱</div>
               <div className="font-semibold">Mobile-Friendly Test</div>
@@ -370,7 +370,7 @@ export default function GoogleIndexingPage() {
               href="https://search.google.com/structured-data/testing-tool"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 text-white p-4 rounded-lg text-center hover:bg-red-700 transition-colors"
+              className="badge badge-red p-4 rounded-lg text-center"
             >
               <div className="text-2xl mb-2">🏷️</div>
               <div className="font-semibold">Structured Data Test</div>

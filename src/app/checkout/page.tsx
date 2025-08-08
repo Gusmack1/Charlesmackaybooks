@@ -250,14 +250,14 @@ export default function CheckoutPage() {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => updateQuantity(item.book.id, item.quantity - 1)}
-                            className="w-8 h-8 flex items-center justify-center bg-secondary rounded-full hover:bg-gray-300"
+                          className="w-8 h-8 flex items-center justify-center bg-secondary rounded-full hover:bg-secondary"
                           >
                             -
                           </button>
                           <span className="w-8 text-center text-sm text-primary">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
-                            className="w-8 h-8 flex items-center justify-center bg-secondary rounded-full hover:bg-gray-300"
+                          className="w-8 h-8 flex items-center justify-center bg-secondary rounded-full hover:bg-secondary"
                           >
                             +
                           </button>
@@ -288,10 +288,10 @@ export default function CheckoutPage() {
                       <span>Subtotal ({items.reduce((sum, item) => sum + item.quantity, 0)} books)</span>
                       <span>£{subtotal.toFixed(2)}</span>
                     </div>
-                    <div className="flex justify-between text-sm text-secondary">
-                      <span>Shipping</span>
-                      <span>Calculated at next step</span>
-                    </div>
+                     <div className="flex justify-between text-sm text-accent-green">
+                       <span>Shipping</span>
+                       <span>FREE Worldwide</span>
+                     </div>
                   </div>
 
                   <button
@@ -332,7 +332,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.firstName}
                         onChange={(e) => handleInputChange('firstName', e.target.value)}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+                        className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue text-primary bg-white"
                       />
                     </div>
 
@@ -345,7 +345,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.lastName}
                         onChange={(e) => handleInputChange('lastName', e.target.value)}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+                        className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue text-primary bg-white"
                       />
                     </div>
                   </div>
@@ -359,7 +359,7 @@ export default function CheckoutPage() {
                       required
                       value={customerDetails.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+                      className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue text-primary bg-white"
                     />
                   </div>
 
@@ -371,7 +371,7 @@ export default function CheckoutPage() {
                       type="tel"
                       value={customerDetails.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+                      className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue text-primary bg-white"
                     />
                   </div>
 
@@ -410,7 +410,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.city}
                         onChange={(e) => handleInputChange('city', e.target.value)}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+                        className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue text-primary bg-white"
                       />
                     </div>
 
@@ -423,7 +423,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.postcode}
                         onChange={(e) => handleInputChange('postcode', e.target.value)}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+                        className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue text-primary bg-white"
                       />
                     </div>
                   </div>
@@ -436,7 +436,7 @@ export default function CheckoutPage() {
                       required
                       value={customerDetails.country}
                       onChange={(e) => handleInputChange('country', e.target.value)}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+                      className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue text-primary bg-white"
                     >
                       <option value="GB">United Kingdom</option>
                       <option value="US">United States</option>
@@ -482,7 +482,7 @@ export default function CheckoutPage() {
                     <button
                       type="button"
                       onClick={() => setStep('basket')}
-                      className="flex-1 bg-secondary text-secondary py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm"
+                      className="flex-1 bg-secondary text-secondary py-2 px-4 rounded-lg hover:bg-secondary transition-colors text-sm"
                     >
                       Back to Basket
                     </button>
@@ -556,7 +556,7 @@ export default function CheckoutPage() {
                 <div className="flex gap-4">
                   <button
                     onClick={() => setStep('address')}
-                    className="flex-1 bg-secondary text-secondary py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors"
+                    className="flex-1 bg-secondary text-secondary py-3 px-4 rounded-lg hover:bg-secondary transition-colors"
                   >
                     Back
                   </button>

@@ -153,7 +153,7 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
         ) : (
           <button
             disabled
-            className="w-full bg-gray-400 text-white py-2 px-4 rounded cursor-not-allowed text-sm font-medium"
+            className="w-full badge badge-gray py-2 px-4 cursor-not-allowed text-sm font-medium"
           >
             📋 Out of Stock
           </button>

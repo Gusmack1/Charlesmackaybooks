@@ -229,12 +229,12 @@ export default function FAQPage() {
                     .filter(item => item.category === category)
                     .map((faq, index) => (
                       <div key={index} className="border-b border-slate-100 last:border-b-0 pb-6 last:pb-0">
-                        <h4 className="text-xl font-semibold text-slate-800 mb-4 leading-relaxed">
+                        <h4 className="text-xl font-semibold text-primary mb-4 leading-relaxed">
                           {faq.question}
                         </h4>
 
                         <div className="prose max-w-none">
-                          <p className="text-slate-700 leading-relaxed mb-4">
+                          <p className="text-secondary leading-relaxed mb-4">
                             {faq.answer}
                           </p>
                         </div>
@@ -253,9 +253,9 @@ export default function FAQPage() {
                         )}
 
                         {faq.relatedBooks && (
-                          <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-                            <h5 className="font-semibold text-primary mb-2">Recommended Reading:</h5>
-                            <div className="text-sm text-secondary">
+                          <div className="mt-4 card-compact bg-accent-blue text-white p-4 rounded-lg">
+                            <h5 className="font-semibold text-white mb-2">Recommended Reading:</h5>
+                            <div className="text-sm text-white">
                               {faq.relatedBooks.join(', ')}
                             </div>
                           </div>

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Share2, BookOpen, Clock, User, Calendar, Tag, ChevronRight, Heart, MessageCircle } from 'lucide-react';
+import PostRelatedBooks from '@/components/PostRelatedBooks';
 
 interface BlogPost {
   id: string;
@@ -50,6 +51,48 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
   const [isLiked, setIsLiked] = useState(false);
   const [shareCount, setShareCount] = useState(0);
   const [showTableOfContents, setShowTableOfContents] = useState(false);
+
+  // Image fallbacks and content processing (ensure at least 3 images, add onerror fallbacks)
+  const fallbackSvg = encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='%231e3a8a'/><stop offset='100%' stop-color='%230256d4'/></linearGradient></defs><rect width='600' height='400' fill='url(#g)'/><g fill='white' font-family='Source Sans 3, Arial' text-anchor='middle'><text x='300' y='185' font-size='28'>Image unavailable</text><text x='300' y='225' font-size='16'>Charles E. MacKay Aviation History</text></g></svg>`
+  );
+
+  const addFallbackToAllImages = (html: string): string => {
+    return html.replace(/<img\s+([^>]*?)>/gi, (match, attrs) => {
+      let updated = attrs;
+      if (!/\balt\s*=/.test(updated)) {
+        updated += ' alt="Aviation history image"';
+      }
+      updated = updated.replace(/\bshadow-[^\s"]+/g, '');
+      if (!/\bclass\s*=/.test(updated)) {
+        updated += ' class="rounded-lg"';
+      }
+      if (!/\bonerror=/.test(updated)) {
+        updated += ` onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'"`;
+      }
+      return `<img ${updated}>`;
+    });
+  };
+
+  const ensureThreeImages = (html: string): string => {
+    const imgMatches = html.match(/<img\s+[^>]*src=/gi) || [];
+    if (imgMatches.length >= 3) return html;
+    const candidates: string[] = [];
+    if (post.featuredImage?.url) candidates.push(post.featuredImage.url);
+    if (post.relatedBooks && post.relatedBooks.length > 0) {
+      candidates.push(...post.relatedBooks.map(b => b.cover).filter(Boolean));
+    }
+    while (candidates.length < 3) {
+      candidates.push(`data:image/svg+xml;utf8,${fallbackSvg}`);
+    }
+    const blocksNeeded = 3 - imgMatches.length;
+    const blocks = Array.from({ length: blocksNeeded }).map((_, idx) =>
+      `<figure class="my-6"><img src="${candidates[idx]}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
+    );
+    return html + blocks.join('');
+  };
+
+  const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html));
 
   // Reading progress tracking
   useEffect(() => {
@@ -134,7 +177,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
             </button>
             <button 
               onClick={() => setIsLiked(!isLiked)}
-              className={`p-2 transition-colors ${isLiked ? 'text-red-500' : 'text-gray-600 hover:text-red-500'}`}
+              className={`p-2 transition-colors ${isLiked ? 'text-accent-red' : 'text-secondary hover:text-accent-red'}`}
               aria-label="Like this post"
             >
               <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />
@@ -208,7 +251,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
           />
         </div>
         {post.featuredImage.caption && (
-          <p className="text-sm text-gray-600 text-center mt-2 italic">
+          <p className="text-sm text-secondary text-center mt-2 italic">
             {post.featuredImage.caption}
           </p>
         )}
@@ -219,7 +262,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
         <div className="mb-8 p-6 card-compact rounded-lg">
           <button
             onClick={() => setShowTableOfContents(!showTableOfContents)}
-            className="flex items-center justify-between w-full text-left font-semibold text-gray-900 mb-2"
+            className="flex items-center justify-between w-full text-left font-semibold text-primary mb-2"
           >
             <span>Table of Contents</span>
             <ChevronRight className={`w-4 h-4 transition-transform ${showTableOfContents ? 'rotate-90' : ''}`} />
@@ -281,7 +324,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Related Books */}
       {post.relatedBooks.length > 0 && (
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
             <BookOpen className="w-6 h-6" />
             Related Books
           </h2>
@@ -296,11 +339,11 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+                <h3 className="font-semibold text-primary mb-1 group-hover:text-accent-blue transition-colors">
                   {book.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-2">by {book.author}</p>
-                <p className="font-bold text-green-600">${book.price}</p>
+                <p className="text-secondary text-sm mb-2">by {book.author}</p>
+                <p className="font-bold text-accent-green">${book.price}</p>
               </div>
             ))}
           </div>
@@ -310,7 +353,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Related Posts */}
       {post.relatedPosts.length > 0 && (
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl font-bold text-primary mb-6">
             Related Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -324,13 +367,13 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="font-semibold text-primary mb-2 group-hover:text-accent-blue transition-colors">
                   {relatedPost.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
+                <p className="text-secondary text-sm mb-2 line-clamp-2">
                   {relatedPost.excerpt}
                 </p>
-                <div className="flex items-center gap-2 text-xs text-gray-500">
+                <div className="flex items-center gap-2 text-xs text-muted">
                   <Clock className="w-3 h-3" />
                   <span>{relatedPost.readingTime} min read</span>
                 </div>

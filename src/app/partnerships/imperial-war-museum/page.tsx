@@ -283,7 +283,7 @@ export default function ImperialWarMuseumPartnershipPage() {
             <h2 className="text-3xl font-bold text-slate-800 mb-8">Collaborative Projects</h2>
             <div className="space-y-6">
               {collaborativeProjects.map((project, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-purple-500">
+                <div key={index} className="card p-6 border-l-4 border-purple-500">
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-semibold text-slate-800">{project.title}</h3>
@@ -329,7 +329,7 @@ export default function ImperialWarMuseumPartnershipPage() {
             <h2 className="text-3xl font-bold text-primary mb-6">Shared Research Resources</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {museumResources.map((resource, index) => (
-                <div key={index} className="border rounded-lg p-4">
+                <div key={index} className="card-compact p-4">
                   <h3 className="text-lg font-semibold text-primary mb-2">{resource.category}</h3>
                   <p className="text-secondary mb-3">{resource.description}</p>
                   <div className="space-y-2">

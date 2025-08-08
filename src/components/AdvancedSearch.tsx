@@ -192,7 +192,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
           placeholder="Search by title, topic, aircraft type, or description..."
           value={filters.query || ''}
           onChange={(e) => updateFilters({ query: e.target.value })}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-lg max-w-full box-border"
+          className="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-blue text-sm sm:text-lg max-w-full box-border"
         />
       </div>
 
@@ -203,7 +203,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
           <select
             value={filters.category || ''}
             onChange={(e) => updateFilters({ category: e.target.value })}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue"
           >
             <option value="">All Categories</option>
             {categories.map(cat => (
@@ -217,7 +217,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
           <select
             value={filters.difficulty || ''}
             onChange={(e) => updateFilters({ difficulty: e.target.value })}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue"
           >
             <option value="">Any Level</option>
             {difficulties.map(diff => (

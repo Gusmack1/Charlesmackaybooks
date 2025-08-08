@@ -15,7 +15,7 @@ export default function BlogNavigation({ title }: BlogNavigationProps) {
           >
             ← Back to Charles Books
           </Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-muted">|</span>
           <Link
             href="/blog"
             className="text-accent-blue hover:text-blue-800 font-medium flex items-center"
@@ -24,8 +24,8 @@ export default function BlogNavigation({ title }: BlogNavigationProps) {
           </Link>
           {title && (
             <>
-              <span className="text-gray-300">|</span>
-              <span className="text-gray-600">{title}</span>
+              <span className="text-muted">|</span>
+              <span className="text-secondary">{title}</span>
             </>
           )}
         </div>
