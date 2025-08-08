@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { CartProvider } from '@/context/CartContext';
 import { RecentlyViewedProvider } from '@/context/RecentlyViewedContext';
 import CartSidebar from '@/components/CartSidebar';
-import LiveChat from '@/components/LiveChat';
+// LiveChat removed per request
 
 export default function ClientBody({
   children,
@@ -23,7 +23,6 @@ export default function ClientBody({
         <RecentlyViewedProvider>
           {children}
           <CartSidebar />
-          <LiveChat />
         </RecentlyViewedProvider>
       </CartProvider>
     </body>

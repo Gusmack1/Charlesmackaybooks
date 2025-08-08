@@ -58,16 +58,16 @@ export default function Header() {
                     ☰ Menu
                   </button>
                   {open && (
-                    <div className="absolute right-0 mt-2 w-64 bg-slate-700 border border-white/10 rounded-lg shadow-xl overflow-hidden z-50">
+                  <div className="absolute right-0 mt-2 w-64 bg-white text-slate-900 border border-slate-200 rounded-lg shadow-xl overflow-hidden z-50">
                       <nav className="flex flex-col p-1">
-                        <Link href="/" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">🏠 Home</Link>
-                        <Link href="/books" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">📚 Shop Books</Link>
-                        <Link href="/blog" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">📝 Blog</Link>
-                        <Link href="/for-researchers" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">🔬 For Researchers</Link>
-                        <Link href="/scottish-aviation-timeline" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">🏴 Scottish Timeline</Link>
-                        <Link href="/how-to-order" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">🛒 How to Order</Link>
-                        <Link href="/about" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">👨‍💼 About Charles</Link>
-                        <Link href="/contact" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">📧 Contact</Link>
+                      <Link href="/" className="px-3 py-2 rounded hover:bg-slate-100 focus:bg-slate-100">🏠 Home</Link>
+                      <Link href="/books" className="px-3 py-2 rounded hover:bg-slate-100 focus:bg-slate-100">📚 Shop Books</Link>
+                      <Link href="/blog" className="px-3 py-2 rounded hover:bg-slate-100 focus:bg-slate-100">📝 Blog</Link>
+                      <Link href="/for-researchers" className="px-3 py-2 rounded hover:bg-slate-100 focus:bg-slate-100">🔬 For Researchers</Link>
+                      <Link href="/scottish-aviation-timeline" className="px-3 py-2 rounded hover:bg-slate-100 focus:bg-slate-100">🏴 Scottish Timeline</Link>
+                      <Link href="/how-to-order" className="px-3 py-2 rounded hover:bg-slate-100 focus:bg-slate-100">🛒 How to Order</Link>
+                      <Link href="/about" className="px-3 py-2 rounded hover:bg-slate-100 focus:bg-slate-100">👨‍💼 About Charles</Link>
+                      <Link href="/contact" className="px-3 py-2 rounded hover:bg-slate-100 focus:bg-slate-100">📧 Contact</Link>
                       </nav>
                     </div>
                   )}
