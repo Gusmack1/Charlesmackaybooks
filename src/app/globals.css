@@ -3,6 +3,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Core design tokens (CSS variables) */
+:root {
+  /* Text */
+  --color-text-primary: #0f172a; /* slate-900 */
+  --color-text-secondary: #334155; /* slate-700 */
+  --color-text-muted: #64748b; /* slate-500 */
+  --color-text-white: #ffffff;
+
+  /* Backgrounds */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8fafc; /* slate-50 */
+  --color-bg-accent: #f1f5f9; /* slate-100 */
+
+  /* Accents */
+  --color-accent-blue: #2563eb; /* blue-600 */
+  --color-accent-blue-dark: #1d4ed8; /* blue-700 */
+  --color-accent-green: #16a34a; /* green-600 */
+  --color-accent-amber: #d97706; /* amber-600 */
+  --color-accent-red: #dc2626; /* red-600 */
+  --color-accent-purple: #7e22ce; /* purple-700 */
+  --color-accent-indigo: #4f46e5; /* indigo-600 */
+  --color-accent-rose: #e11d48; /* rose-600 */
+
+  /* Misc */
+  --border-radius: 12px;
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --color-link: var(--color-accent-blue);
+  --color-link-hover: var(--color-accent-blue-dark);
+}
+
 /* External CSS imports removed: consolidated into this file and Tailwind utilities */
 
 @layer base {
@@ -154,14 +184,29 @@
     -webkit-line-clamp: 3;
   }
 
+  /* Background helpers */
+  .bg-background { background-color: var(--color-bg-primary); }
+  .bg-secondary { background-color: var(--color-bg-secondary); }
+
+  /* Card helpers */
+  .card { background: #ffffff; border-radius: var(--border-radius); box-shadow: var(--shadow-md); padding: 1rem; }
+  .card-large { padding: 2rem; }
+  .card-compact { border-radius: var(--border-radius); padding: 1rem; }
+
   /* Standard accent colors for consistent use */
   .text-accent-blue { color: var(--color-accent-blue); }
   .text-accent-green { color: var(--color-accent-green); }
   .text-accent-amber { color: var(--color-accent-amber); }
+  .text-accent-red { color: var(--color-accent-red); }
+  .text-accent-purple { color: var(--color-accent-purple); }
+  .text-accent-indigo { color: var(--color-accent-indigo); }
   
   .bg-accent-blue { background-color: var(--color-accent-blue); }
   .bg-accent-green { background-color: var(--color-accent-green); }
   .bg-accent-amber { background-color: var(--color-accent-amber); }
+  .bg-accent-red { background-color: var(--color-accent-red); }
+  .bg-accent-purple { background-color: var(--color-accent-purple); }
+  .bg-accent-indigo { background-color: var(--color-accent-indigo); }
 
   /* Standard spacing */
   .section-padding { padding: 3rem 0; }
@@ -174,6 +219,9 @@
   header div {
     color: white !important;
   }
+
+  /* Safe-area utility for mobile bottom bars */
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
 }
 
 /* HERO SECTIONS - Only place where colors change based on content */
