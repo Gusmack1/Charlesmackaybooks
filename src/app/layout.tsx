@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import ConditionalHeader from '@/components/ConditionalHeader'
-import ConditionalFooter from '@/components/ConditionalFooter'
+// Footer removed site-wide per request
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClientBody from './ClientBody'
@@ -230,7 +230,7 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        <ConditionalFooter />
+        {/* Footer removed site-wide */}
         <Analytics />
         <SpeedInsights />
       </ClientBody>
