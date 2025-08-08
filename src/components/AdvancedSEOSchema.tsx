@@ -210,7 +210,7 @@ export default function AdvancedSEOSchema() {
         "name": "How can I purchase Charles MacKay's aviation books?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can purchase books directly through PayPal, eBay store, or by contacting Charles directly. All books ship worldwide from Glasgow, Scotland with UK £3.45 shipping."
+          "text": "You can purchase books directly through PayPal, eBay store, or by contacting Charles directly. All books ship worldwide from Glasgow, Scotland with FREE worldwide shipping."
         }
       },
       {
@@ -226,7 +226,7 @@ export default function AdvancedSEOSchema() {
         "name": "What shipping options are available?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "UK £3.45 shipping. Worldwide delivery is available with tracking. Books are carefully packaged and protected for safe delivery anywhere in the world."
+          "text": "FREE worldwide shipping with tracking. Books are carefully packaged and protected for safe delivery anywhere in the world."
         }
       }
     ]

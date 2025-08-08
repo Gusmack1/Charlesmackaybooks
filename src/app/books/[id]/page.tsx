@@ -269,7 +269,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       site: '@charlesmackaybooks',
       creator: '@charlesmackay',
       title: `${book.title} | Aviation History Book`,
-      description: `${book.category} book by Charles E. MacKay. £${book.price}. UK £3.45 shipping.`,
+      description: `${book.category} book by Charles E. MacKay. £${book.price}. FREE shipping worldwide.`,
       images: {
         url: book.imageUrl || `/book-covers/${book.id}.jpg`,
         alt: `${book.title} - Aviation History Book Cover`,

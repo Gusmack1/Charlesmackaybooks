@@ -99,9 +99,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         <div className="container mx-auto px-4">
           <nav className="flex items-center space-x-2 text-sm">
             <Link href="/" className="text-accent-blue hover:text-blue-800">Home</Link>
-            <span className="text-gray-400">/</span>
+            <span className="text-muted">/</span>
             <Link href="/books" className="text-accent-blue hover:text-blue-800">Books</Link>
-            <span className="text-gray-400">/</span>
+            <span className="text-muted">/</span>
             <span className="text-secondary">{categoryName}</span>
           </nav>
         </div>

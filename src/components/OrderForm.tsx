@@ -78,19 +78,19 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
   if (items.length === 0) {
     return (
       <div className="text-center py-8">
-        <p className="text-gray-600">Your basket is empty. Add some books to continue.</p>
+        <p className="text-secondary">Your basket is empty. Add some books to continue.</p>
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold mb-4">Shipping Details</h2>
+      <div className="card p-6">
+        <h2 className="text-xl font-semibold mb-4 text-primary">Shipping Details</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-secondary mb-1">
               First Name *
             </label>
             <input
@@ -98,12 +98,12 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
               required
               value={customerDetails.firstName}
               onChange={(e) => handleInputChange('firstName', e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-secondary mb-1">
               Last Name *
             </label>
             <input
@@ -111,12 +111,12 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
               required
               value={customerDetails.lastName}
               onChange={(e) => handleInputChange('lastName', e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue"
             />
           </div>
 
           <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-secondary mb-1">
               Email Address *
             </label>
             <input
@@ -124,24 +124,24 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
               required
               value={customerDetails.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue"
             />
           </div>
 
           <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-secondary mb-1">
               Phone Number
             </label>
             <input
               type="tel"
               value={customerDetails.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue"
             />
           </div>
 
           <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-secondary mb-1">
               Address Line 1 *
             </label>
             <input
@@ -149,24 +149,24 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
               required
               value={customerDetails.address1}
               onChange={(e) => handleInputChange('address1', e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue"
             />
           </div>
 
           <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-secondary mb-1">
               Address Line 2
             </label>
             <input
               type="text"
               value={customerDetails.address2}
               onChange={(e) => handleInputChange('address2', e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-secondary mb-1">
               City *
             </label>
             <input
@@ -174,12 +174,12 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
               required
               value={customerDetails.city}
               onChange={(e) => handleInputChange('city', e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-secondary mb-1">
               Postcode/ZIP *
             </label>
             <input
@@ -187,19 +187,19 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
               required
               value={customerDetails.postcode}
               onChange={(e) => handleInputChange('postcode', e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue"
             />
           </div>
 
           <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-secondary mb-1">
               Country *
             </label>
             <select
               required
               value={customerDetails.country}
               onChange={(e) => handleInputChange('country', e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-blue"
             >
               <option value="GB">United Kingdom</option>
               <option value="US">United States</option>
@@ -218,8 +218,8 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
       </div>
 
       {/* Order Summary */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
+      <div className="card p-6">
+        <h2 className="text-xl font-semibold mb-4 text-primary">Order Summary</h2>
 
         <div className="space-y-2 mb-4">
           <div className="flex justify-between">
@@ -239,7 +239,7 @@ export default function OrderForm({ onSubmit }: OrderFormProps) {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          className="w-full badge badge-blue py-3 px-4 rounded-lg font-semibold"
         >
           Proceed to PayPal Payment
         </button>

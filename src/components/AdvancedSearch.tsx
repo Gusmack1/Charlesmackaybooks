@@ -179,7 +179,7 @@ export default function AdvancedSearch({ books, onFilterChange, onFiltersUpdate 
         </div>
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="bg-accent-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          className="badge badge-blue px-4 py-2 rounded-lg"
         >
           {isExpanded ? 'Hide Filters' : 'Show More Filters'}
         </button>
