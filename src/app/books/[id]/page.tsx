@@ -427,11 +427,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           </div>
         </div>
 
-        {/* Simplified Content: Book Description only */}
+        {/* Content removed under description per request; placeholder only */}
         <main className="container mx-auto container-padding section-padding">
           <div className="card card-large content">
             <h2 className="content h2">Description</h2>
-            <div className="whitespace-pre-line text-primary leading-relaxed">{descriptionFromInfo}</div>
+            <div className="text-secondary">Updated copy coming shortly.</div>
           </div>
         </main>
 
