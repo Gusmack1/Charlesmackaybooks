@@ -36,7 +36,7 @@ export default function BookNotFound() {
         </div>
       </div>
 
-      <Footer />
+      {/* Footer removed to avoid duplication; provided by root layout */}
     </div>
   );
 }

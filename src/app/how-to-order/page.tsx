@@ -297,7 +297,7 @@ export default function HowToOrderPage() {
         </div>
       </div>
 
-        <Footer />
+        {/* Footer removed to avoid duplication; provided by root layout */}
       </div>
     </>
   );

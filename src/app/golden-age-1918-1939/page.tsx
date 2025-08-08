@@ -499,7 +499,7 @@ export default function GoldenAgePage() {
         </div>
       </section>
 
-      <Footer />
+      {/* Footer removed to avoid duplication; provided by root layout */}
     </div>
   )
 }

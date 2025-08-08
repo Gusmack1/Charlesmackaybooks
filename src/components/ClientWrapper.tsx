@@ -24,7 +24,7 @@ export default function ClientWrapper({ children, pageType }: ClientWrapperProps
       <main className="min-h-screen">
         {children}
       </main>
-      <Footer />
+      {/* Footer removed to avoid duplication; provided by root layout */}
       <BasketSidebarWrapper />
       <Analytics />
     </RecentlyViewedProvider>

@@ -32,12 +32,7 @@
   to = "/"
   status = 301
 
-# Force homepage to always load correctly with cache busting
-[[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
-  force = true
+# Remove forced index.html redirect to let Next.js app route handle root and styles correctly
 
 [[headers]]
   for = "/"
