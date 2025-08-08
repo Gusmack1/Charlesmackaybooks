@@ -140,13 +140,6 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 bg-white">
-      {/* Reading Progress Bar */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-secondary z-50">
-        <div 
-          className="h-full bg-accent-blue transition-all duration-300"
-          style={{ width: `${readingProgress}%` }}
-        />
-      </div>
 
       {/* Sticky Navigation */}
       <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b py-4 mb-8 z-40">
@@ -240,14 +233,15 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
       {/* Featured Image */}
       <div className="mb-8">
-        <div className="relative aspect-video overflow-hidden rounded-lg">
+        <div className="relative overflow-hidden rounded-lg">
           <Image
             src={post.featuredImage.url}
             alt={post.featuredImage.alt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
+            width={1200}
+            height={630}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 800px"
             priority
+            className="w-full aspect-[16/9] object-cover"
           />
         </div>
         {post.featuredImage.caption && (

@@ -100,13 +100,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
 
   return (
     <div className="bg-white">
-      {/* Reading Progress Bar */}
-              <div className="fixed top-0 left-0 w-full h-1 bg-secondary z-50">
-        <div 
-          className="h-full bg-accent-blue transition-all duration-300 ease-out"
-          style={{ width: `${readingProgress}%` }}
-        />
-      </div>
+      {/* Reading progress bar removed to avoid jank */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="lg:grid lg:grid-cols-4 lg:gap-8">
@@ -170,9 +164,11 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                 <Image
                   src={blog.featuredImage.url}
                   alt={blog.featuredImage.alt}
-                  width={800}
-                  height={400}
-                  className="w-full h-64 md:h-96 object-cover"
+                  width={1200}
+                  height={630}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 800px"
+                  priority
+                  className="w-full aspect-[16/9] object-cover"
                 />
               </div>
               {blog.featuredImage.caption && (
@@ -214,7 +210,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
             )}
 
             {/* Article Content */}
-            <div className="prose prose-lg max-w-none mb-8">
+            <div className="prose prose-lg max-w-none mb-8 blog-content">
               <div 
                 className="text-primary leading-relaxed space-y-6"
                 dangerouslySetInnerHTML={{ __html: blog.content }}
