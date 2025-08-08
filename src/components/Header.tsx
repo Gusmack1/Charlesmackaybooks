@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link'
+import { useState } from 'react'
 import { useCart } from '@/context/CartContext';
 
 export default function Header() {
   const { getTotalItems, openBasket } = useCart();
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="bg-slate-800 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]">
@@ -44,14 +46,40 @@ export default function Header() {
                     </span>
                   )}
                 </button>
+
+                {/* Compact dropdown menu */}
+                <div className="relative">
+                  <button
+                    onClick={() => setOpen(o => !o)}
+                    aria-haspopup="menu"
+                    aria-expanded={open}
+                    className="badge badge-blue px-3 py-2 rounded min-h-[44px] min-w-[44px] text-sm md:text-base"
+                  >
+                    ☰ Menu
+                  </button>
+                  {open && (
+                    <div className="absolute right-0 mt-2 w-64 bg-slate-700 border border-white/10 rounded-lg shadow-xl overflow-hidden z-50">
+                      <nav className="flex flex-col p-1">
+                        <Link href="/" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">🏠 Home</Link>
+                        <Link href="/books" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">📚 Shop Books</Link>
+                        <Link href="/blog" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">📝 Blog</Link>
+                        <Link href="/for-researchers" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">🔬 For Researchers</Link>
+                        <Link href="/scottish-aviation-timeline" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">🏴 Scottish Timeline</Link>
+                        <Link href="/how-to-order" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">🛒 How to Order</Link>
+                        <Link href="/about" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">👨‍💼 About Charles</Link>
+                        <Link href="/contact" className="px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10">📧 Contact</Link>
+                      </nav>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Navigation */}
-      <nav className="bg-slate-700">
+      {/* Navigation (hidden — replaced by compact dropdown) */}
+      <nav className="bg-slate-700 hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 md:gap-6 py-3">
             <Link href="/" className="text-white hover:text-white/90 text-sm md:text-base font-medium flex items-center px-3 py-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-700 min-h-[44px]">
