@@ -241,14 +241,14 @@ export default function AviationGlossaryPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-12">
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               Aviation Glossary & Dictionary
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
               Comprehensive dictionary of aviation terminology with technical definitions, historical context,
               and cross-references. Essential reference for aviation students, professionals, and enthusiasts.
             </p>
@@ -261,13 +261,13 @@ export default function AviationGlossaryPage() {
           </div>
 
           {/* Categories Filter */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-6">
+          <div className="mb-12 card p-6">
             <h2 className="text-2xl font-semibold text-primary mb-4">Browse by Category</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {categories.map((category) => (
-                <div key={category} className="text-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors cursor-pointer">
-                  <div className="font-semibold text-blue-800">{category}</div>
-                  <div className="text-sm text-blue-600 mt-1">
+                <div key={category} className="text-center p-4 bg-secondary rounded-lg hover:bg-secondary/70 transition-colors cursor-pointer">
+                  <div className="font-semibold text-primary">{category}</div>
+                  <div className="text-sm text-secondary mt-1">
                     {glossaryTerms.filter(term => term.category === category).length} terms
                   </div>
                 </div>
@@ -276,7 +276,7 @@ export default function AviationGlossaryPage() {
           </div>
 
           {/* Alphabetical Index */}
-          <div className="mb-8 bg-white rounded-xl shadow-sm p-6">
+          <div className="mb-8 card p-6">
             <h2 className="text-xl font-semibold text-primary mb-4">Alphabetical Index</h2>
             <div className="flex flex-wrap gap-2">
               {Array.from({length: 26}, (_, i) => String.fromCharCode(65 + i)).map(letter => {
@@ -284,11 +284,7 @@ export default function AviationGlossaryPage() {
                 return (
                   <button
                     key={letter}
-                    className={`w-10 h-10 rounded-lg font-semibold ${
-                      hasTerms
-                        ? 'bg-blue-100 text-blue-800 hover:bg-blue-200'
-                        : 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                    }`}
+                    className={`w-10 h-10 rounded-lg font-semibold ${hasTerms ? 'bg-secondary text-primary hover:bg-secondary/80' : 'bg-secondary/40 text-muted cursor-not-allowed'}`}
                     disabled={!hasTerms}
                   >
                     {letter}
@@ -305,39 +301,29 @@ export default function AviationGlossaryPage() {
             {glossaryTerms
               .sort((a, b) => a.term.localeCompare(b.term))
               .map((term) => (
-                <div key={term.term} className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
+                <div key={term.term} className="card p-6 border-l-4 border-accent-blue">
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div className="flex-1 min-w-0">
                       <h3 className="text-2xl font-bold text-primary mb-2">
                         {term.term}
                         {term.aliases && (
-                          <span className="text-lg font-normal text-slate-500 ml-2">
+                          <span className="text-lg font-normal text-muted ml-2">
                             (also: {term.aliases.join(', ')})
                           </span>
                         )}
                       </h3>
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      term.category === 'Aircraft Components' ? 'bg-green-100 text-green-800' :
-                      term.category === 'Flight Operations' ? 'bg-blue-100 text-blue-800' :
-                      term.category === 'Aerodynamics' ? 'bg-purple-100 text-purple-800' :
-                      term.category === 'Historical' ? 'bg-orange-100 text-orange-800' :
-                      term.category === 'Navigation' ? 'bg-indigo-100 text-indigo-800' :
-                      term.category === 'Weather' ? 'bg-cyan-100 text-cyan-800' :
-                      term.category === 'Military' ? 'bg-red-100 text-red-800' :
-                      term.category === 'Engines' ? 'bg-yellow-100 text-yellow-800' :
-                      'bg-slate-100 text-primary'
-                    }`}>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium bg-secondary text-primary`}>
                       {term.category}
                     </span>
                   </div>
 
-                  <p className="text-slate-700 text-lg mb-4">{term.definition}</p>
+                  <p className="text-secondary text-lg mb-4">{term.definition}</p>
 
                   {term.historicalContext && (
-                    <div className="mb-4 p-4 bg-amber-50 rounded-lg border-l-4 border-amber-300">
-                      <h4 className="font-semibold text-amber-800 mb-2">Historical Context:</h4>
-                      <p className="text-amber-700">{term.historicalContext}</p>
+                    <div className="mb-4 p-4 bg-secondary/10 rounded-lg border-l-4 border-accent-amber">
+                      <h4 className="font-semibold text-primary mb-2">Historical Context:</h4>
+                      <p className="text-secondary">{term.historicalContext}</p>
                     </div>
                   )}
 
@@ -346,7 +332,7 @@ export default function AviationGlossaryPage() {
                       <h4 className="font-semibold text-slate-700 mb-2">Related Terms:</h4>
                       <div className="flex flex-wrap gap-2">
                         {term.relatedTerms.map((relatedTerm) => (
-                          <span key={relatedTerm} className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm hover:bg-slate-200 cursor-pointer transition-colors">
+                          <span key={relatedTerm} className="px-3 py-1 bg-secondary text-primary rounded-full text-sm hover:bg-secondary/80 cursor-pointer transition-colors">
                             {relatedTerm}
                           </span>
                         ))}
@@ -358,9 +344,9 @@ export default function AviationGlossaryPage() {
           </div>
 
           {/* Research Context */}
-          <div className="mt-12 bg-white rounded-xl shadow-sm p-8">
+          <div className="mt-12 card p-8">
             <h2 className="text-3xl font-bold text-primary mb-6">Aviation Terminology in Historical Research</h2>
-            <div className="prose max-w-none text-slate-700">
+            <div className="prose max-w-none text-secondary">
               <p className="text-lg mb-4">
                 Understanding aviation terminology is crucial for accurate historical research and academic study.
                 This glossary provides not only technical definitions but also historical context that helps
