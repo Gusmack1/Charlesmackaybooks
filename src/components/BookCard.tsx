@@ -138,14 +138,14 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
             <button
               onClick={handleAddToCart}
               disabled={isAddingToCart}
-              className="w-full badge badge-green py-2 px-4 disabled:opacity-50 text-sm font-medium"
+              className="w-full badge badge-green py-3 px-5 disabled:opacity-50 text-base font-semibold rounded-lg min-h-[44px]"
             >
               {isAddingToCart ? '🔄 Adding...' : '🛒 Add to Basket'}
             </button>
 
             <button
               onClick={handleEbayClick}
-              className="w-full badge badge-amber py-2 px-4 text-sm font-medium"
+              className="w-full badge badge-amber py-3 px-5 text-base font-semibold rounded-lg min-h-[44px]"
             >
               🛒 Buy on eBay
             </button>
@@ -153,7 +153,7 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
         ) : (
           <button
             disabled
-            className="w-full badge badge-gray py-2 px-4 cursor-not-allowed text-sm font-medium"
+            className="w-full badge badge-gray py-3 px-5 cursor-not-allowed text-base font-semibold rounded-lg min-h-[44px]"
           >
             📋 Out of Stock
           </button>

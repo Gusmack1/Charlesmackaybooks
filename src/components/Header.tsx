@@ -7,14 +7,14 @@ export default function Header() {
   const { getTotalItems, openBasket } = useCart();
 
   return (
-    <header className="bg-slate-800 text-white sticky top-0 z-50 shadow-lg">
+    <header className="bg-slate-800 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]">
       {/* Top Header Bar */}
       <div className="bg-slate-800">
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
         <div className="container max-w-7xl mx-auto px-4 py-3 md:py-4">
           <div className="flex justify-between items-center gap-4">
             {/* Logo and Author Info - Clickable */}
-            <Link href="/" className="hover:opacity-90 transition-opacity cursor-pointer group">
+            <Link href="/" className="hover:opacity-90 transition-opacity cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 rounded">
               <h1 className="font-bold text-white tracking-tight text-base md:text-lg leading-none m-0">Charles E. MacKay</h1>
               <p className="text-white text-base md:text-lg leading-none m-0">Aviation Historian & Author</p>
               <p className="text-white/90 text-base md:text-lg leading-none m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
@@ -33,7 +33,7 @@ export default function Header() {
                 <button
                   onClick={openBasket}
                   aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
-                  className="relative badge badge-green px-4 md:px-5 py-2 rounded text-base md:text-sm font-semibold transition-colors text-white min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
+                  className="relative badge badge-green px-5 md:px-6 py-3 rounded text-base md:text-base font-semibold transition-colors text-white min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
                   title="Shopping Basket"
                 >
                   <span className="hidden sm:inline text-white">🛒 Basket</span>
