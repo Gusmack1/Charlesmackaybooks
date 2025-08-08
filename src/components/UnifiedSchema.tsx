@@ -142,6 +142,29 @@ export default function UnifiedSchema({
 
   // Add book-specific schema only when needed
   if (pageType === 'book-detail' && bookData) {
+    // Breadcrumbs: Home > Books > Current Book
+    (unifiedSchema["@graph"] as any[]).push({
+      "@type": "BreadcrumbList",
+      "@id": `${baseUrl}/books/${bookData.id}#breadcrumbs`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": { "@id": `${baseUrl}/`, "name": "Home" }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": { "@id": `${baseUrl}/books`, "name": "Books" }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": { "@id": `${baseUrl}/books/${bookData.id}`, "name": bookData.title }
+        }
+      ]
+    });
+
     // Book as Product (for offers/pricing)
     (unifiedSchema["@graph"] as any[]).push({
       "@type": "Product",

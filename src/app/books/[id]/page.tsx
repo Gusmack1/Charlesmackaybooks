@@ -464,6 +464,44 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               )}
             </div>
           </div>
+
+          {/* Related content blocks */}
+          {(book.relatedBookIds && book.relatedBookIds.length > 0) && (
+            <div className="card mt-8">
+              <h3 className="content h3">Related Books</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {book.relatedBookIds.slice(0, 6).map((rid) => {
+                  const rb = books.find(b => b.id === rid);
+                  if (!rb) return null;
+                  return (
+                    <Link key={rid} href={`/books/${rid}`} className="block border rounded-lg p-4 hover:border-secondary/50">
+                      <div className="flex gap-3">
+                        <Image src={rb.imageUrl || `/book-covers/${rb.id}.jpg`} alt={rb.title} width={56} height={80} className="rounded" />
+                        <div>
+                          <div className="font-semibold text-primary line-clamp-2">{rb.title}</div>
+                          <div className="text-accent-green font-medium">£{rb.price}</div>
+                        </div>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {(book as any).relatedBlogPosts && (book as any).relatedBlogPosts.length > 0 && (
+            <div className="card mt-8">
+              <h3 className="content h3">Related Articles</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {(book as any).relatedBlogPosts.slice(0, 6).map((p: any) => (
+                  <Link key={p.slug} href={`/blog/${p.slug}`} className="block border rounded-lg p-4 hover:border-secondary/50">
+                    <div className="font-semibold text-primary mb-1 line-clamp-2">{p.title}</div>
+                    <div className="text-secondary text-sm line-clamp-3">{p.excerpt}</div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </main>
 
         <MobileFooterNav />
