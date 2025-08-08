@@ -3,20 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import mobile-first responsive styles */
-@import '../styles/mobile-first-responsive.css';
-
-/* Import critical shipping visibility fix */
-@import '../styles/shipping-visibility-fix.css';
-
-/* Import timeline visibility fix */
-@import '../styles/timeline-visibility-fix.css';
-
-/* Import emergency text visibility fix */
-@import '../styles/text-visibility-emergency-fix.css';
-
-/* Import comprehensive typography and readability fix */
-@import '../styles/typography-readability-fix.css';
+/* External CSS imports removed: consolidated into this file and Tailwind utilities */
 
 @layer base {
   body {
