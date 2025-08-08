@@ -414,20 +414,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           </section>
         )}
 
-        {/* Tags */}
-        <section className="mt-12">
-          <h3 className="text-lg font-semibold text-primary mb-4">🏷️ Topics Covered</h3>
-          <div className="flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
-              <span 
-                key={tag}
-                className="badge badge-gray px-3 py-1 rounded-full text-sm font-medium"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </section>
+        {/* Tags removed per request */}
       </div>
 
       {/* Social Sharing Footer */}

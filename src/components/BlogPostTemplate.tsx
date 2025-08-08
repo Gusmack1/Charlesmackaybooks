@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import CommentSystem from './CommentSystem'
+// Comment system removed per request
 
 interface BlogData {
   title: string
@@ -221,17 +221,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
               </div>
             </div>
 
-            {/* Tags */}
-            <div className="mb-8">
-                              <h4 className="font-semibold text-primary mb-3">🏷️ Topics Covered</h4>
-              <div className="flex flex-wrap gap-2">
-                {blog.tags.map((tag) => (
-                                          <span key={tag} className="badge badge-gray px-3 py-1 rounded-full text-sm">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
+            {/* Tags removed per request */}
 
             {/* Related Posts */}
             {relatedPosts.length > 0 && (
@@ -269,11 +259,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
 
       {/* Bottom Social Sharing removed per request */}
 
-      {/* Comment System */}
-      <CommentSystem 
-        postSlug={blog.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
-        postTitle={blog.title}
-      />
+      {/* Comment System removed */}
     </div>
   )
 }

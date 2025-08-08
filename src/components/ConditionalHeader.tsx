@@ -5,14 +5,7 @@ import Header from './Header';
 
 export default function ConditionalHeader() {
   const pathname = usePathname();
-  
-  // Hide header on blog posts (but not blog index page)
-  const shouldHideHeader = pathname.startsWith('/blog/') && pathname !== '/blog';
-  
-  if (shouldHideHeader) {
-    return null;
-  }
-  
+  // Always show the header site-wide (menu is required on every page)
   return (
     <div className="header-container">
       <Header />
