@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Share2, BookOpen, Clock, User, Calendar, Tag, ChevronRight, Heart, MessageCircle } from 'lucide-react';
 import PostRelatedBooks from '@/components/PostRelatedBooks';
@@ -47,7 +47,6 @@ interface OptimizedBlogTemplateProps {
 }
 
 export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplateProps) {
-  const [readingProgress, setReadingProgress] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
   const [shareCount, setShareCount] = useState(0);
   const [showTableOfContents, setShowTableOfContents] = useState(false);
@@ -94,18 +93,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
   const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html));
 
-  // Reading progress tracking
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / docHeight) * 100;
-      setReadingProgress(Math.min(progress, 100));
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // Removed reading progress tracking to avoid scroll jank
 
   // Generate table of contents from content
   const generateTableOfContents = (content: string) => {
@@ -139,10 +127,10 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
   };
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-8 bg-white">
+    <article className="max-w-4xl mx-auto px-4 py-8">
 
       {/* Sticky Navigation */}
-      <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b py-4 mb-8 z-40">
+      <nav className="mb-6">
         <div className="flex items-center justify-between max-w-4xl mx-auto px-4">
           <div className="flex items-center space-x-2 text-sm text-muted">
             <span>Books</span>
@@ -288,7 +276,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       </div>
 
       {/* Author Bio */}
-      <div className="mb-12 p-6 card-compact rounded-lg">
+      <div className="mb-12 p-6">
         <div className="flex items-start gap-4">
           <div className="relative w-16 h-16 flex-shrink-0">
             <Image
@@ -307,7 +295,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
             </p>
             <a 
               href={`mailto:${post.author.email}`}
-              className="text-accent-blue hover:text-blue-700 font-medium"
+              className="text-accent-blue hover:text-accent-blue font-medium"
             >
               Contact the author
             </a>
@@ -380,21 +368,13 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Auto-related books */}
       <PostRelatedBooks category={post.category} tags={post.tags} />
 
-      {/* Social Sharing Footer */}
-      <div className="border-t pt-8">
-        <div className="text-center">
-          <p className="text-secondary mb-4">Share this article</p>
-          <div className="flex justify-center gap-4">
-            {['twitter', 'facebook', 'linkedin', 'pinterest', 'email'].map((platform) => (
-              <button
-                key={platform}
-                onClick={() => handleShare(platform)}
-                className="px-4 py-2 badge badge-gray rounded-lg transition-colors capitalize"
-              >
-                {platform}
-              </button>
-            ))}
-          </div>
+      {/* Simple Share */}
+      <div className="pt-8 text-center">
+        <p className="text-secondary mb-3">Share this article</p>
+        <div className="flex justify-center gap-2">
+          {['twitter', 'facebook', 'linkedin'].map((platform) => (
+            <button key={platform} onClick={() => handleShare(platform)} className="badge badge-gray px-3 py-2 text-sm capitalize">{platform}</button>
+          ))}
         </div>
       </div>
 

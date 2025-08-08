@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import CommentSystem from './CommentSystem'
@@ -53,38 +53,41 @@ interface BlogPostTemplateProps {
 }
 
 export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: BlogPostTemplateProps) {
-  const [readingProgress, setReadingProgress] = useState(0)
-  const [activeSection, setActiveSection] = useState('')
+  const fallbackSvg = encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='%231e3a8a'/><stop offset='100%' stop-color='%230256d4'/></linearGradient></defs><rect width='600' height='400' fill='url(#g)'/><g fill='white' font-family='Source Sans 3, Arial' text-anchor='middle'><text x='300' y='185' font-size='28'>Image unavailable</text><text x='300' y='225' font-size='16'>Charles E. MacKay Aviation History</text></g></svg>`
+  )
 
-  useEffect(() => {
-    const updateReadingProgress = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight
-      const progress = (window.scrollY / totalHeight) * 100
-      setReadingProgress(Math.min(Math.max(progress, 0), 100))
-    }
-
-    const updateActiveSection = () => {
-      const sections = blog.tableOfContents.map(item => document.getElementById(item.id)).filter(Boolean)
-      const currentSection = sections.find(section => {
-        if (section) {
-          const rect = section.getBoundingClientRect()
-          return rect.top <= 100 && rect.bottom > 100
-        }
-        return false
-      })
-      if (currentSection) {
-        setActiveSection(currentSection.id)
+  const addFallbackToAllImages = (html: string): string =>
+    html.replace(/<img\s+([^>]*?)>/gi, (match, attrs) => {
+      let updated = attrs
+      if (!/\balt\s*=/.test(updated)) updated += ' alt="Aviation history image"'
+      updated = updated.replace(/\bshadow-[^\s"]+/g, '')
+      if (!/\bclass\s*=/.test(updated)) updated += ' class="rounded-lg"'
+      if (!/\bonerror=/.test(updated)) {
+        updated += ` onerror=\\"this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'\\"`
       }
-    }
+      return `<img ${updated}>`
+    })
 
-    const handleScroll = () => {
-      updateReadingProgress()
-      updateActiveSection()
+  const ensureThreeImages = (html: string): string => {
+    const imgMatches = html.match(/<img\s+[^>]*src=/gi) || []
+    if (imgMatches.length >= 3) return html
+    const candidates: string[] = []
+    if (blog.featuredImage?.url) candidates.push(blog.featuredImage.url)
+    if (relatedBooks && relatedBooks.length > 0) {
+      candidates.push(...relatedBooks.map(b => b.imageUrl).filter(Boolean))
     }
+    while (candidates.length < 3) {
+      candidates.push(`data:image/svg+xml;utf8,${fallbackSvg}`)
+    }
+    const blocksNeeded = 3 - imgMatches.length
+    const blocks = Array.from({ length: blocksNeeded }).map((_, idx) =>
+      `<figure class=\\"my-6\\"><img src=\\"${candidates[idx]}\\" alt=\\"Historical aviation reference image\\" onerror=\\"this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'\\" class=\\"w-full h-auto rounded-lg\\"/><figcaption class=\\"image-caption text-center text-sm text-secondary mt-2 italic\\">Historical reference image</figcaption></figure>`
+    )
+    return html + blocks.join('')
+  }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [blog.tableOfContents])
+  const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html))
 
   const shareUrl = typeof window !== 'undefined' ? window.location.href : ''
   const shareTitle = blog.title
@@ -99,35 +102,12 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
   }
 
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       {/* Reading progress bar removed to avoid jank */}
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="lg:grid lg:grid-cols-4 lg:gap-8">
-          {/* Table of Contents Sidebar */}
-          <div className="hidden lg:block lg:col-span-1">
-            <div className="sticky top-32 pt-4">
-              <div className="card-compact rounded-lg p-4 border">
-                <h3 className="font-semibold text-primary mb-4">📋 Table of Contents</h3>
-                <nav className="space-y-2">
-                  {blog.tableOfContents.map((item) => (
-                    <a
-                      key={item.id}
-                      href={`#${item.id}`}
-                      className={`block text-sm transition-colors hover:text-accent-blue ${
-                        activeSection === item.id ? 'text-accent-blue font-medium' : 'text-secondary'
-                      } ${item.level === 2 ? 'pl-0' : item.level === 3 ? 'pl-4' : 'pl-8'}`}
-                    >
-                      {item.title}
-                    </a>
-                  ))}
-                </nav>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Content */}
-          <div className="lg:col-span-3 py-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8">
+        {/* Main Content */}
+        <div className="py-4">
             {/* Article Header */}
             <div className="mb-8">
               <div className="mb-4">
@@ -213,7 +193,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
             <div className="prose prose-lg max-w-none mb-8 blog-content">
               <div 
                 className="text-primary leading-relaxed space-y-6"
-                dangerouslySetInnerHTML={{ __html: blog.content }}
+                dangerouslySetInnerHTML={{ __html: processContent(blog.content) }}
               />
             </div>
 
@@ -233,12 +213,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                     {blog.author.credentials.map((credential, index) => (
                       <div key={index} className="flex items-center text-sm text-accent-blue">
                         <span className="mr-2">🏛️</span>
-                        {credential}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                        {credential}
+                        <span>{credential}</span>
                       </div>
                     ))}
                   </div>
@@ -265,7 +240,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                 <div className="grid md:grid-cols-2 gap-4">
                   {relatedPosts.map((post) => (
                     <Link key={post.slug} href={`/blog/${post.slug}`}
-                          className="block bg-white p-4 rounded-lg border hover:shadow-lg transition-shadow">
+                          className="block card p-4 hover:shadow-sm transition-shadow">
                       <div className="flex gap-4">
                         <Image
                           src={post.imageUrl}
@@ -287,32 +262,10 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                 </div>
               </div>
             )}
-          </div>
         </div>
       </div>
 
-      {/* Mobile Floating Share */}
-      <div className="fixed bottom-4 right-4 md:hidden z-40">
-        <div className="bg-white rounded-full shadow-lg p-3 border border-gray-200">
-          <div className="flex gap-2">
-            <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
-                                 className="text-accent-blue hover:text-blue-800 text-xl min-h-[44px] min-w-[44px] flex items-center justify-center" 
-               aria-label="Share on Facebook">
-              📘
-            </a>
-            <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
-                                 className="text-accent-blue hover:text-blue-600 text-xl min-h-[44px] min-w-[44px] flex items-center justify-center" 
-               aria-label="Share on Twitter">
-              🐦
-            </a>
-            <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
-               className="text-accent-blue hover:text-blue-900 text-xl min-h-[44px] min-w-[44px] flex items-center justify-center" 
-               aria-label="Share on LinkedIn">
-              💼
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* Mobile Floating Share removed for simplicity */}
 
       {/* Bottom Social Sharing */}
       <div className="bg-slate-900 text-white py-12">
