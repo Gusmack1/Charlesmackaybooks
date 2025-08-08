@@ -267,37 +267,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
 
       {/* Mobile Floating Share removed for simplicity */}
 
-      {/* Bottom Social Sharing */}
-      <div className="bg-slate-900 text-white py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h3 className="text-2xl font-semibold mb-6">📢 Enjoyed this analysis? Share it!</h3>
-          <div className="flex justify-center gap-4 flex-wrap mb-6">
-            <a href={socialShares.facebook} target="_blank" rel="noopener noreferrer"
-               className="badge badge-blue px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              📘 Share on Facebook
-            </a>
-            <a href={socialShares.twitter} target="_blank" rel="noopener noreferrer"
-               className="badge badge-blue px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              🐦 Share on Twitter
-            </a>
-            <a href={socialShares.linkedin} target="_blank" rel="noopener noreferrer"
-               className="badge badge-blue px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              💼 Share on LinkedIn
-            </a>
-            <a href={socialShares.pinterest} target="_blank" rel="noopener noreferrer"
-               className="badge badge-red px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              📌 Share on Pinterest
-            </a>
-            <a href={socialShares.email}
-               className="badge badge-gray px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center">
-              ✉️ Share via Email
-            </a>
-          </div>
-          <p className="text-white/70 text-sm">
-            Help us reach more aviation enthusiasts by sharing this expert analysis!
-          </p>
-        </div>
-      </div>
+      {/* Bottom Social Sharing removed per request */}
 
       {/* Comment System */}
       <CommentSystem 
