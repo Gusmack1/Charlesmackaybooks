@@ -22,6 +22,8 @@ export interface Book {
   academicValue?: string;
   pageCount?: number;
   publicationYear?: number;
+  // Shipping and logistics
+  weight?: number;
   specifications?: {
     format?: string;
     illustrations?: string;
