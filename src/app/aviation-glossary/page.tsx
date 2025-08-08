@@ -232,6 +232,12 @@ export default function AviationGlossaryPage() {
     }))
   };
 
+  const letters = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
+  const termsByLetter: Record<string, typeof glossaryTerms> = letters.reduce((acc, letter) => {
+    acc[letter] = glossaryTerms.filter((t) => t.term.toUpperCase().startsWith(letter)).sort((a, b) => a.term.localeCompare(b.term));
+    return acc;
+  }, {} as Record<string, typeof glossaryTerms>);
+
   return (
     <>
       <script
@@ -279,68 +285,78 @@ export default function AviationGlossaryPage() {
           <div className="mb-8 card p-6">
             <h2 className="text-xl font-semibold text-primary mb-4">Alphabetical Index</h2>
             <div className="flex flex-wrap gap-2">
-              {Array.from({length: 26}, (_, i) => String.fromCharCode(65 + i)).map(letter => {
-                const hasTerms = glossaryTerms.some(term => term.term.toUpperCase().startsWith(letter));
-                return (
-                  <button
-                    key={letter}
-                    className={`w-10 h-10 rounded-lg font-semibold ${hasTerms ? 'bg-secondary text-primary hover:bg-secondary/80' : 'bg-secondary/40 text-muted cursor-not-allowed'}`}
-                    disabled={!hasTerms}
-                  >
-                    {letter}
-                  </button>
-                );
-              })}
+              {letters.map((letter) => (
+                <a
+                  key={letter}
+                  href={`#letter-${letter}`}
+                  className={`w-10 h-10 rounded-lg font-semibold grid place-items-center ${termsByLetter[letter].length > 0 ? 'bg-secondary text-primary hover:bg-secondary/80' : 'bg-secondary/40 text-muted hover:bg-secondary/50'}`}
+                >
+                  {letter}
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Terms Display */}
-          <div className="space-y-6">
+          {/* Terms Display grouped by letter */}
+          <div className="space-y-10">
             <h2 className="text-3xl font-bold text-primary">Aviation Terms & Definitions</h2>
 
-            {glossaryTerms
-              .sort((a, b) => a.term.localeCompare(b.term))
-              .map((term) => (
-                <div key={term.term} className="card p-6 border-l-4 border-accent-blue">
-                  <div className="flex flex-wrap items-start justify-between mb-4">
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-2xl font-bold text-primary mb-2">
-                        {term.term}
-                        {term.aliases && (
-                          <span className="text-lg font-normal text-muted ml-2">
-                            (also: {term.aliases.join(', ')})
-                          </span>
-                        )}
-                      </h3>
-                    </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium bg-secondary text-primary`}>
-                      {term.category}
-                    </span>
-                  </div>
-
-                  <p className="text-secondary text-lg mb-4">{term.definition}</p>
-
-                  {term.historicalContext && (
-                    <div className="mb-4 p-4 bg-secondary/10 rounded-lg border-l-4 border-accent-amber">
-                      <h4 className="font-semibold text-primary mb-2">Historical Context:</h4>
-                      <p className="text-secondary">{term.historicalContext}</p>
-                    </div>
-                  )}
-
-                  {term.relatedTerms && (
-                    <div className="mt-4">
-                      <h4 className="font-semibold text-slate-700 mb-2">Related Terms:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {term.relatedTerms.map((relatedTerm) => (
-                          <span key={relatedTerm} className="px-3 py-1 bg-secondary text-primary rounded-full text-sm hover:bg-secondary/80 cursor-pointer transition-colors">
-                            {relatedTerm}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+            {letters.map((letter) => (
+              <section key={letter} id={`letter-${letter}`} className="space-y-4 scroll-mt-24">
+                <div className="flex items-center gap-3">
+                  <h3 className="text-2xl font-bold text-primary">{letter}</h3>
+                  <a href="#top" className="text-accent-blue text-sm underline">Back to top</a>
                 </div>
-              ))}
+
+                {termsByLetter[letter].length === 0 ? (
+                  <div className="card p-6">
+                    <p className="text-secondary">No entries under {letter} yet. Research update in progress.</p>
+                  </div>
+                ) : (
+                  termsByLetter[letter].map((term) => (
+                    <div key={term.term} className="card p-6 border-l-4 border-accent-blue">
+                      <div className="flex flex-wrap items-start justify-between mb-4">
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-2xl font-bold text-primary mb-2">
+                            {term.term}
+                            {term.aliases && (
+                              <span className="text-lg font-normal text-muted ml-2">
+                                (also: {term.aliases.join(', ')})
+                              </span>
+                            )}
+                          </h4>
+                        </div>
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium bg-secondary text-primary`}>
+                          {term.category}
+                        </span>
+                      </div>
+
+                      <p className="text-secondary text-lg mb-4">{term.definition}</p>
+
+                      {term.historicalContext && (
+                        <div className="mb-4 p-4 bg-secondary/10 rounded-lg border-l-4 border-accent-amber">
+                          <h5 className="font-semibold text-primary mb-2">Historical Context:</h5>
+                          <p className="text-secondary">{term.historicalContext}</p>
+                        </div>
+                      )}
+
+                      {term.relatedTerms && (
+                        <div className="mt-4">
+                          <h5 className="font-semibold text-slate-700 mb-2">Related Terms:</h5>
+                          <div className="flex flex-wrap gap-2">
+                            {term.relatedTerms.map((relatedTerm) => (
+                              <span key={relatedTerm} className="px-3 py-1 bg-secondary text-primary rounded-full text-sm hover:bg-secondary/80 cursor-pointer transition-colors">
+                                {relatedTerm}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))
+                )}
+              </section>
+            ))}
           </div>
 
           {/* Research Context */}
