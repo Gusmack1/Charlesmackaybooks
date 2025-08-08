@@ -336,8 +336,33 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   const byTitle = entries.find(e => e.title.toLowerCase().includes(book.title.toLowerCase()) || book.title.toLowerCase().includes(e.title.toLowerCase()));
   const info = byIsbn || byTitle;
 
-  const descriptionFromInfo = info?.description || book.description;
+  // Prefer curated, researched copy from src/data/books.ts; fallback to Bookinfo.txt
+  const preferredDescription = book.description || info?.description || '';
   const weightFromInfo = info?.weightGrams;
+
+  // Remove legacy ecommerce boilerplate (price/ISBN/shipping) if present
+  function sanitizeDescription(raw: string): string[] {
+    const lines = raw
+      .split(/\r?\n+/)
+      .map(l => l.trim())
+      .filter(Boolean)
+      .filter(l => !/^£\s?\d/.test(l))
+      .filter(l => !/^isbn[:\s]/i.test(l))
+      .filter(l => !/\bISBN[-:]/i.test(l))
+      .filter(l => !/Condition is/i.test(l))
+      .filter(l => !/Dispatched with/i.test(l))
+      .filter(l => !/Royal Mail/i.test(l))
+      .filter(l => !/\bshipping\b/i.test(l))
+      .filter(l => !/Updated copy coming/i.test(l));
+
+    // Merge back into paragraphs by double-breaks
+    const text = lines.join('\n');
+    return text
+      .split(/\n{2,}/)
+      .map(p => p.trim())
+      .filter(Boolean);
+  }
+  const sanitizedParagraphs = sanitizeDescription(preferredDescription);
 
   return (
     <>
@@ -389,9 +414,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   {book.title}
                 </h1>
                 
-                <p className="text-xl lg:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">
-                  {(descriptionFromInfo?.length > 220 ? `${descriptionFromInfo.slice(0, 220)}…` : descriptionFromInfo)}
-                </p>
+                {/* Per request: no description text in hero */}
 
                 {/* Book Specifications - Enhanced */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
@@ -427,11 +450,19 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           </div>
         </div>
 
-        {/* Content removed under description per request; placeholder only */}
+        {/* Main description content */}
         <main className="container mx-auto container-padding section-padding">
           <div className="card card-large content">
             <h2 className="content h2">Description</h2>
-            <div className="text-secondary">Updated copy coming shortly.</div>
+            <div className="prose prose-invert max-w-none">
+              {sanitizedParagraphs.length > 0 ? (
+                sanitizedParagraphs.map((para, idx) => (
+                  <p key={idx} className="text-secondary mb-4">{para}</p>
+                ))
+              ) : (
+                <p className="text-secondary">No description available.</p>
+              )}
+            </div>
           </div>
         </main>
 
