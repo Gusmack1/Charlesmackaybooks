@@ -15,18 +15,18 @@ export default function Header() {
           <div className="flex justify-between items-center gap-4">
             {/* Logo and Author Info - Clickable */}
             <Link href="/" className="hover:opacity-90 transition-opacity cursor-pointer group">
-              <h1 className="font-bold text-white tracking-tight text-2xl md:text-3xl lg:text-4xl leading-tight">Charles E. MacKay</h1>
-              <p className="text-white text-base md:text-lg">Aviation Historian & Author</p>
-              <p className="text-white/90 text-sm md:text-base">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
+              <h1 className="font-bold text-white tracking-tight text-base md:text-lg leading-none m-0">Charles E. MacKay</h1>
+              <p className="text-white text-base md:text-lg leading-none m-0">Aviation Historian & Author</p>
+              <p className="text-white/90 text-base md:text-lg leading-none m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
             </Link>
 
             {/* Contact Info and Basket */}
             <div className="text-right">
               <div className="flex items-center gap-3 md:gap-5 mb-1">
                 <div className="hidden md:block text-left">
-                  <div className="text-white text-sm md:text-base">📧 charlese1mackay@hotmail.com</div>
-                  <div className="text-white/90 text-xs md:text-sm">Glasgow, Scotland</div>
-                  <div className="text-white/90 text-xs md:text-sm">Published Aviation Books</div>
+                  <div className="text-white text-base md:text-lg leading-none">📧 charlese1mackay@hotmail.com</div>
+                  <div className="text-white/90 text-base md:text-lg leading-none">Glasgow, Scotland</div>
+                  <div className="text-white/90 text-base md:text-lg leading-none">Published Aviation Books</div>
                 </div>
 
                 {/* Basket Button - Always visible */}
