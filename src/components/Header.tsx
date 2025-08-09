@@ -69,7 +69,7 @@ export default function Header() {
 
                 {/* Global navigation (More dropdown for compact screens) */}
                 <div
-                  className="relative md:hidden"
+                  className="relative"
                   onKeyDown={(e) => { if (e.key === 'Escape') setOpen(false); }}
                   onBlur={(e) => {
                     const current = e.currentTarget;
