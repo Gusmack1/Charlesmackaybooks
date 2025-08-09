@@ -18,7 +18,7 @@ Queue (start → finish)
 - [x] german-aircraft-great-war-development
 - [x] english-electric-lightning-development
 - [x] f86-sabre-cold-war-fighter
-- [ ] jet-age-aviation-cold-war-development
+- [x] jet-age-aviation-cold-war-development
 - [ ] schneider-trophy-racing-development
 - [ ] lucy-lady-houston-schneider-trophy
 - [ ] luftwaffe-1945-final-year
