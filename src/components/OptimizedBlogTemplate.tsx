@@ -143,25 +143,25 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       </nav>
 
       {/* Article Header */}
-      <header className="mb-8">
+      <header className="mb-8 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white rounded-lg p-6">
         <div className="mb-4">
-          <span className="inline-block badge badge-blue text-sm font-medium rounded-full">
+          <span className="inline-block badge badge-blue text-sm font-medium rounded-full text-white">
             {post.category}
           </span>
         </div>
         
-        <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-4 leading-tight">
+        <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
           {post.title}
         </h1>
         
         {post.subtitle && (
-          <p className="text-xl text-secondary mb-6 leading-relaxed">
+          <p className="text-xl text-white/90 mb-6 leading-relaxed">
             {post.subtitle}
           </p>
         )}
 
         {/* Article Meta */}
-        <div className="flex flex-wrap items-center gap-6 text-sm text-secondary mb-6">
+        <div className="flex flex-wrap items-center gap-6 text-sm text-white/90 mb-6">
           <div className="flex items-center gap-2">
             <User className="w-4 h-4" />
             <span>By {post.author.name}</span>

@@ -156,7 +156,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       {/* Social Sharing Header removed */}
 
       {/* Hero Section */}
-      <div className="hero-section overflow-hidden">
+      <div className="hero-section overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
         {post.featuredImage?.url && (
           <div className="absolute inset-0">
             <Image
@@ -293,8 +293,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           </section>
         )}
 
-        {/* Auto-related books by category/tags */}
-        <PostRelatedBooks category={post.category} tags={post.tags} />
+        {/* Auto-related books removed to avoid duplicate related sections */}
 
         {/* Author Bio */}
         <section className="mt-16 card p-8">
