@@ -296,6 +296,7 @@ export default function ForResearchersPage() {
           </div>
 
           <p className="text-sm text-white/80 mt-6">📍 Based in Glasgow, Scotland • 📞 Response within 24 hours • 🌍 Available for international collaboration</p>
+        </div>
       </div>
     </BBCPageTemplate>
   );
