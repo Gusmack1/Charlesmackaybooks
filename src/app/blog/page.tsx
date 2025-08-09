@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 
 export const metadata: Metadata = {
   title: 'Aviation History Blog | Expert Insights by Charles E. MacKay | Charles E. MacKay Aviation Books',
@@ -354,28 +355,12 @@ const blogCategories = {
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Aviation History Blog
-              <span className="block text-white text-3xl md:text-4xl mt-2">Expert Insights & Heritage</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
-              Expert insights into Scottish aviation history, WWI & WWII aircraft, helicopter development,
-              jet age aviation, and military aviation heritage.
-            </p>
-            <p className="text-white text-lg">
-              By Aviation Historian <span className="font-semibold text-white">Charles E. MacKay</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-6 py-16">
+    <BBCPageTemplate
+      title="Aviation History Blog"
+      subtitle="Expert insights into Scottish aviation history, WWI & WWII aircraft, helicopter development, jet age aviation, and military aviation heritage."
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]}
+    >
+      <div className="max-w-6xl mx-auto px-6 py-12">
 
         {/* Blog Categories */}
         {Object.entries(blogCategories).map(([category, posts]) => (
@@ -462,7 +447,7 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-    </div>
+    </BBCPageTemplate>
   )
 }
 
