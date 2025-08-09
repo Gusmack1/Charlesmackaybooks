@@ -18,6 +18,12 @@ export default function UnifiedSchema({
 
   const baseUrl = 'https://charlesmackaybooks.com';
   const fullUrl = pageUrl ? `${baseUrl}${pageUrl}` : baseUrl;
+  // Compute a reasonable default for price validity (2 years from now)
+  const priceValidUntil = (() => {
+    const d = new Date();
+    d.setFullYear(d.getFullYear() + 2);
+    return d.toISOString().split('T')[0];
+  })();
   const absoluteImage = (img?: string) => {
     if (!img) return undefined as unknown as string;
     if (img.startsWith('http')) return img;
@@ -193,6 +199,7 @@ export default function UnifiedSchema({
         "url": `${baseUrl}/books/${bookData.id}`,
         "price": bookData.price.toFixed(2),
         "priceCurrency": "GBP",
+        "priceValidUntil": priceValidUntil,
         "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
         "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
         "seller": {
@@ -256,6 +263,7 @@ export default function UnifiedSchema({
         "url": `${baseUrl}/books/${bookData.id}`,
         "price": bookData.price.toFixed(2),
         "priceCurrency": "GBP",
+        "priceValidUntil": priceValidUntil,
         "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
         "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition"
       }
@@ -292,6 +300,7 @@ export default function UnifiedSchema({
             "@type": "Offer",
             "price": book.price.toFixed(2),
             "priceCurrency": "GBP",
+            "priceValidUntil": priceValidUntil,
             "availability": book.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
             "itemCondition": book.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition"
           },
