@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer';
+import BBCPageTemplate from '@/components/BBCPageTemplate';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -33,17 +33,12 @@ export const metadata: Metadata = {
 
 export default function ForResearchersPage() {
   return (
-    <>
-
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-8">
-        {/* Page Header */}
-        <div className="text-center mb-12">
-          <h1 className="content h1 text-primary mb-4">For Researchers & Academic Institutions</h1>
-          <p className="text-xl text-secondary max-w-3xl mx-auto">
-            Academic resources, citation guides, and research collaboration opportunities
-          </p>
-        </div>
+    <BBCPageTemplate
+      title="For Researchers & Academic Institutions"
+      subtitle="Academic resources, citation guides, and research collaboration opportunities"
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'For Researchers' }]}
+    >
+      <div className="pt-2">
 
         {/* Citation Guide */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
@@ -301,11 +296,7 @@ export default function ForResearchersPage() {
           </div>
 
           <p className="text-sm text-white/80 mt-6">📍 Based in Glasgow, Scotland • 📞 Response within 24 hours • 🌍 Available for international collaboration</p>
-        </div>
       </div>
-
-        {/* Footer removed to avoid duplication; provided by root layout */}
-      </div>
-    </>
+    </BBCPageTemplate>
   );
 }

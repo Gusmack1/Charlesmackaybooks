@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import Footer from '@/components/Footer';
+import BBCPageTemplate from '@/components/BBCPageTemplate';
 export const metadata: Metadata = {
   title: 'How to Order Aviation History Books | Charles E. MacKay Aviation Books',
   description: 'Multiple secure purchasing options with fast worldwide shipping from Glasgow, Scotland. Order Charles E. MacKay aviation history books via eBay, PayPal, or direct contact.',
@@ -33,17 +33,12 @@ export const metadata: Metadata = {
 
 export default function HowToOrderPage() {
   return (
-    <>
-
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-8">
-        {/* Page Header */}
-        <div className="text-center mb-12">
-          <h1 className="content h1 text-primary mb-4">How to Order Aviation History Books</h1>
-          <p className="text-xl text-secondary max-w-3xl mx-auto">
-            Multiple secure purchasing options with fast worldwide shipping from Glasgow, Scotland
-          </p>
-        </div>
+    <BBCPageTemplate
+      title="How to Order Aviation History Books"
+      subtitle="Multiple secure purchasing options with fast worldwide shipping from Glasgow, Scotland"
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'How to Order' }]}
+    >
+      <div className="pt-2">
 
         <div className="max-w-6xl mx-auto">
           {/* Quick Start */}
@@ -294,11 +289,7 @@ export default function HowToOrderPage() {
               </a>
             </div>
           </div>
-        </div>
       </div>
-
-        {/* Footer removed to avoid duplication; provided by root layout */}
-      </div>
-    </>
+    </BBCPageTemplate>
   );
 }
