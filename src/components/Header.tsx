@@ -10,7 +10,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]">
+    <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]" role="banner">
       {/* Top Header Bar */}
       <div className="bg-slate-900">
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
@@ -26,6 +26,17 @@ export default function Header() {
             {/* Actions */}
             <div className="text-right">
               <div className="flex items-center gap-3 md:gap-5 mb-1">
+                {/* Simple Search (placeholder) */}
+                <div className="hidden md:block">
+                  <label htmlFor="site-search" className="sr-only">Search</label>
+                  <input
+                    id="site-search"
+                    type="search"
+                    placeholder="Search"
+                    className="rounded bg-slate-800 text-white placeholder-white/70 px-3 py-2 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    aria-label="Search site"
+                  />
+                </div>
 
                 {/* Basket Button - Always visible */}
                 <button
@@ -49,29 +60,43 @@ export default function Header() {
                   onMouseEnter={() => setOpen(true)}
                   onMouseLeave={() => setOpen(false)}
                   onKeyDown={(e) => { if (e.key === 'Escape') setOpen(false); }}
+                  onFocus={() => setOpen(true)}
+                  onBlur={(e) => {
+                    const current = e.currentTarget;
+                    const related = e.relatedTarget as Node | null;
+                    if (!related || (current && !current.contains(related))) {
+                      setOpen(false);
+                    }
+                  }}
                 >
                   <button
                     onClick={() => setOpen(o => !o)}
                     aria-haspopup="menu"
                     aria-expanded={open}
+                    aria-controls="global-more-menu"
                     className="badge badge-blue px-3 py-2 rounded min-h-[44px] min-w-[44px] text-sm md:text-base"
                   >
                     ☰ More
                   </button>
                   {open && (
                   <div
+                    id="global-more-menu"
+                    role="menu"
                     className="absolute right-0 mt-2 w-64 bg-slate-900 text-white border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50"
                     onMouseEnter={() => setOpen(true)}
                   >
-                      <nav className="flex flex-col p-1">
-                      <Link href="/" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">🏠 Home</Link>
-                      <Link href="/books" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">📚 Shop Books</Link>
-                      <Link href="/blog" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">📝 Blog</Link>
-                      <Link href="/about" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">👨‍💼 About Charles</Link>
-                      <Link href="/for-researchers" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">🔬 For Researchers</Link>
-                      <Link href="/scottish-aviation-timeline" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">🏴 Scottish Timeline</Link>
-                      <Link href="/how-to-order" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">🛒 How to Order</Link>
-                      <Link href="/contact" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">📧 Contact</Link>
+                      <nav className="flex flex-col p-1" aria-label="More navigation">
+                        {primaryNavLinks.map(link => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            role="menuitem"
+                            onClick={() => setOpen(false)}
+                            className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
                       </nav>
                     </div>
                   )}
@@ -83,7 +108,7 @@ export default function Header() {
       </div>
 
       {/* Primary navigation row */}
-      <nav className="bg-slate-800 border-t border-slate-700">
+      <nav className="bg-slate-800 border-t border-slate-700" role="navigation" aria-label="Primary">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-start gap-1 md:gap-2 py-2 text-sm text-white">
             {primaryNavLinks.map(link => (
