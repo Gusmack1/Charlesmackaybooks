@@ -1,13 +1,18 @@
 'use client';
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { primaryNavLinks } from '@/config/navigation'
 import { useCart } from '@/context/CartContext';
 
 export default function Header() {
   const { getTotalItems, openBasket } = useCart();
   const [open, setOpen] = useState(false);
+  const [menuPinned, setMenuPinned] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const router = useRouter();
+  const [search, setSearch] = useState('');
 
   return (
     <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]" role="banner">
@@ -35,6 +40,14 @@ export default function Header() {
                     placeholder="Search"
                     className="rounded bg-slate-800 text-white placeholder-white/70 px-3 py-2 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     aria-label="Search site"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        const q = search.trim();
+                        if (q.length > 0) router.push(`/search?query=${encodeURIComponent(q)}`);
+                      }
+                    }}
                   />
                 </div>
 
@@ -58,7 +71,7 @@ export default function Header() {
                 <div
                   className="relative"
                   onMouseEnter={() => setOpen(true)}
-                  onMouseLeave={() => setOpen(false)}
+                  onMouseLeave={() => { if (!menuPinned) setOpen(false); }}
                   onKeyDown={(e) => { if (e.key === 'Escape') setOpen(false); }}
                   onFocus={() => setOpen(true)}
                   onBlur={(e) => {
@@ -66,11 +79,18 @@ export default function Header() {
                     const related = e.relatedTarget as Node | null;
                     if (!related || (current && !current.contains(related))) {
                       setOpen(false);
+                      setMenuPinned(false);
                     }
                   }}
                 >
                   <button
-                    onClick={() => setOpen(o => !o)}
+                    onClick={() => {
+                      setOpen((o) => {
+                        const next = !o;
+                        setMenuPinned(next);
+                        return next;
+                      });
+                    }}
                     aria-haspopup="menu"
                     aria-expanded={open}
                     aria-controls="global-more-menu"
@@ -84,6 +104,7 @@ export default function Header() {
                     role="menu"
                     className="absolute right-0 mt-2 w-64 bg-slate-900 text-white border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50"
                     onMouseEnter={() => setOpen(true)}
+                    ref={menuRef}
                   >
                       <nav className="flex flex-col p-1" aria-label="More navigation">
                         {primaryNavLinks.map(link => (
@@ -91,7 +112,7 @@ export default function Header() {
                             key={link.href}
                             href={link.href}
                             role="menuitem"
-                            onClick={() => setOpen(false)}
+                            onClick={() => { setOpen(false); setMenuPinned(false); }}
                             className="px-3 py-2 rounded text-white hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
                           >
                             {link.label}
@@ -166,6 +187,8 @@ export default function Header() {
           🏆 TRUSTED SELLER - 100% Positive Feedback
         </div>
       </div>
+      {/* Close pinned menu on outside click */}
+      <script dangerouslySetInnerHTML={{ __html: '' }} />
       <style jsx>{`
         .header-primary-nav a,
         .header-primary-nav a:link,
