@@ -40,6 +40,16 @@ const timelineEvents: TimelineEvent[] = [
     technicalDetails: 'First controlled glider flights in Scotland, achieving flights of over 100 meters'
   },
   {
+    year: 1909,
+    title: 'Scottish Aeronautical Society Formed',
+    description: 'The Scottish Aeronautical Society is founded to promote practical experimentation and public exhibitions of aeronautics throughout Scotland.',
+    category: 'Infrastructure',
+    location: 'Glasgow & Edinburgh',
+    significance: 'Created an organizational framework for pre-war aviation exhibitions and knowledge sharing in Scotland',
+    era: 'Pioneer',
+    relatedBlogs: ['clydeside-aviation-revolution']
+  },
+  {
     year: 1896,
     date: 'September',
     title: 'Percy Pilcher\'s "Hawk" Glider Success',
@@ -112,6 +122,16 @@ const timelineEvents: TimelineEvent[] = [
     technicalDetails: 'Development of civilian aviation infrastructure and manufacturing'
   },
   {
+    year: 1923,
+    title: 'Early Scottish Civil Aviation Routes Established',
+    description: 'Post-war demobilization enables small commercial air services linking Scottish cities with England and Europe.',
+    category: 'Commercial',
+    location: 'Glasgow/Edinburgh – London/Europe',
+    significance: 'Lays groundwork for regular scheduled civil aviation to/from Scotland',
+    era: 'Inter-War',
+    relatedBlogs: ['naval-aviation-history']
+  },
+  {
     year: 1935,
     title: 'Scottish Helicopter Pioneer Work',
     description: 'Early helicopter development work begins in Scotland, contributing to the global advancement of rotorcraft technology that would later influence military and civilian applications.',
@@ -124,6 +144,16 @@ const timelineEvents: TimelineEvent[] = [
     keyFigures: ['Helicopter pioneers'],
     aircraftTypes: ['Early helicopters'],
     technicalDetails: 'Experimental rotorcraft development and testing'
+  },
+  {
+    year: 1937,
+    title: 'Scottish Contribution to Schneider Trophy Legacy',
+    description: 'Engineering and manufacturing skills in Scotland contribute to high-speed research that feeds into later fighter development.',
+    category: 'Innovation',
+    location: 'Clydeside & UK',
+    significance: 'Performance research influences advanced fighters ahead of WWII',
+    era: 'Inter-War',
+    relatedBlogs: ['schneider-trophy-racing-development']
   },
   {
     year: 1940,
@@ -140,6 +170,26 @@ const timelineEvents: TimelineEvent[] = [
     technicalDetails: 'Mass production of military aircraft during WWII'
   },
   {
+    year: 1945,
+    title: 'Post-war Demobilisation and Factory Conversion',
+    description: 'Scottish aviation plants transition from wartime production to peacetime manufacturing and maintenance.',
+    category: 'Manufacturing',
+    location: 'Clydeside, Scotland',
+    significance: 'Preserves skilled workforce and infrastructure for jet age requirements',
+    era: 'WWII-Cold-War',
+    relatedBlogs: ['luftwaffe-1945-final-year']
+  },
+  {
+    year: 1950,
+    title: 'Jet Age Training and RAF Expansion Support',
+    description: 'Scottish airfields and engineering facilities support the introduction of jet aircraft and expanded RAF training programmes.',
+    category: 'Military',
+    location: 'Various Scottish airfields',
+    significance: 'Accelerates UK transition to jet-powered air forces',
+    era: 'WWII-Cold-War',
+    relatedBlogs: ['jet-age-aviation-cold-war-development', 'f86-sabre-cold-war-fighter']
+  },
+  {
     year: 1952,
     title: 'V-Force Nuclear Deterrent',
     description: 'British nuclear deterrent strategy begins with V-Force bomber development. Scottish aviation industry contributes to strategic bomber and missile programs.',
@@ -154,6 +204,36 @@ const timelineEvents: TimelineEvent[] = [
     technicalDetails: 'Development of nuclear deterrent aviation capabilities'
   },
   {
+    year: 1954,
+    title: 'Hawker Hunter and Early Jet Operations Influence',
+    description: 'Operational lessons and manufacturing support in Scotland contribute to maturing jet tactics and maintenance.',
+    category: 'Military',
+    location: 'Scotland/UK',
+    significance: 'Feeds Cold War readiness and standardisation of jet maintenance practices',
+    era: 'WWII-Cold-War',
+    relatedBlogs: ['english-electric-lightning-development']
+  },
+  {
+    year: 1960,
+    title: 'Helicopter Operations Expand in Scotland',
+    description: 'Rotary-wing operations grow for rescue, maritime, and offshore roles—benefitting from earlier rotorcraft research.',
+    category: 'Innovation',
+    location: 'Scotland',
+    significance: 'Establishes helicopter capability in challenging North Atlantic conditions',
+    era: 'WWII-Cold-War',
+    relatedBooks: ['sycamore-seeds'],
+    relatedBlogs: ['sycamore-seeds-helicopter-evolution']
+  },
+  {
+    year: 1970,
+    title: 'Regional Air Services and Aerospace Supply Chain',
+    description: 'Regional airlines and component suppliers maintain Scottish aerospace relevance amid UK industry consolidations.',
+    category: 'Commercial',
+    location: 'Scotland',
+    significance: 'Keeps skilled labour and SMEs engaged within the UK aerospace ecosystem',
+    era: 'WWII-Cold-War'
+  },
+  {
     year: 1990,
     title: 'Modern Aerospace Era',
     description: 'Formation of modern aerospace companies and transition to high-tech aviation manufacturing in Scotland, including satellite technology and advanced materials.',
@@ -165,6 +245,25 @@ const timelineEvents: TimelineEvent[] = [
     keyFigures: ['Modern aerospace engineers'],
     aircraftTypes: ['Modern aircraft', 'Aerospace technology'],
     technicalDetails: 'Advanced materials and satellite technology development'
+  },
+  {
+    year: 2000,
+    title: 'Modernisation of Airfields and Training Technology',
+    description: 'Investment in navigation, simulators, and safety systems modernise Scottish aviation infrastructure.',
+    category: 'Infrastructure',
+    location: 'Scotland',
+    significance: 'Improves safety and throughput for commercial and private aviation',
+    era: 'Modern'
+  },
+  {
+    year: 2010,
+    title: 'Growth in Space & Advanced Materials Research',
+    description: 'Scottish universities and companies expand R&D in satellites, composites, and propulsion.',
+    category: 'Research',
+    location: 'Glasgow & across Scotland',
+    significance: 'Positions Scotland within the UK’s space economy and advanced aerospace supply chain',
+    era: 'Modern',
+    relatedBooks: ['sonic-to-standoff']
   },
   {
     year: 2025,
@@ -236,7 +335,24 @@ export default function ScottishAviationTimelinePage() {
   };
 
   const getBookCoverSrc = (bookId: string) => `/book-covers/${bookId}.jpg`;
-  const getBlogImageSrc = (slug: string) => `/blog-images/${slug}.jpg`;
+  const getBlogImageSrc = (slug: string) => {
+    const map: Record<string, string> = {
+      'beardmore-aviation-scottish-industrial-giant': 'beardmore-aviation-scottish-industrial-giant',
+      'clydeside-aviation-revolution': 'clydeside-aviation-revolution',
+      'percy-pilcher-scotland-aviation-pioneer': 'percy-pilcher-scotland-aviation-pioneer',
+      'hms-argus-first-aircraft-carrier': 'hms-argus-first-aircraft-carrier',
+      'hms-argus-first-aircraft-carrier-operations': 'hms-argus-first-aircraft-carrier-operations',
+      'british-aircraft-great-war-rfc-rnas': 'british-aircraft-great-war-rfc-rnas',
+      'schneider-trophy-racing-development': 'schneider-trophy-racing-development',
+      'luftwaffe-1945-final-year': 'luftwaffe-1945-final-year',
+      'jet-age-aviation-cold-war-development': 'jet-age-aviation-cold-war-development',
+      'f86-sabre-cold-war-fighter': 'f86-sabre-cold-war-fighter',
+      'english-electric-lightning-development': 'english-electric-lightning-development',
+      'sycamore-seeds-helicopter-evolution': 'sycamore-seeds-helicopter-evolution',
+    };
+    const base = map[slug] || slug;
+    return `/blog-images/${base}.jpg`;
+  };
 
   return (
     <BBCPageTemplate
