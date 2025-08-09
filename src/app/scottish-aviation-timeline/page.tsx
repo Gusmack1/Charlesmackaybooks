@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import BBCPageTemplate from '@/components/BBCPageTemplate';
 
@@ -234,6 +235,9 @@ export default function ScottishAviationTimelinePage() {
     }))
   };
 
+  const getBookCoverSrc = (bookId: string) => `/book-covers/${bookId}.jpg`;
+  const getBlogImageSrc = (slug: string) => `/blog-images/${slug}.jpg`;
+
   return (
     <BBCPageTemplate
       title="Scottish Aviation Timeline"
@@ -247,7 +251,9 @@ export default function ScottishAviationTimelinePage() {
         }}
       />
 
-      <div className="surface-dark bg-slate-950 -mx-6 px-6 py-12 rounded-2xl">
+      <div className="surface-dark relative -mx-6 px-6 py-12 rounded-2xl bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="absolute inset-0 bg-black/20 rounded-2xl pointer-events-none" />
+        <div className="relative">
         {/* Era Navigation */}
         <div className="max-w-5xl mx-auto mb-10">
           <h2 className="text-white text-center mb-4">Explore by Era</h2>
@@ -295,34 +301,37 @@ export default function ScottishAviationTimelinePage() {
             {filteredEvents
               .sort((a, b) => a.year - b.year)
               .map((event, index) => (
-              <article key={`${event.year}-${index}`} className="border border-white/15 rounded-xl p-6">
+              <article key={`${event.year}-${index}`} className="border border-white/15 rounded-xl p-6 bg-black/10">
                 <header className="mb-3">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-semibold">{event.year}</h3>
+                    <h3 className="text-2xl font-bold">{event.year}</h3>
                     <div className="text-sm opacity-80">{event.category}</div>
                   </div>
-                  <h4 className="text-lg mt-1">{event.title}</h4>
+                  <h4 className="text-lg mt-1 font-bold">{event.title}</h4>
                   <div className="text-sm opacity-80">📍 {event.location}</div>
                 </header>
                 <p className="opacity-90 mb-4">{event.description}</p>
                 <div className="mb-4">
-                  <div className="font-semibold mb-1">Historical Significance</div>
+                  <div className="font-bold mb-1">Historical Significance</div>
                   <p className="opacity-90">{event.significance}</p>
                 </div>
                 {event.technicalDetails && (
                   <div className="mb-4">
-                    <div className="font-semibold mb-1">Technical Details</div>
+                    <div className="font-bold mb-1">Technical Details</div>
                     <p className="opacity-90">{event.technicalDetails}</p>
                   </div>
                 )}
                 <div className="grid md:grid-cols-2 gap-4">
                   {event.relatedBooks && event.relatedBooks.length > 0 && (
                     <div>
-                      <div className="font-semibold mb-2">Related Books</div>
-                      <div className="space-y-2">
+                      <div className="font-bold mb-2">Related Books</div>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                         {event.relatedBooks.map((bookId) => (
-                          <Link key={bookId} href={`/books/${bookId}`} className="underline hover:no-underline">
-                            📖 View Book →
+                          <Link key={bookId} href={`/books/${bookId}`} className="group block">
+                            <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden border border-white/15 bg-black/20">
+                              <Image src={getBookCoverSrc(bookId)} alt={bookId} fill sizes="(max-width:768px) 50vw, 200px" className="object-cover group-hover:scale-[1.02] transition-transform" />
+                            </div>
+                            <div className="mt-2 underline">View Book →</div>
                           </Link>
                         ))}
                       </div>
@@ -330,11 +339,14 @@ export default function ScottishAviationTimelinePage() {
                   )}
                   {event.relatedBlogs && event.relatedBlogs.length > 0 && (
                     <div>
-                      <div className="font-semibold mb-2">Related Articles</div>
-                      <div className="space-y-2">
+                      <div className="font-bold mb-2">Related Articles</div>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                         {event.relatedBlogs.map((blogId) => (
-                          <Link key={blogId} href={`/blog/${blogId}`} className="underline hover:no-underline">
-                            📰 Read Article →
+                          <Link key={blogId} href={`/blog/${blogId}`} className="group block">
+                            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-white/15 bg-black/20">
+                              <Image src={getBlogImageSrc(blogId)} alt={blogId} fill sizes="(max-width:768px) 50vw, 300px" className="object-cover group-hover:scale-[1.02] transition-transform" />
+                            </div>
+                            <div className="mt-2 underline">Read Article →</div>
                           </Link>
                         ))}
                       </div>
@@ -345,13 +357,13 @@ export default function ScottishAviationTimelinePage() {
                   <div className="mt-4 pt-3 border-t border-white/10 grid md:grid-cols-2 gap-3 text-sm">
                     {event.keyFigures && (
                       <div>
-                        <span className="opacity-80">Key Figures:</span>
+                        <span className="opacity-80 font-semibold">Key Figures:</span>
                         <div>{event.keyFigures.join(', ')}</div>
                       </div>
                     )}
                     {event.aircraftTypes && (
                       <div>
-                        <span className="opacity-80">Aircraft Types:</span>
+                        <span className="opacity-80 font-semibold">Aircraft Types:</span>
                         <div>{event.aircraftTypes.join(', ')}</div>
                       </div>
                     )}
@@ -363,7 +375,7 @@ export default function ScottishAviationTimelinePage() {
         </div>
 
         {/* Book Collection CTA */}
-        <div className="mt-16 border border-white/15 rounded-2xl p-8 text-white text-center">
+        <div className="mt-16 border border-white/15 rounded-2xl p-8 text-white text-center bg-black/10">
           <h2 className="text-3xl font-bold mb-4">Complete Aviation History Collection</h2>
           <p className="text-xl mb-6 opacity-90">
             Explore the full story through Charles E. MacKay's comprehensive collection of aviation history books
@@ -371,6 +383,7 @@ export default function ScottishAviationTimelinePage() {
           <Link href="/books" className="inline-block underline">
             Browse All 19 Books →
           </Link>
+        </div>
         </div>
       </div>
     </BBCPageTemplate>
