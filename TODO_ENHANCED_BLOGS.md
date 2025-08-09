@@ -10,7 +10,7 @@ Definition of Done for each post
 
 Queue (start → finish)
 - [x] beardmore-aviation-scottish-industrial-giant
-- [ ] percy-pilcher-scotland-aviation-pioneer
+- [x] percy-pilcher-scotland-aviation-pioneer
 - [ ] hms-argus-first-aircraft-carrier
 - [ ] hawker-hurricane-fighter-development
 - [ ] clydeside-aviation-revolution
