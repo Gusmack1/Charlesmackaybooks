@@ -67,13 +67,10 @@ export default function Header() {
                   )}
                 </button>
 
-                {/* Global navigation */}
+                {/* Global navigation (More dropdown for compact screens) */}
                 <div
-                  className="relative"
-                  onMouseEnter={() => setOpen(true)}
-                  onMouseLeave={() => { if (!menuPinned) setOpen(false); }}
+                  className="relative md:hidden"
                   onKeyDown={(e) => { if (e.key === 'Escape') setOpen(false); }}
-                  onFocus={() => setOpen(true)}
                   onBlur={(e) => {
                     const current = e.currentTarget;
                     const related = e.relatedTarget as Node | null;
@@ -94,7 +91,7 @@ export default function Header() {
                     aria-haspopup="menu"
                     aria-expanded={open}
                     aria-controls="global-more-menu"
-                    className="badge badge-blue px-3 py-2 rounded min-h-[44px] min-w-[44px] text-sm md:text-base"
+                    className="bg-slate-800 text-white px-3 py-2 rounded min-h-[44px] min-w-[44px] text-sm"
                   >
                     ☰ More
                   </button>
@@ -103,7 +100,6 @@ export default function Header() {
                     id="global-more-menu"
                     role="menu"
                     className="absolute right-0 mt-2 w-64 bg-slate-900 text-white border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50"
-                    onMouseEnter={() => setOpen(true)}
                     ref={menuRef}
                   >
                       <nav className="flex flex-col p-1" aria-label="More navigation">
@@ -128,12 +124,12 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Primary navigation row */}
-      <nav className="bg-slate-900 border-t border-slate-700 header-primary-nav" role="navigation" aria-label="Primary">
+      {/* Primary navigation row (desktop) */}
+      <nav className="bg-slate-900 border-t border-slate-700 header-primary-nav hidden md:block" role="navigation" aria-label="Primary">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-start gap-1 md:gap-2 py-2 text-sm">
             {primaryNavLinks.map(link => (
-              <Link key={link.href} href={link.href} className="px-3 py-2 rounded text-white hover:bg-slate-700 hover:text-white">
+              <Link key={link.href} href={link.href} className="px-3 py-2 rounded text-white hover:bg-slate-800 hover:text-white">
                 {link.label}
               </Link>
             ))}
