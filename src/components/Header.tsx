@@ -9,9 +9,9 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-slate-800 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]">
+    <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]">
       {/* Top Header Bar */}
-      <div className="bg-slate-800">
+      <div className="bg-slate-900">
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
         <div className="container max-w-7xl mx-auto px-4 py-3 md:py-4">
           <div className="flex justify-between items-center gap-4">
@@ -22,14 +22,9 @@ export default function Header() {
               <p className="text-white/90 text-base md:text-lg leading-none m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
             </Link>
 
-            {/* Contact Info and Basket */}
+            {/* Actions */}
             <div className="text-right">
               <div className="flex items-center gap-3 md:gap-5 mb-1">
-                <div className="hidden md:block text-left">
-                  <div className="text-white text-base md:text-lg leading-none">📧 charlese1mackay@hotmail.com</div>
-                  <div className="text-white/90 text-base md:text-lg leading-none">Glasgow, Scotland</div>
-                  <div className="text-white/90 text-base md:text-lg leading-none">Published Aviation Books</div>
-                </div>
 
                 {/* Basket Button - Always visible */}
                 <button
@@ -47,7 +42,7 @@ export default function Header() {
                   )}
                 </button>
 
-                {/* Compact dropdown menu */}
+                {/* Global navigation */}
                 <div className="relative" onMouseLeave={() => setOpen(false)}>
                   <button
                     onClick={() => setOpen(o => !o)}
@@ -63,10 +58,10 @@ export default function Header() {
                       <Link href="/" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">🏠 Home</Link>
                       <Link href="/books" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">📚 Shop Books</Link>
                       <Link href="/blog" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">📝 Blog</Link>
+                      <Link href="/about" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">👨‍💼 About Charles</Link>
                       <Link href="/for-researchers" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">🔬 For Researchers</Link>
                       <Link href="/scottish-aviation-timeline" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">🏴 Scottish Timeline</Link>
                       <Link href="/how-to-order" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">🛒 How to Order</Link>
-                      <Link href="/about" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">👨‍💼 About Charles</Link>
                       <Link href="/contact" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">📧 Contact</Link>
                       </nav>
                     </div>
@@ -77,6 +72,22 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* Primary navigation row */}
+      <nav className="bg-slate-800 border-t border-slate-700">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-start gap-1 md:gap-2 py-2 text-sm">
+            <Link href="/" className="px-3 py-2 rounded text-white hover:bg-slate-700">Home</Link>
+            <Link href="/books" className="px-3 py-2 rounded text-white hover:bg-slate-700">Shop Books</Link>
+            <Link href="/blog" className="px-3 py-2 rounded text-white hover:bg-slate-700">Blog</Link>
+            <Link href="/scottish-aviation-timeline" className="px-3 py-2 rounded text-white hover:bg-slate-700">Scottish Timeline</Link>
+            <Link href="/for-researchers" className="px-3 py-2 rounded text-white hover:bg-slate-700">For Researchers</Link>
+            <Link href="/how-to-order" className="px-3 py-2 rounded text-white hover:bg-slate-700">How to Order</Link>
+            <Link href="/about" className="px-3 py-2 rounded text-white hover:bg-slate-700">About Charles</Link>
+            <Link href="/contact" className="px-3 py-2 rounded text-white hover:bg-slate-700">Contact</Link>
+          </div>
+        </div>
+      </nav>
 
       {/* Navigation (hidden — replaced by compact dropdown) */}
       <nav className="bg-slate-700 hidden">
