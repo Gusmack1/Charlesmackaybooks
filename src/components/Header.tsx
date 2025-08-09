@@ -108,11 +108,11 @@ export default function Header() {
       </div>
 
       {/* Primary navigation row */}
-      <nav className="bg-slate-800 border-t border-slate-700" role="navigation" aria-label="Primary">
+      <nav className="bg-slate-800 border-t border-slate-700 header-primary-nav" role="navigation" aria-label="Primary">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-start gap-1 md:gap-2 py-2 text-sm text-white">
+          <div className="flex flex-wrap items-center justify-start gap-1 md:gap-2 py-2 text-sm">
             {primaryNavLinks.map(link => (
-              <Link key={link.href} href={link.href} className="px-3 py-2 rounded text-white hover:bg-slate-700">
+              <Link key={link.href} href={link.href} className="px-3 py-2 rounded hover:bg-slate-700">
                 {link.label}
               </Link>
             ))}
@@ -166,6 +166,10 @@ export default function Header() {
           🏆 TRUSTED SELLER - 100% Positive Feedback
         </div>
       </div>
+      <style jsx>{`
+        .header-primary-nav a { color: #ffffff !important; }
+        #global-more-menu a { color: #ffffff !important; }
+      `}</style>
     </header>
   );
 }
