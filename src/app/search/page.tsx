@@ -7,8 +7,9 @@ export const metadata: Metadata = {
   description: 'Search results for Charles Mackay Books',
 }
 
-export default function SearchPage({ searchParams }: { searchParams: { query?: string } }) {
-  const q = (searchParams?.query || '').trim().toLowerCase()
+export default function SearchPage({ searchParams }: { searchParams: { query?: string, q?: string } }) {
+  const raw = (searchParams?.query ?? searchParams?.q ?? '').toString()
+  const q = raw.trim().toLowerCase()
   const results = q
     ? books.filter(b =>
         [

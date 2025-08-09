@@ -92,6 +92,23 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
   const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html));
 
+  const stripShareUI = (html: string): string => {
+    let output = html
+    output = output.replace(/<div[^>]*>\s*<h[1-6][^>]*>[^<]*Share This Article[^<]*<\/h[1-6]>[\s\S]*?<\/div>/gi, '')
+    const shareDomains = [
+      'facebook.com/sharer',
+      'twitter.com/intent/tweet',
+      'linkedin.com/sharing/share-offsite',
+      'pinterest.com/pin/create',
+      'mailto:\?subject='
+    ]
+    for (const domain of shareDomains) {
+      const re = new RegExp(`<a[^>]+href=\"[^\"]*${domain}[^\"]*\"[^>]*>[^<]*<\/a>`, 'gi')
+      output = output.replace(re, '')
+    }
+    return output
+  }
+
   // Removed reading progress tracking to avoid scroll jank
 
   // Generate table of contents from content
@@ -245,7 +262,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Article Content */}
       <div className="content max-w-none mb-12">
         <div 
-          dangerouslySetInnerHTML={{ __html: processContent(post.content) }}
+          dangerouslySetInnerHTML={{ __html: stripShareUI(processContent(post.content)) }}
         />
       </div>
 

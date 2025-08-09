@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import PostRelatedBooks from '@/components/PostRelatedBooks';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -120,6 +119,25 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
   const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html))
 
+  const stripShareUI = (html: string): string => {
+    let output = html
+    // Remove explicit "Share This Article" blocks
+    output = output.replace(/<div[^>]*>\s*<h[1-6][^>]*>[^<]*Share This Article[^<]*<\/h[1-6]>[\s\S]*?<\/div>/gi, '')
+    // Remove common social share anchors
+    const shareDomains = [
+      'facebook.com/sharer',
+      'twitter.com/intent/tweet',
+      'linkedin.com/sharing/share-offsite',
+      'pinterest.com/pin/create',
+      'mailto:\?subject='
+    ]
+    for (const domain of shareDomains) {
+      const re = new RegExp(`<a[^>]+href=\"[^\"]*${domain}[^\"]*\"[^>]*>[^<]*<\/a>`, 'gi')
+      output = output.replace(re, '')
+    }
+    return output
+  }
+
   // Removed scroll listeners and floating share to prevent jank
 
   const shareUrl = `https://charlesmackaybooks.com/blog/${post.id}`;
@@ -222,7 +240,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           {/* Article Content */}
           <div 
             className="blog-content content"
-            dangerouslySetInnerHTML={{ __html: processContent(post.content) }}
+            dangerouslySetInnerHTML={{ __html: stripShareUI(processContent(post.content)) }}
           />
           {/* Breadcrumb JSON-LD */}
           <script
