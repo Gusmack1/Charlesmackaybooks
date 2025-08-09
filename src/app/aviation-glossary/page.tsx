@@ -1,5 +1,5 @@
-import PageSEO from '@/components/PageSEO'
 import type { Metadata } from 'next';
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 
 
 export const metadata: Metadata = {
@@ -484,24 +484,11 @@ export default function AviationGlossaryPage() {
         }}
       />
 
-      <div className="min-h-screen bg-background">
-        <div className="container mx-auto px-4 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Aviation Glossary & Dictionary
-            </h1>
-            <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
-              Comprehensive dictionary of aviation terminology with technical definitions, historical context,
-              and cross-references. Essential reference for aviation students, professionals, and enthusiasts.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-              <span>✈️ 500+ Aviation Terms</span>
-              <span>📚 Technical Definitions</span>
-              <span>🏛️ Historical Context</span>
-              <span>🔗 Cross-References</span>
-            </div>
-          </div>
+      <BBCPageTemplate
+        title="Aviation Glossary & Dictionary"
+        subtitle="500+ aviation terms with definitions and historical context"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Aviation Glossary' }]}
+      >
 
           {/* Categories Filter */}
           <div className="mb-12 card p-6">
@@ -625,8 +612,7 @@ export default function AviationGlossaryPage() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </BBCPageTemplate>
     </>
   );
 }

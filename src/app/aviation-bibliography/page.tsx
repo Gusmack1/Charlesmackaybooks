@@ -1,5 +1,5 @@
-import PageSEO from '@/components/PageSEO'
 import type { Metadata } from 'next';
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 import { books } from '@/data/books';
 
 
@@ -161,24 +161,11 @@ export default function AviationBibliographyPage() {
         }}
       />
 
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="content h1 text-primary mb-6">
-              Aviation History Bibliography
-            </h1>
-            <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
-              Comprehensive research database featuring primary sources, academic references, and historical documents
-              essential for aviation history research. Curated by historian Charles E. MacKay.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted">
-              <span>📚 150+ Primary Sources</span>
-              <span>🎓 Academic References</span>
-              <span>🏛️ Archive Collections</span>
-              <span>📄 Government Documents</span>
-            </div>
-          </div>
+      <BBCPageTemplate
+        title="Aviation History Bibliography"
+        subtitle="Primary sources, academic references, and historical documents"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Aviation Bibliography' }]}
+      >
 
           {/* Search and Filter Section */}
           <div className="mb-12 card p-6">
@@ -308,8 +295,7 @@ export default function AviationBibliographyPage() {
               ))}
             </div>
           </div>
-        </div>
-      </div>
+      </BBCPageTemplate>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { books } from '@/data/books'
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 
 export const metadata: Metadata = {
   title: 'Academic Resources | Aviation History Research | Charles E. MacKay',
@@ -33,17 +34,11 @@ export default function AcademicResourcesPage() {
   );
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Academic Resources
-          </h1>
-          <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
-            Comprehensive research resources for aviation historians, students, and scholars worldwide
-          </p>
-        </div>
+    <BBCPageTemplate
+      title="Academic Resources"
+      subtitle="Comprehensive research resources for aviation historians, students, and scholars"
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Academic Resources' }]}
+    >
 
         {/* Quick Links */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
@@ -135,7 +130,6 @@ export default function AcademicResourcesPage() {
             Contact for Academic Inquiries
           </Link>
         </div>
-      </div>
-    </div>
+    </BBCPageTemplate>
   )
 }

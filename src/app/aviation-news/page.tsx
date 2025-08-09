@@ -1,5 +1,5 @@
-import PageSEO from '@/components/PageSEO'
 import type { Metadata } from 'next';
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 
 
 export const metadata: Metadata = {
@@ -243,24 +243,11 @@ export default function AviationNewsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="content h1 text-primary mb-6">
-              Aviation News & Updates
-            </h1>
-            <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
-              Latest discoveries, research developments, and expert analysis in aviation history.
-              Stay informed about new findings, exhibitions, and academic developments in the field.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted">
-              <span>📰 Latest Discoveries</span>
-              <span>🏛️ Exhibition News</span>
-              <span>🔍 Research Updates</span>
-              <span>📚 Expert Analysis</span>
-            </div>
-          </div>
+      <BBCPageTemplate
+        title="Aviation News & Updates"
+        subtitle="Latest discoveries, research developments, and expert analysis"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Aviation News' }]}
+      >
 
           {/* Research Highlights */}
           <div className="mb-12 card p-8">
@@ -395,8 +382,7 @@ export default function AviationNewsPage() {
           </div>
 
 
-        </div>
-      </div>
+      </BBCPageTemplate>
     </>
   );
 }

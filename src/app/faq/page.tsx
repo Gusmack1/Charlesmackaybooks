@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import BBCPageTemplate from '@/components/BBCPageTemplate';
 
 export const metadata: Metadata = {
   title: 'Aviation History FAQ | Expert Answers | Charles E. MacKay',
@@ -180,25 +181,11 @@ export default function FAQPage() {
         }}
       />
 
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="content h1 text-primary mb-6">
-              Aviation History FAQ
-            </h1>
-            <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
-              Expert answers to frequently asked questions about aviation history, Scottish aviation heritage,
-              and historical aircraft research from renowned aviation historian Charles E. MacKay.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted">
-              <span>❓ Expert Answers</span>
-              <span>📚 Research Guidance</span>
-              <span>🎓 Academic Resources</span>
-              <span>✈️ Aviation History</span>
-            </div>
-          </div>
-
+      <BBCPageTemplate
+        title="Aviation History FAQ"
+        subtitle="Expert answers to aviation history, Scottish aviation, and research questions"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'FAQ' }]}
+      >
           {/* Category Filter */}
           <div className="mb-12 card p-6">
             <h2 className="content h2 text-primary mb-4">Browse by Category</h2>
@@ -338,8 +325,7 @@ export default function FAQPage() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </BBCPageTemplate>
     </>
   );
 }

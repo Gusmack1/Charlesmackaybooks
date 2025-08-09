@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 
 export const metadata: Metadata = {
   title: 'Aviation Research Guides | Research Methodology | Charles E. MacKay',
@@ -76,17 +77,11 @@ export default function ResearchGuidesPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-12">
-        {/* Header */}
-        <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Aviation Research Guides
-          </h1>
-          <p className="text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
-            Comprehensive methodologies and best practices for aviation history research
-          </p>
-        </header>
+    <BBCPageTemplate
+      title="Aviation Research Guides"
+      subtitle="Comprehensive methodologies and best practices for aviation history research"
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Research Guides' }]}
+    >
 
         {/* Research Guides */}
         <section className="mb-12">
@@ -203,7 +198,6 @@ export default function ResearchGuidesPage() {
             </Link>
           </div>
         </section>
-      </div>
-    </div>
+    </BBCPageTemplate>
   )
 }
