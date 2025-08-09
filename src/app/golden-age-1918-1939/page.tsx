@@ -2,7 +2,6 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Footer from '@/components/Footer'
-import SocialShare from '@/components/SocialShare'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
 export const metadata: Metadata = {
@@ -178,16 +177,7 @@ export default function GoldenAgePage() {
         </div>
       </section>
 
-      {/* Social Share */}
-      <div className="bg-white py-4 border-b">
-        <div className="max-w-4xl mx-auto px-6">
-          <SocialShare
-            url={pageUrl}
-            title={pageTitle}
-            description="Discover aviation's Golden Age - when commercial flight and racing innovation flourished between the wars"
-          />
-        </div>
-      </div>
+      {/* Social Share removed per design directive */}
 
       {/* Overview Section */}
       <section className="py-20 bg-white">
