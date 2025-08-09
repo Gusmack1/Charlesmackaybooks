@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Share2, BookOpen, Clock, User, Calendar, Tag, ChevronRight, Heart, MessageCircle } from 'lucide-react';
+import { BookOpen, Clock, User, Calendar, Tag, ChevronRight, MessageCircle } from 'lucide-react';
 
 interface BlogPost {
   id: string;
