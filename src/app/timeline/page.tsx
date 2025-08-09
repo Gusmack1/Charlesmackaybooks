@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 
 export const metadata: Metadata = {
   title: 'Aviation History Timeline | Chronological Development | Charles E. MacKay',
@@ -106,31 +107,17 @@ export default function TimelinePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto container-padding py-12">
-        {/* Header */}
-        <header className="text-center mb-12">
-          <h1 className="content h1 text-primary mb-6">
-            Aviation History Timeline
-          </h1>
-          <p className="content text-secondary max-w-4xl mx-auto leading-relaxed">
-            A comprehensive chronological journey through the development of aviation
-          </p>
-          <div className="mt-6">
-            <Link
-              href="/scottish-aviation-timeline"
-              className="badge badge-amber mr-4"
-            >
-              🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Aviation Timeline
-            </Link>
-            <Link
-              href="/books"
-              className="badge badge-blue"
-            >
-              📚 Browse Aviation Books
-            </Link>
-          </div>
-        </header>
+    <BBCPageTemplate
+      title="Aviation History Timeline"
+      subtitle="A comprehensive chronological journey through the development of aviation"
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Timeline' }]}
+    >
+      <div className="container mx-auto container-padding py-6">
+        {/* Quick links under hero */}
+        <div className="text-center mb-6">
+          <Link href="/scottish-aviation-timeline" className="badge badge-amber mr-4">🏴 Scottish Aviation Timeline</Link>
+          <Link href="/books" className="badge badge-blue">📚 Browse Aviation Books</Link>
+        </div>
 
         {/* Timeline */}
         <section className="relative">
@@ -196,6 +183,6 @@ export default function TimelinePage() {
           </div>
         </section>
       </div>
-    </div>
+    </BBCPageTemplate>
   )
 }
