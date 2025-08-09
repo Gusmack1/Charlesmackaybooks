@@ -46,7 +46,7 @@ export default function HeroSection() {
                 className="inline-flex items-center justify-center badge badge-green px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-lg min-h-[60px]"
               >
                 <span className="mr-3 text-xl">🛒</span>
-                Shop Aviation Books
+                Buy Books
               </Link>
               <Link
                 href="/blog"
@@ -106,5 +106,21 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
+    
+    {/* Sticky Buy Books CTA - Mobile full-width */}
+    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-slate-900/90 backdrop-blur border-t border-white/10">
+      <div className="container mx-auto px-4 py-3">
+        <Link href="/books" className="w-full inline-flex items-center justify-center badge badge-green px-6 py-3 rounded-lg font-bold text-lg min-h-[52px]">
+          🛒 Buy Books
+        </Link>
+      </div>
+    </div>
+
+    {/* Sticky Buy Books CTA - Desktop floating */}
+    <div className="hidden md:block fixed bottom-6 right-6 z-50">
+      <Link href="/books" className="inline-flex items-center justify-center badge badge-green px-6 py-4 rounded-xl font-bold text-lg shadow-2xl">
+        🛒 Buy Books
+      </Link>
+    </div>
   );
 }

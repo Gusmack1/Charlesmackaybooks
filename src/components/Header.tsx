@@ -55,7 +55,7 @@ export default function Header() {
                     aria-expanded={open}
                     className="badge badge-blue px-3 py-2 rounded min-h-[44px] min-w-[44px] text-sm md:text-base"
                   >
-                    ☰ Menu
+                    ☰ More
                   </button>
                   {open && (
                   <div className="absolute right-0 mt-2 w-64 bg-white text-slate-900 border border-slate-200 rounded-lg shadow-xl overflow-hidden z-50">
