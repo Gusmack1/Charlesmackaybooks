@@ -43,7 +43,12 @@ export default function Header() {
                 </button>
 
                 {/* Global navigation */}
-                <div className="relative" onMouseLeave={() => setOpen(false)}>
+                <div
+                  className="relative"
+                  onMouseEnter={() => setOpen(true)}
+                  onMouseLeave={() => setOpen(false)}
+                  onKeyDown={(e) => { if (e.key === 'Escape') setOpen(false); }}
+                >
                   <button
                     onClick={() => setOpen(o => !o)}
                     aria-haspopup="menu"
@@ -53,7 +58,10 @@ export default function Header() {
                     ☰ More
                   </button>
                   {open && (
-                  <div className="absolute right-0 mt-2 w-64 bg-slate-900 text-white border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50">
+                  <div
+                    className="absolute right-0 mt-2 w-64 bg-slate-900 text-white border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50"
+                    onMouseEnter={() => setOpen(true)}
+                  >
                       <nav className="flex flex-col p-1">
                       <Link href="/" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">🏠 Home</Link>
                       <Link href="/books" onClick={() => setOpen(false)} className="px-3 py-2 rounded hover:bg-slate-800 focus:bg-slate-800">📚 Shop Books</Link>
