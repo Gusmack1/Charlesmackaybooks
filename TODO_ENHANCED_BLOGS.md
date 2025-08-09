@@ -13,7 +13,7 @@ Queue (start → finish)
 - [x] percy-pilcher-scotland-aviation-pioneer
 - [x] hms-argus-first-aircraft-carrier
 - [x] hawker-hurricane-fighter-development
-- [ ] clydeside-aviation-revolution
+- [x] clydeside-aviation-revolution
 - [ ] british-aircraft-great-war-rfc-rnas
 - [ ] german-aircraft-great-war-development
 - [ ] english-electric-lightning-development
