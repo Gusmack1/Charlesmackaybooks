@@ -289,6 +289,7 @@ export default function HowToOrderPage() {
               </a>
             </div>
           </div>
+        </div>
       </div>
     </BBCPageTemplate>
   );
