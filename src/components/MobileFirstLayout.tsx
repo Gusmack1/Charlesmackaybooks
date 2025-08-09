@@ -147,38 +147,8 @@ export default function MobileFirstLayout({
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="bg-slate-700 hidden md:block" style={{ display: 'none' }}>
-            <div className="container">
-              <div className="flex flex-wrap items-center space-x-6 py-3">
-                <Link href="/" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                  🏠 Home
-                </Link>
-                <Link href="/books" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                  📚 Shop Books
-                </Link>
-                <Link href="/about" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                  👨‍💼 About Charles
-                </Link>
-                <Link href="/how-to-order" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                  🛒 How to Order
-                </Link>
-                <Link href="/for-researchers" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                  🔬 For Researchers
-                </Link>
-                <Link href="/contact" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                  📧 Contact
-                </Link>
-                <Link href="/blog" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                  📝 Blog
-                </Link>
-                <Link href="/scottish-aviation-timeline" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                  🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Timeline
-                </Link>
-              </div>
-            </div>
-          </nav>
-
+          {/* Legacy desktop navigation removed – global header handles navigation */}
+          
           {/* Trusted Seller Banner */}
           <div className="bg-green-500 text-center py-2">
             <div className="font-bold text-white text-sm sm:text-base">
