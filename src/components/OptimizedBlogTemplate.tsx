@@ -129,7 +129,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">
 
-      {/* Sticky Navigation */}
+      {/* Breadcrumbs only (share removed) */}
       <nav className="mb-6">
         <div className="flex items-center justify-between max-w-4xl mx-auto px-4">
           <div className="flex items-center space-x-2 text-sm text-muted">
@@ -138,31 +138,6 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
             <span>Blog</span>
             <ChevronRight className="w-4 h-4" />
             <span className="text-accent-blue">{post.category}</span>
-          </div>
-          
-          {/* Social Sharing Buttons */}
-          <div className="flex items-center space-x-2">
-            <button 
-              onClick={() => handleShare('twitter')}
-              className="p-2 text-muted hover:text-accent-blue transition-colors"
-              aria-label="Share on Twitter"
-            >
-              <Share2 className="w-4 h-4" />
-            </button>
-            <button 
-              onClick={() => handleShare('facebook')}
-              className="p-2 text-muted hover:text-accent-blue transition-colors"
-              aria-label="Share on Facebook"
-            >
-              <Share2 className="w-4 h-4" />
-            </button>
-            <button 
-              onClick={() => setIsLiked(!isLiked)}
-              className={`p-2 transition-colors ${isLiked ? 'text-accent-red' : 'text-secondary hover:text-accent-red'}`}
-              aria-label="Like this post"
-            >
-              <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />
-            </button>
           </div>
         </div>
       </nav>
@@ -368,13 +343,13 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Auto-related books */}
       <PostRelatedBooks category={post.category} tags={post.tags} />
 
-      {/* Simple Share */}
-      <div className="pt-8 text-center">
-        <p className="text-secondary mb-3">Share this article</p>
-        <div className="flex justify-center gap-2">
-          {['twitter', 'facebook', 'linkedin'].map((platform) => (
-            <button key={platform} onClick={() => handleShare(platform)} className="badge badge-gray px-3 py-2 text-sm capitalize">{platform}</button>
-          ))}
+      {/* Simple Share removed */}
+
+      {/* Sticky Buy Books (mobile) */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900/95 backdrop-blur border-t border-slate-700">
+        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+          <span className="text-white text-sm">📚 Browse Charles’s aviation books</span>
+          <a href="/books" className="badge badge-blue px-4 py-2 rounded-lg font-semibold">Buy Books</a>
         </div>
       </div>
 
