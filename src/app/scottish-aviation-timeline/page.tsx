@@ -247,199 +247,128 @@ export default function ScottishAviationTimelinePage() {
         }}
       />
 
-      <div className="pt-2 text-white">
+      <div className="surface-dark bg-slate-950 -mx-6 px-6 py-12 rounded-2xl">
         {/* Era Navigation */}
-        <div className="mb-12">
-          <h2 className="text-white mb-6 text-center">Explore by Historical Era</h2>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div className="max-w-5xl mx-auto mb-10">
+          <h2 className="text-white text-center mb-4">Explore by Era</h2>
+          <div className="flex flex-wrap justify-center gap-2">
             {eras.map((era) => (
               <button
                 key={era}
                 onClick={() => setSelectedEra(selectedEra === era ? null : era)}
-                className={`relative overflow-hidden rounded-xl p-6 text-white font-semibold transition-all duration-300 transform hover:scale-105 bg-slate-800 border border-slate-700 ${
-                  selectedEra === era ? 'ring-4 ring-blue-600 scale-105' : ''
-                }`}
+                className={`px-3 py-2 rounded border border-white/30 text-sm hover:bg-white/10 ${selectedEra === era ? 'bg-white/10' : ''}`}
               >
-                <div className="relative z-10">
-                  <div className="text-lg font-bold mb-1">{era.replace('-', ' & ')}</div>
-                  <div className="text-sm opacity-90">
-                    {timelineEvents.filter(e => e.era === era).length} events
-                  </div>
-                  <div className="text-xs opacity-75 mt-1">
-                    {era === 'Pioneer' && '1895-1914'}
-                    {era === 'WWI' && '1914-1918'}
-                    {era === 'Inter-War' && '1918-1939'}
-                    {era === 'WWII-Cold-War' && '1939-1991'}
-                    {era === 'Modern' && '1991-Present'}
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-black opacity-0 hover:opacity-10 transition-opacity duration-300"></div>
+                {era.replace('-', ' & ')}
               </button>
             ))}
           </div>
         </div>
 
         {/* Category Filter */}
-        <div className="mb-12 bg-slate-900/70 border border-slate-700 rounded-xl p-6">
-          <h3 className="text-xl font-semibold text-white mb-4 text-center">Filter by Category</h3>
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="max-w-5xl mx-auto mb-12">
+          <h3 className="text-center mb-3">Filter by Category</h3>
+          <div className="flex flex-wrap justify-center gap-2">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(selectedCategory === category ? null : category)}
-                className={`px-4 py-2 rounded-full font-medium transition-all duration-200 ${
-                  selectedCategory === category
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-slate-800 text-white/90 hover:bg-slate-700'
-                }`}
+                className={`px-3 py-2 rounded border border-white/30 text-sm hover:bg-white/10 ${selectedCategory === category ? 'bg-white/10' : ''}`}
               >
-                <span className="mr-2">{categoryIcons[category as keyof typeof categoryIcons]}</span>
                 {category}
-                <span className="ml-2 text-xs">
-                  ({timelineEvents.filter(e => e.category === category).length})
-                </span>
               </button>
             ))}
-          </div>
-          {(selectedEra || selectedCategory) && (
-            <div className="mt-4 text-center">
+            {(selectedEra || selectedCategory) && (
               <button
-                onClick={() => {
-                  setSelectedEra(null);
-                  setSelectedCategory(null);
-                }}
-                className="text-blue-400 hover:text-blue-300 underline"
+                onClick={() => { setSelectedEra(null); setSelectedCategory(null); }}
+                className="px-3 py-2 rounded border border-white/40 text-sm hover:bg-white/10"
               >
-                Clear all filters
+                Clear
               </button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
 
         {/* Timeline */}
-        <div className="relative">
-          <h2 className="text-white mb-8 text-center">Historical Timeline</h2>
-          
-          {/* Vertical Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 to-purple-700 opacity-60 hidden lg:block"></div>
-
-          <div className="space-y-8">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-white text-center mb-8">Historical Timeline</h2>
+          <div className="space-y-6">
             {filteredEvents
               .sort((a, b) => a.year - b.year)
               .map((event, index) => (
-                <div key={`${event.year}-${index}`} className="relative">
-                  {/* Timeline Dot */}
-                  <div className="absolute left-6 w-6 h-6 bg-white border-4 border-blue-500 rounded-full shadow-lg hidden lg:block z-10">
-                    <div className="absolute inset-1 bg-blue-500 rounded-full"></div>
+              <article key={`${event.year}-${index}`} className="border border-white/15 rounded-xl p-6">
+                <header className="mb-3">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-2xl font-semibold">{event.year}</h3>
+                    <div className="text-sm opacity-80">{event.category}</div>
                   </div>
-
-                  {/* Event Card */}
-                  <div className="lg:ml-20 rounded-2xl border border-slate-800 overflow-hidden shadow-lg bg-slate-950">
-                    {/* Card Header */}
-                    <div className={`bg-gradient-to-r ${eraColors[event.era]} p-6 text-white`}>
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-3xl font-bold text-white">{event.year}</h3>
-                        <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium text-white">
-                          {categoryIcons[event.category]} {event.category}
-                        </span>
-                      </div>
-                      <h4 className="text-xl font-semibold mb-2 text-white">{event.title}</h4>
-                      <div className="text-sm opacity-90 text-white">📍 {event.location}</div>
-                    </div>
-
-                    {/* Card Content */}
-                    <div className="p-6">
-                      <p className="text-slate-200">{event.description}</p>
-                      
-                      {/* Significance */}
-                      <div className="rounded-lg border border-blue-700 bg-blue-900/40 text-white mb-6 p-4">
-                        <h5 className="font-semibold mb-2">Historical Significance:</h5>
-                        <p>{event.significance}</p>
-                      </div>
-
-                      {/* Technical Details */}
-                      {event.technicalDetails && (
-                        <div className="rounded-lg border border-slate-700 bg-slate-800/60 mb-6 p-4">
-                          <h5 className="font-semibold text-white mb-2">Technical Details:</h5>
-                          <p className="text-slate-200">{event.technicalDetails}</p>
-                        </div>
-                      )}
-
-                      {/* Related Content */}
-                      <div className="grid md:grid-cols-2 gap-6">
-                        {/* Related Books */}
-                        {event.relatedBooks && event.relatedBooks.length > 0 && (
-                          <div>
-                            <h5 className="font-semibold text-white mb-3">📚 Related Books:</h5>
-                            <div className="space-y-2">
-                              {event.relatedBooks.map((bookId) => (
-                                <Link
-                                  key={bookId}
-                                  href={`/books/${bookId}`}
-                                  className="block rounded-lg border border-green-700 bg-green-900/30 text-white hover:bg-green-900/40 transition-colors p-4"
-                                >
-                                  <div className="font-medium">📖 View Book →</div>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
-                        {/* Related Blog Posts */}
-                        {event.relatedBlogs && event.relatedBlogs.length > 0 && (
-                          <div>
-                            <h5 className="font-semibold text-white mb-3">📝 Related Articles:</h5>
-                            <div className="space-y-2">
-                              {event.relatedBlogs.map((blogId) => (
-                                <Link
-                                  key={blogId}
-                                  href={`/blog/${blogId}`}
-                                  className="block rounded-lg border border-blue-700 bg-blue-900/30 text-white hover:bg-blue-900/40 transition-colors p-4"
-                                >
-                                  <div className="font-medium">📰 Read Article →</div>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Key Figures & Aircraft */}
-                      {(event.keyFigures || event.aircraftTypes) && (
-                        <div className="mt-6 pt-4 border-t border-slate-700">
-                          <div className="grid md:grid-cols-2 gap-4 text-sm">
-                            {event.keyFigures && (
-                              <div>
-                                <span className="font-medium text-white/80">Key Figures:</span>
-                                <div className="text-slate-200">{event.keyFigures.join(', ')}</div>
-                              </div>
-                            )}
-                            {event.aircraftTypes && (
-                              <div>
-                                <span className="font-medium text-white/80">Aircraft Types:</span>
-                                <div className="text-slate-200">{event.aircraftTypes.join(', ')}</div>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
+                  <h4 className="text-lg mt-1">{event.title}</h4>
+                  <div className="text-sm opacity-80">📍 {event.location}</div>
+                </header>
+                <p className="opacity-90 mb-4">{event.description}</p>
+                <div className="mb-4">
+                  <div className="font-semibold mb-1">Historical Significance</div>
+                  <p className="opacity-90">{event.significance}</p>
                 </div>
-              ))}
+                {event.technicalDetails && (
+                  <div className="mb-4">
+                    <div className="font-semibold mb-1">Technical Details</div>
+                    <p className="opacity-90">{event.technicalDetails}</p>
+                  </div>
+                )}
+                <div className="grid md:grid-cols-2 gap-4">
+                  {event.relatedBooks && event.relatedBooks.length > 0 && (
+                    <div>
+                      <div className="font-semibold mb-2">Related Books</div>
+                      <div className="space-y-2">
+                        {event.relatedBooks.map((bookId) => (
+                          <Link key={bookId} href={`/books/${bookId}`} className="underline hover:no-underline">
+                            📖 View Book →
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {event.relatedBlogs && event.relatedBlogs.length > 0 && (
+                    <div>
+                      <div className="font-semibold mb-2">Related Articles</div>
+                      <div className="space-y-2">
+                        {event.relatedBlogs.map((blogId) => (
+                          <Link key={blogId} href={`/blog/${blogId}`} className="underline hover:no-underline">
+                            📰 Read Article →
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+                {(event.keyFigures || event.aircraftTypes) && (
+                  <div className="mt-4 pt-3 border-t border-white/10 grid md:grid-cols-2 gap-3 text-sm">
+                    {event.keyFigures && (
+                      <div>
+                        <span className="opacity-80">Key Figures:</span>
+                        <div>{event.keyFigures.join(', ')}</div>
+                      </div>
+                    )}
+                    {event.aircraftTypes && (
+                      <div>
+                        <span className="opacity-80">Aircraft Types:</span>
+                        <div>{event.aircraftTypes.join(', ')}</div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </article>
+            ))}
           </div>
         </div>
 
         {/* Book Collection CTA */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+        <div className="mt-16 border border-white/15 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Complete Aviation History Collection</h2>
           <p className="text-xl mb-6 opacity-90">
             Explore the full story through Charles E. MacKay's comprehensive collection of aviation history books
           </p>
-          <Link
-            href="/books"
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
+          <Link href="/books" className="inline-block underline">
             Browse All 19 Books →
           </Link>
         </div>
