@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 export const metadata: Metadata = {
   title: 'Contact Charles E. MacKay - Aviation Historian & Author | Charles E. MacKay Aviation Books',
   description: 'Contact Charles E. MacKay for academic collaboration, research inquiries, bulk book orders, or historical consultancy. Based in Glasgow, Scotland.',
@@ -50,28 +51,18 @@ const structuredData = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <BBCPageTemplate
+      title="Contact Charles E. MacKay"
+      subtitle="Get in touch for academic collaboration, research inquiries, bulk orders, or historical consultancy services."
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Hero Section */}
-      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Contact Charles E. MacKay
-            </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto">
-              Get in touch for academic collaboration, research inquiries, bulk book orders, or historical consultancy services.
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Contact Content */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="pt-2">
 
         {/* Contact Information */}
         <section className="mb-16">
@@ -260,6 +251,6 @@ export default function ContactPage() {
         </section>
 
       </div>
-    </div>
+    </BBCPageTemplate>
   )
 }
