@@ -23,6 +23,15 @@ const eslintConfig = [
       "react/no-unescaped-entities": "off",
       "@next/next/no-img-element": "off",
       "jsx-a11y/alt-text": "off",
+      // Block reintroduction of top share bars
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "JSXElement Literal[value=/Share this article|Enjoyed this article\? Share it!/i]",
+          message:
+            "Top share bars are disallowed. Use no top share UI; keep pages clean."
+        }
+      ]
     },
   },
 ];
