@@ -11,6 +11,11 @@ export default function BBCHeader() {
   const router = useRouter();
   const menuRef = useRef<HTMLDivElement | null>(null);
 
+  // Inline links to show in the header row (desktop)
+  const inlineLabels = new Set(['Home', 'Shop Books', 'Blog', 'About Charles']);
+  const inlineLinks = primaryNavLinks.filter(l => inlineLabels.has(l.label));
+  const otherLinks = primaryNavLinks.filter(l => !inlineLabels.has(l.label));
+
   return (
     <header className="relative bg-slate-900 text-white sticky top-0 z-50" role="banner">
       <div className="max-w-7xl mx-auto px-4">
@@ -53,7 +58,7 @@ export default function BBCHeader() {
       <nav className="bg-slate-900 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4">
           <div className="hidden md:flex gap-2 py-2">
-            {primaryNavLinks.map((l) => (
+            {inlineLinks.map((l) => (
               <Link key={l.href} href={l.href} className="px-3 py-2 rounded text-white hover:bg-slate-800">
                 {l.label}
               </Link>
@@ -63,14 +68,29 @@ export default function BBCHeader() {
       </nav>
       {menuOpen && (
         <div id="bbc-menu" role="menu" ref={menuRef} className="absolute left-0 right-0 top-full z-[60] border-t border-slate-800 bg-slate-900 shadow-xl">
-          <div className="max-w-7xl mx-auto px-4 py-3">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+          <div className="max-w-7xl mx-auto px-4 py-2">
+            {/* Mobile menu: show all links for full navigation */}
+            <div className="md:hidden grid grid-cols-1 gap-1">
               {primaryNavLinks.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
                   role="menuitem"
-                  className="px-3 py-2 rounded text-white hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
+                  className="px-2 py-2 rounded text-white text-sm hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+            {/* Desktop menu: show only the remaining links (compact) */}
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+              {otherLinks.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  role="menuitem"
+                  className="px-2 py-2 rounded text-white text-sm hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
                   onClick={() => setMenuOpen(false)}
                 >
                   {l.label}
