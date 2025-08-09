@@ -16,7 +16,7 @@ Queue (start → finish)
 - [x] clydeside-aviation-revolution
 - [x] british-aircraft-great-war-rfc-rnas
 - [x] german-aircraft-great-war-development
-- [ ] english-electric-lightning-development
+- [x] english-electric-lightning-development
 - [ ] f86-sabre-cold-war-fighter
 - [ ] jet-age-aviation-cold-war-development
 - [ ] schneider-trophy-racing-development
