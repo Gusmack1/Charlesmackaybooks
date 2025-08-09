@@ -226,7 +226,7 @@ export default function RootLayout({
         />
       </head>
       <ClientBody>
-        <ConditionalHeader />
+        {/* Header removed as requested */}
         <main className="min-h-screen">
           {children}
         </main>
