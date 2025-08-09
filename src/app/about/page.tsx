@@ -184,7 +184,6 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-      </div>
 
       {/* Content Sections */}
       <div className="pt-16">
