@@ -19,7 +19,7 @@ Queue (start → finish)
 - [x] english-electric-lightning-development
 - [x] f86-sabre-cold-war-fighter
 - [x] jet-age-aviation-cold-war-development
-- [ ] schneider-trophy-racing-development
+- [x] schneider-trophy-racing-development
 - [ ] lucy-lady-houston-schneider-trophy
 - [ ] luftwaffe-1945-final-year
 - [ ] me262-jet-fighter-revolution
