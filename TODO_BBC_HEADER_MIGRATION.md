@@ -29,6 +29,7 @@ Goal: Make the header consistent across all pages, inspired by BBC’s clear, ca
   - Fully responsive behavior (desktop → tablet → mobile)
   - Keyboard/ARIA handling (aria-controls, aria-expanded, role=menu/menuitem)
 - [ ] Centralize category config in a single map (labels, hrefs, icon optional) used by both desktop and mobile nav
+  - [x] primary nav config created at `src/config/navigation.ts` and wired into `Header.tsx`
 - [ ] Update styles in `src/app/globals.css` for header/nav tokens (spacing, separators, contrast, sticky safeties)
 - [ ] Ensure sticky header does not cause CLS (reserve space, test LCP)
 - [x] Force header/menu text to white for readability site-wide
