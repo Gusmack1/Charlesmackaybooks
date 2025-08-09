@@ -167,8 +167,16 @@ export default function Header() {
         </div>
       </div>
       <style jsx>{`
-        .header-primary-nav a { color: #ffffff !important; }
-        #global-more-menu a { color: #ffffff !important; }
+        .header-primary-nav a,
+        .header-primary-nav a:link,
+        .header-primary-nav a:visited,
+        .header-primary-nav a:hover,
+        .header-primary-nav a:active { color: #ffffff !important; text-decoration: none; }
+        #global-more-menu a,
+        #global-more-menu a:link,
+        #global-more-menu a:visited,
+        #global-more-menu a:hover,
+        #global-more-menu a:active { color: #ffffff !important; text-decoration: none; }
       `}</style>
     </header>
   );
