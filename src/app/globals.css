@@ -232,6 +232,12 @@
 
   /* Safe-area utility for mobile bottom bars */
   .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+
+  /* Surface utility: force white text within dark sections */
+  .surface-dark,
+  .surface-dark * {
+    color: #ffffff !important;
+  }
 }
 
 /* HERO SECTIONS - Only place where colors change based on content */
