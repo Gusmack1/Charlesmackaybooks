@@ -49,17 +49,17 @@ export default function Home() {
   const filteredBooks = books;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="surface-dark relative -mx-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       <HeroSection />
 
       {/* Books Section */}
-      <section className="py-12 bg-white" id="books">
+      <section className="py-12" id="books">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-8">
-            <h2 className="content h2 text-primary">
+            <h2 className="text-2xl font-bold">
               📚 Aviation History Books - Ready to Ship
             </h2>
-            <p className="text-center text-secondary mb-4">
+            <p className="text-center opacity-90 mb-4">
               {filteredBooks.length} books available • Instant purchase with PayPal or eBay • FREE shipping worldwide
             </p>
           </div>
@@ -74,7 +74,9 @@ export default function Home() {
       </section>
 
       {/* Customer Testimonials */}
-      <Testimonials />
+      <div className="container mx-auto container-padding py-12">
+        <Testimonials />
+      </div>
     </div>
   );
 }
