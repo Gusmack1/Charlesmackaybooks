@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import BookCard from '@/components/BookCard'
 import { books } from '@/data/books'
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 
 // Valid category mappings
 const categoryMappings: Record<string, string> = {
@@ -70,45 +71,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   )
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-            {categoryName} Books
-          </h1>
-          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
-            Discover {categoryBooks.length} authoritative {categoryName.toLowerCase()} books by renowned historian Charles E. MacKay
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <span className="bg-white/10 px-3 py-1 rounded-full">
-              {categoryBooks.length} Books Available
-            </span>
-            <span className="bg-white/10 px-3 py-1 rounded-full">
-              Academic References
-            </span>
-            <span className="bg-white/10 px-3 py-1 rounded-full">
-              Worldwide Shipping
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* Navigation */}
-      <section className="bg-white border-b py-4">
-        <div className="container mx-auto px-4">
-          <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-accent-blue hover:text-blue-800">Home</Link>
-            <span className="text-muted">/</span>
-            <Link href="/books" className="text-accent-blue hover:text-blue-800">Books</Link>
-            <span className="text-muted">/</span>
-            <span className="text-secondary">{categoryName}</span>
-          </nav>
-        </div>
-      </section>
-
+    <BBCPageTemplate
+      title={`${categoryName} Books`}
+      subtitle={`Discover ${categoryBooks.length} authoritative ${categoryName.toLowerCase()} books by Charles E. MacKay`}
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Books', href: '/books' }, { label: categoryName }]}
+    >
       {/* Books Grid */}
-      <section className="py-12">
+      <section className="py-6">
         <div className="container mx-auto px-4">
           {categoryBooks.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -156,6 +125,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           </div>
         </div>
       </section>
-    </div>
+    </BBCPageTemplate>
   )
 }
