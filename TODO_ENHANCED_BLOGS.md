@@ -17,7 +17,7 @@ Queue (start → finish)
 - [x] british-aircraft-great-war-rfc-rnas
 - [x] german-aircraft-great-war-development
 - [x] english-electric-lightning-development
-- [ ] f86-sabre-cold-war-fighter
+- [x] f86-sabre-cold-war-fighter
 - [ ] jet-age-aviation-cold-war-development
 - [ ] schneider-trophy-racing-development
 - [ ] lucy-lady-houston-schneider-trophy

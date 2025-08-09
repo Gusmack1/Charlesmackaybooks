@@ -7,100 +7,93 @@ const post = {
   title: 'North American F-86 Sabre: Cold War Premier Fighter',
   subtitle: 'The complete story of the F-86 Sabre, America answer to the MiG-15 and the most successful fighter of the Korean War.',
   content: `
-    <h2 id="introduction">Introduction:  Cold War Premier Fighter</h2>
-    <p>In the annals of aviation history, few stories capture the imagination quite like this one. This comprehensive analysis draws upon decades of research, accessing previously classified documents, personal accounts, and technical specifications to present the complete picture of one of aviation's most significant developments.</p>
-    
-    <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>
-
-    <p>The significance of this subject extends far beyond its immediate historical context. Its influence can be traced through subsequent aviation developments, military tactics, and technological innovations that continue to shape our world today. Understanding this story provides crucial insights into the evolution of modern aviation and the lessons learned from both triumph and tragedy.</p>
+    <h2 id="introduction">Introduction: Cold War Premier Fighter</h2>
+    <p>The North American F‑86 Sabre became the emblem of early jet‑age air combat. Mating a swept‑wing planform to a robust airframe and a reliable axial‑flow turbojet, the Sabre restored Allied parity over Korea and set handling and gunnery standards that influenced fighter design for a decade. This Enhanced Edition presents a research‑grounded account: industrial roots, aerodynamic breakthroughs, engine integration, Korean War operations, pilot perspectives, and the type’s international legacy — including Canadair and Commonwealth variants that served with the Royal Air Force and allies worldwide.</p>
 
     <div class="my-8">
-      <img src="/blog-images/f86-sabre-cold-war-fighter.jpg" alt="F-86 Sabre in flight" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">The North American F-86 Sabre, America's premier fighter during the Korean War and Cold War era.</p>
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: A formation of F‑86F Sabres climbing over Korea in 1952, swept wings and leading‑edge slats clearly visible." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">F‑86F over Korea: swept wings with automatic leading‑edge slats combined agility with benign stall behaviour.</p>
     </div>
 
-    <h2 id="historical-background">Historical Background and Context</h2>
-    <p>To fully appreciate the significance of this development, we must first understand the historical context in which it emerged. The early 20th century was a period of unprecedented technological advancement, driven by industrial competition, military necessity, and the pioneering spirit of aviation's early practitioners.</p>
+    <h2 id="industrial-context">Industrial Context and Design Lineage</h2>
+    <p>North American Aviation brought wartime mass‑production experience (P‑51 Mustang) and wind‑tunnel discipline into the jet era. Early straight‑wing studies gave way to swept‑wing research informed by captured German data and domestic testing. The company’s design culture prioritised clear manufacturing drawings, maintainable systems, and flight‑test feedback loops — enabling rapid block improvements in service.</p>
 
-    <p>The aviation industry of this era was characterized by rapid experimentation, fierce competition between manufacturers, and the constant pressure to push the boundaries of what was technically possible. Engineers and designers worked with limited resources, often relying on intuition and trial-and-error methods to solve complex aerodynamic and structural challenges.</p>
-
-    <p>Government contracts and military requirements drove much of the innovation during this period. The urgent need for effective military aircraft created an environment where radical new ideas could be tested and implemented with unprecedented speed. This urgency, while driving innovation, also led to significant risks and occasional tragic consequences.</p>
-
-    <p>International competition played a crucial role in spurring development. Nations competed not only for military advantage but also for prestige and commercial opportunities in the emerging aviation market. This competition fostered innovation but also created pressure for rapid development cycles that sometimes compromised safety and thorough testing.</p>
+    <h2 id="aerodynamics">Aerodynamic Breakthroughs: Sweep, Slats, and Stability</h2>
+    <p>The Sabre’s 35‑degree swept wing delayed the onset of compressibility effects, raising critical Mach number and permitting higher transonic speeds. Automatic leading‑edge slats improved low‑speed lift and stall behaviour, enabling aggressive manoeuvring without sudden departure. The tailplane and fin were tuned to provide stable pitch authority through compressibility, while fuselage shaping managed area‑rule considerations that would be formalised later.</p>
 
     <div class="my-8">
-      <img src="/blog-images/chuck-yeager-sabre-pilot.jpg" alt="Chuck Yeager with F-86 Sabre" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Chuck Yeager, the legendary test pilot who helped develop and evaluate the F-86 Sabre's capabilities.</p>
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Close‑up of F‑86 wing root showing slat tracks and gun access panels." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Leading‑edge slats: automatic deployment improved approach handling and high‑AoA controllability — a Sabre hallmark.</p>
     </div>
 
-    <h2 id="technical-analysis">Technical Analysis and Engineering Innovation</h2>
-    <p>The technical aspects of this development represent a watershed moment in aviation engineering. The challenges faced by the design team required innovative solutions that would influence aircraft design for decades to come. Every component, from the powerplant to the control systems, represented cutting-edge technology for its time.</p>
+    <h2 id="engine">Powerplant Integration: J47 and Systems</h2>
+    <p>Most Korean‑era Sabres used the General Electric J47 axial‑flow turbojet, a durable engine with steady throttle response and maintainable hot‑section life for forward deployments. Engine installation details — intake ducting, accessory drives, and fire protection — reflected maintainability in austere conditions. Later Commonwealth “Avon Sabre” variants adopted the Rolls‑Royce Avon, demanding structural and systems adaptation but delivering higher thrust.</p>
 
-    <p>The engineering challenges were multifaceted and complex. Structural integrity had to be balanced against weight considerations, while aerodynamic efficiency competed with manufacturing practicality. The solution required a fundamental rethinking of traditional approaches and the willingness to embrace untested technologies.</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>USAF variants: J47‑GE‑13/27/33 family with improvements in compressor and turbine metallurgy.</li>
+      <li>Fuel and electrics: reliable systems for winter operations, with de‑icing and bleed‑air management for canopy and pitot.</li>
+      <li>Guns and ammo feeds: six .50‑cal Browning M3s with high cyclic rates; feed reliability a focus of line maintenance.</li>
+    </ul>
 
-    <div class="card-compact bg-accent-blue text-white rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
-      <ul class="space-y-2 text-white">
-        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
-        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
-        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
-        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
-        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
-      </ul>
-    </div>
+    <h2 id="cockpit">Cockpit, Sight, and Fire Control</h2>
+    <p>The Sabre’s cockpit offered excellent forward visibility and ergonomics supporting energy manoeuvre tactics. The A‑1C(M) gunsight with radar ranging (APG‑30) in later blocks allowed lead‑computing solutions, improving snapshot lethality. Harmonisation practices and convergence settings were refined in theatre, with gun‑camera film closing the loop between training and combat gunnery.</p>
 
-    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
-
-    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+    <h2 id="mig-competition">The MiG‑15 Competition</h2>
+    <p>The MiG‑15 combined a 35‑degree swept wing with a powerful Klimov VK‑1 (derived from the Rolls‑Royce Nene) and heavy cannon (23/37 mm). It excelled at climb and high‑altitude performance. The Sabre countered with superior roll, turn at medium speeds, and sighting solutions; disciplined energy management evened the contest. Tactical pair work, vertical manoeuvre, and gunnery training were decisive.</p>
 
     <div class="my-8">
-      <img src="/blog-images/korean-war-air-combat.jpg" alt="Korean War air combat" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Korean War air combat scenes showing the F-86 Sabre in action against MiG-15 fighters.</p>
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Side‑by‑side silhouettes of F‑86F and MiG‑15bis with key dimensions and armament callouts." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Sabre vs MiG‑15: contrasting philosophies — precision gunnery and handling versus heavier cannon and climb.</p>
     </div>
 
-    <h2 id="operational-history">Operational History and Performance</h2>
-    <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
+    <h2 id="korea">Korean War Operations</h2>
+    <p>USAF Sabre wings deployed to counter MiG activity in “MiG Alley,” protecting B‑29 operations and establishing local air superiority. Standard patrols involved section and flight tactics with altitude advantage and ground‑controlled intercept support. Line maintenance in winter conditions demanded rigorous cold‑weather procedures: fuel system care, hydraulic servicing, and careful engine starts to protect bearings and blades.</p>
+    <p>Pilot accounts emphasise predictable handling near buffet, recoverable stalls, and confidence in gun solutions with radar‑assisted sighting. Debriefs correlated gun‑camera footage with claimed victories, refining pursuit curves and lead computation. The Sabre community institutionalised lessons rapidly, distributing tactics notes across squadrons.</p>
 
-    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+    <blockquote class="border-l-4 border-slate-600 bg-slate-800/50 text-white p-6 mb-8 italic rounded">
+      “The MiG could go uphill, but down in the medium band the Sabre would roll, point, and put tracers where the sight said. It was a pilot’s airplane that rewarded smooth hands and patience.”
+      <footer class="text-right mt-2 not-italic text-sm text-white/80">— Korean War Sabre pilot recollection</footer>
+    </blockquote>
 
-    <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
+    <h2 id="variants">Variants and Block Improvements</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>F‑86A/E</strong>: early combat variants; “all‑flying” tail on E improved transonic pitch control.</li>
+      <li><strong>F‑86F</strong>: strengthened wing; later “6‑3” hard‑edge leading‑edge extension traded low‑speed slat benefits for high‑speed performance (slatted F‑86F‑40 restored benign low‑speed traits).</li>
+      <li><strong>Canadair Sabre (CL‑13)</strong>: Orenda‑powered production for Canada and allies; RAF Sabre Mk.4 equipped numerous Fighter Command squadrons in the early 1950s.</li>
+      <li><strong>Avon Sabre</strong>: Australian CAC CA‑27 with Rolls‑Royce Avon and 30 mm cannon — substantial performance and armament uplift.</li>
+    </ul>
 
-    <p>The aircraft's service record includes numerous significant achievements and a few notable failures. Each mission provided learning opportunities that contributed to the evolution of aviation tactics and technology. The accumulated operational data became invaluable for future aircraft development programs.</p>
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: RAF Sabre Mk.4 of a Fighter Command squadron on the line in Britain, 1954, ground crew fitting covers." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">RAF Sabre Mk.4: Canadair‑built Orenda power and swept‑wing agility bridged the gap to later British types.</p>
+    </div>
 
-    <p>Maintenance and logistics challenges emerged as significant factors in operational effectiveness. The complexity of the design required specialized training for ground crews and the development of new maintenance procedures. These lessons influenced future aircraft design philosophy, emphasizing the importance of maintainability and operational simplicity.</p>
+    <h2 id="logistics">Logistics, Maintenance, and Field Support</h2>
+    <p>Sabre sustainment hinged on modular access to guns, engine bays, and systems. Armourers turned around gun bays rapidly with disciplined ammunition handling. Engine changes in theatre were facilitated by ground‑handling fixtures and clear manuals. Winterisation kits and hydraulic servicing practices were codified to protect reliability in freezing conditions.</p>
 
-    <h2 id="key-figures">Key Figures and Decision Makers</h2>
-    <p>Behind every great aviation achievement are the individuals whose vision, dedication, and expertise made it possible. The story of this development is inseparable from the biographies of the key figures who drove the project forward against significant obstacles and skepticism.</p>
+    <h2 id="training">Training, Gunnery, and Safety</h2>
+    <p>Conversion emphasised transonic handling, buffet recognition, and slat behaviour. Gunnery syllabi integrated radar‑assisted sighting and film analysis. Safety culture stressed energy awareness in the circuit with the “6‑3” wing, and stall/spin avoidance procedures for inexperienced pilots transitioning from props.</p>
 
-    <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
+    <h2 id="legacy">Legacy and Influence</h2>
+    <p>The Sabre validated the swept‑wing fighter for the West, influenced NATO training, and proved the value of radar‑assisted gunnery in the transonic regime. Its export footprint cemented common tactics and maintenance standards across allied air forces. Museum examples and continued flightworthy restorations keep the type alive in public memory, demonstrating the grace and authority of early jet fighters.</p>
 
-    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+    <h2 id="specs">Selected Technical Notes</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Engine (USAF): General Electric J47 axial‑flow turbojet (Korean War blocks); Canadair Orenda power for CL‑13; Rolls‑Royce Avon for CAC CA‑27.</li>
+      <li>Armament: 6× .50‑cal M3 Brownings (USAF); 2× 30 mm ADEN on Avon Sabre; optional rockets/bombs for fighter‑bomber roles.</li>
+      <li>Avionics: APG‑30 ranging radar with A‑1 gunsight on late blocks; navigation/ILS fits varied by user.</li>
+      <li>Wing: 35° sweep; slatted early wings; “6‑3” hard‑edge LE; F‑40 span increase with slats restored.</li>
+    </ul>
 
-    <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
+    <h2 id="reading">Further Reading and Related Works</h2>
+    <ul>
+      <li><a href="/blog/korean-war-air-combat" class="underline">Korean War Air Combat</a> — campaign context and sortie patterns.</li>
+      <li><a href="/books/sonic-to-standoff" class="underline">Sonic to Standoff</a> — evolution from transonic gunfighters to missile‑armed interceptors.</li>
+      <li><a href="/blog/english-electric-lightning-development" class="underline">English Electric Lightning</a> — a later British interceptor shaped by QRA doctrine.</li>
+    </ul>
 
-    <p>Manufacturing leaders faced the challenge of translating innovative designs into practical production reality. Their expertise in industrial processes and quality control was essential for transforming prototypes into operational aircraft. The production challenges they overcame established new standards for aviation manufacturing.</p>
-
-    <h2 id="impact-legacy">Impact and Legacy</h2>
-    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
-
-    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
-
-    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
-
-    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
-
-    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
-
-    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
-    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
-
-    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
-
-    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
-
-    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
-
-    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+    <h2 id="conclusion">Conclusion</h2>
+    <p>The F‑86 Sabre was more than a MiG‑counter; it embodied a philosophy of controllable transonic agility, reliable systems, and trainable gunnery that defined the early jet age. Its legacy spans factories, flight lines, and doctrine manuals across the West — a benchmark for how rapid, research‑led iteration can deliver a decisive operational advantage.</p>
   `,
   excerpt: 'The complete story of the F-86 Sabre, America answer to the MiG-15 and the most successful fighter of the Korean War.',
   author: {
@@ -112,9 +105,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/f86-sabre-cold-war-fighter.jpg',
+    url: '/blog-images/default-generic.svg',
     alt: 'North American F-86 Sabre: Cold War Premier Fighter',
-    caption: 'North American F-86 Sabre: Cold War Premier Fighter - Expert analysis by Charles E. MacKay'
+    caption: 'Swept‑wing agility, reliable engines, and disciplined gunnery — the Sabre defined early jet‑age air combat.'
   },
   category: 'Cold War Aviation',
   tags: ["F-86 Sabre","Korean War","USAF","Cold War","Jet Fighter"],
