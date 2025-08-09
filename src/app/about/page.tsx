@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import BBCPageTemplate from '@/components/BBCPageTemplate'
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Charles E. MacKay - Aviation Historian & Author | Charles E. MacKay Aviation Books',
@@ -86,16 +87,18 @@ const structuredData = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <BBCPageTemplate
+      title="About Charles E. MacKay"
+      subtitle="Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history."
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Charles' }]}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Hero Section */}
-      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Hero body grid */}
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Author Image */}
             <div className="flex justify-center lg:justify-start">
               <div className="relative">
@@ -141,12 +144,9 @@ export default function AboutPage() {
             </div>
 
             {/* About Content */}
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                About Charles E. MacKay
-              </h1>
-              <p className="text-xl text-white mb-8 leading-relaxed">
-                Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history. With 19 published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
+            <div className="lg:col-span-2">
+              <p className="text-lg text-white mb-8 leading-relaxed">
+                With 19 published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8 text-center">
@@ -184,11 +184,10 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
       </div>
 
       {/* Content Sections */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="pt-16">
 
         {/* Biography */}
         <section className="mb-16">
@@ -388,6 +387,6 @@ export default function AboutPage() {
         </section>
 
       </div>
-    </div>
+    </BBCPageTemplate>
   )
 }

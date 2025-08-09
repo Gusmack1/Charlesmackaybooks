@@ -1,0 +1,59 @@
+'use client';
+
+import Link from 'next/link';
+import React from 'react';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface BBCPageTemplateProps {
+  title: string;
+  subtitle?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  children: React.ReactNode;
+}
+
+export default function BBCPageTemplate({ title, subtitle, breadcrumbs = [], children }: BBCPageTemplateProps) {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="max-w-7xl mx-auto px-6 py-14 md:py-20">
+          {breadcrumbs.length > 0 && (
+            <nav aria-label="Breadcrumb" className="mb-4 text-sm text-white/80">
+              <ol className="flex flex-wrap gap-2 items-center">
+                {breadcrumbs.map((bc, idx) => (
+                  <li key={`${bc.label}-${idx}`} className="flex items-center gap-2">
+                    {bc.href ? (
+                      <Link href={bc.href} className="hover:underline text-white/90">
+                        {bc.label}
+                      </Link>
+                    ) : (
+                      <span className="text-white/90">{bc.label}</span>
+                    )}
+                    {idx < breadcrumbs.length - 1 && <span aria-hidden>›</span>}
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
+          <div className="text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">{title}</h1>
+            {subtitle && (
+              <p className="text-lg md:text-xl text-white/90 max-w-3xl md:max-w-4xl md:pr-12">{subtitle}</p>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <main id="main-content" className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+        {children}
+      </main>
+    </div>
+  );
+}
+
+
