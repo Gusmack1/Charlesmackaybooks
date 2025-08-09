@@ -68,6 +68,16 @@
     text-decoration: underline;
   }
 
+  /* Ensure header links remain white regardless of global link color */
+  header a,
+  header a:link,
+  header a:visited,
+  header a:hover,
+  header a:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+
   /* Modern button styling */
   button {
     font-family: 'Inter', sans-serif;

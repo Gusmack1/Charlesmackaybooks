@@ -12,7 +12,7 @@ export default function BBCHeader() {
   const menuRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <header className="bg-slate-900 text-white sticky top-0 z-50" role="banner">
+    <header className="relative bg-slate-900 text-white sticky top-0 z-50" role="banner">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between py-3">
           <Link href="/" className="font-bold text-xl tracking-tight">Charles Mackay Books</Link>
@@ -62,15 +62,15 @@ export default function BBCHeader() {
         </div>
       </nav>
       {menuOpen && (
-        <div id="bbc-menu" role="menu" ref={menuRef} className="border-t border-slate-800 bg-slate-900">
-          <div className="max-w-7xl mx-auto px-4 py-2">
+        <div id="bbc-menu" role="menu" ref={menuRef} className="absolute left-0 right-0 top-full z-[60] border-t border-slate-800 bg-slate-900 shadow-xl">
+          <div className="max-w-7xl mx-auto px-4 py-3">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
               {primaryNavLinks.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
                   role="menuitem"
-                  className="px-3 py-2 rounded text-white hover:bg-slate-800"
+                  className="px-3 py-2 rounded text-white hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
                   onClick={() => setMenuOpen(false)}
                 >
                   {l.label}
