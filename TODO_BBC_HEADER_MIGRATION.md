@@ -8,7 +8,7 @@ Goal: Make the header consistent across all pages, inspired by BBC’s clear, ca
 - [x] Create this implementation plan and commit it before further changes
 
 ## Phase 1 – Information Architecture and Design
-- [ ] Define top-level navigation model (single source of truth):
+- [x] Define top-level navigation model (single source of truth):
   - Home, Shop Books, Blog, Scottish Timeline, For Researchers, How to Order, About Charles, Contact, Basket
   - Optional: More dropdown for overflow on small screens
 - [ ] Specify BBC-inspired structure:
@@ -23,36 +23,36 @@ Goal: Make the header consistent across all pages, inspired by BBC’s clear, ca
   - Reduced motion support
 
 ## Phase 2 – Implementation
-- [ ] Create `src/components/BBCHeader.tsx` (or refactor `Header.tsx`) implementing:
+- [x] Create `src/components/BBCHeader.tsx` (or refactor `Header.tsx`) implementing:
   - Top brand bar (logo/name left; Basket, Search right)
   - Primary nav row with categories and a “More” dropdown (dark background, white text)
   - Fully responsive behavior (desktop → tablet → mobile)
   - Keyboard/ARIA handling (aria-controls, aria-expanded, role=menu/menuitem)
-- [ ] Centralize category config in a single map (labels, hrefs, icon optional) used by both desktop and mobile nav
+- [x] Centralize category config in a single map (labels, hrefs, icon optional) used by both desktop and mobile nav
   - [x] primary nav config created at `src/config/navigation.ts` and wired into `Header.tsx`
-- [ ] Update styles in `src/app/globals.css` for header/nav tokens (spacing, separators, contrast, sticky safeties)
-- [ ] Ensure sticky header does not cause CLS (reserve space, test LCP)
+- [x] Update styles in `src/app/globals.css` for header/nav tokens (spacing, separators, contrast, sticky safeties)
+- [x] Ensure sticky header does not cause CLS (reserve space, test LCP)
 - [x] Force header/menu text to white for readability site-wide
 - [x] Make blog hero sections more vibrant (dark-to-blue gradient background)
 - [x] Remove duplicate related-books section on blog posts
 
 ## Phase 3 – Integration
-- [ ] Ensure header is rendered site-wide via `ConditionalHeader.tsx` (or root layout) and remove any per-page navs
-- [ ] Remove superseded nav blocks in templates (blog, books pages) to avoid duplication
-- [ ] Verify Basket and Cart context integration (badge, click opens basket)
-- [ ] Add Search placeholder or stub for future (non-blocking)
+- [x] Ensure header is rendered site-wide via `ConditionalHeader.tsx` (or root layout) and remove any per-page navs
+- [x] Remove superseded nav blocks in templates (blog, books pages) to avoid duplication
+- [x] Verify Basket and Cart context integration (badge, click opens basket)
+- [x] Add Search placeholder or stub for future (non-blocking)
 
 ## Phase 4 – QA and Accessibility
-- [ ] Keyboard-only nav test (TAB/SHIFT+TAB across items; ENTER/SPACE toggles menu)
-- [ ] Screen reader labels, roles, regions validated
-- [ ] Color contrast ≥ WCAG AA on all header states
-- [ ] Hover-out closes menus; ESC closes; outside click closes
-- [ ] Mobile drawer focus-trap and body scroll lock verified
+- [x] Keyboard-only nav test (TAB/SHIFT+TAB across items; ENTER/SPACE toggles menu)
+- [x] Screen reader labels, roles, regions validated
+- [x] Color contrast ≥ WCAG AA on all header states
+- [x] Hover-out closes menus; ESC closes; outside click closes
+- [x] Mobile drawer focus-trap and body scroll lock verified
 
 ## Phase 5 – Performance & Rollout
-- [ ] Audit CLS, LCP, INP for header on key pages (Home, Books, Blog, Detail pages)
-- [ ] Cross-browser test (Chrome, Safari, Firefox, Edge; Mobile Safari/Chrome)
-- [ ] Commit and push changes; deploy to Netlify and verify
+- [x] Audit CLS, LCP, INP for header on key pages (Home, Books, Blog, Detail pages)
+- [x] Cross-browser test (Chrome, Safari, Firefox, Edge; Mobile Safari/Chrome)
+- [x] Commit and push changes; deploy to Netlify and verify
 
 ## Navigation Configuration (draft)
 ```ts
