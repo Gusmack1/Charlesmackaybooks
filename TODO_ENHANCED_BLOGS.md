@@ -20,9 +20,9 @@ Queue (start → finish)
 - [x] f86-sabre-cold-war-fighter
 - [x] jet-age-aviation-cold-war-development
 - [x] schneider-trophy-racing-development
-- [ ] lucy-lady-houston-schneider-trophy
+- [x] lucy-lady-houston-schneider-trophy
 - [ ] luftwaffe-1945-final-year
-- [ ] me262-jet-fighter-revolution
+- [x] me262-jet-fighter-revolution
 - [ ] naval-aviation-history
 - [ ] bristol-fighter-f2b-brisfit
 - [ ] bristol-sycamore-helicopter-development
