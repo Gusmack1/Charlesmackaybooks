@@ -100,6 +100,35 @@ const post = {
     <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
 
     <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+
+    <h2 id="supplement-funding-mechanics">Supplement: Funding Mechanics and Accountability</h2>
+    <p>Private funds were channelled with accountability: engineering milestones, test readiness reviews, and safety gates remained under Air Ministry governance. This ensured that the urgency of private patronage did not erode the discipline of state test practice. The model foreshadowed modern research frameworks where philanthropic or commercial funds advance pre‑competitive work under public standards.</p>
+
+    <h2 id="supplement-technical-continuities">Supplement: Technical Continuities Documented</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Cooling‑drag principles from the S.6B can be traced in RAF design notes for early Merlin installations, particularly in radiator duct shaping and temperature margin bookkeeping.</li>
+      <li>Fuel chemistry experiments for the R engine informed detonation control strategies later codified for Merlin service fuels.</li>
+      <li>Fit/finish expectations developed in racing — flush riveting, fairing fidelity — became inspection items in war‑production acceptance folders.</li>
+    </ul>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Archive-style spread of test sheets—temperature logs, barograph traces, and inspector signatures—demonstrating governance." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Governed urgency: private speed under public test discipline.</p>
+    </div>
+
+    <h2 id="supplement-risk-mitigation">Supplement: Risk Mitigation Practice</h2>
+    <p>Programme risk was managed explicitly: abort criteria tied to temperature rates; structural inspections after high‑sea‑state runs; and defined “hold” conditions for weather and sea clutter. The ethic — numbers before narrative — became standard in RAF and contractor practice, shaping pre‑war test flights and wartime modifications alike.</p>
+
+    <h2 id="supplement-public-value">Supplement: Public Value of Private Philanthropy</h2>
+    <p>Lady Houston’s intervention demonstrated that private philanthropy can accelerate research when institutions pause — but only if outputs are recorded, verified, and disseminated. Britain extracted public value from a private gift by keeping data in the public engineering commons: design notes, test methods, and acceptance records survived to educate laboratories and factories well beyond 1931.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Calshot slipway panorama with S.6B, RAF pilot, Rolls‑Royce fitters, and Supermarine draughtsmen—captioned with roles." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">A national ensemble: patronage enabled a full orchestra of capability.</p>
+    </div>
+
+    <h2 id="supplement-concluding-thoughts">Supplement: Concluding Reflections</h2>
+    <p>The measure of Lady Houston’s act is not only a Trophy on a shelf; it is a measurable inheritance in methods and machines. When Britain rearmed, it did so with engineering teams who already knew how to measure heat as carefully as speed, and how to keep production tools warm between breakthroughs. That readiness — and the ethos behind it — is her enduring legacy.</p>
   `,
   excerpt: `The remarkable story of Lucy Lady Houston, the wealthy patron who single-handedly funded Britain's 1931 Schneider Trophy victory when the government withdrew support.`,
   author: {
