@@ -7,7 +7,6 @@ import { promises as fs } from 'fs';
 import { books } from '@/data/books';
 import { Book } from '@/types/book';
 import BookDetailClient from '@/components/BookDetailClient';
-import MobileBuyBar from '@/components/MobileBuyBar';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookAnalytics from '@/components/BookAnalytics';
 
@@ -487,8 +486,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         </main>
 
         {/* Mobile footer nav removed on book pages */}
-        {/* Sticky mobile buy bar */}
-        <MobileBuyBar book={book} />
+        {/* Sticky mobile buy bar removed per request */}
         
 
       </div>
