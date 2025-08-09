@@ -148,7 +148,7 @@ export default function MobileFirstLayout({
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="bg-slate-700 hidden md:block">
+          <nav className="bg-slate-700 hidden md:block" style={{ display: 'none' }}>
             <div className="container">
               <div className="flex flex-wrap items-center space-x-6 py-3">
                 <Link href="/" className="text-white hover:text-gray-300 text-sm font-medium flex items-center">
