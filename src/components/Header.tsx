@@ -148,6 +148,10 @@ export default function Header() {
       {/* Close pinned menu on outside click */}
       <script dangerouslySetInnerHTML={{ __html: '' }} />
       <style jsx>{`
+        /* Force white text for all header primary nav descendants */
+        .header-primary-nav, .header-primary-nav * { color: #ffffff !important; }
+        /* Force white text for all dropdown descendants */
+        #global-more-menu, #global-more-menu * { color: #ffffff !important; }
         .header-primary-nav a,
         .header-primary-nav a:link,
         .header-primary-nav a:visited,
