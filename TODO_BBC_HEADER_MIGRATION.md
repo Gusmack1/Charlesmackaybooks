@@ -39,6 +39,8 @@ Goal: Make the header consistent across all pages, inspired by BBC’s clear, ca
 ## Phase 3 – Integration
 - [x] Ensure header is rendered site-wide via `ConditionalHeader.tsx` (or root layout) and remove any per-page navs
 - [x] Remove superseded nav blocks in templates (blog, books pages) to avoid duplication
+  - [x] Delete legacy hidden nav from `src/components/Header.tsx`
+  - [x] Delete legacy desktop nav from `src/components/MobileFirstLayout.tsx`
 - [x] Verify Basket and Cart context integration (badge, click opens basket)
 - [x] Add Search placeholder or stub for future (non-blocking)
 

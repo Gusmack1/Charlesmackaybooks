@@ -129,7 +129,7 @@ export default function Header() {
       </div>
 
       {/* Primary navigation row */}
-      <nav className="bg-slate-800 border-t border-slate-700 header-primary-nav" role="navigation" aria-label="Primary">
+      <nav className="bg-slate-900 border-t border-slate-700 header-primary-nav" role="navigation" aria-label="Primary">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-start gap-1 md:gap-2 py-2 text-sm">
             {primaryNavLinks.map(link => (
@@ -141,45 +141,7 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Navigation (hidden — replaced by compact dropdown) */}
-      <nav className="bg-slate-700 hidden">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 md:gap-6 py-3">
-            <Link href="/" className="text-white hover:text-white/90 text-sm md:text-base font-medium flex items-center px-3 py-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-700 min-h-[44px]">
-              <span className="md:hidden">🏠</span>
-              <span className="hidden md:inline">🏠 Home</span>
-            </Link>
-            <Link href="/books" className="text-white hover:text-white/90 text-sm md:text-base font-medium flex items-center px-3 py-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-700 min-h-[44px]">
-              <span className="md:hidden">📚</span>
-              <span className="hidden md:inline">📚 Shop Books</span>
-            </Link>
-            <Link href="/about" className="text-white hover:text-white/90 text-sm md:text-base font-medium flex items-center px-3 py-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-700 min-h-[44px]">
-              <span className="md:hidden">👨‍💼</span>
-              <span className="hidden md:inline">👨‍💼 About Charles</span>
-            </Link>
-            <Link href="/how-to-order" className="text-white hover:text-white/90 text-sm md:text-base font-medium flex items-center px-3 py-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-700 min-h-[44px]">
-              <span className="md:hidden">🛒</span>
-              <span className="hidden md:inline">🛒 How to Order</span>
-            </Link>
-            <Link href="/for-researchers" className="text-white hover:text-white/90 text-sm md:text-base font-medium flex items-center px-3 py-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-700 min-h-[44px]">
-              <span className="md:hidden">🔬</span>
-              <span className="hidden md:inline">🔬 For Researchers</span>
-            </Link>
-            <Link href="/contact" className="text-white hover:text-white/90 text-sm md:text-base font-medium flex items-center px-3 py-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-700 min-h-[44px]">
-              <span className="md:hidden">📧</span>
-              <span className="hidden md:inline">📧 Contact</span>
-            </Link>
-            <Link href="/blog" className="text-white hover:text-white/90 text-sm md:text-base font-medium flex items-center px-3 py-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-700 min-h-[44px]">
-              <span className="md:hidden">📝</span>
-              <span className="hidden md:inline">📝 Blog</span>
-            </Link>
-            <Link href="/scottish-aviation-timeline" className="text-white hover:text-white/90 text-sm md:text-base font-medium flex items-center px-3 py-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-700 min-h-[44px]">
-              <span className="md:hidden">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
-              <span className="hidden md:inline">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Timeline</span>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      {/* Legacy hidden nav removed – unified header/nav above handles all navigation */}
 
       {/* Trusted Seller Banner */}
       <div className="bg-accent-green text-center py-2">

@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Share2, BookOpen, Clock, User, Calendar, Tag, ChevronRight, Heart, MessageCircle } from 'lucide-react';
-import PostRelatedBooks from '@/components/PostRelatedBooks';
 
 interface BlogPost {
   id: string;
@@ -340,8 +339,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
         </section>
       )}
 
-      {/* Auto-related books */}
-      <PostRelatedBooks category={post.category} tags={post.tags} />
+      {/* Auto-related books removed to avoid duplicate related sections */}
 
       {/* Simple Share removed */}
 
