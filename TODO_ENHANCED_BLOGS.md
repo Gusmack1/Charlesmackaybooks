@@ -21,9 +21,10 @@ Queue (start → finish)
 - [x] jet-age-aviation-cold-war-development
 - [x] schneider-trophy-racing-development
 - [x] lucy-lady-houston-schneider-trophy
-- [ ] luftwaffe-1945-final-year
+- [x] luftwaffe-1945-final-year
 - [x] me262-jet-fighter-revolution
 - [ ] naval-aviation-history
+ - [x] naval-aviation-history
 - [ ] bristol-fighter-f2b-brisfit
 - [ ] bristol-sycamore-helicopter-development
 - [ ] helicopter-development-pioneers
