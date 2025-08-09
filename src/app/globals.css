@@ -325,10 +325,9 @@ label {
   display: block;
 }
 
-/* STANDARD CONTENT AREAS - Always consistent colors */
+/* STANDARD CONTENT AREAS - Limit to light backgrounds only */
 .bg-white,
-.bg-gray-50,
-[class*="bg-"] {
+.bg-gray-50 {
   color: var(--color-text-primary);
 }
 
