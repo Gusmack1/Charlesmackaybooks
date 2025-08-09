@@ -14,7 +14,7 @@ Queue (start → finish)
 - [x] hms-argus-first-aircraft-carrier
 - [x] hawker-hurricane-fighter-development
 - [x] clydeside-aviation-revolution
-- [ ] british-aircraft-great-war-rfc-rnas
+- [x] british-aircraft-great-war-rfc-rnas
 - [ ] german-aircraft-great-war-development
 - [ ] english-electric-lightning-development
 - [ ] f86-sabre-cold-war-fighter
