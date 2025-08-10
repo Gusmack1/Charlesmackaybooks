@@ -41,3 +41,9 @@ Notes
 - As images were cleaned in public/blog-images, use `default-generic.svg` if a period-appropriate replacement is not yet sourced. Replace with licensed historical images as they are added.
 - Each edit will update the `post.content` HTML in the route file under `src/app/blog/<slug>/page.tsx`.
 
+Immediate cleanup follow-up (blog UI)
+- Remove residual metadata badges on all blog hero sections (author/date/reading time/Research-backed) – implemented via shared templates cleanup.
+- Condense hero section vertical padding across blog templates and blog index – implemented.
+- Simplify blog index cards: removed date/read-time/tags row and bottom author section – implemented.
+- Verify individual blog route files do not hardcode removed metadata in local markup – spot check complete; continue checking during future edits.
+

@@ -110,31 +110,10 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
         <div className="py-4">
             {/* Article Header */}
             <div className="mb-8">
-              <div className="mb-4">
-                <span className="badge badge-blue px-3 py-1 rounded-full text-sm font-medium">
-                  {blog.category}
-                </span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">{blog.title}</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-3">{blog.title}</h1>
               {blog.subtitle && (
-                <h2 className="text-xl text-secondary mb-6">{blog.subtitle}</h2>
+                <h2 className="text-xl text-secondary mb-4">{blog.subtitle}</h2>
               )}
-              
-              <div className="flex flex-wrap items-center gap-4 text-sm text-secondary mb-6">
-                <div className="flex items-center">
-                  <span className="font-medium">📅 Published:</span>
-                  <span className="ml-1">{blog.publishDate}</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="font-medium">📖 Read time:</span>
-                  <span className="ml-1">{blog.readTime}</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="font-medium">✍️ By:</span>
-                  <span className="ml-1">{blog.author.name}</span>
-                </div>
-              </div>
-
               <p className="text-lg text-secondary leading-relaxed">{blog.excerpt}</p>
             </div>
 

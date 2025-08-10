@@ -67,16 +67,16 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 surface-dark bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-4">⬢ What Customers Say</h2>
-        <p className="text-center text-secondary mb-12 max-w-2xl mx-auto">
+        <p className="text-center opacity-90 mb-12 max-w-2xl mx-auto">
           Trusted by aviation historians, museum curators, and enthusiasts worldwide
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map(testimonial => (
-            <div key={testimonial.id} className="card-compact rounded-lg p-6 border-l-4 border-[#2a384a]">
+            <div key={testimonial.id} className="rounded-lg p-6 border border-white/15 bg-black/10">
               {/* Star Rating */}
               <div className="flex items-center mb-3">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -92,16 +92,16 @@ export default function Testimonials() {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+              <p className="opacity-90 mb-4 text-sm leading-relaxed">
                 "{testimonial.text}"
               </p>
 
               {/* Author Info */}
               <div className="border-t pt-3">
                 <p className="font-semibold text-sm">{testimonial.name}</p>
-                <p className="text-xs text-secondary">{testimonial.title}</p>
+                <p className="text-xs opacity-80">{testimonial.title}</p>
                 {testimonial.source && (
-                  <p className="text-xs text-blue-600 mt-1">Source: {testimonial.source}</p>
+                  <p className="text-xs underline mt-1">Source: {testimonial.source}</p>
                 )}
               </div>
             </div>
@@ -110,21 +110,21 @@ export default function Testimonials() {
 
         {/* Trust Indicators */}
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-8 bg-blue-50 rounded-lg px-8 py-4">
+          <div className="inline-flex items-center gap-8 border border-white/15 bg-black/10 rounded-lg px-8 py-4">
             <div className="text-center">
-              <p className="text-2xl font-bold text-[#2a384a]">1,718+</p>
-              <p className="text-sm text-secondary">Items Sold on eBay</p>
+              <p className="text-2xl font-bold">1,718+</p>
+              <p className="text-sm opacity-80">Items Sold on eBay</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-[#2a384a]">100%</p>
-              <p className="text-sm text-secondary">Positive Feedback</p>
+              <p className="text-2xl font-bold">100%</p>
+              <p className="text-sm opacity-80">Positive Feedback</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-[#2a384a]">12+</p>
-              <p className="text-sm text-secondary">Years Experience</p>
+              <p className="text-2xl font-bold">12+</p>
+              <p className="text-sm opacity-80">Years Experience</p>
             </div>
           </div>
-          <p className="text-xs text-gray-500 mt-3">
+          <p className="text-xs opacity-70 mt-3">
             All testimonials are from verified eBay purchasers of Charles E. MacKay's aviation books
           </p>
         </div>

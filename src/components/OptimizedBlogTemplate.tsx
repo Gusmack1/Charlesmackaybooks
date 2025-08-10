@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { BookOpen, Clock, User, Calendar, Tag, ChevronRight, MessageCircle } from 'lucide-react';
+import { BookOpen, Clock, ChevronRight } from 'lucide-react';
 
 interface BlogPost {
   id: string;
@@ -124,6 +124,13 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
   const tableOfContents = generateTableOfContents(post.content);
 
+  const handleNextImageError = (e: any) => {
+    try {
+      const img = e.currentTarget as HTMLImageElement;
+      img.src = `data:image/svg+xml;utf8,${fallbackSvg}`;
+    } catch {}
+  };
+
   const handleShare = (platform: string) => {
     const url = window.location.href;
     const title = post.title;
@@ -160,11 +167,6 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
       {/* Article Header */}
       <header className="mb-8 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white rounded-lg p-6">
-        <div className="mb-4">
-          <span className="inline-block badge badge-blue text-sm font-medium rounded-full text-white">
-            {post.category}
-          </span>
-        </div>
         
         <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
           {post.title}
@@ -176,38 +178,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
           </p>
         )}
 
-        {/* Article Meta */}
-        <div className="flex flex-wrap items-center gap-6 text-sm text-white/90 mb-6">
-          <div className="flex items-center gap-2">
-            <User className="w-4 h-4" />
-            <span>By {post.author.name}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4" />
-            <span>{new Date(post.publishedDate).toLocaleDateString()}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4" />
-            <span>{post.readingTime} min read</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <MessageCircle className="w-4 h-4" />
-            <span>{shareCount} shares</span>
-          </div>
-        </div>
-
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-8">
-          {post.tags.map((tag, index) => (
-            <span 
-              key={index}
-              className="inline-flex items-center gap-1 px-2 py-1 badge badge-gray text-xs rounded-md"
-            >
-              <Tag className="w-3 h-3" />
-              {tag}
-            </span>
-          ))}
-        </div>
+        
       </header>
 
       {/* Featured Image */}
@@ -221,6 +192,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 800px"
             priority
             className="w-full aspect-[16/9] object-cover"
+            onError={handleNextImageError}
           />
         </div>
         {post.featuredImage.caption && (
@@ -275,6 +247,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
               alt={post.author.name}
               fill
               className="object-cover rounded-full"
+              onError={handleNextImageError}
             />
           </div>
           <div>
@@ -310,6 +283,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
                     alt={book.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={handleNextImageError}
                   />
                 </div>
                 <h3 className="font-semibold text-primary mb-1 group-hover:text-accent-blue transition-colors">
@@ -338,6 +312,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
                     alt={relatedPost.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={handleNextImageError}
                   />
                 </div>
                 <h3 className="font-semibold text-primary mb-2 group-hover:text-accent-blue transition-colors">

@@ -7,39 +7,38 @@ const post = {
   title: `Helicopter Development Pioneers: From Cierva's Autogyros to Modern Rotorcraft`,
   subtitle: `Enhanced Edition: How pioneers converted theory into controllable vertical flight — rotors, controls, engines, and safe procedures.`,
   content: `
-    <h2 id="introduction">Introduction: From Autogyro Stability to Helicopter Control</h2>
-    <p>Vertical flight became practical when pioneers combined rotor stability, torque control, and disciplined procedure. This Enhanced Edition follows the thread from Cierva’s autogyros, which taught stability and articulation, to Sikorsky’s helicopters, which delivered controllable hover and repeatable approaches. The achievement is engineering joined to training and maintenance — a system rather than a single airframe.</p>
+    <h2 id="introduction">Introduction: Solving Vertical Flight</h2>
+    <p>From Cierva’s autogyros to Sikorsky’s helicopters, pioneers transformed vertical flight from dream to discipline. This Enhanced Edition traces the engineering chain: rotor aerodynamics, articulated hubs, control coupling, engine/gearbox reliability, and the procedures that turned dangerous experiments into routine operations.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Cierva autogyro ready for pre‑spin on a grass strip; ground crew holding tips." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Autogyros taught articulation and stability long before hover was practical.</p>
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Cierva autogyro on a grass field; rotor pre-spin with ground crew." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Autogyros: stability breakthroughs that taught the language of rotors.</p>
     </div>
 
-    <h2 id="autogyro">Autogyros: Articulation, Stability, and Lessons</h2>
-    <p>Cierva introduced articulated rotor hubs that accommodated flapping and lead‑lag, mitigating dissymmetry of lift between advancing and retreating blades. Tail surfaces and control linkages gave pilots authority within the autogyro’s flight regime. The lessons: articulation matters; stability precedes power; and coupling must be understood, not ignored.</p>
+    <h2 id="autogyro">Autogyros: Stability Before Power</h2>
+    <p>Cierva’s machines proved that a free‑spinning rotor could deliver stable lift. Articulated blades addressed dissymmetry of lift; tail surfaces and control linkages taught designers how to manage coupling. These lessons seeded helicopter control philosophy long before adequate engines and transmissions arrived.</p>
 
-    <h2 id="helicopter">Helicopter Breakthroughs and Configuration</h2>
-    <p>Sikorsky’s single‑main‑rotor helicopter with tail rotor anti‑torque established the modern layout. Collective pitch commanded lift; cyclic tilted the rotor disc; pedals balanced torque and set yaw. Early prototypes under tethers perfected incremental liftoff, hover, translation, and landings, with test cards capturing limits and corrective rigging.</p>
+    <h2 id="helicopter">Helicopter Breakthroughs</h2>
+    <p>Sikorsky synthesized prior insights into a practical helicopter: powered main rotor, anti‑torque tail, and a control suite of collective, cyclic, and pedals. Success depended on gearbox reliability, rotor tracking, and training patterns for approach, hover, and landing. Risk receded as procedure advanced.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Early helicopter under tethers; engineers observing with notebooks; pilot holds a steady two‑foot hover." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Risk managed by increments: tethers, test cards, and careful expansion.</p>
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: VS‑300 hovering over water; pilot visible adjusting cyclic." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">From concept to control: the VS‑300 demonstrated sustained, controllable hover.</p>
     </div>
 
-    <h2 id="controls">Controls, Coupling, and Syllabi</h2>
-    <p>Training syllabi addressed pedal‑collective coordination, hover drift, translational lift, and flare for landing. Axial coupling demanded finesse: cyclic inputs begat yaw that pedals then corrected. Mastery turned sensitivity into precision, and syllabi embedded that mastery into repeatable steps.</p>
+    <h2 id="controls">Controls, Coupling, and Training</h2>
+    <p>Cyclic tilts the rotor disc; collective changes blade pitch collectively; pedals command tail rotor thrust. Coupling between axes demanded careful kinematics and pilot technique. Training syllabi addressed hover drift, pedal‑collective coordination, and translational lift, converting sensitivity into skill.</p>
 
-    <h2 id="maintenance">Maintenance and Reliability</h2>
-    <p>Reliability came from blade tracking and balance, gearbox oil management, chip detection, and control‑run freedom. Torques and safetying reduced variance; calibrated tools and logs sustained standards. Early mishaps were analysed and transformed into prevention via procedure.</p>
+    <h2 id="maintenance">Maintenance and Airworthiness</h2>
+    <p>Reliability emerged from inspections: blade tracking and balance, gearbox chip checks, lubrication schedules, and control run freedom. Early mishaps taught systematic prevention — torque values, safetying, and rigging fixtures became routine. Airworthiness was earned through repetition.</p>
 
     <h2 id="applications">Applications and Legacy</h2>
-    <p>Rescue, medical, military, and civil roles followed as confidence rose. The true legacy is a framework for rotorcraft as safe systems: engineering that anticipates loads, training that anticipates coupling, and maintenance that anticipates wear.</p>
+    <p>Rescue, medical, military, and civil roles followed as procedures stabilised. The pioneers’ greatest gift was not a single airframe but a framework: how to build, fly, maintain, and manage rotorcraft safely.</p>
 
     <h2 id="related">Related Books and Articles</h2>
     <ul>
       <li><a class="underline" href="/blog/sikorsky-vs300-helicopter-breakthrough">Sikorsky VS‑300: The Breakthrough</a></li>
       <li><a class="underline" href="/blog/bristol-sycamore-helicopter-development">Bristol Sycamore Development</a></li>
-      <li><a class="underline" href="/blog/rotorcraft-military-applications">Rotorcraft: Military Applications</a></li>
       <li><a class="underline" href="/books/sycamore-seeds">Sycamore Seeds (Book)</a></li>
     </ul>
   `,

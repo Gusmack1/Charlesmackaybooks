@@ -211,36 +211,19 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           </div>
         )}
         
-        <div className="relative max-w-4xl mx-auto px-6 py-20">
+        <div className="relative max-w-4xl mx-auto px-6 py-12">
           <div className="text-center">
-            <div className="mb-6">
-              <span className="badge badge-blue px-4 py-2 rounded-full text-sm font-semibold">
-                📚 {post.category}
-              </span>
-              <div className="flex justify-center items-center gap-4 mt-4 text-white/90 text-sm">
-                <span>By {post.author.name}</span>
-                <span>•</span>
-                <span>📖 {post.readingTime} min read</span>
-                <span>•</span>
-                <span>{new Date(post.publishedDate).toLocaleDateString()}</span>
-              </div>
-            </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
               {cleanedTitle}
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-6 leading-relaxed max-w-3xl mx-auto">
               {cleanedSubtitle}
             </p>
 
-            {/* Reading Stats */}
-            <div className="flex justify-center items-center gap-6 text-sm">
-              <span>⭐ Expert Analysis</span>
-              <span>📖 {post.readingTime} min read</span>
-              <span>🎯 {wordCount.toLocaleString()} words</span>
-              <span>📚 Research-backed</span>
-            </div>
+            
           </div>
         </div>
       </div>

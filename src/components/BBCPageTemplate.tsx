@@ -20,7 +20,7 @@ export default function BBCPageTemplate({ title, subtitle, breadcrumbs = [], chi
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        <div className="max-w-7xl mx-auto px-6 py-14 md:py-20">
+        <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
           {breadcrumbs.length > 0 && (
             <nav aria-label="Breadcrumb" className="mb-4 text-sm text-white/80">
               <ol className="flex flex-wrap gap-2 items-center">
