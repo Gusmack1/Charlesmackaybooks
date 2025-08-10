@@ -284,7 +284,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     notFound();
   }
 
-  const gradientClass = getCategoryGradient(book.category);
+  // Consistent dark-blue hero across all book pages
+  const gradientClass = 'from-slate-900 via-blue-900 to-slate-800';
 
   // Get proper book cover image path - use book.imageUrl with fallback
   const bookCoverSrc = book.imageUrl || `/book-covers/${book.id}.jpg`;
@@ -415,12 +416,12 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       <div className="min-h-screen bg-background">
 
         {/* Hero Section - refined for clarity and unique per-book presentation */}
-        <div className={`hero-section relative bg-gradient-to-br ${gradientClass} text-white py-16 lg:py-24`}>
+        <div className={`hero-section relative bg-gradient-to-br ${gradientClass} text-white py-10 lg:py-16`}>
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               {/* Book Cover */}
-              <div className="flex justify-center mb-10">
+              <div className="flex justify-center mb-6">
                 <div className="relative">
                   <Image
                     src={bookCoverSrc}
@@ -446,14 +447,14 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   {book.isbn && <span className="badge badge-gray">ISBN: {book.isbn}</span>}
                 </div>
 
-                <h1 className="text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
+                <h1 className="text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
                   {book.title}
                 </h1>
                 
                 {/* Per request: no description text in hero */}
 
                 {/* Book Specifications - Enhanced */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto">
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="text-lg font-semibold text-white mb-2">Weight</div>
                     <div className="text-3xl font-bold text-white">{weightFromInfo || (book as any).weight || 300}g</div>
