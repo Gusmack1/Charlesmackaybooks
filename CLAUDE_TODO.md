@@ -11,7 +11,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 - [x] Create Google Merchant XML feed `products.xml` (Prompt 1)
   - [ ] Include mandatory and optional fields; validate against spec
   - [ ] Place at site root and expose via robots/sitemap
-- [ ] Update robots.txt (Prompt 5)
+- [x] Update robots.txt (Prompt 5)
   - [ ] Allow crawler access; add feed and sitemap links
 - [x] Create comprehensive `sitemap.xml` with product anchors (Prompt 4)
   - [ ] Include homepage ItemList and 18 hash URLs
