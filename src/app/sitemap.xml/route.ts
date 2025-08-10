@@ -46,12 +46,18 @@ function buildSitemap(): string {
   const bookUrls = books
     .map((b) => {
       const path = prettyMap[b.id] || `/books/${xml(b.id)}`
+      const imageLoc = `${domain}${b.imageUrl || `/book-covers/${b.id}.jpg`}`
       return `
   <url>
     <loc>${domain}${path}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>${imageLoc}</image:loc>
+      <image:title>${xml(`${b.title} by Charles E. MacKay`)}</image:title>
+      <image:caption>${xml(`Aviation history book: ${b.title}`)}</image:caption>
+    </image:image>
   </url>`
     })
     .join('\n')
@@ -86,7 +92,7 @@ function buildSitemap(): string {
     .join('\n')
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${homepage}
 ${bookUrls}
 ${productAnchors}
