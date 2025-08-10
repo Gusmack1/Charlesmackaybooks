@@ -276,6 +276,7 @@ export default function RootLayout({
             const { books } = require('@/data/books');
             const prices: number[] = (books || []).map((b: any) => Number(b.price) || 0).filter((n: number) => n > 0)
             const minPrice = prices.length ? Math.min(...prices) : 19.99
+            const qty = Array.isArray(books) ? books.length : 0
             return (
               <>
                 {/* Google Product Metadata */}
@@ -310,6 +311,35 @@ export default function RootLayout({
                 <meta itemProp="name" content="Charles MacKay Aviation Books" />
                 <meta itemProp="description" content="Aviation history books" />
                 <meta itemProp="image" content="https://charlesmackaybooks.com/images/books-collection.jpg" />
+
+                {/* Google Rich Results Product Signals */}
+                <meta name="product:brand" content="Charles E. MacKay" />
+                <meta name="product:category" content="Books > History > Aviation" />
+                <meta name="product:condition" content="new" />
+                <meta name="product:availability" content="in_stock" />
+                <meta name="product:price" content={minPrice.toFixed(2)} />
+                <meta name="product:currency" content="GBP" />
+                <meta name="product:retailer" content="Charles MacKay Books" />
+                <meta name="product:retailer_id" content="charlesmackaybooks" />
+
+                {/* Shopping Actions Metadata */}
+                <meta property="product:multiple" content="true" />
+                <meta property="product:quantity" content={String(qty)} />
+                <meta property="product:shipping_cost" content="0.00" />
+                <meta property="product:shipping_country" content="GB" />
+                <meta property="product:tax_included" content="true" />
+
+                {/* Book-Specific Metadata */}
+                <meta property="book:author" content="Charles E. MacKay" />
+                <meta property="book:isbn" content="multiple" />
+                <meta property="book:release_date" content="2023" />
+                <meta property="book:publisher" content="A MacKay" />
+
+                {/* Business Verification */}
+                <meta name="google-site-verification" content="your-google-verification-code" />
+                <meta name="business:contact_data:locality" content="Glasgow" />
+                <meta name="business:contact_data:country_name" content="Scotland" />
+                <meta name="business:contact_data:email" content="charlese1mackay@hotmail.com" />
               </>
             )
           } catch {

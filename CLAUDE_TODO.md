@@ -19,7 +19,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 ## Week 2 — Meta and Microdata
 - [x] Add product meta tags to head (Prompt 3)
 - [x] Add invisible microdata attributes (Prompt 6)
-- [ ] Add Rich Results testing tags (Prompt 8)
+- [x] Add Rich Results testing tags (Prompt 8)
 
 ## Week 3 — Feed Files
 - [x] Create `merchant-feed.txt` (TSV) (Prompt 7)
