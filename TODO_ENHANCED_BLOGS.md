@@ -26,8 +26,8 @@ Queue (start → finish)
 - [ ] naval-aviation-history
  - [x] naval-aviation-history
 - [x] bristol-fighter-f2b-brisfit
-- [ ] bristol-sycamore-helicopter-development
-- [ ] helicopter-development-pioneers
+- [x] bristol-sycamore-helicopter-development
+- [x] helicopter-development-pioneers
 - [x] sikorsky-vs300-helicopter-breakthrough
 - [x] sopwith-camel-wwi-fighter
 - [ ] supermarine-spitfire-development-history
