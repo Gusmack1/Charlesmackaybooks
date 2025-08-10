@@ -32,10 +32,10 @@ Queue (start → finish)
 - [x] sopwith-camel-wwi-fighter
 - [x] supermarine-spitfire-development-history
 - [x] supermarine-spitfire-development-evolution
-- [ ] sycamore-seeds-helicopter-evolution
-- [ ] test-pilot-biography-eric-brown
-- [ ] aviation-manufacturing-wartime-production
-- [ ] korean-war-air-combat
+- [x] sycamore-seeds-helicopter-evolution
+- [x] test-pilot-biography-eric-brown
+- [x] aviation-manufacturing-wartime-production
+- [x] korean-war-air-combat
 
 Notes
 - As images were cleaned in public/blog-images, use `default-generic.svg` if a period-appropriate replacement is not yet sourced. Replace with licensed historical images as they are added.
