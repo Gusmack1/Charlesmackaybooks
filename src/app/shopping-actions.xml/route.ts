@@ -18,7 +18,7 @@ function buildShoppingActionsXml(): string {
       const id = String(b.isbn || b.id)
       const title = `${b.title} by Charles E. MacKay`
       const description = (b.description || '').slice(0, 5000)
-      const link = `${domain}/#${id}`
+      const link = `${domain}/books/${b.id}`
       const image = `${domain}${b.imageUrl || `/book-covers/${b.id}.jpg`}`
       const price = `${Number(b.price).toFixed(2)} GBP`
       const weight = `${((b as any).weight || 300)} g`

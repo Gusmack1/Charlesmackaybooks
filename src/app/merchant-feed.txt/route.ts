@@ -34,7 +34,7 @@ export async function GET() {
     const id = isbn
     const title = `${b.title} - Charles E. MacKay`
     const description = tsvEscape(b.description || '')
-    const link = `${domain}#${isbn}`
+    const link = `${domain}/books/${b.id}`
     const image = `${domain}${b.imageUrl || `/book-covers/${b.id}.jpg`}`
     const condition = 'new'
     const availability = 'in stock'

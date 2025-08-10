@@ -27,10 +27,10 @@ function buildProductsXml(): string {
       const id = isbn
       const title = `${book.title} - Aviation History Book by Charles E. MacKay`
       const description = padDescription(book.description || '')
-      const link = `${domain}#${isbn}`
+      const link = `${domain}/books/${book.id}`
       const imagePath = book.imageUrl || `/book-covers/${book.id}.jpg`
       const image_link = `${domain}${imagePath}`
-      const availability = 'in_stock'
+      const availability = 'in stock'
       const price = `${book.price.toFixed(2)} GBP`
       const brand = 'Charles E. MacKay Publications'
       const gtin = isbn
@@ -42,8 +42,8 @@ function buildProductsXml(): string {
       const shipping_service = 'Standard'
       const shipping_price = '0.00 GBP'
       const shipping_weight = `${((book as any).weight || 300)} g`
-      const identifier_exists = 'true'
-      const adult = 'no'
+      const identifier_exists = 'TRUE'
+      const adult = 'FALSE'
 
       const publication_date = book.publicationYear ? String(book.publicationYear) : ''
       const number_of_pages = book.pageCount ? String(book.pageCount) : ''
