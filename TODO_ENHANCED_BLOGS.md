@@ -25,7 +25,7 @@ Queue (start → finish)
 - [x] me262-jet-fighter-revolution
 - [ ] naval-aviation-history
  - [x] naval-aviation-history
-- [ ] bristol-fighter-f2b-brisfit
+- [x] bristol-fighter-f2b-brisfit
 - [ ] bristol-sycamore-helicopter-development
 - [ ] helicopter-development-pioneers
 - [ ] sikorsky-vs300-helicopter-breakthrough
