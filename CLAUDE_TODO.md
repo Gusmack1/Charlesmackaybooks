@@ -27,7 +27,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 - [x] Add `.htaccess` (Apache only) safe rules (Prompt 10)
 
 ## Week 4 — Final Integration
-- [ ] Add JS data layer for Merchant (Prompt 11)
+- [x] Add JS data layer for Merchant (Prompt 11)
 - [x] Create `data-highlighter.json` (Prompt 9)
 - [ ] Submit feeds in Google Merchant Center (out‑of‑code step)
 

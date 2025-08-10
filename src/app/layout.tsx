@@ -373,6 +373,54 @@ export default function RootLayout({
         {/* Footer removed site-wide */}
         <Analytics />
         <SpeedInsights />
+
+        {/* Invisible Google Merchant Center data layer and product identifiers */}
+        <script
+          type="application/javascript"
+          dangerouslySetInnerHTML={{
+            __html: (() => {
+              try {
+                const { books } = require('@/data/books');
+                const items = (books || []).map((b: any) => ({
+                  item_id: String(b.isbn || b.id),
+                  item_name: b.title,
+                  item_brand: 'Charles E. MacKay',
+                  item_category: `Books/${b.category || 'Aviation History'}`,
+                  price: Number(b.price),
+                  currency: 'GBP',
+                  quantity: 1,
+                  item_variant: 'Paperback',
+                  author: 'Charles E. MacKay',
+                  isbn: String(b.isbn || b.id),
+                  availability: 'in_stock',
+                  condition: 'new'
+                }));
+
+                return `
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                    event: 'view_item_list',
+                    ecommerce: { items: ${JSON.stringify(items)} }
+                  });
+
+                  // Mark page as containing products
+                  try { document.head.insertAdjacentHTML('beforeend', '<meta name="google-merchant-center-product-data" content="true">'); } catch(e) {}
+
+                  // Add product identifiers for crawlers
+                  try {
+                    (document.querySelectorAll('[id^="book-"]') || []).forEach(function(book){
+                      book.setAttribute('itemtype', 'https://schema.org/Product');
+                      var isbn = book.id.replace('book-','');
+                      book.setAttribute('data-product-id', 'isbn-' + isbn);
+                    });
+                  } catch(e) {}
+                `;
+              } catch {
+                return '';
+              }
+            })()
+          }}
+        />
       </ClientBody>
     </html>
   )
