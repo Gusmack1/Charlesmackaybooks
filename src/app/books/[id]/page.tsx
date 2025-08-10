@@ -416,12 +416,12 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       <div className="min-h-screen bg-background">
 
         {/* Hero Section - refined for clarity and unique per-book presentation */}
-        <div className={`hero-section relative bg-gradient-to-br ${gradientClass} text-white py-10 lg:py-16`}>
+        <div className={`hero-section relative bg-gradient-to-br ${gradientClass} text-white py-6 sm:py-8 lg:py-16`}>
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               {/* Book Cover */}
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-4 sm:mb-6">
                 <div className="relative">
                   <Image
                     src={bookCoverSrc}
@@ -447,27 +447,27 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   {book.isbn && <span className="badge badge-gray">ISBN: {book.isbn}</span>}
                 </div>
 
-                <h1 className="text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 leading-tight">
                   {book.title}
                 </h1>
                 
                 {/* Per request: no description text in hero */}
 
                 {/* Book Specifications - Enhanced */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto">
-                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-5xl mx-auto">
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-center">
                   <div className="text-lg font-semibold text-white mb-2">Weight</div>
                     <div className="text-3xl font-bold text-white">{weightFromInfo || (book as any).weight || 300}g</div>
                   </div>
-                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-center">
                     <div className="text-lg font-semibold text-white mb-2">Published</div>
                     <div className="text-3xl font-bold text-white">{book.publicationYear}</div>
                   </div>
-                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-center">
                     <div className="text-lg font-semibold text-white mb-2">ISBN-13</div>
                     <div className="text-lg font-bold text-white leading-tight">{book.isbn}</div>
                   </div>
-                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-center">
                     <div className="text-lg font-semibold text-white mb-2">Condition</div>
                     <div className="text-3xl font-bold text-white">{book.condition}</div>
                   </div>
