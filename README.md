@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Feeds & SEO (Backend-Only)
+
+- Products XML feed: `/products.xml`
+- Merchant TSV feed: `/merchant-feed.txt`
+- Shopping Actions feed: `/shopping-actions.xml`
+- Sitemap: `/sitemap.xml`
+- Robots: `/robots.txt`
+- Data Highlighter config: `/data-highlighter.json`
+- Invisible product schema: global head in `src/app/layout.tsx`
+- Product microdata: `src/components/BookCard.tsx`
+
+Validation & Maintenance
+- Local validation endpoint: `GET /api/validate-feeds` (returns JSON)
+- Weekly ping workflow: `.github/workflows/seo-maintenance.yml`
