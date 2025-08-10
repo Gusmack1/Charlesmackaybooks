@@ -58,27 +58,46 @@ const post = {
     <h2 id="accounts">Pilot Accounts and Combat Notes</h2>
     <p>Pilot debriefs emphasized altitude advantage, sun position, and teamwork. Reports noted that many encounters were decided in brief windows after the merge, where energy state and sight readiness mattered more than notional turn rates. Accounts of disengagement were as important as kills — disciplined break‑offs preserved forces to fight again under better terms.</p>
 
-    <h2 id="impact-legacy">Impact and Legacy</h2>
-    <p>The long-term impact of this development extends far beyond its immediate operational success. Its influence can be traced through subsequent generations of aircraft design, military doctrine, and aviation technology. The lessons learned during its development continue to inform modern aviation practice.</p>
+    <h2 id="case-studies">Case Studies: Patterns That Produced Results</h2>
+    <p>Representative engagements show recurring patterns. Formations that preserved altitude and sun advantage, arrived with stabilized energy states, and coordinated breaks to bracket the adversary created short, high‑probability firing windows. Conversely, chases that bled energy into the vertical without advantage produced few results and invited counter‑attacks. Units that rehearsed these patterns in training reproduced them under stress, turning doctrine into habit.</p>
 
-    <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
+    <h2 id="weather">Weather, Terrain, and Visibility</h2>
+    <p>MiG Alley’s terrain and weather shaped tactics. Mountainous backdrops complicated visual acquisition; haze and winter light affected contrast at altitude. Pilots adjusted lookout patterns and relied on disciplined radio brevity to maintain formation integrity. Ground controllers compensated with radar geometry, vectoring flights to intercept lines that maximized time in favorable light.</p>
 
-    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+    <h2 id="radar-gci">Radar and Ground Control Integration</h2>
+    <p>GCI was not merely a locator; it was a timing instrument. Effective controllers sequenced merges to favor energy and sun angle, called aborts when geometry soured, and directed re‑attacks that preserved fuel and oxygen margins. Squadrons refined common language so that a few words sufficed to cue complex actions — a human factors achievement as important as any airframe upgrade.</p>
 
-    <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
+    <h2 id="training-pipeline">Training Pipeline and Crew Endurance</h2>
+    <p>Conversion to jets at war pace demanded syllabi that emphasized energy management, sighting discipline, and oxygen procedures. Debriefs captured lessons in checklists and briefing cards; instructors graded not only outcomes but adherence to process. Endurance — thermal stress, hypoxia risk, and fatigue — was managed by procedure: hydration, oxygen checks, and cockpit flows that reduced cognitive load when it mattered most.</p>
 
-    <p>Modern aviation continues to reflect the influence of this pioneering work. Contemporary aircraft designs incorporate principles first established during this project. The enduring relevance of these innovations demonstrates the fundamental importance of this contribution to aviation history.</p>
+    <h2 id="sortie-planning">Sortie Planning, Fuel, and Divert Logic</h2>
+    <p>Mission cards balanced fuel, altitude, and time on station against weather and GCI coverage. Pilots briefed minimum and joker fuels, divert fields, and weather alternates before engine start. En‑route climbs targeted Mach and altitude bands that preserved margin for the planned maneuver set; descents home were flown to oxygen and fuel discipline, not impulse. This planning culture made high‑tempo operations survivable in poor light and winter weather.</p>
 
-    <h2 id="conclusion">Conclusion: Enduring Significance</h2>
-    <p>This comprehensive examination reveals the multifaceted significance of one of aviation history's most important developments. From its technical innovations to its operational impact, this story encompasses the full spectrum of aviation progress during a crucial period of technological advancement.</p>
+    <div class="my-12">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Radar plotting room with controllers tracing intercept geometries; grease pencil annotations on a sector board." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-3 text-center italic">Vectoring advantage: GCI sequenced merges and aborts, conserving fuel and oxygen margins for decisive windows.</p>
+    </div>
 
-    <p>The human elements of this story—the vision of designers, the courage of test pilots, and the dedication of countless support personnel—remind us that aviation progress depends on individual commitment and collective effort. These personal stories provide inspiration for current and future aviation professionals.</p>
+    <h2 id="engine-cycles">Engine Cycles and Maintenance Detail</h2>
+    <p>Jet engines demanded routines unfamiliar to piston‑era squadrons. Compressor and turbine inspections watched for foreign object damage and thermal stress; borescope checks, plug changes, fuel‑control verifications, and filter inspections were timed to sortie counts and temperature histories. Technicians logged temperatures and pressures to catch drift before it became failure. The practical effect in combat was simple: the right thrust when the pilot asked for it, again and again.</p>
 
-    <p>The technical achievements documented here represent milestones in engineering excellence. The solutions developed for seemingly impossible challenges demonstrate the power of innovative thinking and persistent effort. These technical legacies continue to influence modern aircraft design and development.</p>
+    <h2 id="representative-sortie">Representative Sortie Timeline</h2>
+    <ul>
+      <li><strong>Scramble and climb:</strong> Depart to briefed Mach/altitude bands; oxygen checks and formation integrity verified en‑route.</li>
+      <li><strong>GCI vectoring:</strong> Controllers set intercept geometries; formations position for sun/altitude advantage.</li>
+      <li><strong>Merge and decision:</strong> Short window; energy state and sight readiness decide whether to press or bracket.</li>
+      <li><strong>Disengage/re‑attack:</strong> Break clean when geometry sours; re‑enter with energy and numbers, or RTB on fuel minima.</li>
+      <li><strong>Recovery and debrief:</strong> Pattern speeds flown by numbers; boresight and systems checks scheduled; debrief turns notes into procedure.</li>
+    </ul>
 
-    <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
+    <h2 id="myths">Myths, Claims, and What the Data Support</h2>
+    <p>Simple verdicts — one type universally superior — collapse under operational detail. Altitude band, block differences, pilot proficiency, and initial position confound single‑number judgements. Data‑grounded comparisons keep context in view: where each aircraft excelled; where tactics compensated; and how training and logistics shifted outcomes over time.</p>
 
-    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+    <h2 id="legacy">Legacy and Influence</h2>
+    <p>Korea clarified transonic fighter practice: conserve energy, fight from advantage, fire brief accurate bursts, and let ground control and maintenance extend pilot reach. Experience with Sabre and MiG informed next‑generation designs — higher‑thrust engines, wings with greater Mach margin — and a gradual move toward sensors that shifted detection and solution further from the merge. Procedures outlived hardware: disciplined briefs, checklists, and debriefs remained the backbone of effective air forces.</p>
+
+    <h2 id="conclusion">Conclusion</h2>
+    <p>The Korean War set the grammar of jet air combat. The aircraft were capable; the system — pilots, controllers, maintainers, and instructors — made capability reliable. The enduring lessons are practical: arrive from advantage, keep energy in hand, fire briefly and precisely, and respect the limits that preserve judgement. They were true over MiG Alley and remain true wherever fighters meet at the edge of the envelope.</p>
   `,
   excerpt: `The intense aerial battles of the Korean War that proved the effectiveness of jet fighters in modern warfare.`,
   author: {
