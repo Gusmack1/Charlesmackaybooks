@@ -46,18 +46,12 @@ function buildSitemap(): string {
   const bookUrls = books
     .map((b) => {
       const path = prettyMap[b.id] || `/books/${xml(b.id)}`
-      const imageLoc = `${domain}${b.imageUrl || `/book-covers/${b.id}.jpg`}`
       return `
   <url>
     <loc>${domain}${path}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>${imageLoc}</image:loc>
-      <image:title>${xml(`${b.title} by Charles E. MacKay`)}</image:title>
-      <image:caption>${xml(`Aviation history book: ${b.title}`)}</image:caption>
-    </image:image>
   </url>`
     })
     .join('\n')
@@ -91,10 +85,41 @@ function buildSitemap(): string {
   </url>`)
     .join('\n')
 
+  // Include key blog posts to improve discovery in the primary sitemap
+  const blogPosts = [
+    'beardmore-aviation-scottish-industrial-giant',
+    'clydeside-aviation-revolution',
+    'german-aircraft-great-war-development',
+    'british-aircraft-great-war-rfc-rnas',
+    'sycamore-seeds-helicopter-evolution',
+    'f86-sabre-cold-war-fighter',
+    'luftwaffe-1945-final-year',
+    'percy-pilcher-scotland-aviation-pioneer',
+    'hms-argus-first-aircraft-carrier',
+    'test-pilot-biography-eric-brown',
+    'lucy-lady-houston-schneider-trophy',
+    'adolf-rohrbach-metal-aircraft-construction',
+    'supermarine-spitfire-development-history',
+    'jet-age-aviation-cold-war-development',
+    'hawker-hurricane-fighter-development',
+    'aviation-manufacturing-wartime-production',
+    'helicopter-development-pioneers',
+    'naval-aviation-history'
+  ]
+    .map((slug) => `
+  <url>
+    <loc>${domain}/blog/${slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`)
+    .join('\n')
+
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${homepage}
-${bookUrls}
+ ${bookUrls}
+ ${blogPosts}
 ${productAnchors}
 ${staticUrls}
 </urlset>`
