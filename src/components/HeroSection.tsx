@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function HeroSection() {
   return (
-    <section className="hero-section relative bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white py-16 lg:py-24">
+    <section className="hero-section relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white py-16 lg:py-24">
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
