@@ -14,7 +14,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 - [x] Update robots.txt (Prompt 5)
   - [ ] Allow crawler access; add feed and sitemap links
 - [x] Create comprehensive `sitemap.xml` with product anchors (Prompt 4)
-  - [ ] Include homepage ItemList and 18 hash URLs
+  - [x] Include homepage ItemList and 18 hash URLs
 
 ## Week 2 — Meta and Microdata
 - [x] Add product meta tags to head (Prompt 3)
@@ -30,6 +30,8 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 - [x] Add JS data layer for Merchant (Prompt 11)
 - [x] Create `data-highlighter.json` (Prompt 9)
 - [ ] Submit feeds in Google Merchant Center (out‑of‑code step)
+
+All backend tasks implemented and pushed. Pending: feed submission/verification in Merchant Center and Search Console.
 
 ## Detailed Prompts (Execution Checklist)
 1) Google Merchant Center XML product feed (products.xml)
