@@ -159,10 +159,10 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
           <div itemProp="offers" itemScope itemType="https://schema.org/Offer" className="hidden">
             <meta itemProp="price" content={Number(book.price).toFixed(2)} />
             <meta itemProp="priceCurrency" content="GBP" />
-            <meta itemProp="availability" content="https://schema.org/InStock" />
+            <meta itemProp="availability" content={book.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"} />
             <meta itemProp="itemCondition" content="https://schema.org/NewCondition" />
             <meta itemProp="seller" content="Charles E. MacKay Books" />
-            <link itemProp="url" href={`https://charlesmackaybooks.com#${book.isbn || book.id}`} />
+            <link itemProp="url" href={`https://charlesmackaybooks.com/books/${book.id}`} />
           </div>
         </div>
       </Link>
