@@ -56,6 +56,20 @@ function buildSitemap(): string {
     })
     .join('\n')
 
+  // Product hash anchors for Merchant Center and Rich Results crawling
+  const productAnchors = books
+    .map((b) => {
+      const hash = (b.isbn || b.id)
+      return `
+  <url>
+    <loc>${domain}#${xml(String(hash))}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`
+    })
+    .join('\n')
+
   const staticUrls = [
     { path: '/about', priority: '0.8' },
     { path: '/contact', priority: '0.7' },
@@ -75,6 +89,7 @@ function buildSitemap(): string {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${homepage}
 ${bookUrls}
+${productAnchors}
 ${staticUrls}
 </urlset>`
 }

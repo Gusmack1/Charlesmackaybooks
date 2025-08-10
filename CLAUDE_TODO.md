@@ -6,13 +6,13 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 
 ## Week 1 — Immediate Backend Files
 - [x] Add Product JSON‑LD to homepage head (Prompt 2)
-  - [ ] Generate ItemList of 18 Products from `src/data/books.ts`
+  - [x] Generate ItemList of 18 Products from `src/data/books.ts`
   - [x] Inject via Next layout (global head) without visual changes
 - [x] Create Google Merchant XML feed `products.xml` (Prompt 1)
-  - [ ] Include mandatory and optional fields; validate against spec
-  - [ ] Place at site root and expose via robots/sitemap
+  - [x] Include mandatory and optional fields; validate against spec
+  - [x] Place at site root and expose via robots/sitemap
 - [x] Update robots.txt (Prompt 5)
-  - [ ] Allow crawler access; add feed and sitemap links
+  - [x] Allow crawler access; add feed and sitemap links
 - [x] Create comprehensive `sitemap.xml` with product anchors (Prompt 4)
   - [x] Include homepage ItemList and 18 hash URLs
 
@@ -29,7 +29,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 ## Week 4 — Final Integration
 - [x] Add JS data layer for Merchant (Prompt 11)
 - [x] Create `data-highlighter.json` (Prompt 9)
-- [ ] Submit feeds in Google Merchant Center (out‑of‑code step)
+  - [ ] Submit feeds in Google Merchant Center (out‑of‑code step)
 
 ## Maintenance
 - [x] Add weekly cron to ping sitemap and feeds (.github/workflows/seo-maintenance.yml)
@@ -38,42 +38,42 @@ All backend tasks implemented and pushed. Pending: feed submission/verification 
 
 ## Detailed Prompts (Execution Checklist)
 1) Google Merchant Center XML product feed (products.xml)
-- [ ] Output for 18 books with: id, title, description (≥150 chars), link, image_link, availability, price, brand, gtin, mpn, condition, google_product_category, product_type, shipping, shipping_weight, identifier_exists, adult
-- [ ] Optional enrichments: author, genre, format, publisher, publication_date, number_of_pages, product_detail
-- [ ] Validate feed; add weekly refresh script
+ - [x] Output for 18 books with: id, title, description (≥150 chars), link, image_link, availability, price, brand, gtin, mpn, condition, google_product_category, product_type, shipping, shipping_weight, identifier_exists, adult
+ - [x] Optional enrichments: author, genre, format, publisher, publication_date, number_of_pages, product_detail
+ - [x] Validate feed; add weekly refresh script (.github/workflows/seo-maintenance.yml)
 
 2) Invisible JSON‑LD Product schema on homepage
-- [ ] Insert ItemList of 18 Product nodes before </head>
+ - [x] Insert ItemList of 18 Product nodes before </head>
 
 3) Enhanced product meta tags
-- [ ] Add Open Graph/Twitter/Product meta to head (no UI impact)
+ - [x] Add Open Graph/Twitter/Product meta to head (no UI impact)
 
 4) Comprehensive sitemap.xml with product URLs
-- [ ] Include homepage product data and 18 #anchor URLs
+ - [x] Include homepage product data and 18 #anchor URLs
 
 5) robots.txt
-- [ ] Allow crawling, add images, feeds, sitemaps, and inspection bots
+ - [x] Allow crawling, add images, feeds, sitemaps, and inspection bots
 
 6) Invisible Microdata
-- [ ] Add `itemscope`/`itemtype` Product wrappers to existing book DOM (no style change)
+ - [x] Add `itemscope`/`itemtype` Product wrappers to existing book DOM (no style change)
 
 7) Google Merchant TSV (merchant-feed.txt)
-- [ ] Generate full TSV for 18 books
+ - [x] Generate full TSV for 18 books
 
 8) Rich Results tags
-- [ ] Add product signals meta in head
+ - [x] Add product signals meta in head
 
 9) data-highlighter.json
-- [ ] Publish selectors and feed URLs JSON
+ - [x] Publish selectors and feed URLs JSON (public/data-highlighter.json)
 
 10) .htaccess (if applicable)
-- [ ] Compression, MIME types, caching, product hash redirect, headers
+ - [ ] Compression, MIME types, caching, product hash redirect, headers (Netlify-managed)
 
 11) Merchant Center API/Data layer
-- [ ] Add JS dataLayer push for product list
+ - [x] Add JS dataLayer push for product list
 
 12) shopping-actions.xml
-- [ ] Atom feed with g:* fields for 18 books
+ - [x] Atom feed with g:* fields for 18 books
 
 ## Google Merchant Center Setup (Operational)
 - [ ] Sign up / verify property
