@@ -123,6 +123,20 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
             {book.description}
           </p>
 
+          {(book.era || book.aircraftTypes || book.geographicFocus) && (
+            <div className="text-xs text-muted mb-3">
+              {book.era && book.era.length > 0 && (
+                <span className="mr-3"><span className="font-semibold text-primary">Era:</span> {book.era[0]}</span>
+              )}
+              {book.aircraftTypes && book.aircraftTypes.length > 0 && (
+                <span className="mr-3"><span className="font-semibold text-primary">Focus:</span> {book.aircraftTypes[0]}</span>
+              )}
+              {book.geographicFocus && book.geographicFocus.length > 0 && (
+                <span><span className="font-semibold text-primary">Region:</span> {book.geographicFocus[0]}</span>
+              )}
+            </div>
+          )}
+
           <div className="flex items-center justify-between text-sm text-muted mb-3">
             <span className="badge badge-gray text-xs px-2 py-1 rounded">
               {book.category}
