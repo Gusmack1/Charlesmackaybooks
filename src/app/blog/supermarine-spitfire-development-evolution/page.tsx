@@ -61,15 +61,7 @@ const post = {
     <h2 id="legacy">Legacy and Influence</h2>
     <p>The Spitfire’s evolution validated design as an extensible framework, not a frozen artifact. Its lessons — aerodynamic discipline, measured integration, manufacturing quality, and pilot‑centred handling — informed post‑war practice and remain instructive wherever aircraft are asked to grow capability without surrendering their core strengths.</p>
 
-    <h2 id="related">Related Books and Articles</h2>
-    <ul>
-      <li><a class="underline" href="/blog/supermarine-spitfire-development-history">Supermarine Spitfire: Complete Development History</a></li>
-      <li><a class="underline" href="/blog/hawker-hurricane-fighter-development">Hawker Hurricane: Development</a></li>
-      <li><a class="underline" href="/blog/schneider-trophy-racing-development">Schneider Trophy Racing: Development</a></li>
-    </ul>
-
-    <h2 id="conclusion">Conclusion</h2>
-    <p>Evolution was earned, not accidental. The Spitfire’s balanced starting point, disciplined integration, and manufacturing quality allowed power and capability to grow without breaking what made it special. Its legend rests on engineering discipline that pilots could feel — and results that history recorded.</p>
+    
 
     <h2 id="timeline">Development Timeline: 1930s Prototypes to Late‑War Marks</h2>
     <p>Pre‑war racing informed the first studies; Air Ministry specifications shaped prototypes; and early service uncovered operational realities that fed back into design. As power and mission demands grew, the airframe absorbed new engines, armament, and equipment while keeping its signature handling. This continuity across years is what “evolution” means in practice: each change was justified by operational need and verified in flight test before fleet adoption.</p>
@@ -177,6 +169,16 @@ const post = {
       <li>Propeller and supercharger evolution matched to climbing, escort, and interception regimes, sustaining energy advantages without sacrificing handling balance.</li>
       <li>Armament progression from rifle‑calibre batteries to cannon, supported by heating and feed improvements for reliability at altitude.</li>
     </ul>
+
+    <h2 id="related">Related Books and Articles</h2>
+    <ul>
+      <li><a class="underline" href="/blog/supermarine-spitfire-development-history">Supermarine Spitfire: Complete Development History</a></li>
+      <li><a class="underline" href="/blog/hawker-hurricane-fighter-development">Hawker Hurricane: Development</a></li>
+      <li><a class="underline" href="/blog/schneider-trophy-racing-development">Schneider Trophy Racing: Development</a></li>
+    </ul>
+
+    <h2 id="conclusion">Conclusion</h2>
+    <p>Evolution was earned, not accidental. The Spitfire’s balanced starting point, disciplined integration, and manufacturing quality allowed power and capability to grow without breaking what made it special. Its legend rests on engineering discipline that pilots could feel — and results that history recorded.</p>
   `,
   excerpt: `The complete development story of the Supermarine Spitfire, from R.J. Mitchell's racing seaplanes to the legendary fighter that became the symbol of British aerial victory.`,
   author: {
