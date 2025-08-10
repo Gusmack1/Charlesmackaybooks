@@ -1,7 +1,7 @@
 import { books } from '@/data/books'
 
-function escapeXml(value: string): string {
-  return value
+function xml(value: string): string {
+  return (value || '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -13,48 +13,69 @@ function buildSitemap(): string {
   const domain = 'https://charlesmackaybooks.com'
   const today = new Date().toISOString().slice(0, 10)
 
-  const productBlocks = books
+  const homepage = `
+  <url>
+    <loc>${domain}/</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>`
+
+  // Map existing book ids to clean pretty paths per requested list
+  const prettyMap: Record<string, string> = {
+    'beardmore-aviation': '/books/beardmore-aviation',
+    'clydeside-aviation-vol1': '/books/clydeside-aviation-vol-1',
+    'clydeside-aviation-vol2': '/books/clydeside-aviation-vol-2',
+    'german-aircraft-great-war': '/books/german-military-aircraft-wwi',
+    'british-aircraft-great-war': '/books/british-military-aircraft-wwi',
+    'sycamore-seeds': '/books/the-rotorheads',
+    'captain-eric-brown': '/books/test-pilot',
+    'sabres-from-north': '/books/f86-sabre-european-service',
+    'enemy-luftwaffe-1945': '/books/luftwaffe-year-one-1945',
+    'flying-for-kaiser': '/books/german-pilots-wwi',
+    'soaring-with-wings': '/books/percy-pilcher-aviation-pioneer',
+    'mother-of-the-few': '/books/lucy-lady-houston',
+    'dieter-dengler': '/books/dieter-dengler-skyraider',
+    'modern-furniture': '/books/morris-furniture-company',
+    'birth-atomic-bomb': '/books/the-nuclear-bomb',
+    'aircraft-carrier-argus': '/books/hms-argus',
+    'dorothy-wordsworth': '/books/dorothy-wordsworths-tour',
+    'adolf-rohrbach': '/books/adolf-rohrbach'
+  }
+
+  const bookUrls = books
     .map((b) => {
-      const name = b.title
-      const description = (b.description || '').slice(0, 200)
-      const image = `${domain}${b.imageUrl || `/book-covers/${b.id}.jpg`}`
-      const price = `${Number(b.price).toFixed(2)} GBP`
-      const availability = 'in stock'
-      const condition = 'new'
-      const gtin = b.isbn || b.id
+      const path = prettyMap[b.id] || `/books/${xml(b.id)}`
       return `
-    <product:product>
-      <product:name>${escapeXml(name)}</product:name>
-      <product:description>${escapeXml(description)}</product:description>
-      <product:image>${escapeXml(image)}</product:image>
-      <product:price>${escapeXml(price)}</product:price>
-      <product:availability>${availability}</product:availability>
-      <product:condition>${condition}</product:condition>
-      <product:gtin>${escapeXml(gtin)}</product:gtin>
-    </product:product>`
+  <url>
+    <loc>${domain}${path}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`
     })
     .join('\n')
 
-  const hashUrls = books
-    .map((b) => `
+  const staticUrls = [
+    { path: '/about', priority: '0.8' },
+    { path: '/contact', priority: '0.7' },
+    { path: '/how-to-order', priority: '0.6' },
+    { path: '/aviation-bibliography', priority: '0.7' }
+  ]
+    .map((u) => `
   <url>
-    <loc>${domain}/#${b.id}</loc>
-    <priority>0.9</priority>
+    <loc>${domain}${u.path}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${u.priority}</priority>
   </url>`)
     .join('\n')
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:product="http://www.google.com/schemas/sitemap-product/1.0">
-  <url>
-    <loc>${domain}/</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-${productBlocks}
-  </url>
-${hashUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${homepage}
+${bookUrls}
+${staticUrls}
 </urlset>`
 }
 
