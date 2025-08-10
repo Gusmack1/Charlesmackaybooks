@@ -90,7 +90,12 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
   };
 
   return (
-    <div className="group card overflow-hidden hover:shadow-lg transition-shadow">
+    <div
+      className="group card overflow-hidden hover:shadow-lg transition-shadow"
+      itemScope
+      itemType="https://schema.org/Product"
+      id={`book-${book.isbn || book.id}`}
+    >
       <Link href={`/books/${book.id}`} onClick={handleBookClick} className="block">
         <div className="relative h-72 overflow-hidden bg-secondary">
           <Image
@@ -110,11 +115,11 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
         </div>
 
         <div className="p-4">
-          <h3 className="font-bold text-lg mb-2 group-hover:text-accent-blue transition-colors line-clamp-2 text-primary">
+          <h3 className="font-bold text-lg mb-2 group-hover:text-accent-blue transition-colors line-clamp-2 text-primary" itemProp="name">
             {book.title}
           </h3>
 
-          <p className="text-secondary text-sm mb-3 line-clamp-2">
+          <p className="text-secondary text-sm mb-3 line-clamp-2" itemProp="description">
             {book.description}
           </p>
 
@@ -127,6 +132,23 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
           
           <div className="text-xs text-muted mb-2">
             📦 Weight: {(book as any).weight || 300}g • 🏷️ ISBN: {book.isbn || 'N/A'}
+          </div>
+
+          {/* Invisible microdata meta for additional product identifiers */}
+          <meta itemProp="sku" content={book.isbn || book.id} />
+          <meta itemProp="gtin13" content={book.isbn || book.id} />
+          <meta itemProp="productID" content={`isbn:${book.isbn || book.id}`} />
+          <meta itemProp="category" content="Books" />
+          <meta itemProp="author" content="Charles E. MacKay" />
+
+          {/* Non-visual Offer microdata */}
+          <div itemProp="offers" itemScope itemType="https://schema.org/Offer" className="hidden">
+            <meta itemProp="price" content={Number(book.price).toFixed(2)} />
+            <meta itemProp="priceCurrency" content="GBP" />
+            <meta itemProp="availability" content="https://schema.org/InStock" />
+            <meta itemProp="itemCondition" content="https://schema.org/NewCondition" />
+            <meta itemProp="seller" content="Charles E. MacKay Books" />
+            <link itemProp="url" href={`https://charlesmackaybooks.com#${book.isbn || book.id}`} />
           </div>
         </div>
       </Link>
