@@ -30,7 +30,7 @@ Queue (start → finish)
  - [ ] helicopter-development-pioneers
 - [x] sikorsky-vs300-helicopter-breakthrough
 - [x] sopwith-camel-wwi-fighter
-- [ ] supermarine-spitfire-development-history
+- [x] supermarine-spitfire-development-history
 - [ ] supermarine-spitfire-development-evolution
 - [ ] sycamore-seeds-helicopter-evolution
 - [ ] test-pilot-biography-eric-brown
