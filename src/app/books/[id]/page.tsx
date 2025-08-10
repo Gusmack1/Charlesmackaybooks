@@ -488,8 +488,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
         {/* Main description content */}
         <main className="container mx-auto container-padding section-padding">
+          {/* Overview */}
           <div className="card card-large content">
-            <h2 className="content h2">Description</h2>
+            <h2 className="content h2">Overview</h2>
             <div className="prose prose-invert max-w-none">
               {sanitizedParagraphs.length > 0 ? (
                 sanitizedParagraphs.map((para, idx) => (
@@ -501,9 +502,115 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             </div>
           </div>
 
+          {/* Scope and Coverage */}
+          {(book.era?.length || book.aircraftTypes?.length || book.geographicFocus?.length || book.researchThemes?.length) ? (
+            <div className="card mt-8 content">
+              <h3 className="content h3">Scope and Coverage</h3>
+              <div className="grid sm:grid-cols-2 gap-4 text-secondary">
+                {book.era?.length ? (
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Era</h4>
+                    <ul className="list-disc list-inside">
+                      {book.era.map((e) => (<li key={e}>{e}</li>))}
+                    </ul>
+                  </div>
+                ) : null}
+                {book.aircraftTypes?.length ? (
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Aircraft and Systems</h4>
+                    <ul className="list-disc list-inside">
+                      {book.aircraftTypes.map((t) => (<li key={t}>{t}</li>))}
+                    </ul>
+                  </div>
+                ) : null}
+                {book.geographicFocus?.length ? (
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Geographic Focus</h4>
+                    <ul className="list-disc list-inside">
+                      {book.geographicFocus.map((g) => (<li key={g}>{g}</li>))}
+                    </ul>
+                  </div>
+                ) : null}
+                {book.researchThemes?.length ? (
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Research Themes</h4>
+                    <ul className="list-disc list-inside">
+                      {book.researchThemes.map((r) => (<li key={r}>{r}</li>))}
+                    </ul>
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          ) : null}
+
+          {/* Research and Sources */}
+          {(book.sourceType?.length || (book as any).researchBackground || (book as any).academicInstitutions?.length) ? (
+            <div className="card mt-8 content">
+              <h3 className="content h3">Research and Sources</h3>
+              {book.sourceType?.length ? (
+                <p className="text-secondary mb-3">Source types: {book.sourceType.join(', ')}.</p>
+              ) : null}
+              {(book as any).researchBackground ? (
+                <p className="text-secondary mb-3">{(book as any).researchBackground}</p>
+              ) : null}
+              {(book as any).academicInstitutions?.length ? (
+                <p className="text-secondary mb-3">Used by: {(book as any).academicInstitutions.join(', ')}.</p>
+              ) : null}
+            </div>
+          ) : null}
+
+          {/* Technical Specifications */}
+          {(book as any).specifications ? (
+            <div className="card mt-8 content">
+              <h3 className="content h3">Technical Specifications</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-secondary">
+                <div>
+                  <div className="font-semibold text-primary">Format</div>
+                  <div>{(book as any).specifications.format}</div>
+                </div>
+                <div>
+                  <div className="font-semibold text-primary">Illustrations</div>
+                  <div>{(book as any).specifications.illustrations}</div>
+                </div>
+                <div>
+                  <div className="font-semibold text-primary">Maps</div>
+                  <div>{(book as any).specifications.maps ? 'Included' : '—'}</div>
+                </div>
+                <div>
+                  <div className="font-semibold text-primary">Bibliography</div>
+                  <div>{(book as any).specifications.bibliography ? 'Included' : '—'}</div>
+                </div>
+                <div>
+                  <div className="font-semibold text-primary">Index</div>
+                  <div>{(book as any).specifications.index ? 'Included' : '—'}</div>
+                </div>
+              </div>
+            </div>
+          ) : null}
+
+          {/* Table of Contents */}
+          {(book as any).tableOfContents?.length ? (
+            <div className="card mt-8 content">
+              <h3 className="content h3">Table of Contents</h3>
+              <ol className="list-decimal list-inside text-secondary space-y-1">
+                {(book as any).tableOfContents.map((item: string, idx: number) => (
+                  <li key={`${idx}-${item.slice(0,20)}`}>{item}</li>
+                ))}
+              </ol>
+            </div>
+          ) : null}
+
+          {/* Author's Note */}
+          {(book as any).authorInsights ? (
+            <div className="card mt-8 content">
+              <h3 className="content h3">Author’s Note</h3>
+              <p className="text-secondary">{(book as any).authorInsights}</p>
+            </div>
+          ) : null}
+
           {/* Related Articles only (continuity) */}
           {(book as any).relatedBlogPosts && (book as any).relatedBlogPosts.length > 0 ? (
-            <div className="card mt-8">
+            <div className="card mt-8 content">
               <h3 className="content h3">Related Articles</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {(book as any).relatedBlogPosts.slice(0, 6).map((p: any) => (
@@ -515,7 +622,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               </div>
             </div>
           ) : (
-            <div className="card mt-8">
+            <div className="card mt-8 content">
               <h3 className="content h3">Explore More</h3>
               <p className="text-secondary mb-3">Read expert research that connects to this title.</p>
               <Link href="/blog" className="badge badge-blue inline-block">Browse the Blog →</Link>
