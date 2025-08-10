@@ -334,8 +334,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   const byTitle = entries.find(e => e.title.toLowerCase().includes(book.title.toLowerCase()) || book.title.toLowerCase().includes(e.title.toLowerCase()));
   const info = byIsbn || byTitle;
 
-  // Prefer curated, researched copy from src/data/books.ts; fallback to Bookinfo.txt
-  const preferredDescription = book.description || info?.description || '';
+  // Prefer authoritative long-form copy from Bookinfo.txt; fallback to curated summary
+  const preferredDescription = info?.description || book.description || '';
   const weightFromInfo = info?.weightGrams;
 
   // Remove legacy ecommerce boilerplate (price/ISBN/shipping) if present
@@ -351,7 +351,15 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       .filter(l => !/Dispatched with/i.test(l))
       .filter(l => !/Royal Mail/i.test(l))
       .filter(l => !/\bshipping\b/i.test(l))
-      .filter(l => !/Updated copy coming/i.test(l));
+      .filter(l => !/Updated copy coming/i.test(l))
+      .filter(l => !/Any questions/i.test(l))
+      .filter(l => !/Highly recommended/i.test(l))
+      .filter(l => !/POST FREE/i.test(l))
+      .filter(l => !/Post Free/i.test(l))
+      .filter(l => !/recent (buyer|purchase|comment)/i.test(l))
+      .filter(l => !/\bEBay\b/i.test(l))
+      .filter(l => !/^".*"\s*(?:-|–)?\s*(?:buyer|review)/i.test(l))
+      .filter(l => !/\bRRHT\b/i.test(l));
 
     // Merge back into paragraphs by double-breaks
     const text = lines.join('\n');
