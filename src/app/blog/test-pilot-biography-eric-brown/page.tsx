@@ -15,9 +15,9 @@ const post = {
       <p class="text-sm  mt-2 text-center italic">Discipline and precision: Brown’s reports are valued for candour and detail, not theatrics — a test pilot’s true currency.</p>
     </div>
     
-    <p>Brown's achievements extend far beyond mere numbers. He was the first pilot to land a jet aircraft on an aircraft carrier, the first Allied pilot to fly the revolutionary Messerschmitt Me 163 rocket fighter, and the only pilot to fly every major German aircraft of World War II. His carrier landing record of 2,407 landings - including dangerous experimental aircraft - demonstrates extraordinary skill and courage.</p>
+    <p>Brown's achievements extend far beyond mere numbers. He made the first jet landing on an aircraft carrier and evaluated an exceptional range of captured enemy aircraft, including the Messerschmitt Me 163 rocket fighter and Me 262 jet, as well as numerous piston types. His carrier landing record of 2,407 arrested landings — including trials in demanding conditions — demonstrates a standard of skill joined to method.</p>
 
-    <p>From testing captured German jets to pioneering helicopter operations aboard ships, Brown's career encompassed virtually every aspect of aviation development during the most dynamic period in flight history. His detailed test reports and fearless approach to experimental flight contributed immeasurably to aviation safety and aircraft development.</p>
+    <p>From testing captured German jets to advancing helicopter operations aboard ships, Brown's career touched nearly every domain of flight in the mid‑twentieth century. His detailed reports and disciplined approach to experimental flying contributed measurably to aviation safety, carrier aviation doctrine, and the transition from piston to jet operations at sea.</p>
 
     <div class="my-8">
       <img src="/blog-images/default-generic.svg" alt="Insert image here: A de Havilland Sea Vampire on short final to a Royal Navy carrier, hook down, spray kicked up from the wake, deck crew poised by the arrestor wires." class="w-full h-auto rounded-lg shadow-lg"/>
@@ -44,20 +44,34 @@ const post = {
     <h2 id="carrier-jet-integration">Carrier Jet Integration: Approach, Arrestment, and Energy</h2>
     <p>Brown’s jet carrier trials forced a re‑examination of approach cues. Piston fighters telegraphed energy through propeller wash and throttle response; early jets arrived quieter, with different spool dynamics and less immediate thrust response. Brown’s reports emphasized stabilized approaches at set attitudes and speeds, consistent sightlines to the deck, and disciplined throttle management to avoid low‑energy sink just before the wires. Arrestor‑hook geometry and wire tensions were part of the same system; where landing gear and hook loads revealed shortcomings, Brown’s notes traced cause to remedy without theatrical blame.</p>
 
-    <div class="card-compact bg-accent-blue text-white rounded-lg p-6 my-6">
-      <h3 class="font-semibold mb-4 ">Key Technical Innovations</h3>
-      <ul class="space-y-2 text-white">
-        <li><strong>Revolutionary Design Approach:</strong> Completely new methodology for aircraft construction</li>
-        <li><strong>Advanced Materials:</strong> Pioneering use of new materials and construction techniques</li>
-        <li><strong>Innovative Systems:</strong> Groundbreaking approach to aircraft systems integration</li>
-        <li><strong>Aerodynamic Efficiency:</strong> Significant improvements in performance and handling</li>
-        <li><strong>Manufacturing Process:</strong> New production methods that influenced industry standards</li>
+    <div class="bg-slate-800/60 border border-slate-700 rounded-lg p-6 my-6 surface-dark">
+      <h3 class="font-semibold mb-4">Key Technical Themes in Brown’s Carrier‑Jet Reports</h3>
+      <ul class="space-y-2">
+        <li><strong>Stabilized Approaches:</strong> Fixed attitude and speed, sightline to the deck constant; avoid last‑second corrections.</li>
+        <li><strong>Throttle Management:</strong> Account for jet spool dynamics; preserve margin to counter sink near the round‑down.</li>
+        <li><strong>Hook/Wire System Behaviour:</strong> Treat gear, hook, and arrestor wires as one tuned system; record loads and bounce tendencies.</li>
+        <li><strong>Reference Cues:</strong> Improve visual landing aids and deck markings to standardize jet approaches at sea.</li>
+        <li><strong>Procedural Repeatability:</strong> Turn novel handling into doctrine through checklists and disciplined briefing/debriefing.</li>
       </ul>
     </div>
 
-    <p>The propulsion system represented one of the most significant technical challenges. The requirements demanded power, reliability, and efficiency levels that pushed existing engine technology to its limits. The solution involved close collaboration between aircraft designers and engine manufacturers, resulting in powerplant innovations that would influence future aviation development.</p>
+    <h2 id="timeline">Selected Timeline of Milestones</h2>
+    <ul>
+      <li><strong>Wartime test and evaluation:</strong> Transition to evaluation of enemy types; foundation of method built on incremental envelope expansion.</li>
+      <li><strong>Jet carrier landing:</strong> First jet landing on an aircraft carrier; reports informing stabilized approach parameters and arrestment checks.</li>
+      <li><strong>Captured types:</strong> Systematic evaluations of rocket, jet, and piston aircraft informing Allied understanding of adversary design approaches.</li>
+      <li><strong>Rotorcraft at sea:</strong> Early helicopter shipboard trials; development of deck procedures and hand signals.</li>
+      <li><strong>Publications and instruction:</strong> Translation of frontline testing into training materials for pilots and engineers.</li>
+    </ul>
 
-    <p>Structural design innovations were equally important. The need to combine strength with lightness required new approaches to aircraft construction. Engineers experimented with different materials, joint techniques, and structural configurations to achieve the optimal balance of performance characteristics.</p>
+    <h2 id="approach-technique">Carrier Approach Technique: Notes and Practice</h2>
+    <p>Brown emphasized that safe carrier approaches by jets depended on holding a known attitude and speed, resisting the urge to chase the deck visually at the close. He recorded throttle response characteristics and recommended power settings that preserved energy margins through the round‑down, with hook contact occurring under control rather than in a sink. These notes influenced standardized sightlines and the later refinement of visual landing aids.</p>
+
+    <h2 id="safety">Safety Contributions and Accident Learning</h2>
+    <p>Not every trial ended neatly. Brown’s reports treat incidents as data rather than theatre, describing causality — whether in energy management, system tuning, or pilot cueing — and proposing specific changes. This habit turned individual risk into institutional memory, improving survivability for pilots who would follow his procedures rather than rediscover hazards.</p>
+
+    <h2 id="publications">Books, Reports, and Teaching</h2>
+    <p>Brown’s writing style mirrored his cockpit discipline: exact, unembellished, and focused on what a pilot must do. His published works and formal reports continue to be used in instruction for carrier operations and flight‑test methodology, preserving both the detail and the tone of a professional who valued clarity over anecdote.</p>
 
     <h2 id="helicopters">Helicopter and Shipboard Trials</h2>
     <p>Brown’s curiosity extended naturally to rotorcraft as they moved from novelty to utility. Early shipboard trials with helicopters required new deck procedures, new hand signals, and an appreciation for downwash and rotor wake on crowded decks. Brown recognized that success would come from the same formula proven elsewhere: steady control response, sightlines for hover cues, and checklists that converted demanding tasks into predictable operations.</p>
