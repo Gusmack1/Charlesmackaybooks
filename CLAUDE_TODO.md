@@ -28,7 +28,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 
 ## Week 4 — Final Integration
 - [ ] Add JS data layer for Merchant (Prompt 11)
-- [ ] Create `data-highlighter.json` (Prompt 9)
+- [x] Create `data-highlighter.json` (Prompt 9)
 - [ ] Submit feeds in Google Merchant Center (out‑of‑code step)
 
 ## Detailed Prompts (Execution Checklist)

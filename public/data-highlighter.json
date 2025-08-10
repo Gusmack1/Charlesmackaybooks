@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "site": "https://charlesmackaybooks.com",
+  "products": {
+    "selector_rules": {
+      "product_container": "div[id^='book-'], .card, article.product",
+      "name": "h3, h2.book-title, .product-name, [itemprop='name']",
+      "price": ".price, .cost, span:contains('£')",
+      "description": "p[itemprop='description'], p.description, .book-description",
+      "image": "img, img.book-cover, .product-image img",
+      "availability": ".availability, .stock-status, span:contains('In Stock')",
+      "isbn": ".isbn, span:contains('ISBN'), [id^='book-']",
+      "author": "span:contains('Charles'), .author"
+    },
+    "structured_data": {
+      "type": "Product",
+      "category": "Book",
+      "brand": "Charles E. MacKay",
+      "currency": "GBP",
+      "condition": "NewCondition",
+      "availability": "InStock",
+      "merchant": {
+        "name": "Charles MacKay Books",
+        "location": "Glasgow, Scotland"
+      }
+    }
+  },
+  "feed_urls": [
+    "https://charlesmackaybooks.com/products.xml",
+    "https://charlesmackaybooks.com/merchant-feed.txt"
+  ]
+}
+
+
