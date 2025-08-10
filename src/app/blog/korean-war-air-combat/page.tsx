@@ -97,7 +97,11 @@ const post = {
   category: 'Aviation History',
   tags: ["korean","war","air","combat"],
   relatedBooks: getBooksData(['sabres-from-north', 'enemy-luftwaffe-1945', 'sonic-to-standoff']),
-  relatedPosts: []
+  relatedPosts: [
+    { slug: 'f86-sabre-cold-war-fighter', title: 'F‑86 Sabre: Cold War Fighter' },
+    { slug: 'jet-age-aviation-cold-war-development', title: 'Jet Age Aviation: Cold War Development' },
+    { slug: 'me262-jet-fighter-revolution', title: 'Me 262: Jet Fighter Revolution' }
+  ]
 }
 
 const relatedBooks: any[] = []
