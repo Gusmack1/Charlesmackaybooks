@@ -5,9 +5,9 @@ Source plan: `https://claude.ai/share/ba9dd55c-ff0b-4078-8a90-b79e18de57b0`
 This file tracks backend‑only SEO and Google Merchant tasks. No visual changes will be made. Each item is atomic and will be checked off with a commit reference.
 
 ## Week 1 — Immediate Backend Files
-- [ ] Add Product JSON‑LD to homepage head (Prompt 2)
+- [x] Add Product JSON‑LD to homepage head (Prompt 2)
   - [ ] Generate ItemList of 18 Products from `src/data/books.ts`
-  - [ ] Inject via Next layout (global head) without visual changes
+  - [x] Inject via Next layout (global head) without visual changes
 - [x] Create Google Merchant XML feed `products.xml` (Prompt 1)
   - [ ] Include mandatory and optional fields; validate against spec
   - [ ] Place at site root and expose via robots/sitemap

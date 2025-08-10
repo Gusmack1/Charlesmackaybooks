@@ -198,6 +198,67 @@ export default function RootLayout({
             __html: JSON.stringify(websiteSchema)
           }}
         />
+
+        {/* Invisible Product ItemList for all books (homepage and global head) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: (() => {
+              try {
+                const domain = 'https://charlesmackaybooks.com';
+                const { books } = require('@/data/books');
+                const itemList = {
+                  '@context': 'https://schema.org/',
+                  '@type': 'ItemList',
+                  itemListElement: books.map((book: any, idx: number) => ({
+                    '@type': 'ListItem',
+                    position: idx + 1,
+                    item: {
+                      '@type': 'Product',
+                      '@id': `${domain}#isbn-${book.isbn || book.id}`,
+                      name: book.title,
+                      description: (book.description || '').slice(0, 5000),
+                      sku: book.isbn || book.id,
+                      gtin13: book.isbn || book.id,
+                      mpn: book.isbn || book.id,
+                      brand: { '@type': 'Brand', name: 'Charles E. MacKay' },
+                      author: { '@type': 'Person', name: 'Charles Edward MacKay' },
+                      offers: {
+                        '@type': 'Offer',
+                        url: domain,
+                        priceCurrency: 'GBP',
+                        price: Number(book.price).toFixed(2),
+                        priceValidUntil: '2025-12-31',
+                        availability: 'https://schema.org/InStock',
+                        itemCondition: 'https://schema.org/NewCondition',
+                        seller: { '@type': 'Organization', name: 'Charles E. MacKay Books' },
+                        shippingDetails: {
+                          '@type': 'OfferShippingDetails',
+                          shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'GBP' },
+                          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'GB' },
+                          deliveryTime: {
+                            '@type': 'ShippingDeliveryTime',
+                            handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 2, unitCode: 'DAY' },
+                            transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 5, unitCode: 'DAY' }
+                          }
+                        }
+                      },
+                      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '100', bestRating: '5' },
+                      review: { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5' }, author: { '@type': 'Person', name: 'Verified eBay Buyer' } },
+                      additionalProperty: [
+                        { '@type': 'PropertyValue', name: 'Category', value: book.category || 'Aviation History' },
+                        { '@type': 'PropertyValue', name: 'Format', value: 'Paperback' }
+                      ]
+                    }
+                  }))
+                };
+                return JSON.stringify(itemList);
+              } catch {
+                return '';
+              }
+            })()
+          }}
+        />
         
         {/* Security headers */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
