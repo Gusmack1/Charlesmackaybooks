@@ -43,7 +43,7 @@ export default function BBCPageTemplate({ title, subtitle, breadcrumbs = [], cen
           <div className={centerHero ? 'text-center' : 'text-center md:text-left'}>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">{title}</h1>
             {subtitle && (
-              <p className="text-lg md:text-xl text-white/90 max-w-3xl md:max-w-4xl md:pr-12">{subtitle}</p>
+              <p className={`text-lg md:text-xl text-white/90 ${centerHero ? 'max-w-4xl mx-auto' : 'max-w-3xl md:max-w-4xl md:pr-12'}`}>{subtitle}</p>
             )}
           </div>
         </div>
