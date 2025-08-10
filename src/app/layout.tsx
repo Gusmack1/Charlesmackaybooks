@@ -269,6 +269,53 @@ export default function RootLayout({
         {/* Performance optimizations */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/playfair-display-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+
+        {/* Google Product/OG/Twitter product meta tags (non-visual) */}
+        {(() => {
+          try {
+            const { books } = require('@/data/books');
+            const prices: number[] = (books || []).map((b: any) => Number(b.price) || 0).filter((n: number) => n > 0)
+            const minPrice = prices.length ? Math.min(...prices) : 19.99
+            return (
+              <>
+                {/* Google Product Metadata */}
+                <meta property="product:price:amount" content={minPrice.toFixed(2)} />
+                <meta property="product:price:currency" content="GBP" />
+                <meta property="product:availability" content="in stock" />
+                <meta property="product:condition" content="new" />
+                <meta property="product:retailer_item_id" content="multiple" />
+                <meta property="product:brand" content="Charles E. MacKay" />
+
+                {/* Open Graph Product Tags */}
+                <meta property="og:type" content="og:product" />
+                <meta property="og:title" content="Aviation History Books by Charles E. MacKay" />
+                <meta property="og:description" content="Self-published aviation history books used as primary references by researchers worldwide" />
+                <meta property="og:url" content="https://charlesmackaybooks.com" />
+                <meta property="og:site_name" content="Charles MacKay Books" />
+                <meta property="product:plural_title" content="Aviation History Books" />
+                <meta property="product:price:amount" content={minPrice.toFixed(2)} />
+                <meta property="product:price:currency" content="GBP" />
+
+                {/* Twitter Product Card */}
+                <meta name="twitter:card" content="product" />
+                <meta name="twitter:site" content="@charlesmackaybooks" />
+                <meta name="twitter:creator" content="@charlesmackaybooks" />
+                <meta name="twitter:domain" content="charlesmackaybooks.com" />
+                <meta name="twitter:label1" content="Price" />
+                <meta name="twitter:data1" content={`From £${minPrice.toFixed(2)}`} />
+                <meta name="twitter:label2" content="Availability" />
+                <meta name="twitter:data2" content="In Stock" />
+
+                {/* Rich Snippets microdata helpers */}
+                <meta itemProp="name" content="Charles MacKay Aviation Books" />
+                <meta itemProp="description" content="Aviation history books" />
+                <meta itemProp="image" content="https://charlesmackaybooks.com/images/books-collection.jpg" />
+              </>
+            )
+          } catch {
+            return null
+          }
+        })()}
         
         {/* Core Web Vitals Monitoring */}
         <script

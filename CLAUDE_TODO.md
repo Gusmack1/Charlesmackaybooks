@@ -17,7 +17,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
   - [ ] Include homepage ItemList and 18 hash URLs
 
 ## Week 2 — Meta and Microdata
-- [ ] Add product meta tags to head (Prompt 3)
+- [x] Add product meta tags to head (Prompt 3)
 - [ ] Add invisible microdata attributes (Prompt 6)
 - [ ] Add Rich Results testing tags (Prompt 8)
 
