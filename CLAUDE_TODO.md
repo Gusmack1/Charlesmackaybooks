@@ -13,7 +13,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
   - [ ] Place at site root and expose via robots/sitemap
 - [ ] Update robots.txt (Prompt 5)
   - [ ] Allow crawler access; add feed and sitemap links
-- [ ] Create comprehensive `sitemap.xml` with product anchors (Prompt 4)
+- [x] Create comprehensive `sitemap.xml` with product anchors (Prompt 4)
   - [ ] Include homepage ItemList and 18 hash URLs
 
 ## Week 2 — Meta and Microdata
