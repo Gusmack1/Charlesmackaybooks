@@ -40,7 +40,8 @@ export default function BooksPage() {
     <BBCPageTemplate
       title="Aviation History Books Collection"
       subtitle={`Discover ${books.length} authoritative aviation history books by Charles E. MacKay. From WWI fighters to modern jets, Scottish aviation heritage to global military aviation.`}
-      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Books' }]}
+      breadcrumbs={[]}
+      centerHero
     >
       <UnifiedSchema
         pageType="books"

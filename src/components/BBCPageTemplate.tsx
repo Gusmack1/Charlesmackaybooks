@@ -13,15 +13,16 @@ interface BBCPageTemplateProps {
   subtitle?: string;
   breadcrumbs?: BreadcrumbItem[];
   children: React.ReactNode;
+  centerHero?: boolean;
 }
 
-export default function BBCPageTemplate({ title, subtitle, breadcrumbs = [], children }: BBCPageTemplateProps) {
+export default function BBCPageTemplate({ title, subtitle, breadcrumbs = [], centerHero = false, children }: BBCPageTemplateProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
-          {breadcrumbs.length > 0 && (
+          {breadcrumbs.length > 0 && !centerHero && (
             <nav aria-label="Breadcrumb" className="mb-4 text-sm text-white/80">
               <ol className="flex flex-wrap gap-2 items-center">
                 {breadcrumbs.map((bc, idx) => (
@@ -39,7 +40,7 @@ export default function BBCPageTemplate({ title, subtitle, breadcrumbs = [], chi
               </ol>
             </nav>
           )}
-          <div className="text-center md:text-left">
+          <div className={centerHero ? 'text-center' : 'text-center md:text-left'}>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">{title}</h1>
             {subtitle && (
               <p className="text-lg md:text-xl text-white/90 max-w-3xl md:max-w-4xl md:pr-12">{subtitle}</p>
