@@ -119,6 +119,24 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
   const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html))
 
+  // Clean hero text: remove any "Enhanced Edition" phrasing from title/subtitle for display
+  const cleanHeroText = (text: string) =>
+    text
+      ?.replace(/\bEnhanced Edition:?\s*/gi, '')
+      ?.replace(/\s+—\s*Enhanced Edition/gi, '')
+      ?.trim();
+
+  const cleanedTitle = cleanHeroText(post.title);
+  const cleanedSubtitle = cleanHeroText(post.subtitle);
+
+  // Compute rough word count from HTML content for display/SEO
+  const computeWordCount = (html: string): number => {
+    const plain = html.replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ');
+    const words = plain.split(/\s+/).filter(Boolean);
+    return words.length;
+  };
+  const wordCount = computeWordCount(post.content);
+
   const stripShareUI = (html: string): string => {
     let output = html
     // Remove explicit "Share This Article" blocks
@@ -175,7 +193,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
       {/* Hero Section */}
       <div className="hero-section overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        {post.featuredImage?.url && (
+          {post.featuredImage?.url && (
           <div className="absolute inset-0">
             <Image
               src={post.featuredImage.url}
@@ -183,10 +201,12 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               fill
               className="object-cover opacity-30"
               priority
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-              }}
+                onError={(e) => {
+                  try {
+                    const t = e.currentTarget as HTMLImageElement;
+                    t.src = `data:image/svg+xml;utf8,${fallbackSvg}`;
+                  } catch {}
+                }}
             />
           </div>
         )}
@@ -207,18 +227,18 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              {post.title}
+              {cleanedTitle}
             </h1>
             
             <p className="text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
-              {post.subtitle}
+              {cleanedSubtitle}
             </p>
 
             {/* Reading Stats */}
             <div className="flex justify-center items-center gap-6 text-sm">
               <span>⭐ Expert Analysis</span>
               <span>📖 {post.readingTime} min read</span>
-              <span>🎯 2000+ words</span>
+              <span>🎯 {wordCount.toLocaleString()} words</span>
               <span>📚 Research-backed</span>
             </div>
           </div>
@@ -257,59 +277,37 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               })
             }}
           />
+
+          {/* Article JSON-LD for SEO */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Article',
+                headline: cleanedTitle || post.title,
+                description: post.excerpt,
+                image: post.featuredImage?.url ? [post.featuredImage.url] : undefined,
+                author: {
+                  '@type': 'Person',
+                  name: post.author.name,
+                  email: post.author.email
+                },
+                publisher: {
+                  '@type': 'Organization',
+                  name: 'Charles Mackay Books',
+                  url: 'https://charlesmackaybooks.com/'
+                },
+                datePublished: post.publishedDate,
+                dateModified: post.publishedDate,
+                keywords: post.tags?.join(', '),
+                mainEntityOfPage: `https://charlesmackaybooks.com/blog/${post.id}`
+              })
+            }}
+          />
         </article>
 
-        {/* Related Books Section */}
-        {post.relatedBooks.length > 0 && (
-          <section className="mt-16 card-compact bg-accent-green text-white rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">
-              📚 Dive Deeper - Related Books by Charles E. MacKay
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {post.relatedBooks.map((book) => (
-                <Link 
-                  key={book.id}
-                  href={`/books/${book.id}`}
-                  className="group block card p-6 hover:shadow-lg transition-all duration-300 hover:scale-105"
-                >
-                  <div className="flex gap-4">
-                    <Image
-                      src={book.cover}
-                      alt={book.title}
-                      width={80}
-                      height={120}
-                      className="rounded group-hover:shadow-lg transition-shadow"
-                    />
-                    <div className="flex-1">
-                      <h4 className="font-bold text-primary group-hover:text-accent-blue mb-2 leading-tight">
-                        {book.title}
-                      </h4>
-                      <p className="text-sm text-secondary mb-3">
-                        Comprehensive historical analysis with expert commentary and rare archival material.
-                      </p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-2xl font-bold text-white">
-                          £{book.price.toFixed(2)}
-                        </span>
-                        <span className="badge badge-amber">
-                          Order Now →
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <div className="text-center mt-6">
-              <Link 
-                href="/books"
-                className="inline-block badge badge-blue px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                📖 Browse All Aviation Books
-              </Link>
-            </div>
-          </section>
-        )}
+        {/* Related Books section intentionally removed across all blog posts per site policy */}
 
         {/* Auto-related books removed to avoid duplicate related sections */}
 
@@ -336,42 +334,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           </div>
         </section>
 
-        {/* Related Posts */}
-        {post.relatedPosts.length > 0 && (
-          <section className="mt-16">
-            <h3 className="text-2xl font-bold text-primary mb-6">📖 Continue Reading</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {post.relatedPosts.map((relatedPost) => (
-                <Link 
-                  key={relatedPost.id}
-                  href={`/blog/${relatedPost.id}`}
-                  className="group block card overflow-hidden hover:shadow-lg transition-shadow"
-                >
-                  {relatedPost.image && (
-                    <div className="aspect-video relative overflow-hidden">
-                      <Image
-                        src={relatedPost.image}
-                        alt={relatedPost.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  )}
-                  <div className="p-6">
-                    <h4 className="font-bold text-primary group-hover:text-accent-blue mb-2 leading-tight">
-                      {relatedPost.title}
-                    </h4>
-                    <p className="text-secondary text-sm mb-3">{relatedPost.excerpt}</p>
-                    <div className="flex justify-between items-center text-xs text-muted">
-                      <span>📖 {relatedPost.readingTime} min read</span>
-                      <span className="text-accent-blue font-medium">Read more →</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
+        {/* Continue Reading section intentionally removed across all blog posts per site policy */}
 
         {/* Tags removed per request */}
       </div>
