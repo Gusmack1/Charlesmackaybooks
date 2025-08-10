@@ -398,12 +398,14 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   }
   const sanitizedParagraphs = sanitizeDescription(preferredDescription);
 
+  const metaDescriptionForSchema = sanitizedParagraphs[0] || book.description || '';
+
   return (
     <>
-      <UnifiedSchema
+        <UnifiedSchema
         pageType="book-detail"
         pageTitle={`${book.title} | Charles E. MacKay Aviation Books`}
-        pageDescription={book.description}
+          pageDescription={metaDescriptionForSchema}
         pageUrl={`/books/${book.id}`}
         bookData={book}
       />
