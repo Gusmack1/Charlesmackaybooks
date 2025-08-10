@@ -31,6 +31,9 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 - [x] Create `data-highlighter.json` (Prompt 9)
 - [ ] Submit feeds in Google Merchant Center (out‑of‑code step)
 
+## Maintenance
+- [x] Add weekly cron to ping sitemap and feeds (.github/workflows/seo-maintenance.yml)
+
 All backend tasks implemented and pushed. Pending: feed submission/verification in Merchant Center and Search Console.
 
 ## Detailed Prompts (Execution Checklist)

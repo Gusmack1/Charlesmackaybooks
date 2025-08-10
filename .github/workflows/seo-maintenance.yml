@@ -1,0 +1,30 @@
+name: SEO Feeds Refresh & Ping
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'  # Every Monday 03:00 UTC
+  push:
+    branches: [ main ]
+
+jobs:
+  refresh-and-ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping sitemap and feeds
+        run: |
+          set -e
+          BASE="https://charlesmackaybooks.com"
+          curl -sS "$BASE/sitemap.xml" > /dev/null
+          curl -sS "$BASE/products.xml" > /dev/null
+          curl -sS "$BASE/merchant-feed.txt" > /dev/null
+          curl -sS "$BASE/shopping-actions.xml" > /dev/null
+      - name: Notify search engines
+        run: |
+          set -e
+          SITE="https://charlesmackaybooks.com/sitemap.xml"
+          # Google
+          curl -sS "https://www.google.com/ping?sitemap=${SITE}" > /dev/null || true
+          # Bing
+          curl -sS "https://www.bing.com/ping?sitemap=${SITE}" > /dev/null || true
+
+
