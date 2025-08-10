@@ -70,6 +70,113 @@ const post = {
 
     <h2 id="conclusion">Conclusion</h2>
     <p>Evolution was earned, not accidental. The Spitfire’s balanced starting point, disciplined integration, and manufacturing quality allowed power and capability to grow without breaking what made it special. Its legend rests on engineering discipline that pilots could feel — and results that history recorded.</p>
+
+    <h2 id="timeline">Development Timeline: 1930s Prototypes to Late‑War Marks</h2>
+    <p>Pre‑war racing informed the first studies; Air Ministry specifications shaped prototypes; and early service uncovered operational realities that fed back into design. As power and mission demands grew, the airframe absorbed new engines, armament, and equipment while keeping its signature handling. This continuity across years is what “evolution” means in practice: each change was justified by operational need and verified in flight test before fleet adoption.</p>
+
+    <h3 id="early-prototypes">Early Prototypes and Lessons</h3>
+    <p>Prototype flights confirmed aerodynamic assumptions and exposed practical considerations: canopy visibility under operational workloads, cooling margins across weather and altitude, and maintainability during quick turnarounds. The project culture remained steady — measure, adjust, document — which would characterize later mark introductions.</p>
+
+    <h3 id="mid-war-marks">Mid‑War Marks and Operational Refinement</h3>
+    <p>As missions diversified, aircraft incorporated revised cooling arrangements, armament options, and radio/navigation improvements appropriate to the tactical environment. The principle was always the same: integrate without compromising control harmony or adding unnecessary drag. Where fairings and blisters were required for new equipment, their geometry was refined to preserve efficient flow.</p>
+
+    <h3 id="late-war-marks">Late‑War Marks and Power Growth</h3>
+    <p>Late‑war variants brought increases in power and capability supported by incremental structural and systems changes. The aerodynamic discipline established at the outset made these changes tractable. Pilots still reported the qualities that defined the type: predictable behavior near the limits and a sense that the aircraft responded as an extension of intent.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Production line with elliptical wings in jigs; workers riveting skins and inspectors logging measurements." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Production as a discipline: jigs, travellers, and calibrated tools turned drawings into repeatable airframes.</p>
+    </div>
+
+    <h2 id="industrial">Industrial Mobilization and Quality Assurance</h2>
+    <p>Meeting operational demand required more than design excellence; it required industrial organization that respected the design’s aerodynamic and structural intent. Precision jigs held critical geometry; inspection culture preserved it across shifts and sites. Documentation — travellers, gauge logs, torque charts — enabled consistency as output scaled. In this way, the aircraft’s performance in the air was protected by habits on the ground.</p>
+
+    <h3 id="metrology">Metrology and Repeatability</h3>
+    <p>Metrology ensured that components matched drawing and that assemblies aligned without undue stress. Surface finish and flush riveting safeguarded drag assumptions; control‑run checks and rigging fixtures preserved handling assumptions. The result was not simply quantity but quality at quantity.</p>
+
+    <h2 id="accounts">Pilot Testimonies and Operational Notes</h2>
+    <p>Pilots valued control harmony and the aircraft’s willingness to respond precisely near the edge of the envelope. Conversion notes emphasized energy management, teamwork, and firing discipline: brief, accurate bursts at harmonized ranges. Reports from interceptions highlighted climb and positioning as decisive factors; reports from escort emphasized formation integrity and mutual support. Across contexts, the airframe’s predictability enabled pilots to execute doctrine with confidence.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Cockpit view over the elliptical wing during a turn; horizon canted, gunsight centered." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Pilot’s view: predictable cues and control harmony fostered confidence at high load factors.</p>
+    </div>
+
+    <h2 id="comparisons-expanded">Expanded Comparisons: Strengths, Trades, and Outcomes</h2>
+    <p>Comparisons are meaningful only when framed by mission, starting energy, and pilot skill. The Hurricane’s robust structure and benign handling rewarded squadrons tasked with bomber interception and operations from austere fields. The Spitfire’s aerodynamic efficiency and armament arrangement favored short, decisive fighter engagements. Against the Bf 109, outcomes often reflected altitude advantage, sun angle, and tactical discipline; the aircraft’s particular strengths provided the means to convert those advantages into results. The Spitfire’s evolution sustained these strengths as power rose and missions diversified.</p>
+
+    <h2 id="modern-legacy">Modern Legacy: Restoration, Training, and Cultural Memory</h2>
+    <p>Preserved examples and restorations keep the type’s lessons alive: aerodynamic cleanliness, careful integration, and rigorous documentation. Training organizations and museums use the aircraft’s story to illustrate how design and industry must align to produce reliable combat power. The airplane remains a touchstone for pilots who value control harmony — a quality that cannot be retrofitted into a rushed design.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Restored Spitfire on a clear day; crowds observing run‑up; maintenance crew attending." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Living heritage: flightworthy examples carry forward lessons about engineering discipline and maintenance culture.</p>
+    </div>
+
+    <h2 id="systems-architecture">Systems Architecture: Hydraulics, Electrics, and Reliability</h2>
+    <p>Behind aerodynamic lines sat systems chosen for robustness and serviceability. Hydraulic circuits actuated undercarriage and flaps with redundancy appropriate to the era, while manual procedures were codified to handle failures. Electrical systems fed ignition, radios, and instrumentation through straightforward looms routed for access and protected against chafing. These choices reflected an operational ethos: keep systems simple enough to diagnose on a dispersal pan and rugged enough to accept field repairs without specialized equipment. The result was tempo—sorties preserved by systems that cooperated with maintainers under pressure.</p>
+
+    <h2 id="gunsights">Gunsight Evolution and Fire Control Discipline</h2>
+    <p>Fire control evolved from fixed‑sight marksmanship to gyro‑assisted aiming. Early reflector sights required pilots to compute lead and closure from experience and training; later gyro gunsights assisted by stabilizing the reticle and estimating lead based on target wingspan and turn rate inputs. The Spitfire’s stable gun platform and predictable pitch response helped both systems by minimizing transient errors during short, disciplined bursts at harmonized ranges. Units codified approach angles and break‑off criteria, ensuring that ammunition expended translated into results rather than waste.</p>
+
+    <h2 id="oxygen-environmental">Oxygen, Heating, and Environmental Discipline</h2>
+    <p>Operations at altitude required oxygen systems, canopy management, and heating provisions that worked in cold, thin air. Procedures emphasized pre‑flight checks of regulators, flow, and mask integrity; canopy sealing and demisting; and glove discipline to preserve tactile sensitivity on the controls. High‑altitude marks introduced pressurization where appropriate, demanding additional attention to sealing, structural loads, and emergency procedures. These measures were not luxuries but mission enablers: reconnaissance, interception, and escort profiles all depended on crews who could perform at altitude without distraction.</p>
+
+    <h2 id="materials-corrosion">Materials, Surface Finish, and Corrosion Control</h2>
+    <p>Surface finish quality and corrosion vigilance preserved aerodynamic assumptions over service life. Rivet flushness, puttied seams where appropriate, and clean paint ensured that boundary‑layer behavior matched design intent. In maritime and coastal climates, thorough washing, inspection of joints, and sealing of vulnerable intersections prevented corrosion from eroding safety margins or distorting surface quality. The connection between shop practice and flight performance remained visible throughout the program.</p>
+
+    <h2 id="supply-chain">Supply Chain, Training, and Documentation</h2>
+    <p>Production scale relied on a national network: primary factories, subcontractors, and transport linking assemblies to final lines. Training pipelines—both for pilots and maintainers—matured alongside: Operational Training Units prepared crews in tactics and aircraft handling; technical schools qualified riggers and fitters in inspection standards, torque values, and documentation. Traveller sheets and parts traceability ensured that when an airframe reached a squadron, it conformed to the geometry and systems configuration expected, with spares and manuals aligned to that standard.</p>
+
+    <h2 id="operations-cases">Operational Cases: Learning in Contact</h2>
+    <p>Fighter sweeps over occupied Europe underscored energy discipline: formations climbed to arrive with altitude in hand, struck in coordinated pairs or fours, and disengaged by plan rather than impulse when fuel dictated. Interceptions demanded tight controller‑pilot coordination; the aircraft’s climb and acceleration helped convert vectors into position. Close support in later campaigns required communication discipline with ground controllers, careful identification, and the restraint to preserve fuel and ammunition for decisive moments. In all roles, the aircraft’s predictable handling helped pilots translate doctrine into action.</p>
+
+    <h2 id="restoration-practice">Restoration Practice: Keeping the Method Alive</h2>
+    <p>Modern restorations replicate wartime methods because those methods still produce the behavior pilots expect. Jigs locate spars and frames; skins are fitted and riveted with attention to flushness; control runs are rigged to precise neutral and travel limits; and engine installations balance cooling with cowl integrity. The aim is not cosmetic fidelity alone but aerodynamic and handling fidelity: the same geometry, the same mass distributions, the same systems margins. When these are honored, the aircraft flies like a Spitfire, not merely a look‑alike.</p>
+
+    <h2 id="lessons">Lessons With Contemporary Relevance</h2>
+    <p>The program exemplifies principles that remain valid: set a coherent aerodynamic and structural baseline; protect it with manufacturing discipline; evolve power and equipment in measured increments with test‑backed validation; and educate pilots and maintainers so the human system keeps pace with the machine. These lessons apply beyond aviation history; they define effective engineering in any field where performance, reliability, and human factors must align.</p>
+
+    <h2 id="aero-refinements">Aerodynamic Testing and Control Surface Refinements</h2>
+    <p>Wind‑tunnel work and flight testing informed successive refinements to the aircraft’s outer mold line and control surfaces. As speeds increased, aileron effectiveness on early fabric‑skinned surfaces declined; metal‑skinned ailerons restored roll authority at higher dynamic pressures. Elevator and rudder balance and hinge arrangements guarded against over‑sensitivity and flutter, while trim systems were maintained as simple, reliable mechanisms. Even small surface details — fairing intersections, panel fit, and access‑door edges — were reviewed to protect drag assumptions established during prototype work.</p>
+    <p>Cooling inlets and exits were tuned for pressure recovery and exit‑area control, recognizing that adequate cooling with minimal drag penalty is a core determinant of sustained performance. The approach remained empirical but disciplined: test, document, and incorporate only those changes that proved their value in measured results.</p>
+
+    <h2 id="prop-supercharger">Propellers, Supercharging, and Fuel Systems</h2>
+    <p>Propeller evolution tracked engine power and altitude regimes. Early two‑ and three‑blade propellers gave way to constant‑speed units from established British manufacturers, allowing the engine to operate near optimal rpm across climb and cruise while improving acceleration out of the turn. As engines adopted higher boost with two‑speed and later two‑stage superchargers, blade count and planform geometry were revised to absorb power efficiently without undue noise or tip losses. These changes reinforced the aircraft’s energy advantages in climb and vertical manoeuvre.</p>
+    <p>Fuel systems began with float‑type carburetors that were vulnerable under negative g. Tactical workarounds — half‑roll then pull — were institutionalized in training, and a restrictor introduced by an RAE engineer mitigated fuel surge until improved systems arrived. The point is not the inconvenience, but the response: operational reality identified a constraint; engineering provided a timely, practical remedy; tactics were adjusted to maximize effectiveness meanwhile.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Ground crew changing a constant‑speed propeller hub; blades stacked on a trolley; cowlings open for inspection." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Matching engine and propeller: constant‑speed units turned power into climb, acceleration, and consistency.</p>
+    </div>
+
+    <h2 id="theatres">Theatres of War: Logistics and Adaptation</h2>
+    <p>Operations across diverse theatres imposed new disciplines. Coastal climates demanded vigilance against corrosion; desert conditions required filtration and dust control; northern winters brought icing risks mitigated by procedures and equipment. Logistics determined tempo: spares provisioning, dispersal of aircraft across satellite fields, and the training of ground crews for local conditions were as decisive as any single performance metric. The airframe’s reliability and straightforward access to critical systems made it a cooperative partner for squadrons working at sustained operational pace.</p>
+    <p>Escort, sweep, and interception profiles varied by theatre, but the underlying grammar remained: maintain energy, use altitude, and fight briefly and decisively. Each mark introduced for a theatre respected these fundamentals while adding the range, communications, or environmental resilience appropriate to the task.</p>
+
+    <h2 id="training">Training and Gunnery</h2>
+    <p>Conversion syllabi stressed procedural discipline: cockpit checks, engine management, and pattern work that internalized throttle‑rudder coordination on the ground and in the climb. Gunnery instruction moved beyond simple marksmanship to tactical sighting — harmonization distances, lead computation with gyro sights, and the judgement to fire only when geometry promised results. The aircraft’s stability as a gun platform, particularly after the adoption of cannon and refined heating for reliability, made that judgement pay off.</p>
+
+    <h2 id="maintenance">Maintenance, Field Modifications, and Resilience</h2>
+    <p>Squadron maintenance turned intent into reality. Rigging checks preserved control harmony; periodic inspection of control runs guarded against wear that could introduce play; engine monitoring and plug changes were conducted by the book to protect reliability. Field modifications — from local fairing tweaks to environmental protections — were tolerated when they served clear operational needs and did not threaten safety or performance. This practical, documented flexibility is one reason the aircraft remained serviceable under pressures that could have broken a less disciplined program.</p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: Line crew performing evening maintenance by lamplight; panels removed; a rigger sighting along an aileron trailing edge." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Rigging is handling: repeatable geometry and careful control runs preserved the type’s signature feel.</p>
+    </div>
+
+    <h2 id="postwar">Post‑War Influence and Continuity</h2>
+    <p>Post‑war, the aircraft’s lessons migrated into training curricula, restoration shops, and design studios. Engineers pointed to the type when explaining how aerodynamic cleanliness and structural honesty pay dividends across the envelope. Pilots referenced its control harmony when discussing the feel that fosters precision. Museum programs and flying collections preserved not only artifacts but practices — jigging, riveting standards, inspection — that keep the connection between drawing and performance visible to the public.</p>
+    <p>This continuity matters. It anchors public memory to the realities of design and labour. It also equips a new generation of engineers and maintainers to appreciate that the elegant solution is often the robust one, because it removes the unnecessary and gives margin back to the pilot.</p>
+
+    <h2 id="technical-notes">Selected Technical Notes</h2>
+    <ul>
+      <li>Elliptical planform aimed at near‑ideal lift distribution with practical allowances for structure and armament, protecting induced‑drag assumptions while enabling benign stall behavior.</li>
+      <li>Stressed‑skin structure with a torsion‑resistant forward box limited aeroelastic twist, preserving control authority at higher speeds and loadings.</li>
+      <li>Cooling installations refined for pressure recovery and effective exit control, limiting drag growth as power and heat rejection increased.</li>
+      <li>Propeller and supercharger evolution matched to climbing, escort, and interception regimes, sustaining energy advantages without sacrificing handling balance.</li>
+      <li>Armament progression from rifle‑calibre batteries to cannon, supported by heating and feed improvements for reliability at altitude.</li>
+    </ul>
   `,
   excerpt: `The complete development story of the Supermarine Spitfire, from R.J. Mitchell's racing seaplanes to the legendary fighter that became the symbol of British aerial victory.`,
   author: {
