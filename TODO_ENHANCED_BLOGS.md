@@ -32,7 +32,7 @@ Queue (start → finish)
 - [x] sopwith-camel-wwi-fighter
 - [x] supermarine-spitfire-development-history
 - [x] supermarine-spitfire-development-evolution
-- [x] sycamore-seeds-helicopter-evolution
+- [ ] sycamore-seeds-helicopter-evolution
 - [ ] test-pilot-biography-eric-brown
 - [ ] aviation-manufacturing-wartime-production
 - [ ] korean-war-air-combat
