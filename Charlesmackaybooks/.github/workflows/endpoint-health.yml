@@ -40,4 +40,16 @@ jobs:
           curl -fsSI https://charlesmackaybooks.com/sitemap.xml | sed -n '1,20p'
           curl -fsSL https://charlesmackaybooks.com/sitemap.xml | head -c 700
 
+      - name: Check sitemap-indexing-fix.xml
+        run: |
+          set -euo pipefail
+          curl -fsSI https://charlesmackaybooks.com/sitemap-indexing-fix.xml | sed -n '1,20p'
+          curl -fsSL https://charlesmackaybooks.com/sitemap-indexing-fix.xml | head -c 700
+
+      - name: Check sitemap-images.xml
+        run: |
+          set -euo pipefail
+          curl -fsSI https://charlesmackaybooks.com/sitemap-images.xml | sed -n '1,20p'
+          curl -fsSL https://charlesmackaybooks.com/sitemap-images.xml | head -c 700
+
 

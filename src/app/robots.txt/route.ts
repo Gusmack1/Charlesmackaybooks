@@ -20,10 +20,13 @@ Allow: /*.png$
 Allow: /products.xml
 Allow: /merchant-feed.txt
 Allow: /shopping-actions.xml
+Allow: /book-covers/
+Allow: /blog-images/
 
 # Sitemaps
 Sitemap: https://charlesmackaybooks.com/sitemap.xml
 Sitemap: https://charlesmackaybooks.com/sitemap-indexing-fix.xml
+Sitemap: https://charlesmackaybooks.com/sitemap-images.xml
 
 # Allow Google Rich Results Test
 User-agent: Google-InspectionTool

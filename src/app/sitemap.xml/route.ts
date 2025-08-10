@@ -71,6 +71,8 @@ function buildSitemap(): string {
     .join('\n')
 
   const staticUrls = [
+    { path: '/books', priority: '0.95' },
+    { path: '/blog', priority: '0.9' },
     { path: '/about', priority: '0.8' },
     { path: '/contact', priority: '0.7' },
     { path: '/how-to-order', priority: '0.6' },
