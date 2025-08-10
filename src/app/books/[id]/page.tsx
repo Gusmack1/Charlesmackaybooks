@@ -329,8 +329,49 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   };
 
   const entries = fileText ? parseEntries(fileText) : [];
-  const normaliseIsbn = (s?: string) => (s ? s.replace(/[^0-9Xx]/g, '') : '');
-  const byIsbn = entries.find(e => e.isbn && e.isbn === normaliseIsbn(book.isbn));
+
+  // ISBN helpers: normalize and convert between 10/13 to generate match candidates
+  const normalizeIsbn = (s?: string) => (s ? s.replace(/[^0-9Xx]/g, '').toUpperCase() : '');
+  const computeIsbn13From10 = (isbn10?: string): string | undefined => {
+    const n = normalizeIsbn(isbn10);
+    if (!n || n.length !== 10) return undefined;
+    const core = n.slice(0, 9);
+    const prefixed = '978' + core;
+    const digits = prefixed.split('').map(d => parseInt(d, 10));
+    if (digits.some(Number.isNaN)) return undefined;
+    const sum = digits.reduce((acc, d, idx) => acc + d * (idx % 2 === 0 ? 1 : 3), 0);
+    const check = (10 - (sum % 10)) % 10;
+    return prefixed + String(check);
+  };
+  const computeIsbn10From13 = (isbn13?: string): string | undefined => {
+    const n = normalizeIsbn(isbn13);
+    if (!n || n.length !== 13 || (n.slice(0, 3) !== '978' && n.slice(0, 3) !== '979')) return undefined;
+    const core = n.slice(3, 12); // 9 digits
+    const digits = core.split('').map(d => parseInt(d, 10));
+    if (digits.some(Number.isNaN)) return undefined;
+    const sum = digits.reduce((acc, d, idx) => acc + d * (10 - idx), 0);
+    let checkVal = 11 - (sum % 11);
+    if (checkVal === 10) return core + 'X';
+    if (checkVal === 11) checkVal = 0;
+    return core + String(checkVal);
+  };
+  const generateIsbnCandidates = (raw?: string): string[] => {
+    const base = normalizeIsbn(raw);
+    if (!base) return [];
+    const candidates = new Set<string>();
+    candidates.add(base);
+    if (base.length === 10) {
+      const v13 = computeIsbn13From10(base);
+      if (v13) candidates.add(v13);
+    } else if (base.length === 13) {
+      const v10 = computeIsbn10From13(base);
+      if (v10) candidates.add(v10);
+    }
+    return Array.from(candidates);
+  };
+
+  const bookIsbnCandidates = generateIsbnCandidates(book.isbn);
+  const byIsbn = entries.find(e => !!e.isbn && bookIsbnCandidates.includes(normalizeIsbn(e.isbn)));
   const byTitle = entries.find(e => e.title.toLowerCase().includes(book.title.toLowerCase()) || book.title.toLowerCase().includes(e.title.toLowerCase()));
   const info = byIsbn || byTitle;
 
