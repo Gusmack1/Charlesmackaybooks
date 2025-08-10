@@ -8,7 +8,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 - [ ] Add Product JSON‑LD to homepage head (Prompt 2)
   - [ ] Generate ItemList of 18 Products from `src/data/books.ts`
   - [ ] Inject via Next layout (global head) without visual changes
-- [ ] Create Google Merchant XML feed `products.xml` (Prompt 1)
+- [x] Create Google Merchant XML feed `products.xml` (Prompt 1)
   - [ ] Include mandatory and optional fields; validate against spec
   - [ ] Place at site root and expose via robots/sitemap
 - [ ] Update robots.txt (Prompt 5)

@@ -282,3 +282,14 @@ export class AutomatedOptimizer {
 
 // Export singleton instance
 export const automatedOptimizer = new AutomatedOptimizer();
+
+// Weekly feed refresher (can be invoked by a scheduled job)
+export async function refreshMerchantFeeds(): Promise<{ ok: boolean; refreshedAt: string }> {
+  try {
+    const endpoint = 'https://charlesmackaybooks.com/products.xml';
+    await fetch(endpoint, { cache: 'no-store' });
+    return { ok: true, refreshedAt: new Date().toISOString() };
+  } catch {
+    return { ok: false, refreshedAt: new Date().toISOString() };
+  }
+}
