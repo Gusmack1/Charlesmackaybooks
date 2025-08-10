@@ -1,0 +1,41 @@
+# Enable compression for faster loading
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript text/xml application/xml application/json
+</IfModule>
+
+# Set proper MIME types for product feeds
+AddType application/xml .xml
+AddType text/tab-separated-values .tsv
+AddType application/ld+json .jsonld
+
+# Cache control for product images
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Header set Cache-Control "max-age=604800, public"
+  </FilesMatch>
+</IfModule>
+
+# Redirect for product URLs using hash
+RewriteEngine On
+RewriteRule ^product/([0-9]+)$ /#$1 [NE,L,R=301]
+
+# Allow Google Merchant Bot (environment hints)
+SetEnvIfNoCase User-Agent "Googlebot" google_bot
+SetEnvIfNoCase User-Agent "Googlebot-Image" google_image
+SetEnvIfNoCase User-Agent "Google-Merchant" google_merchant
+
+# Custom headers for products
+<IfModule mod_headers.c>
+  <Files "index.html">
+    Header set X-Robots-Tag "index, follow, max-image-preview:large, max-snippet:-1"
+    Header set X-Product-Site "true"
+  </Files>
+</IfModule>
+
+# Protect product feed files
+<Files "products.xml">
+  Order Allow,Deny
+  Allow from all
+</Files>
+
+

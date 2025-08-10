@@ -24,7 +24,7 @@ This file tracks backend‑only SEO and Google Merchant tasks. No visual changes
 ## Week 3 — Feed Files
 - [x] Create `merchant-feed.txt` (TSV) (Prompt 7)
 - [ ] Create `shopping-actions.xml` (Prompt 12)
-- [ ] Add `.htaccess` (Apache only) safe rules (Prompt 10)
+- [x] Add `.htaccess` (Apache only) safe rules (Prompt 10)
 
 ## Week 4 — Final Integration
 - [ ] Add JS data layer for Merchant (Prompt 11)
