@@ -193,27 +193,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   const keywords = generateKeywords(book);
 
-  // Enhanced meta description
+  // Meta description derived strictly from book content (no extra marketing)
   const generateDescription = (book: Book) => {
-    let description = book.description;
-
-    // Add selling points
-    description += ` Written by renowned aviation historian Charles E. MacKay. ${book.condition} condition. ISBN: ${book.isbn}.`;
-
-    // Add academic credentials if available
-    if (book.citationCount && book.citationCount > 0) {
-      description += ` Cited ${book.citationCount} times in academic research.`;
-    }
-
-    // Add institutional backing
-    if (book.academicInstitutions && book.academicInstitutions.length > 0) {
-      description += ` Used by ${book.academicInstitutions[0]} and other leading institutions.`;
-    }
-
-    // Add purchase info
-    description += ` Available for £${book.price}. FREE shipping worldwide.`;
-
-    return description;
+    const base = (book.description || '').replace(/\s+/g, ' ').trim();
+    // Clamp to typical meta length ~160 chars without cutting mid‑word
+    if (base.length <= 160) return base;
+    const slice = base.slice(0, 157);
+    const lastSpace = slice.lastIndexOf(' ');
+    return (lastSpace > 120 ? slice.slice(0, lastSpace) : slice) + '…';
   };
 
   return {
@@ -263,7 +250,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       site: '@charlesmackaybooks',
       creator: '@charlesmackay',
       title: `${book.title} | Aviation History Book`,
-      description: `${book.category} book by Charles E. MacKay. £${book.price}. FREE shipping worldwide.`,
+      description: generateDescription(book),
       images: {
         url: book.imageUrl || `/book-covers/${book.id}.jpg`,
         alt: `${book.title} - Aviation History Book Cover`,
