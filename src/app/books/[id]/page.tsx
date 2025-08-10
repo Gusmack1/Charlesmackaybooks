@@ -362,8 +362,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   const byTitle = entries.find(e => e.title.toLowerCase().includes(book.title.toLowerCase()) || book.title.toLowerCase().includes(e.title.toLowerCase()));
   const info = byIsbn || byTitle;
 
-  // Prefer authoritative long-form copy from Bookinfo.txt; fallback to curated summary
-  const preferredDescription = info?.description || book.description || '';
+  // Prefer curated summary from books.ts; fallback to sanitized Bookinfo.txt content
+  const preferredDescription = book.description || info?.description || '';
   const weightFromInfo = info?.weightGrams;
 
   // Remove legacy ecommerce boilerplate (price/ISBN/shipping) if present
