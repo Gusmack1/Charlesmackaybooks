@@ -57,3 +57,34 @@
   for = "/blog-images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache control for feeds and sitemaps
+[[headers]]
+  for = "/products.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, s-maxage=86400"
+
+[[headers]]
+  for = "/merchant-feed.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, s-maxage=86400"
+
+[[headers]]
+  for = "/shopping-actions.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, s-maxage=86400"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/sitemap-indexing-fix.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, s-maxage=3600"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, s-maxage=3600"
