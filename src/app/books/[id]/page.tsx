@@ -502,6 +502,41 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             </div>
           </div>
 
+          {/* At a Glance (derived only from existing fields) */}
+          <div className="card mt-8 content">
+            <h3 className="content h3">At a Glance</h3>
+            <ul className="list-disc list-inside text-secondary space-y-1">
+              <li><span className="font-semibold text-primary">Category:</span> {book.category}</li>
+              {book.pageCount ? (
+                <li><span className="font-semibold text-primary">Pages:</span> {book.pageCount}</li>
+              ) : null}
+              {book.publicationYear ? (
+                <li><span className="font-semibold text-primary">Publication Year:</span> {book.publicationYear}</li>
+              ) : null}
+              {book.isbn ? (
+                <li><span className="font-semibold text-primary">ISBN:</span> {book.isbn}</li>
+              ) : null}
+              <li><span className="font-semibold text-primary">Condition:</span> {book.condition}</li>
+              <li><span className="font-semibold text-primary">In Stock:</span> {book.inStock ? 'Yes' : 'No'}</li>
+              <li><span className="font-semibold text-primary">Price:</span> £{book.price}</li>
+              {(weightFromInfo || (book as any).weight) ? (
+                <li><span className="font-semibold text-primary">Weight:</span> {weightFromInfo || (book as any).weight}g</li>
+              ) : null}
+              {book.era && book.era.length ? (
+                <li><span className="font-semibold text-primary">Era:</span> {book.era.join(', ')}</li>
+              ) : null}
+              {book.aircraftTypes && book.aircraftTypes.length ? (
+                <li><span className="font-semibold text-primary">Aircraft / Systems:</span> {book.aircraftTypes.join(', ')}</li>
+              ) : null}
+              {book.geographicFocus && book.geographicFocus.length ? (
+                <li><span className="font-semibold text-primary">Geographic Focus:</span> {book.geographicFocus.join(', ')}</li>
+              ) : null}
+              {book.researchThemes && book.researchThemes.length ? (
+                <li><span className="font-semibold text-primary">Research Themes:</span> {book.researchThemes.join(', ')}</li>
+              ) : null}
+            </ul>
+          </div>
+
           {/* Scope and Coverage */}
           {(book.era?.length || book.aircraftTypes?.length || book.geographicFocus?.length || book.researchThemes?.length) ? (
             <div className="card mt-8 content">
