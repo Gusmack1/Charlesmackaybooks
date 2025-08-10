@@ -167,11 +167,6 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
       {/* Article Header */}
       <header className="mb-8 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white rounded-lg p-6">
-        <div className="mb-4">
-          <span className="inline-block badge badge-blue text-sm font-medium rounded-full text-white">
-            {post.category}
-          </span>
-        </div>
         
         <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
           {post.title}
