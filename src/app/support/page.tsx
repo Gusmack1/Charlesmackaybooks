@@ -67,6 +67,17 @@ export default function SupportPage() {
             </div>
           </div>
 
+          {/* Payment & Ordering */}
+          <div className="card content mt-8">
+            <h3 className="content h3">Payment & Ordering</h3>
+            <ul className="list-disc list-inside text-secondary space-y-1">
+              <li>eBay Store: <a className="underline" href="https://www.ebay.co.uk/usr/chaza87" target="_blank" rel="noopener noreferrer">purchase with buyer protection</a></li>
+              <li>PayPal Direct: email to arrange direct payment</li>
+              <li>Website Cart: add multiple books and check out</li>
+            </ul>
+            <p className="text-secondary mt-2">Full instructions: <a className="underline" href="/how-to-order">How to Order</a></p>
+          </div>
+
           {/* Shipping Summary */}
           <div className="card content mt-8">
             <h3 className="content h3">Shipping Summary</h3>
@@ -95,6 +106,17 @@ export default function SupportPage() {
             <p className="text-secondary mt-3">Full details: <a className="underline" href="/how-to-order">How to Order</a></p>
           </div>
 
+          {/* Damaged or Not as Described */}
+          <div className="card content mt-8">
+            <h3 className="content h3">Damaged or Not as Described</h3>
+            <ol className="list-decimal list-inside text-secondary space-y-1">
+              <li>Email with your title, ISBN, date of purchase and brief description of the issue</li>
+              <li>Attach clear photos of any damage (book and packaging if available)</li>
+              <li>We’ll reply with next steps; if a return is needed, we’ll confirm the method</li>
+            </ol>
+            <p className="text-secondary mt-2">See <a className="underline" href="/returns">Returns & Refunds</a> for the full process.</p>
+          </div>
+
           {/* FAQs */}
           <div className="card content mt-8">
             <h3 className="content h3">Frequently Asked Questions</h3>
@@ -110,6 +132,10 @@ export default function SupportPage() {
               <div>
                 <div className="font-semibold text-primary">Do you ship internationally?</div>
                 <div>Yes – worldwide shipping with typical delivery times listed above.</div>
+              </div>
+              <div>
+                <div className="font-semibold text-primary">Do you accept institutional orders?</div>
+                <div>Yes – universities and libraries can use purchase orders. Email for arrangements.</div>
               </div>
             </div>
           </div>
