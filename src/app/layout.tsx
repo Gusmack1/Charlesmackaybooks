@@ -370,7 +370,19 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        {/* Footer removed site-wide */}
+        {/* Footer: minimal site-wide links for policy discoverability */}
+        <footer className="mt-12 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm opacity-90">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="/how-to-order" className="underline">How to Order</a>
+              <span className="hidden sm:inline">•</span>
+              <a href="/returns" className="underline">Returns & Refunds</a>
+              <span className="hidden sm:inline">•</span>
+              <a href="/contact" className="underline">Contact</a>
+            </div>
+            <div className="mt-4">© {new Date().getFullYear()} Charles E. MacKay Books</div>
+          </div>
+        </footer>
         <Analytics />
         <SpeedInsights />
 
