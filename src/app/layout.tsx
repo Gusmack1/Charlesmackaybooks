@@ -334,6 +334,7 @@ export default function RootLayout({
                 <meta property="book:isbn" content="multiple" />
                 <meta property="book:release_date" content="2023" />
                 <meta property="book:publisher" content="A MacKay" />
+                <meta property="product:price:valid_until" content="2026-12-31" />
 
                 {/* Business Verification */}
                 <meta name="google-site-verification" content="your-google-verification-code" />
