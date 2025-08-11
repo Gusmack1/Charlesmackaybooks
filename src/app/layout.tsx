@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s',
     yandex: 'your-yandex-verification-code',
     yahoo: 'your-yahoo-verification-code',
   },
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
   category: 'Books & Literature',
   classification: 'Aviation History',
   other: {
-    'google-site-verification': 'your-google-verification-code',
+    'google-site-verification': 'GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s',
     'msvalidate.01': 'your-bing-verification-code',
     'yandex-verification': 'your-yandex-verification-code',
   }
