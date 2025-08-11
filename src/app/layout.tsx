@@ -380,7 +380,18 @@ export default function RootLayout({
               <span className="hidden sm:inline">•</span>
               <a href="/contact" className="underline text-white">Contact</a>
             </div>
-            <div className="mt-4">© {new Date().getFullYear()} Charles E. MacKay Books</div>
+            <div className="mt-4">© {new Date().getFullYear()} Charles E. MacKay Books · All rights reserved</div>
+            <div className="mt-1">
+              <span>A MACKAY (PUBLISHER) LTD · Company number </span>
+              <a
+                href="https://find-and-update.company-information.service.gov.uk/company/SC858624"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-white"
+              >
+                SC858624
+              </a>
+            </div>
           </div>
         </footer>
         <Analytics />
