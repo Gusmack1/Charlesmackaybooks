@@ -371,14 +371,14 @@ export default function RootLayout({
           {children}
         </main>
         {/* Footer: minimal site-wide links for policy discoverability */}
-        <footer className="mt-12 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm opacity-90">
+        <footer className="mt-12 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm opacity-90 text-white">
           <div className="container mx-auto px-6">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/how-to-order" className="underline">How to Order</a>
+              <a href="/how-to-order" className="underline text-white">How to Order</a>
               <span className="hidden sm:inline">•</span>
-              <a href="/support" className="underline">Support</a>
+              <a href="/support" className="underline text-white">Support</a>
               <span className="hidden sm:inline">•</span>
-              <a href="/contact" className="underline">Contact</a>
+              <a href="/contact" className="underline text-white">Contact</a>
             </div>
             <div className="mt-4">© {new Date().getFullYear()} Charles E. MacKay Books</div>
           </div>
