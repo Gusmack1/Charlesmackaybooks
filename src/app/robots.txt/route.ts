@@ -28,6 +28,10 @@ Sitemap: https://charlesmackaybooks.com/sitemap.xml
 Sitemap: https://charlesmackaybooks.com/sitemap-indexing-fix.xml
 Sitemap: https://charlesmackaybooks.com/sitemap-images.xml
 
+# Key policies/pages
+Allow: /how-to-order
+Allow: /returns
+
 # Allow Google Rich Results Test
 User-agent: Google-InspectionTool
 Allow: /
