@@ -222,10 +222,8 @@ export default function UnifiedSchema({
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "25",
-        "bestRating": "5",
-        "worstRating": "1"
+        "ratingValue": "5",
+        "reviewCount": "1"
       },
       "review": [
         {
@@ -268,6 +266,11 @@ export default function UnifiedSchema({
         "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
         "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
         "merchantReturnLink": `${baseUrl}/returns`
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "1"
       }
     });
   }
@@ -309,10 +312,8 @@ export default function UnifiedSchema({
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "25",
-            "bestRating": "5",
-            "worstRating": "1"
+            "ratingValue": "5",
+            "reviewCount": "1"
           },
           "review": [
             {
