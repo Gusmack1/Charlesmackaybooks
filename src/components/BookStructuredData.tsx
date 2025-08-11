@@ -92,7 +92,9 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
     ].join(', '),
     image: {
       '@type': 'ImageObject',
-      url: book.imageUrl || `/book-covers/${book.id}.jpg`,
+      url: (book.imageUrl && book.imageUrl.startsWith('http'))
+        ? book.imageUrl
+        : `https://charlesmackaybooks.com${(book.imageUrl || `/book-covers/${book.id}.jpg`).startsWith('/') ? '' : '/'}${book.imageUrl || `book-covers/${book.id}.jpg`}`,
       width: 400,
       height: 600,
       caption: `${book.title} by Charles E. MacKay - Aviation History Book Cover`
@@ -235,7 +237,9 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
     '@id': `https://charlesmackaybooks.com/books/${book.id}#product`,
     name: book.title,
     description: book.description,
-    image: book.imageUrl || `/book-covers/${book.id}.jpg`,
+    image: (book.imageUrl && book.imageUrl.startsWith('http'))
+      ? book.imageUrl
+      : `https://charlesmackaybooks.com${(book.imageUrl || `/book-covers/${book.id}.jpg`).startsWith('/') ? '' : '/'}${book.imageUrl || `book-covers/${book.id}.jpg`}`,
     brand: {
       '@type': 'Brand',
       name: 'Charles E. MacKay Publishing'

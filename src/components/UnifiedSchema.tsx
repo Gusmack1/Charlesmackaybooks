@@ -25,9 +25,8 @@ export default function UnifiedSchema({
     return d.toISOString().split('T')[0];
   })();
   const absoluteImage = (img?: string) => {
-    if (!img) return undefined as unknown as string;
+    if (!img) return `${baseUrl}/charles-mackay-aviation-historian.jpg`;
     if (img.startsWith('http')) return img;
-    // Ensure leading slash
     const path = img.startsWith('/') ? img : `/${img}`;
     return `${baseUrl}${path}`;
   };

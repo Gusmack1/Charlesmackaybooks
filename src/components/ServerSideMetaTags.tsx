@@ -93,13 +93,18 @@ export function generateJSONLD(props: ServerSideMetaTagsProps & {
   const baseUrl = 'https://charlesmackaybooks.com'
   const canonicalUrl = props.pageUrl.startsWith('http') ? props.pageUrl : `${baseUrl}${props.pageUrl}`
 
+  const toAbsolute = (img?: string) => {
+    if (!img) return `${baseUrl}/charles-mackay-aviation-historian.jpg`;
+    return img.startsWith('http') ? img : `${baseUrl}${img.startsWith('/') ? '' : '/'}${img}`;
+  };
+
   const baseSchema = {
     '@context': 'https://schema.org',
     '@type': props.type || 'WebPage',
     name: props.pageTitle,
     description: props.pageDescription,
     url: canonicalUrl,
-    image: props.ogImage || '/charles-mackay-aviation-historian.jpg',
+    image: toAbsolute(props.ogImage || '/charles-mackay-aviation-historian.jpg'),
     author: {
       '@type': 'Person',
       name: props.author || 'Charles E. MacKay',

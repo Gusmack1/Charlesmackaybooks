@@ -15,12 +15,18 @@ export default function ProductSchema({
 }: ProductSchemaProps) {
 
   // Generate individual product schema for each book
+  const toAbsolute = (img?: string) => {
+    const base = 'https://charlesmackaybooks.com';
+    if (!img) return `${base}/book-covers/${book.id}.jpg`;
+    return img.startsWith('http') ? img : `${base}${img.startsWith('/') ? '' : '/'}${img}`;
+  };
+
   const generateProductSchema = (book: Book) => ({
     '@type': 'Product',
     '@id': `https://charlesmackaybooks.com/books/${book.id}#product`,
     name: book.title,
     description: book.description,
-    image: book.imageUrl ? `https://charlesmackaybooks.com${book.imageUrl}` : `https://charlesmackaybooks.com/book-covers/${book.id}.jpg`,
+    image: toAbsolute(book.imageUrl) || `https://charlesmackaybooks.com/book-covers/${book.id}.jpg`,
     brand: {
       '@type': 'Brand',
       name: 'Charles E. MacKay Aviation Books'

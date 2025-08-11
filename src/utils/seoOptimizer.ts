@@ -44,7 +44,10 @@ export function generateBookMetadata(book: Book): Metadata {
   const title = `${book.title} by ${book.author} - Charles Mackay Books`;
   const description = `${book.description.substring(0, 155)}... Available for purchase with worldwide shipping. ISBN: ${book.isbn}`;
   const canonicalUrl = `${seoConfig.baseUrl}/books/${book.id}`;
-  const imageUrl = book.imageUrl || `${seoConfig.baseUrl}/book-covers/${book.id}.jpg`;
+  const imageUrl = (() => {
+    const candidate = book.imageUrl ?? `/book-covers/${book.id}.jpg`;
+    return candidate.startsWith('http') ? candidate : `${seoConfig.baseUrl}${candidate.startsWith('/') ? '' : '/'}${candidate}`;
+  })();
 
   return {
     title,
@@ -213,7 +216,10 @@ export function generateBookStructuredData(book: Book) {
     '@type': 'Product',
     name: book.title,
     description: book.description,
-    image: book.imageUrl || `${baseUrl}/book-covers/${book.id}.jpg`,
+    image: (() => {
+      const candidate = book.imageUrl ?? `/book-covers/${book.id}.jpg`;
+      return candidate.startsWith('http') ? candidate : `${baseUrl}${candidate.startsWith('/') ? '' : '/'}${candidate}`;
+    })(),
     sku: book.id,
     isbn: book.isbn,
     author: {
