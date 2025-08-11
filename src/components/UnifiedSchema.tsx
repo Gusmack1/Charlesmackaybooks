@@ -202,6 +202,7 @@ export default function UnifiedSchema({
         "priceValidUntil": priceValidUntil,
         "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
         "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
+        "merchantReturnLink": `${baseUrl}/returns`,
         "seller": {
           "@id": `${baseUrl}/#organization`
         },
@@ -265,7 +266,8 @@ export default function UnifiedSchema({
         "priceCurrency": "GBP",
         "priceValidUntil": priceValidUntil,
         "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-        "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition"
+        "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
+        "merchantReturnLink": `${baseUrl}/returns`
       }
     });
   }
@@ -302,7 +304,8 @@ export default function UnifiedSchema({
             "priceCurrency": "GBP",
             "priceValidUntil": priceValidUntil,
             "availability": book.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-            "itemCondition": book.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition"
+            "itemCondition": book.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
+            "merchantReturnLink": `${baseUrl}/returns`
           },
           "aggregateRating": {
             "@type": "AggregateRating",
