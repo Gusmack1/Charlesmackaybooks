@@ -31,6 +31,7 @@ Sitemap: https://charlesmackaybooks.com/sitemap-images.xml
 # Key policies/pages
 Allow: /how-to-order
 Allow: /returns
+Allow: /support
 
 # Allow Google Rich Results Test
 User-agent: Google-InspectionTool

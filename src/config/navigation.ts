@@ -12,6 +12,7 @@ export const primaryNavLinks: NavLinkItem[] = [
   { label: 'For Researchers', href: '/for-researchers' },
   { label: 'How to Order', href: '/how-to-order' },
   { label: 'Returns & Refunds', href: '/returns' },
+  { label: 'Support', href: '/support' },
   { label: 'About Charles', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];

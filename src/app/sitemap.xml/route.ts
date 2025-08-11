@@ -77,6 +77,7 @@ function buildSitemap(): string {
     { path: '/contact', priority: '0.7' },
     { path: '/how-to-order', priority: '0.6' },
     { path: '/returns', priority: '0.6' },
+    { path: '/support', priority: '0.6' },
     { path: '/aviation-bibliography', priority: '0.7' }
   ]
     .map((u) => `
