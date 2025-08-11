@@ -376,7 +376,7 @@ export default function RootLayout({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="/how-to-order" className="underline">How to Order</a>
               <span className="hidden sm:inline">•</span>
-              <a href="/returns" className="underline">Returns & Refunds</a>
+              <a href="/support" className="underline">Support</a>
               <span className="hidden sm:inline">•</span>
               <a href="/contact" className="underline">Contact</a>
             </div>

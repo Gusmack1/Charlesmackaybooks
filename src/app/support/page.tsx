@@ -51,9 +51,9 @@ export default function SupportPage() {
           <div className="grid md:grid-cols-2 gap-8 mt-8">
             <div className="card content">
               <h3 className="content h3">Order Help</h3>
-              <ul className="list-disc list-inside text-secondary space-y-1">
+            <ul className="list-disc list-inside text-secondary space-y-1">
                 <li><a className="underline" href="/how-to-order">How to Order</a> – purchase options and shipping</li>
-                <li><a className="underline" href="/returns">Returns & Refunds</a> – process and timelines</li>
+              <li><a className="underline" href="/returns">Returns & Refunds</a> – process and timelines</li>
                 <li>Order status: email your title, ISBN, and date of purchase</li>
               </ul>
             </div>
