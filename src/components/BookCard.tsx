@@ -92,8 +92,6 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
   return (
     <div
       className="group card overflow-hidden hover:shadow-lg transition-shadow"
-      itemScope
-      itemType="https://schema.org/Product"
       id={`book-${book.isbn || book.id}`}
     >
       <Link href={`/books/${book.id}`} onClick={handleBookClick} className="block">
@@ -148,23 +146,7 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
             📦 Weight: {(book as any).weight || 300}g • 🏷️ ISBN: {book.isbn || 'N/A'}
           </div>
 
-          {/* Invisible microdata meta for additional product identifiers */}
-          <meta itemProp="sku" content={book.isbn || book.id} />
-          <meta itemProp="gtin13" content={book.isbn || book.id} />
-          <meta itemProp="productID" content={`isbn:${book.isbn || book.id}`} />
-          <meta itemProp="category" content="Books" />
-          <meta itemProp="author" content="Charles E. MacKay" />
-
-          {/* Non-visual Offer microdata */}
-          <div itemProp="offers" itemScope itemType="https://schema.org/Offer" className="hidden">
-            <meta itemProp="price" content={Number(book.price).toFixed(2)} />
-            <meta itemProp="priceCurrency" content="GBP" />
-            <meta itemProp="priceValidUntil" content="2026-12-31" />
-            <meta itemProp="availability" content={book.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"} />
-            <meta itemProp="itemCondition" content="https://schema.org/NewCondition" />
-            <meta itemProp="seller" content="Charles E. MacKay Books" />
-            <link itemProp="url" href={`https://charlesmackaybooks.com/books/${book.id}`} />
-          </div>
+          {/* microdata removed; rely on JSON-LD for Product/Offer schema */}
         </div>
       </Link>
 
