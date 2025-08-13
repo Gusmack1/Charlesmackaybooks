@@ -243,6 +243,16 @@ export default function RootLayout({
                             handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 2, unitCode: 'DAY' },
                             transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 5, unitCode: 'DAY' }
                           }
+                        },
+                        hasMerchantReturnPolicy: {
+                          '@type': 'MerchantReturnPolicy',
+                          applicableCountry: 'GB',
+                          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                          merchantReturnDays: 30,
+                          returnMethod: 'https://schema.org/ReturnByMail',
+                          returnFees: 'https://schema.org/FreeReturn',
+                          returnShippingFeesAmount: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
+                          returnPolicyUrl: `${domain}/returns`
                         }
                       },
                       aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '100', bestRating: '5' },
