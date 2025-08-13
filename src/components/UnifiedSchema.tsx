@@ -1,3 +1,5 @@
+import { FileX } from "lucide-react";
+
 interface UnifiedSchemaProps {
   pageType?: 'homepage' | 'books' | 'book-detail' | 'blog' | 'blog-post' | 'category' | 'page';
   pageTitle?: string;
