@@ -247,10 +247,11 @@ export function generateBookStructuredData(book: Book) {
           value: '1.95',
           currency: 'GBP'
         },
-        shippingDestination: {
-          '@type': 'DefinedRegion',
-          addressCountry: 'GB'
-        },
+        shippingDestination: [
+          { '@type': 'DefinedRegion', addressCountry: 'GB' },
+          { '@type': 'DefinedRegion', addressRegion: 'Europe' },
+          { '@type': 'DefinedRegion', addressCountry: 'US' }
+        ],
         deliveryTime: {
           '@type': 'ShippingDeliveryTime',
           businessDays: {
