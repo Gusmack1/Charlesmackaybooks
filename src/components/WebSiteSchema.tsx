@@ -19,7 +19,7 @@ export default function WebSiteSchema() {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://charlesmackaybooks.com/books?search={search_term_string}'
+          urlTemplate: 'https://charlesmackaybooks.com/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       },

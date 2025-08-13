@@ -47,11 +47,11 @@ export default function UnifiedSchema({
         "publisher": {
           "@id": `${baseUrl}/#person`
         },
-        "potentialAction": {
+         "potentialAction": {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": `${baseUrl}/books?search={search_term_string}`
+            "urlTemplate": `${baseUrl}/search?q={search_term_string}`
           },
           "query-input": "required name=search_term_string"
         },

@@ -41,7 +41,7 @@ export interface PageSEOData {
  * Generate optimized metadata for book detail pages
  */
 export function generateBookMetadata(book: Book): Metadata {
-  const title = `${book.title} by ${book.author} - Charles Mackay Books`;
+  const title = `${book.title} - Charles Mackay Books`;
   const description = `${book.description.substring(0, 155)}... Available for purchase with worldwide shipping. ISBN: ${book.isbn}`;
   const canonicalUrl = `${seoConfig.baseUrl}/books/${book.id}`;
   const imageUrl = (() => {
@@ -54,7 +54,7 @@ export function generateBookMetadata(book: Book): Metadata {
     description,
     keywords: [
       book.title,
-      book.author,
+      'Charles E. MacKay',
       book.category,
       'aviation history',
       'military aircraft',
@@ -62,7 +62,7 @@ export function generateBookMetadata(book: Book): Metadata {
       'historical research',
       book.isbn || ''
     ].filter(Boolean),
-    canonical: canonicalUrl,
+    // alternates included once below
     openGraph: {
       title,
       description,
@@ -86,12 +86,10 @@ export function generateBookMetadata(book: Book): Metadata {
       description,
       images: [imageUrl]
     },
-    alternates: {
-      canonical: canonicalUrl
-    },
+    alternates: { canonical: canonicalUrl },
     other: {
-      'article:author': book.author,
-      'article:published_time': book.publicationDate || '',
+      'article:author': 'Charles E. MacKay',
+      'article:published_time': (book as any).publicationDate || String(book.publicationYear || ''),
       'book:isbn': book.isbn || '',
       'product:price:amount': book.price.toString(),
       'product:price:currency': 'GBP',
@@ -121,7 +119,7 @@ export function generateCategoryMetadata(category: string, bookCount: number): M
       'aviation research',
       'historical books'
     ],
-    canonical: canonicalUrl,
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title,
       description,
@@ -135,9 +133,6 @@ export function generateCategoryMetadata(category: string, bookCount: number): M
       site: seoConfig.twitterHandle,
       title,
       description
-    },
-    alternates: {
-      canonical: canonicalUrl
     }
   };
 }
@@ -168,7 +163,7 @@ export function generateBlogMetadata(
       'aircraft development',
       'military history'
     ],
-    canonical: canonicalUrl,
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: fullTitle,
       description,
@@ -192,9 +187,6 @@ export function generateBlogMetadata(
       title: fullTitle,
       description,
       images: [imageUrl]
-    },
-    alternates: {
-      canonical: canonicalUrl
     },
     other: {
       'article:author': 'Charles Mackay',
@@ -224,7 +216,7 @@ export function generateBookStructuredData(book: Book) {
     isbn: book.isbn,
     author: {
       '@type': 'Person',
-      name: book.author
+      name: 'Charles E. MacKay'
     },
     publisher: {
       '@type': 'Organization',
@@ -346,7 +338,7 @@ export function generateOrganizationStructuredData() {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${baseUrl}/books?search={search_term_string}`
+        urlTemplate: `${baseUrl}/search?q={search_term_string}`
       },
       'query-input': 'required name=search_term_string'
     }
@@ -389,7 +381,7 @@ export function generateWebsiteStructuredData() {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${baseUrl}/books?search={search_term_string}`
+        urlTemplate: `${baseUrl}/search?q={search_term_string}`
       },
       'query-input': 'required name=search_term_string'
     },
@@ -506,7 +498,7 @@ export function generateSitemapData(books: Book[]) {
     pages: [...staticPages, ...bookPages, ...categoryPages],
     images: books.map(book => ({
       url: book.imageUrl || `${baseUrl}/book-covers/${book.id}.jpg`,
-      caption: `${book.title} by ${book.author}`,
+      caption: `${book.title} by Charles E. MacKay`,
       title: book.title
     }))
   };
