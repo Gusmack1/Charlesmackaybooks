@@ -216,8 +216,10 @@ export default function RootLayout({
                     item: {
                       '@type': 'Product',
                       '@id': `${domain}#isbn-${book.isbn || book.id}`,
+                      url: `${domain}/books/${book.id}`,
                       name: book.title,
                       description: (book.description || '').slice(0, 5000),
+                      image: `${domain}${(book.imageUrl || `/book-covers/${book.id}.jpg`).startsWith('/') ? '' : '/'}${book.imageUrl || `book-covers/${book.id}.jpg`}`,
                       sku: book.isbn || book.id,
                       gtin13: book.isbn || book.id,
                       mpn: book.isbn || book.id,
