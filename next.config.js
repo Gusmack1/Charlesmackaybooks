@@ -29,6 +29,12 @@ const nextConfig = {
   // Redirect configuration - aircraft pages moved to blog
   async redirects() {
     return [
+      // Consolidate old /book/:id paths to canonical /books/:id
+      {
+        source: '/book/:id',
+        destination: '/books/:id',
+        permanent: true,
+      },
       {
         source: '/aircraft/bristol-fighter',
         destination: '/blog/bristol-fighter-f2b-brisfit',
