@@ -212,9 +212,15 @@ export default function UnifiedSchema({
             "value": "0.00",
             "currency": "GBP"
           },
+          "shippingDestination": [
+            { "@type": "DefinedRegion", "addressCountry": "GB" },
+            { "@type": "DefinedRegion", "addressRegion": "Europe" },
+            { "@type": "DefinedRegion", "addressCountry": "US" }
+          ],
           "deliveryTime": {
             "@type": "ShippingDeliveryTime",
-            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" }
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
           },
           "shippingLabel": "Free worldwide shipping"
         }
@@ -307,7 +313,21 @@ export default function UnifiedSchema({
             "priceValidUntil": priceValidUntil,
             "availability": book.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
             "itemCondition": book.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
-            "merchantReturnLink": `${baseUrl}/returns`
+             "merchantReturnLink": `${baseUrl}/returns`,
+             "shippingDetails": {
+               "@type": "OfferShippingDetails",
+               "shippingRate": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
+               "shippingDestination": [
+                 { "@type": "DefinedRegion", "addressCountry": "GB" },
+                 { "@type": "DefinedRegion", "addressRegion": "Europe" },
+                 { "@type": "DefinedRegion", "addressCountry": "US" }
+               ],
+               "deliveryTime": {
+                 "@type": "ShippingDeliveryTime",
+                 "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+                 "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+               }
+             }
           },
           "aggregateRating": {
             "@type": "AggregateRating",
