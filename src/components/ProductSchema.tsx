@@ -85,6 +85,16 @@ export default function ProductSchema({
             unitCode: 'DAY'
           }
         }
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'GB',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
+        returnShippingFeesAmount: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
+        returnPolicyUrl: 'https://charlesmackaybooks.com/returns'
       }
     },
     // Required: aggregateRating field to fix Google indexing error
