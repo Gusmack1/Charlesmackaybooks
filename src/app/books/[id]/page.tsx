@@ -421,9 +421,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       'enemy-luftwaffe-1945': 'luftwaffe-1945-final-year',
       'clydeside-aviation-vol2': 'clydeside-aviation-revolution',
       'flying-for-kaiser': 'german-aircraft-great-war-development',
-      'dieter-dengler': 'korean-war-air-combat',
-      'modern-furniture': 'aviation-manufacturing-wartime-production',
-      'birth-atomic-bomb': 'british-nuclear-deterrent-v-force',
+      'dieter-dengler': 'dieter-dengler-skyraider-escape',
+      'modern-furniture': 'morris-furniture-war-work-aviation',
+      'birth-atomic-bomb': 'maud-alsos-atomic-program',
       'dorothy-wordsworth': 'dorothy-wordsworth-scottish-tour-1803',
     };
     if ((b as any).id && idToSlug[(b as any).id as string]) return idToSlug[(b as any).id as string];

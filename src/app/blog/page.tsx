@@ -117,6 +117,15 @@ const blogCategories = {
       image: '/blog-images/default-generic.svg',
       tags: ['WWI Aviation', 'Albatros D.Va', 'German Fighter'],
       readTime: '22 min'
+    },
+    {
+      title: 'Aces, Jagdgeschwader, and Organisation: German Fighter Culture in WWI',
+      slug: 'german-aces-organization-wwi',
+      excerpt: 'Von Hoeppner’s reforms, squadron tactics, and the rise of the “ace” in German fighter aviation.',
+      date: 'August 14, 2025',
+      image: '/blog-images/default-generic.svg',
+      tags: ['WWI Aviation', 'German Aces', 'Jagdgeschwader'],
+      readTime: '16 min'
     }
   ],
   'WWII Aviation': [
@@ -271,6 +280,15 @@ const blogCategories = {
       image: '/blog-images/supermarine-s6-schneider-race.jpg',
       tags: ['Aviation Biography', 'Schneider Trophy', 'Philanthropy', 'Aviation History'],
       readTime: '13 min'
+    },
+    {
+      title: 'Dieter Dengler and the Skyraider: Shoot‑down, Captivity, Escape',
+      slug: 'dieter-dengler-skyraider-escape',
+      excerpt: 'A‑1 Skyraider endurance, the Laos shoot‑down, captivity, and a daring escape—carrier ops context.',
+      date: 'August 14, 2025',
+      image: '/blog-images/default-generic.svg',
+      tags: ['Aviation Biography', 'Dieter Dengler', 'Skyraider'],
+      readTime: '12 min'
     }
   ],
   'Helicopter History': [
@@ -394,6 +412,15 @@ const blogCategories = {
       image: '/blog-images/rohrbach-ro-ix-aircraft.jpg',
       tags: ['Industrial History', 'Rohrbach Revolution', 'Metal Construction', 'Aviation Engineering'],
       readTime: '15 min'
+    },
+    {
+      title: 'From Liners to Lancaster Parts: Morris Furniture’s War Work and Aviation Supply Chains',
+      slug: 'morris-furniture-war-work-aviation',
+      excerpt: 'How Glasgow’s Morris Furniture pivoted to rifle stocks, Upkeep/Highball components, rotor blades, and aerodynamic models.',
+      date: 'August 14, 2025',
+      image: '/blog-images/default-generic.svg',
+      tags: ['Industrial History', 'Glasgow', 'Upkeep', 'Weir', 'Cierva'],
+      readTime: '18 min'
     }
   ]
   ,
@@ -406,6 +433,18 @@ const blogCategories = {
       image: '/blog-images/default-generic.svg',
       tags: ['Travel Literature', 'Dorothy Wordsworth', 'Scottish Tour 1803', 'Romanticism'],
       readTime: '18 min'
+    }
+  ]
+  ,
+  'Military History': [
+    {
+      title: 'From MAUD to Alsos: Documents Behind the Allied Atomic Program',
+      slug: 'maud-alsos-atomic-program',
+      excerpt: 'MAUD, Quebec Agreement, Alsos, and 1945 statements—the documentary spine of the bomb.',
+      date: 'August 14, 2025',
+      image: '/blog-images/default-generic.svg',
+      tags: ['Military History', 'MAUD', 'Alsos', 'Atomic Bomb'],
+      readTime: '16 min'
     }
   ]
 }
