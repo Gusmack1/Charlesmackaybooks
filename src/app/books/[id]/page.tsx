@@ -424,6 +424,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       'dieter-dengler': 'korean-war-air-combat',
       'modern-furniture': 'aviation-manufacturing-wartime-production',
       'birth-atomic-bomb': 'british-nuclear-deterrent-v-force',
+      'dorothy-wordsworth': 'dorothy-wordsworth-scottish-tour-1803',
     };
     if ((b as any).id && idToSlug[(b as any).id as string]) return idToSlug[(b as any).id as string];
 
