@@ -96,17 +96,81 @@ const post = {
       <p class="text-sm mt-2 text-center italic">Jet-age logistics in 1944–45: metallurgy, fuel, and spares mattered as much as tactics.</p>
     </div>
 
+    <h2 id="remagen">Case Focus: Reconnaissance over the Remagen Bridge</h2>
+    <p>
+      In March 1945, as Allied forces forged a bridgehead over the Rhine at Remagen, German jet reconnaissance became a high priority. Sources record Ar 234 sorties photographing the Ludendorff Bridge and approaches under intense anti‑aircraft fire. These missions illustrate the aircraft’s operational value: the Blitz could arrive quickly, capture imagery through brief exposure windows, and exit before interception. The limiting factors were not speed or altitude but engine life, fuel availability, weather, and the density of flak over critical nodes.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Arado Ar 234 reconnaissance profile over Rhine crossings, March 1945" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Rhine crossings 1945: reconnaissance windows were measured in seconds; engine margins mattered more than tactics.</p>
+    </div>
+
+    <h2 id="development">Development Timeline and Prototypes</h2>
+    <p>
+      The Ar 234 program progressed from early trolley‑launched prototypes to the more practical B‑series with tricycle gear. Prototype <em>V</em>‑airframes validated the skid concept and camera installations before the design pivoted to conventional undercarriage to enable dispersed operations from damaged or improvised airfields. This transition reflects a broader wartime learning curve: the attraction of pure performance gave way to the realities of sortie generation, turnaround time, and field maintenance.
+    </p>
+    <ul>
+      <li><strong>Ar 234 A (prototypes):</strong> Trolley take‑off plus skid landing to save drag and weight.</li>
+      <li><strong>Ar 234 B (production):</strong> Retractable tricycle gear; bomber and reconnaissance fits.</li>
+      <li><strong>Ar 234 C (limited):</strong> Four BMW 003 engines paired in nacelles to improve acceleration and one‑engine safety.</li>
+    </ul>
+
+    <h2 id="engines">Engines: Jumo 004B versus BMW 003</h2>
+    <p>
+      The Jumo 004B’s axial compressor and annular combustor defined the B‑series. Operational guidance stressed gentle throttle handling to avoid hot‑section distress, with overhaul lives measured in tens of hours at best under ideal conditions. The envisioned four‑engine C‑series with BMW 003s promised better acceleration and redundancy, but production and logistics realities limited its fielding. In practice, engine husbandry and fuel quality were as decisive as aerodynamics.
+    </p>
+
+    <h2 id="units">Units, Sorties, and Reconnaissance Workflow</h2>
+    <p>
+      Ar 234 units prioritised photo‑reconnaissance on Western Front axes: bridges, marshalling yards, depots, and assembly areas. Crews briefed for fuel margins, escape headings, and weather windows; camera kits (e.g., Rb 50/30, Rb 75/30) were selected per altitude and task. Ground echelons focused on rapid camera swaps, engine checks, and fuel filtration—procedures that frequently dictated sortie rates more than aircrew availability did.
+    </p>
+
+    <h2 id="spec-table">Data Snapshot (Ar 234 B, representative)</h2>
+    <ul>
+      <li>Engines: 2 × Junkers Jumo 004B axial‑flow turbojets</li>
+      <li>Max speed: c. 740–780 km/h (mission/altitude dependent)</li>
+      <li>Ceiling: c. 10,000–11,000 m</li>
+      <li>Range: reconnaissance‑biased profiles; fuel fraction and altitude critical</li>
+      <li>Payload: external stores for strike; camera bays for recce</li>
+    </ul>
+
+    <h2 id="production">Production, Logistics, and Constraints</h2>
+    <p>
+      Output was capped by alloy supply, engine manufacture, and disruption of transport nodes. Fuel quality variability further eroded engine life. These constraints explain why the Blitz’s strategic impact was limited despite its performance: the ecosystem around the airframe—metallurgy, refining, spares, trained technicians—determined how many effective sorties could be flown.
+    </p>
+
+    <h2 id="postwar">Post‑war Influence and Evaluation</h2>
+    <p>
+      Post‑war assessments highlighted nacelle aerodynamics suited to axial compressors, landing‑gear integration for jet weight/CG envelopes, and compact nose packaging for cameras—patterns visible in early reconnaissance jets and light bombers. Handling notes emphasised engine‑management discipline and the trade space between climb, speed, and mission sensor use. The Blitz thus served as a bridge from wartime improvisation to post‑war jet standards.
+    </p>
+
     <h2 id="engineering-lessons">Engineering Lessons and Influence</h2>
     <p>
-      Lessons included nacelle aerodynamics tuned for axial compressors, landing-gear integration for jet-era weight and CG distributions, and systems miniaturisation for compact noses and camera bays. Post-war, these themes migrated directly into reconnaissance jets and light bombers, informing intake placement, engine handling procedures, and avionics packaging.
+      Lessons included intake/nacelle design for surge margins, undercarriage choices that privilege operational tempo as much as drag, and systems miniaturisation to preserve forward visibility and sensor fields. These migrated into Cold War types and doctrine, where speed and sensor reliability mattered as much as raw payload.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Post-war evaluation themes: nacelle design, landing gear, camera packaging" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">From Blitz to Cold War jets: packaging and procedures mattered as much as airframe speed.</p>
+    </div>
+
+    <h2 id="buy-book">Dive Deeper in the Book</h2>
+    <p>
+      For a comprehensive late‑war context—engines, operations, logistics, and collapse of the Luftwaffe—see the book <a class="underline font-semibold" href="/books/enemy-luftwaffe-1945">“This Was the Enemy: The Luftwaffe 1945”</a> by Charles E. MacKay. It provides the broader operational canvas for understanding Ar 234 employment and limitations in 1944–45.
     </p>
 
     <h2 id="sources">Sources and Historiography</h2>
     <p>
-      Contemporary squadron records, engine maintenance notes for Jumo 004B variants, and Allied intelligence summaries provide the most reliable operational picture. Later technical syntheses corroborate the short engine life, careful throttle discipline, and reconnaissance emphasis described by wartime documents.
+      This article synthesises wartime records and post‑war analyses. Useful overviews and museum resources include the Smithsonian National Air and Space Museum’s Ar 234 exhibit materials and RAF technical histories. For unit‑level narratives and imagery, dedicated studies of Ar 234 bomber and reconnaissance units provide sortie‑pattern context and technical appendices. Engine data are corroborated across maintenance notes and post‑war test summaries.
     </p>
+    <ul>
+      <li>Smithsonian National Air and Space Museum: Arado Ar 234 resources (Udvar‑Hazy Center).</li>
+      <li>RAF and Allied intelligence summaries on German late‑war jets and engine maintenance.</li>
+      <li>Robert Forsyth & Nick Beale, <em>Arado Ar 234 Bomber and Reconnaissance Units</em> (unit‑level operations and photos).</li>
+    </ul>
 
-    <h2 id="further-reading">Further Reading & Related</h2>
+    <h2 id="related-reading">Further Reading & Related</h2>
     <ul>
       <li><a class="underline" href="/blog/me262-jet-fighter-revolution">Me 262: Revolutionary Jet Fighter</a></li>
       <li><a class="underline" href="/blog/luftwaffe-1945-final-year">Luftwaffe 1945: The Final Year</a></li>
