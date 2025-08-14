@@ -351,6 +351,18 @@ const blogCategories = {
       readTime: '15 min'
     }
   ]
+  ,
+  'Travel Literature': [
+    {
+      title: 'Dorothy Wordsworth’s Scottish Tour of 1803',
+      slug: 'dorothy-wordsworth-scottish-tour-1803',
+      excerpt: 'A richly researched account of Dorothy Wordsworth’s 1803 Scottish journey—routes, people, costs, and the Romantic gaze—contextualised for modern readers.',
+      date: 'August 14, 2025',
+      image: '/blog-images/historical-scotland-map.jpg',
+      tags: ['Travel Literature', 'Dorothy Wordsworth', 'Scottish Tour 1803', 'Romanticism'],
+      readTime: '18 min'
+    }
+  ]
 }
 
 export default function BlogPage() {
