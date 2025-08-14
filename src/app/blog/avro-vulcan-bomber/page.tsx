@@ -57,6 +57,24 @@ const post = {
       Beyond deterrence, the Vulcan’s public displays showcased delta aesthetics and British engineering. As a technology bridge, it linked analogue navigation-bombing paradigms to later digital strike aircraft. Its legacy survives in airshow memories, museum exhibits, and the historical record of independent nuclear deterrent policy.
     </p>
 
+    <h2 id="specifications">Variants and Key Specifications</h2>
+    <p>
+      Successive marks introduced structural and systems upgrades alongside engine changes. Highlights include progressively more powerful Olympus engines, Blue Steel stand‑off integration, and avionics modernisation. Crew complement and systems workload reflected Cold War mission demands and long‑range tanker support for conventional roles.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Vulcan cockpit and systems layout (representative)" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Crew systems evolved from analogue bombing-navigation to terrain-following procedures and ECM.</p>
+    </div>
+
+    <h2 id="sources">Sources</h2>
+    <ul>
+      <li>RAF Museum and UK National Archives: Vulcan service papers, V‑Force doctrine, and Black Buck operational summaries.</li>
+      <li>Imperial War Museum collections and oral histories from RAF crews.</li>
+      <li>Rolls‑Royce historical notes on Avon and Olympus engine development.</li>
+      <li>Declassified NATO/UK materials on low‑level tactics and ECM evolution.</li>
+    </ul>
+
     <h2 id="related">Further Reading & Related</h2>
     <ul>
       <li><a class="underline" href="/blog/british-nuclear-deterrent-v-force">Britain’s Nuclear Deterrent: The V-Force</a></li>
@@ -71,7 +89,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 24,
+  readingTime: 26,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Avro Vulcan bomber',

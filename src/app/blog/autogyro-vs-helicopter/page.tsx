@@ -72,11 +72,30 @@ const post = {
       Modern designs pursue efficiency and noise reduction: coaxial counter-rotating rotors remove the tail rotor penalty; NOTAR leverages boundary-layer control; tiltrotors trade hover efficiency for high cruise speed. Each solution revisits trade-offs first confronted by Cierva and Sikorsky: torque balance, control authority, and mission economics.
     </p>
 
+    <h2 id="training">Training, Certification, and Safety Culture</h2>
+    <p>
+      Pilot training for rotorcraft centres on energy management and control coordination. For helicopters, power changes interact with rotor RPM and tail-rotor thrust; for autogyros, glidepath control depends on airspeed and descent angle. Certification standards require demonstrated autorotation, controllability in crosswind, and stable handling across loading. Operational culture emphasises discipline around power margins, density altitude, and obstacle environments.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Rotorcraft pattern, power management, and decision points" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Energy management: consistent procedures and gate checks underpin rotorcraft safety.</p>
+    </div>
+
     <h2 id="further-reading">Further Reading & Related</h2>
     <ul>
       <li><a class="underline" href="/blog/helicopter-development-pioneers">Helicopter Development: From Autogyros to Modern Rotorcraft</a></li>
       <li><a class="underline" href="/blog/bristol-sycamore-helicopter-development">Bristol Sycamore Development</a></li>
       <li><a class="underline" href="/blog/sikorsky-vs300-helicopter-breakthrough">Sikorsky VS-300</a></li>
+    </ul>
+
+    <h2 id="sources">Sources</h2>
+    <ul>
+      <li>FAA, Rotorcraft Flying Handbook (now Helicopter Flying Handbook), authoritative training guidance on autorotation and rotor control.</li>
+      <li>Cierva, J. de la, original papers on autogyro rotor articulation and autorotation principles.</li>
+      <li>Smithsonian National Air and Space Museum, Cierva autogyro and Sikorsky collections technical notes.</li>
+      <li>Royal Air Force Museum and National Aerospace Library archives on British rotary-wing development including Bristol Sycamore.</li>
+      <li>NASA Technical Reports on rotor aerodynamics and autorotation analyses.</li>
     </ul>
   `,
   excerpt: 'From Cierva’s autorotative genius to Sikorsky’s powered hover—how autogyros enabled the helicopter age.',
@@ -87,7 +106,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 26,
+  readingTime: 28,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Autogyro vs Helicopter',

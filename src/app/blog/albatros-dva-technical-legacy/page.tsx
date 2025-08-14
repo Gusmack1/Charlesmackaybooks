@@ -52,8 +52,21 @@ const post = {
       <li><a class="underline" href="/blog/german-aircraft-great-war-development">German Aircraft: Great War Development</a></li>
       <li><a class="underline" href="/blog/sopwith-camel-wwi-fighter">Sopwith Camel</a></li>
       <li><a class="underline" href="/blog/bristol-fighter-f2b-brisfit">Bristol Fighter F2B</a></li>
+     </ul>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Field maintenance and rigging context for WWI biplanes" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Field maintenance and rigging practices shaped reliability and handling at the front.</p>
+    </div>
+
+    <h2 id="sources">Sources</h2>
+    <ul>
+      <li>Idflieg (Inspectorate of Flying Troops) reports and captured aircraft evaluations.</li>
+      <li>Contemporary German technical manuals for Albatros types and Mercedes D.III engines.</li>
+      <li>RAF and French test summaries on captured Albatros fighters.</li>
+      <li>Major museum restoration notes (e.g., RAF Museum, NASM) on D.Va structures and materials.</li>
     </ul>
-  `,
+   `,
   excerpt: 'Albatros D.Va—semi-monocoque fuselage, sesquiplane wings, and the frontline realities of 1917–1918 air combat.',
   author: {
     name: 'Charles E. MacKay',
@@ -62,7 +75,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 18,
+  readingTime: 22,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Albatros D.Va',

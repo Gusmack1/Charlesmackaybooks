@@ -47,6 +47,14 @@ const post = {
       The W.B.III’s significance is cumulative: it contributed to the carrier-fighter lineage by hardening structures, practices, and culture. Later naval aircraft absorbed its lessons, while Clyde’s industrial breadth sustained aviation projects beyond the war.
     </p>
 
+    <h2 id="sources">Sources</h2>
+    <ul>
+      <li>National Archives and Royal Navy documents on early deck-landing procedures and barrier development.</li>
+      <li>Scottish industrial histories on Beardmore & Co. and Clyde shipbuilding.</li>
+      <li>Imperial War Museum and RAF Museum collections related to HMS Argus era operations.</li>
+      <li>Contemporary engineering journals documenting folding mechanisms and naval fittings.</li>
+    </ul>
+
     <h2 id="related">Further Reading & Related</h2>
     <ul>
       <li><a class="underline" href="/blog/hms-argus-first-aircraft-carrier">HMS Argus: The First True Aircraft Carrier</a></li>
@@ -61,7 +69,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 22,
+  readingTime: 24,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Beardmore naval fighter context',
