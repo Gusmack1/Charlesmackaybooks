@@ -216,7 +216,7 @@ export default function UnifiedSchema({
           },
           "shippingDestination": [
             { "@type": "DefinedRegion", "addressCountry": "GB" },
-            { "@type": "DefinedRegion", "addressRegion": "Europe" },
+            { "@type": "DefinedRegion", "addressCountry": "EU" },
             { "@type": "DefinedRegion", "addressCountry": "US" }
           ],
           "deliveryTime": {
@@ -331,7 +331,7 @@ export default function UnifiedSchema({
                "shippingRate": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
                "shippingDestination": [
                  { "@type": "DefinedRegion", "addressCountry": "GB" },
-                 { "@type": "DefinedRegion", "addressRegion": "Europe" },
+                 { "@type": "DefinedRegion", "addressCountry": "EU" },
                  { "@type": "DefinedRegion", "addressCountry": "US" }
                ],
                "deliveryTime": {

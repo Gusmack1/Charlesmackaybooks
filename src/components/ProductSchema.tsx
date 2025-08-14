@@ -66,10 +66,11 @@ export default function ProductSchema({
           value: '3.45',
           currency: 'GBP'
         },
-        shippingDestination: {
-          '@type': 'DefinedRegion',
-          addressCountry: 'GB'
-        },
+        shippingDestination: [
+          { '@type': 'DefinedRegion', addressCountry: 'GB' },
+          { '@type': 'DefinedRegion', addressCountry: 'EU' },
+          { '@type': 'DefinedRegion', addressCountry: 'US' }
+        ],
         deliveryTime: {
           '@type': 'ShippingDeliveryTime',
           handlingTime: {

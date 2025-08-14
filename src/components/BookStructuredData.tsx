@@ -164,7 +164,7 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
           },
           shippingDestination: {
             '@type': 'DefinedRegion',
-            addressRegion: 'Europe'
+            addressCountry: 'EU'
           }
         },
         {
