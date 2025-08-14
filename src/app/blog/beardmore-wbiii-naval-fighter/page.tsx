@@ -21,6 +21,9 @@ const post = {
     <p>
       Naval fighters demanded arresting robustness, corrosion resistance, and compact footprints. Folding wings, reinforced undercarriages, and fittings for deck-handling distinguished the type from land-based peers. Structure prioritised ease of maintenance at sea and controlled weight growth; reliability often trumped ultimate performance as the design criterion.
     </p>
+    <p>
+      Material choices addressed salt‑laden environments: protective finishes, drain paths, and inspection access reduced corrosion and fluid entrapment. Wing‑fold mechanisms balanced hinge loads against alignment accuracy; locking pins and visual confirmations reduced human‑factor errors on crowded decks.
+    </p>
 
     <h2 id="operations">Operations and Deck-Landing Practice</h2>
     <p>
@@ -31,6 +34,9 @@ const post = {
       <img src="/blog-images/default-generic.svg" alt="HMS Argus deck operations" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">HMS Argus: the moving laboratory for Britain’s deck-landing doctrine.</p>
     </div>
+    <p>
+      Flight deck procedures matured through iteration: approach speeds and angles, signal flags, arrester wire spacing, and barrier heights were refined to reduce bounce and overrun. Debriefs captured hook strikes, prop clearance issues, and brake fade events, feeding back into training notes and engineering tweaks.
+    </p>
 
     <div class="my-8">
       <img src="/blog-images/default-generic.svg" alt="Folding wing mechanisms and naval handling gear" class="w-full h-auto rounded-lg shadow-lg"/>
@@ -41,10 +47,16 @@ const post = {
     <p>
       The Clyde’s steel, machine, and shipbuilding capacity enabled short supply lines for fixtures, forgings, and repair. Collaboration between yards and airframes accelerated iteration, with naval requirements shaping design priorities distinct from land-based fighters.
     </p>
+    <p>
+      Shipyard metrology and lifting gear complemented airframe assembly: jigs, rotators, and precision boring supported repeatable assemblies. Local test facilities, including catapult trials and static load rigs, shortened development cycles and aligned manufacturing with operational reality.
+    </p>
 
     <h2 id="legacy">Legacy</h2>
     <p>
       The W.B.III’s significance is cumulative: it contributed to the carrier-fighter lineage by hardening structures, practices, and culture. Later naval aircraft absorbed its lessons, while Clyde’s industrial breadth sustained aviation projects beyond the war.
+    </p>
+    <p>
+      The pathway from W.B.III to later deck fighters traces continuity in folding schemes, arresting gear interfaces, and pilot training syllabi. Scotland’s contribution lay not only in airframes but in the enabling infrastructure and doctrine.
     </p>
 
     <h2 id="sources">Sources</h2>
@@ -69,7 +81,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 24,
+  readingTime: 30,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Beardmore naval fighter context',

@@ -11,6 +11,9 @@ const post = {
     <p>
       Between 1918 and 1939, Scotland built a civilian air network from Renfrew outward. Timetables reveal early commercial viability and seasonal shifts; accident reports show the safety culture maturing as weather and terrain lessons were absorbed into procedures.
     </p>
+    <p>
+      Renfrew, Aberdeen, Inverness, and the Western Isles formed an emerging mesh of routes balancing geography, weather, and aircraft range. Operators tuned schedules to daylight and cloud ceilings, adding alternates and weather minima as experience hardened policy. Radio beacons and ground signals improved navigation; aerodrome logs capture the slow codification of best practice—fuel reserves, diversion protocols, and runway condition reporting.
+    </p>
 
     <div class="my-8">
       <img src="/blog-images/default-generic.svg" alt="Inter‑war Scotland aerodromes and routes—representative" class="w-full h-auto rounded-lg shadow-lg"/>
@@ -21,10 +24,16 @@ const post = {
     <p>
       Club logs and newsletters chronicle training, proficiency, and outreach. Private flying seeded pilot pipelines, technical maintenance skills, and a social identity that later meshed with rearmament.
     </p>
+    <p>
+      The club system sustained currency training, instrument familiarisation, and basic aerobatics. Volunteer instructors established airmanship standards; maintenance crews honed inspection discipline. Youth outreach and air days broadened public acceptance of civil flight—critically, clubs helped normalise safety culture (emergency drills, weather holds) that later eased transitions to service flying.
+    </p>
 
     <h2 id="industry">Industry: Beardmore and Weir</h2>
     <p>
       Beardmore’s aircraft and engines, Weir’s rotary‑wing experiments, and supplier networks kept skilled labour and tooling in circulation. Factory papers link civil orders to retained capacity—critical when rearmament demanded rapid scale‑up.
+    </p>
+    <p>
+      Beardmore’s engine test cells, jigs, and heat‑treatment shops underwrote component repeatability. Weir’s autogyro work injected rotorcraft know‑how into the region—lamination techniques, balance, and track. Subcontractors—machine shops, foundries, and joiners—maintained capabilities by cycling between civil jobs and light service work. The Clyde’s adjacency to shipbuilding ensured fast access to steels, plating, and inspection services.
     </p>
 
     <div class="my-8">
@@ -36,6 +45,9 @@ const post = {
     <p>
       By the mid‑1930s, Scottish units and firms reconnected civilian experience with defence imperatives. 602 (City of Glasgow) Squadron’s evolution foreshadowed fighter modernisation, while civil infrastructure offered training airfields and logistics nodes.
     </p>
+    <p>
+      When procurement accelerated, Scotland’s blended ecosystem—routes, clubs, and factories—converted quickly to service needs: ground crews familiar with civil inspection moved into RAF standards; pilots transitioned from club machines to trainers; civil aerodromes provided dispersal and training circuits. The inter‑war groundwork reduced conversion friction and time to readiness.
+    </p>
 
     <h2 id="sources">Sources</h2>
     <ul>
@@ -43,6 +55,9 @@ const post = {
       <li>Scottish Flying Club logs and newsletters.</li>
       <li>Beardmore and Weir engineering papers; local archives.</li>
     </ul>
+    <p>
+      Note: Specific route timings and fleet compositions varied by season and year; contemporary timetables and aerodrome logs remain the definitive references for exact schedules and equipment.
+    </p>
   `,
   excerpt: 'A civil‑to‑military bridge: routes, clubs, and industry that sustained Scottish aviation between the wars.',
   author: {
@@ -52,7 +67,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 15,
+  readingTime: 28,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Scottish inter‑war aviation',

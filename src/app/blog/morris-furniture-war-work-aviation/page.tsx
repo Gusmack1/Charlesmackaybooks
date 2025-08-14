@@ -36,6 +36,9 @@ const post = {
     <p>
       Precision wood components for <em>Upkeep/Highball</em> demanded tight concentricity, balanced assemblies, and reliable adhesives under environmental stress. Parallel lines produced large-scale aerodynamic models for proof-of-concept, tooling studies, and factory training—accelerating ramp-up and compressing error loops before metal cutting.
     </p>
+    <p>
+      Model work linked draughting rooms and shop floors: scaled airfoils, fuselage sections, and jig mock‑ups enabled fixture optimisation and workforce training. Templates and gauges migrated from model shops to production bays, shortening learning curves.
+    </p>
 
     <h2 id="rotor">Weir/Cierva Rotorcraft Work</h2>
     <p>
@@ -63,6 +66,9 @@ const post = {
       <li>Ministry of Aircraft Production circulars on subcontractor inspection.</li>
       <li>Weir/Cierva rotorcraft documentation and museum notes.</li>
     </ul>
+    <p>
+      Note: Specific quantities and contract identifiers vary across years and sites. Where possible, corroborate with factory ledgers and MAP circulars to trace lot numbers and inspection stamps.
+    </p>
   `,
   excerpt: 'How Morris Furniture pivoted to war work: rifle furniture, Upkeep/Highball parts, rotor blades, and aerodynamic models for aviation.',
   author: {
@@ -72,7 +78,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 18,
+  readingTime: 26,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Glasgow wartime industrial work for aviation',
