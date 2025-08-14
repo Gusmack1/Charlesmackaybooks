@@ -419,6 +419,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       'sonic-to-standoff': 'british-nuclear-deterrent-v-force',
       'sabres-from-north': 'f86-sabre-cold-war-fighter',
       'enemy-luftwaffe-1945': 'luftwaffe-1945-final-year',
+      'clydeside-aviation-vol2': 'clydeside-aviation-revolution',
+      'flying-for-kaiser': 'german-aircraft-great-war-development',
+      'dieter-dengler': 'korean-war-air-combat',
+      'modern-furniture': 'aviation-manufacturing-wartime-production',
+      'birth-atomic-bomb': 'british-nuclear-deterrent-v-force',
     };
     if ((b as any).id && idToSlug[(b as any).id as string]) return idToSlug[(b as any).id as string];
 
