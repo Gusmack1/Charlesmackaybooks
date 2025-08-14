@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   keywords: [
     'aviation history books',
     'Charles E MacKay books',
+    'charles mackay books',
     'aviation books for sale',
     'WWI aircraft books',
     'WWII aviation history',
