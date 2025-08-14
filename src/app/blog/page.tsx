@@ -108,6 +108,15 @@ const blogCategories = {
       image: '/blog-images/fokker-triplane-wwi.jpg',
       tags: ['WWI Aviation', 'German Aircraft', 'Fighter Development', 'Luftstreitkräfte'],
       readTime: '11 min'
+    },
+    {
+      title: 'Albatros D.Va: Design, Strengths, and Frontline Service',
+      slug: 'albatros-dva-technical-legacy',
+      excerpt: 'Semi-monocoque fuselage, sesquiplane wings, and the frontline realities of 1917–1918 air combat.',
+      date: 'August 14, 2025',
+      image: '/blog-images/default-generic.svg',
+      tags: ['WWI Aviation', 'Albatros D.Va', 'German Fighter'],
+      readTime: '22 min'
     }
   ],
   'WWII Aviation': [
@@ -146,6 +155,15 @@ const blogCategories = {
       image: '/blog-images/me262-luftwaffe.jpg',
       tags: ['WWII Aviation', 'Luftwaffe', 'German Aircraft', 'Jet Aircraft'],
       readTime: '15 min'
+    },
+    {
+      title: 'Arado Ar 234: The World’s First Operational Jet Bomber',
+      slug: 'arado-ar234-jet-bomber',
+      excerpt: 'Design, engines, operations, and legacy of the revolutionary German jet bomber that redefined late-war reconnaissance and strike.',
+      date: 'August 14, 2025',
+      image: '/blog-images/default-generic.svg',
+      tags: ['WWII Aviation', 'Arado Ar 234', 'Jet Bomber'],
+      readTime: '26 min'
     }
   ],
   'Cold War Aviation': [
@@ -166,6 +184,15 @@ const blogCategories = {
       image: '/blog-images/vulcan-bomber-formation.jpg',
       tags: ['Cold War', 'V-Force', 'Nuclear Deterrent', 'Strategic Bombers'],
       readTime: '12 min'
+    },
+    {
+      title: 'Avro Vulcan: Aerodynamics, Systems, and Britain’s Cold War Deterrent',
+      slug: 'avro-vulcan-bomber',
+      excerpt: 'Delta wings, high-altitude penetration, and the V-Force doctrine that shaped RAF nuclear and conventional strategy.',
+      date: 'August 14, 2025',
+      image: '/blog-images/default-generic.svg',
+      tags: ['Cold War', 'Avro Vulcan', 'V-Force'],
+      readTime: '24 min'
     }
   ],
   'Jet Age Aviation': [
@@ -284,6 +311,15 @@ const blogCategories = {
       readTime: '17 min'
     },
     {
+      title: 'Autogyro vs Helicopter: The Bridge to True Vertical Flight',
+      slug: 'autogyro-vs-helicopter',
+      excerpt: 'How Cierva’s autorotation breakthroughs enabled Sikorsky’s controlled powered hover and modern rotorcraft.',
+      date: 'August 14, 2025',
+      image: '/blog-images/default-generic.svg',
+      tags: ['Helicopter History', 'Autogyro', 'Sikorsky'],
+      readTime: '26 min'
+    },
+    {
       title: 'Sycamore Seeds and Helicopter Evolution: Nature\'s Inspiration',
       slug: 'sycamore-seeds-helicopter-evolution',
       excerpt: 'How nature\'s spinning sycamore seeds revealed the fundamental principles of autorotation and inspired generations of helicopter pioneers.',
@@ -320,6 +356,15 @@ const blogCategories = {
       image: '/blog-images/hms-argus-dazzle-camouflage.jpg',
       tags: ['Naval Aviation', 'HMS Argus', 'Carrier Operations', 'Flight Deck Procedures'],
       readTime: '13 min'
+    },
+    {
+      title: 'Beardmore W.B.III and Clyde-Built Naval Fighters',
+      slug: 'beardmore-wbiii-naval-fighter',
+      excerpt: 'From shipyard ingenuity to deck-landing realities: Scotland’s naval fighter contribution in WWI.',
+      date: 'August 14, 2025',
+      image: '/blog-images/default-generic.svg',
+      tags: ['Naval Aviation', 'Beardmore', 'HMS Argus'],
+      readTime: '22 min'
     }
   ],
   'Industrial History': [
