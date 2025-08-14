@@ -27,7 +27,19 @@ export async function GET(request: NextRequest) {
     'hawker-hurricane-fighter-development',
     'aviation-manufacturing-wartime-production',
     'helicopter-development-pioneers',
-    'naval-aviation-history'
+    'naval-aviation-history',
+    // Newly added long‑form posts to prioritise indexing
+    'dieter-dengler-skyraider-escape',
+    'morris-furniture-war-work-aviation',
+    'maud-alsos-atomic-program',
+    'german-aces-organization-wwi',
+    'scottish-aviation-between-the-wars',
+    'beardmore-wbiii-naval-fighter',
+    'arado-ar234-jet-bomber',
+    'autogyro-vs-helicopter',
+    'avro-vulcan-bomber',
+    'albatros-dva-technical-legacy',
+    'dorothy-wordsworth-scottish-tour-1803'
   ]
 
   // Generate sitemap XML

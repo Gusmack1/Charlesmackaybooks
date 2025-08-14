@@ -91,6 +91,7 @@ function buildSitemap(): string {
 
   // Include key blog posts to improve discovery in the primary sitemap
   const blogPosts = [
+    // Existing key posts
     'beardmore-aviation-scottish-industrial-giant',
     'clydeside-aviation-revolution',
     'german-aircraft-great-war-development',
@@ -108,7 +109,19 @@ function buildSitemap(): string {
     'hawker-hurricane-fighter-development',
     'aviation-manufacturing-wartime-production',
     'helicopter-development-pioneers',
-    'naval-aviation-history'
+    'naval-aviation-history',
+    // Newly added long‑form posts
+    'dieter-dengler-skyraider-escape',
+    'morris-furniture-war-work-aviation',
+    'maud-alsos-atomic-program',
+    'german-aces-organization-wwi',
+    'scottish-aviation-between-the-wars',
+    'beardmore-wbiii-naval-fighter',
+    'arado-ar234-jet-bomber',
+    'autogyro-vs-helicopter',
+    'avro-vulcan-bomber',
+    'albatros-dva-technical-legacy',
+    'dorothy-wordsworth-scottish-tour-1803'
   ]
     .map((slug) => `
   <url>
