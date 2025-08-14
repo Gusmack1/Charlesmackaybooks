@@ -407,6 +407,21 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     const anyRel = (b as any).relatedBlogPosts?.[0]?.slug as string | undefined;
     if (anyRel) return anyRel;
 
+    // Per-book direct mappings where a highly relevant article exists
+    const idToSlug: Record<string, string> = {
+      'adolf-rohrbach': 'adolf-rohrbach-metal-aircraft-revolution',
+      'german-aircraft-great-war': 'german-aircraft-great-war-development',
+      'british-aircraft-great-war': 'british-aircraft-great-war-rfc-rnas',
+      'aircraft-carrier-argus': 'hms-argus-first-aircraft-carrier',
+      'sycamore-seeds': 'sycamore-seeds-helicopter-evolution',
+      'soaring-with-wings': 'percy-pilcher-scotland-aviation-pioneer',
+      'mother-of-the-few': 'lucy-lady-houston-schneider-trophy',
+      'sonic-to-standoff': 'british-nuclear-deterrent-v-force',
+      'sabres-from-north': 'f86-sabre-cold-war-fighter',
+      'enemy-luftwaffe-1945': 'luftwaffe-1945-final-year',
+    };
+    if ((b as any).id && idToSlug[(b as any).id as string]) return idToSlug[(b as any).id as string];
+
     // Map common categories to cornerstone blog articles
     const categoryToSlug: Record<string, string> = {
       'WWI Aviation': 'british-aircraft-great-war-rfc-rnas',
