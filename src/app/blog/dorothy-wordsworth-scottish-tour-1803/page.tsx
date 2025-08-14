@@ -15,8 +15,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Highland track and loch (representative)" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Scottish roads and lochs as experienced in the early nineteenth century demanded patience, observation, and endurance.</p>
+      <img src="/blog-images/historical-scotland-map.jpg" alt="Historical map of Scotland, early-modern routes and regions" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Routes across Scotland—valleys, passes, ferries—structured the tour long before railways.</p>
     </div>
 
     <h2 id="context">Context: Scotland in 1803—Improvement and Memory</h2>
@@ -52,8 +52,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Loch-side landing place (representative)" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Water routes—crossings and ferries—structured many stages of the 1803 tour.</p>
+      <img src="/blog-images/glasgow-historical-map.jpg" alt="Historical Glasgow and Clydeside context map" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Lowland gateways: Glasgow, Stirling, and Edinburgh connected markets, books, and ideas to the Highlands.</p>
     </div>
 
     <h2 id="urban">Edinburgh, Stirling, and the Lowland Gateways</h2>
@@ -75,8 +75,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Highland inn parlour (representative)" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Inns and cottages were staging posts of knowledge: prices, paths, weather, and stories.</p>
+      <img src="/blog-images/historical-scotland-map.jpg" alt="Highland districts and parishes on a historical Scotland map" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Inns and cottages—waypoints across districts—shaped the day-to-day arithmetic of travel.</p>
     </div>
 
     <h2 id="literature">Literature from the Road: Journal, Lyric, and Memory</h2>
@@ -98,8 +98,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Trossachs path (representative)" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">The Trossachs: a grammar of paths, water, birchwoods, and shadow.</p>
+      <img src="/blog-images/glasgow-historical-map.jpg" alt="Central Scotland context with gateways to the Trossachs" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">The Trossachs: approached through the Lowland gateways, then by foot and water into birchwoods and lochs.</p>
     </div>
 
     <h2 id="reading">Further Reading & Related Works</h2>
