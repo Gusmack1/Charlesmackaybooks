@@ -311,6 +311,19 @@ export default function ScottishAviationTimelinePage() {
     return true;
   });
 
+  const toAddress = (loc: string) => {
+    let locality = loc;
+    if (locality.includes(',')) locality = locality.split(',')[0].trim();
+    if (locality.includes('–')) locality = locality.split('–')[0].trim();
+    if (locality.includes('-')) locality = locality.split('-')[0].trim();
+    return {
+      "@type": "PostalAddress",
+      addressLocality: locality,
+      addressRegion: 'Scotland',
+      addressCountry: 'GB'
+    };
+  };
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "HistoricalTimeline",
@@ -328,7 +341,8 @@ export default function ScottishAviationTimelinePage() {
       "startDate": `${event.year}-01-01`,
       "location": {
         "@type": "Place",
-        "name": event.location
+        "name": event.location,
+        "address": toAddress(event.location)
       },
       "description": event.description
     }))
