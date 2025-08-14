@@ -159,54 +159,10 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
   // Removed scroll listeners and floating share to prevent jank
 
-  // Prepare processed content and mid-article CTA split
+  // Prepare processed content
   const processedHtml = stripShareUI(processContent(post.content));
-  const splitContentForMidCta = (html: string): { first: string; second: string } => {
-    const tokens = html.split(/(<\/p>)/i);
-    if (tokens.length < 6) {
-      return { first: html, second: '' };
-    }
-    let paraCount = 0;
-    for (let i = 0; i < tokens.length; i++) {
-      if (/^<\/p>$/i.test(tokens[i])) paraCount++;
-    }
-    const target = Math.max(2, Math.floor(paraCount * 0.4));
-    let seen = 0;
-    let splitIdx = tokens.length;
-    for (let i = 0; i < tokens.length; i++) {
-      if (/^<\/p>$/i.test(tokens[i])) {
-        seen++;
-        if (seen === target) { splitIdx = i + 1; break; }
-      }
-    }
-    const first = tokens.slice(0, splitIdx).join('');
-    const second = tokens.slice(splitIdx).join('');
-    return { first, second };
-  };
 
-  // Determine a primary related book for the mid-article CTA
-  const hasExplicitBooks = Array.isArray(post.relatedBooks) && post.relatedBooks.length > 0;
-  const normalize = (s: string) => (s || '').toLowerCase();
-  const categoryNorm = normalize(post.category);
-  const tagsNorm = (post.tags || []).map(normalize);
-  const pick = new Set<string>();
-  if (!hasExplicitBooks) {
-    if (categoryNorm.includes('wwi')) { pick.add('british-aircraft-great-war'); pick.add('german-aircraft-great-war'); }
-    if (categoryNorm.includes('wwii') || categoryNorm.includes('world war ii')) { pick.add('enemy-luftwaffe-1945'); }
-    if (categoryNorm.includes('jet') || categoryNorm.includes('cold war')) { pick.add('sonic-to-standoff'); }
-    if (categoryNorm.includes('helicopter')) { pick.add('sycamore-seeds'); }
-    if (categoryNorm.includes('naval')) { pick.add('aircraft-carrier-argus'); }
-    if (categoryNorm.includes('scottish')) { pick.add('clydeside-aviation-vol1'); }
-    if (categoryNorm.includes('biography')) { pick.add('captain-eric-brown'); pick.add('soaring-with-wings'); }
-    if (categoryNorm.includes('industrial') || categoryNorm.includes('manufacturing')) { pick.add('beardmore-aviation'); }
-    if (tagsNorm.includes('v-force') || tagsNorm.includes('vulcan')) { pick.add('sonic-to-standoff'); }
-    if (tagsNorm.includes('hms argus') || tagsNorm.includes('carrier')) { pick.add('aircraft-carrier-argus'); }
-    if (tagsNorm.includes('bristol') || tagsNorm.includes('brisfit')) { pick.add('bristol-fighter'); }
-    if (tagsNorm.includes('schneider') || tagsNorm.includes('trophy')) { pick.add('mother-of-the-few'); }
-  }
-  const fallbackBooksForCta = !hasExplicitBooks ? getBooksData(Array.from(pick)) : [];
-  const primaryBook = hasExplicitBooks ? post.relatedBooks[0] : (fallbackBooksForCta[0] || null);
-  const { first: firstHalf, second: secondHalf } = splitContentForMidCta(processedHtml);
+  // Mid-article CTA removed per requirement; recommendations appear only at bottom
 
   const shareUrl = `https://charlesmackaybooks.com/blog/${post.id}`;
   const shareTitle = encodeURIComponent(post.title);
@@ -290,63 +246,11 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
             </div>
           )}
 
-          {/* Article Content (first half) */}
+          {/* Article Content (full) */}
           <div 
             className="blog-content content"
-            dangerouslySetInnerHTML={{ __html: firstHalf }}
+            dangerouslySetInnerHTML={{ __html: processedHtml }}
           />
-
-          {/* Mid-article Buy CTA */}
-          {primaryBook && (
-            <section className="my-10 p-6 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-900/40" aria-label="Buy the related book">
-              <div className="flex flex-col sm:flex-row items-start gap-5">
-                <div className="w-32 sm:w-40 flex-shrink-0 overflow-hidden rounded-md bg-slate-100 dark:bg-slate-800">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={primaryBook.cover || '/book-covers/default-placeholder.svg'}
-                    alt={`${primaryBook.title} cover`}
-                    className="w-full h-auto object-cover"
-                    onError={(e) => { try { (e.currentTarget as HTMLImageElement).src = '/blog-images/default-generic.svg' } catch {} }}
-                  />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-primary mb-1">Recommended Book</h3>
-                  <p className="text-lg font-bold text-primary mb-2">{primaryBook.title}</p>
-                  {typeof primaryBook.price === 'number' && (
-                    <p className="text-secondary mb-3">£{primaryBook.price.toFixed(2)}</p>
-                  )}
-                  <Link href={`/books/${primaryBook.id}`} className="badge badge-blue px-4 py-2 rounded-lg font-semibold">View & Buy</Link>
-                </div>
-              </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    '@context': 'https://schema.org',
-                    '@type': 'Product',
-                    name: primaryBook.title,
-                    url: `https://charlesmackaybooks.com/books/${primaryBook.id}`,
-                    image: primaryBook.cover?.startsWith('http') ? primaryBook.cover : `https://charlesmackaybooks.com${primaryBook.cover?.startsWith('/') ? '' : '/'}${primaryBook.cover || ''}`,
-                    brand: { '@type': 'Brand', name: 'Charles Mackay Books' },
-                    author: { '@type': 'Person', name: 'Charles E. MacKay' },
-                    offers: typeof primaryBook.price === 'number' ? {
-                      '@type': 'Offer', priceCurrency: 'GBP', price: primaryBook.price,
-                      availability: 'https://schema.org/InStock',
-                      url: `https://charlesmackaybooks.com/books/${primaryBook.id}`
-                    } : undefined
-                  })
-                }}
-              />
-            </section>
-          )}
-
-          {/* Article Content (second half) */}
-          {secondHalf && (
-            <div 
-              className="blog-content content"
-              dangerouslySetInnerHTML={{ __html: secondHalf }}
-            />
-          )}
           {/* Breadcrumb JSON-LD */}
           <script
             type="application/ld+json"
