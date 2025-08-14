@@ -15,7 +15,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/historical-scotland-map.jpg" alt="Historical map of Scotland, early-modern routes and regions" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Historical map of Scotland, early-modern routes and regions" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Routes across Scotland—valleys, passes, ferries—structured the tour long before railways.</p>
     </div>
 
@@ -32,7 +32,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/charles-mackay-aviation-historian.jpg" alt="Charles E. MacKay portrait placeholder" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Charles E. MacKay portrait placeholder" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Charles E. MacKay, editor and historian—our modern guide to nineteenth‑century Scotland’s landscapes and texts.</p>
     </div>
 
@@ -52,7 +52,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/glasgow-historical-map.jpg" alt="Historical Glasgow and Clydeside context map" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Historical Glasgow and Clydeside context map" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Lowland gateways: Glasgow, Stirling, and Edinburgh connected markets, books, and ideas to the Highlands.</p>
     </div>
 
@@ -75,7 +75,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/historical-scotland-map.jpg" alt="Highland districts and parishes on a historical Scotland map" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Highland districts and parishes on a historical Scotland map" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Inns and cottages—waypoints across districts—shaped the day-to-day arithmetic of travel.</p>
     </div>
 
@@ -98,7 +98,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/glasgow-historical-map.jpg" alt="Central Scotland context with gateways to the Trossachs" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Central Scotland context with gateways to the Trossachs" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">The Trossachs: approached through the Lowland gateways, then by foot and water into birchwoods and lochs.</p>
     </div>
 

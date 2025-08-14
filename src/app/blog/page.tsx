@@ -358,7 +358,7 @@ const blogCategories = {
       slug: 'dorothy-wordsworth-scottish-tour-1803',
       excerpt: 'A richly researched account of Dorothy Wordsworth’s 1803 Scottish journey—routes, people, costs, and the Romantic gaze—contextualised for modern readers.',
       date: 'August 14, 2025',
-      image: '/blog-images/historical-scotland-map.jpg',
+      image: '/blog-images/default-generic.svg',
       tags: ['Travel Literature', 'Dorothy Wordsworth', 'Scottish Tour 1803', 'Romanticism'],
       readTime: '18 min'
     }
