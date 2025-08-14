@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'beardmore-wbiii-naval-fighter',
@@ -12,7 +13,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/beardmore-clyde-shipyard.jpg" alt="Beardmore W.B.III assembly context at Clyde shipyards" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Beardmore W.B.III assembly context at Clyde shipyards" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Clyde-built: from shipyard to flight deck—Scotland’s naval aviation contribution.</p>
     </div>
 
@@ -27,7 +28,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/hms-argus-aircraft-carrier.jpg" alt="HMS Argus deck operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="HMS Argus deck operations" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">HMS Argus: the moving laboratory for Britain’s deck-landing doctrine.</p>
     </div>
 
@@ -52,7 +53,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/hms-argus-aircraft-carrier.jpg',
+    url: '/blog-images/default-generic.svg',
     alt: 'Beardmore naval fighter context',
     caption: 'Carrier operations defined the problem set and the solution space.'
   },
@@ -60,18 +61,18 @@ const post = {
   tags: [
     'Beardmore', 'W.B.III', 'Naval fighter', 'HMS Argus', 'Clydeside', 'charles mackay books'
   ],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['beardmore-aviation', 'aircraft-carrier-argus', 'clydeside-aviation-vol1']),
   relatedPosts: []
 }
 
 export const metadata: Metadata = {
   title: 'Beardmore W.B.III Naval Fighter | Charles E. MacKay',
   description: 'Engineering and operational history of the Beardmore W.B.III and early British naval fighter development on the Clyde.',
-  keywords: 'Beardmore, W.B.III, naval fighter, HMS Argus, Clydeside, Charles MacKay, charles mackay books',
+  keywords: 'Beardmore W.B.III, Clyde-built naval fighter, HMS Argus carrier, WWI deck-landing, Clydeside aviation, William Beardmore, Charles E. MacKay, charles mackay books',
   openGraph: {
     title: 'Beardmore W.B.III and Clyde-Built Naval Fighters',
     description: 'From shipyard ingenuity to deck-landing realities in WWI.',
-    images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
+    images: ['/blog-images/default-generic.svg'],
     type: 'article'
   }
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'albatros-dva-technical-legacy',
@@ -12,7 +13,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/albatros-dva-german-fighter.jpg" alt="Albatros D.Va German fighter" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Albatros D.Va German fighter" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Albatros D.Va: clean lines and semi-monocoque fuselage shaping late-war German fighter design.</p>
     </div>
 
@@ -27,7 +28,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/albatros-dv-flying.jpg" alt="Albatros D.V in flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Albatros D.V in flight" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">The D.V/D.Va in flight: dive with care—lower-wing loads demanded respect.</p>
     </div>
 
@@ -37,7 +38,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/albatros-dva-museum-display.jpg" alt="Albatros D.Va museum restoration" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Albatros D.Va museum restoration" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Museum restorations reveal joinery, plywood layup, and hardware selection—keys to the type’s character.</p>
     </div>
 
@@ -63,7 +64,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/albatros-dva-german-fighter.jpg',
+    url: '/blog-images/default-generic.svg',
     alt: 'Albatros D.Va',
     caption: 'Late-war Albatros refinement.'
   },
@@ -71,18 +72,18 @@ const post = {
   tags: [
     'Albatros D.Va', 'WWI fighter', 'Mercedes D.III', 'Sesquiplane', 'charles mackay books'
   ],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['german-aircraft-great-war', 'flying-for-kaiser']),
   relatedPosts: []
 }
 
 export const metadata: Metadata = {
   title: 'Albatros D.Va Technical Legacy | Charles E. MacKay',
   description: 'Engineering analysis and service history of the Albatros D.Va fighter, with structure, powerplant, and tactics.',
-  keywords: 'Albatros D.Va, WWI fighter, sesquiplane, Mercedes D.III, Charles MacKay, charles mackay books',
+  keywords: 'Albatros D.Va, WWI German fighter, sesquiplane wing, Mercedes D.III engine, Albatros D.V limits, German aircraft 1917, Charles E. MacKay, charles mackay books',
   openGraph: {
     title: 'Albatros D.Va: Design, Strengths, and Service',
     description: 'Structure, aerodynamics, and combat employment of the Albatros D.Va.',
-    images: ['/blog-images/albatros-dva-german-fighter.jpg'],
+    images: ['/blog-images/default-generic.svg'],
     type: 'article'
   }
 }

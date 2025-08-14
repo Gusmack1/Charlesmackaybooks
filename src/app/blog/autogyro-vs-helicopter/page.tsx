@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'autogyro-vs-helicopter',
@@ -12,7 +13,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/autogyro-vs-helicopter-comparison.jpg" alt="Autogyro and early helicopter comparison" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Autogyro and early helicopter comparison" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Autogyro vs helicopter: autorotation as foundation, powered hover as destination.</p>
     </div>
 
@@ -22,7 +23,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/cierva-autogyro-duxford.jpg" alt="Cierva autogyro at Duxford museum" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Cierva autogyro at Duxford museum" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Cierva’s autogyro: the hinge is the thing—flapping and lead-lag freed the rotor.</p>
     </div>
 
@@ -32,7 +33,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/sikorsky-vs300-helicopter.jpg" alt="Sikorsky VS-300 early helicopter configuration" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Sikorsky VS-300 early helicopter configuration" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Sikorsky VS-300: the canonical single-main rotor plus tail rotor configuration.</p>
     </div>
 
@@ -42,7 +43,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/bristol-sycamore-helicopter.jpg" alt="Bristol Sycamore in service" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Bristol Sycamore in service" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Bristol Sycamore: Britain’s first production helicopter—proof of post-war maturation.</p>
     </div>
 
@@ -68,7 +69,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/autogyro-vs-helicopter-comparison.jpg',
+    url: '/blog-images/default-generic.svg',
     alt: 'Autogyro vs Helicopter',
     caption: 'Autorotation as foundation; powered hover as destination.'
   },
@@ -76,18 +77,18 @@ const post = {
   tags: [
     'Autogyro', 'Helicopter', 'Cierva', 'Sikorsky', 'Rotorcraft', 'Autorotation', 'charles mackay books'
   ],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['sycamore-seeds']),
   relatedPosts: []
 }
 
 export const metadata: Metadata = {
   title: 'Autogyro vs Helicopter | Charles E. MacKay',
   description: 'Technical comparison of autogyros and helicopters: aerodynamics, controls, applications, and legacy.',
-  keywords: 'autogyro, helicopter, Cierva, Sikorsky, rotorcraft, autorotation, Charles MacKay, charles mackay books',
+  keywords: 'autogyro vs helicopter, Cierva autogyro, Sikorsky VS-300, rotorcraft autorotation, helicopter controls, Bristol Sycamore, British helicopter history, Charles E. MacKay, charles mackay books',
   openGraph: {
     title: 'Autogyro vs Helicopter: The Bridge to True Vertical Flight',
     description: 'How autogyros enabled the helicopter revolution.',
-    images: ['/blog-images/autogyro-vs-helicopter-comparison.jpg'],
+    images: ['/blog-images/default-generic.svg'],
     type: 'article'
   }
 }

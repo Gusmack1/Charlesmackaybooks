@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'arado-ar234-jet-bomber',
@@ -12,7 +13,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/arado-ar234-jet-bomber.jpg" alt="Arado Ar 234 jet bomber on the tarmac during WWII" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Arado Ar 234 jet bomber on the tarmac during WWII" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Arado Ar 234 Blitz: sleek lines optimised for speed, altitude, and reconnaissance.</p>
     </div>
 
@@ -32,7 +33,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/me262-jet-fighter-historical.jpg" alt="Me 262 formation illustrating Germany’s late-war jet ecosystem" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Me 262 formation illustrating Germany’s late-war jet ecosystem" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Germany’s late-war jet ecosystem: reconnaissance from the Ar 234 complemented interceptor work by the Me 262.</p>
     </div>
 
@@ -52,7 +53,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/luftwaffe-1945-final-year.jpg" alt="Late-war German airfields and logistics under pressure in 1945" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Late-war German airfields and logistics under pressure in 1945" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Late-war Germany: logistic constraints restricted jet operations more than tactics or airframe limits.</p>
     </div>
 
@@ -82,7 +83,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/arado-ar234-jet-bomber.jpg',
+    url: '/blog-images/default-generic.svg',
     alt: 'Arado Ar 234 jet bomber',
     caption: 'The world’s first operational jet bomber.'
   },
@@ -90,18 +91,18 @@ const post = {
   tags: [
     'Arado Ar 234', 'Jet bomber', 'WWII Aviation', 'Reconnaissance', 'Jumo 004', 'charles mackay books'
   ],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['enemy-luftwaffe-1945']),
   relatedPosts: []
 }
 
 export const metadata: Metadata = {
   title: 'Arado Ar 234 Jet Bomber | Charles E. MacKay',
   description: 'Technical history and operational analysis of the Arado Ar 234 Blitz, the first operational jet bomber, with engines, airframe, missions, and legacy.',
-  keywords: 'Arado Ar 234, jet bomber, WWII reconnaissance, Jumo 004, Luftwaffe, Charles MacKay, charles mackay books',
+  keywords: 'Arado Ar 234, jet bomber, WWII reconnaissance aircraft, Jumo 004 engines, Luftwaffe 1945, German jet bomber, Me 262 ecosystem, late-war aviation, Charles E. MacKay, charles mackay books',
   openGraph: {
     title: 'Arado Ar 234: First Operational Jet Bomber',
     description: 'Design, engines, missions, and legacy of the Ar 234 Blitz.',
-    images: ['/blog-images/arado-ar234-jet-bomber.jpg'],
+    images: ['/blog-images/default-generic.svg'],
     type: 'article'
   }
 }

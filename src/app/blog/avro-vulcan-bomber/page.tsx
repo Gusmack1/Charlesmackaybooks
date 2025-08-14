@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
   id: 'avro-vulcan-bomber',
@@ -12,7 +13,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/avro-vulcan-bomber.jpg" alt="Avro Vulcan bomber in flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="Avro Vulcan bomber in flight" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Avro Vulcan: delta-wing geometry at the heart of Britain’s V-Force.</p>
     </div>
 
@@ -27,7 +28,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/vulcan-bomber-formation.jpg" alt="V-Force Vulcan formation" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/default-generic.svg" alt="V-Force Vulcan formation" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Vulcans in formation: Britain’s V-Force strategy, airborne.</p>
     </div>
 
@@ -57,7 +58,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/avro-vulcan-bomber.jpg',
+    url: '/blog-images/default-generic.svg',
     alt: 'Avro Vulcan bomber',
     caption: 'Delta-wing icon of the V-Force.'
   },
@@ -65,18 +66,18 @@ const post = {
   tags: [
     'Avro Vulcan', 'V-Force', 'Cold War', 'Delta wing', 'Olympus', 'charles mackay books'
   ],
-  relatedBooks: [],
+  relatedBooks: getBooksData(['sonic-to-standoff']),
   relatedPosts: []
 }
 
 export const metadata: Metadata = {
   title: 'Avro Vulcan Bomber | Charles E. MacKay',
   description: 'Avro Vulcan aerodynamics, systems, doctrine, and legacy in Britain’s Cold War deterrent.',
-  keywords: 'Avro Vulcan, V-Force, Cold War bomber, delta wing, Olympus, Charles MacKay, charles mackay books',
+  keywords: 'Avro Vulcan, RAF V-Force, Cold War bomber, delta wing bomber, Olympus engines, Blue Steel, British nuclear deterrent, Charles E. MacKay, charles mackay books',
   openGraph: {
     title: 'Avro Vulcan: Aerodynamics and the V-Force',
     description: 'How the Vulcan’s delta wing and systems underwrote Britain’s deterrent doctrine.',
-    images: ['/blog-images/avro-vulcan-bomber.jpg'],
+    images: ['/blog-images/default-generic.svg'],
     type: 'article'
   }
 }
