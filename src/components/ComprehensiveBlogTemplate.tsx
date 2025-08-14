@@ -290,9 +290,71 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           />
         </article>
 
-        {/* Related Books section intentionally removed across all blog posts per site policy */}
-
-        {/* Auto-related books removed to avoid duplicate related sections */}
+        {/* Related Books CTA */}
+        {Array.isArray(post.relatedBooks) && post.relatedBooks.length > 0 && (
+          <section className="mt-16 card p-8" aria-labelledby="related-books-heading">
+            <div className="flex items-center justify-between gap-4 mb-6">
+              <h3 id="related-books-heading" className="text-2xl font-bold text-primary">Related Books by Charles E. MacKay</h3>
+              <Link href="/books" className="badge badge-blue px-4 py-2 rounded-lg font-semibold">Browse all books</Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {post.relatedBooks.map((book) => (
+                <article key={book.id} className="p-5 rounded-lg border border-slate-200 bg-white/50 dark:bg-slate-900/40">
+                  <Link href={`/books/${book.id}`} className="block group">
+                    <div className="aspect-[3/4] w-full overflow-hidden rounded-md bg-slate-100 dark:bg-slate-800 mb-4">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={book.cover || '/book-covers/default-placeholder.svg'}
+                        alt={`${book.title} cover`}
+                        className="w-full h-full object-cover group-hover:opacity-90"
+                        onError={(e) => {
+                          try { (e.currentTarget as HTMLImageElement).src = '/blog-images/default-generic.svg' } catch {}
+                        }}
+                      />
+                    </div>
+                    <h4 className="text-lg font-semibold text-primary mb-1">{book.title}</h4>
+                    <p className="text-sm text-secondary mb-2">By {book.author || 'Charles E. MacKay'}</p>
+                    {typeof book.price === 'number' && (
+                      <p className="text-sm font-semibold text-primary mb-3">£{book.price.toFixed(2)}</p>
+                    )}
+                    <div className="flex items-center gap-3">
+                      <span className="badge badge-blue px-3 py-2 rounded-lg">View & Buy</span>
+                    </div>
+                  </Link>
+                </article>
+              ))}
+            </div>
+            {/* Related Books JSON-LD */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'ItemList',
+                  itemListElement: post.relatedBooks.map((b, index) => ({
+                    '@type': 'ListItem',
+                    position: index + 1,
+                    item: {
+                      '@type': 'Product',
+                      name: b.title,
+                      url: `https://charlesmackaybooks.com/books/${b.id}`,
+                      image: b.cover?.startsWith('http') ? b.cover : `https://charlesmackaybooks.com${b.cover?.startsWith('/') ? '' : '/'}${b.cover || ''}`,
+                      brand: { '@type': 'Brand', name: 'Charles Mackay Books' },
+                      author: { '@type': 'Person', name: 'Charles E. MacKay' },
+                      offers: typeof b.price === 'number' ? {
+                        '@type': 'Offer',
+                        priceCurrency: 'GBP',
+                        price: b.price,
+                        availability: 'https://schema.org/InStock',
+                        url: `https://charlesmackaybooks.com/books/${b.id}`
+                      } : undefined
+                    }
+                  }))
+                })
+              }}
+            />
+          </section>
+        )}
 
         {/* Author Bio */}
         <section className="mt-16 card p-8">
