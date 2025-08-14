@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getBooksData } from '@/utils/bookUtils';
 
 interface BlogPost {
   id: string;
@@ -290,15 +291,50 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           />
         </article>
 
-        {/* Related Books CTA */}
-        {Array.isArray(post.relatedBooks) && post.relatedBooks.length > 0 && (
+        {/* Related Books CTA (with intelligent fallback) */}
+        {(() => {
+          const hasExplicit = Array.isArray(post.relatedBooks) && post.relatedBooks.length > 0;
+          const normalize = (s: string) => (s || '').toLowerCase();
+          const category = normalize(post.category);
+          const tags = (post.tags || []).map(normalize);
+          const pick = new Set<string>();
+          if (!hasExplicit) {
+            // Category-based suggestions
+            if (category.includes('wwi')) { pick.add('british-aircraft-great-war'); pick.add('german-aircraft-great-war'); }
+            if (category.includes('wwii') || category.includes('world war ii')) { pick.add('enemy-luftwaffe-1945'); }
+            if (category.includes('jet') || category.includes('cold war')) { pick.add('sonic-to-standoff'); }
+            if (category.includes('helicopter')) { pick.add('sycamore-seeds'); }
+            if (category.includes('naval')) { pick.add('aircraft-carrier-argus'); }
+            if (category.includes('scottish')) { pick.add('clydeside-aviation-vol1'); }
+            if (category.includes('biography')) { pick.add('captain-eric-brown'); pick.add('soaring-with-wings'); }
+            if (category.includes('industrial') || category.includes('manufacturing')) { pick.add('beardmore-aviation'); }
+            // Tag-based augment
+            if (tags.includes('v-force') || tags.includes('vulcan')) { pick.add('sonic-to-standoff'); }
+            if (tags.includes('hms argus') || tags.includes('carrier')) { pick.add('aircraft-carrier-argus'); }
+            if (tags.includes('bristol') || tags.includes('brisfit')) { pick.add('bristol-fighter'); }
+            if (tags.includes('schneider') || tags.includes('trophy')) { pick.add('mother-of-the-few'); }
+          }
+          const fallbackBooks = !hasExplicit ? getBooksData(Array.from(pick)) : [];
+          const finalRelated = hasExplicit ? post.relatedBooks : fallbackBooks;
+          if (!finalRelated || finalRelated.length === 0) {
+            return (
+              <section className="mt-16 card p-8" aria-labelledby="related-books-heading">
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <h3 id="related-books-heading" className="text-2xl font-bold text-primary">Explore Charles E. MacKay’s Books</h3>
+                  <Link href="/books" className="badge badge-blue px-4 py-2 rounded-lg font-semibold">Browse all books</Link>
+                </div>
+                <p className="text-secondary">Dive deeper into aviation and Scottish industrial history with our full catalogue of meticulously researched titles.</p>
+              </section>
+            );
+          }
+          return (
           <section className="mt-16 card p-8" aria-labelledby="related-books-heading">
             <div className="flex items-center justify-between gap-4 mb-6">
               <h3 id="related-books-heading" className="text-2xl font-bold text-primary">Related Books by Charles E. MacKay</h3>
               <Link href="/books" className="badge badge-blue px-4 py-2 rounded-lg font-semibold">Browse all books</Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {post.relatedBooks.map((book) => (
+              {finalRelated.map((book) => (
                 <article key={book.id} className="p-5 rounded-lg border border-slate-200 bg-white/50 dark:bg-slate-900/40">
                   <Link href={`/books/${book.id}`} className="block group">
                     <div className="aspect-[3/4] w-full overflow-hidden rounded-md bg-slate-100 dark:bg-slate-800 mb-4">
@@ -331,7 +367,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 __html: JSON.stringify({
                   '@context': 'https://schema.org',
                   '@type': 'ItemList',
-                  itemListElement: post.relatedBooks.map((b, index) => ({
+                  itemListElement: finalRelated.map((b, index) => ({
                     '@type': 'ListItem',
                     position: index + 1,
                     item: {
@@ -354,7 +390,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               }}
             />
           </section>
-        )}
+          );
+        })()}
 
         {/* Author Bio */}
         <section className="mt-16 card p-8">
