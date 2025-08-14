@@ -32,6 +32,16 @@ const post = {
       <p class="text-sm mt-2 text-center italic">HMS Argus: the moving laboratory for Britain’s deck-landing doctrine.</p>
     </div>
 
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Folding wing mechanisms and naval handling gear" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Folding and fittings: compact footprints and handling gear defined naval fighter design.</p>
+    </div>
+
+    <h2 id="industrial">Industrial Ecosystem and the Clyde</h2>
+    <p>
+      The Clyde’s steel, machine, and shipbuilding capacity enabled short supply lines for fixtures, forgings, and repair. Collaboration between yards and airframes accelerated iteration, with naval requirements shaping design priorities distinct from land-based fighters.
+    </p>
+
     <h2 id="legacy">Legacy</h2>
     <p>
       The W.B.III’s significance is cumulative: it contributed to the carrier-fighter lineage by hardening structures, practices, and culture. Later naval aircraft absorbed its lessons, while Clyde’s industrial breadth sustained aviation projects beyond the war.
@@ -51,7 +61,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 18,
+  readingTime: 22,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Beardmore naval fighter context',

@@ -52,6 +52,26 @@ const post = {
       Modern autogyros survive as efficient sport and patrol aircraft; helicopters dominate vertical lift. The lineage is continuous: without Cierva’s rotors and the discipline of autorotation, Sikorsky’s powered rotorcraft would have lacked a safe descent mode and a practical envelope. Today’s rotorcraft research—coaxial, compound, tiltrotor—still balances the same forces Cierva and Sikorsky tamed.
     </p>
 
+    <h2 id="autorotation-math">Autorotation: Physics and Safety Envelope</h2>
+    <p>
+      Autorotation extracts energy from upward airflow through the rotor disc. Blade element theory explains how inflow angle and rotational speed set blade angle of attack segments. In both autogyro cruise and helicopter engine-out descent, managing rotor RPM via collective and airspeed is central to safe touchdown. Demonstrated, practised autorotation underpins certification and training.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Rotorcraft training diagram for autorotation and flare" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Emergency descent: the autorotation flare stores and releases rotor energy for a gentle landing.</p>
+    </div>
+
+    <h2 id="lineage">British Lineage and the Bristol Sycamore</h2>
+    <p>
+      Britain’s first production helicopter, the Bristol Sycamore, embodied lessons from autogyro research while adding powered rotor control laws, crew ergonomics, and maintainability. As operations expanded—SAR, medevac—the procedural discipline of autorotation remained the foundation of safety cases.
+    </p>
+
+    <h2 id="modern">Modern Concepts: Coaxial, NOTAR, and Tiltrotor</h2>
+    <p>
+      Modern designs pursue efficiency and noise reduction: coaxial counter-rotating rotors remove the tail rotor penalty; NOTAR leverages boundary-layer control; tiltrotors trade hover efficiency for high cruise speed. Each solution revisits trade-offs first confronted by Cierva and Sikorsky: torque balance, control authority, and mission economics.
+    </p>
+
     <h2 id="further-reading">Further Reading & Related</h2>
     <ul>
       <li><a class="underline" href="/blog/helicopter-development-pioneers">Helicopter Development: From Autogyros to Modern Rotorcraft</a></li>
@@ -67,7 +87,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 18,
+  readingTime: 26,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Autogyro vs Helicopter',

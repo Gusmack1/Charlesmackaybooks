@@ -32,10 +32,25 @@ const post = {
       <p class="text-sm mt-2 text-center italic">Vulcans in formation: Britain’s V-Force strategy, airborne.</p>
     </div>
 
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Blue Steel stand-off missile integration on Vulcan" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Blue Steel integration: stand-off capability extended deterrent reach in the missile era.</p>
+    </div>
+
     <h2 id="doctrine">Doctrine: From High Altitude to Low Level</h2>
     <p>
       Initially intended to transit and attack at high altitude, the Vulcan’s survivability at those profiles diminished as Soviet SAMs matured. The RAF transformed doctrine toward low-level ingress, trading fuel economy for terrain masking. The Black Buck raids in the Falklands era demonstrated long-range conventional reach when supported by extensive air-to-air refuelling.
     </p>
+
+    <h2 id="ecm">ECM and Crew Systems</h2>
+    <p>
+      Electronic countermeasures evolved continuously: receivers, jammers, and chaff/flare tactics layered survivability. Training emphasised crew resource management and navigation precision under fatigue and weather constraints—particularly during long-duration refuelled sorties.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Low-level terrain masking routes used by Vulcan crews" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Low-level routes: performance, terrain, and radar coverage shaped ingress planning.</p>
+    </div>
 
     <h2 id="legacy">Legacy and Cultural Memory</h2>
     <p>
@@ -56,7 +71,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 18,
+  readingTime: 24,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Avro Vulcan bomber',

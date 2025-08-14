@@ -57,6 +57,11 @@ const post = {
       <p class="text-sm mt-2 text-center italic">Late-war Germany: logistic constraints restricted jet operations more than tactics or airframe limits.</p>
     </div>
 
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Ar 234 four-engine C-series concept vs twin-engine B-series" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Two vs four: acceleration and redundancy weighed against production reality.</p>
+    </div>
+
     <h2 id="specifications">Selected Specifications (Ar 234 B)</h2>
     <ul>
       <li>Powerplant: 2 × Junkers Jumo 004B axial turbojets</li>
@@ -65,6 +70,41 @@ const post = {
       <li>Range: Mission-dependent; reconnaissance fits prioritised fuel</li>
       <li>Armament: Typically none on recon; bombs externally for strike</li>
     </ul>
+
+    <h2 id="variants">Variants, Production, and Logistics</h2>
+    <p>
+      The primary operational model was the Ar 234 B, which adopted a tricycle undercarriage and practical field systems. Proposals and limited trials included the Ar 234 C with four BMW 003 engines in twin paired nacelles to improve acceleration and single-engine safety. Production, however, was constrained by fuel shortages, engine manufacture bottlenecks, and Allied disruption of transport nodes. In practice, operational units prioritised reconnaissance fit-outs over strike owing to payload-range trade-offs and the strategic value of timely imagery.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Arado Ar 234 camera installation and reconnaissance workflow" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Reconnaissance first: optics, workflow, and route planning defined most Ar 234 sorties.</p>
+    </div>
+
+    <h2 id="case-studies">Operational Case Studies</h2>
+    <p>
+      Case studies of Western Front sorties show the Ar 234 exploiting cloud breaks and high-speed runs to survey bridges, marshalling yards, and assembly areas. Mission debriefs emphasised fuel margins, engine husbandry, and the importance of pre-briefed escape headings. Where bombing was tasked, short, straight runs and disciplined throttle changes protected the 004s from surge while preserving weapon release accuracy.
+    </p>
+
+    <h2 id="comparison">Comparison: Ar 234 vs. Mosquito PR Variants</h2>
+    <p>
+      The RAF’s de Havilland Mosquito PR variants remained formidable through 1944–45, combining speed, range, and reliability. The Ar 234’s advantage was peak speed at altitude and jet climb performance once underway; the Mosquito offered longer endurance, mature engines, and a robust support network. The contrast illustrates the transitional nature of late-war jet operations: raw speed met industrial realities and field support constraints.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Jet operations logistics: fuel, engines, and maintenance" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Jet-age logistics in 1944–45: metallurgy, fuel, and spares mattered as much as tactics.</p>
+    </div>
+
+    <h2 id="engineering-lessons">Engineering Lessons and Influence</h2>
+    <p>
+      Lessons included nacelle aerodynamics tuned for axial compressors, landing-gear integration for jet-era weight and CG distributions, and systems miniaturisation for compact noses and camera bays. Post-war, these themes migrated directly into reconnaissance jets and light bombers, informing intake placement, engine handling procedures, and avionics packaging.
+    </p>
+
+    <h2 id="sources">Sources and Historiography</h2>
+    <p>
+      Contemporary squadron records, engine maintenance notes for Jumo 004B variants, and Allied intelligence summaries provide the most reliable operational picture. Later technical syntheses corroborate the short engine life, careful throttle discipline, and reconnaissance emphasis described by wartime documents.
+    </p>
 
     <h2 id="further-reading">Further Reading & Related</h2>
     <ul>
@@ -81,7 +121,7 @@ const post = {
     email: 'charlese1mackay@hotmail.com'
   },
   publishedDate: new Date().toISOString(),
-  readingTime: 18,
+  readingTime: 26,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
     alt: 'Arado Ar 234 jet bomber',
