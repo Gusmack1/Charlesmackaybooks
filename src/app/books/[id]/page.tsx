@@ -191,7 +191,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     return baseKeywords;
   };
 
-  const keywords = generateKeywords(book);
+  const keywords = [...generateKeywords(book), 'charles mackay books'];
 
   // Meta description derived strictly from book content (no extra marketing)
   const generateDescription = (book: Book) => {
@@ -450,6 +450,10 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 leading-tight">
                   {book.title}
                 </h1>
+
+                <p className="text-white/90 text-base sm:text-lg -mt-2">
+                  By <Link href="/about" className="underline font-semibold">Charles E. MacKay</Link>
+                </p>
                 
                 {/* Per request: no description text in hero */}
 
