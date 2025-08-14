@@ -401,6 +401,28 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
   const metaDescriptionForSchema = sanitizedParagraphs[0] || book.description || '';
 
+  // Infer a best-fit blog article slug for "Explore More" when explicit related posts are missing
+  const inferRelatedBlogSlug = (b: Book): string | undefined => {
+    // Prefer the first explicit related post when present
+    const anyRel = (b as any).relatedBlogPosts?.[0]?.slug as string | undefined;
+    if (anyRel) return anyRel;
+
+    // Map common categories to cornerstone blog articles
+    const categoryToSlug: Record<string, string> = {
+      'WWI Aviation': 'british-aircraft-great-war-rfc-rnas',
+      'WWII Aviation': 'luftwaffe-1945-final-year',
+      'Scottish Aviation History': 'clydeside-aviation-revolution',
+      'Helicopter History': 'helicopter-development-pioneers',
+      'Jet Age Aviation': 'jet-age-aviation-cold-war-development',
+      'Naval Aviation': 'hms-argus-first-aircraft-carrier',
+      'Aviation Biography': 'test-pilot-biography-eric-brown',
+      'Aviation History': 'adolf-rohrbach-metal-aircraft-revolution',
+      'Military History': 'british-nuclear-deterrent-v-force',
+      'Industrial History': 'clydeside-aviation-revolution',
+    };
+    return categoryToSlug[b.category];
+  };
+
   return (
     <>
         <UnifiedSchema
@@ -539,6 +561,12 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               {book.researchThemes && book.researchThemes.length ? (
                 <li><span className="font-semibold text-primary">Research Themes:</span> {book.researchThemes.join(', ')}</li>
               ) : null}
+              {(book as any).academicInstitutions?.length ? (
+                <li><span className="font-semibold text-primary">Academic Use:</span> {(book as any).academicInstitutions.slice(0, 2).join(', ')}{((book as any).academicInstitutions.length > 2 ? '…' : '')}</li>
+              ) : null}
+              {Array.isArray((book as any).sourceType) && (book as any).sourceType.length ? (
+                <li><span className="font-semibold text-primary">Sources:</span> {(book as any).sourceType.join(', ')}</li>
+              ) : null}
             </ul>
           </div>
 
@@ -576,6 +604,14 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                     <h4 className="font-semibold text-primary mb-2">Research Themes</h4>
                     <ul className="list-disc list-inside">
                       {book.researchThemes.map((r) => (<li key={r}>{r}</li>))}
+                    </ul>
+                  </div>
+                ) : null}
+                {(book as any).sourceType?.length ? (
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Source Types</h4>
+                    <ul className="list-disc list-inside">
+                      {(book as any).sourceType.map((s: string) => (<li key={s}>{s}</li>))}
                     </ul>
                   </div>
                 ) : null}
@@ -665,7 +701,15 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             <div className="card mt-8 content">
               <h3 className="content h3">Explore More</h3>
               <p className="text-secondary mb-3">Read expert research that connects to this title.</p>
-              <Link href="/blog" className="badge badge-blue inline-block">Browse the Blog →</Link>
+              {(() => {
+                const slug = inferRelatedBlogSlug(book);
+                if (slug) {
+                  return (
+                    <Link href={`/blog/${slug}`} className="badge badge-blue inline-block">Read the related article →</Link>
+                  );
+                }
+                return <Link href="/blog" className="badge badge-blue inline-block">Browse the Blog →</Link>;
+              })()}
             </div>
           )}
         </main>
