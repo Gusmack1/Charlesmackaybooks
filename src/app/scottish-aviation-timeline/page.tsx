@@ -341,6 +341,7 @@ export default function ScottishAviationTimelinePage() {
       "startDate": `${event.year}-01-01`,
       "endDate": `${event.year}-12-31`,
       "eventStatus": "https://schema.org/EventScheduled",
+      "image": "https://charlesmackaybooks.com/blog-images/default-generic.svg",
       "location": {
         "@type": "Place",
         "name": event.location,
