@@ -346,6 +346,10 @@ export default function ScottishAviationTimelinePage() {
         "address": toAddress(event.location)
       },
       "description": event.description,
+      "performer": {
+        "@type": "Person",
+        "name": event.keyFigures?.[0] || "Scottish Aviation Pioneers"
+      },
       "offers": {
         "@type": "Offer",
         "price": "0",
