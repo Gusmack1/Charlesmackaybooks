@@ -344,7 +344,12 @@ export default function ScottishAviationTimelinePage() {
         "name": event.location,
         "address": toAddress(event.location)
       },
-      "description": event.description
+      "description": event.description,
+      organizer: {
+        "@type": "Person",
+        "name": "Charles E. MacKay",
+        "url": "https://charlesmackaybooks.com/about"
+      }
     }))
   };
 
