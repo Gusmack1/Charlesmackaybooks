@@ -340,6 +340,7 @@ export default function ScottishAviationTimelinePage() {
       "name": event.title,
       "startDate": `${event.year}-01-01`,
       "endDate": `${event.year}-12-31`,
+      "eventStatus": "https://schema.org/EventScheduled",
       "location": {
         "@type": "Place",
         "name": event.location,
