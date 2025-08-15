@@ -346,6 +346,13 @@ export default function ScottishAviationTimelinePage() {
         "address": toAddress(event.location)
       },
       "description": event.description,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://charlesmackaybooks.com/scottish-aviation-timeline"
+      },
       organizer: {
         "@type": "Person",
         "name": "Charles E. MacKay",
