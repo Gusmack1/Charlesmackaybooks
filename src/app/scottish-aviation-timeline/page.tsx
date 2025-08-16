@@ -357,6 +357,7 @@ export default function ScottishAviationTimelinePage() {
         "price": "0",
         "priceCurrency": "GBP",
         "availability": "https://schema.org/InStock",
+        "validFrom": `${event.year}-01-01`,
         "url": "https://charlesmackaybooks.com/scottish-aviation-timeline"
       },
       organizer: {
