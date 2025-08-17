@@ -106,24 +106,14 @@ export default function AdvancedSEOSchema() {
       "name": "A MacKay Publishing",
       "logo": "https://charlesmackaybooks.com/book-covers/charles-mackay-logo.jpg"
     },
-    "potentialAction": [
-      {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://charlesmackaybooks.com/search?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
+    "potentialAction": {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://charlesmackaybooks.com/search?q={search_term_string}"
       },
-      {
-        "@type": "ReadAction",
-        "target": "https://charlesmackaybooks.com",
-        "expectsAcceptanceOf": {
-          "@type": "Offer",
-          "category": "Aviation Books"
-        }
-      }
-    ],
+      "query-input": "required name=search_term_string"
+    },
     "mainEntity": {
       "@type": "WebSite",
       "name": "Charles E. MacKay Aviation Books",

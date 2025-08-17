@@ -6,6 +6,9 @@ import BBCPageTemplate from '@/components/BBCPageTemplate'
 export const metadata: Metadata = {
   title: 'Academic Resources | Aviation History Research | Charles E. MacKay',
   description: 'Comprehensive academic resources for aviation history research including bibliographies, primary sources, archival collections, and research methodologies for students and scholars.',
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/academic-resources'
+  },
   keywords: [
     'aviation history research',
     'academic resources',

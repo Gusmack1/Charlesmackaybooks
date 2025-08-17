@@ -5,6 +5,9 @@ import { books } from '@/data/books'
 export const metadata: Metadata = {
   title: 'Search | Charles E. MacKay',
   description: 'Search results for Charles Mackay Books',
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/search'
+  },
 }
 
 export default function SearchPage({ searchParams }: { searchParams: { query?: string, q?: string } }) {

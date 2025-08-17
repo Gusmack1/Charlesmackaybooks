@@ -131,7 +131,10 @@ export function generateJSONLD(props: SEOIndexingFixesProps & { url: string }) {
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://charlesmackaybooks.com/search?q={search_term_string}',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://charlesmackaybooks.com/search?q={search_term_string}'
+          },
           'query-input': 'required name=search_term_string'
         }
       },

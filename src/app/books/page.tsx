@@ -7,6 +7,9 @@ import BBCPageTemplate from '@/components/BBCPageTemplate'
 export const metadata: Metadata = {
   title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
   description: 'Browse the complete collection of aviation history books by Charles E. MacKay. 19+ books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.',
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/books'
+  },
   keywords: [
     'aviation history books',
     'Charles E MacKay books',
