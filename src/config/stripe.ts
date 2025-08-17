@@ -2,8 +2,8 @@ import { loadStripe } from '@stripe/stripe-js';
 
 // Stripe configuration for Charles Mackay Books
 export const stripeConfig = {
-  // Use environment variable for Stripe publishable key
-  publishableKey: process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
+  // Use environment variable for Stripe publishable key with fallback
+  publishableKey: process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || '',
   
   // Currency and locale settings
   currency: 'gbp',
@@ -39,8 +39,10 @@ export const stripeConfig = {
   }
 };
 
-// Initialize Stripe
-export const stripePromise = loadStripe(stripeConfig.publishableKey);
+// Initialize Stripe only if we have a publishable key
+export const stripePromise = stripeConfig.publishableKey 
+  ? loadStripe(stripeConfig.publishableKey)
+  : Promise.resolve(null);
 
 // Stripe Elements options
 export const stripeElementsOptions = {

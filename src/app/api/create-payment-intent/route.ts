@@ -1,12 +1,28 @@
 import { NextRequest, NextResponse } from 'next/server';
-import Stripe from 'stripe';
 
-// Initialize Stripe with secret key from environment variables only
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-07-30.basil',
-});
+// Only import Stripe if we have the required environment variables
+let stripe: any = null;
+
+try {
+  if (process.env.STRIPE_SECRET_KEY) {
+    const Stripe = require('stripe');
+    stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: '2025-07-30.basil',
+    });
+  }
+} catch (error) {
+  console.warn('Stripe not initialized - missing environment variables');
+}
 
 export async function POST(request: NextRequest) {
+  // Check if Stripe is properly initialized
+  if (!stripe) {
+    return NextResponse.json(
+      { error: 'Payment service not configured' },
+      { status: 503 }
+    );
+  }
+
   try {
     const body = await request.json();
     const { amount, currency = 'gbp', customerEmail, orderId, items } = body;
@@ -60,7 +76,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Error creating payment intent:', error);
     
-    if (error instanceof Stripe.errors.StripeError) {
+    if (error instanceof Error && 'type' in error) {
       return NextResponse.json(
         { error: error.message },
         { status: 400 }
