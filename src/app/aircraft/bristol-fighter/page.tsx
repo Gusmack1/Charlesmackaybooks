@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
+import { getBooksData } from '@/utils/bookUtils';
 
 export const metadata: Metadata = {
-  title: 'Bristol Fighter F2B | Complete Technical Guide & Service History | Charles E. MacKay',
-  description: 'Comprehensive guide to the Bristol Fighter F2B - technical specifications, service history, combat performance, and operational records. Authoritative research by aviation historian Charles E. MacKay.',
+  title: 'Bristol Fighter F2B "Brisfit" | Complete Technical Guide & Combat History | Charles E. MacKay',
+  description: 'Comprehensive analysis of the Bristol Fighter F2B - technical specifications, combat performance, operational history, and legacy. Authoritative research by aviation historian Charles E. MacKay.',
   keywords: [
     'Bristol Fighter F2B',
     'Bristol F2B specifications',
@@ -18,11 +21,13 @@ export const metadata: Metadata = {
     'Bristol Fighter armament',
     'F2B operational history',
     'Bristol Fighter development',
-    'Rolls-Royce Falcon engine'
+    'Rolls-Royce Falcon engine',
+    'Charles E MacKay',
+    'aviation history'
   ],
   openGraph: {
-    title: 'Bristol Fighter F2B | Complete Technical Guide',
-    description: 'Comprehensive guide to the Bristol Fighter F2B with technical specifications and service history.',
+    title: 'Bristol Fighter F2B "Brisfit" | Complete Technical Guide & Combat History',
+    description: 'Comprehensive analysis of the Bristol Fighter F2B including specifications, combat performance, and operational history during World War I.',
     type: 'article',
   },
 };
@@ -198,118 +203,79 @@ export default function BristolFighterPage() {
     },
     "datePublished": new Date().toISOString(),
     "dateModified": new Date().toISOString(),
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Bristol Fighter F2B"
-      },
-      {
-        "@type": "Thing",
-        "name": "World War I Aircraft"
-      },
-      {
-        "@type": "Thing",
-        "name": "British Military Aviation"
-      }
-    ],
-    "mainEntity": {
-      "@type": "Product",
-      "name": "Bristol Fighter F2B",
-      "description": "British two-seat biplane fighter and reconnaissance aircraft",
-      "manufacturer": {
-        "@type": "Organization",
-        "name": "Bristol Aeroplane Company"
-      },
-      "productionDate": "1917-1918",
-      "category": "Military Aircraft"
+    "image": "https://charlesmackaybooks.com/blog-images/default-generic.svg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://charlesmackaybooks.com/aircraft/bristol-fighter"
     }
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
-      />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="container mx-auto px-4 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-              Bristol Fighter F2B
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Bristol Fighter F2B "Brisfit"
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              Complete technical guide and service history of the Bristol Fighter F2B, one of the most
-              successful two-seat fighters of World War I. Comprehensive analysis by aviation historian Charles E. MacKay.
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              The Aggressive Two-Seat Fighter That Revolutionized WWI Combat
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-              <span>✈️ Complete Technical Specifications</span>
-              <span>⚔️ Combat Service Records</span>
-              <span>📊 Performance Analysis</span>
-              <span>📚 Historical Documentation</span>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <span className="bg-blue-600 px-3 py-1 rounded-full">WWI Fighter</span>
+              <span className="bg-blue-600 px-3 py-1 rounded-full">1917-1918</span>
+              <span className="bg-blue-600 px-3 py-1 rounded-full">Rolls-Royce Falcon</span>
+              <span className="bg-blue-600 px-3 py-1 rounded-full">Two-Seat Design</span>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Aircraft Overview */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">Aircraft Overview</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <p className="text-slate-700 leading-relaxed mb-4">
-                  The Bristol Fighter F2B was a British two-seat biplane fighter and reconnaissance aircraft
-                  that served with distinction during World War I. Developed by the Bristol Aeroplane Company,
-                  it became one of the war's most effective multi-role combat aircraft.
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Introduction */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Introduction: The Aggressive Two-Seat Fighter</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg leading-relaxed mb-6">
+                The Bristol Fighter F.2B — the "Brisfit" — overturned assumptions about two-seat aircraft in 1917. 
+                Properly flown, it fought like a single-seat fighter while retaining reconnaissance power and observation. 
+                This comprehensive analysis provides a formal, research-backed account of its conception, structure, 
+                engine and systems, armament, gunnery, crew coordination, maintenance and logistics, tactics, 
+                operational history, comparisons with contemporaries, and its long legacy in multi-role doctrine.
+              </p>
+              
+              <div className="my-8">
+                <Image 
+                  src="/blog-images/default-generic.svg" 
+                  alt="Bristol F.2B in formation, sunlight on upper wing surfaces, observer scanning astern" 
+                  width={800} 
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <p className="text-sm mt-2 text-center italic text-gray-600">
+                  A fighter with two minds: pilot's forward firepower; observer's situational guard.
                 </p>
-                <p className="text-slate-700 leading-relaxed mb-4">
-                  Powered by the reliable Rolls-Royce Falcon III engine, the F2B combined excellent
-                  performance with robust construction, making it equally effective in fighter,
-                  reconnaissance, and ground-attack roles.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <div className="font-semibold text-blue-800">First Flight</div>
-                    <div className="text-blue-700">September 1916</div>
-                  </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <div className="font-semibold text-green-800">Production</div>
-                    <div className="text-green-700">5,329 built</div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-slate-100 rounded-lg p-6">
-                <h3 className="font-semibold text-slate-800 mb-4">Key Features</h3>
-                <ul className="space-y-2 text-slate-700">
-                  <li>• Dual-role fighter and reconnaissance capability</li>
-                  <li>• Powerful Rolls-Royce Falcon III engine</li>
-                  <li>• Forward and rear-firing armament</li>
-                  <li>• Excellent visibility for crew</li>
-                  <li>• Robust construction for battlefield conditions</li>
-                  <li>• Good handling characteristics</li>
-                </ul>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Technical Specifications */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-8">Technical Specifications</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {technicalSpecs.map((category) => (
-                <div key={category.category} className="bg-white rounded-xl shadow-sm p-6">
-                  <h3 className="text-xl font-semibold text-slate-800 mb-4 border-b border-slate-200 pb-2">
-                    {category.category}
-                  </h3>
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Technical Specifications</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {technicalSpecs.map((spec, index) => (
+                <div key={index} className="bg-slate-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-slate-800 mb-4">{spec.category}</h3>
                   <div className="space-y-3">
-                    {category.specifications.map((spec, index) => (
-                      <div key={index} className="flex justify-between items-start">
-                        <span className="font-medium text-slate-700">{spec.parameter}:</span>
+                    {spec.specifications.map((item, itemIndex) => (
+                      <div key={itemIndex} className="flex justify-between items-start">
+                        <span className="font-medium text-slate-700">{item.parameter}:</span>
                         <div className="text-right">
-                          <span className="text-slate-800">{spec.value}</span>
-                          {spec.notes && (
-                            <div className="text-xs text-slate-500 mt-1">{spec.notes}</div>
+                          <span className="text-slate-900">{item.value}</span>
+                          {item.notes && (
+                            <div className="text-sm text-slate-600 mt-1">{item.notes}</div>
                           )}
                         </div>
                       </div>
@@ -318,125 +284,241 @@ export default function BristolFighterPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
-          {/* Development History */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">Development History</h2>
-            <div className="relative">
-              <div className="absolute left-4 top-0 bottom-0 w-1 bg-blue-200"></div>
-              <div className="space-y-6">
-                {developmentHistory.map((milestone, index) => (
-                  <div key={index} className="relative flex items-start">
-                    <div className="absolute left-2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white"></div>
-                    <div className="ml-10">
-                      <div className="flex items-center gap-4 mb-2">
-                        <span className="font-semibold text-slate-800">{milestone.date}</span>
-                        <span className="text-blue-600 font-medium">{milestone.milestone}</span>
-                      </div>
-                      <p className="text-slate-700">{milestone.details}</p>
-                    </div>
-                  </div>
-                ))}
+          {/* Historical Narrative */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Origins and Requirements</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg leading-relaxed mb-6">
+                The Royal Flying Corps sought a two-seat aircraft capable of aggressive patrols, escort, and reconnaissance 
+                under hostile skies. Early two-seaters survived by defensive fire and tight formations; the Brisfit was 
+                designed to change the grammar of two-seat fighting from passive to offensive. The design brief emphasised 
+                speed, climb, and manoeuvrability with a second gun position that added capability rather than drag alone.
+              </p>
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Design and Structure</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg leading-relaxed mb-6">
+                Chief designer Frank Barnwell's team balanced strength and weight through a conventional wood-and-fabric 
+                structure with steel fittings at high-load joints. Mass was concentrated around the centre of gravity to 
+                improve roll response. The centre-section was robust, the wings braced for stiffness, and the tail volume 
+                generous for control authority. Field repairability was a design requirement: spares, fabric, wire, and 
+                standard fittings enabled rapid patching near the front.
+              </p>
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Powerplant: Rolls-Royce Falcon</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg leading-relaxed mb-6">
+                The Falcon V-12 provided the decisive margin: robust power delivery, responsive throttle, and dependable 
+                cooling when cowlings and shutters were managed correctly. Unit practices covered plug inspection, coolant 
+                checks, and radiator care; hot-weather operations demanded attention to mixture and climb schedules. 
+                The engine's reliability underpinned offensive tactics, allowing confident dives and climbs back to altitude.
+              </p>
+              
+              <div className="my-8">
+                <Image 
+                  src="/blog-images/default-generic.svg" 
+                  alt="Close shot of Falcon engine installation with cowlings off; mechanics check magnetos and coolant lines" 
+                  width={800} 
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <p className="text-sm mt-2 text-center italic text-gray-600">
+                  Power and process: Falcon maintenance discipline sustained availability.
+                </p>
               </div>
             </div>
-          </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Armament and Fields of Fire</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg leading-relaxed mb-6">
+                Forward armament comprised a synchronized Vickers gun aligned to deliver stable fire at convergence. 
+                Aft, one or two Lewis guns on the Scarff ring covered the upper rear hemisphere. Ammunition management 
+                — belt care and drum changes — was drilled. The intent was unity of action: the pilot pressed attacks; 
+                the observer controlled the geometry astern, denying enemy aircraft preferred approach arcs.
+              </p>
+              
+              <div className="my-8">
+                <Image 
+                  src="/blog-images/default-generic.svg" 
+                  alt="Combat diagram showing Brisfit forward cone of fire and observer arcs; recommended break patterns" 
+                  width={800} 
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <p className="text-sm mt-2 text-center italic text-gray-600">
+                  Geometry of advantage: coordinated cones of fire and disciplined breaks.
+                </p>
+              </div>
+            </div>
+          </section>
 
           {/* Service Records */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-8">Squadron Service Records</h2>
-            <div className="grid gap-6">
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Operational Service</h2>
+            <div className="grid md:grid-cols-2 gap-6">
               {serviceRecords.map((record, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-500">
-                  <div className="flex flex-wrap items-start justify-between mb-4">
+                <div key={index} className="bg-slate-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-slate-800 mb-3">{record.squadron}</h3>
+                  <div className="space-y-2 text-sm">
+                    <p><span className="font-medium">Period:</span> {record.period}</p>
+                    <p><span className="font-medium">Theatre:</span> {record.theatre}</p>
+                    <p><span className="font-medium">Role:</span> {record.role}</p>
                     <div>
-                      <h3 className="text-xl font-semibold text-slate-800">{record.squadron}</h3>
-                      <div className="text-slate-600 mt-1">
-                        {record.period} • {record.theatre}
-                      </div>
-                    </div>
-                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                      {record.role}
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-700 mb-2">Notable Operations:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {record.notableOperations.map((operation) => (
-                        <span key={operation} className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-sm">
-                          {operation}
-                        </span>
-                      ))}
+                      <span className="font-medium">Notable Operations:</span>
+                      <ul className="list-disc list-inside mt-1 ml-4">
+                        {record.notableOperations.map((op, opIndex) => (
+                          <li key={opIndex}>{op}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
           {/* Combat Records */}
-          <div className="mb-12 bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">Notable Combat Records</h2>
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Notable Combat Engagements</h2>
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full border-collapse border border-slate-300">
                 <thead>
-                  <tr className="border-b border-slate-200">
-                    <th className="text-left py-3 px-4 font-semibold text-slate-800">Date</th>
-                    <th className="text-left py-3 px-4 font-semibold text-slate-800">Crew</th>
-                    <th className="text-left py-3 px-4 font-semibold text-slate-800">Location</th>
-                    <th className="text-left py-3 px-4 font-semibold text-slate-800">Enemy</th>
-                    <th className="text-left py-3 px-4 font-semibold text-slate-800">Outcome</th>
+                  <tr className="bg-slate-100">
+                    <th className="border border-slate-300 px-4 py-2 text-left">Date</th>
+                    <th className="border border-slate-300 px-4 py-2 text-left">Pilot</th>
+                    <th className="border border-slate-300 px-4 py-2 text-left">Observer</th>
+                    <th className="border border-slate-300 px-4 py-2 text-left">Location</th>
+                    <th className="border border-slate-300 px-4 py-2 text-left">Enemy</th>
+                    <th className="border border-slate-300 px-4 py-2 text-left">Outcome</th>
                   </tr>
                 </thead>
                 <tbody>
                   {combatRecords.map((record, index) => (
-                    <tr key={index} className="border-b border-slate-100">
-                      <td className="py-3 px-4 text-slate-700">{record.date}</td>
-                      <td className="py-3 px-4">
-                        <div className="text-slate-800 font-medium">{record.pilot}</div>
-                        <div className="text-slate-600 text-sm">{record.observer}</div>
-                      </td>
-                      <td className="py-3 px-4 text-slate-700">{record.location}</td>
-                      <td className="py-3 px-4 text-slate-700">{record.enemy}</td>
-                      <td className="py-3 px-4">
-                        <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">
-                          {record.outcome}
-                        </span>
-                      </td>
+                    <tr key={index} className="hover:bg-slate-50">
+                      <td className="border border-slate-300 px-4 py-2">{record.date}</td>
+                      <td className="border border-slate-300 px-4 py-2">{record.pilot}</td>
+                      <td className="border border-slate-300 px-4 py-2">{record.observer}</td>
+                      <td className="border border-slate-300 px-4 py-2">{record.location}</td>
+                      <td className="border border-slate-300 px-4 py-2">{record.enemy}</td>
+                      <td className="border border-slate-300 px-4 py-2">{record.outcome}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          </div>
+          </section>
 
-          {/* Research Sources */}
-          <div className="bg-blue-50 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-slate-800 mb-6">Research Sources & Academic References</h2>
-            <div className="prose max-w-none text-slate-700">
-              <p className="mb-4">
-                This comprehensive analysis is based on extensive primary source research including:
+          {/* Development History */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Development Timeline</h2>
+            <div className="space-y-4">
+              {developmentHistory.map((item, index) => (
+                <div key={index} className="flex items-start space-x-4 p-4 bg-slate-50 rounded-lg">
+                  <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium min-w-fit">
+                    {item.date}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-800 mb-1">{item.milestone}</h4>
+                    <p className="text-slate-700">{item.details}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Legacy */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Legacy and Influence</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg leading-relaxed mb-6">
+                The Brisfit validated the offensive two-seat fighter. Lessons in crew coordination, maintenance practice, 
+                and armament management flowed into later multi-role doctrine and training. Its long post-war service 
+                confirmed robustness and adaptability across climates and roles, from patrol to policing, where reliability 
+                and repairability mattered as much as peak speed.
               </p>
-              <ul className="list-disc list-inside space-y-2 mb-6">
-                <li>Official RAF Squadron Records (The National Archives)</li>
-                <li>Bristol Aeroplane Company Technical Documentation</li>
-                <li>Imperial War Museum Aircraft Records</li>
-                <li>Personal accounts from Bristol Fighter pilots and observers</li>
-                <li>Combat reports and operational summaries</li>
-                <li>Technical drawings and manufacturer specifications</li>
-              </ul>
-
-              <div className="bg-white p-6 rounded-lg">
-                <h3 className="font-semibold text-slate-800 mb-2">Citation Reference:</h3>
-                <p className="text-sm text-slate-600">
-                  MacKay, C. E. (2024). "Bristol Fighter F2B: Complete Technical Guide & Service History."
-                  Charles E. MacKay Aviation Research. https://charlesmackaybooks.com/aircraft/bristol-fighter
+              
+              <div className="my-8">
+                <Image 
+                  src="/blog-images/default-generic.svg" 
+                  alt="Post-war F.2B on a grass field; maintenance party with fabric patching frame" 
+                  width={800} 
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <p className="text-sm mt-2 text-center italic text-gray-600">
+                  Longevity by design: repairable structure, reliable engine, and trained crews.
                 </p>
               </div>
             </div>
-          </div>
+          </section>
+
+          {/* Related Content */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Related Books and Articles</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-slate-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-slate-800 mb-4">Related Books</h3>
+                <div className="space-y-3">
+                  <Link href="/books/british-aircraft-great-war" className="block text-blue-600 hover:text-blue-800 underline">
+                    British Aircraft of the Great War
+                  </Link>
+                  <Link href="/books/german-aircraft-great-war" className="block text-blue-600 hover:text-blue-800 underline">
+                    German Aircraft of the Great War
+                  </Link>
+                  <Link href="/books/clydeside-aviation-vol1" className="block text-blue-600 hover:text-blue-800 underline">
+                    Clydeside Aviation Volume One: The Great War
+                  </Link>
+                </div>
+              </div>
+              <div className="bg-slate-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-slate-800 mb-4">Related Articles</h3>
+                <div className="space-y-3">
+                  <Link href="/blog/british-aircraft-great-war-rfc-rnas" className="block text-blue-600 hover:text-blue-800 underline">
+                    British Aircraft of the Great War: RFC & RNAS Development
+                  </Link>
+                  <Link href="/blog/sopwith-camel-wwi-fighter" className="block text-blue-600 hover:text-blue-800 underline">
+                    Sopwith Camel: WWI Fighter
+                  </Link>
+                  <Link href="/blog/aviation-manufacturing-wartime-production" className="block text-blue-600 hover:text-blue-800 underline">
+                    Aviation Manufacturing in Wartime
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Conclusion */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Conclusion</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg leading-relaxed mb-6">
+                The Brisfit's achievement lies in integration: airframe agility, reliable power, coordinated armament, 
+                trained crews, and maintainable structure. Its record stands as a study in how concept, engineering, 
+                and operations combine to create combat power — a lesson with modern relevance wherever multi-role 
+                aircraft and crew coordination determine outcomes.
+              </p>
+            </div>
+          </section>
         </div>
       </div>
-    </>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
+    </div>
   );
 }
