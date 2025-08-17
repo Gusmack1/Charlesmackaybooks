@@ -8,38 +8,77 @@ export async function GET(request: NextRequest) {
   const baseUrl = 'https://charlesmackaybooks.com'
   const currentDate = new Date().toISOString()
 
-  // All blog posts
+  // Include ALL blog posts for complete indexing
   const blogPosts = [
-    'beardmore-aviation-scottish-industrial-giant',
-    'clydeside-aviation-revolution',
-    'german-aircraft-great-war-development',
-    'british-aircraft-great-war-rfc-rnas',
-    'sycamore-seeds-helicopter-evolution',
-    'f86-sabre-cold-war-fighter',
-    'luftwaffe-1945-final-year',
-    'percy-pilcher-scotland-aviation-pioneer',
-    'hms-argus-first-aircraft-carrier',
-    'test-pilot-biography-eric-brown',
-    'lucy-lady-houston-schneider-trophy',
+    // All existing blog posts
     'adolf-rohrbach-metal-aircraft-construction',
-    'supermarine-spitfire-development-history',
-    'jet-age-aviation-cold-war-development',
-    'hawker-hurricane-fighter-development',
-    'aviation-manufacturing-wartime-production',
-    'helicopter-development-pioneers',
-    'naval-aviation-history',
-    // Newly added long‑form posts to prioritise indexing
-    'dieter-dengler-skyraider-escape',
-    'morris-furniture-war-work-aviation',
-    'maud-alsos-atomic-program',
-    'german-aces-organization-wwi',
-    'scottish-aviation-between-the-wars',
-    'beardmore-wbiii-naval-fighter',
+    'adolf-rohrbach-metal-aircraft-revolution',
+    'albatros-dva-technical-legacy',
     'arado-ar234-jet-bomber',
     'autogyro-vs-helicopter',
+    'aviation-manufacturing-wartime-production',
     'avro-vulcan-bomber',
-    'albatros-dva-technical-legacy',
-    'dorothy-wordsworth-scottish-tour-1803'
+    'beardmore-aviation-scottish-industrial-giant',
+    'beardmore-wbiii-naval-fighter',
+    'bristol-fighter-f2b-brisfit',
+    'bristol-sycamore-helicopter-development',
+    'british-aircraft-great-war-rfc-rnas',
+    'british-nuclear-deterrent-v-force',
+    'clydeside-aviation-revolution',
+    'de-havilland-chipmunk-wp808-turnhouse',
+    'dieter-dengler-skyraider-escape',
+    'dorothy-wordsworth-scottish-tour-1803',
+    'english-electric-lightning-development',
+    'f86-sabre-cold-war-fighter',
+    'german-aces-organization-wwi',
+    'german-aircraft-great-war-development',
+    'hawker-hurricane-fighter-development',
+    'helicopter-development-pioneers',
+    'hms-argus-first-aircraft-carrier',
+    'hms-argus-first-aircraft-carrier-operations',
+    'jet-age-aviation-cold-war-development',
+    'korean-war-air-combat',
+    'lucy-lady-houston-schneider-trophy',
+    'luftwaffe-1945-final-year',
+    'maud-alsos-atomic-program',
+    'me262-jet-fighter-revolution',
+    'morris-furniture-war-work-aviation',
+    'naval-aviation-history',
+    'percy-pilcher-scotland-aviation-pioneer',
+    'rotorcraft-military-applications',
+    'schneider-trophy-racing-development',
+    'scottish-aviation-between-the-wars',
+    'sikorsky-vs300-helicopter-breakthrough',
+    'sopwith-camel-wwi-fighter',
+    'supermarine-spitfire-development-evolution',
+    'supermarine-spitfire-development-history',
+    'sycamore-seeds-helicopter-evolution',
+    'test-pilot-biography-eric-brown'
+  ]
+
+  const staticPages = [
+    { path: '/books', priority: '0.95' },
+    { path: '/blog', priority: '0.9' },
+    { path: '/about', priority: '0.8' },
+    { path: '/contact', priority: '0.7' },
+    { path: '/how-to-order', priority: '0.6' },
+    { path: '/returns', priority: '0.6' },
+    { path: '/support', priority: '0.6' },
+    { path: '/aviation-bibliography', priority: '0.7' },
+    { path: '/academic-resources', priority: '0.7' },
+    { path: '/aviation-glossary', priority: '0.6' },
+    { path: '/aviation-news', priority: '0.6' },
+    { path: '/faq', priority: '0.6' },
+    { path: '/for-researchers', priority: '0.7' },
+    { path: '/golden-age-1918-1939', priority: '0.7' },
+    { path: '/great-war-1914-1918', priority: '0.7' },
+    { path: '/order-complete', priority: '0.5' },
+    { path: '/pioneer-era-1895-1914', priority: '0.7' },
+    { path: '/research-guides', priority: '0.7' },
+    { path: '/scottish-aviation-timeline', priority: '0.8' },
+    { path: '/timeline', priority: '0.6' },
+    { path: '/checkout', priority: '0.5' },
+    { path: '/partnerships/imperial-war-museum', priority: '0.6' }
   ]
 
   // Generate sitemap XML
@@ -141,6 +180,17 @@ export async function GET(request: NextRequest) {
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-GB" href="${baseUrl}/blog/${slug}" />
     <xhtml:link rel="alternate" hreflang="en-US" href="${baseUrl}/blog/${slug}" />
+  </url>`).join('')}
+
+  <!-- Static Pages for Complete Coverage -->
+  ${staticPages.map(page => `
+  <url>
+    <loc>${baseUrl}${page.path}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>${page.priority}</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="${baseUrl}${page.path}" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="${baseUrl}${page.path}" />
   </url>`).join('')}
 
   <!-- Category Pages -->
