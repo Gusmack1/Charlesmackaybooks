@@ -35,6 +35,13 @@ const nextConfig = {
         destination: '/books/:id',
         permanent: true,
       },
+      // Book redirects
+      {
+        source: '/books/captain-clouds',
+        destination: '/books/captain-eric-brown',
+        permanent: true,
+      },
+      // Aircraft pages moved to blog
       {
         source: '/aircraft/bristol-fighter',
         destination: '/blog/bristol-fighter-f2b-brisfit',
@@ -47,7 +54,7 @@ const nextConfig = {
       },
       {
         source: '/aircraft/sopwith-camel',
-        destination: '/blog/sopwith-camel-legendary-fighter',
+        destination: '/blog/sopwith-camel-wwi-fighter',
         permanent: true,
       },
     ]
