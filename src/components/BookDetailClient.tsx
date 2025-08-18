@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
 import { useAnalytics } from '@/hooks/useAnalytics';
+import TrustSecurityBadges from '@/components/TrustSecurityBadges';
 
 interface BookDetailClientProps {
   book: Book;
@@ -115,6 +116,11 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         >
           📧 Contact Charles for bulk orders
         </a>
+      </div>
+
+      {/* Trust & Security Badges */}
+      <div className="pt-4">
+        <TrustSecurityBadges />
       </div>
     </div>
   );

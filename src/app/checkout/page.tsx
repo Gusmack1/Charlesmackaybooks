@@ -18,6 +18,9 @@ import {
   Order
 } from '@/utils/orderUtils';
 import { OrderManagementService, CustomerInfo } from '@/utils/orderManagement';
+import TrustSecurityBadges from '@/components/TrustSecurityBadges';
+import CustomerTestimonials from '@/components/CustomerTestimonials';
+import { trackCartAbandonment } from '@/utils/abandonedCartRecovery';
 
 export default function CheckoutPage() {
   const { items, getTotalPrice, removeFromCart, updateQuantity, clearCart } = useCart();
@@ -603,7 +606,7 @@ export default function CheckoutPage() {
           </div>
 
           {/* Right Column - Order Summary */}
-          <div className="lg:sticky lg:top-8">
+          <div className="lg:sticky lg:top-8 space-y-6">
             <div className="card">
               <h3 className="text-lg font-bold mb-4">Order Summary</h3>
               <div className="space-y-3">
@@ -644,6 +647,12 @@ export default function CheckoutPage() {
                 </div>
               </div>
             </div>
+
+            {/* Trust & Security Badges */}
+            <TrustSecurityBadges />
+
+            {/* Customer Testimonials */}
+            <CustomerTestimonials maxDisplay={2} />
           </div>
         </div>
       </div>
