@@ -649,10 +649,14 @@ export default function CheckoutPage() {
             </div>
 
             {/* Trust & Security Badges */}
-            <TrustSecurityBadges />
+            <div className="mt-6">
+              <TrustSecurityBadges />
+            </div>
 
             {/* Customer Testimonials */}
-            <CustomerTestimonials maxDisplay={2} />
+            <div className="mt-6">
+              <CustomerTestimonials maxDisplay={2} />
+            </div>
           </div>
         </div>
       </div>

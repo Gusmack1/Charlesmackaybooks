@@ -119,7 +119,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
       </div>
 
       {/* Trust & Security Badges */}
-      <div className="pt-4">
+      <div className="mt-6">
         <TrustSecurityBadges />
       </div>
     </div>

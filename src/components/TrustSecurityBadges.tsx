@@ -21,79 +21,90 @@ export default function TrustSecurityBadges({
   showTrust = true
 }: TrustSecurityBadgesProps) {
   return (
-    <div className="bg-white border border-slate-200 rounded-lg p-6">
-      <h3 className="text-lg font-semibold text-primary mb-4 flex items-center">
-        <Shield className="w-5 h-5 mr-2 text-green-600" />
-        Secure & Trusted Shopping
-      </h3>
-      
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {showSSL && (
-          <div className="flex items-center space-x-2 p-3 bg-green-50 rounded-lg">
-            <Lock className="w-5 h-5 text-green-600" />
-            <div>
-              <p className="text-sm font-medium text-green-800">SSL Secured</p>
-              <p className="text-xs text-green-600">256-bit encryption</p>
+    <div className="surface-dark bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
+      <div className="container mx-auto px-4 py-8">
+        <h3 className="text-2xl font-bold text-center mb-6 flex items-center justify-center">
+          <Shield className="w-6 h-6 mr-3 text-blue-400" />
+          Secure & Trusted Shopping
+        </h3>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          {showSSL && (
+            <div className="flex items-center space-x-3 p-4 rounded-lg border border-white/15 bg-black/10">
+              <Lock className="w-6 h-6 text-green-400" />
+              <div>
+                <p className="text-sm font-semibold text-white">SSL Secured</p>
+                <p className="text-xs opacity-80">256-bit encryption</p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {showPCI && (
-          <div className="flex items-center space-x-2 p-3 bg-blue-50 rounded-lg">
-            <CreditCard className="w-5 h-5 text-blue-600" />
-            <div>
-              <p className="text-sm font-medium text-blue-800">PCI Compliant</p>
-              <p className="text-xs text-blue-600">Payment security</p>
+          {showPCI && (
+            <div className="flex items-center space-x-3 p-4 rounded-lg border border-white/15 bg-black/10">
+              <CreditCard className="w-6 h-6 text-blue-400" />
+              <div>
+                <p className="text-sm font-semibold text-white">PCI Compliant</p>
+                <p className="text-xs opacity-80">Payment security</p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {showGuarantee && (
-          <div className="flex items-center space-x-2 p-3 bg-orange-50 rounded-lg">
-            <Award className="w-5 h-5 text-orange-600" />
-            <div>
-              <p className="text-sm font-medium text-orange-800">30-Day Guarantee</p>
-              <p className="text-xs text-orange-600">Money back guarantee</p>
+          {showGuarantee && (
+            <div className="flex items-center space-x-3 p-4 rounded-lg border border-white/15 bg-black/10">
+              <Award className="w-6 h-6 text-orange-400" />
+              <div>
+                <p className="text-sm font-semibold text-white">30-Day Guarantee</p>
+                <p className="text-xs opacity-80">Money back guarantee</p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {showReviews && (
-          <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-lg">
-            <Star className="w-5 h-5 text-yellow-600" />
-            <div>
-              <p className="text-sm font-medium text-yellow-800">5-Star Reviews</p>
-              <p className="text-xs text-yellow-600">Customer verified</p>
+          {showReviews && (
+            <div className="flex items-center space-x-3 p-4 rounded-lg border border-white/15 bg-black/10">
+              <Star className="w-6 h-6 text-yellow-400" />
+              <div>
+                <p className="text-sm font-semibold text-white">5-Star Reviews</p>
+                <p className="text-xs opacity-80">Customer verified</p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {showSecurity && (
-          <div className="flex items-center space-x-2 p-3 bg-purple-50 rounded-lg">
-            <Shield className="w-5 h-5 text-purple-600" />
-            <div>
-              <p className="text-sm font-medium text-purple-800">Fraud Protection</p>
-              <p className="text-xs text-purple-600">Advanced security</p>
+          {showSecurity && (
+            <div className="flex items-center space-x-3 p-4 rounded-lg border border-white/15 bg-black/10">
+              <Shield className="w-6 h-6 text-purple-400" />
+              <div>
+                <p className="text-sm font-semibold text-white">Fraud Protection</p>
+                <p className="text-xs opacity-80">Advanced security</p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {showTrust && (
-          <div className="flex items-center space-x-2 p-3 bg-indigo-50 rounded-lg">
-            <CheckCircle className="w-5 h-5 text-indigo-600" />
-            <div>
-              <p className="text-sm font-medium text-indigo-800">Trusted Author</p>
-              <p className="text-xs text-indigo-600">Charles E. MacKay</p>
+          {showTrust && (
+            <div className="flex items-center space-x-3 p-4 rounded-lg border border-white/15 bg-black/10">
+              <CheckCircle className="w-6 h-6 text-green-400" />
+              <div>
+                <p className="text-sm font-semibold text-white">Trusted Author</p>
+                <p className="text-xs opacity-80">Charles E. MacKay</p>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
 
-      <div className="mt-4 pt-4 border-t border-slate-200">
-        <div className="flex items-center justify-between text-sm text-secondary">
-          <span>🔒 Secure Checkout</span>
-          <span>✓ Verified Author</span>
-          <span>🛡️ Protected</span>
+        <div className="mt-6 pt-6 border-t border-white/15">
+          <div className="flex items-center justify-center space-x-8 text-sm opacity-90">
+            <span className="flex items-center">
+              <Lock className="w-4 h-4 mr-2 text-green-400" />
+              Secure Checkout
+            </span>
+            <span className="flex items-center">
+              <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+              Verified Author
+            </span>
+            <span className="flex items-center">
+              <Shield className="w-4 h-4 mr-2 text-purple-400" />
+              Protected
+            </span>
+          </div>
         </div>
       </div>
     </div>

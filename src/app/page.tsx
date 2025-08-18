@@ -80,15 +80,7 @@ export default function Home() {
       </div>
 
       {/* Trust & Security Badges */}
-      <div className="container mx-auto container-padding py-12">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold mb-4">Trusted & Secure Shopping</h2>
-          <p className="text-center opacity-90">
-            Your security and satisfaction are our top priorities
-          </p>
-        </div>
-        <TrustSecurityBadges />
-      </div>
+      <TrustSecurityBadges />
     </div>
   );
 }
