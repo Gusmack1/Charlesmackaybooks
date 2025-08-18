@@ -17,6 +17,7 @@ import {
   validateCustomerDetails,
   Order
 } from '@/utils/orderUtils';
+import { OrderManagementService, CustomerInfo } from '@/utils/orderManagement';
 
 export default function CheckoutPage() {
   const { items, getTotalPrice, removeFromCart, updateQuantity, clearCart } = useCart();
@@ -110,91 +111,173 @@ export default function CheckoutPage() {
     }
   };
 
-  const handleStripeSuccess = (paymentIntent: any) => {
-    const orderId = generateOrderId();
-    const order: Order = {
-      orderId,
-      customerDetails,
-      items: items.map(item => ({
-        id: item.book.id,
-        title: item.book.title,
-        price: item.book.price,
-        quantity: item.quantity,
-        isbn: item.book.isbn
-      })),
-      subtotal,
-      shippingCost,
-      total,
-      timestamp: new Date().toISOString(),
-      status: 'paid',
-      paypalTransactionId: paymentIntent.id
-    };
+  const handleStripeSuccess = async (paymentIntent: any) => {
+    try {
+      // Convert customer details to new format
+      const customerInfo: CustomerInfo = {
+        firstName: customerDetails.firstName,
+        lastName: customerDetails.lastName,
+        email: customerDetails.email,
+        phone: customerDetails.phone,
+        address: {
+          line1: customerDetails.address1,
+          line2: customerDetails.address2,
+          city: customerDetails.city,
+          state: customerDetails.postcode, // Using postcode as state for UK
+          postalCode: customerDetails.postcode,
+          country: customerDetails.country
+        }
+      };
 
-    saveOrder(order);
-    clearCart();
-    window.location.href = `/order-complete?orderId=${orderId}`;
+      // Convert cart items to order items
+      const orderItems = items.map(item => ({
+        bookId: item.book.id,
+        quantity: item.quantity,
+        price: item.book.price,
+        book: item.book
+      }));
+
+      // Create order in new system
+      const order = await OrderManagementService.createOrder(
+        orderItems,
+        customerInfo,
+        'stripe',
+        paymentIntent.id
+      );
+
+      // Confirm payment
+      await OrderManagementService.confirmPayment(order.id, paymentIntent.id);
+
+      // Save to legacy system for backward compatibility
+      const legacyOrder: Order = {
+        orderId: order.id,
+        customerDetails,
+        items: items.map(item => ({
+          id: item.book.id,
+          title: item.book.title,
+          price: item.book.price,
+          quantity: item.quantity,
+          isbn: item.book.isbn
+        })),
+        subtotal,
+        shippingCost,
+        total,
+        timestamp: new Date().toISOString(),
+        status: 'paid',
+        paypalTransactionId: paymentIntent.id
+      };
+      saveOrder(legacyOrder);
+
+      clearCart();
+      window.location.href = `/order-complete?orderId=${order.id}`;
+    } catch (error) {
+      console.error('Error creating order:', error);
+      setErrors(['Failed to create order. Please contact support.']);
+    }
   };
 
   const handleStripeError = (error: string) => {
     setErrors([error]);
   };
 
-  const handlePayPalPayment = () => {
-    const orderId = generateOrderId();
-
-    const order: Order = {
-      orderId,
-      customerDetails,
-      items: items.map(item => ({
-        id: item.book.id,
-        title: item.book.title,
-        price: item.book.price,
-        quantity: item.quantity,
-        isbn: item.book.isbn
-      })),
-      subtotal,
-      shippingCost,
-      total,
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-    };
-
-    saveOrder(order);
-    const paypalUrl = generatePayPalUrl(order);
-
-    const popup = window.open(
-      paypalUrl,
-      'paypal_checkout',
-      'width=900,height=700,scrollbars=yes,resizable=yes,toolbar=no,location=no,status=no'
-    );
-
-    if (popup) {
-      const messageListener = (event: MessageEvent) => {
-        if (event.origin !== window.location.origin && !event.origin.includes('paypal.com')) {
-          return;
-        }
-
-        if (event.data.type === 'PAYPAL_PAYMENT_SUCCESS') {
-          clearCart();
-          window.location.href = `/order-complete?orderId=${orderId}`;
-        } else if (event.data.type === 'PAYPAL_PAYMENT_CANCELLED') {
-          alert('Payment was cancelled. You can try again or contact us for assistance.');
-        } else if (event.data.type === 'PAYPAL_PAYMENT_ERROR') {
-          alert('Payment failed. Please try again or contact us for assistance.');
+  const handlePayPalPayment = async () => {
+    try {
+      // Convert customer details to new format
+      const customerInfo: CustomerInfo = {
+        firstName: customerDetails.firstName,
+        lastName: customerDetails.lastName,
+        email: customerDetails.email,
+        phone: customerDetails.phone,
+        address: {
+          line1: customerDetails.address1,
+          line2: customerDetails.address2,
+          city: customerDetails.city,
+          state: customerDetails.postcode, // Using postcode as state for UK
+          postalCode: customerDetails.postcode,
+          country: customerDetails.country
         }
       };
 
-      window.addEventListener('message', messageListener);
-      
-      const checkClosed = setInterval(() => {
-        if (popup.closed) {
-          clearInterval(checkClosed);
-          window.removeEventListener('message', messageListener);
-        }
-      }, 1000);
-    } else {
-      alert('Popup blocked. Redirecting to PayPal...');
-      window.location.href = paypalUrl;
+      // Convert cart items to order items
+      const orderItems = items.map(item => ({
+        bookId: item.book.id,
+        quantity: item.quantity,
+        price: item.book.price,
+        book: item.book
+      }));
+
+      // Create order in new system
+      const order = await OrderManagementService.createOrder(
+        orderItems,
+        customerInfo,
+        'paypal'
+      );
+
+      // Create legacy order for PayPal URL generation
+      const legacyOrder: Order = {
+        orderId: order.id,
+        customerDetails,
+        items: items.map(item => ({
+          id: item.book.id,
+          title: item.book.title,
+          price: item.book.price,
+          quantity: item.quantity,
+          isbn: item.book.isbn
+        })),
+        subtotal,
+        shippingCost,
+        total,
+        timestamp: new Date().toISOString(),
+        status: 'pending'
+      };
+
+      saveOrder(legacyOrder);
+      const paypalUrl = generatePayPalUrl(legacyOrder);
+
+      const popup = window.open(
+        paypalUrl,
+        'paypal_checkout',
+        'width=900,height=700,scrollbars=yes,resizable=yes,toolbar=no,location=no,status=no'
+      );
+
+      if (popup) {
+        const messageListener = async (event: MessageEvent) => {
+          if (event.origin !== window.location.origin && !event.origin.includes('paypal.com')) {
+            return;
+          }
+
+          if (event.data.type === 'PAYPAL_PAYMENT_SUCCESS') {
+            try {
+              // Confirm payment in new system
+              await OrderManagementService.confirmPayment(order.id);
+              clearCart();
+              window.location.href = `/order-complete?orderId=${order.id}`;
+            } catch (error) {
+              console.error('Error confirming PayPal payment:', error);
+              alert('Payment received but order confirmation failed. Please contact support.');
+            }
+          } else if (event.data.type === 'PAYPAL_PAYMENT_CANCELLED') {
+            alert('Payment was cancelled. You can try again or contact us for assistance.');
+          } else if (event.data.type === 'PAYPAL_PAYMENT_ERROR') {
+            alert('Payment failed. Please try again or contact us for assistance.');
+          }
+        };
+
+        window.addEventListener('message', messageListener);
+        
+        const checkClosed = setInterval(() => {
+          if (popup.closed) {
+            clearInterval(checkClosed);
+            window.removeEventListener('message', messageListener);
+          }
+        }, 1000);
+      } else {
+        alert('Popup blocked. Redirecting to PayPal...');
+        window.location.href = paypalUrl;
+      }
+    } catch (error) {
+      console.error('Error creating PayPal order:', error);
+      setErrors(['Failed to create order. Please try again.']);
     }
   };
 
