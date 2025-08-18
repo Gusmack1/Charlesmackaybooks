@@ -16,6 +16,7 @@ export interface AbandonedCart {
   lastEmailSent?: Date;
   emailSequence: number;
   recovered: boolean;
+  recoveredAt?: Date;
   recoveryCode?: string;
   incentives: {
     discountApplied: boolean;
@@ -86,7 +87,7 @@ export class AbandonedCartRecovery {
 
       // Schedule next email if not the last one
       if (sequenceNumber < 3) {
-        const delayHours = sequenceNumber === 1 ? 24 : 48; // 24h, then 48h
+        const delayHours = sequenceNumber === 1 ? 24 : 48; // 24h, then 48h (72h total)
         setTimeout(() => {
           this.sendRecoveryEmail(cartId, sequenceNumber + 1);
         }, delayHours * 60 * 60 * 1000);
@@ -106,10 +107,18 @@ export class AbandonedCartRecovery {
     }
 
     // Apply progressive incentives based on email sequence
-    if (cart.emailSequence >= 2 && !cart.incentives.discountApplied) {
+    if (cart.emailSequence >= 1 && !cart.incentives.discountApplied) {
       cart.incentives.discountApplied = true;
-      cart.incentives.discountAmount = 10; // 10% discount
+      cart.incentives.discountAmount = 5; // 5% discount for first email
       cart.incentives.discountCode = `RECOVER${cart.recoveryCode}`;
+    }
+
+    if (cart.emailSequence >= 2 && cart.incentives.discountAmount === 5) {
+      cart.incentives.discountAmount = 7; // 7% discount for second email
+    }
+
+    if (cart.emailSequence >= 3 && cart.incentives.discountAmount === 7) {
+      cart.incentives.discountAmount = 10; // 10% discount for final email
     }
 
     if (cart.emailSequence >= 3 && !cart.incentives.freeShippingApplied) {
@@ -164,20 +173,26 @@ export class AbandonedCartRecovery {
     switch (sequenceNumber) {
       case 1:
         subject = `Complete Your Order - ${cart.customerName || 'Aviation Enthusiast'}`;
+        incentiveText = `
+          <div style="background: #fef3c7; border: 2px solid #f59e0b; padding: 15px; margin: 20px 0; border-radius: 8px; text-align: center;">
+            <h3 style="color: #92400e; margin: 0 0 10px 0;">🎉 SPECIAL OFFER: 5% DISCOUNT</h3>
+            <p style="color: #92400e; margin: 0;">Use code: <strong>RECOVER${cart.recoveryCode}</strong></p>
+          </div>
+        `;
         urgencyText = 'Your aviation history books are waiting for you!';
         break;
       case 2:
-        subject = `Special Offer: 10% Off Your Aviation Books`;
+        subject = `Don't Miss Out: 7% Off Your Aviation Books`;
         incentiveText = `
           <div style="background: #fef3c7; border: 2px solid #f59e0b; padding: 15px; margin: 20px 0; border-radius: 8px; text-align: center;">
-            <h3 style="color: #92400e; margin: 0 0 10px 0;">🎉 SPECIAL OFFER: 10% DISCOUNT</h3>
+            <h3 style="color: #92400e; margin: 0 0 10px 0;">🎉 SPECIAL OFFER: 7% DISCOUNT</h3>
             <p style="color: #92400e; margin: 0;">Use code: <strong>RECOVER${cart.recoveryCode}</strong></p>
           </div>
         `;
         urgencyText = 'Limited time offer - don\'t miss out on these savings!';
         break;
       case 3:
-        subject = `Final Reminder: Your Books + FREE Shipping`;
+        subject = `Final Chance: 10% Off + FREE Shipping`;
         incentiveText = `
           <div style="background: #dbeafe; border: 2px solid #3b82f6; padding: 15px; margin: 20px 0; border-radius: 8px; text-align: center;">
             <h3 style="color: #1e40af; margin: 0 0 10px 0;">🚚 FREE WORLDWIDE SHIPPING + 10% OFF</h3>
@@ -192,7 +207,7 @@ export class AbandonedCartRecovery {
 
     return {
       subject,
-      delayHours: sequenceNumber === 1 ? 1 : sequenceNumber === 2 ? 24 : 48,
+      delayHours: sequenceNumber === 1 ? 1 : sequenceNumber === 2 ? 24 : 72,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #1e3a8a; color: white; padding: 20px; text-align: center;">
@@ -306,8 +321,7 @@ export function trackCartAbandonment(
 }
 
 // Recovery URL validation
-export function validateRecoveryCode(code: string): AbandonedCart | null {
-  return AbandonedCartRecovery.getAbandonedCarts().then(carts => 
-    carts.find(cart => cart.recoveryCode === code && !cart.recovered) || null
-  );
+export async function validateRecoveryCode(code: string): Promise<AbandonedCart | null> {
+  const carts = await AbandonedCartRecovery.getAbandonedCarts();
+  return carts.find(cart => cart.recoveryCode === code && !cart.recovered) || null;
 }
