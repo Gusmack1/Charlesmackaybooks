@@ -7,44 +7,42 @@ interface BookStructuredDataProps {
 }
 
 export default function BookStructuredData({ book }: BookStructuredDataProps) {
-  // Main Book Schema
+  // Validate and format ISBN
+  const formatIsbn = (isbn: string | undefined): string | undefined => {
+    if (!isbn) return undefined;
+    // Remove any non-digit characters and ensure it's a valid ISBN
+    const cleanIsbn = isbn.replace(/[^0-9Xx]/g, '');
+    if (cleanIsbn.length === 10 || cleanIsbn.length === 13) {
+      return cleanIsbn;
+    }
+    return undefined;
+  };
+
+  const formattedIsbn = formatIsbn(book.isbn);
+
+  // Book Schema
   const bookSchema = {
     '@context': 'https://schema.org',
     '@type': 'Book',
-    '@id': `https://charlesmackaybooks.com/books/${book.id}`,
+    '@id': `https://charlesmackaybooks.com/books/${book.id}#book`,
     name: book.title,
-    alternateName: book.title.length > 50 ? book.title.substring(0, 50) + '...' : undefined,
     author: {
       '@type': 'Person',
-      '@id': 'https://charlesmackaybooks.com/#author',
+      '@id': 'https://charlesmackaybooks.com/about#author',
       name: 'Charles E. MacKay',
-      description: 'Renowned aviation historian specializing in Scottish aviation history, WWI & WWII aircraft, and military aviation development',
-      url: 'https://charlesmackaybooks.com',
+      jobTitle: 'Aviation Historian',
+      description: 'Expert aviation historian specializing in Scottish and British aviation heritage',
+      url: 'https://charlesmackaybooks.com/about',
       sameAs: [
-        'https://charlesmackaybooks.com/about',
-        'https://www.ebay.co.uk/usr/chaza87'
-      ],
-      jobTitle: 'Aviation Historian & Author',
-      worksFor: {
-        '@type': 'Organization',
-        name: 'Charles E. MacKay Publishing'
-      },
-      alumniOf: book.academicInstitutions ? book.academicInstitutions.map(inst => ({
-        '@type': 'Organization',
-        name: inst
-      })) : undefined
+        'https://www.imperialwarmuseum.org/',
+        'https://www.rafmuseum.org.uk/'
+      ]
     },
     publisher: {
       '@type': 'Organization',
       '@id': 'https://charlesmackaybooks.com/#publisher',
       name: 'Charles E. MacKay Publishing',
       url: 'https://charlesmackaybooks.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://charlesmackaybooks.com/charles-mackay-aviation-author.jpg',
-        width: 300,
-        height: 400
-      },
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Glasgow',
@@ -57,7 +55,7 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
         contactType: 'customer service'
       }
     },
-    isbn: book.isbn,
+    ...(formattedIsbn && { isbn: formattedIsbn }),
     numberOfPages: book.pageCount,
     bookFormat: book.condition === 'New' ? 'Paperback' : 'UsedBook',
     bookEdition: '1st Edition',
@@ -134,7 +132,7 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
           '@type': 'OfferShippingDetails',
           shippingRate: {
             '@type': 'MonetaryAmount',
-            value: '3.45',
+            value: '0.00',
             currency: 'GBP'
           },
           shippingDestination: {
@@ -159,27 +157,63 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
           '@type': 'OfferShippingDetails',
           shippingRate: {
             '@type': 'MonetaryAmount',
-            value: '4.95',
+            value: '0.00',
             currency: 'GBP'
           },
           shippingDestination: {
             '@type': 'DefinedRegion',
             addressCountry: 'EU'
+          },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            businessDays: {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+            },
+            transitTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 3,
+              maxValue: 7,
+              unitCode: 'DAY'
+            }
           }
         },
         {
           '@type': 'OfferShippingDetails',
           shippingRate: {
             '@type': 'MonetaryAmount',
-            value: '8.95',
+            value: '0.00',
             currency: 'GBP'
           },
           shippingDestination: {
             '@type': 'DefinedRegion',
             addressCountry: 'US'
+          },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            businessDays: {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+            },
+            transitTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 5,
+              maxValue: 10,
+              unitCode: 'DAY'
+            }
           }
         }
-      ]
+      ],
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'GB',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
+        returnShippingFeesAmount: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
+        returnPolicyUrl: 'https://charlesmackaybooks.com/returns'
+      }
     },
     aggregateRating: book.citationCount ? {
       '@type': 'AggregateRating',
@@ -245,8 +279,8 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
       name: 'Charles E. MacKay Publishing'
     },
     category: book.category,
-    sku: book.isbn || book.id,
-    gtin: book.isbn,
+    sku: formattedIsbn || book.id,
+    ...(formattedIsbn && { gtin: formattedIsbn }),
     offers: {
       '@type': 'Offer',
       url: `https://charlesmackaybooks.com/books/${book.id}`,
