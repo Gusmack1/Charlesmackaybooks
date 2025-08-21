@@ -272,7 +272,7 @@ export default function RootLayout({
                       description: (book.description || '').slice(0, 5000),
                       image: `${domain}${(book.imageUrl || `/book-covers/${book.id}.jpg`).startsWith('/') ? '' : '/'}${book.imageUrl || `book-covers/${book.id}.jpg`}`,
                       sku: book.isbn || book.id,
-                      gtin13: book.isbn || book.id,
+                      gtin: book.isbn || book.id,
                       mpn: book.isbn || book.id,
                       brand: { '@type': 'Brand', name: 'Charles E. MacKay' },
                       author: { '@type': 'Person', name: 'Charles Edward MacKay' },
