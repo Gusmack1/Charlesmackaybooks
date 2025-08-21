@@ -22,24 +22,25 @@ function buildSitemap(): string {
   </url>`
 
   // Map existing book ids to clean pretty paths per requested list
+  // Use the actual book IDs for consistent URL structure
   const prettyMap: Record<string, string> = {
     'beardmore-aviation': '/books/beardmore-aviation',
-    'clydeside-aviation-vol1': '/books/clydeside-aviation-vol-1',
-    'clydeside-aviation-vol2': '/books/clydeside-aviation-vol-2',
-    'german-aircraft-great-war': '/books/german-military-aircraft-wwi',
-    'british-aircraft-great-war': '/books/british-military-aircraft-wwi',
-    'sycamore-seeds': '/books/the-rotorheads',
-    'captain-eric-brown': '/books/test-pilot',
-    'sabres-from-north': '/books/f86-sabre-european-service',
-    'enemy-luftwaffe-1945': '/books/luftwaffe-year-one-1945',
-    'flying-for-kaiser': '/books/german-pilots-wwi',
-    'soaring-with-wings': '/books/percy-pilcher-aviation-pioneer',
-    'mother-of-the-few': '/books/lucy-lady-houston',
-    'dieter-dengler': '/books/dieter-dengler-skyraider',
-    'modern-furniture': '/books/morris-furniture-company',
-    'birth-atomic-bomb': '/books/the-nuclear-bomb',
-    'aircraft-carrier-argus': '/books/hms-argus',
-    'dorothy-wordsworth': '/books/dorothy-wordsworths-tour',
+    'clydeside-aviation-vol1': '/books/clydeside-aviation-vol1',
+    'clydeside-aviation-vol2': '/books/clydeside-aviation-vol2',
+    'german-aircraft-great-war': '/books/german-aircraft-great-war',
+    'british-aircraft-great-war': '/books/british-aircraft-great-war',
+    'sycamore-seeds': '/books/sycamore-seeds',
+    'captain-eric-brown': '/books/captain-eric-brown',
+    'sabres-from-north': '/books/sabres-from-north',
+    'enemy-luftwaffe-1945': '/books/enemy-luftwaffe-1945',
+    'flying-for-kaiser': '/books/flying-for-kaiser',
+    'soaring-with-wings': '/books/soaring-with-wings',
+    'mother-of-the-few': '/books/mother-of-the-few',
+    'dieter-dengler': '/books/dieter-dengler',
+    'modern-furniture': '/books/modern-furniture',
+    'birth-atomic-bomb': '/books/birth-atomic-bomb',
+    'aircraft-carrier-argus': '/books/aircraft-carrier-argus',
+    'dorothy-wordsworth': '/books/dorothy-wordsworth',
     'adolf-rohrbach': '/books/adolf-rohrbach'
   }
 
