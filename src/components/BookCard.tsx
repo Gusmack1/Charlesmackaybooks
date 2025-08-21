@@ -95,7 +95,7 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
       id={`book-${book.isbn || book.id}`}
     >
       <Link href={`/books/${book.id}`} onClick={handleBookClick} className="block">
-        <div className="relative h-72 overflow-hidden bg-secondary">
+        <div className="relative h-96 overflow-hidden bg-secondary">
           <Image
             src={imgSrc}
             alt={`${book.title} by Charles E. MacKay`}
@@ -112,17 +112,17 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
           </div>
         </div>
 
-        <div className="p-4">
-          <h3 className="font-bold text-lg mb-2 group-hover:text-accent-blue transition-colors line-clamp-2 text-primary" itemProp="name">
+        <div className="p-6">
+          <h3 className="font-bold text-xl mb-3 group-hover:text-accent-blue transition-colors line-clamp-2 text-primary" itemProp="name">
             {book.title}
           </h3>
 
-          <p className="text-secondary text-sm mb-3 line-clamp-2" itemProp="description">
+          <p className="text-secondary text-base mb-4 line-clamp-3" itemProp="description">
             {book.description}
           </p>
 
           {(book.era || book.aircraftTypes || book.geographicFocus) && (
-            <div className="text-xs text-muted mb-3">
+            <div className="text-sm text-muted mb-4">
               {book.era && book.era.length > 0 && (
                 <span className="mr-3"><span className="font-semibold text-primary">Era:</span> {book.era[0]}</span>
               )}
@@ -135,14 +135,14 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
             </div>
           )}
 
-          <div className="flex items-center justify-between text-sm text-muted mb-3">
-            <span className="badge badge-gray text-xs px-2 py-1 rounded">
+          <div className="flex items-center justify-between text-base text-muted mb-4">
+            <span className="badge badge-gray text-sm px-3 py-2 rounded">
               {book.category}
             </span>
             <span>{book.condition}</span>
           </div>
           
-          <div className="text-xs text-muted mb-2">
+          <div className="text-sm text-muted mb-3">
             📦 Weight: {(book as any).weight || 300}g • 🏷️ ISBN: {book.isbn || 'N/A'}
           </div>
 
@@ -151,20 +151,20 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
       </Link>
 
       {/* Action Buttons */}
-      <div className="px-4 pb-4 space-y-2">
+      <div className="px-6 pb-6 space-y-3">
         {book.inStock ? (
           <>
             <button
               onClick={handleAddToCart}
               disabled={isAddingToCart}
-              className="w-full badge badge-green py-3 px-5 disabled:opacity-50 text-base font-semibold rounded-lg min-h-[44px]"
+              className="w-full badge badge-green py-4 px-6 disabled:opacity-50 text-lg font-semibold rounded-lg min-h-[52px]"
             >
               {isAddingToCart ? '🔄 Adding...' : '🛒 Add to Basket'}
             </button>
 
             <button
               onClick={handleEbayClick}
-              className="w-full badge badge-amber py-3 px-5 text-base font-semibold rounded-lg min-h-[44px]"
+              className="w-full badge badge-amber py-4 px-6 text-lg font-semibold rounded-lg min-h-[52px]"
             >
               🛒 Buy on eBay
             </button>
@@ -172,7 +172,7 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
         ) : (
           <button
             disabled
-            className="w-full badge badge-gray py-3 px-5 cursor-not-allowed text-base font-semibold rounded-lg min-h-[44px]"
+            className="w-full badge badge-gray py-4 px-6 cursor-not-allowed text-lg font-semibold rounded-lg min-h-[52px]"
           >
             📋 Out of Stock
           </button>

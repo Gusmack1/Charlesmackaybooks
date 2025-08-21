@@ -56,13 +56,13 @@ export default function BooksPage() {
       />
 
       {/* Books Grid */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="content h2 text-primary mb-4">Complete Book Collection</h2>
-            <p className="text-secondary mb-6">Expert research • Academic references • FREE shipping worldwide</p>
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-primary mb-6">Complete Book Collection</h2>
+            <p className="text-xl text-secondary mb-8">Expert research • Academic references • FREE shipping worldwide</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {books.map(book => (
               <BookCard key={book.id} book={book} sourceContext="books-catalog" />
             ))}
