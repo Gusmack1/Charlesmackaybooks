@@ -4,8 +4,10 @@ import Link from 'next/link';
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { primaryNavLinks } from '@/config/navigation';
+import { useCart } from '@/context/CartContext';
 
 export default function BBCHeader() {
+  const { getTotalItems, openBasket } = useCart();
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState('');
   const router = useRouter();
@@ -17,6 +19,21 @@ export default function BBCHeader() {
         <div className="flex items-center justify-between py-3">
           <Link href="/" className="font-bold text-xl tracking-tight">Charles Mackay Books</Link>
           <div className="hidden md:flex items-center gap-2">
+            {/* Basket Button - White background */}
+            <button
+              onClick={openBasket}
+              aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
+              className="relative bg-white text-slate-900 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100"
+              title="Shopping Basket"
+            >
+              <span className="hidden sm:inline">🛒 Basket</span>
+              <span className="sm:hidden">🛒</span>
+              {getTotalItems() > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
+                  {getTotalItems()}
+                </span>
+              )}
+            </button>
             <input
               type="search"
               placeholder="Search"
@@ -41,13 +58,29 @@ export default function BBCHeader() {
               ☰ Menu
             </button>
           </div>
-          <button
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label="Open menu"
-            className="md:hidden px-3 py-2 rounded bg-slate-800"
-          >
-            ☰
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            {/* Mobile Basket Button */}
+            <button
+              onClick={openBasket}
+              aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
+              className="relative bg-white text-slate-900 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100"
+              title="Shopping Basket"
+            >
+              🛒
+              {getTotalItems() > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
+                  {getTotalItems()}
+                </span>
+              )}
+            </button>
+            <button
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label="Open menu"
+              className="px-3 py-2 rounded bg-slate-800"
+            >
+              ☰
+            </button>
+          </div>
         </div>
       </div>
       <nav className="bg-slate-900 border-t border-slate-800">
