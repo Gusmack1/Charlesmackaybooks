@@ -85,7 +85,7 @@ export default function Testimonials() {
                   </svg>
                 ))}
                 {testimonial.verified && (
-                  <span className="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
+                  <span className="ml-2 text-xs bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-semibold px-2 py-1 rounded shadow-sm border border-yellow-300">
                     ✓ Verified Purchase
                   </span>
                 )}

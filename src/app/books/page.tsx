@@ -3,6 +3,7 @@ import BookCard from '@/components/BookCard'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
+import Testimonials from '@/components/Testimonials'
 
 export const metadata: Metadata = {
   title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
@@ -67,6 +68,13 @@ export default function BooksPage() {
               <BookCard key={book.id} book={book} sourceContext="books-catalog" />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Customer Testimonials */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="container mx-auto px-6">
+          <Testimonials />
         </div>
       </section>
     </BBCPageTemplate>
