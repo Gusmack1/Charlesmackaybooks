@@ -23,7 +23,7 @@ import CustomerTestimonials from '@/components/CustomerTestimonials';
 import { trackCartAbandonment } from '@/utils/abandonedCartRecovery';
 
 export default function CheckoutPage() {
-  const { items, getTotalPrice, removeFromCart, updateQuantity, clearCart } = useCart();
+  const { items, getTotalPrice, getBulkDiscount, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
   const [step, setStep] = useState<'basket' | 'address' | 'payment' | 'review'>('basket');
   const [paymentMethod, setPaymentMethod] = useState<'stripe' | 'paypal'>('stripe');
   const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
@@ -48,7 +48,8 @@ export default function CheckoutPage() {
   
   const shippingCost = 0; // Free worldwide shipping
   const subtotal = getTotalPrice();
-  const total = subtotal + shippingCost;
+  const bulkDiscount = getBulkDiscount();
+  const total = getFinalTotal(); // This includes bulk discounts and shipping
 
   const handleInputChange = (field: keyof CustomerDetails, value: string) => {
     setCustomerDetails(prev => ({ ...prev, [field]: value }));
@@ -378,10 +379,31 @@ export default function CheckoutPage() {
                   ))}
                 </div>
                 <div className="mt-6 pt-4 border-t">
-                  <div className="flex justify-between text-lg font-semibold">
-                    <span>Total:</span>
-                    <span>£{total.toFixed(2)}</span>
+                  <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span>Subtotal:</span>
+                      <span>£{subtotal.toFixed(2)}</span>
+                    </div>
+                    {bulkDiscount > 0 && (
+                      <div className="flex justify-between text-green-600 font-semibold">
+                        <span>Bulk Discount ({items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
+                        <span>-£{bulkDiscount.toFixed(2)}</span>
+                      </div>
+                    )}
+                    <div className="flex justify-between text-green-600">
+                      <span>Shipping:</span>
+                      <span>FREE</span>
+                    </div>
+                    <div className="flex justify-between text-lg font-semibold border-t pt-2">
+                      <span>Total:</span>
+                      <span>£{total.toFixed(2)}</span>
+                    </div>
                   </div>
+                  {bulkDiscount > 0 && (
+                    <p className="text-sm text-green-600 mt-2">
+                      🎉 You've saved £{bulkDiscount.toFixed(2)} with bulk discount!
+                    </p>
+                  )}
                   <p className="text-sm text-secondary mt-2">Free worldwide shipping included</p>
                 </div>
                 <button
@@ -617,11 +639,28 @@ export default function CheckoutPage() {
                   </div>
                 ))}
               </div>
+              {bulkDiscount > 0 && (
+                <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                  <div className="flex items-center">
+                    <span className="text-green-600 mr-2">🎉</span>
+                    <div className="text-sm">
+                      <p className="font-semibold text-green-800">Bulk Discount Applied!</p>
+                      <p className="text-green-700">You've saved £{bulkDiscount.toFixed(2)} on your order</p>
+                    </div>
+                  </div>
+                </div>
+              )}
               <div className="border-t mt-4 pt-4 space-y-2">
                 <div className="flex justify-between">
                   <span>Subtotal:</span>
                   <span>£{subtotal.toFixed(2)}</span>
                 </div>
+                {bulkDiscount > 0 && (
+                  <div className="flex justify-between text-green-600 font-semibold">
+                    <span>Bulk Discount ({items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
+                    <span>-£{bulkDiscount.toFixed(2)}</span>
+                  </div>
+                )}
                 <div className="flex justify-between">
                   <span>Shipping:</span>
                   <span className="text-green-600">FREE</span>
