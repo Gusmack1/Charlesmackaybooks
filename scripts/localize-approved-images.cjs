@@ -41,7 +41,18 @@ function pickClient(url) {
 async function downloadToFile(url, dest) {
   const client = pickClient(url);
   return new Promise((resolve, reject) => {
-    client.get(url, (res) => {
+    const opts = new URL(url);
+    const requestOptions = {
+      hostname: opts.hostname,
+      path: opts.pathname + (opts.search || ''),
+      protocol: opts.protocol,
+      headers: {
+        'User-Agent': 'CharlesMackayBooks/1.0 (+https://charlesmackaybooks.com)',
+        'Accept': 'image/avif,image/webp,image/*,*/*;q=0.8',
+        'Accept-Language': 'en-GB,en;q=0.9'
+      }
+    };
+    client.get(requestOptions, (res) => {
       if (res.statusCode && res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         // follow redirect
         return downloadToFile(res.headers.location, dest).then(resolve).catch(reject);

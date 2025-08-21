@@ -1,34 +1,88 @@
 {
   "version": 1,
-  "updatedAt": "2025-08-21T00:00:00.000Z",
+  "updatedAt": "2025-08-21T16:22:54.466Z",
   "notes": "Approval manifest for blog images. Approve candidates in /admin/image-approvals, then download and replace this file.",
   "posts": {
     "hawker-hurricane-fighter-development": {
       "requiredCount": 4,
-      "approvedFeaturedIndex": null,
+      "approvedFeaturedIndex": 0,
       "candidates": [
         {
-          "url": "",
+          "url": "/blog-images/hawker-hurricane-fighter-development/407af68700000578-0-image-m-27_1495125738720.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "",
+          "alt": "Hawker Hurricane prototype and early service imagery",
+          "caption": "Above shows the Battle of Britain Memorial flight Hurricane (front) leading the Spitfire (back) in the skies over Southern Britain",
+          "approved": true
+        },
+        {
+          "url": "/blog-images/hawker-hurricane-fighter-development/407af43200000578-0-image-m-42_1495126382346.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "",
+          "alt": "",
+          "caption": "Above are 174 Hurricane Sqn at Manston",
+          "approved": true
+        },
+        {
+          "url": "/blog-images/hawker-hurricane-fighter-development/2.-20the-20last-20of-20the-20many-20flown-20by-20george-20bulman.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "",
+          "alt": "",
+          "caption": "Hurricane Mk IIC PZ865, “The Last of the Many!”, on an early test flight in 1944, being flown by Hawker’s Chief Test Pilot, the hatless George Bulman, who had flown the maiden flight of the prototype Hurricane, K5083, on 6th November 1935.",
+          "approved": true
+        },
+        {
+          "url": "https://www.militaryaviationmuseum.org/wp-content/uploads/Hawker-Hurricane-production-run-at-Canadian-Car-Foundry-during-Spring-1941-1.jpg",
           "source": "",
           "license": "",
           "title": "",
-          "alt": "Hawker Hurricane prototype and early service imagery",
-          "caption": "",
+          "alt": "",
+          "caption": "Hawker Hurricane production at Canadian Car & Foundry during the Spring of 1941. The supply of Rolls-Royce Merlin engines was a perennial problem until Packard began producing its US equivalent. Note how only the Hurricane in the foreground has an engine and propeller. This was likely just a dummy set up to ensure that everything fitted properly prior to the airframe's delivery - the engine and propeller being dismounted for trial in subsequent airframes once fettling was complete.",
           "approved": false
         }
       ]
     },
     "bristol-fighter-f2b-brisfit": {
       "requiredCount": 4,
-      "approvedFeaturedIndex": null,
+      "approvedFeaturedIndex": 0,
       "candidates": [
         {
-          "url": "",
+          "url": "/blog-images/bristol-fighter-f2b-brisfit/bristol-f.2.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "",
+          "alt": "Bristol Fighter F.2B historical photograph",
+          "caption": "Observer, pilot, and Bristol Fighter F2B aircraft, Serial B1146, of No. 1 Squadron, Australian Flying Corps. The pilot (left) is Captain (Capt) Ross Macpherson Smith, MC and bar, DFC and two bars. Capt Hurley made two visits to No. 1 Squadron on the 25 and 28 February 1918, going for his first flight with Captain Ross Macpherson Smith and later flying on a bombing raid and this photograph was probably taken on one of those days. ",
+          "approved": true
+        },
+        {
+          "url": "/blog-images/bristol-fighter-f2b-brisfit/464684380_8957761104257727_4186253948793157977_n.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "",
+          "alt": "",
+          "caption": "Charlie Barton, with his movie camera, in a Bristol fighter F2B of the New Zealand Permanent Air Force. Taken in September 1928, on the occasion of Charles Kingsford Smith's aerial crossing of the Tasman.",
+          "approved": true
+        },
+        {
+          "url": "/blog-images/bristol-fighter-f2b-brisfit/1000px-13th_squadron_-_dayton-wright_xb-1a.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "",
+          "alt": "",
+          "caption": "13th Squadron (Attack) - Dayton-Wright XB-1A, Kelly Field, Texas, 1921.",
+          "approved": true
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Bristol_F2_Fighter_REJS.jpg/1000px-Bristol_F2_Fighter_REJS.jpg",
           "source": "",
           "license": "",
           "title": "",
-          "alt": "Bristol Fighter F.2B historical photograph",
-          "caption": "",
+          "alt": "",
+          "caption": "A Bristol F.2 Fighter preserved at the Imperial War Museum Duxford",
           "approved": false
         }
       ]
@@ -45,10 +99,35 @@
           "alt": "Beardmore Parkhead Forge industrial complex",
           "caption": "Beardmore’s Parkhead Forge and related works underpinned the company’s aviation contributions.",
           "approved": true
+        },
+        {
+          "url": "/blog-images/beardmore-aviation-scottish-industrial-giant/tgse01045.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "",
+          "alt": "",
+          "caption": "The staff of Bay 3 Machine Section at William Beardmore & Co's Howitzer Department, Parkhead, during the First World War.",
+          "approved": true
+        },
+        {
+          "url": "/blog-images/beardmore-aviation-scottish-industrial-giant/william-beardmore-baron-invernairn-1856-1936-photographed-by-t-r-annan-in-1932-snpg-portrait-archive.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "",
+          "alt": "",
+          "caption": "Sir William Beardmore (1856-1936)",
+          "approved": true
+        },
+        {
+          "url": "/blog-images/beardmore-aviation-scottish-industrial-giant/inchinnan-20airship-20shed.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "",
+          "alt": "",
+          "caption": "Beardmore - The Completed constructional shed, Inchinnan, Scotland",
+          "approved": true
         }
       ]
     }
   }
 }
-
-
