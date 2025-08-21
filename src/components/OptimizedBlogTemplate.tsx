@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { BookOpen, Clock, ChevronRight } from 'lucide-react';
+import { getApprovedFeatured, getApprovedInline } from '@/utils/approvedImageResolver'
 
 interface BlogPost {
   id: string;
@@ -149,6 +150,9 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
     }
   };
 
+  const featured = getApprovedFeatured(post.id, post.featuredImage?.url, post.featuredImage?.alt)
+  const approvedInline = getApprovedInline(post.id, 4)
+
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">
 
@@ -185,8 +189,8 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       <div className="mb-8">
         <div className="relative overflow-hidden rounded-lg">
           <Image
-            src={post.featuredImage.url}
-            alt={post.featuredImage.alt}
+            src={featured.url || post.featuredImage.url}
+            alt={featured.alt || post.featuredImage.alt}
             width={1200}
             height={630}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 800px"
@@ -195,9 +199,9 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
             onError={handleNextImageError}
           />
         </div>
-        {post.featuredImage.caption && (
+        {(featured.caption || post.featuredImage.caption) && (
           <p className="text-sm text-secondary text-center mt-2 italic">
-            {post.featuredImage.caption}
+            {featured.caption || post.featuredImage.caption}
           </p>
         )}
       </div>
@@ -236,6 +240,17 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
         <div 
           dangerouslySetInnerHTML={{ __html: stripShareUI(processContent(post.content)) }}
         />
+        {approvedInline.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            {approvedInline.map((img, idx) => (
+              <figure key={idx}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={img.url} alt={img.alt} className="w-full h-auto rounded-lg" />
+                {img.caption && <figcaption className="image-caption">{img.caption}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Author Bio */}

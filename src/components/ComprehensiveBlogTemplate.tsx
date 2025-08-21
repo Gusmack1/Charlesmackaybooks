@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getBooksData } from '@/utils/bookUtils';
+import { getApprovedFeatured, getApprovedInline } from '@/utils/approvedImageResolver'
 
 interface BlogPost {
   id: string;
@@ -47,6 +48,8 @@ interface ComprehensiveBlogTemplateProps {
 }
 
 export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTemplateProps) {
+  const featured = getApprovedFeatured(post.id, post.featuredImage?.url, post.featuredImage?.alt)
+  const approvedInline = getApprovedInline(post.id, 4)
   const fallbackSvg = encodeURIComponent(
     `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='%231e3a8a'/><stop offset='100%' stop-color='%230256d4'/></linearGradient></defs><rect width='600' height='400' fill='url(#g)'/><g fill='white' font-family='Source Sans 3, Arial' text-anchor='middle'><text x='300' y='185' font-size='28'>Image unavailable</text><text x='300' y='225' font-size='16'>Charles E. MacKay Aviation History</text></g></svg>`
   );
@@ -199,11 +202,11 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
       {/* Hero Section */}
       <div className="hero-section overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-          {post.featuredImage?.url && (
+          {(featured.url || post.featuredImage?.url) && (
           <div className="absolute inset-0">
             <Image
-              src={post.featuredImage.url}
-              alt={post.featuredImage.alt || post.title}
+              src={featured.url || post.featuredImage.url}
+              alt={featured.alt || post.featuredImage.alt || post.title}
               fill
               className="object-cover opacity-30"
               priority
@@ -238,10 +241,10 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       <div className="max-w-4xl mx-auto px-6 py-16">
         <article className="content card p-8">
           {/* Featured Image Caption */}
-          {post.featuredImage?.caption && (
+          {(featured.caption || post.featuredImage?.caption) && (
             <div className="text-center mb-8">
               <p className="text-sm text-muted italic">
-                {post.featuredImage.caption}
+                {featured.caption || post.featuredImage.caption}
               </p>
             </div>
           )}
@@ -251,6 +254,17 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
             className="blog-content content"
             dangerouslySetInnerHTML={{ __html: processedHtml }}
           />
+          {approvedInline.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              {approvedInline.map((img, idx) => (
+                <figure key={idx}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={img.url} alt={img.alt} className="w-full h-auto rounded-lg" />
+                  {img.caption && <figcaption className="image-caption">{img.caption}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          )}
           {/* Breadcrumb JSON-LD */}
           <script
             type="application/ld+json"

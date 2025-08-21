@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "updatedAt": "2025-08-21T00:00:00.000Z",
+  "notes": "Approval manifest for blog images. Approve candidates in /admin/image-approvals, then download and replace this file.",
+  "posts": {
+    "hawker-hurricane-fighter-development": {
+      "requiredCount": 4,
+      "approvedFeaturedIndex": null,
+      "candidates": [
+        {
+          "url": "",
+          "source": "",
+          "license": "",
+          "title": "",
+          "alt": "Hawker Hurricane prototype and early service imagery",
+          "caption": "",
+          "approved": false
+        }
+      ]
+    },
+    "bristol-fighter-f2b-brisfit": {
+      "requiredCount": 4,
+      "approvedFeaturedIndex": null,
+      "candidates": [
+        {
+          "url": "",
+          "source": "",
+          "license": "",
+          "title": "",
+          "alt": "Bristol Fighter F.2B historical photograph",
+          "caption": "",
+          "approved": false
+        }
+      ]
+    },
+    "beardmore-aviation-scottish-industrial-giant": {
+      "requiredCount": 4,
+      "approvedFeaturedIndex": 0,
+      "candidates": [
+        {
+          "url": "/blog-images/beardmore-parkhead-forge.jpg",
+          "source": "internal",
+          "license": "owned",
+          "title": "Beardmore Parkhead Forge",
+          "alt": "Beardmore Parkhead Forge industrial complex",
+          "caption": "Beardmore’s Parkhead Forge and related works underpinned the company’s aviation contributions.",
+          "approved": true
+        }
+      ]
+    }
+  }
+}
+
+

@@ -7,7 +7,9 @@
     "dev": "next dev -H 0.0.0.0 --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate:images": "node scripts/validate-image-approvals.cjs",
+    "images:localize": "node scripts/localize-approved-images.cjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
