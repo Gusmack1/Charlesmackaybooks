@@ -164,6 +164,19 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
   // Prepare processed content
   const processedHtml = stripShareUI(processContent(post.content));
+  const replacePlaceholdersWithApproved = (html: string): string => {
+    if (!approvedInline || approvedInline.length === 0) return html;
+    let useIndex = 0;
+    return html.replace(/<img\s+([^>]*?)src=(['"])\/blog-images\/default-generic\.svg\2([^>]*)>/gi, (match, pre, quote, post) => {
+      const cand = approvedInline[useIndex++];
+      if (!cand) return match;
+      let attrs = pre + post;
+      if (!/\balt\s*=/.test(attrs)) {
+        attrs = attrs.replace(/\s*>$/, '') + ` alt="${cand.alt || 'Aviation history image'}"`;
+      }
+      return `<img ${pre}src="${cand.url}"${post}>`;
+    });
+  };
 
   // Mid-article CTA removed per requirement; recommendations appear only at bottom
 
@@ -252,7 +265,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           {/* Article Content (full) */}
           <div 
             className="blog-content content"
-            dangerouslySetInnerHTML={{ __html: processedHtml }}
+            dangerouslySetInnerHTML={{ __html: replacePlaceholdersWithApproved(processedHtml) }}
           />
           {approvedInline.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">

@@ -93,6 +93,21 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
   const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html));
 
+  // Replace any inline placeholders with approved images for this post
+  const replacePlaceholdersWithApproved = (html: string): string => {
+    if (!approvedInline || approvedInline.length === 0) return html;
+    let useIndex = 0;
+    return html.replace(/<img\s+([^>]*?)src=(['"])\/blog-images\/default-generic\.svg\2([^>]*)>/gi, (match, pre, quote, post) => {
+      const cand = approvedInline[useIndex++];
+      if (!cand) return match;
+      let attrs = pre + post;
+      if (!/\balt\s*=/.test(attrs)) {
+        attrs = attrs.replace(/\s*>$/, '') + ` alt="${cand.alt || 'Aviation history image'}"`;
+      }
+      return `<img ${pre}src="${cand.url}"${post}>`;
+    });
+  };
+
   const stripShareUI = (html: string): string => {
     let output = html
     output = output.replace(/<div[^>]*>\s*<h[1-6][^>]*>[^<]*Share This Article[^<]*<\/h[1-6]>[\s\S]*?<\/div>/gi, '')
@@ -238,7 +253,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Article Content */}
       <div className="content max-w-none mb-12">
         <div 
-          dangerouslySetInnerHTML={{ __html: stripShareUI(processContent(post.content)) }}
+          dangerouslySetInnerHTML={{ __html: stripShareUI(replacePlaceholdersWithApproved(processContent(post.content))) }}
         />
         {approvedInline.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
