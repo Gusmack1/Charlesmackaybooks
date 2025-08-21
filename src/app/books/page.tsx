@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import BookCard from '@/components/BookCard'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
-import BBCPageTemplate from '@/components/BBCPageTemplate'
 import Testimonials from '@/components/Testimonials'
+import TrustSecurityBadges from '@/components/TrustSecurityBadges'
 
 export const metadata: Metadata = {
   title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
@@ -42,12 +42,7 @@ export const metadata: Metadata = {
 
 export default function BooksPage() {
   return (
-    <BBCPageTemplate
-      title="Aviation History Books Collection"
-      subtitle={`Discover ${books.length} authoritative aviation history books by Charles E. MacKay. From WWI fighters to modern jets, Scottish aviation heritage to global military aviation.`}
-      breadcrumbs={[]}
-      centerHero
-    >
+    <div className="surface-dark relative -mx-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       <UnifiedSchema
         pageType="books"
         pageTitle="Aviation History Books - Complete Collection | Charles E. MacKay"
@@ -56,14 +51,34 @@ export default function BooksPage() {
         books={books}
       />
 
-      {/* Books Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-6">Complete Book Collection</h2>
-            <p className="text-xl text-secondary mb-8">Expert research • Academic references • FREE shipping worldwide</p>
+      {/* Hero Section - Matching Homepage Style */}
+      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              Aviation History Books Collection
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto">
+              Discover {books.length} authoritative aviation history books by Charles E. MacKay. From WWI fighters to modern jets, Scottish aviation heritage to global military aviation.
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        </div>
+      </div>
+
+      {/* Books Section - Exact Match to Homepage */}
+      <section className="py-12" id="books">
+        <div className="container mx-auto container-padding">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold">
+              📚 Complete Book Collection
+            </h2>
+            <p className="text-center opacity-90 mb-4">
+              {books.length} books available • Expert research • Academic references • FREE shipping worldwide
+            </p>
+          </div>
+
+          {/* Books Grid - Matching Homepage Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {books.map(book => (
               <BookCard key={book.id} book={book} sourceContext="books-catalog" />
             ))}
@@ -71,12 +86,13 @@ export default function BooksPage() {
         </div>
       </section>
 
-      {/* Customer Testimonials */}
-      <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        <div className="container mx-auto px-6">
-          <Testimonials />
-        </div>
-      </section>
-    </BBCPageTemplate>
+      {/* Customer Testimonials - Matching Homepage */}
+      <div className="container mx-auto container-padding py-12">
+        <Testimonials />
+      </div>
+
+      {/* Trust & Security Badges - Matching Homepage */}
+      <TrustSecurityBadges />
+    </div>
   )
 }
