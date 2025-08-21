@@ -95,7 +95,7 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
       id={`book-${book.isbn || book.id}`}
     >
       <Link href={`/books/${book.id}`} onClick={handleBookClick} className="block">
-        <div className="relative h-96 overflow-hidden bg-secondary">
+        <div className="relative h-[32rem] overflow-hidden bg-secondary">
           <Image
             src={imgSrc}
             alt={`${book.title} by Charles E. MacKay`}
@@ -151,28 +151,31 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
       </Link>
 
       {/* Action Buttons */}
-      <div className="px-6 pb-6 space-y-3">
+      <div className="px-6 pb-6">
         {book.inStock ? (
-          <>
+          <div className="grid grid-cols-2 gap-3">
             <button
               onClick={handleAddToCart}
               disabled={isAddingToCart}
-              className="w-full badge badge-green py-4 px-6 disabled:opacity-50 text-lg font-semibold rounded-lg min-h-[52px]"
+              className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 px-4 disabled:opacity-50 text-sm font-semibold rounded-lg min-h-[44px] hover:from-blue-700 hover:to-blue-900 transition-all duration-200 flex items-center justify-center"
             >
               {isAddingToCart ? '🔄 Adding...' : '🛒 Add to Basket'}
             </button>
 
             <button
               onClick={handleEbayClick}
-              className="w-full badge badge-amber py-4 px-6 text-lg font-semibold rounded-lg min-h-[52px]"
+              className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 px-4 text-sm font-semibold rounded-lg min-h-[44px] hover:from-orange-600 hover:to-red-700 transition-all duration-200 flex items-center justify-center"
             >
-              🛒 Buy on eBay
+              <svg className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.5 7.5c-.3-.3-.7-.5-1.2-.5H4.7c-.5 0-.9.2-1.2.5L2 9.8v8.4c0 .8.7 1.5 1.5 1.5h17c.8 0 1.5-.7 1.5-1.5V9.8l-1.5-2.3zM12 15.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/>
+              </svg>
+              Buy on eBay
             </button>
-          </>
+          </div>
         ) : (
           <button
             disabled
-            className="w-full badge badge-gray py-4 px-6 cursor-not-allowed text-lg font-semibold rounded-lg min-h-[52px]"
+            className="w-full bg-gray-400 text-white py-3 px-4 cursor-not-allowed text-sm font-semibold rounded-lg min-h-[44px]"
           >
             📋 Out of Stock
           </button>

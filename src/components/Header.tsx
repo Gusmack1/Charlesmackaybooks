@@ -10,6 +10,7 @@ export default function Header() {
   const { getTotalItems, openBasket } = useCart();
   const [open, setOpen] = useState(false);
   const [menuPinned, setMenuPinned] = useState(false);
+  const [showMobileSearch, setShowMobileSearch] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
   const [search, setSearch] = useState('');
@@ -30,8 +31,33 @@ export default function Header() {
 
             {/* Actions */}
             <div className="text-right">
-              <div className="flex items-center gap-3 md:gap-5 mb-1">
-                {/* Simple Search (placeholder) */}
+              <div className="flex items-center gap-2 md:gap-4 mb-1">
+                {/* Basket Button - Always visible, before search */}
+                <button
+                  onClick={openBasket}
+                  aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
+                  className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:from-blue-700 hover:to-blue-900 min-h-[40px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
+                  title="Shopping Basket"
+                >
+                  <span className="hidden sm:inline">🛒 Basket</span>
+                  <span className="sm:hidden">🛒</span>
+                  {getTotalItems() > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold" aria-hidden>
+                      {getTotalItems()}
+                    </span>
+                  )}
+                </button>
+
+                {/* Mobile Search Toggle */}
+                <button
+                  onClick={() => setShowMobileSearch(!showMobileSearch)}
+                  className="md:hidden bg-slate-800 text-white px-3 py-2 rounded-lg min-h-[40px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                  aria-label="Toggle search"
+                >
+                  🔍
+                </button>
+
+                {/* Desktop Search */}
                 <div className="hidden md:block">
                   <label htmlFor="site-search" className="sr-only">Search</label>
                   <input
@@ -50,22 +76,6 @@ export default function Header() {
                     }}
                   />
                 </div>
-
-                {/* Basket Button - Always visible */}
-                <button
-                  onClick={openBasket}
-                  aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
-                  className="relative badge badge-green px-5 md:px-6 py-3 rounded text-base md:text-base font-semibold transition-colors text-white min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
-                  title="Shopping Basket"
-                >
-                  <span className="hidden sm:inline text-white">🛒 Basket</span>
-                  <span className="sm:hidden text-white">🛒</span>
-                  {getTotalItems() > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" aria-hidden>
-                      {getTotalItems()}
-                    </span>
-                  )}
-                </button>
 
                 {/* Global navigation (More dropdown for compact screens) */}
                 <div
@@ -123,6 +133,36 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* Mobile Search Bar */}
+      {showMobileSearch && (
+        <div className="md:hidden bg-slate-800 border-t border-slate-700 p-3">
+          <div className="flex gap-2">
+            <input
+              type="search"
+              placeholder="Search books..."
+              className="flex-1 rounded bg-slate-700 text-white placeholder-white/70 px-3 py-2 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  const q = search.trim();
+                  if (q.length > 0) {
+                    router.push(`/search?query=${encodeURIComponent(q)}`);
+                    setShowMobileSearch(false);
+                  }
+                }
+              }}
+            />
+            <button
+              onClick={() => setShowMobileSearch(false)}
+              className="bg-slate-600 text-white px-3 py-2 rounded hover:bg-slate-500"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Primary navigation row (desktop) */}
       <nav className="bg-slate-900 border-t border-slate-700 header-primary-nav hidden md:block" role="navigation" aria-label="Primary">
