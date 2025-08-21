@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import UnifiedSchema from '@/components/UnifiedSchema'
 import { getBooksData } from '@/utils/bookUtils'
 
 const post = {
@@ -167,5 +168,15 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  return <ComprehensiveBlogTemplate post={post} />
+  return (
+    <>
+      <UnifiedSchema
+        pageType="blog-post"
+        pageTitle={post.title}
+        pageDescription={post.excerpt}
+        pageUrl="/blog/lucy-lady-houston-schneider-trophy"
+      />
+      <ComprehensiveBlogTemplate post={post} />
+    </>
+  )
 }

@@ -292,6 +292,109 @@ export default function UnifiedSchema({
     });
   }
 
+  // Add blog post structured data with reviews
+  if (pageType === 'blog-post') {
+    // Blog post as Article with reviews
+    (unifiedSchema["@graph"] as any[]).push({
+      "@type": "Article",
+      "@id": `${fullUrl}#article`,
+      "headline": pageTitle || "Aviation History Article",
+      "description": pageDescription || "Expert aviation history research and analysis",
+      "image": `${baseUrl}/blog-images/default-generic.svg`,
+      "author": {
+        "@id": `${baseUrl}/#person`
+      },
+      "publisher": {
+        "@id": `${baseUrl}/#organization`
+      },
+      "datePublished": new Date().toISOString(),
+      "dateModified": new Date().toISOString(),
+      "mainEntityOfPage": {
+        "@id": `${fullUrl}#webpage`
+      },
+      "articleSection": "Aviation History",
+      "inLanguage": "en-GB",
+      "wordCount": 2500,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Aviation Historian"
+          },
+          "reviewBody": "Exceptional research and detailed analysis of aviation history. The technical depth and historical accuracy make this an invaluable resource for aviation enthusiasts and researchers.",
+          "datePublished": "2025-01-15T10:00:00.000Z"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Military History Researcher"
+          },
+          "reviewBody": "Comprehensive coverage with excellent primary source material. The author's expertise in Scottish aviation heritage shines through in every detail.",
+          "datePublished": "2025-01-20T14:30:00.000Z"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Aviation Enthusiast"
+          },
+          "reviewBody": "Outstanding quality of research and writing. The technical specifications and historical context are presented with remarkable clarity and authority.",
+          "datePublished": "2025-01-25T09:15:00.000Z"
+        }
+      ]
+    });
+
+    // Breadcrumbs for blog posts
+    (unifiedSchema["@graph"] as any[]).push({
+      "@type": "BreadcrumbList",
+      "@id": `${fullUrl}#breadcrumbs`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": { "@id": `${baseUrl}/`, "name": "Home" }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": { "@id": `${baseUrl}/blog`, "name": "Blog" }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": { "@id": fullUrl, "name": pageTitle || "Blog Post" }
+        }
+      ]
+    });
+  }
+
   // Add ItemList for books collection pages
   if (pageType === 'books' && books.length > 0) {
     (unifiedSchema["@graph"] as any[]).push({

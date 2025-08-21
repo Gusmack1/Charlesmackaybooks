@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
+import UnifiedSchema from '@/components/UnifiedSchema'
 
 const post = {
   id: 'german-aircraft-great-war-development',
@@ -143,5 +144,15 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  return <ComprehensiveBlogTemplate post={post} />
+  return (
+    <>
+      <UnifiedSchema
+        pageType="blog-post"
+        pageTitle={post.title}
+        pageDescription={post.excerpt}
+        pageUrl="/blog/german-aircraft-great-war-development"
+      />
+      <ComprehensiveBlogTemplate post={post} />
+    </>
+  )
 }

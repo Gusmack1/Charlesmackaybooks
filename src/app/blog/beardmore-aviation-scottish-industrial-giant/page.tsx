@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
+import UnifiedSchema from '@/components/UnifiedSchema'
 
 export const metadata: Metadata = {
   title: `William Beardmore & Company: Scottish Aviation Pioneer | Charles E. MacKay`,
@@ -142,5 +143,15 @@ const post = {
 
 
 export default function BlogPost() {
-  return <ComprehensiveBlogTemplate post={post} />
+  return (
+    <>
+      <UnifiedSchema
+        pageType="blog-post"
+        pageTitle={post.title}
+        pageDescription={post.excerpt}
+        pageUrl="/blog/beardmore-aviation-scottish-industrial-giant"
+      />
+      <ComprehensiveBlogTemplate post={post} />
+    </>
+  )
 }
