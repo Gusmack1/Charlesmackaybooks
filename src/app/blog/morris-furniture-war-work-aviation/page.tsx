@@ -114,11 +114,7 @@ export default function BlogPost() {
         pageUrl="/blog/morris-furniture-war-work-aviation"
       />
       <ComprehensiveBlogTemplate post={post} />
-        <BlogAuthorityEnhancer 
-          postTitle={post.title}
-          postCategory="Aviation History"
-          researchDate="2025"
-        />
+        
     </>
   )
 }

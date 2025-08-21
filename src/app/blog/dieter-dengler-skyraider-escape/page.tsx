@@ -219,11 +219,7 @@ export default function BlogPost() {
         pageUrl="/blog/dieter-dengler-skyraider-escape"
       />
       <ComprehensiveBlogTemplate post={post} />
-        <BlogAuthorityEnhancer 
-          postTitle={post.title}
-          postCategory="Aviation History"
-          researchDate="2025"
-        />
+        
     </>
   )
 }

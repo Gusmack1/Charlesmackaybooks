@@ -119,11 +119,7 @@ export default function BlogPost() {
         pageUrl="/blog/beardmore-wbiii-naval-fighter"
       />
       <ComprehensiveBlogTemplate post={post} />
-        <BlogAuthorityEnhancer 
-          postTitle={post.title}
-          postCategory="Aviation History"
-          researchDate="2025"
-        />
+        
     </>
   )
 }

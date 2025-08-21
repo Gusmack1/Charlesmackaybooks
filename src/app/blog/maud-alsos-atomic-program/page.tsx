@@ -159,11 +159,7 @@ export default function BlogPost() {
         pageUrl="/blog/maud-alsos-atomic-program"
       />
       <ComprehensiveBlogTemplate post={post} />
-        <BlogAuthorityEnhancer 
-          postTitle={post.title}
-          postCategory="Aviation History"
-          researchDate="2025"
-        />
+        
     </>
   )
 }

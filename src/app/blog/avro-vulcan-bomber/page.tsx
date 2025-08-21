@@ -127,11 +127,7 @@ export default function BlogPost() {
         pageUrl="/blog/avro-vulcan-bomber"
       />
       <ComprehensiveBlogTemplate post={post} />
-        <BlogAuthorityEnhancer 
-          postTitle={post.title}
-          postCategory="Aviation History"
-          researchDate="2025"
-        />
+        
     </>
   )
 }

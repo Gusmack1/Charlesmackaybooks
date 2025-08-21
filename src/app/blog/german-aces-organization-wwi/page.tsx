@@ -123,11 +123,7 @@ export default function BlogPost() {
         pageUrl="/blog/german-aces-organization-wwi"
       />
       <ComprehensiveBlogTemplate post={post} />
-        <BlogAuthorityEnhancer 
-          postTitle={post.title}
-          postCategory="Aviation History"
-          researchDate="2025"
-        />
+        
     </>
   )
 }

@@ -157,11 +157,7 @@ export default function BlogPost() {
         pageUrl="/blog/dorothy-wordsworth-scottish-tour-1803"
       />
       <ComprehensiveBlogTemplate post={post} />
-        <BlogAuthorityEnhancer 
-          postTitle={post.title}
-          postCategory="Aviation History"
-          researchDate="2025"
-        />
+        
     </>
   )
 }

@@ -223,11 +223,7 @@ export default function BlogPost() {
         pageUrl="/blog/arado-ar234-jet-bomber"
       />
       <ComprehensiveBlogTemplate post={post} />
-        <BlogAuthorityEnhancer 
-          postTitle={post.title}
-          postCategory="Aviation History"
-          researchDate="2025"
-        />
+        
     </>
   )
 }

@@ -92,11 +92,7 @@ export default function BlogPost() {
         pageUrl="/blog/helicopter-development-pioneers"
       />
       <ComprehensiveBlogTemplate post={post} />
-        <BlogAuthorityEnhancer 
-          postTitle={post.title}
-          postCategory="Aviation History"
-          researchDate="2025"
-        />
+        
     </>
   )
 }
