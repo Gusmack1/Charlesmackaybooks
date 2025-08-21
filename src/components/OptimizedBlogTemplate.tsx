@@ -125,6 +125,43 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
     });
   };
 
+  // Match specific images with their correct captions
+  const matchImagesWithCaptions = (html: string): string => {
+    if (!approvedInline || approvedInline.length === 0) return html;
+    
+    // Create a mapping of image URLs to their captions
+    const imageCaptionMap = new Map();
+    approvedInline.forEach(img => {
+      if (img.url && img.caption) {
+        // Extract filename from URL for matching
+        const filename = img.url.split('/').pop()?.split('?')[0];
+        if (filename) {
+          imageCaptionMap.set(filename, img.caption);
+        }
+      }
+    });
+
+    // Replace img tags with their correct captions
+    return html.replace(/<img\s+([^>]*?)src=(['"])([^'"]+)\2([^>]*)>/gi, (match, pre, quote, src, post) => {
+      const filename = src.split('/').pop()?.split('?')[0];
+      const caption = imageCaptionMap.get(filename);
+      
+      if (caption) {
+        // Add or update the title attribute with the correct caption
+        let attrs = pre + post;
+        if (!/\btitle\s*=/.test(attrs)) {
+          attrs = attrs.replace(/\s*>$/, '') + ` title="${caption.replace(/"/g,'\\"')}"`;
+        } else {
+          // Replace existing title
+          attrs = attrs.replace(/\btitle\s*=\s*['"][^'"]*['"]/, `title="${caption.replace(/"/g,'\\"')}"`);
+        }
+        return `<img ${pre}src="${src}"${post}>`;
+      }
+      
+      return match;
+    });
+  };
+
   const stripShareUI = (html: string): string => {
     let output = html
     output = output.replace(/<div[^>]*>\s*<h[1-6][^>]*>[^<]*Share This Article[^<]*<\/h[1-6]>[\s\S]*?<\/div>/gi, '')
@@ -270,7 +307,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Article Content */}
       <div className="content max-w-none mb-12">
         <div 
-          dangerouslySetInnerHTML={{ __html: stripShareUI(replaceGenericCaptions(replacePlaceholdersWithApproved(processContent(post.content)))) }}
+          dangerouslySetInnerHTML={{ __html: stripShareUI(matchImagesWithCaptions(replaceGenericCaptions(replacePlaceholdersWithApproved(processContent(post.content))))) }}
         />
         {/* No extra image grid; placeholders only */}
       </div>

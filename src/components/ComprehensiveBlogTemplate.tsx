@@ -195,6 +195,43 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     });
   };
 
+  // Match specific images with their correct captions
+  const matchImagesWithCaptions = (html: string): string => {
+    if (!approvedInline || approvedInline.length === 0) return html;
+    
+    // Create a mapping of image URLs to their captions
+    const imageCaptionMap = new Map();
+    approvedInline.forEach(img => {
+      if (img.url && img.caption) {
+        // Extract filename from URL for matching
+        const filename = img.url.split('/').pop()?.split('?')[0];
+        if (filename) {
+          imageCaptionMap.set(filename, img.caption);
+        }
+      }
+    });
+
+    // Replace img tags with their correct captions
+    return html.replace(/<img\s+([^>]*?)src=(['"])([^'"]+)\2([^>]*)>/gi, (match, pre, quote, src, post) => {
+      const filename = src.split('/').pop()?.split('?')[0];
+      const caption = imageCaptionMap.get(filename);
+      
+      if (caption) {
+        // Add or update the title attribute with the correct caption
+        let attrs = pre + post;
+        if (!/\btitle\s*=/.test(attrs)) {
+          attrs = attrs.replace(/\s*>$/, '') + ` title="${caption.replace(/"/g,'\\"')}"`;
+        } else {
+          // Replace existing title
+          attrs = attrs.replace(/\btitle\s*=\s*['"][^'"]*['"]/, `title="${caption.replace(/"/g,'\\"')}"`);
+        }
+        return `<img ${pre}src="${src}"${post}>`;
+      }
+      
+      return match;
+    });
+  };
+
   // Mid-article CTA removed per requirement; recommendations appear only at bottom
 
   const shareUrl = `https://charlesmackaybooks.com/blog/${post.id}`;
@@ -282,7 +319,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           {/* Article Content (full) */}
           <div 
             className="blog-content content"
-            dangerouslySetInnerHTML={{ __html: replaceGenericCaptions(replacePlaceholdersWithApproved(processedHtml)) }}
+            dangerouslySetInnerHTML={{ __html: matchImagesWithCaptions(replaceGenericCaptions(replacePlaceholdersWithApproved(processedHtml))) }}
           />
           {/* Removed auto-append image grid; images are placed only where placeholders exist */}
           {/* Breadcrumb JSON-LD */}
