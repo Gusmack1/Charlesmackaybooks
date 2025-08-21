@@ -91,7 +91,8 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
     return html + blocks.join('');
   };
 
-  const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html));
+  // Only tidy images; do not auto-insert extras. We rely on author placeholders.
+  const processContent = (html: string): string => addFallbackToAllImages(html);
 
   // Replace any inline placeholders with approved images for this post
   const replacePlaceholdersWithApproved = (html: string): string => {
@@ -106,7 +107,21 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       if (!/\balt\s*=/.test(attrs)) {
         attrs = attrs.replace(/\s*>$/, '') + ` alt="${cand.alt || 'Aviation history image'}"`;
       }
+      if (cand.caption && !/\btitle\s*=/.test(attrs)) {
+        attrs = attrs.replace(/\s*>$/, '') + ` title="${cand.caption.replace(/"/g,'\\"')}"`;
+      }
       return `<img ${pre}src="${cand.url}"${post}>`;
+    });
+  };
+
+  // Replace generic placeholder caption text with approved captions (in order)
+  const replaceGenericCaptions = (html: string): string => {
+    const generic = 'Where period photography is unavailable, we use curated placeholders and continue to source verified, license-compliant images for archival completeness.';
+    if (approvedInline.length === 0) return html;
+    let useIndex = 0;
+    return html.replace(new RegExp(generic.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), () => {
+      const next = approvedInline[useIndex++]?.caption;
+      return next || generic;
     });
   };
 
@@ -255,19 +270,9 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Article Content */}
       <div className="content max-w-none mb-12">
         <div 
-          dangerouslySetInnerHTML={{ __html: stripShareUI(replacePlaceholdersWithApproved(processContent(post.content))) }}
+          dangerouslySetInnerHTML={{ __html: stripShareUI(replaceGenericCaptions(replacePlaceholdersWithApproved(processContent(post.content)))) }}
         />
-        {approvedInline.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            {approvedInline.map((img, idx) => (
-              <figure key={idx}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img.url} alt={img.alt} className="w-full h-auto rounded-lg" />
-                {img.caption && <figcaption className="image-caption">{img.caption}</figcaption>}
-              </figure>
-            ))}
-          </div>
-        )}
+        {/* No extra image grid; placeholders only */}
       </div>
 
       {/* Author Bio */}

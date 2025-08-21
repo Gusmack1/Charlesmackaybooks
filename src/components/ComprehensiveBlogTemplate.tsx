@@ -121,7 +121,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     return injected;
   };
 
-  const processContent = (html: string): string => addFallbackToAllImages(ensureThreeImages(html))
+  // Only tidy images; do not auto-insert extras. We rely on author placeholders.
+  const processContent = (html: string): string => addFallbackToAllImages(html)
 
   // Clean hero text: remove any "Enhanced Edition" phrasing from title/subtitle for display
   const cleanHeroText = (text: string) =>
@@ -176,7 +177,21 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       if (!/\balt\s*=/.test(attrs)) {
         attrs = attrs.replace(/\s*>$/, '') + ` alt="${cand.alt || 'Aviation history image'}"`;
       }
+      if (cand.caption && !/\btitle\s*=/.test(attrs)) {
+        attrs = attrs.replace(/\s*>$/, '') + ` title="${cand.caption.replace(/"/g,'\\"')}"`;
+      }
       return `<img ${pre}src="${cand.url}"${post}>`;
+    });
+  };
+
+  // Replace generic placeholder caption text with approved captions (in order)
+  const replaceGenericCaptions = (html: string): string => {
+    const generic = 'Where period photography is unavailable, we use curated placeholders and continue to source verified, license-compliant images for archival completeness.';
+    if (approvedInline.length === 0) return html;
+    let useIndex = 0;
+    return html.replace(new RegExp(generic.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), () => {
+      const next = approvedInline[useIndex++]?.caption;
+      return next || generic;
     });
   };
 
@@ -267,7 +282,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           {/* Article Content (full) */}
           <div 
             className="blog-content content"
-            dangerouslySetInnerHTML={{ __html: replacePlaceholdersWithApproved(processedHtml) }}
+            dangerouslySetInnerHTML={{ __html: replaceGenericCaptions(replacePlaceholdersWithApproved(processedHtml)) }}
           />
           {/* Removed auto-append image grid; images are placed only where placeholders exist */}
           {/* Breadcrumb JSON-LD */}
