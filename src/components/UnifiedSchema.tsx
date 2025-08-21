@@ -297,6 +297,25 @@ export default function UnifiedSchema({
 
   // Add blog post structured data with reviews
   if (pageType === 'blog-post') {
+    // Blog post as WebPage (informational content, NOT a product)
+    (unifiedSchema["@graph"] as any[]).push({
+      "@type": "WebPage",
+      "@id": `${fullUrl}#webpage`,
+      "url": fullUrl,
+      "name": pageTitle || "Aviation History Article",
+      "description": pageDescription || "Expert aviation history research and analysis",
+      "isPartOf": {
+        "@id": `${baseUrl}/#website`
+      },
+      "about": "Aviation History Research",
+      "contentType": "Article",
+      "inLanguage": "en-GB",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Aviation Historians and Researchers"
+      }
+    });
+
     // Blog post as Article with reviews
     (unifiedSchema["@graph"] as any[]).push({
       "@type": "Article",
@@ -374,43 +393,7 @@ export default function UnifiedSchema({
       ]
     });
 
-    // Blog post as Product (for e-commerce detection)
-    (unifiedSchema["@graph"] as any[]).push({
-      "@type": "Product",
-      "@id": `${fullUrl}#product`,
-      "name": pageTitle || "Aviation History Article",
-      "description": pageDescription || "Expert aviation history research and analysis",
-      "image": `${baseUrl}/blog-images/default-generic.svg`,
-      "brand": {
-        "@type": "Brand",
-        "name": "Charles E. MacKay Aviation Books"
-      },
-      "manufacturer": {
-        "@id": `${baseUrl}/#organization`
-      },
-      "category": "Aviation History Research",
-      "productID": pageUrl?.split('/').pop() || "blog-post",
-      "sku": pageUrl?.split('/').pop() || "blog-post",
-      "offers": {
-        "@type": "Offer",
-        "url": fullUrl,
-        "price": "0.00",
-        "priceCurrency": "GBP",
-        "priceValidUntil": priceValidUntil,
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "seller": {
-          "@id": `${baseUrl}/#organization`
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "3",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
-    });
+
 
     // Breadcrumbs for blog posts
     (unifiedSchema["@graph"] as any[]).push({
