@@ -394,24 +394,24 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           const finalRelated = hasExplicit ? post.relatedBooks : fallbackBooks;
           if (!finalRelated || finalRelated.length === 0) {
             return (
-              <section className="mt-16 card p-8" aria-labelledby="related-books-heading">
+              <section className="mt-16 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 border border-slate-200 dark:border-slate-700" aria-labelledby="related-books-heading">
                 <div className="flex items-center justify-between gap-4 mb-6">
                   <h3 id="related-books-heading" className="text-2xl font-bold text-primary">Explore Charles E. MacKay’s Books</h3>
-                  <Link href="/books" className="badge badge-blue px-4 py-2 rounded-lg font-semibold">Browse all books</Link>
+                  <Link href="/books" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">Browse all books</Link>
                 </div>
-                <p className="text-secondary">Dive deeper into aviation and Scottish industrial history with our full catalogue of meticulously researched titles.</p>
+                <p className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">Dive deeper into aviation and Scottish industrial history with our full catalogue of meticulously researched titles.</p>
               </section>
             );
           }
           return (
-          <section className="mt-16 card p-8" aria-labelledby="related-books-heading">
+          <section className="mt-16 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 border border-slate-200 dark:border-slate-700" aria-labelledby="related-books-heading">
             <div className="flex items-center justify-between gap-4 mb-6">
-              <h3 id="related-books-heading" className="text-2xl font-bold text-primary">Related Books by Charles E. MacKay</h3>
-              <Link href="/books" className="badge badge-blue px-4 py-2 rounded-lg font-semibold">Browse all books</Link>
+                              <h3 id="related-books-heading" className="text-2xl font-bold text-slate-900 dark:text-white">Related Books by Charles E. MacKay</h3>
+                <Link href="/books" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">Browse all books</Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {finalRelated.map((book) => (
-                <article key={book.id} className="p-5 rounded-lg border border-slate-200 bg-white/50 dark:bg-slate-900/40">
+                <article key={book.id} className="bg-white dark:bg-slate-700 rounded-lg shadow-md border border-slate-200 dark:border-slate-600 p-5 hover:shadow-lg transition-shadow">
                   <Link href={`/books/${book.id}`} className="block group">
                     <div className="aspect-[3/4] w-full overflow-hidden rounded-md bg-slate-100 dark:bg-slate-800 mb-4">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -424,13 +424,13 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                         }}
                       />
                     </div>
-                    <h4 className="text-lg font-semibold text-primary mb-1">{book.title}</h4>
-                    <p className="text-sm text-secondary mb-2">By {book.author || 'Charles E. MacKay'}</p>
+                    <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{book.title}</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">By {book.author || 'Charles E. MacKay'}</p>
                     {typeof book.price === 'number' && (
-                      <p className="text-sm font-semibold text-primary mb-3">£{book.price.toFixed(2)}</p>
+                      <p className="text-sm font-semibold text-slate-900 dark:text-white mb-3">£{book.price.toFixed(2)}</p>
                     )}
                     <div className="flex items-center gap-3">
-                      <span className="badge badge-blue px-3 py-2 rounded-lg">View & Buy</span>
+                      <span className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors">View & Buy</span>
                     </div>
                   </Link>
                 </article>

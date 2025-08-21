@@ -341,35 +341,45 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
         </div>
       </div>
 
-      {/* Related Books */}
-      {post.relatedBooks.length > 0 && (
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
+      {/* Related Books - Always show a book link */}
+      <section className="mb-12 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+        <div className="flex items-center justify-between gap-4 mb-6">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
             <BookOpen className="w-6 h-6" />
-            Related Books
+            {post.relatedBooks.length > 0 ? 'Related Books' : 'Explore Charles E. MacKay\'s Books'}
           </h2>
+          <a href="/books" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">Browse all books</a>
+        </div>
+        
+        {post.relatedBooks.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {post.relatedBooks.map((book) => (
-              <div key={book.id} className="group cursor-pointer">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-lg mb-3">
-                  <Image
-                    src={book.cover}
-                    alt={book.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={handleNextImageError}
-                  />
+              <a key={book.id} href={`/books/${book.id}`} className="group block">
+                <div className="bg-white dark:bg-slate-700 rounded-lg shadow-md border border-slate-200 dark:border-slate-600 p-4 hover:shadow-lg transition-shadow">
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-md mb-3">
+                    <Image
+                      src={book.cover}
+                      alt={book.title}
+                      fill
+                      className="object-cover group-hover:opacity-90 transition-opacity"
+                      onError={handleNextImageError}
+                    />
+                  </div>
+                  <h3 className="font-semibold text-slate-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {book.title}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm mb-2">by {book.author}</p>
+                  <p className="font-bold text-slate-900 dark:text-white">£{book.price}</p>
                 </div>
-                <h3 className="font-semibold text-primary mb-1 group-hover:text-accent-blue transition-colors">
-                  {book.title}
-                </h3>
-                <p className="text-secondary text-sm mb-2">by {book.author}</p>
-                <p className="font-bold text-accent-green">${book.price}</p>
-              </div>
+              </a>
             ))}
           </div>
-        </section>
-      )}
+        ) : (
+          <p className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
+            Dive deeper into aviation and Scottish industrial history with our full catalogue of meticulously researched titles.
+          </p>
+        )}
+      </section>
 
       {/* Related Posts */}
       {post.relatedPosts.length > 0 && (
