@@ -101,7 +101,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Bristol Sycamore Helicopter Development | Charles E. MacKay`,
   description: `Comprehensive analysis of bristol sycamore helicopter development with expert historical research and technical details.`,
-  keywords: 'bristol, sycamore, helicopter, development, Charles MacKay, aviation history',
+  keywords: 'bristol, sycamore, helicopter, development, aviation history',
   openGraph: {
     title: `Bristol Sycamore Helicopter Development`,
     description: `Comprehensive analysis of bristol sycamore helicopter development with expert historical research and technical details.`,

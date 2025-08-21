@@ -120,7 +120,7 @@ const post = {
 export const metadata: Metadata = {
   title: `North American F-86 Sabre: Cold War Premier Fighter | Charles E. MacKay`,
   description: `The complete story of the F-86 Sabre, America answer to the MiG-15 and the most successful fighter of the Korean War.`,
-  keywords: 'F-86 Sabre, Korean War, USAF, Cold War, Jet Fighter, Charles MacKay, aviation history',
+  keywords: 'F-86 Sabre, Korean War, USAF, Cold War, Jet Fighter, aviation history',
   openGraph: {
     title: `North American F-86 Sabre: Cold War Premier Fighter`,
     description: `The complete story of the F-86 Sabre, America answer to the MiG-15 and the most successful fighter of the Korean War.`,

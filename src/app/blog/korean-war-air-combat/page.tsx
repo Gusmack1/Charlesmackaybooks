@@ -132,7 +132,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Korean War Air Combat | Charles E. MacKay`,
   description: `Comprehensive analysis of korean war air combat with expert historical research and technical details.`,
-  keywords: 'korean, war, air, combat, Charles MacKay, aviation history',
+  keywords: 'korean, war, air, combat, aviation history',
   openGraph: {
     title: `Korean War Air Combat`,
     description: `Comprehensive analysis of korean war air combat with expert historical research and technical details.`,

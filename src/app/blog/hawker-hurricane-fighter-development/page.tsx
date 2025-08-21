@@ -103,7 +103,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain | Charles E. MacKay',
   description: 'Expert aviation history analysis of the Hawker Hurricane - the forgotten hero of the Battle of Britain. Comprehensive research by aviation historian Charles E. MacKay.',
-  keywords: 'hawker hurricane, battle of britain, wwii fighter aircraft, charles e mackay, aviation history, british aircraft, Charles MacKay, Charles E. MacKay',
+  keywords: 'hawker hurricane, battle of britain, wwii fighter aircraft, charles e mackay, aviation history, british aircraft, Charles E. MacKay',
   openGraph: {
     title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
     description: 'Expert aviation history analysis with comprehensive research and historical context.',

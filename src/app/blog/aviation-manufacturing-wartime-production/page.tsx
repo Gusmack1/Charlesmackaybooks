@@ -108,7 +108,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Aviation Manufacturing Wartime Production | Charles E. MacKay`,
   description: `Comprehensive analysis of aviation manufacturing wartime production with expert historical research and technical details.`,
-  keywords: 'aviation, manufacturing, wartime, production, Charles MacKay, aviation history',
+  keywords: 'aviation, manufacturing, wartime, production, aviation history',
   openGraph: {
     title: `Aviation Manufacturing Wartime Production`,
     description: `Comprehensive analysis of aviation manufacturing wartime production with expert historical research and technical details.`,

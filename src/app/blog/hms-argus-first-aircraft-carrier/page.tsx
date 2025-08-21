@@ -97,7 +97,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `HMS Argus: The World First True Aircraft Carrier | Charles E. MacKay`,
   description: `The pioneering story of HMS Argus, converted from an ocean liner to become the world first aircraft carrier with a full-length flight deck.`,
-  keywords: 'HMS Argus, Aircraft Carrier, Naval Aviation, Royal Navy, Maritime History, Charles MacKay, aviation history',
+  keywords: 'HMS Argus, Aircraft Carrier, Naval Aviation, Royal Navy, Maritime History, aviation history',
   openGraph: {
     title: `HMS Argus: The World First True Aircraft Carrier`,
     description: `The pioneering story of HMS Argus, converted from an ocean liner to become the world first aircraft carrier with a full-length flight deck.`,

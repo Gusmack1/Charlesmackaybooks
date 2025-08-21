@@ -29,9 +29,9 @@ export default function BlogAuthorityEnhancer({
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
             <Award className="w-5 h-5 text-blue-600" />
-            <h3 className="text-lg font-semibold text-slate-900">
-              Expert Research by Charles E. MacKay & Charles MacKay
-            </h3>
+                         <h3 className="text-lg font-semibold text-slate-900">
+               Expert Research by Charles E. MacKay
+             </h3>
           </div>
           
           <div className="space-y-3 text-sm text-slate-700">
@@ -103,7 +103,7 @@ export default function BlogAuthorityEnhancer({
       {/* Related Research Section */}
       <div className="mt-6 pt-6 border-t border-slate-200">
         <h4 className="text-md font-semibold text-slate-900 mb-3">
-          Related Research by Charles MacKay & Charles E. MacKay
+          Related Research by Charles E. MacKay
         </h4>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -156,8 +156,8 @@ export default function BlogAuthorityEnhancer({
 
       {/* Citation Information */}
       <div className="mt-4 p-4 bg-slate-100 rounded text-xs text-slate-600">
-        <strong>Citation:</strong> MacKay, Charles E. & MacKay, Charles. "{postTitle}." 
-        Charles MacKay Aviation Books, {researchYear}. 
+                 <strong>Citation:</strong> MacKay, Charles E. "{postTitle}." 
+         Charles E. MacKay Aviation Books, {researchYear}.  
         <Link href="/" className="text-blue-600 hover:underline ml-1">
           charlesmackaybooks.com
         </Link>

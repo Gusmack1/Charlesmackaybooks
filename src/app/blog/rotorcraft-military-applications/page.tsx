@@ -129,7 +129,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Rotorcraft Military Applications | Charles E. MacKay`,
   description: `Comprehensive analysis of rotorcraft military applications with expert historical research and technical details.`,
-  keywords: 'rotorcraft, military, applications, Charles MacKay, aviation history',
+  keywords: 'rotorcraft, military, applications, aviation history',
   openGraph: {
     title: `Rotorcraft Military Applications`,
     description: `Comprehensive analysis of rotorcraft military applications with expert historical research and technical details.`,

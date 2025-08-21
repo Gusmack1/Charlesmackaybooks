@@ -159,7 +159,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Lucy Lady Houston Schneider Trophy | Charles E. MacKay`,
   description: `Comprehensive analysis of lucy lady houston schneider trophy with expert historical research and technical details.`,
-  keywords: 'lucy, lady, houston, schneider, trophy, Charles MacKay, aviation history',
+  keywords: 'lucy, lady, houston, schneider, trophy, aviation history',
   openGraph: {
     title: `Lucy Lady Houston Schneider Trophy`,
     description: `Comprehensive analysis of lucy lady houston schneider trophy with expert historical research and technical details.`,

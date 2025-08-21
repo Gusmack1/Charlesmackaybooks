@@ -83,7 +83,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Jet Age Aviation Cold War Development | Charles E. MacKay`,
   description: `Comprehensive analysis of jet age aviation cold war development with expert historical research and technical details.`,
-  keywords: 'jet, age, aviation, cold, war, development, Charles MacKay, aviation history',
+  keywords: 'jet, age, aviation, cold, war, development, aviation history',
   openGraph: {
     title: `Jet Age Aviation Cold War Development`,
     description: `Comprehensive analysis of jet age aviation cold war development with expert historical research and technical details.`,

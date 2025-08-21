@@ -104,7 +104,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Luftwaffe 1945 Final Year | Charles E. MacKay`,
   description: `Comprehensive analysis of luftwaffe 1945 final year with expert historical research and technical details.`,
-  keywords: 'luftwaffe, 1945, final, year, Charles MacKay, aviation history',
+  keywords: 'luftwaffe, 1945, final, year, aviation history',
   openGraph: {
     title: `Luftwaffe 1945 Final Year`,
     description: `Comprehensive analysis of luftwaffe 1945 final year with expert historical research and technical details.`,

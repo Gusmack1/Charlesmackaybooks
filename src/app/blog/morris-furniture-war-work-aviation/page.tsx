@@ -95,7 +95,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'Morris Furniture War Work & Aviation | Charles E. MacKay',
   description: 'How Morris Furniture pivoted to wartime aviation: rifle furniture, Upkeep/Highball components, rotor blades, and aerodynamic models.',
-  keywords: 'Morris Furniture, Glasgow industry, Upkeep, Highball, Cierva rotor blades, aviation supply chain, charles mackay books, Charles MacKay, Charles E. MacKay',
+  keywords: 'Morris Furniture, Glasgow industry, Upkeep, Highball, Cierva rotor blades, aviation supply chain, charles mackay books, Charles E. MacKay',
   openGraph: {
     title: 'From Liners to Lancaster Parts: Morris Furniture’s War Work',
     description: 'Glasgow’s precision woodcraft retooled for aviation and armaments.',

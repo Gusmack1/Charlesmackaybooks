@@ -126,7 +126,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Schneider Trophy Racing Development | Charles E. MacKay`,
   description: `Comprehensive analysis of schneider trophy racing development with expert historical research and technical details.`,
-  keywords: 'schneider, trophy, racing, development, Charles MacKay, aviation history',
+  keywords: 'schneider, trophy, racing, development, aviation history',
   openGraph: {
     title: `Schneider Trophy Racing Development`,
     description: `Comprehensive analysis of schneider trophy racing development with expert historical research and technical details.`,

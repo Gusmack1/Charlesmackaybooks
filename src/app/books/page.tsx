@@ -6,19 +6,16 @@ import Testimonials from '@/components/Testimonials'
 import TrustSecurityBadges from '@/components/TrustSecurityBadges'
 
 export const metadata: Metadata = {
-  title: 'Aviation History Books - Complete Collection | Charles MacKay & Charles E. MacKay',
-  description: 'Browse the complete collection of aviation history books by Charles MacKay and Charles E. MacKay. 19+ books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.',
+  title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
+  description: 'Browse the complete collection of aviation history books by Charles E. MacKay. 19+ books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.',
   alternates: {
     canonical: 'https://charlesmackaybooks.com/books'
   },
   keywords: [
     'aviation history books',
-    'Charles MacKay',
     'Charles E MacKay',
     'Charles E. MacKay',
-    'Charles Mackay Books',
     'Charles E. MacKay Books',
-    'Charles MacKay Aviation',
     'Charles E. MacKay Aviation',
     'aviation books for sale',
     'WWI aircraft books',
@@ -30,8 +27,8 @@ export const metadata: Metadata = {
     'naval aviation books'
   ],
   openGraph: {
-    title: 'Aviation History Books - Complete Collection | Charles MacKay & Charles E. MacKay',
-    description: 'Browse 19+ aviation history books by expert historians Charles MacKay and Charles E. MacKay. WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.',
+    title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
+    description: 'Browse 19+ aviation history books by expert historian Charles E. MacKay. WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.',
     url: 'https://charlesmackaybooks.com/books',
     siteName: 'Charles E. MacKay Aviation Books',
     images: [
@@ -64,7 +61,7 @@ export default function BooksPage() {
               Aviation History Books Collection
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto">
-              Discover {books.length} authoritative aviation history books by Charles MacKay and Charles E. MacKay. From WWI fighters to modern jets, Scottish aviation heritage to global military aviation.
+              Discover {books.length} authoritative aviation history books by Charles E. MacKay. From WWI fighters to modern jets, Scottish aviation heritage to global military aviation.
             </p>
           </div>
         </div>

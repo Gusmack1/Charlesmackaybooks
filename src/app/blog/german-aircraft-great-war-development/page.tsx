@@ -135,7 +135,7 @@ const post = {
 export const metadata: Metadata = {
   title: `German Aircraft Great War Development | Charles E. MacKay`,
   description: `Comprehensive analysis of german aircraft great war development with expert historical research and technical details.`,
-  keywords: 'german, aircraft, great, war, development, Charles MacKay, aviation history',
+  keywords: 'german, aircraft, great, war, development, aviation history',
   openGraph: {
     title: `German Aircraft Great War Development`,
     description: `Comprehensive analysis of german aircraft great war development with expert historical research and technical details.`,

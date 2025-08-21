@@ -111,7 +111,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Sopwith Camel: The Most Deadly Fighter of World War I | Charles E. MacKay`,
   description: `The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.`,
-  keywords: 'sopwith camel, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history, great war fighter, Charles MacKay, Charles E. MacKay',
+  keywords: 'sopwith camel, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history, great war fighter, Charles E. MacKay',
   openGraph: {
     title: `Sopwith Camel: The Most Deadly Fighter of World War I`,
     description: `The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.`,

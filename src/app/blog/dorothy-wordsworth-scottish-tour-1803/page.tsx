@@ -138,7 +138,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Dorothy Wordsworth Scottish Tour 1803 | Charles E. MacKay`,
   description: `A richly researched account of Dorothy Wordsworth’s 1803 Scottish tour—landscape, people, logistics, and the Romantic method of attention—edited and contextualised by Charles E. MacKay.`,
-  keywords: 'Dorothy Wordsworth, Scottish Tour 1803, Romanticism, Travel Literature, William Wordsworth, Highlands, Trossachs, Scotland, Loch Lomond, Charles MacKay, charles mackay books',
+  keywords: 'Dorothy Wordsworth, Scottish Tour 1803, Romanticism, Travel Literature, William Wordsworth, Highlands, Trossachs, Scotland, Loch Lomond, charles mackay books',
   openGraph: {
     title: `Dorothy Wordsworth’s Scottish Tour of 1803`,
     description: `A deeply researched narrative of Dorothy Wordsworth’s 1803 journey across Scotland, with context, routes, and legacy.`,

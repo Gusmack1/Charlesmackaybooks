@@ -213,7 +213,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Supermarine Spitfire Development Evolution | Charles E. MacKay`,
   description: `Comprehensive analysis of supermarine spitfire development evolution with expert historical research and technical details.`,
-  keywords: 'supermarine, spitfire, development, evolution, Charles MacKay, aviation history',
+  keywords: 'supermarine, spitfire, development, evolution, aviation history',
   openGraph: {
     title: `Supermarine Spitfire Development Evolution`,
     description: `Comprehensive analysis of supermarine spitfire development evolution with expert historical research and technical details.`,

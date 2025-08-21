@@ -123,7 +123,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Bristol Fighter F2B: The Brisfit's Combat Legacy | Charles E. MacKay`,
   description: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters. Expert research by aviation historian Charles E. MacKay.`,
-  keywords: 'bristol fighter f2b, brisfit, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history, Charles MacKay, Charles E. MacKay',
+  keywords: 'bristol fighter f2b, brisfit, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history, Charles E. MacKay',
   openGraph: {
     title: `Bristol Fighter F2B: The Brisfit's Combat Legacy`,
     description: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters. Expert research by aviation historian Charles E. MacKay.`,

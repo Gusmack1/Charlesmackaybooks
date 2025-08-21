@@ -147,7 +147,7 @@ const relatedPosts = [
 export const metadata: Metadata = {
   title: `Adolf Rohrbach: The Metal Aircraft Revolution That Changed Aviation | Charles E. MacKay`,
   description: `How German engineer Adolf Rohrbach's revolutionary metal aircraft construction techniques transformed aviation design and established manufacturing principles still used today.`,
-  keywords: 'Adolf Rohrbach, Metal Aircraft, Aviation Technology, Engineering Innovation, Aircraft Design, Rohrbach Roland, Flying Boats, Aviation History, Charles MacKay',
+  keywords: 'Adolf Rohrbach, Metal Aircraft, Aviation Technology, Engineering Innovation, Aircraft Design, Rohrbach Roland, Flying Boats, Aviation History',
   openGraph: {
     title: `Adolf Rohrbach: The Metal Aircraft Revolution That Changed Aviation`,
     description: `How German engineer Adolf Rohrbach's revolutionary metal aircraft construction techniques transformed aviation design and established manufacturing principles still used today.`,

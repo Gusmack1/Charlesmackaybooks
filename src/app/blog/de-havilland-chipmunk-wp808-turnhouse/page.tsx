@@ -117,7 +117,7 @@ const post = {
 export const metadata: Metadata = {
   title: `De Havilland Chipmunk WP808: Turnhouse's Training Legend | Charles E. MacKay`,
   description: `The remarkable story of De Havilland Chipmunk WP808, stationed at RAF Turnhouse (now Edinburgh Airport) in 1962, and its role in training generations of RAF pilots.`,
-  keywords: 'De Havilland Chipmunk, WP808, Turnhouse, RAF, Edinburgh Airport, training aircraft, Charles MacKay, aviation history',
+  keywords: 'De Havilland Chipmunk, WP808, Turnhouse, RAF, Edinburgh Airport, training aircraft, aviation history',
   openGraph: {
     title: `De Havilland Chipmunk WP808: Turnhouse's Training Legend`,
     description: `The remarkable story of De Havilland Chipmunk WP808, stationed at RAF Turnhouse (now Edinburgh Airport) in 1962, and its role in training generations of RAF pilots.`,

@@ -102,7 +102,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Messerschmitt Me 262: The World First Operational Jet Fighter | Charles E. MacKay`,
   description: `The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.`,
-  keywords: 'Me 262, Jet Fighter, Luftwaffe, WWII, Aviation Technology, Charles MacKay, aviation history',
+  keywords: 'Me 262, Jet Fighter, Luftwaffe, WWII, Aviation Technology, aviation history',
   openGraph: {
     title: `Messerschmitt Me 262: The World First Operational Jet Fighter`,
     description: `The revolutionary Me 262 that introduced jet propulsion to combat aviation and changed the future of military aircraft design.`,

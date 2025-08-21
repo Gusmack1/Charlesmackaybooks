@@ -122,7 +122,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Clydeside Aviation: Scotland Industrial Flying Revolution | Charles E. MacKay`,
   description: `How the River Clyde became the center of Scottish aviation manufacturing and changed the course of British aviation history.`,
-  keywords: 'Clydeside, Scottish Aviation, Industrial Revolution, Manufacturing, Aviation History, Charles MacKay, aviation history',
+  keywords: 'Clydeside, Scottish Aviation, Industrial Revolution, Manufacturing, Aviation History, aviation history',
   openGraph: {
     title: `Clydeside Aviation: Scotland Industrial Flying Revolution`,
     description: `How the River Clyde became the center of Scottish aviation manufacturing and changed the course of British aviation history.`,

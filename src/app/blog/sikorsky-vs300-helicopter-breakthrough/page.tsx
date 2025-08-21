@@ -101,7 +101,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Sikorsky Vs300 Helicopter Breakthrough | Charles E. MacKay`,
   description: `Comprehensive analysis of sikorsky vs300 helicopter breakthrough with expert historical research and technical details.`,
-  keywords: 'sikorsky, vs300, helicopter, breakthrough, Charles MacKay, aviation history',
+  keywords: 'sikorsky, vs300, helicopter, breakthrough, aviation history',
   openGraph: {
     title: `Sikorsky Vs300 Helicopter Breakthrough`,
     description: `Comprehensive analysis of sikorsky vs300 helicopter breakthrough with expert historical research and technical details.`,

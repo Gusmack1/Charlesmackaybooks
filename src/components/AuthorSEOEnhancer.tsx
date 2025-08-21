@@ -8,7 +8,7 @@ export default function AuthorSEOEnhancer() {
     <div className="bg-gradient-to-br from-slate-50 to-blue-50 border border-slate-200 rounded-lg p-6 my-8">
       <div className="text-center mb-6">
         <h2 className="text-2xl font-bold text-slate-900 mb-2">
-          Expert Aviation Historians: Charles MacKay & Charles E. MacKay
+          Expert Aviation Historian: Charles E. MacKay
         </h2>
         <p className="text-slate-600">
           Leading authorities on Scottish aviation heritage and military aviation history
@@ -23,13 +23,12 @@ export default function AuthorSEOEnhancer() {
             <Award className="w-5 h-5 text-blue-600" />
             <h3 className="font-semibold text-slate-900">Author Credentials</h3>
           </div>
-          <ul className="space-y-2 text-sm text-slate-700">
-            <li>• <strong>Charles MacKay</strong> - Aviation Historian</li>
-            <li>• <strong>Charles E. MacKay</strong> - Aviation Historian</li>
-            <li>• 19+ Published Books</li>
-            <li>• 25+ Years Research Experience</li>
-            <li>• Scottish Aviation Specialist</li>
-          </ul>
+                     <ul className="space-y-2 text-sm text-slate-700">
+             <li>• <strong>Charles E. MacKay</strong> - Aviation Historian</li>
+             <li>• 19+ Published Books</li>
+             <li>• 25+ Years Research Experience</li>
+             <li>• Scottish Aviation Specialist</li>
+           </ul>
         </div>
 
         {/* Academic Recognition */}
@@ -68,24 +67,19 @@ export default function AuthorSEOEnhancer() {
             <BookOpen className="w-5 h-5 text-orange-600" />
             <h3 className="font-semibold text-slate-900">Key Publications</h3>
           </div>
-          <div className="space-y-2 text-sm text-slate-700">
-            <div>
-              <strong>Charles MacKay Books:</strong>
-              <ul className="mt-1 ml-4 space-y-1">
-                <li>• British Aircraft of the Great War</li>
-                <li>• German Aircraft of the Great War</li>
-                <li>• Beardmore Aviation</li>
-              </ul>
-            </div>
-            <div>
-              <strong>Charles E. MacKay Books:</strong>
-              <ul className="mt-1 ml-4 space-y-1">
-                <li>• Scottish Aviation Heritage</li>
-                <li>• Military Aviation History</li>
-                <li>• Helicopter Development</li>
-              </ul>
-            </div>
-          </div>
+                     <div className="space-y-2 text-sm text-slate-700">
+             <div>
+               <strong>Charles E. MacKay Books:</strong>
+               <ul className="mt-1 ml-4 space-y-1">
+                 <li>• British Aircraft of the Great War</li>
+                 <li>• German Aircraft of the Great War</li>
+                 <li>• Beardmore Aviation</li>
+                 <li>• Scottish Aviation Heritage</li>
+                 <li>• Military Aviation History</li>
+                 <li>• Helicopter Development</li>
+               </ul>
+             </div>
+           </div>
         </div>
 
         {/* Research Methodology */}
@@ -122,9 +116,9 @@ export default function AuthorSEOEnhancer() {
       {/* Call to Action */}
       <div className="mt-6 text-center">
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <h3 className="font-semibold text-blue-900 mb-2">
-            Discover Aviation History by Charles MacKay & Charles E. MacKay
-          </h3>
+                     <h3 className="font-semibold text-blue-900 mb-2">
+             Discover Aviation History by Charles E. MacKay
+           </h3>
           <p className="text-blue-700 text-sm mb-4">
             Explore our complete collection of authoritative aviation history books and research
           </p>
@@ -148,18 +142,15 @@ export default function AuthorSEOEnhancer() {
       {/* SEO Keywords Section */}
       <div className="mt-6 p-4 bg-slate-100 rounded-lg">
         <h4 className="font-semibold text-slate-900 mb-2">Related Search Terms:</h4>
-        <div className="flex flex-wrap gap-2 text-xs">
-          <span className="bg-white px-2 py-1 rounded border">Charles MacKay</span>
-          <span className="bg-white px-2 py-1 rounded border">Charles E. MacKay</span>
-          <span className="bg-white px-2 py-1 rounded border">Charles Mackay Books</span>
-          <span className="bg-white px-2 py-1 rounded border">Charles E. MacKay Books</span>
-          <span className="bg-white px-2 py-1 rounded border">Charles MacKay Aviation</span>
-          <span className="bg-white px-2 py-1 rounded border">Charles E. MacKay Aviation</span>
-          <span className="bg-white px-2 py-1 rounded border">Aviation Historian Charles MacKay</span>
-          <span className="bg-white px-2 py-1 rounded border">Scottish Aviation Charles MacKay</span>
-          <span className="bg-white px-2 py-1 rounded border">WWI Aircraft Charles MacKay</span>
-          <span className="bg-white px-2 py-1 rounded border">Military Aviation Charles E. MacKay</span>
-        </div>
+                 <div className="flex flex-wrap gap-2 text-xs">
+           <span className="bg-white px-2 py-1 rounded border">Charles E. MacKay</span>
+           <span className="bg-white px-2 py-1 rounded border">Charles E. MacKay Books</span>
+           <span className="bg-white px-2 py-1 rounded border">Charles E. MacKay Aviation</span>
+           <span className="bg-white px-2 py-1 rounded border">Aviation Historian Charles E. MacKay</span>
+           <span className="bg-white px-2 py-1 rounded border">Scottish Aviation Charles E. MacKay</span>
+           <span className="bg-white px-2 py-1 rounded border">WWI Aircraft Charles E. MacKay</span>
+           <span className="bg-white px-2 py-1 rounded border">Military Aviation Charles E. MacKay</span>
+         </div>
       </div>
     </div>
   )

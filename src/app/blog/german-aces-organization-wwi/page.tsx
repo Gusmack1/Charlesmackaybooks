@@ -104,7 +104,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'German Aces & Organisation in WWI | Charles E. MacKay',
   description: 'Von Hoeppner’s reforms, fighter squadron tactics, and the culture of the ace in German WWI aviation.',
-  keywords: 'German aces, Jagdgeschwader, WWI fighter organisation, von Hoeppner, charles mackay books, Charles MacKay, Charles E. MacKay',
+  keywords: 'German aces, Jagdgeschwader, WWI fighter organisation, von Hoeppner, charles mackay books, Charles E. MacKay',
   openGraph: {
     title: 'Aces, Jagdgeschwader, and Organisation: German Fighter Culture in WWI',
     description: 'How structure and doctrine shaped German fighter performance on the Western Front.',

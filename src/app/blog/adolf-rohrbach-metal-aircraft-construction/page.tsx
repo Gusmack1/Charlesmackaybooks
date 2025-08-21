@@ -128,7 +128,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Adolf Rohrbach: Revolutionary Metal Aircraft Designer | Charles E. MacKay`,
   description: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
-  keywords: 'Adolf Rohrbach, Metal Aircraft, Engineering, Aviation Design, German Aviation, Charles MacKay, aviation history',
+  keywords: 'Adolf Rohrbach, Metal Aircraft, Engineering, Aviation Design, German Aviation, aviation history',
   openGraph: {
     title: `Adolf Rohrbach: Revolutionary Metal Aircraft Designer`,
     description: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,

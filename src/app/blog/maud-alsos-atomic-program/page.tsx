@@ -140,7 +140,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'MAUD to Alsos: Allied Atomic Documents | Charles E. MacKay',
   description: 'A primary‑source tour from MAUD and the Quebec Agreement to the Alsos Mission and August 1945 statements.',
-  keywords: 'MAUD Committee, Quebec Agreement, Alsos Mission, atomic bomb documents, primary sources, charles mackay books, Charles MacKay, Charles E. MacKay',
+  keywords: 'MAUD Committee, Quebec Agreement, Alsos Mission, atomic bomb documents, primary sources, charles mackay books, Charles E. MacKay',
   openGraph: {
     title: 'From MAUD to Alsos: The Documents Behind the Allied Atomic Program',
     description: 'How memoranda, agreements, and field intelligence framed the bomb, 1940–45.',

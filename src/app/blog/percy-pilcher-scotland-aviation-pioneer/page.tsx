@@ -93,7 +93,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Percy Pilcher Scotland Aviation Pioneer | Charles E. MacKay`,
   description: `Comprehensive analysis of percy pilcher scotland aviation pioneer with expert historical research and technical details.`,
-  keywords: 'percy, pilcher, scotland, aviation, pioneer, Charles MacKay, aviation history',
+  keywords: 'percy, pilcher, scotland, aviation, pioneer, aviation history',
   openGraph: {
     title: `Percy Pilcher Scotland Aviation Pioneer`,
     description: `Comprehensive analysis of percy pilcher scotland aviation pioneer with expert historical research and technical details.`,

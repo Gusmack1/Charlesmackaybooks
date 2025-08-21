@@ -133,7 +133,7 @@ const post = {
 export const metadata: Metadata = {
   title: `British Nuclear Deterrent V Force | Charles E. MacKay`,
   description: `Comprehensive analysis of british nuclear deterrent v force with expert historical research and technical details.`,
-  keywords: 'british, nuclear, deterrent, v, force, Charles MacKay, aviation history',
+  keywords: 'british, nuclear, deterrent, v, force, aviation history',
   openGraph: {
     title: `British Nuclear Deterrent V Force`,
     description: `Comprehensive analysis of british nuclear deterrent v force with expert historical research and technical details.`,

@@ -128,7 +128,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `English Electric Lightning Development | Charles E. MacKay`,
   description: `Comprehensive analysis of english electric lightning development with expert historical research and technical details.`,
-  keywords: 'english, electric, lightning, development, Charles MacKay, aviation history',
+  keywords: 'english, electric, lightning, development, aviation history',
   openGraph: {
     title: `English Electric Lightning Development`,
     description: `Comprehensive analysis of english electric lightning development with expert historical research and technical details.`,

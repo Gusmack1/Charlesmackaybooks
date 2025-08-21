@@ -200,7 +200,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'Dieter Dengler Biography: POW Escape & A‑1 Skyraider | Charles E. MacKay',
   description: 'The definitive, sourced biography of Dieter Dengler—wartime childhood, U.S. naval aviation, Laos shoot‑down, captivity, escape, rescue, awards, and legacy.',
-  keywords: 'Dieter Dengler biography, Escape from Laos, Rescue Dawn, Little Dieter Needs to Fly, Navy Cross, A-1 Skyraider, VA-145, USS Ranger, POW escape Laos, Vietnam War biography, combat SAR, Sandy doctrine, charles mackay books, Charles MacKay, Charles E. MacKay',
+  keywords: 'Dieter Dengler biography, Escape from Laos, Rescue Dawn, Little Dieter Needs to Fly, Navy Cross, A-1 Skyraider, VA-145, USS Ranger, POW escape Laos, Vietnam War biography, combat SAR, Sandy doctrine, charles mackay books, Charles E. MacKay',
   openGraph: {
     title: 'Dieter Dengler: Shoot‑down, Captivity, Escape',
     description: 'Skyraider endurance and a daring escape in Southeast Asia.',

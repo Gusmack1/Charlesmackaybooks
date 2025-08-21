@@ -129,7 +129,7 @@ const post = {
 export const metadata: Metadata = {
   title: `HMS Argus Operations: Pioneering Carrier Aviation Techniques | Charles E. MacKay`,
   description: `The operational history of HMS Argus and the development of carrier aviation procedures that influenced naval warfare.`,
-  keywords: 'HMS Argus, Carrier Operations, Naval Aviation, Flight Deck Operations, Royal Navy, Charles MacKay, aviation history',
+  keywords: 'HMS Argus, Carrier Operations, Naval Aviation, Flight Deck Operations, Royal Navy, aviation history',
   openGraph: {
     title: `HMS Argus Operations: Pioneering Carrier Aviation Techniques`,
     description: `The operational history of HMS Argus and the development of carrier aviation procedures that influenced naval warfare.`,

@@ -129,7 +129,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Captain Eric Brown: The World Most Experienced Test Pilot | Charles E. MacKay`,
   description: `The extraordinary career of Captain Eric Brown, who flew more aircraft types than any pilot in history and pioneered carrier aviation.`,
-  keywords: 'Eric Brown, Test Pilot, Carrier Aviation, Flight Testing, Royal Navy, Charles MacKay, aviation history',
+  keywords: 'Eric Brown, Test Pilot, Carrier Aviation, Flight Testing, Royal Navy, aviation history',
   openGraph: {
     title: `Captain Eric Brown: The World Most Experienced Test Pilot`,
     description: `The extraordinary career of Captain Eric Brown, who flew more aircraft types than any pilot in history and pioneered carrier aviation.`,

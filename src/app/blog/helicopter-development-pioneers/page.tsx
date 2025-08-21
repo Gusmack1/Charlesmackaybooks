@@ -73,7 +73,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Helicopter Development Pioneers | Charles E. MacKay`,
   description: `Comprehensive analysis of helicopter development pioneers with expert historical research and technical details.`,
-  keywords: 'helicopter, development, pioneers, Charles MacKay, aviation history',
+  keywords: 'helicopter, development, pioneers, aviation history',
   openGraph: {
     title: `Helicopter Development Pioneers`,
     description: `Comprehensive analysis of helicopter development pioneers with expert historical research and technical details.`,

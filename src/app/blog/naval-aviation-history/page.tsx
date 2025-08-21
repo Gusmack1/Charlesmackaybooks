@@ -110,7 +110,7 @@ const relatedPosts: any[] = []
 export const metadata: Metadata = {
   title: `Naval Aviation History | Charles E. MacKay`,
   description: `Comprehensive analysis of naval aviation history with expert historical research and technical details.`,
-  keywords: 'naval, aviation, history, Charles MacKay, aviation history',
+  keywords: 'naval, aviation, history, aviation history',
   openGraph: {
     title: `Naval Aviation History`,
     description: `Comprehensive analysis of naval aviation history with expert historical research and technical details.`,

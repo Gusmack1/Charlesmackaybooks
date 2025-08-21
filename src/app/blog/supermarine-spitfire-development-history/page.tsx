@@ -96,7 +96,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Supermarine Spitfire: The Complete Development History | Charles E. MacKay`,
   description: `The remarkable story of how R.J. Mitchell's revolutionary fighter design evolved from the Schneider Trophy racers to become Britain's most iconic aircraft of World War II.`,
-  keywords: 'supermarine, spitfire, development, history, fighter, wwii, british, aviation, Charles MacKay',
+  keywords: 'supermarine, spitfire, development, history, fighter, wwii, british, aviation',
   openGraph: {
     title: `Supermarine Spitfire: The Complete Development History`,
     description: `The remarkable story of how R.J. Mitchell's revolutionary fighter design evolved from the Schneider Trophy racers to become Britain's most iconic aircraft of World War II.`,

@@ -149,7 +149,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Bristol Sycamore: Britain's First Helicopter | Charles E. MacKay`,
   description: `The remarkable story of the Bristol Sycamore, Britain's first helicopter to enter military service and the foundation of British rotorcraft development.`,
-  keywords: 'bristol, sycamore, helicopter, british, aviation, rotorcraft, Charles MacKay',
+  keywords: 'bristol, sycamore, helicopter, british, aviation, rotorcraft',
   openGraph: {
     title: `Bristol Sycamore: Britain's First Helicopter`,
     description: `The remarkable story of the Bristol Sycamore, Britain's first helicopter to enter military service and the foundation of British rotorcraft development.`,

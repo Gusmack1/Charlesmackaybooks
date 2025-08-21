@@ -84,7 +84,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'Scottish Aviation Between the Wars | Charles E. MacKay',
   description: 'Routes, clubs, and industry across inter‑war Scotland with Beardmore and Weir at the core.',
-  keywords: 'Scottish aviation, inter‑war, Renfrew airport, Scottish Flying Club, Beardmore, Weir, charles mackay books, Charles MacKay, Charles E. MacKay',
+  keywords: 'Scottish aviation, inter‑war, Renfrew airport, Scottish Flying Club, Beardmore, Weir, charles mackay books, Charles E. MacKay',
   openGraph: {
     title: 'Scottish Aviation Between the Wars',
     description: 'Civil infrastructure, clubs, and industry that bridged to rearmament.',

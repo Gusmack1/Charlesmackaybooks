@@ -72,7 +72,7 @@ const post = {
 export const metadata: Metadata = {
   title: `British Aircraft Great War Rfc Rnas | Charles E. MacKay`,
   description: `Comprehensive analysis of british aircraft great war rfc rnas with expert historical research and technical details.`,
-  keywords: 'british, aircraft, great, war, rfc, rnas, Charles MacKay, aviation history',
+  keywords: 'british, aircraft, great, war, rfc, rnas, aviation history',
   openGraph: {
     title: `British Aircraft Great War Rfc Rnas`,
     description: `Comprehensive analysis of british aircraft great war rfc rnas with expert historical research and technical details.`,
