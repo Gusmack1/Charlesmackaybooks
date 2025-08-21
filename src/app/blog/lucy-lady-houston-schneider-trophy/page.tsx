@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { getBooksData } from '@/utils/bookUtils'
 
@@ -177,6 +178,11 @@ export default function BlogPost() {
         pageUrl="/blog/lucy-lady-houston-schneider-trophy"
       />
       <ComprehensiveBlogTemplate post={post} />
+        <BlogAuthorityEnhancer 
+          postTitle={post.title}
+          postCategory="Aviation History"
+          researchDate="2025"
+        />
     </>
   )
 }

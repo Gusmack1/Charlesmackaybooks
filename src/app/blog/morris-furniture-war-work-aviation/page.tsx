@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -94,7 +95,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'Morris Furniture War Work & Aviation | Charles E. MacKay',
   description: 'How Morris Furniture pivoted to wartime aviation: rifle furniture, Upkeep/Highball components, rotor blades, and aerodynamic models.',
-  keywords: 'Morris Furniture, Glasgow industry, Upkeep, Highball, Cierva rotor blades, aviation supply chain, charles mackay books',
+  keywords: 'Morris Furniture, Glasgow industry, Upkeep, Highball, Cierva rotor blades, aviation supply chain, charles mackay books, Charles MacKay, Charles E. MacKay',
   openGraph: {
     title: 'From Liners to Lancaster Parts: Morris Furniture’s War Work',
     description: 'Glasgow’s precision woodcraft retooled for aviation and armaments.',
@@ -113,6 +114,11 @@ export default function BlogPost() {
         pageUrl="/blog/morris-furniture-war-work-aviation"
       />
       <ComprehensiveBlogTemplate post={post} />
+        <BlogAuthorityEnhancer 
+          postTitle={post.title}
+          postCategory="Aviation History"
+          researchDate="2025"
+        />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -103,7 +104,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'German Aces & Organisation in WWI | Charles E. MacKay',
   description: 'Von Hoeppner’s reforms, fighter squadron tactics, and the culture of the ace in German WWI aviation.',
-  keywords: 'German aces, Jagdgeschwader, WWI fighter organisation, von Hoeppner, charles mackay books',
+  keywords: 'German aces, Jagdgeschwader, WWI fighter organisation, von Hoeppner, charles mackay books, Charles MacKay, Charles E. MacKay',
   openGraph: {
     title: 'Aces, Jagdgeschwader, and Organisation: German Fighter Culture in WWI',
     description: 'How structure and doctrine shaped German fighter performance on the Western Front.',
@@ -122,6 +123,11 @@ export default function BlogPost() {
         pageUrl="/blog/german-aces-organization-wwi"
       />
       <ComprehensiveBlogTemplate post={post} />
+        <BlogAuthorityEnhancer 
+          postTitle={post.title}
+          postCategory="Aviation History"
+          researchDate="2025"
+        />
     </>
   )
 }

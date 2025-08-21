@@ -5,15 +5,22 @@ import AcademicAuthority from '@/components/AcademicAuthority';
 import BookCard from '@/components/BookCard';
 import Testimonials from '@/components/Testimonials';
 import TrustSecurityBadges from '@/components/TrustSecurityBadges';
+import AuthorSEOEnhancer from '@/components/AuthorSEOEnhancer';
 
 import { books } from '@/data/books';
 
 export const metadata: Metadata = {
-  title: 'Charles E. MacKay - Aviation History Books | WWI & WWII Aircraft Expert',
-  description: 'Authoritative aviation history books by Charles E. MacKay. Expert on Scottish aviation heritage, WWI & WWII aircraft, military aviation, helicopter development, and jet age history. 19+ books available.',
+  title: 'Charles MacKay & Charles E. MacKay - Aviation History Books | Expert Aviation Historians',
+  description: 'Authoritative aviation history books by Charles MacKay and Charles E. MacKay. Expert aviation historians specializing in Scottish aviation heritage, WWI & WWII aircraft, military aviation, helicopter development, and jet age history. 19+ books available.',
   keywords: [
     'aviation history books',
+    'Charles MacKay',
     'Charles E MacKay',
+    'Charles E. MacKay',
+    'Charles Mackay Books',
+    'Charles E. MacKay Books',
+    'Charles MacKay Aviation',
+    'Charles E. MacKay Aviation',
     'WWI aircraft books',
     'WWII aviation history',
     'Scottish aviation heritage',
@@ -25,10 +32,10 @@ export const metadata: Metadata = {
     'aviation biography books'
   ],
   openGraph: {
-    title: 'Charles E. MacKay - Aviation History Books | Expert Aviation Historian',
-    description: 'Authoritative aviation history books by Charles E. MacKay. Expert on Scottish aviation heritage, WWI & WWII aircraft, military aviation, helicopter development, and jet age history.',
+    title: 'Charles MacKay & Charles E. MacKay - Aviation History Books | Expert Aviation Historians',
+    description: 'Authoritative aviation history books by Charles MacKay and Charles E. MacKay. Expert aviation historians specializing in Scottish aviation heritage, WWI & WWII aircraft, military aviation, helicopter development, and jet age history.',
     url: 'https://charlesmackaybooks.com',
-    siteName: 'Charles E. MacKay - Aviation Historian',
+    siteName: 'Charles MacKay & Charles E. MacKay - Aviation Historians',
     images: [
       {
         url: 'https://charlesmackaybooks.com/charles-mackay-aviation-books.jpg',
@@ -40,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Charles E. MacKay - Aviation History Books',
-    description: 'Authoritative aviation history books by expert historian Charles E. MacKay. WWI & WWII aircraft, Scottish aviation heritage, and military aviation.'
+    title: 'Charles MacKay & Charles E. MacKay - Aviation History Books',
+    description: 'Authoritative aviation history books by expert historians Charles MacKay and Charles E. MacKay. WWI & WWII aircraft, Scottish aviation heritage, and military aviation.'
   }
 }
 
@@ -73,6 +80,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Author SEO Enhancement */}
+      <div className="container mx-auto container-padding py-12">
+        <AuthorSEOEnhancer />
+      </div>
 
       {/* Customer Testimonials */}
       <div className="container mx-auto container-padding py-12">

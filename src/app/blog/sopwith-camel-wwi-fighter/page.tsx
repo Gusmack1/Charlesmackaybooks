@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -110,7 +111,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Sopwith Camel: The Most Deadly Fighter of World War I | Charles E. MacKay`,
   description: `The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.`,
-  keywords: 'sopwith camel, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history, great war fighter',
+  keywords: 'sopwith camel, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history, great war fighter, Charles MacKay, Charles E. MacKay',
   openGraph: {
     title: `Sopwith Camel: The Most Deadly Fighter of World War I`,
     description: `The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.`,
@@ -129,6 +130,11 @@ export default function BlogPost() {
         pageUrl="/blog/sopwith-camel-wwi-fighter"
       />
       <ComprehensiveBlogTemplate post={post} />
+        <BlogAuthorityEnhancer 
+          postTitle={post.title}
+          postCategory="Aviation History"
+          researchDate="2025"
+        />
     </>
   )
 }

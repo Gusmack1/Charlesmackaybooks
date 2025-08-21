@@ -15,7 +15,7 @@ export default function HeroSection() {
             </h1>
             
             <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed">
-              Published by renowned aviation historian <strong className="font-bold">Charles E. MacKay</strong>
+              Published by renowned aviation historians <strong className="font-bold">Charles MacKay</strong> and <strong className="font-bold">Charles E. MacKay</strong>
             </p>
             
             <p className="text-lg md:text-xl text-white mb-8 leading-relaxed">

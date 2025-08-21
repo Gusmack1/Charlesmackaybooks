@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -122,7 +123,7 @@ const post = {
 export const metadata: Metadata = {
   title: `Bristol Fighter F2B: The Brisfit's Combat Legacy | Charles E. MacKay`,
   description: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters. Expert research by aviation historian Charles E. MacKay.`,
-  keywords: 'bristol fighter f2b, brisfit, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history',
+  keywords: 'bristol fighter f2b, brisfit, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history, Charles MacKay, Charles E. MacKay',
   openGraph: {
     title: `Bristol Fighter F2B: The Brisfit's Combat Legacy`,
     description: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters. Expert research by aviation historian Charles E. MacKay.`,
@@ -141,6 +142,11 @@ export default function BlogPost() {
         pageUrl="/blog/bristol-fighter-f2b-brisfit"
       />
       <ComprehensiveBlogTemplate post={post} />
+        <BlogAuthorityEnhancer 
+          postTitle={post.title}
+          postCategory="Aviation History"
+          researchDate="2025"
+        />
     </>
   )
 }

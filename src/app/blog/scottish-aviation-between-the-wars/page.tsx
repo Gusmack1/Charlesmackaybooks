@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
+import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -83,7 +84,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'Scottish Aviation Between the Wars | Charles E. MacKay',
   description: 'Routes, clubs, and industry across inter‑war Scotland with Beardmore and Weir at the core.',
-  keywords: 'Scottish aviation, inter‑war, Renfrew airport, Scottish Flying Club, Beardmore, Weir, charles mackay books',
+  keywords: 'Scottish aviation, inter‑war, Renfrew airport, Scottish Flying Club, Beardmore, Weir, charles mackay books, Charles MacKay, Charles E. MacKay',
   openGraph: {
     title: 'Scottish Aviation Between the Wars',
     description: 'Civil infrastructure, clubs, and industry that bridged to rearmament.',
@@ -102,6 +103,11 @@ export default function BlogPost() {
         pageUrl="/blog/scottish-aviation-between-the-wars"
       />
       <ComprehensiveBlogTemplate post={post} />
+        <BlogAuthorityEnhancer 
+          postTitle={post.title}
+          postCategory="Aviation History"
+          researchDate="2025"
+        />
     </>
   )
 }
