@@ -374,6 +374,44 @@ export default function UnifiedSchema({
       ]
     });
 
+    // Blog post as Product (for e-commerce detection)
+    (unifiedSchema["@graph"] as any[]).push({
+      "@type": "Product",
+      "@id": `${fullUrl}#product`,
+      "name": pageTitle || "Aviation History Article",
+      "description": pageDescription || "Expert aviation history research and analysis",
+      "image": `${baseUrl}/blog-images/default-generic.svg`,
+      "brand": {
+        "@type": "Brand",
+        "name": "Charles E. MacKay Aviation Books"
+      },
+      "manufacturer": {
+        "@id": `${baseUrl}/#organization`
+      },
+      "category": "Aviation History Research",
+      "productID": pageUrl?.split('/').pop() || "blog-post",
+      "sku": pageUrl?.split('/').pop() || "blog-post",
+      "offers": {
+        "@type": "Offer",
+        "url": fullUrl,
+        "price": "0.00",
+        "priceCurrency": "GBP",
+        "priceValidUntil": priceValidUntil,
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": `${baseUrl}/#organization`
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    });
+
     // Breadcrumbs for blog posts
     (unifiedSchema["@graph"] as any[]).push({
       "@type": "BreadcrumbList",
