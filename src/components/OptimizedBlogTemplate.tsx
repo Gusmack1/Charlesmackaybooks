@@ -96,9 +96,11 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
   // Replace any inline placeholders with approved images for this post
   const replacePlaceholdersWithApproved = (html: string): string => {
     if (!approvedInline || approvedInline.length === 0) return html;
+    // do not reuse featured image to avoid duplicates
+    const pool = approvedInline.filter(img => img.url !== (featured.url || ''))
     let useIndex = 0;
     return html.replace(/<img\s+([^>]*?)src=(['"])\/blog-images\/default-generic\.svg\2([^>]*)>/gi, (match, pre, quote, post) => {
-      const cand = approvedInline[useIndex++];
+      const cand = pool[useIndex++];
       if (!cand) return match;
       let attrs = pre + post;
       if (!/\balt\s*=/.test(attrs)) {

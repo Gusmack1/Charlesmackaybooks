@@ -166,9 +166,11 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
   const processedHtml = stripShareUI(processContent(post.content));
   const replacePlaceholdersWithApproved = (html: string): string => {
     if (!approvedInline || approvedInline.length === 0) return html;
+    // avoid duplicating the featured image
+    const pool = approvedInline.filter(img => img.url !== (featured.url || ''))
     let useIndex = 0;
     return html.replace(/<img\s+([^>]*?)src=(['"])\/blog-images\/default-generic\.svg\2([^>]*)>/gi, (match, pre, quote, post) => {
-      const cand = approvedInline[useIndex++];
+      const cand = pool[useIndex++];
       if (!cand) return match;
       let attrs = pre + post;
       if (!/\balt\s*=/.test(attrs)) {
@@ -267,17 +269,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
             className="blog-content content"
             dangerouslySetInnerHTML={{ __html: replacePlaceholdersWithApproved(processedHtml) }}
           />
-          {approvedInline.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-              {approvedInline.map((img, idx) => (
-                <figure key={idx}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={img.url} alt={img.alt} className="w-full h-auto rounded-lg" />
-                  {img.caption && <figcaption className="image-caption">{img.caption}</figcaption>}
-                </figure>
-              ))}
-            </div>
-          )}
+          {/* Removed auto-append image grid; images are placed only where placeholders exist */}
           {/* Breadcrumb JSON-LD */}
           <script
             type="application/ld+json"
