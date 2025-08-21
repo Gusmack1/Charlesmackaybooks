@@ -23,7 +23,7 @@ import CustomerTestimonials from '@/components/CustomerTestimonials';
 import { trackCartAbandonment } from '@/utils/abandonedCartRecovery';
 
 export default function CheckoutPage() {
-  const { items, getTotalPrice, getBulkDiscount, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
+  const { items, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
   const [step, setStep] = useState<'basket' | 'address' | 'payment' | 'review'>('basket');
   const [paymentMethod, setPaymentMethod] = useState<'stripe' | 'paypal'>('stripe');
   const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
@@ -343,15 +343,19 @@ export default function CheckoutPage() {
                 <div className="space-y-4">
                   {items.map((item, index) => (
                     <div key={index} className="flex items-center space-x-4 p-4 border rounded-lg">
-                      <Image
-                        src={item.book.imageUrl || `/book-covers/${item.book.id}.jpg`}
-                        alt={item.book.title}
-                        width={60}
-                        height={80}
-                        className="rounded"
-                      />
+                      <Link href={`/books/${item.book.id}`} className="hover:opacity-80 transition-opacity">
+                        <Image
+                          src={item.book.imageUrl || `/book-covers/${item.book.id}.jpg`}
+                          alt={item.book.title}
+                          width={60}
+                          height={80}
+                          className="rounded cursor-pointer"
+                        />
+                      </Link>
                       <div className="flex-1">
-                        <h3 className="font-semibold">{item.book.title}</h3>
+                        <Link href={`/books/${item.book.id}`} className="hover:text-primary transition-colors">
+                          <h3 className="font-semibold cursor-pointer">{item.book.title}</h3>
+                        </Link>
                         <p className="text-sm text-secondary">£{item.book.price}</p>
                       </div>
                       <div className="flex items-center space-x-2">
@@ -386,7 +390,7 @@ export default function CheckoutPage() {
                     </div>
                     {bulkDiscount > 0 && (
                       <div className="flex justify-between text-green-600 font-semibold">
-                        <span>Bulk Discount ({items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
+                        <span>Bulk Discount ({getBulkDiscountPercentage()}% off {items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
                         <span>-£{bulkDiscount.toFixed(2)}</span>
                       </div>
                     )}
@@ -401,7 +405,7 @@ export default function CheckoutPage() {
                   </div>
                   {bulkDiscount > 0 && (
                     <p className="text-sm text-green-600 mt-2">
-                      🎉 You've saved £{bulkDiscount.toFixed(2)} with bulk discount!
+                      🎉 You've saved £{bulkDiscount.toFixed(2)} with {getBulkDiscountPercentage()}% bulk discount!
                     </p>
                   )}
                   <p className="text-sm text-secondary mt-2">Free worldwide shipping included</p>
@@ -634,7 +638,9 @@ export default function CheckoutPage() {
               <div className="space-y-3">
                 {items.map((item, index) => (
                   <div key={index} className="flex justify-between">
-                    <span className="text-sm">{item.book.title} (x{item.quantity})</span>
+                    <Link href={`/books/${item.book.id}`} className="text-sm hover:text-primary transition-colors">
+                      {item.book.title} (x{item.quantity})
+                    </Link>
                     <span className="text-sm">£{(item.book.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
@@ -645,7 +651,7 @@ export default function CheckoutPage() {
                     <span className="text-green-600 mr-2">🎉</span>
                     <div className="text-sm">
                       <p className="font-semibold text-green-800">Bulk Discount Applied!</p>
-                      <p className="text-green-700">You've saved £{bulkDiscount.toFixed(2)} on your order</p>
+                      <p className="text-green-700">You've saved £{bulkDiscount.toFixed(2)} with {getBulkDiscountPercentage()}% discount</p>
                     </div>
                   </div>
                 </div>
@@ -657,7 +663,7 @@ export default function CheckoutPage() {
                 </div>
                 {bulkDiscount > 0 && (
                   <div className="flex justify-between text-green-600 font-semibold">
-                    <span>Bulk Discount ({items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
+                    <span>Bulk Discount ({getBulkDiscountPercentage()}% off {items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
                     <span>-£{bulkDiscount.toFixed(2)}</span>
                   </div>
                 )}

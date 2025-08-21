@@ -20,6 +20,7 @@ interface CartContextType {
   getTotalPrice: () => number;
   getTotal: () => number;
   getBulkDiscount: () => number;
+  getBulkDiscountPercentage: () => number;
   getShippingCost: (country?: string) => number;
   getFinalTotal: () => number;
   isBasketOpen: boolean;
@@ -125,9 +126,15 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const getBulkDiscount = () => {
     const total = getTotalItems();
-    if (total >= 5) return getTotalPrice() * 0.15; // 15% discount for 5+ books
-    if (total >= 3) return getTotalPrice() * 0.10; // 10% discount for 3+ books
+    if (total >= 3) return getTotalPrice() * 0.10; // 10% discount for 3+ books (maximum)
     if (total >= 2) return getTotalPrice() * 0.05; // 5% discount for 2+ books
+    return 0;
+  };
+
+  const getBulkDiscountPercentage = () => {
+    const total = getTotalItems();
+    if (total >= 3) return 10; // 10% discount for 3+ books (maximum)
+    if (total >= 2) return 5; // 5% discount for 2+ books
     return 0;
   };
 
@@ -173,6 +180,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         getTotalPrice,
         getTotal,
         getBulkDiscount,
+        getBulkDiscountPercentage,
         getShippingCost,
         getFinalTotal,
         isBasketOpen,
@@ -202,6 +210,7 @@ export function useCart() {
         getTotalPrice: () => 0,
         getTotal: () => 0,
         getBulkDiscount: () => 0,
+        getBulkDiscountPercentage: () => 0,
         getShippingCost: (country?: string) => 0,
         getFinalTotal: () => 0,
         isBasketOpen: false,

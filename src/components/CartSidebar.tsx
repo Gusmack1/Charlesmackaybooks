@@ -14,6 +14,7 @@ export default function CartSidebar() {
     isCartOpen,
     setIsCartOpen,
     getBulkDiscount,
+    getBulkDiscountPercentage,
     getShippingCost,
     getFinalTotal
   } = useCart()
@@ -119,7 +120,7 @@ export default function CartSidebar() {
                 </div>
                 {discount > 0 && (
                   <div className="flex justify-between text-green-600">
-                    <span>Bulk Discount ({getTotalItems() >= 5 ? '15%' : getTotalItems() >= 3 ? '10%' : '5%'}):</span>
+                    <span>Bulk Discount ({getBulkDiscountPercentage()}% off {getTotalItems()}+ books):</span>
                     <span>-£{discount.toFixed(2)}</span>
                   </div>
                 )}
