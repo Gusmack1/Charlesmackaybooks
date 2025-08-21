@@ -22,16 +22,16 @@ export default function TrustSecurityBadges({
 }: TrustSecurityBadgesProps) {
   return (
     <div className="surface-dark bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
-      <div className="container mx-auto px-4 py-2">
-        <h3 className="text-base font-bold text-center mb-2 flex items-center justify-center">
-          <Shield className="w-3 h-3 mr-1 text-blue-400" />
+      <div className="container mx-auto px-3 py-1">
+        <h3 className="text-sm font-bold text-center mb-1 flex items-center justify-center">
+          <Shield className="w-2 h-2 mr-1 text-blue-400" />
           Secure & Trusted Shopping
         </h3>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 max-w-xl mx-auto">
           {showSSL && (
-            <div className="flex items-center space-x-1 p-2 rounded-lg border border-white/15 bg-black/10">
-              <Lock className="w-3 h-3 text-green-400" />
+            <div className="flex items-center space-x-1 p-1 rounded border border-white/15 bg-black/10">
+              <Lock className="w-2 h-2 text-green-400" />
               <div>
                 <p className="text-xs font-semibold text-white">SSL Secured</p>
                 <p className="text-xs opacity-80">256-bit encryption</p>
@@ -40,8 +40,8 @@ export default function TrustSecurityBadges({
           )}
 
           {showPCI && (
-            <div className="flex items-center space-x-1 p-2 rounded-lg border border-white/15 bg-black/10">
-              <CreditCard className="w-3 h-3 text-blue-400" />
+            <div className="flex items-center space-x-1 p-1 rounded border border-white/15 bg-black/10">
+              <CreditCard className="w-2 h-2 text-blue-400" />
               <div>
                 <p className="text-xs font-semibold text-white">PCI Compliant</p>
                 <p className="text-xs opacity-80">Payment security</p>
@@ -50,8 +50,8 @@ export default function TrustSecurityBadges({
           )}
 
           {showGuarantee && (
-            <div className="flex items-center space-x-1 p-2 rounded-lg border border-white/15 bg-black/10">
-              <Award className="w-3 h-3 text-orange-400" />
+            <div className="flex items-center space-x-1 p-1 rounded border border-white/15 bg-black/10">
+              <Award className="w-2 h-2 text-orange-400" />
               <div>
                 <p className="text-xs font-semibold text-white">30-Day Guarantee</p>
                 <p className="text-xs opacity-80">Money back guarantee</p>
@@ -60,8 +60,8 @@ export default function TrustSecurityBadges({
           )}
 
           {showReviews && (
-            <div className="flex items-center space-x-1 p-2 rounded-lg border border-white/15 bg-black/10">
-              <Star className="w-3 h-3 text-yellow-400" />
+            <div className="flex items-center space-x-1 p-1 rounded border border-white/15 bg-black/10">
+              <Star className="w-2 h-2 text-yellow-400" />
               <div>
                 <p className="text-xs font-semibold text-white">5-Star Reviews</p>
                 <p className="text-xs opacity-80">Customer verified</p>
@@ -70,8 +70,8 @@ export default function TrustSecurityBadges({
           )}
 
           {showSecurity && (
-            <div className="flex items-center space-x-1 p-2 rounded-lg border border-white/15 bg-black/10">
-              <Shield className="w-3 h-3 text-purple-400" />
+            <div className="flex items-center space-x-1 p-1 rounded border border-white/15 bg-black/10">
+              <Shield className="w-2 h-2 text-purple-400" />
               <div>
                 <p className="text-xs font-semibold text-white">Fraud Protection</p>
                 <p className="text-xs opacity-80">Advanced security</p>
@@ -80,8 +80,8 @@ export default function TrustSecurityBadges({
           )}
 
           {showTrust && (
-            <div className="flex items-center space-x-1 p-2 rounded-lg border border-white/15 bg-black/10">
-              <CheckCircle className="w-3 h-3 text-green-400" />
+            <div className="flex items-center space-x-1 p-1 rounded border border-white/15 bg-black/10">
+              <CheckCircle className="w-2 h-2 text-green-400" />
               <div>
                 <p className="text-xs font-semibold text-white">Trusted Author</p>
                 <p className="text-xs opacity-80">Charles E. MacKay</p>
@@ -90,8 +90,8 @@ export default function TrustSecurityBadges({
           )}
         </div>
 
-        <div className="mt-2 pt-2 border-t border-white/15">
-          <div className="flex items-center justify-center space-x-4 text-xs opacity-90">
+        <div className="mt-1 pt-1 border-t border-white/15">
+          <div className="flex items-center justify-center space-x-2 text-xs opacity-90">
             <span className="flex items-center">
               <Lock className="w-2 h-2 mr-1 text-green-400" />
               Secure Checkout

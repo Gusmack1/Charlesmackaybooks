@@ -95,12 +95,12 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
       id={`book-${book.isbn || book.id}`}
     >
       <Link href={`/books/${book.id}`} onClick={handleBookClick} className="block">
-        <div className="relative h-[32rem] overflow-hidden bg-secondary">
+        <div className="relative aspect-[2/3] overflow-hidden bg-secondary">
           <Image
             src={imgSrc}
             alt={`${book.title} by Charles E. MacKay`}
             fill
-            className="object-contain group-hover:scale-105 transition-transform duration-300"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
             onError={() => setImgSrc('/book-covers/placeholder-book.svg')}
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={false}
