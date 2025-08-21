@@ -19,15 +19,24 @@ export default function BBCHeader() {
         <div className="flex items-center justify-between py-3">
           <Link href="/" className="font-bold text-xl tracking-tight">Charles Mackay Books</Link>
           <div className="hidden md:flex items-center gap-2">
-            {/* Basket Button - White background */}
+            {/* Basket Button - White outline icon */}
             <button
               onClick={openBasket}
               aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
-              className="relative bg-white text-slate-900 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100"
+              className="relative bg-transparent border-2 border-white text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900"
               title="Shopping Basket"
             >
-              <span className="hidden sm:inline">🛒 Basket</span>
-              <span className="sm:hidden">🛒</span>
+              <span className="hidden sm:inline flex items-center">
+                <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+                </svg>
+                Basket
+              </span>
+              <span className="sm:hidden">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+                </svg>
+              </span>
               {getTotalItems() > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
                   {getTotalItems()}
@@ -63,10 +72,12 @@ export default function BBCHeader() {
             <button
               onClick={openBasket}
               aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
-              className="relative bg-white text-slate-900 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100"
+              className="relative bg-transparent border-2 border-white text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900"
               title="Shopping Basket"
             >
-              🛒
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+              </svg>
               {getTotalItems() > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
                   {getTotalItems()}
