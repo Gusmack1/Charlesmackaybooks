@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 // import ConditionalHeader from '@/components/ConditionalHeader'
 import BBCHeader from '@/components/BBCHeader'
+import TrustSecurityBadges from '@/components/TrustSecurityBadges'
 // Footer removed site-wide per request
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -448,6 +449,10 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
+        
+        {/* Trust & Security Badges - Site-wide above footer */}
+        <TrustSecurityBadges />
+        
         {/* Footer: minimal site-wide links for policy discoverability */}
         <footer className="mt-12 py-8 text-center text-sm opacity-90 text-white bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
           <div className="container mx-auto px-6">

@@ -36,7 +36,7 @@ export default function Header() {
                 <button
                   onClick={openBasket}
                   aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
-                  className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:from-blue-700 hover:to-blue-900 min-h-[40px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
+                  className="relative bg-white text-slate-900 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100 min-h-[40px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
                   title="Shopping Basket"
                 >
                   <span className="hidden sm:inline">🛒 Basket</span>
