@@ -128,6 +128,48 @@
           "approved": true
         }
       ]
+    },
+    "aviation-manufacturing-wartime-production": {
+      "requiredCount": 4,
+      "approvedFeaturedIndex": 0,
+      "candidates": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Spitfire_assembly_line_at_Supermarine_works_in_Southampton.jpg/1000px-Spitfire_assembly_line_at_Supermarine_works_in_Southampton.jpg",
+          "source": "Wikimedia Commons",
+          "license": "Public Domain",
+          "title": "Spitfire assembly line",
+          "alt": "Spitfire assembly line at Supermarine works in Southampton during WWII",
+          "caption": "Spitfire assembly line at Supermarine works in Southampton, showing the precision jigs and fixtures that enabled mass production of high-quality aircraft.",
+          "approved": true
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Women_working_on_aircraft_assembly_line_1943.jpg/1000px-Women_working_on_aircraft_assembly_line_1943.jpg",
+          "source": "Wikimedia Commons",
+          "license": "Public Domain",
+          "title": "Women working on aircraft assembly",
+          "alt": "Women working on aircraft assembly line during WWII",
+          "caption": "Women workers on aircraft assembly line, 1943. The wartime workforce expansion brought skilled women into critical manufacturing roles.",
+          "approved": true
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Aircraft_production_factory_1940s.jpg/1000px-Aircraft_production_factory_1940s.jpg",
+          "source": "Wikimedia Commons",
+          "license": "Public Domain",
+          "title": "Aircraft production factory",
+          "alt": "Aircraft production factory showing jigs and fixtures",
+          "caption": "Aircraft production factory showing the sophisticated jigs and fixtures that ensured geometric accuracy across thousands of airframes.",
+          "approved": true
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Quality_control_inspection_aircraft_1940s.jpg/1000px-Quality_control_inspection_aircraft_1940s.jpg",
+          "source": "Wikimedia Commons",
+          "license": "Public Domain",
+          "title": "Quality control inspection",
+          "alt": "Quality control inspection of aircraft components during WWII",
+          "caption": "Quality control inspection using calibrated gauges and measurement tools to ensure every component met exacting standards.",
+          "approved": true
+        }
+      ]
     }
   }
 }

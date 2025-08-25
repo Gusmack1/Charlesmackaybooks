@@ -4,6 +4,7 @@ import Link from 'next/link'
 import BookCard from '@/components/BookCard'
 import { books } from '@/data/books'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
+import { categoryDescriptions } from '@/data/category-descriptions'
 
 // Valid category mappings
 const categoryMappings: Record<string, string> = {
@@ -37,10 +38,12 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     }
   }
 
+  const categoryDesc = categoryDescriptions[category]
+  
   return {
     title: `${categoryName} Books | Charles E. MacKay Aviation Books`,
-    description: `Browse ${categoryName.toLowerCase()} books by aviation historian Charles E. MacKay. Comprehensive collection of specialized aviation history publications.`,
-    keywords: [
+    description: categoryDesc?.description || `Browse ${categoryName.toLowerCase()} books by aviation historian Charles E. MacKay. Comprehensive collection of specialized aviation history publications.`,
+    keywords: categoryDesc?.keywords || [
       `${categoryName.toLowerCase()} books`,
       'Charles E MacKay',
       'aviation history',
@@ -53,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     },
     openGraph: {
       title: `${categoryName} Books | Charles E. MacKay`,
-      description: `Browse ${categoryName.toLowerCase()} books by aviation historian Charles E. MacKay.`,
+      description: categoryDesc?.description || `Browse ${categoryName.toLowerCase()} books by aviation historian Charles E. MacKay.`,
       type: 'website',
       url: `https://charlesmackaybooks.com/category/${category}`
     }
@@ -73,12 +76,29 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     book.category.toLowerCase().replace(/\s+/g, '-') === category
   )
 
+  const categoryDesc = categoryDescriptions[category]
+
   return (
     <BBCPageTemplate
       title={`${categoryName} Books`}
       subtitle={`Discover ${categoryBooks.length} authoritative ${categoryName.toLowerCase()} books by Charles E. MacKay`}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Books', href: '/books' }, { label: categoryName }]}
     >
+      {/* Category Description */}
+      {categoryDesc?.longDescription && (
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="prose prose-lg max-w-none">
+                <div dangerouslySetInnerHTML={{ 
+                  __html: categoryDesc.longDescription.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>') 
+                }} />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Books Grid */}
       <section className="py-6">
         <div className="container mx-auto px-4">
