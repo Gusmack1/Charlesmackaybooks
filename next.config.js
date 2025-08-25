@@ -26,55 +26,7 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Redirect configuration for SEO and URL consistency
-  async redirects() {
-    return [
-      // Redirect /book/ URLs to /books/ for consistency
-      {
-        source: '/book/:slug',
-        destination: '/books/:slug',
-        permanent: true,
-      },
-      // Redirect old aircraft URLs to new format
-      {
-        source: '/aircraft/:slug',
-        destination: '/books/:slug',
-        permanent: true,
-      },
-      // Redirect any old book URLs that might exist
-      {
-        source: '/product/:slug',
-        destination: '/books/:slug',
-        permanent: true,
-      },
-      // Redirect old pretty URLs to actual book IDs
-      {
-        source: '/books/test-pilot',
-        destination: '/books/captain-eric-brown',
-        permanent: true,
-      },
-      {
-        source: '/books/hms-argus',
-        destination: '/books/aircraft-carrier-argus',
-        permanent: true,
-      },
-      {
-        source: '/books/british-military-aircraft-wwi',
-        destination: '/books/british-aircraft-great-war',
-        permanent: true,
-      },
-      {
-        source: '/books/the-nuclear-bomb',
-        destination: '/books/birth-atomic-bomb',
-        permanent: true,
-      },
-      {
-        source: '/books/sycamore-seeds',
-        destination: '/books/sycamore-seeds',
-        permanent: true,
-      },
-    ]
-  },
+  // Redirect configuration removed - using direct page routing instead
 
   // Headers for security and caching
   async headers() {
