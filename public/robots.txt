@@ -16,6 +16,9 @@ Disallow: /.github/
 Disallow: /.same/
 Disallow: *.json
 Disallow: *.lock
+Disallow: /search?*
+Disallow: /*?q=*
+Disallow: /*?query=*
 
 # Allow important pages for better indexing
 Allow: /books/

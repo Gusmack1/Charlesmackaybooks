@@ -2,12 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { books } from '@/data/books'
 
-export const metadata: Metadata = {
-  title: 'Search | Charles E. MacKay',
-  description: 'Search results for Charles Mackay Books',
-  alternates: {
-    canonical: 'https://charlesmackaybooks.com/search'
-  },
+export async function generateMetadata({ searchParams }: { searchParams: { query?: string, q?: string } }): Promise<Metadata> {
+  const raw = (searchParams?.query ?? searchParams?.q ?? '').toString()
+  const hasQuery = raw.trim().length > 0
+
+  return {
+    title: hasQuery ? `Search Results for "${raw}" | Charles E. MacKay` : 'Search | Charles E. MacKay',
+    description: hasQuery ? `Search results for "${raw}" in Charles Mackay Books collection` : 'Search the Charles Mackay Books collection',
+    alternates: {
+      canonical: 'https://charlesmackaybooks.com/search'
+    },
+    robots: {
+      index: hasQuery ? false : true, // Don't index search result pages, but index the main search page
+      follow: true,
+    },
+  }
 }
 
 export default function SearchPage({ searchParams }: { searchParams: { query?: string, q?: string } }) {

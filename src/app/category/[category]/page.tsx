@@ -48,6 +48,9 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
       categoryName.toLowerCase(),
       'aviation historian'
     ],
+    alternates: {
+      canonical: `https://charlesmackaybooks.com/category/${category}`
+    },
     openGraph: {
       title: `${categoryName} Books | Charles E. MacKay`,
       description: `Browse ${categoryName.toLowerCase()} books by aviation historian Charles E. MacKay.`,
