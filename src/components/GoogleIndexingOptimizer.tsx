@@ -211,18 +211,7 @@ export default function GoogleIndexingOptimizer({
         </a>
       </nav>
 
-      {/* Aircraft pages for discovery */}
-      <nav itemScope itemType="https://schema.org/SiteNavigationElement">
-        <a href="/aircraft/bristol-fighter" itemProp="url">
-          <span itemProp="name">Bristol Fighter</span>
-        </a>
-        <a href="/aircraft/sopwith-camel" itemProp="url">
-          <span itemProp="name">Sopwith Camel</span>
-        </a>
-        <a href="/aircraft/hawker-hurricane" itemProp="url">
-          <span itemProp="name">Hawker Hurricane</span>
-        </a>
-      </nav>
+      {/* Aircraft pages removed */}
     </div>
   );
 }

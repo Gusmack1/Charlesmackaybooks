@@ -41,10 +41,7 @@ export function generateSitemap(): string {
     { url: '/category/wwi-aviation', changeFrequency: 'weekly', priority: 0.7 },
     { url: '/category/wwii-aviation', changeFrequency: 'weekly', priority: 0.7 },
 
-    // Aircraft pages
-    { url: '/aircraft/bristol-fighter', changeFrequency: 'monthly', priority: 0.6 },
-    { url: '/aircraft/hawker-hurricane', changeFrequency: 'monthly', priority: 0.6 },
-    { url: '/aircraft/sopwith-camel', changeFrequency: 'monthly', priority: 0.6 },
+    // Aircraft pages removed
 
     // All book pages - dynamically generated
     ...books.map(book => ({
@@ -87,10 +84,7 @@ export function generateSitemap(): string {
     { url: '/blog/luftwaffe-1945-final-year', changeFrequency: 'weekly', priority: 0.6 },
     { url: '/blog/british-nuclear-deterrent-v-force', changeFrequency: 'weekly', priority: 0.6 },
 
-    // Aircraft pages
-    { url: '/aircraft/bristol-fighter', changeFrequency: 'monthly', priority: 0.6 },
-    { url: '/aircraft/hawker-hurricane', changeFrequency: 'monthly', priority: 0.6 },
-    { url: '/aircraft/sopwith-camel', changeFrequency: 'monthly', priority: 0.6 },
+    // Aircraft pages removed
 
     // Partnership pages
     { url: '/partnerships/imperial-war-museum', changeFrequency: 'monthly', priority: 0.7 }

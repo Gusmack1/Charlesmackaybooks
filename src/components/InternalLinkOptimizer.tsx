@@ -240,13 +240,13 @@ export function SEOFooterNavigation() {
             </ul>
           </div>
 
-          {/* Aircraft Resources */}
+          {/* Aircraft Resources replaced with blog equivalents */}
           <div>
-            <h3 className="font-semibold mb-3">Aircraft Information</h3>
+            <h3 className="font-semibold mb-3">Aircraft Articles</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/aircraft/bristol-fighter" className="hover:text-blue-300">Bristol F2B Fighter</Link></li>
-              <li><Link href="/aircraft/sopwith-camel" className="hover:text-blue-300">Sopwith Camel</Link></li>
-              <li><Link href="/aircraft/hawker-hurricane" className="hover:text-blue-300">Hawker Hurricane</Link></li>
+              <li><Link href="/blog/bristol-fighter-f2b-brisfit" className="hover:text-blue-300">Bristol F2B Fighter</Link></li>
+              <li><Link href="/blog/sopwith-camel-wwi-fighter" className="hover:text-blue-300">Sopwith Camel</Link></li>
+              <li><Link href="/blog/hawker-hurricane-fighter-development" className="hover:text-blue-300">Hawker Hurricane</Link></li>
               <li><Link href="/aviation-news" className="hover:text-blue-300">Aviation News</Link></li>
               <li><Link href="/partnerships/imperial-war-museum" className="hover:text-blue-300">Museum Partnerships</Link></li>
             </ul>

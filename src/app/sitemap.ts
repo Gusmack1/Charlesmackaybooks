@@ -73,12 +73,8 @@ const categoryNames = [
   'travel-literature'
 ];
 
-// Aircraft detail pages (legacy redirects maintained)
-const aircraftPages = [
-  'bristol-fighter',
-  'sopwith-camel',
-  'hawker-hurricane'
-];
+// Aircraft detail pages removed: use blog posts instead
+const aircraftPages: string[] = [];
 
 // Complete sitemap with ALL pages for maximum Google indexing
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -230,13 +226,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8, // Categories important for discovery
   }));
 
-  // 6. Aircraft detail pages - Specialized content (maintained for legacy)
-  const aircraftDetailPages: MetadataRoute.Sitemap = aircraftPages.map(aircraft => ({
-    url: `${baseUrl}/aircraft/${aircraft}`,
-    lastModified: lastModified,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  // 6. Aircraft detail pages removed
+  const aircraftDetailPages: MetadataRoute.Sitemap = [];
 
   // 7. Partnership and authority pages
   const partnershipPages: MetadataRoute.Sitemap = [
@@ -255,7 +246,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...dynamicBookPages,     // Books from books.ts
     ...additionalBookPages,  // Additional static book pages
     ...categoryPages,        // Category pages
-    ...aircraftDetailPages,  // Aircraft pages
+    ...aircraftDetailPages,  // (none)
     ...partnershipPages,     // Partnership pages
   ];
 

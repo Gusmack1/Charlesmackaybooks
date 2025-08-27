@@ -26,7 +26,7 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Redirect configuration removed - using direct page routing instead
+  // No redirects: clean URLs only
 
   // Headers for security and caching
   async headers() {
