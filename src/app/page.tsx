@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import AcademicAuthority from '@/components/AcademicAuthority';
 import BookCard from '@/components/BookCard';
 import Testimonials from '@/components/Testimonials';
-import TrustSecurityBadges from '@/components/TrustSecurityBadges';
 import AuthorSEOEnhancer from '@/components/AuthorSEOEnhancer';
 
 import { books } from '@/data/books';
@@ -88,8 +87,7 @@ export default function Home() {
         <Testimonials />
       </div>
 
-      {/* Trust & Security Badges */}
-      <TrustSecurityBadges />
+      {/* Trust & Security Badges moved to global layout */}
     </div>
   );
 }

@@ -18,7 +18,6 @@ import {
   Order
 } from '@/utils/orderUtils';
 import { OrderManagementService, CustomerInfo } from '@/utils/orderManagement';
-import TrustSecurityBadges from '@/components/TrustSecurityBadges';
 import CustomerTestimonials from '@/components/CustomerTestimonials';
 import { trackCartAbandonment } from '@/utils/abandonedCartRecovery';
 
@@ -695,10 +694,7 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            {/* Trust & Security Badges */}
-            <div className="mt-6">
-              <TrustSecurityBadges />
-            </div>
+            {/* Trust & Security Badges are rendered globally via layout */}
 
             {/* Customer Testimonials */}
             <div className="mt-6">

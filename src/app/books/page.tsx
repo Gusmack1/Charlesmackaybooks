@@ -3,7 +3,6 @@ import BookCard from '@/components/BookCard'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
 import Testimonials from '@/components/Testimonials'
-import TrustSecurityBadges from '@/components/TrustSecurityBadges'
 
 export const metadata: Metadata = {
   title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
@@ -93,8 +92,7 @@ export default function BooksPage() {
         <Testimonials />
       </div>
 
-      {/* Trust & Security Badges - Matching Homepage */}
-      <TrustSecurityBadges />
+      {/* Trust & Security Badges provided globally via layout */}
     </div>
   )
 }
