@@ -12,7 +12,7 @@ const post = {
     <p>The Bristol Fighter F.2B — the "Brisfit" — overturned assumptions about two‑seat aircraft in 1917. Properly flown, it fought like a single‑seat fighter while retaining reconnaissance power and observation. This Enhanced Edition provides a formal, research‑backed account of its conception, structure, engine and systems, armament, gunnery, crew coordination, maintenance and logistics, tactics, operational history, comparisons with contemporaries, and its long legacy in multi‑role doctrine. For comprehensive coverage of British aircraft development during this period, see <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a> by Charles E. MacKay.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Bristol F.2B in formation, sunlight on upper wing surfaces, observer scanning astern." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-fighter-f2b-flying.jpg" alt="Bristol F.2B in formation; observer scanning astern" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">A fighter with two minds: pilot's forward firepower; observer's situational guard.</p>
     </div>
 
@@ -29,7 +29,7 @@ const post = {
     <p>The Falcon V‑12 provided the decisive margin: robust power delivery, responsive throttle, and dependable cooling when cowlings and shutters were managed correctly. Unit practices covered plug inspection, coolant checks, and radiator care; hot‑weather operations demanded attention to mixture and climb schedules. The engine's reliability underpinned offensive tactics, allowing confident dives and climbs back to altitude. The development of British aero engines during this period is explored in detail in <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a>.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Close shot of Falcon engine installation with cowlings off; mechanics check magnetos and coolant lines." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-fighter-technical-side.jpg" alt="Falcon engine installation; mechanics at work" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Power and process: Falcon maintenance discipline sustained availability.</p>
     </div>
 
@@ -40,7 +40,7 @@ const post = {
     <p>Forward armament comprised a synchronized Vickers gun aligned to deliver stable fire at convergence. Aft, one or two Lewis guns on the Scarff ring covered the upper rear hemisphere. Ammunition management — belt care and drum changes — was drilled. The intent was unity of action: the pilot pressed attacks; the observer controlled the geometry astern, denying enemy aircraft preferred approach arcs. The evolution of aircraft armament during the Great War is comprehensively covered in <a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft of the Great War</a>, which provides valuable comparative analysis.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Combat diagram showing Brisfit forward cone of fire and observer arcs; recommended break patterns." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-fighter-ground.jpg" alt="Brisfit on the line with guns serviced" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Geometry of advantage: coordinated cones of fire and disciplined breaks.</p>
     </div>
 
@@ -66,7 +66,7 @@ const post = {
     <p>Squadron reports describe successful engagements where pilots attacked head‑on or in slashing dives while observers disrupted pursuers with disciplined bursts. The aircraft could absorb punishment yet remained responsive when rigging was kept tight and the engine properly managed. These accounts align with the broader shift in two‑seat fighting doctrine during 1917–1918.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Post‑war F.2B on a grass field; maintenance party with fabric patching frame." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-f2b-fighter-replica.jpg" alt="Post‑war F.2B on a grass field; maintenance party with fabric patching frame" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Longevity by design: repairable structure, reliable engine, and trained crews.</p>
     </div>
 
@@ -104,7 +104,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/bristol-fighter-f2b-brisfit.jpg',
     alt: 'Bristol Fighter F.2B – Enhanced Edition',
     caption: 'The Brisfit re‑examined: design, tactics, sustainment, legacy.'
   },
@@ -112,10 +112,10 @@ const post = {
   tags: ["bristol","fighter","f2b","brisfit","wwi","combat"],
   relatedBooks: getBooksData(['british-aircraft-great-war', 'german-aircraft-great-war', 'clydeside-aviation-vol1', 'beardmore-aviation', 'captain-eric-brown']),
   relatedPosts: [
-    { id: 'british-aircraft-great-war-rfc-rnas', title: 'British Aircraft of the Great War: RFC & RNAS', excerpt: 'Comprehensive analysis of RFC and RNAS aircraft development', image: '/blog-images/default-generic.svg', readingTime: 10 },
-    { id: 'sopwith-camel-wwi-fighter', title: 'Sopwith Camel: WWI Fighter', excerpt: 'Analysis of the most successful WWI fighter aircraft', image: '/blog-images/default-generic.svg', readingTime: 12 },
-    { id: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing in Wartime', excerpt: 'Industrial production during wartime aviation', image: '/blog-images/default-generic.svg', readingTime: 8 },
-    { id: 'german-aircraft-great-war-development', title: 'German Aircraft Development in the Great War', excerpt: 'German aviation technology and development', image: '/blog-images/default-generic.svg', readingTime: 11 }
+    { id: 'british-aircraft-great-war-rfc-rnas', title: 'British Aircraft of the Great War: RFC & RNAS', excerpt: 'Comprehensive analysis of RFC and RNAS aircraft development', image: '/blog-images/spitfire-castle-bromwich-production.jpg', readingTime: 10 },
+    { id: 'sopwith-camel-wwi-fighter', title: 'Sopwith Camel: WWI Fighter', excerpt: 'Analysis of the most successful WWI fighter aircraft', image: '/blog-images/sopwith-camel-historical-1918.jpg', readingTime: 12 },
+    { id: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing in Wartime', excerpt: 'Industrial production during wartime aviation', image: '/blog-images/wwii-aircraft-factory-production.jpg', readingTime: 8 },
+    { id: 'german-aircraft-great-war-development', title: 'German Aircraft Development in the Great War', excerpt: 'German aviation technology and development', image: '/blog-images/german-albatros-dva-wwi-fighter.jpg', readingTime: 11 }
   ]
 }
 
