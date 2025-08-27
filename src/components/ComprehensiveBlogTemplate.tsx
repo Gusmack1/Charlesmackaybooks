@@ -308,7 +308,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       <div className="max-w-4xl mx-auto px-6 py-16">
         <article className="content card p-8">
           {/* Featured Image Caption */}
-          {(featured.caption || post.featuredImage?.caption) && (
+          {(featured.url && (featured.caption || post.featuredImage?.caption)) && (
             <div className="text-center mb-8">
               <p className="text-sm text-muted italic">
                 {featured.caption || post.featuredImage.caption}
