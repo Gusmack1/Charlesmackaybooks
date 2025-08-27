@@ -22,8 +22,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/lightning-f6-supersonic.jpg" alt="English Electric Lightning F.6 in steep climb with reheat and large ventral tank" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Lightning F.6 in reheat: the cambered leading edge and enlarged ventral tank mark the definitive RAF interceptor configuration.</p>
+      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning F.6 on climb‑out, showing ventral tank and fin extension" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Lightning F.6 on climb‑out: ventral tank and fin extension visible; a compact airframe built for time‑to‑height.</p>
     </div>
 
     <h2 id="industrial-context">Industrial and Research Context (late‑1940s–1950s)</h2>
@@ -190,9 +190,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 20,
   featuredImage: {
-    url: '/blog-images/lightning-f6-supersonic.jpg',
+    url: '/blog-images/english-electric-lightning-f6.jpg',
     alt: 'English Electric Lightning: Britain\'s Supersonic Interceptor',
-    caption: 'Supersonic point‑defence in British skies: the Lightning’s climb and dash defined QRA for a generation.'
+    caption: ''
   },
   category: 'Aviation History',
   tags: ["english","electric","lightning","development","supersonic","interceptor"],
