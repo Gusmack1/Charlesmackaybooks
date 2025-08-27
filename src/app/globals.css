@@ -234,12 +234,10 @@
   .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
 
   /* Surface utility: force white text within dark sections */
-  .surface-dark {
+  .surface-dark,
+  .surface-dark * {
     color: #ffffff !important;
   }
-
-  /* Ensure links remain readable on dark surfaces */
-  .surface-dark a { color: #ffffff !important; }
 
   /* Force white text on common dark backgrounds (BBC-style dark surfaces) */
   .bg-slate-800, .bg-slate-800 *,
