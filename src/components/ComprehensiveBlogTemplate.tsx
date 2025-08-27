@@ -299,7 +299,35 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               {cleanedSubtitle}
             </p>
 
-            
+            {/* Compact related books CTA near the top for strong internal linking */}
+            {(() => {
+              const hasExplicit = Array.isArray(post.relatedBooks) && post.relatedBooks.length > 0;
+              const normalize = (s: string) => (s || '').toLowerCase();
+              const category = normalize(post.category || '');
+              const tags = (post.tags || []).map(normalize);
+              const pick = new Set<string>();
+              if (!hasExplicit) {
+                if (category.includes('wwi')) { pick.add('british-aircraft-great-war'); pick.add('german-aircraft-great-war'); }
+                if (category.includes('wwii') || category.includes('world war ii')) { pick.add('enemy-luftwaffe-1945'); }
+                if (category.includes('jet') || category.includes('cold war')) { pick.add('sonic-to-standoff'); }
+                if (category.includes('helicopter')) { pick.add('sycamore-seeds'); }
+                if (category.includes('naval')) { pick.add('aircraft-carrier-argus'); }
+                if (category.includes('scottish')) { pick.add('clydeside-aviation-vol1'); }
+                if (category.includes('biography')) { pick.add('captain-eric-brown'); }
+              }
+              const fallbackMini = !hasExplicit ? getBooksData(Array.from(pick)).slice(0,2) : [];
+              const mini = hasExplicit ? post.relatedBooks.slice(0,2) : fallbackMini;
+              if (!mini || mini.length === 0) return null;
+              return (
+                <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  {mini.map((b) => (
+                    <Link key={b.id} href={`/books/${b.id}`} className="badge badge-blue px-5 py-3 rounded-lg font-semibold shadow">
+                      Explore: {b.title}
+                    </Link>
+                  ))}
+                </div>
+              );
+            })()}
           </div>
         </div>
       </div>
@@ -347,7 +375,12 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 '@type': 'Article',
                 headline: cleanedTitle || post.title,
                 description: post.excerpt,
-                image: post.featuredImage?.url ? [post.featuredImage.url] : undefined,
+                image: (() => {
+                  const list: string[] = [];
+                  if (featured.url) list.push(featured.url);
+                  try { (approvedInline || []).forEach((i: any) => { if (i?.url) list.push(i.url) }) } catch {}
+                  return list.length ? list.slice(0, 4) : undefined;
+                })(),
                 author: {
                   '@type': 'Person',
                   name: post.author.name,
