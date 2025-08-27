@@ -12,7 +12,7 @@ const post = {
     <p>The Sopwith Camel became the most effective British fighter of the Great War by combining concentrated mass, heavy forward armament, and disciplined tactics. Designed under Herbert Smith at Sopwith, the Camel's reputation rests on measurable outcomes — over a thousand credited victories — and on a design grammar that privileged turning authority and fire concentration over raw straight‑line speed. This Enhanced Edition presents a formal, evidence‑based analysis: development lineage, structure and systems, engines and handling, pilot technique and combat accounts, comparisons with German contemporaries, naval operations, and enduring influence. For comprehensive coverage of British aircraft development during this period, see <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a> by Charles E. MacKay.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A wartime Sopwith Camel in flight profile, twin Vickers cowl visible, with a broken cloud layer below." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/sopwith-camel-historical-1918.jpg" alt="Wartime Sopwith Camel in flight profile, twin Vickers cowl visible" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">A compact fighter with mass forward: agility in turns, authority in gun runs.</p>
     </div>
 
@@ -23,7 +23,7 @@ const post = {
     <p>Wooden fuselage bays with wire bracing and steel fittings provided strength; fabric covering kept weight down. The forward "hump" over the Vickers installation housed ammunition and synchronization. Fuel and pilot sat forward with the engine, concentrating mass within roughly seven feet — a key to turning behaviour. The twin‑gun layout gave a dense cone of fire exactly along the pilot's sightline, simplifying gunnery solutions compared with wing‑mounted guns. The evolution of aircraft armament during the Great War is comprehensively covered in <a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft of the Great War</a>.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Cockpit perspective of a Camel showing twin Vickers breeches, ring-and-bead sight, and simple instrumentation." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/sopwith-camel-rfc.jpg" alt="Cockpit and twin Vickers installation of Sopwith Camel" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Concentrated fire: twin Vickers in the pilot's natural line of sight shortened engagements.</p>
     </div>
 
@@ -37,7 +37,7 @@ const post = {
     <p>Engagements opened with altitude and sun advantage where possible. Pairs and fours overlapped arcs and avoided flat turning fights when numbers were uncertain. The Camel's grammar emphasised: short decisive bursts, quick repositioning, and stacking support to prevent enemy reversals. Reports show successful slashing attacks against Albatros types, with rapid right rolls to reset the fight.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Combat diagram — Camel cones of fire, recommended break directions, and supporting wingman geometry." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/se5a-royal-aircraft-factory.jpg" alt="Formation tactics and supporting fighters context" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Discipline over drama: brief attacks, mutual support, and controlled breaks.</p>
     </div>
 
@@ -51,7 +51,7 @@ const post = {
     <p>Ship's Camel variants adapted undercarriage and folding arrangements for deck handling. Operations from early carriers demonstrated feasibility of sea‑based fighter activity. The Tondern raid against Zeppelin sheds stands as an early case study in maritime air power projection: limited numbers, carefully briefed routes, and decisive effect against high‑value targets. Naval aviation development is covered in <a href="/books/aircraft-carrier-argus" class="underline font-medium">Aircraft Carrier - Beardmore's HMS Argus</a>.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Ship's Camel on carrier deck with chocks and lashings; deck crew in position." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/sopwith-pup-carrier-landing.jpg" alt="Early carrier operations with Sopwith on deck" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">From fields to decks: early proof that fighters could launch from ships and strike ashore.</p>
     </div>
 
@@ -92,7 +92,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 15,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/sopwith-camel-wwi-fighter.jpg',
     alt: 'Sopwith Camel – Enhanced Edition',
     caption: 'Concentrated mass, twin Vickers, disciplined tactics — the British answer to 1917 air combat.'
   },
@@ -100,10 +100,10 @@ const post = {
   tags: ["sopwith","camel","wwi","fighter","british","aviation","history"],
   relatedBooks: getBooksData(['british-aircraft-great-war', 'german-aircraft-great-war', 'clydeside-aviation-vol1', 'captain-eric-brown', 'aircraft-carrier-argus']),
   relatedPosts: [
-    { id: 'british-aircraft-great-war-rfc-rnas', title: 'British Aircraft of the Great War: RFC & RNAS', excerpt: 'Comprehensive analysis of RFC and RNAS aircraft development', image: '/blog-images/default-generic.svg', readingTime: 10 },
-    { id: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing in Wartime', excerpt: 'Industrial production during wartime aviation', image: '/blog-images/default-generic.svg', readingTime: 8 },
-    { id: 'german-aircraft-great-war-development', title: 'German Aircraft Development in the Great War', excerpt: 'German aviation technology and development', image: '/blog-images/default-generic.svg', readingTime: 11 },
-    { id: 'bristol-fighter-f2b-brisfit', title: 'Bristol Fighter F2B: The Aggressive Two-Seat Fighter', excerpt: 'Analysis of the successful two-seat fighter', image: '/blog-images/default-generic.svg', readingTime: 12 }
+    { id: 'british-aircraft-great-war-rfc-rnas', title: 'British Aircraft of the Great War: RFC & RNAS', excerpt: 'Comprehensive analysis of RFC and RNAS aircraft development', image: '/blog-images/spitfire-prototype-k5054.jpg', readingTime: 10 },
+    { id: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing in Wartime', excerpt: 'Industrial production during wartime aviation', image: '/blog-images/aircraft-factory-assembly-line.jpg', readingTime: 8 },
+    { id: 'german-aircraft-great-war-development', title: 'German Aircraft Development in the Great War', excerpt: 'German aviation technology and development', image: '/blog-images/german-aircraft-albatros-d3-historical.jpg', readingTime: 11 },
+    { id: 'bristol-fighter-f2b-brisfit', title: 'Bristol Fighter F2B: The Aggressive Two-Seat Fighter', excerpt: 'Analysis of the successful two-seat fighter', image: '/blog-images/bristol-fighter-f2b-flying.jpg', readingTime: 12 }
   ]
 }
 
