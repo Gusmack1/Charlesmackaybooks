@@ -12,7 +12,7 @@ const post = {
     <p>The English Electric Lightning was the Royal Air Force’s definitive point‑defence interceptor of the Cold War — a twin‑Avon, Mach‑2, steep‑climbing thoroughbred designed to get airborne fast, climb vertically, acquire with AI.23 AIRPASS radar, and deliver a missile kill against high‑speed intruders long before they reached Britain’s targets. Its story is about systems thinking as much as speed: a design pathway from the experimental P.1A through the production F.1 to the range‑extended F.6; an operational doctrine built around Quick Reaction Alert (QRA) scrambles; and a maintenance culture that kept an exceptionally high‑performance aircraft serviceable under British weather, day and night.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A silver English Electric Lightning F.6 in a steep climb, afterburners lit, showing the distinctive belly tank and stacked exhausts." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/lightning-f6-supersonic.jpg" alt="English Electric Lightning F.6 in steep climb with reheat and belly tank" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Lightning F.6 in full reheat: stacked Avons, small wing, and slender fuselage prioritised climb and dash over endurance.</p>
     </div>
 
@@ -25,7 +25,7 @@ const post = {
     <p>Trade‑offs were explicit. The compact intake and small wing favoured climb and dash but constrained fuel volume. Early marks had limited endurance, addressed progressively by belly tanks, over‑wing tanks, and airframe refinements on the F.6. The engineering philosophy was clear: achieve intercept geometry quickly; endurance could be managed by basing, tanker support (where available), and procedural economy in climb and cruise.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Close-up of a Lightning’s nose intake and shock cone, ground crew nearby, illustrating access panels and radar bay." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="Lightning nose intake and shock cone with access panels open" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Ventral intake with translating cone: shock management for supersonic flow and compact radar/duct installation.</p>
     </div>
 
@@ -56,7 +56,7 @@ const post = {
     </ul>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A pair of Lightning F.6s on QRA alert pans in Northern England, ground crew with power carts and covers." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/lightning-cockpit-interior.jpg" alt="Lightning cockpit and QRA readiness details" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">QRA posture: covers off, ladders fitted, carts plugged — minutes from call to airborne in all weathers.</p>
     </div>
 
@@ -71,7 +71,7 @@ const post = {
     <p>Contemporaries reveal the Lightning’s niche. The Dassault Mirage III excelled in simplicity and export‑friendly multirole utility; the Lockheed F‑104 Starfighter prioritised dash speed and altitude with even less wing and comparable endurance constraints; the Convair F‑106 Delta Dart integrated powerful radar and missile systems for continental defence. The Lightning’s distinctive proposition was reaction time and climb in a compact national airspace — a point‑defence purist’s machine optimised for Britain’s geography and threat model.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Comparative silhouettes of Lightning, Mirage III, and F‑104 to scale, illustrating wing loading and intake layouts." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/f104-starfighter-supersonic.jpg" alt="Peer aircraft context: F-104 Starfighter and contemporary interceptors" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Comparative context: design choices reflect mission and geography — each type optimised a different slice of the interceptor problem.</p>
     </div>
 
@@ -110,7 +110,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/lightning-f6-supersonic.jpg',
     alt: 'English Electric Lightning: Britain\'s Supersonic Interceptor',
     caption: 'Supersonic point‑defence in British skies: the Lightning’s climb and dash defined QRA for a generation.'
   },
