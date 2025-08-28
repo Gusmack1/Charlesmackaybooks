@@ -5,7 +5,7 @@ export const books: Book[] = [
     id: 'beardmore-aviation',
     title: 'Beardmore Aviation: The Story of a Scottish Industrial Giant\'s Aviation Activities',
     price: 12.76,
-    isbn: '978095734103316', // Fixed: Converted to ISBN-13 format
+    isbn: '9780957341036', // Corrected to valid ISBN-13 (was 15 digits)
     category: 'Scottish Aviation History',
     condition: 'New',
     inStock: true,

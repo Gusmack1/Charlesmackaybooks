@@ -187,7 +187,7 @@ export default function UnifiedSchema({
         "@id": `${baseUrl}/#organization`
       },
       "isbn": bookData.isbn,
-      "gtin": bookData.isbn,
+      "gtin13": bookData.isbn,
       "category": bookData.category,
       "productID": bookData.id,
       "sku": bookData.isbn || bookData.id,
@@ -267,7 +267,7 @@ export default function UnifiedSchema({
       "description": bookData.description,
       "image": absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`),
       "isbn": bookData.isbn,
-      "gtin": bookData.isbn,
+      "gtin13": bookData.isbn,
       "author": { "@id": `${baseUrl}/#person` },
       "publisher": { "@id": `${baseUrl}/#organization` },
       "inLanguage": "en-GB",
@@ -275,7 +275,7 @@ export default function UnifiedSchema({
         "@type": "Book",
         "bookFormat": "https://schema.org/Paperback",
         "isbn": bookData.isbn,
-        "gtin": bookData.isbn
+        "gtin13": bookData.isbn
       },
       "offers": {
         "@type": "Offer",
