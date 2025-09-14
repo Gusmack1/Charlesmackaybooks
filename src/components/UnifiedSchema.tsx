@@ -246,6 +246,10 @@ export default function UnifiedSchema({
       "review": [
         {
           "@type": "Review",
+          "itemReviewed": {
+            "@type": "Book",
+            "name": bookData.title
+          },
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5"
@@ -347,6 +351,10 @@ export default function UnifiedSchema({
       "review": [
         {
           "@type": "Review",
+          "itemReviewed": {
+            "@type": "Article",
+            "name": pageTitle || "Aviation History Article"
+          },
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5",
@@ -362,6 +370,10 @@ export default function UnifiedSchema({
         },
         {
           "@type": "Review",
+          "itemReviewed": {
+            "@type": "Article",
+            "name": pageTitle || "Aviation History Article"
+          },
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5",
@@ -377,6 +389,10 @@ export default function UnifiedSchema({
         },
         {
           "@type": "Review",
+          "itemReviewed": {
+            "@type": "Article",
+            "name": pageTitle || "Aviation History Article"
+          },
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5",
@@ -486,6 +502,10 @@ export default function UnifiedSchema({
           "review": [
             {
               "@type": "Review",
+              "itemReviewed": {
+                "@type": "Book",
+                "name": book.title
+              },
               "reviewRating": {
                 "@type": "Rating",
                 "ratingValue": "5"

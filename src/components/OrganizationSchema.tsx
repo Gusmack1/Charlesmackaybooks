@@ -147,6 +147,10 @@ export default function OrganizationSchema() {
         review: [
           {
             '@type': 'Review',
+            itemReviewed: {
+              '@type': 'Book',
+              name: 'Aviation History Books Collection'
+            },
             reviewRating: {
               '@type': 'Rating',
               ratingValue: '5'
@@ -249,6 +253,10 @@ export default function OrganizationSchema() {
     review: [
       {
         '@type': 'Review',
+        itemReviewed: {
+          '@type': 'Organization',
+          name: 'Charles E. MacKay Aviation Books'
+        },
         reviewRating: {
           '@type': 'Rating',
           ratingValue: '5'
@@ -261,6 +269,10 @@ export default function OrganizationSchema() {
       },
       {
         '@type': 'Review',
+        itemReviewed: {
+          '@type': 'Organization',
+          name: 'Charles E. MacKay Aviation Books'
+        },
         reviewRating: {
           '@type': 'Rating',
           ratingValue: '5'

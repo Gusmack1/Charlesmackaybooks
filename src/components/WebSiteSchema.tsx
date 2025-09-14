@@ -58,6 +58,10 @@ export default function WebSiteSchema() {
           review: [
             {
               '@type': 'Review',
+              itemReviewed: {
+                '@type': 'WebSite',
+                name: 'Charles E. MacKay Aviation Books'
+              },
               reviewRating: {
                 '@type': 'Rating',
                 ratingValue: '5'

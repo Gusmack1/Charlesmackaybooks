@@ -110,6 +110,10 @@ export default function ProductSchema({
     review: [
       {
         '@type': 'Review',
+        itemReviewed: {
+          '@type': 'Book',
+          name: book.title
+        },
         reviewRating: {
           '@type': 'Rating',
           ratingValue: '5',
@@ -124,6 +128,10 @@ export default function ProductSchema({
       },
       {
         '@type': 'Review',
+        itemReviewed: {
+          '@type': 'Book',
+          name: book.title
+        },
         reviewRating: {
           '@type': 'Rating',
           ratingValue: '5',

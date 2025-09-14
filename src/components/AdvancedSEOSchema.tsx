@@ -63,6 +63,10 @@ export default function AdvancedSEOSchema() {
     "review": [
       {
         "@type": "Review",
+        "itemReviewed": {
+          "@type": "Book",
+          "name": "Aviation History Books Collection"
+        },
         "author": {
           "@type": "Person",
           "name": "Aviation Enthusiast"
@@ -75,6 +79,10 @@ export default function AdvancedSEOSchema() {
       },
       {
         "@type": "Review",
+        "itemReviewed": {
+          "@type": "Book",
+          "name": "Aviation History Books Collection"
+        },
         "author": {
           "@type": "Person",
           "name": "Book Collector"
