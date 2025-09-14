@@ -98,11 +98,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
-  },
   alternates: {
     canonical: 'https://charlesmackaybooks.com',
     languages: {
@@ -115,6 +110,9 @@ export const metadata: Metadata = {
     'google-site-verification': 'GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s',
     'msvalidate.01': 'your-bing-verification-code',
     'yandex-verification': 'your-yandex-verification-code',
+  },
+  verification: {
+    google: 'GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s'
   }
 }
 
@@ -404,7 +402,7 @@ export default function RootLayout({
                 <meta property="book:publisher" content="A MacKay" />
                 <meta property="product:price:valid_until" content="2026-12-31" />
 
-                {/* Business Verification */}
+                {/* Google Search Console Verification */}
                 <meta name="google-site-verification" content="GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s" />
                 <meta name="business:contact_data:locality" content="Glasgow" />
                 <meta name="business:contact_data:country_name" content="Scotland" />
@@ -432,6 +430,9 @@ export default function RootLayout({
             `
           }}
         />
+        
+        {/* Google Search Console Verification - Direct Meta Tag */}
+        <meta name="google-site-verification" content="GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s" />
       </head>
       <ClientBody>
         {/* Google Tag Manager (noscript) */}
