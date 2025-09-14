@@ -480,44 +480,15 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                     '@type': 'ListItem',
                     position: index + 1,
                     item: {
-                      '@type': 'Product',
+                      '@type': 'Book',
                       name: b.title,
                       description: `Aviation history book by Charles E. MacKay covering ${b.title.toLowerCase()}`,
                       url: `https://charlesmackaybooks.com/books/${b.id}`,
                       image: b.cover?.startsWith('http') ? b.cover : `https://charlesmackaybooks.com${b.cover?.startsWith('/') ? '' : '/'}${b.cover || ''}`,
-                      brand: { '@type': 'Brand', name: 'Charles Mackay Books' },
                       author: { '@type': 'Person', name: 'Charles E. MacKay' },
-                      offers: typeof b.price === 'number' ? {
-                        '@type': 'Offer',
-                        priceCurrency: 'GBP',
-                        price: b.price,
-                        availability: 'https://schema.org/InStock',
-                        url: `https://charlesmackaybooks.com/books/${b.id}`,
-                        shippingDetails: {
-                          '@type': 'OfferShippingDetails',
-                          shippingRate: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
-                          shippingDestination: [
-                            { '@type': 'DefinedRegion', addressCountry: 'GB' },
-                            { '@type': 'DefinedRegion', addressRegion: 'Europe' },
-                            { '@type': 'DefinedRegion', addressCountry: 'US' }
-                          ],
-                          deliveryTime: {
-                            '@type': 'ShippingDeliveryTime',
-                            handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
-                            transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 5, unitCode: 'DAY' }
-                          }
-                        },
-                        hasMerchantReturnPolicy: {
-                          '@type': 'MerchantReturnPolicy',
-                          applicableCountry: 'GB',
-                          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-                          merchantReturnDays: 30,
-                          returnMethod: 'https://schema.org/ReturnByMail',
-                          returnFees: 'https://schema.org/FreeReturn',
-                          returnShippingFeesAmount: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
-                          returnPolicyUrl: 'https://charlesmackaybooks.com/returns'
-                        }
-                      } : undefined
+                      publisher: { '@type': 'Organization', name: 'Charles Mackay Books' },
+                      bookFormat: 'Hardcover',
+                      inLanguage: 'en-GB'
                     }
                   }))
                 })
