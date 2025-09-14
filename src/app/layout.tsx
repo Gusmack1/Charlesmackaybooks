@@ -405,7 +405,7 @@ export default function RootLayout({
                 <meta property="product:price:valid_until" content="2026-12-31" />
 
                 {/* Business Verification */}
-                <meta name="google-site-verification" content="your-google-verification-code" />
+                <meta name="google-site-verification" content="GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s" />
                 <meta name="business:contact_data:locality" content="Glasgow" />
                 <meta name="business:contact_data:country_name" content="Scotland" />
                 <meta name="business:contact_data:email" content="charlese1mackay@hotmail.com" />
