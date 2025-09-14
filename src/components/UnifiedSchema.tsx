@@ -340,73 +340,7 @@ export default function UnifiedSchema({
       },
       "articleSection": "Aviation History",
       "inLanguage": "en-GB",
-      "wordCount": 2500,
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "3",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "itemReviewed": {
-            "@type": "Article",
-            "name": pageTitle || "Aviation History Article"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Aviation Historian"
-          },
-          "reviewBody": "Exceptional research and detailed analysis of aviation history. The technical depth and historical accuracy make this an invaluable resource for aviation enthusiasts and researchers.",
-          "datePublished": "2025-01-15T10:00:00.000Z"
-        },
-        {
-          "@type": "Review",
-          "itemReviewed": {
-            "@type": "Article",
-            "name": pageTitle || "Aviation History Article"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Military History Researcher"
-          },
-          "reviewBody": "Comprehensive coverage with excellent primary source material. The author's expertise in Scottish aviation heritage shines through in every detail.",
-          "datePublished": "2025-01-20T14:30:00.000Z"
-        },
-        {
-          "@type": "Review",
-          "itemReviewed": {
-            "@type": "Article",
-            "name": pageTitle || "Aviation History Article"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Aviation Enthusiast"
-          },
-          "reviewBody": "Outstanding quality of research and writing. The technical specifications and historical context are presented with remarkable clarity and authority.",
-          "datePublished": "2025-01-25T09:15:00.000Z"
-        }
-      ]
+      "wordCount": 2500
     });
 
 
