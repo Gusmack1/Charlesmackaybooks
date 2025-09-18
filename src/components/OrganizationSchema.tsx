@@ -128,6 +128,7 @@ export default function OrganizationSchema() {
         },
         offers: {
           '@type': 'Offer',
+          validFrom: new Date().toISOString(),
           price: '12.86',
           priceCurrency: 'GBP',
           availability: 'https://schema.org/InStock',

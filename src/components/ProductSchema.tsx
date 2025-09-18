@@ -43,6 +43,7 @@ export default function ProductSchema({
       '@type': 'Offer',
       '@id': `https://charlesmackaybooks.com/books/${book.id}#offer`,
       url: `https://charlesmackaybooks.com/books/${book.id}`,
+      validFrom: new Date().toISOString(),
       price: book.price.toFixed(2),
       priceCurrency: 'GBP',
       availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
