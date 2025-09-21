@@ -18,16 +18,20 @@ export default function ClientBody({
     document.body.className = "antialiased";
   }, []);
 
+  const sslWrapperEnabled = process.env.NEXT_PUBLIC_ENABLE_MOBILE_SSL_FIX === 'true';
+
+  const content = (
+    <CartProvider>
+      <RecentlyViewedProvider>
+        {children}
+        <CartSidebar />
+      </RecentlyViewedProvider>
+    </CartProvider>
+  );
+
   return (
     <body suppressHydrationWarning className="antialiased">
-      <MobileSSLFix>
-        <CartProvider>
-          <RecentlyViewedProvider>
-            {children}
-            <CartSidebar />
-          </RecentlyViewedProvider>
-        </CartProvider>
-      </MobileSSLFix>
+      {sslWrapperEnabled ? <MobileSSLFix>{content}</MobileSSLFix> : content}
     </body>
   );
 }

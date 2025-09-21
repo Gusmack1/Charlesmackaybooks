@@ -1,7 +1,5 @@
 'use client'
 
-import SEOIndexingFix from './SEOIndexingFix'
-
 interface PageSEOProps {
   title: string
   description: string
@@ -24,13 +22,8 @@ export default function PageSEO({
   const baseUrl = 'https://charlesmackaybooks.com'
   const fullUrl = `${baseUrl}${path}`
 
-  return (
-    <SEOIndexingFix
-      pageUrl={fullUrl}
-      pageTitle={title}
-      pageDescription={description}
-    />
-  )
+  // No-op: canonical and SEO are handled centrally via Next.js metadata in layout.tsx
+  return null
 }
 
 // Export metadata generation helper
