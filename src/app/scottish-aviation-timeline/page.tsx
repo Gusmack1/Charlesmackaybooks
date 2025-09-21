@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BBCPageTemplate from '@/components/BBCPageTemplate';
 
 // Metadata will be handled by layout or parent component
@@ -369,7 +369,7 @@ export default function ScottishAviationTimelinePage() {
   };
 
   const getBookCoverSrc = (bookId: string) => `/book-covers/${bookId}.jpg`;
-  const getBlogImageSrc = (slug: string) => {
+  const getBlogImageBase = (slug: string) => {
     const map: Record<string, string> = {
       'beardmore-aviation-scottish-industrial-giant': 'beardmore-aviation-scottish-industrial-giant',
       'clydeside-aviation-revolution': 'clydeside-aviation-revolution',
@@ -384,9 +384,49 @@ export default function ScottishAviationTimelinePage() {
       'english-electric-lightning-development': 'english-electric-lightning-development',
       'sycamore-seeds-helicopter-evolution': 'sycamore-seeds-helicopter-evolution',
     };
-    const base = map[slug] || slug;
-    return `/blog-images/${base}.jpg`;
+    return map[slug] || slug;
   };
+
+  const toTitleFromSlug = (slug: string) =>
+    slug
+      .split('-')
+      .map(s => s.charAt(0).toUpperCase() + s.slice(1))
+      .join(' ');
+
+  function RelatedBlogImage({ slug }: { slug: string }) {
+    const base = getBlogImageBase(slug);
+    const candidates = [
+      `/blog-images/${base}.jpg`,
+      `/blog-images/${base}.webp`,
+      `/blog-images/${base}.png`,
+      `/blog-images/default-generic.svg`
+    ];
+    const [index, setIndex] = useState(0);
+    const [src, setSrc] = useState(candidates[0]);
+
+    useEffect(() => {
+      setIndex(0);
+      setSrc(candidates[0]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [slug]);
+
+    return (
+      <Image
+        src={src}
+        alt={`${toTitleFromSlug(slug)} illustrative image`}
+        fill
+        sizes="(max-width:768px) 50vw, 300px"
+        className="object-cover group-hover:scale-[1.02] transition-transform"
+        onError={() => {
+          const next = Math.min(index + 1, candidates.length - 1);
+          if (next !== index) {
+            setIndex(next);
+            setSrc(candidates[next]);
+          }
+        }}
+      />
+    );
+  }
 
   return (
     <BBCPageTemplate
@@ -494,7 +534,7 @@ export default function ScottishAviationTimelinePage() {
                         {event.relatedBlogs.map((blogId) => (
                           <Link key={blogId} href={`/blog/${blogId}`} className="group block">
                             <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-white/15 bg-black/20">
-                              <Image src={getBlogImageSrc(blogId)} alt={blogId} fill sizes="(max-width:768px) 50vw, 300px" className="object-cover group-hover:scale-[1.02] transition-transform" />
+                              <RelatedBlogImage slug={blogId} />
                             </div>
                             <div className="mt-2 underline">Read Article →</div>
                           </Link>
