@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { CartProvider } from '@/context/CartContext';
-import { RecentlyViewedProvider } from '@/context/RecentlyViewedContext';
-import CartSidebar from '@/components/CartSidebar';
-import MobileSSLFix from '@/components/MobileSSLFix';
+import { CartProvider } from '../context/CartContext';
+import { RecentlyViewedProvider } from '../context/RecentlyViewedContext';
+import CartSidebar from '../components/CartSidebar';
+import MobileSSLFix from '../components/MobileSSLFix';
 // LiveChat removed per request
 
 export default function ClientBody({

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import approvals from "@/data/image-approvals.json";
+import approvals from "../../../data/image-approvals.json";
 
 type Candidate = {
   url: string;
