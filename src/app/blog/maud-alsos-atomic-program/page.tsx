@@ -127,14 +127,17 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 36,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: 'Allied atomic program documents',
-    caption: 'Memoranda and mission reports that shaped policy and history.'
+    url: '/blog-images/aircraft-production-statistics.jpg',
+    alt: 'Wartime production and industrial mobilisation context',
+    caption: 'Industrial mobilisation contextualises the scale behind Allied scientific programmes.'
   },
   category: 'Military History',
   tags: ['MAUD', 'Tube Alloys', 'Quebec Agreement', 'Combined Policy Committee', 'Combined Development Trust', 'Alsos Mission', 'Smyth Report', 'Atomic Bomb', 'Primary Sources', 'charles mackay books'],
   relatedBooks: getBooksData(['birth-atomic-bomb']),
-  relatedPosts: []
+  relatedPosts: [
+    { id: 'british-nuclear-deterrent-v-force', title: 'Britain’s Nuclear Deterrent and the V-Force', excerpt: 'From Blue Danube to Blue Steel—capability, policy, and industrial underpinning.', image: '/blog-images/blue-steel-missile.jpg', readingTime: 14 },
+    { id: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing and Wartime Production', excerpt: 'Capacity, bottlenecks, and workforce—how industry delivered at scale.', image: '/blog-images/wwii-aircraft-factory-production.jpg', readingTime: 12 }
+  ]
 }
 
 export const metadata: Metadata = {

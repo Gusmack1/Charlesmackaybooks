@@ -168,6 +168,12 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg', alt: 'VS-300 breakthrough test flights' },
     { url: '/blog-images/sikorsky-vs300-test.jpg', alt: 'VS-300 testing' },
     { url: '/blog-images/sikorsky-vs300-igor-sikorsky.jpg', alt: 'Igor Sikorsky with VS-300' }
+  ],
+  'maud-alsos-atomic-program': [
+    { url: '/blog-images/aircraft-production-statistics.jpg', alt: 'Wartime production and industrial mobilisation context' },
+    { url: '/blog-images/women-aircraft-workers.jpg', alt: 'Women in wartime industry supporting Allied programmes' },
+    { url: '/blog-images/willow-run-assembly-line.jpg', alt: 'Willow Run assembly line—large-scale wartime manufacturing' },
+    { url: '/blog-images/boeing-b17-assembly-line.jpg', alt: 'B-17 assembly line—illustrative of wartime production scale' }
   ]
 };
 
