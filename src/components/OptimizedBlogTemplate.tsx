@@ -74,25 +74,27 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
   };
 
   const ensureThreeImages = (html: string): string => {
+    // Ensure at least 4 images present in the article content
+    const minimumImages = 4;
     const imgMatches = html.match(/<img\s+[^>]*src=/gi) || [];
-    if (imgMatches.length >= 3) return html;
+    if (imgMatches.length >= minimumImages) return html;
     const candidates: string[] = [];
     if (post.featuredImage?.url) candidates.push(post.featuredImage.url);
     if (post.relatedBooks && post.relatedBooks.length > 0) {
       candidates.push(...post.relatedBooks.map(b => b.cover).filter(Boolean));
     }
-    while (candidates.length < 3) {
+    while (candidates.length < minimumImages) {
       candidates.push(`data:image/svg+xml;utf8,${fallbackSvg}`);
     }
-    const blocksNeeded = 3 - imgMatches.length;
+    const blocksNeeded = minimumImages - imgMatches.length;
     const blocks = Array.from({ length: blocksNeeded }).map((_, idx) =>
       `<figure class="my-6"><img src="${candidates[idx]}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
     );
     return html + blocks.join('');
   };
 
-  // Only tidy images; do not auto-insert extras. We rely on author placeholders.
-  const processContent = (html: string): string => addFallbackToAllImages(html);
+  // Tidy images and ensure a minimum number of inline visuals
+  const processContent = (html: string): string => ensureThreeImages(addFallbackToAllImages(html));
 
   // Replace any inline placeholders with approved images for this post
   const replacePlaceholdersWithApproved = (html: string): string => {

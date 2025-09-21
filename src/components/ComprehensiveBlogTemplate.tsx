@@ -121,8 +121,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     return injected;
   };
 
-  // Only tidy images; do not auto-insert extras. We rely on author placeholders.
-  const processContent = (html: string): string => addFallbackToAllImages(html)
+  // Ensure at least 4 images and add fallbacks
+  const processContent = (html: string): string => ensureThreeImages(addFallbackToAllImages(html))
 
   // Clean hero text: remove any "Enhanced Edition" phrasing from title/subtitle for display
   const cleanHeroText = (text: string) =>
