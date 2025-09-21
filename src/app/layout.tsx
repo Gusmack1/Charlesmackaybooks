@@ -9,6 +9,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClientBody from './ClientBody'
 import { performanceMonitor } from '@/utils/performanceMonitor'
+import MobileSSLFix from '@/components/MobileSSLFix'
 
 const inter = Inter({ 
   subsets: ['latin'],

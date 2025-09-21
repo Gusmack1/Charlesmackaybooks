@@ -12,6 +12,17 @@
 
 # Image serving handled by Next.js - no redirects needed
 
+# HTTPS Enforcement and SSL Configuration
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Force HTTPS for all connections
+    X-Forwarded-Proto = "https"
+    # Ensure proper SSL/TLS negotiation
+    X-Forwarded-Ssl = "on"
+    # Mobile SSL compatibility
+    X-Forwarded-Port = "443"
+
 # Force non-www canonical URLs to prevent indexing conflicts
 [[redirects]]
   from = "https://www.charlesmackaybooks.com/*"
@@ -46,6 +57,12 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # SSL/TLS Security Headers for Mobile Compatibility
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-XSS-Protection = "1; mode=block"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    # Content Security Policy for enhanced security
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://api.netlify.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
 
 [[headers]]
   for = "/book-covers/*"

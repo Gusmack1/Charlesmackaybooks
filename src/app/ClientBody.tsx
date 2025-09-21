@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { CartProvider } from '@/context/CartContext';
 import { RecentlyViewedProvider } from '@/context/RecentlyViewedContext';
 import CartSidebar from '@/components/CartSidebar';
+import MobileSSLFix from '@/components/MobileSSLFix';
 // LiveChat removed per request
 
 export default function ClientBody({
@@ -19,12 +20,14 @@ export default function ClientBody({
 
   return (
     <body suppressHydrationWarning className="antialiased">
-      <CartProvider>
-        <RecentlyViewedProvider>
-          {children}
-          <CartSidebar />
-        </RecentlyViewedProvider>
-      </CartProvider>
+      <MobileSSLFix>
+        <CartProvider>
+          <RecentlyViewedProvider>
+            {children}
+            <CartSidebar />
+          </RecentlyViewedProvider>
+        </CartProvider>
+      </MobileSSLFix>
     </body>
   );
 }
