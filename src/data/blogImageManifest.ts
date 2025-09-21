@@ -66,6 +66,90 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300' },
     { url: '/blog-images/bristol-sycamore.jpg', alt: 'Bristol Sycamore' },
     { url: '/blog-images/helicopter-development-timeline.jpg', alt: 'Helicopter development timeline' }
+  ],
+  'albatros-dva-technical-legacy': [
+    { url: '/blog-images/albatros-dva-wwi-german.jpg', alt: 'Albatros D.Va German fighter' },
+    { url: '/blog-images/albatros-dva-museum-display.jpg', alt: 'Albatros D.Va museum display' },
+    { url: '/blog-images/albatros-museum-display.jpg', alt: 'German WWI fighter exhibit' },
+    { url: '/blog-images/albatros-dv-flying.jpg', alt: 'Albatros D.V in flight (replica)' }
+  ],
+  'clydeside-aviation-revolution': [
+    { url: '/blog-images/clydeside-aviation-dalmuir.jpg', alt: 'Dalmuir aircraft works on the Clyde' },
+    { url: '/blog-images/clydeside-aircraft-factory.jpg', alt: 'Clydeside aircraft factory interior' },
+    { url: '/blog-images/clydeside-wwi-collections.jpg', alt: 'Clydeside WWI industrial collections' },
+    { url: '/blog-images/clydeside-industrial-workers.jpg', alt: 'Industrial workforce on the Clyde' }
+  ],
+  'f86-sabre-cold-war-fighter': [
+    { url: '/blog-images/f86-sabre-cold-war-fighter.jpg', alt: 'North American F-86 Sabre' },
+    { url: '/blog-images/f86-sabre-formation.jpg', alt: 'F-86 Sabre formation flight' },
+    { url: '/blog-images/f86-sabre-formation-flight.jpg', alt: 'RCAF Sabre formation' },
+    { url: '/blog-images/f86-vs-mig15-combat.jpg', alt: 'F-86 vs MiG-15 engagement (illustrative)' }
+  ],
+  'german-aces-organization-wwi': [
+    { url: '/blog-images/fokker-dr1-triplane-replica.jpg', alt: 'Fokker Dr.I triplane (Red Baron type)' },
+    { url: '/blog-images/fokker-triplane-wwi.jpg', alt: 'Fokker triplane on display' },
+    { url: '/blog-images/manfred-von-richthofen-portrait.jpg', alt: 'Manfred von Richthofen portrait' },
+    { url: '/blog-images/german-albatros-dva-wwi-fighter.jpg', alt: 'Jagdstaffel Albatros fighters' }
+  ],
+  'jet-age-aviation-cold-war-development': [
+    { url: '/blog-images/modern-carrier-operations.jpg', alt: 'Modern jet age carrier operations' },
+    { url: '/blog-images/handley-page-victor-bomber.jpg', alt: 'Handley Page Victor bomber' },
+    { url: '/blog-images/vickers-valiant-bomber.jpg', alt: 'Vickers Valiant bomber' },
+    { url: '/blog-images/sr71-blackbird-spy-plane.jpg', alt: 'SR-71 Blackbird strategic reconnaissance' }
+  ],
+  'korean-war-air-combat': [
+    { url: '/blog-images/korean-war-aviation.jpg', alt: 'Korean War air operations' },
+    { url: '/blog-images/f86-sabre-korean-war-flight-line.jpg', alt: 'F-86 Sabres on flight line' },
+    { url: '/blog-images/mig15-korean-war-fighter.jpg', alt: 'MiG-15 Korean War fighter' },
+    { url: '/blog-images/rcaf-sabre-formation-golden-hawks.jpg', alt: 'RCAF Golden Hawks Sabres' }
+  ],
+  'luftwaffe-1945-final-year': [
+    { url: '/blog-images/fw190-d9-luftwaffe-1945.jpg', alt: 'Focke-Wulf Fw 190 D-9 late war' },
+    { url: '/blog-images/me262-luftwaffe.jpg', alt: 'Messerschmitt Me 262 jet fighter' },
+    { url: '/blog-images/do335-pfeil-experimental-fighter.jpg', alt: 'Dornier Do 335 Pfeil' },
+    { url: '/blog-images/german-fokker-dvii-museum.jpg', alt: 'Fokker D.VII museum example (context)' }
+  ],
+  'me262-jet-fighter-revolution': [
+    { url: '/blog-images/me262-jet-fighter-historical.jpg', alt: 'Me 262 historical photo' },
+    { url: '/blog-images/me262-luftwaffe-historical.jpg', alt: 'Luftwaffe Me 262 on airfield' },
+    { url: '/blog-images/me262-luftwaffe.jpg', alt: 'Me 262 jet fighter on display' },
+    { url: '/blog-images/victor-bomber-formation.jpg', alt: 'Cold War jet context formation' }
+  ],
+  'scottish-aviation-between-the-wars': [
+    { url: '/blog-images/clydeside-aviation-dalmuir-1928.jpg', alt: 'Dalmuir 1928 aviation works' },
+    { url: '/blog-images/beardmore-parkhead-forge.jpg', alt: 'Beardmore Parkhead Forge' },
+    { url: '/blog-images/beardmore-aviation-factory.jpg', alt: 'Beardmore aviation factory' },
+    { url: '/blog-images/historical-scotland-map.jpg', alt: 'Historical Scotland aviation map' }
+  ],
+  'supermarine-spitfire-development-evolution': [
+    { url: '/blog-images/spitfire-prototype-k5054.jpg', alt: 'Spitfire prototype K5054' },
+    { url: '/blog-images/spitfire-castle-bromwich-production.jpg', alt: 'Castle Bromwich Spitfire production' },
+    { url: '/blog-images/spitfire-battle-of-britain.jpg', alt: 'Spitfire during Battle of Britain' },
+    { url: '/blog-images/supermarine-spitfire-development-evolution.jpg', alt: 'Spitfire development evolution' }
+  ],
+  'sycamore-seeds-helicopter-evolution': [
+    { url: '/blog-images/sycamore-seeds-helicopter.jpg', alt: 'Sycamore seed biomimicry for rotorcraft' },
+    { url: '/blog-images/sycamore-seeds-nature-inspiration.jpg', alt: 'Sycamore seeds nature inspiration' },
+    { url: '/blog-images/sycamore-seeds-multiple.jpg', alt: 'Sycamore seeds in motion' },
+    { url: '/blog-images/sycamore-biomimicry-design.jpg', alt: 'Biomimicry design in helicopters' }
+  ],
+  'test-pilot-biography-eric-brown': [
+    { url: '/blog-images/eric-brown-official-portrait.jpg', alt: 'Captain Eric "Winkle" Brown portrait' },
+    { url: '/blog-images/eric-brown-sea-vampire-landing.jpg', alt: 'Sea Vampire carrier landing' },
+    { url: '/blog-images/vampire-carrier-landing-hms-ocean.jpg', alt: 'Vampire landing on HMS Ocean' },
+    { url: '/blog-images/eric-brown-test-pilot-portrait.jpg', alt: 'Eric Brown as test pilot' }
+  ],
+  'bristol-sycamore-helicopter-development': [
+    { url: '/blog-images/bristol-sycamore.jpg', alt: 'Bristol Sycamore helicopter' },
+    { url: '/blog-images/bristol-sycamore-formation.jpg', alt: 'Bristol Sycamore formation flight' },
+    { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300 context' },
+    { url: '/blog-images/sikorsky-r4-helicopter.jpg', alt: 'Sikorsky R-4 early helicopter' }
+  ],
+  'beardmore-wbiii-naval-fighter': [
+    { url: '/blog-images/hms-furious-early-carrier.jpg', alt: 'HMS Furious early carrier operations' },
+    { url: '/blog-images/formidable-corsair-deck.jpg', alt: 'Fleet Air Arm deck operations (context)' },
+    { url: '/blog-images/uss-lexington-aircraft-operations.jpg', alt: 'Carrier aircraft operations' },
+    { url: '/blog-images/hms-formidable-deck-operations.jpg', alt: 'Royal Navy carrier deck operations' }
   ]
 };
 
