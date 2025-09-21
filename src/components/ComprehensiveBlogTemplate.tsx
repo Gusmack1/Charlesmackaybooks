@@ -84,8 +84,9 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
   }
 
   const ensureThreeImages = (html: string): string => {
+    const minimumImages = 4;
     const imgMatches = html.match(/<img\s+[^>]*src=/gi) || [];
-    if (imgMatches.length >= 3) return html;
+    if (imgMatches.length >= minimumImages) return html;
 
     const candidates: string[] = [];
     if (post.featuredImage?.url) candidates.push(post.featuredImage.url);
@@ -93,13 +94,13 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       const covers = post.relatedBooks.map((b) => b.cover).filter(Boolean);
       candidates.push(...covers);
     }
-    // ensure at least 3
-    while (candidates.length < 3) {
+    // ensure at least minimumImages
+    while (candidates.length < minimumImages) {
       candidates.push(`data:image/svg+xml;utf8,${fallbackSvg}`);
     }
 
     const paragraphs = html.split(/(<\/p>)/i);
-    const insertAt = [2, Math.max(4, Math.floor(paragraphs.length / 2)), paragraphs.length - 1];
+    const insertAt = [2, Math.max(4, Math.floor(paragraphs.length / 2)), paragraphs.length - 1, paragraphs.length + 1];
     let injected = html;
     let inserted = 0;
     if (paragraphs.length > 1) {
@@ -108,7 +109,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
         rebuilt.push(paragraphs[i]);
         if (/^<\/p>$/i.test(paragraphs[i])) {
           // after a paragraph closes
-          if (insertAt.includes(p) && inserted < 3 - imgMatches.length) {
+          if (insertAt.includes(p) && inserted < minimumImages - imgMatches.length) {
             const src = candidates[inserted];
             rebuilt.push(
               `<figure class="my-6"><img src="${src}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
@@ -121,7 +122,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       injected = rebuilt.join('');
     } else {
       // No paragraphs detected; append images at end
-      const blocks = Array.from({ length: 3 - imgMatches.length }).map((_, idx) =>
+      const blocks = Array.from({ length: minimumImages - imgMatches.length }).map((_, idx) =>
         `<figure class="my-6"><img src="${candidates[idx]}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
       );
       injected = html + blocks.join('');
@@ -386,14 +387,14 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       <div className="max-w-4xl mx-auto px-6 py-16">
         <article className="content card p-8">
           {/* Featured Image Caption */}
-          {(featured.url && (featured.caption || post.featuredImage?.caption)) && (
+          {featured.url && (
             <div className="text-center mb-8">
               <p className="text-sm text-muted italic">
-                {featured.caption || post.featuredImage.caption}
+                {featured.caption || post.featuredImage?.caption || featured.alt || post.featuredImage?.alt || post.title}
               </p>
             </div>
           )}
-
+          
           {/* Article Content (full) */}
           <div 
             className="blog-content content"
