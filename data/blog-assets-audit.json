@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-21T17:00:45.716Z",
+  "generatedAt": "2025-09-21T20:02:35.392Z",
   "report": [
     {
       "slug": "adolf-rohrbach-metal-aircraft-construction",
@@ -30,9 +30,9 @@
     },
     {
       "slug": "arado-ar234-jet-bomber",
-      "featuredUrl": "/blog-images/default-generic.svg",
-      "featuredIsDefault": true,
-      "placeholdersInContent": 10,
+      "featuredUrl": "/blog-images/arado-ar234-jet-bomber.jpg",
+      "featuredIsDefault": false,
+      "placeholdersInContent": 2,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -102,9 +102,9 @@
     },
     {
       "slug": "british-aircraft-great-war-rfc-rnas",
-      "featuredUrl": "/blog-images/default-generic.svg",
-      "featuredIsDefault": true,
-      "placeholdersInContent": 4,
+      "featuredUrl": "/blog-images/rfc-pilots-no32-squadron-1916.jpg",
+      "featuredIsDefault": false,
+      "placeholdersInContent": 1,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -183,9 +183,9 @@
     },
     {
       "slug": "german-aircraft-great-war-development",
-      "featuredUrl": "/blog-images/default-generic.svg",
-      "featuredIsDefault": true,
-      "placeholdersInContent": 6,
+      "featuredUrl": "/blog-images/albatros-dva-wwi-german.jpg",
+      "featuredIsDefault": false,
+      "placeholdersInContent": 1,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -363,9 +363,9 @@
     },
     {
       "slug": "supermarine-spitfire-development-history",
-      "featuredUrl": "/blog-images/default-generic.svg",
-      "featuredIsDefault": true,
-      "placeholdersInContent": 5,
+      "featuredUrl": "/blog-images/spitfire-battle-of-britain.jpg",
+      "featuredIsDefault": false,
+      "placeholdersInContent": 0,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0

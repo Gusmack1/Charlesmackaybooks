@@ -53,6 +53,7 @@ interface OptimizedBlogTemplateProps {
 }
 
 export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplateProps) {
+  type Reference = { title: string; url: string; source?: string; date?: string };
   const [isLiked, setIsLiked] = useState(false);
   const [shareCount, setShareCount] = useState(0);
   const [showTableOfContents, setShowTableOfContents] = useState(false);
@@ -219,15 +220,15 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
   const tableOfContents = generateTableOfContents(post.content);
 
   // Fallback references for posts without explicit references
-  const getCategoryFallbackReferences = (category: string | undefined) => {
+  const getCategoryFallbackReferences = (category: string | undefined): Reference[] => {
     return [
       { title: 'Royal Air Force Museum — Aircraft Collection', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/', source: 'Royal Air Force Museum' },
       { title: 'Imperial War Museums — Aviation History', url: 'https://www.iwm.org.uk/history', source: 'Imperial War Museums' },
       { title: 'FlightGlobal Archive', url: 'https://www.flightglobal.com/archive/', source: 'FlightGlobal' }
     ];
   };
-  const effectiveReferences = (Array.isArray(post.references) && post.references.length > 0)
-    ? post.references
+  const effectiveReferences: Reference[] = (Array.isArray(post.references) && post.references.length > 0)
+    ? (post.references as Reference[])
     : getCategoryFallbackReferences(post.category);
 
   const handleNextImageError = (e: any) => {

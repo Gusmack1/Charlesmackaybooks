@@ -55,6 +55,7 @@ interface ComprehensiveBlogTemplateProps {
 }
 
 export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTemplateProps) {
+  type Reference = { title: string; url: string; source?: string; date?: string };
   const featured = getApprovedFeatured(post.id, post.featuredImage?.url, post.featuredImage?.alt)
   const approvedInline = getApprovedInline(post.id, 4)
   const fallbackSvg = encodeURIComponent(
@@ -202,7 +203,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
   const processedHtml = enforceCaptions(replaceGenericPlaceholdersWithManifest(stripShareUI(processContent(post.content))));
   
   // Fallback references if a post doesn't specify any
-  const getCategoryFallbackReferences = (category: string | undefined) => {
+  const getCategoryFallbackReferences = (category: string | undefined): Reference[] => {
     // Default authoritative sources (UK aviation history)
     const defaults = [
       { title: 'Royal Air Force Museum — Aircraft Collection', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/', source: 'Royal Air Force Museum' },
@@ -211,8 +212,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     ];
     return defaults;
   };
-  const effectiveReferences = (Array.isArray(post.references) && post.references.length > 0)
-    ? post.references
+  const effectiveReferences: Reference[] = (Array.isArray(post.references) && post.references.length > 0)
+    ? (post.references as Reference[])
     : getCategoryFallbackReferences(post.category);
   const replacePlaceholdersWithApproved = (html: string): string => {
     if (!approvedInline || approvedInline.length === 0) return html;
