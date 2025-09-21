@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "audit:blogs": "node scripts/audit-blog-assets.cjs",
     "validate:images": "node scripts/validate-image-approvals.cjs",
     "images:localize": "node scripts/localize-approved-images.cjs"
   },
