@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getBooksData } from '@/utils/bookUtils';
+import { getImageCandidates } from '@/data/blogImageManifest';
 import { getApprovedFeatured, getApprovedInline } from '@/utils/approvedImageResolver'
 
 interface BlogPost {
@@ -170,7 +171,19 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
   // Removed scroll listeners and floating share to prevent jank
 
   // Prepare processed content
-  const processedHtml = stripShareUI(processContent(post.content));
+  // Replace any remaining generic placeholders with local high-quality suggestions
+  const replaceGenericPlaceholdersWithManifest = (html: string): string => {
+    const candidates = getImageCandidates(post.id, post.category, post.tags);
+    if (!candidates || candidates.length === 0) return html;
+    let use = 0;
+    return html.replace(/<img\s+([^>]*?)src=(['"])\/blog-images\/default-generic\.svg\2([^>]*)>/gi, (match, pre, quote, postAttrs) => {
+      const cand = candidates[use++] || candidates[candidates.length - 1];
+      const altAttr = /\balt\s*=/.test(pre + postAttrs) ? '' : ` alt="${cand.alt.replace(/"/g,'&quot;')}"`;
+      return `<img ${pre}src="${cand.url}"${altAttr}${postAttrs}>`;
+    });
+  };
+
+  const processedHtml = replaceGenericPlaceholdersWithManifest(stripShareUI(processContent(post.content)));
   
   // Fallback references if a post doesn't specify any
   const getCategoryFallbackReferences = (category: string | undefined) => {
