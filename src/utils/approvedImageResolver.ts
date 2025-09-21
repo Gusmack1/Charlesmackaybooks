@@ -34,7 +34,11 @@ export function getApprovedFeatured(slug: string, fallbackUrl?: string, fallback
   if (firstApproved) {
     return { url: firstApproved.url, alt: firstApproved.alt || fallbackAlt, caption: firstApproved.caption }
   }
-  return { url: fallbackUrl, alt: fallbackAlt, caption: undefined }
+  // If no approvals and fallback is missing or the generic placeholder, try a sensible slug-based asset
+  const generic = '/blog-images/default-generic.svg'
+  const guessUrl = `/blog-images/${slug}.jpg`
+  const finalUrl = !fallbackUrl || fallbackUrl === generic ? guessUrl : fallbackUrl
+  return { url: finalUrl, alt: fallbackAlt, caption: undefined }
 }
 
 export function getApprovedInline(slug: string, count: number): Candidate[] {

@@ -201,7 +201,12 @@ const post = {
   category: 'Aviation History',
   tags: ["english","electric","lightning","development","supersonic","interceptor","raf","cold-war"],
   relatedBooks: getBooksData(['sonic-to-standoff', 'captain-eric-brown', 'british-aircraft-great-war']),
-  relatedPosts: []
+  relatedPosts: [],
+  references: [
+    { title: 'English Electric Lightning Fact File', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/english-electric-lightning/', source: 'Royal Air Force Museum' },
+    { title: 'Pilot’s Notes: Lightning F.2A and F.6', url: 'https://www.rafmuseum.org.uk/research/documents/pilots-notes/english-electric-lightning.pdf', source: 'RAF Museum (PDF)' },
+    { title: 'Lightning Performance and Service', url: 'https://www.flightglobal.com/', source: 'FlightGlobal (archival articles)' }
+  ]
 }
 
 export const metadata: Metadata = {

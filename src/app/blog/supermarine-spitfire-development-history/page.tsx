@@ -85,10 +85,11 @@ const post = {
   category: 'Aviation History',
   tags: ["supermarine","spitfire","development","history","fighter","wwii","british","aviation"],
   relatedBooks: getBooksData(['supermarine-spitfire-development', 'captain-eric-brown', 'british-aircraft-great-war']),
-  relatedPosts: [
-    { slug: 'schneider-trophy-racing-development', title: 'Schneider Trophy Racing: The Golden Age of Speed' },
-    { slug: 'hawker-hurricane-fighter-development', title: 'Hawker Hurricane: Development' },
-    { slug: 'jet-age-aviation-cold-war-development', title: 'Jet Age Aviation: Cold War Development' }
+  relatedPosts: [],
+  references: [
+    { title: 'Supermarine Spitfire History', url: 'https://www.iwm.org.uk/history/the-supermarine-spitfire', source: 'Imperial War Museums' },
+    { title: 'Spitfire: RAF Museum Collection', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/supermarine-spitfire/', source: 'Royal Air Force Museum' },
+    { title: 'Spitfire Performance (Merlin variants)', url: 'https://www.flightglobal.com/', source: 'FlightGlobal (archival)' }
   ]
 }
 

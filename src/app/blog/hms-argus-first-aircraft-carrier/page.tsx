@@ -86,7 +86,12 @@ const post = {
   category: 'Naval Aviation',
   tags: ["hms","argus","aircraft","carrier","naval","aviation","royal","navy"],
   relatedBooks: getBooksData(['aircraft-carrier-argus', 'beardmore-aviation', 'british-aircraft-great-war']),
-  relatedPosts: []
+  relatedPosts: [],
+  references: [
+    { title: 'HMS Argus (D49) - Service History', url: 'https://www.naval-history.net/xGM-Chrono-04CVE-Argus.htm', source: 'Naval-History.net' },
+    { title: 'HMS Argus | Royal Navy Aircraft Carriers', url: 'https://www.iwm.org.uk/collections/search?query=HMS%20Argus', source: 'Imperial War Museums' },
+    { title: 'The Aircraft Carrier HMS Argus', url: 'https://www.britishpathe.com/asset/83910/', source: 'British Pathé (archival film)' }
+  ]
 }
 
 const relatedBooks = [{"id":"aircraft-carrier-argus","title":"Aircraft Carrier Argus","price":22.99,"imageUrl":"/book-covers/aircraft-carrier-argus.jpg","description":"Expert aviation history analysis","relevantContent":"Detailed coverage with archival research and technical analysis"}]
