@@ -171,6 +171,20 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
   // Prepare processed content
   const processedHtml = stripShareUI(processContent(post.content));
+  
+  // Fallback references if a post doesn't specify any
+  const getCategoryFallbackReferences = (category: string | undefined) => {
+    // Default authoritative sources (UK aviation history)
+    const defaults = [
+      { title: 'Royal Air Force Museum — Aircraft Collection', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/', source: 'Royal Air Force Museum' },
+      { title: 'Imperial War Museums — Aviation History Articles', url: 'https://www.iwm.org.uk/history', source: 'Imperial War Museums' },
+      { title: 'FlightGlobal Archive', url: 'https://www.flightglobal.com/archive/', source: 'FlightGlobal' }
+    ];
+    return defaults;
+  };
+  const effectiveReferences = (Array.isArray(post.references) && post.references.length > 0)
+    ? post.references
+    : getCategoryFallbackReferences(post.category);
   const replacePlaceholdersWithApproved = (html: string): string => {
     if (!approvedInline || approvedInline.length === 0) return html;
     // avoid duplicating the featured image
@@ -358,11 +372,11 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           {/* Removed auto-append image grid; images are placed only where placeholders exist */}
 
       {/* References */}
-      {Array.isArray(post.references) && post.references.length > 0 && (
+      {Array.isArray(effectiveReferences) && effectiveReferences.length > 0 && (
         <section className="mt-12">
           <h3 className="text-xl font-bold text-primary mb-3">References</h3>
           <ol className="list-decimal list-inside space-y-2 text-sm text-secondary">
-            {post.references.map((ref, idx) => (
+            {effectiveReferences.map((ref, idx) => (
               <li key={idx}>
                 <a href={ref.url} target="_blank" rel="noopener noreferrer" className="underline text-accent-blue">
                   {ref.title}

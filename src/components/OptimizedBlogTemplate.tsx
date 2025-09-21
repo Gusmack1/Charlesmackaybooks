@@ -202,6 +202,18 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
 
   const tableOfContents = generateTableOfContents(post.content);
 
+  // Fallback references for posts without explicit references
+  const getCategoryFallbackReferences = (category: string | undefined) => {
+    return [
+      { title: 'Royal Air Force Museum — Aircraft Collection', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/', source: 'Royal Air Force Museum' },
+      { title: 'Imperial War Museums — Aviation History', url: 'https://www.iwm.org.uk/history', source: 'Imperial War Museums' },
+      { title: 'FlightGlobal Archive', url: 'https://www.flightglobal.com/archive/', source: 'FlightGlobal' }
+    ];
+  };
+  const effectiveReferences = (Array.isArray(post.references) && post.references.length > 0)
+    ? post.references
+    : getCategoryFallbackReferences(post.category);
+
   const handleNextImageError = (e: any) => {
     try {
       const img = e.currentTarget as HTMLImageElement;
@@ -320,11 +332,11 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
         {/* No extra image grid; placeholders only */}
 
       {/* References */}
-      {Array.isArray(post.references) && post.references.length > 0 && (
+      {Array.isArray(effectiveReferences) && effectiveReferences.length > 0 && (
         <section className="mt-8">
           <h3 className="text-xl font-semibold text-primary mb-2">References</h3>
           <ol className="list-decimal list-inside space-y-2 text-sm text-secondary">
-            {post.references.map((ref, idx) => (
+            {effectiveReferences.map((ref, idx) => (
               <li key={idx}>
                 <a href={ref.url} target="_blank" rel="noopener noreferrer" className="underline text-accent-blue">
                   {ref.title}
