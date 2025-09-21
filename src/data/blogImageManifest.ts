@@ -170,10 +170,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/sikorsky-vs300-igor-sikorsky.jpg', alt: 'Igor Sikorsky with VS-300' }
   ],
   'maud-alsos-atomic-program': [
-    { url: '/blog-images/aircraft-production-statistics.jpg?v=1', alt: 'Wartime production and industrial mobilisation context' },
-    { url: '/blog-images/women-aircraft-workers.jpg?v=1', alt: 'Women in wartime industry supporting Allied programmes' },
-    { url: '/blog-images/willow-run-assembly-line.jpg?v=1', alt: 'Willow Run assembly line—large-scale wartime manufacturing' },
-    { url: '/blog-images/boeing-b17-assembly-line.jpg?v=1', alt: 'B-17 assembly line—illustrative of wartime production scale' }
+    { url: 'https://charlesmackaybooks.com/blog-images/aircraft-production-statistics.jpg?v=1', alt: 'Wartime production and industrial mobilisation context' },
+    { url: 'https://charlesmackaybooks.com/blog-images/women-aircraft-workers.jpg?v=1', alt: 'Women in wartime industry supporting Allied programmes' },
+    { url: 'https://charlesmackaybooks.com/blog-images/willow-run-assembly-line.jpg?v=1', alt: 'Willow Run assembly line—large-scale wartime manufacturing' },
+    { url: 'https://charlesmackaybooks.com/blog-images/boeing-b17-assembly-line.jpg?v=1', alt: 'B-17 assembly line—illustrative of wartime production scale' }
   ]
 };
 
