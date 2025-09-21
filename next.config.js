@@ -46,11 +46,7 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
           },
-          // SSL/TLS Security Headers for Mobile Compatibility
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains; preload',
-          },
+          // Security headers (SSL handled by Netlify)
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
@@ -58,11 +54,6 @@ const nextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
-          },
-          // Force HTTPS
-          {
-            key: 'X-Forwarded-Proto',
-            value: 'https',
           },
         ],
       },
