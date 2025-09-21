@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useCart } from '@/context/CartContext';
+import { useCart } from '../../context/CartContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Elements } from '@stripe/react-stripe-js';
-import { stripePromise } from '@/config/stripe';
-import StripePaymentForm from '@/components/StripePaymentForm';
+import { stripePromise } from '../../config/stripe';
+import StripePaymentForm from '../../components/StripePaymentForm';
 import {
   CustomerDetails,
   calculateShipping,
@@ -16,10 +16,10 @@ import {
   generatePayPalUrl,
   validateCustomerDetails,
   Order
-} from '@/utils/orderUtils';
-import { OrderManagementService, CustomerInfo } from '@/utils/orderManagement';
-import CustomerTestimonials from '@/components/CustomerTestimonials';
-import { trackCartAbandonment } from '@/utils/abandonedCartRecovery';
+} from '../../utils/orderUtils';
+import { OrderManagementService, CustomerInfo } from '../../utils/orderManagement';
+import CustomerTestimonials from '../../components/CustomerTestimonials';
+import { trackCartAbandonment } from '../../utils/abandonedCartRecovery';
 
 export default function CheckoutPage() {
   const { items, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();

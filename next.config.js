@@ -12,6 +12,11 @@ const nextConfig = {
   output: undefined,
   distDir: '.next',
 
+  // Ensure TS/JS path aliases from tsconfig.json are respected in all environments
+  experimental: {
+    tsconfigPaths: true,
+  },
+
   // Image configuration with performance optimization
   images: {
     domains: [

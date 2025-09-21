@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { useStripe, useElements, PaymentElement } from '@stripe/react-stripe-js';
-import { stripeConfig, getStripeErrorMessage, formatCurrency, convertToStripeAmount } from '@/config/stripe';
-import { Book } from '@/types/book';
+import { stripeConfig, getStripeErrorMessage, formatCurrency, convertToStripeAmount } from '../config/stripe';
+import { Book } from '../types/book';
 
 interface StripePaymentFormProps {
   amount: number;
