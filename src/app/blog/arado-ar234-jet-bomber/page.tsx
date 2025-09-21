@@ -15,7 +15,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Arado Ar 234 jet bomber on the tarmac during WWII" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/arado-ar234-jet-bomber.jpg" alt="Arado Ar 234 jet bomber on the tarmac during WWII" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Arado Ar 234 Blitz: sleek lines optimised for speed, altitude, and reconnaissance.</p>
     </div>
 
@@ -35,7 +35,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Me 262 formation illustrating Germany’s late-war jet ecosystem" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/me262-jet-fighter-historical.jpg" alt="Me 262 formation illustrating Germany’s late-war jet ecosystem" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Germany’s late-war jet ecosystem: reconnaissance from the Ar 234 complemented interceptor work by the Me 262.</p>
     </div>
 
@@ -55,12 +55,12 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Late-war German airfields and logistics under pressure in 1945" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/wwii-aircraft-factory-production.jpg" alt="Late-war logistics and production pressures in 1945" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Late-war Germany: logistic constraints restricted jet operations more than tactics or airframe limits.</p>
     </div>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Ar 234 four-engine C-series concept vs twin-engine B-series" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/me262-luftwaffe-historical.jpg" alt="Late-war German jet development context" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Two vs four: acceleration and redundancy weighed against production reality.</p>
     </div>
 
@@ -79,7 +79,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Arado Ar 234 camera installation and reconnaissance workflow" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/aircraft-production-statistics.jpg" alt="Reconnaissance workflow and planning context" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Reconnaissance first: optics, workflow, and route planning defined most Ar 234 sorties.</p>
     </div>
 
@@ -104,7 +104,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Arado Ar 234 reconnaissance profile over Rhine crossings, March 1945" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/fw190-d9-luftwaffe-1945.jpg" alt="Late-war Luftwaffe operations context, 1945" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Rhine crossings 1945: reconnaissance windows were measured in seconds; engine margins mattered more than tactics.</p>
     </div>
 
@@ -153,7 +153,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Post-war evaluation themes: nacelle design, landing gear, camera packaging" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/me262-luftwaffe.jpg" alt="Post-war evaluations: jet packaging and nacelle lessons" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">From Blitz to Cold War jets: packaging and procedures mattered as much as airframe speed.</p>
     </div>
 
@@ -189,7 +189,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 26,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/arado-ar234-jet-bomber.jpg',
     alt: 'Arado Ar 234 jet bomber',
     caption: 'The world’s first operational jet bomber.'
   },
