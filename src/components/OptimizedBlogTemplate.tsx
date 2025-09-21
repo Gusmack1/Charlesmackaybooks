@@ -187,6 +187,22 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
     return output
   }
 
+  // Ensure every image has a caption directly below it; remove orphan caption paragraphs
+  const enforceCaptions = (html: string): string => {
+    let out = html;
+    // Convert image + following italic paragraph into a figure with figcaption
+    out = out.replace(/(<img\s+[^>]*>)(\s*<p[^>]*class=\"[^\"]*italic[^\"]*\"[^>]*>([\s\S]*?)<\/p>)/gi, '<figure>$1<figcaption>$3</figcaption></figure>');
+    // Wrap any remaining standalone images in a figure and add caption from alt
+    out = out.replace(/(<img\s+[^>]*>)(?!\s*<\/figure>)/gi, (match) => {
+      const altMatch = match.match(/\balt\s*=\s*["']([^"']+)["']/i);
+      const cap = altMatch ? altMatch[1] : 'Image';
+      return `<figure>${match}<figcaption>${cap}</figcaption></figure>`;
+    });
+    // Remove any italic caption paragraphs that no longer have an image
+    out = out.replace(/<p[^>]*class=\"[^\"]*italic[^\"]*\"[^>]*>[\s\S]*?<\/p>/gi, '');
+    return out;
+  };
+
   // Removed reading progress tracking to avoid scroll jank
 
   // Generate table of contents from content
@@ -288,11 +304,9 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
             onError={handleNextImageError}
           />
         </div>
-        {(featured.caption || post.featuredImage.caption) && (
-          <p className="text-sm text-secondary text-center mt-2 italic">
-            {featured.caption || post.featuredImage.caption}
-          </p>
-        )}
+        <p className="text-sm text-secondary text-center mt-2 italic">
+          {featured.caption || post.featuredImage.caption || featured.alt || post.featuredImage.alt}
+        </p>
       </div>
 
       {/* Table of Contents */}
@@ -327,7 +341,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       {/* Article Content */}
       <div className="content max-w-none mb-12">
         <div 
-          dangerouslySetInnerHTML={{ __html: stripShareUI(matchImagesWithCaptions(replaceGenericCaptions(replacePlaceholdersWithApproved(processContent(post.content))))) }}
+          dangerouslySetInnerHTML={{ __html: enforceCaptions(stripShareUI(matchImagesWithCaptions(replaceGenericCaptions(replacePlaceholdersWithApproved(processContent(post.content)))))) }}
         />
         {/* No extra image grid; placeholders only */}
 
