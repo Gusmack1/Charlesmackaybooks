@@ -150,6 +150,24 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/formidable-corsair-deck.jpg', alt: 'Fleet Air Arm deck operations (context)' },
     { url: '/blog-images/uss-lexington-aircraft-operations.jpg', alt: 'Carrier aircraft operations' },
     { url: '/blog-images/hms-formidable-deck-operations.jpg', alt: 'Royal Navy carrier deck operations' }
+  ],
+  'morris-furniture-war-work-aviation': [
+    { url: '/blog-images/women-aircraft-workers.jpg', alt: 'Women aircraft workers in wartime production' },
+    { url: '/blog-images/wwii-aircraft-factory-production.jpg', alt: 'WWII aircraft factory production line' },
+    { url: '/blog-images/aircraft-factory-assembly-line.jpg', alt: 'Aircraft assembly line during war work' },
+    { url: '/blog-images/willow-run-assembly-line.jpg', alt: 'Willow Run B-24 assembly line' }
+  ],
+  'schneider-trophy-racing-development': [
+    { url: '/blog-images/schneider-trophy-1931.jpg', alt: '1931 Schneider Trophy race' },
+    { url: '/blog-images/supermarine-s6b-schneider-trophy.jpg', alt: 'Supermarine S.6B Schneider Trophy winner' },
+    { url: '/blog-images/supermarine-s6b-museum.jpg', alt: 'Supermarine S.6B museum exhibit' },
+    { url: '/blog-images/supermarine-s6-schneider-race.jpg', alt: 'Supermarine S.6 racing seaplane' }
+  ],
+  'sikorsky-vs300-helicopter-breakthrough': [
+    { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300 prototype helicopter' },
+    { url: '/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg', alt: 'VS-300 breakthrough test flights' },
+    { url: '/blog-images/sikorsky-vs300-test.jpg', alt: 'VS-300 testing' },
+    { url: '/blog-images/sikorsky-vs300-igor-sikorsky.jpg', alt: 'Igor Sikorsky with VS-300' }
   ]
 };
 
