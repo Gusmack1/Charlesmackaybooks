@@ -104,6 +104,11 @@ const post = {
     { id: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing in Wartime', excerpt: 'Industrial production during wartime aviation', image: '/blog-images/aircraft-factory-assembly-line.jpg', readingTime: 8 },
     { id: 'german-aircraft-great-war-development', title: 'German Aircraft Development in the Great War', excerpt: 'German aviation technology and development', image: '/blog-images/german-aircraft-albatros-d3-historical.jpg', readingTime: 11 },
     { id: 'bristol-fighter-f2b-brisfit', title: 'Bristol Fighter F2B: The Aggressive Two-Seat Fighter', excerpt: 'Analysis of the successful two-seat fighter', image: '/blog-images/bristol-fighter-f2b-flying.jpg', readingTime: 12 }
+  ],
+  references: [
+    { title: 'Sopwith Camel — RAF Museum', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/sopwith-camel/', source: 'Royal Air Force Museum' },
+    { title: 'Sopwith Camel: IWM Collections', url: 'https://www.iwm.org.uk/collections/search?query=Sopwith%20Camel', source: 'Imperial War Museums' },
+    { title: 'WWI Aviation Reports', url: 'https://www.flightglobal.com/archive/', source: 'FlightGlobal Archive' }
   ]
 }
 

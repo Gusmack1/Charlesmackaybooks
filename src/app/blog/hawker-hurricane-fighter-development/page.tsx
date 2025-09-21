@@ -190,6 +190,11 @@ const post = {
     { id: 'supermarine-spitfire-development-history', title: 'Supermarine Spitfire Development History', excerpt: 'Comprehensive analysis of Spitfire development and evolution', image: '/blog-images/supermarine-spitfire-development.jpg', readingTime: 14 },
     { id: 'test-pilot-biography-eric-brown', title: 'Test Pilot Perspectives: Eric Brown', excerpt: 'Insights into aircraft testing and pilot training', image: '/blog-images/eric-brown-test-pilot-portrait.jpg', readingTime: 12 },
     { id: 'supermarine-spitfire-development-evolution', title: 'Supermarine Spitfire: Development & Evolution', excerpt: 'Design pathway and operational roles', image: '/blog-images/supermarine-spitfire-development-evolution.jpg', readingTime: 16 }
+  ],
+  references: [
+    { title: 'Hawker Hurricane — RAF Museum', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/hawker-hurricane/', source: 'Royal Air Force Museum' },
+    { title: 'Hawker Hurricane: IWM Collections & History', url: 'https://www.iwm.org.uk/history/the-hawker-hurricane', source: 'Imperial War Museums' },
+    { title: 'Hurricane Production and Service', url: 'https://www.flightglobal.com/archive/', source: 'FlightGlobal Archive' }
   ]
 }
 
