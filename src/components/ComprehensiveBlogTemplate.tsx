@@ -189,12 +189,12 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
   const enforceCaptions = (html: string): string => {
     let out = html;
     // Convert image + following italic paragraph into a figure with figcaption
-    out = out.replace(/(<img\s+[^>]*>)(\s*<p[^>]*class=\"[^\"]*italic[^\"]*\"[^>]*>([\s\S]*?)<\/p>)/gi, '<figure>$1<figcaption>$3</figcaption></figure>');
+    out = out.replace(/(<img\s+[^>]*>)(\s*<p[^>]*class=\"[^\"]*italic[^\"]*\"[^>]*>([\s\S]*?)<\/p>)/gi, '<figure>$1<figcaption class="image-caption">$3</figcaption></figure>');
     // Wrap any remaining standalone images in a figure and add caption from alt
     out = out.replace(/(<img\s+[^>]*>)(?!\s*<\/figure>)/gi, (match) => {
       const altMatch = match.match(/\balt\s*=\s*["']([^"']+)["']/i);
       const cap = altMatch ? altMatch[1] : 'Image';
-      return `<figure>${match}<figcaption>${cap}</figcaption></figure>`;
+      return `<figure>${match}<figcaption class="image-caption">${cap}</figcaption></figure>`;
     });
     // Remove any italic caption paragraphs that no longer have an image
     out = out.replace(/<p[^>]*class=\"[^\"]*italic[^\"]*\"[^>]*>[\s\S]*?<\/p>/gi, '');
