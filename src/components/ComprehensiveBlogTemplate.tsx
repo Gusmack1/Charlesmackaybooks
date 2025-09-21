@@ -183,7 +183,23 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     });
   };
 
-  const processedHtml = replaceGenericPlaceholdersWithManifest(stripShareUI(processContent(post.content)));
+  // Ensure every image has a caption directly below it; remove orphan caption paragraphs
+  const enforceCaptions = (html: string): string => {
+    let out = html;
+    // Convert image + following italic paragraph into a figure with figcaption
+    out = out.replace(/(<img\s+[^>]*>)(\s*<p[^>]*class=\"[^\"]*italic[^\"]*\"[^>]*>([\s\S]*?)<\/p>)/gi, '<figure>$1<figcaption>$3</figcaption></figure>');
+    // Wrap any remaining standalone images in a figure and add caption from alt
+    out = out.replace(/(<img\s+[^>]*>)(?!\s*<\/figure>)/gi, (match) => {
+      const altMatch = match.match(/\balt\s*=\s*["']([^"']+)["']/i);
+      const cap = altMatch ? altMatch[1] : 'Image';
+      return `<figure>${match}<figcaption>${cap}</figcaption></figure>`;
+    });
+    // Remove any italic caption paragraphs that no longer have an image
+    out = out.replace(/<p[^>]*class=\"[^\"]*italic[^\"]*\"[^>]*>[\s\S]*?<\/p>/gi, '');
+    return out;
+  };
+
+  const processedHtml = enforceCaptions(replaceGenericPlaceholdersWithManifest(stripShareUI(processContent(post.content))));
   
   // Fallback references if a post doesn't specify any
   const getCategoryFallbackReferences = (category: string | undefined) => {
