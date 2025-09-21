@@ -1,3 +1,5 @@
+import path from 'path'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Disable ESLint during builds to prevent deployment failures due to linting errors
@@ -12,9 +14,12 @@ const nextConfig = {
   output: undefined,
   distDir: '.next',
 
-  // Ensure TS/JS path aliases from tsconfig.json are respected in all environments
-  experimental: {
-    tsconfigPaths: true,
+  // Webpack alias to resolve '@/...' to './src/...'
+  webpack: (config) => {
+    if (!config.resolve) config.resolve = {}
+    if (!config.resolve.alias) config.resolve.alias = {}
+    config.resolve.alias['@'] = path.resolve(process.cwd(), 'src')
+    return config
   },
 
   // Image configuration with performance optimization
