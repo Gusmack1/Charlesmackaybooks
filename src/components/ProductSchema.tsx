@@ -18,15 +18,20 @@ export default function ProductSchema({
   const toAbsolute = (img: string | undefined, fallbackId: string) => {
     const base = 'https://charlesmackaybooks.com';
     if (!img || img.trim().length === 0) return `${base}/book-covers/${fallbackId}.jpg`;
-    return img.startsWith('http') ? img : `${base}${img.startsWith('/') ? '' : '/'}${img}`;
+    if (img.startsWith('http')) return img;
+    return `${base}${img.startsWith('/') ? '' : '/'}${img}`;
   };
 
-  const generateProductSchema = (book: Book) => ({
-    '@type': 'Product',
-    '@id': `https://charlesmackaybooks.com/books/${book.id}#product`,
-    name: book.title,
-    description: book.description,
-    image: toAbsolute(book.imageUrl, book.id),
+  const generateProductSchema = (book: Book) => {
+    // Ensure we always have a valid image URL
+    const imageUrl = toAbsolute(book.imageUrl, book.id);
+    
+    return {
+      '@type': 'Product',
+      '@id': `https://charlesmackaybooks.com/books/${book.id}#product`,
+      name: book.title,
+      description: book.description,
+      image: [imageUrl],
     brand: {
       '@type': 'Brand',
       name: 'Charles E. MacKay Aviation Books'
@@ -163,7 +168,8 @@ export default function ProductSchema({
         value: book.academicLevel?.join(', ') || 'General Interest'
       }
     ]
-  });
+  };
+  };
 
   // Create the appropriate structured data based on page type
   const structuredData = pageType === 'collection'

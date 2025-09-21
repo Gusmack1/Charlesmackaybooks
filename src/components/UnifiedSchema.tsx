@@ -97,7 +97,7 @@ export default function UnifiedSchema({
         "alternateName": "Charles MacKay",
         "description": "Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history",
         "url": baseUrl,
-        "image": `${baseUrl}/charles-mackay-aviation-historian.jpg`,
+        "image": [`${baseUrl}/charles-mackay-aviation-historian.jpg`],
         "jobTitle": "Aviation Historian & Author",
         "nationality": "British",
         "birthPlace": "Glasgow, Scotland",
@@ -178,7 +178,7 @@ export default function UnifiedSchema({
       "@id": `${baseUrl}/books/${bookData.id}#product`,
       "name": bookData.title,
       "description": bookData.description,
-      "image": absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`),
+      "image": [absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`)],
       "brand": {
         "@type": "Brand",
         "name": "Charles E. MacKay Aviation Books"
@@ -269,7 +269,7 @@ export default function UnifiedSchema({
       "@id": `${baseUrl}/books/${bookData.id}#book`,
       "name": bookData.title,
       "description": bookData.description,
-      "image": absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`),
+      "image": [absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`)],
       "isbn": bookData.isbn,
       "gtin13": bookData.isbn,
       "author": { "@id": `${baseUrl}/#person` },
@@ -289,7 +289,17 @@ export default function UnifiedSchema({
         "priceValidUntil": priceValidUntil,
         "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
         "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
-        "merchantReturnLink": `${baseUrl}/returns`
+        "merchantReturnLink": `${baseUrl}/returns`,
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "GB",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn",
+          "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
+          "returnPolicyUrl": `${baseUrl}/returns`
+        }
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -326,7 +336,7 @@ export default function UnifiedSchema({
       "@id": `${fullUrl}#article`,
       "headline": pageTitle || "Aviation History Article",
       "description": pageDescription || "Expert aviation history research and analysis",
-      "image": `${baseUrl}/blog-images/default-generic.svg`,
+      "image": [`${baseUrl}/blog-images/default-generic.svg`],
       "author": {
         "@id": `${baseUrl}/#person`
       },
@@ -385,7 +395,7 @@ export default function UnifiedSchema({
           "@id": `${baseUrl}/books/${book.id}#product`,
           "name": book.title,
           "description": book.description,
-          "image": absoluteImage(book.imageUrl || `/book-covers/${book.id}.jpg`),
+          "image": [absoluteImage(book.imageUrl || `/book-covers/${book.id}.jpg`)],
           "url": `${baseUrl}/books/${book.id}`,
           "isbn": book.isbn,
           "sku": book.isbn || book.id,

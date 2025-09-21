@@ -10,27 +10,26 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Ensure book cover images are served correctly
-[[redirects]]
-  from = "/book-covers/*"
-  to = "/book-covers/:splat"
-  status = 200
+# Image serving handled by Next.js - no redirects needed
 
+# Force non-www canonical URLs to prevent indexing conflicts
 [[redirects]]
-  from = "/blog-images/*"
-  to = "/blog-images/:splat"
-  status = 200
-
-# Ensure homepage loads correctly (force refresh)
-[[redirects]]
-  from = "/performance-optimizer"
-  to = "/"
+  from = "https://www.charlesmackaybooks.com/*"
+  to = "https://charlesmackaybooks.com/:splat"
   status = 301
+  force = true
 
 [[redirects]]
-  from = "/performance-optimizer/*"
-  to = "/"
+  from = "http://www.charlesmackaybooks.com/*"
+  to = "https://charlesmackaybooks.com/:splat"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "http://charlesmackaybooks.com/*"
+  to = "https://charlesmackaybooks.com/:splat"
+  status = 301
+  force = true
 
 # Remove forced index.html redirect to let Next.js app route handle root and styles correctly
 

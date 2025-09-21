@@ -15,9 +15,10 @@ AddType application/ld+json .jsonld
   </FilesMatch>
 </IfModule>
 
-# Redirect for product URLs using hash
-RewriteEngine On
-RewriteRule ^product/([0-9]+)$ /#$1 [NE,L,R=301]
+# Redirect for product URLs using hash - REMOVED
+# This redirect was causing indexing issues
+# RewriteEngine On
+# RewriteRule ^product/([0-9]+)$ /#$1 [NE,L,R=301]
 
 # Allow Google Merchant Bot (environment hints)
 SetEnvIfNoCase User-Agent "Googlebot" google_bot

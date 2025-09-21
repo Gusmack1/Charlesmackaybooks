@@ -645,6 +645,7 @@ export default function OptimizedBookSalesTemplate({ book }: OptimizedBookSalesT
               "name": book.author
             },
             "isbn": book.isbn,
+            ...(book.isbn && { "gtin13": book.isbn }),
             "numberOfPages": book.pageCount,
             "datePublished": book.publishedDate,
             "aggregateRating": {
@@ -660,7 +661,35 @@ export default function OptimizedBookSalesTemplate({ book }: OptimizedBookSalesT
                 ? "https://schema.org/InStock" 
                 : "https://schema.org/OutOfStock",
               "itemCondition": "https://schema.org/NewCondition",
-              "format": format.type
+              "format": format.type,
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0.00",
+                  "currency": "GBP"
+                },
+                "shippingDestination": [
+                  { "@type": "DefinedRegion", "addressCountry": "GB" },
+                  { "@type": "DefinedRegion", "addressCountry": "EU" },
+                  { "@type": "DefinedRegion", "addressCountry": "US" }
+                ],
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+                  "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+                }
+              },
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "GB",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 30,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn",
+                "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
+                "returnPolicyUrl": "https://charlesmackaybooks.com/returns"
+              }
             }))
           })
         }}
