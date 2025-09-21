@@ -12,7 +12,7 @@ const post = {
     <p>The Supermarine Spitfire emerged from a design culture forged in high‑speed racing and matured in wartime manufacturing. Its elliptical wing, careful engine integration, and clean construction made it efficient; its eight‑gun armament and later cannon fits made it effective. This Enhanced Edition examines the Spitfire as a system: lineage, aerodynamics, engines, armament, prototype and testing, manufacturing, combat doctrine and comparisons, continuous development, and legacy.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Early Spitfire lined up on a grass airfield; elliptical wings prominent." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/spitfire-prototype-k5054.jpg" alt="Early Spitfire prototype K5054 on grass airfield; elliptical wings prominent." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Elliptical efficiency: balanced lift distribution and low drag in a compact planform.</p>
     </div>
 
@@ -23,7 +23,7 @@ const post = {
     <p>Elliptical wings balanced lift and minimised induced drag; a slim fuselage and flush riveting reduced parasitic drag. Stressed‑skin aluminium alloy construction on the wings, and clean system routing, preserved shape under load. The retractable undercarriage removed drag in flight while preserving ground handling with a pragmatic track.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Close view of an elliptical wing with flush rivets and gun access panels open." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/supermarine-spitfire-prototype.jpg" alt="Elliptical wing close‑up with flush rivets and gun access panels open." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Surface quality mattered: flush rivets and tight panels preserved aerodynamic intent.</p>
     </div>
 
@@ -37,7 +37,7 @@ const post = {
     <p>Prototype K5054’s first flight in March 1936 established handling quality and informed refinements. Testing iterated visibility, stability, and systems reliability. The approach remained measured: confirm what works, document adjustments, and avoid unnecessary changes that add drag or weight.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Prototype Spitfire on a test apron; ground crew with panels open for inspection." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/spitfire-prototype-k5054-historical.jpg" alt="Prototype Spitfire on test apron; ground crew inspecting panels." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Measured iteration: refine without losing the core aerodynamic virtues.</p>
     </div>
 
@@ -51,7 +51,7 @@ const post = {
     <p>Throughout the war the type evolved across marks, integrating more powerful engines, cannon armament, and equipment improvements. The underlying aerodynamic and structural discipline supported this growth without undermining handling quality, which remained a defining attribute.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Line‑up of different Spitfire marks showing evolution in cowlings and wing armament blisters." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/supermarine-spitfire-development.jpg" alt="Line‑up of different Spitfire marks showing cowl and armament evolution." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Growth within bounds: more power and capability without losing balance.</p>
     </div>
 
@@ -78,8 +78,8 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 15,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: 'Supermarine Spitfire – Enhanced Edition',
+    url: '/blog-images/spitfire-battle-of-britain.jpg',
+    alt: 'Supermarine Spitfire – Development History',
     caption: 'From Schneider lineage to operational balance — a disciplined design history.'
   },
   category: 'Aviation History',
