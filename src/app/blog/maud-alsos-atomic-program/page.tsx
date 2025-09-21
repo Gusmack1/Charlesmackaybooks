@@ -137,6 +137,13 @@ const post = {
   relatedPosts: [
     { id: 'british-nuclear-deterrent-v-force', title: 'Britain’s Nuclear Deterrent and the V-Force', excerpt: 'From Blue Danube to Blue Steel—capability, policy, and industrial underpinning.', image: '/blog-images/blue-steel-missile.jpg', readingTime: 14 },
     { id: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing and Wartime Production', excerpt: 'Capacity, bottlenecks, and workforce—how industry delivered at scale.', image: '/blog-images/wwii-aircraft-factory-production.jpg', readingTime: 12 }
+  ],
+  references: [
+    { title: 'MAUD Committee Reports (1940–41)', url: 'https://discovery.nationalarchives.gov.uk/details/r/C1790021', source: 'The National Archives (UK)' },
+    { title: 'The Quebec Agreement (1943)', url: 'https://www.atomicarchive.com/resources/documents/med/the-quebec-agreement.html', source: 'Atomic Archive' },
+    { title: 'Combined Policy Committee: Minutes and Agreements', url: 'https://catalog.archives.gov/id/299350', source: 'U.S. National Archives' },
+    { title: 'Alsos Mission Reports', url: 'https://catalog.archives.gov/id/305270', source: 'U.S. National Archives' },
+    { title: 'A General Account of the Development of Methods of Using Atomic Energy for Military Purposes (Smyth Report)', url: 'https://www.osti.gov/opennet/manhattan-project-history/Reports/smythreport/index.htm', source: 'U.S. DOE/OSTI' }
   ]
 }
 
