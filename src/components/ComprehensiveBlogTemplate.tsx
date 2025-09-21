@@ -41,6 +41,12 @@ interface BlogPost {
     image: string;
     readingTime: number;
   }>;
+  references?: Array<{
+    title: string;
+    url: string;
+    source?: string;
+    date?: string;
+  }>;
 }
 
 interface ComprehensiveBlogTemplateProps {
@@ -350,6 +356,24 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
             dangerouslySetInnerHTML={{ __html: matchImagesWithCaptions(replaceGenericCaptions(replacePlaceholdersWithApproved(processedHtml))) }}
           />
           {/* Removed auto-append image grid; images are placed only where placeholders exist */}
+
+      {/* References */}
+      {Array.isArray(post.references) && post.references.length > 0 && (
+        <section className="mt-12">
+          <h3 className="text-xl font-bold text-primary mb-3">References</h3>
+          <ol className="list-decimal list-inside space-y-2 text-sm text-secondary">
+            {post.references.map((ref, idx) => (
+              <li key={idx}>
+                <a href={ref.url} target="_blank" rel="noopener noreferrer" className="underline text-accent-blue">
+                  {ref.title}
+                </a>
+                {ref.source ? ` — ${ref.source}` : ''}
+                {ref.date ? ` (${ref.date})` : ''}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
           {/* Breadcrumb JSON-LD */}
           <script
             type="application/ld+json"

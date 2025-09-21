@@ -40,6 +40,12 @@ interface BlogPost {
     image: string;
     readingTime: number;
   }>;
+  references?: Array<{
+    title: string;
+    url: string;
+    source?: string;
+    date?: string;
+  }>;
 }
 
 interface OptimizedBlogTemplateProps {
@@ -312,6 +318,24 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
           dangerouslySetInnerHTML={{ __html: stripShareUI(matchImagesWithCaptions(replaceGenericCaptions(replacePlaceholdersWithApproved(processContent(post.content))))) }}
         />
         {/* No extra image grid; placeholders only */}
+
+      {/* References */}
+      {Array.isArray(post.references) && post.references.length > 0 && (
+        <section className="mt-8">
+          <h3 className="text-xl font-semibold text-primary mb-2">References</h3>
+          <ol className="list-decimal list-inside space-y-2 text-sm text-secondary">
+            {post.references.map((ref, idx) => (
+              <li key={idx}>
+                <a href={ref.url} target="_blank" rel="noopener noreferrer" className="underline text-accent-blue">
+                  {ref.title}
+                </a>
+                {ref.source ? ` — ${ref.source}` : ''}
+                {ref.date ? ` (${ref.date})` : ''}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
       </div>
 
       {/* Author Bio */}
