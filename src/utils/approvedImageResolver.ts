@@ -1,4 +1,5 @@
 import approvals from '@/data/image-approvals.json'
+import { getImageCandidates } from '@/data/blogImageManifest'
 
 type Candidate = {
   url: string
@@ -36,15 +37,39 @@ export function getApprovedFeatured(slug: string, fallbackUrl?: string, fallback
   }
   // If no approvals and fallback is missing or the generic placeholder, try a sensible slug-based asset
   const generic = '/blog-images/default-generic.svg'
-  const guessUrl = `/blog-images/${slug}.jpg`
-  const finalUrl = !fallbackUrl || fallbackUrl === generic ? guessUrl : fallbackUrl
-  return { url: finalUrl, alt: fallbackAlt, caption: undefined }
+  if (!fallbackUrl || fallbackUrl === generic) {
+    const manifest = getImageCandidates(slug)
+    if (manifest && manifest.length > 0) {
+      const first = manifest[0]
+      return { url: first.url, alt: first.alt || fallbackAlt, caption: first.caption }
+    }
+    const guessUrl = `/blog-images/${slug}.jpg`
+    return { url: guessUrl, alt: fallbackAlt, caption: undefined }
+  }
+  return { url: fallbackUrl, alt: fallbackAlt, caption: undefined }
 }
 
 export function getApprovedInline(slug: string, count: number): Candidate[] {
   const rec = getPostApprovals(slug)
-  if (!rec) return []
-  return rec.candidates.filter(c => c.approved && !!c.url).slice(0, count)
+  const approved = rec ? rec.candidates.filter(c => c.approved && !!c.url) : []
+  if (approved.length >= count) {
+    return approved.slice(0, count)
+  }
+  // Fallback to local manifest candidates when approvals are empty/missing
+  const manifest = getImageCandidates(slug)
+  if (manifest && manifest.length > 0) {
+    const mapped: Candidate[] = manifest.slice(0, count).map(m => ({
+      url: m.url,
+      alt: (m as any).alt || 'Aviation history image',
+      title: (m as any).alt || 'Local image',
+      caption: (m as any).caption,
+      source: 'local',
+      license: 'local',
+      approved: true
+    }))
+    return mapped
+  }
+  return approved.slice(0, count)
 }
 
 export function getApprovalStatus(slug: string): {
