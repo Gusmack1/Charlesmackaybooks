@@ -127,7 +127,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 36,
   featuredImage: {
-    url: '/blog-images/aircraft-production-statistics.jpg',
+    url: '/blog-images/aircraft-production-statistics.jpg?v=1',
     alt: 'Wartime production and industrial mobilisation context',
     caption: 'Industrial mobilisation contextualises the scale behind Allied scientific programmes.'
   },
