@@ -12,7 +12,7 @@ const post = {
     <p>Between 1914 and 1918 British aviation matured from reconnaissance to decisive air power. The Royal Flying Corps (RFC) and Royal Naval Air Service (RNAS) pursued parallel paths — tactical support over the Western Front and maritime/expeditionary roles — before unifying as the Royal Air Force in April 1918. Their combined output in doctrine, design, and training shaped 20th‑century air warfare.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="RFC and RNAS personnel (placeholder)" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/rfc-pilots-no32-squadron-1916.jpg" alt="RFC No.32 Squadron pilots, 1916" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">RFC and RNAS built complementary capabilities that fused into the RAF in 1918.</p>
     </div>
 
@@ -23,8 +23,18 @@ const post = {
     <p>Firms such as Sopwith, Bristol, Avro, Vickers, and the Royal Aircraft Factory transitioned from small‑series craft to volume production under strict inspection regimes. Tooling, jigging, and supply chains matured quickly; interchangeable parts and repair manuals supported forward maintenance. Powerplant development — Clerget, Bentley rotary, and Rolls‑Royce inline engines — kept pace with airframe demand.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Great War aircraft production (placeholder)" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/aircraft-factory-assembly-line.jpg" alt="Great War aircraft production line under inspection" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Volume manufacture under wartime inspection created reliable fleets at the front.</p>
+    </div>
+
+    <div class="my-8">
+      <img src="/blog-images/se5a-royal-aircraft-factory.jpg" alt="Royal Aircraft Factory S.E.5a on display" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">S.E.5a: stable gun platform with excellent visibility and altitude performance.</p>
+    </div>
+
+    <div class="my-8">
+      <img src="/blog-images/bristol-fighter-f2b-flying.jpg" alt="Bristol Fighter F.2B in flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Bristol Fighter F.2B: two‑seat fighter that excelled when properly employed.</p>
     </div>
 
     <h2 id="types">Representative Types</h2>
@@ -58,14 +68,19 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/rfc-pilots-no32-squadron-1916.jpg',
     alt: 'British Aircraft Great War: RFC & RNAS Development',
-    caption: 'British Aircraft Great War: RFC & RNAS Development - Expert analysis by Charles E. MacKay'
+    caption: 'RFC and RNAS development leading to RAF formation in 1918.'
   },
   category: 'Aviation History',
   tags: ["british","aircraft","great","war","rfc","rnas"],
   relatedBooks: getBooksData(['british-aircraft-great-war', 'clydeside-aviation-vol1', 'german-aircraft-great-war']),
-  relatedPosts: []
+  relatedPosts: [],
+  references: [
+    { title: 'RAF Museum – Aircraft of the First World War', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/', source: 'Royal Air Force Museum' },
+    { title: 'Imperial War Museums – First World War Collections', url: 'https://www.iwm.org.uk/collections/search?query=Royal%20Flying%20Corps', source: 'Imperial War Museums' },
+    { title: 'FlightGlobal Archive – WWI Aviation Reports', url: 'https://www.flightglobal.com/archive/', source: 'FlightGlobal' }
+  ]
 }
 
 export const metadata: Metadata = {

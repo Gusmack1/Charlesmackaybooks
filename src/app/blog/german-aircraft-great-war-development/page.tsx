@@ -12,7 +12,7 @@ const post = {
     <p>German aviation in the Great War progressed from pre‑war experimentation to a tightly integrated system of design, production, and operational doctrine. Within four years, Germany fielded aircraft from reconnaissance monoplanes to refined fighters such as the Albatros series and Fokker D.VII, while evolving tactics, training, and logistics at unprecedented speed. This article provides a structured, research‑grounded account of that transformation: technical design, manufacturing practice, frontline employment, and the institutional learning that created air superiority episodes and informed post‑war aviation.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Albatros D.III era fighter (placeholder)" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/albatros-dva-german-fighter.jpg" alt="Albatros D.Va German fighter" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Semi‑monocoque fuselages and systematic production planning defined mid‑war German fighter development.</p>
     </div>
 
@@ -27,7 +27,7 @@ const post = {
     <p>In 1915 Anthony Fokker’s forward‑firing, propeller‑synchronized gun transformed tactics. The Eindecker’s single‑seat layout, with the aircraft aimed as the gun, created the canonical fighter role. Mechanically, cam‑driven interrupter gear demanded precision timing, robust linkages, and careful maintenance; operationally, it permitted concentration of fire without complex flexible mounts. The “Fokker Scourge” reflected not only hardware advantage but also the rapid codification of aiming, convergence, and burst discipline in pilot training.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Fokker Eindecker synchronization (placeholder)" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/fokker-triplane-wwi.jpg" alt="Fokker Triplane and synchronized armament lineage" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Synchronization gear enabled decisive forward fire — a systems integration milestone joining engine, propeller, and armament.</p>
     </div>
 
@@ -51,7 +51,7 @@ const post = {
     <p>Fighter units (Jagdstaffeln) concentrated talent, mentorship, and maintenance capability. Leaders such as Boelcke systematized combat rules — height advantage, mutual support, focus fire, disengagement discipline — while Richthofen enforced unit standards and aircraft readiness. Groupings into Jagdgeschwader provided mass at decisive points, translating technical quality into operational effect.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Jagdstaffel organization and tactics (placeholder)" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/german-albatros-dva-wwi-fighter.jpg" alt="Jagdstaffel aircraft line-up" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Organisation and doctrine amplified the value of superior types: training, leadership, and maintenance cadence were decisive.</p>
     </div>
 
@@ -74,7 +74,7 @@ const post = {
     <p>The D.VII’s thick‑section, high‑lift wing provided benign stall and strong vertical performance. With the BMW IIIa at altitude, climb and sustained turn were exceptional. Structural simplicity aided production and field repair. The Armistice’s specific clause demanding D.VII surrender reflected its reputation — a rare acknowledgement of a type’s battlefield significance in a diplomatic instrument.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Fokker D.VII performance concepts (placeholder)" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/german-fokker-dvii-museum.jpg" alt="Fokker D.VII museum example" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Thick airfoils, forgiving stalls, and altitude engines underpinned the D.VII’s late‑war mastery.</p>
     </div>
 
@@ -104,9 +104,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/albatros-dva-wwi-german.jpg',
     alt: 'German Aircraft Great War Development',
-    caption: 'German Aircraft Great War Development - Expert analysis by Charles E. MacKay'
+    caption: 'German fighter development from Taube to Albatros and Fokker types.'
   },
   category: 'Aviation History',
   tags: ["german","aircraft","great","war","development","wwi","fighter"],
