@@ -637,9 +637,11 @@ export default function OptimizedBookSalesTemplate({ book }: OptimizedBookSalesT
             "@type": "Product",
             "name": book.title,
             "description": book.description,
-            "image": book.cover.url.startsWith('http')
-              ? book.cover.url
-              : `https://charlesmackaybooks.com${book.cover.url.startsWith('/') ? '' : '/'}${book.cover.url}`,
+            "image": [
+              book.cover.url.startsWith('http')
+                ? book.cover.url
+                : `https://charlesmackaybooks.com${book.cover.url.startsWith('/') ? '' : '/'}${book.cover.url}`
+            ],
             "author": {
               "@type": "Person",
               "name": book.author
