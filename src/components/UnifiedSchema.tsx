@@ -196,18 +196,28 @@ export default function UnifiedSchema({
         "value": (bookData as any).weight || 300,
         "unitCode": "GRM"
       },
-      "offers": {
-        "@type": "Offer",
-        "url": `${baseUrl}/books/${bookData.id}`,
-        "price": bookData.price.toFixed(2),
-        "priceCurrency": "GBP",
-        "priceValidUntil": priceValidUntil,
-        "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-        "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
-        "merchantReturnLink": `${baseUrl}/returns`,
-        "seller": {
-          "@id": `${baseUrl}/#organization`
-        },
+          "offers": {
+            "@type": "Offer",
+            "url": `${baseUrl}/books/${bookData.id}`,
+            "price": bookData.price.toFixed(2),
+            "priceCurrency": "GBP",
+            "priceValidUntil": priceValidUntil,
+            "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+            "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
+            "merchantReturnLink": `${baseUrl}/returns`,
+            "seller": {
+              "@id": `${baseUrl}/#organization`
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "GB",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn",
+              "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
+              "returnPolicyUrl": `${baseUrl}/returns`
+            },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
           "shippingRate": {

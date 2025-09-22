@@ -94,7 +94,7 @@ export default function ProductSchema({
         }
       },
       hasMerchantReturnPolicy: {
-        '@type': 'MerchantReturnPolicy',
+        "@type": "MerchantReturnPolicy",
         applicableCountry: 'GB',
         returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
         merchantReturnDays: 30,
