@@ -117,6 +117,16 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
       priceCurrency: 'GBP',
       availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
       itemCondition: book.condition === 'New' ? 'https://schema.org/NewCondition' : 'https://schema.org/UsedCondition',
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "GB",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn",
+        "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
+        "returnPolicyUrl": "https://charlesmackaybooks.com/returns"
+      },
       seller: {
         '@type': 'Organization',
         '@id': 'https://charlesmackaybooks.com/#publisher'
