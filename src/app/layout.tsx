@@ -10,6 +10,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClientBody from './ClientBody'
 import { performanceMonitor } from '@/utils/performanceMonitor'
 import MobileSSLFix from '@/components/MobileSSLFix'
+import PerformanceSEO from '@/components/PerformanceSEO'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -486,6 +487,7 @@ export default function RootLayout({
         </footer>
         <Analytics />
         <SpeedInsights />
+        <PerformanceSEO />
 
         {/* Invisible Google Merchant Center data layer and product identifiers */}
         <script
