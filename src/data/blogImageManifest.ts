@@ -186,6 +186,12 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: 'https://charlesmackaybooks.com/blog-images/women-aircraft-workers.jpg?v=1', alt: 'Women in wartime industry supporting Allied programmes' },
     { url: 'https://charlesmackaybooks.com/blog-images/willow-run-assembly-line.jpg?v=1', alt: 'Willow Run assembly line—large-scale wartime manufacturing' },
     { url: 'https://charlesmackaybooks.com/blog-images/boeing-b17-assembly-line.jpg?v=1', alt: 'B-17 assembly line—illustrative of wartime production scale' }
+  ],
+  'hms-argus-first-aircraft-carrier': [
+    { url: '/blog-images/hms-argus-aircraft-carrier.jpg', alt: 'HMS Argus first aircraft carrier' },
+    { url: '/blog-images/hms-argus-dazzle-camouflage.jpg', alt: 'HMS Argus dazzle camouflage scheme' },
+    { url: '/blog-images/carrier-evolution-diagram.jpg', alt: 'Aircraft carrier evolution diagram' },
+    { url: '/blog-images/hms-formidable-deck-operations.jpg', alt: 'Royal Navy carrier deck operations' }
   ]
 };
 
