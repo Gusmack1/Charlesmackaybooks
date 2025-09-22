@@ -1,0 +1,31 @@
+export async function GET() {
+  const robotsTxt = `User-agent: *
+Allow: /
+
+# Important pages for indexing
+Allow: /books/
+Allow: /blog/
+Allow: /category/
+Allow: /about/
+
+# Block admin and internal tools
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /comprehensive-fix/
+Disallow: /test-systems/
+Disallow: /deployment/
+Disallow: /optimize-website/
+
+# Sitemaps
+Sitemap: https://charlesmackaybooks.com/sitemap.xml
+Sitemap: https://charlesmackaybooks.com/sitemap-images.xml
+Sitemap: https://charlesmackaybooks.com/sitemap-indexing-fix.xml`;
+
+  return new Response(robotsTxt, {
+    headers: {
+      'Content-Type': 'text/plain',
+      'Cache-Control': 'public, max-age=3600, s-maxage=3600'
+    }
+  });
+}
