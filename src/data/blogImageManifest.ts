@@ -49,12 +49,6 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/modern-carrier-operations.jpg', alt: 'Modern carrier operations' },
     { url: '/blog-images/jet-age-aviation-cold-war-development.jpg', alt: 'Jet age carrier deck' }
   ],
-  'avro-vulcan-bomber': [
-    { url: '/blog-images/avro-vulcan-bomber.jpg', alt: 'Avro Vulcan bomber' },
-    { url: '/blog-images/vulcan-bomber-formation.jpg', alt: 'Vulcan bomber formation' },
-    { url: '/blog-images/blue-steel-missile.jpg', alt: 'Blue Steel stand-off missile' },
-    { url: '/blog-images/vulcan-black-buck-falklands.jpg', alt: 'Vulcan Black Buck context' }
-  ],
   'aviation-manufacturing-wartime-production': [
     { url: '/blog-images/aircraft-factory-assembly-line.jpg', alt: 'Aircraft assembly line' },
     { url: '/blog-images/women-aircraft-workers.jpg', alt: 'Women aircraft workers' },
