@@ -301,7 +301,7 @@ export default function RootLayout({
                           }
                         },
                         hasMerchantReturnPolicy: {
-                          '@type': 'MerchantReturnPolicy',
+                          "@type": "MerchantReturnPolicy",
                           applicableCountry: 'GB',
                           returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
                           merchantReturnDays: 30,

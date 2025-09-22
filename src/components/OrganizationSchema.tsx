@@ -136,6 +136,16 @@ export default function OrganizationSchema() {
           seller: {
             '@type': 'Organization',
             name: 'Charles E. MacKay Aviation Books'
+          },
+          hasMerchantReturnPolicy: {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "GB",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn",
+            "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
+            "returnPolicyUrl": "https://charlesmackaybooks.com/returns"
           }
         },
         aggregateRating: {
@@ -166,6 +176,16 @@ export default function OrganizationSchema() {
       },
       availability: 'https://schema.org/InStock',
       priceCurrency: 'GBP',
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "GB",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn",
+        "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
+        "returnPolicyUrl": "https://charlesmackaybooks.com/returns"
+      },
       shippingDetails: {
         '@type': 'OfferShippingDetails',
         shippingDestination: [
