@@ -18,24 +18,7 @@
 
 # SSL Configuration - Let Netlify handle SSL automatically
 
-# Temporarily set www as primary during SSL provisioning, then flip if desired
-[[redirects]]
-  from = "https://charlesmackaybooks.com/*"
-  to = "https://www.charlesmackaybooks.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.charlesmackaybooks.com/*"
-  to = "https://charlesmackaybooks.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://charlesmackaybooks.com/*"
-  to = "https://www.charlesmackaybooks.com/:splat"
-  status = 301
-  force = true
+# No redirects - let Netlify handle SSL and domains automatically
 
 # Remove forced index.html redirect to let Next.js app route handle root and styles correctly
 
