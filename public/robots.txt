@@ -1,51 +1,22 @@
-# Robots.txt for Charles E. MacKay Aviation Books
-# https://charlesmackaybooks.com
-
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /scripts/
-Disallow: /*.zip
-Disallow: /*.tar.gz
-Disallow: /node_modules/
-Disallow: /.git/
-Disallow: /.github/
-Disallow: /.same/
-Disallow: *.json
-Disallow: *.lock
-Disallow: /search?*
-Disallow: /*?q=*
-Disallow: /*?query=*
 
-# Allow important pages for better indexing
+# Important pages for indexing
 Allow: /books/
 Allow: /blog/
 Allow: /category/
 Allow: /about/
-Allow: /research-guides/
-Allow: /aviation-glossary/
-Allow: /sitemap.xml
 
-# Crawl delays for different bots
-User-agent: Googlebot
-Crawl-delay: 1
-
-User-agent: Bingbot
-Crawl-delay: 1
-
-User-agent: Slurp
-Crawl-delay: 2
-
-User-agent: *
-Crawl-delay: 5
+# Block admin and internal tools
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /comprehensive-fix/
+Disallow: /test-systems/
+Disallow: /deployment/
+Disallow: /optimize-website/
 
 # Sitemaps
 Sitemap: https://charlesmackaybooks.com/sitemap.xml
-Sitemap: https://charlesmackaybooks.com/sitemap-indexing-fix.xml
 Sitemap: https://charlesmackaybooks.com/sitemap-images.xml
-
-# Host (helps search engines understand canonical domain)
-Host: https://charlesmackaybooks.com
+Sitemap: https://charlesmackaybooks.com/sitemap-indexing-fix.xml
