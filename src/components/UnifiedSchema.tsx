@@ -58,25 +58,69 @@ export default function UnifiedSchema({
         "inLanguage": "en-GB"
       },
 
-      // Organization Schema
+      // Organization Schema with LocalBusiness for local SEO
       {
-        "@type": "Organization",
+        "@type": ["Organization", "LocalBusiness", "BookStore"],
         "@id": `${baseUrl}/#organization`,
         "name": "Charles E. MacKay Aviation Books",
-        "alternateName": "Charles MacKay Books",
+        "alternateName": ["Charles MacKay Books", "Charles Mackay Aviation History", "MacKay Aviation Books"],
         "url": baseUrl,
         "logo": `${baseUrl}/charles-mackay-logo.png`,
-        "description": "Publisher of specialized aviation history books focusing on Scottish aviation heritage and military aviation history",
+        "description": "Scotland's leading publisher of aviation history books specializing in Scottish aviation heritage, WWI/WWII aircraft, helicopter development, and military aviation. Expert research by renowned historian Charles E. MacKay.",
         "foundingDate": "2010",
         "founder": {
           "@id": `${baseUrl}/#person`
         },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "charlese1mackay@hotmail.com",
-          "contactType": "customer service",
-          "areaServed": "Worldwide"
+        "slogan": "Authentic Aviation History - Expert Research - Global Shipping",
+        "knowsAbout": [
+          "Scottish Aviation History",
+          "WWI Aviation",
+          "WWII Aviation", 
+          "Helicopter Development",
+          "Naval Aviation",
+          "Military Aviation",
+          "Aircraft Development",
+          "Beardmore Aviation",
+          "Clydeside Aviation",
+          "Royal Air Force History"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Aviation History Books",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Scottish Aviation Books",
+              "description": "Books on Scottish aviation heritage and industrial aviation"
+            },
+            {
+              "@type": "OfferCatalog", 
+              "name": "WWI Aviation Books",
+              "description": "World War I aircraft and military aviation history"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "WWII Aviation Books", 
+              "description": "World War II aircraft, pilots, and air warfare"
+            }
+          ]
         },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "charlese1mackay@hotmail.com",
+            "contactType": "customer service",
+            "areaServed": "Worldwide",
+            "availableLanguage": "English"
+          },
+          {
+            "@type": "ContactPoint",
+            "email": "charlese1mackay@hotmail.com", 
+            "contactType": "sales",
+            "areaServed": ["GB", "EU", "US"],
+            "availableLanguage": "English"
+          }
+        ],
         "sameAs": [
           "https://www.ebay.co.uk/usr/chaza87",
           "https://www.paypal.com/paypalme/charlese1mackay"
@@ -84,9 +128,32 @@ export default function UnifiedSchema({
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Glasgow",
-          "addressRegion": "Scotland",
-          "addressCountry": "GB"
-        }
+          "addressRegion": "Scotland", 
+          "addressCountry": "GB",
+          "postalCode": "G1 1AA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "55.8642",
+          "longitude": "-4.2518"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          {
+            "@type": "Country", 
+            "name": "United States"
+          },
+          {
+            "@type": "Continent",
+            "name": "Europe"
+          }
+        ],
+        "priceRange": "£12-£45",
+        "paymentAccepted": ["Cash", "Credit Card", "PayPal", "Bank Transfer"],
+        "currenciesAccepted": "GBP"
       },
 
       // Person Schema (Author)

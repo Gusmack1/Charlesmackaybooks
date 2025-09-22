@@ -5,12 +5,13 @@ import AcademicAuthority from '@/components/AcademicAuthority';
 import BookCard from '@/components/BookCard';
 import Testimonials from '@/components/Testimonials';
 import AuthorSEOEnhancer from '@/components/AuthorSEOEnhancer';
+import FAQSchema from '@/components/FAQSchema';
 
 import { books } from '@/data/books';
 
 export const metadata: Metadata = {
-  title: 'Charles E. MacKay - Aviation History Books | Expert Aviation Historian',
-  description: 'Authoritative aviation history books by Charles E. MacKay. Expert aviation historian specializing in Scottish aviation heritage, WWI & WWII aircraft, military aviation, helicopter development, and jet age history. 19+ books available.',
+  title: 'Charles E. MacKay Aviation Books - Buy Expert Aviation History Books Online | Scottish Aviation | WWI WWII Aircraft',
+  description: '🛩️ Buy authentic aviation history books by Charles E. MacKay - Scotland\'s leading aviation historian. 19+ books on Scottish aviation, WWI/WWII aircraft, helicopters, naval aviation. Used by museums & universities. Free shipping worldwide! ⭐',
   keywords: [
     'aviation history books',
     'Charles E MacKay',
@@ -86,6 +87,9 @@ export default function Home() {
       <div className="container mx-auto container-padding py-12">
         <Testimonials />
       </div>
+
+      {/* FAQ Schema for rich snippets */}
+      <FAQSchema />
 
       {/* Trust & Security Badges moved to global layout */}
     </div>
