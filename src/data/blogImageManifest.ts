@@ -169,6 +169,24 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/sikorsky-vs300-test.jpg', alt: 'VS-300 testing' },
     { url: '/blog-images/sikorsky-vs300-igor-sikorsky.jpg', alt: 'Igor Sikorsky with VS-300' }
   ],
+  'dieter-dengler-skyraider-escape': [
+    { url: '/blog-images/f86-sabre-cold-war-fighter.jpg', alt: 'Cold War era fighter aircraft context' },
+    { url: '/blog-images/korean-war-aviation.jpg', alt: 'Korean War aviation operations' },
+    { url: '/blog-images/chuck-yeager-sabre-pilot.jpg', alt: 'Test pilot in Cold War era' },
+    { url: '/blog-images/f86-vs-mig15-combat.jpg', alt: 'Air combat engagement illustration' }
+  ],
+  'dorothy-wordsworth-scottish-tour-1803': [
+    { url: '/blog-images/historical-scotland-map.jpg', alt: 'Historical Scotland map from early 1800s' },
+    { url: '/blog-images/glasgow-historical-map.jpg', alt: 'Glasgow historical map' },
+    { url: '/blog-images/clydeside-industrial-workers.jpg', alt: 'Scottish industrial heritage' },
+    { url: '/blog-images/beardmore-parkhead-forge.jpg', alt: 'Scottish industrial landscape' }
+  ],
+  'avro-vulcan-bomber': [
+    { url: '/blog-images/avro-vulcan-bomber.jpg', alt: 'Avro Vulcan strategic bomber' },
+    { url: '/blog-images/vulcan-bomber-formation.jpg', alt: 'Vulcan bomber formation flight' },
+    { url: '/blog-images/blue-steel-missile.jpg', alt: 'Blue Steel stand-off missile' },
+    { url: '/blog-images/vulcan-black-buck-falklands.jpg', alt: 'Vulcan Black Buck operations context' }
+  ],
   'maud-alsos-atomic-program': [
     { url: 'https://charlesmackaybooks.com/blog-images/aircraft-production-statistics.jpg?v=1', alt: 'Wartime production and industrial mobilisation context' },
     { url: 'https://charlesmackaybooks.com/blog-images/women-aircraft-workers.jpg?v=1', alt: 'Women in wartime industry supporting Allied programmes' },
