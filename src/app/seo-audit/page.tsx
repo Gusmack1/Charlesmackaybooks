@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import SEOOptimizer from '@/components/SEOOptimizer'
+// SEOOptimizer removed - functionality handled by layout.tsx and UnifiedSchema
 
 interface SEOAuditResult {
   category: string
@@ -365,14 +365,6 @@ export default function SEOAuditPage() {
 
   return (
     <div className="min-h-screen bg-white py-8">
-      <SEOOptimizer
-        title="SEO Audit & Optimization - Charles Mackay Books"
-        description="Comprehensive SEO audit and optimization system for achieving 100/100 Google SEO scores. Expert analysis of technical SEO, content quality, performance, and user experience."
-        keywords={['SEO audit', 'Google SEO', 'technical SEO', 'on-page SEO', 'performance optimization', 'aviation books SEO']}
-        url="/seo-audit"
-        type="website"
-      />
-      
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">

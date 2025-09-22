@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import SEOOptimizer from '@/components/SEOOptimizer'
+// SEOOptimizer removed - functionality handled by layout.tsx and UnifiedSchema
 
 interface IndexingStatus {
   url: string
@@ -104,14 +104,6 @@ export default function GoogleIndexingPage() {
 
   return (
     <div className="min-h-screen bg-white py-8">
-      <SEOOptimizer
-        title="Google Indexing Optimization - Charles Mackay Books"
-        description="Comprehensive Google indexing optimization tools and strategies to ensure all pages are properly indexed by Google search engine."
-        keywords={['Google indexing', 'SEO optimization', 'search engine indexing', 'Google Search Console', 'aviation books SEO']}
-        url="/google-indexing"
-        type="website"
-      />
-      
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">

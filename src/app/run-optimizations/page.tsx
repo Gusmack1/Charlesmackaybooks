@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import ComprehensiveWebsiteFixer from '@/components/ComprehensiveWebsiteFixer';
 import PerformanceOptimizer from '../../components/PerformanceOptimizer';
-import SEOOptimizer from '../../components/SEOOptimizer';
+// SEOOptimizer removed - functionality handled by layout.tsx and UnifiedSchema;
 import MultiAgentAuditDeployment from '../../components/MultiAgentAuditDeployment';
 import FinalQualityAssurance from '../../components/FinalQualityAssurance';
 import CrossLinkingInterface from '../../components/CrossLinkingInterface';
@@ -29,12 +29,6 @@ export default function RunOptimizationsPage() {
       component: PerformanceOptimizer,
       status: 'pending',
       description: 'Core Web Vitals and performance optimization'
-    },
-    {
-      name: 'SEO Optimizer',
-      component: SEOOptimizer,
-      status: 'pending',
-      description: 'Search engine optimization and meta tags'
     },
     {
       name: 'Multi-Agent Audit',
