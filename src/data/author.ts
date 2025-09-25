@@ -23,7 +23,7 @@ export const authorData = {
     ],
     
     achievements: [
-      "Published 18 authoritative books on aviation history",
+      "Published 20 authoritative books on aviation history",
       "Over 1,700 books sold to satisfied customers worldwide",
       "100% positive feedback from eBay customers",
       "Books used as primary references by aviation researchers globally",
@@ -33,11 +33,11 @@ export const authorData = {
   },
   
   publications: {
-    totalBooks: 18,
+    totalBooks: 20,
     categories: {
       "Scottish Aviation History": 3,
       "WWI Aviation": 3,
-      "WWII Aviation": 2,
+      "WWII Aviation": 3,
       "Aviation Biography": 5,
       "Helicopter History": 1,
       "Naval Aviation": 1,

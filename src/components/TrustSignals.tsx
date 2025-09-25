@@ -244,7 +244,7 @@ function AuthorVerification() {
             <li>📚 14+ Years Publishing Experience</li>
             <li>🏛️ Imperial War Museum Partner</li>
             <li>✈️ RAF Historical Society Member</li>
-            <li>📖 19 Published Aviation Books</li>
+            <li>📖 20 Published Aviation Books</li>
             <li>🌍 International Research Network</li>
           </ul>
         </div>

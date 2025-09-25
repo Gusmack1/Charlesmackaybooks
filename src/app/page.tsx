@@ -11,7 +11,7 @@ import { books } from '@/data/books';
 
 export const metadata: Metadata = {
   title: 'Charles E. MacKay Aviation Books - Buy Expert Aviation History Books Online | Scottish Aviation | WWI WWII Aircraft',
-  description: '🛩️ Buy authentic aviation history books by Charles E. MacKay - Scotland\'s leading aviation historian. 19+ books on Scottish aviation, WWI/WWII aircraft, helicopters, naval aviation. Used by museums & universities. Free shipping worldwide! ⭐',
+  description: '🛩️ Buy authentic aviation history books by Charles E. MacKay - Scotland\'s leading aviation historian. 20+ books on Scottish aviation, WWI/WWII aircraft, helicopters, naval aviation. Used by museums & universities. Free shipping worldwide! ⭐',
   keywords: [
     'aviation history books',
     'Charles E MacKay',

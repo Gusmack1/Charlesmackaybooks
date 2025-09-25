@@ -25,7 +25,7 @@ export default function AuthorSEOEnhancer() {
           </div>
           <ul className="space-y-2 text-sm text-white/90">
             <li>• <strong>Charles E. MacKay</strong> - Aviation Historian</li>
-            <li>• 19+ Published Books</li>
+            <li>• 20+ Published Books</li>
             <li>• 25+ Years Research Experience</li>
             <li>• Scottish Aviation Specialist</li>
           </ul>

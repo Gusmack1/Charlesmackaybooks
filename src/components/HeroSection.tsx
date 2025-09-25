@@ -30,7 +30,7 @@ export default function HeroSection() {
                 <div className="text-lg font-semibold text-white">Happy Customers</div>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">19</div>
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">20</div>
                 <div className="text-lg font-semibold text-white">Published Books</div>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">

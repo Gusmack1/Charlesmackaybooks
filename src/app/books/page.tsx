@@ -47,7 +47,7 @@ export default function BooksPage() {
       <UnifiedSchema
         pageType="books"
         pageTitle="Aviation History Books - Complete Collection | Charles E. MacKay"
-        pageDescription="Browse the complete collection of aviation history books by Charles E. MacKay. 19+ books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more."
+        pageDescription="Browse the complete collection of aviation history books by Charles E. MacKay. 20+ books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more."
         pageUrl="/books"
         books={books}
       />
