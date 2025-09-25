@@ -5,25 +5,25 @@ export const books: Book[] = [
     id: 'this-was-the-enemy-volume-two',
     title: 'This Was the Enemy: Aeroplanes Guns Bombs Downfall Volume Two',
     price: 15.95,
-    isbn: '9781838056798',
+    isbn: 'Coming Soon',
     category: 'WWII Aviation',
-    condition: 'New',
-    inStock: true,
-    description: 'With the destruction of the German Air Arm after the Treaty of Versailles, Germany sought new ways to increase the size and complexity of the Luftwaffe. Volume Two of This was the Enemy explores the chaos behind the failure of the Luftwaffe—from post-Versailles rebuilding through collapse and defeat. Comprehensive analysis of German aviation development, aircraft types, and operational doctrine during World War II.',
+    condition: 'Pre-Order',
+    inStock: false,
+    description: 'With the destruction of the German Air Arm after the Treaty of Versailles, Germany sought new ways to increase the size and complexity of the Luftwaffe. Volume Two of This was the Enemy explores the chaos behind the failure of the Luftwaffe. Coming Soon - Pre-order available.',
     imageUrl: '/book-covers/this-was-the-enemy-volume-two.jpg',
     tags: ['WWII', 'Luftwaffe', 'German Aircraft', 'Military Aviation'],
-    pageCount: 284,
-    publicationYear: 2024,
-    weight: 445,
+    pageCount: null,
+    publicationYear: null,
+    weight: null,
     academicLevel: ['Undergraduate', 'Graduate', 'Professional'],
     era: ['WWII (1939-1945)'],
     aircraftTypes: ['Fighters', 'Bombers', 'Jet Aircraft', 'Attack Aircraft'],
     geographicFocus: ['Germany', 'Europe'],
-    sourceType: ['Technical Analysis', 'Photographic', 'Archival Research', 'Primary Sources'],
-    researchThemes: ['Luftwaffe Operations', 'German Aviation Development', 'WWII Aircraft Technology', 'Military Aviation Doctrine'],
+    sourceType: ['Technical Analysis', 'Photographic', 'Archival Research'],
+    researchThemes: ['Luftwaffe Operations', 'German Aviation Development', 'WWII Aircraft Technology'],
     difficulty: 'Advanced',
-    citationCount: 85,
-    academicInstitutions: ['Imperial War Museum', 'Deutsches Technikmuseum', 'RAF Museum', 'National Air and Space Museum'],
+    citationCount: null,
+    academicInstitutions: ['Imperial War Museum', 'RAF Museum'],
     relatedBookIds: ['enemy-luftwaffe-1945', 'german-aircraft-great-war', 'flying-for-kaiser'],
     relatedBlogPosts: [
       {
@@ -47,44 +47,9 @@ export const books: Book[] = [
         excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.'
       }
     ],
-    tableOfContents: [
-      'Foreword and Acknowledgments',
-      'Chapter 1: Post-Versailles Aviation Restrictions and Covert Development',
-      'Chapter 2: The Rise of the Luftwaffe (1933-1939)',
-      'Chapter 3: Early War Successes and Tactical Innovation',
-      'Chapter 4: Fighter Development - From Messerschmitt to Jets',
-      'Chapter 5: Bomber Command and Strategic Aviation',
-      'Chapter 6: The Battle for Air Superiority (1940-1943)',
-      'Chapter 7: Technological Warfare - Jets and Wonder Weapons',
-      'Chapter 8: The Final Collapse (1944-1945)',
-      'Chapter 9: Lessons Learned and Post-War Assessment',
-      'Chapter 10: Aircraft Specifications and Technical Analysis',
-      'Appendices: Production Numbers and Unit Histories',
-      'Bibliography and Primary Sources',
-      'Index'
-    ],
-    sampleContent: [
-      {
-        chapter: 'Chapter 1',
-        title: 'Post-Versailles Aviation Restrictions and Covert Development',
-        excerpt: 'The Treaty of Versailles had effectively dismantled German military aviation, but it could not destroy the engineering knowledge and innovation that had made German aircraft formidable during the Great War. In the shadows of international oversight, German engineers and designers began the patient work of rebuilding what would eventually become the most technologically advanced air force of the early war years...'
-      },
-      {
-        chapter: 'Chapter 4',
-        title: 'Fighter Development - From Messerschmitt to Jets',
-        excerpt: 'The evolution of German fighter aircraft during World War II represents one of the most rapid and innovative periods in aviation history. From the reliable Messerschmitt Bf 109 to the revolutionary Me 262 jet fighter, German engineers pushed the boundaries of what was aerodynamically and technologically possible, often achieving breakthroughs that would influence post-war aviation development worldwide...'
-      }
-    ],
-    authorInsights: 'This volume represents extensive research into previously classified German aviation archives and Allied intelligence reports. The book provides unprecedented detail into the organizational structure, technological development, and operational doctrine of the Luftwaffe during its most critical period.',
-    researchBackground: 'Primary sources include captured German aircraft manuals, pilot testimonies, factory production records, and post-war Allied technical intelligence reports. Extensive collaboration with German aviation museums provided access to rare photographs and technical documentation.',
-    academicValue: 'Essential reference for understanding German aviation development and the technological competition that drove WWII aircraft innovation. Cited by aviation historians and aerospace engineering researchers studying wartime technological advancement.',
-    specifications: {
-      format: 'Paperback, 284 pages',
-      illustrations: '120+ photographs, technical diagrams, maps',
-      maps: true,
-      bibliography: true,
-      index: true
-    }
+    authorInsights: 'Coming Soon - This comprehensive volume will explore the complete story of German aviation development during World War II.',
+    researchBackground: 'Based on extensive archival research and primary sources covering German aviation development and Luftwaffe operations.',
+    academicValue: 'Volume Two will provide detailed analysis of German aviation technology and operational doctrine during the war years.',
   },
 
   {
