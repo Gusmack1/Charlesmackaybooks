@@ -24,20 +24,26 @@ export const metadata: Metadata = {
 
 export default function OrderTrackingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-primary mb-4">
-            Track Your Order
-          </h1>
-          <p className="text-lg text-secondary max-w-2xl mx-auto">
-            Enter your email address or order ID to track your aviation history book order. 
-            Get real-time updates on your delivery status.
-          </p>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              Track Your Order
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+              Enter your email address or order ID to track your aviation history book order. 
+              Get real-time updates on your delivery status.
+            </p>
+          </div>
         </div>
-
-        <OrderTrackingClient />
       </div>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+        <OrderTrackingClient />
+      </main>
     </div>
   );
 }
