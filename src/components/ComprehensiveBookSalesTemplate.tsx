@@ -283,39 +283,75 @@ export default function ComprehensiveBookSalesTemplate({
           <div className="space-y-8">
             {/* Purchase Options */}
             <div className="bg-white border border-gray-200 rounded-lg p-6 sticky top-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">📦 Purchase Options</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg border border-green-200">
-                  <div>
-                    <div className="font-semibold text-green-800">Hardcover Edition</div>
-                    <div className="text-sm text-green-600">Free worldwide shipping</div>
-                  </div>
-                  <div className="text-2xl font-bold text-green-800">£{(book.price || 24.99).toFixed(2)}</div>
-                </div>
-                
-                <BookOrderClient
-                  book={book}
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors"
-                >
-                  🛒 Add to Cart
-                </BookOrderClient>
-                
-                <a
-                  href="https://www.ebay.co.uk/usr/chaza87"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors text-center block"
-                >
-                  🏪 Buy on eBay
-                </a>
+              {book.condition === 'Pre-Order' || book.isbn === 'Coming Soon' || !book.inStock ? (
+                <>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🔔 Pre-Order Options</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                      <div>
+                        <div className="font-semibold text-yellow-800">Pre-Order Edition</div>
+                        <div className="text-sm text-yellow-600">Coming Soon - Reserve Your Copy</div>
+                      </div>
+                      <div className="text-2xl font-bold text-yellow-800">£{(book.price || 15.95).toFixed(2)}</div>
+                    </div>
+                    
+                    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-4">
+                      <p className="text-sm text-yellow-800 font-medium">📅 Publication Status: Coming Soon</p>
+                      <p className="text-xs text-yellow-700">Be the first to receive your copy when it's published!</p>
+                    </div>
+                    
+                    <BookOrderClient
+                      book={book}
+                      className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded-lg font-semibold transition-colors"
+                    >
+                      🔔 Pre-Order Now
+                    </BookOrderClient>
 
-                <div className="text-xs text-gray-600 space-y-1">
-                  <div>✅ Secure PayPal checkout</div>
-                  <div>📦 Ships within 24 hours</div>
-                  <div>🌍 Worldwide delivery available</div>
-                  <div>🔒 30-day return policy</div>
-                </div>
-              </div>
+                    <div className="text-xs text-gray-600 space-y-1">
+                      <div>🔔 You'll be notified when available</div>
+                      <div>💳 No charge until book ships</div>
+                      <div>📧 Email updates on publication progress</div>
+                      <div>🌍 Worldwide delivery when published</div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">📦 Purchase Options</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg border border-green-200">
+                      <div>
+                        <div className="font-semibold text-green-800">Hardcover Edition</div>
+                        <div className="text-sm text-green-600">Free worldwide shipping</div>
+                      </div>
+                      <div className="text-2xl font-bold text-green-800">£{(book.price || 24.99).toFixed(2)}</div>
+                    </div>
+                    
+                    <BookOrderClient
+                      book={book}
+                      className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors"
+                    >
+                      🛒 Add to Cart
+                    </BookOrderClient>
+                    
+                    <a
+                      href="https://www.ebay.co.uk/usr/chaza87"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors text-center block"
+                    >
+                      🏪 Buy on eBay
+                    </a>
+
+                    <div className="text-xs text-gray-600 space-y-1">
+                      <div>✅ Secure PayPal checkout</div>
+                      <div>📦 Ships within 24 hours</div>
+                      <div>🌍 Worldwide delivery available</div>
+                      <div>🔒 30-day return policy</div>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Shipping Information */}
