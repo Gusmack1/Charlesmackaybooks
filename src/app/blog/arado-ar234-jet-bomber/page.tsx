@@ -159,7 +159,7 @@ const post = {
 
     <h2 id="buy-book">Dive Deeper in the Book</h2>
     <p>
-      For a comprehensive late‑war context—engines, operations, logistics, and collapse of the Luftwaffe—see the book <a class="underline font-semibold" href="/books/enemy-luftwaffe-1945">“This Was the Enemy: The Luftwaffe 1945”</a> by Charles E. MacKay. It provides the broader operational canvas for understanding Ar 234 employment and limitations in 1944–45.
+      For a comprehensive late‑war context—engines, operations, logistics, and collapse of the Luftwaffe—see <a class="underline font-semibold" href="/books/this-was-the-enemy-volume-two">"This Was the Enemy: Aeroplanes Guns Bombs Downfall Volume Two"</a> by Charles E. MacKay. Volume Two provides detailed analysis of German aviation development and the complete story of Luftwaffe technological advancement and collapse. Also available: <a class="underline font-semibold" href="/books/enemy-luftwaffe-1945">"This Was the Enemy: The Luftwaffe 1945"</a> for focused coverage of the final year.
     </p>
 
     <h2 id="sources">Sources and Historiography</h2>
@@ -197,7 +197,7 @@ const post = {
   tags: [
     'Arado Ar 234', 'Jet bomber', 'WWII Aviation', 'Reconnaissance', 'Jumo 004', 'charles mackay books'
   ],
-  relatedBooks: getBooksData(['enemy-luftwaffe-1945']),
+  relatedBooks: getBooksData(['this-was-the-enemy-volume-two', 'enemy-luftwaffe-1945']),
   relatedPosts: []
 }
 

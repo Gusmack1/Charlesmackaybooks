@@ -68,6 +68,7 @@ const post = {
     <ul>
       <li><a href="/blog/me262-jet-fighter-revolution" class="underline">Me 262: Jet Fighter Revolution</a> — design, engines, operations, and legacy.</li>
       <li><a href="/blog/german-aircraft-great-war-development" class="underline">German Aircraft Great War Development</a> — the deeper lineage of engineering culture.</li>
+      <li><a href="/books/this-was-the-enemy-volume-two" class="underline">This Was the Enemy Volume Two</a> — comprehensive analysis of Luftwaffe development and collapse.</li>
       <li><a href="/books/enemy-luftwaffe-1945" class="underline">Luftwaffe 1945</a> — campaign analysis with technical annexes.</li>
     </ul>
 

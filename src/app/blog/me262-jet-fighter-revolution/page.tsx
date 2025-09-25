@@ -66,6 +66,7 @@ const post = {
 
     <h2 id="reading">Further Reading and Related Works</h2>
     <ul>
+      <li><a href="/books/this-was-the-enemy-volume-two" class="underline">This Was the Enemy Volume Two</a> — comprehensive analysis of Luftwaffe development and collapse.</li>
       <li><a href="/blog/luftwaffe-1945-final-year" class="underline">Luftwaffe 1945 Final Year</a> — the strategic backdrop to Me 262 operations.</li>
       <li><a href="/books/enemy-luftwaffe-1945" class="underline">Luftwaffe 1945</a> — campaign analysis and technical annexes.</li>
       <li><a href="/blog/german-aircraft-great-war-development" class="underline">German Aircraft Origins</a> — the longer lineage of German engineering culture.</li>
@@ -90,7 +91,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["me262","jet","fighter","revolution"],
-  relatedBooks: getBooksData(['enemy-luftwaffe-1945', 'german-aircraft-great-war', 'sonic-to-standoff']),
+  relatedBooks: getBooksData(['this-was-the-enemy-volume-two', 'enemy-luftwaffe-1945', 'german-aircraft-great-war']),
   relatedPosts: []
 }
 
