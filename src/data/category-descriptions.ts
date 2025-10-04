@@ -149,7 +149,7 @@ The collection includes detailed technical analysis of helicopter systems and pe
       'helicopter books',
       'helicopter aviation history'
     ],
-    featuredBooks: ['helicopter-development-history', 'rotary-wing-aviation']
+    featuredBooks: ['sycamore-seeds', 'captain-eric-brown']
   },
   'jet-age-aviation': {
     name: 'Jet Age Aviation',
@@ -173,7 +173,7 @@ The collection includes detailed technical analysis of jet engine systems and ai
       'jet age books',
       'jet aviation history'
     ],
-    featuredBooks: ['jet-age-aviation', 'modern-jet-aircraft']
+    featuredBooks: ['sabres-from-north', 'f86-sabre-cold-war-fighter']
   },
   'naval-aviation': {
     name: 'Naval Aviation',
@@ -197,7 +197,7 @@ The collection includes detailed technical analysis of naval aircraft systems an
       'maritime air power',
       'naval aviation technology'
     ],
-    featuredBooks: ['aircraft-carrier-argus', 'naval-aviation-history']
+    featuredBooks: ['aircraft-carrier-argus', 'hms-argus-first-aircraft-carrier']
   },
   'industrial-history': {
     name: 'Industrial History',
@@ -221,7 +221,7 @@ The collection includes detailed analysis of manufacturing processes, production
       'aircraft production history',
       'aviation manufacturing'
     ],
-    featuredBooks: ['beardmore-aviation', 'aviation-manufacturing-history']
+    featuredBooks: ['beardmore-aviation', 'modern-furniture']
   },
   'aviation-history': {
     name: 'Aviation History',
@@ -245,7 +245,7 @@ The collection includes detailed technical analysis of aircraft systems and perf
       'flight development',
       'aviation technology history'
     ],
-    featuredBooks: ['aviation-history-comprehensive', 'flight-development-history']
+    featuredBooks: ['british-aircraft-great-war', 'german-aircraft-great-war']
   },
   'travel-literature': {
     name: 'Travel Literature',
@@ -269,6 +269,6 @@ The collection includes both historical accounts and contemporary works, providi
       'flight literature',
       'aviation adventures books'
     ],
-    featuredBooks: ['aviation-adventures', 'flight-memoirs']
+    featuredBooks: ['dorothy-wordsworth', 'soaring-with-wings']
   }
 };

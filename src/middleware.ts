@@ -35,8 +35,25 @@ const URL_REDIRECTS: Record<string, string> = {
   '/fonts/inter-var.woff2': '/404'
 }
 
+// Protocol and domain redirects for canonicalization
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+  const host = request.headers.get('host') || ''
+  const protocol = request.headers.get('x-forwarded-proto') || 'https'
+
+  // Handle www vs non-www redirects (force non-www)
+  if (host.startsWith('www.')) {
+    const newUrl = new URL(request.url)
+    newUrl.host = host.substring(4) // Remove 'www.'
+    return NextResponse.redirect(newUrl.toString(), 301)
+  }
+
+  // Handle HTTP to HTTPS redirects
+  if (protocol === 'http') {
+    const newUrl = new URL(request.url)
+    newUrl.protocol = 'https:'
+    return NextResponse.redirect(newUrl.toString(), 301)
+  }
 
   // Handle URL redirects for 404 fixes
   if (URL_REDIRECTS[pathname]) {

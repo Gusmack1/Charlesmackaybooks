@@ -1,9 +1,5 @@
 import { notFound } from 'next/navigation'
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import BookCard from '@/components/BookCard'
 import { books } from '@/data/books'
-import BBCPageTemplate from '@/components/BBCPageTemplate'
 import { categoryDescriptions } from '@/data/category-descriptions'
 
 // Valid category mappings
@@ -27,127 +23,44 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
-  const { category } = await params
-  const categoryName = categoryMappings[category]
-  
-  if (!categoryName) {
-    return {
-      title: 'Category Not Found | Charles E. MacKay Aviation Books',
-      description: 'The requested category could not be found.',
-    }
-  }
-
-  const categoryDesc = categoryDescriptions[category]
-  
-  return {
-    title: `${categoryName} Books | Charles E. MacKay Aviation Books`,
-    description: categoryDesc?.description || `Browse ${categoryName.toLowerCase()} books by aviation historian Charles E. MacKay. Comprehensive collection of specialized aviation history publications.`,
-    keywords: categoryDesc?.keywords || [
-      `${categoryName.toLowerCase()} books`,
-      'Charles E MacKay',
-      'aviation history',
-      'aviation books for sale',
-      categoryName.toLowerCase(),
-      'aviation historian'
-    ],
-    alternates: {
-      canonical: `https://charlesmackaybooks.com/category/${category}`
-    },
-    openGraph: {
-      title: `${categoryName} Books | Charles E. MacKay`,
-      description: categoryDesc?.description || `Browse ${categoryName.toLowerCase()} books by aviation historian Charles E. MacKay.`,
-      type: 'website',
-      url: `https://charlesmackaybooks.com/category/${category}`
-    }
-  }
-}
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params
   const categoryName = categoryMappings[category]
-  
+
   if (!categoryName) {
     notFound()
   }
 
-  const categoryBooks = books.filter(book => 
-    book.category === categoryName || 
+  const categoryBooks = books.filter(book =>
+    book.category === categoryName ||
     book.category.toLowerCase().replace(/\s+/g, '-') === category
   )
 
   const categoryDesc = categoryDescriptions[category]
 
+  if (!categoryDesc) {
+    notFound()
+  }
+
+  // Temporarily disable static generation for debugging
   return (
-    <BBCPageTemplate
-      title={`${categoryName} Books`}
-      subtitle={`Discover ${categoryBooks.length} authoritative ${categoryName.toLowerCase()} books by Charles E. MacKay`}
-      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Books', href: '/books' }, { label: categoryName }]}
-    >
-      {/* Category Description */}
-      {categoryDesc?.longDescription && (
-        <section className="py-8 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="prose prose-lg max-w-none">
-                <div dangerouslySetInnerHTML={{ 
-                  __html: categoryDesc.longDescription.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>') 
-                }} />
-              </div>
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-center mb-8">{categoryName} Books</h1>
+        <p className="text-center mb-8">
+          Found {categoryBooks.length} books in this category
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categoryBooks.map((book) => (
+            <div key={book.id} className="border rounded-lg p-4">
+              <h3 className="font-semibold">{book.title}</h3>
+              <p className="text-sm text-gray-600">{book.category}</p>
+              <p className="text-sm">£{book.price}</p>
             </div>
-          </div>
-        </section>
-      )}
-
-      {/* Books Grid */}
-      <section className="py-6">
-        <div className="container mx-auto px-4">
-          {categoryBooks.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {categoryBooks.map((book) => (
-                <BookCard key={book.id} book={book} sourceContext={`category-${category}`} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-16">
-              <h2 className="text-2xl font-bold text-primary mb-4">No Books Found</h2>
-              <p className="text-secondary mb-8">
-                No books are currently available in the {categoryName} category.
-              </p>
-              <Link
-                href="/books"
-                className="inline-block badge badge-blue px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Browse All Books
-              </Link>
-            </div>
-          )}
+          ))}
         </div>
-      </section>
-
-      {/* Related Categories */}
-      <section className="bg-white py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">Explore Other Categories</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {Object.entries(categoryMappings)
-              .filter(([slug]) => slug !== category)
-              .slice(0, 8)
-              .map(([slug, name]) => (
-                <Link
-                  key={slug}
-                  href={`/category/${slug}`}
-                  className="bg-white p-4 rounded-lg text-center hover:shadow-md transition-shadow"
-                >
-                  <h3 className="font-semibold text-sm">{name}</h3>
-                  <p className="text-xs text-muted mt-1">
-                    {books.filter(book => book.category === name).length} books
-                  </p>
-                </Link>
-              ))}
-          </div>
-        </div>
-      </section>
-    </BBCPageTemplate>
+      </div>
+    </div>
   )
 }

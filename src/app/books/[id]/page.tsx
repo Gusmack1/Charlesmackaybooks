@@ -480,7 +480,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               {/* Book Details */}
               <div className="space-y-6">
                 <div className="text-sm font-semibold text-white mb-4 flex items-center gap-3 justify-center flex-wrap">
-                  <span className="badge badge-blue">{book.category}</span>
+                  <Link href={`/category/${book.category.toLowerCase().replace(/\s+/g, '-')}`} className="badge badge-blue hover:bg-blue-600 transition-colors">
+                    {book.category}
+                  </Link>
                   {book.era && book.era[0] && (
                     <span className="badge badge-amber">{book.era[0]}</span>
                   )}

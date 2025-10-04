@@ -214,6 +214,46 @@ export default function UnifiedSchema({
     ]
   };
 
+  // Add category-specific schema
+  if (pageType === 'category') {
+    // Category as CollectionPage
+    (unifiedSchema["@graph"] as any[]).push({
+      "@type": "CollectionPage",
+      "@id": `${fullUrl}#collection`,
+      "url": fullUrl,
+      "name": pageTitle || "Aviation Book Category",
+      "description": pageDescription || "Collection of aviation history books",
+      "isPartOf": {
+        "@id": `${baseUrl}/#website`
+      },
+      "about": "Aviation History Books",
+      "inLanguage": "en-GB"
+    });
+
+    // Breadcrumbs for category pages
+    (unifiedSchema["@graph"] as any[]).push({
+      "@type": "BreadcrumbList",
+      "@id": `${fullUrl}#breadcrumbs`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": { "@id": `${baseUrl}/`, "name": "Home" }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": { "@id": `${baseUrl}/books`, "name": "Books" }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": { "@id": fullUrl, "name": pageTitle || "Category" }
+        }
+      ]
+    });
+  }
+
   // Add book-specific schema only when needed
   if (pageType === 'book-detail' && bookData) {
     // Breadcrumbs: Home > Books > Current Book
