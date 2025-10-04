@@ -10,6 +10,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Handle trailing slashes consistently to fix Google indexing issues
+  trailingSlash: true,
   // Dynamic site configuration for Netlify with Next.js runtime
   output: undefined,
   distDir: '.next',

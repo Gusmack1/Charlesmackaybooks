@@ -210,7 +210,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 2. ALL Blog post pages - High content priority
   const blogPages: MetadataRoute.Sitemap = blogPosts.map(postId => ({
-    url: `${baseUrl}/blog/${postId}`,
+    url: `${baseUrl}/blog/${postId}/`,
     lastModified: lastModified,
     changeFrequency: 'monthly' as const,
     priority: 0.8, // Blog content is crucial for SEO
@@ -218,7 +218,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 3. ALL Book pages (from books data + additional static ones) - Product priority
   const dynamicBookPages: MetadataRoute.Sitemap = books.map(book => ({
-    url: `${baseUrl}/books/${book.id}`,
+    url: `${baseUrl}/books/${book.id}/`,
     lastModified: lastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.9, // Product pages crucial for sales
@@ -227,7 +227,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 4. Additional static book pages not in books.ts
   const additionalBookIds = allBookIds.filter(id => !books.some(book => book.id === id));
   const additionalBookPages: MetadataRoute.Sitemap = additionalBookIds.map(bookId => ({
-    url: `${baseUrl}/books/${bookId}`,
+    url: `${baseUrl}/books/${bookId}/`,
     lastModified: lastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.9,
@@ -235,7 +235,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 5. Category pages - Navigation priority
   const categoryPages: MetadataRoute.Sitemap = categoryNames.map(category => ({
-    url: `${baseUrl}/category/${category}`,
+    url: `${baseUrl}/category/${category}/`,
     lastModified: lastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.8, // Categories important for discovery
@@ -247,7 +247,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 7. Partnership and authority pages
   const partnershipPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/partnerships/imperial-war-museum`,
+      url: `${baseUrl}/partnerships/imperial-war-museum/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,

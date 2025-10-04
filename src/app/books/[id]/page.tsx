@@ -225,7 +225,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title: `${book.title} | Charles E. MacKay | £${book.price}`,
       description: generateDescription(book),
       type: 'website',
-      url: `https://charlesmackaybooks.com/books/${book.id}`,
+      url: `https://charlesmackaybooks.com/books/${book.id}/`,
       siteName: 'Charles E. MacKay Aviation Books',
       locale: 'en_GB',
       images: [
@@ -259,7 +259,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       },
     },
     alternates: {
-      canonical: `https://charlesmackaybooks.com/books/${book.id}`,
+      canonical: `https://charlesmackaybooks.com/books/${book.id}/`,
     },
     other: {
       'product:price:amount': book.price.toString(),
@@ -450,7 +450,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         pageType="book-detail"
         pageTitle={`${book.title} | Charles E. MacKay Aviation Books`}
           pageDescription={metaDescriptionForSchema}
-        pageUrl={`/books/${book.id}`}
+        pageUrl={`/books/${book.id}/`}
         bookData={book}
       />
 
