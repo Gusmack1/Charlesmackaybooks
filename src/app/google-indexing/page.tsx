@@ -26,7 +26,7 @@ export default function GoogleIndexingPage() {
     'https://charlesmackaybooks.com/books/clydeside-aviation-vol1',
     'https://charlesmackaybooks.com/books/german-aircraft-great-war',
     'https://charlesmackaybooks.com/books/british-aircraft-great-war',
-    'https://charlesmackaybooks.com/books/captain-eric-brown',
+    'https://charlesmackaybooks.com/books/captain-eric-brown/',
     'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant',
     'https://charlesmackaybooks.com/blog/clydeside-aviation-revolution',
     'https://charlesmackaybooks.com/blog/german-aircraft-great-war-development',

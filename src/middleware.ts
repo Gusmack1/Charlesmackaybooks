@@ -73,7 +73,27 @@ export const config = {
     '/book/:path*',
     '/books/:path*',
     '/research-methodology/:path*',
-    '/fonts/:path*'
+    '/fonts/:path*',
+    // Add specific patterns for exact matches
+    '/aircraft/hawker-hurricane',
+    '/aircraft/hawker-hurricane/',
+    '/aircraft/bristol-fighter',
+    '/aircraft/bristol-fighter/',
+    '/book/dieter-dengler',
+    '/book/dieter-dengler/',
+    '/book/dorothy-wordsworth',
+    '/book/dorothy-wordsworth/',
+    '/book/enemy-luftwaffe-1945',
+    '/book/enemy-luftwaffe-1945/',
+    '/book/aircraft-carrier-argus',
+    '/book/aircraft-carrier-argus/',
+    '/books/aviation-manufacturing-wartime-production',
+    '/books/aviation-manufacturing-wartime-production/',
+    '/books/captain-clouds',
+    '/books/captain-clouds/',
+    '/research-methodology',
+    '/research-methodology/',
+    '/fonts/inter-var.woff2'
   ]
 }
 
