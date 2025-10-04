@@ -12,13 +12,41 @@ const NOINDEX_PATHS = [
   '/google-indexing'
 ]
 
+// URL redirect mappings for 404 fixes
+const URL_REDIRECTS: Record<string, string> = {
+  '/aircraft/hawker-hurricane': '/blog/hawker-hurricane-fighter-development/',
+  '/aircraft/bristol-fighter': '/blog/bristol-fighter-f2b-brisfit/',
+  '/book/dieter-dengler': '/books/dieter-dengler/',
+  '/book/dorothy-wordsworth': '/books/dorothy-wordsworth/',
+  '/book/enemy-luftwaffe-1945': '/books/enemy-luftwaffe-1945/',
+  '/book/aircraft-carrier-argus': '/books/aircraft-carrier-argus/',
+  '/books/aviation-manufacturing-wartime-production': '/blog/aviation-manufacturing-wartime-production/',
+  '/books/captain-clouds': '/books/captain-eric-brown/',
+  '/research-methodology': '/research-guides/',
+  '/fonts/inter-var.woff2': '/404'
+}
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  // Handle URL redirects for 404 fixes
+  if (URL_REDIRECTS[pathname]) {
+    const redirectUrl = URL_REDIRECTS[pathname]
+    if (redirectUrl === '/404') {
+      // Return 404 for font files and other non-content URLs
+      return new Response('Not Found', { status: 404 })
+    }
+    // Redirect to correct URL
+    return NextResponse.redirect(new URL(redirectUrl, request.url), 301)
+  }
+
+  // Add X-Robots-Tag to internal tooling routes to avoid indexing
   if (NOINDEX_PATHS.some((p) => pathname.startsWith(p))) {
     const response = NextResponse.next()
     response.headers.set('X-Robots-Tag', 'noindex, nofollow')
     return response
   }
+
   return NextResponse.next()
 }
 
@@ -30,7 +58,12 @@ export const config = {
     '/deployment/:path*',
     '/optimize-website/:path*',
     '/comprehensive-optimization-suite/:path*',
-    '/google-indexing/:path*'
+    '/google-indexing/:path*',
+    '/aircraft/:path*',
+    '/book/:path*',
+    '/books/:path*',
+    '/research-methodology/:path*',
+    '/fonts/:path*'
   ]
 }
 
