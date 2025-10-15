@@ -148,13 +148,13 @@ export default function AboutPage() {
             {/* About Content */}
             <div className="lg:col-span-2">
               <p className="text-lg text-white mb-8 leading-relaxed">
-                With 19 published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
+                With {getBookCountText()} published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8 text-center">
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="text-sm text-white mb-1">Published Books</div>
-                  <div className="text-2xl font-bold text-white">19</div>
+                  <div className="text-2xl font-bold text-white">{getBookCountText()}</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="text-sm text-white mb-1">Years Research</div>
@@ -173,7 +173,7 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/books"
-                  className="badge badge-blue px-8 py-3 rounded-lg font-bold transition-colors text-center"
+                  className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-8 py-3 rounded-lg font-bold transition-colors text-center"
                 >
                   Browse Books
                 </Link>
@@ -380,7 +380,7 @@ export default function AboutPage() {
           <div className="text-center mt-8">
             <Link
               href="/books"
-              className="badge badge-blue px-8 py-3 rounded-lg font-bold transition-colors"
+              className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-8 py-3 rounded-lg font-bold transition-colors"
             >
               View All {getBookCountText()} Books
             </Link>
