@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import type { Metadata } from 'next'
-import { getBookCountText } from '@/config/constants'
+import UnifiedSchema from '@/components/UnifiedSchema'
+import { getPublishedBookCountText, getTotalBookCountText, SITE_CONSTANTS } from '@/config/constants'
 
 export const metadata: Metadata = {
   title: 'About Charles E. MacKay - Aviation Historian & Author | Charles E. MacKay Aviation Books',
@@ -21,10 +22,13 @@ export const metadata: Metadata = {
     'aircraft development history',
     'aviation biography'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/about/'
+  },
   openGraph: {
     title: 'About Charles E. MacKay - Aviation Historian & Author',
     description: 'Meet Charles E. MacKay, renowned aviation historian specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history.',
-    url: 'https://charlesmackaybooks.com/about',
+    url: 'https://charlesmackaybooks.com/about/',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [
       {
@@ -51,7 +55,7 @@ const structuredData = {
   "name": "Charles E. MacKay",
   "alternateName": "Charles MacKay",
   "description": "Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history",
-  "url": "https://charlesmackaybooks.com/about",
+  "url": "https://charlesmackaybooks.com/about/",
   "image": "https://charlesmackaybooks.com/charles-mackay-aviation-historian.jpg",
   "jobTitle": "Aviation Historian & Author",
   "knowsAbout": [
@@ -94,10 +98,13 @@ export default function AboutPage() {
       subtitle="Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history."
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Charles' }]}
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      <UnifiedSchema
+        pageType="page"
+        pageTitle="About Charles E. MacKay"
+        pageDescription="Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history."
+        pageUrl="/about/"
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 
       {/* Hero body grid */}
       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -148,13 +155,13 @@ export default function AboutPage() {
             {/* About Content */}
             <div className="lg:col-span-2">
               <p className="text-lg text-white mb-8 leading-relaxed">
-                With {getBookCountText()} published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
+                With {getPublishedBookCountText()} published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8 text-center">
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="text-sm text-white mb-1">Published Books</div>
-                  <div className="text-2xl font-bold text-white">{getBookCountText()}</div>
+                  <div className="text-2xl font-bold text-white">{getPublishedBookCountText()}</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="text-sm text-white mb-1">Years Research</div>
@@ -173,13 +180,13 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/books"
-                  className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-8 py-3 rounded-lg font-bold transition-colors text-center"
+                  className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
                 >
                   Browse Books
                 </Link>
                 <Link
                   href="/contact"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary transition-colors text-center"
+                  className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors text-center"
                 >
                   Contact Author
                 </Link>
@@ -223,7 +230,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span>📚</span>
-                    <span>{getBookCountText()} Published Books</span>
+                    <span>{getPublishedBookCountText()} Published Books</span>
                   </div>
                 </div>
               </div>
@@ -380,9 +387,9 @@ export default function AboutPage() {
           <div className="text-center mt-8">
             <Link
               href="/books"
-              className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-8 py-3 rounded-lg font-bold transition-colors"
+              className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              View All {getBookCountText()} Books
+              View All {getTotalBookCountText()} Books
             </Link>
           </div>
         </section>

@@ -55,9 +55,19 @@ export const getBookCountDescription = (includeComingSoon: boolean = false): str
   return `${count}${suffix} aviation history books`
 }
 
+// Explicit helpers for clarity in different contexts
+export const getTotalBookCountText = (): string => {
+  const hasComingSoon = SITE_CONSTANTS.COMING_SOON_BOOKS > 0
+  return `${SITE_CONSTANTS.TOTAL_BOOKS}${hasComingSoon ? '+' : ''}`
+}
+
+export const getPublishedBookCountText = (): string => {
+  return `${SITE_CONSTANTS.PUBLISHED_BOOKS}`
+}
+
 export const getAuthorBio = (includeBookCount: boolean = true): string => {
   const bookText = includeBookCount
-    ? `With over ${SITE_CONSTANTS.PUBLISHED_BOOKS} published books and more than ${SITE_CONSTANTS.SATISFIED_CUSTOMERS.toLocaleString()} satisfied customers worldwide.`
+    ? `With over ${SITE_CONSTANTS.TOTAL_BOOKS}${SITE_CONSTANTS.COMING_SOON_BOOKS > 0 ? '+' : ''} books in the collection and more than ${SITE_CONSTANTS.SATISFIED_CUSTOMERS.toLocaleString()} satisfied customers worldwide.`
     : `Expert aviation historian and author.`
 
   return `Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. ${bookText}`
