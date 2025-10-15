@@ -161,10 +161,15 @@ function CartProgressIndicator({
       <h4 className="progress-title">Your Progress</h4>
       
       <div className="progress-bar">
-        <div 
-          className="progress-fill" 
-          style={{ width: `${progress}%` }}
-        />
+        {(() => {
+          const rounded = Math.max(0, Math.min(100, Math.round(progress / 10) * 10));
+          return (
+            <div 
+              className="progress-fill"
+              data-progress={`${rounded}`}
+            />
+          );
+        })()}
       </div>
       
       <div className="progress-goals">
@@ -214,7 +219,19 @@ function CartProgressIndicator({
           background: linear-gradient(90deg, #0ea5e9 0%, #0284c7 100%);
           border-radius: 4px;
           transition: width 0.5s ease;
+          width: 0%;
         }
+        .progress-fill[data-progress="0"] { width: 0%; }
+        .progress-fill[data-progress="10"] { width: 10%; }
+        .progress-fill[data-progress="20"] { width: 20%; }
+        .progress-fill[data-progress="30"] { width: 30%; }
+        .progress-fill[data-progress="40"] { width: 40%; }
+        .progress-fill[data-progress="50"] { width: 50%; }
+        .progress-fill[data-progress="60"] { width: 60%; }
+        .progress-fill[data-progress="70"] { width: 70%; }
+        .progress-fill[data-progress="80"] { width: 80%; }
+        .progress-fill[data-progress="90"] { width: 90%; }
+        .progress-fill[data-progress="100"] { width: 100%; }
         
         .progress-goals {
           display: flex;

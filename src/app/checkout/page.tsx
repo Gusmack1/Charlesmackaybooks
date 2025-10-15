@@ -425,9 +425,13 @@ export default function CheckoutPage() {
                 <h2 className="text-lg sm:text-xl font-bold mb-4 text-slate-900">Shipping Address</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-1 text-slate-900">First Name *</label>
+                    <label htmlFor="firstName" className="block text-sm font-medium mb-1 text-slate-900">First Name *</label>
                     <input
+                      id="firstName"
+                      name="firstName"
                       type="text"
+                      autoComplete="given-name"
+                      placeholder="First name"
                       value={customerDetails.firstName}
                       onChange={(e) => handleInputChange('firstName', e.target.value)}
                       className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
@@ -435,9 +439,13 @@ export default function CheckoutPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-1 text-slate-900">Last Name *</label>
+                    <label htmlFor="lastName" className="block text-sm font-medium mb-1 text-slate-900">Last Name *</label>
                     <input
+                      id="lastName"
+                      name="lastName"
                       type="text"
+                      autoComplete="family-name"
+                      placeholder="Last name"
                       value={customerDetails.lastName}
                       onChange={(e) => handleInputChange('lastName', e.target.value)}
                       className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
@@ -446,9 +454,13 @@ export default function CheckoutPage() {
                   </div>
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label className="block text-sm font-medium mb-1 text-slate-900">Email *</label>
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-slate-900">Email *</label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
+                    autoComplete="email"
+                    placeholder="you@example.com"
                     value={customerDetails.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
                     className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
@@ -456,18 +468,26 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label className="block text-sm font-medium mb-1 text-slate-900">Phone</label>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-1 text-slate-900">Phone</label>
                   <input
+                    id="phone"
+                    name="phone"
                     type="tel"
+                    autoComplete="tel"
+                    placeholder="Optional phone number"
                     value={customerDetails.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
                     className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label className="block text-sm font-medium mb-1 text-slate-900">Address Line 1 *</label>
+                  <label htmlFor="address1" className="block text-sm font-medium mb-1 text-slate-900">Address Line 1 *</label>
                   <input
+                    id="address1"
+                    name="address1"
                     type="text"
+                    autoComplete="address-line1"
+                    placeholder="Street address"
                     value={customerDetails.address1}
                     onChange={(e) => handleInputChange('address1', e.target.value)}
                     className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
@@ -475,9 +495,13 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label className="block text-sm font-medium mb-1 text-slate-900">Address Line 2</label>
+                  <label htmlFor="address2" className="block text-sm font-medium mb-1 text-slate-900">Address Line 2</label>
                   <input
+                    id="address2"
+                    name="address2"
                     type="text"
+                    autoComplete="address-line2"
+                    placeholder="Apartment, suite, etc. (optional)"
                     value={customerDetails.address2}
                     onChange={(e) => handleInputChange('address2', e.target.value)}
                     className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
@@ -485,9 +509,13 @@ export default function CheckoutPage() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-3 sm:mt-4">
                   <div>
-                    <label className="block text-sm font-medium mb-1 text-slate-900">City *</label>
+                    <label htmlFor="city" className="block text-sm font-medium mb-1 text-slate-900">City *</label>
                     <input
+                      id="city"
+                      name="city"
                       type="text"
+                      autoComplete="address-level2"
+                      placeholder="City"
                       value={customerDetails.city}
                       onChange={(e) => handleInputChange('city', e.target.value)}
                       className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
@@ -495,9 +523,13 @@ export default function CheckoutPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-1 text-slate-900">Postcode *</label>
+                    <label htmlFor="postcode" className="block text-sm font-medium mb-1 text-slate-900">Postcode *</label>
                     <input
+                      id="postcode"
+                      name="postcode"
                       type="text"
+                      autoComplete="postal-code"
+                      placeholder="Postcode"
                       value={customerDetails.postcode}
                       onChange={(e) => handleInputChange('postcode', e.target.value)}
                       className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
@@ -506,8 +538,12 @@ export default function CheckoutPage() {
                   </div>
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label className="block text-sm font-medium mb-1 text-slate-900">Country *</label>
+                  <label htmlFor="country" className="block text-sm font-medium mb-1 text-slate-900">Country *</label>
                   <select
+                    id="country"
+                    name="country"
+                    title="Country"
+                    aria-label="Country"
                     value={customerDetails.country}
                     onChange={(e) => handleInputChange('country', e.target.value)}
                     className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
