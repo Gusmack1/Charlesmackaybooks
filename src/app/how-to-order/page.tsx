@@ -131,7 +131,7 @@ export default function HowToOrderPage() {
               <div className="text-center">
                 <Link
                   href="/books"
-                  className="underline inline-block"
+                  className="btn-books inline-block"
                 >
                   Browse Books →
                 </Link>
@@ -279,7 +279,7 @@ export default function HowToOrderPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/books"
-                className="underline font-semibold"
+                className="btn-books"
               >
                 📚 Browse Books
               </Link>

@@ -499,7 +499,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               <section className="mt-16 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 border border-slate-200 dark:border-slate-700" aria-labelledby="related-books-heading">
                 <div className="flex items-center justify-between gap-4 mb-6">
                   <h3 id="related-books-heading" className="text-2xl font-bold text-primary">Explore Charles E. MacKay’s Books</h3>
-                  <Link href="/books" className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Browse all books</Link>
+                  <Link href="/books" className="btn-books">Browse all books</Link>
                 </div>
                 <p className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">Dive deeper into aviation and Scottish industrial history with our full catalogue of meticulously researched titles.</p>
               </section>
@@ -509,7 +509,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           <section className="mt-16 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 border border-slate-200 dark:border-slate-700" aria-labelledby="related-books-heading">
             <div className="flex items-center justify-between gap-4 mb-6">
                               <h3 id="related-books-heading" className="text-2xl font-bold text-slate-900 dark:text-white">Related Books by Charles E. MacKay</h3>
-                <Link href="/books" className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Browse all books</Link>
+                <Link href="/books" className="btn-books">Browse all books</Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {finalRelated.map((book) => (
@@ -532,7 +532,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                       <p className="text-sm font-semibold text-slate-900 dark:text-white mb-3">£{book.price.toFixed(2)}</p>
                     )}
                     <div className="flex items-center gap-3">
-                      <span className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">View & Buy</span>
+                      <span className="btn-books text-sm px-4 py-2">View & Buy</span>
                     </div>
                   </Link>
                 </article>
@@ -601,7 +601,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900/95 backdrop-blur border-t border-slate-700">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
           <span className="text-white text-sm">📚 Browse Charles’s aviation books</span>
-          <Link href="/books" className="badge badge-blue px-4 py-2 rounded-lg font-semibold">Buy Books</Link>
+          <Link href="/books" className="btn-books px-4 py-2">Buy Books</Link>
         </div>
       </div>
 

@@ -98,6 +98,11 @@
     transform: translateY(-2px);
   }
 
+  /* Standardized primary books CTA button */
+  .btn-books {
+    @apply bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors;
+  }
+
   /* Enhanced blog content styling with fixed text visibility */
   .blog-content {
     font-family: 'Inter', sans-serif;

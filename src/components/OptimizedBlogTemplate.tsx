@@ -401,7 +401,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
             <BookOpen className="w-6 h-6" />
             {post.relatedBooks.length > 0 ? 'Related Books' : 'Explore Charles E. MacKay\'s Books'}
           </h2>
-          <a href="/books" className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Browse all books</a>
+          <a href="/books" className="btn-books">Browse all books</a>
         </div>
         
         {post.relatedBooks.length > 0 ? (
@@ -476,7 +476,7 @@ export default function OptimizedBlogTemplate({ post }: OptimizedBlogTemplatePro
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900/95 backdrop-blur border-t border-slate-700">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
           <span className="text-white text-sm">📚 Browse Charles’s aviation books</span>
-          <a href="/books" className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Buy Books</a>
+          <a href="/books" className="btn-books">Buy Books</a>
         </div>
       </div>
 

@@ -998,7 +998,7 @@ function EmptyCart() {
       <p className="empty-message">
         Start building your aviation history collection
       </p>
-      <button className="browse-books-btn">
+      <button className="btn-books">
         Browse Books
       </button>
       
@@ -1025,20 +1025,7 @@ function EmptyCart() {
           margin-bottom: 24px;
         }
         
-        .browse-books-btn {
-          background: #3b82f6;
-          color: white;
-          border: none;
-          padding: 12px 24px;
-          border-radius: 8px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: background-color 0.2s ease;
-        }
-        
-        .browse-books-btn:hover {
-          background: #2563eb;
-        }
+        /* using global .btn-books utility from Tailwind layer */
       `}</style>
     </div>
   );

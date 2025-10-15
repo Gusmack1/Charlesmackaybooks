@@ -290,7 +290,7 @@ export default function CheckoutPage() {
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Your basket is empty</h1>
           <p className="text-secondary mb-6">Add some books to your basket to proceed with checkout.</p>
-          <Link href="/books" className="badge badge-blue">
+          <Link href="/books" className="btn-books">
             Browse Books
           </Link>
         </div>

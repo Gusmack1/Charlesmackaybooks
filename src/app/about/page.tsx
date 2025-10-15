@@ -180,7 +180,7 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/books"
-                  className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+                  className="btn-books text-center"
                 >
                   Browse Books
                 </Link>
@@ -387,7 +387,7 @@ export default function AboutPage() {
           <div className="text-center mt-8">
             <Link
               href="/books"
-              className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="btn-books"
             >
               View All {getTotalBookCountText()} Books
             </Link>

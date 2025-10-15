@@ -245,7 +245,7 @@ export default function ContactPage() {
             </a>
             <Link
               href="/books"
-              className="underline font-bold"
+              className="btn-books"
             >
               📚 Browse Books
             </Link>
