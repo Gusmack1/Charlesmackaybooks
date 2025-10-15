@@ -99,109 +99,109 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 1. Core site pages - High priority
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: lastModified,
       changeFrequency: 'daily',
       priority: 1.0, // Homepage - highest priority
     },
     {
-      url: `${baseUrl}/books`,
+      url: `${baseUrl}/books/`,
       lastModified: lastModified,
       changeFrequency: 'daily',
       priority: 0.95, // Product catalog - very high priority
     },
     {
-      url: `${baseUrl}/ai-prompt-system`,
+      url: `${baseUrl}/ai-prompt-system/`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
       priority: 0.8, // AI Prompt System - high priority
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${baseUrl}/blog/`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
       priority: 0.9, // Blog homepage - high content priority
     },
     {
-      url: `${baseUrl}/scottish-aviation-timeline`,
+      url: `${baseUrl}/scottish-aviation-timeline/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8, // Required page from user list
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/about/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/how-to-order`,
+      url: `${baseUrl}/how-to-order/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.9, // Important for conversions
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/contact/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/for-researchers`,
+      url: `${baseUrl}/for-researchers/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8, // Academic audience
     },
     {
-      url: `${baseUrl}/faq`,
+      url: `${baseUrl}/faq/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/research-guides`,
+      url: `${baseUrl}/research-guides/`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
       priority: 0.8, // High-value content
     },
     {
-      url: `${baseUrl}/aviation-glossary`,
+      url: `${baseUrl}/aviation-glossary/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8, // SEO valuable content
     },
     {
-      url: `${baseUrl}/aviation-bibliography`,
+      url: `${baseUrl}/aviation-bibliography/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.7, // Academic reference
     },
     {
-      url: `${baseUrl}/aviation-news`,
+      url: `${baseUrl}/aviation-news/`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/academic-resources`,
+      url: `${baseUrl}/academic-resources/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/timeline`,
+      url: `${baseUrl}/timeline/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/checkout`,
+      url: `${baseUrl}/checkout/`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/order-complete`,
+      url: `${baseUrl}/order-complete/`,
       lastModified: lastModified,
       changeFrequency: 'yearly',
       priority: 0.3,
