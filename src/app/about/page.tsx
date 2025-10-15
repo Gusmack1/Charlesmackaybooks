@@ -155,13 +155,13 @@ export default function AboutPage() {
             {/* About Content */}
             <div className="lg:col-span-2">
               <p className="text-lg text-white mb-8 leading-relaxed">
-                With {getPublishedBookCountText()} published books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
+                With {getTotalBookCountText()} books and extensive archival research, Charles MacKay is recognized as a leading authority on aviation development.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8 text-center">
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="text-sm text-white mb-1">Published Books</div>
-                  <div className="text-2xl font-bold text-white">{getPublishedBookCountText()}</div>
+                  <div className="text-2xl font-bold text-white">{getTotalBookCountText()}</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="text-sm text-white mb-1">Years Research</div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span>📚</span>
-                    <span>{getPublishedBookCountText()} Published Books</span>
+                    <span>{getTotalBookCountText()} Published Books</span>
                   </div>
                 </div>
               </div>
