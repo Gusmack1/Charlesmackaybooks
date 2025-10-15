@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import type { Metadata } from 'next'
+import { getBookCountText } from '@/config/constants'
+
 export const metadata: Metadata = {
   title: 'About Charles E. MacKay - Aviation Historian & Author | Charles E. MacKay Aviation Books',
   description: 'Meet Charles E. MacKay, renowned aviation historian specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history. Based in Glasgow, Scotland.',
@@ -221,7 +223,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span>📚</span>
-                    <span>19 Published Books</span>
+                    <span>{getBookCountText()} Published Books</span>
                   </div>
                 </div>
               </div>
@@ -380,7 +382,7 @@ export default function AboutPage() {
               href="/books"
               className="badge badge-blue px-8 py-3 rounded-lg font-bold transition-colors"
             >
-              View All 19 Books
+              View All {getBookCountText()} Books
             </Link>
           </div>
         </section>

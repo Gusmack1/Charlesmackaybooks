@@ -125,7 +125,7 @@ export default function AuthorSEOEnhancer() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
               href="/books"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
             >
               Browse All Books
             </Link>
