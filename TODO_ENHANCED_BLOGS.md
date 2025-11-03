@@ -23,8 +23,7 @@ Queue (start → finish)
 - [x] lucy-lady-houston-schneider-trophy
 - [x] luftwaffe-1945-final-year
 - [x] me262-jet-fighter-revolution
-- [ ] naval-aviation-history
- - [x] naval-aviation-history
+- [x] naval-aviation-history
 - [x] bristol-fighter-f2b-brisfit
 - [x] bristol-sycamore-helicopter-development
 - [x] helicopter-development-pioneers
