@@ -298,7 +298,43 @@
   .bg-gray-900, .bg-gray-900 *,
   .bg-neutral-900, .bg-neutral-900 *,
   .bg-zinc-900, .bg-zinc-900 *,
-  .bg-black, .bg-black * {
+  .bg-black, .bg-black *,
+  .bg-blue-900, .bg-blue-900 * {
+    color: #ffffff !important;
+  }
+  
+  /* Ensure all blue-900 backgrounds are solid dark blue */
+  .bg-blue-900 {
+    background-color: #1e3a8a !important;
+  }
+  
+  /* Badge styles for dark blue backgrounds */
+  .badge {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff !important;
+  }
+  
+  .badge-blue {
+    background-color: rgba(37, 99, 235, 0.8); /* blue-600 with transparency */
+    color: #ffffff !important;
+  }
+  
+  .badge-amber {
+    background-color: rgba(217, 119, 6, 0.8); /* amber-600 */
+    color: #ffffff !important;
+  }
+  
+  .badge-green {
+    background-color: rgba(22, 163, 74, 0.8); /* green-600 */
+    color: #ffffff !important;
+  }
+  
+  .badge-gray {
+    background-color: rgba(107, 114, 128, 0.8); /* gray-500 */
     color: #ffffff !important;
   }
 
@@ -313,6 +349,11 @@
   position: relative;
   overflow: hidden;
   padding: 4rem 0;
+}
+
+/* Remove default gradient overlay for solid dark blue backgrounds */
+.hero-section.bg-blue-900::before {
+  display: none;
 }
 
 .hero-section::before {

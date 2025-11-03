@@ -285,8 +285,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     notFound();
   }
 
-  // Consistent dark-blue hero across all book pages
-  const gradientClass = 'from-slate-900 via-blue-900 to-slate-800';
+  // Consistent dark-blue hero across all book pages - solid dark blue
+  const gradientClass = 'bg-blue-900';
 
   // Get proper book cover image path - use book.imageUrl with fallback
   const bookCoverSrc = book.imageUrl || `/book-covers/${book.id}.jpg`;
@@ -519,11 +519,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
       <BookAnalytics book={book} />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-blue-900">
 
         {/* Hero Section - refined for clarity and unique per-book presentation */}
-        <div className={`hero-section relative bg-gradient-to-br ${gradientClass} text-white py-6 sm:py-8 lg:py-16`}>
-          <div className="absolute inset-0 bg-black/50"></div>
+        <div className={`hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-16`}>
+          <div className="absolute inset-0 bg-black/20"></div>
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               {/* Book Cover */}
@@ -567,19 +567,19 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
                 {/* Book Specifications - Enhanced */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-5xl mx-auto">
-                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-center">
+                  <div className="bg-blue-800/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
                   <div className="text-lg font-semibold text-white mb-2">Weight</div>
                     <div className="text-3xl font-bold text-white">{weightFromInfo || (book as any).weight || 300}g</div>
                   </div>
-                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-center">
+                  <div className="bg-blue-800/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
                     <div className="text-lg font-semibold text-white mb-2">Published</div>
                     <div className="text-3xl font-bold text-white">{book.publicationYear}</div>
                   </div>
-                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-center">
+                  <div className="bg-blue-800/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
                     <div className="text-lg font-semibold text-white mb-2">ISBN-13</div>
                     <div className="text-lg font-bold text-white leading-tight">{book.isbn}</div>
                   </div>
-                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-center">
+                  <div className="bg-blue-800/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
                     <div className="text-lg font-semibold text-white mb-2">Condition</div>
                     <div className="text-3xl font-bold text-white">{book.condition}</div>
                   </div>
@@ -589,7 +589,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 <div className="space-y-4 max-w-2xl mx-auto">
                   <BookDetailClient book={book} />
                   <div className="text-center mt-6">
-                    <Link href="/books" className="text-accent-blue hover:text-accent-blue underline">
+                    <Link href="/books" className="text-blue-300 hover:text-white underline">
                       ← Browse All Aviation Books
                     </Link>
                   </div>

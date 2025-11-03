@@ -354,7 +354,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Lucy Lady Houston Schneider Trophy`,
     description: `Comprehensive analysis of lucy lady houston schneider trophy with expert historical research and technical details.`,
-    images: ['/blog-images/lucy-lady-houston-schneider-trophy-featured.jpg'],
+    images: ['/blog-images/lucy-lady-houston.jpg'],
     type: 'article'
   }
 }
