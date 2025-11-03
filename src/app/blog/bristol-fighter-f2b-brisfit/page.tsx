@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'bristol-fighter-f2b-brisfit',
   title: `Bristol Fighter F2B: The Brisfit's Combat Legacy`,
@@ -160,6 +161,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/bristol-fighter-f2b-brisfit"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol1', title: '', isbn: '', price: 0 }, { id: 'beardmore-aviation', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[{ id: 'british-aircraft-great-war-rfc-rnas', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'sopwith-camel-wwi-fighter', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'aviation-manufacturing-wartime-production', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'german-aircraft-great-war-development', title: '', excerpt: '', image: '', readingTime: 0 }]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

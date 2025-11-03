@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { getBooksData } from '@/utils/bookUtils'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'lucy-lady-houston-schneider-trophy',
   title: `Lucy Lady Houston: The Woman Who Saved the Schneider Trophy`,
@@ -176,6 +177,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/lucy-lady-houston-schneider-trophy"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'mother-of-the-few', title: '', isbn: '', price: 0 }, { id: 'soaring-with-wings', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

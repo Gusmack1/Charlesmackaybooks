@@ -457,7 +457,7 @@ export default function RootLayout({
             src="https://www.googletagmanager.com/ns.html?id=GTM-WKRHZDSX"
             height="0" 
             width="0" 
-            style={{display:'none',visibility:'hidden'}}
+            className="gtm-noscript"
           />
         </noscript>
         

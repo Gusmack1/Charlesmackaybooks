@@ -4,6 +4,7 @@ import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'morris-furniture-war-work-aviation',
   title: 'From Liners to Lancaster Parts: Morris Furniture’s War Work and Aviation Supply Chains',
@@ -113,6 +114,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/morris-furniture-war-work-aviation"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'modern-furniture', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

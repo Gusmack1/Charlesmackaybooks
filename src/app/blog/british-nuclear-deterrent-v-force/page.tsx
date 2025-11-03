@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'british-nuclear-deterrent-v-force',
   title: 'British Nuclear Deterrent: The V-Force and Cold War Strategy',
@@ -150,6 +151,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/british-nuclear-deterrent-v-force"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }, { id: 'birth-atomic-bomb', title: '', isbn: '', price: 0 }, { id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'jet-age-aviation-cold-war-development',
   title: `Jet Age Aviation Cold War Development`,
@@ -100,6 +101,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/jet-age-aviation-cold-war-development"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }, { id: 'me262-jet-fighter-revolution', title: '', isbn: '', price: 0 }, { id: 'f86-sabre-cold-war-fighter', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

@@ -4,6 +4,7 @@ import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'arado-ar234-jet-bomber',
   title: 'Arado Ar 234: The World’s First Operational Jet Bomber',
@@ -222,6 +223,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/arado-ar234-jet-bomber"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'this-was-the-enemy-volume-two', title: '', isbn: '', price: 0 }, { id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

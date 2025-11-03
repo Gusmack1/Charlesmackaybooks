@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'korean-war-air-combat',
   title: `Korean War Air Combat: The Jet Age in Battle`,
@@ -149,6 +150,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/korean-war-air-combat"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'sabres-from-north', title: '', isbn: '', price: 0 }, { id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }, { id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'luftwaffe-1945-final-year',
   title: `Luftwaffe 1945 Final Year`,
@@ -122,6 +123,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/luftwaffe-1945-final-year"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }, { id: 'me262-jet-fighter-revolution', title: '', isbn: '', price: 0 }, { id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

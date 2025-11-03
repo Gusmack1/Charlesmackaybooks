@@ -4,6 +4,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'maud-alsos-atomic-program',
   title: 'From MAUD to Alsos: Documents Behind the Allied Atomic Program',
@@ -168,6 +169,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/maud-alsos-atomic-program"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'birth-atomic-bomb', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[{ id: 'british-nuclear-deterrent-v-force', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'aviation-manufacturing-wartime-production', title: '', excerpt: '', image: '', readingTime: 0 }]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

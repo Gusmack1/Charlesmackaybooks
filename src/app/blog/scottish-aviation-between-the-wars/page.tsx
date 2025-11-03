@@ -4,6 +4,7 @@ import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'scottish-aviation-between-the-wars',
   title: 'Scottish Aviation Between the Wars: Clubs, Carriers, and Civil Routes',
@@ -102,6 +103,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/scottish-aviation-between-the-wars"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'clydeside-aviation-vol2', title: '', isbn: '', price: 0 }, { id: 'beardmore-aviation', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol1', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'aviation-manufacturing-wartime-production',
   title: `Aviation Manufacturing: Wartime Production Revolution`,
@@ -125,6 +126,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/aviation-manufacturing-wartime-production"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'beardmore-aviation', title: '', isbn: '', price: 0 }, { id: 'birth-atomic-bomb', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

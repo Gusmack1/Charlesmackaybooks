@@ -4,6 +4,7 @@ import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'helicopter-development-pioneers',
   title: `Helicopter Development Pioneers: From Cierva's Autogyros to Modern Rotorcraft`,
@@ -287,6 +288,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/helicopter-development-pioneers"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'sycamore-seeds', title: '', isbn: '', price: 0 }, { id: 'sikorsky-vs300', title: '', isbn: '', price: 0 }, { id: 'helicopter-development-pioneers', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

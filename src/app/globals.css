@@ -102,10 +102,15 @@
   .btn-books {
     @apply bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors;
     display: inline-block;
+    color: #ffffff !important;
   }
   /* Ensure anchors styled as buttons remain white in blog/content areas */
   .content a.btn-books,
-  a.btn-books {
+  a.btn-books,
+  .btn-books,
+  span.btn-books,
+  button.btn-books,
+  .btn-books * {
     color: #ffffff !important;
     text-decoration: none !important;
   }
@@ -245,6 +250,12 @@
   /* Safe-area utility for mobile bottom bars */
   .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
 
+  /* Google Tag Manager noscript iframe - hidden visually */
+  .gtm-noscript {
+    display: none;
+    visibility: hidden;
+  }
+
   /* Surface utility: force white text within dark sections */
   .surface-dark,
   .surface-dark * {
@@ -375,8 +386,55 @@ label {
 }
 
 [class*="bg-gradient-to"] * {
-  color: var(--color-text-white);
+  color: var(--color-text-white) !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure ALL blue backgrounds have white text */
+[class*="bg-blue"],
+[class*="from-blue"],
+[class*="via-blue"],
+[class*="to-blue"],
+.bg-blue-600,
+.bg-blue-700,
+.bg-blue-800,
+.bg-blue-900,
+.from-blue-600,
+.from-blue-700,
+.from-blue-800,
+.from-blue-900,
+.via-blue-600,
+.via-blue-700,
+.via-blue-800,
+.via-blue-900,
+.to-blue-600,
+.to-blue-700,
+.to-blue-800,
+.to-blue-900 {
+  color: #ffffff !important;
+}
+
+[class*="bg-blue"] *,
+[class*="from-blue"] *,
+[class*="via-blue"] *,
+[class*="to-blue"] *,
+.bg-blue-600 *,
+.bg-blue-700 *,
+.bg-blue-800 *,
+.bg-blue-900 *,
+.from-blue-600 *,
+.from-blue-700 *,
+.from-blue-800 *,
+.from-blue-900 *,
+.via-blue-600 *,
+.via-blue-700 *,
+.via-blue-800 *,
+.via-blue-900 *,
+.to-blue-600 *,
+.to-blue-700 *,
+.to-blue-800 *,
+.to-blue-900 * {
+  color: #ffffff !important;
 }
 
 /* Stronger override for any link color rules that may leak into button anchors */
@@ -389,15 +447,27 @@ label {
 
 /* ACCENT BADGES - Consistent colors */
 .badge {
-  color: var(--color-text-white);
+  color: var(--color-text-white) !important;
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   font-weight: 600;
   font-size: 0.875rem;
 }
 
-.badge-blue { background-color: var(--color-accent-blue); }
-.badge-green { background-color: var(--color-accent-green); }
+.badge-blue { 
+  background-color: var(--color-accent-blue);
+  color: #ffffff !important;
+}
+.badge-blue * {
+  color: #ffffff !important;
+}
+.badge-green { 
+  background-color: var(--color-accent-green);
+  color: #ffffff !important;
+}
+.badge-green * {
+  color: #ffffff !important;
+}
 .badge-amber { background-color: var(--color-accent-amber); }
 
 /* TEXT UTILITIES */

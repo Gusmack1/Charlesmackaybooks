@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'hawker-hurricane-fighter-development',
   title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
@@ -230,6 +231,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/hawker-hurricane-fighter-development"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol2', title: '', isbn: '', price: 0 }, { id: 'beardmore-aviation', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'aviation-manufacturing-wartime-production', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[{ id: 'supermarine-spitfire-development-history', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'test-pilot-biography-eric-brown', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'supermarine-spitfire-development-evolution', title: '', excerpt: '', image: '', readingTime: 0 }]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
     </>
   )

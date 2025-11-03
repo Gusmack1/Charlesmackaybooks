@@ -4,6 +4,7 @@ import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'dorothy-wordsworth-scottish-tour-1803',
   title: "Dorothy Wordsworth’s Scottish Tour of 1803: Landscape, Literature, and the Romantic Eye",
@@ -156,6 +157,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/dorothy-wordsworth-scottish-tour-1803"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'dorothy-wordsworth', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

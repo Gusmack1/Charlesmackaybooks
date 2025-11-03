@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'naval-aviation-history',
   title: `Naval Aviation History: From Seaplanes to Supercarriers`,
@@ -334,6 +335,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/naval-aviation-history"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'beardmore-aviation', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[{ id: 'hms-argus-first-aircraft-carrier', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'hms-argus-first-aircraft-carrier-operations', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'jet-age-aviation-cold-war-development', title: '', excerpt: '', image: '', readingTime: 0 }]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

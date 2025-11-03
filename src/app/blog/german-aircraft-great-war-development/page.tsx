@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'german-aircraft-great-war-development',
   title: `German Aircraft Great War Development`,
@@ -152,6 +153,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/german-aircraft-great-war-development"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol1', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[{ id: 'sopwith-camel-wwi-fighter', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'bristol-fighter-f2b-brisfit', title: '', excerpt: '', image: '', readingTime: 0 }]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

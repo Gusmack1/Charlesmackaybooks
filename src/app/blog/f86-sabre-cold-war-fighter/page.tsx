@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'f86-sabre-cold-war-fighter',
   title: 'North American F-86 Sabre: Cold War Premier Fighter',
@@ -137,6 +138,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/f86-sabre-cold-war-fighter"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'sabres-from-north', title: '', isbn: '', price: 0 }, { id: 'korean-war-air-combat', title: '', isbn: '', price: 0 }, { id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

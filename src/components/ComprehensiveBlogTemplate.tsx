@@ -372,7 +372,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               return (
                 <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
                   {mini.map((b) => (
-                    <Link key={b.id} href={`/books/${b.id}`} className="badge badge-blue px-5 py-3 rounded-lg font-semibold shadow">
+                    <Link key={b.id} href={`/books/${b.id}`} className="badge badge-blue px-5 py-3 rounded-lg font-semibold shadow text-white">
                       Explore: {b.title}
                     </Link>
                   ))}
@@ -532,7 +532,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                       <p className="text-sm font-semibold text-slate-900 dark:text-white mb-3">£{book.price.toFixed(2)}</p>
                     )}
                     <div className="flex items-center gap-3">
-                      <span className="btn-books text-sm px-4 py-2">View & Buy</span>
+                      <span className="btn-books text-sm px-4 py-2 text-white">View & Buy</span>
                     </div>
                   </Link>
                 </article>

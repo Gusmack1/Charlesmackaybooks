@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'hms-argus-first-aircraft-carrier-operations',
   title: `HMS Argus Operations: Pioneering Carrier Aviation Techniques`,
@@ -146,6 +147,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/hms-argus-first-aircraft-carrier-operations"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'aircraft-carrier-argus', title: '', isbn: '', price: 0 }, { id: 'naval-aviation-history', title: '', isbn: '', price: 0 }, { id: 'beardmore-aviation', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

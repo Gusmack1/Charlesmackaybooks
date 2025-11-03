@@ -4,6 +4,7 @@ import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'avro-vulcan-bomber',
   title: 'Avro Vulcan: Aerodynamics, Systems, and Britain’s Cold War Deterrent',
@@ -126,6 +127,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/avro-vulcan-bomber"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

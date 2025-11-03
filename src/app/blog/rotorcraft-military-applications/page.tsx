@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'rotorcraft-military-applications',
   title: `Rotorcraft Military Applications: From Korea to Modern Warfare`,
@@ -146,6 +147,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/rotorcraft-military-applications"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'sycamore-seeds', title: '', isbn: '', price: 0 }, { id: 'sikorsky-vs300', title: '', isbn: '', price: 0 }, { id: 'helicopter-development-pioneers', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

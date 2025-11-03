@@ -4,6 +4,7 @@ import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'dieter-dengler-skyraider-escape',
   title: 'Dieter Dengler: A Complete Biography — Pilot, POW, Escape, Legacy',
@@ -218,6 +219,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/dieter-dengler-skyraider-escape"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'dieter-dengler', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

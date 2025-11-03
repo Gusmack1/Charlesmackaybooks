@@ -3,6 +3,7 @@ import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
+import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'sopwith-camel-wwi-fighter',
   title: 'Sopwith Camel: The Most Deadly Fighter of World War I',
@@ -133,6 +134,18 @@ export default function BlogPost() {
         pageDescription={post.excerpt}
         pageUrl="/blog/sopwith-camel-wwi-fighter"
       />
+      <EnhancedBlogSEO 
+
+        post={post}
+
+        relatedBooks={[{ id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol1', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'aircraft-carrier-argus', title: '', isbn: '', price: 0 }]}
+
+        relatedPosts={[{ id: 'british-aircraft-great-war-rfc-rnas', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'aviation-manufacturing-wartime-production', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'german-aircraft-great-war-development', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'bristol-fighter-f2b-brisfit', title: '', excerpt: '', image: '', readingTime: 0 }]}
+
+      />
+
+      
+
       <ComprehensiveBlogTemplate post={post} />
         
     </>

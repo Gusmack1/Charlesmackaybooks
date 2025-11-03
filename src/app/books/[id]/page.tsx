@@ -9,6 +9,7 @@ import { Book } from '@/types/book';
 import BookDetailClient from '@/components/BookDetailClient';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookAnalytics from '@/components/BookAnalytics';
+import EnhancedBookSEO from '@/components/EnhancedBookSEO';
 
 
 // Simplified category gradient function - only used for hero backgrounds
@@ -497,6 +498,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     return categoryToSlug[b.category];
   };
 
+  // Get related blog posts for enhanced SEO
+  const relatedBlogPosts = (book as any).relatedBlogPosts || [];
+  
   return (
     <>
         <UnifiedSchema
@@ -505,6 +509,12 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           pageDescription={metaDescriptionForSchema}
         pageUrl={`/books/${book.id}/`}
         bookData={book}
+      />
+
+      {/* Enhanced SEO with FAQ, Reviews, and AI optimization */}
+      <EnhancedBookSEO 
+        book={book} 
+        relatedBlogPosts={relatedBlogPosts}
       />
 
       <BookAnalytics book={book} />
