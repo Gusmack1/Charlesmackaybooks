@@ -286,10 +286,10 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-blue-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Your basket is empty</h1>
-          <p className="text-secondary mb-6">Add some books to your basket to proceed with checkout.</p>
+          <h1 className="text-2xl font-bold mb-4 text-white">Your basket is empty</h1>
+          <p className="text-white/90 mb-6">Add some books to your basket to proceed with checkout.</p>
           <Link href="/books" className="btn-books">
             Browse Books
           </Link>
@@ -299,33 +299,33 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-blue-900">
       <div className="max-w-6xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
         {/* Header */}
         <div className="mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Secure Checkout</h1>
-          <p className="text-slate-600 text-sm sm:text-base">Complete your order for Charles E. MacKay's aviation history books</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Secure Checkout</h1>
+          <p className="text-white/90 text-sm sm:text-base">Complete your order for Charles E. MacKay's aviation history books</p>
         </div>
 
         {/* Progress Steps - Mobile Friendly */}
         <div className="flex items-center justify-center mb-6 sm:mb-8 overflow-x-auto">
           <div className="flex items-center space-x-2 sm:space-x-4 min-w-max px-2">
-            <div className={`flex items-center ${step === 'basket' ? 'text-slate-900' : 'text-slate-500'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'basket' ? 'bg-slate-900 text-white' : 'bg-slate-300 text-slate-600'}`}>
+            <div className={`flex items-center ${step === 'basket' ? 'text-white' : 'text-white/60'}`}>
+              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'basket' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
                 1
               </div>
               <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Basket</span>
             </div>
-            <div className="w-4 sm:w-8 h-0.5 sm:h-1 bg-slate-300"></div>
-            <div className={`flex items-center ${step === 'address' || step === 'payment' || step === 'review' ? 'text-slate-900' : 'text-slate-500'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'address' || step === 'payment' || step === 'review' ? 'bg-slate-900 text-white' : 'bg-slate-300 text-slate-600'}`}>
+            <div className="w-4 sm:w-8 h-0.5 sm:h-1 bg-blue-800/50"></div>
+            <div className={`flex items-center ${step === 'address' || step === 'payment' || step === 'review' ? 'text-white' : 'text-white/60'}`}>
+              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'address' || step === 'payment' || step === 'review' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
                 2
               </div>
               <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Address</span>
             </div>
-            <div className="w-4 sm:w-8 h-0.5 sm:h-1 bg-slate-300"></div>
-            <div className={`flex items-center ${step === 'payment' || step === 'review' ? 'text-slate-900' : 'text-slate-500'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'payment' || step === 'review' ? 'bg-slate-900 text-white' : 'bg-slate-300 text-slate-600'}`}>
+            <div className="w-4 sm:w-8 h-0.5 sm:h-1 bg-blue-800/50"></div>
+            <div className={`flex items-center ${step === 'payment' || step === 'review' ? 'text-white' : 'text-white/60'}`}>
+              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'payment' || step === 'review' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
                 3
               </div>
               <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Payment</span>
@@ -337,11 +337,11 @@ export default function CheckoutPage() {
           {/* Left Column - Form */}
           <div>
             {step === 'basket' && (
-              <div className="bg-white border border-slate-200 rounded-lg p-4 sm:p-6">
-                <h2 className="text-lg sm:text-xl font-bold mb-4 text-slate-900">Your Basket</h2>
+              <div className="bg-blue-800/90 border border-blue-700/50 rounded-lg p-4 sm:p-6">
+                <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Your Basket</h2>
                 <div className="space-y-3 sm:space-y-4">
                   {items.map((item, index) => (
-                    <div key={index} className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 border border-slate-200 rounded-lg bg-slate-50">
+                    <div key={index} className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 border border-blue-700/50 rounded-lg bg-blue-800/60">
                       <Link href={`/books/${item.book.id}`} className="hover:opacity-80 transition-opacity flex-shrink-0">
                         <Image
                           src={item.book.imageUrl || `/book-covers/${item.book.id}.jpg`}
@@ -352,30 +352,30 @@ export default function CheckoutPage() {
                         />
                       </Link>
                       <div className="flex-1 min-w-0">
-                        <Link href={`/books/${item.book.id}`} className="hover:text-blue-600 transition-colors">
-                          <h3 className="font-semibold cursor-pointer text-slate-900 text-sm sm:text-base line-clamp-2">{item.book.title}</h3>
+                        <Link href={`/books/${item.book.id}`} className="hover:text-blue-300 transition-colors">
+                          <h3 className="font-semibold cursor-pointer text-white text-sm sm:text-base line-clamp-2">{item.book.title}</h3>
                         </Link>
-                        <p className="text-xs sm:text-sm text-slate-600">£{item.book.price}</p>
+                        <p className="text-xs sm:text-sm text-white/90">£{item.book.price}</p>
                       </div>
                       <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 flex-shrink-0">
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => updateQuantity(item.book.id, Math.max(0, item.quantity - 1))}
-                            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-600 text-white flex items-center justify-center text-sm font-bold hover:bg-slate-700"
+                            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold hover:bg-blue-700"
                           >
                             -
                           </button>
-                          <span className="w-6 sm:w-8 text-center text-slate-900 text-sm font-medium">{item.quantity}</span>
+                          <span className="w-6 sm:w-8 text-center text-white text-sm font-medium">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
-                            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-600 text-white flex items-center justify-center text-sm font-bold hover:bg-slate-700"
+                            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold hover:bg-blue-700"
                           >
                             +
                           </button>
                         </div>
                         <button
                           onClick={() => removeFromCart(item.book.id)}
-                          className="text-red-600 hover:text-red-700 text-xs sm:text-sm font-medium"
+                          className="text-red-400 hover:text-red-300 text-xs sm:text-sm font-medium"
                         >
                           Remove
                         </button>
@@ -383,33 +383,33 @@ export default function CheckoutPage() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 sm:mt-6 pt-4 border-t border-slate-200">
+                <div className="mt-4 sm:mt-6 pt-4 border-t border-blue-700/50">
                   <div className="space-y-2">
-                    <div className="flex justify-between text-slate-900">
+                    <div className="flex justify-between text-white">
                       <span className="text-sm sm:text-base">Subtotal:</span>
                       <span className="text-sm sm:text-base font-medium">£{subtotal.toFixed(2)}</span>
                     </div>
                     {bulkDiscount > 0 && (
-                      <div className="flex justify-between text-green-600 font-semibold">
+                      <div className="flex justify-between text-green-400 font-semibold">
                         <span className="text-xs sm:text-sm">Bulk Discount ({getBulkDiscountPercentage()}% off {items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
                         <span className="text-xs sm:text-sm">-£{bulkDiscount.toFixed(2)}</span>
                       </div>
                     )}
-                    <div className="flex justify-between text-green-600">
+                    <div className="flex justify-between text-green-400">
                       <span className="text-sm sm:text-base">Shipping:</span>
                       <span className="text-sm sm:text-base font-medium">FREE</span>
                     </div>
-                    <div className="flex justify-between text-base sm:text-lg font-semibold border-t border-slate-200 pt-2 text-slate-900">
+                    <div className="flex justify-between text-base sm:text-lg font-semibold border-t border-blue-700/50 pt-2 text-white">
                       <span>Total:</span>
                       <span>£{total.toFixed(2)}</span>
                     </div>
                   </div>
                   {bulkDiscount > 0 && (
-                    <p className="text-xs sm:text-sm text-green-600 mt-2">
+                    <p className="text-xs sm:text-sm text-green-400 mt-2">
                       🎉 You've saved £{bulkDiscount.toFixed(2)} with {getBulkDiscountPercentage()}% bulk discount!
                     </p>
                   )}
-                  <p className="text-xs sm:text-sm text-slate-600 mt-2">Free worldwide shipping included</p>
+                  <p className="text-xs sm:text-sm text-white/80 mt-2">Free worldwide shipping included</p>
                 </div>
                 <button
                   onClick={() => setStep('address')}
@@ -421,11 +421,11 @@ export default function CheckoutPage() {
             )}
 
             {step === 'address' && (
-              <div className="bg-white border border-slate-200 rounded-lg p-4 sm:p-6">
-                <h2 className="text-lg sm:text-xl font-bold mb-4 text-slate-900">Shipping Address</h2>
+              <div className="bg-blue-800/90 border border-blue-700/50 rounded-lg p-4 sm:p-6">
+                <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Shipping Address</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium mb-1 text-slate-900">First Name *</label>
+                    <label htmlFor="firstName" className="block text-sm font-medium mb-1 text-white">First Name *</label>
                     <input
                       id="firstName"
                       name="firstName"
@@ -434,12 +434,12 @@ export default function CheckoutPage() {
                       placeholder="First name"
                       value={customerDetails.firstName}
                       onChange={(e) => handleInputChange('firstName', e.target.value)}
-                      className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium mb-1 text-slate-900">Last Name *</label>
+                    <label htmlFor="lastName" className="block text-sm font-medium mb-1 text-white">Last Name *</label>
                     <input
                       id="lastName"
                       name="lastName"
@@ -448,13 +448,13 @@ export default function CheckoutPage() {
                       placeholder="Last name"
                       value={customerDetails.lastName}
                       onChange={(e) => handleInputChange('lastName', e.target.value)}
-                      className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
                       required
                     />
                   </div>
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-slate-900">Email *</label>
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-white">Email *</label>
                   <input
                     id="email"
                     name="email"
@@ -463,12 +463,12 @@ export default function CheckoutPage() {
                     placeholder="you@example.com"
                     value={customerDetails.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
                     required
                   />
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label htmlFor="phone" className="block text-sm font-medium mb-1 text-slate-900">Phone</label>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-1 text-white">Phone</label>
                   <input
                     id="phone"
                     name="phone"
@@ -477,11 +477,11 @@ export default function CheckoutPage() {
                     placeholder="Optional phone number"
                     value={customerDetails.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
                   />
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label htmlFor="address1" className="block text-sm font-medium mb-1 text-slate-900">Address Line 1 *</label>
+                  <label htmlFor="address1" className="block text-sm font-medium mb-1 text-white">Address Line 1 *</label>
                   <input
                     id="address1"
                     name="address1"
@@ -490,12 +490,12 @@ export default function CheckoutPage() {
                     placeholder="Street address"
                     value={customerDetails.address1}
                     onChange={(e) => handleInputChange('address1', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
                     required
                   />
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label htmlFor="address2" className="block text-sm font-medium mb-1 text-slate-900">Address Line 2</label>
+                  <label htmlFor="address2" className="block text-sm font-medium mb-1 text-white">Address Line 2</label>
                   <input
                     id="address2"
                     name="address2"
@@ -504,12 +504,12 @@ export default function CheckoutPage() {
                     placeholder="Apartment, suite, etc. (optional)"
                     value={customerDetails.address2}
                     onChange={(e) => handleInputChange('address2', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
                   />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-3 sm:mt-4">
                   <div>
-                    <label htmlFor="city" className="block text-sm font-medium mb-1 text-slate-900">City *</label>
+                    <label htmlFor="city" className="block text-sm font-medium mb-1 text-white">City *</label>
                     <input
                       id="city"
                       name="city"
@@ -518,12 +518,12 @@ export default function CheckoutPage() {
                       placeholder="City"
                       value={customerDetails.city}
                       onChange={(e) => handleInputChange('city', e.target.value)}
-                      className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="postcode" className="block text-sm font-medium mb-1 text-slate-900">Postcode *</label>
+                    <label htmlFor="postcode" className="block text-sm font-medium mb-1 text-white">Postcode *</label>
                     <input
                       id="postcode"
                       name="postcode"
@@ -532,13 +532,13 @@ export default function CheckoutPage() {
                       placeholder="Postcode"
                       value={customerDetails.postcode}
                       onChange={(e) => handleInputChange('postcode', e.target.value)}
-                      className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
                       required
                     />
                   </div>
                 </div>
                 <div className="mt-3 sm:mt-4">
-                  <label htmlFor="country" className="block text-sm font-medium mb-1 text-slate-900">Country *</label>
+                  <label htmlFor="country" className="block text-sm font-medium mb-1 text-white">Country *</label>
                   <select
                     id="country"
                     name="country"
@@ -546,7 +546,7 @@ export default function CheckoutPage() {
                     aria-label="Country"
                     value={customerDetails.country}
                     onChange={(e) => handleInputChange('country', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-slate-300 rounded-lg text-slate-900 bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400"
                     required
                   >
                     <option value="GB">United Kingdom</option>
@@ -562,8 +562,8 @@ export default function CheckoutPage() {
                   </select>
                 </div>
                 {errors.length > 0 && (
-                  <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <ul className="text-red-800 text-xs sm:text-sm">
+                  <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-red-900/50 border border-red-700 rounded-lg">
+                    <ul className="text-red-200 text-xs sm:text-sm">
                       {errors.map((error, index) => (
                         <li key={index}>• {error}</li>
                       ))}
@@ -580,8 +580,8 @@ export default function CheckoutPage() {
             )}
 
             {step === 'payment' && (
-              <div className="bg-white border border-slate-200 rounded-lg p-4 sm:p-6">
-                <h2 className="text-lg sm:text-xl font-bold mb-4 text-slate-900">Payment Method</h2>
+              <div className="bg-blue-800/90 border border-blue-700/50 rounded-lg p-4 sm:p-6">
+                <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Payment Method</h2>
                 
                 {/* Payment Method Selection */}
                 <div className="mb-4 sm:mb-6">
@@ -591,15 +591,15 @@ export default function CheckoutPage() {
                       onClick={() => handlePaymentMethodSelect('stripe')}
                       className={`w-full p-3 sm:p-4 border rounded-lg text-left transition-colors ${
                         paymentMethod === 'stripe'
-                          ? 'border-blue-500 bg-blue-50'
-                          : 'border-slate-300 hover:border-slate-400'
+                          ? 'border-blue-500 bg-blue-800/80'
+                          : 'border-blue-700/50 hover:border-blue-600 bg-blue-800/60'
                       }`}
                     >
                       <div className="flex items-center">
                         <span className="text-xl sm:text-2xl mr-2 sm:mr-3">💳</span>
                         <div>
-                          <div className="font-medium text-slate-900 text-sm sm:text-base">Credit or Debit Card</div>
-                          <div className="text-xs sm:text-sm text-slate-600">Visa, Mastercard, American Express, Apple Pay, Google Pay</div>
+                          <div className="font-medium text-white text-sm sm:text-base">Credit or Debit Card</div>
+                          <div className="text-xs sm:text-sm text-white/80">Visa, Mastercard, American Express, Apple Pay, Google Pay</div>
                         </div>
                       </div>
                     </button>
@@ -609,15 +609,15 @@ export default function CheckoutPage() {
                       onClick={() => handlePaymentMethodSelect('paypal')}
                       className={`w-full p-3 sm:p-4 border rounded-lg text-left transition-colors ${
                         paymentMethod === 'paypal'
-                          ? 'border-blue-500 bg-blue-50'
-                          : 'border-slate-300 hover:border-slate-400'
+                          ? 'border-blue-500 bg-blue-800/80'
+                          : 'border-blue-700/50 hover:border-blue-600 bg-blue-800/60'
                       }`}
                     >
                       <div className="flex items-center">
                         <span className="text-xl sm:text-2xl mr-2 sm:mr-3">🔵</span>
                         <div>
-                          <div className="font-medium text-slate-900 text-sm sm:text-base">PayPal</div>
-                          <div className="text-xs sm:text-sm text-slate-600">Pay with your PayPal account</div>
+                          <div className="font-medium text-white text-sm sm:text-base">PayPal</div>
+                          <div className="text-xs sm:text-sm text-white/80">Pay with your PayPal account</div>
                         </div>
                       </div>
                     </button>
@@ -649,15 +649,15 @@ export default function CheckoutPage() {
                     >
                       {isLoading ? 'Processing...' : 'Pay with PayPal'}
                     </button>
-                    <p className="text-xs sm:text-sm text-slate-600 mt-2">
+                    <p className="text-xs sm:text-sm text-white/80 mt-2">
                       You'll be redirected to PayPal to complete your payment
                     </p>
                   </div>
                 )}
 
                 {errors.length > 0 && (
-                  <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <ul className="text-red-800 text-xs sm:text-sm">
+                  <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-red-900/50 border border-red-700 rounded-lg">
+                    <ul className="text-red-200 text-xs sm:text-sm">
                       {errors.map((error, index) => (
                         <li key={index}>• {error}</li>
                       ))}
@@ -670,59 +670,59 @@ export default function CheckoutPage() {
 
           {/* Right Column - Order Summary */}
           <div className="lg:sticky lg:top-8 space-y-4 sm:space-y-6">
-            <div className="bg-white border border-slate-200 rounded-lg p-4 sm:p-6">
-              <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-slate-900">Order Summary</h3>
+            <div className="bg-blue-800/90 border border-blue-700/50 rounded-lg p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-white">Order Summary</h3>
               <div className="space-y-2 sm:space-y-3">
                 {items.map((item, index) => (
                   <div key={index} className="flex justify-between items-start">
-                    <Link href={`/books/${item.book.id}`} className="text-xs sm:text-sm hover:text-blue-600 transition-colors text-slate-900 flex-1 pr-2 line-clamp-2">
+                    <Link href={`/books/${item.book.id}`} className="text-xs sm:text-sm hover:text-blue-300 transition-colors text-white flex-1 pr-2 line-clamp-2">
                       {item.book.title} (x{item.quantity})
                     </Link>
-                    <span className="text-xs sm:text-sm font-medium text-slate-900 flex-shrink-0">£{(item.book.price * item.quantity).toFixed(2)}</span>
+                    <span className="text-xs sm:text-sm font-medium text-white flex-shrink-0">£{(item.book.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
               </div>
               {bulkDiscount > 0 && (
-                <div className="mt-3 sm:mt-4 p-2 sm:p-3 bg-green-50 border border-green-200 rounded-lg">
+                <div className="mt-3 sm:mt-4 p-2 sm:p-3 bg-green-900/30 border border-green-700/50 rounded-lg">
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2 text-sm">🎉</span>
+                    <span className="text-green-400 mr-2 text-sm">🎉</span>
                     <div className="text-xs sm:text-sm">
-                      <p className="font-semibold text-green-800">Bulk Discount Applied!</p>
-                      <p className="text-green-700">You've saved £{bulkDiscount.toFixed(2)} with {getBulkDiscountPercentage()}% discount</p>
+                      <p className="font-semibold text-green-400">Bulk Discount Applied!</p>
+                      <p className="text-green-300">You've saved £{bulkDiscount.toFixed(2)} with {getBulkDiscountPercentage()}% discount</p>
                     </div>
                   </div>
                 </div>
               )}
-              <div className="border-t border-slate-200 mt-3 sm:mt-4 pt-3 sm:pt-4 space-y-2">
-                <div className="flex justify-between text-slate-900">
+              <div className="border-t border-blue-700/50 mt-3 sm:mt-4 pt-3 sm:pt-4 space-y-2">
+                <div className="flex justify-between text-white">
                   <span className="text-xs sm:text-sm">Subtotal:</span>
                   <span className="text-xs sm:text-sm font-medium">£{subtotal.toFixed(2)}</span>
                 </div>
                 {bulkDiscount > 0 && (
-                  <div className="flex justify-between text-green-600 font-semibold">
+                  <div className="flex justify-between text-green-400 font-semibold">
                     <span className="text-xs">Bulk Discount ({getBulkDiscountPercentage()}% off {items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
                     <span className="text-xs">-£{bulkDiscount.toFixed(2)}</span>
                   </div>
                 )}
-                <div className="flex justify-between text-slate-900">
+                <div className="flex justify-between text-white">
                   <span className="text-xs sm:text-sm">Shipping:</span>
-                  <span className="text-xs sm:text-sm font-medium text-green-600">FREE</span>
+                  <span className="text-xs sm:text-sm font-medium text-green-400">FREE</span>
                 </div>
-                <div className="flex justify-between font-bold text-sm sm:text-lg text-slate-900 border-t border-slate-200 pt-2">
+                <div className="flex justify-between font-bold text-sm sm:text-lg text-white border-t border-blue-700/50 pt-2">
                   <span>Total:</span>
                   <span>£{total.toFixed(2)}</span>
                 </div>
               </div>
               
               {/* Security Notice */}
-              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-900/50 border border-blue-700/50 rounded-lg">
                 <div className="flex items-start">
-                  <svg className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 mt-0.5 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 text-blue-300 mt-0.5 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <p className="text-xs sm:text-sm text-blue-800 font-medium">Secure Payment</p>
-                    <p className="text-xs text-blue-700 mt-1">
+                    <p className="text-xs sm:text-sm text-white font-medium">Secure Payment</p>
+                    <p className="text-xs text-white/80 mt-1">
                       Your payment is protected by SSL encryption and processed securely by Stripe/PayPal.
                     </p>
                   </div>

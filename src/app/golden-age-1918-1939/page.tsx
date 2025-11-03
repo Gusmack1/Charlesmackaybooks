@@ -114,7 +114,7 @@ export default function GoldenAgePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-blue-900">
 
       <UnifiedSchema
         pageType="page"
@@ -124,13 +124,13 @@ export default function GoldenAgePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-800 text-white">
-        <div className="absolute inset-0 bg-black/30"></div>
+      <section className="relative bg-blue-900 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-6 py-32">
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
               Golden Age Aviation
-              <span className="block text-3xl md:text-5xl text-cyan-300 font-normal mt-4">
+              <span className="block text-3xl md:text-5xl text-blue-300 font-normal mt-4">
                 1918-1939: Between the Wars
               </span>
             </h1>

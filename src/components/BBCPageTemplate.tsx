@@ -18,9 +18,9 @@ interface BBCPageTemplateProps {
 
 export default function BBCPageTemplate({ title, subtitle, breadcrumbs = [], centerHero = false, children }: BBCPageTemplateProps) {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-blue-900">
       {/* Hero Section */}
-      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+      <div className="hero-section bg-blue-900">
         <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
           {breadcrumbs.length > 0 && !centerHero && (
             <nav aria-label="Breadcrumb" className="mb-4 text-sm text-white/80">

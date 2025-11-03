@@ -434,24 +434,49 @@ textarea:focus {
   background-color: rgba(30, 64, 175, 1) !important;
 }
 
-label {
-  color: #ffffff !important;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  display: block;
-}
+  /* Select dropdown options should have dark background */
+  select option {
+    background-color: #1e3a8a !important;
+    color: #ffffff !important;
+  }
 
-/* STANDARD CONTENT AREAS - Dark theme override */
-.bg-white,
-.bg-gray-50 {
-  background-color: #1e3a8a !important; /* Dark blue */
-  color: #ffffff !important;
-}
+  label {
+    color: #ffffff !important; /* White label text */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  /* Override any remaining light backgrounds site-wide */
+  [class*="bg-slate-50"],
+  [class*="bg-slate-100"],
+  [class*="bg-gray-50"],
+  [class*="bg-gray-100"] {
+    background-color: #1e3a8a !important;
+  }
+  
+  [class*="bg-slate-50"] *,
+  [class*="bg-slate-100"] *,
+  [class*="bg-gray-50"] *,
+  [class*="bg-gray-100"] * {
+    color: #ffffff !important;
+  }
 
-.bg-white *:not(.hero-section *),
-.bg-gray-50 *:not(.hero-section *) {
-  color: #ffffff !important; /* White text */
-}
+  /* STANDARD CONTENT AREAS - Dark theme override */
+  .bg-white,
+  .bg-gray-50,
+  .bg-slate-50,
+  .bg-slate-100 {
+    background-color: #1e3a8a !important; /* Dark blue */
+    color: #ffffff !important;
+  }
+
+  .bg-white *:not(.hero-section *):not(input):not(select):not(textarea),
+  .bg-gray-50 *:not(.hero-section *):not(input):not(select):not(textarea),
+  .bg-slate-50 *:not(.hero-section *):not(input):not(select):not(textarea),
+  .bg-slate-100 *:not(.hero-section *):not(input):not(select):not(textarea) {
+    color: #ffffff !important; /* White text */
+  }
 
 /* GRADIENT BACKGROUNDS - Only for hero sections */
 [class*="bg-gradient-to"] {
