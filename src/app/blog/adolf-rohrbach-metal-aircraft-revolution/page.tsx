@@ -425,7 +425,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 30,
   featuredImage: {
-    url: '/blog-images/adolf-rohrbach-metal-aircraft-revolution-featured.jpg',
+    url: '/blog-images/metal-aircraft-construction.jpg',
     alt: 'Adolf Rohrbach: The Metal Aircraft Revolution',
     caption: 'Adolf Rohrbach: The Metal Aircraft Revolution - Expert analysis by Charles E. MacKay'
   },
@@ -446,7 +446,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Adolf Rohrbach: The Metal Aircraft Revolution That Changed Aviation - Enhanced Edition`,
     description: `How German engineer Adolf Rohrbach's revolutionary metal aircraft construction techniques transformed aviation design and established manufacturing principles still used today.`,
-    images: ['/blog-images/adolf-rohrbach-metal-aircraft-revolution-featured.jpg'],
+    images: ['/blog-images/metal-aircraft-construction.jpg'],
     type: 'article'
   }
 }

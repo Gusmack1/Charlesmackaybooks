@@ -296,7 +296,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 25,
   featuredImage: {
-    url: '/blog-images/hms-argus-first-aircraft-carrier-operations-featured.jpg',
+    url: '/blog-images/hms-argus-aircraft-carrier.jpg',
     alt: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques - Enhanced Edition',
     caption: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques - Expert analysis by Charles E. MacKay'
   },
@@ -315,7 +315,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `HMS Argus Operations: Pioneering Carrier Aviation Techniques - Enhanced Edition`,
     description: `A comprehensive, research-backed account of HMS Argus's operational history: from first carrier landings in 1918 through deck landing training, Operation Torch, Club Runs to Malta, and her role as a training vessel for Highball operations, examining the development of carrier aviation procedures that influenced naval warfare for decades.`,
-    images: ['/blog-images/hms-argus-first-aircraft-carrier-operations-featured.jpg'],
+    images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
     type: 'article'
   }
 }

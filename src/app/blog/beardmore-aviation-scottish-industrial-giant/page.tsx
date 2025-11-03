@@ -92,7 +92,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/beardmore-camel-production.jpg" alt="Beardmore-built Sopwith Camel production line" class="w-full h-auto rounded-lg shadow-lg"/>
+      <!-- Broken image removed: /blog-images/beardmore-camel-production.jpg -->
       <p class="text-sm mt-2 text-center italic">Beardmore production: The Sopwith Camel N6812, preserved in the Imperial War Museum, was manufactured at Dalmuir.</p>
     </div>
 
@@ -157,7 +157,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/beardmore-airship-r34.jpg" alt="R34 airship built at Beardmore's Inchinnan works" class="w-full h-auto rounded-lg shadow-lg"/>
+      <!-- Broken image removed: /blog-images/beardmore-airship-r34.jpg -->
       <p class="text-sm mt-2 text-center italic">R34 at Inchinnan: One of four airships built at Beardmore's facilities, demonstrating the company's expertise in large-scale aviation projects.</p>
     </div>
 
@@ -232,7 +232,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/beardmore-inflexible.jpg" alt="Beardmore Inflexible all-metal aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
+      <!-- Broken image removed: /blog-images/beardmore-inflexible.jpg -->
       <p class="text-sm mt-2 text-center italic">Beardmore Inflexible: The culmination of Beardmore's aviation achievements, representing cutting-edge all-metal aircraft technology.</p>
     </div>
 

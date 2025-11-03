@@ -307,7 +307,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/hms-argus-first-aircraft-carrier.jpg',
+    url: '/blog-images/hms-argus-aircraft-carrier.jpg',
     alt: 'Naval Aviation History: From Seaplanes to Supercarriers - Enhanced Edition',
     caption: 'The evolution of naval aviation: from experimental seaplanes to modern supercarriers.'
   },
@@ -319,21 +319,21 @@ const post = {
       id: 'hms-argus-first-aircraft-carrier', 
       title: 'HMS Argus: The World\'s First True Aircraft Carrier',
       excerpt: 'Detailed examination of the breakthrough carrier design that established the template for all future aircraft carriers.',
-      image: '/blog-images/hms-argus-first-aircraft-carrier.jpg',
+      image: '/blog-images/hms-argus-aircraft-carrier.jpg',
       readingTime: 15
     },
     { 
       id: 'hms-argus-first-aircraft-carrier-operations', 
       title: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques',
       excerpt: 'Operational procedures and deck choreography development that established carrier aviation doctrine.',
-      image: '/blog-images/hms-argus-first-aircraft-carrier-operations.jpg',
+      image: '/blog-images/hms-argus-aircraft-carrier.jpg',
       readingTime: 12
     },
     { 
       id: 'jet-age-aviation-cold-war-development', 
       title: 'Jet Age Aviation: Cold War Development',
       excerpt: 'The transition to jet operations at sea and the evolution of naval aviation technology.',
-      image: '/blog-images/jet-age-aviation-cold-war-development.jpg',
+      image: '/blog-images/default-generic.svg',
       readingTime: 18
     }
   ]
@@ -346,7 +346,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Naval Aviation History: From Seaplanes to Supercarriers - Enhanced Edition",
     description: "A comprehensive, research-backed history of naval aviation from early seaplane experiments through the development of modern aircraft carriers.",
-    images: ['/blog-images/hms-argus-first-aircraft-carrier.jpg'],
+    images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
     type: 'article'
   }
 }

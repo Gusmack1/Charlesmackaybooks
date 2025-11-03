@@ -372,7 +372,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/sycamore-seeds-helicopter-evolution.jpg" alt="Insert image here: A detailed close-up photograph of sycamore seeds demonstrating autorotation principles, with seeds spinning as they fall through air, showing the aerodynamic principles that guided early rotor design and illustrating how nature inspired helicopter engineers to understand the fundamental physics of rotating flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <!-- Broken image removed: /blog-images/sycamore-seeds-helicopter-evolution.jpg -->
       <p class="text-sm mt-2 text-center italic">Nature's blueprint: sycamore seeds demonstrate autorotation principles that guided early rotor design.</p>
     </div>
 

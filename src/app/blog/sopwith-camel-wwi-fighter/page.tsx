@@ -93,7 +93,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 15,
   featuredImage: {
-    url: '/blog-images/sopwith-camel-wwi-fighter.jpg',
+    url: '/blog-images/sopwith-camel-historical-1918.jpg',
     alt: 'Sopwith Camel – Enhanced Edition',
     caption: 'Concentrated mass, twin Vickers, disciplined tactics — the British answer to 1917 air combat.'
   },

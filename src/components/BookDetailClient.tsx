@@ -57,6 +57,8 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
     return `${baseUrl}?${params.toString()}`;
   };
 
+  const isPreOrder = book.authorInsights?.toLowerCase().includes('pre-order') || book.authorInsights?.toLowerCase().includes('release date');
+
   return (
     <div className="space-y-4">
       {/* Price Display */}
@@ -64,24 +66,31 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         <div className="text-3xl font-bold text-accent-green mb-2">£{book.price}</div>
         <div className="text-sm text-secondary">{book.condition} condition</div>
         <div className="text-sm text-secondary">
-          {book.inStock ? (
+          {isPreOrder ? (
+            <span className="text-accent-blue font-semibold">📅 Available for Pre-Order</span>
+          ) : book.inStock ? (
             <span className="text-accent-green font-semibold">✓ In Stock</span>
           ) : (
-                          <span className="text-accent-red font-semibold">✗ Out of Stock</span>
+            <span className="text-accent-red font-semibold">✗ Out of Stock</span>
           )}
         </div>
+        {isPreOrder && book.authorInsights && (
+          <div className="text-sm text-secondary mt-2">
+            {book.authorInsights.match(/Release date:?\s*([^\.]+)/i)?.[1] || 'Pre-order available'}
+          </div>
+        )}
       </div>
 
       {/* Action Buttons - Match homepage styling */}
       <div className="space-y-3">
-        {book.inStock && (
+        {(book.inStock || isPreOrder) && (
           <div className="grid grid-cols-2 gap-3">
             <button
               onClick={handleAddToCart}
               disabled={isAddingToCart}
               className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 px-4 disabled:opacity-50 text-sm font-semibold rounded-lg min-h-[44px] hover:from-blue-700 hover:to-blue-900 transition-all duration-200 flex items-center justify-center"
             >
-              {isAddingToCart ? '🔄 Adding...' : '🛒 Add to Basket'}
+              {isAddingToCart ? '🔄 Adding...' : isPreOrder ? '📅 Pre-Order Now' : '🛒 Add to Basket'}
             </button>
 
             <a
@@ -99,7 +108,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
           </div>
         )}
 
-        {!book.inStock && (
+        {!book.inStock && !isPreOrder && (
           <button
             disabled
             className="w-full bg-gray-400 text-white py-3 px-4 cursor-not-allowed text-sm font-semibold rounded-lg min-h-[44px]"

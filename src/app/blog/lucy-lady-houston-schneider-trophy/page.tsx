@@ -333,7 +333,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/lucy-lady-houston-schneider-trophy-featured.jpg',
+    url: '/blog-images/lucy-lady-houston.jpg',
     alt: 'Lucy Lady Houston: The Woman Who Saved the Schneider Trophy',
     caption: 'Lucy Lady Houston: The Woman Who Saved the Schneider Trophy - Expert analysis by Charles E. MacKay'
   },

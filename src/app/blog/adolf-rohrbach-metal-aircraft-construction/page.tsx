@@ -111,7 +111,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/adolf-rohrbach-metal-aircraft-construction-featured.jpg',
+    url: '/blog-images/metal-aircraft-construction.jpg',
     alt: 'Adolf Rohrbach: Revolutionary Metal Aircraft Designer',
     caption: 'Adolf Rohrbach: Revolutionary Metal Aircraft Designer - Expert analysis by Charles E. MacKay'
   },
@@ -132,7 +132,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Adolf Rohrbach: Revolutionary Metal Aircraft Designer`,
     description: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
-    images: ['/blog-images/adolf-rohrbach-metal-aircraft-construction-featured.jpg'],
+    images: ['/blog-images/metal-aircraft-construction.jpg'],
     type: 'article'
   }
 }
