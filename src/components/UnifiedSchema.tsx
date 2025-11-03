@@ -423,6 +423,8 @@ export default function UnifiedSchema({
   }
 
   // Add blog post structured data with reviews
+  // IMPORTANT: Blog posts are informational content (Article), NOT products
+  // They must NEVER be included in Product schema or Google Merchant feeds
   if (pageType === 'blog-post') {
     // Blog post as WebPage (informational content, NOT a product)
     (unifiedSchema["@graph"] as any[]).push({
@@ -440,10 +442,13 @@ export default function UnifiedSchema({
       "audience": {
         "@type": "Audience",
         "audienceType": "Aviation Historians and Researchers"
-      }
+      },
+      // Explicitly mark as non-product content
+      "additionalType": "https://schema.org/Article",
+      "category": "Blog Post"
     });
 
-    // Blog post as Article with reviews
+    // Blog post as Article (NOT Product) - explicitly excludes product schema
     (unifiedSchema["@graph"] as any[]).push({
       "@type": "Article",
       "@id": `${fullUrl}#article`,
@@ -463,7 +468,10 @@ export default function UnifiedSchema({
       },
       "articleSection": "Aviation History",
       "inLanguage": "en-GB",
-      "wordCount": 2500
+      "wordCount": 2500,
+      // Explicitly mark as informational content, NOT a product
+      "additionalType": "https://schema.org/BlogPosting",
+      "category": "Informational Content"
     });
 
 
@@ -493,14 +501,23 @@ export default function UnifiedSchema({
   }
 
   // Add ItemList for books collection pages
+  // IMPORTANT: This page ONLY contains products (books) for sale
+  // Blog posts are completely separate and must NEVER appear here
   if (pageType === 'books' && books.length > 0) {
+    // Filter to ensure only actual books (products) are included, not blog posts
+    const productBooks = books.filter((book: any) => {
+      // Ensure book has required product fields and is not a blog post
+      return book && book.id && book.title && !book.id.startsWith('blog-') && 
+             book.price !== undefined && book.price !== null;
+    });
+    
     (unifiedSchema["@graph"] as any[]).push({
       "@type": "ItemList",
       "@id": `${baseUrl}/books#itemlist`,
       "name": "Aviation History Books",
       "description": "Complete collection of aviation history books by Charles E. MacKay",
-      "numberOfItems": books.length,
-      "itemListElement": books.slice(0, 10).map((book, index) => {
+      "numberOfItems": productBooks.length,
+      "itemListElement": productBooks.slice(0, 10).map((book, index) => {
         const validISBN = getValidISBN(book.isbn);
         const validGTIN13 = getValidGTIN13(book.isbn);
         const validSKU = getValidSKU(book.isbn, book.id);

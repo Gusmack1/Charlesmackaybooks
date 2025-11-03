@@ -22,7 +22,15 @@ function buildProductsXml(): string {
   const domain = 'https://charlesmackaybooks.com'
   const now = new Date().toISOString()
 
-  const items = books
+  // IMPORTANT: Only include actual books (products) - NEVER include blog posts
+  // Filter to ensure only valid products with required fields
+  const productBooks = books.filter((book) => {
+    return book && book.id && book.title && !book.id.startsWith('blog-') &&
+           book.price !== undefined && book.price !== null &&
+           typeof book.price === 'number' && book.price > 0;
+  });
+
+  const items = productBooks
     .map((book) => {
       // Get validated ISBN, GTIN, and SKU values
       const validGTIN13 = getValidGTIN13(book.isbn);

@@ -10,6 +10,14 @@ function tsvEscape(value: string): string {
 export async function GET() {
   const domain = 'https://charlesmackaybooks.com'
 
+  // IMPORTANT: Only include actual books (products) - NEVER include blog posts
+  // Filter to ensure only valid products with required fields
+  const productBooks = books.filter((b) => {
+    return b && b.id && b.title && !b.id.startsWith('blog-') &&
+           b.price !== undefined && b.price !== null &&
+           typeof b.price === 'number' && b.price > 0;
+  });
+
   const header = [
     'id',
     'title',
@@ -30,7 +38,7 @@ export async function GET() {
     'author',
   ].join('\t')
 
-  const rows = books.map((b) => {
+  const rows = productBooks.map((b) => {
     // Get validated ISBN, GTIN, and SKU values
     const validGTIN13 = getValidGTIN13(b.isbn);
     const validSKU = getValidSKU(b.isbn, b.id);
