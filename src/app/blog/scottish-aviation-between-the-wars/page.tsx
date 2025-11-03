@@ -12,16 +12,20 @@ const post = {
   content: `
     <h2 id="introduction">Introduction: The Inter-War Bridge</h2>
     <p>
-      Between 1918 and 1939, Scotland built a civilian air network from Renfrew outward, establishing the infrastructure, skills, and procedures that would prove essential when rearmament demanded rapid scale-up. Based on comprehensive research documented in Charles E. MacKay's authoritative works 
-      <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a> 
-      and <a href="/books/clydeside-aviation-vol1" class="underline font-medium">Clydeside Aviation, Vol. 1</a>, 
-      this analysis presents the complete story of how Scottish aviation maintained capabilities between the wars through civil routes, flying clubs, and retained industrial capacity.
+      Between 1918 and 1939, Scotland built a civilian air network from Renfrew outward, establishing the infrastructure, skills, and procedures that would prove essential when rearmament demanded rapid scale-up. From Spitfires to Airships, Kangaroos to Moths, Autogiros to Helicopters—this comprehensive analysis traces the complete transformation of Scottish aviation during the inter-war decades. Based on comprehensive research documented in Charles E. MacKay's authoritative works 
+      <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two: Between the Wars</a>, 
+      <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a>, 
+      and <a href="/books/clydeside-aviation-vol1" class="underline font-medium">Clydeside Aviation Volume One: The Great War</a>, 
+      this Enhanced Edition presents the complete story of how Scottish aviation maintained capabilities between the wars through civil routes, flying clubs, retained industrial capacity, and the establishment of the Auxiliary Air Force that would prove decisive in 1939.
     </p>
     <p>
-      The book <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation</a> covers the air school at Renfrew - the original Renfrew Airport - with a list of all aircraft deployed at the airfield, how the school was set up to its closure in 1928. Mentions how the Auxiliary Air Force was set up. There is a complete list of school aircraft including the Avro 504, Bristol Fighter, Bristol 89 and Bristol 89a. This included the Pollockshaws and Springburn Park air crashes. This comprehensive documentation ensures that Renfrew Airport's role in inter-war Scottish aviation is properly understood.
+      The book <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two: Between the Wars</a> provides comprehensive coverage of aviation events in the Clydeside district from 1919 to 1939. This definitive 344-page A5 work, supported by over 300 rare pictures and over 40,000 words, explains the aeronautical events at Beardmore and Weir, the economic situation and Red Clydeside. The book explores the regional airlines at Renfrew and the Scottish Flying Club with freshly researched material, documenting Scotland's transition from wartime production to civilian aviation and military preparation. This comprehensive documentation ensures that the complete story of inter-war Scottish aviation is properly preserved for future generations.
     </p>
     <p>
-      The inter-war period represented a crucial bridge between World War I aviation expansion and World War II rearmament. Scottish aviation maintained industrial capabilities, pilot training infrastructure, and operational procedures that would prove essential when military requirements accelerated. Understanding this inter-war period provides valuable insights into how Scotland's aviation ecosystem prepared for wartime demands.
+      The book <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation</a> covers the air school at Renfrew - the original Renfrew Airport - with a list of all aircraft deployed at the airfield, how the school was set up to its closure in 1928. The book mentions how the Auxiliary Air Force was set up, providing crucial context for understanding Scotland's military aviation preparation. There is a complete list of school aircraft including the Avro 504, Bristol Fighter, Bristol 89 and Bristol 89a. This included the Pollockshaws and Springburn Park air crashes, which are documented in detail. This comprehensive documentation ensures that Renfrew Airport's role in inter-war Scottish aviation is properly understood.
+    </p>
+    <p>
+      The inter-war period represented a crucial bridge between World War I aviation expansion and World War II rearmament. Scottish aviation maintained industrial capabilities, pilot training infrastructure, and operational procedures that would prove essential when military requirements accelerated. Understanding this inter-war period provides valuable insights into how Scotland's aviation ecosystem prepared for wartime demands. The transition from military to civilian aviation, the establishment of commercial routes, the development of flying clubs, and the retention of manufacturing capabilities created a unique Scottish aviation heritage that influenced Britain's wartime aviation capability.
     </p>
 
     <div class="my-8">
@@ -108,13 +112,19 @@ const post = {
 
     <h2 id="auxiliary-air-force">Auxiliary Air Force: 602 Squadron and Military Preparation</h2>
     <p>
-      By the mid‑1930s, Scottish units and firms reconnected civilian experience with defence imperatives. 602 (City of Glasgow) Squadron's evolution foreshadowed fighter modernisation, while civil infrastructure offered training airfields and logistics nodes. The book mentions how the Auxiliary Air Force was set up, providing comprehensive coverage of how Scotland's military aviation capabilities were maintained between the wars.
+      By the mid‑1930s, Scottish units and firms reconnected civilian experience with defence imperatives. 602 (City of Glasgow) Squadron's evolution foreshadowed fighter modernisation, while civil infrastructure offered training airfields and logistics nodes. The book <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a> provides comprehensive coverage of how Scotland's military aviation capabilities were maintained between the wars, documenting the complete evolution of 602 Squadron from its formation to 1939.
     </p>
     <p>
-      602 Squadron's evolution demonstrated how civilian aviation experience could be transitioned to military requirements. The comprehensive documentation of 602 Squadron's development ensures that the complete story of Scottish military aviation preparation is properly preserved. Understanding 602 Squadron's development provides valuable insights into how military aviation capabilities were maintained between the wars.
+      602 Squadron (City of Glasgow) Auxiliary Air Force is comprehensively documented in <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a>, which traces the squadron's evolution from its formation with the DH9a through to 1939 with the Hawker Hector, Gloster Gauntlet and Supermarine Spitfire. The squadron's aircraft progression demonstrates how Scotland's auxiliary units modernized throughout the inter-war period, transitioning from Great War designs to modern fighters capable of matching contemporary European aircraft. Squadron accidents are documented, including those at Bishopbriggs and over Renfrewshire, demonstrating the operational realities of inter-war military aviation training. The comprehensive documentation of these accidents ensures that the complete story of inter-war aviation safety is properly preserved.
     </p>
     <p>
-      The Auxiliary Air Force represented a crucial bridge between civilian and military aviation, maintaining military capabilities while drawing on civilian experience. The comprehensive documentation of the Auxiliary Air Force ensures that the complete story of Scottish military aviation preparation is properly preserved. Understanding the Auxiliary Air Force provides valuable insights into how military aviation capabilities were maintained between the wars.
+      The squadron's evolution demonstrated how civilian aviation experience could be transitioned to military requirements. Beginning with the DH9a, a Great War design that remained in service during the early inter-war years, 602 Squadron progressively modernized through aircraft including the Hawker Hector, Gloster Gauntlet, and ultimately the Supermarine Spitfire. This progression reflects the broader modernization of Britain's Auxiliary Air Force during the 1930s, as civilian pilots transitioned to increasingly sophisticated military aircraft. The comprehensive documentation of 602 Squadron's development ensures that the complete story of Scottish military aviation preparation is properly preserved.
+    </p>
+    <p>
+      The Auxiliary Air Force represented a crucial bridge between civilian and military aviation, maintaining military capabilities while drawing on civilian experience. The comprehensive documentation of the Auxiliary Air Force setup in <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation</a> ensures that the complete story of Scottish military aviation preparation is properly preserved. Understanding the Auxiliary Air Force provides valuable insights into how military aviation capabilities were maintained between the wars. The lists of Gauntlet and Spitfire airframes of 602 Squadron documented in Clydeside Aviation Volume Two provide detailed records of aircraft allocations and squadron strength, demonstrating how Scotland's auxiliary units prepared for wartime operations.
+    </p>
+    <p>
+      Squadron operations during the inter-war period maintained military readiness while drawing on civilian aviation expertise. Weekend training flights, summer camps, and proficiency exercises kept pilots current on modern aircraft while maintaining civilian careers. This dual role created a unique aviation culture that combined civilian flying experience with military discipline, producing pilots who would prove essential when war began. The comprehensive documentation of squadron operations ensures that the complete story of inter-war military aviation preparation is properly preserved.
     </p>
 
     <h2 id="aircraft-operations">Aircraft Operations: Avro 504, Bristol Fighter, and Training Aircraft</h2>
@@ -163,6 +173,121 @@ const post = {
       <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of Scottish aircraft in formation during the inter-war period, showing Avro 504s or Bristol Fighters, demonstrating the training capabilities maintained between the wars" class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Inter-war training: maintaining pilot pipelines and operational capabilities for future demands.</p>
     </div>
+
+    <h2 id="other-squadrons">Other Squadrons: 269, 32, and 21 Squadrons at Abbotsinch</h2>
+    <p>
+      Beyond 602 Squadron, Scotland hosted additional RAF squadrons that maintained military aviation capabilities during the inter-war period. <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a> provides detailed descriptions of 269 Squadron, 32 Squadron and 21 Squadrons at Abbotsinch, documenting how these units contributed to Scotland's military aviation presence. These squadrons operated various aircraft types, maintaining operational readiness while supporting Scotland's aviation infrastructure.
+    </p>
+    <p>
+      Abbotsinch airfield, which would later become Glasgow Airport, served as a crucial military aviation facility during the inter-war period. The presence of multiple squadrons at Abbotsinch demonstrated Scotland's strategic importance for British air defense and training. These squadrons maintained operational capabilities while supporting Scotland's broader aviation ecosystem, training pilots, maintaining aircraft, and developing operational procedures that would prove essential when war began.
+    </p>
+    <p>
+      The comprehensive documentation of these squadrons in Clydeside Aviation Volume Two ensures that the complete story of Scotland's inter-war military aviation presence is properly preserved. Understanding these squadron operations provides valuable insights into how Scotland maintained military aviation capabilities while transitioning to civilian aviation dominance. The relationships between these military units and Scotland's civilian aviation infrastructure created a unique aviation ecosystem that would prove strategically valuable when rearmament accelerated.
+    </p>
+
+    <h2 id="raf-volunteer-reserve">Royal Air Force Volunteer Reserve: Training the Next Generation</h2>
+    <p>
+      The founding of the Royal Air Force Volunteer Reserve (RAFVR) represented a crucial development in Britain's inter-war aviation preparation. <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a> explains the founding of the RAF Volunteer Reserve, documenting how this organization expanded pilot training capabilities beyond the Auxiliary Air Force. The RAFVR created additional pathways for civilian pilots to gain military training, maintaining pilot pipelines that would prove essential when war began.
+    </p>
+    <p>
+      The RAF Volunteer Reserve system allowed civilian pilots to maintain military currency through part-time training, expanding Britain's potential pilot pool significantly. This system proved essential when rearmament accelerated in the late 1930s, providing trained pilots who could quickly transition to full-time military service. The comprehensive documentation of RAFVR development ensures that the complete story of inter-war pilot training expansion is properly preserved.
+    </p>
+    <p>
+      Scotland's RAFVR units contributed to maintaining pilot training capabilities throughout the inter-war period, working alongside Auxiliary Air Force squadrons and flying clubs to create a comprehensive pilot training system. The relationship between civilian flying clubs, Auxiliary Air Force squadrons, and RAFVR units created a layered training system that ensured pilot pipelines were maintained across multiple organizational structures. This redundancy proved strategically valuable when wartime demands accelerated pilot training requirements.
+    </p>
+
+    <h2 id="commercial-airlines">Commercial Airlines: SMT, Northern and Scottish, Railway Air Services</h2>
+    <p>
+      The chapter on Renfrew and Abbotsinch in <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a> explores the airlines such as SMT (Scottish Motor Traction), Northern and Scottish, and Railway Air Services, documenting Scotland's emerging commercial aviation network. These regional airlines connected Scotland's cities and towns, demonstrating how civil aviation could serve commercial and social needs while maintaining aviation infrastructure and skills.
+    </p>
+    <p>
+      SMT's aviation operations represented an innovative approach to regional transportation, combining road and air services to serve Scotland's dispersed population. Northern and Scottish airlines operated routes connecting Scottish cities with London and other major centers, demonstrating commercial aviation's viability for connecting Scotland with the rest of Britain. Railway Air Services, operating in partnership with railway companies, integrated air travel with existing transportation networks, creating multimodal transportation systems that served Scotland's commercial needs.
+    </p>
+    <p>
+      These commercial airlines maintained aviation infrastructure, trained pilots and ground crews, and established operational procedures that would prove valuable when military requirements accelerated. The comprehensive documentation of these airlines ensures that the complete story of Scotland's commercial aviation development is properly preserved. Understanding these commercial operations provides valuable insights into how Scotland maintained aviation capabilities while serving civilian needs during the inter-war period.
+    </p>
+    <p>
+      Commercial airline operations during the inter-war period faced significant challenges, including weather, terrain, and economic viability. Airlines developed operational procedures for dealing with Scottish weather conditions, establishing weather minima, alternate aerodromes, and diversion protocols. These procedures created valuable operational knowledge that would influence military aviation operations when war began. The comprehensive documentation of commercial airline operations ensures that the complete story of inter-war aviation procedures is properly preserved.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of a commercial airliner at Renfrew Airport during the inter-war period, showing passengers boarding or aircraft on the tarmac, demonstrating Scotland's commercial aviation operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Commercial aviation: connecting Scotland's cities while maintaining aviation infrastructure and skills.</p>
+    </div>
+
+    <h2 id="air-ambulances">Air Ambulances: Medical Aviation Innovation</h2>
+    <p>
+      <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a> includes new details on air ambulances, documenting Scotland's pioneering use of aircraft for medical transportation. Air ambulance operations represented one of aviation's most socially valuable applications, demonstrating how aircraft could serve humanitarian needs while maintaining aviation capabilities. These operations established procedures for medical aviation that would prove valuable during wartime.
+    </p>
+    <p>
+      Air ambulance operations in Scotland during the inter-war period connected remote communities with medical facilities, demonstrating aviation's potential for serving social needs. These operations required specialized aircraft modifications, trained medical personnel, and operational procedures for medical emergencies. The comprehensive documentation of air ambulance operations ensures that the complete story of Scotland's medical aviation innovation is properly preserved.
+    </p>
+    <p>
+      The development of air ambulance services demonstrated how aviation could serve practical needs beyond transportation and defense. These operations established procedures for medical aviation, emergency response, and coordination between aviation and medical services that would prove valuable during wartime. The comprehensive documentation of air ambulance operations ensures that Scotland's contributions to medical aviation are properly recognized.
+    </p>
+
+    <h2 id="first-british-helicopter">The First British Helicopter: Weir W5 and Raymond Pullin</h2>
+    <p>
+      Perhaps one of Scotland's most significant inter-war aviation achievements was the first flights of the first British helicopter. <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a> documents the first flights of the first British helicopter, the Weir W5, flown by Raymond Pullin in Glasgow in 1938. The cover of the book features the first practical British helicopter, the Weir W5, demonstrating the significance of this achievement in Scottish aviation history.
+    </p>
+    <p>
+      The Weir W5 represented a breakthrough in British rotorcraft development, building upon autogyro technology to achieve true helicopter flight. Raymond Pullin's test flights in Glasgow demonstrated the helicopter's practical capabilities, establishing Scotland as a center of rotorcraft innovation. For comprehensive coverage of helicopter development and Morris Furniture's contribution to rotor blades, see <a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a>, which investigates the role of G & J Weir and the first British helicopters including the Weir W5 and W6. This comprehensive documentation ensures that Scotland's contribution to helicopter development is properly recognized.
+    </p>
+    <p>
+      The Weir W5's development and first flights demonstrated how Scotland's industrial capabilities supported advanced aviation innovation. The helicopter's successful flights in Glasgow established Scotland as a center of rotorcraft development, building upon autogyro work to achieve true helicopter capability. The comprehensive documentation of the Weir W5's development ensures that Scotland's pioneering role in helicopter development is properly preserved for future generations.
+    </p>
+    <p>
+      The first flights of the Weir W5 in Glasgow represented a milestone in British aviation history, demonstrating that helicopters could achieve practical flight. These flights established procedures for helicopter operations, testing, and safety that would influence later helicopter development. The comprehensive documentation of these first flights ensures that the complete story of British helicopter development is properly preserved, with Scotland's role properly recognized.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Weir W5 helicopter, the first practical British helicopter, during test flights in Glasgow in 1938, showing Raymond Pullin at the controls, demonstrating Scotland's pioneering role in rotorcraft development" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">First British helicopter: Raymond Pullin's test flights in Glasgow established Scotland as a center of rotorcraft innovation.</p>
+    </div>
+
+    <h2 id="blackburn-production">Blackburn Production: Botha and Shark at Dumbarton</h2>
+    <p>
+      Blackburn is introduced in 1939 with the Blackburn Botha and the Blackburn Shark production at Dumbarton, documented in <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a>. This production represented Scotland's continued involvement in aircraft manufacturing as rearmament accelerated, demonstrating how Scottish industrial capabilities supported Britain's wartime aviation production. The Blackburn Botha and Shark production at Dumbarton demonstrated Scotland's ability to manufacture advanced aircraft types for naval and military operations.
+    </p>
+    <p>
+      The Blackburn Botha, a twin-engine reconnaissance and torpedo bomber, and the Blackburn Shark, a carrier-based torpedo bomber, represented advanced aircraft types that Scotland manufactured as rearmament accelerated. These aircraft types demonstrated Scotland's ability to produce sophisticated military aircraft, building upon the manufacturing capabilities maintained during the inter-war period. The comprehensive documentation of Blackburn production ensures that Scotland's contribution to late inter-war aircraft production is properly preserved.
+    </p>
+    <p>
+      Production of the Blackburn Botha and Shark at Dumbarton demonstrated how Scotland's shipbuilding heritage supported advanced aircraft manufacturing. The skills, tooling, and manufacturing processes developed during the inter-war period enabled rapid production scaling when rearmament accelerated. The comprehensive documentation of Blackburn production ensures that Scotland's contribution to Britain's aviation production capability is properly recognized.
+    </p>
+
+    <h2 id="bennie-railplane">The Bennie Railplane: Innovative Transportation</h2>
+    <p>
+      The Bennie Railplane has fresh details never before published including dates and builders, documented in <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a>. This innovative transportation system represented Scotland's continued contribution to advanced transportation technology, combining railway and aviation principles in a unique design. The Bennie Railplane demonstrated how Scottish engineering innovation extended beyond conventional aircraft to include innovative transportation solutions.
+    </p>
+    <p>
+      The Bennie Railplane represented an innovative approach to high-speed transportation, using suspended rail systems to achieve speeds that conventional railways could not match. This innovative system demonstrated Scotland's engineering capabilities and willingness to explore advanced transportation concepts. The comprehensive documentation of the Bennie Railplane ensures that Scotland's contribution to innovative transportation technology is properly preserved.
+    </p>
+    <p>
+      While the Bennie Railplane did not achieve commercial success, its development demonstrated Scotland's capacity for innovative engineering and advanced transportation concepts. The system's design incorporated principles from both railway and aviation engineering, demonstrating how cross-disciplinary approaches could create innovative solutions. The comprehensive documentation of the Bennie Railplane ensures that Scotland's innovative transportation contributions are properly recognized.
+    </p>
+
+    <h2 id="supermarine-s6b">Supermarine S6b and Schneider Trophy Connection</h2>
+    <p>
+      <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a> includes fresh detail on the Supermarine S6b with a rare description of its airframe and wings supported by photographs and drawings. This connection demonstrates Scotland's relationship with Britain's Schneider Trophy achievements, linking inter-war Scottish aviation with Britain's international racing success. The Supermarine S6b represented the pinnacle of British racing aircraft design, achieving speeds that established Britain as a leader in high-speed aviation.
+    </p>
+    <p>
+      The Schneider Trophy races represented international competition in high-speed aviation, with Britain's Supermarine S6b achieving victory in 1931. The comprehensive documentation of the Supermarine S6b in Clydeside Aviation Volume Two ensures that Scotland's connection to Britain's Schneider Trophy achievements is properly preserved. Understanding this connection provides valuable insights into how Scottish aviation related to Britain's broader aviation achievements during the inter-war period.
+    </p>
+    <p>
+      The Supermarine S6b's technical details, documented with rare descriptions of its airframe and wings, demonstrate the advanced engineering required for high-speed aviation. This aircraft's development influenced later fighter design, particularly the Supermarine Spitfire, which would become one of Britain's most important fighters. The comprehensive documentation of the Supermarine S6b ensures that its technical achievements and influence are properly recognized.
+    </p>
+
+    <h2 id="empire-air-day">Empire Air Day 1939: Stainforth's Spitfire Flight</h2>
+    <p>
+      The book ends with the Spitfire flight up the East Coast of Great Britain on Empire Air Day, 22nd May 1939, with Stainforth flying Spitfire K9895 from Netherhavon to Ross and Cromarty for a bottle of whisky and a haggis. This remarkable flight, documented in <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a>, demonstrates how Scottish aviation connections extended throughout Britain, with this flight symbolizing the transition from inter-war aviation to wartime operations. There is a mini biography of Stainforth and an account of his death in a Beaufighter, ensuring that this remarkable pilot's story is properly preserved.
+    </p>
+    <p>
+      Empire Air Day represented Britain's celebration of aviation achievements and demonstration of military aviation capabilities. Stainforth's Spitfire flight from Netherhavon to Ross and Cromarty demonstrated the Spitfire's range and performance capabilities while celebrating Scottish aviation heritage. This flight, occurring just months before war began, symbolized the transition from inter-war aviation to wartime operations, demonstrating how inter-war development had prepared Britain for wartime demands.
+    </p>
+    <p>
+      The comprehensive documentation of Stainforth's flight and biography ensures that this remarkable pilot's achievements are properly preserved. His death in a Beaufighter during wartime operations demonstrates the continuity between inter-war aviation and wartime service, with pilots trained during the inter-war period serving in combat operations. The comprehensive documentation of Stainforth's story ensures that the human dimension of inter-war aviation is properly preserved.
+    </p>
 
     <h2 id="comparison-contemporaries">Comparison with Contemporaries: Scottish Aviation in Context</h2>
     <p>
@@ -221,9 +346,12 @@ const post = {
     <h2 id="further-reading">Further Reading and Related Works</h2>
     <p>For comprehensive coverage of inter-war Scottish aviation and related topics, explore these authoritative works by Charles E. MacKay:</p>
     <ul>
-      <li><a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a> — Comprehensive coverage of Beardmore's aviation activities from 1913 to 1930, including Renfrew Airport development, aircraft production, and the air school</li>
-      <li><a href="/books/clydeside-aviation-vol1" class="underline font-medium">Clydeside Aviation, Vol. 1</a> — Detailed coverage of Scottish aviation manufacturing during World War I and the inter-war period</li>
-      <li><a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation, Vol. 2</a> — Continued coverage of Scottish aviation development and operations</li>
+      <li><a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two: Between the Wars</a> — The definitive 344-page A5 work, supported by over 300 rare pictures and over 40,000 words, covering aviation events in the Clydeside district from 1919 to 1939, including regional airlines, Scottish Flying Club, 602 Squadron evolution, first British helicopter flights, and Empire Air Day 1939</li>
+      <li><a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a> — Comprehensive coverage of Beardmore's aviation activities from 1913 to 1930, including Renfrew Airport development, aircraft production, the air school, and Auxiliary Air Force setup</li>
+      <li><a href="/books/clydeside-aviation-vol1" class="underline font-medium">Clydeside Aviation Volume One: The Great War</a> — Detailed coverage of Scottish aviation manufacturing during World War I, providing context for inter-war development</li>
+      <li><a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a> — Investigates the role of G & J Weir and the first British helicopters including the Weir W5 and W6, documenting Scotland's pioneering role in rotorcraft development</li>
+      <li><a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War 1914-1918</a> — Provides context on aircraft types used during the Great War that continued in service during the inter-war period</li>
+      <li><a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft in the Great War 1914-1918</a> — Offers insights into international aviation development during the period that influenced inter-war aircraft design</li>
       <li><a href="/blog/beardmore-aviation-scottish-industrial-giant" class="underline font-medium">Beardmore Aviation: Scottish Industrial Giant</a> — Comprehensive analysis of Beardmore's aviation activities</li>
       <li><a href="/blog/clydeside-aviation-revolution" class="underline font-medium">Clydeside Aviation Revolution</a> — The broader context of Scottish aviation manufacturing</li>
     </ul>
