@@ -218,4 +218,19 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development/'
-  },
+  }
+}
+
+export default function BlogPost() {
+  return (
+    <>
+      <UnifiedSchema
+        pageType="blog-post"
+        pageTitle={post.title}
+        pageDescription={post.excerpt}
+        pageUrl="/blog/hawker-hurricane-fighter-development"
+      />
+      <ComprehensiveBlogTemplate post={post} />
+    </>
+  )
+}
