@@ -135,8 +135,9 @@ export function normalizeISBN(isbn: string | undefined | null): string | null {
     return null;
   }
   
-  // Remove any non-digit characters except X
-  const cleanISBN = isbn.replace(/[^0-9X]/g, '');
+  // Convert to uppercase first to preserve both lowercase and uppercase 'x' as 'X'
+  // Then remove any non-digit characters except X
+  const cleanISBN = isbn.toUpperCase().replace(/[^0-9X]/g, '');
   
   // Validate ISBN-10
   if (cleanISBN.length === 10 && isValidISBN10(cleanISBN)) {
