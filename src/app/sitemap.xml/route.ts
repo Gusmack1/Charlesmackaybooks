@@ -74,6 +74,8 @@ function buildSitemap(): string {
   //   })
   //   .join('\n')
 
+  // Only include public pages that should be indexed
+  // EXCLUDE internal tooling pages that have noindex headers
   const staticUrls = [
     { path: '/books/', priority: '0.95' },
     { path: '/blog/', priority: '0.9' },
@@ -97,18 +99,20 @@ function buildSitemap(): string {
     { path: '/timeline/', priority: '0.6' },
     { path: '/checkout/', priority: '0.5' },
     { path: '/partnerships/imperial-war-museum/', priority: '0.6' },
-    { path: '/comprehensive-fix/', priority: '0.4' },
-    { path: '/comprehensive-optimization-suite/', priority: '0.4' },
-    { path: '/optimize-website/', priority: '0.4' },
-    { path: '/test-systems/', priority: '0.4' },
-    { path: '/deployment/', priority: '0.4' },
-    { path: '/google-indexing/', priority: '0.4' },
-    { path: '/seo-audit/', priority: '0.4' },
-    { path: '/performance-optimizer/', priority: '0.4' },
-    { path: '/seo-optimizer/', priority: '0.4' },
-    { path: '/run-optimizations/', priority: '0.4' },
-    { path: '/test-react/', priority: '0.3' },
-    { path: '/ai-prompt-system/', priority: '0.4' }
+    { path: '/categories/', priority: '0.85' }
+    // REMOVED internal tooling pages (noindex):
+    // - /comprehensive-fix/
+    // - /comprehensive-optimization-suite/
+    // - /optimize-website/
+    // - /test-systems/
+    // - /deployment/
+    // - /google-indexing/
+    // - /seo-audit/
+    // - /performance-optimizer/
+    // - /seo-optimizer/
+    // - /run-optimizations/
+    // - /test-react/
+    // - /ai-prompt-system/
   ]
     .map((u) => {
       // Ensure trailing slash

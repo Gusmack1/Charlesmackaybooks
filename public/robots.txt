@@ -5,4 +5,18 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 
+# Disallow internal tooling pages (these have noindex headers but also exclude from crawling)
+Disallow: /comprehensive-fix/
+Disallow: /test-systems/
+Disallow: /run-optimizations/
+Disallow: /deployment/
+Disallow: /optimize-website/
+Disallow: /comprehensive-optimization-suite/
+Disallow: /google-indexing/
+Disallow: /seo-audit/
+Disallow: /performance-optimizer/
+Disallow: /seo-optimizer/
+Disallow: /test-react/
+Disallow: /ai-prompt-system/
+
 Sitemap: https://charlesmackaybooks.com/sitemap.xml

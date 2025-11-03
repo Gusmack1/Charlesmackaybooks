@@ -41,30 +41,31 @@ export function middleware(request: NextRequest) {
   const host = request.headers.get('host') || ''
   const protocol = request.headers.get('x-forwarded-proto') || 'https'
 
-  // Handle www vs non-www redirects (force non-www)
+  // Handle www vs non-www redirects (force non-www) - 301 redirect
   if (host.startsWith('www.')) {
     const newUrl = new URL(request.url)
     newUrl.host = host.substring(4) // Remove 'www.'
     return NextResponse.redirect(newUrl.toString(), 301)
   }
 
-  // Handle HTTP to HTTPS redirects
+  // Handle HTTP to HTTPS redirects - 301 redirect
   if (protocol === 'http') {
     const newUrl = new URL(request.url)
     newUrl.protocol = 'https:'
     return NextResponse.redirect(newUrl.toString(), 301)
   }
 
-  // Handle URL redirects for 404 fixes
+  // Handle URL redirects for 404 fixes - 301 redirect
   if (URL_REDIRECTS[pathname]) {
     const redirectUrl = URL_REDIRECTS[pathname]
     if (redirectUrl === '/404') {
       // Return 404 for font files and other non-content URLs
       return new Response('Not Found', { status: 404 })
     }
-    // Redirect to correct URL with proper trailing slash handling
-    const fullRedirectUrl = redirectUrl.startsWith('/') ? redirectUrl : `/${redirectUrl}`
-    return NextResponse.redirect(new URL(fullRedirectUrl, request.url), 301)
+    // Ensure redirect URL has trailing slash for consistency
+    const finalRedirectUrl = redirectUrl.endsWith('/') ? redirectUrl : `${redirectUrl}/`
+    const newUrl = new URL(finalRedirectUrl, request.url)
+    return NextResponse.redirect(newUrl.toString(), 301)
   }
 
   // Add X-Robots-Tag to internal tooling routes to avoid indexing
