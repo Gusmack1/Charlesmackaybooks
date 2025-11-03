@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
   description: 'Browse the complete collection of aviation history books by Charles E. MacKay. 19+ books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.',
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/books'
+    canonical: 'https://charlesmackaybooks.com/books/'
   },
   keywords: [
     'aviation history books',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
     description: 'Browse 19+ aviation history books by expert historian Charles E. MacKay. WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.',
-    url: 'https://charlesmackaybooks.com/books',
+    url: 'https://charlesmackaybooks.com/books/',
     siteName: 'Charles E. MacKay Aviation Books',
     images: [
       {

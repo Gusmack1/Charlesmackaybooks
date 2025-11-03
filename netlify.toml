@@ -93,3 +93,9 @@
   for = "/robots.txt"
   [headers.values]
     Cache-Control = "public, max-age=3600, s-maxage=3600"
+
+# Ensure updated Next.js static assets (CSS/JS) are not served stale from cache
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, s-maxage=0, must-revalidate"

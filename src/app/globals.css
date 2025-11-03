@@ -101,6 +101,13 @@
   /* Standardized primary books CTA button */
   .btn-books {
     @apply bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors;
+    display: inline-block;
+  }
+  /* Ensure anchors styled as buttons remain white in blog/content areas */
+  .content a.btn-books,
+  a.btn-books {
+    color: #ffffff !important;
+    text-decoration: none !important;
   }
 
   /* Enhanced blog content styling with fixed text visibility */
@@ -370,6 +377,14 @@ label {
 [class*="bg-gradient-to"] * {
   color: var(--color-text-white);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Stronger override for any link color rules that may leak into button anchors */
+.content a.btn-books:link,
+.content a.btn-books:visited,
+.content a.btn-books:hover,
+.content a.btn-books:active {
+  color: #ffffff !important;
 }
 
 /* ACCENT BADGES - Consistent colors */

@@ -47,9 +47,11 @@ function buildSitemap(): string {
   const bookUrls = books
     .map((b) => {
       const path = prettyMap[b.id] || `/books/${xml(b.id)}`
+      // Ensure trailing slash for consistency with Next.js trailingSlash: true
+      const pathWithSlash = path.endsWith('/') ? path : `${path}/`
       return `
   <url>
-    <loc>${domain}${path}</loc>
+    <loc>${domain}${pathWithSlash}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -57,63 +59,68 @@ function buildSitemap(): string {
     })
     .join('\n')
 
-  // Product hash anchors for Merchant Center and Rich Results crawling
-  const productAnchors = books
-    .map((b) => {
-      const hash = (b.isbn || b.id)
-      return `
-  <url>
-    <loc>${domain}#${xml(String(hash))}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`
-    })
-    .join('\n')
+  // Remove product hash anchors - they cause duplicate content issues
+  // Google prefers clean URLs without hash fragments for indexing
+  // const productAnchors = books
+  //   .map((b) => {
+  //     const hash = (b.isbn || b.id)
+  //     return `
+  // <url>
+  //   <loc>${domain}#${xml(String(hash))}</loc>
+  //   <lastmod>${today}</lastmod>
+  //   <changefreq>weekly</changefreq>
+  //   <priority>0.8</priority>
+  // </url>`
+  //   })
+  //   .join('\n')
 
   const staticUrls = [
-    { path: '/books', priority: '0.95' },
-    { path: '/blog', priority: '0.9' },
-    { path: '/about', priority: '0.8' },
-    { path: '/contact', priority: '0.7' },
-    { path: '/how-to-order', priority: '0.6' },
-    { path: '/returns', priority: '0.6' },
-    { path: '/support', priority: '0.6' },
-    { path: '/aviation-bibliography', priority: '0.7' },
-    { path: '/academic-resources', priority: '0.7' },
-    { path: '/aviation-glossary', priority: '0.6' },
-    { path: '/aviation-news', priority: '0.6' },
-    { path: '/faq', priority: '0.6' },
-    { path: '/for-researchers', priority: '0.7' },
-    { path: '/golden-age-1918-1939', priority: '0.7' },
-    { path: '/great-war-1914-1918', priority: '0.7' },
-    { path: '/order-complete', priority: '0.5' },
-    { path: '/pioneer-era-1895-1914', priority: '0.7' },
-    { path: '/research-guides', priority: '0.7' },
-    { path: '/scottish-aviation-timeline', priority: '0.8' },
-    { path: '/timeline', priority: '0.6' },
-    { path: '/checkout', priority: '0.5' },
-    { path: '/partnerships/imperial-war-museum', priority: '0.6' },
-    { path: '/comprehensive-fix', priority: '0.4' },
-    { path: '/comprehensive-optimization-suite', priority: '0.4' },
-    { path: '/optimize-website', priority: '0.4' },
-    { path: '/test-systems', priority: '0.4' },
-    { path: '/deployment', priority: '0.4' },
-    { path: '/google-indexing', priority: '0.4' },
-    { path: '/seo-audit', priority: '0.4' },
-    { path: '/performance-optimizer', priority: '0.4' },
-    { path: '/seo-optimizer', priority: '0.4' },
-    { path: '/run-optimizations', priority: '0.4' },
-    { path: '/test-react', priority: '0.3' },
-    { path: '/ai-prompt-system', priority: '0.4' }
+    { path: '/books/', priority: '0.95' },
+    { path: '/blog/', priority: '0.9' },
+    { path: '/about/', priority: '0.8' },
+    { path: '/contact/', priority: '0.7' },
+    { path: '/how-to-order/', priority: '0.6' },
+    { path: '/returns/', priority: '0.6' },
+    { path: '/support/', priority: '0.6' },
+    { path: '/aviation-bibliography/', priority: '0.7' },
+    { path: '/academic-resources/', priority: '0.7' },
+    { path: '/aviation-glossary/', priority: '0.6' },
+    { path: '/aviation-news/', priority: '0.6' },
+    { path: '/faq/', priority: '0.6' },
+    { path: '/for-researchers/', priority: '0.7' },
+    { path: '/golden-age-1918-1939/', priority: '0.7' },
+    { path: '/great-war-1914-1918/', priority: '0.7' },
+    { path: '/order-complete/', priority: '0.5' },
+    { path: '/pioneer-era-1895-1914/', priority: '0.7' },
+    { path: '/research-guides/', priority: '0.7' },
+    { path: '/scottish-aviation-timeline/', priority: '0.8' },
+    { path: '/timeline/', priority: '0.6' },
+    { path: '/checkout/', priority: '0.5' },
+    { path: '/partnerships/imperial-war-museum/', priority: '0.6' },
+    { path: '/comprehensive-fix/', priority: '0.4' },
+    { path: '/comprehensive-optimization-suite/', priority: '0.4' },
+    { path: '/optimize-website/', priority: '0.4' },
+    { path: '/test-systems/', priority: '0.4' },
+    { path: '/deployment/', priority: '0.4' },
+    { path: '/google-indexing/', priority: '0.4' },
+    { path: '/seo-audit/', priority: '0.4' },
+    { path: '/performance-optimizer/', priority: '0.4' },
+    { path: '/seo-optimizer/', priority: '0.4' },
+    { path: '/run-optimizations/', priority: '0.4' },
+    { path: '/test-react/', priority: '0.3' },
+    { path: '/ai-prompt-system/', priority: '0.4' }
   ]
-    .map((u) => `
+    .map((u) => {
+      // Ensure trailing slash
+      const pathWithSlash = u.path.endsWith('/') ? u.path : `${u.path}/`
+      return `
   <url>
-    <loc>${domain}${u.path}</loc>
+    <loc>${domain}${pathWithSlash}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${u.priority}</priority>
-  </url>`)
+  </url>`
+    })
     .join('\n')
 
   // Include ALL blog posts for complete indexing
@@ -163,13 +170,17 @@ function buildSitemap(): string {
     'sycamore-seeds-helicopter-evolution',
     'test-pilot-biography-eric-brown'
   ]
-    .map((slug) => `
+    .map((slug) => {
+      // Ensure trailing slash for blog posts
+      const blogPath = `/blog/${slug}/`
+      return `
   <url>
-    <loc>${domain}/blog/${slug}</loc>
+    <loc>${domain}${blogPath}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>`)
+  </url>`
+    })
     .join('\n')
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -177,7 +188,6 @@ function buildSitemap(): string {
 ${homepage}
  ${bookUrls}
  ${blogPosts}
-${productAnchors}
 ${staticUrls}
 </urlset>`
 }

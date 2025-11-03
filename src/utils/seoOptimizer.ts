@@ -43,7 +43,7 @@ export interface PageSEOData {
 export function generateBookMetadata(book: Book): Metadata {
   const title = `${book.title} - Charles Mackay Books`;
   const description = `${book.description.substring(0, 155)}... Available for purchase with worldwide shipping. ISBN: ${book.isbn}`;
-  const canonicalUrl = `${seoConfig.baseUrl}/books/${book.id}`;
+  const canonicalUrl = `${seoConfig.baseUrl}/books/${book.id}/`;
   const imageUrl = (() => {
     const candidate = book.imageUrl ?? `/book-covers/${book.id}.jpg`;
     return candidate.startsWith('http') ? candidate : `${seoConfig.baseUrl}${candidate.startsWith('/') ? '' : '/'}${candidate}`;
@@ -149,7 +149,7 @@ export function generateBlogMetadata(
 ): Metadata {
   const fullTitle = `${title} - Aviation History Blog | Charles Mackay Books`;
   const description = excerpt.length > 155 ? `${excerpt.substring(0, 152)}...` : excerpt;
-  const canonicalUrl = `${seoConfig.baseUrl}/blog/${slug}`;
+  const canonicalUrl = `${seoConfig.baseUrl}/blog/${slug}/`;
   const imageUrl = featuredImage || `${seoConfig.baseUrl}/blog-images/${slug}-hero.jpg`;
 
   return {
