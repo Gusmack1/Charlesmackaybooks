@@ -14,13 +14,16 @@ const post = {
     <p>
       Wartime innovation often hides in plain sight: in the machine shops and pattern rooms of firms whose peacetime products seem far removed from aeronautics. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
       <a href="/books/modern-furniture" class="underline font-medium">Modern Furniture Shavings for Breakfast: the Morris Furniture Company</a>, 
-      this analysis presents the complete story of how the Morris Furniture Company of Glasgow—renowned for luxury liners like the Queen Mary and premier hotels—retooled to supply exacting military work during World War II.
+      this Enhanced Edition presents the complete story of how the Morris Furniture Company of Glasgow—renowned for luxury liners like the Queen Mary and premier hotels—retooled to supply exacting military work during World War II. This remarkable transformation demonstrates how civilian manufacturing capabilities were adapted for wartime requirements, creating a unique chapter in British industrial and aviation history.
     </p>
     <p>
-      The book <a href="/books/modern-furniture" class="underline font-medium">Modern Furniture Shavings for Breakfast</a> takes the company from 1914 to 1975 and is profusely illustrated with many pictures never before published and shows the production process for the Lee Enfield Rifle, the Vickers Transonic Missile progenitor of Blue Steel, the company completed the model work for the MAEE and the wooden aircraft propellers for the Rolls - Royce Merlin and Griffon. This comprehensive documentation ensures that Morris Furniture's wartime transformation is properly understood.
+      The book <a href="/books/modern-furniture" class="underline font-medium">Modern Furniture Shavings for Breakfast</a> takes the company from 1914 to 1975 and is profusely illustrated with many pictures never before published, showing the production process for the Lee Enfield Rifle, the Vickers Transonic Missile progenitor of Blue Steel, the company completed the model work for the MAEE (Marine Aircraft Experimental Establishment) and the wooden aircraft propellers for the Rolls-Royce Merlin and Griffon. This comprehensive documentation, drawing on original research and never-before-published materials, ensures that Morris Furniture's wartime transformation is properly understood in its complete historical context. The book represents a rare insight into the British Furniture industry in peace and war, providing authoritative documentation of industrial transformation during the Second World War.
     </p>
     <p>
-      First based in Newcastle to furnish the Vickers liners the company moved to Glasgow, Scotland, in 1914. For over seventy years the company had been associated with furniture of distinction and of being at the forefront of innovation. Their wartime history was war winning being involved with Highball and Upkeep spherical mines/bombs, the Cierva Air Horse, the Rotachute and the Rotabuggy and later the Vickers Trans Sonic Missile. This comprehensive documentation demonstrates how Morris Furniture's industrial capabilities were adapted for wartime production.
+      First based in Newcastle to furnish the Vickers liners the company moved to Glasgow, Scotland, in 1914. For over seventy years the company had been associated with furniture of distinction and of being at the forefront of innovation. Their wartime history was war winning, being involved with Highball and Upkeep spherical mines/bombs, the Cierva Air Horse, the Rotachute and the Rotabuggy and later the Vickers Trans Sonic Missile. This comprehensive documentation demonstrates how Morris Furniture's industrial capabilities were adapted for wartime production, bridging the gap between civilian craftsmanship and military precision requirements. Understanding this transformation provides valuable insights into how British industry responded to wartime demands, adapting existing capabilities to serve new requirements.
+    </p>
+    <p>
+      The comprehensive documentation provided in <a href="/books/modern-furniture" class="underline font-medium">Modern Furniture Shavings for Breakfast</a> ensures that Morris Furniture's complete story is preserved. This historical document is particularly significant because the company has ceased making all furniture, making this the only source book for furniture manufacturing in print from 1884 to 1975. This scholarly work, originally researched and printed in the United Kingdom, comes highly recommended for the student and general reader alike, providing insights into British industrial and aviation history that are not available in any other publication.
     </p>
 
     <div class="my-8">
@@ -173,6 +176,69 @@ const post = {
       Post-war displays showcased Morris Furniture's capabilities and innovations, demonstrating how wartime production experience influenced peacetime development. The comprehensive documentation of post-war displays ensures that the complete story of Morris Furniture's post-war transition is properly preserved. Understanding post-war displays provides valuable insights into how wartime capabilities were applied to peacetime production.
     </p>
 
+    <h2 id="manufacturing-techniques">Manufacturing Techniques: Precision Woodworking and Quality Control</h2>
+    <p>
+      Morris Furniture's transition from luxury furniture to precision military components required adapting woodworking techniques to meet exacting tolerances. The production processes documented in <a href="/books/modern-furniture" class="underline font-medium">Modern Furniture Shavings for Breakfast</a> demonstrate how traditional joinery skills were applied to military requirements. Kiln schedules for dimensional stability, fixtures for repeatability, and high-throughput finishing techniques enabled Morris Furniture to produce precision components at scale.
+    </p>
+    <p>
+      The book includes diagrams showing the production cycle of manufacturing the Lee Enfield rifle wooden parts, demonstrating how Morris Furniture's woodworking expertise was applied to armament production. These production processes required precision jigging, moisture conditioning, and statistical inspection techniques that would later prove valuable for aeronautical contracts. The comprehensive documentation of these manufacturing techniques ensures that the complete story of Morris Furniture's production capabilities is properly preserved.
+    </p>
+    <p>
+      Statistical inspection and gauge maintenance techniques developed for rifle furniture production fed forward into later aeronautical contracts, where blade tracking and model fidelity depended upon the same measurement discipline. The workmanship culture—grain matching, adhesive quality, and inspection—aligned with rotorcraft needs and fed into post-war industrial capability. Understanding these manufacturing techniques provides valuable insights into how civilian manufacturing capabilities were adapted for wartime precision requirements.
+    </p>
+    <p>
+      The comprehensive documentation of manufacturing techniques in <a href="/books/modern-furniture" class="underline font-medium">Modern Furniture Shavings for Breakfast</a> ensures that Morris Furniture's production processes are properly preserved. The book's detailed illustrations and diagrams demonstrate how precision woodworking techniques were applied across multiple production requirements, from rifle furniture to rotor blades to aircraft components. This technical documentation provides valuable insights into wartime manufacturing practices that are not available in other publications.
+    </p>
+
+    <h2 id="workforce-training">Workforce and Training: Women in Manufacturing</h2>
+    <p>
+      The book includes images of women making furniture and glider parts, assembly of Hurricane PZ865, "The last of the Many," demonstrating how Morris Furniture's workforce contributed to aircraft production. During wartime, Morris Furniture's workforce expanded significantly, with women entering skilled manufacturing roles that had previously been male-dominated. This workforce expansion was essential for meeting wartime production demands while maintaining quality standards.
+    </p>
+    <p>
+      Women workers at Morris Furniture performed precision woodworking tasks including furniture assembly, glider part production, and aircraft component manufacturing. The comprehensive documentation of women's contributions ensures that the complete story of wartime manufacturing workforce expansion is properly preserved. Understanding workforce expansion provides valuable insights into how British industry adapted to wartime labor requirements while maintaining production quality.
+    </p>
+    <p>
+      Training programs at Morris Furniture ensured that new workers, including women entering manufacturing for the first time, could quickly achieve proficiency in precision woodworking techniques. These training programs emphasized measurement, tool care, and documentation, ensuring that quality standards were maintained as the workforce expanded. The comprehensive documentation of training programs ensures that the complete story of wartime workforce development is properly preserved.
+    </p>
+
+    <h2 id="rotachute-rotabuggy">Rotachute and Rotabuggy: Innovative Rotorcraft</h2>
+    <p>
+      Morris Furniture's involvement with the Rotachute and Rotabuggy represented innovative rotorcraft development during wartime. The Rotachute was a single-seat rotorcraft designed for military applications, while the Rotabuggy was an innovative adaptation of rotorcraft technology for vehicle transportation. These projects demonstrated Morris Furniture's versatility in applying woodworking expertise to innovative aviation concepts.
+    </p>
+    <p>
+      The Rotachute and Rotabuggy development required precision rotor blade manufacturing techniques similar to those used for helicopters. Morris Furniture's experience with rotor blade production for Weir and Cierva helicopters enabled the company to contribute to these innovative projects. The comprehensive documentation of Rotachute and Rotabuggy development ensures that Morris Furniture's contribution to innovative rotorcraft is properly preserved.
+    </p>
+    <p>
+      For comprehensive coverage of rotorcraft development and Morris Furniture's contribution to the Rotachute and Rotabuggy, see <a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a>, which documents these innovative rotorcraft projects. Understanding these projects provides valuable insights into how Morris Furniture's woodworking expertise supported innovative aviation development during wartime.
+    </p>
+
+    <h2 id="tallboy-grand-slam">Heavy Bombs: Tallboy, Grand Slam, and 44,000lb Bomb</h2>
+    <p>
+      Morris Furniture worked with the Americans in producing heavy bombs such as Tallboy, Grand slam and the biggest of all the giant 44,000lb bomb, with Morris completing all the model work. These massive bombs represented some of the largest conventional weapons developed during World War II, requiring sophisticated model work for development and testing. The comprehensive documentation of this model work ensures that Morris Furniture's contribution to heavy bomb development is properly preserved.
+    </p>
+    <p>
+      The Tallboy and Grand Slam bombs were designed by Barnes Wallis for use against heavily fortified targets. These bombs required precision model work to validate aerodynamic characteristics and structural integrity before full-scale production. Morris Furniture's model-making capabilities enabled these projects to progress from design to production, demonstrating how model work accelerated development timelines.
+    </p>
+    <p>
+      The 44,000lb bomb represented the largest conventional bomb developed during World War II, requiring extensive model work for aerodynamic and structural validation. Morris Furniture's comprehensive model work for this massive weapon demonstrated the company's capabilities in producing large-scale aerodynamic models. The comprehensive documentation of this work ensures that Morris Furniture's contribution to heavy bomb development is properly recognized.
+    </p>
+
+    <h2 id="balsa-plywood-patent">Balsa Plywood Patent: Mosquito Airframe Innovation</h2>
+    <p>
+      Morris held the patent for the Balsa plywood used in the de Havilland Mosquito airframe, representing a significant contribution to aircraft production. The Mosquito's wooden construction required precision plywood manufacturing techniques, with Morris Furniture's patent covering the specific balsa plywood processes used in airframe production. This patent represented a key innovation in aircraft construction, enabling the Mosquito's high-performance wooden airframe.
+    </p>
+    <p>
+      The balsa plywood patent enabled Morris Furniture to produce precision plywood components for the Mosquito airframe, contributing to one of World War II's most successful aircraft designs. The comprehensive documentation of this patent ensures that Morris Furniture's innovation in aircraft construction materials is properly preserved. Understanding this patent provides valuable insights into how industrial capabilities supported innovative aircraft design.
+    </p>
+    <p>
+      Morris Furniture's balsa plywood manufacturing techniques were applied to Mosquito production, demonstrating how precision woodworking expertise supported advanced aircraft construction. The comprehensive documentation of balsa plywood production ensures that Morris Furniture's contribution to Mosquito manufacturing is properly recognized. This patent represented a significant achievement in adapting woodworking expertise for aviation applications.
+    </p>
+
+    <div class="my-8">
+      <img src="/blog-images/default-generic.svg" alt="Insert image here: A photograph or diagram showing balsa plywood manufacturing for Mosquito airframes at Morris Furniture, demonstrating precision plywood production techniques and the patented processes" class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Innovation in materials: Morris Furniture's balsa plywood patent enabled Mosquito airframe production.</p>
+    </div>
+
     <h2 id="comparison-contemporaries">Comparison with Contemporaries: Glasgow Industrial Capability</h2>
     <p>
       Morris Furniture's wartime transformation occurred within the broader context of Glasgow's industrial capabilities. While other firms focused on specific production areas, Morris Furniture demonstrated versatility across multiple production requirements. The comprehensive documentation of Morris Furniture's contributions ensures that its unique role is properly recognized.
@@ -218,10 +284,14 @@ const post = {
     <h2 id="further-reading">Further Reading and Related Works</h2>
     <p>For comprehensive coverage of Morris Furniture's wartime work and related topics, explore these authoritative works by Charles E. MacKay:</p>
     <ul>
-      <li><a href="/books/modern-furniture" class="underline font-medium">Modern Furniture Shavings for Breakfast: the Morris Furniture Company</a> — The definitive work taking the company from 1914 to 1975, profusely illustrated with many pictures never before published, showing production processes for Lee Enfield Rifle, Vickers Transonic Missile, MAEE model work, and wooden aircraft propellers for Rolls-Royce Merlin and Griffon</li>
-      <li><a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a> — Includes coverage of Morris Furniture's rotor blade manufacturing for Weir, Cierva, and Bristol Sycamore helicopters</li>
-      <li><a href="/blog/aviation-manufacturing-wartime-production" class="underline font-medium">Aviation Manufacturing Wartime Production</a> — The broader context of wartime aviation manufacturing</li>
-      <li><a href="/blog/scottish-aviation-between-the-wars" class="underline font-medium">Scottish Aviation Between the Wars</a> — The industrial context of Scottish aviation development</li>
+      <li><a href="/books/modern-furniture" class="underline font-medium">Modern Furniture Shavings for Breakfast: the Morris Furniture Company</a> — The definitive work taking the company from 1914 to 1975, profusely illustrated with many pictures never before published, showing production processes for Lee Enfield Rifle, Vickers Transonic Missile, MAEE model work, and wooden aircraft propellers for Rolls-Royce Merlin and Griffon. This is an historical document and the only source book for furniture manufacturing in print from 1884 to 1975</li>
+      <li><a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a> — Includes comprehensive coverage of Morris Furniture's rotor blade manufacturing for Weir, Cierva, and Bristol Sycamore helicopters, documenting the technical contribution to British rotorcraft development</li>
+      <li><a href="/books/clydeside-aviation-vol1" class="underline font-medium">Clydeside Aviation Volume One: The Great War</a> — Provides context on Scottish aviation manufacturing during World War I, showing how industrial capabilities evolved to support wartime production</li>
+      <li><a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two: Between the Wars</a> — Documents the inter-war period when companies like Morris Furniture maintained industrial capabilities that would prove essential for wartime production</li>
+      <li><a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a> — Provides context on another major Scottish aviation manufacturer, demonstrating how Scottish industrial capabilities supported wartime production</li>
+      <li><a href="/books/aviation-manufacturing-wartime-production" class="underline font-medium">Aviation Manufacturing: Wartime Production Revolution</a> — The broader context of wartime aviation manufacturing, showing how precision manufacturing techniques were applied across the industry</li>
+      <li><a href="/blog/aviation-manufacturing-wartime-production" class="underline font-medium">Aviation Manufacturing Wartime Production</a> — Detailed analysis of wartime production techniques, jigs, metrology, and quality control procedures</li>
+      <li><a href="/blog/scottish-aviation-between-the-wars" class="underline font-medium">Scottish Aviation Between the Wars</a> — The industrial context of Scottish aviation development and the retained capabilities that supported wartime production</li>
     </ul>
 
     <h3>Related Articles</h3>
