@@ -369,35 +369,88 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
   // Remove legacy ecommerce boilerplate (price/ISBN/shipping) if present
   function sanitizeDescription(raw: string): string[] {
+    if (!raw) return [];
+    
+    // Check if this is a single-line description (likely from books.ts)
+    const isSingleLine = !raw.includes('\n') || raw.split('\n').length <= 2;
+    
+    if (isSingleLine) {
+      // For single-line descriptions, just check if it's entirely boilerplate
+      const trimmed = raw.trim();
+      if (trimmed.length === 0) return [];
+      
+      // If it's just boilerplate, return empty
+      if (/^£\s?\d/.test(trimmed) || /^Condition is/i.test(trimmed) || 
+          /^Dispatched with/i.test(trimmed) || /^ISBN[:\s]/i.test(trimmed)) {
+        return [];
+      }
+      
+      // Split by sentence endings and create paragraphs
+      const sentences = trimmed.split(/(?<=[.!?])\s+/).filter(s => s.trim().length > 0);
+      if (sentences.length > 0) {
+        // Group sentences into paragraphs of 2-3 sentences
+        const paragraphs: string[] = [];
+        for (let i = 0; i < sentences.length; i += 3) {
+          paragraphs.push(sentences.slice(i, i + 3).join(' '));
+        }
+        return paragraphs;
+      }
+      
+      return [trimmed];
+    }
+    
+    // Multi-line description - process line by line
     const lines = raw
       .split(/\r?\n+/)
       .map(l => l.trim())
       .filter(Boolean)
-      .filter(l => !/^£\s?\d/.test(l))
-      .filter(l => !/^isbn[:\s]/i.test(l))
-      .filter(l => !/\bISBN[-:]/i.test(l))
-      .filter(l => !/Condition is/i.test(l))
-      .filter(l => !/Dispatched with/i.test(l))
-      .filter(l => !/Royal Mail/i.test(l))
-      .filter(l => !/\bshipping\b/i.test(l))
+      // Filter out ecommerce boilerplate but be less aggressive with ISBN mentions in content
+      .filter(l => !/^£\s?\d/.test(l)) // Price lines
+      .filter(l => !/^isbn[:\s]/i.test(l)) // Lines starting with ISBN
+      .filter(l => !/^Condition is/i.test(l))
+      .filter(l => !/^Dispatched with/i.test(l))
+      .filter(l => !/^Royal Mail/i.test(l))
+      .filter(l => !/^\bshipping\b/i.test(l))
       .filter(l => !/Updated copy coming/i.test(l))
-      .filter(l => !/Any questions/i.test(l))
-      .filter(l => !/Highly recommended/i.test(l))
-      .filter(l => !/POST FREE/i.test(l))
-      .filter(l => !/Post Free/i.test(l))
+      .filter(l => !/^Any questions/i.test(l))
+      .filter(l => !/^Highly recommended/i.test(l))
+      .filter(l => !/^POST FREE/i.test(l))
+      .filter(l => !/^Post Free/i.test(l))
       .filter(l => !/recent (buyer|purchase|comment)/i.test(l))
       .filter(l => !/\bEBay\b/i.test(l))
       .filter(l => !/^".*"\s*(?:-|–)?\s*(?:buyer|review)/i.test(l))
       .filter(l => !/\bRRHT\b/i.test(l));
 
+    // If we filtered out everything, try a less aggressive approach
+    if (lines.length === 0) {
+      // Split by paragraph breaks and preserve content
+      const paragraphs = raw.split(/\n{2,}/);
+      return paragraphs
+        .map(p => p.trim())
+        .filter(p => p.length > 0 && !/^£\s?\d/.test(p) && !/^Condition is/i.test(p))
+        .filter(Boolean);
+    }
+
     // Merge back into paragraphs by double-breaks
     const text = lines.join('\n');
-    return text
+    const paragraphs = text
       .split(/\n{2,}/)
       .map(p => p.trim())
       .filter(Boolean);
+    
+    // If we still have no paragraphs, create one from remaining lines
+    if (paragraphs.length === 0 && lines.length > 0) {
+      return [lines.join(' ')];
+    }
+    
+    return paragraphs;
   }
   const sanitizedParagraphs = sanitizeDescription(preferredDescription);
+  
+  // Fallback: if sanitization removed everything, use the original description as paragraphs
+  const finalParagraphs = sanitizedParagraphs.length > 0 
+    ? sanitizedParagraphs 
+    : (preferredDescription ? [preferredDescription] : []);
 
   const metaDescriptionForSchema = sanitizedParagraphs[0] || book.description || '';
 
@@ -542,8 +595,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           <div className="card card-large content">
             <h2 className="content h2">Overview</h2>
             <div className="prose prose-invert max-w-none">
-              {sanitizedParagraphs.length > 0 ? (
-                sanitizedParagraphs.map((para, idx) => (
+              {finalParagraphs.length > 0 ? (
+                finalParagraphs.map((para, idx) => (
                   <p key={idx} className="text-secondary mb-4">{para}</p>
                 ))
               ) : (
