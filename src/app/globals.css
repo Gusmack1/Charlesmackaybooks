@@ -303,13 +303,21 @@
     color: #ffffff !important;
   }
   
-  /* CRITICAL: Force ALL backgrounds to use #020221 */
-  * {
-    background-color: transparent;
+  /* Ensure all blue-900 backgrounds are solid dark blue */
+  .bg-blue-900,
+  [class*="bg-blue-900"] {
+    background-color: #020221 !important;
   }
   
-  body,
-  html {
+  /* Ensure all slate-900 backgrounds are solid dark blue */
+  .bg-slate-900,
+  [class*="bg-slate-900"] {
+    background-color: #020221 !important;
+  }
+  
+  /* Ensure all slate-800 backgrounds are solid dark blue */
+  .bg-slate-800,
+  [class*="bg-slate-800"] {
     background-color: #020221 !important;
   }
   
@@ -363,16 +371,8 @@
 }
 
 /* Remove default gradient overlay for solid dark blue backgrounds */
-.hero-section.bg-[#020221]::before {
-  display: none;
-}
-
 .hero-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
-  z-index: 1;
+  display: none;
 }
 
 .hero-section > * {
