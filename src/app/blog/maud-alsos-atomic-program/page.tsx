@@ -429,7 +429,7 @@ const post = {
   tags: ['MAUD', 'Tube Alloys', 'Quebec Agreement', 'Combined Policy Committee', 'Combined Development Trust', 'Alsos Mission', 'Smyth Report', 'Atomic Bomb', 'Primary Sources', 'charles mackay books'],
   relatedBooks: getBooksData(['birth-atomic-bomb']),
   relatedPosts: [
-    { id: 'british-nuclear-deterrent-v-force', title: 'Britain's Nuclear Deterrent and the V-Force', excerpt: 'From Blue Danube to Blue Steel—capability, policy, and industrial underpinning.', image: '/blog-images/blue-steel-missile.jpg', readingTime: 14 },
+    { id: 'british-nuclear-deterrent-v-force', title: "Britain's Nuclear Deterrent and the V-Force", excerpt: 'From Blue Danube to Blue Steel—capability, policy, and industrial underpinning.', image: '/blog-images/blue-steel-missile.jpg', readingTime: 14 },
     { id: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing and Wartime Production', excerpt: 'Capacity, bottlenecks, and workforce—how industry delivered at scale.', image: '/blog-images/wwii-aircraft-factory-production.jpg', readingTime: 12 }
   ],
   references: [

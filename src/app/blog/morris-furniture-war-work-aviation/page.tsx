@@ -7,7 +7,7 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'morris-furniture-war-work-aviation',
-  title: 'From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition',
+  title: "From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition",
   subtitle: 'A comprehensive, research-backed account of how Morris Furniture Company of Glasgow pivoted from luxury liner interiors to wartime aviation production: Lee–Enfield rifle stocks, Upkeep/Highball components, rotor blades for Cierva/Weir helicopters, Mosquito balsa plywood, and aerodynamic models for the Royal Aircraft Establishment.',
   content: `
     <h2 id="introduction">Introduction: Industrial Transformation</h2>
@@ -312,7 +312,7 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
-    alt: 'From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition',
+    alt: "From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition",
     caption: 'Precision woodcraft meets aviation production on the Clyde.'
   },
   category: 'Industrial History',
@@ -322,11 +322,11 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: 'From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition | Charles E. MacKay',
+  title: "From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition | Charles E. MacKay",
   description: 'A comprehensive, research-backed account of how Morris Furniture Company of Glasgow pivoted from luxury liner interiors to wartime aviation production: Lee–Enfield rifle stocks, Upkeep/Highball components, rotor blades for Cierva/Weir helicopters, Mosquito balsa plywood, and aerodynamic models for the Royal Aircraft Establishment.',
   keywords: 'Morris Furniture, Glasgow industry, Upkeep, Highball, Cierva rotor blades, aviation supply chain, charles mackay books, Charles E. MacKay',
   openGraph: {
-    title: 'From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition',
+    title: "From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition",
     description: 'A comprehensive, research-backed account of how Morris Furniture Company of Glasgow pivoted from luxury liner interiors to wartime aviation production.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'

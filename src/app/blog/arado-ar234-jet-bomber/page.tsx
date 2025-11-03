@@ -8,7 +8,7 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'arado-ar234-jet-bomber',
   title: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition",
-  subtitle: 'A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.',
+  subtitle: "A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.",
   content: `
     <h2 id="introduction">Introduction: The World's First Operational Jet Bomber</h2>
     <p>
@@ -296,7 +296,7 @@ const post = {
       <li><a href="/blog/jet-age-aviation-cold-war-development" class="underline">Jet Age Aviation: Cold War Development</a> — Post-war jet evolution</li>
     </ul>
   `,
-  excerpt: 'A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.',
+  excerpt: "A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.",
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -307,8 +307,8 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/arado-ar234-jet-bomber.jpg',
-    alt: 'Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition',
-    caption: 'The world's first operational jet bomber.'
+    alt: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition",
+    caption: "The world's first operational jet bomber."
   },
   category: 'WWII Aviation',
   tags: [
@@ -319,11 +319,11 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: 'Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition | Charles E. MacKay',
-  description: 'A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.',
+  title: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition | Charles E. MacKay",
+  description: "A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.",
   keywords: 'Arado Ar 234, jet bomber, WWII reconnaissance aircraft, Jumo 004 engines, Luftwaffe 1945, German jet bomber, Me 262 ecosystem, late-war aviation, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: 'Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition',
+    title: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition",
     description: 'A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, and its legacy.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'

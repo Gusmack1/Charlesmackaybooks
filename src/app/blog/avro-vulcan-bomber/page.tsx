@@ -8,7 +8,7 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'avro-vulcan-bomber',
   title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition",
-  subtitle: 'A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.',
+  subtitle: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.",
   content: `
     <h2 id="introduction">Introduction: Britain's Delta-Wing Bomber</h2>
     <p>
@@ -250,7 +250,7 @@ const post = {
       <li><a href="/blog/jet-age-aviation-cold-war-development" class="underline">Jet Age Aviation: Cold War Development</a> — The broader context of Cold War aviation</li>
     </ul>
   `,
-  excerpt: 'A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.',
+  excerpt: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.",
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -261,7 +261,7 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
-    alt: 'Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition',
+    alt: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition",
     caption: 'Delta-wing icon of the V-Force.'
   },
   category: 'Cold War Aviation',
@@ -273,12 +273,12 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: 'Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition | Charles E. MacKay',
-  description: 'A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.',
+  title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition | Charles E. MacKay",
+  description: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.",
   keywords: 'Avro Vulcan, RAF V-Force, Cold War bomber, delta wing bomber, Olympus engines, Blue Steel, British nuclear deterrent, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: 'Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition',
-    description: 'A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, and its role in Britain's V-Force nuclear deterrent strategy.',
+    title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition",
+    description: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, and its role in Britain's V-Force nuclear deterrent strategy.",
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
   }
