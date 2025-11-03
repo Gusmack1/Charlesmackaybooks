@@ -114,7 +114,7 @@ export default function GoldenAgePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-blue-900">
+    <div className="min-h-screen bg-[#020221]">
 
       <UnifiedSchema
         pageType="page"
@@ -124,7 +124,7 @@ export default function GoldenAgePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-blue-900 text-white">
+      <section className="relative bg-[#020221] text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-6 py-32">
           <div className="text-center max-w-5xl mx-auto">

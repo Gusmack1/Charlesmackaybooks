@@ -286,7 +286,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   }
 
   // Consistent dark-blue hero across all book pages - solid dark blue
-  const gradientClass = 'bg-blue-900';
+  const gradientClass = 'bg-[#020221]';
 
   // Get proper book cover image path - use book.imageUrl with fallback
   const bookCoverSrc = book.imageUrl || `/book-covers/${book.id}.jpg`;
@@ -519,7 +519,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
       <BookAnalytics book={book} />
 
-      <div className="min-h-screen bg-blue-900">
+      <div className="min-h-screen bg-[#020221]">
 
         {/* Hero Section - refined for clarity and unique per-book presentation */}
         <div className={`hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-16`}>
@@ -567,19 +567,19 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
                 {/* Book Specifications - Enhanced */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-5xl mx-auto">
-                  <div className="bg-blue-800/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
+                  <div className="bg-[#020221]/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
                   <div className="text-lg font-semibold text-white mb-2">Weight</div>
                     <div className="text-3xl font-bold text-white">{weightFromInfo || (book as any).weight || 300}g</div>
                   </div>
-                  <div className="bg-blue-800/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
+                  <div className="bg-[#020221]/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
                     <div className="text-lg font-semibold text-white mb-2">Published</div>
                     <div className="text-3xl font-bold text-white">{book.publicationYear}</div>
                   </div>
-                  <div className="bg-blue-800/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
+                  <div className="bg-[#020221]/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
                     <div className="text-lg font-semibold text-white mb-2">ISBN-13</div>
                     <div className="text-lg font-bold text-white leading-tight">{book.isbn}</div>
                   </div>
-                  <div className="bg-blue-800/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
+                  <div className="bg-[#020221]/90 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
                     <div className="text-lg font-semibold text-white mb-2">Condition</div>
                     <div className="text-3xl font-bold text-white">{book.condition}</div>
                   </div>

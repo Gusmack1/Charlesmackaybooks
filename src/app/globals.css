@@ -12,9 +12,9 @@
   --color-text-white: #ffffff;
 
   /* Backgrounds - Dark Blue Theme */
-  --color-bg-primary: #1e3a8a; /* Dark blue - blue-900 */
-  --color-bg-secondary: #1e40af; /* Slightly lighter blue - blue-800 */
-  --color-bg-accent: #2563eb; /* Medium blue for accents - blue-600 */
+  --color-bg-primary: #020221; /* Very dark blue */
+  --color-bg-secondary: #020221; /* Very dark blue */
+  --color-bg-accent: #020221; /* Very dark blue */
 
   /* Accents */
   --color-accent-blue: #2563eb; /* blue-600 */
@@ -40,7 +40,7 @@
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #ffffff; /* White text */
-    background-color: #1e3a8a; /* Dark blue background */
+    background-color: #020221; /* Very dark blue background */
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -231,7 +231,7 @@
 
   /* Card helpers - Dark theme */
   .card { 
-    background: rgba(30, 64, 175, 0.8); 
+    background: rgba(2, 2, 33, 0.9); 
     border-radius: var(--border-radius); 
     box-shadow: var(--shadow-md); 
     padding: 1rem; 
@@ -242,7 +242,7 @@
   .card-compact { 
     border-radius: var(--border-radius); 
     padding: 1rem; 
-    background: rgba(30, 64, 175, 0.6);
+    background: rgba(2, 2, 33, 0.8);
     color: #ffffff !important;
   }
   
@@ -303,9 +303,20 @@
     color: #ffffff !important;
   }
   
-  /* Ensure all blue-900 backgrounds are solid dark blue */
-  .bg-blue-900 {
-    background-color: #1e3a8a !important;
+  /* CRITICAL: Force ALL backgrounds to use #020221 */
+  * {
+    background-color: transparent;
+  }
+  
+  body,
+  html {
+    background-color: #020221 !important;
+  }
+  
+  /* Ensure all blue-800 backgrounds are solid dark blue */
+  .bg-blue-800,
+  [class*="bg-blue-800"] {
+    background-color: #020221 !important;
   }
   
   /* Badge styles for dark blue backgrounds */
@@ -352,7 +363,7 @@
 }
 
 /* Remove default gradient overlay for solid dark blue backgrounds */
-.hero-section.bg-blue-900::before {
+.hero-section.bg-[#020221]::before {
   display: none;
 }
 
@@ -409,34 +420,34 @@
   font-weight: 400;
 }
 
-/* FORM ELEMENTS - Dark theme styling */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"],
-select,
-textarea {
-  color: #ffffff !important;
-  background-color: rgba(30, 64, 175, 0.8) !important; /* Dark blue */
-  border: 1px solid rgba(147, 197, 253, 0.3) !important; /* Light blue border */
-  border-radius: var(--border-radius);
-  padding: 0.75rem;
-}
+  /* FORM ELEMENTS - Dark theme styling */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  select,
+  textarea {
+    color: #ffffff !important;
+    background-color: rgba(2, 2, 33, 0.9) !important; /* Very dark blue */
+    border: 1px solid rgba(147, 197, 253, 0.3) !important; /* Light blue border */
+    border-radius: var(--border-radius);
+    padding: 0.75rem;
+  }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="password"]:focus,
-select:focus,
-textarea:focus {
-  outline: 2px solid #60a5fa !important; /* Light blue outline */
-  border-color: #60a5fa !important;
-  background-color: rgba(30, 64, 175, 1) !important;
-}
-
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  input[type="password"]:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid #60a5fa !important; /* Light blue outline */
+    border-color: #60a5fa !important;
+    background-color: rgba(2, 2, 33, 1) !important;
+  }
+  
   /* Select dropdown options should have dark background */
   select option {
-    background-color: #1e3a8a !important;
+    background-color: #020221 !important;
     color: #ffffff !important;
   }
 
@@ -452,7 +463,7 @@ textarea:focus {
   [class*="bg-slate-100"],
   [class*="bg-gray-50"],
   [class*="bg-gray-100"] {
-    background-color: #1e3a8a !important;
+    background-color: #020221 !important;
   }
   
   [class*="bg-slate-50"] *,
@@ -467,7 +478,7 @@ textarea:focus {
   .bg-gray-50,
   .bg-slate-50,
   .bg-slate-100 {
-    background-color: #1e3a8a !important; /* Dark blue */
+    background-color: #020221 !important; /* Very dark blue */
     color: #ffffff !important;
   }
 
