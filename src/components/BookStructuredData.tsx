@@ -1,24 +1,17 @@
 'use client';
 
 import { Book } from '@/types/book';
+import { getValidISBN, getValidGTIN13, getValidSKU } from '@/utils/isbn';
 
 interface BookStructuredDataProps {
   book: Book;
 }
 
 export default function BookStructuredData({ book }: BookStructuredDataProps) {
-  // Validate and format ISBN
-  const formatIsbn = (isbn: string | undefined): string | undefined => {
-    if (!isbn) return undefined;
-    // Remove any non-digit characters and ensure it's a valid ISBN
-    const cleanIsbn = isbn.replace(/[^0-9Xx]/g, '');
-    if (cleanIsbn.length === 10 || cleanIsbn.length === 13) {
-      return cleanIsbn;
-    }
-    return undefined;
-  };
-
-  const formattedIsbn = formatIsbn(book.isbn);
+  // Get validated ISBN, GTIN, and SKU values
+  const validISBN = getValidISBN(book.isbn);
+  const validGTIN13 = getValidGTIN13(book.isbn);
+  const validSKU = getValidSKU(book.isbn, book.id);
 
   // Book Schema
   const bookSchema = {
@@ -55,7 +48,7 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
         contactType: 'customer service'
       }
     },
-    ...(formattedIsbn && { isbn: formattedIsbn }),
+    ...(validISBN && { isbn: validISBN }),
     numberOfPages: book.pageCount,
     bookFormat: book.condition === 'New' ? 'Paperback' : 'UsedBook',
     bookEdition: '1st Edition',
@@ -289,8 +282,8 @@ export default function BookStructuredData({ book }: BookStructuredDataProps) {
       name: 'Charles E. MacKay Publishing'
     },
     category: book.category,
-    sku: formattedIsbn || book.id,
-    ...(formattedIsbn && { gtin: formattedIsbn }),
+    sku: validSKU,
+    ...(validGTIN13 && { gtin: validGTIN13 }),
     offers: {
       '@type': 'Offer',
       url: `https://charlesmackaybooks.com/books/${book.id}`,

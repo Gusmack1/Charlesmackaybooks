@@ -1,6 +1,7 @@
 'use client';
 
 import { Book } from '@/types/book';
+import { getValidISBN, getValidGTIN13, getValidSKU } from '@/utils/isbn';
 
 interface ProductSchemaProps {
   books: Book[];
@@ -26,6 +27,11 @@ export default function ProductSchema({
     // Ensure we always have a valid image URL
     const imageUrl = toAbsolute(book.imageUrl, book.id);
     
+    // Get validated ISBN, GTIN, and SKU values
+    const validISBN = getValidISBN(book.isbn);
+    const validGTIN13 = getValidGTIN13(book.isbn);
+    const validSKU = getValidSKU(book.isbn, book.id);
+    
     return {
       '@type': 'Product',
       '@id': `https://charlesmackaybooks.com/books/${book.id}#product`,
@@ -41,9 +47,11 @@ export default function ProductSchema({
       name: 'Charles E. MacKay',
       url: 'https://charlesmackaybooks.com'
     },
-    isbn: book.isbn || undefined,
+    ...(validISBN && { isbn: validISBN }),
+    ...(validGTIN13 && { gtin13: validGTIN13 }),
     category: book.category,
     productID: book.id,
+    sku: validSKU,
     offers: {
       '@type': 'Offer',
       '@id': `https://charlesmackaybooks.com/books/${book.id}#offer`,

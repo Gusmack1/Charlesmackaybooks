@@ -202,6 +202,11 @@ export function generateBlogMetadata(
  */
 export function generateBookStructuredData(book: Book) {
   const baseUrl = seoConfig.baseUrl;
+  const { getValidISBN, getValidGTIN13, getValidSKU } = require('@/utils/isbn');
+  
+  const validISBN = getValidISBN(book.isbn);
+  const validGTIN13 = getValidGTIN13(book.isbn);
+  const validSKU = getValidSKU(book.isbn, book.id);
   
   return {
     '@context': 'https://schema.org',
@@ -212,8 +217,8 @@ export function generateBookStructuredData(book: Book) {
       const candidate = book.imageUrl ?? `/book-covers/${book.id}.jpg`;
       return candidate.startsWith('http') ? candidate : `${baseUrl}${candidate.startsWith('/') ? '' : '/'}${candidate}`;
     })(),
-    sku: book.id,
-    isbn: book.isbn,
+    sku: validSKU,
+    ...(validISBN && { isbn: validISBN }),
     author: {
       '@type': 'Person',
       name: 'Charles E. MacKay'

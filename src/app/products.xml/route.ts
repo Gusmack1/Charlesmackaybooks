@@ -1,4 +1,5 @@
 import { books } from '@/data/books'
+import { getValidISBN, getValidGTIN13, getValidSKU } from '@/utils/isbn'
 
 function escapeXml(value: string): string {
   return value
@@ -23,26 +24,34 @@ function buildProductsXml(): string {
 
   const items = books
     .map((book) => {
-      const isbn = (book.isbn || book.id || '').toString()
-      const id = isbn
+      // Get validated ISBN, GTIN, and SKU values
+      const validGTIN13 = getValidGTIN13(book.isbn);
+      const validSKU = getValidSKU(book.isbn, book.id);
+      const validISBN = getValidISBN(book.isbn);
+      
+      // Use valid GTIN13 for gtin field, or fallback to SKU if no GTIN
+      // Note: Google Merchant requires GTIN to be exactly 13 digits, so only include if valid
+      const gtin = validGTIN13 || '';
+      const id = validGTIN13 || validSKU; // Use GTIN13 as ID if available, else SKU
+      const mpn = validSKU; // MPN can be SKU format
+      
       const title = `${book.title} - Aviation History Book by Charles E. MacKay`
       const description = padDescription(book.description || '')
       const link = `${domain}/books/${book.id}`
       const imagePath = book.imageUrl || `/book-covers/${book.id}.jpg`
       const image_link = `${domain}${imagePath}`
-      const availability = 'in stock'
+      const availability = book.inStock ? 'in stock' : 'out of stock'
       const price = `${book.price.toFixed(2)} GBP`
       const brand = 'Charles E. MacKay Publications'
-      const gtin = isbn
-      const mpn = isbn
-      const condition = 'new'
+      const condition = book.condition === 'New' ? 'new' : 'used'
       const google_product_category = 'Media > Books > Non-Fiction > History Books'
       const product_type = `Aviation History > ${book.category}`
       const shipping_country = 'GB'
       const shipping_service = 'Standard'
       const shipping_price = '0.00 GBP'
       const shipping_weight = `${((book as any).weight || 300)} g`
-      const identifier_exists = 'TRUE'
+      // Only set identifier_exists to TRUE if we have a valid GTIN
+      const identifier_exists = validGTIN13 ? 'TRUE' : 'FALSE'
       const adult = 'FALSE'
 
       const publication_date = book.publicationYear ? String(book.publicationYear) : ''
@@ -58,7 +67,7 @@ function buildProductsXml(): string {
       <g:availability>${availability}</g:availability>
       <g:price>${price}</g:price>
       <g:brand>${escapeXml(brand)}</g:brand>
-      <g:gtin>${escapeXml(gtin)}</g:gtin>
+      ${gtin ? `<g:gtin>${escapeXml(gtin)}</g:gtin>` : ''}
       <g:mpn>${escapeXml(mpn)}</g:mpn>
       <g:condition>${condition}</g:condition>
       <g:google_product_category>${escapeXml(google_product_category)}</g:google_product_category>
@@ -69,7 +78,7 @@ function buildProductsXml(): string {
         <g:price>${shipping_price}</g:price>
       </g:shipping>
       <g:shipping_weight>${escapeXml(shipping_weight)}</g:shipping_weight>
-      <g:identifier_exists>${identifier_exists}</g:identifier_exists>
+      ${identifier_exists ? `<g:identifier_exists>${identifier_exists}</g:identifier_exists>` : ''}
       <g:adult>${adult}</g:adult>
       <!-- Optional enrichments via product_detail -->
       <g:product_detail>

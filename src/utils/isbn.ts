@@ -121,3 +121,106 @@ export function getISBNFormats(isbn: string): { isbn10: string | null; isbn13: s
 
   return { isbn10: null, isbn13: null };
 }
+
+/**
+ * Validates and normalizes an ISBN value for use in structured data
+ * Returns null if ISBN is invalid or placeholder text
+ */
+export function normalizeISBN(isbn: string | undefined | null): string | null {
+  if (!isbn || typeof isbn !== 'string') return null;
+  
+  // Check for placeholder/invalid values
+  const lowerISBN = isbn.toLowerCase().trim();
+  if (lowerISBN === 'coming soon' || lowerISBN === 'tbd' || lowerISBN === 'n/a' || lowerISBN === '') {
+    return null;
+  }
+  
+  // Remove any non-digit characters except X
+  const cleanISBN = isbn.replace(/[^0-9X]/g, '');
+  
+  // Validate ISBN-10
+  if (cleanISBN.length === 10 && isValidISBN10(cleanISBN)) {
+    return cleanISBN;
+  }
+  
+  // Validate ISBN-13
+  if (cleanISBN.length === 13 && isValidISBN13(cleanISBN)) {
+    return cleanISBN;
+  }
+  
+  return null;
+}
+
+/**
+ * Gets a valid ISBN-13 for GTIN (converts ISBN-10 to ISBN-13 if needed)
+ * Returns null if ISBN is invalid
+ */
+export function getValidGTIN13(isbn: string | undefined | null): string | null {
+  const normalized = normalizeISBN(isbn);
+  if (!normalized) return null;
+  
+  // If already ISBN-13, return it
+  if (normalized.length === 13 && isValidISBN13(normalized)) {
+    return normalized;
+  }
+  
+  // If ISBN-10, convert to ISBN-13
+  if (normalized.length === 10 && isValidISBN10(normalized)) {
+    return convertISBN10to13(normalized);
+  }
+  
+  return null;
+}
+
+/**
+ * Gets a valid SKU value
+ * Prefers ISBN-13, falls back to formatted book ID
+ */
+export function getValidSKU(isbn: string | undefined | null, bookId: string): string {
+  // Try to get valid ISBN-13 first (preferred for SKU)
+  const gtin13 = getValidGTIN13(isbn);
+  if (gtin13) {
+    return gtin13;
+  }
+  
+  // Fallback to normalized ISBN-13 if ISBN-10 exists
+  const normalized = normalizeISBN(isbn);
+  if (normalized && normalized.length === 10) {
+    const converted = convertISBN10to13(normalized);
+    if (converted) return converted;
+  }
+  
+  // If ISBN-13 exists but wasn't valid, try to use it anyway (better than book ID)
+  if (normalized && normalized.length === 13) {
+    return normalized;
+  }
+  
+  // Final fallback: format book ID as SKU
+  // Format: BOOK-{id} where id is sanitized
+  const sanitizedId = bookId.replace(/[^a-zA-Z0-9-]/g, '-').toUpperCase();
+  return `BOOK-${sanitizedId}`;
+}
+
+/**
+ * Gets a valid ISBN value for structured data (prefers ISBN-13)
+ */
+export function getValidISBN(isbn: string | undefined | null): string | null {
+  const normalized = normalizeISBN(isbn);
+  if (!normalized) return null;
+  
+  // Prefer ISBN-13 if available
+  if (normalized.length === 13 && isValidISBN13(normalized)) {
+    return normalized;
+  }
+  
+  // If ISBN-10, convert to ISBN-13
+  if (normalized.length === 10 && isValidISBN10(normalized)) {
+    const converted = convertISBN10to13(normalized);
+    if (converted) return converted;
+    // If conversion fails, return original ISBN-10
+    return normalized;
+  }
+  
+  // If ISBN-13 exists but fails validation, return null
+  return null;
+}

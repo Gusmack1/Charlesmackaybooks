@@ -268,22 +268,28 @@ export default function RootLayout({
               try {
                 const domain = 'https://charlesmackaybooks.com';
                 const { books } = require('@/data/books');
+                const { getValidISBN, getValidGTIN13, getValidSKU } = require('@/utils/isbn');
                 const itemList = {
                   '@context': 'https://schema.org/',
                   '@type': 'ItemList',
-                  itemListElement: books.map((book: any, idx: number) => ({
+                  itemListElement: books.map((book: any, idx: number) => {
+                    const validISBN = getValidISBN(book.isbn);
+                    const validGTIN13 = getValidGTIN13(book.isbn);
+                    const validSKU = getValidSKU(book.isbn, book.id);
+                    
+                    return {
                     '@type': 'ListItem',
                     position: idx + 1,
                     item: {
                       '@type': 'Product',
-                      '@id': `${domain}#isbn-${book.isbn || book.id}`,
+                      '@id': `${domain}#isbn-${validISBN || book.id}`,
                       url: `${domain}/books/${book.id}`,
                       name: book.title,
                       description: (book.description || '').slice(0, 5000),
                       image: [`${domain}${(book.imageUrl || `/book-covers/${book.id}.jpg`).startsWith('/') ? '' : '/'}${book.imageUrl || `book-covers/${book.id}.jpg`}`],
-                      sku: book.isbn || book.id,
-                      ...(book.isbn && { gtin13: book.isbn }),
-                      mpn: book.isbn || book.id,
+                      sku: validSKU,
+                      ...(validGTIN13 && { gtin13: validGTIN13 }),
+                      mpn: validSKU,
                       brand: { '@type': 'Brand', name: 'Charles E. MacKay' },
                       author: { '@type': 'Person', name: 'Charles Edward MacKay' },
                       offers: {
@@ -327,7 +333,8 @@ export default function RootLayout({
                         { '@type': 'PropertyValue', name: 'Format', value: 'Paperback' }
                       ]
                     }
-                  }))
+                  };
+                  })
                 };
                 return JSON.stringify(itemList);
               } catch {

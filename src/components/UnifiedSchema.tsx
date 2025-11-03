@@ -1,4 +1,5 @@
 import { FileX } from "lucide-react";
+import { getValidISBN, getValidGTIN13, getValidSKU } from '@/utils/isbn';
 
 interface UnifiedSchemaProps {
   pageType?: 'homepage' | 'books' | 'book-detail' | 'blog' | 'blog-post' | 'category' | 'page';
@@ -256,6 +257,11 @@ export default function UnifiedSchema({
 
   // Add book-specific schema only when needed
   if (pageType === 'book-detail' && bookData) {
+    // Get validated ISBN, GTIN, and SKU values
+    const validISBN = getValidISBN(bookData.isbn);
+    const validGTIN13 = getValidGTIN13(bookData.isbn);
+    const validSKU = getValidSKU(bookData.isbn, bookData.id);
+    
     // Breadcrumbs: Home > Books > Current Book
     (unifiedSchema["@graph"] as any[]).push({
       "@type": "BreadcrumbList",
@@ -293,11 +299,11 @@ export default function UnifiedSchema({
       "manufacturer": {
         "@id": `${baseUrl}/#organization`
       },
-      "isbn": bookData.isbn,
-      "gtin13": bookData.isbn,
+      ...(validISBN && { "isbn": validISBN }),
+      ...(validGTIN13 && { "gtin13": validGTIN13 }),
       "category": bookData.category,
       "productID": bookData.id,
-      "sku": bookData.isbn || bookData.id,
+      "sku": validSKU,
       "weight": {
         "@type": "QuantitativeValue",
         "value": (bookData as any).weight || 300,
@@ -377,16 +383,16 @@ export default function UnifiedSchema({
       "name": bookData.title,
       "description": bookData.description,
       "image": [absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`)],
-      "isbn": bookData.isbn,
-      "gtin13": bookData.isbn,
+      ...(validISBN && { "isbn": validISBN }),
+      ...(validGTIN13 && { "gtin13": validGTIN13 }),
       "author": { "@id": `${baseUrl}/#person` },
       "publisher": { "@id": `${baseUrl}/#organization` },
       "inLanguage": "en-GB",
       "workExample": {
         "@type": "Book",
         "bookFormat": "https://schema.org/Paperback",
-        "isbn": bookData.isbn,
-        "gtin13": bookData.isbn
+        ...(validISBN && { "isbn": validISBN }),
+        ...(validGTIN13 && { "gtin13": validGTIN13 })
       },
       "offers": {
         "@type": "Offer",
@@ -494,7 +500,12 @@ export default function UnifiedSchema({
       "name": "Aviation History Books",
       "description": "Complete collection of aviation history books by Charles E. MacKay",
       "numberOfItems": books.length,
-      "itemListElement": books.slice(0, 10).map((book, index) => ({
+      "itemListElement": books.slice(0, 10).map((book, index) => {
+        const validISBN = getValidISBN(book.isbn);
+        const validGTIN13 = getValidGTIN13(book.isbn);
+        const validSKU = getValidSKU(book.isbn, book.id);
+        
+        return {
         "@type": "ListItem",
         "position": index + 1,
         "item": {
@@ -504,8 +515,8 @@ export default function UnifiedSchema({
           "description": book.description,
           "image": [absoluteImage(book.imageUrl || `/book-covers/${book.id}.jpg`)],
           "url": `${baseUrl}/books/${book.id}`,
-          "isbn": book.isbn,
-          "sku": book.isbn || book.id,
+          ...(validISBN && { "isbn": validISBN }),
+          "sku": validSKU,
           "category": book.category,
           "weight": {
             "@type": "QuantitativeValue",
@@ -569,7 +580,8 @@ export default function UnifiedSchema({
             }
           ]
         }
-      }))
+      };
+      })
     });
   }
 

@@ -1,4 +1,5 @@
 import { books } from '@/data/books'
+import { getValidISBN, getValidGTIN13, getValidSKU } from '@/utils/isbn'
 
 function tsvEscape(value: string): string {
   return (value || '')
@@ -30,24 +31,30 @@ export async function GET() {
   ].join('\t')
 
   const rows = books.map((b) => {
-    const isbn = (b.isbn || b.id || '').toString()
-    const id = isbn
+    // Get validated ISBN, GTIN, and SKU values
+    const validGTIN13 = getValidGTIN13(b.isbn);
+    const validSKU = getValidSKU(b.isbn, b.id);
+    
+    // Use valid GTIN13 for gtin field, or empty string if no valid GTIN
+    const gtin = validGTIN13 || '';
+    const id = validGTIN13 || validSKU; // Use GTIN13 as ID if available, else SKU
+    const mpn = validSKU; // MPN can be SKU format
+    
     const title = `${b.title} - Charles E. MacKay`
     const description = tsvEscape(b.description || '')
     const link = `${domain}/books/${b.id}`
     const image = `${domain}${b.imageUrl || `/book-covers/${b.id}.jpg`}`
-    const condition = 'new'
-    const availability = 'in stock'
+    const condition = b.condition === 'New' ? 'new' : 'used'
+    const availability = b.inStock ? 'in stock' : 'out of stock'
     // Use existing prices only (do not modify)
     const price = `${Number(b.price).toFixed(2)} GBP`
-    const gtin = isbn
-    const mpn = isbn
     const brand = 'Charles E. MacKay'
     const googleCategory = 'Media > Books > Non-Fiction > Transportation > Aviation'
     const shipping = 'GB:::0.00 GBP'
     const shippingWeight = `${((b as any).weight || 300)}g`
     const productType = `Aviation History > ${b.category}`
-    const identifierExists = 'TRUE'
+    // Only set identifier_exists to TRUE if we have a valid GTIN
+    const identifierExists = validGTIN13 ? 'TRUE' : 'FALSE'
     const author = 'Charles E. MacKay'
 
     return [
