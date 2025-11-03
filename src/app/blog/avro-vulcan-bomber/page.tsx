@@ -7,7 +7,7 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'avro-vulcan-bomber',
-  title: 'Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition',
+  title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition",
   subtitle: 'A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.',
   content: `
     <h2 id="introduction">Introduction: Britain's Delta-Wing Bomber</h2>

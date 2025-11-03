@@ -7,7 +7,7 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'arado-ar234-jet-bomber',
-  title: 'Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition',
+  title: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition",
   subtitle: 'A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.',
   content: `
     <h2 id="introduction">Introduction: The World's First Operational Jet Bomber</h2>

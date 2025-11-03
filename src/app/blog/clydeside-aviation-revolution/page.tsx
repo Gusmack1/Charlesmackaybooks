@@ -279,7 +279,7 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/default-generic.svg',
-    alt: 'Clydeside Aviation: Scotland\'s Industrial Flying Revolution - Enhanced Edition',
+    alt: "Clydeside Aviation: Scotland's Industrial Flying Revolution - Enhanced Edition",
     caption: 'Heavy industry to air power: Scotland's Clydeside aviation transformation.'
   },
   category: 'Scottish Aviation',

@@ -27,7 +27,7 @@ Queue (start → finish)
  - [x] naval-aviation-history
 - [x] bristol-fighter-f2b-brisfit
 - [x] bristol-sycamore-helicopter-development
- - [ ] helicopter-development-pioneers
+- [x] helicopter-development-pioneers
 - [x] sikorsky-vs300-helicopter-breakthrough
 - [x] sopwith-camel-wwi-fighter
 - [x] supermarine-spitfire-development-history
@@ -36,6 +36,8 @@ Queue (start → finish)
 - [x] test-pilot-biography-eric-brown
 - [x] aviation-manufacturing-wartime-production
 - [x] korean-war-air-combat
+- [x] maud-alsos-atomic-program
+- [x] adolf-rohrbach-metal-aircraft-revolution
 
 Notes
 - As images were cleaned in public/blog-images, use `default-generic.svg` if a period-appropriate replacement is not yet sourced. Replace with licensed historical images as they are added.
