@@ -209,27 +209,36 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
     }
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'pending': return 'bg-yellow-600/50 text-yellow-200 border border-yellow-500';
-      case 'confirmed': return 'bg-blue-600/50 text-blue-200 border border-blue-500';
-      case 'processing': return 'bg-purple-600/50 text-purple-200 border border-purple-500';
-      case 'dispatched': return 'bg-indigo-600/50 text-indigo-200 border border-indigo-500';
-      case 'shipped': return 'bg-indigo-600/50 text-indigo-200 border border-indigo-500';
-      case 'delivered': return 'bg-green-600/50 text-green-200 border border-green-500';
-      case 'cancelled': return 'bg-red-600/50 text-red-200 border border-red-500';
-      default: return 'bg-slate-600/50 text-slate-200 border border-slate-500';
+  // Get combined status display - prioritize order status over payment status
+  const getCombinedStatus = (order: Order): { status: string; color: string } => {
+    // If order is cancelled, delivered, or shipped/dispatched, show that
+    if (order.status === 'cancelled') {
+      return { status: 'Cancelled', color: 'bg-red-600/50 text-red-200 border border-red-500' };
     }
-  };
-
-  const getPaymentStatusColor = (status: string) => {
-    switch (status) {
-      case 'paid': return 'bg-green-600/50 text-green-200 border border-green-500';
-      case 'pending': return 'bg-yellow-600/50 text-yellow-200 border border-yellow-500';
-      case 'failed': return 'bg-red-600/50 text-red-200 border border-red-500';
-      case 'refunded': return 'bg-slate-600/50 text-slate-200 border border-slate-500';
-      default: return 'bg-slate-600/50 text-slate-200 border border-slate-500';
+    if (order.status === 'delivered') {
+      return { status: 'Delivered', color: 'bg-green-600/50 text-green-200 border border-green-500' };
     }
+    if (order.status === 'dispatched' || order.status === 'shipped') {
+      return { status: order.status === 'dispatched' ? 'Dispatched' : 'Shipped', color: 'bg-indigo-600/50 text-indigo-200 border border-indigo-500' };
+    }
+    if (order.status === 'processing') {
+      return { status: 'Processing', color: 'bg-purple-600/50 text-purple-200 border border-purple-500' };
+    }
+    if (order.status === 'confirmed') {
+      return { status: 'Confirmed', color: 'bg-blue-600/50 text-blue-200 border border-blue-500' };
+    }
+    // For pending status, check payment status
+    if (order.paymentStatus === 'paid') {
+      return { status: 'Payment Confirmed', color: 'bg-green-600/50 text-green-200 border border-green-500' };
+    }
+    if (order.paymentStatus === 'failed') {
+      return { status: 'Payment Failed', color: 'bg-red-600/50 text-red-200 border border-red-500' };
+    }
+    if (order.paymentStatus === 'refunded') {
+      return { status: 'Refunded', color: 'bg-slate-600/50 text-slate-200 border border-slate-500' };
+    }
+    // Default: pending payment
+    return { status: 'Pending Payment', color: 'bg-yellow-600/50 text-yellow-200 border border-yellow-500' };
   };
 
   return (
@@ -288,12 +297,14 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(order.status)}`}>
-                    {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
-                  </span>
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getPaymentStatusColor(order.paymentStatus)}`}>
-                    {order.paymentStatus.charAt(0).toUpperCase() + order.paymentStatus.slice(1)}
-                  </span>
+                  {(() => {
+                    const combinedStatus = getCombinedStatus(order);
+                    return (
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${combinedStatus.color}`}>
+                        {combinedStatus.status}
+                      </span>
+                    );
+                  })()}
                 </div>
               </div>
 

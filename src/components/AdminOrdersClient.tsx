@@ -16,16 +16,51 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
     fetchOrders();
   }, []);
 
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { Order } from '@/utils/orderManagement';
+import { getAllOrdersFromLocalStorage } from '@/utils/orderSync';
+
+interface AdminOrdersClientProps {}
+
+export default function AdminOrdersClient({}: AdminOrdersClientProps) {
+  const [orders, setOrders] = useState<Order[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
+  const [statusFilter, setStatusFilter] = useState<string>('all');
+
+  useEffect(() => {
+    fetchOrders();
+  }, []);
+
   const fetchOrders = async () => {
     try {
+      // Fetch from API (OrderManagementService)
       const response = await fetch('/api/orders');
       const data = await response.json();
       
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to fetch orders');
+      let apiOrders: Order[] = [];
+      if (response.ok) {
+        apiOrders = data.orders || [];
       }
-      
-      setOrders(data.orders || []);
+
+      // Also fetch from localStorage (legacy orders)
+      const localStorageOrders = getAllOrdersFromLocalStorage();
+
+      // Merge orders, removing duplicates by ID
+      const allOrders = [...apiOrders];
+      localStorageOrders.forEach(localOrder => {
+        if (!allOrders.find(o => o.id === localOrder.id)) {
+          allOrders.push(localOrder);
+        }
+      });
+
+      // Sort by creation date (newest first)
+      allOrders.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+
+      setOrders(allOrders);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch orders');
     } finally {

@@ -1,22 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { OrderManagementService, OrderItem, CustomerInfo } from '@/utils/orderManagement';
+import { OrderManagementService, OrderItem, CustomerInfo, Order } from '@/utils/orderManagement';
 import { books } from '@/data/books';
 
 // GET /api/orders - Get all orders (admin only)
+// This combines orders from OrderManagementService (in-memory) and localStorage (via client-side sync)
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const email = searchParams.get('email');
     
+    // Get orders from OrderManagementService (in-memory)
+    let orders: Order[] = [];
+    
     if (email) {
-      // Get orders by customer email
-      const orders = await OrderManagementService.getOrdersByEmail(email);
-      return NextResponse.json({ orders });
+      orders = await OrderManagementService.getOrdersByEmail(email);
     } else {
-      // Get all orders (in production, add admin authentication)
-      const orders = await OrderManagementService.getAllOrders();
-      return NextResponse.json({ orders });
+      orders = await OrderManagementService.getAllOrders();
     }
+
+    // Note: Orders stored in localStorage are client-side only and will be synced
+    // when the admin panel loads them client-side. For server-side API, we return
+    // orders from OrderManagementService. The AdminOrdersClient component will
+    // also fetch from localStorage and merge the results.
+
+    return NextResponse.json({ orders });
   } catch (error) {
     console.error('Error fetching orders:', error);
     return NextResponse.json(
