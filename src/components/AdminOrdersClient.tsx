@@ -458,6 +458,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
               className="px-3 py-2 border border-slate-600 bg-slate-900 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              aria-label="Filter orders by status"
             >
               <option value="all">All Status</option>
               {activeTab === 'active' ? (
