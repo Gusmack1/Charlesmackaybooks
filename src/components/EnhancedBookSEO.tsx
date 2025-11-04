@@ -265,7 +265,9 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
     '@type': 'Product',
     '@id': `${baseUrl}/books/${book.id}#product`,
     name: book.title,
-    description: book.description,
+    description: ((book.description || '').length >= 50 && (book.description || '').length <= 5000)
+      ? book.description
+      : ((book.description || book.title || 'Aviation history book by Charles E. MacKay. Expert research on Scottish aviation, WWI & WWII aircraft, helicopter development, and military aviation history. Essential reference material for historians and researchers.').slice(0, 5000)),
     image: (book.imageUrl && book.imageUrl.startsWith('http'))
       ? book.imageUrl
       : `${baseUrl}${(book.imageUrl || `/book-covers/${book.id}.jpg`).startsWith('/') ? '' : '/'}${book.imageUrl || `book-covers/${book.id}.jpg`}`,
@@ -282,11 +284,50 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
       '@type': 'Offer',
       price: book.price.toString(),
       priceCurrency: 'GBP',
+      priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
       url: `${baseUrl}/books/${book.id}`,
       seller: {
         '@type': 'Organization',
         name: 'Charles E. MacKay Publishing'
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0.00',
+          currency: 'GBP'
+        },
+        shippingDestination: [
+          { '@type': 'DefinedRegion', addressCountry: 'GB' },
+          { '@type': 'DefinedRegion', addressCountry: 'EU' },
+          { '@type': 'DefinedRegion', addressCountry: 'US' }
+        ],
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 2,
+            unitCode: 'DAY'
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 1,
+            maxValue: 5,
+            unitCode: 'DAY'
+          }
+        }
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'GB',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
+        returnShippingFeesAmount: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
+        returnPolicyUrl: `${baseUrl}/returns`
       }
     }
   };

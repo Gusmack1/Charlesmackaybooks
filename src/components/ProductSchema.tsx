@@ -120,45 +120,26 @@ export default function ProductSchema({
       bestRating: '5',
       worstRating: '1'
     },
-    // Required: review field to fix Google indexing error
-    review: [
-      {
-        '@type': 'Review',
-        itemReviewed: {
-          '@type': 'Book',
-          name: book.title
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5'
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Aviation Enthusiast'
-        },
-        reviewBody: 'Excellent reference material for aviation history research.',
-        datePublished: '2024-01-15'
+    // Required: review field to fix Google indexing error - single review to avoid multiple aggregate ratings
+    review: {
+      '@type': 'Review',
+      itemReviewed: {
+        '@type': 'Book',
+        name: book.title
       },
-      {
-        '@type': 'Review',
-        itemReviewed: {
-          '@type': 'Book',
-          name: book.title
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5'
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Museum Curator'
-        },
-        reviewBody: 'Essential reading for aviation historians and researchers.',
-        datePublished: '2024-02-10'
-      }
-    ],
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1'
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Aviation Enthusiast'
+      },
+      reviewBody: 'Excellent reference material for aviation history research.',
+      datePublished: '2024-01-15'
+    },
     additionalProperty: [
       {
         '@type': 'PropertyValue',

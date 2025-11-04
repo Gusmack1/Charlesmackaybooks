@@ -148,7 +148,8 @@ export default function AviationBibliographyPage() {
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "distribution": {
       "@type": "DataDownload",
-      "contentUrl": "https://charlesmackaybooks.com/aviation-bibliography"
+      "contentUrl": "https://charlesmackaybooks.com/aviation-bibliography",
+      "encodingFormat": "text/html"
     }
   };
 

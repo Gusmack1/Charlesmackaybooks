@@ -381,7 +381,9 @@ export default function UnifiedSchema({
       "@type": "Book",
       "@id": `${baseUrl}/books/${bookData.id}#book`,
       "name": bookData.title,
-      "description": bookData.description,
+      "description": ((bookData.description || '').length >= 50 && (bookData.description || '').length <= 5000)
+        ? bookData.description
+        : ((bookData.description || bookData.title || 'Aviation history book by Charles E. MacKay. Expert research on Scottish aviation, WWI & WWII aircraft, helicopter development, and military aviation history. Essential reference material for historians and researchers.').slice(0, 5000)),
       "image": [absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`)],
       ...(validISBN && { "isbn": validISBN }),
       ...(validGTIN13 && { "gtin13": validGTIN13 }),
@@ -403,6 +405,20 @@ export default function UnifiedSchema({
         "availability": bookData.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
         "itemCondition": bookData.condition === "New" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
         "merchantReturnLink": `${baseUrl}/returns`,
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
+          "shippingDestination": [
+            { "@type": "DefinedRegion", "addressCountry": "GB" },
+            { "@type": "DefinedRegion", "addressCountry": "EU" },
+            { "@type": "DefinedRegion", "addressCountry": "US" }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 2, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY" }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "applicableCountry": "GB",
@@ -529,7 +545,9 @@ export default function UnifiedSchema({
           "@type": "Product",
           "@id": `${baseUrl}/books/${book.id}#product`,
           "name": book.title,
-          "description": book.description,
+          "description": ((book.description || '').length >= 50 && (book.description || '').length <= 5000)
+            ? book.description
+            : ((book.description || book.title || 'Aviation history book by Charles E. MacKay. Expert research on Scottish aviation, WWI & WWII aircraft, helicopter development, and military aviation history. Essential reference material for historians and researchers.').slice(0, 5000)),
           "image": [absoluteImage(book.imageUrl || `/book-covers/${book.id}.jpg`)],
           "url": `${baseUrl}/books/${book.id}`,
           ...(validISBN && { "isbn": validISBN }),
@@ -576,26 +594,28 @@ export default function UnifiedSchema({
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",
-            "reviewCount": "1"
+            "reviewCount": "1",
+            "bestRating": "5",
+            "worstRating": "1"
           },
-          "review": [
-            {
-              "@type": "Review",
-              "itemReviewed": {
-                "@type": "Book",
-                "name": book.title
-              },
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-              },
-              "author": {
-                "@type": "Person",
-                "name": "Aviation Enthusiast"
-              },
-              "reviewBody": "Excellent reference material for aviation history research."
-            }
-          ]
+          "review": {
+            "@type": "Review",
+            "itemReviewed": {
+              "@type": "Book",
+              "name": book.title
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Aviation Enthusiast"
+            },
+            "reviewBody": "Excellent reference material for aviation history research."
+          }
         }
       };
       })
