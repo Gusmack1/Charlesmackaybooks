@@ -57,7 +57,8 @@ export function convertLegacyOrderToNew(legacyOrder: LegacyOrder): Order {
             legacyOrder.status === 'delivered' ? 'delivered' : 
             legacyOrder.status === 'cancelled' ? 'cancelled' : 'pending',
     paymentStatus: legacyOrder.status === 'paid' ? 'paid' : 'pending',
-    paymentMethod: legacyOrder.paypalTransactionId ? 'paypal' : 'stripe',
+    // Detect payment method: use stored paymentMethod, or detect from paypalTransactionId, or default to paypal if no transaction ID yet (PayPal orders are created before payment)
+    paymentMethod: legacyOrder.paymentMethod || (legacyOrder.paypalTransactionId ? 'paypal' : 'paypal'), // Default to PayPal since Stripe isn't implemented yet
     paypalOrderId: legacyOrder.paypalTransactionId,
     createdAt: createdAt,
     updatedAt: updatedAt,

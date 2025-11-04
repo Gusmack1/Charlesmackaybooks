@@ -187,6 +187,10 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                   }
                 } else if (action === 'confirm_payment') {
                   legacyOrder.status = 'paid';
+                  // Ensure payment method is set if not already set
+                  if (!legacyOrder.paymentMethod) {
+                    legacyOrder.paymentMethod = 'paypal'; // Default to PayPal since Stripe isn't implemented
+                  }
                 }
                 legacyOrder.timestamp = new Date().toISOString();
                 saveOrder(legacyOrder);
@@ -271,6 +275,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                       newOrder.paymentStatus === 'paid' ? 'paid' : 'pending',
               trackingNumber: newOrder.trackingNumber,
               notes: newOrder.notes,
+              paymentMethod: newOrder.paymentMethod || 'paypal', // Store payment method
             };
           }
           
@@ -283,6 +288,10 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               }
             } else if (action === 'confirm_payment') {
               legacyOrder.status = 'paid';
+              // Ensure payment method is set if not already set
+              if (!legacyOrder.paymentMethod) {
+                legacyOrder.paymentMethod = 'paypal'; // Default to PayPal since Stripe isn't implemented
+              }
             } else if (result.legacyOrder) {
               legacyOrder.status = result.legacyOrder.status;
               if (result.legacyOrder.trackingNumber) {
@@ -300,6 +309,12 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               }
               if (result.order.notes) {
                 legacyOrder.notes = result.order.notes;
+              }
+              // Ensure payment method is preserved
+              if (result.order.paymentMethod) {
+                legacyOrder.paymentMethod = result.order.paymentMethod;
+              } else if (!legacyOrder.paymentMethod) {
+                legacyOrder.paymentMethod = 'paypal'; // Default to PayPal
               }
             }
             
@@ -672,7 +687,14 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                   <>
                     {selectedOrder.paymentStatus === 'pending' && (
                       <button
-                        onClick={() => updateOrderStatus(selectedOrder.id, 'confirm_payment')}
+                        onClick={async () => {
+                          try {
+                            await updateOrderStatus(selectedOrder.id, 'confirm_payment');
+                          } catch (error) {
+                            console.error('Confirm payment error:', error);
+                            alert('Failed to confirm payment: ' + (error instanceof Error ? error.message : 'Unknown error'));
+                          }
+                        }}
                         className="w-full px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
                       >
                         Confirm Payment

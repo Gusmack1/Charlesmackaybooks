@@ -232,7 +232,8 @@ export default function CheckoutPage() {
         shippingCost,
         total,
         timestamp: new Date().toISOString(),
-        status: 'pending'
+        status: 'pending',
+        paymentMethod: 'paypal' // Explicitly set payment method
       };
 
       saveOrder(legacyOrder);

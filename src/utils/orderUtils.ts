@@ -29,6 +29,8 @@ export interface Order {
   status: 'pending' | 'paid' | 'shipped' | 'dispatched' | 'delivered' | 'cancelled' | 'failed';
   paypalTransactionId?: string;
   trackingNumber?: string;
+  paymentMethod?: 'paypal' | 'stripe' | 'bank_transfer'; // Store payment method for proper detection
+  notes?: string;
 }
 
 export interface ShippingRates {
