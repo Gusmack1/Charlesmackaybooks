@@ -606,7 +606,6 @@ View order: https://charlesmackaybooks.com/admin/orders/
     }
   }
 }
-}
 
 // Order Management Service
 export class OrderManagementService {
