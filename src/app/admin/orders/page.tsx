@@ -9,19 +9,25 @@ export const metadata: Metadata = {
 
 export default function AdminOrdersPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-primary mb-4">
-            Order Management Dashboard
-          </h1>
-          <p className="text-lg text-secondary">
-            Manage orders, update status, and provide customer service support.
-          </p>
+    <div className="min-h-screen bg-slate-900">
+      {/* Hero Section */}
+      <div className="hero-section bg-slate-900">
+        <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              Order Management Dashboard
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+              Manage orders, update status, and provide customer service support.
+            </p>
+          </div>
         </div>
-
-        <AdminOrdersClient />
       </div>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+        <AdminOrdersClient />
+      </main>
     </div>
   );
 }
