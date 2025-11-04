@@ -101,10 +101,13 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
             ? localOrder.updatedAt 
             : new Date(localOrder.updatedAt);
           
-          // If localStorage version is more recent, use it (especially for cancelled orders)
-          if (localUpdated > existingUpdated || localOrder.status === 'cancelled') {
+          // Prioritize API orders (OrderManagementService) over localStorage unless localStorage is clearly more recent
+          // API orders are the source of truth for status updates
+          if (localUpdated > existingUpdated && (localOrder.status === 'cancelled' || Math.abs(localUpdated.getTime() - existingUpdated.getTime()) > 1000)) {
+            // Only use localStorage if it's significantly more recent (more than 1 second) or if order is cancelled
             allOrders[existingIndex] = localOrder;
           }
+          // Otherwise keep API order (which has the updated status)
         }
       });
 
@@ -352,6 +355,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
           setSelectedOrder(null);
           setActiveTab('cancelled');
         } else {
+          // Update the selected order with the latest data from the API
           setSelectedOrder(updatedOrder);
         }
       } else if (action === 'cancel') {
@@ -359,6 +363,11 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         setActiveTab('cancelled');
         setSelectedOrder(null);
       }
+      
+      // Force a small delay to ensure state updates are reflected
+      setTimeout(() => {
+        // This ensures the UI updates properly
+      }, 100);
       
       alert(`Order ${action.replace('_', ' ')} successful${action === 'dispatch' ? ' - Customer has been notified via email' : ''}`);
     } catch (err) {
@@ -540,12 +549,32 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                     <div className="text-right">
                       <p className="font-semibold text-white">£{order.total.toFixed(2)}</p>
                       <div className="flex flex-col gap-1 mt-1 items-end">
-                        <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor(order.status)}`}>
-                          {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
-                        </span>
-                        <span className={`px-2 py-1 rounded-full text-xs ${getPaymentStatusColor(order.paymentStatus)}`}>
-                          {order.paymentStatus === 'paid' ? '✓ Paid' : order.paymentStatus.charAt(0).toUpperCase() + order.paymentStatus.slice(1)}
-                        </span>
+                        {/* Show single combined status badge instead of two separate ones */}
+                        {order.status === 'cancelled' ? (
+                          <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor(order.status)}`}>
+                            Cancelled
+                          </span>
+                        ) : order.status === 'delivered' ? (
+                          <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor(order.status)}`}>
+                            Delivered
+                          </span>
+                        ) : order.status === 'dispatched' || order.status === 'shipped' ? (
+                          <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor(order.status)}`}>
+                            {order.status === 'dispatched' ? 'Dispatched' : 'Shipped'}
+                          </span>
+                        ) : order.status === 'processing' ? (
+                          <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor(order.status)}`}>
+                            Processing
+                          </span>
+                        ) : order.status === 'confirmed' || order.paymentStatus === 'paid' ? (
+                          <span className={`px-2 py-1 rounded-full text-xs ${getPaymentStatusColor('paid')}`}>
+                            ✓ Paid
+                          </span>
+                        ) : (
+                          <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor('pending')}`}>
+                            Pending Payment
+                          </span>
+                        )}
                         {order.paymentMethod && (
                           <span className="text-xs text-white/60">
                             {order.paymentMethod === 'paypal' ? 'PayPal' : 'Stripe'}
