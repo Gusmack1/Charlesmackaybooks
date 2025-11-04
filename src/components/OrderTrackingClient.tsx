@@ -117,7 +117,19 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
         }
         
         if (legacyOrder) {
-          foundOrders = [convertLegacyOrder(legacyOrder)];
+          const convertedOrder = convertLegacyOrder(legacyOrder);
+          // Only include if it's a paid/confirmed order
+          if ((convertedOrder.paymentStatus === 'paid' || 
+               convertedOrder.status === 'paid' || 
+               convertedOrder.status === 'confirmed' || 
+               convertedOrder.status === 'shipped' || 
+               convertedOrder.status === 'delivered') &&
+              convertedOrder.status !== 'cancelled' && 
+              convertedOrder.status !== 'failed' &&
+              convertedOrder.paymentStatus !== 'failed' &&
+              convertedOrder.paymentStatus !== 'refunded') {
+            foundOrders = [convertedOrder];
+          }
         }
       } else {
         // Search by email - normalize email for comparison
@@ -167,6 +179,22 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
         foundOrders = matchingOrders.map(convertLegacyOrder);
       }
 
+      // Filter to only show successfully purchased orders
+      // Exclude pending, cancelled, and failed orders
+      foundOrders = foundOrders.filter(order => {
+        // Only show orders that have been paid/confirmed
+        const isPaid = order.paymentStatus === 'paid' || 
+                       order.status === 'paid' || 
+                       order.status === 'confirmed' || 
+                       order.status === 'shipped' || 
+                       order.status === 'delivered';
+        const isNotCancelled = order.status !== 'cancelled' && 
+                               order.status !== 'failed' &&
+                               order.paymentStatus !== 'failed' &&
+                               order.paymentStatus !== 'refunded';
+        return isPaid && isNotCancelled;
+      });
+
       // If no orders found in localStorage, try API as fallback
       if (foundOrders.length === 0) {
         const url = searchType === 'email' 
@@ -177,17 +205,39 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
         const data = await response.json();
 
         if (response.ok) {
+          let apiOrders: Order[] = [];
           if (searchType === 'email') {
-            foundOrders = data.orders || [];
+            apiOrders = data.orders || [];
           } else {
-            foundOrders = data.order ? [data.order] : [];
+            apiOrders = data.order ? [data.order] : [];
           }
+          
+          // Filter API results to only show paid orders
+          apiOrders = apiOrders.filter(order => {
+            const isPaid = order.paymentStatus === 'paid' || 
+                           order.status === 'paid' || 
+                           order.status === 'confirmed' || 
+                           order.status === 'shipped' || 
+                           order.status === 'delivered';
+            const isNotCancelled = order.status !== 'cancelled' && 
+                                   order.status !== 'failed' &&
+                                   order.paymentStatus !== 'failed' &&
+                                   order.paymentStatus !== 'refunded';
+            return isPaid && isNotCancelled;
+          });
+          
+          foundOrders = [...foundOrders, ...apiOrders];
         }
       }
 
-      setOrders(foundOrders);
+      // Remove duplicates based on order ID
+      const uniqueOrders = foundOrders.filter((order, index, self) =>
+        index === self.findIndex(o => o.id === order.id)
+      );
 
-      if (foundOrders.length === 0) {
+      setOrders(uniqueOrders);
+
+      if (uniqueOrders.length === 0) {
         setError('No orders found. Please check your email address or order ID and try again.');
       }
     } catch (err) {
