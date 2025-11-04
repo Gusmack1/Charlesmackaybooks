@@ -536,6 +536,75 @@ export class EmailService {
     const template = emailTemplates.deliveryConfirmation(order);
     return this.sendEmail(order.customer.email, template);
   }
+
+  static async sendAdminNotification(order: Order, notificationType: 'new_order' | 'payment_received'): Promise<boolean> {
+    try {
+      // Check if we're in browser environment
+      if (typeof window === 'undefined') {
+        console.log('Admin notification would be sent:', notificationType);
+        return true; // Server-side: just log
+      }
+      
+      const adminEmail = 'charlese1mackay@hotmail.com';
+      let subject: string;
+      let body: string;
+
+      if (notificationType === 'new_order') {
+        subject = `NEW ORDER RECEIVED - ${order.id} - £${order.total.toFixed(2)}`;
+        body = `
+NEW ORDER RECEIVED
+
+Order ID: ${order.id}
+Customer: ${order.customer.firstName} ${order.customer.lastName}
+Email: ${order.customer.email}
+Phone: ${order.customer.phone || 'N/A'}
+Payment Method: ${order.paymentMethod?.toUpperCase() || 'Unknown'}
+Total: £${order.total.toFixed(2)}
+Status: ${order.status.toUpperCase()}
+Payment Status: ${order.paymentStatus.toUpperCase()}
+
+ITEMS:
+${order.items.map(item => `- ${item.book.title} (Qty: ${item.quantity}) - £${(item.price * item.quantity).toFixed(2)}`).join('\n')}
+
+SHIPPING ADDRESS:
+${order.customer.address.line1}
+${order.customer.address.line2 || ''}
+${order.customer.address.city}, ${order.customer.address.postalCode}
+${order.customer.address.country}
+
+View order: https://charlesmackaybooks.com/admin/orders/
+        `.trim();
+      } else {
+        subject = `PAYMENT RECEIVED - ${order.id} - £${order.total.toFixed(2)}`;
+        body = `
+PAYMENT RECEIVED - PayPal Purchase
+
+Order ID: ${order.id}
+Customer: ${order.customer.firstName} ${order.customer.lastName}
+Email: ${order.customer.email}
+Payment Method: PayPal
+Amount: £${order.total.toFixed(2)}
+Payment Status: PAID
+
+ITEMS:
+${order.items.map(item => `- ${item.book.title} (Qty: ${item.quantity}) - £${(item.price * item.quantity).toFixed(2)}`).join('\n')}
+
+This order is now ready for processing.
+
+View order: https://charlesmackaybooks.com/admin/orders/
+        `.trim();
+      }
+
+      const mailtoLink = `mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.open(mailtoLink, '_blank');
+      
+      console.log('Admin notification sent:', notificationType);
+      return true;
+    } catch (error) {
+      console.error('Failed to send admin notification:', error);
+      return false;
+    }
+  }
 }
 }
 
