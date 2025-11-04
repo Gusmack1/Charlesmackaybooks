@@ -297,6 +297,10 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               if (result.legacyOrder.trackingNumber) {
                 legacyOrder.trackingNumber = result.legacyOrder.trackingNumber;
               }
+              // Preserve payment method from legacyOrder response
+              if (result.legacyOrder.paymentMethod) {
+                legacyOrder.paymentMethod = result.legacyOrder.paymentMethod;
+              }
             } else if (result.order) {
               // Update from result.order if available
               legacyOrder.status = result.order.status === 'cancelled' ? 'cancelled' :

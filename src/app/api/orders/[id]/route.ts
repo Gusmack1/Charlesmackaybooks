@@ -110,7 +110,8 @@ export async function PATCH(
                 action === 'confirm_payment' ? 'paid' :
                 updatedOrder.status,
         trackingNumber: updatedOrder.trackingNumber,
-        updatedAt: updatedOrder.updatedAt.toISOString()
+        updatedAt: updatedOrder.updatedAt.toISOString(),
+        paymentMethod: updatedOrder.paymentMethod || 'paypal' // Preserve payment method
       } : undefined
     });
 
