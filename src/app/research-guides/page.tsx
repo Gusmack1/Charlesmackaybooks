@@ -85,15 +85,15 @@ export default function ResearchGuidesPage() {
 
         {/* Research Guides */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-primary mb-8 text-center">Research Methodologies</h2>
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">Research Methodologies</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {guides.map((guide, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-                <h3 className="text-xl font-semibold text-primary mb-3">{guide.title}</h3>
-                <p className="text-secondary mb-4">{guide.description}</p>
+              <div key={index} className="bg-slate-800 border border-white/15 rounded-lg p-6 text-white">
+                <h3 className="text-xl font-semibold text-white mb-3">{guide.title}</h3>
+                <p className="text-white/90 mb-4">{guide.description}</p>
                 <div className="space-y-2">
-                  <h4 className="font-medium text-slate-700">Key Topics:</h4>
-                  <ul className="grid grid-cols-2 gap-1 text-sm text-secondary">
+                  <h4 className="font-medium text-white">Key Topics:</h4>
+                  <ul className="grid grid-cols-2 gap-1 text-sm text-white/90">
                     {guide.topics.map((topic, topicIndex) => (
                       <li key={topicIndex} className="flex items-center">
                         <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
@@ -109,33 +109,33 @@ export default function ResearchGuidesPage() {
 
         {/* Archives Directory */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-primary mb-8 text-center">Key Aviation Archives</h2>
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">Key Aviation Archives</h2>
+          <div className="bg-slate-800 border border-white/15 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-slate-100">
+                <thead className="bg-slate-900">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Institution</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Location</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Specialization</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Website</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-white/80 uppercase tracking-wider">Institution</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-white/80 uppercase tracking-wider">Location</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-white/80 uppercase tracking-wider">Specialization</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-white/80 uppercase tracking-wider">Website</th>
                   </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
+                <tbody className="bg-slate-800 divide-y divide-white/10">
                   {archives.map((archive, index) => (
                     <tr key={index}>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="font-medium text-slate-900">{archive.name}</div>
+                        <div className="font-medium text-white">{archive.name}</div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-white/80">
                         {archive.location}
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-500">
+                      <td className="px-6 py-4 text-sm text-white/80">
                         {archive.specialization}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
                         <a href={`https://${archive.website}`} target="_blank" rel="noopener noreferrer" 
-                           className="text-blue-600 hover:text-blue-800">
+                           className="text-blue-300 hover:text-blue-200 underline">
                           {archive.website}
                         </a>
                       </td>
@@ -149,12 +149,12 @@ export default function ResearchGuidesPage() {
 
         {/* Research Ethics */}
         <section className="mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-primary mb-6">Research Ethics & Best Practices</h2>
+          <div className="bg-slate-800 border border-white/15 rounded-lg p-8 text-white">
+            <h2 className="text-2xl font-bold text-white mb-6">Research Ethics & Best Practices</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-slate-700 mb-4">Ethical Guidelines</h3>
-                <ul className="space-y-2 text-secondary">
+                <h3 className="text-lg font-semibold text-white mb-4">Ethical Guidelines</h3>
+                <ul className="space-y-2 text-white/90">
                   <li>• Respect copyright and intellectual property</li>
                   <li>• Obtain proper permissions for document use</li>
                   <li>• Acknowledge all sources and contributors</li>
@@ -163,8 +163,8 @@ export default function ResearchGuidesPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-700 mb-4">Quality Standards</h3>
-                <ul className="space-y-2 text-secondary">
+                <h3 className="text-lg font-semibold text-white mb-4">Quality Standards</h3>
+                <ul className="space-y-2 text-white/90">
                   <li>• Use multiple primary sources for verification</li>
                   <li>• Cross-reference information across archives</li>
                   <li>• Document research methodology clearly</li>
@@ -178,8 +178,8 @@ export default function ResearchGuidesPage() {
 
         {/* Contact */}
         <section className="text-center">
-          <h2 className="text-2xl font-bold text-primary mb-4">Research Consultation</h2>
-          <p className="text-secondary mb-6 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-4">Research Consultation</h2>
+          <p className="text-white/90 mb-6 max-w-2xl mx-auto">
             Charles E. MacKay is available for research consultation, methodology guidance, 
             and collaborative projects with academic institutions and fellow researchers.
           </p>
@@ -192,7 +192,7 @@ export default function ResearchGuidesPage() {
             </Link>
             <Link
               href="/academic-resources"
-              className="inline-block bg-slate-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-700 transition-colors"
+              className="inline-block bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors"
             >
               Academic Resources
             </Link>

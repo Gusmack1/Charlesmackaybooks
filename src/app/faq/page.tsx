@@ -187,13 +187,13 @@ export default function FAQPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'FAQ' }]}
       >
           {/* Category Filter */}
-          <div className="mb-12 card p-6">
-            <h2 className="content h2 text-primary mb-4">Browse by Category</h2>
+          <div className="mb-12 bg-slate-800 border border-white/15 rounded-lg p-6 text-white">
+            <h2 className="content h2 text-white mb-4">Browse by Category</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {categories.map((category) => (
-                <div key={category} className="text-center p-4 card-compact bg-accent-blue text-white rounded-lg hover:opacity-90 transition-opacity cursor-pointer">
+                <div key={category} className="text-center p-4 bg-blue-900/50 border border-blue-700/50 text-white rounded-lg hover:opacity-90 transition-opacity cursor-pointer">
                   <div className="font-semibold text-white">{category}</div>
-                  <div className="text-sm text-white mt-1">
+                  <div className="text-sm text-white/90 mt-1">
                     {faqItems.filter(item => item.category === category).length} questions
                   </div>
                 </div>
@@ -203,11 +203,11 @@ export default function FAQPage() {
 
           {/* FAQ Items */}
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-slate-800">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-white">Frequently Asked Questions</h2>
 
             {categories.map((category) => (
-              <div key={category} className="card p-6">
-                <h3 className="text-2xl font-semibold text-slate-800 mb-6 border-b border-slate-200 pb-2">
+              <div key={category} className="bg-slate-800 border border-white/15 rounded-lg p-6 text-white">
+                <h3 className="text-2xl font-semibold text-white mb-6 border-b border-white/15 pb-2">
                   {category}
                 </h3>
 
@@ -215,23 +215,23 @@ export default function FAQPage() {
                   {faqItems
                     .filter(item => item.category === category)
                     .map((faq, index) => (
-                      <div key={index} className="border-b border-slate-100 last:border-b-0 pb-6 last:pb-0">
-                        <h4 className="text-xl font-semibold text-primary mb-4 leading-relaxed">
+                      <div key={index} className="border-b border-white/10 last:border-b-0 pb-6 last:pb-0">
+                        <h4 className="text-xl font-semibold text-white mb-4 leading-relaxed">
                           {faq.question}
                         </h4>
 
                         <div className="prose max-w-none">
-                          <p className="text-secondary leading-relaxed mb-4">
+                          <p className="text-white/90 leading-relaxed mb-4">
                             {faq.answer}
                           </p>
                         </div>
 
                         {faq.relatedTopics && (
                           <div className="mb-4">
-                            <h5 className="font-semibold text-slate-700 mb-2">Related Topics:</h5>
+                            <h5 className="font-semibold text-white mb-2">Related Topics:</h5>
                             <div className="flex flex-wrap gap-2">
                               {faq.relatedTopics.map((topic) => (
-                                <span key={topic} className="px-3 py-1 badge badge-gray rounded-full text-sm">
+                                <span key={topic} className="px-3 py-1 bg-slate-900 text-white border border-white/15 rounded-full text-sm">
                                   {topic}
                                 </span>
                               ))}
@@ -240,9 +240,9 @@ export default function FAQPage() {
                         )}
 
                         {faq.relatedBooks && (
-                          <div className="mt-4 card-compact bg-accent-blue text-white p-4 rounded-lg">
+                          <div className="mt-4 bg-blue-900/50 border border-blue-700/50 text-white p-4 rounded-lg">
                             <h5 className="font-semibold text-white mb-2">Recommended Reading:</h5>
-                            <div className="text-sm text-white">
+                            <div className="text-sm text-white/90">
                               {faq.relatedBooks.join(', ')}
                             </div>
                           </div>
@@ -255,37 +255,37 @@ export default function FAQPage() {
           </div>
 
           {/* Contact for More Questions */}
-          <div className="mt-12 bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">Have Additional Questions?</h2>
+          <div className="mt-12 bg-slate-800 border border-white/15 rounded-xl p-8 text-white">
+            <h2 className="text-3xl font-bold text-white mb-6">Have Additional Questions?</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">Academic Inquiries</h3>
-                <p className="text-slate-700 mb-4">
+                <h3 className="text-xl font-semibold text-white mb-4">Academic Inquiries</h3>
+                <p className="text-white/90 mb-4">
                   For detailed academic questions about aviation history research, source verification,
                   or assistance with dissertation and thesis work, academic inquiries are welcome.
                 </p>
-                <div className="space-y-2 text-sm text-slate-600">
+                <div className="space-y-2 text-sm text-white/80">
                   <div><strong>Response Time:</strong> 3-5 business days</div>
                   <div><strong>Best For:</strong> Research methodology, source verification, academic collaboration</div>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">General Inquiries</h3>
-                <p className="text-slate-700 mb-4">
+                <h3 className="text-xl font-semibold text-white mb-4">General Inquiries</h3>
+                <p className="text-white/90 mb-4">
                   Questions about books, availability, shipping, or general aviation history topics.
                   Please review the FAQ above first as many common questions are already answered.
                 </p>
-                <div className="space-y-2 text-sm text-slate-600">
+                <div className="space-y-2 text-sm text-white/80">
                   <div><strong>Response Time:</strong> 1-2 business days</div>
                   <div><strong>Best For:</strong> Book inquiries, general questions, purchase assistance</div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-6 p-4 bg-green-50 rounded-lg">
-              <h4 className="font-semibold text-green-800 mb-2">Research Collaboration</h4>
-              <p className="text-green-700">
+            <div className="mt-6 p-4 bg-green-900/50 border border-green-700/50 rounded-lg text-white">
+              <h4 className="font-semibold text-white mb-2">Research Collaboration</h4>
+              <p className="text-white/90">
                 Charles E. MacKay welcomes collaboration opportunities with academic institutions,
                 museums, and serious researchers. Please provide detailed information about your
                 research project and specific collaboration interests.
@@ -294,7 +294,7 @@ export default function FAQPage() {
           </div>
 
           {/* About the Expert */}
-          <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-8">
+          <div className="mt-12 bg-gradient-to-r from-blue-900 to-blue-800 text-white rounded-xl p-8">
             <h2 className="text-3xl font-bold mb-6">About the Expert</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>

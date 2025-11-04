@@ -122,28 +122,28 @@ export default function TimelinePage() {
         {/* Timeline */}
         <section className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-accent-blue"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-blue-500"></div>
 
           <div className="space-y-12">
             {timelineEvents.map((period, index) => (
               <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-accent-blue border-4 border-white rounded-full shadow-lg z-10"></div>
+                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-500 border-4 border-slate-900 rounded-full shadow-lg z-10"></div>
 
                 {/* Content */}
                 <div className={`w-full md:w-5/12 ml-12 md:ml-0 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <div className="card p-6">
+                  <div className="bg-slate-800 border border-white/15 rounded-lg p-6 text-white">
                     <div className="flex items-center mb-3">
-                      <span className="badge badge-blue text-sm font-semibold px-3 py-1 rounded-full">
+                      <span className="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
                         {period.period}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-primary mb-2">{period.title}</h3>
-                    <p className="text-secondary mb-4">{period.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{period.title}</h3>
+                    <p className="text-white/90 mb-4">{period.description}</p>
                     <ul className="space-y-2">
                       {period.events.map((event, eventIndex) => (
-                        <li key={eventIndex} className="flex items-start text-sm text-secondary">
-                          <span className="w-2 h-2 bg-accent-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <li key={eventIndex} className="flex items-start text-sm text-white/90">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                           <span>{event}</span>
                         </li>
                       ))}
@@ -160,24 +160,24 @@ export default function TimelinePage() {
 
         {/* Call to Action */}
         <section className="mt-16 text-center">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-slate-800 mb-4">Explore Aviation History in Detail</h2>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <div className="bg-slate-800 border border-white/15 rounded-lg p-8 text-white">
+            <h2 className="text-2xl font-bold text-white mb-4">Explore Aviation History in Detail</h2>
+            <p className="text-white/90 mb-6 max-w-2xl mx-auto">
               Discover comprehensive books covering each era of aviation development, 
               written by aviation historian Charles E. MacKay with unprecedented detail and analysis.
             </p>
             <div className="grid md:grid-cols-3 gap-4 mt-8">
-              <Link href="/category/wwi-aviation" className="bg-red-50 border border-red-200 rounded-lg p-4 hover:bg-red-100 transition-colors">
-                <h3 className="font-semibold text-red-800 mb-2">WWI Aviation</h3>
-                <p className="text-sm text-red-600">Great War aircraft and development</p>
+              <Link href="/category/wwi-aviation" className="bg-red-900/50 border border-red-700/50 rounded-lg p-4 hover:bg-red-800/50 transition-colors text-white">
+                <h3 className="font-semibold text-white mb-2">WWI Aviation</h3>
+                <p className="text-sm text-white/80">Great War aircraft and development</p>
               </Link>
-              <Link href="/category/wwii-aviation" className="bg-blue-50 border border-blue-200 rounded-lg p-4 hover:bg-blue-100 transition-colors">
-                <h3 className="font-semibold text-blue-800 mb-2">WWII Aviation</h3>
-                <p className="text-sm text-blue-600">World War II aircraft and operations</p>
+              <Link href="/category/wwii-aviation" className="bg-blue-900/50 border border-blue-700/50 rounded-lg p-4 hover:bg-blue-800/50 transition-colors text-white">
+                <h3 className="font-semibold text-white mb-2">WWII Aviation</h3>
+                <p className="text-sm text-white/80">World War II aircraft and operations</p>
               </Link>
-              <Link href="/category/jet-age-aviation" className="bg-purple-50 border border-purple-200 rounded-lg p-4 hover:bg-purple-100 transition-colors">
-                <h3 className="font-semibold text-purple-800 mb-2">Jet Age</h3>
-                <p className="text-sm text-purple-600">Modern aviation development</p>
+              <Link href="/category/jet-age-aviation" className="bg-purple-900/50 border border-purple-700/50 rounded-lg p-4 hover:bg-purple-800/50 transition-colors text-white">
+                <h3 className="font-semibold text-white mb-2">Jet Age</h3>
+                <p className="text-sm text-white/80">Modern aviation development</p>
               </Link>
             </div>
           </div>

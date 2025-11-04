@@ -45,46 +45,46 @@ export default function AcademicResourcesPage() {
 
         {/* Quick Links */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
-          <Link href="/aviation-bibliography" className="card p-6 text-center hover:shadow-lg transition-shadow">
+          <Link href="/aviation-bibliography" className="bg-slate-800 border border-white/15 rounded-lg p-6 text-center hover:shadow-lg transition-shadow text-white">
             <div className="text-3xl mb-3">📚</div>
-            <h3 className="font-semibold text-primary mb-2">Bibliography</h3>
-            <p className="text-sm text-secondary">150+ primary sources and references</p>
+            <h3 className="font-semibold text-white mb-2">Bibliography</h3>
+            <p className="text-sm text-white/80">150+ primary sources and references</p>
           </Link>
-          <Link href="/aviation-glossary" className="card p-6 text-center hover:shadow-lg transition-shadow">
+          <Link href="/aviation-glossary" className="bg-slate-800 border border-white/15 rounded-lg p-6 text-center hover:shadow-lg transition-shadow text-white">
             <div className="text-3xl mb-3">📖</div>
-            <h3 className="font-semibold text-primary mb-2">Glossary</h3>
-            <p className="text-sm text-secondary">500+ aviation terms and definitions</p>
+            <h3 className="font-semibold text-white mb-2">Glossary</h3>
+            <p className="text-sm text-white/80">500+ aviation terms and definitions</p>
           </Link>
-          <Link href="/research-guides" className="card p-6 text-center hover:shadow-lg transition-shadow">
+          <Link href="/research-guides" className="bg-slate-800 border border-white/15 rounded-lg p-6 text-center hover:shadow-lg transition-shadow text-white">
             <div className="text-3xl mb-3">🔍</div>
-            <h3 className="font-semibold text-primary mb-2">Research Guides</h3>
-            <p className="text-sm text-secondary">Methodologies and best practices</p>
+            <h3 className="font-semibold text-white mb-2">Research Guides</h3>
+            <p className="text-sm text-white/80">Methodologies and best practices</p>
           </Link>
-          <Link href="/scottish-aviation-timeline" className="card p-6 text-center hover:shadow-lg transition-shadow">
+          <Link href="/scottish-aviation-timeline" className="bg-slate-800 border border-white/15 rounded-lg p-6 text-center hover:shadow-lg transition-shadow text-white">
             <div className="text-3xl mb-3">📅</div>
-            <h3 className="font-semibold text-primary mb-2">Timeline</h3>
-            <p className="text-sm text-secondary">Scottish aviation chronology</p>
+            <h3 className="font-semibold text-white mb-2">Timeline</h3>
+            <p className="text-sm text-white/80">Scottish aviation chronology</p>
           </Link>
         </div>
 
         {/* Academic Books */}
-        <div className="card p-8 mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-6">Academic Publications</h2>
+        <div className="bg-slate-800 border border-white/15 rounded-lg p-8 mb-8 text-white">
+          <h2 className="text-2xl font-bold text-white mb-6">Academic Publications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {academicBooks.map((book) => (
-              <div key={book.id} className="border border-gray-200 rounded-lg p-4">
+              <div key={book.id} className="border border-white/15 bg-slate-900 rounded-lg p-4">
                 <h3 className="font-semibold text-lg mb-2">
-                  <Link href={`/books/${book.id}`} className="text-accent-blue hover:text-blue-800">
+                  <Link href={`/books/${book.id}`} className="text-blue-300 hover:text-blue-200">
                     {book.title}
                   </Link>
                 </h3>
-                <p className="text-secondary text-sm mb-3">{book.description}</p>
-                <div className="flex justify-between items-center text-xs text-gray-500">
+                <p className="text-white/80 text-sm mb-3">{book.description}</p>
+                <div className="flex justify-between items-center text-xs text-white/60">
                   <span>{book.category}</span>
                   <span>£{book.price}</span>
                 </div>
                 {book.citationCount && (
-                  <div className="mt-2 text-xs text-green-600">
+                  <div className="mt-2 text-xs text-green-300">
                     {book.citationCount} academic citations
                   </div>
                 )}
@@ -94,12 +94,12 @@ export default function AcademicResourcesPage() {
         </div>
 
         {/* Research Institutions */}
-        <div className="card p-8 mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-6">Partner Institutions</h2>
+        <div className="bg-slate-800 border border-white/15 rounded-lg p-8 mb-8 text-white">
+          <h2 className="text-2xl font-bold text-white mb-6">Partner Institutions</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold text-lg mb-3">Museums & Archives</h3>
-              <ul className="space-y-2 text-secondary">
+              <h3 className="font-semibold text-lg mb-3 text-white">Museums & Archives</h3>
+              <ul className="space-y-2 text-white/90">
                 <li>• Imperial War Museum</li>
                 <li>• Royal Air Force Museum</li>
                 <li>• National Museum of Flight</li>
@@ -108,8 +108,8 @@ export default function AcademicResourcesPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-lg mb-3">Academic Institutions</h3>
-              <ul className="space-y-2 text-secondary">
+              <h3 className="font-semibold text-lg mb-3 text-white">Academic Institutions</h3>
+              <ul className="space-y-2 text-white/90">
                 <li>• University of Glasgow</li>
                 <li>• Edinburgh University</li>
                 <li>• Royal Aeronautical Society</li>
@@ -122,8 +122,8 @@ export default function AcademicResourcesPage() {
 
         {/* Contact */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-primary mb-4">Research Collaboration</h2>
-          <p className="text-secondary mb-6">
+          <h2 className="text-2xl font-bold text-white mb-4">Research Collaboration</h2>
+          <p className="text-white/90 mb-6">
             Available for academic consultation, research collaboration, and guest lectures
           </p>
           <Link

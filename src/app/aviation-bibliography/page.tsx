@@ -168,13 +168,13 @@ export default function AviationBibliographyPage() {
       >
 
           {/* Search and Filter Section */}
-          <div className="mb-12 card p-6">
-            <h2 className="content h2 text-primary mb-4">Research Categories</h2>
+          <div className="mb-12 bg-slate-800 border border-white/15 rounded-lg p-6 text-white">
+            <h2 className="content h2 text-white mb-4">Research Categories</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {['Primary Sources', 'Academic Papers', 'Government Documents', 'Archive Collections'].map((category) => (
-                <div key={category} className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="font-semibold text-blue-800">{category}</div>
-                  <div className="text-sm text-blue-600 mt-1">
+                <div key={category} className="text-center p-4 bg-slate-900 border border-white/15 rounded-lg">
+                  <div className="font-semibold text-white">{category}</div>
+                  <div className="text-sm text-white/80 mt-1">
                     {aviationBibliography.filter(entry => entry.type === category || category === 'Archive Collections' && entry.type === 'Archive').length} entries
                   </div>
                 </div>
@@ -184,33 +184,33 @@ export default function AviationBibliographyPage() {
 
           {/* Bibliography Entries */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-8">Research Sources</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">Research Sources</h2>
             <div className="space-y-6">
               {aviationBibliography.map((entry) => (
-                <div key={entry.id} className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
+                <div key={entry.id} className="bg-slate-800 border border-white/15 rounded-xl p-6 border-l-4 border-blue-500 text-white">
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-xl font-semibold text-slate-800 mb-2">{entry.title}</h3>
-                      <div className="text-slate-600 mb-2">
+                      <h3 className="text-xl font-semibold text-white mb-2">{entry.title}</h3>
+                      <div className="text-white/80 mb-2">
                         <span className="font-medium">{entry.author}</span> • {entry.publication} • {entry.year}
                       </div>
                     </div>
                     <div className="flex flex-col items-end gap-2">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        entry.type === 'Primary Source' ? 'bg-green-100 text-green-800' :
-                        entry.type === 'Academic Paper' ? 'bg-blue-100 text-blue-800' :
-                        entry.type === 'Government Document' ? 'bg-purple-100 text-purple-800' :
-                        'bg-orange-100 text-orange-800'
+                        entry.type === 'Primary Source' ? 'bg-green-900/50 text-green-200 border border-green-700' :
+                        entry.type === 'Academic Paper' ? 'bg-blue-900/50 text-blue-200 border border-blue-700' :
+                        entry.type === 'Government Document' ? 'bg-purple-900/50 text-purple-200 border border-purple-700' :
+                        'bg-orange-900/50 text-orange-200 border border-orange-700'
                       }`}>
                         {entry.type}
                       </span>
-                      <span className="text-xs text-slate-500">Cited {entry.citationCount}× in academic papers</span>
+                      <span className="text-xs text-white/60">Cited {entry.citationCount}× in academic papers</span>
                     </div>
                   </div>
-                  <p className="text-slate-700 mb-4">{entry.significance}</p>
+                  <p className="text-white/90 mb-4">{entry.significance}</p>
                   <div className="flex flex-wrap gap-2">
                     {entry.relatedTopics.map((topic) => (
-                      <span key={topic} className="px-2 py-1 bg-slate-100 text-slate-700 rounded text-sm">
+                      <span key={topic} className="px-2 py-1 bg-slate-900 text-white border border-white/15 rounded text-sm">
                         {topic}
                       </span>
                     ))}
@@ -222,12 +222,12 @@ export default function AviationBibliographyPage() {
 
           {/* Research Institutions */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-8">Key Research Institutions</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">Key Research Institutions</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {researchInstitutions.map((institution) => (
-                <div key={institution.name} className="bg-white rounded-xl shadow-sm p-6">
-                  <h3 className="text-xl font-semibold text-slate-800 mb-3">{institution.name}</h3>
-                  <div className="space-y-2 text-slate-600">
+                <div key={institution.name} className="bg-slate-800 border border-white/15 rounded-xl p-6 text-white">
+                  <h3 className="text-xl font-semibold text-white mb-3">{institution.name}</h3>
+                  <div className="space-y-2 text-white/90">
                     <div><strong>Location:</strong> {institution.location}</div>
                     <div><strong>Specialization:</strong> {institution.specialization}</div>
                     <div><strong>Collections:</strong> {institution.collections}</div>
@@ -239,32 +239,32 @@ export default function AviationBibliographyPage() {
           </div>
 
           {/* Citation Guide */}
-          <div className="bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">Research Citation Guidelines</h2>
-            <div className="prose max-w-none text-slate-700">
-              <h3 className="text-xl font-semibold mb-4">Academic Citation Standards</h3>
+          <div className="bg-slate-800 border border-white/15 rounded-xl p-8 text-white">
+            <h2 className="text-3xl font-bold text-white mb-6">Research Citation Guidelines</h2>
+            <div className="prose max-w-none text-white/90">
+              <h3 className="text-xl font-semibold mb-4 text-white">Academic Citation Standards</h3>
               <p className="mb-4">
                 When citing aviation history sources in academic research, follow these established guidelines
                 to ensure scholarly accuracy and enable source verification by other researchers.
               </p>
 
-              <h4 className="font-semibold mb-2">Primary Source Citation Format:</h4>
-              <div className="bg-slate-50 p-4 rounded-lg mb-4">
-                <code className="text-sm">
+              <h4 className="font-semibold mb-2 text-white">Primary Source Citation Format:</h4>
+              <div className="bg-slate-900 border border-white/15 p-4 rounded-lg mb-4">
+                <code className="text-sm text-white/90">
                   Author, A. A. (Year). Title of document. Archive/Institution, Location. Collection Reference.
                 </code>
               </div>
 
-              <h4 className="font-semibold mb-2">Book Citation Format:</h4>
-              <div className="bg-slate-50 p-4 rounded-lg mb-4">
-                <code className="text-sm">
+              <h4 className="font-semibold mb-2 text-white">Book Citation Format:</h4>
+              <div className="bg-slate-900 border border-white/15 p-4 rounded-lg mb-4">
+                <code className="text-sm text-white/90">
                   MacKay, C. E. (2023). Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities.
                   A MacKay Publishing. ISBN: 978-0-9573443-0-3.
                 </code>
               </div>
 
-              <h4 className="font-semibold mb-2">Research Best Practices:</h4>
-              <ul className="list-disc list-inside space-y-2">
+              <h4 className="font-semibold mb-2 text-white">Research Best Practices:</h4>
+              <ul className="list-disc list-inside space-y-2 text-white/90">
                 <li>Always verify primary sources when possible</li>
                 <li>Cross-reference multiple sources for historical accuracy</li>
                 <li>Note archival access restrictions and permissions</li>
@@ -275,20 +275,20 @@ export default function AviationBibliographyPage() {
           </div>
 
           {/* Related Books Section */}
-          <div className="mt-12 bg-blue-50 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-slate-800 mb-6">
+          <div className="mt-12 bg-blue-900/50 border border-blue-700/50 rounded-xl p-8 text-white">
+            <h2 className="text-2xl font-bold text-white mb-6">
               Essential Aviation History Books by Charles E. MacKay
             </h2>
-            <p className="text-slate-700 mb-6">
+            <p className="text-white/90 mb-6">
               Complement your research with these authoritative books by Charles E. MacKay,
               cited as primary references in academic aviation history research.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {books.slice(0, 6).map((book) => (
-                <div key={book.id} className="bg-white rounded-lg p-4">
-                  <h4 className="font-semibold text-slate-800 mb-2">{book.title}</h4>
-                  <p className="text-sm text-slate-600 mb-2">{book.category}</p>
-                  <div className="text-xs text-slate-500">
+                <div key={book.id} className="bg-slate-800 border border-white/15 rounded-lg p-4">
+                  <h4 className="font-semibold text-white mb-2">{book.title}</h4>
+                  <p className="text-sm text-white/80 mb-2">{book.category}</p>
+                  <div className="text-xs text-white/60">
                     Citations: {book.citationCount} • Academic Level: {book.academicLevel?.join(', ')}
                   </div>
                 </div>
