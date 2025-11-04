@@ -372,7 +372,9 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
     '@id': `${baseUrl}/books/${book.id}#webpage`,
     url: `${baseUrl}/books/${book.id}`,
     name: book.title,
-    description: book.description.substring(0, 300),
+    description: ((book.description || '').length >= 50 && (book.description || '').length <= 5000)
+      ? book.description.substring(0, 300)
+      : ((book.description || book.title || 'Aviation history book by Charles E. MacKay').substring(0, 300)),
     isPartOf: {
       '@id': `${baseUrl}/#website`
     },
@@ -385,7 +387,9 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
       '@type': 'ImageObject',
       url: (book.imageUrl && book.imageUrl.startsWith('http'))
         ? book.imageUrl
-        : `${baseUrl}${(book.imageUrl || `/book-covers/${book.id}.jpg`).startsWith('/') ? '' : '/'}${book.imageUrl || `book-covers/${book.id}.jpg`}`
+        : `${baseUrl}${(book.imageUrl || `/book-covers/${book.id}.jpg`).startsWith('/') ? '' : '/'}${book.imageUrl || `book-covers/${book.id}.jpg`}`,
+      width: 400,
+      height: 600
     },
     breadcrumb: {
       '@id': `${baseUrl}/books/${book.id}#breadcrumb`
@@ -393,13 +397,26 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
     mainEntity: {
       '@id': `${baseUrl}/books/${book.id}#book`
     },
+    datePublished: book.publicationYear ? `${book.publicationYear}-01-01` : undefined,
+    dateModified: new Date().toISOString(),
+    inLanguage: 'en-GB',
     // Enhanced for AI: content reference
-    mentions: relatedBlogPosts.map(post => ({
+    mentions: relatedBlogPosts.length > 0 ? relatedBlogPosts.map(post => ({
       '@type': 'Article',
       '@id': `${baseUrl}/blog/${post.slug}#article`,
       headline: post.title,
       url: `${baseUrl}/blog/${post.slug}`
-    }))
+    })) : undefined,
+    // Additional SEO signals
+    keywords: [
+      book.title,
+      'Charles E MacKay',
+      book.category,
+      'aviation history',
+      'aviation books',
+      ...(book.researchThemes || []),
+      ...(book.tags || [])
+    ].filter(Boolean).join(', ')
   };
 
   // Organization schema for publisher authority

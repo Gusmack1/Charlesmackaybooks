@@ -13,6 +13,7 @@ import MobileSSLFix from '@/components/MobileSSLFix'
 import PerformanceSEO from '@/components/PerformanceSEO'
 import TechnicalSEOAudit from '@/components/TechnicalSEOAudit'
 import BacklinkStrategy from '@/components/BacklinkStrategy'
+import GoogleSEOCompliance from '@/components/GoogleSEOCompliance'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -501,6 +502,7 @@ export default function RootLayout({
         <PerformanceSEO />
         <TechnicalSEOAudit />
         <BacklinkStrategy />
+        <GoogleSEOCompliance />
 
         {/* Invisible Google Merchant Center data layer and product identifiers */}
         <script
