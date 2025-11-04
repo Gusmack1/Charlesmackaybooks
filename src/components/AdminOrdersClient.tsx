@@ -19,41 +19,64 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
 
   const fetchOrders = async () => {
     try {
+      setLoading(true);
+      setError('');
+
       // Fetch from API (OrderManagementService)
-      const response = await fetch('/api/orders');
-      const data = await response.json();
-      
       let apiOrders: Order[] = [];
-      if (response.ok) {
-        apiOrders = data.orders || [];
+      try {
+        const response = await fetch('/api/orders');
+        const data = await response.json();
+        
+        if (response.ok) {
+          apiOrders = data.orders || [];
+        }
+      } catch (apiError) {
+        console.error('Error fetching from API:', apiError);
+        // Continue without API orders
       }
 
-      // Also fetch from localStorage (legacy orders)
-      const localStorageOrders = getAllOrdersFromLocalStorage();
-
-      // Sync localStorage orders to OrderManagementService (so they can be updated)
+      // Also fetch from localStorage (legacy orders) - only on client side
+      let localStorageOrders: Order[] = [];
       if (typeof window !== 'undefined') {
-        for (const localOrder of localStorageOrders) {
-          // Check if order exists in API orders
-          if (!apiOrders.find(o => o.id === localOrder.id)) {
-            try {
-              // Sync order to OrderManagementService
-              await fetch('/api/orders/sync', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ order: localOrder }),
-              });
-            } catch (e) {
-              console.log('Could not sync order:', localOrder.id, e);
+        try {
+          localStorageOrders = getAllOrdersFromLocalStorage();
+        } catch (localStorageError) {
+          console.error('Error fetching from localStorage:', localStorageError);
+          // Continue without localStorage orders
+        }
+
+        // Sync localStorage orders to OrderManagementService (so they can be updated)
+        // Only sync if we have localStorage orders
+        if (localStorageOrders.length > 0) {
+          for (const localOrder of localStorageOrders) {
+            // Check if order exists in API orders
+            if (!apiOrders.find(o => o.id === localOrder.id)) {
+              try {
+                // Sync order to OrderManagementService
+                await fetch('/api/orders/sync', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ order: localOrder }),
+                });
+              } catch (syncError) {
+                console.error('Could not sync order:', localOrder.id, syncError);
+                // Continue - don't block loading
+              }
             }
           }
-        }
-        
-        // Fetch again after syncing to get updated list
-        const syncResponse = await fetch('/api/orders');
-        const syncData = await syncResponse.json();
-        if (syncResponse.ok) {
-          apiOrders = syncData.orders || [];
+          
+          // Fetch again after syncing to get updated list (if we synced any)
+          try {
+            const syncResponse = await fetch('/api/orders');
+            const syncData = await syncResponse.json();
+            if (syncResponse.ok) {
+              apiOrders = syncData.orders || [];
+            }
+          } catch (refetchError) {
+            console.error('Error refetching after sync:', refetchError);
+            // Continue with existing orders
+          }
         }
       }
 
@@ -65,11 +88,16 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         }
       });
 
-      // Sort by creation date (newest first)
-      allOrders.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+      // Sort by creation date (newest first) - ensure dates are valid
+      allOrders.sort((a, b) => {
+        const dateA = a.createdAt instanceof Date ? a.createdAt : new Date(a.createdAt);
+        const dateB = b.createdAt instanceof Date ? b.createdAt : new Date(b.createdAt);
+        return dateB.getTime() - dateA.getTime();
+      });
 
       setOrders(allOrders);
     } catch (err) {
+      console.error('Error in fetchOrders:', err);
       setError(err instanceof Error ? err.message : 'Failed to fetch orders');
     } finally {
       setLoading(false);
@@ -265,7 +293,9 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                     </p>
                     <p className="text-sm text-white/80">{order.customer.email}</p>
                     <p className="text-sm text-white/80">
-                      {order.createdAt.toLocaleDateString()}
+                      {order.createdAt instanceof Date 
+                        ? order.createdAt.toLocaleDateString() 
+                        : new Date(order.createdAt).toLocaleDateString()}
                     </p>
                   </div>
                   <div className="text-right">

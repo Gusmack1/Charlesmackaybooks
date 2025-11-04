@@ -78,7 +78,14 @@ export function getAllOrdersFromLocalStorage(): Order[] {
 
   try {
     const orderHistory = getOrderHistory();
-    return orderHistory.map(convertLegacyOrderToNew);
+    if (!orderHistory || !Array.isArray(orderHistory)) {
+      return [];
+    }
+    
+    return orderHistory
+      .filter(order => order && order.orderId) // Filter out invalid orders
+      .map(convertLegacyOrderToNew)
+      .filter(order => order && order.id); // Filter out invalid conversions
   } catch (error) {
     console.error('Error getting orders from localStorage:', error);
     return [];
