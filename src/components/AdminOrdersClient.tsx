@@ -546,100 +546,8 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               <div className="space-y-2">
                 <h4 className="font-semibold text-white">Update Status</h4>
                 
-                {selectedOrder.paymentStatus === 'pending' && (
-                  <button
-                    onClick={() => updateOrderStatus(selectedOrder.id, 'confirm_payment')}
-                    className="w-full px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
-                  >
-                    Confirm Payment
-                  </button>
-                )}
-
-                {selectedOrder.status === 'confirmed' && (
-                  <button
-                    onClick={() => updateOrderStatus(selectedOrder.id, 'process')}
-                    className="w-full px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                  >
-                    Process Order
-                  </button>
-                )}
-
-                {selectedOrder.status === 'processing' && (
-                  <div className="space-y-2">
-                    <input
-                      type="text"
-                      placeholder="Tracking number (optional)"
-                      className="w-full px-3 py-2 border border-slate-600 bg-slate-900 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      id="tracking-number-dispatch"
-                    />
-                    <button
-                      onClick={() => {
-                        const trackingNumber = (document.getElementById('tracking-number-dispatch') as HTMLInputElement).value;
-                        updateOrderStatus(selectedOrder.id, 'dispatch', { trackingNumber: trackingNumber || undefined });
-                      }}
-                      className="w-full px-3 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
-                    >
-                      Dispatch Order (Sends Email)
-                    </button>
-                  </div>
-                )}
-
-                {selectedOrder.status === 'processing' && (
-                  <div className="space-y-2">
-                    <input
-                      type="text"
-                      placeholder="Tracking number (optional)"
-                      className="w-full px-3 py-2 border border-slate-600 bg-slate-900 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      id="tracking-number-ship"
-                    />
-                    <button
-                      onClick={() => {
-                        const trackingNumber = (document.getElementById('tracking-number-ship') as HTMLInputElement).value;
-                        updateOrderStatus(selectedOrder.id, 'ship', { trackingNumber: trackingNumber || undefined });
-                      }}
-                      className="w-full px-3 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
-                    >
-                      Ship Order (Alternative)
-                    </button>
-                  </div>
-                )}
-
-                {selectedOrder.status === 'dispatched' && (
-                  <div className="space-y-2">
-                    <p className="text-sm text-white/80">Order dispatched. Customer has been notified via email.</p>
-                    <button
-                      onClick={() => updateOrderStatus(selectedOrder.id, 'deliver')}
-                      className="w-full px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
-                    >
-                      Mark as Delivered
-                    </button>
-                  </div>
-                )}
-
-                {selectedOrder.status === 'shipped' && (
-                  <button
-                    onClick={() => updateOrderStatus(selectedOrder.id, 'deliver')}
-                    className="w-full px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
-                  >
-                    Mark as Delivered
-                  </button>
-                )}
-
-                {selectedOrder.status !== 'cancelled' && selectedOrder.status !== 'delivered' && (
-                  <button
-                    onClick={() => {
-                      const reason = prompt('Reason for cancellation:');
-                      if (reason !== null) { // Allow empty string but not null (cancelled)
-                        updateOrderStatus(selectedOrder.id, 'cancel', { reason: reason || 'No reason provided' });
-                      }
-                    }}
-                    className="w-full px-3 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
-                  >
-                    Cancel Order
-                  </button>
-                )}
-
-                {selectedOrder.status === 'cancelled' && (
+                {/* Don't show action buttons for cancelled orders */}
+                {selectedOrder.status === 'cancelled' ? (
                   <div className="p-3 bg-red-900/50 border border-red-700 rounded-lg">
                     <p className="text-sm text-red-200 font-semibold mb-2">⚠️ Order Cancelled</p>
                     {selectedOrder.notes && (
@@ -649,6 +557,101 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                       Cancelled orders remain in the system for record-keeping but cannot be reactivated.
                     </p>
                   </div>
+                ) : (
+                  <>
+                    {selectedOrder.paymentStatus === 'pending' && (
+                      <button
+                        onClick={() => updateOrderStatus(selectedOrder.id, 'confirm_payment')}
+                        className="w-full px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+                      >
+                        Confirm Payment
+                      </button>
+                    )}
+
+                    {selectedOrder.status === 'confirmed' && (
+                      <button
+                        onClick={() => updateOrderStatus(selectedOrder.id, 'process')}
+                        className="w-full px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                      >
+                        Process Order
+                      </button>
+                    )}
+
+                    {selectedOrder.status === 'processing' && (
+                      <div className="space-y-2">
+                        <input
+                          type="text"
+                          placeholder="Tracking number (optional)"
+                          className="w-full px-3 py-2 border border-slate-600 bg-slate-900 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          id="tracking-number-dispatch"
+                        />
+                        <button
+                          onClick={() => {
+                            const trackingNumber = (document.getElementById('tracking-number-dispatch') as HTMLInputElement).value;
+                            updateOrderStatus(selectedOrder.id, 'dispatch', { trackingNumber: trackingNumber || undefined });
+                          }}
+                          className="w-full px-3 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                        >
+                          Dispatch Order (Sends Email)
+                        </button>
+                      </div>
+                    )}
+
+                    {selectedOrder.status === 'processing' && (
+                      <div className="space-y-2">
+                        <input
+                          type="text"
+                          placeholder="Tracking number (optional)"
+                          className="w-full px-3 py-2 border border-slate-600 bg-slate-900 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          id="tracking-number-ship"
+                        />
+                        <button
+                          onClick={() => {
+                            const trackingNumber = (document.getElementById('tracking-number-ship') as HTMLInputElement).value;
+                            updateOrderStatus(selectedOrder.id, 'ship', { trackingNumber: trackingNumber || undefined });
+                          }}
+                          className="w-full px-3 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+                        >
+                          Ship Order (Alternative)
+                        </button>
+                      </div>
+                    )}
+
+                    {selectedOrder.status === 'dispatched' && (
+                      <div className="space-y-2">
+                        <p className="text-sm text-white/80">Order dispatched. Customer has been notified via email.</p>
+                        <button
+                          onClick={() => updateOrderStatus(selectedOrder.id, 'deliver')}
+                          className="w-full px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+                        >
+                          Mark as Delivered
+                        </button>
+                      </div>
+                    )}
+
+                    {selectedOrder.status === 'shipped' && (
+                      <button
+                        onClick={() => updateOrderStatus(selectedOrder.id, 'deliver')}
+                        className="w-full px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+                      >
+                        Mark as Delivered
+                      </button>
+                    )}
+
+                    {selectedOrder.status !== 'delivered' && (
+                      <button
+                        onClick={() => {
+                          const reason = prompt('Reason for cancellation:');
+                          if (reason !== null) { // Allow empty string but not null (cancelled)
+                            updateOrderStatus(selectedOrder.id, 'cancel', { reason: reason || 'No reason provided' });
+                          }
+                        }}
+                        className="w-full px-3 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+                      >
+                        Cancel Order
+                      </button>
+                    )}
+                  </>
                 )}
 
                 {selectedOrder.paymentStatus === 'paid' && selectedOrder.status !== 'cancelled' && (
