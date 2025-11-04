@@ -210,12 +210,6 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
             // Update status based on action
             if (action === 'cancel') {
               legacyOrder.status = 'cancelled';
-              // If order was paid, mark payment as refunded
-              if (legacyOrder.status === 'paid' || order.paymentStatus === 'paid') {
-                legacyOrder.status = 'cancelled'; // Keep status as cancelled
-                // Note: In legacy system, we don't have separate paymentStatus
-                // The status 'cancelled' indicates the order is cancelled
-              }
               if (data?.reason) {
                 legacyOrder.notes = data.reason;
               }
