@@ -31,6 +31,32 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
       // Also fetch from localStorage (legacy orders)
       const localStorageOrders = getAllOrdersFromLocalStorage();
 
+      // Sync localStorage orders to OrderManagementService (so they can be updated)
+      if (typeof window !== 'undefined') {
+        for (const localOrder of localStorageOrders) {
+          // Check if order exists in API orders
+          if (!apiOrders.find(o => o.id === localOrder.id)) {
+            try {
+              // Sync order to OrderManagementService
+              await fetch('/api/orders/sync', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ order: localOrder }),
+              });
+            } catch (e) {
+              console.log('Could not sync order:', localOrder.id, e);
+            }
+          }
+        }
+        
+        // Fetch again after syncing to get updated list
+        const syncResponse = await fetch('/api/orders');
+        const syncData = await syncResponse.json();
+        if (syncResponse.ok) {
+          apiOrders = syncData.orders || [];
+        }
+      }
+
       // Merge orders, removing duplicates by ID
       const allOrders = [...apiOrders];
       localStorageOrders.forEach(localOrder => {
@@ -52,6 +78,37 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
 
   const updateOrderStatus = async (orderId: string, action: string, data?: any) => {
     try {
+      // If order is only in localStorage (not in OrderManagementService), we need to sync it first
+      // Check if order exists in OrderManagementService by trying to fetch it
+      const getOrderResponse = await fetch(`/api/orders/${orderId}`);
+      const getOrderData = await getOrderResponse.json();
+      
+      // If order not found in OrderManagementService, try to sync from localStorage
+      if (!getOrderResponse.ok && typeof window !== 'undefined') {
+        try {
+          const { getOrder } = require('@/utils/orderUtils');
+          const { convertLegacyOrderToNew } = require('@/utils/orderSync');
+          const legacyOrder = getOrder(orderId);
+          
+          if (legacyOrder) {
+            // Convert and add to OrderManagementService via API
+            const convertedOrder = convertLegacyOrderToNew(legacyOrder);
+            const syncResponse = await fetch('/api/orders/sync', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ order: convertedOrder }),
+            });
+            
+            if (!syncResponse.ok) {
+              console.log('Could not sync order to OrderManagementService');
+            }
+          }
+        } catch (e) {
+          console.log('Could not sync order from localStorage:', e);
+        }
+      }
+
+      // Now perform the update
       const response = await fetch(`/api/orders/${orderId}`, {
         method: 'PATCH',
         headers: {
@@ -66,19 +123,40 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         throw new Error(result.error || 'Failed to update order');
       }
       
-      // Update localStorage if order was dispatched/shipped (for legacy compatibility)
-      if ((action === 'dispatch' || action === 'ship') && result.legacyOrder && typeof window !== 'undefined') {
+      // Update localStorage for all status changes (for legacy compatibility)
+      if (result.legacyOrder && typeof window !== 'undefined') {
         try {
           const { getOrder, saveOrder } = require('@/utils/orderUtils');
           const legacyOrder = getOrder(orderId);
           if (legacyOrder) {
             legacyOrder.status = result.legacyOrder.status;
-            legacyOrder.trackingNumber = result.legacyOrder.trackingNumber;
+            if (result.legacyOrder.trackingNumber) {
+              legacyOrder.trackingNumber = result.legacyOrder.trackingNumber;
+            }
             legacyOrder.timestamp = result.legacyOrder.updatedAt;
             saveOrder(legacyOrder);
           }
         } catch (e) {
           console.log('Could not update localStorage:', e);
+        }
+      }
+      
+      // Also update localStorage even if no legacyOrder in response (for cancel/confirm_payment)
+      if ((action === 'cancel' || action === 'confirm_payment') && typeof window !== 'undefined') {
+        try {
+          const { getOrder, saveOrder } = require('@/utils/orderUtils');
+          const legacyOrder = getOrder(orderId);
+          if (legacyOrder) {
+            if (action === 'cancel') {
+              legacyOrder.status = 'cancelled';
+            } else if (action === 'confirm_payment') {
+              legacyOrder.status = 'paid';
+            }
+            legacyOrder.timestamp = result.order.updatedAt.toISOString();
+            saveOrder(legacyOrder);
+          }
+        } catch (e) {
+          console.log('Could not update localStorage for action:', action, e);
         }
       }
       

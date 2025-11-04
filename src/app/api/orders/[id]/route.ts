@@ -1,5 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { OrderManagementService } from '@/utils/orderManagement';
+import { convertLegacyOrderToNew } from '@/utils/orderSync';
+
+// Helper function to get order from localStorage (server-side compatible)
+async function getOrderFromLocalStorage(orderId: string): Promise<any> {
+  // This is a placeholder - actual localStorage access happens client-side
+  // We'll handle this by having the client sync orders to OrderManagementService
+  return null;
+}
 
 // GET /api/orders/[id] - Get specific order
 export async function GET(
@@ -40,31 +48,43 @@ export async function PATCH(
     const body = await request.json();
     const { action, ...data } = body;
 
-    let order;
+    // Check if order exists in OrderManagementService
+    let order = await OrderManagementService.getOrder(orderId);
+    
+    // If order not found and we're trying to update it, return error
+    // (We can't load from localStorage server-side, so client needs to sync first)
+    if (!order) {
+      return NextResponse.json(
+        { error: 'Order not found. Please ensure the order is synced to the system.' },
+        { status: 404 }
+      );
+    }
+
+    let updatedOrder;
 
     switch (action) {
       case 'confirm_payment':
-        order = await OrderManagementService.confirmPayment(orderId, data.paymentIntentId);
+        updatedOrder = await OrderManagementService.confirmPayment(orderId, data.paymentIntentId);
         break;
       
       case 'process':
-        order = await OrderManagementService.processOrder(orderId);
+        updatedOrder = await OrderManagementService.processOrder(orderId);
         break;
       
       case 'dispatch':
-        order = await OrderManagementService.dispatchOrder(orderId, data.trackingNumber);
+        updatedOrder = await OrderManagementService.dispatchOrder(orderId, data.trackingNumber);
         break;
       
       case 'ship':
-        order = await OrderManagementService.shipOrder(orderId, data.trackingNumber);
+        updatedOrder = await OrderManagementService.shipOrder(orderId, data.trackingNumber);
         break;
       
       case 'deliver':
-        order = await OrderManagementService.deliverOrder(orderId);
+        updatedOrder = await OrderManagementService.deliverOrder(orderId);
         break;
       
       case 'cancel':
-        order = await OrderManagementService.cancelOrder(orderId, data.reason);
+        updatedOrder = await OrderManagementService.cancelOrder(orderId, data.reason);
         break;
       
       default:
@@ -79,14 +99,18 @@ export async function PATCH(
 
     return NextResponse.json({ 
       success: true, 
-      order,
+      order: updatedOrder,
       message: `Order ${action.replace('_', ' ')} successful`,
       // Include legacy format for localStorage sync
-      legacyOrder: action === 'dispatch' || action === 'ship' ? {
-        orderId: order.id,
-        status: action === 'dispatch' ? 'dispatched' : 'shipped',
-        trackingNumber: order.trackingNumber,
-        updatedAt: order.updatedAt.toISOString()
+      legacyOrder: (action === 'dispatch' || action === 'ship' || action === 'cancel' || action === 'confirm_payment') ? {
+        orderId: updatedOrder.id,
+        status: action === 'dispatch' ? 'dispatched' : 
+                action === 'ship' ? 'shipped' : 
+                action === 'cancel' ? 'cancelled' :
+                action === 'confirm_payment' ? 'paid' :
+                updatedOrder.status,
+        trackingNumber: updatedOrder.trackingNumber,
+        updatedAt: updatedOrder.updatedAt.toISOString()
       } : undefined
     });
 

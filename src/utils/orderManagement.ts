@@ -685,6 +685,29 @@ export class OrderManagementService {
     return order;
   }
 
+  static async syncOrder(order: Order): Promise<Order> {
+    // Check if order already exists
+    const existingOrder = this.orders.find(o => o.id === order.id);
+    if (existingOrder) {
+      // Update existing order with new data
+      Object.assign(existingOrder, order);
+      existingOrder.updatedAt = new Date();
+      return existingOrder;
+    }
+
+    // Ensure dates are Date objects
+    const syncedOrder: Order = {
+      ...order,
+      createdAt: order.createdAt instanceof Date ? order.createdAt : new Date(order.createdAt),
+      updatedAt: order.updatedAt instanceof Date ? order.updatedAt : new Date(order.updatedAt),
+      estimatedDelivery: order.estimatedDelivery ? (order.estimatedDelivery instanceof Date ? order.estimatedDelivery : new Date(order.estimatedDelivery)) : undefined,
+    };
+
+    // Add new order
+    this.orders.push(syncedOrder);
+    return syncedOrder;
+  }
+
   static async getOrder(orderId: string): Promise<Order | null> {
     return this.orders.find(o => o.id === orderId) || null;
   }
