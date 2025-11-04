@@ -21,7 +21,7 @@ export default function TrustSecurityBadges({
   showTrust = true
 }: TrustSecurityBadgesProps) {
   return (
-    <div className="surface-dark bg-[#020221] text-white">
+    <div className="surface-dark bg-slate-900 text-white">
       <div className="container mx-auto px-3 py-1">
         <h3 className="text-sm font-bold text-center mb-1 flex items-center justify-center">
           <Shield className="w-2 h-2 mr-1 text-blue-400" />

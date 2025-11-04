@@ -103,8 +103,8 @@ export default function StripePaymentForm({
             onClick={() => handlePaymentMethodChange('card')}
             className={`w-full p-4 border rounded-lg text-left transition-colors ${
               paymentMethod === 'card'
-                ? 'border-blue-500 bg-[#020221]/80'
-                : 'border-blue-700/50 hover:border-blue-600 bg-[#020221]/60'
+                ? 'border-blue-500 bg-slate-800'
+                : 'border-blue-700/50 hover:border-blue-600 bg-slate-800'
             }`}
           >
             <div className="flex items-center">
@@ -121,8 +121,8 @@ export default function StripePaymentForm({
             onClick={() => handlePaymentMethodChange('applePay')}
             className={`w-full p-4 border rounded-lg text-left transition-colors ${
               paymentMethod === 'applePay'
-                ? 'border-blue-500 bg-[#020221]/80'
-                : 'border-blue-700/50 hover:border-blue-600 bg-[#020221]/60'
+                ? 'border-blue-500 bg-slate-800'
+                : 'border-blue-700/50 hover:border-blue-600 bg-slate-800'
             }`}
           >
             <div className="flex items-center">
@@ -139,8 +139,8 @@ export default function StripePaymentForm({
             onClick={() => handlePaymentMethodChange('googlePay')}
             className={`w-full p-4 border rounded-lg text-left transition-colors ${
               paymentMethod === 'googlePay'
-                ? 'border-blue-500 bg-[#020221]/80'
-                : 'border-blue-700/50 hover:border-blue-600 bg-[#020221]/60'
+                ? 'border-blue-500 bg-slate-800'
+                : 'border-blue-700/50 hover:border-blue-600 bg-slate-800'
             }`}
           >
             <div className="flex items-center">
@@ -157,7 +157,7 @@ export default function StripePaymentForm({
       {/* Payment Form */}
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Order Summary */}
-        <div className="bg-[#020221]/60 p-4 rounded-lg">
+        <div className="bg-slate-800 p-4 rounded-lg">
           <h4 className="font-semibold text-white mb-3">Order Summary</h4>
           <div className="space-y-2 text-sm text-white">
             {items.map((item, index) => (
@@ -174,7 +174,7 @@ export default function StripePaymentForm({
         </div>
 
         {/* Payment Element */}
-        <div className="border border-blue-700/50 rounded-lg p-4 bg-[#020221]/60">
+        <div className="border border-blue-700/50 rounded-lg p-4 bg-slate-800">
           <PaymentElement 
             options={{
               layout: 'tabs',
@@ -204,7 +204,7 @@ export default function StripePaymentForm({
         )}
 
         {/* Security Notice */}
-        <div className="bg-[#020221]/50 border border-blue-700/50 rounded-lg p-4">
+        <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4">
           <div className="flex">
             <div className="flex-shrink-0">
               <svg className="h-5 w-5 text-blue-300" viewBox="0 0 20 20" fill="currentColor">

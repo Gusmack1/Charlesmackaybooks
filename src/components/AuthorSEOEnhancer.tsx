@@ -5,7 +5,7 @@ import { BookOpen, Award, Users, FileText, Calendar, MapPin, Star } from 'lucide
 
 export default function AuthorSEOEnhancer() {
   return (
-    <div className="surface-dark bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 rounded-lg p-6 my-8">
+    <div className="surface-dark bg-slate-900 rounded-lg p-6 my-8">
       <div className="text-center mb-6">
         <h2 className="text-2xl font-bold text-white mb-2">
           Expert Aviation Historian: Charles E. MacKay
@@ -125,7 +125,7 @@ export default function AuthorSEOEnhancer() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
               href="/books"
-              className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
               Browse All Books
             </Link>

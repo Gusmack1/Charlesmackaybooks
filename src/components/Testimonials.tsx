@@ -67,7 +67,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-12 surface-dark bg-[#020221]">
+    <section className="py-12 surface-dark bg-slate-900">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-4">⬢ What Customers Say</h2>
         <p className="text-center opacity-90 mb-12 max-w-2xl mx-auto">

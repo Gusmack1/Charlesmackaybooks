@@ -319,7 +319,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       {/* Social Sharing Header removed */}
 
       {/* Hero Section */}
-      <div className="hero-section overflow-hidden bg-[#020221]">
+      <div className="hero-section overflow-hidden bg-slate-900">
           {(featured.url || post.featuredImage?.url) && (
           <div className="absolute inset-0">
             <Image
