@@ -364,11 +364,6 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         setSelectedOrder(null);
       }
       
-      // Force a small delay to ensure state updates are reflected
-      setTimeout(() => {
-        // This ensures the UI updates properly
-      }, 100);
-      
       alert(`Order ${action.replace('_', ' ')} successful${action === 'dispatch' ? ' - Customer has been notified via email' : ''}`);
     } catch (err) {
       console.error('Error updating order:', err);
