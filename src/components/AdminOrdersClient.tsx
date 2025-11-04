@@ -174,6 +174,11 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                 
                 // Refresh and show success
                 await fetchOrders();
+                // Clear selection and switch to cancelled tab if cancelling
+                if (action === 'cancel') {
+                  setSelectedOrder(null);
+                  setActiveTab('cancelled');
+                }
                 alert(`Order ${action.replace('_', ' ')} successful (updated in localStorage)`);
                 return;
               }
@@ -243,7 +248,14 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
       
       // Update selected order if it's the one being updated
       if (selectedOrder && selectedOrder.id === orderId) {
-        setSelectedOrder(result.order);
+        const updatedOrder = result.order;
+        // If order was cancelled, clear selection and switch to cancelled tab
+        if (action === 'cancel') {
+          setSelectedOrder(null);
+          setActiveTab('cancelled');
+        } else {
+          setSelectedOrder(updatedOrder);
+        }
       }
       
       alert(`Order ${action.replace('_', ' ')} successful${action === 'dispatch' ? ' - Customer has been notified via email' : ''}`);
@@ -385,48 +397,63 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
           </div>
 
           <div className="space-y-4 max-h-96 overflow-y-auto">
-            {filteredOrders.map((order) => (
-              <div
-                key={order.id}
-                className={`p-4 border rounded-lg cursor-pointer transition-colors ${
-                  selectedOrder?.id === order.id
-                    ? 'border-blue-500 bg-blue-900/50 text-white'
-                    : 'border-white/15 bg-slate-900/50 hover:border-blue-500 text-white'
-                }`}
-                onClick={() => setSelectedOrder(order)}
-              >
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="font-semibold text-white">{order.id}</h3>
-                    <p className="text-sm text-white/80">
-                      {order.customer.firstName} {order.customer.lastName}
-                    </p>
-                    <p className="text-sm text-white/80">{order.customer.email}</p>
-                    <p className="text-sm text-white/80">
-                      {order.createdAt instanceof Date 
-                        ? order.createdAt.toLocaleDateString() 
-                        : new Date(order.createdAt).toLocaleDateString()}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-semibold text-white">£{order.total.toFixed(2)}</p>
-                    <div className="flex flex-col gap-1 mt-1 items-end">
-                      <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor(order.status)}`}>
-                        {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
-                      </span>
-                      <span className={`px-2 py-1 rounded-full text-xs ${getPaymentStatusColor(order.paymentStatus)}`}>
-                        {order.paymentStatus === 'paid' ? '✓ Paid' : order.paymentStatus.charAt(0).toUpperCase() + order.paymentStatus.slice(1)}
-                      </span>
-                      {order.paymentMethod && (
-                        <span className="text-xs text-white/60">
-                          {order.paymentMethod === 'paypal' ? 'PayPal' : 'Stripe'}
+            {filteredOrders.length === 0 ? (
+              <div className="text-center py-8 text-white/70">
+                <p className="text-lg">
+                  {activeTab === 'cancelled' 
+                    ? 'No cancelled or inactive orders' 
+                    : 'No active orders'}
+                </p>
+                <p className="text-sm mt-2">
+                  {activeTab === 'cancelled'
+                    ? 'Cancelled orders will appear here'
+                    : 'Active orders will appear here'}
+                </p>
+              </div>
+            ) : (
+              filteredOrders.map((order) => (
+                <div
+                  key={order.id}
+                  className={`p-4 border rounded-lg cursor-pointer transition-colors ${
+                    selectedOrder?.id === order.id
+                      ? 'border-blue-500 bg-blue-900/50 text-white'
+                      : 'border-white/15 bg-slate-900/50 hover:border-blue-500 text-white'
+                  }`}
+                  onClick={() => setSelectedOrder(order)}
+                >
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="font-semibold text-white">{order.id}</h3>
+                      <p className="text-sm text-white/80">
+                        {order.customer.firstName} {order.customer.lastName}
+                      </p>
+                      <p className="text-sm text-white/80">{order.customer.email}</p>
+                      <p className="text-sm text-white/80">
+                        {order.createdAt instanceof Date 
+                          ? order.createdAt.toLocaleDateString() 
+                          : new Date(order.createdAt).toLocaleDateString()}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="font-semibold text-white">£{order.total.toFixed(2)}</p>
+                      <div className="flex flex-col gap-1 mt-1 items-end">
+                        <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor(order.status)}`}>
+                          {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
                         </span>
-                      )}
+                        <span className={`px-2 py-1 rounded-full text-xs ${getPaymentStatusColor(order.paymentStatus)}`}>
+                          {order.paymentStatus === 'paid' ? '✓ Paid' : order.paymentStatus.charAt(0).toUpperCase() + order.paymentStatus.slice(1)}
+                        </span>
+                        {order.paymentMethod && (
+                          <span className="text-xs text-white/60">
+                            {order.paymentMethod === 'paypal' ? 'PayPal' : 'Stripe'}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </div>
       </div>
