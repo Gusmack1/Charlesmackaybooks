@@ -287,16 +287,21 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
             apiOrders = data.order ? [data.order] : [];
           }
           
-          // Filter API results to only show paid orders
+          // Filter API results with same logic as localStorage filter
+          // Show paid/confirmed orders, but also show pending orders
           apiOrders = apiOrders.filter(order => {
+            // Show orders that are paid/confirmed/shipped/delivered
             const isPaid = order.paymentStatus === 'paid' || 
                            order.status === 'confirmed' || 
                            order.status === 'shipped' || 
                            order.status === 'delivered';
+            // Also show pending orders (so users can track their order)
+            const isPending = order.paymentStatus === 'pending' && order.status === 'pending';
+            // Exclude cancelled and failed orders
             const isNotCancelled = order.status !== 'cancelled' && 
                                    order.paymentStatus !== 'failed' &&
                                    order.paymentStatus !== 'refunded';
-            return isPaid && isNotCancelled;
+            return (isPaid || isPending) && isNotCancelled;
           });
           
           foundOrders = [...foundOrders, ...apiOrders];
