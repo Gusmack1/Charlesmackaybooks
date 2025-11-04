@@ -678,7 +678,9 @@ export class OrderManagementService {
       throw new Error('Order not found');
     }
 
+    // Mark order as cancelled - this should persist
     order.status = 'cancelled';
+    order.paymentStatus = order.paymentStatus === 'paid' ? 'refunded' : order.paymentStatus; // If paid, mark as refunded
     order.notes = reason;
     order.updatedAt = new Date();
 
