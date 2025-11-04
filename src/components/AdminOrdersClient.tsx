@@ -256,6 +256,10 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         } else {
           setSelectedOrder(updatedOrder);
         }
+      } else if (action === 'cancel') {
+        // If cancelling any order (even if not selected), switch to cancelled tab after refresh
+        setActiveTab('cancelled');
+        setSelectedOrder(null);
       }
       
       alert(`Order ${action.replace('_', ' ')} successful${action === 'dispatch' ? ' - Customer has been notified via email' : ''}`);
@@ -341,7 +345,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               onClick={() => {
                 setActiveTab('active');
                 setStatusFilter('all');
-                setSelectedOrder(null);
+                setSelectedOrder(null); // Clear selection when switching tabs
               }}
               className={`px-4 py-2 font-semibold transition-colors ${
                 activeTab === 'active'
@@ -355,7 +359,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               onClick={() => {
                 setActiveTab('cancelled');
                 setStatusFilter('all');
-                setSelectedOrder(null);
+                setSelectedOrder(null); // Clear selection when switching tabs
               }}
               className={`px-4 py-2 font-semibold transition-colors ${
                 activeTab === 'cancelled'
