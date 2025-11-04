@@ -341,12 +341,8 @@ export default function UnifiedSchema({
           "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
           "returnPolicyUrl": `${baseUrl}/returns`
         }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "1"
       }
+      // Note: aggregateRating is handled by EnhancedBookSEO Product schema to avoid duplicates
     });
   }
 

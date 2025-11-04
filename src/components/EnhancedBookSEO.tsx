@@ -237,8 +237,7 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
         url: `${baseUrl}/blog/${post.slug}`
       }))
     }),
-    // Review/rating aggregation
-    aggregateRating: generateReviewSchema(),
+    // Note: aggregateRating is only in Product schema below to avoid duplicate aggregate ratings
     offers: {
       '@type': 'Offer',
       '@id': `${baseUrl}/books/${book.id}#offer`,
