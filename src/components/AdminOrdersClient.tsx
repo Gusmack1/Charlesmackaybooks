@@ -12,6 +12,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
   const [error, setError] = useState('');
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
   const [statusFilter, setStatusFilter] = useState<string>('all');
+  const [activeTab, setActiveTab] = useState<'active' | 'cancelled'>('active');
 
   useEffect(() => {
     fetchOrders();
