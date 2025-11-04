@@ -527,6 +527,7 @@ export class EmailService {
     return this.sendEmail(order.customer.email, template);
   }
 }
+}
 
 // Order Management Service
 export class OrderManagementService {

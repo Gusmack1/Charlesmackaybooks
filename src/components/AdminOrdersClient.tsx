@@ -16,6 +16,8 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
 
   useEffect(() => {
     fetchOrders();
+    // Scroll to top on mount and refresh
+    window.scrollTo(0, 0);
   }, []);
 
   const fetchOrders = async () => {

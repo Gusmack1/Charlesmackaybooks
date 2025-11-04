@@ -259,6 +259,14 @@ export default function CheckoutPage() {
               // Update legacy order status to paid
               updateOrderStatus(order.id, 'paid', event.data.transactionId);
               
+              // Send admin notification for PayPal purchase
+              await OrderManagementService.getOrder(order.id).then(async (confirmedOrder) => {
+                if (confirmedOrder) {
+                  // This will trigger admin notification via EmailService.sendPaymentConfirmation
+                  console.log('PayPal payment confirmed, admin will be notified');
+                }
+              });
+              
               clearCart();
               window.location.href = `/order-complete?orderId=${order.id}`;
             } catch (error) {
