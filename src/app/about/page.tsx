@@ -199,23 +199,23 @@ export default function AboutPage() {
 
         {/* Biography */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Biography</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Biography</h2>
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <p className="text-lg text-secondary mb-6 leading-relaxed">
+              <p className="text-lg text-white/90 mb-6 leading-relaxed">
                 Charles E. MacKay is a distinguished aviation historian based in Glasgow, Scotland, whose extensive research has transformed our understanding of Scottish aviation heritage. Over the past 25 years, his meticulous archival work has uncovered previously unknown aspects of aviation development, particularly focusing on Scottish contributions to military and civilian aircraft advancement.
               </p>
-              <p className="text-lg text-secondary mb-6 leading-relaxed">
+              <p className="text-lg text-white/90 mb-6 leading-relaxed">
                 His academic approach combines rigorous primary source research with accessible writing, making complex aviation history understandable for both scholars and enthusiasts. MacKay's work is particularly noted for its comprehensive coverage of industrial aviation development, from early pioneers through the jet age.
               </p>
-              <p className="text-lg text-secondary mb-6 leading-relaxed">
+              <p className="text-lg text-white/90 mb-6 leading-relaxed">
                 As an alumnus of the University of Glasgow, MacKay brings academic rigor to his historical research while maintaining a passionate commitment to preserving Scotland's aviation legacy for future generations.
               </p>
             </div>
             <div className="space-y-6">
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="font-bold text-primary mb-3">Contact Information</h3>
-                <div className="space-y-2 text-sm">
+              <div className="bg-slate-800 rounded-lg p-6 border border-white/15">
+                <h3 className="font-bold text-white mb-3">Contact Information</h3>
+                <div className="space-y-2 text-sm text-white/90">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
                     <span>charlese1mackay@hotmail.com</span>
@@ -240,32 +240,32 @@ export default function AboutPage() {
 
         {/* Specializations */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Areas of Expertise</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Areas of Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Scottish Aviation Heritage</h3>
-              <p className="text-secondary mb-4">Comprehensive research into Scotland's contribution to aviation development, from early pioneers to modern aerospace.</p>
-              <ul className="text-sm text-secondary space-y-1">
+            <div className="bg-slate-800 rounded-lg p-6 border border-white/15">
+              <h3 className="text-xl font-semibold text-white mb-4">Scottish Aviation Heritage</h3>
+              <p className="text-white/90 mb-4">Comprehensive research into Scotland's contribution to aviation development, from early pioneers to modern aerospace.</p>
+              <ul className="text-sm text-white/90 space-y-1">
                 <li>• Clydeside aviation history</li>
                 <li>• Industrial aviation development</li>
                 <li>• Scottish aircraft manufacturers</li>
                 <li>• Regional aviation growth</li>
               </ul>
             </div>
-            <div className="bg-amber-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Military Aviation History</h3>
-              <p className="text-secondary mb-4">Detailed analysis of military aviation development through two world wars and the Cold War period.</p>
-              <ul className="text-sm text-secondary space-y-1">
+            <div className="bg-slate-800 rounded-lg p-6 border border-white/15">
+              <h3 className="text-xl font-semibold text-white mb-4">Military Aviation History</h3>
+              <p className="text-white/90 mb-4">Detailed analysis of military aviation development through two world wars and the Cold War period.</p>
+              <ul className="text-sm text-white/90 space-y-1">
                 <li>• WWI aviation operations</li>
                 <li>• WWII aircraft development</li>
                 <li>• Cold War jet fighters</li>
                 <li>• Naval aviation history</li>
               </ul>
             </div>
-            <div className="bg-green-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Aircraft Development</h3>
-              <p className="text-secondary mb-4">Technical and historical analysis of aircraft design evolution from early biplanes to modern jets.</p>
-              <ul className="text-sm text-secondary space-y-1">
+            <div className="bg-slate-800 rounded-lg p-6 border border-white/15">
+              <h3 className="text-xl font-semibold text-white mb-4">Aircraft Development</h3>
+              <p className="text-white/90 mb-4">Technical and historical analysis of aircraft design evolution from early biplanes to modern jets.</p>
+              <ul className="text-sm text-white/90 space-y-1">
                 <li>• Test pilot biographies</li>
                 <li>• Helicopter development</li>
                 <li>• Jet age innovation</li>
@@ -277,51 +277,51 @@ export default function AboutPage() {
 
         {/* Academic Recognition */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Academic Recognition & Usage</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Academic Recognition & Usage</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Referenced By Leading Institutions</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Referenced By Leading Institutions</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-secondary">Imperial War Museum</span>
+                  <span className="text-blue-300">🏛️</span>
+                  <span className="text-white/90">Imperial War Museum</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-secondary">Royal Air Force Museum</span>
+                  <span className="text-blue-300">🏛️</span>
+                  <span className="text-white/90">Royal Air Force Museum</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-secondary">University of Glasgow</span>
+                  <span className="text-blue-300">🏛️</span>
+                  <span className="text-white/90">University of Glasgow</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-secondary">Edinburgh University</span>
+                  <span className="text-blue-300">🏛️</span>
+                  <span className="text-white/90">Edinburgh University</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-secondary">National Museums Scotland</span>
+                  <span className="text-blue-300">🏛️</span>
+                  <span className="text-white/90">National Museums Scotland</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-blue-600">🏛️</span>
-                  <span className="text-secondary">Royal Aeronautical Society</span>
+                  <span className="text-blue-300">🏛️</span>
+                  <span className="text-white/90">Royal Aeronautical Society</span>
                 </div>
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Research Impact</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Research Impact</h3>
               <div className="space-y-4">
-                <div className="bg-slate-100 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600">500+</div>
-                  <div className="text-sm text-secondary">Academic citations</div>
+                <div className="bg-slate-800 rounded-lg p-4 border border-white/15">
+                  <div className="text-2xl font-bold text-blue-300">500+</div>
+                  <div className="text-sm text-white/90">Academic citations</div>
                 </div>
-                <div className="bg-slate-100 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600">15</div>
-                  <div className="text-sm text-secondary">University courses using books</div>
+                <div className="bg-slate-800 rounded-lg p-4 border border-white/15">
+                  <div className="text-2xl font-bold text-blue-300">15</div>
+                  <div className="text-sm text-white/90">University courses using books</div>
                 </div>
-                <div className="bg-slate-100 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600">25+</div>
-                  <div className="text-sm text-secondary">Years of research</div>
+                <div className="bg-slate-800 rounded-lg p-4 border border-white/15">
+                  <div className="text-2xl font-bold text-blue-300">25+</div>
+                  <div className="text-sm text-white/90">Years of research</div>
                 </div>
               </div>
             </div>
@@ -330,18 +330,18 @@ export default function AboutPage() {
 
         {/* Featured Books */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Featured Publications</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Featured Publications</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="font-semibold text-lg mb-3 text-blue-600 hover:text-blue-800">
+            <div className="border border-white/15 bg-slate-800 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-semibold text-lg mb-3 text-white hover:text-blue-300">
                 <Link href="/books/beardmore-aviation">
                   Beardmore Aviation: Scottish Industrial Giant
                 </Link>
               </h3>
-              <p className="text-secondary mb-4">Comprehensive history of Beardmore's transformation from shipbuilding to aviation manufacturing, including the R101 airship project.</p>
+              <p className="text-white/90 mb-4">Comprehensive history of Beardmore's transformation from shipbuilding to aviation manufacturing, including the R101 airship project.</p>
               <Link
                 href="/books/beardmore-aviation"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flex items-center text-blue-300 hover:text-blue-200 font-medium"
               >
                 View Book
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -349,16 +349,16 @@ export default function AboutPage() {
                 </svg>
               </Link>
             </div>
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="font-semibold text-lg mb-3 text-blue-600 hover:text-blue-800">
+            <div className="border border-white/15 bg-slate-800 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-semibold text-lg mb-3 text-white hover:text-blue-300">
                 <Link href="/books/clydeside-aviation-vol1">
                   Clydeside Aviation Volume One: The Great War
                 </Link>
               </h3>
-              <p className="text-secondary mb-4">First volume covering aviation activities on the Clyde during WWI, documenting Scotland's crucial role in early military aviation.</p>
+              <p className="text-white/90 mb-4">First volume covering aviation activities on the Clyde during WWI, documenting Scotland's crucial role in early military aviation.</p>
               <Link
                 href="/books/clydeside-aviation-vol1"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flex items-center text-blue-300 hover:text-blue-200 font-medium"
               >
                 View Book
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -366,16 +366,16 @@ export default function AboutPage() {
                 </svg>
               </Link>
             </div>
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="font-semibold text-lg mb-3 text-blue-600 hover:text-blue-800">
+            <div className="border border-white/15 bg-slate-800 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-semibold text-lg mb-3 text-white hover:text-blue-300">
                 <Link href="/books/captain-eric-brown">
                   Captain Eric Brown: Test Pilot Extraordinary
                 </Link>
               </h3>
-              <p className="text-secondary mb-4">Biography of the legendary test pilot who flew 487 different aircraft types and revolutionized test flying safety.</p>
+              <p className="text-white/90 mb-4">Biography of the legendary test pilot who flew 487 different aircraft types and revolutionized test flying safety.</p>
               <Link
                 href="/books/captain-eric-brown"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flex items-center text-blue-300 hover:text-blue-200 font-medium"
               >
                 View Book
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

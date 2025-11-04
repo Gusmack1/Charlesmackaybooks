@@ -239,13 +239,13 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:charlese1mackay@hotmail.com"
-              className="underline font-bold"
+              className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center border border-white/15"
             >
               📧 Send Email
             </a>
             <Link
               href="/books"
-              className="btn-books"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
             >
               📚 Browse Books
             </Link>
