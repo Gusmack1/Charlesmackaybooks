@@ -49,6 +49,22 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         throw new Error(result.error || 'Failed to update order');
       }
       
+      // Update localStorage if order was dispatched/shipped (for legacy compatibility)
+      if ((action === 'dispatch' || action === 'ship') && result.legacyOrder && typeof window !== 'undefined') {
+        try {
+          const { getOrder, saveOrder } = require('@/utils/orderUtils');
+          const legacyOrder = getOrder(orderId);
+          if (legacyOrder) {
+            legacyOrder.status = result.legacyOrder.status;
+            legacyOrder.trackingNumber = result.legacyOrder.trackingNumber;
+            legacyOrder.timestamp = result.legacyOrder.updatedAt;
+            saveOrder(legacyOrder);
+          }
+        } catch (e) {
+          console.log('Could not update localStorage:', e);
+        }
+      }
+      
       // Refresh orders
       await fetchOrders();
       
@@ -57,7 +73,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         setSelectedOrder(result.order);
       }
       
-      alert(`Order ${action.replace('_', ' ')} successful`);
+      alert(`Order ${action.replace('_', ' ')} successful${action === 'dispatch' ? ' - Customer has been notified via email' : ''}`);
     } catch (err) {
       alert(err instanceof Error ? err.message : 'Failed to update order');
     }

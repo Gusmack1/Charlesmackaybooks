@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { OrderManagementService } from '@/utils/orderManagement';
-import { updateOrderStatus } from '@/utils/orderUtils';
 
 // GET /api/orders/[id] - Get specific order
 export async function GET(
@@ -75,20 +74,20 @@ export async function PATCH(
         );
     }
 
-    // Also update localStorage for legacy compatibility (for dispatch/ship actions)
-    if ((action === 'dispatch' || action === 'ship') && order) {
-      try {
-        const legacyStatus = action === 'dispatch' ? 'dispatched' : 'shipped';
-        updateOrderStatus(order.id, legacyStatus as any, undefined, order.trackingNumber);
-      } catch (e) {
-        console.log('Could not update localStorage order:', e);
-      }
-    }
+    // Note: localStorage updates will be handled client-side
+    // The order response includes all updated data for client to sync
 
     return NextResponse.json({ 
       success: true, 
       order,
-      message: `Order ${action.replace('_', ' ')} successful` 
+      message: `Order ${action.replace('_', ' ')} successful`,
+      // Include legacy format for localStorage sync
+      legacyOrder: action === 'dispatch' || action === 'ship' ? {
+        orderId: order.id,
+        status: action === 'dispatch' ? 'dispatched' : 'shipped',
+        trackingNumber: order.trackingNumber,
+        updatedAt: order.updatedAt.toISOString()
+      } : undefined
     });
 
   } catch (error) {
