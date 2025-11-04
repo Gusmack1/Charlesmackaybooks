@@ -275,10 +275,6 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
     }
   };
 
-  const filteredOrders = orders.filter(order => 
-    statusFilter === 'all' || order.status === statusFilter
-  );
-
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -306,9 +302,41 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
       {/* Orders List */}
       <div className="lg:col-span-2">
         <div className="bg-slate-800 border border-white/15 rounded-lg p-6 text-white">
+          {/* Tab Navigation */}
+          <div className="flex space-x-4 mb-6 border-b border-white/15">
+            <button
+              onClick={() => {
+                setActiveTab('active');
+                setStatusFilter('all');
+                setSelectedOrder(null);
+              }}
+              className={`px-4 py-2 font-semibold transition-colors ${
+                activeTab === 'active'
+                  ? 'text-blue-400 border-b-2 border-blue-400'
+                  : 'text-white/70 hover:text-white'
+              }`}
+            >
+              Active Orders ({activeOrders.length})
+            </button>
+            <button
+              onClick={() => {
+                setActiveTab('cancelled');
+                setStatusFilter('all');
+                setSelectedOrder(null);
+              }}
+              className={`px-4 py-2 font-semibold transition-colors ${
+                activeTab === 'cancelled'
+                  ? 'text-red-400 border-b-2 border-red-400'
+                  : 'text-white/70 hover:text-white'
+              }`}
+            >
+              Cancelled/Inactive ({cancelledOrders.length})
+            </button>
+          </div>
+
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-white">
-              Orders ({filteredOrders.length})
+              {activeTab === 'cancelled' ? 'Cancelled Orders' : 'Active Orders'} ({filteredOrders.length})
             </h2>
             <select
               value={statusFilter}
@@ -316,13 +344,22 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               className="px-3 py-2 border border-slate-600 bg-slate-900 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="all">All Status</option>
-              <option value="pending">Pending</option>
-              <option value="confirmed">Confirmed</option>
-              <option value="processing">Processing</option>
-              <option value="dispatched">Dispatched</option>
-              <option value="shipped">Shipped</option>
-              <option value="delivered">Delivered</option>
-              <option value="cancelled">Cancelled</option>
+              {activeTab === 'active' ? (
+                <>
+                  <option value="pending">Pending Payment</option>
+                  <option value="paid">Paid/Confirmed</option>
+                  <option value="confirmed">Confirmed</option>
+                  <option value="processing">Processing</option>
+                  <option value="dispatched">Dispatched</option>
+                  <option value="shipped">Shipped</option>
+                </>
+              ) : (
+                <>
+                  <option value="cancelled">Cancelled</option>
+                  <option value="failed">Payment Failed</option>
+                  <option value="refunded">Refunded</option>
+                </>
+              )}
             </select>
           </div>
 
@@ -352,13 +389,18 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                   </div>
                   <div className="text-right">
                     <p className="font-semibold text-white">£{order.total.toFixed(2)}</p>
-                    <div className="flex gap-1 mt-1">
+                    <div className="flex flex-col gap-1 mt-1 items-end">
                       <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor(order.status)}`}>
-                        {order.status}
+                        {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
                       </span>
                       <span className={`px-2 py-1 rounded-full text-xs ${getPaymentStatusColor(order.paymentStatus)}`}>
-                        {order.paymentStatus}
+                        {order.paymentStatus === 'paid' ? '✓ Paid' : order.paymentStatus.charAt(0).toUpperCase() + order.paymentStatus.slice(1)}
                       </span>
+                      {order.paymentMethod && (
+                        <span className="text-xs text-white/60">
+                          {order.paymentMethod === 'paypal' ? 'PayPal' : 'Stripe'}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -380,6 +422,29 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               <div>
                 <h4 className="font-semibold text-white">Order ID</h4>
                 <p className="text-white/90">{selectedOrder.id}</p>
+              </div>
+
+              <div className="bg-slate-900/50 border border-white/15 p-3 rounded-lg">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-white/80">Order Status:</span>
+                  <span className={`px-2 py-1 rounded-full text-xs ${getStatusColor(selectedOrder.status)}`}>
+                    {selectedOrder.status.charAt(0).toUpperCase() + selectedOrder.status.slice(1)}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-white/80">Payment Status:</span>
+                  <span className={`px-2 py-1 rounded-full text-xs ${getPaymentStatusColor(selectedOrder.paymentStatus)}`}>
+                    {selectedOrder.paymentStatus === 'paid' ? '✓ Paid' : selectedOrder.paymentStatus.charAt(0).toUpperCase() + selectedOrder.paymentStatus.slice(1)}
+                  </span>
+                </div>
+                {selectedOrder.paymentMethod && (
+                  <div className="flex justify-between items-center mt-2">
+                    <span className="text-white/80">Payment Method:</span>
+                    <span className="text-white/90 font-semibold">
+                      {selectedOrder.paymentMethod === 'paypal' ? 'PayPal' : selectedOrder.paymentMethod === 'stripe' ? 'Stripe' : selectedOrder.paymentMethod}
+                    </span>
+                  </div>
+                )}
               </div>
 
               <div>
@@ -555,10 +620,22 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
 
                 {selectedOrder.status === 'cancelled' && (
                   <div className="p-3 bg-red-900/50 border border-red-700 rounded-lg">
-                    <p className="text-sm text-red-200 font-semibold">Order Cancelled</p>
+                    <p className="text-sm text-red-200 font-semibold mb-2">⚠️ Order Cancelled</p>
                     {selectedOrder.notes && (
                       <p className="text-sm text-red-300 mt-1">Reason: {selectedOrder.notes}</p>
                     )}
+                    <p className="text-xs text-red-300/70 mt-2">
+                      Cancelled orders remain in the system for record-keeping but cannot be reactivated.
+                    </p>
+                  </div>
+                )}
+
+                {selectedOrder.paymentStatus === 'paid' && selectedOrder.status !== 'cancelled' && (
+                  <div className="p-3 bg-green-900/50 border border-green-700 rounded-lg">
+                    <p className="text-sm text-green-200 font-semibold">✓ Payment Confirmed</p>
+                    <p className="text-xs text-green-300/70 mt-1">
+                      This order has been paid and is ready for processing.
+                    </p>
                   </div>
                 )}
               </div>
