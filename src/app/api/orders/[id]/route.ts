@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { OrderManagementService } from '@/utils/orderManagement';
+import { updateOrderStatus } from '@/utils/orderUtils';
 
 // GET /api/orders/[id] - Get specific order
 export async function GET(
@@ -51,6 +52,10 @@ export async function PATCH(
         order = await OrderManagementService.processOrder(orderId);
         break;
       
+      case 'dispatch':
+        order = await OrderManagementService.dispatchOrder(orderId, data.trackingNumber);
+        break;
+      
       case 'ship':
         order = await OrderManagementService.shipOrder(orderId, data.trackingNumber);
         break;
@@ -68,6 +73,16 @@ export async function PATCH(
           { error: 'Invalid action' },
           { status: 400 }
         );
+    }
+
+    // Also update localStorage for legacy compatibility (for dispatch/ship actions)
+    if ((action === 'dispatch' || action === 'ship') && order) {
+      try {
+        const legacyStatus = action === 'dispatch' ? 'dispatched' : 'shipped';
+        updateOrderStatus(order.id, legacyStatus as any, undefined, order.trackingNumber);
+      } catch (e) {
+        console.log('Could not update localStorage order:', e);
+      }
     }
 
     return NextResponse.json({ 

@@ -68,6 +68,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
       case 'pending': return 'bg-yellow-100 text-yellow-800';
       case 'confirmed': return 'bg-blue-100 text-blue-800';
       case 'processing': return 'bg-purple-100 text-purple-800';
+      case 'dispatched': return 'bg-indigo-100 text-indigo-800';
       case 'shipped': return 'bg-indigo-100 text-indigo-800';
       case 'delivered': return 'bg-green-100 text-green-800';
       case 'cancelled': return 'bg-red-100 text-red-800';
@@ -291,16 +292,48 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                       type="text"
                       placeholder="Tracking number (optional)"
                       className="w-full px-3 py-2 border border-slate-300 rounded-lg"
-                      id="tracking-number"
+                      id="tracking-number-dispatch"
                     />
                     <button
                       onClick={() => {
-                        const trackingNumber = (document.getElementById('tracking-number') as HTMLInputElement).value;
-                        updateOrderStatus(selectedOrder.id, 'ship', { trackingNumber });
+                        const trackingNumber = (document.getElementById('tracking-number-dispatch') as HTMLInputElement).value;
+                        updateOrderStatus(selectedOrder.id, 'dispatch', { trackingNumber: trackingNumber || undefined });
+                      }}
+                      className="w-full px-3 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                    >
+                      Dispatch Order (Sends Email)
+                    </button>
+                  </div>
+                )}
+
+                {selectedOrder.status === 'processing' && (
+                  <div className="space-y-2">
+                    <input
+                      type="text"
+                      placeholder="Tracking number (optional)"
+                      className="w-full px-3 py-2 border border-slate-300 rounded-lg"
+                      id="tracking-number-ship"
+                    />
+                    <button
+                      onClick={() => {
+                        const trackingNumber = (document.getElementById('tracking-number-ship') as HTMLInputElement).value;
+                        updateOrderStatus(selectedOrder.id, 'ship', { trackingNumber: trackingNumber || undefined });
                       }}
                       className="w-full px-3 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
                     >
-                      Ship Order
+                      Ship Order (Alternative)
+                    </button>
+                  </div>
+                )}
+
+                {selectedOrder.status === 'dispatched' && (
+                  <div className="space-y-2">
+                    <p className="text-sm text-secondary">Order dispatched. Customer has been notified via email.</p>
+                    <button
+                      onClick={() => updateOrderStatus(selectedOrder.id, 'deliver')}
+                      className="w-full px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+                    >
+                      Mark as Delivered
                     </button>
                   </div>
                 )}

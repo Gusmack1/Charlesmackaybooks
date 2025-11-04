@@ -33,7 +33,7 @@ export default function OrderTrackingPage() {
               Track Your Order
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-              Enter your email address or order ID to track your aviation history book order. 
+              Enter your order ID to track your aviation history book order. 
               Get real-time updates on your delivery status.
             </p>
           </div>

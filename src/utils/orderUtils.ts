@@ -26,7 +26,7 @@ export interface Order {
   shippingCost: number;
   total: number;
   timestamp: string;
-  status: 'pending' | 'paid' | 'shipped' | 'delivered' | 'cancelled' | 'failed';
+  status: 'pending' | 'paid' | 'shipped' | 'dispatched' | 'delivered' | 'cancelled' | 'failed';
   paypalTransactionId?: string;
   trackingNumber?: string;
 }

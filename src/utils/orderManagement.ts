@@ -30,7 +30,7 @@ export interface Order {
   subtotal: number;
   shipping: number;
   total: number;
-  status: 'pending' | 'confirmed' | 'processing' | 'shipped' | 'delivered' | 'cancelled';
+  status: 'pending' | 'confirmed' | 'processing' | 'dispatched' | 'shipped' | 'delivered' | 'cancelled';
   paymentStatus: 'pending' | 'paid' | 'failed' | 'refunded';
   paymentMethod: 'stripe' | 'paypal' | 'bank_transfer';
   paymentIntentId?: string;
@@ -40,9 +40,10 @@ export interface Order {
   estimatedDelivery?: Date;
   trackingNumber?: string;
   notes?: string;
-  emailNotifications: {
+    emailNotifications: {
     orderConfirmation: boolean;
     paymentConfirmation: boolean;
+    dispatchConfirmation: boolean;
     shippingConfirmation: boolean;
     deliveryConfirmation: boolean;
   };
@@ -273,6 +274,90 @@ Charles E. MacKay
     `
   }),
 
+  dispatchConfirmation: (order: Order): EmailTemplate => ({
+    subject: `Your Order Has Been Dispatched - ${order.id}`,
+    html: `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="background: #7c3aed; color: white; padding: 20px; text-align: center;">
+          <h1>Your Order Has Been Dispatched!</h1>
+          <h2>Order ${order.id}</h2>
+        </div>
+        
+        <div style="padding: 20px; background: #f8fafc;">
+          <p>Dear ${order.customer.firstName} ${order.customer.lastName},</p>
+          
+          <p>Great news! Your aviation history books have been dispatched and are on their way to you.</p>
+          
+          <div style="background: white; padding: 15px; margin: 20px 0; border-radius: 8px;">
+            <h3>Dispatch Information</h3>
+            <p><strong>Order ID:</strong> ${order.id}</p>
+            <p><strong>Dispatch Date:</strong> ${new Date().toLocaleDateString()}</p>
+            <p><strong>Tracking Number:</strong> ${order.trackingNumber || 'Will be provided once available'}</p>
+            <p><strong>Estimated Delivery:</strong> ${order.estimatedDelivery?.toLocaleDateString() || '3-5 business days'}</p>
+            <p><strong>Shipping Method:</strong> Royal Mail International</p>
+          </div>
+          
+          <div style="background: white; padding: 15px; margin: 20px 0; border-radius: 8px;">
+            <h3>Items Dispatched</h3>
+            ${order.items.map(item => `
+              <div style="border-bottom: 1px solid #e5e7eb; padding: 10px 0;">
+                <p><strong>${item.book.title}</strong></p>
+                <p>Quantity: ${item.quantity}</p>
+              </div>
+            `).join('')}
+          </div>
+          
+          <p>Your books will be delivered to:</p>
+          <div style="background: white; padding: 15px; margin: 20px 0; border-radius: 8px;">
+            <p>${order.customer.address.line1}</p>
+            ${order.customer.address.line2 ? `<p>${order.customer.address.line2}</p>` : ''}
+            <p>${order.customer.address.city}, ${order.customer.address.state} ${order.customer.address.postalCode}</p>
+            <p>${order.customer.address.country}</p>
+          </div>
+          
+          <p>You can track your order status at any time using your order ID: <strong>${order.id}</strong></p>
+          <p style="text-align: center; margin: 20px 0;">
+            <a href="https://charlesmackaybooks.com/order-tracking" style="display: inline-block; padding: 12px 24px; background: #7c3aed; color: white; text-decoration: none; border-radius: 8px;">Track Your Order</a>
+          </p>
+          
+          <p>We hope you enjoy diving into the fascinating world of aviation history!</p>
+          
+          <p>Best regards,<br>Charles E. MacKay</p>
+        </div>
+      </div>
+    `,
+    text: `
+Your Order Has Been Dispatched - ${order.id}
+
+Dear ${order.customer.firstName} ${order.customer.lastName},
+
+Great news! Your aviation history books have been dispatched and are on their way to you.
+
+Dispatch Information:
+- Order ID: ${order.id}
+- Dispatch Date: ${new Date().toLocaleDateString()}
+- Tracking Number: ${order.trackingNumber || 'Will be provided once available'}
+- Estimated Delivery: ${order.estimatedDelivery?.toLocaleDateString() || '3-5 business days'}
+- Shipping Method: Royal Mail International
+
+Items Dispatched:
+${order.items.map(item => `- ${item.book.title} (Qty: ${item.quantity})`).join('\n')}
+
+Your books will be delivered to:
+${order.customer.address.line1}
+${order.customer.address.line2 ? order.customer.address.line2 + '\n' : ''}${order.customer.address.city}, ${order.customer.address.state} ${order.customer.address.postalCode}
+${order.customer.address.country}
+
+You can track your order status at any time using your order ID: ${order.id}
+Visit: https://charlesmackaybooks.com/order-tracking
+
+We hope you enjoy diving into the fascinating world of aviation history!
+
+Best regards,
+Charles E. MacKay
+    `
+  }),
+
   shippingConfirmation: (order: Order): EmailTemplate => ({
     subject: `Your Order Has Shipped - ${order.id}`,
     html: `
@@ -427,6 +512,11 @@ export class EmailService {
     return this.sendEmail(order.customer.email, template);
   }
 
+  static async sendDispatchConfirmation(order: Order): Promise<boolean> {
+    const template = emailTemplates.dispatchConfirmation(order);
+    return this.sendEmail(order.customer.email, template);
+  }
+
   static async sendShippingConfirmation(order: Order): Promise<boolean> {
     const template = emailTemplates.shippingConfirmation(order);
     return this.sendEmail(order.customer.email, template);
@@ -474,6 +564,7 @@ export class OrderManagementService {
       emailNotifications: {
         orderConfirmation: false,
         paymentConfirmation: false,
+        dispatchConfirmation: false,
         shippingConfirmation: false,
         deliveryConfirmation: false
       }
@@ -521,6 +612,28 @@ export class OrderManagementService {
 
     order.status = 'processing';
     order.updatedAt = new Date();
+
+    return order;
+  }
+
+  static async dispatchOrder(orderId: string, trackingNumber?: string): Promise<Order> {
+    const order = this.orders.find(o => o.id === orderId);
+    if (!order) {
+      throw new Error('Order not found');
+    }
+
+    if (order.paymentStatus !== 'paid') {
+      throw new Error('Cannot dispatch unpaid order');
+    }
+
+    order.status = 'dispatched';
+    order.trackingNumber = trackingNumber;
+    order.estimatedDelivery = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000); // 5 days from now
+    order.updatedAt = new Date();
+
+    // Send dispatch confirmation email automatically
+    await EmailService.sendDispatchConfirmation(order);
+    order.emailNotifications.dispatchConfirmation = true;
 
     return order;
   }
