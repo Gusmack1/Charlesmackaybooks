@@ -487,13 +487,23 @@ Charles E. MacKay
 export class EmailService {
   static async sendEmail(to: string, template: EmailTemplate): Promise<boolean> {
     try {
-      // In a real implementation, you would use a service like SendGrid, Mailgun, or AWS SES
-      console.log('Sending email to:', to);
-      console.log('Subject:', template.subject);
-      console.log('HTML Content:', template.html.substring(0, 200) + '...');
+      // Check if we're in browser environment
+      if (typeof window === 'undefined') {
+        console.log('Email would be sent to:', to);
+        console.log('Subject:', template.subject);
+        return true; // Server-side: just log
+      }
       
-      // Simulate email sending delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Create mailto link with pre-filled email
+      const subject = encodeURIComponent(template.subject);
+      const body = encodeURIComponent(template.text || template.html.replace(/<[^>]*>/g, ''));
+      
+      // Open email client with pre-filled email
+      const mailtoLink = `mailto:${to}?subject=${subject}&body=${body}`;
+      window.open(mailtoLink, '_blank');
+      
+      console.log('Email opened for:', to);
+      console.log('Subject:', template.subject);
       
       return true;
     } catch (error) {
@@ -578,6 +588,9 @@ export class OrderManagementService {
     await EmailService.sendOrderConfirmation(order);
     order.emailNotifications.orderConfirmation = true;
 
+    // Send admin notification for new order
+    await EmailService.sendAdminNotification(order, 'new_order');
+
     return order;
   }
 
@@ -597,6 +610,11 @@ export class OrderManagementService {
     // Send payment confirmation email
     await EmailService.sendPaymentConfirmation(order);
     order.emailNotifications.paymentConfirmation = true;
+
+    // Send admin notification for PayPal payment received
+    if (order.paymentMethod === 'paypal') {
+      await EmailService.sendAdminNotification(order, 'payment_received');
+    }
 
     return order;
   }
