@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Order } from '@/utils/orderManagement';
+import { getOrder, getOrderHistory, Order as LegacyOrder } from '@/utils/orderUtils';
 
 interface OrderTrackingClientProps {}
 
@@ -12,6 +13,57 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  // Convert legacy order format to new format
+  const convertLegacyOrder = (legacyOrder: LegacyOrder): Order => {
+    return {
+      id: legacyOrder.orderId,
+      customer: {
+        firstName: legacyOrder.customerDetails.firstName,
+        lastName: legacyOrder.customerDetails.lastName,
+        email: legacyOrder.customerDetails.email,
+        phone: legacyOrder.customerDetails.phone,
+        address: {
+          line1: legacyOrder.customerDetails.address1,
+          line2: legacyOrder.customerDetails.address2,
+          city: legacyOrder.customerDetails.city,
+          state: legacyOrder.customerDetails.postcode,
+          postalCode: legacyOrder.customerDetails.postcode,
+          country: legacyOrder.customerDetails.country,
+        },
+      },
+      items: legacyOrder.items.map(item => ({
+        bookId: item.id,
+        quantity: item.quantity,
+        price: item.price,
+        book: {
+          id: item.id,
+          title: item.title,
+          price: item.price,
+          // Add minimal book data - in real app you'd fetch full book details
+          author: 'Charles E. MacKay',
+          category: 'Aviation History',
+          inStock: true,
+        } as any,
+      })),
+      subtotal: legacyOrder.subtotal,
+      shipping: legacyOrder.shippingCost,
+      total: legacyOrder.total,
+      status: legacyOrder.status === 'paid' ? 'confirmed' : legacyOrder.status === 'shipped' ? 'shipped' : legacyOrder.status === 'delivered' ? 'delivered' : legacyOrder.status === 'cancelled' ? 'cancelled' : 'pending',
+      paymentStatus: legacyOrder.status === 'paid' ? 'paid' : 'pending',
+      paymentMethod: legacyOrder.paypalTransactionId ? 'paypal' : 'stripe',
+      paypalOrderId: legacyOrder.paypalTransactionId,
+      createdAt: new Date(legacyOrder.timestamp),
+      updatedAt: new Date(legacyOrder.timestamp),
+      trackingNumber: legacyOrder.trackingNumber,
+      emailNotifications: {
+        orderConfirmation: false,
+        paymentConfirmation: false,
+        shippingConfirmation: false,
+        deliveryConfirmation: false,
+      },
+    };
+  };
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,24 +77,45 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
     setError('');
 
     try {
-      const url = searchType === 'email' 
-        ? `/api/orders?email=${encodeURIComponent(searchValue)}`
-        : `/api/orders/${searchValue}`;
+      let foundOrders: Order[] = [];
 
-      const response = await fetch(url);
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to fetch orders');
-      }
-
-      if (searchType === 'email') {
-        setOrders(data.orders || []);
+      // First, check localStorage (where orders are actually stored)
+      if (searchType === 'orderId') {
+        // Search by order ID
+        const legacyOrder = getOrder(searchValue);
+        if (legacyOrder) {
+          foundOrders = [convertLegacyOrder(legacyOrder)];
+        }
       } else {
-        setOrders(data.order ? [data.order] : []);
+        // Search by email - check order history
+        const orderHistory = getOrderHistory();
+        const matchingOrders = orderHistory.filter(
+          (order: LegacyOrder) => order.customerDetails.email.toLowerCase() === searchValue.toLowerCase()
+        );
+        foundOrders = matchingOrders.map(convertLegacyOrder);
       }
 
-      if ((data.orders && data.orders.length === 0) || (data.order === null)) {
+      // If no orders found in localStorage, try API as fallback
+      if (foundOrders.length === 0) {
+        const url = searchType === 'email' 
+          ? `/api/orders?email=${encodeURIComponent(searchValue)}`
+          : `/api/orders/${searchValue}`;
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (response.ok) {
+          if (searchType === 'email') {
+            foundOrders = data.orders || [];
+          } else {
+            foundOrders = data.order ? [data.order] : [];
+          }
+        }
+      }
+
+      setOrders(foundOrders);
+
+      if (foundOrders.length === 0) {
         setError('No orders found');
       }
     } catch (err) {
