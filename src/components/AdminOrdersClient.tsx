@@ -276,6 +276,26 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
     }
   };
 
+  // Separate orders into active and cancelled
+  const activeOrders = orders.filter(order => 
+    order.status !== 'cancelled' && 
+    order.paymentStatus !== 'failed' &&
+    order.paymentStatus !== 'refunded'
+  );
+
+  const cancelledOrders = orders.filter(order => 
+    order.status === 'cancelled' || 
+    order.paymentStatus === 'failed' ||
+    order.paymentStatus === 'refunded'
+  );
+
+  // Filter orders based on active tab and status filter
+  const filteredOrders = (activeTab === 'active' ? activeOrders : cancelledOrders).filter(order => {
+    if (statusFilter === 'all') return true;
+    if (statusFilter === 'paid') return order.paymentStatus === 'paid';
+    return order.status === statusFilter || order.paymentStatus === statusFilter;
+  });
+
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
