@@ -48,26 +48,29 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         }
 
         // Sync localStorage orders to OrderManagementService (so they can be updated)
-        // Only sync if we have localStorage orders
+        // CRITICAL: Always sync ALL localStorage orders to ensure OrderManagementService has latest status
+        // This ensures cancelled orders persist even if server restarts
         if (localStorageOrders.length > 0) {
           for (const localOrder of localStorageOrders) {
-            // Check if order exists in API orders
-            if (!apiOrders.find(o => o.id === localOrder.id)) {
-              try {
-                // Sync order to OrderManagementService
-                await fetch('/api/orders/sync', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ order: localOrder }),
-                });
-              } catch (syncError) {
-                console.error('Could not sync order:', localOrder.id, syncError);
-                // Continue - don't block loading
+            // Always sync - even if order exists in API, sync ensures latest status (e.g., cancelled)
+            try {
+              // Sync order to OrderManagementService
+              const syncResponse = await fetch('/api/orders/sync', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ order: localOrder }),
+              });
+              
+              if (!syncResponse.ok) {
+                console.error('Sync failed for order:', localOrder.id);
               }
+            } catch (syncError) {
+              console.error('Could not sync order:', localOrder.id, syncError);
+              // Continue - don't block loading
             }
           }
           
-          // Fetch again after syncing to get updated list (if we synced any)
+          // Fetch again after syncing to get updated list with all synced orders
           try {
             const syncResponse = await fetch('/api/orders');
             const syncData = await syncResponse.json();
@@ -81,11 +84,27 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         }
       }
 
-      // Merge orders, removing duplicates by ID
+      // Merge orders, removing duplicates by ID and prioritizing most recent status
       const allOrders = [...apiOrders];
       localStorageOrders.forEach(localOrder => {
-        if (!allOrders.find(o => o.id === localOrder.id)) {
+        const existingIndex = allOrders.findIndex(o => o.id === localOrder.id);
+        if (existingIndex === -1) {
+          // Order doesn't exist in apiOrders, add it
           allOrders.push(localOrder);
+        } else {
+          // Order exists in both - prioritize the one with more recent updatedAt
+          const existingOrder = allOrders[existingIndex];
+          const existingUpdated = existingOrder.updatedAt instanceof Date 
+            ? existingOrder.updatedAt 
+            : new Date(existingOrder.updatedAt);
+          const localUpdated = localOrder.updatedAt instanceof Date 
+            ? localOrder.updatedAt 
+            : new Date(localOrder.updatedAt);
+          
+          // If localStorage version is more recent, use it (especially for cancelled orders)
+          if (localUpdated > existingUpdated || localOrder.status === 'cancelled') {
+            allOrders[existingIndex] = localOrder;
+          }
         }
       });
 
@@ -206,11 +225,55 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
         throw new Error(result.error || 'Failed to update order');
       }
       
-      // Update localStorage for all status changes (for legacy compatibility)
+      // CRITICAL: Update localStorage for all status changes (for legacy compatibility)
+      // This ensures cancelled orders persist even if OrderManagementService resets
       if (typeof window !== 'undefined') {
         try {
           const { getOrder, saveOrder } = require('@/utils/orderUtils');
-          const legacyOrder = getOrder(orderId);
+          const { convertLegacyOrderToNew } = require('@/utils/orderSync');
+          
+          let legacyOrder = getOrder(orderId);
+          
+          // If order doesn't exist in localStorage, create it from the updated order
+          if (!legacyOrder && result.order) {
+            // Convert new format order to legacy format for localStorage
+            const newOrder = result.order;
+            legacyOrder = {
+              orderId: newOrder.id,
+              customerDetails: {
+                firstName: newOrder.customer.firstName,
+                lastName: newOrder.customer.lastName,
+                email: newOrder.customer.email,
+                phone: newOrder.customer.phone || '',
+                address1: newOrder.customer.address.line1,
+                address2: newOrder.customer.address.line2 || '',
+                city: newOrder.customer.address.city,
+                postcode: newOrder.customer.address.postalCode,
+                country: newOrder.customer.address.country,
+              },
+              items: newOrder.items.map(item => ({
+                id: item.bookId || item.book?.id,
+                title: item.book?.title || '',
+                price: item.price,
+                quantity: item.quantity,
+                isbn: item.book?.isbn,
+              })),
+              subtotal: newOrder.subtotal,
+              shippingCost: newOrder.shipping,
+              total: newOrder.total,
+              timestamp: newOrder.updatedAt instanceof Date 
+                ? newOrder.updatedAt.toISOString() 
+                : newOrder.updatedAt,
+              status: newOrder.status === 'cancelled' ? 'cancelled' :
+                      newOrder.status === 'dispatched' ? 'dispatched' :
+                      newOrder.status === 'shipped' ? 'shipped' :
+                      newOrder.status === 'delivered' ? 'delivered' :
+                      newOrder.paymentStatus === 'paid' ? 'paid' : 'pending',
+              trackingNumber: newOrder.trackingNumber,
+              notes: newOrder.notes,
+            };
+          }
+          
           if (legacyOrder) {
             // Update status based on action
             if (action === 'cancel') {
@@ -225,6 +288,19 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
               if (result.legacyOrder.trackingNumber) {
                 legacyOrder.trackingNumber = result.legacyOrder.trackingNumber;
               }
+            } else if (result.order) {
+              // Update from result.order if available
+              legacyOrder.status = result.order.status === 'cancelled' ? 'cancelled' :
+                                  result.order.status === 'dispatched' ? 'dispatched' :
+                                  result.order.status === 'shipped' ? 'shipped' :
+                                  result.order.status === 'delivered' ? 'delivered' :
+                                  result.order.paymentStatus === 'paid' ? 'paid' : 'pending';
+              if (result.order.trackingNumber) {
+                legacyOrder.trackingNumber = result.order.trackingNumber;
+              }
+              if (result.order.notes) {
+                legacyOrder.notes = result.order.notes;
+              }
             }
             
             // Update timestamp
@@ -234,9 +310,12 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                 : result.order.updatedAt;
             } else if (result.legacyOrder && result.legacyOrder.updatedAt) {
               legacyOrder.timestamp = result.legacyOrder.updatedAt;
+            } else {
+              legacyOrder.timestamp = new Date().toISOString();
             }
             
             saveOrder(legacyOrder);
+            console.log('localStorage updated for order:', orderId, 'status:', legacyOrder.status);
           }
         } catch (e) {
           console.error('Could not update localStorage:', e);
