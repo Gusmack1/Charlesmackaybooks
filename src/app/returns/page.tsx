@@ -14,7 +14,7 @@ export default function ReturnsPage() {
       subtitle="Clear information about returns, refunds, and how to contact us"
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Returns & Refunds' }]}
     >
-      <div className="surface-dark relative -mx-6 px-6 py-12 rounded-2xl bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+      <div className="surface-dark relative -mx-6 px-6 py-12 rounded-2xl bg-slate-900">
         <div className="absolute inset-0 bg-black/20 rounded-2xl pointer-events-none" />
         <div className="relative">
           <div className="card content">

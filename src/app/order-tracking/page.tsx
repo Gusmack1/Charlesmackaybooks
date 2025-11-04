@@ -24,9 +24,9 @@ export const metadata: Metadata = {
 
 export default function OrderTrackingPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-900">
       {/* Hero Section */}
-      <div className="hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+      <div className="hero-section bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">

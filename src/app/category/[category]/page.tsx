@@ -45,18 +45,18 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
   // Temporarily disable static generation for debugging
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-900">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-center mb-8">{categoryName} Books</h1>
-        <p className="text-center mb-8">
+        <h1 className="text-3xl font-bold text-center mb-8 text-white">{categoryName} Books</h1>
+        <p className="text-center mb-8 text-white/90">
           Found {categoryBooks.length} books in this category
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categoryBooks.map((book) => (
-            <div key={book.id} className="border rounded-lg p-4">
-              <h3 className="font-semibold">{book.title}</h3>
-              <p className="text-sm text-gray-600">{book.category}</p>
-              <p className="text-sm">£{book.price}</p>
+            <div key={book.id} className="border border-white/15 bg-slate-800 rounded-lg p-4 text-white">
+              <h3 className="font-semibold text-white">{book.title}</h3>
+              <p className="text-sm text-white/80">{book.category}</p>
+              <p className="text-sm text-white">£{book.price}</p>
             </div>
           ))}
         </div>

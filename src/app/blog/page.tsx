@@ -456,12 +456,12 @@ export default function BlogPage() {
       subtitle="Expert insights into Scottish aviation history, WWI & WWII aircraft, helicopter development, jet age aviation, and military aviation heritage."
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]}
     >
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-6 py-12 bg-slate-900">
 
         {/* Blog Categories */}
         {Object.entries(blogCategories).map(([category, posts]) => (
           <section key={category} className="mb-16">
-            <h2 className="text-2xl font-bold text-primary mb-8">
+            <h2 className="text-2xl font-bold text-white mb-8">
               {category}
             </h2>
 
@@ -472,7 +472,7 @@ export default function BlogPage() {
                   href={`/blog/${post.slug}`}
                   className="group"
                 >
-                  <article className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-200">
+                  <article className="bg-slate-800 border border-white/15 rounded-lg overflow-hidden hover:border-white/30 hover:shadow-md transition-all duration-200">
                     <div className="relative h-48 overflow-hidden">
                       <Image
                         src={post.image}
@@ -486,17 +486,17 @@ export default function BlogPage() {
                     <div className="p-6">
                       
 
-                      <h3 className="text-lg font-semibold text-primary mb-3 group-hover:text-accent-blue transition-colors line-clamp-2">
+                      <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors line-clamp-2">
                         {post.title}
                       </h3>
 
-                      <p className="text-secondary mb-4 line-clamp-3 text-sm leading-relaxed">
+                      <p className="text-white/90 mb-4 line-clamp-3 text-sm leading-relaxed">
                         {post.excerpt}
                       </p>
 
                       
 
-                      <div className="text-accent-blue font-medium text-sm">
+                      <div className="text-blue-300 font-medium text-sm">
                         Read Article →
                       </div>
                     </div>

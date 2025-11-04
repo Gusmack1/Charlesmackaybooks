@@ -60,14 +60,14 @@ export default function CategoriesPage() {
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Categories' }]}
     >
       {/* Introduction */}
-      <section className="py-8 bg-white">
+      <section className="py-8 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-secondary mb-6">
+            <p className="text-lg text-white/90 mb-6">
               Discover our comprehensive collection of aviation history books, meticulously organized by theme, era, and specialization.
               Each category represents years of expert research by aviation historian Charles E. MacKay.
             </p>
-            <p className="text-secondary">
+            <p className="text-white/90">
               From the pioneering days of early flight to modern aviation technology, explore {books.length} authoritative titles
               covering every aspect of aviation development, military operations, and technological innovation.
             </p>
@@ -77,9 +77,9 @@ export default function CategoriesPage() {
 
       {/* Category Groups */}
       {Object.entries(categoryGroups).map(([groupName, categorySlugs]) => (
-        <section key={groupName} className="py-12">
+        <section key={groupName} className="py-12 bg-slate-900">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-primary mb-8 text-center">{groupName}</h2>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">{groupName}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {categorySlugs.map((categorySlug) => {
                 const categoryDesc = categoryDescriptions[categorySlug]
@@ -91,9 +91,9 @@ export default function CategoriesPage() {
                 if (!categoryDesc) return null
 
                 return (
-                  <div key={categorySlug} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  <div key={categorySlug} className="bg-slate-800 border border-white/15 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow text-white">
                     <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-xl font-semibold text-primary">
+                      <h3 className="text-xl font-semibold text-white">
                         {categoryDesc.name}
                       </h3>
                       <span className="badge badge-blue text-sm">
@@ -101,15 +101,15 @@ export default function CategoriesPage() {
                       </span>
                     </div>
 
-                    <p className="text-secondary mb-4 line-clamp-3">
+                    <p className="text-white/90 mb-4 line-clamp-3">
                       {categoryDesc.description}
                     </p>
 
                     <div className="mb-4">
-                      <h4 className="font-semibold text-sm text-primary mb-2">Featured Topics:</h4>
+                      <h4 className="font-semibold text-sm text-white mb-2">Featured Topics:</h4>
                       <div className="flex flex-wrap gap-1">
                         {categoryDesc.keywords.slice(0, 4).map((keyword) => (
-                          <span key={keyword} className="text-xs bg-gray-100 px-2 py-1 rounded">
+                          <span key={keyword} className="text-xs bg-slate-700 text-white px-2 py-1 rounded">
                             {keyword}
                           </span>
                         ))}
@@ -131,7 +131,7 @@ export default function CategoriesPage() {
       ))}
 
       {/* Call to Action */}
-      <section className="bg-accent-blue text-white py-12">
+      <section className="bg-blue-700 text-white py-12">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Need Help Finding the Right Book?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
