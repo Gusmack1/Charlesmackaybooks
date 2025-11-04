@@ -691,23 +691,25 @@ export class OrderManagementService {
     // Check if order already exists
     const existingOrder = this.orders.find(o => o.id === order.id);
     if (existingOrder) {
-      // Update existing order with new data, but preserve paymentStatus if existing is 'paid' and new is 'pending'
-      // This prevents overwriting confirmed payments with stale localStorage data
+      // Preserve critical fields before updating
       const preservePaymentStatus = existingOrder.paymentStatus === 'paid' && order.paymentStatus === 'pending';
-      const preserveStatus = existingOrder.status === 'confirmed' || existingOrder.status === 'processing' || 
-                            existingOrder.status === 'dispatched' || existingOrder.status === 'shipped' || 
-                            existingOrder.status === 'delivered';
+      const preserveAdvancedStatus = existingOrder.status === 'confirmed' || existingOrder.status === 'processing' || 
+                                    existingOrder.status === 'dispatched' || existingOrder.status === 'shipped' || 
+                                    existingOrder.status === 'delivered';
+      const originalStatus = existingOrder.status;
+      const originalPaymentStatus = existingOrder.paymentStatus;
       
+      // Update existing order with new data
       Object.assign(existingOrder, order);
       existingOrder.updatedAt = new Date();
       
-      // Restore preserved payment status if needed
+      // Restore preserved payment status if needed (don't overwrite paid with pending)
       if (preservePaymentStatus) {
-        existingOrder.paymentStatus = 'paid';
+        existingOrder.paymentStatus = originalPaymentStatus; // 'paid'
       }
       
       // Restore preserved status if new status is less advanced
-      if (preserveStatus) {
+      if (preserveAdvancedStatus) {
         const statusHierarchy: Record<string, number> = {
           'pending': 0,
           'confirmed': 1,
@@ -717,11 +719,11 @@ export class OrderManagementService {
           'delivered': 4,
           'cancelled': -1
         };
-        const existingLevel = statusHierarchy[existingOrder.status] || 0;
+        const existingLevel = statusHierarchy[originalStatus] || 0;
         const newLevel = statusHierarchy[order.status] || 0;
-        if (newLevel < existingLevel) {
+        if (newLevel < existingLevel && order.status !== 'cancelled') {
           // Don't downgrade status - keep the more advanced status
-          existingOrder.status = existingOrder.status;
+          existingOrder.status = originalStatus;
         }
       }
       
