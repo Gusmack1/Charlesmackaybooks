@@ -68,7 +68,8 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!searchValue.trim()) {
+    const trimmedSearch = searchValue.trim();
+    if (!trimmedSearch) {
       setError('Please enter a search value');
       return;
     }
@@ -81,25 +82,96 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
 
       // First, check localStorage (where orders are actually stored)
       if (searchType === 'orderId') {
-        // Search by order ID
-        const legacyOrder = getOrder(searchValue);
+        // Search by order ID - try exact match first
+        let legacyOrder = getOrder(trimmedSearch);
+        
+        // If not found, try searching all localStorage keys for orders
+        if (!legacyOrder && typeof window !== 'undefined') {
+          const orderKeys: string[] = [];
+          for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('order_')) {
+              orderKeys.push(key);
+            }
+          }
+          
+          // Try to find order by partial match (in case format differs)
+          for (const key of orderKeys) {
+            try {
+              const orderData = localStorage.getItem(key);
+              if (orderData) {
+                const order: LegacyOrder = JSON.parse(orderData);
+                // Check if orderId matches (case-insensitive, partial match)
+                if (order.orderId && 
+                    (order.orderId.toLowerCase().includes(trimmedSearch.toLowerCase()) ||
+                     trimmedSearch.toLowerCase().includes(order.orderId.toLowerCase()))) {
+                  legacyOrder = order;
+                  break;
+                }
+              }
+            } catch (e) {
+              // Skip invalid JSON
+              continue;
+            }
+          }
+        }
+        
         if (legacyOrder) {
           foundOrders = [convertLegacyOrder(legacyOrder)];
         }
       } else {
-        // Search by email - check order history
+        // Search by email - normalize email for comparison
+        const normalizedSearchEmail = trimmedSearch.toLowerCase().trim();
+        
+        // Check order history first
         const orderHistory = getOrderHistory();
-        const matchingOrders = orderHistory.filter(
-          (order: LegacyOrder) => order.customerDetails.email.toLowerCase() === searchValue.toLowerCase()
+        let matchingOrders = orderHistory.filter(
+          (order: LegacyOrder) => {
+            const orderEmail = order.customerDetails?.email?.toLowerCase().trim() || '';
+            return orderEmail === normalizedSearchEmail || 
+                   orderEmail.includes(normalizedSearchEmail) ||
+                   normalizedSearchEmail.includes(orderEmail);
+          }
         );
+        
+        // Also check all individual order keys in localStorage
+        if (typeof window !== 'undefined') {
+          const orderKeys: string[] = [];
+          for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('order_')) {
+              orderKeys.push(key);
+            }
+          }
+          
+          for (const key of orderKeys) {
+            try {
+              const orderData = localStorage.getItem(key);
+              if (orderData) {
+                const order: LegacyOrder = JSON.parse(orderData);
+                const orderEmail = order.customerDetails?.email?.toLowerCase().trim() || '';
+                if ((orderEmail === normalizedSearchEmail || 
+                     orderEmail.includes(normalizedSearchEmail) ||
+                     normalizedSearchEmail.includes(orderEmail)) &&
+                    !matchingOrders.find(o => o.orderId === order.orderId)) {
+                  matchingOrders.push(order);
+                }
+              }
+            } catch (e) {
+              // Skip invalid JSON
+              continue;
+            }
+          }
+        }
+        
         foundOrders = matchingOrders.map(convertLegacyOrder);
       }
 
       // If no orders found in localStorage, try API as fallback
       if (foundOrders.length === 0) {
         const url = searchType === 'email' 
-          ? `/api/orders?email=${encodeURIComponent(searchValue)}`
-          : `/api/orders/${searchValue}`;
+          ? `/api/orders?email=${encodeURIComponent(trimmedSearch)}`
+          : `/api/orders/${trimmedSearch}`;
 
         const response = await fetch(url);
         const data = await response.json();
@@ -116,10 +188,11 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
       setOrders(foundOrders);
 
       if (foundOrders.length === 0) {
-        setError('No orders found');
+        setError('No orders found. Please check your email address or order ID and try again.');
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      console.error('Order search error:', err);
+      setError(err instanceof Error ? err.message : 'An error occurred while searching for orders');
       setOrders([]);
     } finally {
       setLoading(false);
