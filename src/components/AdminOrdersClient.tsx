@@ -106,12 +106,20 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
 
   const updateOrderStatus = async (orderId: string, action: string, data?: any) => {
     try {
-      // First, ensure order is synced to OrderManagementService
-      // Check if order exists in OrderManagementService by trying to fetch it
-      const getOrderResponse = await fetch(`/api/orders/${orderId}`);
+      // CRITICAL: Always ensure order is synced to OrderManagementService BEFORE updating
+      // First, check if order exists in OrderManagementService
+      let orderExists = false;
+      try {
+        const getOrderResponse = await fetch(`/api/orders/${orderId}`);
+        if (getOrderResponse.ok) {
+          orderExists = true;
+        }
+      } catch (e) {
+        console.log('Check order existence failed:', e);
+      }
       
-      // If order not found in OrderManagementService, sync it from localStorage
-      if (!getOrderResponse.ok && typeof window !== 'undefined') {
+      // If order not found in OrderManagementService, sync it from localStorage FIRST
+      if (!orderExists && typeof window !== 'undefined') {
         try {
           const { getOrder } = require('@/utils/orderUtils');
           const { convertLegacyOrderToNew } = require('@/utils/orderSync');
@@ -120,6 +128,8 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
           if (legacyOrder) {
             // Convert and sync to OrderManagementService
             const convertedOrder = convertLegacyOrderToNew(legacyOrder);
+            
+            // Sync order - wait for this to complete
             const syncResponse = await fetch('/api/orders/sync', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -127,16 +137,55 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
             });
             
             if (!syncResponse.ok) {
-              console.error('Could not sync order to OrderManagementService');
-              // Continue anyway - we'll try to update localStorage directly
+              const syncError = await syncResponse.json();
+              throw new Error(`Sync failed: ${syncError.error || 'Unknown error'}`);
+            }
+            
+            // Verify sync was successful
+            const verifyResponse = await fetch(`/api/orders/${orderId}`);
+            if (!verifyResponse.ok) {
+              throw new Error('Order sync verification failed');
+            }
+            
+            console.log('Order synced successfully:', orderId);
+          } else {
+            throw new Error('Order not found in localStorage');
+          }
+        } catch (syncError) {
+          console.error('Could not sync order from localStorage:', syncError);
+          
+          // If sync fails, try to update localStorage directly for cancel/confirm_payment
+          if (action === 'cancel' || action === 'confirm_payment') {
+            try {
+              const { getOrder, saveOrder } = require('@/utils/orderUtils');
+              const legacyOrder = getOrder(orderId);
+              if (legacyOrder) {
+                if (action === 'cancel') {
+                  legacyOrder.status = 'cancelled';
+                  if (data?.reason) {
+                    legacyOrder.notes = data.reason;
+                  }
+                } else if (action === 'confirm_payment') {
+                  legacyOrder.status = 'paid';
+                }
+                legacyOrder.timestamp = new Date().toISOString();
+                saveOrder(legacyOrder);
+                
+                // Refresh and show success
+                await fetchOrders();
+                alert(`Order ${action.replace('_', ' ')} successful (updated in localStorage)`);
+                return;
+              }
+            } catch (localStorageError) {
+              console.error('Could not update localStorage:', localStorageError);
             }
           }
-        } catch (e) {
-          console.error('Could not sync order from localStorage:', e);
+          
+          throw new Error(`Failed to sync order: ${syncError instanceof Error ? syncError.message : 'Unknown error'}`);
         }
       }
 
-      // Now perform the update
+      // Now perform the update - order should definitely exist now
       const response = await fetch(`/api/orders/${orderId}`, {
         method: 'PATCH',
         headers: {
@@ -160,6 +209,9 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
             // Update status based on action
             if (action === 'cancel') {
               legacyOrder.status = 'cancelled';
+              if (data?.reason) {
+                legacyOrder.notes = data.reason;
+              }
             } else if (action === 'confirm_payment') {
               legacyOrder.status = 'paid';
             } else if (result.legacyOrder) {

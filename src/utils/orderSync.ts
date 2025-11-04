@@ -11,16 +11,20 @@ import { books } from '@/data/books';
  * Convert legacy order format to new Order format
  */
 export function convertLegacyOrderToNew(legacyOrder: LegacyOrder): Order {
+  // Ensure dates are properly handled
+  const createdAt = legacyOrder.timestamp ? new Date(legacyOrder.timestamp) : new Date();
+  const updatedAt = legacyOrder.timestamp ? new Date(legacyOrder.timestamp) : new Date();
+  
   return {
     id: legacyOrder.orderId,
     customer: {
       firstName: legacyOrder.customerDetails.firstName,
       lastName: legacyOrder.customerDetails.lastName,
       email: legacyOrder.customerDetails.email,
-      phone: legacyOrder.customerDetails.phone,
+      phone: legacyOrder.customerDetails.phone || '',
       address: {
         line1: legacyOrder.customerDetails.address1,
-        line2: legacyOrder.customerDetails.address2,
+        line2: legacyOrder.customerDetails.address2 || '',
         city: legacyOrder.customerDetails.city,
         state: legacyOrder.customerDetails.postcode,
         postalCode: legacyOrder.customerDetails.postcode,
@@ -55,9 +59,10 @@ export function convertLegacyOrderToNew(legacyOrder: LegacyOrder): Order {
     paymentStatus: legacyOrder.status === 'paid' ? 'paid' : 'pending',
     paymentMethod: legacyOrder.paypalTransactionId ? 'paypal' : 'stripe',
     paypalOrderId: legacyOrder.paypalTransactionId,
-    createdAt: new Date(legacyOrder.timestamp),
-    updatedAt: new Date(legacyOrder.timestamp),
+    createdAt: createdAt,
+    updatedAt: updatedAt,
     trackingNumber: legacyOrder.trackingNumber,
+    notes: legacyOrder.notes,
     emailNotifications: {
       orderConfirmation: false,
       paymentConfirmation: false,
