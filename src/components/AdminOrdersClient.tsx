@@ -78,12 +78,11 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
 
   const updateOrderStatus = async (orderId: string, action: string, data?: any) => {
     try {
-      // If order is only in localStorage (not in OrderManagementService), we need to sync it first
+      // First, ensure order is synced to OrderManagementService
       // Check if order exists in OrderManagementService by trying to fetch it
       const getOrderResponse = await fetch(`/api/orders/${orderId}`);
-      const getOrderData = await getOrderResponse.json();
       
-      // If order not found in OrderManagementService, try to sync from localStorage
+      // If order not found in OrderManagementService, sync it from localStorage
       if (!getOrderResponse.ok && typeof window !== 'undefined') {
         try {
           const { getOrder } = require('@/utils/orderUtils');
@@ -91,7 +90,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
           const legacyOrder = getOrder(orderId);
           
           if (legacyOrder) {
-            // Convert and add to OrderManagementService via API
+            // Convert and sync to OrderManagementService
             const convertedOrder = convertLegacyOrderToNew(legacyOrder);
             const syncResponse = await fetch('/api/orders/sync', {
               method: 'POST',
@@ -100,11 +99,12 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
             });
             
             if (!syncResponse.ok) {
-              console.log('Could not sync order to OrderManagementService');
+              console.error('Could not sync order to OrderManagementService');
+              // Continue anyway - we'll try to update localStorage directly
             }
           }
         } catch (e) {
-          console.log('Could not sync order from localStorage:', e);
+          console.error('Could not sync order from localStorage:', e);
         }
       }
 
@@ -124,39 +124,36 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
       }
       
       // Update localStorage for all status changes (for legacy compatibility)
-      if (result.legacyOrder && typeof window !== 'undefined') {
+      if (typeof window !== 'undefined') {
         try {
           const { getOrder, saveOrder } = require('@/utils/orderUtils');
           const legacyOrder = getOrder(orderId);
           if (legacyOrder) {
-            legacyOrder.status = result.legacyOrder.status;
-            if (result.legacyOrder.trackingNumber) {
-              legacyOrder.trackingNumber = result.legacyOrder.trackingNumber;
-            }
-            legacyOrder.timestamp = result.legacyOrder.updatedAt;
-            saveOrder(legacyOrder);
-          }
-        } catch (e) {
-          console.log('Could not update localStorage:', e);
-        }
-      }
-      
-      // Also update localStorage even if no legacyOrder in response (for cancel/confirm_payment)
-      if ((action === 'cancel' || action === 'confirm_payment') && typeof window !== 'undefined') {
-        try {
-          const { getOrder, saveOrder } = require('@/utils/orderUtils');
-          const legacyOrder = getOrder(orderId);
-          if (legacyOrder) {
+            // Update status based on action
             if (action === 'cancel') {
               legacyOrder.status = 'cancelled';
             } else if (action === 'confirm_payment') {
               legacyOrder.status = 'paid';
+            } else if (result.legacyOrder) {
+              legacyOrder.status = result.legacyOrder.status;
+              if (result.legacyOrder.trackingNumber) {
+                legacyOrder.trackingNumber = result.legacyOrder.trackingNumber;
+              }
             }
-            legacyOrder.timestamp = result.order.updatedAt.toISOString();
+            
+            // Update timestamp
+            if (result.order && result.order.updatedAt) {
+              legacyOrder.timestamp = result.order.updatedAt instanceof Date 
+                ? result.order.updatedAt.toISOString() 
+                : result.order.updatedAt;
+            } else if (result.legacyOrder && result.legacyOrder.updatedAt) {
+              legacyOrder.timestamp = result.legacyOrder.updatedAt;
+            }
+            
             saveOrder(legacyOrder);
           }
         } catch (e) {
-          console.log('Could not update localStorage for action:', action, e);
+          console.error('Could not update localStorage:', e);
         }
       }
       
@@ -170,6 +167,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
       
       alert(`Order ${action.replace('_', ' ')} successful${action === 'dispatch' ? ' - Customer has been notified via email' : ''}`);
     } catch (err) {
+      console.error('Error updating order:', err);
       alert(err instanceof Error ? err.message : 'Failed to update order');
     }
   };
@@ -463,14 +461,23 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                   <button
                     onClick={() => {
                       const reason = prompt('Reason for cancellation:');
-                      if (reason) {
-                        updateOrderStatus(selectedOrder.id, 'cancel', { reason });
+                      if (reason !== null) { // Allow empty string but not null (cancelled)
+                        updateOrderStatus(selectedOrder.id, 'cancel', { reason: reason || 'No reason provided' });
                       }
                     }}
                     className="w-full px-3 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
                   >
                     Cancel Order
                   </button>
+                )}
+
+                {selectedOrder.status === 'cancelled' && (
+                  <div className="p-3 bg-red-900/50 border border-red-700 rounded-lg">
+                    <p className="text-sm text-red-200 font-semibold">Order Cancelled</p>
+                    {selectedOrder.notes && (
+                      <p className="text-sm text-red-300 mt-1">Reason: {selectedOrder.notes}</p>
+                    )}
+                  </div>
                 )}
               </div>
             </div>
