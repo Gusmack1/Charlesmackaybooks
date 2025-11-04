@@ -691,9 +691,40 @@ export class OrderManagementService {
     // Check if order already exists
     const existingOrder = this.orders.find(o => o.id === order.id);
     if (existingOrder) {
-      // Update existing order with new data
+      // Update existing order with new data, but preserve paymentStatus if existing is 'paid' and new is 'pending'
+      // This prevents overwriting confirmed payments with stale localStorage data
+      const preservePaymentStatus = existingOrder.paymentStatus === 'paid' && order.paymentStatus === 'pending';
+      const preserveStatus = existingOrder.status === 'confirmed' || existingOrder.status === 'processing' || 
+                            existingOrder.status === 'dispatched' || existingOrder.status === 'shipped' || 
+                            existingOrder.status === 'delivered';
+      
       Object.assign(existingOrder, order);
       existingOrder.updatedAt = new Date();
+      
+      // Restore preserved payment status if needed
+      if (preservePaymentStatus) {
+        existingOrder.paymentStatus = 'paid';
+      }
+      
+      // Restore preserved status if new status is less advanced
+      if (preserveStatus) {
+        const statusHierarchy: Record<string, number> = {
+          'pending': 0,
+          'confirmed': 1,
+          'processing': 2,
+          'dispatched': 3,
+          'shipped': 3,
+          'delivered': 4,
+          'cancelled': -1
+        };
+        const existingLevel = statusHierarchy[existingOrder.status] || 0;
+        const newLevel = statusHierarchy[order.status] || 0;
+        if (newLevel < existingLevel) {
+          // Don't downgrade status - keep the more advanced status
+          existingOrder.status = existingOrder.status;
+        }
+      }
+      
       return existingOrder;
     }
 

@@ -130,6 +130,23 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
   const updateOrderStatus = async (orderId: string, action: string, data?: any) => {
     try {
       // CRITICAL: Always ensure order is synced to OrderManagementService BEFORE updating
+      // For dispatch action, always verify paymentStatus is 'paid' before proceeding
+      if (action === 'dispatch' || action === 'ship') {
+        // Get the current order state to verify payment status
+        try {
+          const getOrderResponse = await fetch(`/api/orders/${orderId}`);
+          if (getOrderResponse.ok) {
+            const orderData = await getOrderResponse.json();
+            if (orderData.order && orderData.order.paymentStatus !== 'paid') {
+              throw new Error(`Cannot ${action} unpaid order. Payment status is: ${orderData.order.paymentStatus}. Please confirm payment first.`);
+            }
+          }
+        } catch (e) {
+          // If we can't verify, continue and let the API handle the error
+          console.log('Could not verify payment status:', e);
+        }
+      }
+      
       // First, check if order exists in OrderManagementService
       let orderExists = false;
       try {
