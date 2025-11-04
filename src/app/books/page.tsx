@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 export default function BooksPage() {
   return (
-    <div className="surface-dark relative -mx-0 bg-[#020221]">
+    <div className="surface-dark relative -mx-0 bg-slate-900">
       <UnifiedSchema
         pageType="books"
         pageTitle="Aviation History Books - Complete Collection | Charles E. MacKay"
@@ -53,7 +53,7 @@ export default function BooksPage() {
       />
 
       {/* Hero Section - Matching Homepage Style */}
-      <div className="hero-section bg-[#020221]">
+      <div className="hero-section bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">

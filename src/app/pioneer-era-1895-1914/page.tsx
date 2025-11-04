@@ -87,7 +87,7 @@ export default function PioneerEraPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-900">
 
       <UnifiedSchema
         pageType="page"
@@ -97,7 +97,7 @@ export default function PioneerEraPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-900 via-orange-800 to-red-800 text-white">
+      <section className="relative bg-slate-900 text-white">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative max-w-7xl mx-auto px-6 py-32">
           <div className="text-center max-w-5xl mx-auto">
@@ -147,7 +147,7 @@ export default function PioneerEraPage() {
       </section>
 
       {/* Social Share */}
-      <div className="bg-white py-4 border-b">
+      <div className="bg-slate-900 py-4 border-b text-white">
         <div className="max-w-4xl mx-auto px-6">
           <SocialShare
             url={pageUrl}
@@ -158,22 +158,22 @@ export default function PioneerEraPage() {
       </div>
 
       {/* Overview Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">The Age of Aviation Pioneers</h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <h2 className="text-4xl font-bold text-white mb-6">The Age of Aviation Pioneers</h2>
+              <p className="text-lg text-white mb-6 leading-relaxed">
                 The Pioneer Era of aviation, spanning from 1895 to 1914, represents humanity's greatest leap into the unknown.
                 This extraordinary period witnessed the transformation of flight from ancient dream to modern reality through the
                 courage, ingenuity, and determination of remarkable individuals.
               </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-lg text-white mb-6 leading-relaxed">
                 From Percy Pilcher's Scottish gliding experiments to the Wright Brothers' historic first powered flight,
                 these nineteen years of innovation established the foundation for all subsequent aviation development.
                 Every modern aircraft can trace its lineage back to the breakthrough achievements of these pioneering years.
               </p>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              <p className="text-lg text-white mb-8 leading-relaxed">
                 Charles E. MacKay's research reveals the untold stories of aviation's earliest pioneers, including forgotten
                 figures whose contributions shaped the development of human flight.
               </p>
@@ -194,67 +194,67 @@ export default function PioneerEraPage() {
       </section>
 
       {/* Timeline Section */}
-      <section id="timeline" className="py-20 bg-amber-50">
+      <section id="timeline" className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Pioneer Era Timeline</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Pioneer Era Timeline</h2>
 
           <div className="space-y-12">
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-amber-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-amber-500">
               <div className="flex items-center mb-4">
                 <span className="bg-amber-500 text-white px-4 py-2 rounded-full font-bold">1895</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">Percy Pilcher Begins Aviation Experiments</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">Percy Pilcher Begins Aviation Experiments</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 Percy Pilcher, working at Glasgow University, builds his first hang glider "The Bat" and begins systematic
                 aviation experiments in Scotland. His correspondence with Otto Lilienthal establishes international collaboration
                 in early aviation development.
               </p>
-              <div className="text-sm text-amber-700">
+              <div className="text-sm text-amber-300">
                 <strong>Significance:</strong> First systematic aviation experiments in Scotland, predating Wright Brothers by 8 years
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-orange-500">
               <div className="flex items-center mb-4">
                 <span className="bg-orange-500 text-white px-4 py-2 rounded-full font-bold">1897</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">World Distance Record</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">World Distance Record</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 Percy Pilcher achieves a world distance record of 250 meters flying his glider "Hawk" at Stanford Hall.
                 This achievement demonstrates the viability of controlled heavier-than-air flight and establishes gliding
                 as a practical approach to aviation development.
               </p>
-              <div className="text-sm text-orange-700">
+              <div className="text-sm text-orange-300">
                 <strong>Significance:</strong> First world aviation record, proving feasibility of controlled flight
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-red-500">
               <div className="flex items-center mb-4">
                 <span className="bg-red-500 text-white px-4 py-2 rounded-full font-bold">1903</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">Wright Brothers First Powered Flight</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">Wright Brothers First Powered Flight</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 Orville and Wilbur Wright achieve the first powered, sustained, and controlled heavier-than-air human flight
                 at Kitty Hawk, North Carolina. This historic 12-second flight marks the beginning of the aviation age and
                 validates years of pioneering work by aviation experimenters worldwide.
               </p>
-              <div className="text-sm text-red-700">
+              <div className="text-sm text-red-300">
                 <strong>Significance:</strong> First powered flight - the achievement that launched the aviation age
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-amber-600">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-amber-600">
               <div className="flex items-center mb-4">
                 <span className="bg-amber-600 text-white px-4 py-2 rounded-full font-bold">1909</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">Aviation Manufacturing Begins</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">Aviation Manufacturing Begins</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 Following successful aviation demonstrations across Europe, industrial interest in aircraft manufacturing
                 emerges. Companies like Beardmore in Scotland begin investigating aviation opportunities, laying the
                 foundation for the aviation industry.
               </p>
-              <div className="text-sm text-amber-700">
+              <div className="text-sm text-amber-300">
                 <strong>Significance:</strong> Beginning of commercial aviation industry development
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function PioneerEraPage() {
       {/* Featured Books Section */}
       <section id="featured-books" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Pioneer Era Books</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Pioneer Era Books</h2>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {pioneerBooks.map((book) => (
@@ -273,12 +273,12 @@ export default function PioneerEraPage() {
                 <div className="flex justify-between items-start mb-4">
                   <div className="flex-1">
                     <span className="text-sm bg-amber-200 text-amber-800 px-3 py-1 rounded-full">{book.category}</span>
-                    <h3 className="text-2xl font-bold text-gray-900 mt-3 mb-2">{book.title}</h3>
+                    <h3 className="text-2xl font-bold text-white mt-3 mb-2">{book.title}</h3>
                     <p className="text-lg text-amber-700 mb-3">{book.subtitle}</p>
                   </div>
                   <span className="text-3xl font-bold text-green-600">{book.price}</span>
                 </div>
-                <p className="text-gray-700 mb-6">{book.description}</p>
+                <p className="text-white mb-6">{book.description}</p>
                 <div className="flex gap-3">
                   <Link
                     href={`/books/${book.id}`}
@@ -311,7 +311,7 @@ export default function PioneerEraPage() {
       {/* Expert Articles Section */}
       <section className="py-20 bg-amber-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Expert Articles & Analysis</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Expert Articles & Analysis</h2>
 
           <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
             {pioneerArticles.map((article) => (
@@ -324,10 +324,10 @@ export default function PioneerEraPage() {
                   <span className="text-sm bg-amber-200 text-amber-800 px-3 py-1 rounded-full">{article.category}</span>
                   <span className="text-amber-600 group-hover:text-amber-700 transition-colors">Read Article →</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-amber-700 transition-colors mb-3">
+                <h3 className="text-2xl font-bold text-white group-hover:text-amber-700 transition-colors mb-3">
                   {article.title}
                 </h3>
-                <p className="text-gray-700">{article.excerpt}</p>
+                <p className="text-white">{article.excerpt}</p>
               </Link>
             ))}
           </div>
@@ -344,9 +344,9 @@ export default function PioneerEraPage() {
       </section>
 
       {/* Key Figures Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Pioneer Era Visionaries</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Pioneer Era Visionaries</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6 bg-amber-50 rounded-xl border border-amber-200">

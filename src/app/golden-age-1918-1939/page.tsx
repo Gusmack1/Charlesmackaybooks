@@ -114,7 +114,7 @@ export default function GoldenAgePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#020221]">
+    <div className="min-h-screen bg-slate-900">
 
       <UnifiedSchema
         pageType="page"
@@ -124,7 +124,7 @@ export default function GoldenAgePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-[#020221] text-white">
+      <section className="relative bg-slate-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-6 py-32">
           <div className="text-center max-w-5xl mx-auto">
@@ -180,22 +180,22 @@ export default function GoldenAgePage() {
       {/* Social Share removed per design directive */}
 
       {/* Overview Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Aviation's Most Glamorous Era</h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <h2 className="text-4xl font-bold text-white mb-6">Aviation's Most Glamorous Era</h2>
+              <p className="text-lg text-white mb-6 leading-relaxed">
                 The Golden Age of Aviation, spanning from 1918 to 1939, witnessed the transformation of flying from
                 a wartime necessity into a peacetime wonder. These two decades saw the birth of commercial airlines,
                 the establishment of international air routes, and technological advances that made flying safer and more reliable.
               </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-lg text-white mb-6 leading-relaxed">
                 Record-breaking flights captured public imagination while racing competitions like the Schneider Trophy
                 drove innovation that would prove crucial in the coming world war. Airlines connected continents,
                 flying boats crossed oceans, and aviation became a symbol of human progress and technological achievement.
               </p>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              <p className="text-lg text-white mb-8 leading-relaxed">
                 Charles E. MacKay's research reveals how this golden period laid the foundation for modern aviation,
                 establishing the principles of commercial flight and the technological advances that would define military aviation in WWII.
               </p>
@@ -216,46 +216,46 @@ export default function GoldenAgePage() {
       </section>
 
       {/* Timeline Section */}
-      <section id="timeline" className="py-20 bg-blue-50">
+      <section id="timeline" className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Golden Age Timeline</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Golden Age Timeline</h2>
 
           <div className="space-y-12">
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-blue-500">
               <div className="flex items-center mb-4">
                 <span className="bg-blue-500 text-white px-4 py-2 rounded-full font-bold">1919</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">First Transatlantic Flight</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">First Transatlantic Flight</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 Alcock and Brown achieve the first non-stop transatlantic flight in a Vickers Vimy, proving that
                 long-distance air travel is possible. This breakthrough inspires the development of commercial aviation
                 and international air routes.
               </p>
-              <div className="text-sm text-blue-700">
+              <div className="text-sm text-blue-300">
                 <strong>Significance:</strong> Demonstrates feasibility of long-distance commercial aviation
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-cyan-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-cyan-500">
               <div className="flex items-center mb-4">
                 <span className="bg-cyan-500 text-white px-4 py-2 rounded-full font-bold">1924</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">Imperial Airways Founded</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">Imperial Airways Founded</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 Britain establishes Imperial Airways to connect the British Empire through scheduled air services.
                 This marks the beginning of systematic commercial aviation development and international airline operations.
               </p>
-              <div className="text-sm text-cyan-700">
+              <div className="text-sm text-cyan-300">
                 <strong>Significance:</strong> Birth of systematic commercial aviation and international air routes
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-purple-500">
               <div className="flex items-center mb-4">
                 <span className="bg-purple-500 text-white px-4 py-2 rounded-full font-bold">1927</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">Lindbergh's Solo Atlantic Crossing</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">Lindbergh's Solo Atlantic Crossing</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 Charles Lindbergh's solo flight from New York to Paris in the Spirit of St. Louis captures global attention
                 and demonstrates the reliability of modern aircraft. This achievement sparks worldwide enthusiasm for aviation.
               </p>
@@ -264,12 +264,12 @@ export default function GoldenAgePage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-indigo-500">
               <div className="flex items-center mb-4">
                 <span className="bg-indigo-500 text-white px-4 py-2 rounded-full font-bold">1931</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">Schneider Trophy Victory</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">Schneider Trophy Victory</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 Britain wins permanent possession of the Schneider Trophy with the Supermarine S6B, achieving over 400 mph.
                 Lady Houston's £100,000 donation saves the competition and enables technology that leads to the Spitfire.
               </p>
@@ -282,9 +282,9 @@ export default function GoldenAgePage() {
       </section>
 
       {/* Innovation Highlights Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Golden Age Innovations</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Golden Age Innovations</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6 bg-blue-50 rounded-xl border border-blue-200">
@@ -333,7 +333,7 @@ export default function GoldenAgePage() {
       {/* Featured Books Section */}
       <section id="featured-books" className="py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Golden Age Aviation Books</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Golden Age Aviation Books</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {goldenAgeBooks.map((book) => (
@@ -346,7 +346,7 @@ export default function GoldenAgePage() {
                   </div>
                   <span className="text-2xl font-bold text-green-600">{book.price}</span>
                 </div>
-                <p className="text-gray-700 mb-6 text-sm">{book.description}</p>
+                <p className="text-white mb-6 text-sm">{book.description}</p>
                 <div className="flex gap-2">
                   <Link
                     href={`/books/${book.id}`}
@@ -377,9 +377,9 @@ export default function GoldenAgePage() {
       </section>
 
       {/* Expert Articles Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Expert Analysis & Articles</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Expert Analysis & Articles</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {goldenAgeArticles.map((article) => (
@@ -395,7 +395,7 @@ export default function GoldenAgePage() {
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors mb-3">
                   {article.title}
                 </h3>
-                <p className="text-gray-700">{article.excerpt}</p>
+                <p className="text-white">{article.excerpt}</p>
               </Link>
             ))}
           </div>
@@ -414,7 +414,7 @@ export default function GoldenAgePage() {
       {/* Aviation Achievements Section */}
       <section className="py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Record-Breaking Achievements</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Record-Breaking Achievements</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-blue-200">

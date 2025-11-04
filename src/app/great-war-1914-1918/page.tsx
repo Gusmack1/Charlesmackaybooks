@@ -106,7 +106,7 @@ export default function GreatWarPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-900">
 
       <UnifiedSchema
         pageType="page"
@@ -116,7 +116,7 @@ export default function GreatWarPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-red-900 via-crimson-700 to-rose-800 text-white">
+      <section className="relative bg-slate-900 text-white">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative max-w-7xl mx-auto px-6 py-32">
           <div className="text-center max-w-5xl mx-auto">
@@ -172,22 +172,22 @@ export default function GreatWarPage() {
       {/* Social Share removed per design directive */}
 
       {/* Overview Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Aviation's Crucible of War</h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <h2 className="text-4xl font-bold text-white mb-6">Aviation's Crucible of War</h2>
+              <p className="text-lg text-white mb-6 leading-relaxed">
                 The Great War of 1914-1918 transformed aviation from a fledgling technology into a decisive military
                 weapon. In just four years, aircraft evolved from fragile reconnaissance machines into sophisticated
                 fighters, bombers, and specialized military platforms that would define aerial warfare for generations.
               </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-lg text-white mb-6 leading-relaxed">
                 The Royal Flying Corps and Royal Naval Air Service pioneered British air power, developing legendary
                 aircraft like the Sopwith Camel, SE5a, and Bristol Fighter. Meanwhile, German innovation produced
                 the feared Albatros fighters and Fokker triplanes that challenged Allied air supremacy.
               </p>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              <p className="text-lg text-white mb-8 leading-relaxed">
                 Charles E. MacKay's extensive research reveals how this period of unprecedented innovation established
                 the foundations of modern air power and created the Royal Air Force as the world's first independent air service.
               </p>
@@ -208,67 +208,67 @@ export default function GreatWarPage() {
       </section>
 
       {/* Timeline Section */}
-      <section id="timeline" className="py-20 bg-red-50">
+      <section id="timeline" className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Great War Aviation Timeline</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Great War Aviation Timeline</h2>
 
           <div className="space-y-12">
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-red-500">
               <div className="flex items-center mb-4">
                 <span className="bg-red-500 text-white px-4 py-2 rounded-full font-bold">August 1914</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">War Begins - Aviation Mobilizes</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">War Begins - Aviation Mobilizes</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 The Royal Flying Corps deploys to France with 37 aircraft for reconnaissance duties. Aircraft are
                 viewed primarily as "eyes of the army" for observing enemy positions. The RNAS begins naval aviation
                 operations, establishing the dual-service structure that would dominate British aviation.
               </p>
-              <div className="text-sm text-red-700">
+              <div className="text-sm text-red-300">
                 <strong>Significance:</strong> First military deployment of organized aviation forces in warfare
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-orange-500">
               <div className="flex items-center mb-4">
                 <span className="bg-orange-500 text-white px-4 py-2 rounded-full font-bold">1915</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">The Fighter Revolution</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">The Fighter Revolution</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 Introduction of synchronized machine guns creates the first true fighter aircraft. The "Fokker Scourge"
                 demonstrates German technological superiority, prompting urgent Allied fighter development. Air combat
                 evolves from individual encounters to organized fighter tactics.
               </p>
-              <div className="text-sm text-orange-700">
+              <div className="text-sm text-orange-300">
                 <strong>Significance:</strong> Birth of air-to-air combat and fighter aircraft doctrine
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-rose-500">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-rose-500">
               <div className="flex items-center mb-4">
                 <span className="bg-rose-500 text-white px-4 py-2 rounded-full font-bold">1916-1917</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">British Fighter Supremacy</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">British Fighter Supremacy</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 The Sopwith Pup, Triplane, and SE5a establish British air superiority. Coordinated fighter tactics,
                 improved training, and superior aircraft design overcome German advantages. Large-scale air battles
                 become commonplace over the Western Front.
               </p>
-              <div className="text-sm text-rose-700">
+              <div className="text-sm text-rose-300">
                 <strong>Significance:</strong> Allied air supremacy enables ground offensive operations
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-600">
+            <div className="bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 text-white border-red-600">
               <div className="flex items-center mb-4">
                 <span className="bg-red-600 text-white px-4 py-2 rounded-full font-bold">April 1918</span>
-                <h3 className="text-2xl font-bold text-gray-900 ml-4">Birth of the Royal Air Force</h3>
+                <h3 className="text-2xl font-bold text-white ml-4">Birth of the Royal Air Force</h3>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-white mb-4">
                 The RFC and RNAS merge to form the Royal Air Force - the world's first independent air service.
                 This organizational innovation recognizes aviation as a distinct form of warfare requiring specialized
                 leadership, doctrine, and resources.
               </p>
-              <div className="text-sm text-red-700">
+              <div className="text-sm text-red-300">
                 <strong>Significance:</strong> Creation of independent air power as a military service
               </div>
             </div>
@@ -277,9 +277,9 @@ export default function GreatWarPage() {
       </section>
 
       {/* Aircraft Development Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Legendary Aircraft of the Great War</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Legendary Aircraft of the Great War</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
@@ -321,7 +321,7 @@ export default function GreatWarPage() {
       {/* Featured Books Section */}
       <section id="featured-books" className="py-20 bg-red-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Great War Aviation Books</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Great War Aviation Books</h2>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {warBooks.map((book) => (
@@ -329,12 +329,12 @@ export default function GreatWarPage() {
                 <div className="flex justify-between items-start mb-4">
                   <div className="flex-1">
                     <span className="text-sm bg-red-200 text-red-800 px-3 py-1 rounded-full">{book.category}</span>
-                    <h3 className="text-2xl font-bold text-gray-900 mt-3 mb-2">{book.title}</h3>
+                    <h3 className="text-2xl font-bold text-white mt-3 mb-2">{book.title}</h3>
                     <p className="text-lg text-red-700 mb-3">{book.subtitle}</p>
                   </div>
                   <span className="text-3xl font-bold text-green-600">{book.price}</span>
                 </div>
-                <p className="text-gray-700 mb-6">{book.description}</p>
+                <p className="text-white mb-6">{book.description}</p>
                 <div className="flex gap-3">
                   <Link
                     href={`/books/${book.id}`}
@@ -365,9 +365,9 @@ export default function GreatWarPage() {
       </section>
 
       {/* Expert Articles Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Expert Analysis & Articles</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Expert Analysis & Articles</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {warArticles.map((article) => (
@@ -383,7 +383,7 @@ export default function GreatWarPage() {
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-700 transition-colors mb-3">
                   {article.title}
                 </h3>
-                <p className="text-gray-700">{article.excerpt}</p>
+                <p className="text-white">{article.excerpt}</p>
               </Link>
             ))}
           </div>
@@ -402,7 +402,7 @@ export default function GreatWarPage() {
       {/* Industrial Impact Section */}
       <section className="py-20 bg-red-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Industrial Revolution in Aviation</h2>
+              <h2 className="text-4xl font-bold text-white text-center mb-16">Industrial Revolution in Aviation</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6 bg-white rounded-xl border border-red-200">
