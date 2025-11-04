@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Order } from '@/utils/orderManagement';
 import { getOrder, getOrderHistory, Order as LegacyOrder } from '@/utils/orderUtils';
@@ -13,6 +13,38 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  // Expose debug function to window for console testing
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).debugOrderTracking = () => {
+        const allKeys = Array.from({ length: localStorage.length }, (_, i) => localStorage.key(i)).filter(k => k && k.startsWith('order_'));
+        const history = getOrderHistory();
+        console.log('=== ORDER TRACKING DEBUG ===');
+        console.log('Order keys in localStorage:', allKeys);
+        console.log('Order history length:', history.length);
+        console.log('Order history emails:', history.map((o: LegacyOrder) => o.customerDetails?.email));
+        allKeys.forEach((key: string | null) => {
+          if (key) {
+            try {
+              const data = localStorage.getItem(key);
+              if (data) {
+                const order: LegacyOrder = JSON.parse(data);
+                console.log(`Order ${key}:`, {
+                  orderId: order.orderId,
+                  email: order.customerDetails?.email,
+                  status: order.status
+                });
+              }
+            } catch (e) {
+              console.error('Error parsing', key, e);
+            }
+          }
+        });
+        console.log('===========================');
+      };
+    }
+  }, []);
 
   // Convert legacy order format to new format
   const convertLegacyOrder = (legacyOrder: LegacyOrder): Order => {
@@ -79,6 +111,12 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
 
     try {
       let foundOrders: Order[] = [];
+      
+      // Email normalization function (used in both search types)
+      const normalizeEmail = (email: string): string => {
+        if (!email) return '';
+        return email.toLowerCase().trim().replace(/\s+/g, '');
+      };
 
       // First, check localStorage (where orders are actually stored)
       if (searchType === 'orderId') {
@@ -118,33 +156,52 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
         
         if (legacyOrder) {
           const convertedOrder = convertLegacyOrder(legacyOrder);
-          // Only include if it's a paid/confirmed order
-          if ((convertedOrder.paymentStatus === 'paid' || 
-               convertedOrder.status === 'paid' || 
-               convertedOrder.status === 'confirmed' || 
-               convertedOrder.status === 'shipped' || 
-               convertedOrder.status === 'delivered') &&
-              convertedOrder.status !== 'cancelled' && 
-              convertedOrder.status !== 'failed' &&
-              convertedOrder.paymentStatus !== 'failed' &&
-              convertedOrder.paymentStatus !== 'refunded') {
+          // Include paid/confirmed orders, and also pending orders
+          const isPaid = convertedOrder.paymentStatus === 'paid' || 
+                         convertedOrder.status === 'confirmed' || 
+                         convertedOrder.status === 'shipped' || 
+                         convertedOrder.status === 'delivered';
+          const isPending = convertedOrder.paymentStatus === 'pending' && 
+                           convertedOrder.status === 'pending';
+          const isNotCancelled = convertedOrder.status !== 'cancelled' && 
+                                convertedOrder.paymentStatus !== 'failed' && 
+                                convertedOrder.paymentStatus !== 'refunded';
+          
+          if ((isPaid || isPending) && isNotCancelled) {
             foundOrders = [convertedOrder];
           }
         }
       } else {
         // Search by email - normalize email for comparison
-        const normalizedSearchEmail = trimmedSearch.toLowerCase().trim();
+        const normalizedSearchEmail = normalizeEmail(trimmedSearch);
+        
+        // Debug logging
+        if (typeof window !== 'undefined') {
+          console.log('Searching for email:', normalizedSearchEmail);
+        }
         
         // Check order history first
         const orderHistory = getOrderHistory();
-        let matchingOrders = orderHistory.filter(
-          (order: LegacyOrder) => {
-            const orderEmail = order.customerDetails?.email?.toLowerCase().trim() || '';
-            return orderEmail === normalizedSearchEmail || 
-                   orderEmail.includes(normalizedSearchEmail) ||
-                   normalizedSearchEmail.includes(orderEmail);
+        let matchingOrders: LegacyOrder[] = [];
+        
+        // Check order history
+        orderHistory.forEach((order: LegacyOrder) => {
+          const orderEmail = normalizeEmail(order.customerDetails?.email || '');
+          if (orderEmail) {
+            // Multiple matching strategies
+            const exactMatch = orderEmail === normalizedSearchEmail;
+            const noUnderscoresMatch = orderEmail.replace(/_/g, '') === normalizedSearchEmail.replace(/_/g, '');
+            const noDotsMatch = orderEmail.replace(/\./g, '') === normalizedSearchEmail.replace(/\./g, '');
+            const containsMatch = orderEmail.includes(normalizedSearchEmail) || normalizedSearchEmail.includes(orderEmail);
+            
+            if (exactMatch || noUnderscoresMatch || noDotsMatch || containsMatch) {
+              if (!matchingOrders.find(o => o.orderId === order.orderId)) {
+                matchingOrders.push(order);
+                console.log('Found order in history:', order.orderId, 'Email:', orderEmail);
+              }
+            }
           }
-        );
+        });
         
         // Also check all individual order keys in localStorage
         if (typeof window !== 'undefined') {
@@ -156,43 +213,61 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
             }
           }
           
+          console.log('Found order keys in localStorage:', orderKeys.length);
+          
           for (const key of orderKeys) {
             try {
               const orderData = localStorage.getItem(key);
               if (orderData) {
                 const order: LegacyOrder = JSON.parse(orderData);
-                const orderEmail = order.customerDetails?.email?.toLowerCase().trim() || '';
-                if ((orderEmail === normalizedSearchEmail || 
-                     orderEmail.includes(normalizedSearchEmail) ||
-                     normalizedSearchEmail.includes(orderEmail)) &&
-                    !matchingOrders.find(o => o.orderId === order.orderId)) {
-                  matchingOrders.push(order);
+                const orderEmail = normalizeEmail(order.customerDetails?.email || '');
+                
+                if (orderEmail) {
+                  // Multiple matching strategies
+                  const exactMatch = orderEmail === normalizedSearchEmail;
+                  const noUnderscoresMatch = orderEmail.replace(/_/g, '') === normalizedSearchEmail.replace(/_/g, '');
+                  const noDotsMatch = orderEmail.replace(/\./g, '') === normalizedSearchEmail.replace(/\./g, '');
+                  const containsMatch = orderEmail.includes(normalizedSearchEmail) || normalizedSearchEmail.includes(orderEmail);
+                  
+                  if ((exactMatch || noUnderscoresMatch || noDotsMatch || containsMatch) && 
+                      !matchingOrders.find(o => o.orderId === order.orderId)) {
+                    matchingOrders.push(order);
+                    console.log('Found order in localStorage:', order.orderId, 'Email:', orderEmail);
+                  }
                 }
               }
             } catch (e) {
-              // Skip invalid JSON
+              console.error('Error parsing order from localStorage:', key, e);
               continue;
             }
           }
         }
         
+        console.log('Total matching orders found:', matchingOrders.length);
         foundOrders = matchingOrders.map(convertLegacyOrder);
       }
 
-      // Filter to only show successfully purchased orders
-      // Exclude pending, cancelled, and failed orders
+      // Filter orders - show paid/confirmed orders, but also show pending orders
+      // (so users can see their order even if payment is still processing)
       foundOrders = foundOrders.filter(order => {
-        // Only show orders that have been paid/confirmed
+        // Show orders that are paid/confirmed/shipped/delivered
         const isPaid = order.paymentStatus === 'paid' || 
-                       order.status === 'paid' || 
                        order.status === 'confirmed' || 
                        order.status === 'shipped' || 
                        order.status === 'delivered';
+        // Also show pending orders (so users can track their order)
+        const isPending = order.paymentStatus === 'pending' && order.status === 'pending';
+        // Exclude cancelled and failed orders
         const isNotCancelled = order.status !== 'cancelled' && 
-                               order.status !== 'failed' &&
                                order.paymentStatus !== 'failed' &&
                                order.paymentStatus !== 'refunded';
-        return isPaid && isNotCancelled;
+        const shouldShow = (isPaid || isPending) && isNotCancelled;
+        
+        if (!shouldShow && typeof window !== 'undefined') {
+          console.log('Filtered out order:', order.id, 'Status:', order.status, 'PaymentStatus:', order.paymentStatus);
+        }
+        
+        return shouldShow;
       });
 
       // If no orders found in localStorage, try API as fallback
@@ -215,12 +290,10 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
           // Filter API results to only show paid orders
           apiOrders = apiOrders.filter(order => {
             const isPaid = order.paymentStatus === 'paid' || 
-                           order.status === 'paid' || 
                            order.status === 'confirmed' || 
                            order.status === 'shipped' || 
                            order.status === 'delivered';
             const isNotCancelled = order.status !== 'cancelled' && 
-                                   order.status !== 'failed' &&
                                    order.paymentStatus !== 'failed' &&
                                    order.paymentStatus !== 'refunded';
             return isPaid && isNotCancelled;
@@ -238,7 +311,32 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
       setOrders(uniqueOrders);
 
       if (uniqueOrders.length === 0) {
-        setError('No orders found. Please check your email address or order ID and try again.');
+        // Provide helpful debugging info
+        if (typeof window !== 'undefined') {
+          const allOrderKeys = Array.from({ length: localStorage.length }, (_, i) => localStorage.key(i)).filter(k => k && k.startsWith('order_'));
+          const orderHistory = getOrderHistory();
+          
+          console.log('Order search debug:', {
+            searchType,
+            searchValue: trimmedSearch,
+            normalizedSearchEmail: searchType === 'email' ? normalizeEmail(trimmedSearch) : null,
+            localStorageKeys: allOrderKeys,
+            orderHistoryLength: orderHistory.length,
+            orderHistoryEmails: orderHistory.map((o: LegacyOrder) => normalizeEmail(o.customerDetails?.email || '')),
+            allOrderEmails: allOrderKeys.map((key: string | null) => {
+              if (!key) return null;
+              try {
+                const data = localStorage.getItem(key);
+                if (data) {
+                  const order: LegacyOrder = JSON.parse(data);
+                  return normalizeEmail(order.customerDetails?.email || '');
+                }
+              } catch {}
+              return null;
+            }).filter(Boolean)
+          });
+        }
+        setError('No orders found. Please check your email address or order ID and try again. Make sure you\'re using the same email address you used when placing the order. Check the browser console (F12) for more details.');
       }
     } catch (err) {
       console.error('Order search error:', err);
@@ -284,6 +382,7 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
               <select
                 value={searchType}
                 onChange={(e) => setSearchType(e.target.value as 'email' | 'orderId')}
+                aria-label="Search by email address or order ID"
                 className="w-full px-3 py-2 border border-slate-600 bg-slate-900 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="email">Email Address</option>
@@ -298,7 +397,7 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
                 type={searchType === 'email' ? 'email' : 'text'}
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
-                placeholder={searchType === 'email' ? 'Enter your email' : 'Enter order ID (e.g., CMB-...)'}
+                placeholder={searchType === 'email' ? 'Enter your email' : 'Enter order ID (e.g., CM-...)'}
                 className="w-full px-3 py-2 border border-slate-600 bg-slate-900 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
@@ -420,7 +519,7 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
         <h3 className="text-lg font-semibold text-white mb-4">Need Help?</h3>
         <div className="space-y-2 text-white/90">
           <p>• Can't find your order? Check your email for the order confirmation.</p>
-          <p>• Order ID format: CMB-XXXXXXXX-XXXXXX</p>
+          <p>• Order ID format: CM-XXXXXXXX-XXXXXX</p>
           <p>• For questions about your order, contact us at charlese1mackay@hotmail.com</p>
           <p>• Shipping typically takes 3-5 business days for UK orders, 5-10 days internationally.</p>
         </div>

@@ -4,10 +4,11 @@ import { OrderManagementService } from '@/utils/orderManagement';
 // GET /api/orders/[id] - Get specific order
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const orderId = params.id;
+    const { id } = await params;
+    const orderId = id;
     const order = await OrderManagementService.getOrder(orderId);
     
     if (!order) {
@@ -31,10 +32,11 @@ export async function GET(
 // PATCH /api/orders/[id] - Update order status
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const orderId = params.id;
+    const { id } = await params;
+    const orderId = id;
     const body = await request.json();
     const { action, ...data } = body;
 

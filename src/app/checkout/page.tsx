@@ -15,6 +15,7 @@ import {
   saveOrder,
   generatePayPalUrl,
   validateCustomerDetails,
+  updateOrderStatus,
   Order
 } from '../../utils/orderUtils';
 import { OrderManagementService, CustomerInfo } from '../../utils/orderManagement';
@@ -253,6 +254,10 @@ export default function CheckoutPage() {
             try {
               // Confirm payment in new system
               await OrderManagementService.confirmPayment(order.id);
+              
+              // Update legacy order status to paid
+              updateOrderStatus(order.id, 'paid', event.data.transactionId);
+              
               clearCart();
               window.location.href = `/order-complete?orderId=${order.id}`;
             } catch (error) {

@@ -9,7 +9,7 @@ import { useCart } from '@/context/CartContext';
 
 function OrderCompleteContent() {
   const searchParams = useSearchParams();
-  const orderId = searchParams.get('order');
+  const orderId = searchParams.get('order') || searchParams.get('orderId');
   const [order, setOrder] = useState<Order | null>(null);
   const [loading, setLoading] = useState(true);
   const { clearCart } = useCart();

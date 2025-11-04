@@ -85,8 +85,17 @@ export function saveOrder(order: Order): void {
 
 export function getOrder(orderId: string): Order | null {
   try {
-    const orderData = localStorage.getItem(`order_${orderId}`);
-    return orderData ? JSON.parse(orderData) : null;
+    // Try with order_ prefix first (most common case)
+    let orderData = localStorage.getItem(`order_${orderId}`);
+    if (orderData) {
+      return JSON.parse(orderData);
+    }
+    // Also try without prefix (for backward compatibility)
+    orderData = localStorage.getItem(orderId);
+    if (orderData) {
+      return JSON.parse(orderData);
+    }
+    return null;
   } catch (error) {
     console.error('Error retrieving order:', error);
     return null;
