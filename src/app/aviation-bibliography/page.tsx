@@ -20,9 +20,24 @@ export const metadata: Metadata = {
     'aviation history references',
     'military aviation bibliography'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/aviation-bibliography'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Aviation History Bibliography | Research Database',
     description: 'Comprehensive aviation history bibliography with 150+ primary sources and academic references.',
+    url: 'https://charlesmackaybooks.com/aviation-bibliography',
     type: 'website',
   },
 };
