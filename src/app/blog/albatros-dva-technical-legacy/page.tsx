@@ -330,6 +330,9 @@ export const metadata: Metadata = {
     description: 'Structure, aerodynamics, and combat employment of the Albatros D.Va.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/albatros-dva-technical-legacy/'
   }
 }
 

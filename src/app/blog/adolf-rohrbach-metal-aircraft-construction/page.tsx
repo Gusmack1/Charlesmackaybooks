@@ -134,6 +134,9 @@ export const metadata: Metadata = {
     description: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
     images: ['/blog-images/metal-aircraft-construction.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/adolf-rohrbach-metal-aircraft-construction/'
   }
 }
 

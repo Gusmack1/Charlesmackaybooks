@@ -391,6 +391,9 @@ export const metadata: Metadata = {
     description: 'A comprehensive, research-backed account of inter-war Scottish aviation: Renfrew Airport development, the Scottish Flying Club, Beardmore/Weir engineering, civil air routes, and the transition to rearmament.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/scottish-aviation-between-the-wars/'
   }
 }
 

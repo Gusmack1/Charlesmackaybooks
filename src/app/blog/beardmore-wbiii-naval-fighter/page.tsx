@@ -509,6 +509,9 @@ export const metadata: Metadata = {
     description: 'From shipyard ingenuity to deck-landing realities in WWI.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/beardmore-wbiii-naval-fighter/'
   }
 }
 

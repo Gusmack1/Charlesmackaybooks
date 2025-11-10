@@ -436,6 +436,9 @@ export const metadata: Metadata = {
     description: `Comprehensive analysis of percy pilcher scotland aviation pioneer with expert historical research and technical details.`,
     images: ['/blog-images/percy-pilcher-hawk-glider-scotland.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/percy-pilcher-scotland-aviation-pioneer/'
   }
 }
 

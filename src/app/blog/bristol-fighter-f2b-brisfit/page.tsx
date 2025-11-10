@@ -242,6 +242,9 @@ export const metadata: Metadata = {
     description: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters. Expert research by aviation historian Charles E. MacKay.`,
     images: ['/blog-images/bristol-fighter-f2b-flying.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/bristol-fighter-f2b-brisfit/'
   }
 }
 

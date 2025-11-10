@@ -348,6 +348,9 @@ export const metadata: Metadata = {
     description: "A comprehensive, research-backed history of naval aviation from early seaplane experiments through the development of modern aircraft carriers.",
     images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/naval-aviation-history/'
   }
 }
 

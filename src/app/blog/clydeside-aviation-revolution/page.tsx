@@ -303,6 +303,9 @@ export const metadata: Metadata = {
     description: `A comprehensive, research-backed account of how Clydeside's heavy industry transformed into aviation manufacturing excellence.`,
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/clydeside-aviation-revolution/'
   }
 }
 

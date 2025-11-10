@@ -245,6 +245,9 @@ export const metadata: Metadata = {
     description: `The extraordinary career of Captain Eric Brown, who flew more aircraft types than any pilot in history and pioneered carrier aviation.`,
     images: ['/blog-images/test-pilot-biography-eric-brown-featured.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/test-pilot-biography-eric-brown/'
   }
 }
 

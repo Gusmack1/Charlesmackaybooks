@@ -689,6 +689,9 @@ export const metadata: Metadata = {
     description: `Comprehensive analysis of helicopter development pioneers with expert historical research and technical details.`,
     images: ['/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/helicopter-development-pioneers/'
   }
 }
 

@@ -10,11 +10,14 @@ export async function generateMetadata({ searchParams }: { searchParams: { query
     title: hasQuery ? `Search Results for "${raw}" | Charles E. MacKay` : 'Search | Charles E. MacKay',
     description: hasQuery ? `Search results for "${raw}" in Charles Mackay Books collection` : 'Search the Charles Mackay Books collection',
     alternates: {
-      canonical: 'https://charlesmackaybooks.com/search'
+      canonical: 'https://charlesmackaybooks.com/search/'
     },
     robots: {
-      index: hasQuery ? false : true, // Don't index search result pages, but index the main search page
+      index: false, // Never index search pages (with or without query params)
       follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'none',
+      'max-video-preview': -1,
     },
   }
 }

@@ -317,6 +317,9 @@ export const metadata: Metadata = {
     description: `A comprehensive, research-backed account of HMS Argus's operational history: from first carrier landings in 1918 through deck landing training, Operation Torch, Club Runs to Malta, and her role as a training vessel for Highball operations, examining the development of carrier aviation procedures that influenced naval warfare for decades.`,
     images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/hms-argus-first-aircraft-carrier-operations/'
   }
 }
 

@@ -363,6 +363,9 @@ export const metadata: Metadata = {
     description: "A comprehensive, research-backed account of Igor Sikorsky's VS-300: the first practical helicopter that established modern helicopter configuration.",
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/sikorsky-vs300-helicopter-breakthrough/'
   }
 }
 

@@ -127,9 +127,13 @@ export const metadata: Metadata = {
   title: `Schneider Trophy Racing Development | Charles E. MacKay`,
   description: `Comprehensive analysis of schneider trophy racing development with expert historical research and technical details.`,
   keywords: 'schneider, trophy, racing, development, aviation history',
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/schneider-trophy-racing-development/'
+  },
   openGraph: {
     title: `Schneider Trophy Racing Development`,
     description: `Comprehensive analysis of schneider trophy racing development with expert historical research and technical details.`,
+    url: 'https://charlesmackaybooks.com/blog/schneider-trophy-racing-development/',
     images: ['/blog-images/schneider-trophy-racing-development-featured.jpg'],
     type: 'article'
   }

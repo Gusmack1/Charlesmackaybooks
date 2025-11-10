@@ -319,6 +319,9 @@ export const metadata: Metadata = {
     description: `A comprehensive, research-backed account of the Luftwaffe's final year: advanced jet and piston aircraft operating within a collapsing system.`,
     images: ['/blog-images/luftwaffe-1945-final-year-featured.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/luftwaffe-1945-final-year/'
   }
 }
 

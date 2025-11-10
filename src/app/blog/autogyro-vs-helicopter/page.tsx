@@ -154,6 +154,9 @@ export const metadata: Metadata = {
     description: 'How autogyros enabled the helicopter revolution.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/autogyro-vs-helicopter/'
   }
 }
 

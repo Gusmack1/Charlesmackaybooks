@@ -450,6 +450,9 @@ export const metadata: Metadata = {
     description: 'How memoranda, agreements, and field intelligence framed the bomb, 1940–45. Comprehensive analysis with historical context and technical details.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/maud-alsos-atomic-program/'
   }
 }
 

@@ -308,6 +308,9 @@ export const metadata: Metadata = {
     description: "A comprehensive, research-backed account of HMS Argus's revolutionary design and how it established the essential architecture for all future aircraft carriers.",
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/hms-argus-first-aircraft-carrier/'
   }
 }
 

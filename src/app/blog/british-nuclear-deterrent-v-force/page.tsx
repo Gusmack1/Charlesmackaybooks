@@ -383,6 +383,9 @@ export const metadata: Metadata = {
     description: `Comprehensive analysis of british nuclear deterrent v force with expert historical research and technical details.`,
     images: ['/blog-images/blue-steel-missile.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/british-nuclear-deterrent-v-force/'
   }
 }
 

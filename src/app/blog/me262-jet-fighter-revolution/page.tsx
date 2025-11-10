@@ -298,6 +298,9 @@ export const metadata: Metadata = {
     description: `A comprehensive, research-backed account of the world's first operational jet fighter: its revolutionary design, Jumo 004 engines, operational deployment, and legacy.`,
     images: ['/blog-images/me262-jet-fighter-revolution-featured.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/me262-jet-fighter-revolution/'
   }
 }
 

@@ -292,6 +292,9 @@ export const metadata: Metadata = {
     description: "A comprehensive, research-backed account of how the Royal Flying Corps and Royal Naval Air Service matured from reconnaissance to decisive air power.",
     images: ['/blog-images/rfc-pilots-no32-squadron-1916.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/british-aircraft-great-war-rfc-rnas/'
   }
 }
 

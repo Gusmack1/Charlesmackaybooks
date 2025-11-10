@@ -356,6 +356,9 @@ export const metadata: Metadata = {
     description: `Comprehensive analysis of lucy lady houston schneider trophy with expert historical research and technical details.`,
     images: ['/blog-images/lucy-lady-houston.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/lucy-lady-houston-schneider-trophy/'
   }
 }
 

@@ -243,6 +243,9 @@ export const metadata: Metadata = {
     description: 'How structure and doctrine shaped German fighter performance on the Western Front.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/german-aces-organization-wwi/'
   }
 }
 

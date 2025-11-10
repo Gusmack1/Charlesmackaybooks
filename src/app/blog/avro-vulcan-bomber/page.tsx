@@ -321,6 +321,9 @@ export const metadata: Metadata = {
     description: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, and its role in Britain's V-Force nuclear deterrent strategy.",
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/avro-vulcan-bomber/'
   }
 }
 

@@ -299,6 +299,9 @@ export const metadata: Metadata = {
     description: 'Skyraider endurance and a daring escape in Southeast Asia.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/dieter-dengler-skyraider-escape/'
   }
 }
 

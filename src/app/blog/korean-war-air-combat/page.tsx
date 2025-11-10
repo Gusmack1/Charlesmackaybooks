@@ -230,6 +230,9 @@ export const metadata: Metadata = {
     description: `Comprehensive analysis of korean war air combat with expert historical research and technical details.`,
     images: ['/blog-images/korean-war-air-combat-featured.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/korean-war-air-combat/'
   }
 }
 

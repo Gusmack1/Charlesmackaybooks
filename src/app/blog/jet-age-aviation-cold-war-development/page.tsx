@@ -383,6 +383,9 @@ export const metadata: Metadata = {
     description: `A comprehensive, research-backed account of jet age aviation development during the Cold War: from late-war German jets to mature Cold War weapon systems.`,
     images: ['/blog-images/jet-age-aviation-cold-war-development-featured.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/jet-age-aviation-cold-war-development/'
   }
 }
 

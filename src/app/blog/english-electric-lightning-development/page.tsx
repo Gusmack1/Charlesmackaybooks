@@ -286,6 +286,9 @@ export const metadata: Metadata = {
     description: `Comprehensive analysis of english electric lightning development with expert historical research and technical details.`,
     images: ['/blog-images/english-electric-lightning-f6.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/english-electric-lightning-development/'
   }
 }
 

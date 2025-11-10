@@ -448,6 +448,9 @@ export const metadata: Metadata = {
     description: `How German engineer Adolf Rohrbach's revolutionary metal aircraft construction techniques transformed aviation design and established manufacturing principles still used today.`,
     images: ['/blog-images/metal-aircraft-construction.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/adolf-rohrbach-metal-aircraft-revolution/'
   }
 }
 

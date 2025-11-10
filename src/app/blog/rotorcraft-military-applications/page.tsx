@@ -262,6 +262,9 @@ export const metadata: Metadata = {
     description: `A comprehensive, research-backed account of military helicopter operations: from early WWII anti-submarine operations and Sikorsky Hoverfly deployments through Korean War medevac missions to modern multi-role aircraft that revolutionized battlefield mobility and logistics.`,
     images: ['/blog-images/rotorcraft-military-applications-featured.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/rotorcraft-military-applications/'
   }
 }
 

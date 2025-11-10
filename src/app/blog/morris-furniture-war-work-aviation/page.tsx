@@ -330,6 +330,9 @@ export const metadata: Metadata = {
     description: 'A comprehensive, research-backed account of how Morris Furniture Company of Glasgow pivoted from luxury liner interiors to wartime aviation production.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/morris-furniture-war-work-aviation/'
   }
 }
 

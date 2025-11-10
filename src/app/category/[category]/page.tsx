@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { books } from '@/data/books'
 import { categoryDescriptions } from '@/data/category-descriptions'
+import type { Metadata } from 'next'
 
 // Valid category mappings
 const categoryMappings: Record<string, string> = {
@@ -23,6 +24,22 @@ export async function generateStaticParams() {
   }))
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
+  const { category } = await params
+  const categoryName = categoryMappings[category] || category
+  
+  return {
+    title: `${categoryName} Books | Charles E. MacKay Aviation Books`,
+    description: `Browse ${categoryName} books by Charles E. MacKay. Expert aviation history research and documentation.`,
+    alternates: {
+      canonical: `https://charlesmackaybooks.com/category/${category}/`
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  }
+}
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params

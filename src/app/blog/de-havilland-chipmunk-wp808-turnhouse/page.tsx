@@ -277,6 +277,9 @@ export const metadata: Metadata = {
     description: `A comprehensive, research-backed account of De Havilland Chipmunk WP808, stationed at RAF Turnhouse (now Edinburgh Airport) in 1962, examining its role in training generations of RAF pilots.`,
     images: ['/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/de-havilland-chipmunk-wp808-turnhouse/'
   }
 }
 

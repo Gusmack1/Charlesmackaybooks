@@ -223,6 +223,9 @@ export const metadata: Metadata = {
     description: `The remarkable story of the Bristol Sycamore, Britain's first helicopter to enter military service and the foundation of British rotorcraft development.`,
     images: ['/blog-images/bristol-sycamore.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/sycamore-seeds-helicopter-evolution/'
   }
 }
 

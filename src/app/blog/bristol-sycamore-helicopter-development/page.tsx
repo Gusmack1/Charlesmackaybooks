@@ -325,6 +325,9 @@ export const metadata: Metadata = {
     description: "A comprehensive, research-backed account of the Bristol Sycamore: Britain's first production helicopter and its lasting influence on British rotorcraft practice.",
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/bristol-sycamore-helicopter-development/'
   }
 }
 

@@ -219,6 +219,9 @@ export const metadata: Metadata = {
     description: `Comprehensive analysis of supermarine spitfire development evolution with expert historical research and technical details.`,
     images: ['/blog-images/supermarine-spitfire-development-evolution-featured.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/supermarine-spitfire-development-evolution/'
   }
 }
 

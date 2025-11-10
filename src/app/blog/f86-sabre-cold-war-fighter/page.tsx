@@ -321,6 +321,9 @@ export const metadata: Metadata = {
     description: `A comprehensive, research-backed account of the F-86 Sabre: its swept-wing design, Korean War operations, RAF/RCAF service, and legacy.`,
     images: ['/blog-images/f86-sabre-cold-war-fighter-featured.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/f86-sabre-cold-war-fighter/'
   }
 }
 

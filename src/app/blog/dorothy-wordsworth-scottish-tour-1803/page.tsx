@@ -145,6 +145,9 @@ export const metadata: Metadata = {
     description: `A deeply researched narrative of Dorothy Wordsworth’s 1803 journey across Scotland, with context, routes, and legacy.`,
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/dorothy-wordsworth-scottish-tour-1803/'
   }
 }
 

@@ -327,6 +327,9 @@ export const metadata: Metadata = {
     description: 'A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, and its legacy.',
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/arado-ar234-jet-bomber/'
   }
 }
 

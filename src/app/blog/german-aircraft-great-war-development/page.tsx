@@ -324,6 +324,9 @@ export const metadata: Metadata = {
     description: `A comprehensive, research-backed account of German aircraft development during World War I.`,
     images: ['/blog-images/default-generic.svg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/german-aircraft-great-war-development/'
   }
 }
 

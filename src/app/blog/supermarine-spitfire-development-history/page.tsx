@@ -304,6 +304,9 @@ export const metadata: Metadata = {
     description: "A comprehensive, research-backed account of the Supermarine Spitfire: from Schneider Trophy racing heritage to Battle of Britain combat.",
     images: ['/blog-images/supermarine-spitfire-development-history.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/supermarine-spitfire-development-history/'
   }
 }
 

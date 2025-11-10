@@ -122,6 +122,9 @@ export const metadata: Metadata = {
     description: `The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.`,
     images: ['/blog-images/sopwith-camel-wwi-fighter.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/sopwith-camel-wwi-fighter/'
   }
 }
 

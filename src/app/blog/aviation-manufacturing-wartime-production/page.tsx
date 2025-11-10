@@ -114,6 +114,9 @@ export const metadata: Metadata = {
     description: `Comprehensive analysis of aviation manufacturing wartime production with expert historical research and technical details.`,
     images: ['/blog-images/aviation-manufacturing-wartime-production-featured.jpg'],
     type: 'article'
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/blog/aviation-manufacturing-wartime-production/'
   }
 }
 
