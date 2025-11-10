@@ -12,61 +12,14 @@ const NOINDEX_PATHS = [
   '/google-indexing'
 ]
 
-// URL redirect mappings for 404 fixes
-const URL_REDIRECTS: Record<string, string> = {
-  '/aircraft/hawker-hurricane': '/blog/hawker-hurricane-fighter-development',
-  '/aircraft/hawker-hurricane/': '/blog/hawker-hurricane-fighter-development',
-  '/aircraft/bristol-fighter': '/blog/bristol-fighter-f2b-brisfit',
-  '/aircraft/bristol-fighter/': '/blog/bristol-fighter-f2b-brisfit',
-  '/book/dieter-dengler': '/books/dieter-dengler',
-  '/book/dieter-dengler/': '/books/dieter-dengler',
-  '/book/dorothy-wordsworth': '/books/dorothy-wordsworth',
-  '/book/dorothy-wordsworth/': '/books/dorothy-wordsworth',
-  '/book/enemy-luftwaffe-1945': '/books/enemy-luftwaffe-1945',
-  '/book/enemy-luftwaffe-1945/': '/books/enemy-luftwaffe-1945',
-  '/book/aircraft-carrier-argus': '/books/aircraft-carrier-argus',
-  '/book/aircraft-carrier-argus/': '/books/aircraft-carrier-argus',
-  '/books/aviation-manufacturing-wartime-production': '/blog/aviation-manufacturing-wartime-production',
-  '/books/aviation-manufacturing-wartime-production/': '/blog/aviation-manufacturing-wartime-production',
-  '/books/captain-clouds': '/books/captain-eric-brown',
-  '/books/captain-clouds/': '/books/captain-eric-brown',
-  '/research-methodology': '/research-guides',
-  '/research-methodology/': '/research-guides',
-  '/fonts/inter-var.woff2': '/404'
-}
-
-// Protocol and domain redirects for canonicalization
+// No redirects - each page must be accessible at its own URL
+// Netlify handles SSL/HTTPS automatically, no need for redirects here
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
-  const host = request.headers.get('host') || ''
-  const protocol = request.headers.get('x-forwarded-proto') || 'https'
 
-  // Handle www vs non-www redirects (force non-www) - 301 redirect
-  if (host.startsWith('www.')) {
-    const newUrl = new URL(request.url)
-    newUrl.host = host.substring(4) // Remove 'www.'
-    return NextResponse.redirect(newUrl.toString(), 301)
-  }
-
-  // Handle HTTP to HTTPS redirects - 301 redirect
-  if (protocol === 'http') {
-    const newUrl = new URL(request.url)
-    newUrl.protocol = 'https:'
-    return NextResponse.redirect(newUrl.toString(), 301)
-  }
-
-  // Handle URL redirects for 404 fixes - 301 redirect
-  if (URL_REDIRECTS[pathname]) {
-    const redirectUrl = URL_REDIRECTS[pathname]
-    if (redirectUrl === '/404') {
-      // Return 404 for font files and other non-content URLs
-      return new Response('Not Found', { status: 404 })
-    }
-    // Remove trailing slash from redirect URLs to prevent double redirects
-    const finalRedirectUrl = redirectUrl.endsWith('/') ? redirectUrl.slice(0, -1) : redirectUrl
-    const newUrl = new URL(finalRedirectUrl, request.url)
-    return NextResponse.redirect(newUrl.toString(), 301)
-  }
+  // Note: All redirects removed - pages must be accessible directly
+  // Each page has its own unique URL without redirects
+  // Old URL patterns will return 404 naturally if they don't exist
 
   // Add X-Robots-Tag to internal tooling routes to avoid indexing
   if (NOINDEX_PATHS.some((p) => pathname.startsWith(p))) {
@@ -94,32 +47,8 @@ export const config = {
     '/optimize-website/:path*',
     '/comprehensive-optimization-suite/:path*',
     '/google-indexing/:path*',
-    '/aircraft/:path*',
-    '/book/:path*',
-    '/books/:path*',
-    '/research-methodology/:path*',
     '/fonts/:path*',
-    '/sitemap.xml',
-    // Add specific patterns for exact matches
-    '/aircraft/hawker-hurricane',
-    '/aircraft/hawker-hurricane/',
-    '/aircraft/bristol-fighter',
-    '/aircraft/bristol-fighter/',
-    '/book/dieter-dengler',
-    '/book/dieter-dengler/',
-    '/book/dorothy-wordsworth',
-    '/book/dorothy-wordsworth/',
-    '/book/enemy-luftwaffe-1945',
-    '/book/enemy-luftwaffe-1945/',
-    '/book/aircraft-carrier-argus',
-    '/book/aircraft-carrier-argus/',
-    '/books/aviation-manufacturing-wartime-production',
-    '/books/aviation-manufacturing-wartime-production/',
-    '/books/captain-clouds',
-    '/books/captain-clouds/',
-    '/research-methodology',
-    '/research-methodology/',
-    '/fonts/inter-var.woff2'
+    '/sitemap.xml'
   ]
 }
 

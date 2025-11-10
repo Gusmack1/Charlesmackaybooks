@@ -17,25 +17,8 @@
 # Image serving handled by Next.js - no redirects needed
 
 # SSL Configuration - Let Netlify handle SSL automatically
-
-# Force www to non-www and http to https redirects
-[[redirects]]
-  from = "http://www.charlesmackaybooks.com/*"
-  to = "https://charlesmackaybooks.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.charlesmackaybooks.com/*"
-  to = "https://charlesmackaybooks.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://charlesmackaybooks.com/*"
-  to = "https://charlesmackaybooks.com/:splat"
-  status = 301
-  force = true
+# Note: All redirects removed - each page must be accessible at its own URL
+# Netlify will handle HTTPS automatically without explicit redirects
 
 [[headers]]
   for = "/"
