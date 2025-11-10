@@ -18,9 +18,24 @@ export const metadata: Metadata = {
     'helicopter history FAQ',
     'aviation expert answers'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/faq/'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Aviation History FAQ | Expert Answers from Charles E. MacKay',
     description: 'Get expert answers to common aviation history questions from renowned historian Charles E. MacKay.',
+    url: 'https://charlesmackaybooks.com/faq/',
     type: 'website',
   },
 };

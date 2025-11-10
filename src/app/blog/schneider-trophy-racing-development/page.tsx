@@ -130,6 +130,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://charlesmackaybooks.com/blog/schneider-trophy-racing-development/'
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: `Schneider Trophy Racing Development`,
     description: `Comprehensive analysis of schneider trophy racing development with expert historical research and technical details.`,

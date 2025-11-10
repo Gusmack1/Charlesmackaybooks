@@ -280,6 +280,17 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://charlesmackaybooks.com/blog/de-havilland-chipmunk-wp808-turnhouse/'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   }
 }
 

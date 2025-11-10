@@ -75,6 +75,13 @@ export function middleware(request: NextRequest) {
     return response
   }
 
+  // Add noindex to sitemap.xml and font files
+  if (pathname === '/sitemap.xml' || pathname.startsWith('/fonts/') || pathname.includes('.woff2')) {
+    const response = NextResponse.next()
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow')
+    return response
+  }
+
   return NextResponse.next()
 }
 
@@ -92,6 +99,7 @@ export const config = {
     '/books/:path*',
     '/research-methodology/:path*',
     '/fonts/:path*',
+    '/sitemap.xml',
     // Add specific patterns for exact matches
     '/aircraft/hawker-hurricane',
     '/aircraft/hawker-hurricane/',
