@@ -259,6 +259,7 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
   };
 
   // Product schema for e-commerce
+  // IMPORTANT: Only ONE Product schema per page with aggregateRating to avoid Google errors
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -441,14 +442,9 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
     },
     sameAs: [
       'https://www.ebay.co.uk/usr/chaza87'
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '1743',
-      bestRating: '5',
-      worstRating: '1'
-    }
+    ]
+    // Note: aggregateRating removed from Organization schema to avoid "multiple aggregate ratings" error
+    // Only Product schema should have aggregateRating for product reviews
   };
 
   // Author schema for E-E-A-T
