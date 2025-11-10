@@ -116,7 +116,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/aviation-manufacturing-wartime-production/'
+    canonical: 'https://charlesmackaybooks.com/blog/aviation-manufacturing-wartime-production'
   },
   robots: {
     index: true,

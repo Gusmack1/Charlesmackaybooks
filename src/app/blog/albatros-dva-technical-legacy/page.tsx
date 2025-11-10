@@ -332,7 +332,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/albatros-dva-technical-legacy/'
+    canonical: 'https://charlesmackaybooks.com/blog/albatros-dva-technical-legacy'
   },
   robots: {
     index: true,

@@ -268,7 +268,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain - Enhanced Edition',
     description: 'A comprehensive, research-backed account of the Hawker Hurricane: Sydney Camm\'s masterpiece that saved Britain.',
-    url: 'https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development/',
+    url: 'https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [{
       url: '/blog-images/hawker-hurricane-battle-of-britain.jpg',
@@ -280,7 +280,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development/'
+    canonical: 'https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development'
   },
   robots: {
     index: true,

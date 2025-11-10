@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'aviation expert answers'
   ],
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/faq/'
+    canonical: 'https://charlesmackaybooks.com/faq'
   },
   robots: {
     index: true,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Aviation History FAQ | Expert Answers from Charles E. MacKay',
     description: 'Get expert answers to common aviation history questions from renowned historian Charles E. MacKay.',
-    url: 'https://charlesmackaybooks.com/faq/',
+    url: 'https://charlesmackaybooks.com/faq',
     type: 'website',
   },
 };

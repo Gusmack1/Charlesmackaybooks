@@ -350,7 +350,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/naval-aviation-history/'
+    canonical: 'https://charlesmackaybooks.com/blog/naval-aviation-history'
   },
   robots: {
     index: true,

@@ -294,7 +294,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/british-aircraft-great-war-rfc-rnas/'
+    canonical: 'https://charlesmackaybooks.com/blog/british-aircraft-great-war-rfc-rnas'
   },
   robots: {
     index: true,

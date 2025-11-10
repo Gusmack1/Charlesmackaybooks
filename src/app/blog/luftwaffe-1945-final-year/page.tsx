@@ -321,7 +321,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/luftwaffe-1945-final-year/'
+    canonical: 'https://charlesmackaybooks.com/blog/luftwaffe-1945-final-year'
   },
   robots: {
     index: true,

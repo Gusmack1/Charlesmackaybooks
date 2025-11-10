@@ -305,7 +305,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/clydeside-aviation-revolution/'
+    canonical: 'https://charlesmackaybooks.com/blog/clydeside-aviation-revolution'
   },
   robots: {
     index: true,

@@ -225,7 +225,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/sycamore-seeds-helicopter-evolution/'
+    canonical: 'https://charlesmackaybooks.com/blog/sycamore-seeds-helicopter-evolution'
   },
   robots: {
     index: true,

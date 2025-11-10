@@ -332,7 +332,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/morris-furniture-war-work-aviation/'
+    canonical: 'https://charlesmackaybooks.com/blog/morris-furniture-war-work-aviation'
   },
   robots: {
     index: true,

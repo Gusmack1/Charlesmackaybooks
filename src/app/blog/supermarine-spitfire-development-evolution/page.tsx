@@ -221,7 +221,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/supermarine-spitfire-development-evolution/'
+    canonical: 'https://charlesmackaybooks.com/blog/supermarine-spitfire-development-evolution'
   },
   robots: {
     index: true,

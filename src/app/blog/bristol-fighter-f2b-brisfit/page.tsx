@@ -244,7 +244,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/bristol-fighter-f2b-brisfit/'
+    canonical: 'https://charlesmackaybooks.com/blog/bristol-fighter-f2b-brisfit'
   },
   robots: {
     index: true,

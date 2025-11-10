@@ -326,7 +326,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/german-aircraft-great-war-development/'
+    canonical: 'https://charlesmackaybooks.com/blog/german-aircraft-great-war-development'
   },
   robots: {
     index: true,

@@ -691,7 +691,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/helicopter-development-pioneers/'
+    canonical: 'https://charlesmackaybooks.com/blog/helicopter-development-pioneers'
   },
   robots: {
     index: true,

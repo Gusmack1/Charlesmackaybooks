@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     'aviation biography'
   ],
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/about/'
+    canonical: 'https://charlesmackaybooks.com/about'
   },
   openGraph: {
     title: 'About Charles E. MacKay - Aviation Historian & Author',
     description: 'Meet Charles E. MacKay, renowned aviation historian specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history.',
-    url: 'https://charlesmackaybooks.com/about/',
+    url: 'https://charlesmackaybooks.com/about',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [
       {

@@ -264,7 +264,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/rotorcraft-military-applications/'
+    canonical: 'https://charlesmackaybooks.com/blog/rotorcraft-military-applications'
   },
   robots: {
     index: true,

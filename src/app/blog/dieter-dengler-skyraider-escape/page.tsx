@@ -301,7 +301,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/dieter-dengler-skyraider-escape/'
+    canonical: 'https://charlesmackaybooks.com/blog/dieter-dengler-skyraider-escape'
   },
   robots: {
     index: true,

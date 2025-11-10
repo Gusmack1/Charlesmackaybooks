@@ -245,7 +245,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/german-aces-organization-wwi/'
+    canonical: 'https://charlesmackaybooks.com/blog/german-aces-organization-wwi'
   },
   robots: {
     index: true,

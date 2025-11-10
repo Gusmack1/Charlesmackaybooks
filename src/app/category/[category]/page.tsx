@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     title: `${categoryName} Books | Charles E. MacKay Aviation Books`,
     description: `Browse ${categoryName} books by Charles E. MacKay. Expert aviation history research and documentation.`,
     alternates: {
-      canonical: `https://charlesmackaybooks.com/category/${category}/`
+      canonical: `https://charlesmackaybooks.com/category/${category}`
     },
     robots: {
       index: true,

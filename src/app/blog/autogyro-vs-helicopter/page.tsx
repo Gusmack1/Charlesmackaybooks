@@ -156,7 +156,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/autogyro-vs-helicopter/'
+    canonical: 'https://charlesmackaybooks.com/blog/autogyro-vs-helicopter'
   },
   robots: {
     index: true,

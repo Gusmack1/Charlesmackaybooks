@@ -300,7 +300,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/me262-jet-fighter-revolution/'
+    canonical: 'https://charlesmackaybooks.com/blog/me262-jet-fighter-revolution'
   },
   robots: {
     index: true,

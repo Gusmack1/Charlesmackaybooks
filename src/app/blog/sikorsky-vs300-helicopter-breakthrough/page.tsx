@@ -365,7 +365,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/sikorsky-vs300-helicopter-breakthrough/'
+    canonical: 'https://charlesmackaybooks.com/blog/sikorsky-vs300-helicopter-breakthrough'
   },
   robots: {
     index: true,

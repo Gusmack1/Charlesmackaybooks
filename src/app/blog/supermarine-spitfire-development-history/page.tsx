@@ -306,7 +306,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/supermarine-spitfire-development-history/'
+    canonical: 'https://charlesmackaybooks.com/blog/supermarine-spitfire-development-history'
   },
   robots: {
     index: true,

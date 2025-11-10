@@ -310,7 +310,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/hms-argus-first-aircraft-carrier/'
+    canonical: 'https://charlesmackaybooks.com/blog/hms-argus-first-aircraft-carrier'
   },
   robots: {
     index: true,

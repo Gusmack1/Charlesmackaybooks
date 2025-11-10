@@ -329,7 +329,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/arado-ar234-jet-bomber/'
+    canonical: 'https://charlesmackaybooks.com/blog/arado-ar234-jet-bomber'
   },
   robots: {
     index: true,

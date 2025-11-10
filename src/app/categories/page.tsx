@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'Charles E MacKay books'
   ],
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/categories/'
+    canonical: 'https://charlesmackaybooks.com/categories'
   },
   openGraph: {
     title: 'Aviation Book Categories | Charles E. MacKay Aviation Books',
     description: 'Comprehensive aviation book categories covering all aspects of aviation history, from early flight to modern aviation.',
     type: 'website',
-    url: 'https://charlesmackaybooks.com/categories/'
+    url: 'https://charlesmackaybooks.com/categories'
   }
 }
 

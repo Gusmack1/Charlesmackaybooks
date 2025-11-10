@@ -232,7 +232,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/korean-war-air-combat/'
+    canonical: 'https://charlesmackaybooks.com/blog/korean-war-air-combat'
   },
   robots: {
     index: true,

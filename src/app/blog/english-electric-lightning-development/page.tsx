@@ -288,7 +288,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/english-electric-lightning-development/'
+    canonical: 'https://charlesmackaybooks.com/blog/english-electric-lightning-development'
   },
   robots: {
     index: true,

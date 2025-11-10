@@ -10,8 +10,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Handle trailing slashes consistently to fix Google indexing issues
-  trailingSlash: true,
+  // Disable trailing slashes to prevent redirects - each page should have its own URL
+  trailingSlash: false,
   // Dynamic site configuration for Netlify with Next.js runtime
   output: undefined,
   distDir: '.next',

@@ -327,7 +327,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/bristol-sycamore-helicopter-development/'
+    canonical: 'https://charlesmackaybooks.com/blog/bristol-sycamore-helicopter-development'
   },
   robots: {
     index: true,

@@ -105,103 +105,103 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0, // Homepage - highest priority
     },
     {
-      url: `${baseUrl}/books/`,
+      url: `${baseUrl}/books`,
       lastModified: lastModified,
       changeFrequency: 'daily',
       priority: 0.95, // Product catalog - very high priority
     },
     {
-      url: `${baseUrl}/ai-prompt-system/`,
+      url: `${baseUrl}/ai-prompt-system`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
       priority: 0.8, // AI Prompt System - high priority
     },
     {
-      url: `${baseUrl}/blog/`,
+      url: `${baseUrl}/blog`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
       priority: 0.9, // Blog homepage - high content priority
     },
     {
-      url: `${baseUrl}/scottish-aviation-timeline/`,
+      url: `${baseUrl}/scottish-aviation-timeline`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8, // Required page from user list
     },
     {
-      url: `${baseUrl}/about/`,
+      url: `${baseUrl}/about`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/how-to-order/`,
+      url: `${baseUrl}/how-to-order`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.9, // Important for conversions
     },
     {
-      url: `${baseUrl}/contact/`,
+      url: `${baseUrl}/contact`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/for-researchers/`,
+      url: `${baseUrl}/for-researchers`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8, // Academic audience
     },
     {
-      url: `${baseUrl}/faq/`,
+      url: `${baseUrl}/faq`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/research-guides/`,
+      url: `${baseUrl}/research-guides`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
       priority: 0.8, // High-value content
     },
     {
-      url: `${baseUrl}/aviation-glossary/`,
+      url: `${baseUrl}/aviation-glossary`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8, // SEO valuable content
     },
     {
-      url: `${baseUrl}/aviation-bibliography/`,
+      url: `${baseUrl}/aviation-bibliography`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.7, // Academic reference
     },
     {
-      url: `${baseUrl}/aviation-news/`,
+      url: `${baseUrl}/aviation-news`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/academic-resources/`,
+      url: `${baseUrl}/academic-resources`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/timeline/`,
+      url: `${baseUrl}/timeline`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/checkout/`,
+      url: `${baseUrl}/checkout`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/order-complete/`,
+      url: `${baseUrl}/order-complete`,
       lastModified: lastModified,
       changeFrequency: 'yearly',
       priority: 0.3,
@@ -210,7 +210,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 2. ALL Blog post pages - High content priority
   const blogPages: MetadataRoute.Sitemap = blogPosts.map(postId => ({
-    url: `${baseUrl}/blog/${postId}/`,
+    url: `${baseUrl}/blog/${postId}`,
     lastModified: lastModified,
     changeFrequency: 'monthly' as const,
     priority: 0.8, // Blog content is crucial for SEO
@@ -218,7 +218,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 3. ALL Book pages (from books data + additional static ones) - Product priority
   const dynamicBookPages: MetadataRoute.Sitemap = books.map(book => ({
-    url: `${baseUrl}/books/${book.id}/`,
+    url: `${baseUrl}/books/${book.id}`,
     lastModified: lastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.9, // Product pages crucial for sales
@@ -227,7 +227,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 4. Additional static book pages not in books.ts
   const additionalBookIds = allBookIds.filter(id => !books.some(book => book.id === id));
   const additionalBookPages: MetadataRoute.Sitemap = additionalBookIds.map(bookId => ({
-    url: `${baseUrl}/books/${bookId}/`,
+    url: `${baseUrl}/books/${bookId}`,
     lastModified: lastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.9,
@@ -235,7 +235,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 5. Category pages - Navigation priority
   const categoryPages: MetadataRoute.Sitemap = categoryNames.map(category => ({
-    url: `${baseUrl}/category/${category}/`,
+    url: `${baseUrl}/category/${category}`,
     lastModified: lastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.8, // Categories important for discovery
@@ -247,7 +247,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 7. Partnership and authority pages
   const partnershipPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/partnerships/imperial-war-museum/`,
+      url: `${baseUrl}/partnerships/imperial-war-museum`,
       lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,

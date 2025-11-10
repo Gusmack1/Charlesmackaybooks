@@ -247,7 +247,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/test-pilot-biography-eric-brown/'
+    canonical: 'https://charlesmackaybooks.com/blog/test-pilot-biography-eric-brown'
   },
   robots: {
     index: true,

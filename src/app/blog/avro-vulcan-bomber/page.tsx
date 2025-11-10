@@ -323,7 +323,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/avro-vulcan-bomber/'
+    canonical: 'https://charlesmackaybooks.com/blog/avro-vulcan-bomber'
   },
   robots: {
     index: true,

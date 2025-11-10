@@ -450,7 +450,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/adolf-rohrbach-metal-aircraft-revolution/'
+    canonical: 'https://charlesmackaybooks.com/blog/adolf-rohrbach-metal-aircraft-revolution'
   },
   robots: {
     index: true,

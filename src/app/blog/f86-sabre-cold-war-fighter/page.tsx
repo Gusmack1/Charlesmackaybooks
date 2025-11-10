@@ -323,7 +323,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/f86-sabre-cold-war-fighter/'
+    canonical: 'https://charlesmackaybooks.com/blog/f86-sabre-cold-war-fighter'
   },
   robots: {
     index: true,

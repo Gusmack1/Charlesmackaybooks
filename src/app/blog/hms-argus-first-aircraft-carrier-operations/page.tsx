@@ -319,7 +319,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/hms-argus-first-aircraft-carrier-operations/'
+    canonical: 'https://charlesmackaybooks.com/blog/hms-argus-first-aircraft-carrier-operations'
   },
   robots: {
     index: true,

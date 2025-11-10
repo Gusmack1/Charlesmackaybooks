@@ -385,7 +385,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/jet-age-aviation-cold-war-development/'
+    canonical: 'https://charlesmackaybooks.com/blog/jet-age-aviation-cold-war-development'
   },
   robots: {
     index: true,

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `William Beardmore & Company: Scottish Aviation Pioneer`,
     description: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
-    url: 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant/',
+    url: 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [{
       url: '/blog-images/beardmore-parkhead-forge.jpg',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant/'
+    canonical: 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant'
   },
   robots: {
     index: true,

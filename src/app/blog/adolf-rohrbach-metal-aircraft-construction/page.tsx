@@ -136,7 +136,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/adolf-rohrbach-metal-aircraft-construction/'
+    canonical: 'https://charlesmackaybooks.com/blog/adolf-rohrbach-metal-aircraft-construction'
   },
   robots: {
     index: true,

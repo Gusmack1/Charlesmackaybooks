@@ -124,7 +124,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/sopwith-camel-wwi-fighter/'
+    canonical: 'https://charlesmackaybooks.com/blog/sopwith-camel-wwi-fighter'
   },
   robots: {
     index: true,

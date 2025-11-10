@@ -385,7 +385,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/british-nuclear-deterrent-v-force/'
+    canonical: 'https://charlesmackaybooks.com/blog/british-nuclear-deterrent-v-force'
   },
   robots: {
     index: true,

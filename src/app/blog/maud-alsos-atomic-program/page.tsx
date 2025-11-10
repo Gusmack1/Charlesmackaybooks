@@ -452,7 +452,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/maud-alsos-atomic-program/'
+    canonical: 'https://charlesmackaybooks.com/blog/maud-alsos-atomic-program'
   },
   robots: {
     index: true,

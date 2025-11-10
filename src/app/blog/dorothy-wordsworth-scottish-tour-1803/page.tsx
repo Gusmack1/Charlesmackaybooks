@@ -147,7 +147,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/dorothy-wordsworth-scottish-tour-1803/'
+    canonical: 'https://charlesmackaybooks.com/blog/dorothy-wordsworth-scottish-tour-1803'
   },
   robots: {
     index: true,

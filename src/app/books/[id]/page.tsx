@@ -260,7 +260,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       },
     },
     alternates: {
-      canonical: `https://charlesmackaybooks.com/books/${book.id}/`,
+      canonical: `https://charlesmackaybooks.com/books/${book.id}`,
     },
     other: {
       'product:price:amount': book.price.toString(),

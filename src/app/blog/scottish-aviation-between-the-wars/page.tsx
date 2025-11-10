@@ -393,7 +393,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/scottish-aviation-between-the-wars/'
+    canonical: 'https://charlesmackaybooks.com/blog/scottish-aviation-between-the-wars'
   },
   robots: {
     index: true,

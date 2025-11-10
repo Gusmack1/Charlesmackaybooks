@@ -511,7 +511,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/beardmore-wbiii-naval-fighter/'
+    canonical: 'https://charlesmackaybooks.com/blog/beardmore-wbiii-naval-fighter'
   },
   robots: {
     index: true,

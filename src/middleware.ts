@@ -14,24 +14,24 @@ const NOINDEX_PATHS = [
 
 // URL redirect mappings for 404 fixes
 const URL_REDIRECTS: Record<string, string> = {
-  '/aircraft/hawker-hurricane': '/blog/hawker-hurricane-fighter-development/',
-  '/aircraft/hawker-hurricane/': '/blog/hawker-hurricane-fighter-development/',
-  '/aircraft/bristol-fighter': '/blog/bristol-fighter-f2b-brisfit/',
-  '/aircraft/bristol-fighter/': '/blog/bristol-fighter-f2b-brisfit/',
-  '/book/dieter-dengler': '/books/dieter-dengler/',
-  '/book/dieter-dengler/': '/books/dieter-dengler/',
-  '/book/dorothy-wordsworth': '/books/dorothy-wordsworth/',
-  '/book/dorothy-wordsworth/': '/books/dorothy-wordsworth/',
-  '/book/enemy-luftwaffe-1945': '/books/enemy-luftwaffe-1945/',
-  '/book/enemy-luftwaffe-1945/': '/books/enemy-luftwaffe-1945/',
-  '/book/aircraft-carrier-argus': '/books/aircraft-carrier-argus/',
-  '/book/aircraft-carrier-argus/': '/books/aircraft-carrier-argus/',
-  '/books/aviation-manufacturing-wartime-production': '/blog/aviation-manufacturing-wartime-production/',
-  '/books/aviation-manufacturing-wartime-production/': '/blog/aviation-manufacturing-wartime-production/',
-  '/books/captain-clouds': '/books/captain-eric-brown/',
-  '/books/captain-clouds/': '/books/captain-eric-brown/',
-  '/research-methodology': '/research-guides/',
-  '/research-methodology/': '/research-guides/',
+  '/aircraft/hawker-hurricane': '/blog/hawker-hurricane-fighter-development',
+  '/aircraft/hawker-hurricane/': '/blog/hawker-hurricane-fighter-development',
+  '/aircraft/bristol-fighter': '/blog/bristol-fighter-f2b-brisfit',
+  '/aircraft/bristol-fighter/': '/blog/bristol-fighter-f2b-brisfit',
+  '/book/dieter-dengler': '/books/dieter-dengler',
+  '/book/dieter-dengler/': '/books/dieter-dengler',
+  '/book/dorothy-wordsworth': '/books/dorothy-wordsworth',
+  '/book/dorothy-wordsworth/': '/books/dorothy-wordsworth',
+  '/book/enemy-luftwaffe-1945': '/books/enemy-luftwaffe-1945',
+  '/book/enemy-luftwaffe-1945/': '/books/enemy-luftwaffe-1945',
+  '/book/aircraft-carrier-argus': '/books/aircraft-carrier-argus',
+  '/book/aircraft-carrier-argus/': '/books/aircraft-carrier-argus',
+  '/books/aviation-manufacturing-wartime-production': '/blog/aviation-manufacturing-wartime-production',
+  '/books/aviation-manufacturing-wartime-production/': '/blog/aviation-manufacturing-wartime-production',
+  '/books/captain-clouds': '/books/captain-eric-brown',
+  '/books/captain-clouds/': '/books/captain-eric-brown',
+  '/research-methodology': '/research-guides',
+  '/research-methodology/': '/research-guides',
   '/fonts/inter-var.woff2': '/404'
 }
 
@@ -62,8 +62,8 @@ export function middleware(request: NextRequest) {
       // Return 404 for font files and other non-content URLs
       return new Response('Not Found', { status: 404 })
     }
-    // Ensure redirect URL has trailing slash for consistency
-    const finalRedirectUrl = redirectUrl.endsWith('/') ? redirectUrl : `${redirectUrl}/`
+    // Remove trailing slash from redirect URLs to prevent double redirects
+    const finalRedirectUrl = redirectUrl.endsWith('/') ? redirectUrl.slice(0, -1) : redirectUrl
     const newUrl = new URL(finalRedirectUrl, request.url)
     return NextResponse.redirect(newUrl.toString(), 301)
   }

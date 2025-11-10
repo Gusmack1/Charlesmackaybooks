@@ -438,7 +438,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/percy-pilcher-scotland-aviation-pioneer/'
+    canonical: 'https://charlesmackaybooks.com/blog/percy-pilcher-scotland-aviation-pioneer'
   },
   robots: {
     index: true,

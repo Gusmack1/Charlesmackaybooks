@@ -358,7 +358,7 @@ export const metadata: Metadata = {
     type: 'article'
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/blog/lucy-lady-houston-schneider-trophy/'
+    canonical: 'https://charlesmackaybooks.com/blog/lucy-lady-houston-schneider-trophy'
   },
   robots: {
     index: true,
