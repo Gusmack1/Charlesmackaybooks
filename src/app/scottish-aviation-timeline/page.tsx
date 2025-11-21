@@ -407,8 +407,7 @@ export default function ScottishAviationTimelinePage() {
     useEffect(() => {
       setIndex(0);
       setSrc(candidates[0]);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [slug]);
+    }, [slug, candidates]);
 
     return (
       <Image

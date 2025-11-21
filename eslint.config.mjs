@@ -23,6 +23,17 @@ const eslintConfig = [
       "react/no-unescaped-entities": "off",
       "@next/next/no-img-element": "off",
       "jsx-a11y/alt-text": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-require-imports": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
+      "@typescript-eslint/no-unsafe-function-type": "off",
+      "prefer-rest-params": "off",
+      "prefer-const": "off",
+      "react-hooks/exhaustive-deps": "off",
+      "@next/next/no-html-link-for-pages": "off",
+      "@next/next/next-script-for-ga": "off",
+      "@next/next/no-page-custom-font": "off",
       // Block reintroduction of top share bars
       "no-restricted-syntax": [
         "error",

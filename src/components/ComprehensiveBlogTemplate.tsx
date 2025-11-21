@@ -516,7 +516,6 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 <article key={book.id} className="bg-white dark:bg-slate-700 rounded-lg shadow-md border border-slate-200 dark:border-slate-600 p-5 hover:shadow-lg transition-shadow">
                   <Link href={`/books/${book.id}`} className="block group">
                     <div className="aspect-[3/4] w-full overflow-hidden rounded-md bg-slate-100 dark:bg-slate-800 mb-4">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={book.cover || '/book-covers/default-placeholder.svg'}
                         alt={`${book.title} cover`}

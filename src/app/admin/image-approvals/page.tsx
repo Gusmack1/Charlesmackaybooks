@@ -115,7 +115,6 @@ export default function ImageApprovalsPage() {
                     </div>
                     {c.url && (
                       <div className="aspect-video bg-slate-800 rounded overflow-hidden border border-slate-700">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={c.url} alt={c.alt} className="w-full h-full object-cover" />
                       </div>
                     )}
