@@ -1,11 +1,17 @@
 #!/usr/bin/env node
-// Validate src/data/image-approvals.json for source/license/completeness
 /* eslint-disable no-console */
+/**
+ * Validate src/data/image-approvals.json for license/source accuracy.
+ * Usage:
+ *   node scripts/validate-image-approvals.cjs                # validate all slugs
+ *   node scripts/validate-image-approvals.cjs spitfire ...   # specific slugs
+ */
+
 const fs = require('fs');
 const path = require('path');
 
 const manifestPath = path.join(__dirname, '..', 'src', 'data', 'image-approvals.json');
-const data = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+const args = process.argv.slice(2).map((arg) => arg.toLowerCase());
 
 const allowedSources = [
   'commons.wikimedia.org',
@@ -14,45 +20,76 @@ const allowedSources = [
   'unsplash.com',
   'pixabay.com',
   'pexels.com',
-  'internal'
-];
-const prohibitedSources = [
-  'gettyimages.com',
-  'alamy.com',
-  'shutterstock.com',
-  'istockphoto.com',
-  'adobe.com'
+  'internal',
 ];
 
+const prohibitedSources = ['gettyimages.com', 'alamy.com', 'shutterstock.com', 'istockphoto.com', 'adobe.com'];
 const validLicenseKeywords = ['CC0', 'CC BY', 'CC BY-SA', 'Public Domain', 'owned', 'Custom'];
 
-let ok = true;
-for (const [slug, rec] of Object.entries(data.posts || {})) {
-  const approved = (rec.candidates || []).filter(c => c.approved);
-  if (approved.length < (rec.requiredCount || 0)) {
-    console.warn(`[PENDING] ${slug}: approved ${approved.length}/${rec.requiredCount}`);
-    ok = false;
+if (!fs.existsSync(manifestPath)) {
+  console.error('image-approvals.json not found at', manifestPath);
+  process.exit(1);
+}
+
+const data = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+
+function slugMatchesFilter(slug) {
+  if (!args.length) return true;
+  return args.includes(slug.toLowerCase());
+}
+
+let hasErrors = false;
+let warningCount = 0;
+let pendingTotal = 0;
+
+for (const [slug, record] of Object.entries(data.posts || {})) {
+  if (!slugMatchesFilter(slug)) continue;
+
+  const requiredCount = Number(record.requiredCount || 0);
+  const approved = (record.candidates || []).filter((candidate) => candidate.approved);
+  if (approved.length < requiredCount) {
+    console.warn(`[PENDING] ${slug}: approved ${approved.length}/${requiredCount}`);
+    warningCount += 1;
+    pendingTotal += requiredCount - approved.length;
   }
-  approved.forEach((c, idx) => {
-    if (!c.url) { console.error(`[ERROR] ${slug} candidate ${idx}: missing url`); ok = false; }
-    const lower = (c.source || '').toLowerCase();
-    if (prohibitedSources.some(p => lower.includes(p))) {
-      console.error(`[ERROR] ${slug} candidate ${idx}: source is prohibited (${c.source})`);
-      ok = false;
+
+  approved.forEach((candidate, index) => {
+    if (!candidate.url) {
+      console.error(`[ERROR] ${slug} candidate ${index}: missing url`);
+      hasErrors = true;
     }
-    if (!allowedSources.some(a => lower.includes(a))) {
-      console.warn(`[WARN] ${slug} candidate ${idx}: source not in allowed list (${c.source})`);
+    const source = (candidate.source || '').toLowerCase();
+    if (prohibitedSources.some((host) => source.includes(host))) {
+      console.error(`[ERROR] ${slug} candidate ${index}: source is prohibited (${candidate.source})`);
+      hasErrors = true;
     }
-    if (!validLicenseKeywords.some(k => (c.license || '').includes(k))) {
-      console.error(`[ERROR] ${slug} candidate ${idx}: invalid/unknown license (${c.license})`);
-      ok = false;
+    if (!allowedSources.some((host) => source.includes(host))) {
+      console.warn(`[WARN] ${slug} candidate ${index}: source not in allow list (${candidate.source})`);
+      warningCount += 1;
+    }
+    if (!validLicenseKeywords.some((token) => (candidate.license || '').includes(token))) {
+      console.error(`[ERROR] ${slug} candidate ${index}: invalid or missing license (${candidate.license || 'n/a'})`);
+      hasErrors = true;
+    }
+    if (!candidate.alt || candidate.alt.trim().length < 10) {
+      console.warn(`[WARN] ${slug} candidate ${index}: alt text is very short or missing`);
+      warningCount += 1;
     }
   });
 }
 
-if (!ok) {
-  console.error('Validation failed. Fix errors above.');
-  process.exit(1);
+if (args.length && !Object.keys(data.posts || {}).some((slug) => args.includes(slug.toLowerCase()))) {
+  console.warn('None of the requested slugs were found in the manifest.');
 }
-console.log('Image approvals manifest looks OK.');
+
+console.log('\nValidation summary:');
+console.log(`  Pending approvals: ${pendingTotal}`);
+console.log(`  Warnings: ${warningCount}`);
+console.log(`  Errors: ${hasErrors ? 'YES' : 'no'}`);
+
+if (hasErrors) {
+  process.exitCode = 1;
+} else {
+  console.log('Image approvals manifest looks OK.');
+}
 

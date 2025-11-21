@@ -14,6 +14,9 @@ import PerformanceSEO from '@/components/PerformanceSEO'
 import TechnicalSEOAudit from '@/components/TechnicalSEOAudit'
 import BacklinkStrategy from '@/components/BacklinkStrategy'
 import GoogleSEOCompliance from '@/components/GoogleSEOCompliance'
+import AnalyticsScripts from '@/components/AnalyticsScripts'
+import { books } from '@/data/books'
+import { getValidGTIN13, getValidISBN, getValidSKU } from '@/utils/isbn'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -26,6 +29,11 @@ const playfair = Playfair_Display({
   display: 'swap',
   variable: '--font-playfair'
 })
+
+const SITE_DOMAIN = 'https://charlesmackaybooks.com'
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WKRHZDSX'
+const priceSummary = getPriceSummary()
+const productItemListJson = buildProductItemList()
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -190,53 +198,6 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={`${inter.variable} ${playfair.variable} font-sans`}>
       <head>
-        {/* Google Analytics Tags */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJS2CCBSJP"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-RJS2CCBSJP', {
-                page_title: document.title,
-                page_location: window.location.href,
-                send_page_view: true
-              });
-              gtag('config', 'GT-MR8KZP58', {
-                page_title: document.title,
-                page_location: window.location.href,
-                send_page_view: true
-              });
-              gtag('config', 'GT-WKRHZDSX', {
-                page_title: document.title,
-                page_location: window.location.href,
-                send_page_view: true
-              });
-              
-              // Enhanced e-commerce tracking
-              gtag('event', 'page_view', {
-                page_title: document.title,
-                page_location: window.location.href,
-                page_referrer: document.referrer
-              });
-            `
-          }}
-        />
-        
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-WKRHZDSX');
-            `
-          }}
-        />
-        
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -262,88 +223,13 @@ export default function RootLayout({
         />
 
         {/* Invisible Product ItemList for all books (homepage and global head) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: (() => {
-              try {
-                const domain = 'https://charlesmackaybooks.com';
-                const { books } = require('@/data/books');
-                const { getValidISBN, getValidGTIN13, getValidSKU } = require('@/utils/isbn');
-                const itemList = {
-                  '@context': 'https://schema.org/',
-                  '@type': 'ItemList',
-                  itemListElement: books.map((book: any, idx: number) => {
-                    const validISBN = getValidISBN(book.isbn);
-                    const validGTIN13 = getValidGTIN13(book.isbn);
-                    const validSKU = getValidSKU(book.isbn, book.id);
-                    
-                    return {
-                    '@type': 'ListItem',
-                    position: idx + 1,
-                    item: {
-                      '@type': 'Product',
-                      '@id': `${domain}#isbn-${validISBN || book.id}`,
-                      url: `${domain}/books/${book.id}`,
-                      name: book.title,
-                      description: (book.description || '').slice(0, 5000).length >= 50 
-                        ? (book.description || '').slice(0, 5000) 
-                        : (book.description || book.title || 'Aviation history book by Charles E. MacKay. Expert research on Scottish aviation, WWI & WWII aircraft, helicopter development, and military aviation history. Essential reference material for historians and researchers.').slice(0, 5000),
-                      image: [`${domain}${(book.imageUrl || `/book-covers/${book.id}.jpg`).startsWith('/') ? '' : '/'}${book.imageUrl || `book-covers/${book.id}.jpg`}`],
-                      sku: validSKU,
-                      ...(validGTIN13 && { gtin13: validGTIN13 }),
-                      mpn: validSKU,
-                      brand: { '@type': 'Brand', name: 'Charles E. MacKay' },
-                      author: { '@type': 'Person', name: 'Charles Edward MacKay' },
-                      offers: {
-                        '@type': 'Offer',
-                        url: domain,
-                        priceCurrency: 'GBP',
-                        price: Number(book.price).toFixed(2),
-                        priceValidUntil: '2025-12-31',
-                        availability: 'https://schema.org/InStock',
-                        itemCondition: 'https://schema.org/NewCondition',
-                        seller: { '@type': 'Organization', name: 'Charles E. MacKay Books' },
-                        shippingDetails: {
-                          '@type': 'OfferShippingDetails',
-                          shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'GBP' },
-                          shippingDestination: [
-                            { '@type': 'DefinedRegion', addressCountry: 'GB' },
-                            { '@type': 'DefinedRegion', addressCountry: 'EU' },
-                            { '@type': 'DefinedRegion', addressCountry: 'US' }
-                          ],
-                          deliveryTime: {
-                            '@type': 'ShippingDeliveryTime',
-                            handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 2, unitCode: 'DAY' },
-                            transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 5, unitCode: 'DAY' }
-                          }
-                        },
-                        hasMerchantReturnPolicy: {
-                          "@type": "MerchantReturnPolicy",
-                          applicableCountry: 'GB',
-                          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-                          merchantReturnDays: 30,
-                          returnMethod: 'https://schema.org/ReturnByMail',
-                          returnFees: 'https://schema.org/FreeReturn',
-                          returnShippingFeesAmount: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
-                          returnPolicyUrl: `${domain}/returns`
-                        }
-                      },
-                      additionalProperty: [
-                        { '@type': 'PropertyValue', name: 'Category', value: book.category || 'Aviation History' },
-                        { '@type': 'PropertyValue', name: 'Format', value: 'Paperback' }
-                      ]
-                    }
-                  };
-                  })
-                };
-                return JSON.stringify(itemList);
-              } catch {
-                return '';
-              }
-            })()
-          }}
-        />
+        {productItemListJson && (
+          <script
+            id="global-product-itemlist"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: productItemListJson }}
+          />
+        )}
         
         {/* Security headers */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
@@ -357,82 +243,73 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
         {/* Google Product/OG/Twitter product meta tags (non-visual) */}
-        {(() => {
-          try {
-            const { books } = require('@/data/books');
-            const prices: number[] = (books || []).map((b: any) => Number(b.price) || 0).filter((n: number) => n > 0)
-            const minPrice = prices.length ? Math.min(...prices) : 19.99
-            const qty = Array.isArray(books) ? books.length : 0
-            return (
-              <>
-                {/* Google Product Metadata */}
-                <meta property="product:price:amount" content={minPrice.toFixed(2)} />
-                <meta property="product:price:currency" content="GBP" />
-                <meta property="product:availability" content="in stock" />
-                <meta property="product:condition" content="new" />
-                <meta property="product:retailer_item_id" content="multiple" />
-                <meta property="product:brand" content="Charles E. MacKay" />
+        <>
+          {/* Google Product Metadata */}
+          <meta property="product:price:amount" content={priceSummary.minPrice.toFixed(2)} />
+          <meta property="product:price:currency" content="GBP" />
+          <meta property="product:availability" content="in stock" />
+          <meta property="product:condition" content="new" />
+          <meta property="product:retailer_item_id" content="multiple" />
+          <meta property="product:brand" content="Charles E. MacKay" />
 
-                {/* Open Graph Product Tags */}
-                <meta property="og:type" content="og:product" />
-                <meta property="og:title" content="Aviation History Books by Charles E. MacKay" />
-                <meta property="og:description" content="Self-published aviation history books used as primary references by researchers worldwide" />
-                <meta property="og:url" content="https://charlesmackaybooks.com" />
-                <meta property="og:site_name" content="Charles MacKay Books" />
-                <meta property="product:plural_title" content="Aviation History Books" />
-                <meta property="product:price:amount" content={minPrice.toFixed(2)} />
-                <meta property="product:price:currency" content="GBP" />
+          {/* Open Graph Product Tags */}
+          <meta property="og:type" content="og:product" />
+          <meta property="og:title" content="Aviation History Books by Charles E. MacKay" />
+          <meta
+            property="og:description"
+            content="Self-published aviation history books used as primary references by researchers worldwide"
+          />
+          <meta property="og:url" content={SITE_DOMAIN} />
+          <meta property="og:site_name" content="Charles MacKay Books" />
+          <meta property="product:plural_title" content="Aviation History Books" />
+          <meta property="product:price:amount" content={priceSummary.minPrice.toFixed(2)} />
+          <meta property="product:price:currency" content="GBP" />
 
-                {/* Twitter Product Card */}
-                <meta name="twitter:card" content="product" />
-                <meta name="twitter:site" content="@charlesmackaybooks" />
-                <meta name="twitter:creator" content="@charlesmackaybooks" />
-                <meta name="twitter:domain" content="charlesmackaybooks.com" />
-                <meta name="twitter:label1" content="Price" />
-                <meta name="twitter:data1" content={`From £${minPrice.toFixed(2)}`} />
-                <meta name="twitter:label2" content="Availability" />
-                <meta name="twitter:data2" content="In Stock" />
+          {/* Twitter Product Card */}
+          <meta name="twitter:card" content="product" />
+          <meta name="twitter:site" content="@charlesmackaybooks" />
+          <meta name="twitter:creator" content="@charlesmackaybooks" />
+          <meta name="twitter:domain" content="charlesmackaybooks.com" />
+          <meta name="twitter:label1" content="Price" />
+          <meta name="twitter:data1" content={`From £${priceSummary.minPrice.toFixed(2)}`} />
+          <meta name="twitter:label2" content="Availability" />
+          <meta name="twitter:data2" content="In Stock" />
 
-                {/* Rich Snippets microdata helpers */}
-                <meta itemProp="name" content="Charles MacKay Aviation Books" />
-                <meta itemProp="description" content="Aviation history books" />
-                <meta itemProp="image" content="https://charlesmackaybooks.com/images/books-collection.jpg" />
+          {/* Rich Snippets microdata helpers */}
+          <meta itemProp="name" content="Charles MacKay Aviation Books" />
+          <meta itemProp="description" content="Aviation history books" />
+          <meta itemProp="image" content={`${SITE_DOMAIN}/images/books-collection.jpg`} />
 
-                {/* Google Rich Results Product Signals */}
-                <meta name="product:brand" content="Charles E. MacKay" />
-                <meta name="product:category" content="Books > History > Aviation" />
-                <meta name="product:condition" content="new" />
-                <meta name="product:availability" content="in_stock" />
-                <meta name="product:price" content={minPrice.toFixed(2)} />
-                <meta name="product:currency" content="GBP" />
-                <meta name="product:retailer" content="Charles MacKay Books" />
-                <meta name="product:retailer_id" content="charlesmackaybooks" />
+          {/* Google Rich Results Product Signals */}
+          <meta name="product:brand" content="Charles E. MacKay" />
+          <meta name="product:category" content="Books > History > Aviation" />
+          <meta name="product:condition" content="new" />
+          <meta name="product:availability" content="in_stock" />
+          <meta name="product:price" content={priceSummary.minPrice.toFixed(2)} />
+          <meta name="product:currency" content="GBP" />
+          <meta name="product:retailer" content="Charles MacKay Books" />
+          <meta name="product:retailer_id" content="charlesmackaybooks" />
 
-                {/* Shopping Actions Metadata */}
-                <meta property="product:multiple" content="true" />
-                <meta property="product:quantity" content={String(qty)} />
-                <meta property="product:shipping_cost" content="0.00" />
-                <meta property="product:shipping_country" content="GB" />
-                <meta property="product:tax_included" content="true" />
+          {/* Shopping Actions Metadata */}
+          <meta property="product:multiple" content="true" />
+          <meta property="product:quantity" content={String(priceSummary.totalBooks)} />
+          <meta property="product:shipping_cost" content="0.00" />
+          <meta property="product:shipping_country" content="GB" />
+          <meta property="product:tax_included" content="true" />
 
-                {/* Book-Specific Metadata */}
-                <meta property="book:author" content="Charles E. MacKay" />
-                <meta property="book:isbn" content="multiple" />
-                <meta property="book:release_date" content="2023" />
-                <meta property="book:publisher" content="A MacKay" />
-                <meta property="product:price:valid_until" content="2026-12-31" />
+          {/* Book-Specific Metadata */}
+          <meta property="book:author" content="Charles E. MacKay" />
+          <meta property="book:isbn" content="multiple" />
+          <meta property="book:release_date" content="2023" />
+          <meta property="book:publisher" content="A MacKay" />
+          <meta property="product:price:valid_until" content="2026-12-31" />
 
-                {/* Business Verification */}
-                <meta name="google-site-verification" content="GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s" />
-                <meta name="business:contact_data:locality" content="Glasgow" />
-                <meta name="business:contact_data:country_name" content="Scotland" />
-                <meta name="business:contact_data:email" content="charlese1mackay@hotmail.com" />
-              </>
-            )
-          } catch {
-            return null
-          }
-        })()}
+          {/* Business Verification */}
+          <meta name="google-site-verification" content="GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s" />
+          <meta name="business:contact_data:locality" content="Glasgow" />
+          <meta name="business:contact_data:country_name" content="Scotland" />
+          <meta name="business:contact_data:email" content="charlese1mackay@hotmail.com" />
+        </>
         
         {/* Core Web Vitals Monitoring */}
         <script
@@ -452,15 +329,13 @@ export default function RootLayout({
         />
       </head>
       <ClientBody>
+        <AnalyticsScripts />
         {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe 
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WKRHZDSX"
-            height="0" 
-            width="0" 
-            className="gtm-noscript"
-          />
-        </noscript>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
         
         {/* BBC-style header */}
         <BBCHeader />
@@ -506,50 +381,147 @@ export default function RootLayout({
         <script
           type="application/javascript"
           dangerouslySetInnerHTML={{
-            __html: (() => {
-              try {
-                const { books } = require('@/data/books');
-                const items = (books || []).map((b: any) => ({
-                  item_id: String(b.isbn || b.id),
-                  item_name: b.title,
-                  item_brand: 'Charles E. MacKay',
-                  item_category: `Books/${b.category || 'Aviation History'}`,
-                  price: Number(b.price),
-                  currency: 'GBP',
-                  quantity: 1,
-                  item_variant: 'Paperback',
-                  author: 'Charles E. MacKay',
-                  isbn: String(b.isbn || b.id),
-                  availability: 'in_stock',
-                  condition: 'new'
-                }));
-
-                return `
-                  window.dataLayer = window.dataLayer || [];
-                  window.dataLayer.push({
-                    event: 'view_item_list',
-                    ecommerce: { items: ${JSON.stringify(items)} }
-                  });
-
-                  // Mark page as containing products
-                  try { document.head.insertAdjacentHTML('beforeend', '<meta name="google-merchant-center-product-data" content="true">'); } catch(e) {}
-
-                  // Add product identifiers for crawlers
-                  try {
-                    (document.querySelectorAll('[id^="book-"]') || []).forEach(function(book){
-                      book.setAttribute('itemtype', 'https://schema.org/Product');
-                      var isbn = book.id.replace('book-','');
-                      book.setAttribute('data-product-id', 'isbn-' + isbn);
-                    });
-                  } catch(e) {}
-                `;
-              } catch {
-                return '';
-              }
-            })()
+            __html: buildMerchantDataLayer(),
           }}
         />
       </ClientBody>
     </html>
   )
+}
+
+function getPriceSummary() {
+  const numericPrices = books.map((book) => Number(book.price) || 0).filter((value) => value > 0)
+  const minPrice = numericPrices.length ? Math.min(...numericPrices) : 19.99
+  return {
+    minPrice,
+    totalBooks: books.length,
+  }
+}
+
+function buildProductItemList() {
+  try {
+    const itemList = {
+      '@context': 'https://schema.org/',
+      '@type': 'ItemList',
+      itemListElement: books.map((book, index) => {
+        const validISBN = getValidISBN(book.isbn)
+        const validGTIN13 = getValidGTIN13(book.isbn)
+        const validSKU = getValidSKU(book.isbn, book.id)
+
+        return {
+          '@type': 'ListItem',
+          position: index + 1,
+          item: {
+            '@type': 'Product',
+            '@id': `${SITE_DOMAIN}#isbn-${validISBN || book.id}`,
+            url: `${SITE_DOMAIN}/books/${book.id}`,
+            name: book.title,
+            description: resolveDescription(book),
+            image: [absoluteImagePath(book.imageUrl, book.id)],
+            sku: validSKU,
+            ...(validGTIN13 && { gtin13: validGTIN13 }),
+            mpn: validSKU,
+            brand: { '@type': 'Brand', name: 'Charles E. MacKay' },
+            author: { '@type': 'Person', name: 'Charles Edward MacKay' },
+            offers: {
+              '@type': 'Offer',
+              url: SITE_DOMAIN,
+              priceCurrency: 'GBP',
+              price: Number(book.price).toFixed(2),
+              priceValidUntil: '2025-12-31',
+              availability: 'https://schema.org/InStock',
+              itemCondition: 'https://schema.org/NewCondition',
+              seller: { '@type': 'Organization', name: 'Charles E. MacKay Books' },
+              shippingDetails: {
+                '@type': 'OfferShippingDetails',
+                shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'GBP' },
+                shippingDestination: [
+                  { '@type': 'DefinedRegion', addressCountry: 'GB' },
+                  { '@type': 'DefinedRegion', addressCountry: 'EU' },
+                  { '@type': 'DefinedRegion', addressCountry: 'US' },
+                ],
+                deliveryTime: {
+                  '@type': 'ShippingDeliveryTime',
+                  handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 2, unitCode: 'DAY' },
+                  transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 5, unitCode: 'DAY' },
+                },
+              },
+              hasMerchantReturnPolicy: {
+                '@type': 'MerchantReturnPolicy',
+                applicableCountry: 'GB',
+                returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                merchantReturnDays: 30,
+                returnMethod: 'https://schema.org/ReturnByMail',
+                returnFees: 'https://schema.org/FreeReturn',
+                returnShippingFeesAmount: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
+                returnPolicyUrl: `${SITE_DOMAIN}/returns`,
+              },
+            },
+            additionalProperty: [
+              { '@type': 'PropertyValue', name: 'Category', value: book.category || 'Aviation History' },
+              { '@type': 'PropertyValue', name: 'Format', value: 'Paperback' },
+            ],
+          },
+        }
+      }),
+    }
+    return JSON.stringify(itemList)
+  } catch {
+    return ''
+  }
+}
+
+function absoluteImagePath(imagePath: string | undefined, id: string) {
+  if (!imagePath) return `${SITE_DOMAIN}/book-covers/${id}.jpg`
+  if (imagePath.startsWith('http')) return imagePath
+  return `${SITE_DOMAIN}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`
+}
+
+function resolveDescription(book: (typeof books)[number]) {
+  const fallback =
+    'Aviation history book by Charles E. MacKay. Expert research on Scottish aviation, WWI & WWII aircraft, helicopter development, and military aviation history.'
+  const base = (book.description || book.title || fallback).slice(0, 5000)
+  if (base.length >= 50) return base
+  return fallback
+}
+
+function buildMerchantDataLayer() {
+  try {
+    const items = books.map((book) => ({
+      item_id: String(book.isbn || book.id),
+      item_name: book.title,
+      item_brand: 'Charles E. MacKay',
+      item_category: `Books/${book.category || 'Aviation History'}`,
+      price: Number(book.price),
+      currency: 'GBP',
+      quantity: 1,
+      item_variant: 'Paperback',
+      author: 'Charles E. MacKay',
+      isbn: String(book.isbn || book.id),
+      availability: 'in_stock',
+      condition: 'new',
+    }))
+
+    return `
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'view_item_list',
+        ecommerce: { items: ${JSON.stringify(items)} }
+      });
+
+      try {
+        document.head.insertAdjacentHTML('beforeend', '<meta name="google-merchant-center-product-data" content="true">');
+      } catch (e) {}
+
+      try {
+        (document.querySelectorAll('[id^="book-"]') || []).forEach(function(book) {
+          book.setAttribute('itemtype', 'https://schema.org/Product');
+          var isbn = book.id.replace('book-', '');
+          book.setAttribute('data-product-id', 'isbn-' + isbn);
+        });
+      } catch (e) {}
+    `
+  } catch {
+    return ''
+  }
 }

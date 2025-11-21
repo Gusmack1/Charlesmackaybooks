@@ -5,9 +5,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev -H 0.0.0.0 --turbopack",
+    "prebuild": "npm run docs:books",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "docs:books": "node scripts/export-book-reference.cjs",
     "audit:blogs": "node scripts/audit-blog-assets.cjs",
     "images:refresh": "node scripts/refresh-blog-images.cjs",
     "validate:images": "node scripts/validate-image-approvals.cjs",
