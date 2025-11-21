@@ -31,3 +31,16 @@ The script fetches position, clicks, CTR, and impressions for each keyword/url p
 - Set `priority` (`tier-1`, `tier-2`, `tier-3`) to help triage alerts once we add thresholds.
 - When launching a new campaign, add the keyword, link it to the relevant book/blog page, and re-run the dashboard locally to confirm Search Console returns data.
 
+## Current keyword priorities
+
+The table below reflects the live contents of `data/keyword-tracking.json` (sorted by priority). Use it as a quick reference when checking whether a blog post or book page already owns a strategic query.
+
+| Priority | Keyword | Target URL | Content type |
+| --- | --- | --- | --- |
+| Tier‑1 | Scottish aviation history books | `/books` | Books hub |
+| Tier‑1 | Charles E MacKay Luftwaffe research | `/books/this-was-the-enemy-volume-two` | Book detail |
+| Tier‑2 | Beardmore aviation history | `/books/beardmore-aviation` | Book detail |
+| Tier‑2 | RAF Lossiemouth heritage | `/blog/raf-lossiemouth-heritage` | Blog article |
+| Tier‑3 | Scottish helicopter pioneers | `/books/sycamore-seeds` | Book detail |
+
+For any new newsroom piece or long-form blog post, pick the highest-priority keyword that matches the topic, then ensure the article links back to the target URL above to reinforce relevance.
