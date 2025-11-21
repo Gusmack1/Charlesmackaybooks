@@ -66,10 +66,13 @@ async function runOptimizations() {
   console.log('   • Duration: < 30 seconds\n');
 
   console.log('🌐 LIVE WEBSITE OPTIMIZATION:');
-  console.log('   1. Visit: https://charlesmackaybooks.com/optimize-website');
-  console.log('   2. Click: "Start Website Optimization"');
-  console.log('   3. Wait: For all 7 systems to complete');
-  console.log('   4. Review: Comprehensive results\n');
+  console.log('   • Internal optimizer UI routes have been retired to keep production lean.');
+  console.log('   • Use CLI tasks instead:');
+  console.log('       - npm run audit:blogs');
+  console.log('       - npm run images:refresh');
+  console.log('       - npm run validate:images');
+  console.log('       - npm run images:localize');
+  console.log('   • Review build output + Search Console for verification.\n');
 
   console.log('🔧 DEPLOYMENT STATUS:');
   console.log('   ✅ Build successful');

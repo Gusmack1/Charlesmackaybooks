@@ -107,12 +107,12 @@ Write-Host ""
 Write-Host "🌐 Next steps:" -ForegroundColor Cyan
 Write-Host "  1. Check your deployment platform (Netlify/Vercel) for automatic deployment" -ForegroundColor White
 Write-Host "  2. Test the website at your domain" -ForegroundColor White
-Write-Host "  3. Verify the /comprehensive-fix page is working" -ForegroundColor White
-Write-Host "  4. Test the /test-react page to confirm React is working" -ForegroundColor White
+Write-Host "  3. Spot-check key routes (/ , /books , /blog )" -ForegroundColor White
+Write-Host "  4. Re-submit /sitemap.xml in Google Search Console if SEO changes were made" -ForegroundColor White
 Write-Host ""
 Write-Host "🔗 Test URLs:" -ForegroundColor Cyan
-Write-Host "  - /comprehensive-fix - Main fixer system" -ForegroundColor White
-Write-Host "  - /test-react - React module test" -ForegroundColor White
 Write-Host "  - / - Homepage" -ForegroundColor White
+Write-Host "  - /books - Catalog" -ForegroundColor White
+Write-Host "  - /blog - Research articles" -ForegroundColor White
 Write-Host ""
 Write-Host "✨ All done! The website should now be updated with the fixes." -ForegroundColor Green 

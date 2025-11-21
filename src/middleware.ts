@@ -2,15 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 // Add X-Robots-Tag to internal tooling routes to avoid indexing
-const NOINDEX_PATHS = [
-  '/comprehensive-fix',
-  '/test-systems',
-  '/run-optimizations',
-  '/deployment',
-  '/optimize-website',
-  '/comprehensive-optimization-suite',
-  '/google-indexing'
-]
+const NOINDEX_PATHS = ['/ai-prompt-system']
 
 // No redirects - each page must be accessible at its own URL
 // Netlify handles SSL/HTTPS automatically, no need for redirects here
@@ -39,17 +31,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    '/comprehensive-fix/:path*',
-    '/test-systems/:path*',
-    '/run-optimizations/:path*',
-    '/deployment/:path*',
-    '/optimize-website/:path*',
-    '/comprehensive-optimization-suite/:path*',
-    '/google-indexing/:path*',
-    '/fonts/:path*',
-    '/sitemap.xml'
-  ]
+  matcher: ['/ai-prompt-system/:path*', '/fonts/:path*', '/sitemap.xml']
 }
 
 

@@ -329,8 +329,6 @@ export default function RootLayout({
                           returnPolicyUrl: `${domain}/returns`
                         }
                       },
-                      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '100', bestRating: '5', worstRating: '1' },
-                      review: { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' }, author: { '@type': 'Person', name: 'Verified eBay Buyer' }, reviewBody: 'Excellent aviation history reference material.' },
                       additionalProperty: [
                         { '@type': 'PropertyValue', name: 'Category', value: book.category || 'Aviation History' },
                         { '@type': 'PropertyValue', name: 'Format', value: 'Paperback' }

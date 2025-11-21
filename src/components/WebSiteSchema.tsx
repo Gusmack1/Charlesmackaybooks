@@ -47,32 +47,7 @@ export default function WebSiteSchema() {
               '@type': 'Organization',
               name: 'Charles E. MacKay Aviation Books'
             }
-          },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.9',
-            reviewCount: '170',
-            bestRating: '5',
-            worstRating: '1'
-          },
-          review: [
-            {
-              '@type': 'Review',
-              itemReviewed: {
-                '@type': 'WebSite',
-                name: 'Charles E. MacKay Aviation Books'
-              },
-              reviewRating: {
-                '@type': 'Rating',
-                ratingValue: '5'
-              },
-              author: {
-                '@type': 'Organization',
-                name: 'Imperial War Museum'
-              },
-              reviewBody: 'Excellent reference material for aviation history research'
-            }
-          ]
+          }
         }
       }
     ],

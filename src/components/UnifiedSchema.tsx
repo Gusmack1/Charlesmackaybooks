@@ -498,31 +498,6 @@ export default function UnifiedSchema({
                "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0.00", "currency": "GBP" },
                "returnPolicyUrl": `${baseUrl}/returns`
              }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "1",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": {
-            "@type": "Review",
-            "itemReviewed": {
-              "@type": "Book",
-              "name": book.title
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "Aviation Enthusiast"
-            },
-            "reviewBody": "Excellent reference material for aviation history research."
           }
         }
       };

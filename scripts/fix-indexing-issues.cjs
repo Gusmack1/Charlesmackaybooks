@@ -73,12 +73,7 @@ if (fs.existsSync(appDir) && fs.existsSync(sitemapPath)) {
     console.log(`  Found ${urlMatches.length} URLs in sitemap`);
     
     // Check for common problematic pages
-    const problematicPages = [
-      '/performance-optimizer',
-      '/ai-prompt-system',
-      '/comprehensive-fix',
-      '/test-systems'
-    ];
+    const problematicPages = ['/ai-prompt-system'];
     
     problematicPages.forEach(page => {
       if (sitemapContent.includes(page)) {
