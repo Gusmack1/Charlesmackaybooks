@@ -61,7 +61,7 @@ export function useAnalytics() {
     trackEmailClick()
   }, [])
 
-  // Track external eBay redirects
+  // Track eBay redirects
   const trackEbayRedirect = useCallback((bookTitle: string) => {
     trackEbayClick(bookTitle)
   }, [])

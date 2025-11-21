@@ -503,12 +503,16 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   
   return (
     <>
-        <UnifiedSchema
+      <UnifiedSchema
         pageType="book-detail"
         pageTitle={`${book.title} | Charles E. MacKay Aviation Books`}
-          pageDescription={metaDescriptionForSchema}
-        pageUrl={`/books/${book.id}/`}
-        bookData={book}
+        pageDescription={metaDescriptionForSchema}
+        pageUrl={`/books/${book.id}`}
+        bookData={{
+          id: book.id,
+          title: book.title,
+          imageUrl: book.imageUrl || `/book-covers/${book.id}.jpg`,
+        }}
       />
 
       {/* Enhanced SEO with FAQ, Reviews, and AI optimization */}

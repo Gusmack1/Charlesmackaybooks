@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useStripe, useElements, PaymentElement } from '@stripe/react-stripe-js';
+import { useStripe, useElements, PaymentElement, PaymentRequestButtonElement } from '@stripe/react-stripe-js';
+import type { PaymentRequest } from '@stripe/stripe-js';
 import { stripeConfig, getStripeErrorMessage, formatCurrency, convertToStripeAmount } from '../config/stripe';
 import { Book } from '../types/book';
 
@@ -14,6 +15,7 @@ interface StripePaymentFormProps {
   customerEmail?: string;
   orderId?: string;
   items?: Array<{ book: Book; quantity: number }>;
+  clientSecret: string;
 }
 
 export default function StripePaymentForm({
@@ -24,7 +26,8 @@ export default function StripePaymentForm({
   onCancel,
   customerEmail,
   orderId,
-  items = []
+  items = [],
+  clientSecret
 }: StripePaymentFormProps) {
   const stripe = useStripe();
   const elements = useElements();
@@ -32,6 +35,9 @@ export default function StripePaymentForm({
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [paymentMethod, setPaymentMethod] = useState<string>('card');
+  const [paymentRequest, setPaymentRequest] = useState<PaymentRequest | null>(null);
+
+  const isWalletSelected = paymentMethod === 'applePay' || paymentMethod === 'googlePay';
 
   // Format amount for display
   const formattedAmount = formatCurrency(convertToStripeAmount(amount), currency);
@@ -91,6 +97,94 @@ export default function StripePaymentForm({
     setPaymentMethod(method);
     setError(null);
   };
+
+  useEffect(() => {
+    if (!stripe || !clientSecret) {
+      setPaymentRequest(null);
+      return;
+    }
+
+    const paymentRequestInstance = stripe.paymentRequest({
+      country: 'GB',
+      currency: currency.toLowerCase(),
+      total: {
+        label: 'Charles E. MacKay Aviation Books',
+        amount: convertToStripeAmount(amount)
+      },
+      requestPayerName: true,
+      requestPayerEmail: true
+    });
+
+    let isMounted = true;
+
+    paymentRequestInstance.canMakePayment().then(result => {
+      if (!isMounted) return;
+      if (result) {
+        setPaymentRequest(paymentRequestInstance);
+      } else {
+        setPaymentRequest(null);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [stripe, currency, amount, clientSecret]);
+
+  useEffect(() => {
+    if (!paymentRequest || !stripe || !clientSecret) {
+      return;
+    }
+
+    const handlePaymentMethodEvent = async (event: any) => {
+      setIsProcessing(true);
+      setError(null);
+      try {
+        const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(
+          clientSecret,
+          {
+            payment_method: event.paymentMethod.id
+          },
+          { handleActions: false }
+        );
+
+        if (confirmError) {
+          const message = getStripeErrorMessage(confirmError);
+          event.complete('fail');
+          setError(message);
+          onError(message);
+          return;
+        }
+
+        event.complete('success');
+
+        if (paymentIntent?.status === 'requires_action') {
+          const { error: actionError, paymentIntent: resolvedIntent } = await stripe.confirmCardPayment(clientSecret);
+          if (actionError) {
+            const message = getStripeErrorMessage(actionError);
+            setError(message);
+            onError(message);
+          } else {
+            onSuccess(resolvedIntent ?? paymentIntent);
+          }
+        } else if (paymentIntent) {
+          onSuccess(paymentIntent);
+        }
+      } catch (err) {
+        const message = err instanceof Error ? err.message : 'Apple/Google Pay failed.';
+        event.complete('fail');
+        setError(message);
+        onError(message);
+      } finally {
+        setIsProcessing(false);
+      }
+    };
+
+    paymentRequest.on('paymentmethod', handlePaymentMethodEvent);
+    return () => {
+      paymentRequest.off('paymentmethod', handlePaymentMethodEvent);
+    };
+  }, [paymentRequest, stripe, clientSecret, onSuccess, onError]);
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -173,19 +267,48 @@ export default function StripePaymentForm({
           </div>
         </div>
 
-        {/* Payment Element */}
-        <div className="border border-blue-700/50 rounded-lg p-4 bg-slate-800">
-          <PaymentElement 
-            options={{
-              layout: 'tabs',
-              defaultValues: {
-                billingDetails: {
-                  email: customerEmail,
-                },
-              },
-            }}
-          />
-        </div>
+        {/* Payment Element or Wallet */}
+        {paymentMethod === 'card' && (
+          <div className="border border-blue-700/50 rounded-lg p-4 bg-slate-800">
+            <PaymentElement
+              options={{
+                layout: 'tabs',
+                defaultValues: {
+                  billingDetails: {
+                    email: customerEmail
+                  }
+                }
+              }}
+            />
+          </div>
+        )}
+
+        {(paymentMethod === 'applePay' || paymentMethod === 'googlePay') && (
+          <div className="border border-blue-700/50 rounded-lg p-4 bg-slate-800">
+            {paymentRequest ? (
+              <PaymentRequestButtonElement
+                options={{
+                  paymentRequest,
+                  style: {
+                    paymentRequestButton: {
+                      theme: 'dark',
+                      height: '48px',
+                      type: paymentMethod === 'applePay' ? 'buy' : 'default'
+                    }
+                  }
+                }}
+              />
+            ) : (
+              <div className="text-white text-sm">
+                <p className="font-medium">Apple Pay / Google Pay unavailable</p>
+                <p className="text-white/70">
+                  Wallet checkout requires a compatible browser and a saved card. Please try again on a supported
+                  device or choose the secure card option above.
+                </p>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Error Display */}
         {error && (
@@ -231,10 +354,12 @@ export default function StripePaymentForm({
           </button>
           <button
             type="submit"
-            disabled={!stripe || isProcessing}
+            disabled={!stripe || isProcessing || isWalletSelected}
             className="flex-1 px-4 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isProcessing ? (
+            {isWalletSelected ? (
+              'Use wallet button above'
+            ) : isProcessing ? (
               <div className="flex items-center justify-center">
                 <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>

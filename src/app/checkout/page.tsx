@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect, useCallback } from 'react';
 import { useCart } from '../../context/CartContext';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,8 +9,6 @@ import { stripePromise } from '../../config/stripe';
 import StripePaymentForm from '../../components/StripePaymentForm';
 import {
   CustomerDetails,
-  calculateShipping,
-  calculateShippingByWeight,
   generateOrderId,
   saveOrder,
   generatePayPalUrl,
@@ -18,14 +16,45 @@ import {
   updateOrderStatus,
   Order
 } from '../../utils/orderUtils';
-import { OrderManagementService, CustomerInfo } from '../../utils/orderManagement';
 import CustomerTestimonials from '../../components/CustomerTestimonials';
 import { trackCartAbandonment } from '../../utils/abandonedCartRecovery';
+import { useSearchParams } from 'next/navigation';
 
-export default function CheckoutPage() {
+interface CustomerInfoPayload {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone?: string;
+  address: {
+    line1: string;
+    line2?: string;
+    city: string;
+    state: string;
+    postalCode: string;
+    country: string;
+  };
+}
+
+interface OrderItemPayload {
+  bookId: string;
+  quantity: number;
+  price: number;
+}
+
+interface CreateOrderRequest {
+  items: OrderItemPayload[];
+  customer: CustomerInfoPayload;
+  paymentMethod: 'stripe' | 'paypal' | 'bank_transfer';
+  paymentIntentId?: string;
+  paypalOrderId?: string;
+}
+
+function CheckoutContent() {
+  const searchParams = useSearchParams();
+  const preferredPaymentMethod = searchParams.get('method') === 'paypal' ? 'paypal' : 'stripe';
   const { items, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
   const [step, setStep] = useState<'basket' | 'address' | 'payment' | 'review'>('basket');
-  const [paymentMethod, setPaymentMethod] = useState<'stripe' | 'paypal'>('stripe');
+  const [paymentMethod, setPaymentMethod] = useState<'stripe' | 'paypal'>(preferredPaymentMethod);
   const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
     firstName: '',
     lastName: '',
@@ -40,6 +69,60 @@ export default function CheckoutPage() {
   const [errors, setErrors] = useState<string[]>([]);
   const [clientSecret, setClientSecret] = useState<string>('');
   const [isLoading, setIsLoading] = useState(false);
+  const [abandonmentTracked, setAbandonmentTracked] = useState(false);
+  const [checkoutCompleted, setCheckoutCompleted] = useState(false);
+  const [stripeReference] = useState(() => generateOrderId());
+
+  const buildCustomerInfoPayload = (): CustomerInfoPayload => ({
+    firstName: customerDetails.firstName,
+    lastName: customerDetails.lastName,
+    email: customerDetails.email,
+    phone: customerDetails.phone,
+    address: {
+      line1: customerDetails.address1,
+      line2: customerDetails.address2,
+      city: customerDetails.city,
+      state: customerDetails.postcode,
+      postalCode: customerDetails.postcode,
+      country: customerDetails.country
+    }
+  });
+
+  const mapOrderItemsPayload = (): OrderItemPayload[] =>
+    items.map(item => ({
+      bookId: item.book.id,
+      quantity: item.quantity,
+      price: item.book.price
+    }));
+
+  const createServerOrder = async (payload: CreateOrderRequest) => {
+    const response = await fetch('/api/orders', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+    if (!response.ok || !data?.order) {
+      throw new Error(data?.error || 'Failed to create order');
+    }
+    return data.order as { id: string };
+  };
+
+  const patchServerOrder = async (orderId: string, body: Record<string, unknown>) => {
+    const response = await fetch(`/api/orders/${orderId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData?.error || 'Failed to update order');
+    }
+
+    return response.json().catch(() => ({}));
+  };
 
   // Calculate total weight of all items
   const totalWeight = items.reduce((total, item) => {
@@ -50,6 +133,37 @@ export default function CheckoutPage() {
   const subtotal = getTotalPrice();
   const bulkDiscount = getBulkDiscount();
   const total = getFinalTotal(); // This includes bulk discounts and shipping
+
+  useEffect(() => {
+    if (!items.length || checkoutCompleted) return;
+
+    const maybeTrackAbandonment = () => {
+      if (abandonmentTracked) return;
+      if (!customerDetails.email) return;
+      const cartPayload = items.map((cartItem) => ({
+        bookId: cartItem.book.id,
+        quantity: cartItem.quantity,
+        book: cartItem.book,
+      }));
+      const customerName = `${customerDetails.firstName || ''} ${customerDetails.lastName || ''}`.trim() || undefined;
+      trackCartAbandonment(customerDetails.email, customerName, cartPayload, subtotal).finally(() => {
+        setAbandonmentTracked(true);
+      });
+    };
+
+    const handleBeforeUnload = () => {
+      maybeTrackAbandonment();
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      if (!checkoutCompleted) {
+        maybeTrackAbandonment();
+      }
+    };
+  }, [items, customerDetails, subtotal, checkoutCompleted, abandonmentTracked]);
 
   const handleInputChange = (field: keyof CustomerDetails, value: string) => {
     setCustomerDetails(prev => ({ ...prev, [field]: value }));
@@ -72,7 +186,7 @@ export default function CheckoutPage() {
     }
   };
 
-  const createStripePaymentIntent = async () => {
+  const createStripePaymentIntent = useCallback(async () => {
     if (!customerDetails.email) {
       setErrors(['Email is required for payment processing']);
       return;
@@ -80,7 +194,7 @@ export default function CheckoutPage() {
 
     setIsLoading(true);
     try {
-      const orderId = generateOrderId();
+      const orderId = stripeReference;
       const response = await fetch('/api/create-payment-intent', {
         method: 'POST',
         headers: {
@@ -113,46 +227,31 @@ export default function CheckoutPage() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [customerDetails.email, items, stripeReference, total]);
+
+  useEffect(() => {
+    if (step === 'payment' && paymentMethod === 'stripe' && !clientSecret) {
+      createStripePaymentIntent();
+    }
+  }, [step, paymentMethod, clientSecret, createStripePaymentIntent]);
 
   const handleStripeSuccess = async (paymentIntent: any) => {
     try {
-      // Convert customer details to new format
-      const customerInfo: CustomerInfo = {
-        firstName: customerDetails.firstName,
-        lastName: customerDetails.lastName,
-        email: customerDetails.email,
-        phone: customerDetails.phone,
-        address: {
-          line1: customerDetails.address1,
-          line2: customerDetails.address2,
-          city: customerDetails.city,
-          state: customerDetails.postcode, // Using postcode as state for UK
-          postalCode: customerDetails.postcode,
-          country: customerDetails.country
-        }
-      };
+      const customerInfo = buildCustomerInfoPayload();
+      const orderItems = mapOrderItemsPayload();
 
-      // Convert cart items to order items
-      const orderItems = items.map(item => ({
-        bookId: item.book.id,
-        quantity: item.quantity,
-        price: item.book.price,
-        book: item.book
-      }));
+      const order = await createServerOrder({
+        items: orderItems,
+        customer: customerInfo,
+        paymentMethod: 'stripe',
+        paymentIntentId: paymentIntent.id
+      });
 
-      // Create order in new system
-      const order = await OrderManagementService.createOrder(
-        orderItems,
-        customerInfo,
-        'stripe',
-        paymentIntent.id
-      );
+      await patchServerOrder(order.id, {
+        action: 'confirm_payment',
+        paymentIntentId: paymentIntent.id
+      });
 
-      // Confirm payment
-      await OrderManagementService.confirmPayment(order.id, paymentIntent.id);
-
-      // Save to legacy system for backward compatibility
       const legacyOrder: Order = {
         orderId: order.id,
         customerDetails,
@@ -172,6 +271,8 @@ export default function CheckoutPage() {
       };
       saveOrder(legacyOrder);
 
+      setCheckoutCompleted(true);
+      setAbandonmentTracked(true);
       clearCart();
       window.location.href = `/order-complete?orderId=${order.id}`;
     } catch (error) {
@@ -186,38 +287,16 @@ export default function CheckoutPage() {
 
   const handlePayPalPayment = async () => {
     try {
-      // Convert customer details to new format
-      const customerInfo: CustomerInfo = {
-        firstName: customerDetails.firstName,
-        lastName: customerDetails.lastName,
-        email: customerDetails.email,
-        phone: customerDetails.phone,
-        address: {
-          line1: customerDetails.address1,
-          line2: customerDetails.address2,
-          city: customerDetails.city,
-          state: customerDetails.postcode, // Using postcode as state for UK
-          postalCode: customerDetails.postcode,
-          country: customerDetails.country
-        }
-      };
+      setIsLoading(true);
+      const customerInfo = buildCustomerInfoPayload();
+      const orderItems = mapOrderItemsPayload();
 
-      // Convert cart items to order items
-      const orderItems = items.map(item => ({
-        bookId: item.book.id,
-        quantity: item.quantity,
-        price: item.book.price,
-        book: item.book
-      }));
+      const order = await createServerOrder({
+        items: orderItems,
+        customer: customerInfo,
+        paymentMethod: 'paypal'
+      });
 
-      // Create order in new system
-      const order = await OrderManagementService.createOrder(
-        orderItems,
-        customerInfo,
-        'paypal'
-      );
-
-      // Create legacy order for PayPal URL generation
       const legacyOrder: Order = {
         orderId: order.id,
         customerDetails,
@@ -253,12 +332,13 @@ export default function CheckoutPage() {
 
           if (event.data.type === 'PAYPAL_PAYMENT_SUCCESS') {
             try {
-              // Confirm payment in new system
-              await OrderManagementService.confirmPayment(order.id);
+              await patchServerOrder(order.id, { action: 'confirm_payment' });
               
               // Update legacy order status to paid
               updateOrderStatus(order.id, 'paid', event.data.transactionId);
               
+              setCheckoutCompleted(true);
+              setAbandonmentTracked(true);
               clearCart();
               window.location.href = `/order-complete?orderId=${order.id}`;
             } catch (error) {
@@ -287,6 +367,8 @@ export default function CheckoutPage() {
     } catch (error) {
       console.error('Error creating PayPal order:', error);
       setErrors(['Failed to create order. Please try again.']);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -640,8 +722,9 @@ export default function CheckoutPage() {
                       onError={handleStripeError}
                       onCancel={() => setStep('address')}
                       customerEmail={customerDetails.email}
-                      orderId={generateOrderId()}
+                      orderId={stripeReference}
                       items={items}
+                      clientSecret={clientSecret}
                     />
                   </Elements>
                 )}
@@ -746,5 +829,24 @@ export default function CheckoutPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+function CheckoutLoading() {
+  return (
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <div className="text-center text-white/80 space-y-2">
+        <p className="text-lg font-semibold">Preparing checkout…</p>
+        <p className="text-sm text-white/60">Loading your basket and available payment options.</p>
+      </div>
+    </div>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={<CheckoutLoading />}>
+      <CheckoutContent />
+    </Suspense>
   );
 }

@@ -1,6 +1,48 @@
 export type ImageCandidate = { url: string; alt: string; caption?: string };
 
 const bySlug: Record<string, ImageCandidate[]> = {
+  'adolf-rohrbach-metal-aircraft-revolution': [
+    { url: '/blog-images/rohrbach-ro-ix-aircraft.jpg', alt: 'Rohrbach Ro IX all-metal transport demonstrator', caption: 'Rohrbach pioneered stressed-skin transports long before all-metal standards were commonplace.' },
+    { url: '/blog-images/metal-aircraft-construction.jpg', alt: 'Precision riveting in Rohrbach metal aircraft construction', caption: 'All-metal wing panels being riveted using Rohrbach’s patented fixtures.' },
+    { url: '/blog-images/rohrbach-roland.jpg', alt: 'Rohrbach Roland passenger aircraft', caption: 'Roland airliner illustrating Rohrbach’s large-span, corrugated-wing philosophy.' },
+    { url: '/blog-images/rohrbach-roland-flying-boat.jpg', alt: 'Roland flying boat operations', caption: 'Rohrbach flying boat moored for passenger transfer on Baltic routes.' }
+  ],
+  'hms-argus-first-aircraft-carrier-operations': [
+    { url: '/blog-images/hms-argus-first-aircraft-carrier-operations.jpg', alt: 'Argus deck crew positioning aircraft', caption: 'Flight deck teams rehearsing choreography for launch and recovery aboard HMS Argus.' },
+    { url: '/blog-images/hms-argus-dazzle.jpg', alt: 'Argus in dazzle camouflage alongside', caption: 'Operations phase showing Argus’s unique flush-deck silhouette without an island.' },
+    { url: '/blog-images/sopwith-pup-carrier-landing.jpg', alt: 'Sopwith Pup landing on carrier deck', caption: 'Early carrier trials with Sopwith Pups illustrated the precision demanded of Argus pilots.' },
+    { url: '/blog-images/hms-formidable-deck-operations.jpg', alt: 'Royal Navy deck crews managing aircraft', caption: 'Handling drills with chocks, lashing points, and firefighting crews on alert.' }
+  ],
+  'british-nuclear-deterrent-v-force': [
+    { url: '/blog-images/avro-vulcan-bomber.jpg', alt: 'Avro Vulcan B.2 bomber', caption: 'Vulcan B.2 on quick-reaction alert reflecting Britain’s airborne deterrent posture.' },
+    { url: '/blog-images/vulcan-bomber-formation.jpg', alt: 'Vulcan aerial formation', caption: 'V-force formation training to ensure dispersed, survivable launch plans.' },
+    { url: '/blog-images/handley-page-victor-bomber.jpg', alt: 'Handley Page Victor tanker/bomber', caption: 'Victor demonstrating crescent wing geometry optimised for high-altitude cruise.' },
+    { url: '/blog-images/vickers-valiant-bomber.jpg', alt: 'Vickers Valiant bomber', caption: 'Valiant representing the first of the V-bombers to enter RAF service.' }
+  ],
+  'helicopter-development-pioneers': [
+    { url: '/blog-images/cierva-autogyro-c4.jpg', alt: 'Cierva C.4 autogyro trials', caption: 'Cierva’s C.4 demonstrating stabilised autorotation in 1923.' },
+    { url: '/blog-images/cierva-autogyro-duxford.jpg', alt: 'Cierva autogyro display at Duxford', caption: 'Autogyro heritage linking Spanish innovation to British rotary craft.' },
+    { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300 prototype hover', caption: 'Igor Sikorsky’s VS-300 establishing the single-main-rotor template.' },
+    { url: '/blog-images/sikorsky-vs300-igor-sikorsky.jpg', alt: 'Igor Sikorsky with VS-300', caption: 'The pioneer whose work bridged prototypes to practical service helicopters.' }
+  ],
+  'lucy-lady-houston-schneider-trophy': [
+    { url: '/blog-images/lucy-lady-houston.jpg', alt: 'Lucy, Lady Houston portrait', caption: 'Lucy, Lady Houston, whose patronage sustained Britain’s Schneider Trophy effort.' },
+    { url: '/blog-images/schneider-s6b-schneider-trophy.jpg', alt: 'Supermarine S.6B winning aircraft', caption: 'S.6B racing at full power during the 1931 Schneider Trophy victory.' },
+    { url: '/blog-images/supermarine-s6b-museum.jpg', alt: 'Preserved Supermarine S.6B', caption: 'Museum display of the S.6B linking trophy triumph to the Spitfire lineage.' },
+    { url: '/blog-images/schneider-trophy-1931.jpg', alt: 'Schneider Trophy race start line', caption: 'Crowds along the Solent watching Britain secure the final trophy outright.' }
+  ],
+  'percy-pilcher-scotland-aviation-pioneer': [
+    { url: '/blog-images/percy-pilcher-hawk-glider.jpg', alt: 'Percy Pilcher Hawk glider on hillside', caption: 'Pilcher preparing the Hawk glider on Scottish uplands.' },
+    { url: '/blog-images/percy-pilcher-glider-experiments.jpg', alt: 'Pilcher glider experiments', caption: 'Workshop experiments refining wing bracing on Pilcher’s machines.' },
+    { url: '/blog-images/percy-pilcher-portrait-engineer.jpg', alt: 'Portrait of Percy Pilcher', caption: 'Pilcher documented as engineer-inventor ahead of powered flight.' },
+    { url: '/blog-images/percy-pilcher-with-glider.jpg', alt: 'Pilcher beside glider airframe', caption: 'Demonstrating structural refinements learned from Lilienthal and Chanute.' }
+  ],
+  'rotorcraft-military-applications': [
+    { url: '/blog-images/sikorsky-r4-helicopter.jpg', alt: 'Sikorsky R-4 in military service', caption: 'R-4 demonstrating the first helicopter combat rescue capability.' },
+    { url: '/blog-images/sikorsky-vs300-test.jpg', alt: 'VS-300 test hovering tethered', caption: 'VS-300 proving control concepts adopted by later military rotorcraft.' },
+    { url: '/blog-images/helicopter-development-timeline.jpg', alt: 'Rotorcraft development timeline', caption: 'Technical evolution from autogyros to turbine rotorcraft.' },
+    { url: '/blog-images/bristol-sycamore-formation.jpg', alt: 'Bristol Sycamore formation flight', caption: 'RAF Sycamores defining post-war rotary support roles.' }
+  ],
   'hms-argus-first-aircraft-carrier': [
     { url: '/blog-images/hms-argus-aircraft-carrier.jpg', alt: 'HMS Argus full-length flight deck' },
     { url: '/blog-images/hms-argus-dazzle-camouflage.jpg', alt: 'HMS Argus dazzle camouflage' },
@@ -60,6 +102,12 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300' },
     { url: '/blog-images/bristol-sycamore.jpg', alt: 'Bristol Sycamore' },
     { url: '/blog-images/helicopter-development-timeline.jpg', alt: 'Helicopter development timeline' }
+  ],
+  'arado-ar234-jet-bomber': [
+    { url: '/blog-images/arado-ar234-jet-bomber.jpg', alt: 'Arado Ar 234 jet bomber' },
+    { url: '/blog-images/me262-jet-fighter-historical.jpg', alt: 'Me 262 jet fighter context' },
+    { url: '/blog-images/fw190-d9-luftwaffe-1945.jpg', alt: 'Fw 190 D-9 late-war Luftwaffe fighter' },
+    { url: '/blog-images/do335-pfeil-experimental-fighter.jpg', alt: 'Dornier Do 335 Pfeil experimental fighter' }
   ],
   'albatros-dva-technical-legacy': [
     { url: '/blog-images/albatros-dva-wwi-german.jpg', alt: 'Albatros D.Va German fighter' },

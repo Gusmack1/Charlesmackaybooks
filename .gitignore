@@ -59,6 +59,9 @@ pids
 *.pid
 *.seed
 *.pid.lock
+data/dev-cart.json
+data/orders.json
+data/abandoned-carts.json
 
 # Coverage directory used by tools like istanbul
 coverage/

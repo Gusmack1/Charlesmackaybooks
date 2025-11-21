@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import { X, ShoppingBag } from 'lucide-react'
 import Image from 'next/image'
@@ -18,6 +19,13 @@ export default function CartSidebar() {
     getShippingCost,
     getFinalTotal
   } = useCart()
+  const router = useRouter()
+
+  const startCheckout = (method: 'stripe' | 'paypal' = 'stripe') => {
+    const url = method === 'paypal' ? '/checkout?method=paypal' : '/checkout?method=stripe'
+    router.push(url)
+    setIsCartOpen(false)
+  }
 
   if (!isCartOpen) return null
 
@@ -49,6 +57,7 @@ export default function CartSidebar() {
             <button
               onClick={() => setIsCartOpen(false)}
               className="rounded-lg p-2 hover:bg-gray-50"
+              aria-label="Close basket"
             >
               <X className="h-5 w-5 text-primary" />
             </button>
@@ -139,29 +148,23 @@ export default function CartSidebar() {
 
               <div className="mt-4 space-y-2">
                 <button
-                  onClick={() => {
-                    // Navigate to checkout page
-                    window.location.href = '/checkout'
-                  }}
+                  onClick={() => startCheckout('stripe')}
                   className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                 >
-                  Proceed to Checkout
+                  Secure Checkout (Card / Wallet)
                 </button>
                 <button
-                  onClick={() => {
-                    // Track eBay click for analytics
-                    if (typeof window !== 'undefined' && window.gtag) {
-                      window.gtag('event', 'click', {
-                        event_category: 'External Link',
-                        event_label: 'eBay Store'
-                      })
-                    }
-                    window.open('https://www.ebay.co.uk/usr/chaza87', '_blank')
-                  }}
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  onClick={() => startCheckout('paypal')}
+                  className="w-full bg-yellow-500 text-slate-900 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors"
                 >
-                  Buy All on eBay
+                  Express Pay with PayPal
                 </button>
+                <div className="rounded-lg border border-dashed border-gray-200 p-3 text-xs text-gray-600">
+                  <p className="font-semibold text-gray-800">New: Apple Pay & Google Pay</p>
+                  <p>
+                    Choose the card option on the next step to use instant wallets, or select PayPal for account checkout.
+                  </p>
+                </div>
               </div>
             </div>
           )}

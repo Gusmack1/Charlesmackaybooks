@@ -27,23 +27,6 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
     }, 500);
   };
 
-  const handleEbayClick = () => {
-    // Track eBay redirect with new analytics system
-    trackEbayRedirect(book.title);
-
-    // Track source context for better insights
-    trackAviationEvent('ebay_click_from_card', {
-      book_id: book.id,
-      book_title: book.title,
-      category: book.category,
-      source_context: sourceContext,
-      price: book.price,
-      event_label: 'external_purchase_intent'
-    });
-
-    window.open(book.ebayUrl || `https://www.ebay.co.uk/usr/chaza87`, '_blank');
-  };
-
   const handleBookClick = () => {
     // Track book view with context of where the click came from
     trackBookView({
@@ -64,6 +47,13 @@ export default function BookCard({ book, sourceContext = 'unknown' }: BookCardPr
       price: book.price,
       event_label: 'book_detail_navigation'
     });
+  };
+
+  const handleEbayClick = () => {
+    trackEbayRedirect(book.title);
+    if (typeof window !== 'undefined') {
+      window.open('https://www.ebay.co.uk/usr/chaza87', '_blank', 'noopener,noreferrer');
+    }
   };
 
   const generatePayPalUrl = (book: Book) => {

@@ -8,11 +8,13 @@
 
 const fs = require('fs');
 const path = require('path');
+const ts = require('typescript');
 
 const ROOT = process.cwd();
 const BLOG_DIR = path.join(ROOT, 'src', 'app', 'blog');
 const APPROVALS_PATH = path.join(ROOT, 'data', 'image-approvals.json');
 const OUTPUT_PATH = path.join(ROOT, 'data', 'blog-assets-audit.json');
+const MANIFEST_PATH = path.join(ROOT, 'src', 'data', 'blogImageManifest.ts');
 const TARGET_SLUGS = process.argv.slice(2).map((arg) => arg.toLowerCase());
 
 function readFileSafe(p) {
@@ -44,6 +46,20 @@ function extractFeaturedUrl(source) {
 
 function countPlaceholders(source) {
   return (source.match(/\/blog-images\/default-generic\.svg/g) || []).length;
+}
+
+function extractCategory(source) {
+  const match = source.match(/category\s*:\s*['"]([^'"]+)['"]/);
+  return match ? match[1] : '';
+}
+
+function extractTags(source) {
+  const tagsMatch = source.match(/tags\s*:\s*\[([^\]]+)\]/);
+  if (!tagsMatch) return [];
+  return tagsMatch[1]
+    .split(',')
+    .map((token) => token.replace(/['"`]/g, '').trim())
+    .filter(Boolean);
 }
 
 function loadApprovals() {
@@ -81,6 +97,39 @@ function resolveSlugs(allSlugs) {
   return { slugs: [...new Set(resolved)], missing };
 }
 
+const manifestApi = loadManifest();
+
+function loadManifest() {
+  const source = readFileSafe(MANIFEST_PATH);
+  if (!source) return null;
+  try {
+    const transpiled = ts.transpileModule(source, {
+      compilerOptions: {
+        module: ts.ModuleKind.CommonJS,
+        esModuleInterop: true,
+      },
+    });
+    const module = { exports: {} };
+    const fn = new Function('exports', 'require', 'module', '__filename', '__dirname', transpiled.outputText);
+    fn(module.exports, require, module, MANIFEST_PATH, path.dirname(MANIFEST_PATH));
+    return module.exports;
+  } catch (err) {
+    console.warn('Failed to load blogImageManifest.ts:', err.message);
+    return null;
+  }
+}
+
+function getManifestCandidates(slug, category, tags) {
+  if (!manifestApi || typeof manifestApi.getImageCandidates !== 'function') {
+    return [];
+  }
+  try {
+    return manifestApi.getImageCandidates(slug, category, tags) || [];
+  } catch {
+    return [];
+  }
+}
+
 function ensureDataDir() {
   if (!fs.existsSync(path.dirname(OUTPUT_PATH))) {
     fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
@@ -106,11 +155,19 @@ function main() {
     if (!source) continue;
     const stats = getApprovalStats(approvals, slug);
     const featuredUrl = extractFeaturedUrl(source);
+    const category = extractCategory(source);
+    const tags = extractTags(source);
+    const manifestCandidates = getManifestCandidates(slug, category, tags);
+    const hasManifestCoverage = manifestCandidates.length > 0;
+    const featuredIsFallback = featuredUrl.trim() === '/blog-images/default-generic.svg';
+    const resolvedPlaceholders = hasManifestCoverage ? 0 : countPlaceholders(source);
+
     report.push({
       slug,
-      featuredUrl,
-      featuredIsDefault: featuredUrl.trim() === '/blog-images/default-generic.svg',
-      placeholdersInContent: countPlaceholders(source),
+      featuredUrl: hasManifestCoverage ? manifestCandidates[0].url : featuredUrl,
+      featuredIsDefault: featuredIsFallback && !hasManifestCoverage,
+      placeholdersInContent: resolvedPlaceholders,
+      manifestCandidateCount: manifestCandidates.length,
       approvedCount: stats.approvedCount,
       requiredCount: stats.requiredCount,
       pendingCount: stats.pendingCount,

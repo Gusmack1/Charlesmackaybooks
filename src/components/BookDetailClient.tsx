@@ -12,7 +12,7 @@ interface BookDetailClientProps {
 export default function BookDetailClient({ book }: BookDetailClientProps) {
   const { addToCart, openBasket } = useCart();
   const [isAddingToCart, setIsAddingToCart] = useState(false);
-  const { trackEbayRedirect, trackContactEmail } = useAnalytics();
+  const { trackContactEmail, trackEbayRedirect } = useAnalytics();
 
   const handleAddToCart = () => {
     setIsAddingToCart(true);
@@ -23,14 +23,13 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
     }, 500);
   };
 
-  const handleEbayClick = () => {
-    // Track eBay redirect analytics
-    trackEbayRedirect(book.title);
-  };
-
   const handleEmailClick = () => {
     // Track email click analytics
     trackContactEmail();
+  };
+
+  const handleEbayClick = () => {
+    trackEbayRedirect(book.title);
   };
 
   const generatePayPalUrl = (book: Book) => {

@@ -1,5 +1,16 @@
+import { promises as fs } from 'fs';
+import path from 'path';
 import { Book } from '@/types/book';
 import { books } from '@/data/books';
+
+const DATA_DIR = path.join(process.cwd(), 'data');
+const ORDERS_FILE = path.join(DATA_DIR, 'orders.json');
+
+type SerializableOrder = Omit<Order, 'createdAt' | 'updatedAt' | 'estimatedDelivery'> & {
+  createdAt: string;
+  updatedAt: string;
+  estimatedDelivery?: string;
+};
 
 export interface OrderItem {
   bookId: string;
@@ -610,6 +621,64 @@ View order: https://charlesmackaybooks.com/admin/orders/
 // Order Management Service
 export class OrderManagementService {
   private static orders: Order[] = [];
+  private static initialized = false;
+
+  private static async ensureInitialized() {
+    if (this.initialized) {
+      return;
+    }
+    await this.loadOrdersFromDisk();
+    this.initialized = true;
+  }
+
+  private static hydrateOrder(order: SerializableOrder): Order {
+    return {
+      ...order,
+      createdAt: new Date(order.createdAt),
+      updatedAt: new Date(order.updatedAt),
+      estimatedDelivery: order.estimatedDelivery ? new Date(order.estimatedDelivery) : undefined
+    };
+  }
+
+  private static serializeOrder(order: Order): SerializableOrder {
+    return {
+      ...order,
+      createdAt: order.createdAt.toISOString(),
+      updatedAt: order.updatedAt.toISOString(),
+      estimatedDelivery: order.estimatedDelivery ? order.estimatedDelivery.toISOString() : undefined
+    };
+  }
+
+  private static async ensureDataDir() {
+    await fs.mkdir(DATA_DIR, { recursive: true });
+  }
+
+  private static async loadOrdersFromDisk() {
+    try {
+      await this.ensureDataDir();
+      const data = await fs.readFile(ORDERS_FILE, 'utf8');
+      const parsed: SerializableOrder[] = JSON.parse(data);
+      this.orders = parsed.map(order => this.hydrateOrder(order));
+    } catch (error: any) {
+      if (error && error.code === 'ENOENT') {
+        this.orders = [];
+        await this.persistOrders();
+      } else {
+        console.error('Failed to load orders from disk:', error);
+        this.orders = [];
+      }
+    }
+  }
+
+  private static async persistOrders() {
+    try {
+      await this.ensureDataDir();
+      const serialized = this.orders.map(order => this.serializeOrder(order));
+      await fs.writeFile(ORDERS_FILE, JSON.stringify(serialized, null, 2), 'utf8');
+    } catch (error) {
+      console.error('Failed to persist orders:', error);
+    }
+  }
 
   static async createOrder(
     items: OrderItem[],
@@ -618,6 +687,7 @@ export class OrderManagementService {
     paymentIntentId?: string,
     paypalOrderId?: string
   ): Promise<Order> {
+    await this.ensureInitialized();
     // Validate order
     const validation = validateOrder(items, customer);
     if (!validation.valid) {
@@ -659,10 +729,12 @@ export class OrderManagementService {
     // Send admin notification for new order
     await EmailService.sendAdminNotification(order, 'new_order');
 
+    await this.persistOrders();
     return order;
   }
 
   static async confirmPayment(orderId: string, paymentIntentId?: string): Promise<Order> {
+    await this.ensureInitialized();
     const order = this.orders.find(o => o.id === orderId);
     if (!order) {
       throw new Error('Order not found');
@@ -684,10 +756,12 @@ export class OrderManagementService {
       await EmailService.sendAdminNotification(order, 'payment_received');
     }
 
+    await this.persistOrders();
     return order;
   }
 
   static async processOrder(orderId: string): Promise<Order> {
+    await this.ensureInitialized();
     const order = this.orders.find(o => o.id === orderId);
     if (!order) {
       throw new Error('Order not found');
@@ -700,10 +774,12 @@ export class OrderManagementService {
     order.status = 'processing';
     order.updatedAt = new Date();
 
+    await this.persistOrders();
     return order;
   }
 
   static async dispatchOrder(orderId: string, trackingNumber?: string): Promise<Order> {
+    await this.ensureInitialized();
     const order = this.orders.find(o => o.id === orderId);
     if (!order) {
       throw new Error('Order not found');
@@ -722,10 +798,12 @@ export class OrderManagementService {
     await EmailService.sendDispatchConfirmation(order);
     order.emailNotifications.dispatchConfirmation = true;
 
+    await this.persistOrders();
     return order;
   }
 
   static async shipOrder(orderId: string, trackingNumber?: string): Promise<Order> {
+    await this.ensureInitialized();
     const order = this.orders.find(o => o.id === orderId);
     if (!order) {
       throw new Error('Order not found');
@@ -740,10 +818,12 @@ export class OrderManagementService {
     await EmailService.sendShippingConfirmation(order);
     order.emailNotifications.shippingConfirmation = true;
 
+    await this.persistOrders();
     return order;
   }
 
   static async deliverOrder(orderId: string): Promise<Order> {
+    await this.ensureInitialized();
     const order = this.orders.find(o => o.id === orderId);
     if (!order) {
       throw new Error('Order not found');
@@ -756,10 +836,12 @@ export class OrderManagementService {
     await EmailService.sendDeliveryConfirmation(order);
     order.emailNotifications.deliveryConfirmation = true;
 
+    await this.persistOrders();
     return order;
   }
 
   static async cancelOrder(orderId: string, reason?: string): Promise<Order> {
+    await this.ensureInitialized();
     const order = this.orders.find(o => o.id === orderId);
     if (!order) {
       throw new Error('Order not found');
@@ -771,10 +853,12 @@ export class OrderManagementService {
     order.notes = reason;
     order.updatedAt = new Date();
 
+    await this.persistOrders();
     return order;
   }
 
   static async syncOrder(order: Order): Promise<Order> {
+    await this.ensureInitialized();
     // Check if order already exists
     const existingOrder = this.orders.find(o => o.id === order.id);
     if (existingOrder) {
@@ -814,6 +898,7 @@ export class OrderManagementService {
         }
       }
       
+      await this.persistOrders();
       return existingOrder;
     }
 
@@ -827,18 +912,22 @@ export class OrderManagementService {
 
     // Add new order
     this.orders.push(syncedOrder);
+    await this.persistOrders();
     return syncedOrder;
   }
 
   static async getOrder(orderId: string): Promise<Order | null> {
+    await this.ensureInitialized();
     return this.orders.find(o => o.id === orderId) || null;
   }
 
   static async getOrdersByEmail(email: string): Promise<Order[]> {
+    await this.ensureInitialized();
     return this.orders.filter(o => o.customer.email === email);
   }
 
   static async getAllOrders(): Promise<Order[]> {
+    await this.ensureInitialized();
     return [...this.orders];
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Order } from '@/utils/orderManagement';
+import type { Order } from '@/utils/orderManagement';
 import { getAllOrdersFromLocalStorage } from '@/utils/orderSync';
 
 interface AdminOrdersClientProps {}
@@ -277,7 +277,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
                 postcode: newOrder.customer.address.postalCode,
                 country: newOrder.customer.address.country,
               },
-              items: newOrder.items.map(item => ({
+              items: newOrder.items.map((item: Order['items'][number]) => ({
                 id: item.bookId || item.book?.id,
                 title: item.book?.title || '',
                 price: item.price,

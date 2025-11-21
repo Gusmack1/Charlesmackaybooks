@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 import { Book } from '@/types/book';
 import { trackAddToCart } from '@/components/GoogleAnalytics';
 
@@ -31,11 +31,15 @@ interface CartContextType {
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
+const DEV_CART_SEED =
+  process.env.NEXT_PUBLIC_DEV_CART_SEED === 'true' ||
+  (process.env.NODE_ENV !== 'production' && process.env.NEXT_PUBLIC_DEV_CART_SEED !== 'false');
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isBasketOpen, setIsBasketOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const seedAttempted = useRef(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -60,6 +64,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
       window.dispatchEvent(new CustomEvent('cartUpdated', { detail: items }));
     }
   }, [items, isClient]);
+
+  useEffect(() => {
+    if (!DEV_CART_SEED || seedAttempted.current || items.length > 0 || !isClient || typeof window === 'undefined') {
+      return;
+    }
+    seedAttempted.current = true;
+    fetch('/api/dev-cart')
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data) => {
+        if (!data?.items?.length) return;
+        setItems(data.items);
+        console.info(`[cart] Seeded ${data.items.length} dev item(s) from /api/dev-cart`);
+      })
+      .catch((error) => {
+        console.warn('[cart] Failed to seed dev cart', error);
+      });
+  }, [items.length, isClient]);
 
   const addToCart = (book: Book) => {
     if (!isClient) return;

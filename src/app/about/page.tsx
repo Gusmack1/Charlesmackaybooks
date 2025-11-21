@@ -102,7 +102,7 @@ export default function AboutPage() {
         pageType="page"
         pageTitle="About Charles E. MacKay"
         pageDescription="Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history."
-        pageUrl="/about/"
+        pageUrl="/about"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 

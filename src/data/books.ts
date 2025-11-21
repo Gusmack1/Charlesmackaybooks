@@ -9,7 +9,7 @@ export const books: Book[] = [
     category: 'WWII Aviation',
     condition: 'New',
     inStock: true,
-    description: 'Coming soon',
+    description: 'Pre-order the definitive continuation of Charles E. MacKay’s Luftwaffe history project. Volume Two dissects late-war German fighter, bomber, and jet programs, combining newly translated factory correspondence, operational records, and eyewitness maintenance notes to explain how fuel starvation, pilot attrition, and rushed weapons schemes doomed the Reich’s aerial defense in 1944–45. Detailed appendices document production totals, losses, and technology transfers that foreshadowed the Cold War jet age.',
     imageUrl: '/book-covers/this-was-the-enemy-volume-two.jpg',
     tags: ['WWII', 'Luftwaffe', 'German Aircraft', 'Military Aviation'],
     pageCount: 296,
@@ -777,3 +777,7 @@ export const categoryDescriptions: Record<string, string> = {
   'Industrial History': 'Industrial development and manufacturing',
   'Travel Literature': 'Historical travel accounts and literature'
 };
+
+
+
+
