@@ -14,7 +14,8 @@
     "images:refresh": "node scripts/refresh-blog-images.cjs",
     "validate:images": "node scripts/validate-image-approvals.cjs",
     "images:localize": "node scripts/localize-approved-images.cjs",
-    "seed:cart": "node scripts/seed-cart.cjs"
+    "seed:cart": "node scripts/seed-cart.cjs",
+    "verify:bookinfo": "node scripts/check-book-reference.cjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
