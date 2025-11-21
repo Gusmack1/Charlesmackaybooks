@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
-import books from '@/data/books'
+import { books } from '@/data/books'
 import { getNewsArticles } from '@/lib/newsroom'
 
 export const dynamic = 'force-dynamic'
