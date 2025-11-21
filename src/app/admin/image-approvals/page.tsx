@@ -79,39 +79,44 @@ export default function ImageApprovalsPage() {
                 <div className="text-sm text-slate-300">Approved {approved}/{rec.requiredCount}</div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {rec.candidates.map((c, idx) => (
+                {rec.candidates.map((c, idx) => {
+                  const baseId = `${slug}-candidate-${idx}`;
+                  return (
                   <div key={idx} className="border border-slate-700 bg-slate-900/30 rounded p-3">
                     <div className="flex items-center gap-3 mb-3">
-                      <input type="checkbox" checked={c.approved} onChange={() => toggleApproved(slug, idx)} />
+                      <div className="flex items-center gap-2">
+                        <input id={`${baseId}-approved`} type="checkbox" checked={c.approved} onChange={() => toggleApproved(slug, idx)} />
+                        <label htmlFor={`${baseId}-approved`} className="text-sm">Approved</label>
+                      </div>
                       <button className={`px-2 py-1 rounded ${rec.approvedFeaturedIndex === idx ? 'bg-green-600 text-white' : 'bg-slate-700 text-white hover:bg-slate-600'}`} onClick={() => setFeatured(slug, idx)}>
                         {rec.approvedFeaturedIndex === idx ? 'Featured' : 'Set as Featured'}
                       </button>
                     </div>
                     <div className="mb-3">
-                      <label className="block text-sm mb-1">Image URL</label>
-                      <input className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.url} onChange={e => updateField(slug, idx, 'url', e.target.value)} placeholder="https://..." />
+                      <label className="block text-sm mb-1" htmlFor={`${baseId}-url`}>Image URL</label>
+                      <input id={`${baseId}-url`} className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.url} onChange={e => updateField(slug, idx, 'url', e.target.value)} placeholder="https://..." />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                       <div>
-                        <label className="block text-sm mb-1">Source</label>
-                        <input className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.source} onChange={e => updateField(slug, idx, 'source', e.target.value)} placeholder="commons.wikimedia.org/..." />
+                        <label className="block text-sm mb-1" htmlFor={`${baseId}-source`}>Source</label>
+                        <input id={`${baseId}-source`} className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.source} onChange={e => updateField(slug, idx, 'source', e.target.value)} placeholder="commons.wikimedia.org/..." />
                       </div>
                       <div>
-                        <label className="block text-sm mb-1">License</label>
-                        <input className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.license} onChange={e => updateField(slug, idx, 'license', e.target.value)} placeholder="CC BY-SA 4.0 / Public Domain" />
+                        <label className="block text-sm mb-1" htmlFor={`${baseId}-license`}>License</label>
+                        <input id={`${baseId}-license`} className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.license} onChange={e => updateField(slug, idx, 'license', e.target.value)} placeholder="CC BY-SA 4.0 / Public Domain" />
                       </div>
                     </div>
                     <div className="mb-3">
-                      <label className="block text-sm mb-1">Title</label>
-                      <input className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.title} onChange={e => updateField(slug, idx, 'title', e.target.value)} />
+                      <label className="block text-sm mb-1" htmlFor={`${baseId}-title`}>Title</label>
+                      <input id={`${baseId}-title`} className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.title} onChange={e => updateField(slug, idx, 'title', e.target.value)} placeholder="Historical description" />
                     </div>
                     <div className="mb-3">
-                      <label className="block text-sm mb-1">Alt</label>
-                      <input className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.alt} onChange={e => updateField(slug, idx, 'alt', e.target.value)} />
+                      <label className="block text-sm mb-1" htmlFor={`${baseId}-alt`}>Alt</label>
+                      <input id={`${baseId}-alt`} className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.alt} onChange={e => updateField(slug, idx, 'alt', e.target.value)} placeholder="Concise alt text" />
                     </div>
                     <div className="mb-3">
-                      <label className="block text-sm mb-1">Caption</label>
-                      <textarea className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.caption || ''} onChange={e => updateField(slug, idx, 'caption', e.target.value)} />
+                      <label className="block text-sm mb-1" htmlFor={`${baseId}-caption`}>Caption</label>
+                      <textarea id={`${baseId}-caption`} className="w-full border border-slate-600 bg-slate-800 text-white placeholder-slate-400 rounded p-2" value={c.caption || ''} onChange={e => updateField(slug, idx, 'caption', e.target.value)} placeholder="Optional caption visible to readers" />
                     </div>
                     {c.url && (
                       <div className="aspect-video bg-slate-800 rounded overflow-hidden border border-slate-700">
@@ -119,7 +124,7 @@ export default function ImageApprovalsPage() {
                       </div>
                     )}
                   </div>
-                ))}
+                )})}
               </div>
               <div className="mt-3">
                 <button onClick={() => addCandidate(slug)} className="px-3 py-2 rounded bg-slate-700 text-white hover:bg-slate-600">Add candidate</button>
