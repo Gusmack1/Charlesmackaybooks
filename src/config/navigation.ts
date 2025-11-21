@@ -9,6 +9,7 @@ export const primaryNavLinks: NavLinkItem[] = [
   { label: 'Shop Books', href: '/books' },
   { label: 'Categories', href: '/categories' },
   { label: 'Blog', href: '/blog' },
+  { label: 'Newsroom', href: '/news' },
   { label: 'Scottish Timeline', href: '/scottish-aviation-timeline' },
   { label: 'For Researchers', href: '/for-researchers' },
   { label: 'How to Order', href: '/how-to-order' },
