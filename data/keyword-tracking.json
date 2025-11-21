@@ -1,0 +1,44 @@
+{
+  "lastUpdated": "2025-11-21T18:45:00Z",
+  "defaultWindowDays": 7,
+  "propertyUrl": "https://charlesmackaybooks.com/",
+  "notes": "Each entry links a priority keyword to a canonical page. Update this list whenever we launch new campaigns or books.",
+  "keywords": [
+    {
+      "keyword": "Scottish aviation history books",
+      "targetUrl": "https://charlesmackaybooks.com/books",
+      "contentType": "books-hub",
+      "bookId": null,
+      "priority": "tier-1"
+    },
+    {
+      "keyword": "Charles e Mackay Luftwaffe research",
+      "targetUrl": "https://charlesmackaybooks.com/books/this-was-the-enemy-volume-two",
+      "contentType": "book-detail",
+      "bookId": "this-was-the-enemy-volume-two",
+      "priority": "tier-1"
+    },
+    {
+      "keyword": "Beardmore aviation history",
+      "targetUrl": "https://charlesmackaybooks.com/books/beardmore-aviation",
+      "contentType": "book-detail",
+      "bookId": "beardmore-aviation",
+      "priority": "tier-2"
+    },
+    {
+      "keyword": "RAF Lossiemouth heritage",
+      "targetUrl": "https://charlesmackaybooks.com/blog/raf-lossiemouth-heritage",
+      "contentType": "blog",
+      "bookId": "sabres-from-north",
+      "priority": "tier-2"
+    },
+    {
+      "keyword": "Scottish helicopter pioneers",
+      "targetUrl": "https://charlesmackaybooks.com/books/sycamore-seeds",
+      "contentType": "book-detail",
+      "bookId": "sycamore-seeds",
+      "priority": "tier-3"
+    }
+  ]
+}
+

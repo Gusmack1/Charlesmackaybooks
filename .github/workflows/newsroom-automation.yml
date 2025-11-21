@@ -1,0 +1,198 @@
+name: Newsroom Automation
+
+on:
+  schedule:
+    - cron: '15 5 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: newsroom-automation
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  ingest-and-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GOOGLE_SEARCH_CONSOLE_KEY: ${{ secrets.NEWSROOM_GSC_KEY || '' }}
+      GOOGLE_SEARCH_CONSOLE_PROPERTY: ${{ secrets.NEWSROOM_GSC_PROPERTY || 'https://charlesmackaybooks.com/' }}
+    outputs:
+      artifact-name: ${{ steps.meta.outputs.artifact-name }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run news ingestion
+        run: npm run news:ingest
+
+      - name: Draft newsroom article
+        run: npm run news:draft
+
+      - name: Generate automation report
+        run: npm run news:report -- --output reports/automation/latest.json
+
+      - name: Generate keyword dashboard
+        if: env.GOOGLE_SEARCH_CONSOLE_KEY != ''
+        env:
+          GOOGLE_SEARCH_CONSOLE_KEY: ${{ env.GOOGLE_SEARCH_CONSOLE_KEY }}
+          GOOGLE_SEARCH_CONSOLE_PROPERTY: ${{ env.GOOGLE_SEARCH_CONSOLE_PROPERTY }}
+        run: npm run keywords:report
+
+      - name: Capture artifact name
+        id: meta
+        run: |
+          ARTIFACT_NAME=newsroom-automation-${GITHUB_RUN_ID}
+          echo "artifact-name=${ARTIFACT_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload newsroom artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.meta.outputs.artifact-name }}
+          retention-days: 14
+          path: |
+            data/news-ingest-log.json
+            data/news-queue.json
+            data/news-articles
+            reports/automation/latest.json
+            reports/keywords
+
+  notify:
+    needs: ingest-and-draft
+    if: always()
+    runs-on: ubuntu-latest
+    env:
+      SLACK_WEBHOOK: ${{ secrets.NEWSROOM_SLACK_WEBHOOK || '' }}
+    environment:
+      name: newsroom-automation
+      url: https://charlesmackaybooks.com/newsroom
+    steps:
+      - name: Determine artifact availability
+        id: artifact
+        env:
+          ARTIFACT_NAME: ${{ needs.ingest-and-draft.outputs.artifact-name }}
+        run: |
+          if [ -n "$ARTIFACT_NAME" ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "artifact=${ARTIFACT_NAME}" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download artifacts
+        if: steps.artifact.outputs.found == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ steps.artifact.outputs.artifact }}
+          path: automation-artifacts
+
+      - name: Parse automation report
+        if: steps.artifact.outputs.found == 'true'
+        id: report
+        run: |
+          node <<'NODE'
+          const fs = require('fs')
+          const path = require('path')
+          const reportPath = path.join('automation-artifacts', 'reports', 'automation', 'latest.json')
+          const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'))
+          const summaryLines = [
+            `## Newsroom automation (${report.generatedAt || 'unknown time'})`,
+            '',
+            report.summaryMarkdown || '- No summary generated.',
+            '',
+            `Alert level: **${report.alertLevel || 'ok'}**`,
+          ]
+          if (report.alertReasons && report.alertReasons.length) {
+            summaryLines.push('', 'Alert reasons:', ...report.alertReasons.map((reason) => `- ${reason}`))
+          }
+          fs.writeFileSync('report-summary.md', summaryLines.join('\n'))
+          fs.writeFileSync('report-alert.txt', report.alertLevel || 'ok')
+          NODE
+          ALERT_LEVEL=$(cat report-alert.txt)
+          echo "alert-level=$ALERT_LEVEL" >> "$GITHUB_OUTPUT"
+
+      - name: Append keyword dashboard
+        if: steps.artifact.outputs.found == 'true'
+        run: |
+          {
+            echo ""
+            echo "## Keyword dashboard"
+            if [ -f automation-artifacts/reports/keywords/latest.md ]; then
+              cat automation-artifacts/reports/keywords/latest.md
+            else
+              echo "_Keyword dashboard not generated (Search Console key not configured?)._"
+            fi
+          } >> report-summary.md
+
+      - name: Append run summary
+        if: steps.artifact.outputs.found == 'true'
+        run: cat report-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Summarise missing artifacts
+        if: steps.artifact.outputs.found != 'true'
+        run: |
+          echo "## Newsroom automation" >> "$GITHUB_STEP_SUMMARY"
+          echo "Ingest job failed before producing artifacts. Check the ingest-and-draft job logs." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create newsroom ticket
+        if: steps.artifact.outputs.found == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs')
+            const body = fs.readFileSync('report-summary.md', 'utf8')
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Daily newsroom digest – run ${context.runNumber}`,
+              body,
+              labels: ['newsroom', 'automation', 'digest']
+            })
+
+      - name: Send Slack digest
+        if: steps.artifact.outputs.found == 'true' && env.SLACK_WEBHOOK != ''
+        run: |
+          python - <<'PY'
+import json, pathlib
+summary = pathlib.Path('report-summary.md').read_text()
+pathlib.Path('slack-payload.json').write_text(json.dumps({"text": summary}))
+PY
+          curl -X POST -H 'Content-type: application/json' --data @slack-payload.json "$SLACK_WEBHOOK"
+
+      - name: Raise GitHub issue on warning
+        if: steps.artifact.outputs.found == 'true' && steps.report.outputs['alert-level'] == 'warning'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs')
+            const body = fs.readFileSync('report-summary.md', 'utf8')
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Newsroom automation alert – run ${context.runNumber}`,
+              body,
+              labels: ['newsroom', 'automation']
+            })
+
+      - name: Raise GitHub issue on ingestion failure
+        if: steps.artifact.outputs.found != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Newsroom automation failed before artifact upload – run ${context.runNumber}`,
+              body: 'The ingest-and-draft job did not complete successfully. Review workflow logs for details.',
+              labels: ['newsroom', 'automation', 'ci-failure']
+            })

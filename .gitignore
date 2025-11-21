@@ -62,6 +62,8 @@ pids
 data/dev-cart.json
 data/orders.json
 data/abandoned-carts.json
+reports/automation/
+reports/keywords/
 
 # Coverage directory used by tools like istanbul
 coverage/
@@ -101,3 +103,4 @@ output/
 CHARLES-MACKAY-*.zip
 final-deployment.zip
 production.zip
+secrets/

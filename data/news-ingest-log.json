@@ -1,0 +1,988 @@
+[
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/uk-launches-military-esports-games-to-boost-cyber-skills#2025-11-21T14:49:40Z",
+    "title": "UK launches military esports games to boost cyber skills",
+    "sourceUrl": "https://www.gov.uk/government/news/uk-launches-military-esports-games-to-boost-cyber-skills",
+    "summary": "Military personnel from over 40 nations compete to sharpen cyber skills through gaming applying lessons from Ukraine's use of gaming technology in warfare.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-21T14:49:40.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.411Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/gurkhas-lay-to-rest-unknown-war-hero#2025-11-21T13:40:13Z",
+    "title": "Gurkhas lay to rest unknown war hero",
+    "sourceUrl": "https://www.gov.uk/government/news/gurkhas-lay-to-rest-unknown-war-hero",
+    "summary": "The poignant burial of an unknown soldier of World War 2 took place today in Arezzo, Italy, with a bearer party from the Gurkhas carrying him to his final resting place.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-21T13:40:13.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/mod-workforce-management-information-january-to-december-2025#2025-11-21T12:05:16Z",
+    "title": "Transparency data: MOD: workforce management information January to December 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/mod-workforce-management-information-january-to-december-2025",
+    "summary": "Reports on departmental staff numbers and costs.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-21T12:05:16.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/ministry-of-defence-police-misconduct-hearings#2025-11-21T11:47:12Z",
+    "title": "Ministry of Defence Police: misconduct hearings",
+    "sourceUrl": "https://www.gov.uk/guidance/ministry-of-defence-police-misconduct-hearings",
+    "summary": "Find out about misconduct hearings involving Ministry of Defence Police (MDP) officers and how to attend these public hearings.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-21T11:47:12.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table#2025-11-21T09:55:34Z",
+    "title": "Regulation: Notice of authorised amendments (NAA) reference table",
+    "sourceUrl": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table",
+    "summary": "The NAA table provides information of changes in regulations and manuals and release date produced by the Military Aviation Authority (MAA).",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-21T09:55:34.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2025-documents#2025-11-21T09:52:51Z",
+    "title": "Regulation: Notice of authorised amendments (NAA) 2025 documents",
+    "sourceUrl": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2025-documents",
+    "summary": "Issuing of an NAA gives notice to the changes in regulations and manuals. Produced by the Military Aviation Authority (MAA).",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-21T09:52:51.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/manual-of-airworthiness-maintenance-documentation-mam-d#2025-11-21T09:52:15Z",
+    "title": "Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D)",
+    "sourceUrl": "https://www.gov.uk/government/publications/manual-of-airworthiness-maintenance-documentation-mam-d",
+    "summary": "The MAM-D is a comprehensive list of Defence Aviation Environment engineering documentation, processes and Instructions for Use.",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-21T09:52:15.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/100-new-jobs-created-as-drone-factory-opens-in-swindon#2025-11-20T18:00:00Z",
+    "title": "100 new jobs created as drone factory opens in Swindon",
+    "sourceUrl": "https://www.gov.uk/government/news/100-new-jobs-created-as-drone-factory-opens-in-swindon",
+    "summary": "Factory will build next-generation uncrewed systems and loitering munitions.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T18:00:00.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/chickerell-firing-times#2025-11-20T16:02:57Z",
+    "title": "Guidance: Chickerell firing times",
+    "sourceUrl": "https://www.gov.uk/government/publications/chickerell-firing-times",
+    "summary": "Warning notice of firing at Chickerell range.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T16:02:57.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/dartmoor-firing-programme#2025-11-20T15:57:55Z",
+    "title": "Guidance: Dartmoor firing times",
+    "sourceUrl": "https://www.gov.uk/government/publications/dartmoor-firing-programme",
+    "summary": "Information on Dartmoor Training Area's firing times.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T15:57:55.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/sennybridge-firing-notice#2025-11-20T15:46:16Z",
+    "title": "Guidance: Sennybridge firing notice",
+    "sourceUrl": "https://www.gov.uk/government/publications/sennybridge-firing-notice",
+    "summary": "Monthly firing times for Sennybridge Training Area.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T15:46:16.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/introduction-to-bowtie-methodology-course#2025-11-20T15:09:59Z",
+    "title": "Guidance: Introduction to BowTie methodology course",
+    "sourceUrl": "https://www.gov.uk/government/publications/introduction-to-bowtie-methodology-course",
+    "summary": "This Military Aviation Authority Centre of Air Safety Training enables delegates to gain a basic awareness of BowTies and associated processes.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T15:09:59.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/new-energetics-factories-for-the-uk#2025-11-20T13:39:59Z",
+    "title": "New energetics factories for the UK",
+    "sourceUrl": "https://www.gov.uk/guidance/new-energetics-factories-for-the-uk",
+    "summary": "The defence industry is being invited to submit proposals to meet the Government’s requirements for bolstering munitions and energetics production in the UK.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T13:39:59.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/boost-for-armed-forces-as-new-laser-weapon-takes-down-high-speed-drones#2025-11-20T12:17:06Z",
+    "title": "Boost for Armed Forces as new laser weapon takes down high-speed drones",
+    "sourceUrl": "https://www.gov.uk/government/news/boost-for-armed-forces-as-new-laser-weapon-takes-down-high-speed-drones",
+    "summary": "MBDA awarded £316 million contract to deliver new DragonFire systems to the Royal Navy from 2027, after achieving UK first in latest testing by shooting down high-speed drones with new laser system.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T12:17:06.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/dsa03-ome-part-1-ome-acquisition#2025-11-20T10:41:10Z",
+    "title": "Guidance: DSA03 OME: part 1 OME Acquisition",
+    "sourceUrl": "https://www.gov.uk/government/publications/dsa03-ome-part-1-ome-acquisition",
+    "summary": "DSA 03 OME part 1 provides guidance to ensure that the risks associated with Ordnance, Munitions and Explosives (OME) are as low as reasonably practicable when in use, stored, moved, and disposed.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T10:41:10.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025#2025-11-20T10:19:28Z",
+    "title": "Transparency data: Military Court Service sentencing remarks 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025",
+    "summary": "Transcripts of sentencing remarks from Service Court hearings in the Court Martial from 2025.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T10:19:28.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/statistics/mod-diversity-dashboard-october-2025#2025-11-20T09:30:08Z",
+    "title": "Official Statistics: MOD Diversity Dashboard: October 2025",
+    "sourceUrl": "https://www.gov.uk/government/statistics/mod-diversity-dashboard-october-2025",
+    "summary": "Statistics on the diversity declaration and representation of minority groups of civil servants employed by the MOD.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T09:30:08.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable#2025-11-20T09:27:42Z",
+    "title": "Guidance: Military low flying: RAF operational low flying training timetable",
+    "sourceUrl": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable",
+    "summary": "Royal Air Force (RAF) operational low flying training timetables in 3 areas of the UK.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T09:27:42.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/speeches/defence-secretary-speech-on-threats-to-the-uk#2025-11-19T16:56:30Z",
+    "title": "Defence Secretary speech on threats to the UK",
+    "sourceUrl": "https://www.gov.uk/government/speeches/defence-secretary-speech-on-threats-to-the-uk",
+    "summary": "The Defence Secretary set out the scale of threats we face, including from the Russian spy ship Yantar which was threatening UK waters between 5 and 11 November.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-19T16:56:30.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/first-ever-government-female-veterans-forum-to-put-ex-military-voices-at-the-heart-of-support#2025-11-19T16:50:35Z",
+    "title": "First ever government female veterans’ forum to put ex-military voices at the heart of support",
+    "sourceUrl": "https://www.gov.uk/government/news/first-ever-government-female-veterans-forum-to-put-ex-military-voices-at-the-heart-of-support",
+    "summary": "Female veterans are to be put at the heart of government support, through a new women veterans forum announced today.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-19T16:50:35.000Z",
+    "fetchedAt": "2025-11-21T17:45:52.412Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/220/easyjet-launches-new-inverness-birmingham-route-for-march-2026",
+    "title": "easyJet launches new Inverness–Birmingham route for March 2026",
+    "sourceUrl": "https://www.hial.co.uk/news/article/220/easyjet-launches-new-inverness-birmingham-route-for-march-2026",
+    "summary": "Inverness Airport is thrilled to share that easyJet has announced a new direct service between Inverness and Birmingham, bringing back a route that passengers have requested in recent years.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-11-20T00:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.131Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/219/wick-aberdeen-pso-procurement-process-launched",
+    "title": "Wick - Aberdeen PSO Procurement Process Launched",
+    "sourceUrl": "https://www.hial.co.uk/news/article/219/wick-aberdeen-pso-procurement-process-launched",
+    "summary": "Highland Council have launched an emergency tender today to secure a new operator the Wick - Aberdeen PSO service.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-11-13T00:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.131Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/218/update-on-flights-at-wick-john-o-groats-airport",
+    "title": "Update on flights at Wick John O&#039;Groats Airport",
+    "sourceUrl": "https://www.hial.co.uk/news/article/218/update-on-flights-at-wick-john-o-groats-airport",
+    "summary": "The Highland Council have provided an update on the suspension of flights between Wick and Aberdeen by Eastern Airways.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-10-31T00:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.131Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/217/update-for-wick-john-o-groats-airport",
+    "title": "Update for Wick John O&#039;Groats Airport",
+    "sourceUrl": "https://www.hial.co.uk/news/article/217/update-for-wick-john-o-groats-airport",
+    "summary": "HIAL was made aware via press coverage that Eastern Airways has filed for administration.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-10-28T00:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.131Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/216/hial-recognised-for-health-safety-promotion-work",
+    "title": "HIAL recognised for Health & Safety Promotion work",
+    "sourceUrl": "https://www.hial.co.uk/news/article/216/hial-recognised-for-health-safety-promotion-work",
+    "summary": "Highlands and Islands Airports Ltd have been awarded Highly Commended in the Small Airport Category for their work for 2025 Airports UK Health & Safety Week.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-10-15T23:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.131Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/215/dundee-airport-feature-in-airport-operator-magazine",
+    "title": "Dundee Airport Feature in Airport Operator Magazine",
+    "sourceUrl": "https://www.hial.co.uk/news/article/215/dundee-airport-feature-in-airport-operator-magazine",
+    "summary": "The latest edition of Airport Operator, the magazine published by Airports UK includes a feature on Dundee Airport.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-10-06T23:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.131Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/213/complete-our-survey-for-a-chance-to-win",
+    "title": "Complete our survey for a chance to win",
+    "sourceUrl": "https://www.hial.co.uk/news/article/213/complete-our-survey-for-a-chance-to-win",
+    "summary": "Highlands & Islands Airports Ltd (HIAL) is asking passengers who use any of its 11 airports to complete an online survey. Entrants will have the option to be entered into a draw for Loganair flights.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-09-30T23:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.132Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/214/hial-team-member-volunteers-in-mexico",
+    "title": "HIAL team member volunteers in Mexico",
+    "sourceUrl": "https://www.hial.co.uk/news/article/214/hial-team-member-volunteers-in-mexico",
+    "summary": "Gary Johnstone, Deputy Head of Fire and Airside Operations, recently completed his 14th international volunteering mission with the International Fire & Rescue Association.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-09-24T23:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.132Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/212/new-chair-and-non-executive-director-sought-for-hial-board",
+    "title": "New Chair and Non-Executive Director sought for HIAL Board",
+    "sourceUrl": "https://www.hial.co.uk/news/article/212/new-chair-and-non-executive-director-sought-for-hial-board",
+    "summary": "Scottish Ministers are looking to appoint a new Chair and Non-Executive Director to the Board of Highlands and Islands Airports Ltd (HIAL).",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-09-04T23:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.132Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/211/first-minister-visits-sumburgh-airport",
+    "title": "First Minister visits Sumburgh Airport",
+    "sourceUrl": "https://www.hial.co.uk/news/article/211/first-minister-visits-sumburgh-airport",
+    "summary": "First Minister John Swinney, MSP visited Sumburgh Airport yesterday to thank the team for their hard work and continuing service to customers.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-08-21T23:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:28:06.132Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/deleted-rtfo-and-saf-mandate-feedstock-materials-used-for-creating-low-carbon-fuels#2025-11-21T09:00:00Z",
+    "title": "Guidance: RTFO and SAF Mandate feedstock materials used for creating low carbon fuels",
+    "sourceUrl": "https://www.gov.uk/government/publications/deleted-rtfo-and-saf-mandate-feedstock-materials-used-for-creating-low-carbon-fuels",
+    "summary": "List of feedstock materials for making renewable fuels under the Renewable Transport Fuel Obligation (RTFO) scheme and Sustainable Aviation Fuel (SAF) mandate.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-21T09:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.092Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/news/new-sunderland-made-nissan-leaf-qualifies-for-3750-discount-under-governments-ev-grant-in-a-boost-for-north-east-manufacturing#2025-11-21T00:00:00Z",
+    "title": "New Sunderland-made Nissan LEAF qualifies for £3,750 discount under government’s EV grant in a boost for North East manufacturing",
+    "sourceUrl": "https://www.gov.uk/government/news/new-sunderland-made-nissan-leaf-qualifies-for-3750-discount-under-governments-ev-grant-in-a-boost-for-north-east-manufacturing",
+    "summary": "There are now 39 models of electric vehicles eligible for the Electric Car Grant.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-21T00:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/guidance/e-scooter-trials-guidance-for-users#2025-11-20T13:26:53Z",
+    "title": "Using a rental e-scooter",
+    "sourceUrl": "https://www.gov.uk/guidance/e-scooter-trials-guidance-for-users",
+    "summary": "How to safely use an electric scooter rented as part of a government trial.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T13:26:53.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistics/transport-statistics-geography-portal-november-2025#2025-11-20T09:30:04Z",
+    "title": "Official Statistics: Transport Statistics Geography Portal: November 2025",
+    "sourceUrl": "https://www.gov.uk/government/statistics/transport-statistics-geography-portal-november-2025",
+    "summary": "Quarterly update to the website that presents existing published official statistics, by the Department for Transport, in a geographical format.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T09:30:04.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/vehicle-emissions-trading-schemes-how-to-comply#2025-11-19T17:33:56Z",
+    "title": "Guidance: Vehicle Emissions Trading Schemes: how to comply",
+    "sourceUrl": "https://www.gov.uk/government/publications/vehicle-emissions-trading-schemes-how-to-comply",
+    "summary": "What participants need to do to meet their obligations under the Vehicle Emissions Trading Schemes (VETS) Order 2023.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-19T17:33:56.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/east-west-rail-safeguarding-directions#2025-11-19T10:41:39Z",
+    "title": "Statutory guidance: East West Rail safeguarding directions",
+    "sourceUrl": "https://www.gov.uk/government/publications/east-west-rail-safeguarding-directions",
+    "summary": "Safeguarding directions for the East West Rail project for local planning authorities.",
+    "categories": [
+      "Statutory guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-19T10:41:39.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/speeches/east-west-rail-autumn-announcement-2025#2025-11-19T10:13:36Z",
+    "title": "East West Rail autumn announcement 2025",
+    "sourceUrl": "https://www.gov.uk/government/speeches/east-west-rail-autumn-announcement-2025",
+    "summary": "Latest proposals for East West Rail reflect government’s commitment to delivering improved connectivity for communities in the Oxford-Cambridge region.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-19T10:13:36.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/news/east-west-rail-unveils-next-phase-for-oxford-cambridge-growth#2025-11-19T00:01:02Z",
+    "title": "East West Rail unveils next phase for Oxford-Cambridge growth",
+    "sourceUrl": "https://www.gov.uk/government/news/east-west-rail-unveils-next-phase-for-oxford-cambridge-growth",
+    "summary": "East West Rail confirms next phase of construction, boosting Oxford-Cambridge links with more frequent trains, new stations and major economic growth.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-19T00:01:02.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/consultations/uk-airspace-design-service-proposed-modifications-to-nerl-licence-terms#2025-11-17T09:30:04Z",
+    "title": "UK airspace design service: proposed modifications to NERL licence terms",
+    "sourceUrl": "https://www.gov.uk/government/consultations/uk-airspace-design-service-proposed-modifications-to-nerl-licence-terms",
+    "summary": "Seeks views on the proposed modifications to terms of the national air traffic services (NATS) (En Route) plc (NERL) licence.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-17T09:30:04.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/news/simpler-train-travel-to-london-airports-as-tap-in-tap-out-expanded-across-south-east-england#2025-11-17T00:00:00Z",
+    "title": "Simpler train travel to London airports as tap-in, tap-out expanded across south-east England",
+    "sourceUrl": "https://www.gov.uk/government/news/simpler-train-travel-to-london-airports-as-tap-in-tap-out-expanded-across-south-east-england",
+    "summary": "Buying tickets will be more convenient, more accessible and more flexible, ensuring passengers can get the best fares.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-17T00:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/ukads-and-ukacs-licence-obligations-strategic-objectives#2025-11-17T00:00:00Z",
+    "title": "Statutory guidance: UKADS and UKACS licence obligations: strategic objectives",
+    "sourceUrl": "https://www.gov.uk/government/publications/ukads-and-ukacs-licence-obligations-strategic-objectives",
+    "summary": "Sets out the strategic objectives for the UK airspace design service  (UKADS) and airspace coordination service (UKACS).",
+    "categories": [
+      "Statutory guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-17T00:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/proposed-revocation-of-the-a1-in-northumberland-morpeth-to-ellingham-development-consent-order-2024#2025-11-13T13:00:03Z",
+    "title": "Decision: Revocation of the A1 in Northumberland Morpeth to Ellingham Development Consent Order 2024",
+    "sourceUrl": "https://www.gov.uk/government/publications/proposed-revocation-of-the-a1-in-northumberland-morpeth-to-ellingham-development-consent-order-2024",
+    "summary": "The Secretary of State for Transport has approved the revocation of the A1 in Northumberland: Morpeth to Ellingham Development Consent Order 2024.",
+    "categories": [
+      "Decision"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T13:00:03.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistics/renewable-transport-fuel-obligation-rtfo-statistics-2024-final-report#2025-11-13T12:18:07Z",
+    "title": "Official Statistics: Renewable Transport Fuel Obligation (RTFO) statistics 2024: Final report",
+    "sourceUrl": "https://www.gov.uk/government/statistics/renewable-transport-fuel-obligation-rtfo-statistics-2024-final-report",
+    "summary": "Supply of renewable fuels for January to December 2024.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T12:18:07.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/measurement-of-emissions-from-brake-and-tyre-wear#2025-11-13T10:06:35Z",
+    "title": "Research: Measurement of emissions from brake and tyre wear",
+    "sourceUrl": "https://www.gov.uk/government/publications/measurement-of-emissions-from-brake-and-tyre-wear",
+    "summary": "A research report on developing prototypes to measure brake and tyre wear emissions from road vehicles in real driving conditions.",
+    "categories": [
+      "Research"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T10:06:35.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistics/sustainable-aviation-fuel-saf-mandate-statistics-2025-second-provisional-release#2025-11-13T09:30:09Z",
+    "title": "Official Statistics: Sustainable Aviation Fuel (SAF) Mandate statistics 2025: Second provisional release",
+    "sourceUrl": "https://www.gov.uk/government/statistics/sustainable-aviation-fuel-saf-mandate-statistics-2025-second-provisional-release",
+    "summary": "Supply of sustainable aviation fuel under the SAF Mandate for January to December 2025.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T09:30:09.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/uk-airspace-design-support-fund-rules-and-eligibility-criteria#2025-11-13T09:30:08Z",
+    "title": "Guidance: UK Airspace Design Support Fund rules and eligibility criteria",
+    "sourceUrl": "https://www.gov.uk/government/publications/uk-airspace-design-support-fund-rules-and-eligibility-criteria",
+    "summary": "Who can apply to the UK Airspace Design Support Fund and fund administration rules.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T09:30:08.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistics/renewable-transport-fuel-obligation-rtfo-statistics-2025-second-provisional-release#2025-11-13T09:30:08Z",
+    "title": "Official Statistics: Renewable Transport Fuel Obligation (RTFO) statistics 2025: Second provisional release",
+    "sourceUrl": "https://www.gov.uk/government/statistics/renewable-transport-fuel-obligation-rtfo-statistics-2025-second-provisional-release",
+    "summary": "Supply of renewable fuels for January to December 2025.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T09:30:08.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistical-data-sets/sustainable-aviation-fuel-saf-mandate-statistics-data-tables#2025-11-13T09:30:08Z",
+    "title": "Sustainable Aviation Fuel (SAF) Mandate statistics: data tables",
+    "sourceUrl": "https://www.gov.uk/government/statistical-data-sets/sustainable-aviation-fuel-saf-mandate-statistics-data-tables",
+    "summary": "Data on the supply of sustainable aviation fuel (SAF), as required under the Sustainable Aviation Fuel (SAF) Mandate.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T09:30:08.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistical-data-sets/renewable-fuel-statistics-data-tables#2025-11-13T09:30:08Z",
+    "title": "Renewable Transport Fuel Obligation statistics: data tables",
+    "sourceUrl": "https://www.gov.uk/government/statistical-data-sets/renewable-fuel-statistics-data-tables",
+    "summary": "Data on the supply of renewable fuel, as required under the Renewable Transport Fuel Obligation (RTFO).",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T09:30:08.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/news/mirror-signal-manoeuvres-military-driving-examiners-mobilised-to-cut-test-backlog#2025-11-12T11:54:37Z",
+    "title": "Mirror, signal, manoeuvres: Military driving examiners mobilised to cut test backlog",
+    "sourceUrl": "https://www.gov.uk/government/news/mirror-signal-manoeuvres-military-driving-examiners-mobilised-to-cut-test-backlog",
+    "summary": "Partnership with the Ministry of Defence will see 36 defence driving examiners provide thousands of additional tests over the next year.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-12T11:54:37.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.093Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-aaib-and-the-royal-gibraltar-police#2025-11-20T15:28:38Z",
+    "title": "Policy paper: Memorandum of Understanding between the AAIB and the Royal Gibraltar Police",
+    "sourceUrl": "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-aaib-and-the-royal-gibraltar-police",
+    "summary": "Memorandum of Understanding between the Air Accidents Investigation Branch and the Royal Gibraltar Police",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-20T15:28:38.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/vacancy-inspector-of-air-accidents-human-factors--2#2025-11-13T11:15:24Z",
+    "title": "Vacancy: Inspector of Air Accidents (Human Factors)",
+    "sourceUrl": "https://www.gov.uk/government/news/vacancy-inspector-of-air-accidents-human-factors--2",
+    "summary": "The Air Accidents Investigation Branch are recruiting an Inspector of Air Accidents (Human Factors)",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T11:15:24.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/publications/air-accident-monthly-bulletin-november-2025#2025-11-13T10:09:35Z",
+    "title": "Independent report: Air accident monthly bulletin November 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/air-accident-monthly-bulletin-november-2025",
+    "summary": "The AAIB Bulletin is a compilation of AAIB reports and is published on the second Thursday of the month.",
+    "categories": [
+      "Independent report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T10:09:35.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-boeing-737-86n-g-npta#2025-11-13T10:02:32Z",
+    "title": "AAIB investigation to Boeing 737-86N, G-NPTA",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-boeing-737-86n-g-npta",
+    "summary": "Loss of cabin pressurisation, approaching Edinburgh Airport, 17 May 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T10:02:32.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-atr-72-212-a-g-iacz#2025-11-13T10:02:17Z",
+    "title": "AAIB investigation to ATR 72-212 A, G-IACZ",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-atr-72-212-a-g-iacz",
+    "summary": "Aircraft diverted because the flaps could not be fully extended on approach to Cornwall Airport, Newquay, 15 April 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T10:02:17.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/publications/aaib-record-only-investigations-reviewed-august-september-2025#2025-11-13T00:00:00Z",
+    "title": "Independent report: AAIB Record-only UAS investigations reviewed: August - September 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/aaib-record-only-investigations-reviewed-august-september-2025",
+    "summary": "This is a list of AAIB Record-only UAS investigations that were reviewed during August - September 2025.",
+    "categories": [
+      "Independent report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-13T00:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/aaib-report-cessna-t210m-n761ju#2025-11-06T11:47:19Z",
+    "title": "AAIB Report: Cessna T210M, N761JU",
+    "sourceUrl": "https://www.gov.uk/government/news/aaib-report-cessna-t210m-n761ju",
+    "summary": "Fatal accident involving a Cessna T210M, N761JU, Leeds East Airport, 11 April 2024",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-06T11:47:19.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-cessna-t210m-n761ju#2025-11-06T11:46:16Z",
+    "title": "AAIB investigation to Cessna T210M, N761JU",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-cessna-t210m-n761ju",
+    "summary": "Cessna T210M (N761JU), loss of control on takeoff, Leeds East Airport, 11 April 2024",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-06T11:46:16.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-sherburn-in-elmet-airfield-north-yorkshire#2025-11-03T10:54:52Z",
+    "title": "The AAIB has sent a team to Sherburn in Elmet Airfield, North Yorkshire",
+    "sourceUrl": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-sherburn-in-elmet-airfield-north-yorkshire",
+    "summary": "A team of inspectors has been sent to Sherburn in Elmet Airfield, North Yorkshire to begin investigating a light aircraft accident which occurred on Sunday 2 November",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-11-03T10:54:52.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-doncaster#2025-10-30T16:48:51Z",
+    "title": "The AAIB has sent a team to Doncaster",
+    "sourceUrl": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-doncaster",
+    "summary": "A team of inspectors has been sent to Doncaster to begin investigating a helicopter accident which occurred on Thursday 30 October",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-30T16:48:51.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/aaib-report-discus-b-g-djmd-standard-cirrus-g-dctb#2025-10-30T10:03:01Z",
+    "title": "AAIB Report: Discus B, G-DJMD / Standard Cirrus, G-DCTB",
+    "sourceUrl": "https://www.gov.uk/government/news/aaib-report-discus-b-g-djmd-standard-cirrus-g-dctb",
+    "summary": "Fatal accident involving Discus B, G-DJMD and Standard Cirrus, G-DCTB, Hinton-in-the-Hedges Airfield, Northamptonshire, 25 May 2024",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-30T10:03:01.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-discus-b-g-djmd-slash-standard-cirrus-g-dctb#2025-10-30T10:00:20Z",
+    "title": "AAIB investigation to Discus B, G-DJMD / Standard Cirrus, G-DCTB",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-discus-b-g-djmd-slash-standard-cirrus-g-dctb",
+    "summary": "Discus B (G-DJMD) and Standard Cirrus (G-DCTB), collided while landing at Hinton-in-the-Hedges Airfield,  Northamptonshire, 25 May 2024",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-30T10:00:20.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-portmoak-kinross#2025-10-28T10:41:18Z",
+    "title": "The AAIB has sent a team to Portmoak, Kinross",
+    "sourceUrl": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-portmoak-kinross",
+    "summary": "A team of inspectors has been sent to Portmoak, Kinross, to begin investigating a light aircraft accident which occurred on Monday 27 October",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-28T10:41:18.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/publications/air-accident-monthly-bulletin-october-2025#2025-10-09T09:06:54Z",
+    "title": "Independent report: Air accident monthly bulletin October 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/air-accident-monthly-bulletin-october-2025",
+    "summary": "The AAIB Bulletin is a compilation of AAIB reports and is published on the second Thursday of the month.",
+    "categories": [
+      "Independent report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-09T09:06:54.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-spitfire-ixt-g-bmsb-3-may-2025#2025-10-09T09:03:40Z",
+    "title": "AAIB investigation to Spitfire IXT, G-BMSB, 3 May 2025",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-spitfire-ixt-g-bmsb-3-may-2025",
+    "summary": "Loss of engine power and forced landing, near Hythe, Kent, 3 May 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-09T09:03:40.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-phoenix-wings-orca-uas-reg-n-slash-a#2025-10-09T09:03:29Z",
+    "title": "AAIB investigation to Phoenix Wings Orca, (UAS reg n/a)",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-phoenix-wings-orca-uas-reg-n-slash-a",
+    "summary": "Inadvertent in-flight shutdown leading to loss of control, Coombe Country Park, Warwickshire, 25 March 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-09T09:03:29.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-short-bros-sd3-60-n915gd#2025-10-09T09:02:52Z",
+    "title": "AAIB investigation to Short Bros SD3-60, N915GD",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-short-bros-sd3-60-n915gd",
+    "summary": "Runway undershoot at Terrance B. Lettsome International Airport, British Virgin Islands, 6 November 2024",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-09T09:02:52.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/publications/aaib-record-only-investigations-reviewed-july-august-2025#2025-10-08T23:00:00Z",
+    "title": "Independent report: AAIB Record-only investigations reviewed: July - August 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/aaib-record-only-investigations-reviewed-july-august-2025",
+    "summary": "This is a list of AAIB Record-only investigations that were reviewed during July - August 2025.",
+    "categories": [
+      "Independent report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-08T23:00:00.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/anniversary-statement-uas-cgt-50-uas-reg-na-5-october-2023#2025-10-03T09:02:03Z",
+    "title": "Anniversary Statement: UAS CGT 50, (UAS reg n/a), 5 October 2023",
+    "sourceUrl": "https://www.gov.uk/government/news/anniversary-statement-uas-cgt-50-uas-reg-na-5-october-2023",
+    "summary": "Right wing separated from airframe in-flight, Radnor Range, Powys, 5 October 2023",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-03T09:02:03.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/aaib-report-sportstar-slm-g-cmgb#2025-10-02T09:05:46Z",
+    "title": "AAIB Report: SportStar SLM, G-CMGB",
+    "sourceUrl": "https://www.gov.uk/government/news/aaib-report-sportstar-slm-g-cmgb",
+    "summary": "Fatal accident involving a SportStar SLM, G-CMGB, Chesterfield, Derbyshire, 1 September 2024",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2025-10-02T09:05:46.000Z",
+    "fetchedAt": "2025-11-21T19:47:14.165Z"
+  }
+]

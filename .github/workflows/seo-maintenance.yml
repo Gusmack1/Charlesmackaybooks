@@ -10,6 +10,12 @@ jobs:
   refresh-and-ping:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Feed health checks
+        run: npm run verify:feeds -- --base=https://charlesmackaybooks.com --verbose
       - name: Ping sitemap and feeds
         run: |
           set -e
@@ -26,5 +32,4 @@ jobs:
           curl -sS "https://www.google.com/ping?sitemap=${SITE}" > /dev/null || true
           # Bing
           curl -sS "https://www.bing.com/ping?sitemap=${SITE}" > /dev/null || true
-
 

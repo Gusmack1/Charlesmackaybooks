@@ -1,0 +1,63 @@
+[
+  {
+    "id": "raf-mod-uk",
+    "name": "Royal Air Force",
+    "type": "primary",
+    "mode": "govuk-content-api",
+    "apiUrl": "https://www.gov.uk/api/search.json?filter_organisations=royal-air-force&order=-public_timestamp&count=20",
+    "licence": "ogl",
+    "attribution": "Source: Royal Air Force (\u00a9 Crown Copyright/OGL v3.0)",
+    "imagePolicy": "crown",
+    "notes": "Uses the GOV.UK Content API to avoid Cloudflare blocking on the public RSS feed.",
+    "enabled": true
+  },
+  {
+    "id": "mod-press-office",
+    "name": "Ministry of Defence",
+    "type": "primary",
+    "mode": "rss",
+    "feedUrl": "https://www.gov.uk/government/organisations/ministry-of-defence.atom",
+    "licence": "ogl",
+    "attribution": "Source: UK Ministry of Defence (OGL v3.0)",
+    "imagePolicy": "crown",
+    "notes": "Filter to aviation topics via keyword matching (RAF, Fleet Air Arm, aerospace)."
+  },
+  {
+    "id": "hial-airports",
+    "name": "Highlands and Islands Airports Ltd",
+    "type": "primary",
+    "mode": "hial-html",
+    "siteUrl": "https://www.hial.co.uk",
+    "licence": "corporate",
+    "attribution": "Source: Highlands and Islands Airports Ltd",
+    "imagePolicy": "corporate",
+    "notes": "Scrapes the public HIAL newsroom listings (no RSS available) and stores title, summary, and publish date with attribution.",
+    "enabled": true,
+    "feedUrl": "https://www.hial.co.uk/news",
+    "pageUrl": "https://www.hial.co.uk/news"
+  },
+  {
+    "id": "dft-press-office",
+    "name": "Department for Transport",
+    "type": "secondary",
+    "mode": "rss",
+    "feedUrl": "https://www.gov.uk/government/organisations/department-for-transport.atom",
+    "licence": "ogl",
+    "attribution": "Source: UK Department for Transport (OGL v3.0)",
+    "imagePolicy": "crown",
+    "notes": "Includes aviation connectivity announcements, airport funding, and regulatory statements relevant to Scotland.",
+    "enabled": true
+  },
+  {
+    "id": "aaib-bulletins",
+    "name": "Air Accidents Investigation Branch",
+    "type": "secondary",
+    "mode": "rss",
+    "feedUrl": "https://www.gov.uk/government/organisations/air-accidents-investigation-branch.atom",
+    "licence": "ogl",
+    "attribution": "Source: Air Accidents Investigation Branch (OGL v3.0)",
+    "imagePolicy": "crown",
+    "notes": "Accident bulletins and safety recommendations; flag for editor review before publication.",
+    "enabled": true
+  }
+]
