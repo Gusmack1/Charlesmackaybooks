@@ -1,0 +1,64 @@
+{
+  "slug": "2025-11-21-hial-recognised-for-health-safety-promot",
+  "title": "Scottish Aviation Briefing – 2025-11-21",
+  "wordCount": 254,
+  "editorNotes": "Expand each section to ≥3,000 words total, embed at least four approved images, and ensure every factual statement cites the referenced source.",
+  "sections": [
+    {
+      "heading": "Operational Snapshot",
+      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **HIAL recognised for Health & Safety Promotion work** — Highlands and Islands Airports Ltd have been awarded Highly Commended in the Small Airport Category for their work for 2025 Airports UK Health & Safety Week.\n- **Dundee Airport Feature in Airport Operator Magazine** — The latest edition of Airport Operator, the magazine published by Airports UK includes a feature on Dundee Airport.\n- **Complete our survey for a chance to win** — Highlands & Islands Airports Ltd (HIAL) is asking passengers who use any of its 11 airports to complete an online survey. Entrants will have the option to be entered into a draw for Loganair flights.\n\n_Editors: verify figures/details against the primary sources linked below before expanding this section to the full narrative length._"
+    },
+    {
+      "heading": "Technical & Industrial Notes",
+      "content": "Summarise the engineering, basing, and procurement implications highlighted across today’s releases. Connect them to Scottish industrial capacity (Prestwick, Lossiemouth, Weir, Spirit AeroSystems) and quantify any fleet, workforce, or funding metrics disclosed. Cite the relevant MOD transparency tables where applicable."
+    },
+    {
+      "heading": "Historical Context & Lessons",
+      "content": "Relate the current developments back to Charles E. MacKay’s archival research—e.g., how modern readiness exercises echo WWII dispersal plans or how present-day logistics mirror Beardmore/Weir supply chains. Draw on verified passages from the corresponding book to reinforce continuity across decades."
+    },
+    {
+      "heading": "Modern Legacy & Book Recommendation",
+      "content": "Explain why this news matters for contemporary Scottish aviation readers, then steer them toward the recommended book for deeper study. Include a call-to-action linking to the relevant `/books/<id>` page and highlight unique research materials in the volume."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "hial-airports",
+      "sourceUrl": "https://www.hial.co.uk/news/article/216/hial-recognised-for-health-safety-promotion-work",
+      "citationText": "hial-airports – HIAL recognised for Health & Safety Promotion work"
+    },
+    {
+      "sourceId": "hial-airports",
+      "sourceUrl": "https://www.hial.co.uk/news/article/215/dundee-airport-feature-in-airport-operator-magazine",
+      "citationText": "hial-airports – Dundee Airport Feature in Airport Operator Magazine"
+    },
+    {
+      "sourceId": "hial-airports",
+      "sourceUrl": "https://www.hial.co.uk/news/article/213/complete-our-survey-for-a-chance-to-win",
+      "citationText": "hial-airports – Complete our survey for a chance to win"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "Royal Air Force updates",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aerospace industry",
+      "primary": false
+    }
+  ],
+  "status": "draft",
+  "createdAt": "2025-11-21T21:08:31.889Z"
+}

@@ -2,8 +2,11 @@ name: Newsroom Automation
 
 on:
   schedule:
-    - cron: '15 5 * * *'
+    - cron: '0 * * * *'
   workflow_dispatch:
+
+env:
+  NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK || '' }}
 
 concurrency:
   group: newsroom-automation
@@ -137,6 +140,14 @@ jobs:
       - name: Append run summary
         if: steps.artifact.outputs.found == 'true'
         run: cat report-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Trigger Netlify deploy
+        if: env.NETLIFY_BUILD_HOOK != ''
+        run: |
+          curl -X POST -sS "$NETLIFY_BUILD_HOOK" || {
+            echo "Netlify hook POST failed" >&2
+            exit 1
+          }
 
       - name: Summarise missing artifacts
         if: steps.artifact.outputs.found != 'true'

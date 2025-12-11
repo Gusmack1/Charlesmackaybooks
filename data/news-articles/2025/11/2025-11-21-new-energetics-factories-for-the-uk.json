@@ -1,0 +1,64 @@
+{
+  "slug": "2025-11-21-new-energetics-factories-for-the-uk",
+  "title": "Scottish Aviation Briefing – 2025-11-21",
+  "wordCount": 264,
+  "editorNotes": "Expand each section to ≥3,000 words total, embed at least four approved images, and ensure every factual statement cites the referenced source.",
+  "sections": [
+    {
+      "heading": "Operational Snapshot",
+      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **New energetics factories for the UK** — The defence industry is being invited to submit proposals to meet the Government’s requirements for bolstering munitions and energetics production in the UK.\n- **Boost for Armed Forces as new laser weapon takes down high-speed drones** — MBDA awarded £316 million contract to deliver new DragonFire systems to the Royal Navy from 2027, after achieving UK first in latest testing by shooting down high-speed drones with new laser system.\n- **Guidance: DSA03 OME: part 1 OME Acquisition** — DSA 03 OME part 1 provides guidance to ensure that the risks associated with Ordnance, Munitions and Explosives (OME) are as low as reasonably practicable when in use, stored, moved, and disposed.\n\n_Editors: verify figures/details against the primary sources linked below before expanding this section to the full narrative length._"
+    },
+    {
+      "heading": "Technical & Industrial Notes",
+      "content": "Summarise the engineering, basing, and procurement implications highlighted across today’s releases. Connect them to Scottish industrial capacity (Prestwick, Lossiemouth, Weir, Spirit AeroSystems) and quantify any fleet, workforce, or funding metrics disclosed. Cite the relevant MOD transparency tables where applicable."
+    },
+    {
+      "heading": "Historical Context & Lessons",
+      "content": "Relate the current developments back to Charles E. MacKay’s archival research—e.g., how modern readiness exercises echo WWII dispersal plans or how present-day logistics mirror Beardmore/Weir supply chains. Draw on verified passages from the corresponding book to reinforce continuity across decades."
+    },
+    {
+      "heading": "Modern Legacy & Book Recommendation",
+      "content": "Explain why this news matters for contemporary Scottish aviation readers, then steer them toward the recommended book for deeper study. Include a call-to-action linking to the relevant `/books/<id>` page and highlight unique research materials in the volume."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/guidance/new-energetics-factories-for-the-uk",
+      "citationText": "mod-press-office – New energetics factories for the UK"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/news/boost-for-armed-forces-as-new-laser-weapon-takes-down-high-speed-drones",
+      "citationText": "mod-press-office – Boost for Armed Forces as new laser weapon takes down high-speed drones"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/dsa03-ome-part-1-ome-acquisition",
+      "citationText": "mod-press-office – Guidance: DSA03 OME: part 1 OME Acquisition"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "Royal Air Force updates",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aerospace industry",
+      "primary": false
+    }
+  ],
+  "status": "draft",
+  "createdAt": "2025-11-21T21:07:55.622Z"
+}

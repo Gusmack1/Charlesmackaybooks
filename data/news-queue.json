@@ -176,7 +176,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T15:57:55.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-guidance-dartmoor-firing-times",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-guidance-dartmoor-firing-times.json",
+    "draftedAt": "2025-11-21T21:07:47.287Z"
   },
   {
     "id": "c72e5ce0-00f0-46bf-96cc-d5cf6edb9069",
@@ -192,7 +195,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T15:46:16.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-guidance-dartmoor-firing-times",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-guidance-dartmoor-firing-times.json",
+    "draftedAt": "2025-11-21T21:07:47.287Z"
   },
   {
     "id": "7cc92f6b-61b0-4d64-b416-d0666a50f7e7",
@@ -208,7 +214,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T15:09:59.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-guidance-dartmoor-firing-times",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-guidance-dartmoor-firing-times.json",
+    "draftedAt": "2025-11-21T21:07:47.287Z"
   },
   {
     "id": "8b3ae886-b34a-4031-8e86-6d9ce978302f",
@@ -222,7 +231,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T13:39:59.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-new-energetics-factories-for-the-uk",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-new-energetics-factories-for-the-uk.json",
+    "draftedAt": "2025-11-21T21:07:55.626Z"
   },
   {
     "id": "3d7026a5-3a92-48c0-96a1-8ec5372a011e",
@@ -236,7 +248,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T12:17:06.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-new-energetics-factories-for-the-uk",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-new-energetics-factories-for-the-uk.json",
+    "draftedAt": "2025-11-21T21:07:55.626Z"
   },
   {
     "id": "898349e8-88e9-4a9b-bba4-e2f3118c17a3",
@@ -252,7 +267,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T10:41:10.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-new-energetics-factories-for-the-uk",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-new-energetics-factories-for-the-uk.json",
+    "draftedAt": "2025-11-21T21:07:55.626Z"
   },
   {
     "id": "fcb07ca3-174e-4a5e-98e1-1ee8b4c5de2a",
@@ -268,7 +286,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T10:19:28.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-transparency-data-military-court-service",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-transparency-data-military-court-service.json",
+    "draftedAt": "2025-11-21T21:08:03.727Z"
   },
   {
     "id": "9ec3b4b9-494d-4422-818c-2c53eb8c0e03",
@@ -284,7 +305,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T09:30:08.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-transparency-data-military-court-service",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-transparency-data-military-court-service.json",
+    "draftedAt": "2025-11-21T21:08:03.727Z"
   },
   {
     "id": "f106c230-6aac-44e6-99a7-678c56ff34fb",
@@ -300,7 +324,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T09:27:42.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-transparency-data-military-court-service",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-transparency-data-military-court-service.json",
+    "draftedAt": "2025-11-21T21:08:03.727Z"
   },
   {
     "id": "047ab76f-4a5c-4336-be3b-17a8bb03e665",
@@ -314,7 +341,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-19T16:56:30.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-defence-secretary-speech-on-threats-to-t",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-defence-secretary-speech-on-threats-to-t.json",
+    "draftedAt": "2025-11-21T21:08:13.628Z"
   },
   {
     "id": "84bd553a-dd00-49c6-aa86-f1f529458b39",
@@ -328,7 +358,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-19T16:50:35.000Z",
     "fetchedAt": "2025-11-21T17:45:52.412Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-defence-secretary-speech-on-threats-to-t",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-defence-secretary-speech-on-threats-to-t.json",
+    "draftedAt": "2025-11-21T21:08:13.628Z"
   },
   {
     "id": "283ca539-7afb-4183-9f3d-5fd1bb645705",
@@ -344,7 +377,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-11-20T00:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.131Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-defence-secretary-speech-on-threats-to-t",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-defence-secretary-speech-on-threats-to-t.json",
+    "draftedAt": "2025-11-21T21:08:13.628Z"
   },
   {
     "id": "4101ac50-5e7a-4603-99c0-02fe602538a9",
@@ -360,7 +396,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-11-13T00:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.131Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-wick-aberdeen-pso-procurement-process-la",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-wick-aberdeen-pso-procurement-process-la.json",
+    "draftedAt": "2025-11-21T21:08:23.220Z"
   },
   {
     "id": "fe4c8565-cdae-4546-87ac-fea4e8d9545e",
@@ -376,7 +415,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-10-31T00:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.131Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-wick-aberdeen-pso-procurement-process-la",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-wick-aberdeen-pso-procurement-process-la.json",
+    "draftedAt": "2025-11-21T21:08:23.221Z"
   },
   {
     "id": "d1ec4c70-15f8-46c9-a854-893030822887",
@@ -392,7 +434,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-10-28T00:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.131Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-wick-aberdeen-pso-procurement-process-la",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-wick-aberdeen-pso-procurement-process-la.json",
+    "draftedAt": "2025-11-21T21:08:23.221Z"
   },
   {
     "id": "5f4bf7e8-3dbc-45f5-9ef6-aeac5d7656ff",
@@ -408,7 +453,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-10-15T23:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.131Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-hial-recognised-for-health-safety-promot",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-hial-recognised-for-health-safety-promot.json",
+    "draftedAt": "2025-11-21T21:08:31.894Z"
   },
   {
     "id": "9cbff126-4440-4c51-96aa-891f0fe8b06c",
@@ -424,7 +472,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-10-06T23:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.131Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-hial-recognised-for-health-safety-promot",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-hial-recognised-for-health-safety-promot.json",
+    "draftedAt": "2025-11-21T21:08:31.894Z"
   },
   {
     "id": "88ce9a74-54ec-45fd-a6e8-254f0470ca2d",
@@ -440,7 +491,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-09-30T23:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.132Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-hial-recognised-for-health-safety-promot",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-hial-recognised-for-health-safety-promot.json",
+    "draftedAt": "2025-11-21T21:08:31.894Z"
   },
   {
     "id": "4c59ee82-73e9-494e-976a-e41edca5f443",
@@ -456,7 +510,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-09-24T23:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.132Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-hial-team-member-volunteers-in-mexico",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-hial-team-member-volunteers-in-mexico.json",
+    "draftedAt": "2025-11-21T21:08:41.666Z"
   },
   {
     "id": "c91bff1c-c16f-4b7d-9cc4-76d01da2f4ee",
@@ -472,7 +529,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-09-04T23:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.132Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-hial-team-member-volunteers-in-mexico",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-hial-team-member-volunteers-in-mexico.json",
+    "draftedAt": "2025-11-21T21:08:41.666Z"
   },
   {
     "id": "0a87c78c-0c16-412c-af17-b5ff123d1f7c",
@@ -488,7 +548,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-08-21T23:00:00.000Z",
     "fetchedAt": "2025-11-21T19:28:06.132Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-hial-team-member-volunteers-in-mexico",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-hial-team-member-volunteers-in-mexico.json",
+    "draftedAt": "2025-11-21T21:08:41.666Z"
   },
   {
     "id": "9c729924-6ec2-48d0-afa1-af21d95003b6",
@@ -504,7 +567,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-21T09:00:00.000Z",
     "fetchedAt": "2025-11-21T19:47:14.092Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-guidance-rtfo-and-saf-mandate-feedstock-",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-guidance-rtfo-and-saf-mandate-feedstock-.json",
+    "draftedAt": "2025-11-21T21:08:55.965Z"
   },
   {
     "id": "3cf3b320-4799-4c05-95d6-168f20227f7b",
@@ -518,7 +584,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-21T00:00:00.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-guidance-rtfo-and-saf-mandate-feedstock-",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-guidance-rtfo-and-saf-mandate-feedstock-.json",
+    "draftedAt": "2025-11-21T21:08:55.965Z"
   },
   {
     "id": "8a20de20-c507-42e0-bbd3-6727a1565eaf",
@@ -532,7 +601,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T13:26:53.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-guidance-rtfo-and-saf-mandate-feedstock-",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-guidance-rtfo-and-saf-mandate-feedstock-.json",
+    "draftedAt": "2025-11-21T21:08:55.965Z"
   },
   {
     "id": "44010e72-1293-499f-b417-d783223df713",
@@ -548,7 +620,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T09:30:04.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-official-statistics-transport-statistics",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-official-statistics-transport-statistics.json",
+    "draftedAt": "2025-11-21T21:09:07.407Z"
   },
   {
     "id": "547f8e42-bf6c-4cb3-9e18-b534d7c66754",
@@ -564,7 +639,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-19T17:33:56.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-official-statistics-transport-statistics",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-official-statistics-transport-statistics.json",
+    "draftedAt": "2025-11-21T21:09:07.407Z"
   },
   {
     "id": "91860c1b-a6d6-4688-a7aa-12045622e0b3",
@@ -580,7 +658,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-19T10:41:39.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-official-statistics-transport-statistics",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-official-statistics-transport-statistics.json",
+    "draftedAt": "2025-11-21T21:09:07.407Z"
   },
   {
     "id": "82425305-09fe-4f75-889a-232952931e9f",
@@ -594,7 +675,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-19T10:13:36.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-east-west-rail-autumn-announcement-2025",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-east-west-rail-autumn-announcement-2025.json",
+    "draftedAt": "2025-11-21T21:09:16.086Z"
   },
   {
     "id": "d3eaad26-213f-4d92-9afc-f55aed0dcdfc",
@@ -608,7 +692,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-19T00:01:02.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-east-west-rail-autumn-announcement-2025",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-east-west-rail-autumn-announcement-2025.json",
+    "draftedAt": "2025-11-21T21:09:16.086Z"
   },
   {
     "id": "bc2c2a44-f87c-49b3-be7d-75b395c5dea2",
@@ -622,7 +709,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-17T09:30:04.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2025-11-21-east-west-rail-autumn-announcement-2025",
+    "articlePath": "data\\news-articles\\2025\\11\\2025-11-21-east-west-rail-autumn-announcement-2025.json",
+    "draftedAt": "2025-11-21T21:09:16.086Z"
   },
   {
     "id": "a57265a3-b20b-40a1-beb7-7d2f58926e2c",

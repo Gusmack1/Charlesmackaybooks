@@ -1,0 +1,64 @@
+{
+  "slug": "2025-11-21-hial-team-member-volunteers-in-mexico",
+  "title": "Scottish Aviation Briefing – 2025-11-21",
+  "wordCount": 239,
+  "editorNotes": "Expand each section to ≥3,000 words total, embed at least four approved images, and ensure every factual statement cites the referenced source.",
+  "sections": [
+    {
+      "heading": "Operational Snapshot",
+      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **HIAL team member volunteers in Mexico** — Gary Johnstone, Deputy Head of Fire and Airside Operations, recently completed his 14th international volunteering mission with the International Fire & Rescue Association.\n- **New Chair and Non-Executive Director sought for HIAL Board** — Scottish Ministers are looking to appoint a new Chair and Non-Executive Director to the Board of Highlands and Islands Airports Ltd (HIAL).\n- **First Minister visits Sumburgh Airport** — First Minister John Swinney, MSP visited Sumburgh Airport yesterday to thank the team for their hard work and continuing service to customers.\n\n_Editors: verify figures/details against the primary sources linked below before expanding this section to the full narrative length._"
+    },
+    {
+      "heading": "Technical & Industrial Notes",
+      "content": "Summarise the engineering, basing, and procurement implications highlighted across today’s releases. Connect them to Scottish industrial capacity (Prestwick, Lossiemouth, Weir, Spirit AeroSystems) and quantify any fleet, workforce, or funding metrics disclosed. Cite the relevant MOD transparency tables where applicable."
+    },
+    {
+      "heading": "Historical Context & Lessons",
+      "content": "Relate the current developments back to Charles E. MacKay’s archival research—e.g., how modern readiness exercises echo WWII dispersal plans or how present-day logistics mirror Beardmore/Weir supply chains. Draw on verified passages from the corresponding book to reinforce continuity across decades."
+    },
+    {
+      "heading": "Modern Legacy & Book Recommendation",
+      "content": "Explain why this news matters for contemporary Scottish aviation readers, then steer them toward the recommended book for deeper study. Include a call-to-action linking to the relevant `/books/<id>` page and highlight unique research materials in the volume."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "hial-airports",
+      "sourceUrl": "https://www.hial.co.uk/news/article/214/hial-team-member-volunteers-in-mexico",
+      "citationText": "hial-airports – HIAL team member volunteers in Mexico"
+    },
+    {
+      "sourceId": "hial-airports",
+      "sourceUrl": "https://www.hial.co.uk/news/article/212/new-chair-and-non-executive-director-sought-for-hial-board",
+      "citationText": "hial-airports – New Chair and Non-Executive Director sought for HIAL Board"
+    },
+    {
+      "sourceId": "hial-airports",
+      "sourceUrl": "https://www.hial.co.uk/news/article/211/first-minister-visits-sumburgh-airport",
+      "citationText": "hial-airports – First Minister visits Sumburgh Airport"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "Royal Air Force updates",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aerospace industry",
+      "primary": false
+    }
+  ],
+  "status": "draft",
+  "createdAt": "2025-11-21T21:08:41.661Z"
+}

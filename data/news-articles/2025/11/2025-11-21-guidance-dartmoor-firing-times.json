@@ -1,0 +1,64 @@
+{
+  "slug": "2025-11-21-guidance-dartmoor-firing-times",
+  "title": "Scottish Aviation Briefing – 2025-11-21",
+  "wordCount": 201,
+  "editorNotes": "Expand each section to ≥3,000 words total, embed at least four approved images, and ensure every factual statement cites the referenced source.",
+  "sections": [
+    {
+      "heading": "Operational Snapshot",
+      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Guidance: Dartmoor firing times** — Information on Dartmoor Training Area's firing times.\n- **Guidance: Sennybridge firing notice** — Monthly firing times for Sennybridge Training Area.\n- **Guidance: Introduction to BowTie methodology course** — This Military Aviation Authority Centre of Air Safety Training enables delegates to gain a basic awareness of BowTies and associated processes.\n\n_Editors: verify figures/details against the primary sources linked below before expanding this section to the full narrative length._"
+    },
+    {
+      "heading": "Technical & Industrial Notes",
+      "content": "Summarise the engineering, basing, and procurement implications highlighted across today’s releases. Connect them to Scottish industrial capacity (Prestwick, Lossiemouth, Weir, Spirit AeroSystems) and quantify any fleet, workforce, or funding metrics disclosed. Cite the relevant MOD transparency tables where applicable."
+    },
+    {
+      "heading": "Historical Context & Lessons",
+      "content": "Relate the current developments back to Charles E. MacKay’s archival research—e.g., how modern readiness exercises echo WWII dispersal plans or how present-day logistics mirror Beardmore/Weir supply chains. Draw on verified passages from the corresponding book to reinforce continuity across decades."
+    },
+    {
+      "heading": "Modern Legacy & Book Recommendation",
+      "content": "Explain why this news matters for contemporary Scottish aviation readers, then steer them toward the recommended book for deeper study. Include a call-to-action linking to the relevant `/books/<id>` page and highlight unique research materials in the volume."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/dartmoor-firing-programme",
+      "citationText": "mod-press-office – Guidance: Dartmoor firing times"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/sennybridge-firing-notice",
+      "citationText": "mod-press-office – Guidance: Sennybridge firing notice"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/introduction-to-bowtie-methodology-course",
+      "citationText": "mod-press-office – Guidance: Introduction to BowTie methodology course"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "Royal Air Force updates",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aerospace industry",
+      "primary": false
+    }
+  ],
+  "status": "draft",
+  "createdAt": "2025-11-21T21:07:47.283Z"
+}
