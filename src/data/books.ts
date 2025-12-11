@@ -203,6 +203,72 @@ export const books: Book[] = [
   {
     id: 'clydeside-aviation-vol2',
     title: 'Clydeside Aviation Volume Two: Between the Wars',
+    price: 16.95,
+    isbn: '9780957344396',
+    category: 'Scottish Aviation History',
+    condition: 'New',
+    inStock: true,
+    description:
+      'Inter-war Scottish aviation on the Clyde: RAF and civil flying boat operations, airship and seaplane infrastructure, industrial recovery and re-tooling, and the transition from wartime production to peacetime aviation services across 1919–1939.',
+    imageUrl: '/book-covers/clydeside-aviation-vol2.jpg',
+    tags: ['Clydeside', 'Scottish Aviation', 'Inter-war', 'Industrial History'],
+    pageCount: 312,
+    publicationYear: 2023,
+    weight: 500,
+    academicLevel: ['Undergraduate', 'Graduate', 'Research'],
+    era: ['Inter-War (1918-1939)'],
+    aircraftTypes: ['Flying Boats', 'Transports', 'Trainers', 'Early Airliners'],
+    geographicFocus: ['Scotland', 'Britain'],
+    sourceType: ['Archival Research', 'Technical Analysis', 'Photographic'],
+    researchThemes: ['Industrial Aviation', 'Civil Aviation', 'RAF Coastal Operations', 'Training'],
+    difficulty: 'Intermediate',
+    citationCount: 45,
+    academicInstitutions: ['RAF Museum', 'Imperial War Museum', 'University of Glasgow'],
+    relatedBookIds: ['clydeside-aviation-vol1', 'beardmore-aviation', 'british-aircraft-great-war'],
+    relatedBlogPosts: [
+      {
+        slug: 'scottish-aviation-between-the-wars',
+        title: 'Scottish Aviation Between the Wars',
+        excerpt: 'How the Clyde’s shipyards and airfields powered inter‑war aviation growth.'
+      },
+      {
+        slug: 'clydeside-aviation-revolution',
+        title: 'Clydeside Aviation Revolution',
+        excerpt: 'Industrial Glasgow’s shift from ships to aircraft through two world wars.'
+      }
+    ],
+    tableOfContents: [
+      'Preface: From Armistice to Aviation Rebirth',
+      'Chapter 1: Demobilization and the Clyde’s Industrial Reset',
+      'Chapter 2: Civil Aviation and Flying Boat Services',
+      'Chapter 3: RAF Coastal Stations and Training on the Clyde',
+      'Chapter 4: Airship and Seaplane Infrastructure',
+      'Chapter 5: Industrial Re-tooling for Aviation',
+      'Chapter 6: Airfields, Clubs, and Public Display Flying',
+      'Chapter 7: International Contracts and Exports',
+      'Chapter 8: Economic Pressures and Technical Innovation',
+      'Appendices: Aircraft Types, Facilities, and Production Data',
+      'Bibliography and Sources',
+      'Index'
+    ],
+    authorInsights:
+      'Charts the Clyde’s aviation industries between 1919 and 1939, tracing how shipyards, engine shops, and airfields adapted to civil and RAF requirements after the Great War.',
+    researchBackground:
+      'Built from Clyde shipyard archives, RAF coastal station records, contemporary aviation journals, and civil flying boat operator documents covering inter‑war Scotland.',
+    academicValue:
+      'Used by researchers studying inter‑war British aviation infrastructure and industrial transition from naval to aviation production.',
+    specifications: {
+      format: 'Paperback, 312 pages',
+      illustrations: '120+ photographs and technical drawings',
+      maps: true,
+      bibliography: true,
+      index: true
+    }
+  },
+
+  {
+    id: 'clydeside-aviation-vol2',
+    title: 'Clydeside Aviation Volume Two: Between the Wars',
     price: 15.54,
     isbn: '9780957344372',
     category: 'Scottish Aviation History',
