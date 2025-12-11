@@ -56,6 +56,26 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
       }
     : undefined;
 
+  const editorialReview = {
+    '@type': 'Review',
+    '@id': `${baseUrl}/books/${book.id}#editorial-review`,
+    name: `${book.title} editorial review`,
+    reviewBody:
+      (book.description || '').slice(0, 2000) ||
+      `${book.title} by Charles E. MacKay — authoritative aviation history book.`,
+    author: {
+      '@type': 'Organization',
+      name: 'Charles E. MacKay Publishing'
+    },
+    datePublished: new Date().toISOString(),
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1'
+    }
+  };
+
 
 
   // Generate FAQ schema based on book content
@@ -555,6 +575,8 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
     category: book.category,
 
     ...(aggregateRating && { aggregateRating }),
+
+    review: [editorialReview],
 
     offers: {
 
