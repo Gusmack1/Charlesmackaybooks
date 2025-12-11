@@ -13,8 +13,9 @@ const priorityScore: Record<string, number> = {
   'tier-3': 3,
 }
 
-export async function generateMetadata({ searchParams }: { searchParams: SearchParams }): Promise<Metadata> {
-  const raw = (searchParams?.query ?? searchParams?.q ?? '').toString()
+export async function generateMetadata({ searchParams }: { searchParams: Promise<SearchParams> }): Promise<Metadata> {
+  const resolved = await searchParams
+  const raw = ((resolved?.query ?? resolved?.q) ?? '').toString()
   const hasQuery = raw.trim().length > 0
 
   return {
@@ -44,8 +45,9 @@ function formatDate(iso: string | undefined) {
   if (!iso) return 'Date pending'
   return new Date(iso).toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' })
 }
-export default async function SearchPage({ searchParams }: { searchParams: SearchParams }) {
-  const raw = (searchParams?.query ?? searchParams?.q ?? '').toString()
+export default async function SearchPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
+  const resolved = await searchParams
+  const raw = ((resolved?.query ?? resolved?.q) ?? '').toString()
   const q = raw.trim().toLowerCase()
 
   const matchingBooks = q

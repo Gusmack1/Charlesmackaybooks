@@ -174,7 +174,7 @@ export default function CustomerTestimonials({
                   <div className="flex items-center space-x-2">
                     <h4 className="font-semibold text-primary">{testimonial.customerName}</h4>
                     {testimonial.verified && (
-                      <CheckCircle className="w-4 h-4 text-green-600" title="Verified Purchase" />
+                    <CheckCircle className="w-4 h-4 text-green-600" aria-label="Verified Purchase" />
                     )}
                   </div>
                   <p className="text-sm text-secondary">{testimonial.location}</p>

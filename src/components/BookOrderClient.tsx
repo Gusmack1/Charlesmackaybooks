@@ -14,8 +14,11 @@ export default function BookOrderClient({ book, children, className }: BookOrder
   const { addToCart, openBasket } = useCart()
   const [isAddingToCart, setIsAddingToCart] = useState(false)
   
-  // Check if this is a pre-order book
-  const isPreOrder = book.condition === 'Pre-Order' || book.isbn === 'Coming Soon' || !book.inStock
+  // Check if this is a pre-order book (allow legacy labels without widening Book type)
+  const isPreOrder =
+    (book.condition as string) === 'Pre-Order' ||
+    book.isbn === 'Coming Soon' ||
+    !book.inStock
 
   const handleAddToCart = () => {
     setIsAddingToCart(true)
@@ -29,10 +32,7 @@ export default function BookOrderClient({ book, children, className }: BookOrder
   const handlePreOrder = () => {
     // For pre-orders, we'll still add to cart but with different messaging
     setIsAddingToCart(true)
-    addToCart({
-      ...book,
-      condition: 'Pre-Order'
-    })
+    addToCart(book)
     setTimeout(() => {
       setIsAddingToCart(false)
       openBasket()

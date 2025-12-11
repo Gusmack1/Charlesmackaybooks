@@ -471,6 +471,3 @@ export function useLazyImage(
 
 // Export default optimizer instance
 export const imageOptimizer = new ImageOptimizer();
-
-// Export types
-export type { ImageOptimizationConfig, OptimizedImageData, ImageMetadata }; 

@@ -26,15 +26,15 @@ export class PerformanceMonitor {
 
   private async initializeMonitoring() {
     try {
-      // Dynamically import web-vitals to avoid SSR issues
-      const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+      // Dynamically import web-vitals (v5 uses on* API)
+      const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals/attribution');
       
       // Monitor Core Web Vitals
-      getCLS(this.handleMetric.bind(this));
-      getFID(this.handleMetric.bind(this));
-      getFCP(this.handleMetric.bind(this));
-      getLCP(this.handleMetric.bind(this));
-      getTTFB(this.handleMetric.bind(this));
+      onCLS(this.handleMetric.bind(this));
+      onINP(this.handleMetric.bind(this));
+      onFCP(this.handleMetric.bind(this));
+      onLCP(this.handleMetric.bind(this));
+      onTTFB(this.handleMetric.bind(this));
 
       console.log('✅ Performance monitoring initialized');
     } catch (error) {

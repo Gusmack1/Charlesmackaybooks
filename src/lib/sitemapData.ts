@@ -49,22 +49,6 @@ const FALLBACK_CATEGORY_SLUGS = [
   'travel-literature',
 ];
 
-const ADDITIONAL_BOOK_IDS = [
-  'aircraft-carrier-argus',
-  'birth-atomic-bomb',
-  'dorothy-wordsworth',
-  'mother-of-the-few',
-  'modern-furniture',
-  'soaring-with-wings',
-  'flying-for-kaiser',
-  'enemy-luftwaffe-1945',
-  'sabres-from-north',
-  'sycamore-seeds',
-  'captain-eric-brown',
-  'adolf-rohrbach',
-  'sonic-to-standoff',
-];
-
 const PROJECT_ROOT = process.cwd();
 
 function toAbsoluteUrl(route: string) {
@@ -118,10 +102,7 @@ export function getBlogSlugs(): string[] {
 }
 
 function getBookIds(): string[] {
-  const ids = new Set<string>();
-  books.forEach((book) => ids.add(book.id));
-  ADDITIONAL_BOOK_IDS.forEach((id) => ids.add(id));
-  return Array.from(ids);
+  return books.map((book) => book.id);
 }
 
 function getCategorySlugs(): string[] {

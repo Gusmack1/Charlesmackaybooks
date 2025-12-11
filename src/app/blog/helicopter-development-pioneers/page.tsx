@@ -674,9 +674,27 @@ const post = {
   tags: ["helicopter","development","pioneers","cierva","sikorsky","autogyro","rotorcraft"],
   relatedBooks: getBooksData(['sycamore-seeds', 'sikorsky-vs300', 'helicopter-development-pioneers']),
   relatedPosts: [
-    { slug: 'sikorsky-vs300-helicopter-breakthrough', title: 'Sikorsky VS‑300: The Breakthrough' },
-    { slug: 'bristol-sycamore-helicopter-development', title: 'Bristol Sycamore Development' },
-    { slug: 'rotorcraft-military-applications', title: 'Rotorcraft: Military Applications' }
+    {
+      title: 'Sikorsky VS‑300: The Breakthrough',
+      excerpt: 'How Sikorsky’s VS‑300 proved the single-rotor layout and tail rotor control for modern helicopters.',
+      id: 'sikorsky-vs300-helicopter-breakthrough',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 6,
+    },
+    {
+      title: 'Bristol Sycamore Development',
+      excerpt: 'Britain’s first production helicopter and the engineering discipline that made it reliable.',
+      id: 'bristol-sycamore-helicopter-development',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 7,
+    },
+    {
+      title: 'Rotorcraft: Military Applications',
+      excerpt: 'Military roles, tactics, and logistics that shaped rotorcraft requirements post‑WWII.',
+      id: 'rotorcraft-military-applications',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 8,
+    },
   ]
 }
 

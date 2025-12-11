@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
-import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 

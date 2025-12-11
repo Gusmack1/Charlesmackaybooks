@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
-import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -127,6 +126,7 @@ const post = {
   excerpt: 'A comprehensive, research-backed account of how Juan de la Cierva\'s autogyros unlocked autorotation physics and paved the way for Igor Sikorsky\'s revolution in controlled powered hover: technical comparison, historical development, rotor mechanics, control systems, and the evolutionary bridge from autorotative lift to vertical flight.',
   author: {
     name: 'Charles E. MacKay',
+    bio: 'Aviation historian specializing in rotary-wing development, Scottish aviation heritage, and military aviation.',
     image: '/charles-mackay-aviation-historian.jpg',
     email: 'charlese1mackay@hotmail.com'
   },

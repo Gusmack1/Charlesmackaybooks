@@ -1,3 +1,4 @@
+declare const gtag: (...args: any[]) => void;
 /**
  * Performance Monitor - Core Web Vitals Optimization
  * Based on Charles Mackay Books Website Analysis Report - Prompt 5

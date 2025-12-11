@@ -37,25 +37,6 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
   const baseUrl = 'https://charlesmackaybooks.com';
 
   // Use academic signals (citations or institutions) as factual rating counts
-  const ratingSourceCount =
-    (book.citationCount && book.citationCount > 0 && Number.isFinite(book.citationCount)
-      ? book.citationCount
-      : undefined) ??
-    (book.academicInstitutions?.length && book.academicInstitutions.length > 0
-      ? book.academicInstitutions.length
-      : undefined);
-
-  const aggregateRating = ratingSourceCount
-    ? {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        bestRating: '5',
-        worstRating: '1',
-        ratingCount: ratingSourceCount,
-        reviewCount: ratingSourceCount
-      }
-    : undefined;
-
   const editorialReview = {
     '@type': 'Review',
     '@id': `${baseUrl}/books/${book.id}#editorial-review`,
@@ -68,12 +49,6 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
       name: 'Charles E. MacKay Publishing'
     },
     datePublished: new Date().toISOString(),
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      worstRating: '1'
-    }
   };
 
 
@@ -398,6 +373,8 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
 
     ],
 
+    review: [editorialReview],
+
     keywords: [
 
       book.title,
@@ -573,8 +550,6 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
     },
 
     category: book.category,
-
-    ...(aggregateRating && { aggregateRating }),
 
     review: [editorialReview],
 

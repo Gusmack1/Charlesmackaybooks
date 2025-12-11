@@ -90,6 +90,7 @@ export default function OrderTrackingClient({}: OrderTrackingClientProps) {
       emailNotifications: {
         orderConfirmation: false,
         paymentConfirmation: false,
+        dispatchConfirmation: false,
         shippingConfirmation: false,
         deliveryConfirmation: false,
       },

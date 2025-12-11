@@ -1,3 +1,4 @@
+declare const gtag: (...args: any[]) => void
 /**
  * A/B Testing Framework with Statistical Significance
  * Based on Charles Mackay Books Website Analysis Report - Prompt 6

@@ -122,12 +122,6 @@ export const metadata: Metadata = {
     yandex: 'your-yandex-verification-code',
     yahoo: 'your-yahoo-verification-code',
   },
-  alternates: {
-    canonical: 'https://charlesmackaybooks.com',
-    languages: {
-      'en-GB': 'https://charlesmackaybooks.com',
-    },
-  },
   category: 'Books & Literature',
   classification: 'Aviation History',
   other: {

@@ -286,9 +286,27 @@ const post = {
   tags: ["clydeside","scottish","aviation","industrial","revolution","manufacturing"],
   relatedBooks: getBooksData(['clydeside-aviation-vol1', 'beardmore-aviation', 'british-aircraft-great-war']),
   relatedPosts: [
-    { slug: 'beardmore-aviation-scottish-industrial-giant', title: 'Beardmore: Scottish Aviation Pioneer' },
-    { slug: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing in Wartime' },
-    { slug: 'british-aircraft-great-war-rfc-rnas', title: 'British Aircraft of the Great War: RFC & RNAS Development' }
+    {
+      id: 'beardmore-aviation-scottish-industrial-giant',
+      title: 'Beardmore: Scottish Aviation Pioneer',
+      excerpt: 'How Beardmore’s shipyards pivoted to aircraft, engines, and airships with Clyde industrial discipline.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 6,
+    },
+    {
+      id: 'aviation-manufacturing-wartime-production',
+      title: 'Aviation Manufacturing in Wartime',
+      excerpt: 'Standards, inspection culture, and scaling lessons from wartime British aviation production.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 7,
+    },
+    {
+      id: 'british-aircraft-great-war-rfc-rnas',
+      title: 'British Aircraft of the Great War: RFC & RNAS Development',
+      excerpt: 'Programmes, aircraft types, and squadron deployment that framed Clydeside production priorities.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 8,
+    },
   ]
 }
 

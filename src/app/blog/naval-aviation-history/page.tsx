@@ -380,7 +380,11 @@ export default function BlogPost() {
 
         relatedBooks={[{ id: 'aircraft-carrier-argus', title: '', isbn: '', price: 0 }, { id: 'beardmore-aviation', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }]}
 
-        relatedPosts={[{ id: 'hms-argus-first-aircraft-carrier', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'hms-argus-first-aircraft-carrier-operations', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'jet-age-aviation-cold-war-development', title: '', excerpt: '', image: '', readingTime: 0 }]}
+        relatedPosts={[
+          { slug: 'hms-argus-first-aircraft-carrier', title: '', excerpt: '' },
+          { slug: 'hms-argus-first-aircraft-carrier-operations', title: '', excerpt: '' },
+          { slug: 'jet-age-aviation-cold-war-development', title: '', excerpt: '' },
+        ]}
 
       />
 

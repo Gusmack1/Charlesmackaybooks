@@ -200,9 +200,27 @@ const post = {
   tags: ["supermarine","spitfire","development","evolution","fighter","wwii"],
   relatedBooks: getBooksData(['supermarine-spitfire-development', 'captain-eric-brown', 'british-aircraft-great-war']),
   relatedPosts: [
-    { slug: 'supermarine-spitfire-development-history', title: 'Supermarine Spitfire: Complete Development History' },
-    { slug: 'hawker-hurricane-fighter-development', title: 'Hawker Hurricane: Development' },
-    { slug: 'schneider-trophy-racing-development', title: 'Schneider Trophy Racing: Development' }
+    {
+      id: 'supermarine-spitfire-development-history',
+      title: 'Supermarine Spitfire: Complete Development History',
+      excerpt: 'Full lineage from R.J. Mitchell’s racers to late-war Spitfire marks.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 7,
+    },
+    {
+      id: 'hawker-hurricane-fighter-development',
+      title: 'Hawker Hurricane: Development',
+      excerpt: 'How the Hurricane evolved alongside the Spitfire and complemented its roles.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 6,
+    },
+    {
+      id: 'schneider-trophy-racing-development',
+      title: 'Schneider Trophy Racing: Development',
+      excerpt: 'The racing seaplanes that forged British high-speed aerodynamics before WWII.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 6,
+    },
   ]
 }
 

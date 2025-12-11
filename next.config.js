@@ -2,13 +2,8 @@ import path from 'path'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable ESLint during builds to prevent deployment failures due to linting errors
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  // Enable TypeScript but ignore errors during builds
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   // Disable trailing slashes to prevent redirects - each page should have its own URL
   trailingSlash: false,
@@ -26,9 +21,22 @@ const nextConfig = {
 
   // Image configuration with performance optimization
   images: {
-    domains: [
-      'charlesmackaybooks.com',
-      'same-assets.com'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'charlesmackaybooks.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.charlesmackaybooks.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'same-assets.com',
+        pathname: '/**',
+      },
     ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

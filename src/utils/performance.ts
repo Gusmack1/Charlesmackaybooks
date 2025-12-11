@@ -1,3 +1,4 @@
+declare const gtag: (...args: any[]) => void;
 // Performance optimization utilities for Charles Mackay Books website
 
 // Critical CSS for above-the-fold content
@@ -158,8 +159,10 @@ export class PerformanceMonitor {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
-        this.metrics.set('FID', entry.processingStart - entry.startTime);
-        this.reportMetric('FID', entry.processingStart - entry.startTime);
+        const input = entry as any;
+        const fid = (input.processingStart ?? input.startTime ?? 0) - (input.startTime ?? 0);
+        this.metrics.set('FID', fid);
+        this.reportMetric('FID', fid);
       });
     }).observe({ entryTypes: ['first-input'] });
     

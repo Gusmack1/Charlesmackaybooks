@@ -1,3 +1,4 @@
+declare const gtag: (...args: any[]) => void;
 /**
  * Security Manager - Comprehensive Security Implementation
  * Based on Charles Mackay Books Website Analysis Report - Prompt 10

@@ -302,9 +302,27 @@ const post = {
   tags: ["luftwaffe","1945","final","year","wwii","german"],
   relatedBooks: getBooksData(['enemy-luftwaffe-1945', 'this-was-the-enemy-volume-two', 'german-aircraft-great-war']),
   relatedPosts: [
-    { slug: 'me262-jet-fighter-revolution', title: 'Me 262: The Jet Fighter Revolution' },
-    { slug: 'german-aircraft-great-war-development', title: 'German Aircraft Great War Development' },
-    { slug: 'jet-age-aviation-cold-war-development', title: 'Jet Age Aviation: Cold War Development' }
+    {
+      id: 'me262-jet-fighter-revolution',
+      title: 'Me 262: The Jet Fighter Revolution',
+      excerpt: 'How the Me 262’s speed changed interception—and where fuel, engines, and bases limited it.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 6,
+    },
+    {
+      id: 'german-aircraft-great-war-development',
+      title: 'German Aircraft Great War Development',
+      excerpt: 'German WWI design lineage that fed into late-war jet thinking and production culture.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 7,
+    },
+    {
+      id: 'jet-age-aviation-cold-war-development',
+      title: 'Jet Age Aviation: Cold War Development',
+      excerpt: 'Late-WWII jet lessons carried into the early Cold War doctrines and aircraft programs.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 7,
+    },
   ]
 }
 

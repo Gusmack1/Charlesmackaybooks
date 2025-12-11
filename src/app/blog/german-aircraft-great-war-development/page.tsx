@@ -356,7 +356,10 @@ export default function BlogPost() {
 
         relatedBooks={[{ id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol1', title: '', isbn: '', price: 0 }]}
 
-        relatedPosts={[{ id: 'sopwith-camel-wwi-fighter', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'bristol-fighter-f2b-brisfit', title: '', excerpt: '', image: '', readingTime: 0 }]}
+        relatedPosts={[
+          { slug: 'sopwith-camel-wwi-fighter', title: '', excerpt: '' },
+          { slug: 'bristol-fighter-f2b-brisfit', title: '', excerpt: '' },
+        ]}
 
       />
 

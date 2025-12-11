@@ -211,9 +211,27 @@ const post = {
   tags: ["korean","war","air","combat"],
   relatedBooks: getBooksData(['sabres-from-north', 'enemy-luftwaffe-1945', 'sonic-to-standoff']),
   relatedPosts: [
-    { slug: 'f86-sabre-cold-war-fighter', title: 'F‑86 Sabre: Cold War Fighter' },
-    { slug: 'jet-age-aviation-cold-war-development', title: 'Jet Age Aviation: Cold War Development' },
-    { slug: 'me262-jet-fighter-revolution', title: 'Me 262: Jet Fighter Revolution' }
+    {
+      id: 'f86-sabre-cold-war-fighter',
+      title: 'F‑86 Sabre: Cold War Fighter',
+      excerpt: 'Cold War service, variants, and transonic handling lessons from the Sabre line.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 6,
+    },
+    {
+      id: 'jet-age-aviation-cold-war-development',
+      title: 'Jet Age Aviation: Cold War Development',
+      excerpt: 'How early jet combat over Korea drove Cold War fighter design and doctrine.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 7,
+    },
+    {
+      id: 'me262-jet-fighter-revolution',
+      title: 'Me 262: Jet Fighter Revolution',
+      excerpt: 'German WWII jet lessons that foreshadowed MiG Alley’s jet-versus-jet battles.',
+      image: '/blog-images/default-generic.svg',
+      readingTime: 6,
+    },
   ]
 }
 

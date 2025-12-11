@@ -482,7 +482,18 @@ export default function BlogPost() {
 
         relatedBooks={[{ id: 'birth-atomic-bomb', title: '', isbn: '', price: 0 }]}
 
-        relatedPosts={[{ id: 'british-nuclear-deterrent-v-force', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'aviation-manufacturing-wartime-production', title: '', excerpt: '', image: '', readingTime: 0 }]}
+        relatedPosts={[
+          {
+            slug: 'british-nuclear-deterrent-v-force',
+            title: 'British Nuclear Deterrent: V-Force',
+            excerpt: 'How Britain’s V-bomber force framed Cold War deterrence and nuclear delivery doctrine.',
+          },
+          {
+            slug: 'aviation-manufacturing-wartime-production',
+            title: 'Aviation Manufacturing: Wartime Production',
+            excerpt: 'Industrial mobilization, inspection culture, and logistics that enabled complex wartime programs.',
+          },
+        ]}
 
       />
 

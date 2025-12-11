@@ -3,9 +3,7 @@ import Script from 'next/script'
 
 const DEFAULT_GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-RJS2CCBSJP'
 const ADDITIONAL_MEASUREMENT_IDS =
-  process.env.NEXT_PUBLIC_ADDITIONAL_MEASUREMENTS?.split(',').map((id) => id.trim()).filter(Boolean) || [
-    'GT-MR8KZP58',
-  ]
+  process.env.NEXT_PUBLIC_ADDITIONAL_MEASUREMENTS?.split(',').map((id) => id.trim()).filter(Boolean) || []
 const DEFAULT_GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WKRHZDSX'
 
 export default function AnalyticsScripts() {

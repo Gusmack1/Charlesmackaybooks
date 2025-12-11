@@ -16,7 +16,7 @@ export function getBookData(bookId: string): BookData | null {
     id: book.id,
     title: book.title,
     author: 'Charles E. MacKay',
-    cover: book.imageUrl,
+    cover: book.imageUrl || `/book-covers/${book.id}.jpg`,
     price: book.price
   };
 }

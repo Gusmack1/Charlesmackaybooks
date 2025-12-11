@@ -274,7 +274,12 @@ export default function BlogPost() {
 
         relatedBooks={[{ id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol1', title: '', isbn: '', price: 0 }, { id: 'beardmore-aviation', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }]}
 
-        relatedPosts={[{ id: 'british-aircraft-great-war-rfc-rnas', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'sopwith-camel-wwi-fighter', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'aviation-manufacturing-wartime-production', title: '', excerpt: '', image: '', readingTime: 0 }, { id: 'german-aircraft-great-war-development', title: '', excerpt: '', image: '', readingTime: 0 }]}
+        relatedPosts={[
+          { slug: 'british-aircraft-great-war-rfc-rnas', title: '', excerpt: '' },
+          { slug: 'sopwith-camel-wwi-fighter', title: '', excerpt: '' },
+          { slug: 'aviation-manufacturing-wartime-production', title: '', excerpt: '' },
+          { slug: 'german-aircraft-great-war-development', title: '', excerpt: '' },
+        ]}
 
       />
 

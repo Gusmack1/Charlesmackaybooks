@@ -402,7 +402,7 @@ export default function BlogPost() {
         relatedBooks={post.relatedBooks.map(book => ({
           id: book.id,
           title: book.title,
-          isbn: book.isbn || '',
+          isbn: (book as any).isbn || '',
           price: book.price
         }))}
         relatedPosts={post.relatedPosts || []}

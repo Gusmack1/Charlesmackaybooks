@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     const order = await OrderManagementService.createOrder(
       orderItems,
       customerInfo,
-      'test',
+      'stripe',
       'test_payment_id_123'
     );
 
