@@ -20,6 +20,51 @@
 # Note: All redirects removed - each page must be accessible at its own URL
 # Netlify will handle HTTPS automatically without explicit redirects
 
+[[redirects]]
+  from = "/admin/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-prompt-system"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/test-order"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/products.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/merchant-feed.txt"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/shopping-actions.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/primary-feed-url"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/blog/hms-argus-first-aircraft-carrier-operations"
+  to = "/blog/hms-argus-first-aircraft-carrier"
+  status = 301
+
+[[redirects]]
+  from = "/blog/supermarine-spitfire-development-history"
+  to = "/blog/supermarine-spitfire-development-evolution"
+  status = 301
+
 [[headers]]
   for = "/"
   [headers.values]
