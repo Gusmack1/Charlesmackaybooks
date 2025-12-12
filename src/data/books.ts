@@ -9,7 +9,12 @@ export const books: Book[] = [
     category: 'WWII Aviation',
     condition: 'New',
     inStock: true,
-    description: 'Pre-order the definitive continuation of Charles E. MacKay’s Luftwaffe history project. Volume Two dissects late-war German fighter, bomber, and jet programs, combining newly translated factory correspondence, operational records, and eyewitness maintenance notes to explain how fuel starvation, pilot attrition, and rushed weapons schemes doomed the Reich’s aerial defense in 1944–45. Detailed appendices document production totals, losses, and technology transfers that foreshadowed the Cold War jet age.',
+    description: `Newly Published 
+In this second volume of This was the Enemy, the procurement of aircraft, bombs, aeroplane details and aircraft armament are explored. It is astonishing to discover the myriad of production plans, confusion of detail and cancelled projects embarked by the Nazis. Hitler had the knack of appointing through Goering, the wrong people for the wrong jobs at the wrong time. An example of this appointment was Ernst Udet.
+This volume follows German Aeronautical and Armaments Industry from its rise in 1934 to its collapse in 1945. Chapter one covers the planning of the aircraft industry guided by Erhard Milch and shows the collapse of pre-war theory. Chapter two introduces aircraft procurement to the destruction  of aircraft production due to Allied bombing. The research details are covered from the Bombing Command Survey Unit and the United States Strategic Survey Unit.
+There is a chapter covering front line German Air Force aircraft, each aircraft is supported by a myriad of pictures and technical drawings.
+Armament shows the work of Rheinmetall Borsig and Mauser. All classes of bombs are illustrated with technical drawings. The appendix closes with the Blohm unt Voss asymmetrical aircraft.
+288 pages A5, over 300 pictures, 58000 words Bibliography`,
     imageUrl: '/book-covers/this-was-the-enemy-volume-two.jpg',
     tags: ['WWII', 'Luftwaffe', 'German Aircraft', 'Military Aviation'],
     pageCount: 296,
@@ -47,7 +52,7 @@ export const books: Book[] = [
         excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.'
       }
     ],
-    authorInsights: 'Available for pre-order now. Release date: 24 November 2025. This comprehensive volume will explore the complete story of German aviation development during World War II.',
+    authorInsights: 'This comprehensive volume explores the complete story of German aviation development during World War II, building on Volume One with new archival material and production analysis.',
     researchBackground: 'Based on extensive archival research and primary sources covering German aviation development and Luftwaffe operations.',
     academicValue: 'Volume Two will provide detailed analysis of German aviation technology and operational doctrine during the war years.',
   },
@@ -194,72 +199,6 @@ export const books: Book[] = [
     specifications: {
       format: 'Paperback, 268 pages',
       illustrations: '80+ photographs, period maps',
-      maps: true,
-      bibliography: true,
-      index: true
-    }
-  },
-
-  {
-    id: 'clydeside-aviation-vol2',
-    title: 'Clydeside Aviation Volume Two: Between the Wars',
-    price: 16.95,
-    isbn: '9780957344396',
-    category: 'Scottish Aviation History',
-    condition: 'New',
-    inStock: true,
-    description:
-      'Inter-war Scottish aviation on the Clyde: RAF and civil flying boat operations, airship and seaplane infrastructure, industrial recovery and re-tooling, and the transition from wartime production to peacetime aviation services across 1919–1939.',
-    imageUrl: '/book-covers/clydeside-aviation-vol2.jpg',
-    tags: ['Clydeside', 'Scottish Aviation', 'Inter-war', 'Industrial History'],
-    pageCount: 312,
-    publicationYear: 2023,
-    weight: 500,
-    academicLevel: ['Undergraduate', 'Graduate', 'Research'],
-    era: ['Inter-War (1918-1939)'],
-    aircraftTypes: ['Flying Boats', 'Transports', 'Trainers', 'Early Airliners'],
-    geographicFocus: ['Scotland', 'Britain'],
-    sourceType: ['Archival Research', 'Technical Analysis', 'Photographic'],
-    researchThemes: ['Industrial Aviation', 'Civil Aviation', 'RAF Coastal Operations', 'Training'],
-    difficulty: 'Intermediate',
-    citationCount: 45,
-    academicInstitutions: ['RAF Museum', 'Imperial War Museum', 'University of Glasgow'],
-    relatedBookIds: ['clydeside-aviation-vol1', 'beardmore-aviation', 'british-aircraft-great-war'],
-    relatedBlogPosts: [
-      {
-        slug: 'scottish-aviation-between-the-wars',
-        title: 'Scottish Aviation Between the Wars',
-        excerpt: 'How the Clyde’s shipyards and airfields powered inter‑war aviation growth.'
-      },
-      {
-        slug: 'clydeside-aviation-revolution',
-        title: 'Clydeside Aviation Revolution',
-        excerpt: 'Industrial Glasgow’s shift from ships to aircraft through two world wars.'
-      }
-    ],
-    tableOfContents: [
-      'Preface: From Armistice to Aviation Rebirth',
-      'Chapter 1: Demobilization and the Clyde’s Industrial Reset',
-      'Chapter 2: Civil Aviation and Flying Boat Services',
-      'Chapter 3: RAF Coastal Stations and Training on the Clyde',
-      'Chapter 4: Airship and Seaplane Infrastructure',
-      'Chapter 5: Industrial Re-tooling for Aviation',
-      'Chapter 6: Airfields, Clubs, and Public Display Flying',
-      'Chapter 7: International Contracts and Exports',
-      'Chapter 8: Economic Pressures and Technical Innovation',
-      'Appendices: Aircraft Types, Facilities, and Production Data',
-      'Bibliography and Sources',
-      'Index'
-    ],
-    authorInsights:
-      'Charts the Clyde’s aviation industries between 1919 and 1939, tracing how shipyards, engine shops, and airfields adapted to civil and RAF requirements after the Great War.',
-    researchBackground:
-      'Built from Clyde shipyard archives, RAF coastal station records, contemporary aviation journals, and civil flying boat operator documents covering inter‑war Scotland.',
-    academicValue:
-      'Used by researchers studying inter‑war British aviation infrastructure and industrial transition from naval to aviation production.',
-    specifications: {
-      format: 'Paperback, 312 pages',
-      illustrations: '120+ photographs and technical drawings',
       maps: true,
       bibliography: true,
       index: true

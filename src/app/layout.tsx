@@ -16,7 +16,6 @@ import BacklinkStrategy from '@/components/BacklinkStrategy'
 import GoogleSEOCompliance from '@/components/GoogleSEOCompliance'
 import AnalyticsScripts from '@/components/AnalyticsScripts'
 import { books } from '@/data/books'
-import { getValidGTIN13, getValidISBN, getValidSKU } from '@/utils/isbn'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -33,7 +32,6 @@ const playfair = Playfair_Display({
 const SITE_DOMAIN = 'https://charlesmackaybooks.com'
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WKRHZDSX'
 const priceSummary = getPriceSummary()
-const productItemListJson = buildProductItemList()
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -216,15 +214,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* Invisible Product ItemList for all books (homepage and global head) */}
-        {productItemListJson && (
-          <script
-            id="global-product-itemlist"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: productItemListJson }}
-          />
-        )}
-        
         {/* Security headers */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="DENY" />
@@ -392,128 +381,59 @@ function getPriceSummary() {
   }
 }
 
-function buildProductItemList() {
-  try {
-    const itemList = {
-      '@context': 'https://schema.org/',
-      '@type': 'ItemList',
-      itemListElement: books.map((book, index) => {
-        const validISBN = getValidISBN(book.isbn)
-        const validGTIN13 = getValidGTIN13(book.isbn)
-        const validSKU = getValidSKU(book.isbn, book.id)
-
-        return {
-          '@type': 'ListItem',
-          position: index + 1,
-          item: {
-            '@type': 'Product',
-            '@id': `${SITE_DOMAIN}#isbn-${validISBN || book.id}`,
-            url: `${SITE_DOMAIN}/books/${book.id}`,
-            name: book.title,
-            description: resolveDescription(book),
-            image: [absoluteImagePath(book.imageUrl, book.id)],
-            sku: validSKU,
-            ...(validGTIN13 && { gtin13: validGTIN13 }),
-            mpn: validSKU,
-            brand: { '@type': 'Brand', name: 'Charles E. MacKay' },
-            author: { '@type': 'Person', name: 'Charles Edward MacKay' },
-            offers: {
-              '@type': 'Offer',
-              url: SITE_DOMAIN,
-              priceCurrency: 'GBP',
-              price: Number(book.price).toFixed(2),
-              priceValidUntil: '2025-12-31',
-              availability: 'https://schema.org/InStock',
-              itemCondition: 'https://schema.org/NewCondition',
-              seller: { '@type': 'Organization', name: 'Charles E. MacKay Books' },
-              shippingDetails: {
-                '@type': 'OfferShippingDetails',
-                shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'GBP' },
-                shippingDestination: [
-                  { '@type': 'DefinedRegion', addressCountry: 'GB' },
-                  { '@type': 'DefinedRegion', addressCountry: 'EU' },
-                  { '@type': 'DefinedRegion', addressCountry: 'US' },
-                ],
-                deliveryTime: {
-                  '@type': 'ShippingDeliveryTime',
-                  handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 2, unitCode: 'DAY' },
-                  transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 5, unitCode: 'DAY' },
-                },
-              },
-              hasMerchantReturnPolicy: {
-                '@type': 'MerchantReturnPolicy',
-                applicableCountry: 'GB',
-                returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-                merchantReturnDays: 30,
-                returnMethod: 'https://schema.org/ReturnByMail',
-                returnFees: 'https://schema.org/FreeReturn',
-                returnShippingFeesAmount: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
-                returnPolicyUrl: `${SITE_DOMAIN}/returns`,
-              },
-            },
-            additionalProperty: [
-              { '@type': 'PropertyValue', name: 'Category', value: book.category || 'Aviation History' },
-              { '@type': 'PropertyValue', name: 'Format', value: 'Paperback' },
-            ],
-          },
-        }
-      }),
-    }
-    return JSON.stringify(itemList)
-  } catch {
-    return ''
-  }
-}
-
-function absoluteImagePath(imagePath: string | undefined, id: string) {
-  if (!imagePath) return `${SITE_DOMAIN}/book-covers/${id}.jpg`
-  if (imagePath.startsWith('http')) return imagePath
-  return `${SITE_DOMAIN}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`
-}
-
-function resolveDescription(book: (typeof books)[number]) {
-  const fallback =
-    'Aviation history book by Charles E. MacKay. Expert research on Scottish aviation, WWI & WWII aircraft, helicopter development, and military aviation history.'
-  const base = (book.description || book.title || fallback).slice(0, 5000)
-  if (base.length >= 50) return base
-  return fallback
-}
-
 function buildMerchantDataLayer() {
   try {
-    const items = books.map((book) => ({
-      item_id: String(book.isbn || book.id),
-      item_name: book.title,
-      item_brand: 'Charles E. MacKay',
-      item_category: `Books/${book.category || 'Aviation History'}`,
-      price: Number(book.price),
-      currency: 'GBP',
-      quantity: 1,
-      item_variant: 'Paperback',
-      author: 'Charles E. MacKay',
-      isbn: String(book.isbn || book.id),
-      availability: 'in_stock',
-      condition: 'new',
-    }))
+    const itemsWithSlug = books.map((book) => {
+      const normalizedPrice = Number(book.price)
+      return {
+        slug: book.id,
+        item_id: String(book.isbn || book.id),
+        item_name: book.title,
+        item_brand: 'Charles E. MacKay',
+        item_category: `Books/${book.category || 'Aviation History'}`,
+        price: Number.isFinite(normalizedPrice) ? normalizedPrice : 0,
+        currency: 'GBP',
+        quantity: 1,
+        item_variant: 'Paperback',
+        author: 'Charles E. MacKay',
+        isbn: String(book.isbn || book.id),
+        availability: 'in_stock',
+        condition: 'new',
+      }
+    })
+
+    const itemsBySlug = itemsWithSlug.reduce<Record<string, any>>((acc, item) => {
+      const { slug, ...rest } = item
+      acc[slug] = rest
+      return acc
+    }, {})
+
+    const listItems = itemsWithSlug.map(({ slug, ...rest }) => rest)
 
     return `
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'view_item_list',
-        ecommerce: { items: ${JSON.stringify(items)} }
-      });
+      (function() {
+        try {
+          const path = window.location?.pathname || '';
+          const dataLayer = window.dataLayer = window.dataLayer || [];
+          const itemsBySlug = ${JSON.stringify(itemsBySlug)};
+          const listItems = ${JSON.stringify(listItems)};
+          const slugMatch = path.match(/^\\/books\\/([^/]+)\\/?$/);
 
-      try {
-        document.head.insertAdjacentHTML('beforeend', '<meta name="google-merchant-center-product-data" content="true">');
-      } catch (e) {}
+          if (path === '/books') {
+            dataLayer.push({ event: 'view_item_list', ecommerce: { items: listItems } });
+            return;
+          }
 
-      try {
-        (document.querySelectorAll('[id^="book-"]') || []).forEach(function(book) {
-          book.setAttribute('itemtype', 'https://schema.org/Product');
-          var isbn = book.id.replace('book-', '');
-          book.setAttribute('data-product-id', 'isbn-' + isbn);
-        });
-      } catch (e) {}
+          if (slugMatch) {
+            const slug = slugMatch[1];
+            const item = itemsBySlug[slug];
+            if (item) {
+              dataLayer.push({ event: 'view_item', ecommerce: { items: [item] } });
+            }
+            return;
+          }
+        } catch (e) {}
+      })();
     `
   } catch {
     return ''
