@@ -31,7 +31,6 @@ const playfair = Playfair_Display({
 
 const SITE_DOMAIN = 'https://charlesmackaybooks.com'
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WKRHZDSX'
-const priceSummary = getPriceSummary()
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -225,75 +224,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        {/* Google Product/OG/Twitter product meta tags (non-visual) */}
-        <>
-          {/* Google Product Metadata */}
-          <meta property="product:price:amount" content={priceSummary.minPrice.toFixed(2)} />
-          <meta property="product:price:currency" content="GBP" />
-          <meta property="product:availability" content="in stock" />
-          <meta property="product:condition" content="new" />
-          <meta property="product:retailer_item_id" content="multiple" />
-          <meta property="product:brand" content="Charles E. MacKay" />
-
-          {/* Open Graph Product Tags */}
-          <meta property="og:type" content="og:product" />
-          <meta property="og:title" content="Aviation History Books by Charles E. MacKay" />
-          <meta
-            property="og:description"
-            content="Self-published aviation history books used as primary references by researchers worldwide"
-          />
-          <meta property="og:url" content={SITE_DOMAIN} />
-          <meta property="og:site_name" content="Charles MacKay Books" />
-          <meta property="product:plural_title" content="Aviation History Books" />
-          <meta property="product:price:amount" content={priceSummary.minPrice.toFixed(2)} />
-          <meta property="product:price:currency" content="GBP" />
-
-          {/* Twitter Product Card */}
-          <meta name="twitter:card" content="product" />
-          <meta name="twitter:site" content="@charlesmackaybooks" />
-          <meta name="twitter:creator" content="@charlesmackaybooks" />
-          <meta name="twitter:domain" content="charlesmackaybooks.com" />
-          <meta name="twitter:label1" content="Price" />
-          <meta name="twitter:data1" content={`From £${priceSummary.minPrice.toFixed(2)}`} />
-          <meta name="twitter:label2" content="Availability" />
-          <meta name="twitter:data2" content="In Stock" />
-
-          {/* Rich Snippets microdata helpers */}
-          <meta itemProp="name" content="Charles MacKay Aviation Books" />
-          <meta itemProp="description" content="Aviation history books" />
-          <meta itemProp="image" content={`${SITE_DOMAIN}/images/books-collection.jpg`} />
-
-          {/* Google Rich Results Product Signals */}
-          <meta name="product:brand" content="Charles E. MacKay" />
-          <meta name="product:category" content="Books > History > Aviation" />
-          <meta name="product:condition" content="new" />
-          <meta name="product:availability" content="in_stock" />
-          <meta name="product:price" content={priceSummary.minPrice.toFixed(2)} />
-          <meta name="product:currency" content="GBP" />
-          <meta name="product:retailer" content="Charles MacKay Books" />
-          <meta name="product:retailer_id" content="charlesmackaybooks" />
-
-          {/* Shopping Actions Metadata */}
-          <meta property="product:multiple" content="true" />
-          <meta property="product:quantity" content={String(priceSummary.totalBooks)} />
-          <meta property="product:shipping_cost" content="0.00" />
-          <meta property="product:shipping_country" content="GB" />
-          <meta property="product:tax_included" content="true" />
-
-          {/* Book-Specific Metadata */}
-          <meta property="book:author" content="Charles E. MacKay" />
-          <meta property="book:isbn" content="multiple" />
-          <meta property="book:release_date" content="2023" />
-          <meta property="book:publisher" content="A MacKay" />
-          <meta property="product:price:valid_until" content="2026-12-31" />
-
-          {/* Business Verification */}
-          <meta name="google-site-verification" content="GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s" />
-          <meta name="business:contact_data:locality" content="Glasgow" />
-          <meta name="business:contact_data:country_name" content="Scotland" />
-          <meta name="business:contact_data:email" content="charlese1mackay@hotmail.com" />
-        </>
-        
         {/* Core Web Vitals Monitoring */}
         <script
           dangerouslySetInnerHTML={{
@@ -370,15 +300,6 @@ export default function RootLayout({
       </ClientBody>
     </html>
   )
-}
-
-function getPriceSummary() {
-  const numericPrices = books.map((book) => Number(book.price) || 0).filter((value) => value > 0)
-  const minPrice = numericPrices.length ? Math.min(...numericPrices) : 19.99
-  return {
-    minPrice,
-    totalBooks: books.length,
-  }
 }
 
 function buildMerchantDataLayer() {
