@@ -128,6 +128,14 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         </a>
       </div>
 
+      <div className="mt-4 border border-white/10 rounded-lg bg-white/5 px-4 py-3 text-sm text-white/80">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div>🚚 Free UK shipping · 2–5 day dispatch</div>
+          <div>↩️ 30-day returns</div>
+          <div>🔒 Secure checkout (PayPal & card)</div>
+        </div>
+      </div>
+
 
     </div>
   );

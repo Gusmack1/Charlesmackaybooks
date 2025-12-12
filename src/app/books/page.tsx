@@ -42,6 +42,10 @@ export const metadata: Metadata = {
 }
 
 export default function BooksPage() {
+  const newBooks = [...books]
+    .sort((a, b) => (b.publicationYear || 0) - (a.publicationYear || 0))
+    .slice(0, 6)
+
   return (
     <div className="surface-dark relative -mx-0 bg-slate-900">
       <UnifiedSchema
@@ -77,6 +81,22 @@ export default function BooksPage() {
               {books.length} books available • Expert research • Academic references • FREE shipping worldwide
             </p>
           </div>
+
+          {newBooks.length > 0 && (
+            <section className="mb-10">
+              <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                <h3 className="text-xl font-semibold text-white">New &amp; notable</h3>
+                <span className="text-sm text-white/70">
+                  Recent releases and latest editions from Charles E. MacKay
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {newBooks.map((book) => (
+                  <BookCard key={`new-${book.id}`} book={book} sourceContext="books-new-notable" />
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Books Grid - Matching Homepage Layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
