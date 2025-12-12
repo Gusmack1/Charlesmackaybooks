@@ -176,6 +176,31 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
               />
             </div>
 
+            {/* Books referenced in this article */}
+            {relatedBooks.length > 0 && (
+              <div className="card-compact rounded-lg p-6 mb-8 bg-slate-800/50 border border-white/10">
+                <h3 className="text-xl font-semibold text-primary mb-3">Books referenced in this article</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {relatedBooks.slice(0, 3).map((book) => (
+                    <Link key={book.id} href={`/books/${book.id}`} className="flex gap-3 items-start hover:border-white/20 transition-colors border border-white/5 rounded-lg p-3">
+                      <Image
+                        src={book.imageUrl}
+                        alt={book.title}
+                        width={64}
+                        height={90}
+                        className="rounded flex-shrink-0"
+                      />
+                      <div className="space-y-1">
+                        <div className="font-semibold text-primary leading-tight">{book.title}</div>
+                        <div className="text-sm text-secondary line-clamp-3">{book.relevantContent}</div>
+                        <div className="text-sm text-white font-semibold">£{book.price} · Order now →</div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Author Bio */}
             <div className="card-compact bg-accent-blue text-white rounded-lg p-6 mb-8">
               <h3 className="text-xl font-semibold text-white mb-4">👨‍🎓 About the Author</h3>

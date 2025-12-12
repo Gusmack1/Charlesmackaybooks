@@ -605,6 +605,31 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
         {/* Main description content */}
         <main className="container mx-auto container-padding section-padding">
+          {/* Who this book is for */}
+          <div className="card card-large content mb-8">
+            <h3 className="content h3">Who this book is for</h3>
+            <ul className="list-disc list-inside text-secondary space-y-1">
+              <li>Readers of {book.category} seeking primary-source, archival-backed research.</li>
+              {book.era?.length ? <li>Aviation historians focused on {book.era.join(', ')}.</li> : null}
+              {book.aircraftTypes?.length ? <li>Enthusiasts of {book.aircraftTypes.slice(0, 3).join(', ')}.</li> : null}
+              <li>Students and researchers needing citation-ready material with verifiable sourcing.</li>
+            </ul>
+            <div className="mt-4">
+              <h4 className="font-semibold text-primary mb-2">You’ll learn</h4>
+              <ul className="list-disc list-inside text-secondary space-y-1">
+                {book.researchThemes?.slice(0, 3).map((theme) => (
+                  <li key={theme}>{theme}</li>
+                ))}
+                {!book.researchThemes?.length && (
+                  <>
+                    <li>How production, operations, and technology shaped outcomes for this period.</li>
+                    <li>Context from factory records, operational reports, and contemporary accounts.</li>
+                  </>
+                )}
+              </ul>
+            </div>
+          </div>
+
           {/* Overview */}
           <div className="card card-large content">
             <h2 className="content h2">Overview</h2>
