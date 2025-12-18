@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 import path from 'path';
 import { promises as fs } from 'fs';
@@ -9,17 +8,8 @@ import { books } from '@/data/books';
 import { Book } from '@/types/book';
 import BookDetailClient from '@/components/BookDetailClient';
 import UnifiedSchema from '@/components/UnifiedSchema';
-
-// Lazy load heavy components for better performance
-const BookAnalytics = dynamic(() => import('@/components/BookAnalytics'), {
-  loading: () => null,
-  ssr: false
-});
-
-const EnhancedBookSEO = dynamic(() => import('@/components/EnhancedBookSEO'), {
-  loading: () => null,
-  ssr: false
-});
+import BookAnalyticsClient from '@/components/BookAnalyticsClient';
+import EnhancedBookSEOClient from '@/components/EnhancedBookSEOClient';
 
 
 // Simplified category gradient function - only used for hero backgrounds
@@ -623,12 +613,12 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       />
 
       {/* Enhanced SEO with FAQ, Reviews, and AI optimization */}
-      <EnhancedBookSEO 
-        book={book} 
+      <EnhancedBookSEOClient
+        book={book}
         relatedBlogPosts={relatedBlogPosts}
       />
 
-      <BookAnalytics book={book} />
+      <BookAnalyticsClient book={book} />
 
       <div className="min-h-screen bg-slate-900">
 

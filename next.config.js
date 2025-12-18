@@ -52,8 +52,7 @@ const nextConfig = {
     optimizeCss: true,
   },
 
-  // Enable SWC compiler optimizations
-  swcMinify: true,
+  // Compiler optimizations enabled by default in Next.js
 
   // Compression
   compress: true,

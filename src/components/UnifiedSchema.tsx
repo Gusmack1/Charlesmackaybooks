@@ -184,7 +184,7 @@ export default function UnifiedSchema({
     url: BASE_URL,
     logo: `${BASE_URL}/logo.png`,
     image: `${BASE_URL}/charles-mackay-aviation-books.jpg`,
-  })
+  });
 
   // Enhanced LocalBusiness schema for Google My Business
   const localBusinessSchema = {
