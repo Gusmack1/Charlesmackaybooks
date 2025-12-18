@@ -46,7 +46,6 @@ export default function GlasgowAviationHistory() {
     <BBCPageTemplate
       title="Glasgow Aviation History"
       subtitle="From Clyde Shipyards to Modern Aerospace"
-      readingTime="12 min read"
     >
       <div className="prose prose-invert max-w-none">
         <p className="lead">
@@ -101,9 +100,9 @@ export default function GlasgowAviationHistory() {
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-marker">1930s</div>
-            <div class="timeline-content">
+          <div className="timeline-item">
+            <div className="timeline-marker">1930s</div>
+            <div className="timeline-content">
               <h3>Inter-War Aviation Development</h3>
               <p>Glasgow becomes a center for aviation research and development. Local engineers and designers
               contribute to advances in aircraft technology, materials, and aerodynamics. The city hosts
@@ -111,9 +110,9 @@ export default function GlasgowAviationHistory() {
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-marker">1939-1945</div>
-            <div class="timeline-content">
+          <div className="timeline-item">
+            <div className="timeline-marker">1939-1945</div>
+            <div className="timeline-content">
               <h3>World War II Aviation Production</h3>
               <p>Glasgow's engineering firms play vital roles in wartime aircraft production. The city's
               shipyards and factories produce aircraft components, engines, and complete airframes for
@@ -124,9 +123,9 @@ export default function GlasgowAviationHistory() {
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-marker">1950s</div>
-            <div class="timeline-content">
+          <div className="timeline-item">
+            <div className="timeline-marker">1950s</div>
+            <div className="timeline-content">
               <h3>RAF Abbotsinch & Renfrew Airport</h3>
               <p>The establishment of RAF Abbotsinch brings military aviation to Glasgow's doorstep.
               Later becoming Renfrew Airport, the facility serves both military and civilian aviation
@@ -134,9 +133,9 @@ export default function GlasgowAviationHistory() {
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-marker">1960s-1980s</div>
-            <div class="timeline-content">
+          <div className="timeline-item">
+            <div className="timeline-marker">1960s-1980s</div>
+            <div className="timeline-content">
               <h3>Modern Aerospace Engineering</h3>
               <p>Glasgow continues to be a center for aerospace engineering and research. Local universities
               and research institutions contribute to aviation technology development, materials science,
@@ -144,9 +143,9 @@ export default function GlasgowAviationHistory() {
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-marker">1990s-Present</div>
-            <div class="timeline-content">
+          <div className="timeline-item">
+            <div className="timeline-marker">1990s-Present</div>
+            <div className="timeline-content">
               <h3>Contemporary Aerospace Legacy</h3>
               <p>Glasgow's aviation heritage continues through education, research, and preservation efforts.
               The city remains connected to aviation through Glasgow International Airport and ongoing

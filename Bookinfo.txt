@@ -2,7 +2,7 @@
 
 Auto-generated from `src/data/books.ts`. Update the TypeScript data first, then rerun `node scripts/export-book-reference.cjs` to refresh this reference.
 
-Last generated: 2025-12-11T23:42:04.333Z
+Last generated: 2025-12-18T19:49:40.218Z
 
 ## Summary (alphabetical by ID)
 
@@ -15,7 +15,6 @@ Last generated: 2025-12-11T23:42:04.333Z
 | british-aircraft-great-war | British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats | 9781838056704 | £12.91 | 232 | WWI Aviation | Yes |
 | captain-eric-brown | Captain Eric "Vinkle" Brown, Captain of the Clouds, Test Pilot a Biography | 9780957344365 | £6.98 | 192 | Aviation Biography | Yes |
 | clydeside-aviation-vol1 | Clydeside Aviation Volume One: The Great War | 9780957344389 | £16.08 | 268 | Scottish Aviation History | Yes |
-| clydeside-aviation-vol2 | Clydeside Aviation Volume Two: Between the Wars | 9780957344396 | £16.95 | 312 | Scottish Aviation History | Yes |
 | clydeside-aviation-vol2 | Clydeside Aviation Volume Two: Between the Wars | 9780957344372 | £15.54 | 294 | Scottish Aviation History | Yes |
 | dieter-dengler | Dieter Dengler, Skyraider 04 Down, the Man the Ship the Plane NEW | 9781838056773 | £12.39 | 152 | Aviation Biography | Yes |
 | dorothy-wordsworth | Dorothy Wordsworth Recollections of a Tour Made in Scotland 1803 | 9780957344327 | £7.55 | 112 | Travel Literature | Yes |
@@ -55,7 +54,7 @@ Last generated: 2025-12-11T23:42:04.333Z
 - **Related Blog Posts:** Luftwaffe 1945 Final Year (luftwaffe-1945-final-year); Me 262: The Jet Fighter Revolution (me262-jet-fighter-revolution); Arado Ar 234: World's First Jet Bomber (arado-ar234-jet-bomber); German Aircraft Great War Development (german-aircraft-great-war-development)
 
 **Author Insights:**
-> Available for pre-order now. Release date: 24 November 2025. This comprehensive volume will explore the complete story of German aviation development during World War II.
+> This comprehensive volume explores the complete story of German aviation development during World War II, building on Volume One with new archival material and production analysis.
 
 **Research Background:**
 > Based on extensive archival research and primary sources covering German aviation development and Luftwaffe operations.
@@ -64,7 +63,12 @@ Last generated: 2025-12-11T23:42:04.333Z
 > Volume Two will provide detailed analysis of German aviation technology and operational doctrine during the war years.
 
 **Primary Description:**
-> Pre-order the definitive continuation of Charles E. MacKay’s Luftwaffe history project. Volume Two dissects late-war German fighter, bomber, and jet programs, combining newly translated factory correspondence, operational records, and eyewitness maintenance notes to explain how fuel starvation, pilot attrition, and rushed weapons schemes doomed the Reich’s aerial defense in 1944–45. Detailed appendices document production totals, losses, and technology transfers that foreshadowed the Cold War jet age.
+> Newly Published
+> In this second volume of This was the Enemy, the procurement of aircraft, bombs, aeroplane details and aircraft armament are explored. It is astonishing to discover the myriad of production plans, confusion of detail and cancelled projects embarked by the Nazis. Hitler had the knack of appointing through Goering, the wrong people for the wrong jobs at the wrong time. An example of this appointment was Ernst Udet.
+> This volume follows German Aeronautical and Armaments Industry from its rise in 1934 to its collapse in 1945. Chapter one covers the planning of the aircraft industry guided by Erhard Milch and shows the collapse of pre-war theory. Chapter two introduces aircraft procurement to the destruction  of aircraft production due to Allied bombing. The research details are covered from the Bombing Command Survey Unit and the United States Strategic Survey Unit.
+> There is a chapter covering front line German Air Force aircraft, each aircraft is supported by a myriad of pictures and technical drawings.
+> Armament shows the work of Rheinmetall Borsig and Mauser. All classes of bombs are illustrated with technical drawings. The appendix closes with the Blohm unt Voss asymmetrical aircraft.
+> 288 pages A5, over 300 pictures, 58000 words Bibliography
 
 ---
 
@@ -198,65 +202,6 @@ Last generated: 2025-12-11T23:42:04.333Z
 
 **Primary Description:**
 > A detailed description of the history of Aviation on Clydeside from 1785 to 1919. Commences with the balloonist Vincent Lunardi of 1785 in Glasgow, then Percy Pilcher flying at Cardross. There are fresh details of Pilcher and his flights at Cardross and his death flight, A. B. Baird and his monoplane on the Isle of Bute and Harold and Frank Barnwell at Grampian Motor Works, Stirling. This is followed by the Denny Mumford Helicopter, the formation of the Scottish Aeronautical Society and the Ashton Lane murder, the Exhibition at Kelvingrove of 1911,with a description of the disastrous fire: the Lanark meeting of 1910 and the Scotstoun meeting of 1914. The activities of the society are covered in-depth. The Ewen School at Lanark is not neglected nor is the formation of the Scottish Aviation Company at Barrhead and Ewen's record flights across Scotland. There are fresh details of Beardmore and their plans to produce D.F.W. aircraft in Britain pre-1914. There are new facts concerning E.C. Kny, Beardmore and D.F.W. aircraft production in Germany supported by rare drawings and pictures. The Wartime Weir Scheme of aeroplane production is explored in - depth with histories of the scheme members and their ships, including Denny of Dumbarton, Weir, Barclay Curle, Stephen of Linthouse, Fairfield at Govan, The North British Locomotive Works at Springburn, Napier and Miller, Old Kilpatrick, Corporation of Glasgow Tramways Department and Bostock's Zoo at New City Road. Details of the Singer Manufacturing Company's wartime production including production figures and labour totals. (There are details of some of the Denny company's products such as Denny's, King Edward.) Each aircraft type has its own history and description. There are detailed accounts of the aircraft in service with the Royal Flying Corps and the Royal Navy. Airship development is covered at Inchinnan with fresh details of Submarine Scouts and Balloons. The aircraft built on Clydeside were:- B.E.2c (BE series), F.E.2b, Airco DH9, Fairey Campania, Sopwith Pup, Sopwith Camel, Sopwith Cuckoo, Wight Seaplane, Nieuport XII, Handley Page V/1500, Fairey N4 "Titania" the biggest flying boat in the world and the Beardmore prototypes flown at Dalmuir. There is a chapter on cancelled projects such as the Sopwith Snipe, Nieuport Nighthawk and Flying Boats. The airships were:- No 24, No 27, R-34 and R-36. Airship components were manufactured by Beardmore for other companies and a list is provided in the appendix. The Beardmore Halford Pullinger (B.H.P.) aero engine was built by Weir and substantial details of it are included. Details are included for the Ferdinand Porsche designed Beardmore Austro Daimler There are maps and diagrams provided which have never before been published. The use of Belgian Refugees is included for the first time in any aeronautical publication, as is the successful introduction of women into the aircraft manufacturing process. Descriptions of their work are fully described. Aero-engine supply and development is explained as is the development of Renfrew airport by the Ministry of Munitions and the landing ground at Cumnock. The industrial situation of spring 1915, the strikes and the conflict with the trade unions is fully explained. This is an insight into the beginnings of "Red Clydeside." Clydeside Aviation is supported by an Appendix which includes Bleriot aircraft, Ewen across the Forth, the Wright brothers, lighter than air-craft and an accurate Bibliography. Profusely illustrated with over 450 illustrations and drawings in 372 A5 pages on quality paper making it very heavy - Highly recommended. Published to commemorate Clydeside's involvement in the Great War of 1914-18. Any questions will be promptly answered - many thanks for looking. Recommend use offers.
-
----
-
-## Clydeside Aviation Volume Two: Between the Wars
-
-**ID:** `clydeside-aviation-vol2`
-
-- **ISBN:** 9780957344396
-- **Price:** £16.95
-- **Category:** Scottish Aviation History
-- **Condition:** New
-- **In Stock:** Yes
-- **Page Count:** 312
-- **Publication Year:** 2023
-- **Weight:** 500 g
-- **Tags:** Clydeside, Scottish Aviation, Inter-war, Industrial History
-- **Era:** Inter-War (1918-1939)
-- **Aircraft Types:** Flying Boats, Transports, Trainers, Early Airliners
-- **Geographic Focus:** Scotland, Britain
-- **Source Type:** Archival Research, Technical Analysis, Photographic
-- **Research Themes:** Industrial Aviation, Civil Aviation, RAF Coastal Operations, Training
-- **Difficulty:** Intermediate
-- **Academic Level:** Undergraduate, Graduate, Research
-- **Academic Institutions:** RAF Museum, Imperial War Museum, University of Glasgow
-- **Related Books:** clydeside-aviation-vol1, beardmore-aviation, british-aircraft-great-war
-- **Related Blog Posts:** Scottish Aviation Between the Wars (scottish-aviation-between-the-wars); Clydeside Aviation Revolution (clydeside-aviation-revolution)
-
-**Table of Contents:**
-- Preface: From Armistice to Aviation Rebirth
-- Chapter 1: Demobilization and the Clyde’s Industrial Reset
-- Chapter 2: Civil Aviation and Flying Boat Services
-- Chapter 3: RAF Coastal Stations and Training on the Clyde
-- Chapter 4: Airship and Seaplane Infrastructure
-- Chapter 5: Industrial Re-tooling for Aviation
-- Chapter 6: Airfields, Clubs, and Public Display Flying
-- Chapter 7: International Contracts and Exports
-- Chapter 8: Economic Pressures and Technical Innovation
-- Appendices: Aircraft Types, Facilities, and Production Data
-- Bibliography and Sources
-- Index
-
-**Author Insights:**
-> Charts the Clyde’s aviation industries between 1919 and 1939, tracing how shipyards, engine shops, and airfields adapted to civil and RAF requirements after the Great War.
-
-**Research Background:**
-> Built from Clyde shipyard archives, RAF coastal station records, contemporary aviation journals, and civil flying boat operator documents covering inter‑war Scotland.
-
-**Academic Value:**
-> Used by researchers studying inter‑war British aviation infrastructure and industrial transition from naval to aviation production.
-
-**Specifications:**
-- format: Paperback, 312 pages
-- illustrations: 120+ photographs and technical drawings
-- maps: true
-- bibliography: true
-- index: true
-
-**Primary Description:**
-> Inter-war Scottish aviation on the Clyde: RAF and civil flying boat operations, airship and seaplane infrastructure, industrial recovery and re-tooling, and the transition from wartime production to peacetime aviation services across 1919–1939.
 
 ---
 

@@ -71,7 +71,7 @@ export default function UnifiedSchema({
   const graph: any[] = []
 
   // Add LocalBusiness schema for Google My Business
-  graph.push(localBusinessSchema)
+  // graph.push(localBusinessSchema)
 
   graph.push({
     '@type': 'WebSite',
@@ -176,17 +176,11 @@ export default function UnifiedSchema({
       { '@type': 'Country', name: 'United States' },
       { '@type': 'Continent', name: 'Europe' },
     ],
-    priceRange: '£12-£45',
-    paymentAccepted: ['Cash', 'Credit Card', 'PayPal', 'Bank Transfer'],
-    currenciesAccepted: 'GBP',
-    openingHours: 'Mo-Su 09:00-17:00',
-    telephone: '+44-XXXXXXXXXX', // Add actual phone if available
-    url: BASE_URL,
-    logo: `${BASE_URL}/logo.png`,
-    image: `${BASE_URL}/charles-mackay-aviation-books.jpg`,
   });
 
   // Enhanced LocalBusiness schema for Google My Business
+  // Temporarily commented out to isolate syntax error
+  /*
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -289,7 +283,8 @@ export default function UnifiedSchema({
       'https://www.ebay.co.uk/usr/chaza87',
       'https://www.paypal.com/paypalme/charlese1mackay',
     ],
-  })
+  });
+  */
 
   graph.push({
     '@type': 'Person',

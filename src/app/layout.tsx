@@ -291,8 +291,6 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
-        <Analytics />
-        <SpeedInsights />
         <PerformanceSEO />
         <TechnicalSEOAudit />
         <BacklinkStrategy />
