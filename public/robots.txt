@@ -7,3 +7,4 @@ Disallow: /_next/
 Disallow: /ai-prompt-system/
 
 Sitemap: https://charlesmackaybooks.com/sitemap.xml
+Sitemap: https://charlesmackaybooks.com/sitemap-images.xml

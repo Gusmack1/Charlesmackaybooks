@@ -105,15 +105,11 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
   },
   category: 'Books & Literature',
   classification: 'Aviation History',
   other: {
     'google-site-verification': 'GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s',
-    'msvalidate.01': 'your-bing-verification-code',
-    'yandex-verification': 'your-yandex-verification-code',
   }
 }
 
@@ -205,7 +201,7 @@ export default function RootLayout({
 
         {/* Security headers */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        {/* X-Frame-Options should be set via HTTP headers, not meta tag - configured in Netlify */}
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
         
@@ -217,22 +213,10 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Performance monitoring - only in production
+              // Performance monitoring - removed missing file reference
+              // Performance is monitored via Google Analytics and Core Web Vitals
               if (typeof window !== 'undefined' && window.location.hostname === 'charlesmackaybooks.com') {
-                try {
-                  // Lazy load performance monitoring
-                  window.addEventListener('load', function() {
-                    setTimeout(() => {
-                      import('/utils/performanceMonitor.js').then(({ performanceMonitor }) => {
-                        performanceMonitor.init();
-                      }).catch(() => {
-                        // Silently fail in production
-                      });
-                    }, 100);
-                  });
-                } catch (e) {
-                  // Silently fail if performance monitoring fails
-                }
+                // Core Web Vitals are tracked via Google Analytics automatically
               }
             `
           }}
