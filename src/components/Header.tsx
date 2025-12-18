@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { primaryNavLinks } from '@/config/navigation'
+import { mainNavLinks, moreNavLinks } from '@/config/navigation'
 import { useCart } from '@/context/CartContext';
 
 export default function Header() {
@@ -113,7 +113,24 @@ export default function Header() {
                     ref={menuRef}
                   >
                       <nav className="flex flex-col p-1" aria-label="More navigation">
-                        {primaryNavLinks.map(link => (
+                        {/* Main navigation links in mobile menu */}
+                        {mainNavLinks.map(link => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            role="menuitem"
+                            onClick={() => { setOpen(false); setMenuPinned(false); }}
+                            className="px-3 py-2 rounded text-white hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+
+                        {/* Separator */}
+                        <div className="border-t border-slate-700 my-1"></div>
+
+                        {/* More navigation links */}
+                        {moreNavLinks.map(link => (
                           <Link
                             key={link.href}
                             href={link.href}
@@ -168,11 +185,43 @@ export default function Header() {
       <nav className="bg-slate-900 border-t border-slate-700 header-primary-nav hidden md:block" role="navigation" aria-label="Primary">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-start gap-1 md:gap-2 py-2 text-sm">
-            {primaryNavLinks.map(link => (
+            {/* Main navigation links */}
+            {mainNavLinks.map(link => (
               <Link key={link.href} href={link.href} className="px-3 py-2 rounded text-white hover:bg-slate-800 hover:text-white">
                 {link.label}
               </Link>
             ))}
+
+            {/* More dropdown */}
+            <div
+              className="relative ml-2"
+              onKeyDown={(e) => { if (e.key === 'Escape') setOpen(false); }}
+            >
+              <button
+                onClick={() => setOpen(!open)}
+                aria-haspopup="menu"
+                aria-expanded={open}
+                className="px-3 py-2 rounded text-white hover:bg-slate-800 hover:text-white flex items-center gap-1"
+              >
+                More ▼
+              </button>
+              {open && (
+                <div className="absolute left-0 mt-1 w-56 bg-slate-900 text-white border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50">
+                  <nav className="flex flex-col py-1" aria-label="More navigation">
+                    {moreNavLinks.map(link => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setOpen(false)}
+                        className="px-4 py-2 text-white hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </nav>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </nav>

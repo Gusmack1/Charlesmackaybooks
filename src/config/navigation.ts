@@ -4,19 +4,30 @@ export interface NavLinkItem {
   icon?: string; // optional emoji or icon identifier
 }
 
-export const primaryNavLinks: NavLinkItem[] = [
+// Main navigation items (always visible)
+export const mainNavLinks: NavLinkItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Shop Books', href: '/books' },
-  { label: 'Categories', href: '/categories' },
   { label: 'Blog', href: '/blog' },
+  { label: 'About Charles', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+
+// Additional navigation items (in "More" dropdown)
+export const moreNavLinks: NavLinkItem[] = [
+  { label: 'Categories', href: '/categories' },
   { label: 'Newsroom', href: '/news' },
   { label: 'Scottish Timeline', href: '/scottish-aviation-timeline' },
   { label: 'For Researchers', href: '/for-researchers' },
   { label: 'How to Order', href: '/how-to-order' },
   { label: 'Track Order', href: '/order-tracking' },
   { label: 'Support', href: '/support' },
-  { label: 'About Charles', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+];
+
+// Legacy primary nav links (kept for backward compatibility)
+export const primaryNavLinks: NavLinkItem[] = [
+  ...mainNavLinks,
+  ...moreNavLinks,
 ];
 
 export const categoryNavLinks: NavLinkItem[] = [
