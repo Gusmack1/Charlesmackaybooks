@@ -5,39 +5,109 @@
   "notes": "Each entry links a priority keyword to a canonical page. Update this list whenever we launch new campaigns or books.",
   "keywords": [
     {
-      "keyword": "Scottish aviation history books",
-      "targetUrl": "https://charlesmackaybooks.com/books",
-      "contentType": "books-hub",
+      "keyword": "aviation history books for sale",
+      "targetUrl": "https://charlesmackaybooks.com/",
+      "contentType": "homepage",
       "bookId": null,
       "priority": "tier-1"
     },
     {
-      "keyword": "Charles e Mackay Luftwaffe research",
+      "keyword": "buy aviation history books online",
+      "targetUrl": "https://charlesmackaybooks.com/",
+      "contentType": "homepage",
+      "bookId": null,
+      "priority": "tier-1"
+    },
+    {
+      "keyword": "german aircraft wwi books",
+      "targetUrl": "https://charlesmackaybooks.com/books/german-aircraft-great-war",
+      "contentType": "book-detail",
+      "bookId": "german-aircraft-great-war",
+      "priority": "tier-1"
+    },
+    {
+      "keyword": "luftwaffe research books",
       "targetUrl": "https://charlesmackaybooks.com/books/this-was-the-enemy-volume-two",
       "contentType": "book-detail",
       "bookId": "this-was-the-enemy-volume-two",
       "priority": "tier-1"
     },
     {
-      "keyword": "Beardmore aviation history",
+      "keyword": "wwi aviation books",
+      "targetUrl": "https://charlesmackaybooks.com/category/wwi-aviation",
+      "contentType": "category",
+      "bookId": null,
+      "priority": "tier-1"
+    },
+    {
+      "keyword": "wwii aviation books",
+      "targetUrl": "https://charlesmackaybooks.com/category/wwii-aviation",
+      "contentType": "category",
+      "bookId": null,
+      "priority": "tier-1"
+    },
+    {
+      "keyword": "scottish aviation history books",
+      "targetUrl": "https://charlesmackaybooks.com/category/scottish-aviation-history",
+      "contentType": "category",
+      "bookId": null,
+      "priority": "tier-1"
+    },
+    {
+      "keyword": "beardmore aviation history",
       "targetUrl": "https://charlesmackaybooks.com/books/beardmore-aviation",
       "contentType": "book-detail",
       "bookId": "beardmore-aviation",
       "priority": "tier-2"
     },
     {
-      "keyword": "RAF Lossiemouth heritage",
-      "targetUrl": "https://charlesmackaybooks.com/blog/raf-lossiemouth-heritage",
-      "contentType": "blog",
-      "bookId": "sabres-from-north",
+      "keyword": "clydeside aviation history",
+      "targetUrl": "https://charlesmackaybooks.com/books/clydeside-aviation-vol1",
+      "contentType": "book-detail",
+      "bookId": "clydeside-aviation-vol1",
       "priority": "tier-2"
     },
     {
-      "keyword": "Scottish helicopter pioneers",
+      "keyword": "helicopter history books",
       "targetUrl": "https://charlesmackaybooks.com/books/sycamore-seeds",
       "contentType": "book-detail",
       "bookId": "sycamore-seeds",
-      "priority": "tier-3"
+      "priority": "tier-2"
+    },
+    {
+      "keyword": "british aircraft great war",
+      "targetUrl": "https://charlesmackaybooks.com/books/british-aircraft-great-war",
+      "contentType": "book-detail",
+      "bookId": "british-aircraft-great-war",
+      "priority": "tier-2"
+    },
+    {
+      "keyword": "fokker aircraft history",
+      "targetUrl": "https://charlesmackaybooks.com/books/flying-for-kaiser",
+      "contentType": "book-detail",
+      "bookId": "flying-for-kaiser",
+      "priority": "tier-2"
+    },
+    {
+      "keyword": "aviation books glasgow",
+      "targetUrl": "https://charlesmackaybooks.com/",
+      "contentType": "homepage",
+      "bookId": null,
+      "priority": "tier-2"
+    },
+    {
+      "keyword": "military aviation books",
+      "targetUrl": "https://charlesmackaybooks.com/books",
+      "contentType": "books-hub",
+      "bookId": null,
+      "priority": "tier-2"
+    },
+    {
+      "keyword": "charles mackay aviation books",
+      "targetUrl": "https://charlesmackaybooks.com/",
+      "contentType": "homepage",
+      "bookId": null,
+      "priority": "tier-2"
     }
   ]
 }
