@@ -115,7 +115,7 @@ export default function SocialShare({ url, title, description, hashtags = [], au
       <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-4">
         <button
           onClick={() => openShare('whatsapp')}
-          className="flex items-center justify-center p-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors duration-200"
+          className="flex items-center justify-center p-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg transition-colors duration-200"
           aria-label="Share on WhatsApp"
         >
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -155,7 +155,7 @@ export default function SocialShare({ url, title, description, hashtags = [], au
 
         <button
           onClick={copyToClipboard}
-          className={`flex items-center justify-center p-2 ${copied ? 'bg-green-500' : 'bg-gray-500 hover:bg-gray-600'} text-white rounded-lg transition-colors duration-200`}
+          className={`flex items-center justify-center p-2 ${copied ? 'bg-slate-900' : 'bg-slate-700 hover:bg-slate-800'} text-white rounded-lg transition-colors duration-200`}
           aria-label="Copy Link"
         >
           {copied ? (

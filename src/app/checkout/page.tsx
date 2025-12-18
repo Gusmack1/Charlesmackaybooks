@@ -501,7 +501,7 @@ function CheckoutContent() {
                 </div>
                 <button
                   onClick={() => setStep('address')}
-                  className="w-full mt-4 bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm sm:text-base"
+                  className="w-full mt-4 bg-slate-900 text-white py-3 px-4 rounded-lg font-semibold hover:bg-slate-800 transition-colors text-sm sm:text-base"
                 >
                   Continue to Address
                 </button>
@@ -660,7 +660,7 @@ function CheckoutContent() {
                 )}
                 <button
                   onClick={handleAddressSubmit}
-                  className="w-full mt-4 bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm sm:text-base"
+                  className="w-full mt-4 bg-slate-900 text-white py-3 px-4 rounded-lg font-semibold hover:bg-slate-800 transition-colors text-sm sm:text-base"
                 >
                   Continue to Payment
                 </button>

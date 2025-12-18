@@ -75,7 +75,7 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
             </Link>
             <a
               href="#"
-              className="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700 transition-colors"
+              className="bg-slate-900 text-white px-3 py-1 rounded text-sm hover:bg-slate-800 transition-colors"
             >
               Buy Now
             </a>

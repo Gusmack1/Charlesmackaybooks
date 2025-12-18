@@ -291,7 +291,7 @@ export default function PioneerEraPage() {
                   </Link>
                   <Link
                     href={`/books/${book.id}#purchase`}
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                    className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                   >
                     🛒 Buy Now
                   </Link>

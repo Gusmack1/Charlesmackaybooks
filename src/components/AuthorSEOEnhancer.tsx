@@ -36,7 +36,7 @@ export default function AuthorSEOEnhancer() {
             <a href="/books" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Browse All Books
             </a>
-            <a href="/contact" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+            <a href="/contact" className="bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-800 transition-colors">
               Contact Author
             </a>
           </div>
