@@ -359,7 +359,7 @@ export default function GoldenAgePage() {
                   </Link>
                   <Link
                     href={`/books/${book.id}#purchase`}
-                    className="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg font-semibold transition-colors text-sm"
+                    className="bg-white hover:bg-gray-100 text-slate-900 px-4 py-2 rounded-lg font-semibold transition-colors text-sm border border-slate-900"
                   >
                     🛒 Buy
                   </Link>

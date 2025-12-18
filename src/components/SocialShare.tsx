@@ -155,7 +155,7 @@ export default function SocialShare({ url, title, description, hashtags = [], au
 
         <button
           onClick={copyToClipboard}
-          className={`flex items-center justify-center p-2 ${copied ? 'bg-slate-900' : 'bg-slate-700 hover:bg-slate-800'} text-white rounded-lg transition-colors duration-200`}
+          className={`flex items-center justify-center p-2 ${copied ? 'bg-white border-slate-900' : 'bg-white hover:bg-gray-100 border-slate-700'} text-slate-900 rounded-lg transition-colors duration-200 border`}
           aria-label="Copy Link"
         >
           {copied ? (

@@ -149,7 +149,7 @@ export default function CartSidebar() {
               <div className="mt-4 space-y-2">
                 <button
                   onClick={() => startCheckout('stripe')}
-                  className="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors"
+                  className="w-full bg-white text-slate-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors border border-slate-900"
                 >
                   Secure Checkout (Card / Wallet)
                 </button>

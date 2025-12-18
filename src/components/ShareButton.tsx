@@ -110,7 +110,7 @@ export default function ShareButton({
       {/* Main Share Button */}
       <button
         onClick={handleShareClick}
-        className={`inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 font-medium ${className}`}
+        className={`inline-flex items-center justify-center px-4 py-2 bg-white hover:bg-gray-100 text-slate-900 rounded-lg transition-colors duration-200 font-medium border border-slate-900 ${className}`}
         aria-label="Share this content"
       >
         {buttonContent}
@@ -140,7 +140,7 @@ export default function ShareButton({
               <div className="mb-4">
                 <button
                   onClick={copyToClipboard}
-                  className="w-full flex items-center justify-center px-4 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+                  className="w-full flex items-center justify-center px-4 py-3 bg-white hover:bg-gray-100 text-slate-900 rounded-lg transition-colors duration-200 border border-slate-900"
                 >
                   <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -181,7 +181,7 @@ export default function ShareButton({
                   href={socialLinks.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center px-4 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-lg transition-colors duration-200"
+                  className="flex items-center justify-center px-4 py-3 bg-white hover:bg-gray-100 text-slate-900 rounded-lg transition-colors duration-200 border border-slate-900"
                   onClick={() => setShowModal(false)}
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">

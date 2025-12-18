@@ -1,24 +1,23 @@
+'use client';
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { useCart } from '@/context/CartContext'
+import { Book } from '@/types/book'
 
 interface BookCardProps {
-  book: {
-    id: string
-    title: string
-    price: number
-    category: string
-    condition: string
-    inStock: boolean
-    imageUrl?: string
-    isbn?: string
-    pageCount?: number
-    publicationYear?: number
-    weight?: number
-  }
+  book: Book
   sourceContext?: string
 }
 
 export default function BookCard({ book, sourceContext }: BookCardProps) {
+  const { addToCart, openBasket } = useCart();
+
+  const handleBuyNow = () => {
+    addToCart(book);
+    openBasket();
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Book Cover - Now Clickable */}
@@ -73,12 +72,12 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
             >
               View Details
             </Link>
-            <a
-              href="#"
-              className="bg-slate-900 text-white px-3 py-1 rounded text-sm hover:bg-slate-800 transition-colors"
+            <button
+              onClick={handleBuyNow}
+              className="bg-white text-slate-900 px-3 py-1 rounded text-sm hover:bg-gray-100 transition-colors border border-slate-900"
             >
               Buy Now
-            </a>
+            </button>
           </div>
         </div>
 

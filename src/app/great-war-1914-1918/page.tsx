@@ -347,7 +347,7 @@ export default function GreatWarPage() {
                   </Link>
                   <Link
                     href={`/books/${book.id}#purchase`}
-                    className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                    className="bg-white hover:bg-gray-100 text-slate-900 px-6 py-3 rounded-lg font-semibold transition-colors border border-slate-900"
                   >
                     🛒 Buy Now
                   </Link>

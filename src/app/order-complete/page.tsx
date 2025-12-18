@@ -238,7 +238,7 @@ function OrderCompleteContent() {
             </button>
             <button
               onClick={handleEmailReceipt}
-              className="bg-slate-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors"
+              className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors border border-slate-900"
             >
               📧 Email Receipt to Customer
             </button>
