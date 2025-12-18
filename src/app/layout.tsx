@@ -3,6 +3,8 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { books } from '@/data/books'
 
+// Force deployment cache clear - v1.0.1
+
 const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
