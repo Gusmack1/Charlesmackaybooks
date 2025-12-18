@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function HeroSection() {
   return (
-    <section className="hero-section relative bg-slate-900 text-white py-3 lg:py-5">
+    <section className="hero-section relative bg-slate-900 text-white py-1 lg:py-2">
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

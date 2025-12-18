@@ -180,13 +180,13 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/books"
-                  className="btn-books text-center"
+                  className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:underline transition-colors border border-slate-900 text-center"
                 >
                   Browse Books
                 </Link>
                 <Link
                   href="/contact"
-                  className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors text-center"
+                  className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:underline transition-colors border border-slate-900 text-center"
                 >
                   Contact Author
                 </Link>
@@ -387,7 +387,7 @@ export default function AboutPage() {
           <div className="text-center mt-8">
             <Link
               href="/books"
-              className="btn-books"
+              className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:underline transition-colors border border-slate-900"
             >
               View All {getTotalBookCountText()} Books
             </Link>
