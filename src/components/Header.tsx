@@ -24,9 +24,9 @@ export default function Header() {
           <div className="flex justify-between items-center gap-4">
             {/* Logo and Author Info - Clickable */}
             <Link href="/" className="hover:opacity-90 transition-opacity cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 rounded">
-              <h1 className="font-bold text-white tracking-tight text-base md:text-lg leading-none m-0">Charles E. MacKay</h1>
-              <p className="text-white text-base md:text-lg leading-none m-0">Aviation Historian & Author</p>
-              <p className="text-white/90 text-base md:text-lg leading-none m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
+              <h1 className="font-bold text-white tracking-tight text-lg md:text-xl leading-none m-0">Charles E. MacKay</h1>
+              <p className="text-white text-sm md:text-base leading-none m-0">Aviation Historian & Author</p>
+              <p className="text-white/90 text-sm md:text-base leading-none m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
             </Link>
 
             {/* Actions */}
@@ -227,13 +227,6 @@ export default function Header() {
       </nav>
 
       {/* Legacy hidden nav removed – unified header/nav above handles all navigation */}
-
-      {/* Trusted Seller Banner */}
-      <div className="bg-accent-green text-center py-2">
-        <div className="font-bold text-white text-sm md:text-base">
-          🏆 TRUSTED SELLER - 100% Positive Feedback
-        </div>
-      </div>
       {/* Close pinned menu on outside click */}
       <script dangerouslySetInnerHTML={{ __html: '' }} />
       <style jsx>{`
