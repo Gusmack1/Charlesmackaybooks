@@ -7,13 +7,13 @@ import ClientBody from './ClientBody'
 import { books } from '@/data/books'
 
 const inter = Inter({
-  subsets: ['latin', 'latin-ext'],
+  subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext', 'greek', 'greek-ext', 'vietnamese'],
   display: 'swap',
   variable: '--font-inter'
 })
 
 const playfair = Playfair_Display({
-  subsets: ['latin', 'latin-ext'],
+  subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext', 'greek', 'greek-ext', 'vietnamese'],
   display: 'swap',
   variable: '--font-playfair'
 })

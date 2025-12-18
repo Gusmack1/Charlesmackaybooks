@@ -57,7 +57,7 @@ export default async function NewsPage() {
               <div className="space-y-3">
                 <Link
                   href={`/blog/scottish-aviation-news/${hero.slug}`}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-blue-400/90 text-slate-900 font-semibold hover:bg-blue-300 transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white text-slate-900 font-semibold hover:bg-gray-100 transition-colors border border-slate-900"
                 >
                   Read briefing
                   <span aria-hidden>→</span>

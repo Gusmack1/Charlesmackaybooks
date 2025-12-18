@@ -61,7 +61,7 @@ export default function Home() {
       <HeroSection />
 
       {/* Books Section */}
-      <section className="py-12" id="books">
+      <section className="py-6" id="books">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold">
@@ -74,7 +74,7 @@ export default function Home() {
 
           {/* Books Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {filteredBooks.slice(0, 6).map(book => (
+            {filteredBooks.map(book => (
               <BookCard key={book.id} book={book} sourceContext="homepage" />
             ))}
           </div>

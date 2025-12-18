@@ -52,6 +52,9 @@ const nextConfig = {
     optimizeCss: true,
   },
 
+  // Turbopack configuration to resolve build error
+  turbopack: {},
+
   // Compiler optimizations enabled by default in Next.js
 
   // Compression

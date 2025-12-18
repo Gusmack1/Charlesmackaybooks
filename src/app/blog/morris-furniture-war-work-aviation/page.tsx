@@ -26,11 +26,6 @@ const post = {
       The comprehensive documentation provided in <a href="/books/modern-furniture" class="underline font-medium">Modern Furniture Shavings for Breakfast</a> ensures that Morris Furniture's complete story is preserved. This historical document is particularly significant because the company has ceased making all furniture, making this the only source book for furniture manufacturing in print from 1884 to 1975. This scholarly work, originally researched and printed in the United Kingdom, comes highly recommended for the student and general reader alike, providing insights into British industrial and aviation history that are not available in any other publication.
     </p>
 
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of Morris Furniture factory workshops in Glasgow during World War II, showing woodworking machinery and workers producing aircraft components, demonstrating the industrial transformation from furniture to aviation production" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Industrial Glasgow: joinery and precision work pivoted to military production under tight tolerances.</p>
-    </div>
-
     <h2 id="peacetime-foundations">Peacetime Foundations: Luxury Liner Interiors</h2>
     <p>
       Initially the company furnished ships and hotels such as Gleneagles and Turnberry then the liners Empress of Britain, Aquitania, Pendennis Castle, Queen Mary and the Queen Elizabeth etc. Furnishing the Queen Mary was the largest furnishing contract given in the shipbuilding industry at the time in 1932. The company furnished the liners for Canadian Pacific such as the Empress of Britain, Empress of Japan and the Empress of France and continued into the fifties. Furnishing liners lasted till the launching of the Queen Elizabeth 2 at Clydebank in the late sixties.
@@ -61,11 +56,6 @@ const post = {
       The production cycle of manufacturing the Lee Enfield rifle wooden parts is documented in the book with diagrams, demonstrating how Morris Furniture's woodworking expertise was applied to armament production. Understanding rifle furniture production provides valuable insights into how civilian manufacturing capabilities were adapted for wartime requirements.
     </p>
 
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A diagram or photograph showing the production cycle of manufacturing Lee Enfield rifle wooden parts at Morris Furniture, demonstrating fixtures, gauges, and precision woodworking processes" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">From cabinetry to combat: gauges and fixtures ensured repeatable furniture and aeronautical parts.</p>
-    </div>
-
     <h2 id="upkeep-highball">Upkeep and Highball: Dambuster and Bouncing Bombs</h2>
     <p>
       They produced 77 Highball casings (Bouncing bomb for 618 Squadron) and worked with the Americans in producing heavy bombs such as Tallboy, Grand slam and the biggest of all the giant 44000lb. Morris completing all the model work. They were involved with the production of Upkeep and the Dambuster raid. Precision wood components for Upkeep/Highball demanded tight concentricity, balanced assemblies, and reliable adhesives under environmental stress.
@@ -92,11 +82,6 @@ const post = {
     <p>
       After the crash of the Cierva Air Horse heavy lift helicopter the company left aircraft manufacturing to concentrate on volume furniture. They did produce a final of 5V3 Aeroply for Scottish Aviation in 1951 for the Dakota aircraft. The company has never been owned by Scottish Aviation and such reports are historically very inaccurate. This comprehensive documentation ensures that Morris Furniture's post-war transition is properly understood.
     </p>
-
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A photograph or diagram showing rotor blade manufacturing at Morris Furniture, demonstrating lamination schedules, pressure fixtures, and precision woodworking techniques for helicopter blades" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Rotorcraft lessons: tracking, balance, and spar integrity demanded measurement discipline.</p>
-    </div>
 
     <h2 id="aircraft-production">Aircraft Production: Mosquito, Spitfire, Hurricane, and Albemarle</h2>
     <p>
@@ -162,11 +147,6 @@ const post = {
     <p>
       The Clyde's integration of shipbuilding, engineering, and precision manufacturing created a unique industrial ecosystem that supported wartime production. The comprehensive documentation of this integration ensures that the complete story of Scottish wartime manufacturing is properly preserved. Understanding this integration provides valuable insights into how industrial capabilities were coordinated for wartime production.
     </p>
-
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing Morris Furniture workers manufacturing aircraft components or furniture, demonstrating the skilled workforce and precision manufacturing processes" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Industrial capability: skilled workforce and precision manufacturing supporting wartime production.</p>
-    </div>
 
     <h2 id="post-war-displays">Post-War Displays and Exhibitions</h2>
     <p>
@@ -311,7 +291,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '',
     alt: "From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition",
     caption: 'Precision woodcraft meets aviation production on the Clyde.'
   },
@@ -328,7 +308,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: "From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition",
     description: 'A comprehensive, research-backed account of how Morris Furniture Company of Glasgow pivoted from luxury liner interiors to wartime aviation production.',
-    images: ['/blog-images/default-generic.svg'],
     type: 'article'
   },
   alternates: {

@@ -25,15 +25,10 @@ const post = {
       The book <a href="/books/birth-atomic-bomb" class="underline font-medium">Birth of the Atomic Bomb</a> presents newly restored 
       statements from lost documents published by the Allies in August 1945 on the development and deployment of the Atomic Bomb. The 
       192-page A5 volume includes 66 black and white pictures with three drawings including a three-view drawing of a B-29. The restored 
-      documents provide essential context for understanding how the atomic bomb transformed from scientific theory to wartime reality, 
-      demonstrating the complex interplay between scientific research, political decision-making, and military necessity that characterized 
+      documents provide essential context for understanding how the atomic bomb transformed from scientific theory to wartime reality,
+      demonstrating the complex interplay between scientific research, political decision-making, and military necessity that characterized
       the Allied atomic program.
     </p>
-
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of war cabinet papers, agreements, and technical annexes spread across a desk, showing the bureaucratic complexity of coordinating the Allied atomic program across multiple governments and scientific institutions" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Cabinets and cables: decisions documented the path from research to wartime policy.</p>
-    </div>
 
     <h2 id="historical-context">Historical Context: Scientific Revolution and Wartime Imperative</h2>
     <p>
@@ -112,11 +107,6 @@ const post = {
       project to both the British and United States Governments." This statement, included in the book, demonstrates how British atomic 
       research leadership was recognized by American officials, acknowledging Britain's crucial contribution to Allied atomic development.
     </p>
-
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of scientists examining technical drawings and documents related to the MAUD Committee reports, demonstrating the scientific and technical complexity of early atomic weapons research" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Scientific foundation: the MAUD Committee reports established technical feasibility and guided Allied atomic development.</p>
-    </div>
 
     <h2 id="manhattan-architecture">Manhattan: Production Architecture in the Record</h2>
     <p>
@@ -213,11 +203,6 @@ const post = {
       organizational difficulties, and strategic misjudgments prevented German atomic weapons development despite significant scientific capabilities.
     </p>
 
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of Alsos Mission field teams examining captured German nuclear research facilities, with scientists and military personnel documenting evidence of German atomic research efforts" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">In the field: scientists and soldiers gathered the evidence base for postwar assessments.</p>
-    </div>
-
     <h2 id="heavy-water">Heavy Water and Industrial Sabotage in the Papers</h2>
     <p>
       Parallel to Alsos, Allied files preserve the policy and operations context around heavy‑water production and interdiction. While 
@@ -253,11 +238,6 @@ const post = {
       weapons development extended beyond bomb design to include comprehensive delivery system development, requiring coordination between 
       aircraft manufacturers, weapons designers, and military operators.
     </p>
-
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of a modified B-29 Superfortress with Silverplate modifications, showing the bomb bay and structural changes required for atomic bomb delivery, with ground crew visible working on the aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Silverplate modifications: transforming conventional bombers into atomic delivery platforms.</p>
-    </div>
 
     <h2 id="chickenpox-peppermint">Chickenpox and Peppermint: Post-War Planning and Invasion Preparation</h2>
     <p>
@@ -421,9 +401,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 40,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: 'Wartime production and industrial mobilisation context',
-    caption: 'Industrial mobilisation contextualises the scale behind Allied scientific programmes.'
+    url: '',
+    alt: 'MAUD, Alsos, and the Atomic Program - Wartime Scientific Research',
+    caption: 'Scientific collaboration and intelligence operations shaped atomic weapons development.'
   },
   category: 'Military History',
   tags: ['MAUD', 'Tube Alloys', 'Quebec Agreement', 'Combined Policy Committee', 'Combined Development Trust', 'Alsos Mission', 'Smyth Report', 'Atomic Bomb', 'Primary Sources', 'charles mackay books'],
@@ -448,7 +428,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'From MAUD to Alsos: The Documents Behind the Allied Atomic Program - Enhanced Edition',
     description: 'How memoranda, agreements, and field intelligence framed the bomb, 1940–45. Comprehensive analysis with historical context and technical details.',
-    images: ['/blog-images/default-generic.svg'],
     type: 'article'
   },
   alternates: {

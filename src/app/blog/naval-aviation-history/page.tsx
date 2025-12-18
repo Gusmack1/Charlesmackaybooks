@@ -24,11 +24,6 @@ const post = {
     <p>
       Understanding naval aviation's evolution provides valuable insights into how military technology and operational doctrine developed together to create new capabilities. The comprehensive documentation of this evolution ensures that the principles established through naval aviation development continue to guide maritime air power worldwide. This Enhanced Edition examines naval aviation as a complete system: technologies, procedures, doctrines, operational experiences, and strategic significance.
 
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of HMS Argus with full-length flight deck at sea in the 1920s, showing her revolutionary flush-deck design with no superstructure, demonstrating the world's first true aircraft carrier" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">HMS Argus: The world's first true aircraft carrier, establishing the template for all future carrier operations.</p>
-    </div>
-
     <h2 id="historical-context">Historical Context: Industrial Shifts and Maritime Requirements</h2>
     <p>
       The development of naval aviation occurred against a backdrop of profound industrial and military transformation. The early 20th century witnessed rapid advances in shipbuilding, aviation, and engine technology, creating opportunities for innovative maritime applications. Naval requirements for reconnaissance beyond the horizon drove early experiments with shipboard aircraft, while industrial capabilities enabled increasingly sophisticated naval aviation solutions.
@@ -72,14 +67,9 @@ const post = {
       The Marquis of Montrose, a Beardmore director, planned the flush-deck carrier concept, demonstrating how Scottish industrial leadership contributed to naval aviation innovation. The comprehensive documentation of the Marquis of Montrose's concept ensures that this revolutionary design thinking is properly recognized and preserved. Understanding this concept provides valuable insights into how innovative design thinking solved fundamental carrier design challenges.
     </p>
     <p>
-      For comprehensive coverage of HMS Argus's design and development, see 
-      <a href="/blog/hms-argus-first-aircraft-carrier" class="underline font-medium">HMS Argus: The World's First True Aircraft Carrier</a>, 
+      For comprehensive coverage of HMS Argus's design and development, see
+      <a href="/blog/hms-argus-first-aircraft-carrier" class="underline font-medium">HMS Argus: The World's First True Aircraft Carrier</a>,
       which provides detailed analysis of the breakthrough carrier design. The Argus carrier concept was also incorporated into HMS Audacity, and Audacity's plans were given to the U.S. Navy and resulted in the CV USS Long Island, resulting in the jeep carriers of WW2. This demonstrates HMS Argus's influence on subsequent carrier development internationally.
-
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of HMS Argus operations showing deck crew and aircraft handling procedures during early carrier operations, demonstrating the systematic procedures developed on Argus that established carrier aviation doctrine" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Deck operations: The systematic procedures developed on Argus established carrier aviation doctrine.</p>
-    </div>
 
     <h2 id="rnas-operations">Royal Naval Air Service and Early Naval Aviation</h2>
     <p>
@@ -137,14 +127,9 @@ const post = {
       The war accelerated the development of carrier technology and operational procedures. The introduction of radar direction, combat air patrol procedures, and integrated strike coordination transformed carrier operations from individual aircraft sorties into coordinated air campaigns. The development of damage control procedures and firefighting systems proved crucial to carrier survivability in combat conditions.
     </p>
     <p>
-      For detailed coverage of HMS Argus operations and deck procedures, see 
-      <a href="/blog/hms-argus-first-aircraft-carrier-operations" class="underline font-medium">HMS Argus Operations: Pioneering Carrier Aviation Techniques</a>, 
+      For detailed coverage of HMS Argus operations and deck procedures, see
+      <a href="/blog/hms-argus-first-aircraft-carrier-operations" class="underline font-medium">HMS Argus Operations: Pioneering Carrier Aviation Techniques</a>,
       which provides comprehensive analysis of the operational procedures and deck choreography developed on Argus. The operational procedures developed on HMS Argus established carrier aviation doctrine that would influence subsequent carrier operations.
-
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of HMS Argus during Operation Torch in 1942, showing aircraft on deck and demonstrating the carrier's role in supporting the North African landings with air cover" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Operation Torch: HMS Argus provided critical air cover for the eastern landings during the North African invasion.</p>
-    </div>
 
     <h2 id="pilot-testimonies">Pilot Testimonies and Operational Accounts</h2>
     <p>
@@ -193,11 +178,6 @@ const post = {
       For comprehensive coverage of jet age aviation development, see 
       <a href="/blog/jet-age-aviation-cold-war-development" class="underline font-medium">Jet Age Aviation: Cold War Development</a>, 
       which provides detailed analysis of the transition to jet operations at sea and the evolution of naval aviation technology. Understanding jet age transformation provides valuable insights into how naval aviation adapted to new technological capabilities.
-
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of jet aircraft operations on a modern carrier deck in the 1950s-1960s, showing steam catapults, angled deck, and optical landing systems, demonstrating the jet age transformation of carrier operations" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Jet age transformation: Steam catapults, angled decks, and optical landing systems revolutionized carrier operations.</p>
-    </div>
 
     <h2 id="comparison-contemporaries">Comparative Analysis: Global Carrier Development</h2>
     <p>
@@ -322,19 +302,12 @@ const post = {
       image: '/blog-images/hms-argus-aircraft-carrier.jpg',
       readingTime: 15
     },
-    { 
-      id: 'hms-argus-first-aircraft-carrier-operations', 
+    {
+      id: 'hms-argus-first-aircraft-carrier-operations',
       title: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques',
       excerpt: 'Operational procedures and deck choreography development that established carrier aviation doctrine.',
       image: '/blog-images/hms-argus-aircraft-carrier.jpg',
       readingTime: 12
-    },
-    { 
-      id: 'jet-age-aviation-cold-war-development', 
-      title: 'Jet Age Aviation: Cold War Development',
-      excerpt: 'The transition to jet operations at sea and the evolution of naval aviation technology.',
-      image: '/blog-images/default-generic.svg',
-      readingTime: 18
     }
   ]
 }
