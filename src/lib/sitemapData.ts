@@ -171,20 +171,7 @@ function buildCategoryRoutes(): MetadataRoute.Sitemap {
   }));
 }
 
-function buildAircraftRoutes(): MetadataRoute.Sitemap {
-  // Map of aircraft IDs to their blog post last modified times
-  const aircraftIds = ['hawker-hurricane', 'sopwith-camel'];
-  return aircraftIds.map((id) => {
-    const blogSlug = id === 'hawker-hurricane' ? 'hawker-hurricane-fighter-development' : 'sopwith-camel-wwi-fighter';
-    const lastModified = getFileLastModified(path.join('src', 'app', 'blog', blogSlug, 'page.tsx'));
-    return {
-      url: toAbsoluteUrl(`/aircraft/${id}`),
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    };
-  });
-}
+// Aircraft routes removed - content now served via blog posts only
 
 export function generateSitemapEntries(): MetadataRoute.Sitemap {
   return [
@@ -192,7 +179,6 @@ export function generateSitemapEntries(): MetadataRoute.Sitemap {
     ...buildBlogRoutes(),
     ...buildBookRoutes(),
     ...buildCategoryRoutes(),
-    ...buildAircraftRoutes(),
   ];
 }
 
