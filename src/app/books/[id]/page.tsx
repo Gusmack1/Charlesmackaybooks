@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 import path from 'path';
 import { promises as fs } from 'fs';
@@ -8,8 +9,17 @@ import { books } from '@/data/books';
 import { Book } from '@/types/book';
 import BookDetailClient from '@/components/BookDetailClient';
 import UnifiedSchema from '@/components/UnifiedSchema';
-import BookAnalytics from '@/components/BookAnalytics';
-import EnhancedBookSEO from '@/components/EnhancedBookSEO';
+
+// Lazy load heavy components for better performance
+const BookAnalytics = dynamic(() => import('@/components/BookAnalytics'), {
+  loading: () => null,
+  ssr: false
+});
+
+const EnhancedBookSEO = dynamic(() => import('@/components/EnhancedBookSEO'), {
+  loading: () => null,
+  ssr: false
+});
 
 
 // Simplified category gradient function - only used for hero backgrounds
@@ -1011,6 +1021,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                         width={200}
                         height={267}
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAoACgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEB//EACUQAAIBAwMEAwEBAAAAAAAAAAECAwAEEQUSITFBURNhcZEigf/EABUBAFEAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8A4+iiigAooooAKKKKACiiigD/2Q=="
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.src = '/placeholder-book.svg';

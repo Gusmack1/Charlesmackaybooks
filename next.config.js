@@ -46,6 +46,18 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
+  // Performance optimizations
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+    optimizeCss: true,
+  },
+
+  // Enable SWC compiler optimizations
+  swcMinify: true,
+
+  // Compression
+  compress: true,
+
   // Headers will be handled by netlify.toml
 }
 

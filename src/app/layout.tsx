@@ -5,8 +5,9 @@ import './globals.css'
 import BBCHeader from '@/components/BBCHeader'
 import TrustSecurityBadges from '@/components/TrustSecurityBadges'
 // Footer removed site-wide per request
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+// Removed Vercel analytics - deployed on Netlify, not Vercel
+// import { Analytics } from '@vercel/analytics/react'
+// import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClientBody from './ClientBody'
 import { performanceMonitor } from '@/utils/performanceMonitor'
 import MobileSSLFix from '@/components/MobileSSLFix'
@@ -219,23 +220,30 @@ export default function RootLayout({
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
         
-        {/* Google Fonts for optimal performance */}
+        {/* Font preconnects for optimized loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        {/* Core Web Vitals Monitoring */}
+        {/* Optimized Core Web Vitals Monitoring */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Initialize performance monitoring
-              if (typeof window !== 'undefined') {
-                window.addEventListener('load', function() {
-                  // Import performance monitor after page load
-                  import('/utils/performanceMonitor.js').then(({ performanceMonitor }) => {
-                    console.log('Performance monitoring initialized');
-                  }).catch(e => console.log('Performance monitoring not available'));
-                });
+              // Performance monitoring - only in production
+              if (typeof window !== 'undefined' && window.location.hostname === 'charlesmackaybooks.com') {
+                try {
+                  // Lazy load performance monitoring
+                  window.addEventListener('load', function() {
+                    setTimeout(() => {
+                      import('/utils/performanceMonitor.js').then(({ performanceMonitor }) => {
+                        performanceMonitor.init();
+                      }).catch(() => {
+                        // Silently fail in production
+                      });
+                    }, 100);
+                  });
+                } catch (e) {
+                  // Silently fail if performance monitoring fails
+                }
               }
             `
           }}
