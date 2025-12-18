@@ -143,12 +143,22 @@ function buildBlogRoutes(): MetadataRoute.Sitemap {
 
 function buildBookRoutes(): MetadataRoute.Sitemap {
   const booksFileModified = getFileLastModified(path.join('src', 'data', 'books.ts'));
-  return getBookIds().map((id) => ({
+  const bookRoutes = getBookIds().map((id) => ({
     url: toAbsoluteUrl(`/books/${id}`),
     lastModified: booksFileModified,
     changeFrequency: 'weekly' as const,
     priority: 0.9,
   }));
+
+  // Also include /book/ routes for backward compatibility with Google indexing
+  const legacyBookRoutes = getBookIds().map((id) => ({
+    url: toAbsoluteUrl(`/book/${id}`),
+    lastModified: booksFileModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
+
+  return [...bookRoutes, ...legacyBookRoutes];
 }
 
 function buildCategoryRoutes(): MetadataRoute.Sitemap {
@@ -161,12 +171,28 @@ function buildCategoryRoutes(): MetadataRoute.Sitemap {
   }));
 }
 
+function buildAircraftRoutes(): MetadataRoute.Sitemap {
+  // Map of aircraft IDs to their blog post last modified times
+  const aircraftIds = ['hawker-hurricane', 'sopwith-camel'];
+  return aircraftIds.map((id) => {
+    const blogSlug = id === 'hawker-hurricane' ? 'hawker-hurricane-fighter-development' : 'sopwith-camel-wwi-fighter';
+    const lastModified = getFileLastModified(path.join('src', 'app', 'blog', blogSlug, 'page.tsx'));
+    return {
+      url: toAbsoluteUrl(`/aircraft/${id}`),
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    };
+  });
+}
+
 export function generateSitemapEntries(): MetadataRoute.Sitemap {
   return [
     ...buildStaticRoutes(),
     ...buildBlogRoutes(),
     ...buildBookRoutes(),
     ...buildCategoryRoutes(),
+    ...buildAircraftRoutes(),
   ];
 }
 
