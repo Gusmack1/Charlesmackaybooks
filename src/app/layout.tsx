@@ -13,7 +13,7 @@ const inter = Inter({
 })
 
 const playfair = Playfair_Display({
-  subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext', 'greek', 'greek-ext', 'vietnamese'],
+  subsets: ['latin', 'latin-ext', 'cyrillic', 'vietnamese'],
   display: 'swap',
   variable: '--font-playfair'
 })
