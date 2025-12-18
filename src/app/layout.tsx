@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import ClientBody from './ClientBody'
 import { books } from '@/data/books'
-
-// Force deployment cache clear - v1.0.1
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -236,41 +237,12 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
-        {/* Google Tag Manager (noscript) */}
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        />
+      <ClientBody>
+        <Header />
         <main className="min-h-screen">
           {children}
         </main>
-        
-        {/* Footer: minimal site-wide links for policy discoverability */}
-        <footer className="mt-12 py-8 text-center text-sm opacity-90 text-white bg-slate-900">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/how-to-order" className="underline text-white">How to Order</a>
-              <span className="hidden sm:inline">•</span>
-              <a href="/support" className="underline text-white">Support</a>
-              <span className="hidden sm:inline">•</span>
-              <a href="/contact" className="underline text-white">Contact</a>
-            </div>
-            <div className="mt-4">© {new Date().getFullYear()} Charles E. MacKay Books · All rights reserved</div>
-            <div className="mt-1">
-              <span>A MACKAY (PUBLISHER) LTD · Company number </span>
-              <a
-                href="https://find-and-update.company-information.service.gov.uk/company/SC858624"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline text-white"
-              >
-                SC858624
-              </a>
-            </div>
-          </div>
-        </footer>
+        <Footer />
 
         {/* Invisible Google Merchant Center data layer and product identifiers */}
         <script
@@ -279,7 +251,7 @@ export default function RootLayout({
             __html: buildMerchantDataLayer(),
           }}
         />
-      </body>
+      </ClientBody>
     </html>
   )
 }
