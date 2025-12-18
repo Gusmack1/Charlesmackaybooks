@@ -91,7 +91,7 @@ export default function BooksPage() {
 
       {/* Hero Section - Matching Homepage Style */}
       <div className="hero-section bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6 py-1 md:py-1.5">
+        <div className="max-w-7xl mx-auto px-6 py-0 md:py-1">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
               Aviation History Books Collection
