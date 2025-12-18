@@ -33,6 +33,7 @@ const STATIC_PAGES: Array<{
   { path: '/returns', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/support', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/partnerships/imperial-war-museum', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/glasgow-aviation-history', priority: 0.8, changeFrequency: 'monthly' },
 ];
 
 const FALLBACK_CATEGORY_SLUGS = [

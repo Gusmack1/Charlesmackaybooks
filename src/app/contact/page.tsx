@@ -2,26 +2,32 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 export const metadata: Metadata = {
-  title: 'Contact Charles E. MacKay - Aviation Historian & Author | Charles E. MacKay Aviation Books',
-  description: 'Contact Charles E. MacKay for academic collaboration, research inquiries, bulk book orders, or historical consultancy. Based in Glasgow, Scotland.',
+  title: 'Contact Charles E. MacKay - Glasgow Aviation Historian & Author | Scottish Aviation Research',
+  description: 'Contact Glasgow-based aviation historian Charles E. MacKay for academic collaboration, Scottish aviation research, bulk book orders, or historical consultancy. Expert in Scottish aerospace heritage.',
   keywords: [
     'contact Charles MacKay',
-    'aviation historian contact',
-    'Charles MacKay aviation',
-    'academic collaboration',
-    'research inquiries',
-    'bulk book orders',
-    'historical consultancy',
     'Glasgow aviation historian',
-    'Scottish aviation research',
-    'aviation history collaboration'
+    'Scottish aviation researcher',
+    'Glasgow aviation books',
+    'Scottish aviation contact',
+    'Glasgow aerospace historian',
+    'Scottish aviation consultancy',
+    'Glasgow aviation research',
+    'Scottish aviation collaboration',
+    'Glasgow aviation expert',
+    'Scottish aviation heritage contact',
+    'Glasgow military aviation historian',
+    'academic collaboration Glasgow',
+    'Scottish aviation academic',
+    'Glasgow aviation library contact',
+    'Scottish aviation museum contact'
   ],
   alternates: {
     canonical: 'https://charlesmackaybooks.com/contact'
   },
   openGraph: {
-    title: 'Contact Charles E. MacKay - Aviation Historian & Author',
-    description: 'Contact Charles E. MacKay for academic collaboration, research inquiries, bulk book orders, or historical consultancy.',
+    title: 'Contact Glasgow Aviation Historian Charles E. MacKay | Scottish Aviation Research',
+    description: 'Contact Glasgow-based aviation historian Charles E. MacKay for Scottish aviation research, academic collaboration, bulk book orders, or historical consultancy. Expert in Scottish aerospace heritage.',
     url: 'https://charlesmackaybooks.com/contact',
     siteName: 'Charles E. MacKay - Aviation Historian',
     locale: 'en_GB',

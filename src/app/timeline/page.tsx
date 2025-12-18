@@ -3,19 +3,24 @@ import Link from 'next/link'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 
 export const metadata: Metadata = {
-  title: 'Aviation History Timeline | Chronological Development | Charles E. MacKay',
-  description: 'Comprehensive timeline of aviation history from the Wright Brothers to modern aircraft. Key milestones, breakthrough technologies, and influential figures in aviation development.',
+  title: 'Glasgow Aviation History Timeline | Scottish Aerospace Development | Charles E. MacKay',
+  description: 'Glasgow aviation history timeline from 1903-2023. Scottish aerospace pioneers, Clyde shipyards aircraft production, RAF bases, and Glasgow\'s aviation heritage. Comprehensive local aviation chronology.',
   keywords: [
-    'aviation history timeline',
-    'aviation chronology',
-    'aircraft development history',
-    'aviation milestones',
-    'flight history',
-    'aviation pioneers',
-    'aircraft evolution',
-    'aviation technology timeline',
-    'military aviation history',
-    'commercial aviation timeline'
+    'Glasgow aviation history timeline',
+    'Scottish aviation timeline',
+    'Glasgow aerospace history',
+    'Scottish aviation chronology',
+    'Clyde shipyards aviation',
+    'Glasgow aircraft development',
+    'Scottish aviation pioneers',
+    'Glasgow RAF history',
+    'Scottish aerospace timeline',
+    'Glasgow aviation heritage',
+    'Scottish aviation milestones',
+    'Glasgow aviation evolution',
+    'Scottish aircraft industry timeline',
+    'Glasgow aviation technology',
+    'Scottish military aviation history'
   ],
   alternates: {
     canonical: 'https://charlesmackaybooks.com/timeline'
