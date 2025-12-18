@@ -68,13 +68,13 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
           <div className="flex gap-2">
             <Link
               href={`/books/${book.id}`}
-              className="bg-white text-slate-900 px-3 py-1 rounded text-sm hover:bg-gray-100 transition-colors border border-slate-900"
+              className="bg-white text-slate-900 px-3 py-1 rounded text-sm hover:bg-gray-100 hover:underline transition-colors border border-slate-900"
             >
               View Details
             </Link>
             <button
               onClick={handleBuyNow}
-              className="bg-white text-slate-900 px-3 py-1 rounded text-sm hover:bg-gray-100 transition-colors border border-slate-900"
+              className="bg-white text-slate-900 px-3 py-1 rounded text-sm hover:bg-gray-100 hover:underline transition-colors border border-slate-900"
             >
               Buy Now
             </button>

@@ -87,7 +87,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
             <button
               onClick={handleAddToCart}
               disabled={isAddingToCart}
-              className="bg-white text-slate-900 py-3 px-4 disabled:opacity-50 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-gray-100 transition-all duration-200 flex items-center justify-center border border-slate-900"
+              className="bg-white text-slate-900 py-3 px-4 disabled:opacity-50 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-gray-100 hover:underline transition-all duration-200 flex items-center justify-center border border-slate-900"
             >
               {isAddingToCart ? '🔄 Adding...' : isPreOrder ? '📅 Pre-Order Now' : '🛒 Add to Basket'}
             </button>
@@ -97,7 +97,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleEbayClick}
-              className="bg-white text-slate-900 py-3 px-4 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-gray-100 transition-all duration-200 flex items-center justify-center border border-slate-900"
+              className="bg-white text-slate-900 py-3 px-4 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-gray-100 hover:underline transition-all duration-200 flex items-center justify-center border border-slate-900"
             >
               <svg className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20.5 7.5c-.3-.3-.7-.5-1.2-.5H4.7c-.5 0-.9.2-1.2.5L2 9.8v8.4c0 .8.7 1.5 1.5 1.5h17c.8 0 1.5-.7 1.5-1.5V9.8l-1.5-2.3zM12 15.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/>

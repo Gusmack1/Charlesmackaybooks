@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function HeroSection() {
   return (
-    <section className="hero-section relative bg-slate-900 text-white py-16 lg:py-24">
+    <section className="hero-section relative bg-slate-900 text-white py-3 lg:py-5">
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -43,14 +43,14 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 href="/books"
-                className="inline-flex items-center justify-center bg-white text-slate-900 border border-slate-900 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-lg min-h-[60px]"
+                className="inline-flex items-center justify-center bg-white text-slate-900 border border-slate-900 hover:bg-gray-100 hover:underline px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-lg min-h-[60px]"
               >
                 <span className="mr-3 text-xl">🛒</span>
                 Shop Aviation Books
               </Link>
               <Link
                 href="/blog"
-                className="inline-flex items-center justify-center bg-white text-slate-900 border border-slate-900 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-lg min-h-[60px]"
+                className="inline-flex items-center justify-center bg-white text-slate-900 border border-slate-900 hover:bg-gray-100 hover:underline px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-lg min-h-[60px]"
               >
                 <span className="mr-3 text-xl">📝</span>
                 Expert Insights

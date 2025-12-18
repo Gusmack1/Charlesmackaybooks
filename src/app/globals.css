@@ -89,6 +89,14 @@
   button {
     font-family: 'Inter', sans-serif;
   }
+
+  /* Button hover underline for white background buttons */
+  button.bg-white:hover,
+  a.bg-white:hover,
+  button[class*="bg-white"]:hover,
+  a[class*="bg-white"]:hover {
+    text-decoration: underline;
+  }
 }
 
 @layer components {
