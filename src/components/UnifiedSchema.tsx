@@ -70,9 +70,6 @@ export default function UnifiedSchema({
 
   const graph: any[] = []
 
-  // Add LocalBusiness schema for Google My Business
-  // graph.push(localBusinessSchema)
-
   graph.push({
     '@type': 'WebSite',
     '@id': `${BASE_URL}/#website`,
@@ -179,8 +176,6 @@ export default function UnifiedSchema({
   });
 
   // Enhanced LocalBusiness schema for Google My Business
-  // Temporarily commented out to isolate syntax error
-  /*
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -189,11 +184,9 @@ export default function UnifiedSchema({
     alternateName: 'Charles E. MacKay Aviation Books',
     description: 'Expert aviation history books by Scotland\'s leading aviation historian. Specializing in Scottish aviation, WWI & WWII aircraft, helicopter development, and military aviation history. Based in Glasgow, Scotland.',
     url: BASE_URL,
-    telephone: '+44-XXXXXXXXXX', // Add actual phone if available
     email: 'charlese1mackay@hotmail.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Glasgow City Centre', // Add specific address when available
       addressLocality: 'Glasgow',
       addressRegion: 'Scotland',
       addressCountry: 'GB',
@@ -204,17 +197,6 @@ export default function UnifiedSchema({
       latitude: '55.8642',
       longitude: '-4.2518',
     },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '09:00',
-        closes: '17:00',
-      },
-    ],
-    priceRange: '£12-£45',
-    paymentAccepted: ['Cash', 'Credit Card', 'PayPal', 'Bank Transfer'],
-    currenciesAccepted: 'GBP',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: 5.0,
@@ -230,61 +212,17 @@ export default function UnifiedSchema({
           latitude: '55.8642',
           longitude: '-4.2518',
         },
-        geoRadius: '50000', // 50km radius around Glasgow
+        geoRadius: '50000',
       },
       { '@type': 'Country', name: 'United Kingdom' },
-      { '@type': 'Country', name: 'United States' },
-      { '@type': 'Country', name: 'Canada' },
-      { '@type': 'Country', name: 'Australia' },
     ],
-    serviceType: ['Book Sales', 'Aviation Research', 'Historical Publications'],
-    knowsAbout: [
-      'Scottish Aviation History',
-      'World War I Aviation',
-      'World War II Aviation',
-      'Helicopter Development',
-      'Military Aviation',
-      'Aviation Biography',
-      'Glasgow Aviation Heritage',
-      'RAF History',
-      'Fleet Air Arm',
-    ],
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Aviation History Books Collection',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Scottish Aviation History Books',
-            category: 'Local History',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Glasgow Aviation Heritage Books',
-            category: 'Local History',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'WWI Aviation Books',
-            category: 'Military History',
-          },
-        },
-      ],
-    },
     sameAs: [
       'https://www.ebay.co.uk/usr/chaza87',
-      'https://www.paypal.com/paypalme/charlese1mackay',
     ],
-  });
-  */
+  };
+
+  // Add LocalBusiness schema for Google My Business
+  graph.push(localBusinessSchema);
 
   graph.push({
     '@type': 'Person',
