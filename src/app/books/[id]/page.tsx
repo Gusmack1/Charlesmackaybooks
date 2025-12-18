@@ -702,8 +702,22 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
         {/* Main description content */}
         <main className="container mx-auto container-padding section-padding">
-          {/* Who this book is for */}
+          {/* Overview */}
           <div className="card card-large content mb-8">
+            <h2 className="content h2">Overview</h2>
+            <div className="prose prose-invert max-w-none">
+              {finalParagraphs.length > 0 ? (
+                finalParagraphs.map((para, idx) => (
+                  <p key={idx} className="text-secondary mb-4">{para}</p>
+                ))
+              ) : (
+                <p className="text-secondary">No description available.</p>
+              )}
+            </div>
+          </div>
+
+          {/* Who this book is for */}
+          <div className="card card-large content">
             <h3 className="content h3">Who this book is for</h3>
             <ul className="list-disc list-inside text-secondary space-y-1">
               <li>Readers of {book.category} seeking primary-source, archival-backed research.</li>
@@ -724,20 +738,6 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   </>
                 )}
               </ul>
-            </div>
-          </div>
-
-          {/* Overview */}
-          <div className="card card-large content">
-            <h2 className="content h2">Overview</h2>
-            <div className="prose prose-invert max-w-none">
-              {finalParagraphs.length > 0 ? (
-                finalParagraphs.map((para, idx) => (
-                  <p key={idx} className="text-secondary mb-4">{para}</p>
-                ))
-              ) : (
-                <p className="text-secondary">No description available.</p>
-              )}
             </div>
           </div>
 
