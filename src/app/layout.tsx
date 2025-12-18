@@ -1,21 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
-// import ConditionalHeader from '@/components/ConditionalHeader'
-import BBCHeader from '@/components/BBCHeader'
-import TrustSecurityBadges from '@/components/TrustSecurityBadges'
-// Footer removed site-wide per request
-// Removed Vercel analytics - deployed on Netlify, not Vercel
-// import { Analytics } from '@vercel/analytics/react'
-// import { SpeedInsights } from '@vercel/speed-insights/next'
-import ClientBody from './ClientBody'
-import { performanceMonitor } from '@/utils/performanceMonitor'
-import MobileSSLFix from '@/components/MobileSSLFix'
-import PerformanceSEO from '@/components/PerformanceSEO'
-import TechnicalSEOAudit from '@/components/TechnicalSEOAudit'
-import BacklinkStrategy from '@/components/BacklinkStrategy'
-import GoogleSEOCompliance from '@/components/GoogleSEOCompliance'
-import AnalyticsScripts from '@/components/AnalyticsScripts'
 import { books } from '@/data/books'
 
 const inter = Inter({ 
@@ -249,23 +234,16 @@ export default function RootLayout({
           }}
         />
       </head>
-      <ClientBody>
-        <AnalyticsScripts />
+      <body>
         {/* Google Tag Manager (noscript) */}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           }}
         />
-        
-        {/* BBC-style header */}
-        <BBCHeader />
         <main className="min-h-screen">
           {children}
         </main>
-        
-        {/* Trust & Security Badges - Site-wide above footer */}
-        <TrustSecurityBadges />
         
         {/* Footer: minimal site-wide links for policy discoverability */}
         <footer className="mt-12 py-8 text-center text-sm opacity-90 text-white bg-slate-900">
@@ -291,10 +269,6 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
-        <PerformanceSEO />
-        <TechnicalSEOAudit />
-        <BacklinkStrategy />
-        <GoogleSEOCompliance />
 
         {/* Invisible Google Merchant Center data layer and product identifiers */}
         <script
@@ -303,7 +277,7 @@ export default function RootLayout({
             __html: buildMerchantDataLayer(),
           }}
         />
-      </ClientBody>
+      </body>
     </html>
   )
 }
