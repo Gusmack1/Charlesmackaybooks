@@ -195,7 +195,7 @@ export default function AboutPage() {
           </div>
 
       {/* Content Sections */}
-      <div className="pt-16">
+      <div className="pt-2">
 
         {/* Biography */}
         <section className="mb-16">

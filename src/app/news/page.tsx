@@ -37,7 +37,7 @@ export default async function NewsPage() {
       subtitle="Fully automated Scottish aviation briefings with citations, book tie-ins, and keyword coverage."
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Newsroom' }]}
     >
-      <div className="max-w-6xl mx-auto px-6 py-12 space-y-12 bg-slate-900">
+      <div className="max-w-6xl mx-auto px-6 py-2 space-y-6 bg-slate-900">
         {hero ? (
           <article className="grid gap-8 md:grid-cols-2 border border-white/10 rounded-2xl p-6 bg-slate-800/70">
             <div>

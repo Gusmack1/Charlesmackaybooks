@@ -55,7 +55,7 @@ export default function BlogPage() {
       subtitle="Expert insights into Scottish aviation history, WWI & WWII aircraft, helicopter development, jet age aviation, and military aviation heritage."
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]}
     >
-      <div className="max-w-6xl mx-auto px-6 py-12 bg-slate-900">
+      <div className="max-w-6xl mx-auto px-6 py-2 bg-slate-900">
 
         {/* Blog Categories */}
         {Object.entries(blogCategories).map(([category, posts]) => (

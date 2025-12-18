@@ -50,7 +50,7 @@ export default function BBCPageTemplate({ title, subtitle, breadcrumbs = [], cen
       </div>
 
       {/* Main Content */}
-      <main id="main-content" className="max-w-7xl mx-auto px-6 py-6 md:py-8">
+      <main id="main-content" className="max-w-7xl mx-auto px-6 py-2 md:py-3">
         {children}
       </main>
     </div>
