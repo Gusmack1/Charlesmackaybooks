@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'Scottish aviation research',
     'aviation history collaboration'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/contact'
+  },
   openGraph: {
     title: 'Contact Charles E. MacKay - Aviation Historian & Author',
     description: 'Contact Charles E. MacKay for academic collaboration, research inquiries, bulk book orders, or historical consultancy.',

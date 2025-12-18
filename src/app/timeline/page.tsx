@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     'military aviation history',
     'commercial aviation timeline'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/timeline'
+  },
   openGraph: {
     title: 'Aviation History Timeline | Chronological Development',
     description: 'Comprehensive timeline of aviation history from early flight to modern aircraft development.',

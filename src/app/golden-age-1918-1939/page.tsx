@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     'aviation history 1918-1939',
     'inter-war aviation'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/golden-age-1918-1939'
+  },
   openGraph: {
     title: 'Golden Age Aviation 1918-1939: Commercial Aviation & Racing Innovation',
     description: 'Comprehensive guide to aviation\'s Golden Age - discover how commercial aviation and racing innovation flourished between the wars.',

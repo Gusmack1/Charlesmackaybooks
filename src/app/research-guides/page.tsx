@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     'research techniques',
     'scholarly research'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/research-guides'
+  },
   openGraph: {
     title: 'Aviation Research Guides | Research Methodology',
     description: 'Comprehensive research guides for aviation historians including archival research methods and academic writing techniques.',

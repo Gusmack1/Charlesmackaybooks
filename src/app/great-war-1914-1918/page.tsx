@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     'Charles MacKay aviation books',
     'aviation history 1914-1918'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/great-war-1914-1918'
+  },
   openGraph: {
     title: 'Great War Aviation 1914-1918: RFC, RNAS & Birth of RAF',
     description: 'Comprehensive guide to Great War aviation - discover how WWI transformed aircraft from reconnaissance tools to fighters and bombers.',

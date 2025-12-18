@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     'military aviation terms',
     'civil aviation glossary'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/aviation-glossary'
+  },
   openGraph: {
     title: 'Aviation Glossary | Complete Dictionary of Aviation Terms',
     description: 'Comprehensive aviation glossary with 500+ technical terms and definitions.',

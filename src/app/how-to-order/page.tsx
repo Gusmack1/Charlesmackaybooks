@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'aviation history purchase',
     'bulk aviation books order'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/how-to-order'
+  },
   openGraph: {
     title: 'How to Order Aviation History Books',
     description: 'Multiple secure purchasing options with fast worldwide shipping from Glasgow, Scotland.',

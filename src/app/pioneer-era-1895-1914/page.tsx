@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     'aviation history 1895-1914',
     'pioneering aviation'
   ],
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/pioneer-era-1895-1914'
+  },
   openGraph: {
     title: 'Pioneer Era Aviation 1895-1914: From Dreams to Flight',
     description: 'Comprehensive guide to aviation\'s Pioneer Era - discover the visionaries who transformed human flight from dream to reality.',
