@@ -5,7 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getBooksData } from '@/utils/bookUtils';
 import { getImageCandidates } from '@/data/blogImageManifest';
-import { getApprovedFeatured, getApprovedInline } from '@/utils/approvedImageResolver'
+import { getApprovedFeatured, getApprovedInline } from '@/utils/approvedImageResolver';
+import ShareButton from '@/components/ShareButton';
 
 interface BlogPost {
   id: string;
@@ -349,6 +350,17 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
             <p className="text-xl md:text-2xl mb-6 leading-relaxed max-w-3xl mx-auto">
               {cleanedSubtitle}
             </p>
+
+            {/* Share Button - positioned prominently like BBC */}
+            <div className="mb-8">
+              <ShareButton
+                url={shareUrl}
+                title={post.title}
+                description={post.subtitle || post.excerpt}
+                hashtags={['AviationHistory', 'Aviation', 'History']}
+                className="text-lg"
+              />
+            </div>
 
             {/* Compact related books CTA near the top for strong internal linking */}
             {(() => {

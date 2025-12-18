@@ -10,6 +10,7 @@ import BookDetailClient from '@/components/BookDetailClient';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookAnalyticsClient from '@/components/BookAnalyticsClient';
 import EnhancedBookSEOClient from '@/components/EnhancedBookSEOClient';
+import ShareButton from '@/components/ShareButton';
 
 
 // Simplified category gradient function - only used for hero backgrounds
@@ -663,7 +664,18 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 <p className="text-white/90 text-base sm:text-lg -mt-2">
                   By <Link href="/about" className="underline font-semibold">Charles E. MacKay</Link>
                 </p>
-                
+
+                {/* Share Button - positioned prominently in hero */}
+                <div className="mt-6">
+                  <ShareButton
+                    url={`https://charlesmackaybooks.com/books/${book.id}`}
+                    title={book.title}
+                    description={book.description?.substring(0, 150) + '...'}
+                    hashtags={['AviationHistory', 'Aviation', 'Books']}
+                    className="text-lg"
+                  />
+                </div>
+
                 {/* Per request: no description text in hero */}
 
                 {/* Book Specifications - Enhanced */}
