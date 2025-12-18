@@ -41,6 +41,12 @@
     line-height: 1.6;
     color: #ffffff; /* White text */
     background-color: #020221; /* Very dark blue background */
+
+    /* Text rendering optimizations to prevent missing letters */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 1, "kern" 1;
   }
 
   h1, h2, h3, h4, h5, h6 {

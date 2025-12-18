@@ -6,14 +6,14 @@ import Footer from '@/components/Footer'
 import ClientBody from './ClientBody'
 import { books } from '@/data/books'
 
-const inter = Inter({ 
-  subsets: ['latin'],
+const inter = Inter({
+  subsets: ['latin', 'latin-ext'],
   display: 'swap',
   variable: '--font-inter'
 })
 
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
+const playfair = Playfair_Display({
+  subsets: ['latin', 'latin-ext'],
   display: 'swap',
   variable: '--font-playfair'
 })
@@ -178,6 +178,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={`${inter.variable} ${playfair.variable} font-sans`}>
       <head>
+        <meta charSet="UTF-8" />
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
