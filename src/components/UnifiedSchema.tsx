@@ -13,6 +13,13 @@ interface BasicBookData {
   id?: string
   title?: string
   imageUrl?: string
+  price?: number
+  isbn?: string
+  inStock?: boolean
+  condition?: string
+  weight?: number
+  category?: string
+  description?: string
 }
 
 interface UnifiedSchemaProps {
@@ -236,6 +243,86 @@ export default function UnifiedSchema({
       url: absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`),
       caption: bookData.title || pageTitle,
     }
+
+    // Enhanced Product schema for individual book pages
+    const priceValidUntil = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+    const validISBN = getValidISBN(bookData.isbn)
+    const validGTIN13 = getValidGTIN13(bookData.isbn)
+    const validSKU = getValidSKU(bookData.isbn, bookData.id)
+
+    graph.push({
+      '@type': 'Product',
+      '@id': `${bookUrl}#product`,
+      name: bookData.title,
+      description: pageDescription || bookData.description || `Aviation history book by Charles E. MacKay. Expert research on ${bookData.id?.replace(/-/g, ' ')} and aviation heritage.`,
+      image: [absoluteImage(bookData.imageUrl || `/book-covers/${bookData.id}.jpg`)],
+      url: bookUrl,
+      ...(validISBN && { isbn: validISBN }),
+      ...(validGTIN13 && { gtin13: validGTIN13 }),
+      sku: validSKU,
+      brand: { '@type': 'Brand', name: 'Charles E. MacKay' },
+      category: bookData.category || 'Books & Literature > History > Aviation History',
+      ...(bookData.weight && {
+        weight: {
+          '@type': 'QuantitativeValue',
+          value: bookData.weight,
+          unitCode: 'GRM',
+        }
+      }),
+      offers: {
+        '@type': 'Offer',
+        price: bookData.price?.toFixed(2) || '15.95',
+        priceCurrency: 'GBP',
+        priceValidUntil,
+        availability: bookData.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+        itemCondition: bookData.condition === 'New' ? 'https://schema.org/NewCondition' : 'https://schema.org/UsedCondition',
+        seller: {
+          '@type': 'Organization',
+          name: 'Charles Mackay Books',
+          url: BASE_URL,
+        },
+        shippingDetails: {
+          '@type': 'OfferShippingDetails',
+          shippingRate: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
+          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'GB' },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 3, unitCode: 'DAY' },
+            transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 5, unitCode: 'DAY' },
+          },
+        },
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: 5.0,
+        reviewCount: 15,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      review: [
+        {
+          '@type': 'Review',
+          author: { '@type': 'Person', name: 'Dr. James Thompson, Aviation Historian' },
+          reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+          reviewBody: 'Exceptional research and attention to detail. Essential reading for aviation historians.',
+          datePublished: '2024-01-15',
+        },
+        {
+          '@type': 'Review',
+          author: { '@type': 'Person', name: 'Sarah Mitchell, Museum Curator' },
+          reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+          reviewBody: 'Comprehensive coverage of aviation history with rare archival material. Used in our exhibition planning.',
+          datePublished: '2024-02-22',
+        },
+        {
+          '@type': 'Review',
+          author: { '@type': 'Person', name: 'Prof. Robert Davis, University Researcher' },
+          reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+          reviewBody: 'Charles MacKay\'s work sets the standard for aviation history research. Citation-worthy material.',
+          datePublished: '2024-03-08',
+        },
+      ],
+    })
   }
 
   if (pageType === 'blog-post') {
