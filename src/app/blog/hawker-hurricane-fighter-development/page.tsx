@@ -222,7 +222,7 @@ const post = {
       <li><a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two: Between the Wars</a> — Inter‑war aviation development and industrial growth, including fighter development during the 1930s</li>
       <li><a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation</a> — Scottish industrial giant's aviation activities and aircraft production, demonstrating how manufacturing capabilities influenced design</li>
       <li><a href="/books/captain-eric-brown" class="underline font-medium">Captain Eric "Winkle" Brown: Test Pilot Biography</a> — Insights into aircraft testing and pilot training, including test pilot perspectives on fighter aircraft</li>
-      <li><a href="/books/aviation-manufacturing-wartime-production" class="underline font-medium">Aviation Manufacturing in Wartime</a> — Industrial production during wartime aviation, demonstrating how production systems influenced operational effectiveness</li>
+      <li><a href="/blog/aviation-manufacturing-wartime-production" class="underline font-medium">Aviation Manufacturing in Wartime</a> — Industrial production during wartime aviation, demonstrating how production systems influenced operational effectiveness</li>
     </ul>
 
     <h3>Related Articles</h3>
