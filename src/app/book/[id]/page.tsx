@@ -226,7 +226,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title: `${book.title} | Charles E. MacKay | £${book.price}`,
       description: generateDescription(book),
       type: 'website',
-      url: `https://charlesmackaybooks.com/book/${book.id}/`,
+      url: `https://charlesmackaybooks.com/book/${book.id}`,
       siteName: 'Charles E. MacKay Aviation Books',
       locale: 'en_GB',
       images: [

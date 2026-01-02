@@ -55,7 +55,7 @@ const structuredData = {
   "name": "Charles E. MacKay",
   "alternateName": "Charles MacKay",
   "description": "Aviation historian and author specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history",
-  "url": "https://charlesmackaybooks.com/about/",
+  "url": "https://charlesmackaybooks.com/about",
   "image": "https://charlesmackaybooks.com/charles-mackay-aviation-historian.jpg",
   "jobTitle": "Aviation Historian & Author",
   "knowsAbout": [

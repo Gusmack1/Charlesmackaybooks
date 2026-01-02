@@ -126,7 +126,7 @@ export function generateBookSEOMetadata(book: Book) {
       `ISBN ${book.isbn}`
     ].filter(Boolean),
     relatedBlogPosts: relatedPosts,
-    canonicalUrl: `https://charlesmackaybooks.com/books/${book.id}/`
+    canonicalUrl: `https://charlesmackaybooks.com/books/${book.id}`
   };
 }
 
@@ -154,7 +154,7 @@ export function generateBlogSEOMetadata(blogSlug: string, post: any) {
       isbn: book.isbn || '',
       price: book.price
     })),
-    canonicalUrl: `https://charlesmackaybooks.com/blog/${blogSlug}/`
+    canonicalUrl: `https://charlesmackaybooks.com/blog/${blogSlug}`
   };
 }
 
