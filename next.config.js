@@ -7,6 +7,9 @@ const nextConfig = {
   },
   // Disable trailing slashes to prevent redirects - each page should have its own URL
   trailingSlash: false,
+  // Disable Next.js URL normalization redirects; we handle trailing slashes via middleware rewrites (no redirect)
+  skipTrailingSlashRedirect: true,
+  skipMiddlewareUrlNormalize: true,
   // Dynamic site configuration for Netlify with Next.js runtime
   output: undefined,
   distDir: '.next',
@@ -50,9 +53,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
     optimizeCss: true,
-    // Disable Next.js URL normalization redirects; we handle trailing slashes via middleware rewrites (no redirect)
-    skipTrailingSlashRedirect: true,
-    skipMiddlewareUrlNormalize: true,
   },
 
   // Turbopack configuration to resolve build error
