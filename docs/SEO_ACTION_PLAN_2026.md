@@ -149,9 +149,25 @@ Even with external checkout:
 
 ## What we do next (to run this plan)
 
-### Decisions needed from you (to avoid wasted work)
-1. **Content sourcing rule**: what sources are allowed (your own descriptions only, or external citations allowed)?
-2. **Top 10 priority queries** for the next 6 weeks (we can start from `data/keyword-tracking.json`).
-3. **Primary conversion**: PayPal, eBay, or on‑site cart (which should we optimize first)?
+### Plan decisions (set by assistant) — 6‑week sprint starting 2026‑01‑03
+
+1. **Content sourcing rule**: Use only on‑site source material you control (book descriptions, Bookinfo, author notes, site pages). No external factual claims unless you explicitly provide/approve the source and exact wording.
+2. **Top 10 priority queries**: Use the 10 “focus” keywords below (mirrors `data/keyword-tracking.json`).
+3. **Primary conversion**: Optimize for **PayPal checkout intent** first (primary KPI = outbound PayPal click / checkout start), with **eBay outbound clicks** as secondary KPI. Keep add‑to‑cart and view_item as leading indicators.
+
+### Focus keywords (next 6 weeks)
+
+| Priority | Keyword | Canonical target |
+| --- | --- | --- |
+| 1 | aviation history books for sale | `/` |
+| 2 | buy aviation history books online | `/` |
+| 3 | charles mackay aviation books | `/` |
+| 4 | scottish aviation history books | `/category/scottish-aviation-history` |
+| 5 | wwi aviation books | `/category/wwi-aviation` |
+| 6 | wwii aviation books | `/category/wwii-aviation` |
+| 7 | german aircraft wwi books | `/books/german-aircraft-great-war` |
+| 8 | luftwaffe research books | `/books/this-was-the-enemy-volume-two` |
+| 9 | beardmore aviation history | `/books/beardmore-aviation` |
+| 10 | clydeside aviation history | `/books/clydeside-aviation-vol1` |
 
 

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-21T18:45:00Z",
+  "lastUpdated": "2026-01-03T00:55:00Z",
   "defaultWindowDays": 7,
   "propertyUrl": "https://charlesmackaybooks.com/",
   "notes": "Each entry links a priority keyword to a canonical page. Update this list whenever we launch new campaigns or books.",
@@ -9,105 +9,120 @@
       "targetUrl": "https://charlesmackaybooks.com/",
       "contentType": "homepage",
       "bookId": null,
-      "priority": "tier-1"
+      "priority": "tier-1",
+      "focus": true
     },
     {
       "keyword": "buy aviation history books online",
       "targetUrl": "https://charlesmackaybooks.com/",
       "contentType": "homepage",
       "bookId": null,
-      "priority": "tier-1"
+      "priority": "tier-1",
+      "focus": true
     },
     {
       "keyword": "german aircraft wwi books",
       "targetUrl": "https://charlesmackaybooks.com/books/german-aircraft-great-war",
       "contentType": "book-detail",
       "bookId": "german-aircraft-great-war",
-      "priority": "tier-1"
+      "priority": "tier-1",
+      "focus": true
     },
     {
       "keyword": "luftwaffe research books",
       "targetUrl": "https://charlesmackaybooks.com/books/this-was-the-enemy-volume-two",
       "contentType": "book-detail",
       "bookId": "this-was-the-enemy-volume-two",
-      "priority": "tier-1"
+      "priority": "tier-1",
+      "focus": true
     },
     {
       "keyword": "wwi aviation books",
       "targetUrl": "https://charlesmackaybooks.com/category/wwi-aviation",
       "contentType": "category",
       "bookId": null,
-      "priority": "tier-1"
+      "priority": "tier-1",
+      "focus": true
     },
     {
       "keyword": "wwii aviation books",
       "targetUrl": "https://charlesmackaybooks.com/category/wwii-aviation",
       "contentType": "category",
       "bookId": null,
-      "priority": "tier-1"
+      "priority": "tier-1",
+      "focus": true
     },
     {
       "keyword": "scottish aviation history books",
       "targetUrl": "https://charlesmackaybooks.com/category/scottish-aviation-history",
       "contentType": "category",
       "bookId": null,
-      "priority": "tier-1"
+      "priority": "tier-1",
+      "focus": true
     },
     {
       "keyword": "beardmore aviation history",
       "targetUrl": "https://charlesmackaybooks.com/books/beardmore-aviation",
       "contentType": "book-detail",
       "bookId": "beardmore-aviation",
-      "priority": "tier-2"
+      "priority": "tier-2",
+      "focus": true
     },
     {
       "keyword": "clydeside aviation history",
       "targetUrl": "https://charlesmackaybooks.com/books/clydeside-aviation-vol1",
       "contentType": "book-detail",
       "bookId": "clydeside-aviation-vol1",
-      "priority": "tier-2"
+      "priority": "tier-2",
+      "focus": true
     },
     {
       "keyword": "helicopter history books",
       "targetUrl": "https://charlesmackaybooks.com/books/sycamore-seeds",
       "contentType": "book-detail",
       "bookId": "sycamore-seeds",
-      "priority": "tier-2"
+      "priority": "tier-2",
+      "focus": false
     },
     {
       "keyword": "british aircraft great war",
       "targetUrl": "https://charlesmackaybooks.com/books/british-aircraft-great-war",
       "contentType": "book-detail",
       "bookId": "british-aircraft-great-war",
-      "priority": "tier-2"
+      "priority": "tier-2",
+      "focus": false
     },
     {
       "keyword": "fokker aircraft history",
       "targetUrl": "https://charlesmackaybooks.com/books/flying-for-kaiser",
       "contentType": "book-detail",
       "bookId": "flying-for-kaiser",
-      "priority": "tier-2"
+      "priority": "tier-2",
+      "focus": false
     },
     {
       "keyword": "aviation books glasgow",
       "targetUrl": "https://charlesmackaybooks.com/",
       "contentType": "homepage",
       "bookId": null,
-      "priority": "tier-2"
+      "priority": "tier-2",
+      "focus": false
     },
     {
       "keyword": "military aviation books",
       "targetUrl": "https://charlesmackaybooks.com/books",
       "contentType": "books-hub",
       "bookId": null,
-      "priority": "tier-2"
+      "priority": "tier-2",
+      "focus": false
     },
     {
       "keyword": "charles mackay aviation books",
       "targetUrl": "https://charlesmackaybooks.com/",
       "contentType": "homepage",
       "bookId": null,
-      "priority": "tier-2"
+      "priority": "tier-2",
+      "focus": true
     }
   ]
 }
