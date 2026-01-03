@@ -322,6 +322,16 @@ export default function UnifiedSchema({
         priceValidUntil,
         availability: bookData.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
         itemCondition: bookData.condition === 'New' ? 'https://schema.org/NewCondition' : 'https://schema.org/UsedCondition',
+        merchantReturnLink: `${BASE_URL}/returns`,
+        hasMerchantReturnPolicy: {
+          '@type': 'MerchantReturnPolicy',
+          applicableCountry: 'GB',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnUnspecified',
+          merchantReturnLink: `${BASE_URL}/returns`,
+          returnMethod: 'https://schema.org/ReturnByMail',
+          // Returns page states return postage is covered when an item is not as described or arrives damaged.
+          itemDefectReturnFee: 'https://schema.org/FreeReturn',
+        },
         seller: {
           '@type': 'Organization',
           name: 'Charles Mackay Books',
@@ -517,12 +527,10 @@ export default function UnifiedSchema({
                 hasMerchantReturnPolicy: {
                   '@type': 'MerchantReturnPolicy',
                   applicableCountry: 'GB',
-                  returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-                  merchantReturnDays: 30,
+                  returnPolicyCategory: 'https://schema.org/MerchantReturnUnspecified',
                   returnMethod: 'https://schema.org/ReturnByMail',
-                  returnFees: 'https://schema.org/FreeReturn',
-                  returnShippingFeesAmount: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
-                  returnPolicyUrl: `${BASE_URL}/returns`,
+                  merchantReturnLink: `${BASE_URL}/returns`,
+                  itemDefectReturnFee: 'https://schema.org/FreeReturn',
                 },
               },
             },
