@@ -21,9 +21,21 @@ The script fetches position, clicks, CTR, and impressions for each keyword/url p
 
 ## CI Integration
 
-- Add a nightly GitHub Actions workflow that exports the required secrets and runs `npm run keywords:report`.
-- Upload the generated artifacts (JSON + Markdown) just like the newsroom automation workflow. This keeps the dashboard available even if we rotate keys.
-- Optionally extend the workflow to post `reports/keywords/latest.md` into an issue or Slack webhook for daily visibility.
+This repo includes a GitHub Actions workflow that runs nightly and on-demand:
+
+- Workflow: `.github/workflows/keyword-rank-dashboard.yml`
+- Output: uploaded as a GitHub Actions artifact (`keyword-reports`)
+
+### Required GitHub Secrets
+
+Add these in GitHub → Settings → Secrets and variables → Actions:
+
+- `GOOGLE_SEARCH_CONSOLE_KEY` (required): service-account JSON **string** (recommended) or a path inside the repo (not recommended).
+- `GOOGLE_SEARCH_CONSOLE_PROPERTY` (optional): defaults to `https://charlesmackaybooks.com/`
+
+Notes:
+- Do **not** commit the JSON key.
+- Ensure the service account has access to the Search Console property.
 
 ## Updating the Keyword List
 

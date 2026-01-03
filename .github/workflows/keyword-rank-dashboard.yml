@@ -1,0 +1,47 @@
+name: Keyword rank dashboard
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Nightly run (UTC)
+    - cron: "15 2 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  keywords:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: Charlesmackaybooks/package-lock.json
+
+      - name: Install dependencies
+        working-directory: Charlesmackaybooks
+        run: npm ci
+
+      - name: Run keyword dashboard
+        working-directory: Charlesmackaybooks
+        env:
+          GOOGLE_SEARCH_CONSOLE_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_KEY }}
+          GOOGLE_SEARCH_CONSOLE_PROPERTY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_PROPERTY }}
+        run: npm run keywords:report
+
+      - name: Upload keyword reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: keyword-reports
+          path: |
+            Charlesmackaybooks/reports/keywords/*.json
+            Charlesmackaybooks/reports/keywords/latest.md
+          if-no-files-found: error
+
+
