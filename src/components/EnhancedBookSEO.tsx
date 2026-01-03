@@ -720,7 +720,7 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
 
         name: book.category,
 
-        item: `${baseUrl}/books?category=${encodeURIComponent(book.category)}`
+        item: `${baseUrl}/category/${encodeURIComponent(book.category.toLowerCase().replace(/\\s+/g, '-'))}`
 
       },
 
