@@ -107,7 +107,7 @@ export default function Header() {
                   <button
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     aria-haspopup="menu"
-                    aria-expanded={mobileMenuOpen ? 'true' : 'false'}
+                    aria-expanded={mobileMenuOpen}
                     aria-controls="global-more-menu"
                     className="bg-white text-slate-900 px-3 py-2 rounded min-h-[44px] min-w-[44px] text-sm hover:bg-gray-100 border border-slate-900"
                   >
@@ -207,7 +207,7 @@ export default function Header() {
               <button
                 onClick={() => setDesktopMenuOpen(!desktopMenuOpen)}
                 aria-haspopup="menu"
-                aria-expanded={desktopMenuOpen ? 'true' : 'false'}
+                aria-expanded={desktopMenuOpen}
                 className="px-3 py-2 rounded bg-white text-slate-900 hover:bg-gray-100 hover:underline border border-slate-900 flex items-center gap-1 transition-colors"
               >
                 More ▼
