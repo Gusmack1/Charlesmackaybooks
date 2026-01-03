@@ -50,6 +50,9 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
     optimizeCss: true,
+    // Disable Next.js URL normalization redirects; we handle trailing slashes via middleware rewrites (no redirect)
+    skipTrailingSlashRedirect: true,
+    skipMiddlewareUrlNormalize: true,
   },
 
   // Turbopack configuration to resolve build error
