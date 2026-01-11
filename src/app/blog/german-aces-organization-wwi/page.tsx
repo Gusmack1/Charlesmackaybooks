@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
-import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -28,7 +27,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="WWI German fighter squadron organisation—representative" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/jagdgeschwader-organization-schematic.svg" alt="Original schematic illustration of a Jagdstaffel to Jagdgeschwader organization flow using labeled blocks and arrows (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">From detachments to <em>Jagdgeschwader</em>: organisation shaped tactics and morale.</p>
     </div>
 
@@ -140,7 +139,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of German fighter pilots with Pour le Merite decorations, demonstrating the ace culture and unit identity that developed within Jagdgeschwader formations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/pour-le-merite-ace-culture-schematic.svg" alt="Original schematic illustration of a medal and laurel motif representing ace culture and awards (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Ace culture: Pour le Merite pilots represented both tactical excellence and organizational pride.</p>
     </div>
 
@@ -178,7 +177,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of Fokker D.VII fighters in formation, demonstrating the organizational structure that enabled effective employment of advanced aircraft types" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/fokker-dvii-integration-schematic.svg" alt="Original schematic illustration of a new aircraft type being integrated into a formation via an arrow (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Aircraft evolution: organizational structure enabled rapid integration of new types like the Fokker D.VII.</p>
     </div>
 
@@ -224,7 +223,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 32,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/jagdgeschwader-organization-schematic.svg',
     alt: 'German WWI fighter organisation',
     caption: 'Organisation and doctrine behind the aces.'
   },
@@ -241,7 +240,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Aces, Jagdgeschwader, and Organisation: German Fighter Culture in WWI',
     description: 'How structure and doctrine shaped German fighter performance on the Western Front.',
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/jagdgeschwader-organization-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -268,6 +267,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/german-aces-organization-wwi"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a Jagdstaffel to Jagdgeschwader organization flow using labeled blocks and arrows (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#1b2550"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Jasta → Jagdgeschwader (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: organization flow blocks and arrows (diagrammatic)</text>
+  </g>
+
+  <!-- Blocks -->
+  <g fill="#e5e7eb" opacity="0.92" stroke="#0b1220" stroke-width="4">
+    <rect x="140" y="240" width="260" height="110" rx="22"/>
+    <rect x="140" y="380" width="260" height="110" rx="22"/>
+    <rect x="140" y="520" width="260" height="0" rx="0"/>
+    <rect x="520" y="300" width="320" height="150" rx="26"/>
+    <rect x="900" y="320" width="220" height="110" rx="22"/>
+  </g>
+
+  <g fill="#0b1220" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="22" font-weight="800">
+    <text x="270" y="305" text-anchor="middle">Jagdstaffel (Jasta)</text>
+    <text x="270" y="445" text-anchor="middle">Jagdstaffel (Jasta)</text>
+    <text x="680" y="380" text-anchor="middle">Jagdgeschwader (JG)</text>
+    <text x="1010" y="385" text-anchor="middle">Sector tasking</text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#fbbf24" stroke-width="10" opacity="0.9" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="400" y1="295" x2="520" y2="335"/>
+    <path d="M520 335 L492 320"/>
+    <path d="M520 335 L492 350"/>
+
+    <line x1="400" y1="435" x2="520" y2="405"/>
+    <path d="M520 405 L492 390"/>
+    <path d="M520 405 L492 420"/>
+
+    <line x1="840" y1="375" x2="900" y2="375"/>
+    <path d="M900 375 L872 360"/>
+    <path d="M900 375 L872 390"/>
+  </g>
+</svg>
+
