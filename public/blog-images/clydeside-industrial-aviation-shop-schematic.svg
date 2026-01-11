@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of an industrial workshop with a wing outline on a bench and overhead crane blocks (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#1b2550"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Industrial shops → aviation work (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: workshop hall with a simplified wing outline on a bench</text>
+  </g>
+
+  <!-- Hall -->
+  <rect x="140" y="220" width="920" height="340" rx="22" fill="#111827" opacity="0.9" stroke="#cbd5e1" stroke-width="6"/>
+
+  <!-- Overhead crane beam -->
+  <rect x="170" y="250" width="860" height="22" rx="10" fill="#cbd5e1" opacity="0.35"/>
+  <rect x="560" y="272" width="80" height="30" rx="10" fill="#cbd5e1" opacity="0.35"/>
+  <line x1="600" y1="302" x2="600" y2="340" stroke="#cbd5e1" stroke-width="6" opacity="0.35"/>
+
+  <!-- Bench -->
+  <rect x="220" y="420" width="760" height="70" rx="18" fill="#0b1220" opacity="0.9" stroke="#2a3954" stroke-width="4"/>
+
+  <!-- Wing outline -->
+  <path d="M320 430 C420 405, 560 400, 700 412 C820 422, 900 440, 940 455
+           C900 470, 820 486, 700 495 C560 505, 420 502, 320 485 Z"
+        fill="none" stroke="#93c5fd" stroke-width="10" opacity="0.9" stroke-linecap="round"/>
+</svg>
+

@@ -24,7 +24,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing Clydeside industrial works adapted to aviation production, with workers assembling aircraft structures in converted shipbuilding facilities, demonstrating the transformation from heavy industry to aviation manufacturing" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/clydeside-industrial-aviation-shop-schematic.svg" alt="Original schematic illustration of an industrial workshop with a wing outline on a bench and overhead crane blocks (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Heavy engineering to high‑precision aerostructures: how the Clyde repurposed skills for aviation.</p>
     </div>
 
@@ -79,7 +79,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing inspection and progressive build processes on the Clyde, with workers checking aircraft components and inspectors documenting quality control procedures" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/dalmuir-final-inspection-traveller-schematic.svg" alt="Original schematic illustration of a traveller sheet checklist beside a panel being inspected with a straightedge (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">From slips to hangars: progressive inspection, gauge control, and traceability sustained output.</p>
     </div>
 
@@ -108,7 +108,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing aerostructure jigs and fixtures used in Clydeside aviation production, demonstrating the precision manufacturing methods adapted from shipbuilding" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/assembly-jigs-fixtures-schematic.svg" alt="Original schematic illustration of an assembly jig holding an airframe outline with clamp points (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Repeatability by design: jigs, fixtures, and travellers made complex assemblies routine.</p>
     </div>
 
@@ -135,7 +135,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing skilled workforce and training pipelines on the Clyde, with workers being trained in aircraft manufacturing techniques and inspectors documenting quality control procedures" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/clydeside-workforce-training-schematic.svg" alt="Original schematic illustration of a training board with check marks beside two worker silhouettes (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">People, process, and paperwork: three pillars of reliable output under pressure.</p>
     </div>
 
@@ -156,7 +156,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing propeller hub machining and heat-treat documentation at a Clydeside facility, demonstrating the precision manufacturing methods adapted from shipbuilding" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/clydeside-propeller-hub-machining-schematic.svg" alt="Original schematic illustration of a propeller hub cylinder on a lathe with a gauge icon (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Aero‑propulsion on a marine foundation: process control carried across domains.</p>
     </div>
 
@@ -193,7 +193,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing large-span aerostructures under cover at Clydeside facilities, with converted marine sheds serving as hangars with calibrated crane coverage" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/clydeside-hangar-crane-coverage-schematic.svg" alt="Original schematic illustration of a hangar interior with an overhead crane and a long-span structure outline (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">From slips to spans: hangars as repurposed marine sheds with calibrated crane coverage.</p>
     </div>
 
@@ -290,21 +290,21 @@ const post = {
       id: 'beardmore-aviation-scottish-industrial-giant',
       title: 'Beardmore: Scottish Aviation Pioneer',
       excerpt: 'How Beardmore’s shipyards pivoted to aircraft, engines, and airships with Clyde industrial discipline.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/beardmore-parkhead-forge.jpg',
       readingTime: 6,
     },
     {
       id: 'aviation-manufacturing-wartime-production',
       title: 'Aviation Manufacturing in Wartime',
       excerpt: 'Standards, inspection culture, and scaling lessons from wartime British aviation production.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/assembly-jigs-fixtures-schematic.svg',
       readingTime: 7,
     },
     {
       id: 'british-aircraft-great-war-rfc-rnas',
       title: 'British Aircraft of the Great War: RFC & RNAS Development',
       excerpt: 'Programmes, aircraft types, and squadron deployment that framed Clydeside production priorities.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/rfc-pilots-no32-squadron-1916.jpg',
       readingTime: 8,
     },
   ]
@@ -319,7 +319,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Clydeside Aviation: Scotland's Industrial Flying Revolution - Enhanced Edition`,
     description: `A comprehensive, research-backed account of how Clydeside's heavy industry transformed into aviation manufacturing excellence.`,
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/clydeside-aviation-dalmuir.svg'],
     type: 'article'
   },
   alternates: {
@@ -346,6 +346,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/clydeside-aviation-revolution"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

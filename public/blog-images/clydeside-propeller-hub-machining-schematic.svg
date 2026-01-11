@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a propeller hub cylinder on a lathe with a gauge icon (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#3a2410"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Propeller hub machining (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: lathe bed + hub cylinder + gauge mark</text>
+  </g>
+
+  <!-- Lathe bed -->
+  <rect x="160" y="430" width="880" height="90" rx="22" fill="#111827" opacity="0.9" stroke="#cbd5e1" stroke-width="6"/>
+
+  <!-- Hub cylinder -->
+  <rect x="360" y="320" width="480" height="90" rx="26" fill="#e5e7eb" opacity="0.9" stroke="#cbd5e1" stroke-width="6"/>
+  <circle cx="360" cy="365" r="45" fill="#cbd5e1" opacity="0.8"/>
+  <circle cx="840" cy="365" r="45" fill="#cbd5e1" opacity="0.8"/>
+
+  <!-- Tool post -->
+  <rect x="260" y="290" width="70" height="140" rx="14" fill="#93c5fd" opacity="0.75"/>
+  <line x1="330" y1="350" x2="360" y2="350" stroke="#93c5fd" stroke-width="10" opacity="0.75" stroke-linecap="round"/>
+
+  <!-- Gauge mark -->
+  <g stroke="#fbbf24" stroke-width="10" opacity="0.9" stroke-linecap="round">
+    <line x1="600" y1="250" x2="600" y2="300"/>
+  </g>
+</svg>
+

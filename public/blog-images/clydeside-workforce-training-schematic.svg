@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a training board with check marks beside two worker silhouettes (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#163a2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Workforce training & standard work (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: training checklist board + worker silhouettes</text>
+  </g>
+
+  <!-- People -->
+  <g fill="#e5e7eb" opacity="0.9">
+    <circle cx="360" cy="340" r="34"/>
+    <rect x="320" y="380" width="80" height="110" rx="18"/>
+    <circle cx="520" cy="340" r="34"/>
+    <rect x="480" y="380" width="80" height="110" rx="18"/>
+  </g>
+
+  <!-- Checklist board -->
+  <rect x="660" y="260" width="420" height="300" rx="22" fill="#e5e7eb" opacity="0.92"/>
+  <g fill="#0b1220" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial">
+    <text x="870" y="315" font-size="22" font-weight="800" text-anchor="middle">Training board</text>
+    <text x="700" y="370" font-size="18">✓ measurement</text>
+    <text x="700" y="410" font-size="18">✓ tool care</text>
+    <text x="700" y="450" font-size="18">✓ inspection</text>
+    <text x="700" y="490" font-size="18">✓ sign‑off</text>
+  </g>
+</svg>
+
