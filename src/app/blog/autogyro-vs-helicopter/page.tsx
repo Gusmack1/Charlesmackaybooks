@@ -26,8 +26,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Autogyro and early helicopter comparison" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Autogyro vs helicopter: autorotation as foundation, powered hover as destination.</p>
+      <img src="/blog-images/autogyro-vs-helicopter-comparison-schematic.svg" alt="Original schematic illustration comparing an autogyro (autorotating rotor) and a helicopter (powered rotor) side-by-side (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): autorotation as foundation; powered hover as destination.</p>
     </div>
 
     <h2 id="aerodynamics">Aerodynamics: Autorotation vs Powered Hover</h2>
@@ -36,8 +36,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Cierva autogyro at Duxford museum" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Cierva’s autogyro: the hinge is the thing—flapping and lead-lag freed the rotor.</p>
+      <img src="/blog-images/cierva-autogyro-rotor-hinges-schematic.svg" alt="Original schematic illustration of a rotor hub showing flapping and lead-lag hinge concepts (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): flapping + lead‑lag freedom at the hub.</p>
     </div>
 
     <h2 id="rotor-mechanics">Rotor Mechanics and Controls: From Simple to Complex</h2>
@@ -55,8 +55,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Sikorsky VS-300 early helicopter configuration" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Sikorsky VS-300: the canonical single-main rotor plus tail rotor configuration.</p>
+      <img src="/blog-images/sikorsky-vs300-helicopter.svg" alt="Original schematic illustration showing a single-main-rotor helicopter layout with a tail rotor (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): single main rotor + tail rotor configuration.</p>
     </div>
 
     <h2 id="applications">Applications and Mission Profiles</h2>
@@ -65,8 +65,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Bristol Sycamore in service" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Bristol Sycamore: Britain’s first production helicopter—proof of post-war maturation.</p>
+      <img src="/blog-images/bristol-sycamore-schematic.svg" alt="Original schematic illustration of a single-rotor helicopter silhouette with a tail rotor (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): single-rotor helicopter layout representing post‑war maturation.</p>
     </div>
 
     <h2 id="legacy">Legacy and Modern Variants</h2>
@@ -80,8 +80,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Rotorcraft training diagram for autorotation and flare" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Emergency descent: the autorotation flare stores and releases rotor energy for a gentle landing.</p>
+      <img src="/blog-images/autorotation-flare-schematic.svg" alt="Original schematic illustration of an autorotation descent path and flare (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): autorotation glidepath, flare, and touchdown segment.</p>
     </div>
 
     <h2 id="lineage">British Lineage and the Bristol Sycamore</h2>
@@ -100,8 +100,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Rotorcraft pattern, power management, and decision points" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Energy management: consistent procedures and gate checks underpin rotorcraft safety.</p>
+      <img src="/blog-images/rotorcraft-procedure-flow-schematic.svg" alt="Original schematic illustration of a simple rotorcraft procedure flow with decision diamonds and arrows (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): a simplified flow of checks and decision gates.</p>
     </div>
 
     <h2 id="further-reading">Further Reading and Related Works</h2>
@@ -133,9 +133,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/autogyro-vs-helicopter-comparison-schematic.svg',
     alt: 'Autogyro vs Helicopter',
-    caption: 'Autorotation as foundation; powered hover as destination.'
+    caption: 'Original illustration (schematic): autorotation as foundation; powered hover as destination.'
   },
   category: 'Helicopter History',
   tags: [
@@ -152,7 +152,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Autogyro vs Helicopter: The Bridge to True Vertical Flight',
     description: 'How autogyros enabled the helicopter revolution.',
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/autogyro-vs-helicopter-comparison-schematic.svg'],
     type: 'article'
   },
   alternates: {
