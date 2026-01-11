@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a jungle survival motif: route line across hills, a water drop, and a compass mark (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#123024"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Jungle survival & navigation (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: route line, water drop, and compass mark</text>
+  </g>
+
+  <!-- Hills -->
+  <path d="M120 520 C260 380, 420 380, 560 520 C700 420, 820 420, 960 520 L960 560 L120 560 Z"
+        fill="#111827" opacity="0.75"/>
+
+  <!-- Route line -->
+  <path d="M220 520 C340 470, 420 470, 520 430 C620 390, 700 430, 820 400"
+        fill="none" stroke="#fbbf24" stroke-width="10" opacity="0.9" stroke-linecap="round"/>
+
+  <!-- Water drop -->
+  <path d="M1000 380 C980 420, 960 440, 960 470 C960 510, 990 540, 1030 540 C1070 540, 1100 510, 1100 470 C1100 440, 1080 420, 1060 380 Z"
+        fill="#93c5fd" opacity="0.85"/>
+
+  <!-- Compass mark -->
+  <g transform="translate(900,260)" fill="none" stroke="#e5e7eb" stroke-width="8" opacity="0.85" stroke-linecap="round">
+    <circle cx="0" cy="0" r="46"/>
+    <line x1="0" y1="-46" x2="0" y2="-70"/>
+  </g>
+</svg>
+

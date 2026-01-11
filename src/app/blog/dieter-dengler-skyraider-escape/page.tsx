@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
-import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -18,7 +17,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Portrait photograph of Dieter Dengler in U.S. Navy flight suit, showing his determined expression and Navy pilot wings" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/dieter-dengler-portrait-schematic.svg" alt="Original schematic illustration of a pilot portrait silhouette with wing badge motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Dieter Dengler (1938–2001): naval aviator, POW escapee, and test pilot.</p>
     </div>
 
@@ -42,7 +41,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Training aircraft and flight training context showing the progression from student pilot to qualified naval aviator" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/flight-training-pipeline-schematic.svg" alt="Original schematic illustration of a flight training pipeline with three stages connected by arrows (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Flight training pipeline: academics, airmanship, and persistence.</p>
     </div>
 
@@ -72,7 +71,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Douglas A-1 Skyraider on the flight deck of USS Ranger (CV-61), showing the aircraft's distinctive design and operational configuration" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/a1-skyraider-carrier-deck-schematic.svg" alt="Original schematic illustration of a carrier deck with a single aircraft block and centerline markings (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">USS Ranger operations: The Skyraider's rugged design and exceptional endurance made it ideal for carrier-based operations in Southeast Asia.</p>
     </div>
 
@@ -111,7 +110,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Jungle and survival skills placeholder" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/jungle-survival-navigation-schematic.svg" alt="Original schematic illustration of a jungle survival motif: route line across hills, a water drop, and a compass mark (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Jungle survival: water discipline, navigation by terrain, and foraging knowledge.</p>
     </div>
 
@@ -143,7 +142,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Rescue and recovery placeholder image" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/combat-sar-rescue-schematic.svg" alt="Original schematic illustration of combat search and rescue: a helicopter hoist line with an escort aircraft icon (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Combat SAR: doctrine, aircrew judgment, and inter‑service coordination.</p>
     </div>
 
@@ -168,7 +167,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Legacy and remembrance placeholder image" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/dengler-legacy-remembrance-schematic.svg" alt="Original schematic illustration of remembrance: a star and a small aircraft silhouette motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Legacy: courage, ingenuity, duty to others, and the craft of flying.</p>
     </div>
 
@@ -280,9 +279,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 38,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: 'A‑1 Skyraider operations',
-    caption: 'Endurance aircraft in a jet age.'
+    url: '/blog-images/a1-skyraider-carrier-deck-schematic.svg',
+    alt: 'Original schematic illustration of a carrier deck operations motif (diagrammatic).',
+    caption: 'Original illustration (schematic): carrier deck motif representing Skyraider-era naval operations.'
   },
   category: 'Aviation Biography',
   tags: ['Dieter Dengler', 'Dieter Dengler biography', 'Vietnam War POW escape', 'A‑1 Skyraider', 'Carrier Aviation', 'Vietnam War', 'charles mackay books'],
@@ -297,7 +296,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Dieter Dengler: Shoot‑down, Captivity, Escape',
     description: 'Skyraider endurance and a daring escape in Southeast Asia.',
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/a1-skyraider-carrier-deck-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -324,6 +323,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/dieter-dengler-skyraider-escape"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
