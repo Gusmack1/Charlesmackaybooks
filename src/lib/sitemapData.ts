@@ -151,15 +151,8 @@ function buildBookRoutes(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // Also include /book/ routes for backward compatibility with Google indexing
-  const legacyBookRoutes = getBookIds().map((id) => ({
-    url: toAbsoluteUrl(`/book/${id}`),
-    lastModified: booksFileModified,
-    changeFrequency: 'weekly' as const,
-    priority: 0.9,
-  }));
-
-  return [...bookRoutes, ...legacyBookRoutes];
+  // Only canonical /books/{id} routes are included (no legacy /book routes).
+  return bookRoutes;
 }
 
 function buildCategoryRoutes(): MetadataRoute.Sitemap {
