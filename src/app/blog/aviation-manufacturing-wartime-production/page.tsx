@@ -13,7 +13,7 @@ const post = {
     <p>Wartime aviation manufacturing was not simply a matter of building more; it was the disciplined transformation of design intent into repeatable aircraft at unprecedented scale. The achievement rested on jigs that fixed geometry, metrology that verified it, documentation that tracked every airframe, and a workforce — increasingly including women — trained to deliver precision day after day. Engines, structures, systems, and supply chains were integrated into a single promise: that the thousandth aircraft would fly like the first.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Elliptical wings in assembly jigs; fitters riveting skins while inspectors check with gauges and templates." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/assembly-jigs-fixtures-schematic.svg" alt="Original schematic illustration of an assembly jig holding an airframe outline with clamp points (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Geometry first: precision jigs and calibrated gauges turned drawings into repeatable airframes at scale.</p>
     </div>
 
@@ -28,7 +28,7 @@ const post = {
     <p>Precision jigs fixed the relationship of spars, ribs, and skins; fixtures held fuselage frames and stringers in alignment while skins were drilled and riveted. Metrology — from simple go/no‑go gauges to calibrated micrometers — ensured interchangeability. Traveller sheets accompanied each assembly through stations, recording inspection sign‑offs and rework notes. These practices guarded aerodynamic assumptions (surface finish, flush riveting, fairing continuity) and structural assumptions (load paths, fastener quality) at scale.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Inspector checking rivet flushness with a straightedge while a torque chart and traveller sheet are clipped to the jig." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/rivet-flushness-inspection-schematic.svg" alt="Original schematic illustration of a straightedge checking flush rivets on a panel with a checklist beside it (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Surface quality is performance: flush rivets and smooth skins preserved drag assumptions validated in test.</p>
     </div>
 
@@ -49,7 +49,7 @@ const post = {
     <p>Wartime demand widened the labour pool. Women trained into skilled roles — riveting, inspection, instrument assembly, and logistics coordination — and brought consistency to repetitive, quality‑critical tasks. Instructional materials emphasized measurement, tool care, and documentation so that new joiners could reach proficiency quickly without compromising standards. This skills transfer was a cornerstone of reliable volume output.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Women inspectors reviewing gauge blocks and signing traveller sheets at a sub‑assembly station; jigs and drill templates in the background." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/wartime-inspection-signoff-schematic.svg" alt="Original schematic illustration of two inspectors at a bench with a measurement block and a sign-off sheet (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Discipline at scale: skilled workers — increasingly women — sustained precision under tempo.</p>
     </div>
 
@@ -60,7 +60,7 @@ const post = {
     <p>Fighter lines (for example, Spitfire and Hurricane) demanded high surface quality and tight rigging: jigs guarded wing twist and incidence; control‑run fixtures preserved free play limits. Bomber lines emphasized systems integration and access: electrical looms and hydraulic runs were routed for inspection as much as for initial fit. Engine lines enforced torque values, clearances, and run‑in procedures tied to calibrated instrumentation. Across all, the principles were the same: fixtures, measurement, documentation, and feedback.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Final assembly bay with mixed stations — wing mate, engine installation, and systems checkout — travellers clipped to each airframe." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/final-assembly-stations-schematic.svg" alt="Original schematic illustration of a final assembly bay with stations for wing mate, engine install, and systems check (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Flow built on standards: different stations, one vocabulary of quality.</p>
     </div>
 
@@ -91,9 +91,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/assembly-jigs-fixtures-schematic.svg',
     alt: 'Aviation Manufacturing: Wartime Production — Enhanced Edition',
-    caption: 'Shadow factories, jigs, metrology, and a trained workforce delivering quality at quantity.'
+    caption: 'Original illustration (schematic): jigs and fixtures holding geometry for repeatable build standards.'
   },
   category: 'Aviation History',
   tags: ["aviation","manufacturing","wartime","production"],
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Aviation Manufacturing Wartime Production`,
     description: `Comprehensive analysis of aviation manufacturing wartime production with expert historical research and technical details.`,
-    images: ['/blog-images/aviation-manufacturing-wartime-production-featured.jpg'],
+    images: ['/blog-images/assembly-jigs-fixtures-schematic.svg'],
     type: 'article'
   },
   alternates: {
