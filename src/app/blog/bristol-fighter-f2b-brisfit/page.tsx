@@ -267,6 +267,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/bristol-fighter-f2b-brisfit"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
