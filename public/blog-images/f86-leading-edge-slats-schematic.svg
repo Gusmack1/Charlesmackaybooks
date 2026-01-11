@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a swept wing leading edge with a separated slat bar and track marks (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#1b3a57"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Leading-edge slats (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: swept wing section + slat element (diagrammatic)</text>
+  </g>
+
+  <!-- Wing -->
+  <polygon points="260,470 860,330 930,420 330,560" fill="#111827" opacity="0.9" stroke="#cbd5e1" stroke-width="6"/>
+  <!-- Slat (separated) -->
+  <polygon points="250,430 820,300 840,340 270,470" fill="#e5e7eb" opacity="0.9" stroke="#cbd5e1" stroke-width="6"/>
+  <!-- Track marks -->
+  <g stroke="#fbbf24" stroke-width="10" opacity="0.9" stroke-linecap="round">
+    <line x1="420" y1="470" x2="460" y2="455"/>
+    <line x1="560" y1="430" x2="600" y2="415"/>
+    <line x1="700" y1="390" x2="740" y2="375"/>
+  </g>
+</svg>
+

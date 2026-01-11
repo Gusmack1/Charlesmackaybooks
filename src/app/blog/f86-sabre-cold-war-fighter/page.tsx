@@ -23,7 +23,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing a formation of F-86F Sabres climbing over Korea in 1952, swept wings and leading-edge slats clearly visible, demonstrating the Sabre's distinctive aerodynamic design" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/f86-sabre-formation-korea-schematic.svg" alt="Original schematic illustration of three swept-wing fighter silhouettes in climb formation (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">F‑86F over Korea: swept wings with automatic leading‑edge slats combined agility with benign stall behaviour.</p>
     </div>
 
@@ -67,7 +67,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A detailed photograph showing a close-up of the F-86 wing root with slat tracks and gun access panels clearly visible, demonstrating the Sabre's sophisticated aerodynamic design" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/f86-leading-edge-slats-schematic.svg" alt="Original schematic illustration of a swept wing leading edge with a separated slat bar and track marks (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Leading‑edge slats: automatic deployment improved approach handling and high‑AoA controllability — a Sabre hallmark.</p>
     </div>
 
@@ -116,7 +116,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A detailed diagram showing side-by-side silhouettes of F-86F and MiG-15bis with key dimensions and armament callouts, demonstrating the contrasting design philosophies" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/f86-vs-mig15-comparison-schematic.svg" alt="Original schematic illustration comparing two swept-wing fighter silhouettes side-by-side, labelled Sabre and MiG-15 (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Sabre vs MiG‑15: contrasting philosophies — precision gunnery and handling versus heavier cannon and climb.</p>
     </div>
 
@@ -302,7 +302,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/f86-sabre-formation-korea-schematic.svg',
     alt: 'North American F-86 Sabre: Cold War Premier Fighter - Enhanced Edition',
     caption: 'Swept‑wing agility, reliable engines, and disciplined gunnery — the Sabre defined early jet‑age air combat.'
   },
@@ -319,7 +319,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `North American F-86 Sabre: Cold War Premier Fighter - Enhanced Edition`,
     description: `A comprehensive, research-backed account of the F-86 Sabre: its swept-wing design, Korean War operations, RAF/RCAF service, and legacy.`,
-    images: ['/blog-images/f86-sabre-cold-war-fighter-featured.jpg'],
+    images: ['/blog-images/f86-sabre-formation-korea-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -346,6 +346,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/f86-sabre-cold-war-fighter"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
