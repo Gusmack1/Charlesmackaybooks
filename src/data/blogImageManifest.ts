@@ -20,10 +20,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/vickers-valiant-bomber.jpg', alt: 'Vickers Valiant bomber', caption: 'Valiant representing the first of the V-bombers to enter RAF service.' }
   ],
   'helicopter-development-pioneers': [
-    { url: '/blog-images/cierva-autogyro-c4.jpg', alt: 'Cierva C.4 autogyro trials', caption: 'Cierva’s C.4 demonstrating stabilised autorotation in 1923.' },
-    { url: '/blog-images/cierva-autogyro-duxford.jpg', alt: 'Cierva autogyro display at Duxford', caption: 'Autogyro heritage linking Spanish innovation to British rotary craft.' },
     { url: '/blog-images/sikorsky-vs300-helicopter.svg', alt: 'Sikorsky VS-300 configuration schematic', caption: 'Original schematic illustration showing the single-main-rotor + tail-rotor layout.' },
-    { url: '/blog-images/sikorsky-vs300-igor-sikorsky.jpg', alt: 'Igor Sikorsky with VS-300', caption: 'The pioneer whose work bridged prototypes to practical service helicopters.' }
+    { url: '/blog-images/cierva-c30-autogyro-schematic.svg', alt: 'Cierva C.30 autogyro schematic', caption: 'Original schematic illustration (diagrammatic): autogyro rotor disc and propeller motif.' },
+    { url: '/blog-images/weir-w6-helicopter-schematic.svg', alt: 'Weir W6 helicopter schematic', caption: 'Original schematic illustration (diagrammatic): early British helicopter configuration motif.' },
+    { url: '/blog-images/sycamore-seed-autorotation-schematic.svg', alt: 'Sycamore seed autorotation schematic', caption: 'Original schematic illustration (diagrammatic): autorotation-inspired descent and lift motif.' }
   ],
   'lucy-lady-houston-schneider-trophy': [
     { url: '/blog-images/lucy-lady-houston.jpg', alt: 'Lucy, Lady Houston portrait', caption: 'Lucy, Lady Houston, whose patronage sustained Britain’s Schneider Trophy effort.' },

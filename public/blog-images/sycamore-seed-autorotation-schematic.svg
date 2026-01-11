@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: sycamore seed autorotation motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e5e7eb" opacity=".9"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="140" y="150" width="1320" height="600" rx="26" fill="#0a1020" opacity=".55"/>
+
+  <text x="180" y="210" class="text small">Sycamore seed autorotation — biomimicry motif (original schematic)</text>
+  <text x="180" y="250" class="text tiny" opacity=".8">Diagrammatic: falling seed “wing” generates lift while spinning (not a photo; not to scale)</text>
+
+  <!-- Ground / airflow -->
+  <path class="muted" d="M220 690 H1380"/>
+  <path class="muted" d="M260 730 H1340"/>
+
+  <!-- Seed (single winged samara motif) -->
+  <path class="fill" d="M760 360
+    C820 340, 900 345, 980 380
+    C1090 430, 1210 520, 1290 620
+    C1320 658, 1315 685, 1285 695
+    C1250 707, 1210 690, 1170 660
+    C1060 575, 940 505, 820 470
+    C750 450, 700 430, 670 410
+    C650 395, 650 375, 670 365
+    C695 352, 725 350, 760 360 Z"/>
+  <!-- Seed body -->
+  <path class="line" d="M710 430 C680 485, 680 535, 710 590 C735 635, 770 660, 810 670"/>
+  <circle cx="710" cy="430" r="10" fill="#e5e7eb"/>
+
+  <!-- Spin arrows (autorotation) -->
+  <path class="thin" d="M610 520 C610 430, 680 360, 770 360" marker-end="url(#arrow)"/>
+  <path class="thin" d="M930 360 C1025 360, 1090 430, 1090 520" marker-end="url(#arrow)"/>
+
+  <!-- Lift / descent vectors -->
+  <path class="line" d="M980 520 L980 430" marker-end="url(#arrow)"/>
+  <text x="1005" y="455" class="text label">lift</text>
+
+  <path class="line" d="M820 660 L820 740" marker-end="url(#arrow)"/>
+  <text x="845" y="720" class="text label">descent</text>
+
+  <!-- Caption labels -->
+  <text x="220" y="820" class="text tiny">Autorotation: forward airflow through the rotating “wing” sustains spin and lift during descent (schematic)</text>
+</svg>
+

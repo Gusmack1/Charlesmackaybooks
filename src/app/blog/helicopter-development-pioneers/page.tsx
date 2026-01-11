@@ -371,7 +371,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <!-- Broken image removed: /blog-images/sycamore-seeds-helicopter-evolution.jpg -->
+      <img src="/blog-images/sycamore-seed-autorotation-schematic.svg" alt="Original schematic illustration of a sycamore seed autorotation motif showing a single winged samara spinning during descent (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Nature's blueprint: sycamore seeds demonstrate autorotation principles that guided early rotor design.</p>
     </div>
 

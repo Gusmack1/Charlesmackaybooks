@@ -294,7 +294,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'helicopter-development-pioneers',
       excerpt: 'From spinning maple seeds to modern rotorcraft - the evolution of vertical flight technology.',
       date: 'January 12, 2024',
-      image: '/blog-images/cierva-autogyro-duxford.jpg',
+      image: '/blog-images/sikorsky-vs300-helicopter.svg',
       tags: ['Helicopter History', 'Vertical Flight', 'Autogyro', 'Rotorcraft'],
       readTime: '17 min'
     },
