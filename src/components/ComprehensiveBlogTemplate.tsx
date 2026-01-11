@@ -59,8 +59,10 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
   type Reference = { title: string; url: string; source?: string; date?: string };
   const featured = getApprovedFeatured(post.id, post.featuredImage?.url, post.featuredImage?.alt)
   const approvedInline = getApprovedInline(post.id, 4)
+  // IMPORTANT: This string is used inside an inline `onerror="...this.src='data:...'"` handler.
+  // It must not contain any unescaped single quotes, otherwise it can break the JS string and throw a syntax error.
   const fallbackSvg = encodeURIComponent(
-    `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='%231e3a8a'/><stop offset='100%' stop-color='%230256d4'/></linearGradient></defs><rect width='600' height='400' fill='url(#g)'/><g fill='white' font-family='Source Sans 3, Arial' text-anchor='middle'><text x='300' y='185' font-size='28'>Image unavailable</text><text x='300' y='225' font-size='16'>Charles E. MacKay Aviation History</text></g></svg>`
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="%231e3a8a"/><stop offset="100%" stop-color="%230256d4"/></linearGradient></defs><rect width="600" height="400" fill="url(#g)"/><g fill="white" font-family="Source Sans 3, Arial" text-anchor="middle"><text x="300" y="185" font-size="28">Image unavailable</text><text x="300" y="225" font-size="16">Charles E. MacKay Aviation History</text></g></svg>`
   );
 
   const addFallbackToAllImages = (html: string): string => {
@@ -78,7 +80,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       }
       // add onerror fallback
       if (!/\bonerror=/.test(updated)) {
-        updated += ` onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'"`
+        updated += ` onerror="this.onerror=null;this.src='data:image/svg+xml;charset=utf-8,${fallbackSvg}'"`
       }
       return `<img ${updated}>`
     })
@@ -97,7 +99,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     }
     // ensure at least minimumImages
     while (candidates.length < minimumImages) {
-      candidates.push(`data:image/svg+xml;utf8,${fallbackSvg}`);
+      candidates.push(`data:image/svg+xml;charset=utf-8,${fallbackSvg}`);
     }
 
     const paragraphs = html.split(/(<\/p>)/i);
@@ -113,7 +115,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
           if (insertAt.includes(p) && inserted < minimumImages - imgMatches.length) {
             const src = candidates[inserted];
             rebuilt.push(
-              `<figure class="my-6"><img src="${src}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
+              `<figure class="my-6"><img src="${src}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=utf-8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
             );
             inserted++;
           }
@@ -124,7 +126,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     } else {
       // No paragraphs detected; append images at end
       const blocks = Array.from({ length: minimumImages - imgMatches.length }).map((_, idx) =>
-        `<figure class="my-6"><img src="${candidates[idx]}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
+        `<figure class="my-6"><img src="${candidates[idx]}" alt="Historical aviation reference image" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=utf-8,${fallbackSvg}'" class="w-full h-auto rounded-lg"/><figcaption class="image-caption">Historical reference image</figcaption></figure>`
       );
       injected = html + blocks.join('');
     }

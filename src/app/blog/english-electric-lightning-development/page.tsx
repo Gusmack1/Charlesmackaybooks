@@ -219,8 +219,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Lightning F.6 in formation with a Soviet Tu-95 Bear reconnaissance aircraft during a Cold War intercept over the North Sea, demonstrating the aircraft's operational role" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Cold War intercept: Lightning operations demonstrated Britain's air defence capability and contributed to deterrence throughout the Cold War period.</p>
+      <img src="/blog-images/lightning-intercept-radar-schematic.svg" alt="Original schematic illustration of a radar scope with a sweep arc and a vector line to an interceptor symbol (diagrammatic, not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): radar sweep and vector line representing interceptor tasking.</p>
     </div>
 
     <h2 id="technical-innovations">Technical Innovations and Engineering Achievements</h2>

@@ -22,7 +22,7 @@ const bySlug: Record<string, ImageCandidate[]> = {
   'helicopter-development-pioneers': [
     { url: '/blog-images/cierva-autogyro-c4.jpg', alt: 'Cierva C.4 autogyro trials', caption: 'Cierva’s C.4 demonstrating stabilised autorotation in 1923.' },
     { url: '/blog-images/cierva-autogyro-duxford.jpg', alt: 'Cierva autogyro display at Duxford', caption: 'Autogyro heritage linking Spanish innovation to British rotary craft.' },
-    { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300 prototype hover', caption: 'Igor Sikorsky’s VS-300 establishing the single-main-rotor template.' },
+    { url: '/blog-images/sikorsky-vs300-helicopter.svg', alt: 'Sikorsky VS-300 configuration schematic', caption: 'Original schematic illustration showing the single-main-rotor + tail-rotor layout.' },
     { url: '/blog-images/sikorsky-vs300-igor-sikorsky.jpg', alt: 'Igor Sikorsky with VS-300', caption: 'The pioneer whose work bridged prototypes to practical service helicopters.' }
   ],
   'lucy-lady-houston-schneider-trophy': [
@@ -50,9 +50,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/hms-formidable-deck-operations.jpg', alt: 'Royal Navy carrier deck operations' }
   ],
   'english-electric-lightning-development': [
-    { url: '/blog-images/english-electric-lightning-f6.jpg', alt: 'Lightning F.6 climb-out' },
-    { url: '/blog-images/lightning-f6-supersonic-flight.jpg', alt: 'Lightning F.6 in supersonic flight' },
-    { url: '/blog-images/lightning-f6-cockpit.jpg', alt: 'Lightning F.6 cockpit with AI.23 radar' },
+    { url: '/blog-images/english-electric-lightning-f6.svg', alt: 'English Electric Lightning F.6 schematic (profile)', caption: 'Original illustration (schematic): simplified Lightning F.6 profile.' },
+    { url: '/blog-images/lightning-f6-supersonic-flight.svg', alt: 'Lightning in flight schematic', caption: 'Original illustration (schematic): motion lines indicating flight.' },
+    { url: '/blog-images/lightning-f6-cockpit.svg', alt: 'Cockpit instrumentation schematic', caption: 'Original illustration (schematic): simplified instrument panel layout.' },
+    { url: '/blog-images/lightning-intercept-radar-schematic.svg', alt: 'Interceptor vectoring schematic', caption: 'Original illustration (schematic): radar sweep and vector line to an interceptor symbol.' },
     { url: '/blog-images/f104-starfighter-supersonic.jpg', alt: 'F-104 Starfighter comparison context' }
   ],
   'supermarine-spitfire-development-history': [
@@ -99,7 +100,7 @@ const bySlug: Record<string, ImageCandidate[]> = {
   ],
   'autogyro-vs-helicopter': [
     { url: '/blog-images/cierva-autogyro-duxford.jpg', alt: 'Cierva autogyro at Duxford' },
-    { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300' },
+    { url: '/blog-images/sikorsky-vs300-helicopter.svg', alt: 'Sikorsky VS-300 configuration schematic' },
     { url: '/blog-images/bristol-sycamore.jpg', alt: 'Bristol Sycamore' },
     { url: '/blog-images/helicopter-development-timeline.jpg', alt: 'Helicopter development timeline' }
   ],
@@ -116,7 +117,7 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/albatros-dv-flying.jpg', alt: 'Albatros D.V in flight (replica)' }
   ],
   'clydeside-aviation-revolution': [
-    { url: '/blog-images/clydeside-aviation-dalmuir.jpg', alt: 'Dalmuir aircraft works on the Clyde' },
+    { url: '/blog-images/clydeside-aviation-dalmuir.svg', alt: 'Clydeside industrial riverfront schematic', caption: 'Original illustration (schematic): shipyard crane and factory blocks on a riverfront.' },
     { url: '/blog-images/clydeside-aircraft-factory.jpg', alt: 'Clydeside aircraft factory interior' },
     { url: '/blog-images/clydeside-wwi-collections.jpg', alt: 'Clydeside WWI industrial collections' },
     { url: '/blog-images/clydeside-industrial-workers.jpg', alt: 'Industrial workforce on the Clyde' }
