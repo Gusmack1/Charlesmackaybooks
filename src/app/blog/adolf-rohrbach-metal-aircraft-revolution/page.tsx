@@ -285,8 +285,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of early Boeing or Douglas aircraft showing stressed-skin construction techniques, demonstrating how Rohrbach's innovations influenced American aircraft development and established metal construction as the standard for commercial aviation" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">American adaptation: Rohrbach's stressed-skin construction techniques influenced Boeing, Douglas, and Northrop aircraft development.</p>
+      <img src="/blog-images/stressed-skin-construction-schematic.svg" alt="Original schematic illustration of a semi-monocoque fuselage cross-section with frames, stringers, and a stressed skin layer (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): stressed-skin (semi-monocoque) concept used widely in later all-metal airframes.</p>
     </div>
 
     <h2 id="technical-specifications">Technical Specifications and Design Details</h2>
@@ -437,21 +437,21 @@ const post = {
       id: 'german-aircraft-great-war-development',
       title: 'German Aircraft Great War Development',
       excerpt: 'How German WWI aircraft programs evolved toward metal construction and influenced interwar designs.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/albatros-dva-german-fighter.jpg',
       readingTime: 6,
     },
     {
       id: 'aviation-manufacturing-wartime-production',
       title: 'Aviation Manufacturing: Wartime Production Revolution',
       excerpt: 'Industrial mobilization lessons from WWI/WWII that set the stage for stressed-skin production lines.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/aircraft-factory-assembly-line.jpg',
       readingTime: 7,
     },
     {
       id: 'adolf-rohrbach-metal-aircraft-construction',
       title: 'Adolf Rohrbach: Revolutionary Metal Aircraft Designer',
       excerpt: 'Deeper dive on Rohrbach’s stressed-skin methods and their adoption across Europe and the US.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/metal-aircraft-construction.jpg',
       readingTime: 8,
     },
   ]
