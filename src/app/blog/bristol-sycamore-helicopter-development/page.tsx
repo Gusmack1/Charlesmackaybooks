@@ -22,7 +22,7 @@ const post = {
       The Sycamore's significance extends beyond being Britain's first production helicopter. It established British rotorcraft engineering principles that emphasized reliability, maintainability, and operational discipline over headline performance. Understanding Sycamore development provides valuable insights into how post-war Britain developed helicopter capabilities and established procedures that would guide British rotorcraft operations for decades.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of a Bristol Sycamore in a high hover over a moorland clearing during a rescue demonstration in the early 1950s, showing a winchman on the wire with a stretcher below, demonstrating the aircraft's rescue capabilities" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-sycamore-rescue-winch-schematic.svg" alt="Original schematic illustration of a helicopter in hover with a winch line and a stretcher icon below (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Rescue at the edge of performance: hover stability, winch discipline, and crew coordination.</p>
     </div>
 
@@ -68,7 +68,7 @@ const post = {
       Blade tracking and balance procedures ensured that all blades followed the same path and had balanced mass distribution. Proper tracking minimized vibration and reduced pilot workload, while proper balance prevented destructive vibration. The comprehensive documentation of tracking and balance procedures ensures that rotor maintenance practices are properly understood. Understanding tracking and balance provides valuable insights into how rotor systems were maintained to ensure reliability.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A detailed diagrammatic view of Bristol Sycamore rotor head articulation showing flapping hinges, lead-lag hinges, and control inputs with arrows indicating collective, cyclic, and tail rotor control effects" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-sycamore-rotor-head-controls-schematic.svg" alt="Original schematic illustration of a rotor head with flapping and lead-lag hinge markers and control arrows (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Articulation managed physics; tracking and balance made it pleasant to fly.</p>
     </div>
 
@@ -125,7 +125,7 @@ const post = {
       Entry into service marked the transition from development to operational use. Service introduction required training programs, maintenance procedures, and operational documentation to enable successful operations. The comprehensive documentation of service introduction ensures that operational evolution is properly understood. Understanding service introduction provides valuable insights into how helicopter operations were established.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of an early Bristol Sycamore prototype during flight testing in 1947, showing the aircraft in forward flight over grass airfield with test markings visible, demonstrating prototype development and validation" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-sycamore-prototype-test-flight-schematic.svg" alt="Original schematic illustration of a helicopter above a runway line with test markers and a clipboard icon (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Prototype validation: systematic testing established Sycamore capabilities before production.</p>
     </div>
 
@@ -156,7 +156,7 @@ const post = {
       Safety procedures evolved from operational experience, with training emphasizing conservative approaches to power management and operational limits. Emergency procedures were designed to be executed under stress, with clear procedures for engine failures and autorotation. The comprehensive documentation of safety procedures ensures that helicopter safety development is properly preserved. Understanding safety procedures provides valuable insights into how helicopter operations became safer.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of a Bristol Sycamore during a training sortie with hover taxi along a line marked on the ground, showing an instructor visible in the cockpit with notes on a kneeboard, demonstrating helicopter training procedures" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-sycamore-training-hover-taxi-schematic.svg" alt="Original schematic illustration of a helicopter hovering along a marked training line with cones (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Technique before technology: hover discipline and pedal finesse were taught, checked, and retaught.</p>
     </div>
 
@@ -200,7 +200,7 @@ const post = {
       Safety procedures evolved from operational experience, with maintenance procedures emphasizing careful adherence to documented requirements. Incident investigations often recommended more careful procedure adherence rather than fundamental redesign, demonstrating that design served well within operational envelope. The comprehensive documentation of safety evolution ensures that helicopter safety development is properly preserved. Understanding safety evolution provides valuable insights into how helicopter operations became safer.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of a flight line with multiple Bristol Sycamores showing ground crew servicing transmissions with oil carts and tool chests nearby, demonstrating maintenance procedures and operational support" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-sycamore-maintenance-flightline-schematic.svg" alt="Original schematic illustration of a helicopter on a flight line with a toolbox and oil cart icons (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Availability is a maintenance story: spares, tools, and disciplined inspection.</p>
     </div>
 
@@ -302,17 +302,17 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/bristol-sycamore-rescue-winch-schematic.svg',
     alt: 'Bristol Sycamore: British Helicopter Development Pioneer - Enhanced Edition',
-    caption: "Britain's first production helicopter — made reliable by procedure."
+    caption: "Original illustration (schematic): hover + winch motif representing rescue operations (diagrammatic)."
   },
   category: 'Aviation History',
   tags: ["bristol","sycamore","helicopter","development","aviation","history","british","rotorcraft"],
   relatedBooks: getBooksData(['sycamore-seeds', 'captain-eric-brown']),
   relatedPosts: [
-    { id: 'sycamore-seeds-helicopter-evolution', title: 'Bristol Sycamore: Britain\'s First Helicopter', excerpt: 'Comprehensive coverage of Britain\'s first operational helicopter.', image: '/blog-images/default-generic.svg', readingTime: 14 },
-    { id: 'helicopter-development-pioneers', title: 'Helicopter Development Pioneers: From Cierva\'s Autogyros to Modern Rotorcraft', excerpt: 'Comprehensive analysis of vertical flight evolution.', image: '/blog-images/default-generic.svg', readingTime: 14 },
-    { id: 'sikorsky-vs300-helicopter-breakthrough', title: 'Sikorsky VS-300: The Helicopter Breakthrough', excerpt: 'Detailed examination of the first practical helicopter.', image: '/blog-images/default-generic.svg', readingTime: 12 }
+    { id: 'sycamore-seeds-helicopter-evolution', title: 'Bristol Sycamore: Britain\'s First Helicopter', excerpt: 'Comprehensive coverage of Britain\'s first operational helicopter.', image: '/blog-images/bristol-sycamore-schematic.svg', readingTime: 14 },
+    { id: 'helicopter-development-pioneers', title: 'Helicopter Development Pioneers: From Cierva\'s Autogyros to Modern Rotorcraft', excerpt: 'Comprehensive analysis of vertical flight evolution.', image: '/blog-images/sikorsky-vs300-helicopter.svg', readingTime: 14 },
+    { id: 'sikorsky-vs300-helicopter-breakthrough', title: 'Sikorsky VS-300: The Helicopter Breakthrough', excerpt: 'Detailed examination of the first practical helicopter.', image: '/blog-images/sikorsky-vs300-helicopter.svg', readingTime: 12 }
   ]
 }
 
@@ -323,7 +323,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bristol Sycamore: British Helicopter Development Pioneer - Enhanced Edition",
     description: "A comprehensive, research-backed account of the Bristol Sycamore: Britain's first production helicopter and its lasting influence on British rotorcraft practice.",
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/bristol-sycamore-rescue-winch-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -350,6 +350,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/bristol-sycamore-helicopter-development"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
