@@ -9,6 +9,34 @@ const NOINDEX_PATHS = ['/ai-prompt-system']
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
+  // Explicitly mark legacy sections as permanently removed (NO redirects).
+  // This helps Google drop old URLs faster than a generic 404.
+  if (
+    pathname === '/book' ||
+    pathname.startsWith('/book/') ||
+    pathname === '/aircraft' ||
+    pathname.startsWith('/aircraft/')
+  ) {
+    return new NextResponse('Gone', {
+      status: 410,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'X-Robots-Tag': 'noindex, nofollow',
+      },
+    })
+  }
+
+  // Explicitly removed legacy page (NO redirects)
+  if (pathname === '/research-methodology') {
+    return new NextResponse('Gone', {
+      status: 410,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'X-Robots-Tag': 'noindex, nofollow',
+      },
+    })
+  }
+
   // Remove trailing slash via internal rewrite (NO redirect)
   // This ensures both /path and /path/ return 200, while canonical tags still point at /path.
   if (
