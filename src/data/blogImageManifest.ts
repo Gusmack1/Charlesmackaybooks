@@ -185,7 +185,7 @@ const bySlug: Record<string, ImageCandidate[]> = {
   'bristol-sycamore-helicopter-development': [
     { url: '/blog-images/bristol-sycamore.jpg', alt: 'Bristol Sycamore helicopter' },
     { url: '/blog-images/bristol-sycamore-formation.jpg', alt: 'Bristol Sycamore formation flight' },
-    { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300 context' },
+    { url: '/blog-images/sikorsky-vs300-helicopter.svg', alt: 'Sikorsky VS-300 configuration schematic', caption: 'Original schematic illustration showing the single-main-rotor + tail-rotor layout.' },
     { url: '/blog-images/sikorsky-r4-helicopter.jpg', alt: 'Sikorsky R-4 early helicopter' }
   ],
   'beardmore-wbiii-naval-fighter': [
@@ -207,7 +207,7 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/supermarine-s6-schneider-race.jpg', alt: 'Supermarine S.6 racing seaplane' }
   ],
   'sikorsky-vs300-helicopter-breakthrough': [
-    { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300 prototype helicopter' },
+    { url: '/blog-images/sikorsky-vs300-helicopter.svg', alt: 'Sikorsky VS-300 configuration schematic', caption: 'Original schematic illustration showing the single-main-rotor + tail-rotor layout.' },
     { url: '/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg', alt: 'VS-300 breakthrough test flights' },
     { url: '/blog-images/sikorsky-vs300-test.jpg', alt: 'VS-300 testing' },
     { url: '/blog-images/sikorsky-vs300-igor-sikorsky.jpg', alt: 'Igor Sikorsky with VS-300' }
@@ -258,12 +258,12 @@ const byTag: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/bristol-fighter-f2b-flying.jpg', alt: 'Bristol F.2B' }
   ],
   helicopter: [
-    { url: '/blog-images/sikorsky-vs300-helicopter.jpg', alt: 'Sikorsky VS-300' },
+    { url: '/blog-images/sikorsky-vs300-helicopter.svg', alt: 'Sikorsky VS-300 configuration schematic' },
     { url: '/blog-images/bristol-sycamore-formation.jpg', alt: 'Bristol Sycamore formation' }
   ],
   lightning: [
-    { url: '/blog-images/english-electric-lightning-f6.jpg', alt: 'Lightning F.6' },
-    { url: '/blog-images/lightning-f6-cockpit.jpg', alt: 'Lightning cockpit' }
+    { url: '/blog-images/english-electric-lightning-f6.svg', alt: 'English Electric Lightning F.6 schematic' },
+    { url: '/blog-images/lightning-f6-cockpit.svg', alt: 'Lightning cockpit schematic' }
   ],
   vulcan: [
     { url: '/blog-images/avro-vulcan-bomber.jpg', alt: 'Avro Vulcan' },
