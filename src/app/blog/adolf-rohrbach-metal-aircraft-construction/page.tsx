@@ -20,8 +20,8 @@ const post = {
       <p class="text-sm  mt-2 text-center italic">Early flying boat designs that influenced Rohrbach's metal construction approach.</p>
     </div>
     <div class="my-8">
-      <img src="/blog-images/beardmore-aviation-factory.jpg" alt="Aviation manufacturing facility" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Modern aviation manufacturing facilities that benefited from Rohrbach's innovations.</p>
+      <img src="/blog-images/beardmore-aviation-factory.svg" alt="Original schematic illustration of a factory hall with an overhead crane and a simplified assembly line (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original illustration (schematic): factory hall, overhead crane, and simplified production blocks.</p>
     </div>
     
     <p>Through meticulous examination of archival materials, engineering drawings, and firsthand testimonies, we uncover the human drama, technical challenges, and strategic implications that shaped this remarkable chapter in aviation history. This is not merely a technical treatise, but a story of human ambition, engineering brilliance, and the relentless pursuit of flight.</p>

@@ -161,7 +161,7 @@ const bySlug: Record<string, ImageCandidate[]> = {
   'scottish-aviation-between-the-wars': [
     { url: '/blog-images/clydeside-aviation-dalmuir-1928.jpg', alt: 'Dalmuir 1928 aviation works' },
     { url: '/blog-images/beardmore-parkhead-forge.jpg', alt: 'Beardmore Parkhead Forge' },
-    { url: '/blog-images/beardmore-aviation-factory.jpg', alt: 'Beardmore aviation factory' },
+    { url: '/blog-images/beardmore-aviation-factory.svg', alt: 'Factory and assembly line schematic', caption: 'Original illustration (schematic): factory hall, overhead crane, and simplified production blocks.' },
     { url: '/blog-images/historical-scotland-map.jpg', alt: 'Historical Scotland aviation map' }
   ],
   'supermarine-spitfire-development-evolution': [

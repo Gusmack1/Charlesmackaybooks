@@ -38,8 +38,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/metal-aircraft-construction.jpg" alt="Insert image here: A black-and-white photograph of Adolf Rohrbach's revolutionary metal aircraft construction techniques, showing stressed-skin construction methods and advanced metal joining techniques that transformed aviation design" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Revolutionary metal construction techniques that changed aircraft design forever.</p>
+      <img src="/blog-images/metal-aircraft-construction.jpg" alt="Graphic reading 'ROHRBACH RO IX ROFIX' with an aircraft image and the label 'FORGOTTEN AIRCRAFT'." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Cover-style graphic for “Rohrbach Ro IX Rofix”.</p>
     </div>
 
     <h2 id="historical-context">Historical Context: Industrial Shifts and Aviation Evolution</h2>
@@ -91,8 +91,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/beardmore-aviation-factory.jpg" alt="Insert image here: A black-and-white photograph of modern aviation manufacturing facilities, showing production lines and quality control systems that benefited from Rohrbach's innovations in metal aircraft construction and manufacturing standardization" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Modern aviation manufacturing facilities that benefited from Rohrbach's innovations.</p>
+      <img src="/blog-images/beardmore-aviation-factory.svg" alt="Original schematic illustration of a factory hall with an overhead crane and a simplified assembly line (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): factory hall, overhead crane, and simplified production blocks.</p>
     </div>
 
     <h2 id="metal-construction">Revolutionary Metal Construction Techniques: Stressed-Skin Innovation</h2>
@@ -175,8 +175,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/curtiss-nc4-flying-boat.jpg" alt="Insert image here: A black-and-white photograph of early flying boat designs, showing the aerodynamic and hydrodynamic challenges that influenced Rohrbach's metal construction approach for marine aviation applications" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Early flying boat designs that influenced Rohrbach's metal construction approach.</p>
+      <img src="/blog-images/curtiss-nc4-flying-boat.jpg" alt="Black-and-white photograph of a large biplane flying boat over water, with a prominent '4' painted on the hull." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Flying boat in flight over water (photo).</p>
     </div>
 
     <h2 id="roland">The Rohrbach Roland: Pinnacle of 1920s Design</h2>
