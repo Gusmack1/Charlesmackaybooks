@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
-import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -18,7 +17,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Historical map of Scotland, early-modern routes and regions" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/scotland-tour-route-schematic.svg" alt="Original schematic illustration of a simplified Scotland outline with a dotted travel route line (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Routes across Scotland—valleys, passes, ferries—structured the tour long before railways.</p>
     </div>
 
@@ -35,7 +34,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Charles E. MacKay portrait placeholder" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/charles-mackay-aviation-historian.jpg" alt="Portrait of Charles E. MacKay." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Charles E. MacKay, editor and historian—our modern guide to nineteenth‑century Scotland’s landscapes and texts.</p>
     </div>
 
@@ -55,7 +54,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Historical Glasgow and Clydeside context map" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/scotland-lowland-gateways-schematic.svg" alt="Original schematic illustration of lowland gateway nodes and connecting routes (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Lowland gateways: Glasgow, Stirling, and Edinburgh connected markets, books, and ideas to the Highlands.</p>
     </div>
 
@@ -78,7 +77,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Highland districts and parishes on a historical Scotland map" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/highland-districts-waypoints-schematic.svg" alt="Original schematic illustration of highland districts as shaded blocks with waypoint dots (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Inns and cottages—waypoints across districts—shaped the day-to-day arithmetic of travel.</p>
     </div>
 
@@ -101,7 +100,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Central Scotland context with gateways to the Trossachs" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/trossachs-loch-lomond-schematic.svg" alt="Original schematic illustration of a loch with surrounding hills and a footpath line (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">The Trossachs: approached through the Lowland gateways, then by foot and water into birchwoods and lochs.</p>
     </div>
 
@@ -122,9 +121,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/scotland-tour-route-schematic.svg',
     alt: 'Dorothy Wordsworth’s Scottish Tour of 1803',
-    caption: 'Dorothy Wordsworth’s 1803 journey across Scotland—revisited and contextualised.'
+    caption: 'Original illustration (schematic): Scotland outline with a dotted route line (diagrammatic).'
   },
   category: 'Travel Literature',
   tags: [
@@ -143,7 +142,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Dorothy Wordsworth’s Scottish Tour of 1803`,
     description: `A deeply researched narrative of Dorothy Wordsworth’s 1803 journey across Scotland, with context, routes, and legacy.`,
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/scotland-tour-route-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -170,6 +169,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/dorothy-wordsworth-scottish-tour-1803"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

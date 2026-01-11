@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a simplified Scotland outline with a dotted travel route line (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#1b3a57"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Scotland tour route (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: simplified outline + dotted route line (diagrammatic)</text>
+  </g>
+
+  <!-- Simplified Scotland outline (diagrammatic blob) -->
+  <path d="M720 210 C790 200, 850 235, 860 290 C870 350, 830 390, 840 440
+           C850 500, 780 540, 710 530 C650 520, 640 470, 600 450
+           C560 430, 520 420, 510 370 C500 310, 540 280, 560 250
+           C600 220, 650 220, 720 210 Z"
+        fill="#111827" opacity="0.85" stroke="#cbd5e1" stroke-width="6"/>
+
+  <!-- Route line -->
+  <path d="M600 455 C640 430, 670 420, 690 400 C720 370, 740 330, 760 300 C785 265, 810 250, 845 240"
+        fill="none" stroke="#fbbf24" stroke-width="10" opacity="0.9" stroke-linecap="round" stroke-dasharray="18 14"/>
+</svg>
+
