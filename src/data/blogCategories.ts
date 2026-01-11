@@ -207,7 +207,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'f86-sabre-cold-war-fighter',
       excerpt: 'The swept-wing fighter that dominated MiG Alley and established Western air superiority.',
       date: 'January 17, 2024',
-      image: '/blog-images/rcaf-sabre-formation-golden-hawks.jpg',
+      image: '/blog-images/f86-sabre-formation-korea-schematic.svg',
       tags: ['Jet Age', 'F-86 Sabre', 'Cold War', 'Fighter Aircraft'],
       readTime: '12 min'
     }

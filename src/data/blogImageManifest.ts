@@ -123,10 +123,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/clydeside-industrial-workers.jpg', alt: 'Industrial workforce on the Clyde' }
   ],
   'f86-sabre-cold-war-fighter': [
-    { url: '/blog-images/f86-sabre-cold-war-fighter.jpg', alt: 'North American F-86 Sabre' },
-    { url: '/blog-images/f86-sabre-formation.jpg', alt: 'F-86 Sabre formation flight' },
-    { url: '/blog-images/f86-sabre-formation-flight.jpg', alt: 'RCAF Sabre formation' },
-    { url: '/blog-images/f86-vs-mig15-combat.jpg', alt: 'F-86 vs MiG-15 engagement (illustrative)' }
+    { url: '/blog-images/f86-sabre-formation-korea-schematic.svg', alt: 'F-86 Sabre formation motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): simplified swept-wing fighter silhouettes in formation.' },
+    { url: '/blog-images/f86-leading-edge-slats-schematic.svg', alt: 'F-86 leading-edge slats (schematic, diagrammatic)', caption: 'Original illustration (schematic): automatic leading-edge slat motif.' },
+    { url: '/blog-images/f86-vs-mig15-comparison-schematic.svg', alt: 'F-86 vs MiG-15 silhouette comparison (schematic, diagrammatic)', caption: 'Original illustration (schematic): side-by-side comparison motif.' },
+    { url: '/blog-images/raf-sabre-mk4-flightline-schematic.svg', alt: 'RAF Sabre Mk.4 flight line servicing motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): flight-line servicing blocks around a simplified Sabre silhouette.' }
   ],
   'german-aces-organization-wwi': [
     { url: '/blog-images/fokker-dr1-triplane-replica.jpg', alt: 'Fokker Dr.I triplane (Red Baron type)' },

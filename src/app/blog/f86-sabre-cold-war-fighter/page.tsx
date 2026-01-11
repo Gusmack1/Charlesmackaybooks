@@ -24,7 +24,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/f86-sabre-formation-korea-schematic.svg" alt="Original schematic illustration of three swept-wing fighter silhouettes in climb formation (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">F‑86F over Korea: swept wings with automatic leading‑edge slats combined agility with benign stall behaviour.</p>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): swept wings with automatic leading‑edge slats combined agility with benign stall behaviour.</p>
     </div>
 
     <h2 id="historical-background">Historical Background: The Cold War Fighter Requirement</h2>
@@ -68,7 +68,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/f86-leading-edge-slats-schematic.svg" alt="Original schematic illustration of a swept wing leading edge with a separated slat bar and track marks (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Leading‑edge slats: automatic deployment improved approach handling and high‑AoA controllability — a Sabre hallmark.</p>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): leading‑edge slats—automatic deployment improved approach handling and high‑AoA controllability.</p>
     </div>
 
     <h2 id="engine">Powerplant Integration: J47, Orenda, and Avon</h2>
@@ -117,7 +117,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/f86-vs-mig15-comparison-schematic.svg" alt="Original schematic illustration comparing two swept-wing fighter silhouettes side-by-side, labelled Sabre and MiG-15 (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Sabre vs MiG‑15: contrasting philosophies — precision gunnery and handling versus heavier cannon and climb.</p>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): Sabre vs MiG‑15—contrasting handling and firepower emphasis (diagrammatic).</p>
     </div>
 
     <h2 id="korea">Korean War Operations: MiG Alley Dominance</h2>
@@ -154,8 +154,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing RAF Sabre Mk.4 of a Fighter Command squadron on the line in Britain, 1954, ground crew fitting covers, demonstrating Sabre operations in British service" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">RAF Sabre Mk.4: Canadair‑built Orenda power and swept‑wing agility bridged the gap to later British types.</p>
+      <img src="/blog-images/raf-sabre-mk4-flightline-schematic.svg" alt="Original schematic illustration: simplified Sabre silhouette on a flight line with ground crew and servicing equipment blocks (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): RAF Sabre Mk.4 flight‑line servicing motif (diagrammatic).</p>
     </div>
 
     <h2 id="rcaf-operations">RCAF Sabre Operations: North Atlantic to Europe</h2>

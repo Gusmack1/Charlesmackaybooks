@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: simplified Sabre silhouette on a flight line with ground crew and servicing equipment blocks (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .equip { fill:#111827; stroke:#cbd5e1; stroke-width:4; opacity:.95; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="120" y="140" width="1360" height="680" rx="24" fill="#0a1020" opacity=".55"/>
+
+  <!-- Flight line / dispersal hardstanding (diagrammatic) -->
+  <path class="thin" d="M160 700 H1440"/>
+  <path class="muted" d="M220 740 H1380"/>
+  <path class="muted" d="M260 660 H1340"/>
+  <path class="muted" d="M320 780 H1280"/>
+
+  <!-- Simplified F-86 / Sabre silhouette (diagrammatic, not to scale) -->
+  <!-- Fuselage + nose intake ring -->
+  <path class="fill" d="M350 540
+    C420 510, 520 492, 640 488
+    C740 485, 820 492, 905 505
+    C1005 520, 1110 520, 1205 510
+    C1235 507, 1270 505, 1295 508
+    C1310 510, 1320 520, 1320 532
+    C1320 548, 1305 560, 1286 562
+    C1248 567, 1210 574, 1176 582
+    C1110 600, 1040 626, 965 650
+    C875 680, 790 694, 705 700
+    C595 708, 500 694, 420 670
+    C390 661, 365 650, 350 635
+    C338 623, 330 605, 330 590
+    C330 568, 335 551, 350 540 Z"/>
+  <circle cx="395" cy="585" r="56" class="line"/>
+  <circle cx="395" cy="585" r="34" class="thin"/>
+
+  <!-- Canopy -->
+  <path class="line" d="M610 520 C650 496, 725 492, 775 520 C740 555, 650 560, 610 520 Z"/>
+  <path class="thin" d="M650 520 C690 505, 725 505, 760 520"/>
+
+  <!-- Wings (swept) -->
+  <path class="line" d="M705 610 L560 690 L610 720 L760 642 Z"/>
+  <path class="line" d="M815 600 L975 680 L940 714 L785 635 Z"/>
+  <!-- Tailplane -->
+  <path class="line" d="M1120 560 L1230 520 L1255 540 L1140 585 Z"/>
+  <!-- Fin -->
+  <path class="line" d="M1188 520 L1210 440 L1248 448 L1232 532 Z"/>
+
+  <!-- Simple gun ports (diagrammatic dots) -->
+  <circle cx="500" cy="585" r="8" fill="#e5e7eb" opacity=".85"/>
+  <circle cx="520" cy="582" r="8" fill="#e5e7eb" opacity=".85"/>
+  <circle cx="540" cy="579" r="8" fill="#e5e7eb" opacity=".85"/>
+  <circle cx="560" cy="576" r="8" fill="#e5e7eb" opacity=".85"/>
+  <circle cx="580" cy="573" r="8" fill="#e5e7eb" opacity=".85"/>
+  <circle cx="600" cy="570" r="8" fill="#e5e7eb" opacity=".85"/>
+
+  <!-- Ground crew + support equipment blocks (diagrammatic) -->
+  <rect x="280" y="720" width="160" height="60" rx="10" class="equip"/>
+  <path class="thin" d="M320 720 V680 M360 720 V680 M400 720 V690"/>
+  <text x="290" y="815" class="text tiny">Ground-support equipment (schematic)</text>
+
+  <g transform="translate(1240 700)">
+    <circle cx="0" cy="0" r="16" fill="#111827" stroke="#cbd5e1" stroke-width="4"/>
+    <path class="thin" d="M0 16 V52"/>
+    <path class="thin" d="M-18 30 H18"/>
+    <path class="thin" d="M-14 52 L-28 78"/>
+    <path class="thin" d="M14 52 L28 78"/>
+  </g>
+  <text x="1185" y="815" class="text tiny">Ground crew (schematic)</text>
+
+  <!-- Title block -->
+  <text x="160" y="210" class="text small">RAF Sabre Mk.4 — flight line servicing motif (original schematic illustration)</text>
+  <text x="160" y="250" class="text tiny" opacity=".8">Diagrammatic: simplified Sabre silhouette + ground-support blocks (not a photograph; not to scale)</text>
+</svg>
+
