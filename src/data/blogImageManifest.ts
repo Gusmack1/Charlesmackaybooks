@@ -179,7 +179,7 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/eric-brown-official-portrait.jpg', alt: 'Captain Eric "Winkle" Brown portrait' },
     { url: '/blog-images/eric-brown-sea-vampire-landing.jpg', alt: 'Sea Vampire carrier landing' },
     { url: '/blog-images/vampire-carrier-landing-hms-ocean.jpg', alt: 'Vampire landing on HMS Ocean' },
-    { url: '/blog-images/eric-brown-test-pilot-portrait.jpg', alt: 'Eric Brown as test pilot' }
+    { url: '/blog-images/eric-brown-official-portrait.jpg', alt: 'Eric Brown as test pilot' }
   ],
   'bristol-sycamore-helicopter-development': [
     { url: '/blog-images/bristol-sycamore.jpg', alt: 'Bristol Sycamore helicopter' },
