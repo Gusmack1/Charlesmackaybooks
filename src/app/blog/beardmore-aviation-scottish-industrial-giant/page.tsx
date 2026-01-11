@@ -103,8 +103,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <!-- Broken image removed: /blog-images/beardmore-camel-production.jpg -->
-      <p class="text-sm mt-2 text-center italic">Beardmore production: The Sopwith Camel N6812, preserved in the Imperial War Museum, was manufactured at Dalmuir.</p>
+      <img src="/blog-images/beardmore-sopwith-camel-schematic.svg" alt="Original schematic illustration of a WWI-era biplane fighter in side profile with a simple serial label (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): a Beardmore-built biplane fighter outline, labelled in text for context.</p>
     </div>
 
     <h2 id="notable-achievements">Notable Combat Achievements</h2>
@@ -168,8 +168,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <!-- Broken image removed: /blog-images/beardmore-airship-r34.jpg -->
-      <p class="text-sm mt-2 text-center italic">R34 at Inchinnan: One of four airships built at Beardmore's facilities, demonstrating the company's expertise in large-scale aviation projects.</p>
+      <img src="/blog-images/beardmore-airship-r34-schematic.svg" alt="Original schematic illustration of a rigid airship silhouette above a hangar outline (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): rigid airship silhouette and hangar outline, used here as contextual diagram.</p>
     </div>
 
     <h2 id="hms-argus">HMS Argus: The World's First True Aircraft Carrier</h2>
@@ -243,8 +243,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <!-- Broken image removed: /blog-images/beardmore-inflexible.jpg -->
-      <p class="text-sm mt-2 text-center italic">Beardmore Inflexible: The culmination of Beardmore's aviation achievements, representing cutting-edge all-metal aircraft technology.</p>
+      <img src="/blog-images/beardmore-inflexible-aircraft-schematic.svg" alt="Original schematic illustration of a large early all-metal aircraft outline with panel lines (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): large all-metal aircraft outline with simplified panel lines (diagrammatic).</p>
     </div>
 
     <h2 id="industrial-context">Industrial Context and Manufacturing Excellence</h2>
@@ -394,6 +394,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/beardmore-aviation-scottish-industrial-giant"
+        pageImageUrl={post.featuredImage.url}
       />
       
       {/* Enhanced SEO with FAQ, Article schema, and AI optimization */}

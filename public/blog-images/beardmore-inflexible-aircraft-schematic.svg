@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a large early all-metal aircraft outline with panel lines (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#163a2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">All‑metal aircraft programme (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: large aircraft outline with simplified stressed-skin panel lines</text>
+  </g>
+
+  <!-- Wing + fuselage outline (generic, not a specific configuration) -->
+  <g fill="none" stroke="#93c5fd" stroke-width="10" opacity="0.9" stroke-linecap="round" stroke-linejoin="round">
+    <!-- wing -->
+    <path d="M180 360 C360 300, 840 300, 1020 360"/>
+    <path d="M200 400 C380 450, 820 450, 1000 400"/>
+    <!-- fuselage -->
+    <path d="M360 380 C520 350, 680 350, 840 380"/>
+  </g>
+
+  <!-- Panel lines -->
+  <g stroke="#cbd5e1" stroke-width="4" opacity="0.5">
+    <line x1="300" y1="345" x2="300" y2="415"/>
+    <line x1="420" y1="330" x2="420" y2="430"/>
+    <line x1="540" y1="325" x2="540" y2="435"/>
+    <line x1="660" y1="325" x2="660" y2="435"/>
+    <line x1="780" y1="330" x2="780" y2="430"/>
+    <line x1="900" y1="345" x2="900" y2="415"/>
+  </g>
+
+  <g fill="#fbbf24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" opacity="0.95">
+    <text x="600" y="540" text-anchor="middle" font-size="22" font-weight="800">“Inflexible” referenced in text</text>
+    <text x="600" y="570" text-anchor="middle" font-size="18" opacity="0.9">Diagrammatic outline for structural context; not to scale</text>
+  </g>
+</svg>
+
