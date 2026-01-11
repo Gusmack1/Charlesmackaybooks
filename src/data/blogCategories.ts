@@ -238,7 +238,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'test-pilot-biography-eric-brown',
       excerpt: 'The extraordinary life of the test pilot who flew 487 different aircraft types.',
       date: 'December 26, 2024',
-      image: '/blog-images/eric-brown-test-pilot-portrait.svg',
+      image: '/blog-images/eric-brown-official-portrait.jpg',
       tags: ['Aviation Biography', 'Test Pilots', 'Eric Brown', 'Aircraft Testing'],
       readTime: '18 min'
     },

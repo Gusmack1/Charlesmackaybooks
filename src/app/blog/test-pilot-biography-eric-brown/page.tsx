@@ -13,8 +13,8 @@ const post = {
     <p>Captain Eric "Winkle" Brown’s career places him alone in the annals of aviation testing. He flew more distinct aircraft types than any pilot on record, performed a record number of carrier landings, evaluated captured enemy aircraft at the end of the Second World War, and then bridged into the jet and early rotorcraft eras with the same blend of discipline and curiosity that made his reports foundational. The superlatives endure because they are anchored in method: Brown’s hallmark was rigorous observation, faithful adherence to procedure, and a willingness to translate risk into knowledge without romance or bravado.</p>
     
     <div class="my-8">
-      <img src="/blog-images/eric-brown-test-pilot-portrait.svg" alt="Original schematic illustration of a generic test pilot silhouette with note lines (not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Original illustration (schematic): a generic “test pilot notes” motif used as a visual separator for this article.</p>
+      <img src="/blog-images/eric-brown-official-portrait.jpg" alt="Captain Eric \"Winkle\" Brown portrait (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Captain Eric “Winkle” Brown (photograph).</p>
     </div>
 
     <p>Brown's achievements extend far beyond mere numbers. He made the first jet landing on an aircraft carrier and evaluated an exceptional range of captured enemy aircraft, including the Messerschmitt Me 163 rocket fighter and Me 262 jet, as well as numerous piston types. His carrier landing record of 2,407 arrested landings — including trials in demanding conditions — demonstrates a standard of skill joined to method.</p>
@@ -212,9 +212,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/eric-brown-test-pilot-portrait.svg',
-    alt: 'Original schematic illustration of a test pilot silhouette with notes (not a photograph).',
-    caption: 'Original illustration (schematic): a generic “test pilot notes” motif used as the article header image.'
+    url: '/blog-images/eric-brown-official-portrait.jpg',
+    alt: 'Captain Eric "Winkle" Brown portrait (photograph).',
+    caption: 'Captain Eric “Winkle” Brown (photograph).'
   },
   category: 'Test Pilot Biography',
   tags: ["eric","brown","test","pilot","carrier","aviation","flight","testing"],

@@ -251,7 +251,7 @@ const post = {
   relatedBooks: getBooksData(['british-aircraft-great-war', 'clydeside-aviation-vol2', 'beardmore-aviation', 'captain-eric-brown', 'aviation-manufacturing-wartime-production']),
   relatedPosts: [
     { id: 'supermarine-spitfire-development-history', title: 'Supermarine Spitfire Development History', excerpt: 'Comprehensive analysis of Spitfire development and evolution', image: '/blog-images/supermarine-spitfire-development.jpg', readingTime: 14 },
-    { id: 'test-pilot-biography-eric-brown', title: 'Test Pilot Perspectives: Eric Brown', excerpt: 'Insights into aircraft testing and pilot training', image: '/blog-images/eric-brown-test-pilot-portrait.svg', readingTime: 12 },
+    { id: 'test-pilot-biography-eric-brown', title: 'Test Pilot Perspectives: Eric Brown', excerpt: 'Insights into aircraft testing and pilot training', image: '/blog-images/eric-brown-official-portrait.jpg', readingTime: 12 },
     { id: 'supermarine-spitfire-development-evolution', title: 'Supermarine Spitfire: Development & Evolution', excerpt: 'Design pathway and operational roles', image: '/blog-images/supermarine-spitfire-development-evolution.jpg', readingTime: 16 }
   ],
   references: [
