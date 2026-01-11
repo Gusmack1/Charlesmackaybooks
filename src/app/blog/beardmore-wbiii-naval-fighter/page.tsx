@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
-import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -22,7 +21,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Beardmore W.B.III naval fighter prototype on the flight line at Dalmuir, showing its folding wings and naval configuration" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/beardmore-wbiii-naval-fighter-schematic.svg" alt="Original schematic illustration of a compact naval biplane with folded wing lines (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Clyde-built: from shipyard to flight deck—Scotland's naval aviation contribution.</p>
     </div>
 
@@ -86,7 +85,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Technical drawing showing the Beardmore W.B.III folding wing mechanism and naval fittings, demonstrating the engineering solutions for shipboard storage" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/wbiii-folding-wing-mechanism-schematic.svg" alt="Original schematic illustration of a folding wing hinge with a lock pin and alignment marks (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Folding and fittings: compact footprints and handling gear defined naval fighter design.</p>
     </div>
 
@@ -131,7 +130,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: HMS Argus during deck operations showing early aircraft carrier landing procedures, with Sopwith aircraft visible on the flight deck" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hms-argus-deck-operations-schematic.svg" alt="Original schematic illustration of a flat-deck aircraft carrier with landing area markings and aircraft blocks (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">HMS Argus: the moving laboratory for Britain's deck-landing doctrine.</p>
     </div>
 
@@ -227,7 +226,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Detailed photograph of Beardmore W.B.III production at Dalmuir works, showing assembly jigs and precision manufacturing techniques characteristic of Scottish shipyard-to-aviation transition" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/dalmuir-assembly-jigs-schematic.svg" alt="Original schematic illustration of an aircraft assembly jig frame with rivet lines and gauge marks (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Precision manufacturing: shipyard discipline applied to aircraft production.</p>
     </div>
 
@@ -323,7 +322,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Archive photograph showing Beardmore W.B.III undergoing final assembly inspection at Dalmuir, with workers applying finishing touches and quality control checks before delivery to the Royal Naval Air Service" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/dalmuir-final-inspection-traveller-schematic.svg" alt="Original schematic illustration of a traveller sheet checklist beside a panel being inspected with a straightedge (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Quality by design: inspection and documentation ensured operational reliability.</p>
     </div>
 
@@ -488,9 +487,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 30,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: 'Beardmore naval fighter context',
-    caption: 'Carrier operations defined the problem set and the solution space.'
+    url: '/blog-images/beardmore-wbiii-naval-fighter-schematic.svg',
+    alt: 'Beardmore W.B.III and Clyde-Built Naval Fighters',
+    caption: 'Original illustration (schematic): compact naval biplane outline with folding-wing cues (diagrammatic).'
   },
   category: 'Naval Aviation',
   tags: [
@@ -507,7 +506,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Beardmore W.B.III and Clyde-Built Naval Fighters',
     description: 'From shipyard ingenuity to deck-landing realities in WWI.',
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/beardmore-wbiii-naval-fighter-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -534,6 +533,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/beardmore-wbiii-naval-fighter"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
