@@ -332,7 +332,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'hms-argus-first-aircraft-carrier',
       excerpt: 'The pioneering aircraft carrier that established naval aviation principles and transformed maritime warfare forever.',
       date: 'January 20, 2024',
-      image: '/blog-images/hms-argus-aircraft-carrier.jpg',
+      image: '/blog-images/hms-argus-flush-deck-schematic.svg',
       tags: ['Naval Aviation', 'HMS Argus', 'Aircraft Carriers', 'Naval History'],
       readTime: '11 min'
     },

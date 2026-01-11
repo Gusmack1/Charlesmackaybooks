@@ -44,7 +44,7 @@ const post = {
     </p>
     <p>
       The conversion from liner to carrier required fundamental redesign of the vessel's internal arrangements and superstructure. The comprehensive documentation of this conversion process ensures that the engineering challenges and solutions of carrier conversion are properly understood. Understanding conversion challenges provides valuable insights into how maritime engineering adapted existing ship designs for carrier purposes.
-
+    </p>
     <h2 id="montrose-concept">The Marquis of Montrose's Revolutionary Concept</h2>
     <p>
       HMS Argus stands as the world's true aircraft carrier with a flat deck, this concept being planned by the Marquis of Montrose, a Beardmore director. The Marquis of Montrose's vision for a flush-deck carrier represented a fundamental departure from earlier carrier concepts, which had featured obstructed flight decks with superstructures interfering with aircraft operations. This revolutionary concept eliminated visual and physical obstacles that had hampered earlier carrier operations, enabling continuous flight deck operations and safe aircraft recovery.

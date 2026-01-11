@@ -44,10 +44,11 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/bristol-sycamore-formation.jpg', alt: 'Bristol Sycamore formation flight', caption: 'RAF Sycamores defining post-war rotary support roles.' }
   ],
   'hms-argus-first-aircraft-carrier': [
-    { url: '/blog-images/hms-argus-aircraft-carrier.jpg', alt: 'HMS Argus full-length flight deck' },
-    { url: '/blog-images/hms-argus-dazzle-camouflage.jpg', alt: 'HMS Argus dazzle camouflage' },
-    { url: '/blog-images/hms-argus-dazzle.jpg', alt: 'HMS Argus dazzle scheme' },
-    { url: '/blog-images/hms-formidable-deck-operations.jpg', alt: 'Royal Navy carrier deck operations' }
+    { url: '/blog-images/hms-argus-flush-deck-schematic.svg', alt: 'HMS Argus flush flight deck concept schematic (diagrammatic)', caption: 'Original illustration (schematic): full-length unobstructed flight deck motif.' },
+    { url: '/blog-images/hms-argus-hangar-lifts-schematic.svg', alt: 'HMS Argus hangar and lifts schematic (diagrammatic)', caption: 'Original illustration (schematic): hangar volume with lift apertures under the flight deck.' },
+    { url: '/blog-images/hms-argus-flight-deck-handling-schematic.svg', alt: 'HMS Argus flight deck handling schematic (diagrammatic)', caption: 'Original illustration (schematic): deck-handling blocks and markings motif.' },
+    { url: '/blog-images/hms-argus-dazzle-camouflage-schematic.svg', alt: 'HMS Argus dazzle camouflage schematic (diagrammatic)', caption: 'Original illustration (schematic): geometric dazzle pattern motif.' },
+    { url: '/blog-images/carrier-lineage-argus-to-modern-schematic.svg', alt: 'Carrier lineage schematic (diagrammatic)', caption: 'Original illustration (schematic): deck icons showing lineage from early carriers to modern forms.' }
   ],
   'english-electric-lightning-development': [
     { url: '/blog-images/english-electric-lightning-f6.svg', alt: 'English Electric Lightning F.6 schematic (profile)', caption: 'Original illustration (schematic): simplified Lightning F.6 profile.' },
