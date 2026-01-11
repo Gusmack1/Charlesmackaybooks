@@ -24,7 +24,7 @@ const post = {
     </p>
     
     <div class="my-8">
-      <img src="/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg" alt="Insert image here: Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971, showing the aircraft on the ground with Charles E. MacKay standing beside it, demonstrating the personal connection between aviation historian and historic aircraft" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg" alt="Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield (13 February 1971)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield on February 13, 1971. This iconic photograph captures a pivotal moment in aviation history.</p>
     </div>
 
@@ -43,7 +43,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/de-havilland-chipmunk-formation.jpg" alt="Insert image here: A black-and-white photograph of De Havilland Chipmunks in formation flight over Scottish countryside, showing multiple aircraft flying together and demonstrating the aircraft's excellent formation flying capabilities and the training standards at RAF Turnhouse" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/de-havilland-chipmunk-formation.jpg" alt="De Havilland Chipmunks in formation flight (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">De Havilland Chipmunks in formation flight, demonstrating the aircraft's excellent formation flying capabilities and the training standards at RAF Turnhouse.</p>
     </div>
 
@@ -77,7 +77,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/de-havilland-chipmunk-cockpit.jpg" alt="Insert image here: A detailed photograph of the De Havilland Chipmunk cockpit showing its dual-control training configuration, with visible instruments, controls, and seating arrangement that allowed instructors to safely teach student pilots" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/de-havilland-chipmunk-cockpit.jpg" alt="De Havilland Chipmunk cockpit with dual controls (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">The cockpit of a De Havilland Chipmunk, showing its dual-control training configuration that allowed instructors to safely teach student pilots.</p>
     </div>
 
@@ -302,6 +302,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/de-havilland-chipmunk-wp808-turnhouse"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
