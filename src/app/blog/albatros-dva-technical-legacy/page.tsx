@@ -17,8 +17,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of an Albatros D.Va in flight over the Western Front, showing its distinctive sesquiplane wing configuration and streamlined fuselage" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Albatros D.Va: clean lines and semi-monocoque fuselage shaping late-war German fighter design.</p>
+      <img src="/blog-images/albatros-dva-in-flight-schematic.svg" alt="Original schematic illustration of a WWI biplane fighter in side view (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): biplane layout used in late‑war fighter designs.</p>
     </div>
 
     <h2 id="development-context">Development Context: The Albatros Evolution</h2>
@@ -67,8 +67,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Technical drawing showing the Albatros D.Va sesquiplane wing structure and semi-monocoque fuselage construction, illustrating the engineering solutions employed" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Engineering precision: plywood construction and structural optimization defined Albatros design.</p>
+      <img src="/blog-images/albatros-dva-structure-schematic.svg" alt="Original schematic illustration of a sesquiplane wing layout and a simplified fuselage cross-section (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): sesquiplane wing plan with a simplified fuselage section.</p>
     </div>
 
     <h2 id="powerplant">Powerplant and Armament: Mercedes Power and Spandau Firepower</h2>
@@ -96,8 +96,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Close-up photograph of an Albatros D.Va cockpit showing the Mercedes D.IIIaü engine installation and twin Spandau machine guns, demonstrating the integration of powerplant and armament" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Power and firepower: Mercedes engine and synchronized Spandau guns defined combat capability.</p>
+      <img src="/blog-images/albatros-dva-cockpit-armament-schematic.svg" alt="Original schematic illustration of a cockpit position and twin gun arrangement on a WWI fighter (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): cockpit opening, engine bay, and twin forward guns (stylized).</p>
     </div>
 
     <h2 id="service">Frontline Service and Tactics: Combat Employment 1917-1918</h2>
@@ -129,8 +129,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Formation of Albatros D.Va aircraft over the Western Front, showing squadron organization and tactical employment patterns" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Squadron operations: organization and doctrine amplified the value of superior types.</p>
+      <img src="/blog-images/jasta-formation-tactics-schematic.svg" alt="Original schematic illustration of a three-aircraft formation with arrows indicating a diving attack (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): formation geometry and diving attack vectors.</p>
     </div>
 
     <h2 id="comparison">Comparison with Contemporary Fighters</h2>
@@ -201,8 +201,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Albatros D.Va production line showing manufacturing processes and quality control procedures, demonstrating German industrial capability" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Industrial excellence: precision manufacturing enabled quality production at scale.</p>
+      <img src="/blog-images/wwi-aircraft-production-line-schematic.svg" alt="Original schematic illustration of a WWI-era aircraft production line inside a factory (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): factory stations and simplified airframe outlines.</p>
     </div>
 
     <h2 id="maintenance-operations">Maintenance, Field Operations, and Support</h2>
@@ -308,9 +308,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 22,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: 'Albatros D.Va',
-    caption: 'Late-war Albatros refinement.'
+    url: '/blog-images/albatros-dva-in-flight-schematic.svg',
+    alt: 'WWI biplane fighter schematic',
+    caption: 'Original illustration (schematic): biplane layout used in late‑war fighter designs.'
   },
   category: 'WWI Aviation',
   tags: [
@@ -327,7 +327,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Albatros D.Va: Design, Strengths, and Service',
     description: 'Structure, aerodynamics, and combat employment of the Albatros D.Va.',
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/albatros-dva-in-flight-schematic.svg'],
     type: 'article'
   },
   alternates: {

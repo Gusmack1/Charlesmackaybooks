@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a sesquiplane wing layout and a simplified fuselage cross-section (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#16324f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Wing plan (sesquiplane: smaller lower wing) -->
+  <g transform="translate(90,210)" fill="none" stroke-linecap="round">
+    <rect x="60" y="40" width="520" height="70" rx="18" stroke="#e5e7eb" stroke-width="10" opacity="0.95"/>
+    <rect x="120" y="160" width="400" height="55" rx="16" stroke="#cbd5e1" stroke-width="8" opacity="0.85"/>
+    <g stroke="#93c5fd" stroke-width="8" opacity="0.85">
+      <line x1="180" y1="110" x2="180" y2="160"/>
+      <line x1="320" y1="110" x2="320" y2="160"/>
+      <line x1="460" y1="110" x2="460" y2="160"/>
+    </g>
+    <text x="60" y="18" fill="#f9fafb" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="20" opacity="0.9">Upper wing</text>
+    <text x="120" y="248" fill="#f9fafb" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="20" opacity="0.9">Lower wing (reduced chord)</text>
+  </g>
+
+  <!-- Fuselage cross-section -->
+  <g transform="translate(740,230)">
+    <ellipse cx="170" cy="120" rx="150" ry="95" fill="none" stroke="#22c55e" stroke-width="10" opacity="0.85"/>
+    <ellipse cx="170" cy="120" rx="120" ry="75" fill="none" stroke="#cbd5e1" stroke-width="6" opacity="0.8"/>
+    <g stroke="#cbd5e1" stroke-width="5" opacity="0.7">
+      <line x1="20" y1="120" x2="320" y2="120"/>
+      <line x1="170" y1="25" x2="170" y2="215"/>
+    </g>
+    <text x="0" y="-10" fill="#f9fafb" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="20" opacity="0.9">Simplified fuselage section</text>
+  </g>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Structure & layout (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: sesquiplane wing plan + simplified fuselage cross-section</text>
+  </g>
+</svg>
+

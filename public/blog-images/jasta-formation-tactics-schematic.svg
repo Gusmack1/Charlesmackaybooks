@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a three-aircraft formation with arrows indicating a diving attack (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071a12"/>
+      <stop offset="1" stop-color="#0b3b2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Aircraft icons -->
+  <g fill="#e5e7eb" opacity="0.95">
+    <path d="M520 240 l60 20 -60 20 -18 40 -10 -4 10 -36 -42 -12 0 -16 42 -12 -10 -36 10 -4z"/>
+    <path d="M700 300 l60 20 -60 20 -18 40 -10 -4 10 -36 -42 -12 0 -16 42 -12 -10 -36 10 -4z"/>
+    <path d="M340 300 l60 20 -60 20 -18 40 -10 -4 10 -36 -42 -12 0 -16 42 -12 -10 -36 10 -4z"/>
+  </g>
+
+  <!-- Formation outline -->
+  <g stroke="#93c5fd" stroke-width="6" opacity="0.75" fill="none">
+    <path d="M520 260 C520 290, 700 320, 700 320"/>
+    <path d="M520 260 C520 290, 340 320, 340 320"/>
+  </g>
+
+  <!-- Dive arrows -->
+  <g stroke="#fbbf24" stroke-width="10" stroke-linecap="round" opacity="0.9">
+    <line x1="700" y1="340" x2="820" y2="470"/>
+    <line x1="340" y1="340" x2="220" y2="470"/>
+  </g>
+  <g fill="#fbbf24" opacity="0.9">
+    <polygon points="820,470 790,468 808,445"/>
+    <polygon points="220,470 250,468 232,445"/>
+  </g>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Formation & tactics (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: three-aircraft formation with diving attack vectors</text>
+  </g>
+</svg>
+
