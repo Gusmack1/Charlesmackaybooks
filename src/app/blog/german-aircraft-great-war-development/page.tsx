@@ -23,8 +23,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/albatros-dva-german-fighter.jpg" alt="Albatros D.Va German fighter aircraft (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Semi‑monocoque fuselages and systematic production planning defined mid‑war German fighter development.</p>
+      <img src="/blog-images/albatros-semi-monocoque-fuselage-schematic.svg" alt="Original schematic illustration: semi-monocoque plywood fuselage motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): semi‑monocoque plywood fuselage construction motif (diagrammatic).</p>
     </div>
 
     <h2 id="early-aviation">Early German Aviation: Johannisthal and Pre-War Foundations</h2>
@@ -50,8 +50,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/fokker-triplane-wwi.jpg" alt="Fokker Dr.I triplane aircraft (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Synchronization gear enabled decisive forward fire — a systems integration milestone joining engine, propeller, and armament.</p>
+      <img src="/blog-images/fokker-synchronization-gear-schematic.svg" alt="Original schematic illustration: propeller synchronization gear concept motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): synchronization concept—timed firing between propeller blades (diagrammatic).</p>
     </div>
 
     <h2 id="organization">German Aviation Organization and Supply System</h2>
@@ -128,8 +128,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/german-albatros-dva-wwi-fighter.jpg" alt="Jagdstaffel fighter aircraft lineup with Albatros fighters (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Organisation and doctrine amplified the value of superior types: training, leadership, and maintenance cadence were decisive.</p>
+      <img src="/blog-images/jagdstaffel-lineup-maintenance-cadence-schematic.svg" alt="Original schematic illustration: Jagdstaffel lineup and maintenance cadence motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): sortie generation depends on serviceability rhythm—armourers, mechanics, and operations (diagrammatic).</p>
     </div>
 
     <h2 id="richthofen">Manfred von Richthofen: The Red Baron</h2>

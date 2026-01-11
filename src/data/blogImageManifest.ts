@@ -81,10 +81,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/bristol-fighter-f2b-flying.jpg', alt: 'Bristol Fighter F.2B' }
   ],
   'german-aircraft-great-war-development': [
-    { url: '/blog-images/albatros-dva-wwi-german.jpg', alt: 'Albatros D.Va German fighter' },
-    { url: '/blog-images/fokker-triplane-wwi.jpg', alt: 'Fokker triplane lineage' },
-    { url: '/blog-images/german-albatros-dva-wwi-fighter.jpg', alt: 'Jagdstaffel lineup' },
-    { url: '/blog-images/german-fokker-dvii-museum.jpg', alt: 'Fokker D.VII museum example' }
+    { url: '/blog-images/albatros-semi-monocoque-fuselage-schematic.svg', alt: 'Semi-monocoque fuselage construction motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): frames, longerons, and plywood shell bands (diagrammatic).' },
+    { url: '/blog-images/fokker-synchronization-gear-schematic.svg', alt: 'Propeller synchronization/interrupter gear concept motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): cam timing pulse feeding a trigger link (diagrammatic).' },
+    { url: '/blog-images/jagdstaffel-lineup-maintenance-cadence-schematic.svg', alt: 'Jagdstaffel lineup and maintenance cadence motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): serviceability rhythm icons for armourers/mechanics/ops.' },
+    { url: '/blog-images/fokker-dvii-integration-schematic.svg', alt: 'Fokker D.VII integration motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): formation arrow motif representing type integration.' }
   ],
   'naval-aviation-history': [
     { url: '/blog-images/hms-argus-aircraft-carrier.jpg', alt: 'HMS Argus aircraft carrier' },

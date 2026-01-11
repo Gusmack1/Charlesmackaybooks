@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: propeller synchronization gear concept motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="140" y="150" width="1320" height="600" rx="26" fill="#0a1020" opacity=".55"/>
+
+  <text x="180" y="210" class="text small">Fokker interrupter gear — synchronization concept motif (original schematic)</text>
+  <text x="180" y="250" class="text tiny" opacity=".8">Diagrammatic: cam pulse → trigger link → gun burst timed between propeller blades (not a photo)</text>
+
+  <!-- Propeller disc + blades (diagrammatic) -->
+  <circle cx="520" cy="520" r="210" class="line"/>
+  <path class="line" d="M520 310 L548 470 L520 520 L492 470 Z"/>
+  <path class="line" d="M730 520 L570 548 L520 520 L570 492 Z"/>
+
+  <!-- Engine cam / timing wheel -->
+  <circle cx="900" cy="520" r="120" class="line"/>
+  <circle cx="900" cy="520" r="72" class="thin"/>
+  <path class="thin" d="M900 400 V640"/>
+  <path class="thin" d="M780 520 H1020"/>
+  <path class="thin" d="M840 440 L960 600"/>
+  <path class="thin" d="M960 440 L840 600"/>
+
+  <!-- Linkage from cam to trigger -->
+  <path class="line" d="M1020 520 C1100 520, 1160 520, 1240 520"/>
+  <rect x="1240" y="472" width="200" height="96" rx="16" class="fill"/>
+  <text x="1265" y="535" class="text label">Gun trigger</text>
+
+  <!-- Burst window marks (between blades) -->
+  <path class="muted" d="M390 520 C430 430, 470 390, 520 360"/>
+  <path class="muted" d="M520 360 C575 390, 615 430, 650 520"/>
+  <text x="340" y="380" class="text tiny">safe firing window</text>
+
+  <!-- Labels -->
+  <text x="440" y="770" class="text label">Propeller arc</text>
+  <text x="830" y="770" class="text label">Cam timing pulse</text>
+</svg>
+

@@ -75,7 +75,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'german-aircraft-great-war-development',
       excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.',
       date: 'January 18, 2024',
-      image: '/blog-images/fokker-triplane-wwi.jpg',
+      image: '/blog-images/fokker-synchronization-gear-schematic.svg',
       tags: ['WWI Aviation', 'German Aircraft', 'Fighter Development', 'Luftstreitkräfte'],
       readTime: '11 min'
     },
