@@ -139,6 +139,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/aviation-manufacturing-wartime-production"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

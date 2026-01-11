@@ -27,6 +27,7 @@ interface UnifiedSchemaProps {
   pageTitle?: string
   pageDescription?: string
   pageUrl?: string
+  pageImageUrl?: string
   bookData?: BasicBookData | null
   books?: Array<{
     id: string
@@ -49,6 +50,7 @@ export default function UnifiedSchema({
   pageTitle,
   pageDescription,
   pageUrl,
+  pageImageUrl,
   bookData = null,
   books = [],
 }: UnifiedSchemaProps) {
@@ -197,13 +199,6 @@ export default function UnifiedSchema({
       latitude: '55.8642',
       longitude: '-4.2518',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: 5.0,
-      reviewCount: 15,
-      bestRating: 5,
-      worstRating: 1,
-    },
     areaServed: [
       {
         '@type': 'GeoCircle',
@@ -348,36 +343,6 @@ export default function UnifiedSchema({
           },
         },
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: 5.0,
-        reviewCount: 15,
-        bestRating: 5,
-        worstRating: 1,
-      },
-      review: [
-        {
-          '@type': 'Review',
-          author: { '@type': 'Person', name: 'Dr. James Thompson, Aviation Historian' },
-          reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-          reviewBody: 'Exceptional research and attention to detail. Essential reading for aviation historians.',
-          datePublished: '2024-01-15',
-        },
-        {
-          '@type': 'Review',
-          author: { '@type': 'Person', name: 'Sarah Mitchell, Museum Curator' },
-          reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-          reviewBody: 'Comprehensive coverage of aviation history with rare archival material. Used in our exhibition planning.',
-          datePublished: '2024-02-22',
-        },
-        {
-          '@type': 'Review',
-          author: { '@type': 'Person', name: 'Prof. Robert Davis, University Researcher' },
-          reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-          reviewBody: 'Charles MacKay\'s work sets the standard for aviation history research. Citation-worthy material.',
-          datePublished: '2024-03-08',
-        },
-      ],
     })
   }
 
@@ -388,12 +353,19 @@ export default function UnifiedSchema({
       audienceType: 'Aviation Historians and Researchers',
     }
 
+    if (pageImageUrl) {
+      webPageNode.primaryImageOfPage = {
+        '@type': 'ImageObject',
+        url: absoluteImage(pageImageUrl),
+      }
+    }
+
     const articleNode = {
       '@type': 'Article',
       '@id': `${fullUrl}#article`,
       headline: pageTitle || 'Aviation History Article',
       description: pageDescription || 'Expert aviation history research and analysis',
-      image: [absoluteImage('/blog-images/default-generic.svg')],
+      ...(pageImageUrl ? { image: [absoluteImage(pageImageUrl)] } : {}),
       author: {
         '@id': `${BASE_URL}/#person`,
       },
