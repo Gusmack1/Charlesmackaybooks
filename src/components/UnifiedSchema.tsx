@@ -472,16 +472,16 @@ export default function UnifiedSchema({
         description: 'Complete collection of aviation history books by Charles E. MacKay',
         numberOfItems: productBooks.length,
         itemListElement: productBooks.slice(0, 10).map((book, index) => {
-          const validISBN = getValidISBN(book.isbn)
-          const validGTIN13 = getValidGTIN13(book.isbn)
-          const validSKU = getValidSKU(book.isbn, book.id)
-
           return {
             '@type': 'ListItem',
             position: index + 1,
             item: {
-              '@type': 'Product',
-              '@id': `${BASE_URL}/books/${book.id}#product`,
+              // IMPORTANT: On the /books listing page, we intentionally avoid marking each entry as a Product with offers.
+              // We do not have verifiable per-book review/aggregateRating data on this listing page, and we don't want
+              // to emit inaccurate ratings just to satisfy a schema warning. Individual /books/{id} pages carry the
+              // Product + Offer schema where it belongs.
+              '@type': 'WebPage',
+              '@id': `${BASE_URL}/books/${book.id}#webpage`,
               name: book.title,
               description:
                 (book.description || '').length >= 50 && (book.description || '').length <= 5000
@@ -492,47 +492,6 @@ export default function UnifiedSchema({
                     ).slice(0, 5000),
               image: [absoluteImage(book.imageUrl || `/book-covers/${book.id}.jpg`)],
               url: `${BASE_URL}/books/${book.id}`,
-              ...(validISBN && { isbn: validISBN }),
-              sku: validSKU,
-              ...(validGTIN13 && { gtin13: validGTIN13 }),
-              category: book.category,
-              weight: {
-                '@type': 'QuantitativeValue',
-                value: book.weight || 300,
-                unitCode: 'GRM',
-              },
-              offers: {
-                '@type': 'Offer',
-                price: book.price.toFixed(2),
-                priceCurrency: 'GBP',
-                priceValidUntil,
-                availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-                itemCondition:
-                  book.condition === 'New' ? 'https://schema.org/NewCondition' : 'https://schema.org/UsedCondition',
-                merchantReturnLink: `${BASE_URL}/returns`,
-                shippingDetails: {
-                  '@type': 'OfferShippingDetails',
-                  shippingRate: { '@type': 'MonetaryAmount', value: '0.00', currency: 'GBP' },
-                  shippingDestination: [
-                    { '@type': 'DefinedRegion', addressCountry: 'GB' },
-                    { '@type': 'DefinedRegion', addressCountry: 'EU' },
-                    { '@type': 'DefinedRegion', addressCountry: 'US' },
-                  ],
-                  deliveryTime: {
-                    '@type': 'ShippingDeliveryTime',
-                    handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
-                    transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 5, unitCode: 'DAY' },
-                  },
-                },
-                hasMerchantReturnPolicy: {
-                  '@type': 'MerchantReturnPolicy',
-                  applicableCountry: 'GB',
-                  returnPolicyCategory: 'https://schema.org/MerchantReturnUnspecified',
-                  returnMethod: 'https://schema.org/ReturnByMail',
-                  merchantReturnLink: `${BASE_URL}/returns`,
-                  itemDefectReturnFee: 'https://schema.org/FreeReturn',
-                },
-              },
             },
           }
         }),
