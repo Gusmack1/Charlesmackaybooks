@@ -26,7 +26,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="HMS Argus full-length flight deck concept showing the revolutionary flush-deck design" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hms-argus-flush-deck-schematic.svg" alt="Original schematic illustration of a full-length flush flight deck on a ship outline (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Argus's flush, full-length deck removed visual and physical obstacles, enabling continuous carrier operations and safe recoveries.</p>
     </div>
 
@@ -72,7 +72,7 @@ const post = {
       Wind management required careful consideration of flight deck airflow patterns, with flush-deck design eliminating superstructure interference but requiring alternative wind management solutions. The comprehensive documentation of wind management solutions ensures that the aerodynamic considerations of carrier design are properly understood. Understanding wind management provides valuable insights into how carrier design optimized flight deck conditions for aircraft operations.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Argus conversion concept and hangar integration showing internal arrangements" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hms-argus-hangar-lifts-schematic.svg" alt="Original schematic illustration of hangar integration with two lift apertures beneath a flight deck (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Conversion from liner to carrier: hangar volume, lift apertures, and deck-handling flow dictated the internal plan.</p>
     </div>
 
@@ -116,7 +116,7 @@ const post = {
       The full-length deck allowed simultaneous staging, clearing, and recovery cycles unachievable on obstructed layouts. The flush-deck design enabled continuous flight deck operations, with aircraft launch and recovery operations proceeding simultaneously. This operational flexibility demonstrated how flush-deck design enabled superior operational effectiveness compared to obstructed deck designs. The comprehensive documentation of operational advantages ensures that HMS Argus's design superiority is properly recognized.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Flight deck operations showing deck markings and aircraft handling" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hms-argus-flight-deck-handling-schematic.svg" alt="Original schematic illustration of flight deck handling: deck markings and two aircraft blocks (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Flight deck operations: deck markings, landing aids, and aircraft handling procedures established on HMS Argus.</p>
     </div>
 
@@ -160,7 +160,7 @@ const post = {
       Damage-control access enabled effective damage control operations, with access routes designed to enable rapid response to damage. The comprehensive documentation of damage-control features ensures that the survivability considerations of carrier design are properly understood. Understanding damage-control features provides valuable insights into how carrier design balanced operational requirements with survivability considerations.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Dazzle camouflage treatment showing geometric patterns" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hms-argus-dazzle-camouflage-schematic.svg" alt="Original schematic illustration of dazzle camouflage geometric pattern blocks (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Dazzle paint disrupted visual rangefinding—an interim defence as doctrine and technology evolved.</p>
     </div>
 
@@ -206,7 +206,7 @@ const post = {
       Modern aircraft carriers continue to incorporate principles established by HMS Argus: full-length flight decks, internal hangars, aircraft lifts, and systematic deck operations. The comprehensive documentation of these continuities ensures that HMS Argus's contribution to carrier design is properly preserved. Understanding these continuities provides valuable insights into how carrier design principles were established and maintained.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Carrier lineage and design evolution showing progression from Argus to modern carriers" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/carrier-lineage-argus-to-modern-schematic.svg" alt="Original schematic illustration showing carrier lineage as three deck icons connected left to right (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">From Argus to armoured-deck carriers: the essential carrier architecture remained constant even as equipment advanced.</p>
     </div>
 
@@ -280,17 +280,17 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/hms-argus-flush-deck-schematic.svg',
     alt: 'HMS Argus — first true aircraft carrier with full-length flight deck - Enhanced Edition',
-    caption: 'Argus established the modern carrier template: clear deck, enclosed hangar, and lift-enabled operations.'
+    caption: 'Original illustration (schematic): flush flight deck concept on a ship outline (diagrammatic).'
   },
   category: 'Naval Aviation',
   tags: ["hms","argus","aircraft","carrier","naval","aviation","royal","navy","beardmore","scottish"],
   relatedBooks: getBooksData(['aircraft-carrier-argus', 'beardmore-aviation', 'british-aircraft-great-war', 'clydeside-aviation-vol1']),
   relatedPosts: [
-    { id: 'hms-argus-first-aircraft-carrier-operations', title: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques', excerpt: 'Detailed analysis of HMS Argus\'s operational history.', image: '/blog-images/default-generic.svg', readingTime: 14 },
-    { id: 'naval-aviation-history', title: 'Naval Aviation History: From Seaplanes to Supercarriers', excerpt: 'The broader context of naval aviation development.', image: '/blog-images/default-generic.svg', readingTime: 14 },
-    { id: 'beardmore-aviation-scottish-industrial-giant', title: 'Beardmore Aviation: Scottish Industrial Giant', excerpt: 'The industrial context of HMS Argus\'s construction.', image: '/blog-images/default-generic.svg', readingTime: 12 }
+    { id: 'hms-argus-first-aircraft-carrier-operations', title: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques', excerpt: 'Detailed analysis of HMS Argus\'s operational history.', image: '/blog-images/hms-argus-deck-operations-schematic.svg', readingTime: 14 },
+    { id: 'naval-aviation-history', title: 'Naval Aviation History: From Seaplanes to Supercarriers', excerpt: 'The broader context of naval aviation development.', image: '/blog-images/carrier-lineage-argus-to-modern-schematic.svg', readingTime: 14 },
+    { id: 'beardmore-aviation-scottish-industrial-giant', title: 'Beardmore Aviation: Scottish Industrial Giant', excerpt: 'The industrial context of HMS Argus\'s construction.', image: '/blog-images/beardmore-parkhead-forge.jpg', readingTime: 12 }
   ],
   references: [
     { title: 'HMS Argus (D49) - Service History', url: 'https://www.naval-history.net/xGM-Chrono-04CVE-Argus.htm', source: 'Naval-History.net' },
@@ -306,7 +306,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HMS Argus: The World's First True Aircraft Carrier - Enhanced Edition",
     description: "A comprehensive, research-backed account of HMS Argus's revolutionary design and how it established the essential architecture for all future aircraft carriers.",
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/hms-argus-flush-deck-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -333,6 +333,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/hms-argus-first-aircraft-carrier"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

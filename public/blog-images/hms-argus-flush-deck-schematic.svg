@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a full-length flush flight deck on a ship outline (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f2748"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Flush flight deck concept (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: full-length deck over a ship hull outline (diagrammatic)</text>
+  </g>
+
+  <!-- Ship outline -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <path d="M180 420 C320 500, 880 500, 1020 420" stroke="#cbd5e1" stroke-width="10"/>
+    <rect x="210" y="300" width="780" height="90" rx="24" fill="#111827" opacity="0.9" stroke="#cbd5e1" stroke-width="6"/>
+  </g>
+
+  <!-- Deck -->
+  <rect x="210" y="250" width="780" height="60" rx="18" fill="#93c5fd" opacity="0.5"/>
+  <line x1="250" y1="280" x2="950" y2="280" stroke="#fbbf24" stroke-width="8" opacity="0.85" stroke-linecap="round"/>
+</svg>
+

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration showing carrier lineage as three deck icons connected left to right (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#163a2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Carrier lineage (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: deck icons connected by arrows (diagrammatic)</text>
+  </g>
+
+  <!-- Deck icons -->
+  <g fill="#111827" opacity="0.9" stroke="#cbd5e1" stroke-width="6">
+    <rect x="160" y="320" width="220" height="120" rx="22"/>
+    <rect x="490" y="300" width="220" height="140" rx="22"/>
+    <rect x="820" y="280" width="220" height="160" rx="22"/>
+  </g>
+  <g stroke="#93c5fd" stroke-width="8" opacity="0.6">
+    <line x1="270" y1="340" x2="270" y2="420"/>
+    <line x1="600" y1="320" x2="600" y2="420"/>
+    <line x1="930" y1="300" x2="930" y2="420"/>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#fbbf24" stroke-width="10" opacity="0.9" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="380" y1="380" x2="490" y2="380"/>
+    <path d="M490 380 L462 365"/>
+    <path d="M490 380 L462 395"/>
+    <line x1="710" y1="380" x2="820" y2="380"/>
+    <path d="M820 380 L792 365"/>
+    <path d="M820 380 L792 395"/>
+  </g>
+</svg>
+

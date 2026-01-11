@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of dazzle camouflage geometric pattern blocks (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#1e2b4f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Dazzle camouflage (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: geometric blocks representing dazzle paint</text>
+  </g>
+
+  <!-- Pattern blocks -->
+  <g opacity="0.9">
+    <polygon points="200,260 460,260 360,420 200,420" fill="#e5e7eb"/>
+    <polygon points="460,260 720,260 620,420 360,420" fill="#93c5fd" opacity="0.75"/>
+    <polygon points="720,260 1000,260 1000,420 620,420" fill="#111827"/>
+    <polygon points="200,420 360,420 280,540 200,540" fill="#fbbf24" opacity="0.85"/>
+    <polygon points="360,420 620,420 520,540 280,540" fill="#111827"/>
+    <polygon points="620,420 1000,420 1000,540 520,540" fill="#e5e7eb"/>
+  </g>
+</svg>
+
