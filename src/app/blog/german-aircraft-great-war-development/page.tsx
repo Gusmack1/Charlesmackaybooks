@@ -23,7 +23,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/albatros-dva-german-fighter.jpg" alt="Insert image here: A black-and-white photograph of the Albatros D.Va German fighter in flight, showing its distinctive semi-monocoque fuselage and Mercedes engine installation, demonstrating mid-war German fighter design excellence" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/albatros-dva-german-fighter.jpg" alt="Albatros D.Va German fighter aircraft (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Semi‑monocoque fuselages and systematic production planning defined mid‑war German fighter development.</p>
     </div>
 
@@ -50,7 +50,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/fokker-triplane-wwi.jpg" alt="Insert image here: A black-and-white photograph of the Fokker Triplane and synchronized armament lineage, demonstrating how Fokker's innovations revolutionized aerial combat" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/fokker-triplane-wwi.jpg" alt="Fokker Dr.I triplane aircraft (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Synchronization gear enabled decisive forward fire — a systems integration milestone joining engine, propeller, and armament.</p>
     </div>
 
@@ -128,7 +128,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/german-albatros-dva-wwi-fighter.jpg" alt="Insert image here: A black-and-white photograph showing a Jagdstaffel aircraft line-up with Albatros fighters, demonstrating German fighter organization and unit structure" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/german-albatros-dva-wwi-fighter.jpg" alt="Jagdstaffel fighter aircraft lineup with Albatros fighters (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Organisation and doctrine amplified the value of superior types: training, leadership, and maintenance cadence were decisive.</p>
     </div>
 
@@ -222,7 +222,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/german-fokker-dvii-museum.jpg" alt="Insert image here: A black-and-white photograph of the Fokker D.VII museum example, demonstrating the aircraft's structural simplicity and thick-section wing design" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/fokker-dvii-integration-schematic.svg" alt="Original schematic illustration of a new aircraft type being integrated into a formation via an arrow (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Thick airfoils, forgiving stalls, and altitude engines underpinned the D.VII's late‑war mastery.</p>
     </div>
 
@@ -288,9 +288,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/albatros-dva-wwi-german.jpg',
+    url: '/blog-images/albatros-dva-in-flight-schematic.svg',
     alt: 'German Aircraft Great War Development - Enhanced Edition',
-    caption: 'German fighter development from Taube to Albatros and Fokker types.'
+    caption: 'Original illustration (schematic): Albatros D.Va in-flight motif (diagrammatic).'
   },
   category: 'Aviation History',
   tags: ["german","aircraft","great","war","development","wwi","fighter"],
@@ -322,7 +322,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `German Aircraft Great War Development - Enhanced Edition`,
     description: `A comprehensive, research-backed account of German aircraft development during World War I.`,
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/albatros-dva-in-flight-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -349,6 +349,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/german-aircraft-great-war-development"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
