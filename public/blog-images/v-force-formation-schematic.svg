@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of three delta-wing aircraft shapes in formation (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#2a1230"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">V-Force formation (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: three simplified delta planforms in a loose echelon</text>
+  </g>
+
+  <g fill="none" stroke="#cbd5e1" stroke-width="10" opacity="0.85" stroke-linejoin="round">
+    <path d="M380 260 L520 450 L380 420 L240 450 Z"/>
+    <path d="M600 220 L760 470 L600 440 L440 470 Z"/>
+    <path d="M820 280 L960 470 L820 440 L680 470 Z"/>
+  </g>
+
+  <g stroke="#93c5fd" stroke-width="6" opacity="0.55" stroke-linecap="round">
+    <line x1="310" y1="515" x2="380" y2="515"/>
+    <line x1="530" y1="515" x2="600" y2="515"/>
+    <line x1="750" y1="515" x2="820" y2="515"/>
+  </g>
+</svg>
+

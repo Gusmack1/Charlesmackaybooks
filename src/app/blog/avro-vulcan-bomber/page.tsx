@@ -24,7 +24,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Avro Vulcan delta-wing bomber in flight, showing its revolutionary delta wing configuration optimized for high-altitude performance, with four Bristol Olympus turbojet engines visible, photographed during the 1950s or 1960s" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/avro-vulcan-delta-wing-schematic.svg" alt="Original schematic illustration of a delta-wing bomber silhouette with four engine nacelle circles (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Avro Vulcan: delta-wing geometry at the heart of Britain's V-Force.</p>
     </div>
 
@@ -63,7 +63,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of V-Force Vulcans in formation flight, showing multiple aircraft flying together and demonstrating Britain's V-Force strategy and the Vulcan's formation flying capabilities" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/v-force-formation-schematic.svg" alt="Original schematic illustration of three delta-wing aircraft shapes in formation (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Vulcans in formation: Britain's V-Force strategy, airborne.</p>
     </div>
 
@@ -82,7 +82,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Blue Steel standoff missile mounted beneath a Vulcan bomber, showing the missile's streamlined design and its integration with the V-Force aircraft, photographed during testing in the 1960s" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/blue-steel-underwing-schematic.svg" alt="Original schematic illustration of a delta-wing aircraft with a single standoff missile shape beneath the centerline (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Blue Steel integration: stand-off capability extended deterrent reach in the missile era.</p>
     </div>
 
@@ -118,7 +118,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A diagram or photograph showing low-level terrain masking routes used by Vulcan crews, demonstrating how performance, terrain, and radar coverage shaped ingress planning for low-level penetration missions" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/low-level-terrain-masking-route-schematic.svg" alt="Original schematic illustration of a low-level route line over stylized terrain with a radar cone above (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Low-level routes: performance, terrain, and radar coverage shaped ingress planning.</p>
     </div>
 
@@ -140,7 +140,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A photograph or diagram showing the Vulcan cockpit and systems layout, demonstrating how crew systems evolved from analogue bombing-navigation to terrain-following procedures and ECM, with visible instruments and controls" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/vulcan-cockpit-systems-schematic.svg" alt="Original schematic illustration of a cockpit-style instrument panel with round dials and switches (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Crew systems evolved from analogue bombing-navigation to terrain-following procedures and ECM.</p>
     </div>
 
@@ -300,9 +300,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/avro-vulcan-delta-wing-schematic.svg',
     alt: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition",
-    caption: 'Delta-wing icon of the V-Force.'
+    caption: 'Original illustration (schematic): delta-wing planform with engine markers (diagrammatic).'
   },
   category: 'Cold War Aviation',
   tags: [
@@ -319,7 +319,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition",
     description: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, and its role in Britain's V-Force nuclear deterrent strategy.",
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/avro-vulcan-delta-wing-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -346,6 +346,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/avro-vulcan-bomber"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
