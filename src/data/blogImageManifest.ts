@@ -129,10 +129,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/raf-sabre-mk4-flightline-schematic.svg', alt: 'RAF Sabre Mk.4 flight line servicing motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): flight-line servicing blocks around a simplified Sabre silhouette.' }
   ],
   'german-aces-organization-wwi': [
-    { url: '/blog-images/fokker-dr1-triplane-replica.jpg', alt: 'Fokker Dr.I triplane (Red Baron type)' },
-    { url: '/blog-images/fokker-triplane-wwi.jpg', alt: 'Fokker triplane on display' },
-    { url: '/blog-images/manfred-von-richthofen-portrait.jpg', alt: 'Manfred von Richthofen portrait' },
-    { url: '/blog-images/german-albatros-dva-wwi-fighter.jpg', alt: 'Jagdstaffel Albatros fighters' }
+    { url: '/blog-images/jagdgeschwader-organization-schematic.svg', alt: 'Jagdgeschwader organisation flow (schematic, diagrammatic)', caption: 'Original illustration (schematic): Jagdstaffel-to-Jagdgeschwader organisation blocks and arrows.' },
+    { url: '/blog-images/jasta-formation-tactics-schematic.svg', alt: 'Jasta formation tactics motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): simplified formation/tactics motif.' },
+    { url: '/blog-images/pour-le-merite-ace-culture-schematic.svg', alt: 'Pour le Mérite ace-culture motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): medal/laurel motif representing awards and ace culture.' },
+    { url: '/blog-images/fokker-dvii-integration-schematic.svg', alt: 'New aircraft integration motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): formation arrow motif representing integration of a new type.' }
   ],
   'jet-age-aviation-cold-war-development': [
     { url: '/blog-images/modern-carrier-operations.jpg', alt: 'Modern jet age carrier operations' },

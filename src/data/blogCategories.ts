@@ -93,7 +93,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'german-aces-organization-wwi',
       excerpt: 'Von Hoeppner’s reforms, squadron tactics, and the rise of the “ace” in German fighter aviation.',
       date: 'August 14, 2025',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/jagdgeschwader-organization-schematic.svg',
       tags: ['WWI Aviation', 'German Aces', 'Jagdgeschwader'],
       readTime: '16 min'
     }
