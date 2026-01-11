@@ -8,10 +8,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/rohrbach-roland-flying-boat.jpg', alt: 'Roland flying boat operations', caption: 'Rohrbach flying boat moored for passenger transfer on Baltic routes.' }
   ],
   'hms-argus-first-aircraft-carrier-operations': [
-    { url: '/blog-images/hms-argus-first-aircraft-carrier-operations.jpg', alt: 'Argus deck crew positioning aircraft', caption: 'Flight deck teams rehearsing choreography for launch and recovery aboard HMS Argus.' },
-    { url: '/blog-images/hms-argus-dazzle.jpg', alt: 'Argus in dazzle camouflage alongside', caption: 'Operations phase showing Argus’s unique flush-deck silhouette without an island.' },
-    { url: '/blog-images/sopwith-pup-carrier-landing.jpg', alt: 'Sopwith Pup landing on carrier deck', caption: 'Early carrier trials with Sopwith Pups illustrated the precision demanded of Argus pilots.' },
-    { url: '/blog-images/hms-formidable-deck-operations.jpg', alt: 'Royal Navy deck crews managing aircraft', caption: 'Handling drills with chocks, lashing points, and firefighting crews on alert.' }
+    { url: '/blog-images/hms-argus-deck-operations-schematic.svg', alt: 'HMS Argus deck operations schematic (diagrammatic)', caption: 'Original illustration (schematic): simplified deck-operations motif representing launch/recovery choreography.' },
+    { url: '/blog-images/hms-argus-flight-deck-handling-schematic.svg', alt: 'Flight deck handling schematic (diagrammatic)', caption: 'Original illustration (schematic): deck markings and simplified aircraft blocks representing spotting and movement planning.' },
+    { url: '/blog-images/hms-argus-hangar-lifts-schematic.svg', alt: 'Hangar and lifts schematic (diagrammatic)', caption: 'Original illustration (schematic): hangar volume under deck with lift openings.' },
+    { url: '/blog-images/hms-argus-dazzle-camouflage-schematic.svg', alt: 'Dazzle camouflage schematic (diagrammatic)', caption: 'Original illustration (schematic): geometric dazzle pattern motif representing period camouflage practice.' }
   ],
   'british-nuclear-deterrent-v-force': [
     { url: '/blog-images/avro-vulcan-delta-wing-schematic.svg', alt: 'Avro Vulcan delta-wing bomber schematic', caption: 'Original illustration (schematic): delta-wing planform motif representing the Vulcan.' },

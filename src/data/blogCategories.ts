@@ -341,7 +341,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'hms-argus-first-aircraft-carrier-operations',
       excerpt: 'Detailed examination of the operational procedures, deck operations, and pioneering flight operations that made HMS Argus the template for all future aircraft carriers.',
       date: 'January 18, 2025',
-      image: '/blog-images/hms-argus-dazzle-camouflage.jpg',
+      image: '/blog-images/hms-argus-deck-operations-schematic.svg',
       tags: ['Naval Aviation', 'HMS Argus', 'Carrier Operations', 'Flight Deck Procedures'],
       readTime: '13 min'
     },
