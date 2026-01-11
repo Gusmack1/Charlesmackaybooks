@@ -14,8 +14,8 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/hms-formidable-deck-operations.jpg', alt: 'Royal Navy deck crews managing aircraft', caption: 'Handling drills with chocks, lashing points, and firefighting crews on alert.' }
   ],
   'british-nuclear-deterrent-v-force': [
-    { url: '/blog-images/avro-vulcan-bomber.jpg', alt: 'Avro Vulcan B.2 bomber', caption: 'Vulcan B.2 on quick-reaction alert reflecting Britain’s airborne deterrent posture.' },
-    { url: '/blog-images/vulcan-bomber-formation.jpg', alt: 'Vulcan aerial formation', caption: 'V-force formation training to ensure dispersed, survivable launch plans.' },
+    { url: '/blog-images/avro-vulcan-delta-wing-schematic.svg', alt: 'Avro Vulcan delta-wing bomber schematic', caption: 'Original illustration (schematic): delta-wing planform motif representing the Vulcan.' },
+    { url: '/blog-images/v-force-formation-schematic.svg', alt: 'V-Force formation schematic', caption: 'Original illustration (schematic): three simplified delta planforms in formation.' },
     { url: '/blog-images/handley-page-victor-bomber.jpg', alt: 'Handley Page Victor tanker/bomber', caption: 'Victor demonstrating crescent wing geometry optimised for high-altitude cruise.' },
     { url: '/blog-images/vickers-valiant-bomber.jpg', alt: 'Vickers Valiant bomber', caption: 'Valiant representing the first of the V-bombers to enter RAF service.' }
   ],

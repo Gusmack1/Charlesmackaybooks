@@ -19,22 +19,22 @@ const post = {
     </p>
     
     <div class="my-8">
-      <img src="/blog-images/vickers-valiant-bomber.jpg" alt="Insert image here: A black-and-white photograph of the Vickers Valiant B1 bomber in flight, showing its conservative straight-wing design and four Rolls-Royce Avon turbojet engines, photographed during the early 1950s when it first entered service" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/vickers-valiant-bomber.jpg" alt="Vickers Valiant B.1 bomber in flight (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">The Vickers Valiant B1, the first V-Force aircraft to enter service in 1955, featuring a conservative straight-wing design for reliability.</p>
     </div>
     
     <p>Developed during the height of Cold War tensions, these aircraft embodied cutting-edge aerodynamics, advanced nuclear delivery systems, and sophisticated electronic countermeasures. Their design reflected Britain's determination to maintain independent nuclear capability while operating within NATO's strategic framework.</p>
 
     <div class="my-8">
-      <img src="/blog-images/handley-page-victor-bomber.jpg" alt="Insert image here: A black-and-white photograph of the Handley Page Victor bomber in flight, showing its distinctive crescent wing design optimized for high-speed and high-altitude performance, with four Armstrong Siddeley Sapphire turbojet engines visible" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/handley-page-victor-bomber.jpg" alt="Handley Page Victor bomber in flight (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">The Handley Page Victor with its distinctive crescent wing design, combining high-speed and high-altitude capabilities for nuclear delivery.</p>
     </div>
 
     <p>The V-Force story encompasses more than aircraft development - it represents Britain's Cold War strategy, nuclear doctrine evolution, and the technological challenges of maintaining credible deterrence in an era of rapidly advancing missile technology. From Blue Steel standoff weapons to low-level penetration tactics, the V-Force adapted continuously to changing strategic requirements.</p>
 
     <div class="my-8">
-      <img src="/blog-images/avro-vulcan-bomber.jpg" alt="Insert image here: A black-and-white photograph of the Avro Vulcan delta-wing bomber in flight, showing its revolutionary delta wing configuration optimized for high-altitude performance, with four Bristol Olympus turbojet engines visible" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">The Avro Vulcan with its revolutionary delta-wing design, optimized for high-altitude performance and the most recognizable symbol of the V-Force.</p>
+      <img src="/blog-images/avro-vulcan-delta-wing-schematic.svg" alt="Original schematic illustration of a delta-wing bomber silhouette with four engine nacelle circles (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original illustration (schematic): delta-wing planform motif representing the Vulcan within the V-Force story.</p>
     </div>
 
     <h2 id="tube-alloys">Tube Alloys and British Nuclear Development</h2>
@@ -150,7 +150,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Blue Steel standoff missile mounted beneath a Vulcan bomber, showing the missile's streamlined design and its integration with the V-Force aircraft, photographed during testing in the 1960s" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/blue-steel-underwing-schematic.svg" alt="Original schematic illustration of a delta-wing aircraft with a single standoff missile shape beneath the centerline (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Blue Steel standoff missile: enabled V-Force aircraft to attack targets from safe distances beyond enemy air defenses.</p>
     </div>
 
@@ -364,9 +364,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/blue-steel-missile.jpg',
+    url: '/blog-images/blue-steel-underwing-schematic.svg',
     alt: 'British Nuclear Deterrent: The V-Force and Cold War Strategy',
-    caption: 'British Nuclear Deterrent: The V-Force and Cold War Strategy - Expert analysis by Charles E. MacKay'
+    caption: 'Original illustration (schematic): a standoff missile shape carried beneath a delta-wing aircraft (diagrammatic).'
   },
   category: 'Aviation History',
   tags: ["british","nuclear","deterrent","v","force","cold","war","vulcan","victor","valiant"],
@@ -381,7 +381,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `British Nuclear Deterrent V Force`,
     description: `Comprehensive analysis of british nuclear deterrent v force with expert historical research and technical details.`,
-    images: ['/blog-images/blue-steel-missile.jpg'],
+    images: ['/blog-images/blue-steel-underwing-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -408,6 +408,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/british-nuclear-deterrent-v-force"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
