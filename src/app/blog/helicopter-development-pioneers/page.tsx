@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
-import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
 
@@ -44,7 +43,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg" alt="Insert image here: A black-and-white photograph of the Sikorsky VS-300 hovering over water in 1939, showing its single main rotor, tail rotor configuration, and exposed framework structure that established the modern helicopter layout" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/sikorsky-vs300-helicopter.svg" alt="Original schematic illustration of an early single-main-rotor helicopter with tail rotor, labelled Sikorsky VS-300 (schematic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">The VS‑300 breakthrough: sustained, controllable hover achieved through systematic engineering and test discipline.</p>
     </div>
 
@@ -124,7 +123,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of Juan de la Cierva's C.30 autogyro in flight over Britain in the 1930s, showing its three-bladed rotor with individual blade articulation and the forward-mounted propeller driving the aircraft forward, with the distinctive autogyro configuration clearly visible" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/cierva-c30-autogyro-schematic.svg" alt="Original schematic illustration of an autogyro with a rotor disc and forward propeller (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Cierva's C.30 autogyro: the three-bladed rotor with individual blade articulation established the standard configuration for early helicopters.</p>
     </div>
 
@@ -201,7 +200,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Weir W6 helicopter during ground testing, showing its articulated rotor system and early British helicopter configuration, with engineers and mechanics visible working on the aircraft, demonstrating the practical engineering approach taken by British helicopter developers" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/weir-w6-helicopter-schematic.svg" alt="Original schematic illustration of an early helicopter configuration with a main rotor and tail rotor (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">British innovation: the Weir W6 demonstrated Britain's early contribution to helicopter development with articulated rotor systems.</p>
     </div>
 
@@ -302,8 +301,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Sikorsky Hoverfly operating from the deck of MV Daghestan during anti-submarine test flights, showing the helicopter hovering over the ship's deck with crew members visible, demonstrating early naval helicopter operations and the practical application of helicopter technology to maritime operations" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Naval helicopter operations: the Sikorsky Hoverfly demonstrated helicopter capabilities for maritime operations during anti-submarine test flights.</p>
+      <img src="/blog-images/naval-autogyro-deck-tests-schematic.svg" alt="Original schematic illustration of ship deck rotorcraft tests: a deck rectangle and a rotorcraft icon above it (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Naval helicopter operations: early shipboard tests and procedures demonstrated rotorcraft capabilities for maritime use.</p>
     </div>
 
     <h2 id="control-systems">Helicopter Control Systems: The Human-Machine Interface</h2>
@@ -666,9 +665,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 30,
   featuredImage: {
-    url: '/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg',
+    url: '/blog-images/sikorsky-vs300-helicopter.svg',
     alt: 'Helicopter Development Pioneers: From Autogyros to Modern Rotorcraft',
-    caption: 'The evolution of vertical flight: from Cierva\'s stability solutions to Sikorsky\'s practical helicopter.'
+    caption: 'Original illustration (schematic): VS-300 single-rotor layout motif (diagrammatic).'
   },
   category: 'Aviation History',
   tags: ["helicopter","development","pioneers","cierva","sikorsky","autogyro","rotorcraft"],
@@ -678,21 +677,21 @@ const post = {
       title: 'Sikorsky VS‑300: The Breakthrough',
       excerpt: 'How Sikorsky’s VS‑300 proved the single-rotor layout and tail rotor control for modern helicopters.',
       id: 'sikorsky-vs300-helicopter-breakthrough',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/sikorsky-vs300-helicopter.svg',
       readingTime: 6,
     },
     {
       title: 'Bristol Sycamore Development',
       excerpt: 'Britain’s first production helicopter and the engineering discipline that made it reliable.',
       id: 'bristol-sycamore-helicopter-development',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/bristol-sycamore-rescue-winch-schematic.svg',
       readingTime: 7,
     },
     {
       title: 'Rotorcraft: Military Applications',
       excerpt: 'Military roles, tactics, and logistics that shaped rotorcraft requirements post‑WWII.',
       id: 'rotorcraft-military-applications',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/rotorcraft-procedure-flow-schematic.svg',
       readingTime: 8,
     },
   ]
@@ -705,7 +704,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Helicopter Development Pioneers`,
     description: `Comprehensive analysis of helicopter development pioneers with expert historical research and technical details.`,
-    images: ['/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg'],
+    images: ['/blog-images/sikorsky-vs300-helicopter.svg'],
     type: 'article'
   },
   alternates: {
@@ -732,6 +731,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/helicopter-development-pioneers"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
