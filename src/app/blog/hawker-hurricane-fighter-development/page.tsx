@@ -21,7 +21,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/hawker-hurricane-battle-of-britain.jpg" alt="Insert image here: A black-and-white photograph of Hawker Hurricanes scrambling during the Battle of Britain, showing aircraft taking off from grass airfields with ground crew in attendance, demonstrating the Hurricane's operational readiness" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hawker-hurricane-battle-of-britain.jpg" alt="Hawker Hurricanes scrambling during the Battle of Britain (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Battle of Britain readiness: the Hurricane's forgiving handling and rugged structure sustained high availability.</p>
     </div>
 
@@ -50,7 +50,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/hurricane-development-workshop.jpg" alt="Insert image here: A black-and-white photograph showing Hurricane development and factory workshop practice, with workers assembling steel-tube fuselages and wing structures, demonstrating the Hurricane's manufacturing methods" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hurricane-development-workshop.jpg" alt="Hurricane development workshop and factory assembly work (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Design for the shop floor: jigs, access panels, and robust fittings reduced learning curves and repair times.</p>
     </div>
 
@@ -99,7 +99,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/hurricane-r4118-flight.jpg" alt="Insert image here: A color photograph of airworthy Hurricane R4118 in flight, showing the aircraft's distinctive silhouette and demonstrating the robust airframe design that enabled sustained operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hurricane-r4118-flight.jpg" alt="Airworthy Hawker Hurricane R4118 in flight (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">A proven airframe: simple systems and access made the Hurricane easier to keep flying day after day.</p>
     </div>
 
@@ -303,6 +303,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/hawker-hurricane-fighter-development"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
