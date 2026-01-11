@@ -140,7 +140,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'arado-ar234-jet-bomber',
       excerpt: 'Design, engines, operations, and legacy of the revolutionary German jet bomber that redefined late-war reconnaissance and strike.',
       date: 'August 14, 2025',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/arado-ar234-blitz-schematic.svg',
       tags: ['WWII Aviation', 'Arado Ar 234', 'Jet Bomber'],
       readTime: '26 min'
     }

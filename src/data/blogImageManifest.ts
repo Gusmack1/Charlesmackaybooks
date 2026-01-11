@@ -105,10 +105,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/helicopter-development-timeline.jpg', alt: 'Helicopter development timeline' }
   ],
   'arado-ar234-jet-bomber': [
-    { url: '/blog-images/arado-ar234-jet-bomber.jpg', alt: 'Arado Ar 234 jet bomber' },
-    { url: '/blog-images/me262-jet-fighter-historical.jpg', alt: 'Me 262 jet fighter context' },
-    { url: '/blog-images/fw190-d9-luftwaffe-1945.jpg', alt: 'Fw 190 D-9 late-war Luftwaffe fighter' },
-    { url: '/blog-images/do335-pfeil-experimental-fighter.jpg', alt: 'Dornier Do 335 Pfeil experimental fighter' }
+    { url: '/blog-images/arado-ar234-blitz-schematic.svg', alt: 'Arado Ar 234 Blitz motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): Ar 234 silhouette motif with twin nacelle blocks.' },
+    { url: '/blog-images/jumo-004-axial-turbojet-schematic.svg', alt: 'Jumo 004 axial-flow turbojet concept motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): axial-flow section motif from intake to exhaust.' },
+    { url: '/blog-images/german-jet-ecosystem-ar234-me262-schematic.svg', alt: 'Late-war German jet ecosystem role blocks (schematic, diagrammatic)', caption: 'Original illustration (schematic): reconnaissance and interceptor roles shown as blocks and arrows.' },
+    { url: '/blog-images/late-war-logistics-constraints-schematic.svg', alt: 'Late-war logistics constraints motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): fuel, engine life, and transport disruption icons.' }
   ],
   'albatros-dva-technical-legacy': [
     { url: '/blog-images/albatros-dva-wwi-german.jpg', alt: 'Albatros D.Va German fighter' },

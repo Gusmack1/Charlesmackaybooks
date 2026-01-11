@@ -27,8 +27,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/arado-ar234-jet-bomber.jpg" alt="Insert image here: A black-and-white photograph of the Arado Ar 234 Blitz jet bomber on the tarmac during World War II, showing its sleek streamlined design with high-mounted wings and twin Junkers Jumo 004 turbojet engines, demonstrating the world's first operational jet bomber" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Arado Ar 234 Blitz: sleek lines optimised for speed, altitude, and reconnaissance.</p>
+      <img src="/blog-images/arado-ar234-blitz-schematic.svg" alt="Original schematic illustration: Arado Ar 234 Blitz motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): Ar 234 Blitz motif representing high-speed reconnaissance and light bombing roles (diagrammatic).</p>
     </div>
 
     <h2 id="historical-background">Historical Background: Late-War German Jet Development</h2>
@@ -71,8 +71,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A detailed photograph or diagram showing the Junkers Jumo 004 axial-flow turbojet engine, demonstrating its axial compressor design and slim nacelle configuration that enabled the Ar 234's performance" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Jumo 004 axial compressor: reduced frontal area and improved nacelle aerodynamics enabled jet performance.</p>
+      <img src="/blog-images/jumo-004-axial-turbojet-schematic.svg" alt="Original schematic illustration: axial-flow turbojet section motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): axial-flow turbojet concept—intake, compressor stages, combustor, turbine, exhaust (diagrammatic).</p>
     </div>
 
     <h2 id="operations">Operations: Reconnaissance First, Bombing Second</h2>
@@ -90,8 +90,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing Me 262 and Ar 234 aircraft together, illustrating Germany's late-war jet ecosystem where reconnaissance from the Ar 234 complemented interceptor work by the Me 262" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Germany's late-war jet ecosystem: reconnaissance from the Ar 234 complemented interceptor work by the Me 262.</p>
+      <img src="/blog-images/german-jet-ecosystem-ar234-me262-schematic.svg" alt="Original schematic illustration: late-war German jet ecosystem motif with reconnaissance and interceptor roles (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): reconnaissance and interceptor role blocks within a late‑war jet ecosystem (diagrammatic).</p>
     </div>
 
     <h2 id="remagen-missions">Remagen Bridge: Critical Reconnaissance Operations</h2>
@@ -142,8 +142,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing late-war logistics and production pressures in 1945, demonstrating how fuel shortages, engine manufacture bottlenecks, and Allied disruption of transport nodes limited Ar 234 operations" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Late-war Germany: logistic constraints restricted jet operations more than tactics or airframe limits.</p>
+      <img src="/blog-images/late-war-logistics-constraints-schematic.svg" alt="Original schematic illustration: late-war logistics constraints motif (fuel, engines, transport disruption) (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): fuel, engine-life, and transport-node constraints motif (diagrammatic).</p>
     </div>
 
     <h2 id="engines-comparison">Engines: Jumo 004B versus BMW 003</h2>
@@ -183,8 +183,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A diagram or photograph showing reconnaissance workflow and planning context, demonstrating how Ar 234 crews briefed for fuel margins, escape headings, weather windows, and camera kit selection for different mission requirements" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Reconnaissance first: optics, workflow, and route planning defined most Ar 234 sorties.</p>
+      <img src="/blog-images/ar234-reconnaissance-workflow-schematic.svg" alt="Original schematic illustration: reconnaissance workflow motif with planning, sensors, and imagery output (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): planning → capture → imagery output workflow motif (diagrammatic).</p>
     </div>
 
     <h2 id="units-operations">Units, Sorties, and Reconnaissance Workflow</h2>
@@ -230,8 +230,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A photograph or diagram showing post-war evaluations of jet packaging and nacelle lessons learned from the Ar 234, demonstrating how its design influenced early Cold War reconnaissance jets and light bombers" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">From Blitz to Cold War jets: packaging and procedures mattered as much as airframe speed.</p>
+      <img src="/blog-images/postwar-jet-packaging-lessons-schematic.svg" alt="Original schematic illustration: post-war jet packaging lessons motif (nacelle, gear, sensors) (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): post‑war packaging lessons motif—nacelles, gear practicality, and sensor fields (diagrammatic).</p>
     </div>
 
     <h2 id="engineering-lessons">Engineering Lessons and Influence on Post-War Design</h2>
@@ -305,9 +305,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/arado-ar234-jet-bomber.jpg',
+    url: '/blog-images/arado-ar234-blitz-schematic.svg',
     alt: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition",
-    caption: "The world's first operational jet bomber."
+    caption: "Original illustration (schematic): Arado Ar 234 Blitz motif (diagrammatic)."
   },
   category: 'WWII Aviation',
   tags: [
@@ -324,7 +324,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition",
     description: 'A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, and its legacy.',
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/arado-ar234-blitz-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -351,6 +351,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/arado-ar234-jet-bomber"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

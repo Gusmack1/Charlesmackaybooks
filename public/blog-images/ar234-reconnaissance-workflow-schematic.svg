@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: reconnaissance workflow motif with planning, sensors, and imagery output (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .card { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.9; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="160" y="190" class="text small">Reconnaissance workflow — planning → capture → exploitation (original schematic)</text>
+  <text x="160" y="230" class="text tiny" opacity=".8">Diagrammatic flow blocks (not a photo; not to scale)</text>
+
+  <!-- Flow cards -->
+  <rect x="170" y="340" width="380" height="320" rx="22" class="card"/>
+  <rect x="610" y="340" width="380" height="320" rx="22" class="card"/>
+  <rect x="1050" y="340" width="380" height="320" rx="22" class="card"/>
+
+  <!-- Planning icon -->
+  <text x="210" y="395" class="text label">Planning</text>
+  <rect x="220" y="440" width="280" height="180" rx="18" class="line"/>
+  <path class="thin" d="M245 470 H475"/>
+  <path class="thin" d="M245 505 H475"/>
+  <path class="thin" d="M245 540 H475"/>
+  <path class="thin" d="M245 575 H475"/>
+  <!-- simple route line -->
+  <path class="line" d="M260 600 C320 560, 360 575, 420 540 C445 525, 460 520, 480 505"/>
+  <circle cx="260" cy="600" r="10" fill="#e5e7eb"/>
+  <circle cx="480" cy="505" r="10" fill="#e5e7eb"/>
+
+  <!-- Capture icon -->
+  <text x="650" y="395" class="text label">Capture</text>
+  <path class="line" d="M690 470 H910 C935 470 955 490 955 515 V585 C955 610 935 630 910 630 H690 C665 630 645 610 645 585 V515 C645 490 665 470 690 470 Z"/>
+  <circle cx="800" cy="550" r="52" class="line"/>
+  <circle cx="800" cy="550" r="26" class="thin"/>
+  <path class="thin" d="M740 470 L720 430"/>
+  <path class="thin" d="M860 470 L880 430"/>
+  <path class="muted" d="M800 430 V470"/>
+
+  <!-- Exploitation icon -->
+  <text x="1090" y="395" class="text label">Imagery output</text>
+  <rect x="1110" y="455" width="260" height="150" rx="18" class="line"/>
+  <path class="thin" d="M1130 485 H1350"/>
+  <path class="thin" d="M1130 515 H1350"/>
+  <path class="thin" d="M1130 545 H1270"/>
+  <!-- map/photo frame -->
+  <rect x="1125" y="620" width="230" height="70" rx="14" class="thin"/>
+  <path class="muted" d="M1140 675 L1190 635 L1230 665 L1260 645 L1340 685"/>
+
+  <!-- Arrows -->
+  <path class="line" d="M550 500 H610"/>
+  <path class="line" d="M590 482 L610 500 L590 518"/>
+
+  <path class="line" d="M990 500 H1050"/>
+  <path class="line" d="M1030 482 L1050 500 L1030 518"/>
+</svg>
+
