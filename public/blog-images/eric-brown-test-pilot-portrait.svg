@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original illustration of a test pilot silhouette with helmet and notes, labelled Captain Eric 'Winkle' Brown (schematic).">
+  <defs>
+    <linearGradient id="bg7" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#2a1b33"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg7)"/>
+
+  <!-- Pilot silhouette (generic, not a portrait photo) -->
+  <g fill="#e5e7eb" opacity="0.95">
+    <circle cx="380" cy="320" r="80" fill="#d1d5db"/>
+    <rect x="300" y="400" width="160" height="140" rx="28" fill="#cbd5e1"/>
+    <path d="M325 320 C345 280, 415 280, 435 320 C415 350, 345 350, 325 320 Z" fill="#111827" opacity="0.65"/>
+    <rect x="520" y="270" width="420" height="280" rx="20" fill="#0f172a" stroke="#475569" stroke-width="6" opacity="0.95"/>
+  </g>
+
+  <!-- Notes lines -->
+  <g stroke="#93c5fd" stroke-width="6" opacity="0.75" stroke-linecap="round">
+    <line x1="560" y1="320" x2="900" y2="320"/>
+    <line x1="560" y1="370" x2="880" y2="370"/>
+    <line x1="560" y1="420" x2="860" y2="420"/>
+    <line x1="560" y1="470" x2="840" y2="470"/>
+  </g>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Test pilot notes (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration used for the Eric Brown article header image</text>
+  </g>
+</svg>

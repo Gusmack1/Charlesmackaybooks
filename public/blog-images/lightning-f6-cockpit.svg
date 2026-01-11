@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of an aircraft cockpit instrument panel with simplified round dials (diagrammatic).">
+  <defs>
+    <linearGradient id="bg6" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg6)"/>
+
+  <!-- Panel -->
+  <rect x="170" y="190" width="860" height="320" rx="24" fill="#0f172a" stroke="#334155" stroke-width="6"/>
+
+  <!-- Dials -->
+  <g stroke="#e5e7eb" stroke-width="6" fill="none" opacity="0.95">
+    <circle cx="330" cy="310" r="70"/><circle cx="520" cy="310" r="70"/><circle cx="710" cy="310" r="70"/><circle cx="900" cy="310" r="70"/>
+  </g>
+  <g stroke="#93c5fd" stroke-width="6" stroke-linecap="round" opacity="0.8">
+    <line x1="330" y1="310" x2="365" y2="280"/>
+    <line x1="520" y1="310" x2="545" y2="340"/>
+    <line x1="710" y1="310" x2="740" y2="285"/>
+    <line x1="900" y1="310" x2="930" y2="330"/>
+  </g>
+
+  <!-- Simple labels -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#e5e7eb" opacity="0.9">
+    <text x="275" y="430" font-size="22">ALT</text>
+    <text x="470" y="430" font-size="22">SPD</text>
+    <text x="655" y="430" font-size="22">RPM</text>
+    <text x="850" y="430" font-size="22">FUEL</text>
+  </g>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Cockpit instrumentation (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: simplified instrument-panel layout (diagrammatic)</text>
+  </g>
+</svg>

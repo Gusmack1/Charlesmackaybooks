@@ -242,16 +242,16 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/hawker-hurricane-battle-of-britain.jpg',
-    alt: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain - Enhanced Edition',
-    caption: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain - Expert analysis by Charles E. MacKay'
+    url: '/blog-images/hawker-hurricane.svg',
+    alt: 'Original schematic illustration of a Hawker Hurricane in profile (not a photograph).',
+    caption: 'Original illustration (schematic): simplified Hurricane profile used as the article header image.'
   },
   category: 'Aviation History',
   tags: ['hawker', 'hurricane', 'fighter', 'development', 'aviation history'],
   relatedBooks: getBooksData(['british-aircraft-great-war', 'clydeside-aviation-vol2', 'beardmore-aviation', 'captain-eric-brown', 'aviation-manufacturing-wartime-production']),
   relatedPosts: [
     { id: 'supermarine-spitfire-development-history', title: 'Supermarine Spitfire Development History', excerpt: 'Comprehensive analysis of Spitfire development and evolution', image: '/blog-images/supermarine-spitfire-development.jpg', readingTime: 14 },
-    { id: 'test-pilot-biography-eric-brown', title: 'Test Pilot Perspectives: Eric Brown', excerpt: 'Insights into aircraft testing and pilot training', image: '/blog-images/eric-brown-official-portrait.jpg', readingTime: 12 },
+    { id: 'test-pilot-biography-eric-brown', title: 'Test Pilot Perspectives: Eric Brown', excerpt: 'Insights into aircraft testing and pilot training', image: '/blog-images/eric-brown-test-pilot-portrait.svg', readingTime: 12 },
     { id: 'supermarine-spitfire-development-evolution', title: 'Supermarine Spitfire: Development & Evolution', excerpt: 'Design pathway and operational roles', image: '/blog-images/supermarine-spitfire-development-evolution.jpg', readingTime: 16 }
   ],
   references: [

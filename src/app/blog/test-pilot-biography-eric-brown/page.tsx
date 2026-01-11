@@ -13,18 +13,14 @@ const post = {
     <p>Captain Eric "Winkle" Brown’s career places him alone in the annals of aviation testing. He flew more distinct aircraft types than any pilot on record, performed a record number of carrier landings, evaluated captured enemy aircraft at the end of the Second World War, and then bridged into the jet and early rotorcraft eras with the same blend of discipline and curiosity that made his reports foundational. The superlatives endure because they are anchored in method: Brown’s hallmark was rigorous observation, faithful adherence to procedure, and a willingness to translate risk into knowledge without romance or bravado.</p>
     
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Formal portrait of Captain Eric \"Winkle\" Brown in Royal Navy Fleet Air Arm uniform, ribbons visible, photographed mid‑career." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Discipline and precision: Brown’s reports are valued for candour and detail, not theatrics — a test pilot’s true currency.</p>
+      <img src="/blog-images/eric-brown-test-pilot-portrait.svg" alt="Original schematic illustration of a generic test pilot silhouette with note lines (not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original illustration (schematic): a generic “test pilot notes” motif used as a visual separator for this article.</p>
     </div>
-    
+
     <p>Brown's achievements extend far beyond mere numbers. He made the first jet landing on an aircraft carrier and evaluated an exceptional range of captured enemy aircraft, including the Messerschmitt Me 163 rocket fighter and Me 262 jet, as well as numerous piston types. His carrier landing record of 2,407 arrested landings — including trials in demanding conditions — demonstrates a standard of skill joined to method.</p>
 
     <p>From testing captured German jets to advancing helicopter operations aboard ships, Brown's career touched nearly every domain of flight in the mid‑twentieth century. His detailed reports and disciplined approach to experimental flying contributed measurably to aviation safety, carrier aviation doctrine, and the transition from piston to jet operations at sea.</p>
 
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A de Havilland Sea Vampire on short final to a Royal Navy carrier, hook down, spray kicked up from the wake, deck crew poised by the arrestor wires." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Transition to jets at sea: early carrier trials demanded new cues for energy management and approach control.</p>
-    </div>
 
     <h2 id="early-years">Early Years and Wartime Foundations</h2>
     <p>Brown’s wartime foundation combined operational flying with increasingly specialized test duties. Selected for evaluation work on enemy aircraft late in the Second World War, he moved from the comfortable rituals of familiar types into the blunt reality of incomplete manuals, uncertain maintenance, and unknown handling. It was here that Brown refined the habits that would define his career: incremental envelope exploration, scrupulous note‑taking, and a relentless focus on what could be measured rather than what could be assumed.</p>
@@ -40,21 +36,13 @@ const post = {
       this analysis presents the complete story of the world's most experienced test pilot and his extraordinary contributions to aviation.
     </p>
     
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Formal portrait of Captain Eric \"Winkle\" Brown in Royal Navy Fleet Air Arm uniform, ribbons visible, photographed mid‑career." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Discipline and precision: Brown's reports are valued for candour and detail, not theatrics — a test pilot's true currency.</p>
-    </div>
-    
+
     <p>Brown's achievements extend far beyond mere numbers. He made the first jet landing on an aircraft carrier and evaluated an exceptional range of captured enemy aircraft, including the Messerschmitt Me 163 rocket fighter and Me 262 jet, as well as numerous piston types. His carrier landing record of 2,407 arrested landings — including trials in demanding conditions — demonstrates a standard of skill joined to method.</p>
 
     <p>The book provides background information on the flying life of the world's premiere test pilot, from his escapades in pre-war Germany to flying the Me 163 Komet. This illustrated booklet is a mine of information, documenting Brown's remarkable career from its earliest foundations through his most challenging test flights. The comprehensive coverage ensures that Brown's achievements are properly understood within the context of his complete career.</p>
 
     <p>From testing captured German jets to advancing helicopter operations aboard ships, Brown's career touched nearly every domain of flight in the mid‑twentieth century. His detailed reports and disciplined approach to experimental flying contributed measurably to aviation safety, carrier aviation doctrine, and the transition from piston to jet operations at sea.</p>
 
-    <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A de Havilland Sea Vampire on short final to a Royal Navy carrier, hook down, spray kicked up from the wake, deck crew poised by the arrestor wires." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Transition to jets at sea: early carrier trials demanded new cues for energy management and approach control.</p>
-    </div>
 
     <h2 id="early-years">Early Years and Wartime Foundations</h2>
     <p>Brown's wartime foundation combined operational flying with increasingly specialized test duties. Selected for evaluation work on enemy aircraft late in the Second World War, he moved from the comfortable rituals of familiar types into the blunt reality of incomplete manuals, uncertain maintenance, and unknown handling. It was here that Brown refined the habits that would define his career: incremental envelope exploration, scrupulous note‑taking, and a relentless focus on what could be measured rather than what could be assumed.</p>
@@ -224,9 +212,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: 'Captain Eric Brown – Enhanced Edition',
-    caption: 'Carrier aviation, enemy aircraft evaluations, and the disciplined method of a master test pilot.'
+    url: '/blog-images/eric-brown-test-pilot-portrait.svg',
+    alt: 'Original schematic illustration of a test pilot silhouette with notes (not a photograph).',
+    caption: 'Original illustration (schematic): a generic “test pilot notes” motif used as the article header image.'
   },
   category: 'Test Pilot Biography',
   tags: ["eric","brown","test","pilot","carrier","aviation","flight","testing"],

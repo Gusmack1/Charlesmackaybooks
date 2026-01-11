@@ -340,9 +340,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: 'Sikorsky VS-300: The Helicopter Breakthrough - Enhanced Edition',
-    caption: 'Single main rotor, anti-torque tail rotor — the modern helicopter grammar.'
+    url: '/blog-images/sikorsky-vs300-helicopter.svg',
+    alt: 'Original schematic illustration of an early single-main-rotor helicopter with tail rotor (Sikorsky VS-300 configuration; not a photograph).',
+    caption: 'Original illustration (schematic): a simplified VS-300-style layout showing the main rotor mast and tail rotor concept.'
   },
   category: 'Aviation History',
   tags: ["sikorsky","vs300","helicopter","breakthrough","igor sikorsky","rotorcraft"],

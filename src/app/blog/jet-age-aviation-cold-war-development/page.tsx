@@ -362,9 +362,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: 'Jet Age Aviation: Cold War Development - Enhanced Edition',
-    caption: 'From Meteor to Lightning: sensors, engines, and doctrine defined Cold War air power.'
+    url: '/blog-images/lightning-f6-supersonic.svg',
+    alt: 'Original schematic illustration of a supersonic flight concept with a Lightning silhouette and simplified shock-line motif (not a photograph).',
+    caption: 'Original illustration (schematic): Lightning silhouette plus a conceptual “supersonic” line motif used as the article header image.'
   },
   category: 'Aviation History',
   tags: ["jet","age","aviation","cold","war","development","fighter"],

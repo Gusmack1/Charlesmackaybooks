@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of an early single-main-rotor helicopter with tail rotor, labelled Sikorsky VS-300 (schematic).">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#1b2550"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+
+  <!-- Ground line -->
+  <line x1="0" y1="470" x2="1200" y2="470" stroke="#23314f" stroke-width="6"/>
+
+  <!-- Helicopter schematic -->
+  <g stroke="#e5e7eb" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.95" fill="none">
+    <!-- Mast -->
+    <line x1="520" y1="250" x2="520" y2="330"/>
+    <!-- Main rotor -->
+    <line x1="360" y1="250" x2="680" y2="250"/>
+    <line x1="405" y1="210" x2="635" y2="290" opacity="0.8"/>
+    <line x1="405" y1="290" x2="635" y2="210" opacity="0.8"/>
+
+    <!-- Simple airframe -->
+    <path d="M430 360 C470 340, 560 340, 610 360" />
+    <path d="M450 360 L450 420" />
+    <path d="M590 360 L590 420" />
+    <!-- Tail boom -->
+    <line x1="610" y1="360" x2="860" y2="360"/>
+    <!-- Tail rotor -->
+    <line x1="880" y1="345" x2="880" y2="395"/>
+    <line x1="860" y1="370" x2="900" y2="370"/>
+    <!-- Skids -->
+    <line x1="420" y1="430" x2="620" y2="430"/>
+    <line x1="450" y1="450" x2="590" y2="450" opacity="0.8"/>
+  </g>
+
+  <!-- Label text -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f3f4f6">
+    <text x="70" y="92" font-size="52" font-weight="800">Sikorsky VS-300 (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: single main rotor + tail rotor configuration (diagrammatic)</text>
+  </g>
+</svg>

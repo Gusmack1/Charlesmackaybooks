@@ -102,7 +102,7 @@ export default function HeroSection() {
                 </div>
                 <div className="relative overflow-hidden rounded-lg shadow-lg">
                   <Image
-                    src="/blog-images/eric-brown-official-portrait.jpg"
+                    src="/blog-images/eric-brown-test-pilot-portrait.svg"
                     alt="Test pilot Eric Brown"
                     width={250}
                     height={160}

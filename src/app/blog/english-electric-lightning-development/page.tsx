@@ -18,8 +18,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/english-electric-lightning-f6.jpg" alt="English Electric Lightning F.6 on climb‑out, showing distinctive ventral tank and extended fin" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Lightning F.6 on climb‑out: The definitive RAF mark with ventral tank, extended fin, and cambered leading edge — a compact airframe optimized for time‑to‑height performance.</p>
+      <img src="/blog-images/english-electric-lightning-f6.svg" alt="Original schematic illustration of an English Electric Lightning F.6 in profile (not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): a simplified profile silhouette labelled “Lightning F.6”.</p>
     </div>
 
     <h2 id="historical-context">Historical Context: The Cold War Interceptor Challenge</h2>
@@ -45,8 +45,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/lightning-f6-supersonic-flight.jpg" alt="Lightning F.6 in supersonic flight, showing shock wave formation and clean aerodynamic lines" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Supersonic performance: The Lightning's clean configuration and powerful Avon engines enabled Mach 2+ capability, essential for intercepting high‑speed threats.</p>
+      <img src="/blog-images/lightning-f6-supersonic-flight.svg" alt="Original schematic illustration of a Lightning in flight with a motion-line motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): a profile silhouette with motion lines to indicate “in flight”.</p>
     </div>
 
     <h2 id="configuration-innovation">Configuration Innovation: The Stacked‑Engine Solution</h2>
@@ -83,8 +83,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/lightning-f6-cockpit.jpg" alt="Lightning F.6 cockpit showing AI.23 radar display and comprehensive instrument panel" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Cockpit integration: The AI.23 radar display and comprehensive instrument panel enabled pilots to conduct all‑weather interceptions with precision and confidence.</p>
+      <img src="/blog-images/lightning-f6-cockpit.svg" alt="Original schematic illustration of a simplified cockpit instrument panel (diagrammatic, not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): simplified instrument dials and labels to represent cockpit instrumentation.</p>
     </div>
 
     <h2 id="operational-doctrine">Operational Doctrine: QRA and Interception Tactics</h2>
@@ -262,9 +262,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 30,
   featuredImage: {
-    url: '/blog-images/english-electric-lightning-f6.jpg',
-    alt: 'English Electric Lightning: Britain\'s Supersonic Interceptor',
-    caption: 'The definitive Lightning F.6: Britain\'s revolutionary point‑defence interceptor that defined supersonic air defence for a generation.'
+    url: '/blog-images/english-electric-lightning-f6.svg',
+    alt: 'Original schematic illustration of an English Electric Lightning F.6 in profile (not a photograph).',
+    caption: 'Original illustration (schematic): a simplified Lightning F.6 profile used as the article header image.'
   },
   category: 'Aviation History',
   tags: ["english","electric","lightning","development","supersonic","interceptor","raf","cold-war"],
@@ -284,7 +284,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `English Electric Lightning Development`,
     description: `Comprehensive analysis of english electric lightning development with expert historical research and technical details.`,
-    images: ['/blog-images/english-electric-lightning-f6.jpg'],
+    images: ['/blog-images/english-electric-lightning-f6.svg'],
     type: 'article'
   },
   alternates: {

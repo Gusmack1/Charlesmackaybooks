@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a single-seat WWII fighter aircraft in profile, labelled Hawker Hurricane (schematic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#142f1e"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="470" width="1200" height="160" fill="url(#ground)"/>
+
+  <!-- Stylized fighter silhouette (not a photo) -->
+  <g fill="#d1d5db" opacity="0.95">
+    <!-- Fuselage -->
+    <path d="M240 320
+             C330 295, 450 290, 560 300
+             C660 308, 740 310, 860 306
+             C905 305, 930 310, 960 320
+             C930 334, 905 340, 860 340
+             C740 340, 660 338, 560 350
+             C450 362, 330 357, 240 330
+             Z"/>
+    <!-- Nose / spinner -->
+    <circle cx="230" cy="325" r="28" fill="#e5e7eb"/>
+    <circle cx="230" cy="325" r="12" fill="#111827" opacity="0.65"/>
+    <!-- Cockpit canopy -->
+    <path d="M455 303 C485 282, 540 282, 575 305 L565 330 C530 345, 485 345, 455 330 Z" fill="#9ca3af"/>
+    <!-- Tail -->
+    <path d="M920 300 L980 270 L990 288 L955 330 L920 340 Z" fill="#cbd5e1"/>
+    <!-- Wing -->
+    <path d="M470 340 L640 340 L770 410 L520 410 Z" fill="#cbd5e1"/>
+    <!-- Tailplane -->
+    <path d="M845 335 L920 335 L960 365 L860 365 Z" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f3f4f6">
+    <text x="70" y="92" font-size="52" font-weight="800">Hawker Hurricane (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration used as an article header image (not a photograph)</text>
+  </g>
+</svg>

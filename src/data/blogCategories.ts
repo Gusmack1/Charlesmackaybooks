@@ -28,7 +28,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'clydeside-aviation-revolution',
       excerpt: 'How Glasgow\'s mighty shipyards transformed into aviation powerhouses during two world wars.',
       date: 'January 16, 2024',
-      image: '/blog-images/clydeside-aviation-dalmuir.jpg',
+      image: '/blog-images/clydeside-aviation-dalmuir.svg',
       tags: ['Scottish Aviation', 'Industrial History', 'Clydeside', 'WWII'],
       readTime: '10 min'
     },
@@ -122,7 +122,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'hawker-hurricane-fighter-development',
       excerpt: 'The workhorse fighter that shot down more German aircraft than any other during the Battle of Britain.',
       date: 'January 25, 2024',
-      image: '/blog-images/hawker-hurricane.jpg',
+      image: '/blog-images/hawker-hurricane.svg',
       tags: ['WWII Aviation', 'Hurricane', 'Battle of Britain', 'Fighter Aircraft'],
       readTime: '13 min'
     },
@@ -180,7 +180,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'english-electric-lightning-development',
       excerpt: 'The extraordinary development of Britain\'s first supersonic fighter that could climb to 60,000 feet in under three minutes.',
       date: 'January 29, 2025',
-      image: '/blog-images/english-electric-lightning-f6.jpg',
+      image: '/blog-images/english-electric-lightning-f6.svg',
       tags: ['Jet Age', 'Lightning', 'Supersonic Fighter', 'Cold War'],
       readTime: '12 min'
     },
@@ -198,7 +198,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'jet-age-aviation-cold-war-development',
       excerpt: 'How the Cold War drove rapid jet development from primitive jets to supersonic fighters.',
       date: 'January 25, 2024',
-      image: '/blog-images/lightning-f6-supersonic.jpg',
+      image: '/blog-images/lightning-f6-supersonic.svg',
       tags: ['Jet Age', 'Cold War', 'Supersonic Flight', 'Fighter Development'],
       readTime: '17 min'
     },
@@ -238,7 +238,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'test-pilot-biography-eric-brown',
       excerpt: 'The extraordinary life of the test pilot who flew 487 different aircraft types.',
       date: 'December 26, 2024',
-      image: '/blog-images/eric-brown-official-portrait.jpg',
+      image: '/blog-images/eric-brown-test-pilot-portrait.svg',
       tags: ['Aviation Biography', 'Test Pilots', 'Eric Brown', 'Aircraft Testing'],
       readTime: '18 min'
     },
@@ -267,7 +267,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'sikorsky-vs300-helicopter-breakthrough',
       excerpt: 'The complete story of Igor Sikorsky\'s VS-300 - the helicopter that proved practical vertical flight was possible.',
       date: 'January 29, 2025',
-      image: '/blog-images/sikorsky-vs300-helicopter.jpg',
+      image: '/blog-images/sikorsky-vs300-helicopter.svg',
       tags: ['Helicopter History', 'Sikorsky VS-300', 'Igor Sikorsky', 'Vertical Flight'],
       readTime: '11 min'
     },

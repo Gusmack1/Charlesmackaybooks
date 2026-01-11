@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a riverfront industrial skyline with a shipyard crane and factory buildings.">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f2748"/>
+    </linearGradient>
+    <linearGradient id="river" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0a223d"/>
+      <stop offset="1" stop-color="#061726"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#sky)"/>
+
+  <!-- River -->
+  <rect x="0" y="420" width="1200" height="210" fill="url(#river)"/>
+  <path d="M0 470 C160 450, 280 500, 440 480 C600 460, 740 510, 920 490 C1040 476, 1120 500, 1200 488"
+        fill="none" stroke="#1f5a8a" stroke-width="4" opacity="0.55"/>
+
+  <!-- Ground / quay -->
+  <rect x="0" y="385" width="1200" height="55" fill="#0b0f16"/>
+
+  <!-- Simplified factory blocks -->
+  <g fill="#121826" stroke="#2a3954" stroke-width="3">
+    <rect x="90" y="260" width="260" height="140" rx="6"/>
+    <rect x="380" y="235" width="220" height="165" rx="6"/>
+    <rect x="630" y="255" width="300" height="145" rx="6"/>
+  </g>
+
+  <!-- Windows -->
+  <g fill="#89b4ff" opacity="0.35">
+    <rect x="120" y="290" width="26" height="18"/><rect x="160" y="290" width="26" height="18"/><rect x="200" y="290" width="26" height="18"/><rect x="240" y="290" width="26" height="18"/>
+    <rect x="120" y="320" width="26" height="18"/><rect x="160" y="320" width="26" height="18"/><rect x="200" y="320" width="26" height="18"/><rect x="240" y="320" width="26" height="18"/>
+    <rect x="410" y="270" width="26" height="18"/><rect x="450" y="270" width="26" height="18"/><rect x="490" y="270" width="26" height="18"/>
+    <rect x="410" y="300" width="26" height="18"/><rect x="450" y="300" width="26" height="18"/><rect x="490" y="300" width="26" height="18"/>
+  </g>
+
+  <!-- Shipyard crane (schematic) -->
+  <g stroke="#d7e6ff" stroke-width="8" stroke-linecap="round" opacity="0.9">
+    <path d="M980 390 L980 210"/>
+    <path d="M980 225 L1110 275"/>
+    <path d="M980 250 L900 290"/>
+    <path d="M1110 275 L1110 360"/>
+  </g>
+
+  <g fill="#e7f0ff" opacity="0.9">
+    <rect x="970" y="390" width="20" height="18"/>
+    <rect x="1100" y="360" width="20" height="18"/>
+  </g>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#e9f2ff">
+    <text x="70" y="90" font-size="54" font-weight="700">Clydeside Aviation (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: riverfront industry, shipyard crane, and factory blocks</text>
+  </g>
+</svg>

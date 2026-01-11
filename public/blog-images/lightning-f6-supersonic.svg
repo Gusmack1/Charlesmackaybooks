@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a supersonic flight concept with a Lightning silhouette and simplified shock-cone lines.">
+  <defs>
+    <linearGradient id="bg4" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#081425"/>
+      <stop offset="1" stop-color="#102a44"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+
+  <!-- Stylized shock lines (conceptual) -->
+  <g stroke="#93c5fd" stroke-width="4" opacity="0.55" fill="none">
+    <path d="M160 300 L1040 220" />
+    <path d="M160 330 L1040 250" />
+    <path d="M160 360 L1040 280" />
+  </g>
+
+  <!-- Small Lightning silhouette -->
+  <g fill="#e5e7eb" opacity="0.95">
+    <path d="M260 360
+             C370 336, 500 332, 610 336
+             C710 340, 780 346, 890 348
+             C930 350, 950 356, 975 366
+             C950 376, 930 382, 890 384
+             C780 386, 710 392, 610 398
+             C500 406, 370 400, 260 374
+             Z"/>
+    <path d="M790 325 L820 286 L838 296 L820 334 Z" fill="#cbd5e1"/>
+    <path d="M500 380 L620 380 L700 440 L500 440 Z" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Supersonic flight (concept schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: Lightning silhouette with simplified “shock line” motif</text>
+  </g>
+</svg>

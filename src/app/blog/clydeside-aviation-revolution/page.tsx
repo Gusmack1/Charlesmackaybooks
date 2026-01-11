@@ -278,9 +278,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
-    alt: "Clydeside Aviation: Scotland's Industrial Flying Revolution - Enhanced Edition",
-    caption: "Heavy industry to air power: Scotland's Clydeside aviation transformation."
+    url: '/blog-images/clydeside-aviation-dalmuir.svg',
+    alt: 'Original schematic illustration of a riverfront industrial skyline with a shipyard crane and factory buildings (not a photograph).',
+    caption: 'Original illustration (schematic): a generic Clydeside industrial riverfront used as the article header image.'
   },
   category: 'Scottish Aviation',
   tags: ["clydeside","scottish","aviation","industrial","revolution","manufacturing"],
