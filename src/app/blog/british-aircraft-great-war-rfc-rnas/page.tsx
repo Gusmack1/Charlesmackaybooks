@@ -274,7 +274,7 @@ const post = {
   relatedPosts: [
     { id: 'bristol-fighter-f2b-brisfit', title: 'Bristol Fighter F2B: The Brisfit\'s Combat Legacy', excerpt: 'The two-seat fighter that redefined roles and tactics.', image: '/blog-images/bristol-fighter-f2b-flying.jpg', readingTime: 14 },
     { id: 'sopwith-camel-wwi-fighter', title: 'Sopwith Camel: WWI Fighter', excerpt: 'Strengths, pitfalls, and tactics of the legendary fighter.', image: '/blog-images/sopwith-camel-historical-1918.jpg', readingTime: 12 },
-    { id: 'german-aircraft-great-war-development', title: 'German Aircraft Great War Development', excerpt: 'Comparative analysis of German aviation development.', image: '/blog-images/default-generic.svg', readingTime: 14 }
+    { id: 'german-aircraft-great-war-development', title: 'German Aircraft Great War Development', excerpt: 'Comparative analysis of German aviation development.', image: '/blog-images/albatros-dva-in-flight-schematic.svg', readingTime: 14 }
   ],
   references: [
     { title: 'RAF Museum – Aircraft of the First World War', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/', source: 'Royal Air Force Museum' },
@@ -317,6 +317,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/british-aircraft-great-war-rfc-rnas"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
