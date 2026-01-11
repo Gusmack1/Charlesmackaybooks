@@ -142,10 +142,12 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/sr71-blackbird-spy-plane.jpg', alt: 'SR-71 Blackbird strategic reconnaissance' }
   ],
   'korean-war-air-combat': [
-    { url: '/blog-images/korean-war-aviation.jpg', alt: 'Korean War air operations' },
-    { url: '/blog-images/f86-sabre-korean-war-flight-line.jpg', alt: 'F-86 Sabres on flight line' },
-    { url: '/blog-images/mig15-korean-war-fighter.jpg', alt: 'MiG-15 Korean War fighter' },
-    { url: '/blog-images/rcaf-sabre-formation-golden-hawks.jpg', alt: 'RCAF Golden Hawks Sabres' }
+    { url: '/blog-images/korean-war-air-combat-featured-schematic.svg', alt: 'MiG Alley jet combat motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): intercept geometry and swept-wing silhouettes motif.' },
+    { url: '/blog-images/f86-sabre-banking-mig-alley-schematic.svg', alt: 'F-86 banking motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): banking silhouette over terrain bands.' },
+    { url: '/blog-images/mig15-takeoff-runway-schematic.svg', alt: 'MiG-15 takeoff motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): runway departure and intake-nose motif.' },
+    { url: '/blog-images/radar-assisted-gunsight-schematic.svg', alt: 'Radar-assisted gunsight motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): reticle, pipper, and target silhouette motif.' },
+    { url: '/blog-images/gci-radar-plotting-room-schematic.svg', alt: 'GCI radar plotting motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): sector board tracks and a vector cue motif.' },
+    { url: '/blog-images/f86-sabre-korean-war-flightline-schematic.svg', alt: 'Forward-base flight line motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): serviceability rhythm and support equipment motif.' }
   ],
   'luftwaffe-1945-final-year': [
     { url: '/blog-images/fw190-d9-luftwaffe-1945.jpg', alt: 'Focke-Wulf Fw 190 D-9 late war' },

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: F-86 banking over terrain motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Terrain bands (diagrammatic) -->
+  <path class="muted" d="M120 720 C260 660, 380 690, 520 640 C680 585, 820 620, 980 575 C1140 530, 1280 560, 1480 500"/>
+  <path class="muted" d="M120 780 C300 720, 420 760, 600 705 C780 650, 930 700, 1100 650 C1240 610, 1360 630, 1480 600"/>
+
+  <!-- Banking jet silhouette (diagrammatic) -->
+  <path class="fill" d="M520 520
+    C620 470, 760 448, 900 450
+    C1030 452, 1140 480, 1230 525
+    C1260 540, 1260 565, 1230 580
+    C1110 640, 980 674, 840 680
+    C710 686, 600 662, 540 630
+    C500 610, 480 590, 470 565
+    C458 535, 470 545, 520 520 Z"/>
+  <!-- Wing sweep hint -->
+  <path class="line" d="M820 560 L660 650 L700 680 L860 592 Z"/>
+  <path class="line" d="M900 555 L1060 645 L1020 678 L860 590 Z"/>
+  <!-- Intake ring -->
+  <circle cx="575" cy="565" r="44" class="line"/>
+  <circle cx="575" cy="565" r="26" class="thin"/>
+
+  <!-- Title -->
+  <text x="140" y="160" class="text small">F‑86 Sabre — banking silhouette motif (original schematic)</text>
+  <text x="140" y="200" class="text tiny" opacity=".8">Diagrammatic: swept wing + intake ring (not a photo; not to scale)</text>
+</svg>
+

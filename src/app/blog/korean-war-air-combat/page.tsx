@@ -18,16 +18,16 @@ const post = {
       The book <a href="/books/sabres-from-north" class="underline font-medium">Sabres from the North</a> describes the evolution and deployment of the Canadair Sabre in Royal Air Force, Royal Canadian Air Force and in NATO service-includes the West German Air Force. RAF pilots flying the F-86 Sabre in operations over Korea are also illustrated. The MIG-15 is included as well as Soviet jet engine development. This comprehensive 210-page A5 work with over 300 pictures and drawings provides detailed coverage of Sabre operations during the Korean War, including RAF participation and the broader context of NATO operations.
     </p>
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: F‑86 Sabre in flight banking over mountainous terrain; swept wings and leading‑edge slats visible." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">F‑86 Sabre: swept‑wing transonic fighter refined for MiG Alley’s demanding envelope.</p>
+      <img src="/blog-images/f86-sabre-banking-mig-alley-schematic.svg" alt="Original schematic illustration: F-86 banking over terrain motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original illustration (schematic): F‑86 banking motif representing energy fighting and transonic handling (diagrammatic).</p>
     </div>
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: MiG‑15 taking off from a concrete runway; high tailplane and intake nose prominent." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">MiG‑15: light, powerful, and formidable at altitude, armed with heavy cannon.</p>
+      <img src="/blog-images/mig15-takeoff-runway-schematic.svg" alt="Original schematic illustration: MiG-15 takeoff runway motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original illustration (schematic): MiG‑15 runway departure motif—speed, climb, and heavy-cannon interception role (diagrammatic).</p>
     </div>
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Gunsight view depiction — radar‑assisted sight reticle over a distant MiG silhouette; altimeter and Mach indications visible." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Gunnery in the transonic regime: brief, disciplined bursts with radar‑assisted ranging increased hit probability.</p>
+      <img src="/blog-images/radar-assisted-gunsight-schematic.svg" alt="Original schematic illustration: radar-assisted gunsight reticle motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original illustration (schematic): radar‑assisted ranging and a computed sight solution improved brief firing windows (diagrammatic).</p>
     </div>
     
     <p>This aerial confrontation between East and West introduced new tactical doctrines, technologies, and pilot training methods that would define air combat for the next half-century. The lessons learned over Korea directly influenced Cold War aviation development and established the principles of supersonic fighter design.</p>
@@ -82,8 +82,8 @@ const post = {
     <p>Mission cards balanced fuel, altitude, and time on station against weather and GCI coverage. Pilots briefed minimum and joker fuels, divert fields, and weather alternates before engine start. En‑route climbs targeted Mach and altitude bands that preserved margin for the planned maneuver set; descents home were flown to oxygen and fuel discipline, not impulse. This planning culture made high‑tempo operations survivable in poor light and winter weather.</p>
 
     <div class="my-12">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Radar plotting room with controllers tracing intercept geometries; grease pencil annotations on a sector board." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-3 text-center italic">Vectoring advantage: GCI sequenced merges and aborts, conserving fuel and oxygen margins for decisive windows.</p>
+      <img src="/blog-images/gci-radar-plotting-room-schematic.svg" alt="Original schematic illustration: ground-controlled intercept radar plotting motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-3 text-center italic">Original illustration (schematic): GCI vectoring—timed intercepts and aborts conserved fuel/oxygen for decisive windows (diagrammatic).</p>
     </div>
 
     <h2 id="engine-cycles">Engine Cycles and Maintenance Detail</h2>
@@ -203,9 +203,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 18,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/korean-war-air-combat-featured-schematic.svg',
     alt: 'Korean War Air Combat — Enhanced Edition',
-    caption: 'MiG Alley, F‑86 vs MiG‑15, tactics, logistics, and legacy.'
+    caption: 'Original illustration (schematic): MiG Alley jet combat motif (diagrammatic).'
   },
   category: 'Aviation History',
   tags: ["korean","war","air","combat"],
@@ -215,21 +215,21 @@ const post = {
       id: 'f86-sabre-cold-war-fighter',
       title: 'F‑86 Sabre: Cold War Fighter',
       excerpt: 'Cold War service, variants, and transonic handling lessons from the Sabre line.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/f86-sabre-formation-korea-schematic.svg',
       readingTime: 6,
     },
     {
       id: 'jet-age-aviation-cold-war-development',
       title: 'Jet Age Aviation: Cold War Development',
       excerpt: 'How early jet combat over Korea drove Cold War fighter design and doctrine.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/lightning-f6-supersonic.svg',
       readingTime: 7,
     },
     {
       id: 'me262-jet-fighter-revolution',
       title: 'Me 262: Jet Fighter Revolution',
       excerpt: 'German WWII jet lessons that foreshadowed MiG Alley’s jet-versus-jet battles.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/me262-jet-fighter-historical.jpg',
       readingTime: 6,
     },
   ]
@@ -246,7 +246,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Korean War Air Combat`,
     description: `Comprehensive analysis of korean war air combat with expert historical research and technical details.`,
-    images: ['/blog-images/korean-war-air-combat-featured.jpg'],
+    images: ['/blog-images/korean-war-air-combat-featured-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -273,6 +273,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/korean-war-air-combat"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

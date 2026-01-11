@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: MiG-15 takeoff runway motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Runway -->
+  <path class="fill" d="M500 900 L760 360 H840 L1100 900 Z"/>
+  <path class="thin" d="M800 860 V520" stroke-dasharray="14 18"/>
+  <path class="muted" d="M560 900 L790 360"/>
+  <path class="muted" d="M1040 900 L810 360"/>
+
+  <!-- MiG-15 motif (diagrammatic) -->
+  <path class="fill" d="M520 500 C600 470, 720 462, 830 480 C920 495, 1010 530, 1070 565 C1085 574, 1085 590, 1072 600 C1005 650, 915 684, 805 695 C700 706, 610 690, 550 660 C520 645, 502 625, 496 605 C486 572, 495 540, 520 500 Z"/>
+  <!-- Nose intake -->
+  <circle cx="595" cy="575" r="42" class="line"/>
+  <circle cx="595" cy="575" r="24" class="thin"/>
+  <!-- Swept wing -->
+  <path class="line" d="M805 585 L680 675 L720 705 L850 610 Z"/>
+  <path class="line" d="M875 575 L1010 655 L980 695 L850 608 Z"/>
+  <!-- High tailplane hint -->
+  <path class="line" d="M950 520 L1045 470 L1065 492 L968 548 Z"/>
+
+  <!-- Title -->
+  <text x="140" y="160" class="text small">MiG‑15 — runway departure motif (original schematic)</text>
+  <text x="140" y="200" class="text tiny" opacity=".8">Diagrammatic: intake nose + high tailplane cue (not a photo; not to scale)</text>
+</svg>
+

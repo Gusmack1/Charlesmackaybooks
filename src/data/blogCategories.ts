@@ -151,7 +151,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'korean-war-air-combat',
       excerpt: 'F-86 Sabre vs MiG-15 battles over MiG Alley that established modern jet warfare principles and launched the supersonic age.',
       date: 'January 29, 2025',
-      image: '/blog-images/korean-war-aviation.jpg',
+      image: '/blog-images/korean-war-air-combat-featured-schematic.svg',
       tags: ['Korean War', 'F-86 Sabre', 'MiG-15', 'Jet Combat'],
       readTime: '11 min'
     },
