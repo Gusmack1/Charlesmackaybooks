@@ -27,7 +27,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Me 262 A-1a at a wooded dispersal revetment in winter, ground crew servicing a Junkers Jumo 004 turbojet engine under canvas cover, demonstrating the operational challenges of late-war jet operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/me262-winter-dispersal-maintenance-schematic.svg" alt="Original schematic illustration: Me 262 winter dispersal maintenance motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Me 262 at dispersal: speed in the air, vulnerability on the ground — fuel, spares, and runways dictated availability.</p>
     </div>
 
@@ -85,7 +85,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A detailed photograph showing the open Me 262 nose armament bay with four MK 108 cannon, ammunition drums, and feed chutes clearly visible, demonstrating the concentrated firepower design" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/mk108-armament-bay-schematic.svg" alt="Original schematic illustration: four-cannon armament bay motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Concentrated fire: four MK 108 cannon optimized for seconds, not minutes, of gunnery.</p>
     </div>
 
@@ -163,7 +163,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing woodland dispersal hardstand with Me 262 aircraft, mechanics working under camouflage netting, fuel bowser nearby, demonstrating the operational challenges of late-war jet operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/fuel-logistics-forest-strip-schematic.svg" alt="Original schematic illustration: fuel logistics at forest strip motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Dispersal preserved aircraft; it also lengthened maintenance chains and turnaround time.</p>
     </div>
 
@@ -217,7 +217,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A detailed photograph or diagram showing post-war test report spread on Me 262 airframe and Jumo 004 engine with annotated diagrams, demonstrating how Allied engineers studied German jet technology after the war" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/postwar-me262-study-schematic.svg" alt="Original schematic illustration: post-war study of Me 262 reports motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Measured influence: post‑war studies translated Me 262 lessons into early Cold War design practice.</p>
     </div>
 
@@ -279,7 +279,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/me262-jet-fighter-historical.jpg',
     alt: 'Me 262: The Jet Fighter Revolution - Enhanced Edition',
     caption: 'The first operational jet fighter — speed, energy, and systems integration writ large.'
   },
@@ -296,7 +296,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Messerschmitt Me 262: The World's First Operational Jet Fighter - Enhanced Edition`,
     description: `A comprehensive, research-backed account of the world's first operational jet fighter: its revolutionary design, Jumo 004 engines, operational deployment, and legacy.`,
-    images: ['/blog-images/me262-jet-fighter-revolution-featured.jpg'],
+    images: ['/blog-images/me262-jet-fighter-historical.jpg'],
     type: 'article'
   },
   alternates: {
@@ -323,6 +323,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/me262-jet-fighter-revolution"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

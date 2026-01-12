@@ -164,6 +164,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
   ],
   'me262-jet-fighter-revolution': [
     { url: '/blog-images/me262-jet-fighter-historical.jpg', alt: 'Me 262 historical photo' },
+    { url: '/blog-images/me262-winter-dispersal-maintenance-schematic.svg', alt: 'Me 262 dispersal maintenance motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): winter dispersal revetment and engine inspection motif.' },
+    { url: '/blog-images/mk108-armament-bay-schematic.svg', alt: 'Armament bay motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): concentrated firepower motif for four-cannon installation.' },
+    { url: '/blog-images/fuel-logistics-forest-strip-schematic.svg', alt: 'Fuel logistics forest strip motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): bowser/drums/hose motif representing dispersal sustainment.' },
+    { url: '/blog-images/postwar-me262-study-schematic.svg', alt: 'Post-war study reports motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): test report stack and annotated diagrams motif.' },
     { url: '/blog-images/me262-luftwaffe-historical.jpg', alt: 'Luftwaffe Me 262 on airfield' },
     { url: '/blog-images/me262-luftwaffe.jpg', alt: 'Me 262 jet fighter on display' },
     { url: '/blog-images/victor-bomber-formation.jpg', alt: 'Cold War jet context formation' }
