@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Inter-war Training Pipeline (Schematic)</title>
+  <desc id="desc">Diagrammatic flow diagram showing clubs, air schools, auxiliary units, and rearmament transition with arrows representing training pipelines and skills transfer.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .box{fill:#111c2d;stroke:#334155;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .flow{fill:none;stroke:#34d399;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Inter-war training pipelines (schematic)</text>
+  <text class="small" x="90" y="152">Clubs → air schools → auxiliary units → rearmament conversion (diagrammatic)</text>
+
+  <!-- nodes -->
+  <g transform="translate(130,210)">
+    <rect class="box" x="0" y="0" width="240" height="120" rx="14"/>
+    <text class="label" x="26" y="55">Flying clubs</text>
+    <text class="small" x="26" y="88">currency + culture</text>
+
+    <rect class="box" x="320" y="0" width="240" height="120" rx="14"/>
+    <text class="label" x="346" y="55">Air schools</text>
+    <text class="small" x="346" y="88">procedures + logs</text>
+
+    <rect class="box" x="640" y="0" width="300" height="120" rx="14"/>
+    <text class="label" x="666" y="55">Auxiliary units</text>
+    <text class="small" x="666" y="88">service discipline</text>
+
+    <rect class="box" x="320" y="190" width="300" height="120" rx="14"/>
+    <text class="label" x="346" y="245">Ground crews</text>
+    <text class="small" x="346" y="278">inspection routines</text>
+
+    <rect class="box" x="700" y="190" width="240" height="120" rx="14"/>
+    <text class="label" x="726" y="245">Rearmament</text>
+    <text class="small" x="726" y="278">rapid scale-up</text>
+  </g>
+
+  <!-- flows -->
+  <path class="flow" d="M370 270 H450" />
+  <path class="flow" d="M450 270 L435 258" />
+  <path class="flow" d="M450 270 L435 282" />
+
+  <path class="flow" d="M690 270 H770" />
+  <path class="flow" d="M770 270 L755 258" />
+  <path class="flow" d="M770 270 L755 282" />
+
+  <path class="accent" d="M570 330 C600 360 640 380 690 400" />
+  <path class="accent" d="M690 400 L675 390" />
+  <path class="accent" d="M690 400 L675 410" />
+
+  <path class="accent" d="M750 460 H830" />
+  <path class="accent" d="M830 460 L815 448" />
+  <path class="accent" d="M830 460 L815 472" />
+
+  <text class="mono" x="520" y="520">skills transfer + procedures</text>
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; illustrates relationships rather than specific unit rosters or dates.</text>
+</svg>

@@ -182,7 +182,12 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/clydeside-aviation-dalmuir-1928.jpg', alt: 'Dalmuir 1928 aviation works' },
     { url: '/blog-images/beardmore-parkhead-forge.jpg', alt: 'Beardmore Parkhead Forge' },
     { url: '/blog-images/beardmore-aviation-factory.svg', alt: 'Factory and assembly line schematic', caption: 'Original illustration (schematic): factory hall, overhead crane, and simplified production blocks.' },
-    { url: '/blog-images/historical-scotland-map.jpg', alt: 'Historical Scotland aviation map' }
+    { url: '/blog-images/historical-scotland-map.jpg', alt: 'Historical Scotland map (context image)' },
+    { url: '/blog-images/scottish-interwar-air-routes-schematic.svg', alt: 'Inter-war Scottish air route network concept (schematic, diagrammatic)', caption: 'Original illustration (schematic): nodes, alternates, and route planning constraints motif.' },
+    { url: '/blog-images/renfrew-airport-interwar-schematic.svg', alt: 'Renfrew Airport inter-war hub motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): airfield layout, ground handling, and training flow motif.' },
+    { url: '/blog-images/interwar-training-pipeline-schematic.svg', alt: 'Inter-war training pipeline motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): clubs → air schools → auxiliary units pipeline motif.' },
+    { url: '/blog-images/interwar-commercial-aviation-boarding-schematic.svg', alt: 'Inter-war commercial aviation ground operations motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): passengers, handling, and schedule discipline motif.' },
+    { url: '/blog-images/weir-w5-glasgow-test-schematic.svg', alt: 'Early British helicopter testing in Glasgow motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): prototype test points and safety margins motif.' }
   ],
   'supermarine-spitfire-development-evolution': [
     { url: '/blog-images/spitfire-prototype-k5054.jpg', alt: 'Spitfire prototype K5054' },

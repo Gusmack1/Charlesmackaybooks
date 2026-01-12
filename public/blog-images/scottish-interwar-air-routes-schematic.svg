@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Inter-war Scottish Air Route Network (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic map of Scotland with node dots and connecting route lines, plus weather and alternate markers to represent route planning constraints.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .route{fill:none;stroke:#60a5fa;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;opacity:.95}
+      .alt{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.95}
+      .wx{fill:none;stroke:#fbbf24;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.95}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Inter-war Scottish air network (schematic)</text>
+  <text class="small" x="90" y="152">Nodes, routes, alternates, and weather constraints (diagrammatic)</text>
+
+  <!-- simplified Scotland silhouette -->
+  <g transform="translate(170,190)">
+    <path class="ink" d="M210 40 C160 60 120 120 140 170 C120 220 130 260 170 290 C170 340 210 380 270 390 C320 420 380 410 430 380 C470 360 520 360 560 330 C590 300 610 250 590 210 C610 160 600 120 560 90 C520 50 470 40 430 60 C360 30 290 25 210 40 Z" />
+
+    <!-- nodes -->
+    <circle cx="300" cy="330" r="8" fill="#60a5fa"/>
+    <circle cx="420" cy="270" r="8" fill="#60a5fa"/>
+    <circle cx="500" cy="210" r="8" fill="#60a5fa"/>
+    <circle cx="540" cy="140" r="8" fill="#60a5fa"/>
+
+    <!-- routes -->
+    <path class="route" d="M300 330 L420 270 L500 210 L540 140" />
+    <path class="route" d="M300 330 L500 210" />
+
+    <!-- alternates -->
+    <circle cx="360" cy="250" r="10" class="alt"/>
+    <circle cx="470" cy="310" r="10" class="alt"/>
+    <text class="mono" x="15" y="420">concept map</text>
+  </g>
+
+  <!-- weather constraint markers -->
+  <g transform="translate(860,220)">
+    <rect class="panel" x="0" y="0" width="280" height="300" rx="14"/>
+    <text class="label" x="25" y="45">Planning cues</text>
+    <path class="wx" d="M30 90 C50 70 80 70 95 90 C120 80 140 95 135 115 C155 125 150 155 125 155 H55 C30 155 25 115 45 110 C40 100 45 95 55 95" />
+    <text class="small" x="25" y="190">- Weather minima</text>
+    <text class="small" x="25" y="220">- Alternates + reserves</text>
+    <text class="small" x="25" y="250">- Daylight scheduling</text>
+    <text class="small" x="25" y="280">- Terrain awareness</text>
+  </g>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; not a historical timetable map or a precise routing chart.</text>
+</svg>

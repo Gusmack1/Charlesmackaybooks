@@ -29,8 +29,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of Renfrew Airport in the 1920s, showing aircraft on the field and the original terminal building, demonstrating Scotland's first major civil aviation facility" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Inter‑war connectivity: routes, weather, and infrastructure shaped the Scottish map of flight.</p>
+      <img src="/blog-images/renfrew-airport-interwar-schematic.svg" alt="Original schematic illustration representing Renfrew Airport’s inter-war airfield layout and operations (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: Renfrew as an inter‑war hub—airfield layout, ground handling, and training flow (diagrammatic).</p>
     </div>
 
     <h2 id="renfrew-airport">Renfrew Airport: Scotland's First Major Aviation Facility</h2>
@@ -62,8 +62,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A map or diagram showing inter-war Scottish aviation routes connecting Renfrew, Aberdeen, Inverness, and the Western Isles, demonstrating the emerging civil aviation network" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Inter‑war connectivity: routes, weather, and infrastructure shaped the Scottish map of flight.</p>
+      <img src="/blog-images/scottish-interwar-air-routes-schematic.svg" alt="Original schematic illustration of an inter-war Scottish air-route network concept map (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: an inter‑war route network concept—nodes, alternates, and weather-driven planning (diagrammatic).</p>
     </div>
 
     <h2 id="scottish-flying-club">The Scottish Flying Club: Training and Outreach</h2>
@@ -95,7 +95,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of Beardmore workshops at Dalmuir or Parkhead during the inter-war period, showing machinery, tooling, and workers maintaining manufacturing capabilities" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/beardmore-parkhead-forge.jpg" alt="Beardmore industrial works (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Workshops and skills persisted between orders—insurance against the shocks of rearmament.</p>
     </div>
 
@@ -170,8 +170,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of Scottish aircraft in formation during the inter-war period, showing Avro 504s or Bristol Fighters, demonstrating the training capabilities maintained between the wars" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Inter-war training: maintaining pilot pipelines and operational capabilities for future demands.</p>
+      <img src="/blog-images/interwar-training-pipeline-schematic.svg" alt="Original schematic illustration of inter-war training pipelines linking clubs, air schools, and auxiliary units (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: training pipelines—club flying, air schools, and auxiliary pathways sustaining readiness (diagrammatic).</p>
     </div>
 
     <h2 id="other-squadrons">Other Squadrons: 269, 32, and 21 Squadrons at Abbotsinch</h2>
@@ -211,8 +211,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of a commercial airliner at Renfrew Airport during the inter-war period, showing passengers boarding or aircraft on the tarmac, demonstrating Scotland's commercial aviation operations" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Commercial aviation: connecting Scotland's cities while maintaining aviation infrastructure and skills.</p>
+      <img src="/blog-images/interwar-commercial-aviation-boarding-schematic.svg" alt="Original schematic illustration representing inter-war commercial air travel and ground operations (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: inter‑war commercial operations—ground handling, passengers, and schedule discipline (diagrammatic).</p>
     </div>
 
     <h2 id="air-ambulances">Air Ambulances: Medical Aviation Innovation</h2>
@@ -241,8 +241,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Weir W5 helicopter, the first practical British helicopter, during test flights in Glasgow in 1938, showing Raymond Pullin at the controls, demonstrating Scotland's pioneering role in rotorcraft development" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">First British helicopter: Raymond Pullin's test flights in Glasgow established Scotland as a center of rotorcraft innovation.</p>
+      <img src="/blog-images/weir-w5-glasgow-test-schematic.svg" alt="Original schematic illustration representing early British helicopter testing in Glasgow (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: early British helicopter testing in Glasgow—prototype handling, test points, and safety margins (diagrammatic).</p>
     </div>
 
     <h2 id="blackburn-production">Blackburn Production: Botha and Shark at Dumbarton</h2>
@@ -372,7 +372,7 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 25,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/scottish-interwar-air-routes-schematic.svg',
     alt: 'Scottish Aviation Between the Wars: Clubs, Carriers, and Civil Routes - Enhanced Edition',
     caption: 'Clubs, routes, and retained industry capacity.'
   },
@@ -389,7 +389,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Scottish Aviation Between the Wars: Clubs, Carriers, and Civil Routes - Enhanced Edition',
     description: 'A comprehensive, research-backed account of inter-war Scottish aviation: Renfrew Airport development, the Scottish Flying Club, Beardmore/Weir engineering, civil air routes, and the transition to rearmament.',
-    images: ['/blog-images/default-generic.svg'],
+    images: ['/blog-images/scottish-interwar-air-routes-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -416,6 +416,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/scottish-aviation-between-the-wars"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

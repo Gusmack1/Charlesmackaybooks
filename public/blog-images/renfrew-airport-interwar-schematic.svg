@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Renfrew Airport (Inter-war) Hub Layout (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing a simple airfield layout with runway, hangar blocks, a small terminal marker, and arrows for training circuit and ground flow.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .ok{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Renfrew Airport as an inter-war hub (schematic)</text>
+  <text class="small" x="90" y="152">Airfield layout + ground handling + training circuit (diagrammatic)</text>
+
+  <!-- runway + field -->
+  <g transform="translate(140,210)">
+    <rect class="panel" x="0" y="0" width="700" height="360" rx="16"/>
+    <path class="ink" d="M80 300 L620 60" />
+    <path class="accent" d="M120 310 L660 70" />
+    <text class="mono" x="20" y="-10">airfield</text>
+
+    <!-- hangars -->
+    <rect class="panel" x="40" y="60" width="140" height="70" rx="10"/>
+    <rect class="panel" x="40" y="145" width="140" height="70" rx="10"/>
+    <text class="small" x="55" y="105">hangars</text>
+
+    <!-- terminal -->
+    <rect class="panel" x="520" y="260" width="140" height="70" rx="10"/>
+    <text class="small" x="545" y="305">terminal</text>
+
+    <!-- apron -->
+    <path class="accent" d="M420 260 H520" />
+    <path class="accent" d="M420 330 H520" />
+    <text class="small" x="420" y="250">apron</text>
+
+    <!-- training circuit -->
+    <path class="ok" d="M220 120 C340 40 520 40 640 120" />
+    <path class="ok" d="M640 120 C700 170 700 250 640 300" />
+    <path class="ok" d="M640 300 C520 380 340 380 220 300" />
+    <path class="ok" d="M220 300 C160 250 160 170 220 120" />
+    <text class="small" x="250" y="95">training circuit</text>
+  </g>
+
+  <!-- ground flow -->
+  <path class="accent" d="M900 290 H1120" />
+  <path class="accent" d="M1120 290 L1102 278" />
+  <path class="accent" d="M1120 290 L1102 302" />
+  <text class="small" x="900" y="270">ground flow: service → dispatch</text>
+
+  <rect class="panel" x="860" y="330" width="280" height="190" rx="14"/>
+  <text class="label" x="885" y="370">What it sustains</text>
+  <text class="small" x="885" y="405">- Pilot currency</text>
+  <text class="small" x="885" y="435">- Ground handling skill</text>
+  <text class="small" x="885" y="465">- Procedures + records</text>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; not a surveyed plan of the airfield.</text>
+</svg>

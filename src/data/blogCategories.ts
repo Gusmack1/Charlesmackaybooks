@@ -40,6 +40,15 @@ export const blogCategories: BlogCategoryMap = {
       image: '/blog-images/percy-pilcher-hawk-glider-scotland.jpg',
       tags: ['Scottish Aviation', 'Aviation Pioneers', 'Gliding', 'Early Flight'],
       readTime: '8 min'
+    },
+    {
+      title: 'Scottish Aviation Between the Wars: Clubs, Carriers, and Civil Routes',
+      slug: 'scottish-aviation-between-the-wars',
+      excerpt: 'How Scotland maintained aviation capability between WWI and WWII through routes, clubs, and retained industrial capacity.',
+      date: 'January 18, 2025',
+      image: '/blog-images/scottish-interwar-air-routes-schematic.svg',
+      tags: ['Scottish Aviation', 'Inter-War', 'Civil Aviation', 'Renfrew Airport'],
+      readTime: '16 min'
     }
   ],
   'WWI Aviation': [
