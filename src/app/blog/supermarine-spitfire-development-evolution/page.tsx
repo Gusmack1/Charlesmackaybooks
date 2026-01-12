@@ -152,7 +152,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '',
+    url: '/blog-images/spitfire-k5054-prototype.jpg',
     alt: 'Supermarine Spitfire – Evolution Enhanced Edition',
     caption: 'A platform that grew: aerodynamic discipline meeting rising power and mission demands.'
   },
@@ -164,21 +164,21 @@ const post = {
       id: 'supermarine-spitfire-development-history',
       title: 'Supermarine Spitfire: Complete Development History',
       excerpt: 'Full lineage from R.J. Mitchell’s racers to late-war Spitfire marks.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/spitfire-k5054-prototype.jpg',
       readingTime: 7,
     },
     {
       id: 'hawker-hurricane-fighter-development',
       title: 'Hawker Hurricane: Development',
       excerpt: 'How the Hurricane evolved alongside the Spitfire and complemented its roles.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/hawker-hurricane-battle-of-britain.jpg',
       readingTime: 6,
     },
     {
       id: 'schneider-trophy-racing-development',
       title: 'Schneider Trophy Racing: Development',
       excerpt: 'The racing seaplanes that forged British high-speed aerodynamics before WWII.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/schneider-s6b-systems-featured-schematic.svg',
       readingTime: 6,
     },
   ]
@@ -195,7 +195,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Supermarine Spitfire Development Evolution`,
     description: `Comprehensive analysis of supermarine spitfire development evolution with expert historical research and technical details.`,
-    images: ['/blog-images/supermarine-spitfire-development-evolution-featured.jpg'],
+    images: ['/blog-images/spitfire-k5054-prototype.jpg'],
     type: 'article'
   },
   alternates: {
@@ -222,6 +222,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/supermarine-spitfire-development-evolution"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

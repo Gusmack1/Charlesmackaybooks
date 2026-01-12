@@ -101,7 +101,7 @@ const post = {
   tags: ["sopwith","camel","wwi","fighter","british","aviation","history"],
   relatedBooks: getBooksData(['british-aircraft-great-war', 'german-aircraft-great-war', 'clydeside-aviation-vol1', 'captain-eric-brown', 'aircraft-carrier-argus']),
   relatedPosts: [
-    { id: 'british-aircraft-great-war-rfc-rnas', title: 'British Aircraft of the Great War: RFC & RNAS', excerpt: 'Comprehensive analysis of RFC and RNAS aircraft development', image: '/blog-images/spitfire-prototype-k5054.jpg', readingTime: 10 },
+    { id: 'british-aircraft-great-war-rfc-rnas', title: 'British Aircraft of the Great War: RFC & RNAS', excerpt: 'Comprehensive analysis of RFC and RNAS aircraft development', image: '/blog-images/spitfire-k5054-prototype.jpg', readingTime: 10 },
     { id: 'aviation-manufacturing-wartime-production', title: 'Aviation Manufacturing in Wartime', excerpt: 'Industrial production during wartime aviation', image: '/blog-images/aircraft-factory-assembly-line.jpg', readingTime: 8 },
     { id: 'german-aircraft-great-war-development', title: 'German Aircraft Development in the Great War', excerpt: 'German aviation technology and development', image: '/blog-images/german-aircraft-albatros-d3-historical.jpg', readingTime: 11 },
     { id: 'bristol-fighter-f2b-brisfit', title: 'Bristol Fighter F2B: The Aggressive Two-Seat Fighter', excerpt: 'Analysis of the successful two-seat fighter', image: '/blog-images/bristol-fighter-f2b-flying.jpg', readingTime: 12 }

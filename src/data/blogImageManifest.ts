@@ -67,10 +67,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/f104-starfighter-supersonic.jpg', alt: 'F-104 Starfighter comparison context' }
   ],
   'supermarine-spitfire-development-history': [
-    { url: '/blog-images/spitfire-prototype-k5054.jpg', alt: 'Spitfire prototype K5054' },
-    { url: '/blog-images/spitfire-castle-bromwich-production.jpg', alt: 'Castle Bromwich Spitfire production' },
-    { url: '/blog-images/spitfire-battle-of-britain.jpg', alt: 'Spitfire during Battle of Britain' },
-    { url: '/blog-images/supermarine-spitfire-development.jpg', alt: 'Spitfire development' }
+    { url: '/blog-images/spitfire-k5054-prototype.jpg', alt: 'Spitfire prototype K5054 (photograph)' },
+    { url: '/blog-images/spitfire-prototype-k5054-historical.jpg', alt: 'Spitfire prototype K5054 (historical photograph)' },
+    { url: '/blog-images/spitfire-castle-bromwich-production.jpg', alt: 'Castle Bromwich Spitfire production (photograph)' },
+    { url: '/blog-images/spitfire-castle-bromwich-factory.jpg', alt: 'Castle Bromwich Spitfire factory (photograph)' }
   ],
   'hawker-hurricane-fighter-development': [
     { url: '/blog-images/hawker-hurricane-battle-of-britain.jpg', alt: 'Hurricane scramble in 1940' },
@@ -190,10 +190,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/weir-w5-glasgow-test-schematic.svg', alt: 'Early British helicopter testing in Glasgow motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): prototype test points and safety margins motif.' }
   ],
   'supermarine-spitfire-development-evolution': [
-    { url: '/blog-images/spitfire-prototype-k5054.jpg', alt: 'Spitfire prototype K5054' },
-    { url: '/blog-images/spitfire-castle-bromwich-production.jpg', alt: 'Castle Bromwich Spitfire production' },
-    { url: '/blog-images/spitfire-battle-of-britain.jpg', alt: 'Spitfire during Battle of Britain' },
-    { url: '/blog-images/supermarine-spitfire-development-evolution.jpg', alt: 'Spitfire development evolution' }
+    { url: '/blog-images/spitfire-k5054-prototype.jpg', alt: 'Spitfire prototype K5054 (photograph)' },
+    { url: '/blog-images/spitfire-prototype-k5054-historical.jpg', alt: 'Spitfire prototype K5054 (historical photograph)' },
+    { url: '/blog-images/spitfire-castle-bromwich-production.jpg', alt: 'Castle Bromwich Spitfire production (photograph)' },
+    { url: '/blog-images/spitfire-castle-bromwich-factory.jpg', alt: 'Castle Bromwich Spitfire factory (photograph)' }
   ],
   'sycamore-seeds-helicopter-evolution': [
     { url: '/blog-images/sycamore-seeds-helicopter.jpg', alt: 'Sycamore seed biomimicry for rotorcraft' },
