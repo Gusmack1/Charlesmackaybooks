@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Pilcher Glider Development Sequence (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing four simplified glider silhouettes labelled Bat, Beetle, Gull, and Hawk arranged left to right with arrows indicating iterative progression.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .muted{fill:none;stroke:#93c5fd;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Pilcher’s glider sequence (schematic, diagrammatic)</text>
+  <text class="small" x="90" y="152">Bat → Beetle → Gull → Hawk (iterative refinement: structure, stability, controllability)</text>
+
+  <!-- four “cards” -->
+  <g transform="translate(90,185)">
+    <!-- card 1 -->
+    <g>
+      <rect class="panel" x="0" y="0" width="240" height="330" rx="14"/>
+      <text class="label" x="22" y="52">Bat</text>
+      <!-- silhouette -->
+      <path class="ink" d="M40 170 Q120 120 200 170" />
+      <path class="muted" d="M60 200 Q120 170 180 200" />
+      <path class="ink" d="M120 130 L120 240" />
+      <path class="muted" d="M120 240 L90 280 L150 280 Z" />
+      <text class="small" x="22" y="300">Early structure + stability</text>
+    </g>
+
+    <!-- arrow -->
+    <path class="muted" d="M260 165 L305 165" />
+    <path class="muted" d="M305 165 L292 155" />
+    <path class="muted" d="M305 165 L292 175" />
+
+    <!-- card 2 -->
+    <g transform="translate(330,0)">
+      <rect class="panel" x="0" y="0" width="240" height="330" rx="14"/>
+      <text class="label" x="22" y="52">Beetle</text>
+      <path class="ink" d="M35 170 Q120 105 205 170" />
+      <path class="muted" d="M55 210 Q120 165 185 210" />
+      <path class="ink" d="M120 125 L120 245" />
+      <path class="muted" d="M120 245 L95 285 L145 285 Z" />
+      <text class="small" x="22" y="300">Refined planform + bracing</text>
+    </g>
+
+    <!-- arrow -->
+    <path class="muted" d="M590 165 L635 165" />
+    <path class="muted" d="M635 165 L622 155" />
+    <path class="muted" d="M635 165 L622 175" />
+
+    <!-- card 3 -->
+    <g transform="translate(660,0)">
+      <rect class="panel" x="0" y="0" width="240" height="330" rx="14"/>
+      <text class="label" x="22" y="52">Gull</text>
+      <path class="ink" d="M30 170 Q120 95 210 170" />
+      <path class="muted" d="M55 215 Q120 170 185 215" />
+      <path class="ink" d="M120 120 L120 250" />
+      <path class="muted" d="M120 250 L95 290 L145 290 Z" />
+      <text class="small" x="22" y="300">Control feel + repeatability</text>
+    </g>
+
+    <!-- arrow -->
+    <path class="muted" d="M920 165 L965 165" />
+    <path class="muted" d="M965 165 L952 155" />
+    <path class="muted" d="M965 165 L952 175" />
+
+    <!-- card 4 -->
+    <g transform="translate(990,0)">
+      <rect class="panel" x="0" y="0" width="240" height="330" rx="14"/>
+      <text class="label" x="22" y="52">Hawk</text>
+      <path class="ink" d="M25 170 Q120 85 215 170" />
+      <path class="muted" d="M60 220 Q120 175 180 220" />
+      <path class="ink" d="M120 115 L120 255" />
+      <path class="muted" d="M120 255 L95 295 L145 295 Z" />
+      <text class="small" x="22" y="300">Peak glider maturity</text>
+    </g>
+  </g>
+
+  <text class="small" x="90" y="595">Note: stylised shapes are diagrammatic and not to scale; used for explanatory schematic context.</text>
+</svg>

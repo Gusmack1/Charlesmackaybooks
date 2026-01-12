@@ -70,8 +70,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Period illustration placeholder for Pilcher glider experiments" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Contemporary photographs and drawings of the Bat–Beetle–Gull–Hawk series illustrate measured iteration toward controllability.</p>
+      <img src="/blog-images/percy-pilcher-glider-series-schematic.svg" alt="Original schematic illustration of Pilcher’s Bat–Beetle–Gull–Hawk glider development sequence (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: Pilcher’s Bat–Beetle–Gull–Hawk progression, emphasizing measured iteration toward controllability.</p>
     </div>
 
     <h2 id="international-influences">International Influences and Contacts</h2>
@@ -147,8 +147,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Engine and propeller plan placeholder" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Pilcher's powerplant concept emphasised lightness, thrust line management, and staged expansion from hops to sustained flight.</p>
+      <img src="/blog-images/percy-pilcher-powerplant-plan-schematic.svg" alt="Original schematic illustration of a lightweight engine-and-propeller integration concept for Pilcher’s powered-flight plan (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: a lightweight engine-and-propeller integration concept, highlighting thrust-line management and staged test progression.</p>
     </div>
 
     <h2 id="test-sites">Test Sites, Methods, and Safety</h2>
@@ -283,8 +283,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Scottish aviation heritage placeholder" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Pilcher's programme belongs to Scotland's wider engineering heritage — disciplined, resourceful, and quietly transformative.</p>
+      <img src="/blog-images/percy-pilcher-scottish-heritage-schematic.svg" alt="Original schematic illustration representing Scottish engineering heritage behind early aviation experiments (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: Scottish engineering heritage motifs—workshop tools, measured rigour, and early flight experimentation.</p>
     </div>
 
     <h2 id="assessment">Assessment and Counterfactual</h2>
@@ -461,6 +461,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/percy-pilcher-scotland-aviation-pioneer"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

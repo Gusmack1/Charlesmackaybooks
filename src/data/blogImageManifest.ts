@@ -38,7 +38,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/percy-pilcher-hawk-glider.jpg', alt: 'Percy Pilcher Hawk glider on hillside', caption: 'Pilcher preparing the Hawk glider on Scottish uplands.' },
     { url: '/blog-images/percy-pilcher-glider-experiments.jpg', alt: 'Pilcher glider experiments', caption: 'Workshop experiments refining wing bracing on Pilcher’s machines.' },
     { url: '/blog-images/percy-pilcher-portrait-engineer.jpg', alt: 'Portrait of Percy Pilcher', caption: 'Pilcher documented as engineer-inventor ahead of powered flight.' },
-    { url: '/blog-images/percy-pilcher-with-glider.jpg', alt: 'Pilcher beside glider airframe', caption: 'Demonstrating structural refinements learned from Lilienthal and Chanute.' }
+    { url: '/blog-images/percy-pilcher-with-glider.jpg', alt: 'Pilcher beside glider airframe', caption: 'Pilcher pictured beside a glider airframe during his late-1890s experimental period.' },
+    { url: '/blog-images/percy-pilcher-glider-series-schematic.svg', alt: 'Pilcher Bat–Beetle–Gull–Hawk glider development sequence (schematic, diagrammatic)', caption: 'Original illustration (schematic): Pilcher’s glider series progression from early stability to repeatable controllability.' },
+    { url: '/blog-images/percy-pilcher-powerplant-plan-schematic.svg', alt: 'Lightweight engine-and-propeller integration concept for Pilcher’s powered-flight plan (schematic, diagrammatic)', caption: 'Original illustration (schematic): a lightweight powerplant integration motif highlighting thrust-line and weight budgeting.' },
+    { url: '/blog-images/percy-pilcher-scottish-heritage-schematic.svg', alt: 'Scottish engineering heritage behind early aviation experiments (schematic, diagrammatic)', caption: 'Original illustration (schematic): workshop tools and measured rigour motif representing Scottish engineering context.' }
   ],
   'rotorcraft-military-applications': [
     { url: '/blog-images/sikorsky-r4-helicopter.jpg', alt: 'Sikorsky R-4 in military service', caption: 'R-4 demonstrating the first helicopter combat rescue capability.' },

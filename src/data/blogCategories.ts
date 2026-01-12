@@ -37,7 +37,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'percy-pilcher-scotland-aviation-pioneer',
       excerpt: 'The Scottish pioneer whose gliding experiments nearly achieved powered flight before the Wright Brothers.',
       date: 'January 14, 2024',
-      image: '/blog-images/percy-pilcher-with-glider.jpg',
+      image: '/blog-images/percy-pilcher-hawk-glider-scotland.jpg',
       tags: ['Scottish Aviation', 'Aviation Pioneers', 'Gliding', 'Early Flight'],
       readTime: '8 min'
     }

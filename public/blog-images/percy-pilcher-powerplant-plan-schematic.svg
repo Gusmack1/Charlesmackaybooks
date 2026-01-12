@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Pilcher Powered-Flight Plan (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing a simplified glider outline with a lightweight engine block, propeller disc, thrust line, and weight budget callouts.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .warn{fill:none;stroke:#fbbf24;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Powered-flight integration concept (schematic, diagrammatic)</text>
+  <text class="small" x="90" y="152">Lightweight engine + propeller placement, thrust line, and staged test progression (illustrative)</text>
+
+  <!-- glider outline -->
+  <g transform="translate(140,200)">
+    <!-- wing -->
+    <path class="ink" d="M40 170 Q260 70 480 170" />
+    <path class="accent" d="M80 210 Q260 150 440 210" />
+    <!-- keel / pilot -->
+    <path class="ink" d="M260 110 L260 270" />
+    <path class="accent" d="M240 270 L210 320 L310 320 L280 270 Z" />
+    <!-- engine block -->
+    <rect x="300" y="205" width="90" height="55" rx="8" class="panel"/>
+    <path class="warn" d="M300 205 H390 V260 H300 Z" />
+    <text class="mono" x="306" y="238">engine</text>
+    <!-- propeller disc -->
+    <circle cx="420" cy="232" r="38" class="accent"/>
+    <path class="accent" d="M420 194 V270" />
+    <path class="accent" d="M382 232 H458" />
+    <text class="mono" x="398" y="320">propeller</text>
+  </g>
+
+  <!-- thrust line -->
+  <path class="warn" d="M560 432 H1030" />
+  <path class="warn" d="M1030 432 L1012 420" />
+  <path class="warn" d="M1030 432 L1012 444" />
+  <text class="small" x="820" y="420">thrust line (illustrative)</text>
+
+  <!-- callouts -->
+  <g>
+    <rect class="panel" x="700" y="200" width="410" height="160" rx="14"/>
+    <text class="label" x="728" y="242">Key constraints</text>
+    <text class="small" x="728" y="276">- Weight budget discipline</text>
+    <text class="small" x="728" y="306">- Mount reinforcement (local)</text>
+    <text class="small" x="728" y="336">- Incremental test expansion</text>
+  </g>
+
+  <g>
+    <rect class="panel" x="700" y="380" width="410" height="200" rx="14"/>
+    <text class="label" x="728" y="422">Staged tests</text>
+    <text class="small" x="728" y="456">1) Straight hops →</text>
+    <text class="small" x="728" y="486">2) Longer hops →</text>
+    <text class="small" x="728" y="516">3) Brief circuits (as control proves)</text>
+    <text class="small" x="728" y="548">4) Repeatable profiles + documentation</text>
+  </g>
+
+  <text class="small" x="90" y="595">Note: stylised schematic only; not to scale and not a claim of a specific surviving drawing.</text>
+</svg>
