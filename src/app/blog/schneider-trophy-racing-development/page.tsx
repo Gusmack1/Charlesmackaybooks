@@ -13,8 +13,8 @@ const post = {
     <p>The Schneider Trophy contests (1913–1931) transformed seaplane racing into a crucible of engineering where aerodynamics, engines, and operations were pushed to their practical limits. Britain’s ultimate retention of the Trophy in 1931 — achieved by Supermarine’s S.6B powered by the Rolls‑Royce R — was more than a sporting victory: it was a nationally orchestrated research programme whose lessons flowed directly into pre‑war and wartime combat aircraft. This Enhanced Edition presents a formal, evidence‑based account of the technology, people, and organisations behind the record books — and explains precisely how thin radiators, high‑boost fuels, and integrated systems engineering turned salt‑spray competition into national preparedness.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Supermarine S.6B moored at Calshot with cowlings open; engineers servicing coolant lines and the R engine boost plumbing." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Supermarine S.6B in servicing: airframe, engine, cooling, and fuel formed a single, tuned system.</p>
+      <img src="/blog-images/schneider-s6b-systems-featured-schematic.svg" alt="Original schematic illustration of a Schneider Trophy-era high-speed seaplane systems overview (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: systems overview—airframe, powerplant, cooling, and fuel treated as one integrated package (diagrammatic).</p>
     </div>
 
     <h2 id="trophy-rules">What the Rules Drove: Water Operations as Design Constraint</h2>
@@ -31,8 +31,8 @@ const post = {
     <p>Cooling was not an afterthought; it was the limiting factor. The engineering challenge lay in shedding vast heat loads without ruinous drag. This demanded thin, flush radiators, careful ducting, and flight profiles that balanced speed with thermal margins. The discipline established here would later inform Merlin installation practices in the Spitfire and other frontline types.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Cutaway schematic of the R engine showing supercharger stages, coolant circuits, and oil coolers with airflow arrows." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Cooling and boost together set the performance ceiling; both had to be engineered as primary systems.</p>
+      <img src="/blog-images/rolls-royce-r-cooling-boost-schematic.svg" alt="Original schematic illustration of high-boost engine cooling and airflow management (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: cooling + boost as coupled constraints—heat rejection, airflow, and drag management (diagrammatic).</p>
     </div>
 
     <h2 id="aerodynamics">Aerodynamics: Thin Sections, Cooling Drag, and Interference Control</h2>
@@ -45,8 +45,8 @@ const post = {
     <p>Record attempts were flown around multi‑leg courses with exacting timing and barograph verification. Pilots trained to execute sustained high‑G turns that placed unique thermal and lubrication demands on the engine; fuel slosh and temporary starvation had to be anticipated and engineered out. Weather added a second layer of risk: sea state, wind shear near the surface, and salt deposition on radiators all influenced whether a record could be credibly attempted on a given day.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: View from the pylon boat toward an S.6B banking tightly around the turn, spray visible, timing officials recording the pass." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Course craft: the pylon turn compressed every system limit at once — aerodynamics, fuel, cooling, and pilot stamina.</p>
+      <img src="/blog-images/schneider-pylon-turn-systems-load-schematic.svg" alt="Original schematic illustration of a pylon turn showing combined aerodynamic, engine, and pilot workload constraints (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: the pylon turn compresses constraints—turn geometry, heat margin, mixture/boost discipline, and pilot workload (diagrammatic).</p>
     </div>
 
     <h2 id="organisation">Organisation and Patronage: How Britain Won in 1931</h2>
@@ -71,8 +71,8 @@ const post = {
     <p>The programmes faced serious risks: engine bursts, structural failures in chop, and pilot workload at the edge of endurance. Britain’s 1931 effort succeeded because governance recognised risk honestly and reduced it methodically: pre‑run checklists, abort criteria based on temperature rates rather than absolutes, and a culture that privileged airworthiness decisions over publicity schedules. This approach, later mainstream in RAF operations, has roots in the Trophy era.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Mechanics confer over temperature logs beside an S.6B; an RAF pilot in flight gear reviews the course map." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Data before drama: Trophy teams built reputations on logs and limits, not headlines.</p>
+      <img src="/blog-images/schneider-test-logs-governance-schematic.svg" alt="Original schematic illustration of test logs, limits, and governance checkpoints used in a disciplined racing programme (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: logs, limits, and governance—measured parameters before record attempts (diagrammatic).</p>
     </div>
 
     <h2 id="international">International Rivalry and Knowledge Flow</h2>
@@ -109,7 +109,7 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/schneider-s6b-systems-featured-schematic.svg',
     alt: 'Schneider Trophy Racing: The Golden Age of Aviation Speed',
     caption: 'From salt spray to thin sections: racing knowledge that shaped British fighters.'
   },
@@ -145,7 +145,7 @@ export const metadata: Metadata = {
     title: `Schneider Trophy Racing Development`,
     description: `Comprehensive analysis of schneider trophy racing development with expert historical research and technical details.`,
     url: 'https://charlesmackaybooks.com/blog/schneider-trophy-racing-development',
-    images: ['/blog-images/schneider-trophy-racing-development-featured.jpg'],
+    images: ['/blog-images/schneider-s6b-systems-featured-schematic.svg'],
     type: 'article'
   }
 }
@@ -158,6 +158,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/schneider-trophy-racing-development"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

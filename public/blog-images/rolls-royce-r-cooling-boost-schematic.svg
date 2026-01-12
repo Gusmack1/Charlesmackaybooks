@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Cooling and Boost Coupling (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing a simplified engine block with arrows for airflow, heat rejection loops, and a boost path feeding cylinders; illustrates cooling and boost as coupled constraints.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .air{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .heat{fill:none;stroke:#fb7185;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .boost{fill:none;stroke:#fbbf24;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Cooling + boost as coupled constraints (schematic)</text>
+  <text class="small" x="90" y="152">Heat rejection, airflow, and boost path must be engineered together (diagrammatic)</text>
+
+  <!-- engine block -->
+  <g transform="translate(170,220)">
+    <rect class="panel" x="0" y="0" width="520" height="320" rx="18"/>
+    <path class="ink" d="M70 80 H450" />
+    <path class="ink" d="M70 150 H450" />
+    <path class="ink" d="M70 220 H450" />
+    <text class="mono" x="30" y="-10">engine core</text>
+
+    <!-- cylinder hints -->
+    <g opacity="0.9">
+      <circle cx="110" cy="110" r="16" class="ink"/>
+      <circle cx="200" cy="110" r="16" class="ink"/>
+      <circle cx="290" cy="110" r="16" class="ink"/>
+      <circle cx="380" cy="110" r="16" class="ink"/>
+    </g>
+  </g>
+
+  <!-- airflow -->
+  <path class="air" d="M760 270 H1090" />
+  <path class="air" d="M1090 270 L1070 258" />
+  <path class="air" d="M1090 270 L1070 282" />
+  <text class="small" x="760" y="252">airflow / cooling drag</text>
+
+  <!-- heat loop -->
+  <path class="heat" d="M330 560 C330 520 300 500 270 480 C240 460 230 430 230 410 C230 380 250 360 270 350" />
+  <path class="heat" d="M270 350 C310 330 370 330 410 350" />
+  <path class="heat" d="M410 350 C440 365 460 390 460 420 C460 450 445 470 420 485 C395 500 370 520 370 560" />
+  <text class="small" x="460" y="575">heat rejection loop</text>
+
+  <!-- boost path -->
+  <path class="boost" d="M760 430 C700 430 660 420 620 400 C580 380 540 360 500 340" />
+  <path class="boost" d="M500 340 L512 328" />
+  <path class="boost" d="M500 340 L516 345" />
+  <text class="small" x="760" y="420">boost path</text>
+
+  <!-- notes -->
+  <g>
+    <rect class="panel" x="760" y="310" width="350" height="230" rx="14"/>
+    <text class="label" x="785" y="350">What couples</text>
+    <text class="small" x="785" y="385">- Higher boost → higher heat</text>
+    <text class="small" x="785" y="415">- More cooling → more drag risk</text>
+    <text class="small" x="785" y="445">- Limited margin → strict limits</text>
+    <text class="mono" x="785" y="495">diagrammatic / not a cutaway</text>
+  </g>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; not a literal cutaway or a claim of specific Rolls‑Royce R internal routing.</text>
+</svg>

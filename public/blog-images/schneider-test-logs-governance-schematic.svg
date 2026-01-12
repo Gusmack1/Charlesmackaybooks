@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Test Logs and Governance (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing stacked log sheets, a limits checklist, and arrows indicating verification flow before a record attempt.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .paper{fill:#111c2d;stroke:#334155;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .ok{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .warn{fill:none;stroke:#fbbf24;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Logs, limits, and governance checkpoints (schematic)</text>
+  <text class="small" x="90" y="152">Verification culture before record attempts (diagrammatic)</text>
+
+  <!-- stacked papers -->
+  <g transform="translate(160,210)">
+    <rect class="paper" x="40" y="30" width="420" height="300" rx="12" opacity="0.65"/>
+    <rect class="paper" x="20" y="15" width="420" height="300" rx="12" opacity="0.8"/>
+    <rect class="paper" x="0" y="0" width="420" height="300" rx="12"/>
+
+    <!-- lines -->
+    <path class="accent" d="M35 50 H385" />
+    <path class="accent" d="M35 85 H385" />
+    <path class="accent" d="M35 120 H385" />
+    <path class="accent" d="M35 155 H385" />
+    <path class="accent" d="M35 190 H385" />
+    <path class="accent" d="M35 225 H385" />
+    <path class="accent" d="M35 260 H300" />
+
+    <!-- signature -->
+    <path class="ink" d="M270 275 C300 250 340 260 360 245" />
+    <text class="mono" x="35" y="290">temp / pressure / boost logs</text>
+  </g>
+
+  <!-- checklist -->
+  <g transform="translate(660,210)">
+    <rect class="paper" x="0" y="0" width="420" height="300" rx="12"/>
+    <text class="label" x="25" y="48">Limits checklist</text>
+    <path class="ok" d="M30 90 L45 105 L75 75" />
+    <text class="small" x="95" y="100">Temps within limit</text>
+    <path class="ok" d="M30 140 L45 155 L75 125" />
+    <text class="small" x="95" y="150">Boost / mixture stable</text>
+    <path class="ok" d="M30 190 L45 205 L75 175" />
+    <text class="small" x="95" y="200">Cooling trend acceptable</text>
+    <path class="warn" d="M30 240 H75" />
+    <text class="small" x="95" y="250">Abort criteria set</text>
+  </g>
+
+  <!-- flow arrows -->
+  <path class="accent" d="M590 360 H650" />
+  <path class="accent" d="M650 360 L632 348" />
+  <path class="accent" d="M650 360 L632 372" />
+  <text class="small" x="500" y="340">verify → decide</text>
+
+  <path class="accent" d="M870 540 C880 580 900 600 940 615" />
+  <path class="accent" d="M940 615 L922 606" />
+  <path class="accent" d="M940 615 L926 626" />
+  <text class="small" x="950" y="625">record attempt</text>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; illustrates process, not a specific original document set.</text>
+</svg>

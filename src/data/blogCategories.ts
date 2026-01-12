@@ -218,7 +218,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'schneider-trophy-racing-development',
       excerpt: 'How high-speed seaplane competition drove aviation innovation from 1913-1931 and led directly to Spitfire development.',
       date: 'January 29, 2025',
-      image: '/blog-images/supermarine-s6b-schneider-trophy.jpg',
+      image: '/blog-images/schneider-s6b-systems-featured-schematic.svg',
       tags: ['Aviation Racing', 'Schneider Trophy', 'Seaplanes', 'Innovation'],
       readTime: '14 min'
     }

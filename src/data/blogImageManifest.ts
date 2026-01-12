@@ -222,10 +222,12 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/willow-run-assembly-line.jpg', alt: 'Willow Run B-24 assembly line' }
   ],
   'schneider-trophy-racing-development': [
-    { url: '/blog-images/schneider-trophy-1931.jpg', alt: '1931 Schneider Trophy race' },
-    { url: '/blog-images/supermarine-s6b-schneider-trophy.jpg', alt: 'Supermarine S.6B Schneider Trophy winner' },
-    { url: '/blog-images/supermarine-s6b-museum.jpg', alt: 'Supermarine S.6B museum exhibit' },
-    { url: '/blog-images/supermarine-s6-schneider-race.jpg', alt: 'Supermarine S.6 racing seaplane' }
+    { url: '/blog-images/schneider-trophy-1931.jpg', alt: '1931 Schneider Trophy race (photograph)' },
+    { url: '/blog-images/supermarine-s6b-schneider-trophy.jpg', alt: 'Supermarine S.6B Schneider Trophy winner (photograph)' },
+    { url: '/blog-images/schneider-s6b-systems-featured-schematic.svg', alt: 'Schneider programme systems overview motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): integrated airframe, powerplant, cooling, and fuel systems overview.' },
+    { url: '/blog-images/rolls-royce-r-cooling-boost-schematic.svg', alt: 'High-boost engine cooling + airflow management motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): coupled constraints of boost, heat rejection, and drag management.' },
+    { url: '/blog-images/schneider-pylon-turn-systems-load-schematic.svg', alt: 'Pylon turn systems load motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): turn geometry compressing thermal, fuel, and pilot workload limits.' },
+    { url: '/blog-images/schneider-test-logs-governance-schematic.svg', alt: 'Test logs and governance checkpoint motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): logs, limits, and verification culture supporting record attempts.' }
   ],
   'sikorsky-vs300-helicopter-breakthrough': [
     { url: '/blog-images/sikorsky-vs300-helicopter.svg', alt: 'Sikorsky VS-300 configuration schematic', caption: 'Original schematic illustration showing the single-main-rotor + tail-rotor layout.' },
