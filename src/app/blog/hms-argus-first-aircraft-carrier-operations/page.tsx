@@ -130,7 +130,16 @@ export default function BlogPost() {
         pageUrl="/blog/hms-argus-first-aircraft-carrier-operations"
         pageImageUrl={post.featuredImage.url}
       />
-      <EnhancedBlogSEO post={post} relatedBooks={post.relatedBooks} relatedPosts={[]} />
+      <EnhancedBlogSEO
+        post={post}
+        relatedBooks={(post.relatedBooks || []).map((b: any) => ({
+          id: b.id,
+          title: b.title || '',
+          isbn: '',
+          price: typeof b.price === 'number' ? b.price : 0,
+        }))}
+        relatedPosts={[]}
+      />
       <ComprehensiveBlogTemplate post={post} />
     </>
   )
