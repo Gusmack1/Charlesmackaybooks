@@ -23,7 +23,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/bristol-sycamore.jpg" alt="Insert image here: A black-and-white photograph of a Bristol Sycamore helicopter in RAF service during the early 1950s, showing the aircraft hovering over a landing zone with crew visible, demonstrating Britain's first helicopter to enter military service" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/bristol-sycamore.jpg" alt="Bristol Sycamore helicopter (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">The Bristol Sycamore, Britain's first helicopter to enter military service, which pioneered military rotorcraft operations.</p>
     </div>
 
@@ -42,8 +42,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of a Sikorsky Hoverfly helicopter operating from the deck of MV Daghestan during anti-submarine test flights in the 1940s, showing the helicopter hovering over the ship's deck and demonstrating early naval helicopter operations" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Early naval operations: Sikorsky Hoverfly demonstrated helicopter capabilities for anti-submarine warfare and maritime operations.</p>
+      <img src="/blog-images/hoverfly-mv-daghestan-deck-ops-schematic.svg" alt="Original schematic illustration of a Sikorsky Hoverfly operating from a merchant vessel deck during early naval trials (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original schematic: early naval trials—Hoverfly deck operations and shipboard handling constraints (diagrammatic).</p>
     </div>
 
     <h2 id="joint-helicopter-school">Joint Helicopter School: Training and Doctrine Development</h2>
@@ -93,8 +93,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of Bristol Sycamore helicopters in formation during a military exercise in the early 1950s, showing multiple aircraft flying together and demonstrating military helicopter formation operations" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Military helicopter formations demonstrating the evolution of rotorcraft tactics and operational procedures.</p>
+      <img src="/blog-images/military-rotorcraft-formation-schematic.svg" alt="Original schematic illustration of a military helicopter formation and spacing discipline (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original schematic: formation spacing, rendezvous flow, and basic rotorcraft deconfliction cues (diagrammatic).</p>
     </div>
 
     <h2 id="flying-jeep-rotachute">Flying Jeep and Rotachute: Military Rotorcraft Development</h2>
@@ -140,7 +140,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg" alt="Insert image here: A black-and-white photograph of the Sikorsky VS-300 hovering during testing, showing its single main rotor and tail rotor configuration that established the modern helicopter layout for military applications" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/sikorsky-vs300-helicopter-breakthrough.jpg" alt="Sikorsky VS-300 helicopter during testing (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">The Sikorsky VS300, the breakthrough helicopter that established modern rotorcraft design principles for military applications.</p>
     </div>
 
@@ -260,7 +260,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Rotorcraft Military Applications: From Korea to Modern Warfare - Enhanced Edition`,
     description: `A comprehensive, research-backed account of military helicopter operations: from early WWII anti-submarine operations and Sikorsky Hoverfly deployments through Korean War medevac missions to modern multi-role aircraft that revolutionized battlefield mobility and logistics.`,
-    images: ['/blog-images/rotorcraft-military-applications-featured.jpg'],
+    images: ['/blog-images/bristol-sycamore.jpg'],
     type: 'article'
   },
   alternates: {
@@ -287,6 +287,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/rotorcraft-military-applications"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

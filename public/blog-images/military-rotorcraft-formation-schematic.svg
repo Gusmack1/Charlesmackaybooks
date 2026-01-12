@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Military Rotorcraft Formation (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing three helicopter icons in a loose V formation with spacing marks, arrows for route and separation, and simple deconfliction cues.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#a78bfa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .ok{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Rotorcraft formation spacing (schematic, diagrammatic)</text>
+  <text class="small" x="90" y="152">Simple spacing discipline + rendezvous flow cues (illustrative)</text>
+
+  <!-- route arrow -->
+  <path class="accent" d="M140 520 C340 420 520 410 680 430 C820 450 940 430 1120 360" />
+  <path class="accent" d="M1120 360 L1100 350" />
+  <path class="accent" d="M1120 360 L1104 372" />
+  <text class="small" x="930" y="330">route</text>
+
+  <!-- helper: helicopter icon -->
+  <g id="heli">
+    <path class="ink" d="M-60 0 H60" />
+    <path class="accent" d="M0 -14 V14" />
+    <path class="ink" d="M0 0 V28" />
+    <path class="ink" d="M-28 36 Q0 18 28 36 Q32 58 0 66 Q-32 58 -28 36 Z" />
+    <path class="ok" d="M-34 78 H34" />
+    <path class="ink" d="M28 48 H95" />
+    <path class="accent" d="M95 36 V60" />
+  </g>
+
+  <!-- formation positions -->
+  <g transform="translate(520,260)">
+    <use href="#heli" />
+    <text class="mono" x="-10" y="120">lead</text>
+  </g>
+  <g transform="translate(340,360)">
+    <use href="#heli" />
+    <text class="mono" x="-16" y="120">wing</text>
+  </g>
+  <g transform="translate(700,360)">
+    <use href="#heli" />
+    <text class="mono" x="-16" y="120">wing</text>
+  </g>
+
+  <!-- spacing marks -->
+  <path class="ok" d="M410 410 H470" />
+  <path class="ok" d="M410 410 L422 400" />
+  <path class="ok" d="M410 410 L422 420" />
+  <path class="ok" d="M470 410 L458 400" />
+  <path class="ok" d="M470 410 L458 420" />
+  <text class="small" x="430" y="395">spacing</text>
+
+  <path class="ok" d="M730 410 H790" />
+  <path class="ok" d="M730 410 L742 400" />
+  <path class="ok" d="M730 410 L742 420" />
+  <path class="ok" d="M790 410 L778 400" />
+  <path class="ok" d="M790 410 L778 420" />
+
+  <!-- deconfliction cue -->
+  <rect class="panel" x="120" y="200" width="300" height="180" rx="14"/>
+  <text class="label" x="145" y="240">Deconfliction</text>
+  <text class="small" x="145" y="275">- Staggered spacing</text>
+  <text class="small" x="145" y="305">- Altitude blocks</text>
+  <text class="small" x="145" y="335">- Rejoin points</text>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; not a depiction of a specific aircraft type or a specific mission photograph.</text>
+</svg>

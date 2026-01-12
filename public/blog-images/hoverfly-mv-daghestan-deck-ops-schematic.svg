@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Hoverfly Shipboard Trials (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing a simplified ship deck rectangle with a small helicopter silhouette hovering above, arrows for wind over deck, and callouts for clearance and handling constraints.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .warn{fill:none;stroke:#fbbf24;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Shipboard helicopter trials (schematic, diagrammatic)</text>
+  <text class="small" x="90" y="152">Deck handling, wind-over-deck, and clearance constraints (illustrative)</text>
+
+  <!-- ship deck -->
+  <g transform="translate(150,205)">
+    <rect class="panel" x="0" y="0" width="620" height="320" rx="16"/>
+    <path class="ink" d="M40 80 H580" />
+    <path class="accent" d="M40 120 H580" />
+    <path class="accent" d="M40 160 H580" />
+    <path class="accent" d="M40 200 H580" />
+    <path class="accent" d="M40 240 H580" />
+    <path class="accent" d="M40 280 H580" />
+    <text class="small" x="20" y="-10">deck (not to scale)</text>
+  </g>
+
+  <!-- helicopter silhouette -->
+  <g transform="translate(420,260)">
+    <!-- rotor -->
+    <path class="ink" d="M-130 0 H130" />
+    <path class="accent" d="M0 -18 V18" />
+    <!-- mast and cabin -->
+    <path class="ink" d="M0 0 V45" />
+    <path class="ink" d="M-40 55 Q0 30 40 55 Q45 85 0 95 Q-45 85 -40 55 Z" />
+    <!-- skids -->
+    <path class="accent" d="M-55 110 H55" />
+    <path class="accent" d="M-45 100 H45" />
+    <!-- tail boom -->
+    <path class="ink" d="M40 70 H150" />
+    <path class="accent" d="M150 50 V90" />
+  </g>
+
+  <!-- hover gap -->
+  <path class="warn" d="M580 410 V520" />
+  <path class="warn" d="M600 410 V520" />
+  <path class="warn" d="M580 410 H600" />
+  <path class="warn" d="M580 520 H600" />
+  <text class="small" x="620" y="475">clearance / hover height</text>
+
+  <!-- wind over deck arrow -->
+  <path class="accent" d="M860 260 H1080" />
+  <path class="accent" d="M1080 260 L1062 248" />
+  <path class="accent" d="M1080 260 L1062 272" />
+  <text class="small" x="860" y="242">wind over deck</text>
+
+  <!-- callout box -->
+  <g>
+    <rect class="panel" x="820" y="320" width="320" height="205" rx="14"/>
+    <text class="label" x="845" y="360">Constraints</text>
+    <text class="small" x="845" y="395">- Deck space</text>
+    <text class="small" x="845" y="425">- Rotor clearance</text>
+    <text class="small" x="845" y="455">- Handling + tie-down</text>
+    <text class="small" x="845" y="485">- Wind + turbulence</text>
+  </g>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; does not depict a specific photograph or a precise ship layout.</text>
+</svg>

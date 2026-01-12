@@ -285,7 +285,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'rotorcraft-military-applications',
       excerpt: 'How helicopters transformed military operations from battlefield medical evacuation to special forces insertion and modern combat roles.',
       date: 'January 20, 2025',
-      image: '/blog-images/helicopter-development-timeline.jpg',
+      image: '/blog-images/bristol-sycamore.jpg',
       tags: ['Helicopter History', 'Military Aviation', 'Combat Helicopters', 'Search and Rescue'],
       readTime: '15 min'
     },

@@ -47,7 +47,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/sikorsky-r4-helicopter.jpg', alt: 'Sikorsky R-4 in military service', caption: 'R-4 demonstrating the first helicopter combat rescue capability.' },
     { url: '/blog-images/sikorsky-vs300-test.jpg', alt: 'VS-300 test hovering tethered', caption: 'VS-300 proving control concepts adopted by later military rotorcraft.' },
     { url: '/blog-images/helicopter-development-timeline.jpg', alt: 'Rotorcraft development timeline', caption: 'Technical evolution from autogyros to turbine rotorcraft.' },
-    { url: '/blog-images/bristol-sycamore-formation.jpg', alt: 'Bristol Sycamore formation flight', caption: 'RAF Sycamores defining post-war rotary support roles.' }
+    { url: '/blog-images/bristol-sycamore-formation.jpg', alt: 'Bristol Sycamore formation flight', caption: 'RAF Sycamores defining post-war rotary support roles.' },
+    { url: '/blog-images/hoverfly-mv-daghestan-deck-ops-schematic.svg', alt: 'Hoverfly shipboard trials motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): shipboard deck handling and clearance constraints motif.' },
+    { url: '/blog-images/military-rotorcraft-formation-schematic.svg', alt: 'Rotorcraft formation spacing motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): formation spacing and basic deconfliction cues motif.' },
+    { url: '/blog-images/rotorcraft-procedure-flow-schematic.svg', alt: 'Rotorcraft procedure flow motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): training → launch → task → recovery procedure flow motif.' }
   ],
   'hms-argus-first-aircraft-carrier': [
     { url: '/blog-images/hms-argus-flush-deck-schematic.svg', alt: 'HMS Argus flush flight deck concept schematic (diagrammatic)', caption: 'Original illustration (schematic): full-length unobstructed flight deck motif.' },
