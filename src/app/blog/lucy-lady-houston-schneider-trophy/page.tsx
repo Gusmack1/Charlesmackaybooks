@@ -20,7 +20,7 @@ const post = {
     <p>Houston's intervention in 1931 represented more than financial support - it demonstrated the critical role private patronage could play in aviation development. Her funding enabled Supermarine to continue developing high-speed aircraft technology that would prove essential when war clouds gathered over Europe.</p>
 
     <div class="my-8">
-      <img src="/blog-images/lucy-lady-houston.jpg" alt="Insert image here: A formal portrait photograph of Lady Lucy Houston in elegant dress, photographed in the 1930s, showing her refined appearance and the presence of a woman who would become one of aviation's most significant patrons" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/lucy-lady-houston-portrait-schematic.svg" alt="Original schematic illustration: Lucy Lady Houston portrait motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Lady Lucy Houston, the patriotic benefactor whose financial support saved Britain's Schneider Trophy program.</p>
     </div>
 
@@ -55,7 +55,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/supermarine-s6b-schneider-trophy.jpg" alt="Insert image here: A black-and-white photograph of the Supermarine S.6B racing seaplane at high speed during the 1931 Schneider Trophy race, showing its streamlined design, floats, and the Rolls-Royce 'R' engine installation, with spray kicked up from the water" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/supermarine-s6b-schneider-trophy.jpg" alt="Supermarine S.6B Schneider Trophy racing seaplane (historical image)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">The Supermarine S6B that won the 1931 Schneider Trophy with Lady Houston's funding, reaching 407 mph and influencing Spitfire design.</p>
     </div>
 
@@ -131,8 +131,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Westland PV-3 biplane flying over the summit of Mount Everest in 1933, showing the aircraft's configuration, the Himalayan peaks below, and demonstrating the achievement of high-altitude flight over the world's highest mountain" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Mount Everest flight: Clydesdale and McIntyre's achievement demonstrated high-altitude flight capabilities and aerial photography advances.</p>
+      <img src="/blog-images/everest-flight-high-altitude-schematic.svg" alt="Original schematic illustration: high-altitude flight over Everest motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): high‑altitude flight, mapping photography, and survival equipment motif (diagrammatic).</p>
     </div>
 
     <h2 id="racing-seaplanes">Competing Racing Seaplanes and Engines</h2>
@@ -179,7 +179,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/supermarine-spitfire-development.jpg" alt="Insert image here: A black-and-white photograph of a Supermarine Spitfire prototype during early test flights, showing the aircraft's elegant lines and elliptical wings that benefited from Schneider Trophy aerodynamic research, with R.J. Mitchell's design innovations visible" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/spitfire-prototype-k5054-historical.jpg" alt="Spitfire prototype K5054 (historical image)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">The Supermarine Spitfire development that benefited from Schneider Trophy technology and Lady Houston's funding.</p>
     </div>
 
@@ -305,8 +305,8 @@ const post = {
     </ul>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Archive-style spread of test sheets—temperature logs, barograph traces, and inspector signatures—demonstrating governance." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Governed urgency: private speed under public test discipline.</p>
+      <img src="/blog-images/test-discipline-records-schematic.svg" alt="Original schematic illustration: governed test discipline records motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): governed urgency—logs, signatures, and test gates (diagrammatic).</p>
     </div>
 
     <h2 id="supplement-risk-mitigation">Supplement: Risk Mitigation Practice</h2>
@@ -316,8 +316,8 @@ const post = {
     <p>Lady Houston’s intervention demonstrated that private philanthropy can accelerate research when institutions pause — but only if outputs are recorded, verified, and disseminated. Britain extracted public value from a private gift by keeping data in the public engineering commons: design notes, test methods, and acceptance records survived to educate laboratories and factories well beyond 1931.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Calshot slipway panorama with S.6B, RAF pilot, Rolls‑Royce fitters, and Supermarine draughtsmen—captioned with roles." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">A national ensemble: patronage enabled a full orchestra of capability.</p>
+      <img src="/blog-images/calshot-team-roles-schematic.svg" alt="Original schematic illustration: Calshot ensemble roles motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): a national ensemble of roles—pilot, engineers, fitters, and governance (diagrammatic).</p>
     </div>
 
     <h2 id="supplement-concluding-thoughts">Supplement: Concluding Reflections</h2>
@@ -333,9 +333,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 12,
   featuredImage: {
-    url: '/blog-images/lucy-lady-houston.jpg',
+    url: '/blog-images/lucy-lady-houston-portrait-schematic.svg',
     alt: 'Lucy Lady Houston: The Woman Who Saved the Schneider Trophy',
-    caption: 'Lucy Lady Houston: The Woman Who Saved the Schneider Trophy - Expert analysis by Charles E. MacKay'
+    caption: 'Original illustration (schematic): Lucy Lady Houston portrait motif (diagrammatic).'
   },
   category: 'Aviation History',
   tags: ["lucy","lady","houston","schneider","trophy","aviation","history","british"],
@@ -354,7 +354,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Lucy Lady Houston Schneider Trophy`,
     description: `Comprehensive analysis of lucy lady houston schneider trophy with expert historical research and technical details.`,
-    images: ['/blog-images/lucy-lady-houston.jpg'],
+    images: ['/blog-images/lucy-lady-houston-portrait-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -381,6 +381,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/lucy-lady-houston-schneider-trophy"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

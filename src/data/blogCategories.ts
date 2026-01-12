@@ -247,7 +247,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'lucy-lady-houston-schneider-trophy',
       excerpt: 'How Lady Houston\'s £100,000 donation saved the Schneider Trophy and enabled Spitfire development.',
       date: 'January 22, 2024',
-      image: '/blog-images/supermarine-s6-schneider-race.jpg',
+      image: '/blog-images/lucy-lady-houston-portrait-schematic.svg',
       tags: ['Aviation Biography', 'Schneider Trophy', 'Philanthropy', 'Aviation History'],
       readTime: '13 min'
     },

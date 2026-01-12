@@ -26,10 +26,13 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/sycamore-seed-autorotation-schematic.svg', alt: 'Sycamore seed autorotation schematic', caption: 'Original schematic illustration (diagrammatic): autorotation-inspired descent and lift motif.' }
   ],
   'lucy-lady-houston-schneider-trophy': [
-    { url: '/blog-images/lucy-lady-houston.jpg', alt: 'Lucy, Lady Houston portrait', caption: 'Lucy, Lady Houston, whose patronage sustained Britain’s Schneider Trophy effort.' },
-    { url: '/blog-images/schneider-s6b-schneider-trophy.jpg', alt: 'Supermarine S.6B winning aircraft', caption: 'S.6B racing at full power during the 1931 Schneider Trophy victory.' },
-    { url: '/blog-images/supermarine-s6b-museum.jpg', alt: 'Preserved Supermarine S.6B', caption: 'Museum display of the S.6B linking trophy triumph to the Spitfire lineage.' },
-    { url: '/blog-images/schneider-trophy-1931.jpg', alt: 'Schneider Trophy race start line', caption: 'Crowds along the Solent watching Britain secure the final trophy outright.' }
+    { url: '/blog-images/lucy-lady-houston-portrait-schematic.svg', alt: 'Lucy Lady Houston portrait motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): patronage motif (diagrammatic).' },
+    { url: '/blog-images/supermarine-s6b-schneider-trophy.jpg', alt: 'Supermarine S.6B Schneider Trophy racing seaplane', caption: 'S.6B image associated with the 1931 Schneider Trophy narrative.' },
+    { url: '/blog-images/everest-flight-high-altitude-schematic.svg', alt: 'High-altitude Everest flight motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): flight path, mapping photography, and altitude equipment motif.' },
+    { url: '/blog-images/test-discipline-records-schematic.svg', alt: 'Test discipline records motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): logs, signatures, and test gates motif.' },
+    { url: '/blog-images/calshot-team-roles-schematic.svg', alt: 'Calshot team roles motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): roles around a racing programme motif.' },
+    { url: '/blog-images/supermarine-s6b-museum.jpg', alt: 'Preserved Supermarine S.6B museum display', caption: 'Museum display linking Schneider racing hardware to later British aircraft narratives.' },
+    { url: '/blog-images/schneider-trophy-1931.jpg', alt: 'Schneider Trophy 1931 race context', caption: 'Race context image associated with Britain’s final trophy victory narrative.' }
   ],
   'percy-pilcher-scotland-aviation-pioneer': [
     { url: '/blog-images/percy-pilcher-hawk-glider.jpg', alt: 'Percy Pilcher Hawk glider on hillside', caption: 'Pilcher preparing the Hawk glider on Scottish uplands.' },
