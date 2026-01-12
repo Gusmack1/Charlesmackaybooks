@@ -120,7 +120,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Sopwith Camel: The Most Deadly Fighter of World War I`,
     description: `The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.`,
-    images: ['/blog-images/sopwith-camel-wwi-fighter.jpg'],
+    images: ['/blog-images/sopwith-camel-historical-1918.jpg'],
     type: 'article'
   },
   alternates: {
@@ -147,6 +147,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/sopwith-camel-wwi-fighter"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
