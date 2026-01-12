@@ -27,7 +27,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Me 262 A-1a at a winter dispersal revetment, with Jumo 004 engine inspection under canvas cover, demonstrating the operational challenges of late-war jet operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/me262-winter-dispersal-maintenance-schematic.svg" alt="Original schematic illustration: Me 262 winter dispersal maintenance motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Jet age at the end of an era: speed in the air, vulnerability on the ground.</p>
     </div>
 
@@ -69,7 +69,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing a fuel bowser at a forest strip, ground crew gravity-feeding drums to a jet aircraft with drip trays, demonstrating the primitive fuel logistics that limited operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/fuel-logistics-forest-strip-schematic.svg" alt="Original schematic illustration: fuel logistics at forest strip motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Fuel decided tempo: logistics to dispersals determined whether sorties flew.</p>
     </div>
 
@@ -129,7 +129,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing the Do 335 on a dispersal strip, maintenance step-ladders at engine panels, demonstrating advanced piston-engine design in a constrained operational environment" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/do335-dispersal-strip-maintenance-schematic.svg" alt="Original schematic illustration: Do 335 dispersal strip maintenance motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Advanced designs in a constrained system: impressive performance, limited availability.</p>
     </div>
 
@@ -193,7 +193,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph showing a radar plotting room with controllers vectoring fighters, maps and status boards visible, demonstrating command and control systems that determined operational effectiveness" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/radar-command-control-plotting-schematic.svg" alt="Original schematic illustration: radar command and control plotting motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Command and control: vectors, alerts, and base defence determined survival windows.</p>
     </div>
 
@@ -294,9 +294,9 @@ const post = {
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 28,
   featuredImage: {
-    url: '/blog-images/default-generic.svg',
+    url: '/blog-images/fw190-d9-luftwaffe-1945.jpg',
     alt: 'Luftwaffe 1945: The Final Year - Enhanced Edition',
-    caption: 'Luftwaffe 1945 Final Year - Expert analysis by Charles E. MacKay'
+    caption: 'Luftwaffe 1945: late-war operations under collapsing fuel, spares, and training systems.'
   },
   category: 'Aviation History',
   tags: ["luftwaffe","1945","final","year","wwii","german"],
@@ -306,21 +306,21 @@ const post = {
       id: 'me262-jet-fighter-revolution',
       title: 'Me 262: The Jet Fighter Revolution',
       excerpt: 'How the Me 262’s speed changed interception—and where fuel, engines, and bases limited it.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/me262-jet-fighter-historical.jpg',
       readingTime: 6,
     },
     {
       id: 'german-aircraft-great-war-development',
       title: 'German Aircraft Great War Development',
       excerpt: 'German WWI design lineage that fed into late-war jet thinking and production culture.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/albatros-dva-in-flight-schematic.svg',
       readingTime: 7,
     },
     {
       id: 'jet-age-aviation-cold-war-development',
       title: 'Jet Age Aviation: Cold War Development',
       excerpt: 'Late-WWII jet lessons carried into the early Cold War doctrines and aircraft programs.',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/lightning-f6-supersonic.svg',
       readingTime: 7,
     },
   ]
@@ -335,7 +335,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Luftwaffe 1945: The Final Year - Enhanced Edition`,
     description: `A comprehensive, research-backed account of the Luftwaffe's final year: advanced jet and piston aircraft operating within a collapsing system.`,
-    images: ['/blog-images/luftwaffe-1945-final-year-featured.jpg'],
+    images: ['/blog-images/fw190-d9-luftwaffe-1945.jpg'],
     type: 'article'
   },
   alternates: {
@@ -362,6 +362,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/luftwaffe-1945-final-year"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

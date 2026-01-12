@@ -154,6 +154,10 @@ const bySlug: Record<string, ImageCandidate[]> = {
   ],
   'luftwaffe-1945-final-year': [
     { url: '/blog-images/fw190-d9-luftwaffe-1945.jpg', alt: 'Focke-Wulf Fw 190 D-9 late war' },
+    { url: '/blog-images/me262-winter-dispersal-maintenance-schematic.svg', alt: 'Me 262 winter dispersal maintenance motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): dispersal revetment and engine inspection motif.' },
+    { url: '/blog-images/fuel-logistics-forest-strip-schematic.svg', alt: 'Fuel logistics at forest strip motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): bowser, drums, and gravity-feed hose motif.' },
+    { url: '/blog-images/do335-dispersal-strip-maintenance-schematic.svg', alt: 'Do 335 dispersal strip maintenance motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): advanced piston design under field constraints motif.' },
+    { url: '/blog-images/radar-command-control-plotting-schematic.svg', alt: 'Radar command and control plotting motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): plotting board tracks and a vector cue motif.' },
     { url: '/blog-images/me262-luftwaffe.jpg', alt: 'Messerschmitt Me 262 jet fighter' },
     { url: '/blog-images/do335-pfeil-experimental-fighter.jpg', alt: 'Dornier Do 335 Pfeil' },
     { url: '/blog-images/german-fokker-dvii-museum.jpg', alt: 'Fokker D.VII museum example (context)' }

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: Do 335 dispersal strip maintenance motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .equip { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.92; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="160" y="190" class="text small">Do 335 — advanced piston design on a dispersal strip (original schematic)</text>
+  <text x="160" y="230" class="text tiny" opacity=".85">Diagrammatic: push‑pull layout motif + step ladders (not a photo)</text>
+
+  <!-- Strip -->
+  <path class="muted" d="M140 740 H1460"/>
+  <path class="muted" d="M180 700 H1420"/>
+
+  <!-- Do 335 simplified profile block -->
+  <path class="fill" d="M420 560 C520 520, 700 500, 900 520 C1060 538, 1180 575, 1260 615 C1280 628, 1280 650, 1262 660 C1150 725, 1000 760, 820 770 C670 778, 540 758, 460 720 C410 695, 380 665, 372 630 C362 585, 375 575, 420 560 Z"/>
+  <!-- Push-pull hint: nose and tail circles -->
+  <circle cx="500" cy="640" r="26" class="line"/>
+  <circle cx="1130" cy="640" r="26" class="line"/>
+  <path class="thin" d="M540 610 L760 550 L780 575 L560 635 Z"/>
+  <path class="thin" d="M860 550 L1080 610 L1060 635 L840 575 Z"/>
+
+  <!-- Step ladders -->
+  <rect x="720" y="610" width="90" height="160" rx="14" class="equip"/>
+  <path class="thin" d="M740 630 H790 M740 660 H790 M740 690 H790 M740 720 H790 M740 750 H790"/>
+  <rect x="980" y="610" width="90" height="160" rx="14" class="equip"/>
+  <path class="thin" d="M1000 630 H1050 M1000 660 H1050 M1000 690 H1050 M1000 720 H1050 M1000 750 H1050"/>
+</svg>
+
