@@ -23,6 +23,7 @@ const post = {
     </p>
     <p>
       Understanding naval aviation's evolution provides valuable insights into how military technology and operational doctrine developed together to create new capabilities. The comprehensive documentation of this evolution ensures that the principles established through naval aviation development continue to guide maritime air power worldwide. This Enhanced Edition examines naval aviation as a complete system: technologies, procedures, doctrines, operational experiences, and strategic significance.
+    </p>
 
     <h2 id="historical-context">Historical Context: Industrial Shifts and Maritime Requirements</h2>
     <p>
@@ -346,6 +347,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/naval-aviation-history"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 
