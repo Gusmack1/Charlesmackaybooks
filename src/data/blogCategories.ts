@@ -412,7 +412,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'maud-alsos-atomic-program',
       excerpt: 'MAUD, Quebec Agreement, Alsos, and 1945 statements—the documentary spine of the bomb.',
       date: 'August 14, 2025',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/maud-to-alsos-documents-schematic.svg',
       tags: ['Military History', 'MAUD', 'Alsos', 'Atomic Bomb'],
       readTime: '16 min'
     }

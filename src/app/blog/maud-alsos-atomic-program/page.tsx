@@ -21,6 +21,11 @@ const post = {
       <a href="/books/birth-atomic-bomb" class="underline font-medium">Birth of the Atomic Bomb: Statements from Churchill, Truman, Pash etc. German Alsos</a>, 
       this analysis presents the complete story of the atomic program's evolution with verified historical accuracy.
     </p>
+
+    <div class="my-8">
+      <img src="/blog-images/maud-to-alsos-documents-schematic.svg" alt="Original schematic illustration: MAUD to Alsos documents motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): MAUD → Quebec Agreement → Alsos—documents that link feasibility, policy, and field intelligence (diagrammatic).</p>
+    </div>
     <p>
       The book <a href="/books/birth-atomic-bomb" class="underline font-medium">Birth of the Atomic Bomb</a> presents newly restored 
       statements from lost documents published by the Allies in August 1945 on the development and deployment of the Atomic Bomb. The 
@@ -132,6 +137,11 @@ const post = {
       chemical separation facilities that pushed industrial capabilities to their limits. These production achievements demonstrated how 
       industrial infrastructure could support atomic weapons development while creating new challenges in coordination and resource management.
     </p>
+
+    <div class="my-8">
+      <img src="/blog-images/manhattan-production-architecture-schematic.svg" alt="Original schematic illustration: Manhattan production architecture motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): parallel enrichment paths and the plutonium route—an administrative and industrial architecture (diagrammatic).</p>
+    </div>
 
     <h2 id="agreements">The Quebec Agreement and Allied Coordination: Framework for Cooperation</h2>
     <p>
@@ -401,9 +411,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 40,
   featuredImage: {
-    url: '',
+    url: '/blog-images/maud-to-alsos-documents-schematic.svg',
     alt: 'MAUD, Alsos, and the Atomic Program - Wartime Scientific Research',
-    caption: 'Scientific collaboration and intelligence operations shaped atomic weapons development.'
+    caption: 'Original illustration (schematic): MAUD to Alsos documentary record motif (diagrammatic).'
   },
   category: 'Military History',
   tags: ['MAUD', 'Tube Alloys', 'Quebec Agreement', 'Combined Policy Committee', 'Combined Development Trust', 'Alsos Mission', 'Smyth Report', 'Atomic Bomb', 'Primary Sources', 'charles mackay books'],
@@ -428,6 +438,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'From MAUD to Alsos: The Documents Behind the Allied Atomic Program - Enhanced Edition',
     description: 'How memoranda, agreements, and field intelligence framed the bomb, 1940–45. Comprehensive analysis with historical context and technical details.',
+    images: ['/blog-images/maud-to-alsos-documents-schematic.svg'],
     type: 'article'
   },
   alternates: {
@@ -454,6 +465,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/maud-alsos-atomic-program"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

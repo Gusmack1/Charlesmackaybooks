@@ -241,10 +241,8 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/vulcan-black-buck-falklands.jpg', alt: 'Vulcan Black Buck operations context' }
   ],
   'maud-alsos-atomic-program': [
-    { url: 'https://charlesmackaybooks.com/blog-images/aircraft-production-statistics.jpg?v=1', alt: 'Wartime production and industrial mobilisation context' },
-    { url: 'https://charlesmackaybooks.com/blog-images/women-aircraft-workers.jpg?v=1', alt: 'Women in wartime industry supporting Allied programmes' },
-    { url: 'https://charlesmackaybooks.com/blog-images/willow-run-assembly-line.jpg?v=1', alt: 'Willow Run assembly line—large-scale wartime manufacturing' },
-    { url: 'https://charlesmackaybooks.com/blog-images/boeing-b17-assembly-line.jpg?v=1', alt: 'B-17 assembly line—illustrative of wartime production scale' }
+    { url: '/blog-images/maud-to-alsos-documents-schematic.svg', alt: 'MAUD to Alsos documents motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): feasibility papers → agreement → field intelligence (diagrammatic).' },
+    { url: '/blog-images/manhattan-production-architecture-schematic.svg', alt: 'Manhattan production architecture motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): parallel enrichment paths and plutonium route (diagrammatic).' }
   ]
 };
 
