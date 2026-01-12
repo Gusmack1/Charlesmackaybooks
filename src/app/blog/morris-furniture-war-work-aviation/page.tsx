@@ -215,8 +215,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A photograph or diagram showing balsa plywood manufacturing for Mosquito airframes at Morris Furniture, demonstrating precision plywood production techniques and the patented processes" class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Innovation in materials: Morris Furniture's balsa plywood patent enabled Mosquito airframe production.</p>
+      <img src="/blog-images/balsa-plywood-lamination-schematic.svg" alt="Original schematic illustration: balsa plywood lamination motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm mt-2 text-center italic">Original illustration (schematic): balsa‑core plywood lamination and inspection motif (diagrammatic).</p>
     </div>
 
     <h2 id="comparison-contemporaries">Comparison with Contemporaries: Glasgow Industrial Capability</h2>
@@ -291,9 +291,9 @@ const post = {
   publishedDate: new Date().toISOString(),
   readingTime: 28,
   featuredImage: {
-    url: '',
+    url: '/blog-images/women-aircraft-workers.jpg',
     alt: "From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition",
-    caption: 'Precision woodcraft meets aviation production on the Clyde.'
+    caption: 'Wartime manufacturing workforce and precision production culture supporting aviation supply chains.'
   },
   category: 'Industrial History',
   tags: ['Glasgow industry', 'Morris Furniture', 'Upkeep', 'Highball', 'Weir', 'Cierva', 'charles mackay books'],
@@ -308,6 +308,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "From Liners to Lancaster Parts: Morris Furniture's War Work and Aviation Supply Chains - Enhanced Edition",
     description: 'A comprehensive, research-backed account of how Morris Furniture Company of Glasgow pivoted from luxury liner interiors to wartime aviation production.',
+    images: ['/blog-images/women-aircraft-workers.jpg'],
     type: 'article'
   },
   alternates: {
@@ -334,6 +335,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/morris-furniture-war-work-aviation"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

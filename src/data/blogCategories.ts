@@ -388,7 +388,7 @@ export const blogCategories: BlogCategoryMap = {
       slug: 'morris-furniture-war-work-aviation',
       excerpt: 'How Glasgow’s Morris Furniture pivoted to rifle stocks, Upkeep/Highball components, rotor blades, and aerodynamic models.',
       date: 'August 14, 2025',
-      image: '/blog-images/default-generic.svg',
+      image: '/blog-images/women-aircraft-workers.jpg',
       tags: ['Industrial History', 'Glasgow', 'Upkeep', 'Weir', 'Cierva'],
       readTime: '18 min'
     }

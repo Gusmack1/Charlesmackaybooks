@@ -209,7 +209,8 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/hms-formidable-deck-operations.jpg', alt: 'Royal Navy carrier deck operations' }
   ],
   'morris-furniture-war-work-aviation': [
-    { url: '/blog-images/women-aircraft-workers.jpg', alt: 'Women aircraft workers in wartime production' },
+    { url: '/blog-images/women-aircraft-workers.jpg', alt: 'Women aircraft workers in wartime production', caption: 'Wartime manufacturing workforce and precision production culture supporting aviation supply chains.' },
+    { url: '/blog-images/balsa-plywood-lamination-schematic.svg', alt: 'Balsa plywood lamination motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): balsa-core plywood lamination and inspection motif.' },
     { url: '/blog-images/wwii-aircraft-factory-production.jpg', alt: 'WWII aircraft factory production line' },
     { url: '/blog-images/aircraft-factory-assembly-line.jpg', alt: 'Aircraft assembly line during war work' },
     { url: '/blog-images/willow-run-assembly-line.jpg', alt: 'Willow Run B-24 assembly line' }
