@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Bristol Sycamore Museum Display (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing a museum-style hangar scene with a simplified helicopter silhouette, placards, and callout labels to represent interpretation and education rather than a specific photograph.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .ok{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Museum display interpretation (schematic, diagrammatic)</text>
+  <text class="small" x="90" y="152">Placards + callouts used to explain systems and history (conceptual)</text>
+
+  <!-- hangar frame -->
+  <g transform="translate(120,200)">
+    <rect class="panel" x="0" y="0" width="960" height="360" rx="16"/>
+    <path class="accent" d="M40 300 H920" opacity="0.6"/>
+    <text class="mono" x="20" y="-10">display hall (concept)</text>
+  </g>
+
+  <!-- simplified helicopter silhouette -->
+  <g transform="translate(380,340)">
+    <path class="ink" d="M-160 0 H160" />
+    <path class="accent" d="M0 -18 V18" />
+    <path class="ink" d="M0 0 V55" />
+    <path class="ink" d="M-60 70 Q0 35 60 70 Q70 110 0 125 Q-70 110 -60 70 Z" />
+    <path class="ok" d="M-90 155 H90" />
+    <path class="ink" d="M60 95 H220" />
+    <path class="accent" d="M220 75 V115" />
+  </g>
+
+  <!-- placards -->
+  <g transform="translate(760,290)">
+    <rect class="panel" x="0" y="0" width="240" height="110" rx="12"/>
+    <path class="accent" d="M20 30 H220" opacity="0.7"/>
+    <path class="accent" d="M20 55 H220" opacity="0.7"/>
+    <path class="accent" d="M20 80 H180" opacity="0.7"/>
+    <text class="small" x="20" y="140">placard / labels</text>
+  </g>
+
+  <!-- callout labels -->
+  <path class="accent" d="M540 330 C650 310 690 295 760 300" />
+  <path class="accent" d="M760 300 L745 290" />
+  <path class="accent" d="M760 300 L745 312" />
+  <text class="small" x="650" y="285">systems callouts</text>
+
+  <path class="accent" d="M520 410 C640 440 720 460 820 470" />
+  <path class="accent" d="M820 470 L804 458" />
+  <path class="accent" d="M820 470 L804 482" />
+  <text class="small" x="650" y="500">context &amp; history</text>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; not a depiction of a specific museum photograph or a specific preserved airframe.</text>
+</svg>

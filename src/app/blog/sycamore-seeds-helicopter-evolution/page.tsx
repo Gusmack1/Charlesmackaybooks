@@ -16,8 +16,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A Bristol Sycamore in RAF markings hovering over a grass field during a training exercise; crewman visible at the open door with winch cable." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">From demonstration to discipline: Britain's first military helicopter moved rotorcraft from novelty to dependable service.</p>
+      <img src="/blog-images/bristol-sycamore-training-hover-taxi-schematic.svg" alt="Original schematic illustration of a Bristol Sycamore training hover/taxi sequence (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original schematic: training hover/taxi discipline—stable rotor response and repeatable handling cues (diagrammatic).</p>
     </div>
 
     <p>In a period when rotary‑wing flight was still gaining operational maturity, the Sycamore provided Britain with a platform that was practical, maintainable, and adaptable. Its engineering choices—fully articulated rotor, radial piston power, and modular maintenance access—reflected lessons drawn from wartime engineering culture: reliability and repeatability first, performance only where it could be supported in the field. The aircraft's significance extends into training syllabi, maintenance practices, and a manufacturing discipline that supported repeatable geometry in a new domain of flight.</p>
@@ -46,8 +46,8 @@ const post = {
     <p>Early flight‑test work focused on fundamentals: hover stability in varying winds, translational lift behavior, pedal authority during side‑step manoeuvres, and autorotation characteristics with typical service weights. The rotor head’s articulation and damping were tuned to reduce ground resonance and to keep cockpit vibration within acceptable limits. These results guided refinements to blade construction and control linkage geometry before fleet introduction.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Two Bristol Sycamores in loose formation over coastal terrain; rotor discs clearly visible with motion blur." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Formation confidence comes from stability: a fully articulated head and steady control response foster predictable handling.</p>
+      <img src="/blog-images/bristol-sycamore-rotor-head-controls-schematic.svg" alt="Original schematic illustration of Bristol Sycamore rotor head and controls (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original schematic: rotor head articulation and control links—stability and predictable response begin in the hub (diagrammatic).</p>
     </div>
 
     <p>By the mid‑1940s, the single‑main‑rotor, tail‑rotor configuration had achieved practical dominance for utility helicopters. The Sycamore’s three‑bladed rotor provided a sensible balance among lift, vibration, and mechanical complexity; the tail rotor, set to give strong yaw authority, made pedal control intuitive and reliable across wind conditions and weights. These choices were conservative in the best sense: they favored the stable and maintainable over the exotic.</p>
@@ -85,8 +85,8 @@ const post = {
     <p>Helicopters proved their worth where terrain and distance made ground evacuation slow and dangerous. The Sycamore’s steady hover and cabin access enabled casualty evacuation and liaison work in austere environments. The aircraft converted pilot discipline and crew coordination into minutes saved—an operational value that does not show in top‑speed tables but matters disproportionately in the field.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: SAR drill with a Sycamore hovering over coastal rocks; a winchman is being lowered while the pilot maintains a steady hover." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Hover as procedure: when control response is predictable and sightlines are clear, rescue work becomes disciplined teamwork.</p>
+      <img src="/blog-images/bristol-sycamore-rescue-winch-schematic.svg" alt="Original schematic illustration of a Bristol Sycamore rescue winch procedure (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original schematic: rescue winch teamwork—hover stability, winch flow, and crew coordination (diagrammatic).</p>
     </div>
 
     <p>Operational notes emphasized crew coordination, particularly in search and rescue: the pilot’s small, continuous inputs kept the hover stable; the crewman at the door directed winch operations with agreed hand signals and clear voice procedures; and the aircraft’s systems tolerances—temperatures, pressures, and electrical loads—stayed within limits when run by the book. The Sycamore rewarded this discipline with repeatable outcomes.</p>
@@ -101,8 +101,8 @@ const post = {
     <p>Comparisons clarify strengths and limits. Against contemporaries derived from early American designs, the Sycamore stood out for maintainability and predictable handling. Westland’s early licensed types, and later indigenous developments, pursued similar reliability while adding power and, eventually, turbine propulsion in subsequent generations. The Sycamore’s fully articulated head and conservative systems distinguished it as a steady worker rather than a record‑setter—precisely what Britain needed to build a rotary‑wing practice sustained by procedure and training.</p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Comparative lineup photo—Sycamore beside another early British naval helicopter—highlighting differences in rotor head design and cabin layout." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Different answers to the same questions: layout choices reflect doctrinal and maintenance priorities as much as performance goals.</p>
+      <img src="/blog-images/bristol-sycamore-schematic.svg" alt="Original schematic illustration of Bristol Sycamore configuration (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original schematic: configuration overview—layout choices that prioritize maintainability and operational practicality (diagrammatic).</p>
     </div>
 
     <h2 id="legacy-influence">Legacy and Influence on British Aviation</h2>
@@ -144,8 +144,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Production bay with a Sycamore fuselage open to show transmission mounts; inspectors referencing traveler documents at a workbench." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Quality is repeatability: documentation, calibrated tools, and jigs that hold geometry underwrite safety and performance.</p>
+      <img src="/blog-images/bristol-sycamore-maintenance-flightline-schematic.svg" alt="Original schematic illustration of Bristol Sycamore maintenance and inspection workflow (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original schematic: maintenance and inspection workflow—access, documentation, and repeatability (diagrammatic).</p>
     </div>
 
     <h2 id="pilot-accounts">Pilot and Crew Experience</h2>
@@ -173,8 +173,8 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: Preserved Sycamore in a UK museum hangar; visitors reading placards while the articulated rotor head is displayed with explanatory labels." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Legacy on display: preserved examples teach the public not only what a helicopter looks like, but how a reliable one is built and maintained.</p>
+      <img src="/blog-images/bristol-sycamore-museum-display-schematic.svg" alt="Original schematic illustration of a museum-style display of a preserved Bristol Sycamore with labelled components (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <p class="text-sm  mt-2 text-center italic">Original schematic: museum display context—labels and cutaway-style callouts used for public interpretation (diagrammatic).</p>
     </div>
 
     <h2 id="further-reading">Further Reading and Related Works</h2>
@@ -248,6 +248,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/sycamore-seeds-helicopter-evolution"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

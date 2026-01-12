@@ -199,7 +199,13 @@ const bySlug: Record<string, ImageCandidate[]> = {
     { url: '/blog-images/sycamore-seeds-helicopter.jpg', alt: 'Sycamore seed biomimicry for rotorcraft' },
     { url: '/blog-images/sycamore-seeds-nature-inspiration.jpg', alt: 'Sycamore seeds nature inspiration' },
     { url: '/blog-images/sycamore-seeds-multiple.jpg', alt: 'Sycamore seeds in motion' },
-    { url: '/blog-images/sycamore-biomimicry-design.jpg', alt: 'Biomimicry design in helicopters' }
+    { url: '/blog-images/sycamore-biomimicry-design.jpg', alt: 'Biomimicry design in helicopters' },
+    { url: '/blog-images/sycamore-seed-autorotation-schematic.svg', alt: 'Sycamore seed autorotation motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): autorotation/terminal descent motif underpinning rotorcraft thinking.' },
+    { url: '/blog-images/bristol-sycamore-training-hover-taxi-schematic.svg', alt: 'Bristol Sycamore hover/taxi training motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): training hover/taxi sequence and handling cues motif.' },
+    { url: '/blog-images/bristol-sycamore-rotor-head-controls-schematic.svg', alt: 'Bristol Sycamore rotor head and controls motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): articulation/links that support predictable control response.' },
+    { url: '/blog-images/bristol-sycamore-rescue-winch-schematic.svg', alt: 'Bristol Sycamore rescue winch procedure motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): hover + winch flow + crew coordination motif.' },
+    { url: '/blog-images/bristol-sycamore-maintenance-flightline-schematic.svg', alt: 'Bristol Sycamore maintenance and inspection workflow motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): access-first inspection and documentation motif.' },
+    { url: '/blog-images/bristol-sycamore-museum-display-schematic.svg', alt: 'Bristol Sycamore museum display interpretation motif (schematic, diagrammatic)', caption: 'Original illustration (schematic): label/callout interpretation motif used in public displays.' }
   ],
   'test-pilot-biography-eric-brown': [
     { url: '/blog-images/eric-brown-official-portrait.jpg', alt: 'Captain Eric "Winkle" Brown portrait (photograph)' },
