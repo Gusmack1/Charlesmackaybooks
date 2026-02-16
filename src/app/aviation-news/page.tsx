@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import { books } from '@/data/books'
-import { getNewsArticles } from '@/lib/newsroom'
+import { getPublishedNewsArticles } from '@/lib/newsroom'
 
 export const dynamic = 'force-dynamic'
 
@@ -131,7 +131,7 @@ export default async function AviationNewsPage() {
     },
   }
 
-  const articles = await getNewsArticles(10)
+  const articles = await getPublishedNewsArticles(10)
 
   return (
     <>

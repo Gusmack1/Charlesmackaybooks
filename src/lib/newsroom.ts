@@ -391,7 +391,7 @@ async function buildRelatedPosts(currentSlug: string): Promise<RelatedPostCard[]
       const excerpt = plainText.slice(0, 180)
       const words = countWords(plainText)
       return {
-        slug: `scottish-aviation-news/${article.slug}`,
+        slug: `aviation-news/${article.slug}`,
         title: article.title,
         excerpt,
         imageUrl: article.images?.[0]?.src || FALLBACK_IMAGE,

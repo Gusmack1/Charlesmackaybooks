@@ -56,7 +56,7 @@ export default async function NewsPage() {
               </div>
               <div className="space-y-3">
                 <Link
-                  href={`/blog/scottish-aviation-news/${hero.slug}`}
+                  href={`/aviation-news/${hero.slug}`}
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white text-slate-900 font-semibold hover:bg-gray-100 hover:underline transition-colors border border-slate-900"
                 >
                   Read briefing
@@ -100,7 +100,7 @@ export default async function NewsPage() {
               {secondary.map((article) => (
                 <Link
                   key={article.slug}
-                  href={`/blog/scottish-aviation-news/${article.slug}`}
+                  href={`/aviation-news/${article.slug}`}
                   className="border border-white/10 rounded-xl p-5 bg-slate-800/60 hover:border-white/40 transition-colors"
                 >
                   <p className="text-xs text-white/60 mb-1">{formatDate(article.createdAt)}</p>
@@ -125,7 +125,7 @@ export default async function NewsPage() {
           <section>
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-2xl font-semibold text-white">Archive</h2>
-              <Link href="/blog/scottish-aviation-news" className="text-blue-300 text-sm font-semibold hover:underline">
+              <Link href="/aviation-news" className="text-blue-300 text-sm font-semibold hover:underline">
                 View all automated posts →
               </Link>
             </div>
@@ -134,7 +134,7 @@ export default async function NewsPage() {
                 <div key={article.slug} className="flex flex-col md:flex-row md:items-center justify-between border border-white/10 rounded-lg p-4">
                   <div className="md:w-2/3">
                     <p className="text-xs text-white/60">{formatDate(article.createdAt)}</p>
-                    <Link href={`/blog/scottish-aviation-news/${article.slug}`} className="text-lg font-semibold text-white hover:underline">
+                    <Link href={`/aviation-news/${article.slug}`} className="text-lg font-semibold text-white hover:underline">
                       {article.title}
                     </Link>
                   </div>

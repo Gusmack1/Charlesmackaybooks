@@ -198,7 +198,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                   {matchingBriefings.map((article) => (
                     <Link
                       key={article.slug}
-                      href={`/blog/scottish-aviation-news/${article.slug}`}
+                      href={`/aviation-news/${article.slug}`}
                       className="block border border-white/15 bg-slate-800 rounded-lg p-4 hover:border-white/40 transition-colors"
                     >
                       <div className="font-semibold mb-1">{article.title}</div>
