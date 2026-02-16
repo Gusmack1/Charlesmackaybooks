@@ -27,7 +27,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A composite spread featuring Me 262, Gloster Meteor, and early P-80 aircraft, illustrating the transition from props to jets and demonstrating the diversity of early jet designs" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/early-jet-transition-me262-meteor-p80-schematic.svg" alt="Original schematic illustration of early jet transition: a conceptual lineup of late-war and early post-war jet fighters (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">From experimental jets to frontline service: the turbine displaced the piston in less than a decade.</p>
     </div>
 
@@ -66,7 +66,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A detailed diagram of swept wing benefits and all-moving tail, annotated for compressibility effects, demonstrating how these innovations enabled transonic and supersonic flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/swept-wing-all-moving-tail-schematic.svg" alt="Original schematic illustration of swept-wing compressibility concept and all-moving tailplane pitch authority (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Sweep delays compressibility; the all‑flying tail restores pitch authority near and beyond Mach 1.</p>
     </div>
 
@@ -122,7 +122,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A photograph showing Lightning F.6 alongside a Soviet Bear reconnaissance aircraft during a North Sea intercept, illustrating Cold War deterrence and the point-defence interceptor role" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/cold-war-intercept-lightning-bear-schematic.svg" alt="Original schematic illustration of a Cold War intercept geometry (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Cold War theatre: intercept photographs were diplomacy by other means.</p>
     </div>
 
@@ -248,7 +248,7 @@ const post = {
       V-Force bombers demonstrated how strategic requirements influenced bomber design, with delta-wing Vulcan and Victor designs emphasizing high-altitude performance. Understanding bomber design provides valuable insights into how strategic requirements influenced aircraft development. The comprehensive documentation of bomber comparisons ensures that strategic aircraft development is properly preserved.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A comparison diagram showing the evolution of jet fighters from Me 262 through Meteor, Sabre, and Lightning, demonstrating the progression of jet aircraft capabilities" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/jet-fighter-evolution-me262-meteor-sabre-lightning-schematic.svg" alt="Original schematic illustration of jet fighter evolution timeline (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">From first operational jets to supersonic interceptors: the Jet Age transformation.</p>
     </div>
 
@@ -381,7 +381,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Jet Age Aviation: Cold War Development - Enhanced Edition`,
     description: `A comprehensive, research-backed account of jet age aviation development during the Cold War: from late-war German jets to mature Cold War weapon systems.`,
-    images: ['/blog-images/jet-age-aviation-cold-war-development-featured.jpg'],
+    images: [post.featuredImage.url],
     type: 'article'
   },
   alternates: {
@@ -408,6 +408,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/jet-age-aviation-cold-war-development"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

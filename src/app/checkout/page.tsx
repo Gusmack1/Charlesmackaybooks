@@ -16,6 +16,11 @@ import {
   updateOrderStatus,
   Order
 } from '../../utils/orderUtils';
+import {
+  readSavedCustomerProfile,
+  saveCustomerProfile,
+  clearSavedCustomerProfile,
+} from '../../utils/customerProfile';
 import CustomerTestimonials from '../../components/CustomerTestimonials';
 import { trackCartAbandonment } from '../../utils/abandonedCartRecovery';
 import { useSearchParams } from 'next/navigation';
@@ -66,12 +71,21 @@ function CheckoutContent() {
     postcode: '',
     country: 'GB'
   });
+  const [saveDetailsForNextTime, setSaveDetailsForNextTime] = useState(true);
+  const [savedProfile, setSavedProfile] = useState<CustomerDetails | null>(null);
   const [errors, setErrors] = useState<string[]>([]);
   const [clientSecret, setClientSecret] = useState<string>('');
   const [isLoading, setIsLoading] = useState(false);
   const [abandonmentTracked, setAbandonmentTracked] = useState(false);
   const [checkoutCompleted, setCheckoutCompleted] = useState(false);
   const [stripeReference] = useState(() => generateOrderId());
+
+  useEffect(() => {
+    const profile = readSavedCustomerProfile();
+    if (profile?.email) {
+      setSavedProfile(profile);
+    }
+  }, []);
 
   const buildCustomerInfoPayload = (): CustomerInfoPayload => ({
     firstName: customerDetails.firstName,
@@ -167,6 +181,20 @@ function CheckoutContent() {
 
   const handleInputChange = (field: keyof CustomerDetails, value: string) => {
     setCustomerDetails(prev => ({ ...prev, [field]: value }));
+  };
+
+  const applySavedProfile = () => {
+    if (!savedProfile) return;
+    setCustomerDetails(savedProfile);
+  };
+
+  const persistCheckoutProfile = () => {
+    if (!saveDetailsForNextTime) {
+      clearSavedCustomerProfile();
+      return;
+    }
+    if (!customerDetails.email || !customerDetails.firstName || !customerDetails.lastName) return;
+    saveCustomerProfile(customerDetails);
   };
 
   const handleAddressSubmit = () => {
@@ -273,6 +301,7 @@ function CheckoutContent() {
 
       setCheckoutCompleted(true);
       setAbandonmentTracked(true);
+      persistCheckoutProfile();
       clearCart();
       window.location.href = `/order-complete?orderId=${order.id}`;
     } catch (error) {
@@ -339,6 +368,7 @@ function CheckoutContent() {
               
               setCheckoutCompleted(true);
               setAbandonmentTracked(true);
+              persistCheckoutProfile();
               clearCart();
               window.location.href = `/order-complete?orderId=${order.id}`;
             } catch (error) {
@@ -392,7 +422,9 @@ function CheckoutContent() {
         {/* Header */}
         <div className="mb-6 sm:mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Secure Checkout</h1>
-          <p className="text-white/90 text-sm sm:text-base">Complete your order for Charles E. MacKay's aviation history books</p>
+          <p className="text-white/90 text-sm sm:text-base">
+            Guest checkout is enabled by default. Buy quickly with card, wallet, or PayPal.
+          </p>
         </div>
 
         {/* Progress Steps - Mobile Friendly */}
@@ -511,6 +543,21 @@ function CheckoutContent() {
             {step === 'address' && (
               <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4 sm:p-6">
                 <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Shipping Address</h2>
+                <div className="mb-4 rounded-lg border border-white/15 bg-slate-800/80 p-3 text-sm text-white/85">
+                  <p className="font-semibold text-white">Guest checkout (fastest)</p>
+                  <p className="text-white/70 text-xs sm:text-sm mt-1">
+                    No account required. Enter your details once and check out securely.
+                  </p>
+                  {savedProfile?.email && (
+                    <button
+                      type="button"
+                      onClick={applySavedProfile}
+                      className="mt-2 text-blue-300 hover:text-blue-200 underline text-xs sm:text-sm"
+                    >
+                      Use saved details for {savedProfile.email}
+                    </button>
+                  )}
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium mb-1 text-white">First Name *</label>
@@ -658,6 +705,15 @@ function CheckoutContent() {
                     </ul>
                   </div>
                 )}
+                <label className="mt-4 flex items-start gap-2 text-xs sm:text-sm text-white/80">
+                  <input
+                    type="checkbox"
+                    checked={saveDetailsForNextTime}
+                    onChange={(e) => setSaveDetailsForNextTime(e.target.checked)}
+                    className="mt-0.5 h-4 w-4 rounded border-blue-500 bg-slate-800 text-blue-500"
+                  />
+                  Save my details on this device for faster guest checkout next time
+                </label>
                 <button
                   onClick={handleAddressSubmit}
                   className="w-full mt-4 bg-white text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base border border-slate-900"

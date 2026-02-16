@@ -1,6 +1,6 @@
 import { Book } from '@/types/book';
 
-export const books: Book[] = [
+const sourceBooks: Book[] = [
   {
     id: 'this-was-the-enemy-volume-two',
     title: 'This Was the Enemy: Aeroplanes Guns Bombs Downfall Volume Two',
@@ -766,6 +766,54 @@ Armament shows the work of Rheinmetall Borsig and Mauser. All classes of bombs a
     }
   }
 ];
+
+const optimizedDescriptions: Record<string, string> = {
+  'german-aircraft-great-war':
+    'Comprehensive study of German military and naval aviation in the First World War, from early development to Armistice conditions. Uses newly translated documents, Allied intelligence, and League of Nations Inter-Allied Control Commission reports to explain organization, supply, industry, and operations. Includes orders of battle, aerodrome lists, ace biographies, and detail on major aircraft types including Fokker and Riesenflugzeuge units. A5 format, 256 pages, with over 200 original photographs and drawings.',
+  'this-was-the-enemy-volume-two':
+    'Volume Two of This Was the Enemy examines German aircraft, bomb, and armament procurement from 1934 to 1945. It follows planning under Erhard Milch, the breakdown of pre-war theory, and the destruction of production under Allied bombing, using material from the Bombing Command Survey Unit and the United States Strategic Survey Unit. Front-line Luftwaffe aircraft, Rheinmetall Borsig and Mauser armament work, and bomb classes are supported by technical drawings and photographs. A5 format, 288 pages, over 300 pictures, 58,000 words, with bibliography.',
+  'enemy-luftwaffe-1945':
+    'First volume in the series on Luftwaffe history, tracing development from post-1919 restrictions through campaigns in Spain, Poland, Scandinavia, and western Europe. Covers Luftwaffe organization, planning, and operations up to the Battle of Britain period, with discussion of major aircraft companies and engine development. Includes material on piston and gas-turbine programmes plus appendix armament context.',
+  'clydeside-aviation-vol1':
+    'Volume One traces Clydeside aviation from 1785 to 1919, from early pioneers and Scottish aviation societies to wartime industrial aircraft production. It examines the Weir Scheme, RFC/RNAS service aircraft, airship development at Inchinnan, and aero-engine supply during the Great War. The book includes aircraft and production detail for types built on Clydeside, plus maps, diagrams, and appendices. Profusely illustrated with over 450 illustrations and drawings.',
+  'british-aircraft-great-war':
+    'Study of British aircraft procurement and squadron formation across 1914-1918 for the RFC, RNAS, and RAF. Covers Ministry of Munitions processes, aero-engine supply, heavy bomber units including Handley Page 0/400 and V/1500, and shipboard aircraft operations including Sopwith Pup and 2F-1 Camel production by Beardmore. Includes fighters, bombers, seaplanes, trainers, and flying boats. Based on official archive material and original research.',
+  'beardmore-aviation':
+    'Study of William Beardmore & Co. aviation activity from 1913 to 1930 at Dalmuir, Clydebank, and Glasgow. Covers aircraft production, aero-engines, airships, Admiralty programmes, and an in-depth history of HMS Argus and early carrier flying. Based on Beardmore archive records in Scotland and London with contract data, production figures, and extensive original illustrations. Includes material on Sopwith carrier operations, R34 and R36, Renfrew air school, R101 context, and a comprehensive appendix and bibliography.',
+  'clydeside-aviation-vol2':
+    'Volume Two covers aviation events on Clydeside between 1919 and 1939, including Beardmore and Weir activity, Red Clydeside conditions, regional airlines, and flying club development. It follows 602 Squadron from DH9a to Spitfire-era service and documents squadron incidents, Renfrew and Abbotsinch operations, and early British helicopter work including the Weir W5. Includes fresh material on airlines, air ambulances, Blackburn production at Dumbarton, and related appendices. A5 format with over 300 pictures and 40,000+ words.',
+  'flying-for-kaiser':
+    'Volume Two companion to German Aircraft in the Great War, built from newly translated period documents and captured records. Covers German air-service expansion, fighter-wing organization, training systems, armament, ace biographies, and observation-balloon operations. Includes detailed Armistice transfer lists with aircraft serials, plus material on industry scale, operations, and Versailles consequences. A5 paperback, highly illustrated with nearly 300 images.',
+  'adolf-rohrbach':
+    'Study of Adolf Rohrbach and Rohrbach Metall-Flugzeugbau, focused on all-metal aircraft design and company development. Covers major Rohrbach types, design teams, and civil/military operating context including Luft Hansa and Deruluft links. Includes material on patent disputes, economic collapse and liquidation, and Rohrbach stressed-skin influence on later aircraft development. A5 format with over 200 photographs and drawings.',
+  'aircraft-carrier-argus':
+    'Detailed history of HMS Argus from conversion of SS Conte Rosso to Royal Navy carrier service and eventual disposal in 1947. Covers early deck-flying trials, inter-war and wartime deployments, training roles, and operations including convoy and support missions. Includes links to broader Fleet Air Arm and carrier-development context with archival illustrations.',
+  'sonic-to-standoff':
+    'Study of British nuclear-deterrent aviation development, including Blue Steel evolution, V-bomber context, and Cold War programme links. Traces technical and strategic threads from early German rocket-era influences to UK and UK-US development pathways, with RAF force structure, trials, and weapons-programme detail. Includes extensive illustrations, appendices, and bibliography.',
+  'captain-eric-brown':
+    'Illustrated biography of Captain Eric Winkle Brown, covering pre-war Germany, carrier flying, and test-pilot work including flights such as the Me 163. Includes his role in steam catapult development, lecture material on carrier aviation for the US Navy, and related references to his published work. Contains rare images and drawings, including HMS Perseus and HMS Rocket material.',
+  'soaring-with-wings':
+    'Biography of Percy S. Pilcher focused on his experimental flying years, including flights at Cardross and work linked to late-19th-century aviation pioneers. Covers Pilcher technical influences, flight activity, exhibitions, and associated historical context in Scotland and England. Includes material on his yachts, lectures, and the coroner-supported account of his fatal 1899 crash. Illustrated with rare photographs and drawings, with bibliography and appendix.',
+  'dieter-dengler':
+    'Biography of Dieter Dengler covering early life, US Navy service, and the 1966 Laos escape story. Includes USS Ranger context, A-1 Skyraider operational background, and account material tied to capture and escape. Also includes appendix material on media and related Skyraider context.',
+  'sycamore-seeds':
+    'History of helicopter and autogyro development from early work to 1960, including Cierva, Weir, Sikorsky, and Focke Achgelis programmes. Covers British rotorcraft milestones such as Weir W5 and W6, Cierva W9, Air Horse, Rotachute, and Bristol Sycamore development, with company-record detail. Also examines wartime German helicopter work and related British and American influence. A5 format, 219 pages, with over 300 rare images and drawings.',
+  'sabres-from-north':
+    'Cold War study of Canadair Sabre development and deployment in RAF, RCAF, NATO, and West German service. Includes MDAP context, ferry routes across the North Atlantic, squadron histories, and related operations from Korea-era flying to European deployments. Covers connected aircraft and propulsion development, including CF-100, CT-33, Meteor, MiG-15 context, and jet-engine programmes. Supported by extensive drawings, photographs, bibliography, and appendix.',
+  'mother-of-the-few':
+    'Three-part study of Lucy Lady Houston aviation interests, the Schneider Trophy, and the Everest flight. Covers development of the Rolls-Royce R engine and related seaplane racing context, plus flight planning and high-altitude operation details for Everest operations. Includes supporting appendices and illustrated material on aircraft, crews, and technical development.',
+  'birth-atomic-bomb':
+    'Collection of restored 1945 Allied statements and source documents on atomic bomb development and deployment context. Includes material on Tube Alloys, MAUD, Quebec Agreement, ALSOS, Silverplate, Peppermint, and Chickenpox, with statements from Churchill, Truman, Oppenheimer, and other officials. Presented as coordinated documentary source material with illustrations and appendices.',
+  'modern-furniture':
+    'History of the Morris Furniture Company from peace-time furnishing work to wartime and post-war industrial programmes. Covers ship and hotel contracts, wartime model and production work, and links to aviation and military projects including rotorcraft-related manufacturing support. Follows the company development in Scotland through to 1975 with extensive illustrated archival material.',
+  'dorothy-wordsworth':
+    'Illustrated and reset edition of Dorothy Wordsworth 1803 Scottish tour narrative, presented in a compact travel-friendly format. Maintains the core prose while adding restored images, map content, and clear modern typesetting. Covers the Borders, Glasgow, Highland routes, and major locations described during the six-week journey.',
+};
+
+export const books: Book[] = sourceBooks.map((book) => ({
+  ...book,
+  description: optimizedDescriptions[book.id] || book.description,
+}));
 
 export const categories = Array.from(new Set(books.map(book => book.category))).sort();
 

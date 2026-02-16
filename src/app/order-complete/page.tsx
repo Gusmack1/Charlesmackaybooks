@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { getOrder, updateOrderStatus, generateEmailReceipt, notifyAdminOfNewOrder, sendReceiptToCustomer, Order } from '@/utils/orderUtils';
+import { getOrder, updateOrderStatus, generateEmailReceipt, sendReceiptToCustomer, Order } from '@/utils/orderUtils';
 import { useCart } from '@/context/CartContext';
 
 function OrderCompleteContent() {
@@ -56,12 +56,6 @@ function OrderCompleteContent() {
   const handleEmailReceipt = () => {
     if (order) {
       sendReceiptToCustomer(order);
-    }
-  };
-
-  const handleNotifyAdmin = () => {
-    if (order) {
-      notifyAdminOfNewOrder(order);
     }
   };
 
@@ -240,14 +234,20 @@ function OrderCompleteContent() {
               onClick={handleEmailReceipt}
               className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors border border-slate-900"
             >
-              📧 Email Receipt to Customer
+              📧 Email Receipt
             </button>
-            <button
-              onClick={handleNotifyAdmin}
-              className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+            <Link
+              href={`/order-tracking?orderId=${encodeURIComponent(order.orderId)}`}
+              className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
             >
-              📧 Notify Admin
-            </button>
+              🔎 Track This Order
+            </Link>
+            <Link
+              href={`/order-tracking?email=${encodeURIComponent(order.customerDetails.email)}`}
+              className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+            >
+              👤 View My Orders
+            </Link>
             <Link
               href="/books"
               className="bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors"

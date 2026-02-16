@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getBooksData } from '@/utils/bookUtils';
+import { resolveRelatedBooks } from '@/utils/blogRelatedBooks';
 import { getImageCandidates } from '@/data/blogImageManifest';
 import { getApprovedFeatured, getApprovedInline } from '@/utils/approvedImageResolver';
 import ShareButton from '@/components/ShareButton';
@@ -59,6 +59,12 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
   type Reference = { title: string; url: string; source?: string; date?: string };
   const featured = getApprovedFeatured(post.id, post.featuredImage?.url, post.featuredImage?.alt)
   const approvedInline = getApprovedInline(post.id, 4)
+  const resolvedRelatedBooks = resolveRelatedBooks(
+    { id: post.id, title: post.title, category: post.category, tags: post.tags },
+    post.relatedBooks,
+    2,
+    4
+  );
   // IMPORTANT: This string is used inside an inline `onerror="...this.src='data:...'"` handler.
   // It must not contain any unescaped single quotes, otherwise it can break the JS string and throw a syntax error.
   const fallbackSvg = encodeURIComponent(
@@ -93,8 +99,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
     const candidates: string[] = [];
     if (post.featuredImage?.url) candidates.push(post.featuredImage.url);
-    if (post.relatedBooks && post.relatedBooks.length > 0) {
-      const covers = post.relatedBooks.map((b) => b.cover).filter(Boolean);
+    if (resolvedRelatedBooks && resolvedRelatedBooks.length > 0) {
+      const covers = resolvedRelatedBooks.map((b) => b.cover).filter(Boolean);
       candidates.push(...covers);
     }
     // ensure at least minimumImages
@@ -173,6 +179,14 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     return output
   }
 
+  const removeRepetitiveBoilerplate = (html: string): string => {
+    return html
+      .replace(/\s*The comprehensive documentation[^.]*\.\s*/gi, ' ')
+      .replace(/\s*This comprehensive coverage[^.]*\.\s*/gi, ' ')
+      .replace(/\s*Understanding [^.]* provides valuable insights[^.]*\.\s*/gi, ' ')
+      .replace(/\s{2,}/g, ' ');
+  }
+
   // Removed scroll listeners and floating share to prevent jank
 
   // Prepare processed content
@@ -204,7 +218,11 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
     return out;
   };
 
-  const processedHtml = enforceCaptions(replaceGenericPlaceholdersWithManifest(stripShareUI(processContent(post.content))));
+  const processedHtml = enforceCaptions(
+    replaceGenericPlaceholdersWithManifest(
+      stripShareUI(processContent(removeRepetitiveBoilerplate(post.content)))
+    )
+  );
   
   // Fallback references if a post doesn't specify any
   const getCategoryFallbackReferences = (category: string | undefined): Reference[] => {
@@ -366,23 +384,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
             {/* Compact related books CTA near the top for strong internal linking */}
             {(() => {
-              const hasExplicit = Array.isArray(post.relatedBooks) && post.relatedBooks.length > 0;
-              const normalize = (s: string) => (s || '').toLowerCase();
-              const category = normalize(post.category || '');
-              const tags = (post.tags || []).map(normalize);
-              const pick = new Set<string>();
-              if (!hasExplicit) {
-                if (category.includes('wwi')) { pick.add('british-aircraft-great-war'); pick.add('german-aircraft-great-war'); }
-                if (category.includes('wwii') || category.includes('world war ii')) { pick.add('enemy-luftwaffe-1945'); }
-                if (category.includes('jet') || category.includes('cold war')) { pick.add('sonic-to-standoff'); }
-                if (category.includes('helicopter')) { pick.add('sycamore-seeds'); }
-                if (category.includes('naval')) { pick.add('aircraft-carrier-argus'); }
-                if (category.includes('scottish')) { pick.add('clydeside-aviation-vol1'); }
-                if (category.includes('biography')) { pick.add('captain-eric-brown'); }
-              }
-              const fallbackMini = !hasExplicit ? getBooksData(Array.from(pick)).slice(0,2) : [];
-              const mini = hasExplicit ? post.relatedBooks.slice(0,2) : fallbackMini;
-              if (!mini || mini.length === 0) return null;
+              const mini = resolvedRelatedBooks.slice(0, 2);
+              if (!mini.length) return null;
               return (
                 <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
                   {mini.map((b) => (
@@ -485,30 +488,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
         {/* Related Books CTA (with intelligent fallback) */}
         {(() => {
-          const hasExplicit = Array.isArray(post.relatedBooks) && post.relatedBooks.length > 0;
-          const normalize = (s: string) => (s || '').toLowerCase();
-          const category = normalize(post.category);
-          const tags = (post.tags || []).map(normalize);
-          const pick = new Set<string>();
-          if (!hasExplicit) {
-            // Category-based suggestions
-            if (category.includes('wwi')) { pick.add('british-aircraft-great-war'); pick.add('german-aircraft-great-war'); }
-            if (category.includes('wwii') || category.includes('world war ii')) { pick.add('enemy-luftwaffe-1945'); }
-            if (category.includes('jet') || category.includes('cold war')) { pick.add('sonic-to-standoff'); }
-            if (category.includes('helicopter')) { pick.add('sycamore-seeds'); }
-            if (category.includes('naval')) { pick.add('aircraft-carrier-argus'); }
-            if (category.includes('scottish')) { pick.add('clydeside-aviation-vol1'); }
-            if (category.includes('biography')) { pick.add('captain-eric-brown'); pick.add('soaring-with-wings'); }
-            if (category.includes('industrial') || category.includes('manufacturing')) { pick.add('beardmore-aviation'); }
-            // Tag-based augment
-            if (tags.includes('v-force') || tags.includes('vulcan')) { pick.add('sonic-to-standoff'); }
-            if (tags.includes('hms argus') || tags.includes('carrier')) { pick.add('aircraft-carrier-argus'); }
-            if (tags.includes('bristol') || tags.includes('brisfit')) { pick.add('bristol-fighter'); }
-            if (tags.includes('schneider') || tags.includes('trophy')) { pick.add('mother-of-the-few'); }
-          }
-          const fallbackBooks = !hasExplicit ? getBooksData(Array.from(pick)) : [];
-          const finalRelated = hasExplicit ? post.relatedBooks : fallbackBooks;
-          if (!finalRelated || finalRelated.length === 0) {
+          const finalRelated = resolvedRelatedBooks;
+          if (!finalRelated.length) {
             return (
               <section className="mt-16 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 border border-slate-200 dark:border-slate-700" aria-labelledby="related-books-heading">
                 <div className="flex items-center justify-between gap-4 mb-6">

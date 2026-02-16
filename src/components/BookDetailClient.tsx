@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
 import { useAnalytics } from '@/hooks/useAnalytics';
@@ -11,7 +12,9 @@ interface BookDetailClientProps {
 
 export default function BookDetailClient({ book }: BookDetailClientProps) {
   const { addToCart, openBasket } = useCart();
+  const router = useRouter();
   const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const [isBuyingNow, setIsBuyingNow] = useState(false);
   const { trackContactEmail, trackEbayRedirect } = useAnalytics();
 
   const handleAddToCart = () => {
@@ -23,6 +26,15 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
     }, 500);
   };
 
+  const handleBuyNow = () => {
+    if (isBuyingNow) return;
+    setIsBuyingNow(true);
+    addToCart(book);
+    setTimeout(() => {
+      router.push('/checkout?method=stripe');
+    }, 250);
+  };
+
   const handleEmailClick = () => {
     // Track email click analytics
     trackContactEmail();
@@ -32,111 +44,119 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
     trackEbayRedirect(book.title);
   };
 
-  const generatePayPalUrl = (book: Book) => {
-    const baseUrl = 'https://www.paypal.com/cgi-bin/webscr';
-    const params = new URLSearchParams({
-      cmd: '_xclick',
-      business: 'charlese1mackay@hotmail.com',
-      item_name: `${book.title} - Aviation History Book by Charles E. MacKay`,
-      item_number: book.isbn || book.id,
-      amount: book.price.toString(),
-      currency_code: 'GBP',
-      no_shipping: '0',
-      no_note: '0',
-      tax: '0',
-      lc: 'GB',
-      bn: 'PP-BuyNowBF',
-      return: 'https://charlesmackaybooks.com/thank-you',
-      cancel_return: 'https://charlesmackaybooks.com/books',
-      // Enhanced tracking parameters
-      custom: `ISBN:${book.isbn || 'N/A'}|TITLE:${book.title}|CUSTOMER_EMAIL:WILL_BE_FILLED`,
-      invoice: `CM-${book.id}-${Date.now()}`,
-      notify_url: 'https://charlesmackaybooks.com/api/paypal-ipn'
-    });
-    return `${baseUrl}?${params.toString()}`;
-  };
-
   const isPreOrder = book.authorInsights?.toLowerCase().includes('pre-order') || book.authorInsights?.toLowerCase().includes('release date');
 
   return (
-    <div className="space-y-4">
-      {/* Price Display */}
-      <div className="text-center">
-        <div className="text-3xl font-bold text-accent-green mb-2">£{book.price}</div>
-        <div className="text-sm text-secondary">{book.condition} condition</div>
-        <div className="text-sm text-secondary">
-          {isPreOrder ? (
-            <span className="text-accent-blue font-semibold">📅 Available for Pre-Order</span>
-          ) : book.inStock ? (
-            <span className="text-accent-green font-semibold">✓ In Stock</span>
-          ) : (
-            <span className="text-accent-red font-semibold">✗ Out of Stock</span>
+    <div className="space-y-4 pb-24 lg:pb-0">
+      <div className="rounded-xl border border-white/15 bg-slate-800/70 p-4 sm:p-5">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-wider text-white/70">Price</p>
+          <div className="text-4xl font-bold text-white mb-1">£{book.price.toFixed(2)}</div>
+          <div className="text-sm text-white/80">{book.condition} condition</div>
+          <div className="text-sm mt-1">
+            {isPreOrder ? (
+              <span className="text-blue-300 font-semibold">Available for pre-order</span>
+            ) : book.inStock ? (
+              <span className="text-green-300 font-semibold">In stock</span>
+            ) : (
+              <span className="text-red-300 font-semibold">Out of stock</span>
+            )}
+          </div>
+          {isPreOrder && book.authorInsights && (
+            <div className="text-sm text-white/70 mt-2">
+              {book.authorInsights.match(/Release date:?\s*([^\.]+)/i)?.[1] || 'Pre-order available'}
+            </div>
           )}
         </div>
-        {isPreOrder && book.authorInsights && (
-          <div className="text-sm text-secondary mt-2">
-            {book.authorInsights.match(/Release date:?\s*([^\.]+)/i)?.[1] || 'Pre-order available'}
-          </div>
-        )}
-      </div>
 
-      {/* Action Buttons - Match homepage styling */}
-      <div className="space-y-3">
-        {(book.inStock || isPreOrder) && (
-          <div className="grid grid-cols-2 gap-3">
+        <div className="mt-4 grid gap-3">
+          {(book.inStock || isPreOrder) && (
+            <>
+              <button
+                onClick={handleBuyNow}
+                disabled={isBuyingNow}
+                className="w-full bg-white text-slate-900 py-3 px-4 disabled:opacity-60 text-base font-bold rounded-lg min-h-[48px] hover:bg-gray-100 transition-colors border border-slate-900"
+              >
+                {isBuyingNow ? 'Opening checkout...' : 'Buy now - secure checkout'}
+              </button>
+
+              <button
+                onClick={handleAddToCart}
+                disabled={isAddingToCart}
+                className="w-full bg-slate-700 text-white py-3 px-4 disabled:opacity-60 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-slate-600 transition-colors border border-white/20"
+              >
+                {isAddingToCart ? 'Adding...' : 'Add to basket'}
+              </button>
+
+              <a
+                href="https://www.ebay.co.uk/usr/chaza87"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleEbayClick}
+                className="w-full bg-slate-800 text-white py-3 px-4 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-slate-700 transition-colors flex items-center justify-center border border-white/25"
+              >
+                Trusted seller profile on eBay
+              </a>
+            </>
+          )}
+
+          {!book.inStock && !isPreOrder && (
             <button
-              onClick={handleAddToCart}
-              disabled={isAddingToCart}
-              className="bg-white text-slate-900 py-3 px-4 disabled:opacity-50 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-gray-100 hover:underline transition-all duration-200 flex items-center justify-center border border-slate-900"
+              disabled
+              className="w-full bg-gray-500 text-white py-3 px-4 cursor-not-allowed text-sm font-semibold rounded-lg min-h-[44px]"
             >
-              {isAddingToCart ? '🔄 Adding...' : isPreOrder ? '📅 Pre-Order Now' : '🛒 Add to Basket'}
+              Out of stock
             </button>
+          )}
+        </div>
 
-            <a
-              href="https://www.ebay.co.uk/usr/chaza87"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleEbayClick}
-              className="bg-white text-slate-900 py-3 px-4 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-gray-100 hover:underline transition-all duration-200 flex items-center justify-center border border-slate-900"
-            >
-              <svg className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.5 7.5c-.3-.3-.7-.5-1.2-.5H4.7c-.5 0-.9.2-1.2.5L2 9.8v8.4c0 .8.7 1.5 1.5 1.5h17c.8 0 1.5-.7 1.5-1.5V9.8l-1.5-2.3zM12 15.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/>
-              </svg>
-              Buy on eBay
-            </a>
-          </div>
-        )}
-
-        {!book.inStock && !isPreOrder && (
-          <button
-            disabled
-            className="w-full bg-gray-400 text-white py-3 px-4 cursor-not-allowed text-sm font-semibold rounded-lg min-h-[44px]"
-          >
-            📋 Out of Stock
-          </button>
-        )}
+        <p className="mt-3 text-center text-xs text-white/70">
+          No account required. Guest checkout is available, and PayPal is offered during checkout.
+        </p>
       </div>
 
-      {/* Contact */}
-      <div className="text-center pt-3 border-t">
+      <div className="mt-2 border border-white/10 rounded-lg bg-white/5 px-4 py-3 text-sm text-white/80">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center sm:text-left">
+          <div>Free UK shipping</div>
+          <div>30-day returns</div>
+          <div>Secure card and PayPal</div>
+        </div>
+      </div>
+
+      <div className="text-center pt-3 border-t border-white/10">
         <a
           href="mailto:charlese1mackay@hotmail.com"
           onClick={handleEmailClick}
-                        className="text-accent-blue hover:text-blue-800 text-sm font-medium"
+          className="text-blue-300 hover:text-blue-200 text-sm font-medium"
         >
-          📧 Contact Charles for bulk orders
+          Contact Charles for bulk orders
         </a>
       </div>
 
-      <div className="mt-4 border border-white/10 rounded-lg bg-white/5 px-4 py-3 text-sm text-white/80">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <div>🚚 Free UK shipping · 2–5 day dispatch</div>
-          <div>↩️ 30-day returns</div>
-          <div>🔒 Secure checkout (PayPal & card)</div>
+      {(book.inStock || isPreOrder) && (
+        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/20 bg-slate-900/95 backdrop-blur lg:hidden">
+          <div className="mx-auto max-w-3xl px-3 py-3 flex items-center gap-2">
+            <div className="min-w-[74px]">
+              <p className="text-[10px] text-white/70 uppercase tracking-wide">Price</p>
+              <p className="text-lg font-bold text-white">£{book.price.toFixed(2)}</p>
+            </div>
+            <button
+              onClick={handleBuyNow}
+              disabled={isBuyingNow}
+              className="flex-1 bg-white text-slate-900 py-2.5 px-3 rounded-lg text-sm font-semibold border border-slate-900 disabled:opacity-60"
+            >
+              {isBuyingNow ? 'Opening...' : 'Buy now'}
+            </button>
+            <button
+              onClick={handleAddToCart}
+              disabled={isAddingToCart}
+              className="bg-slate-700 text-white py-2.5 px-3 rounded-lg text-sm font-semibold border border-white/20 disabled:opacity-60"
+            >
+              {isAddingToCart ? 'Adding...' : 'Add'}
+            </button>
+          </div>
         </div>
-      </div>
-
-
+      )}
     </div>
   );
 }

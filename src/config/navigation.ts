@@ -17,11 +17,9 @@ export const mainNavLinks: NavLinkItem[] = [
 export const moreNavLinks: NavLinkItem[] = [
   { label: 'Categories', href: '/categories' },
   { label: 'Newsroom', href: '/news' },
-  { label: 'Scottish Timeline', href: '/scottish-aviation-timeline' },
-  { label: 'For Researchers', href: '/for-researchers' },
-  { label: 'How to Order', href: '/how-to-order' },
+  { label: 'FAQ', href: '/faq' },
+  { label: 'Returns', href: '/returns' },
   { label: 'Track Order', href: '/order-tracking' },
-  { label: 'Support', href: '/support' },
 ];
 
 // Legacy primary nav links (kept for backward compatibility)

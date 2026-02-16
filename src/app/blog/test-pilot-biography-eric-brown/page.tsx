@@ -170,7 +170,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A captured German fighter in British markings on a test airfield, ground crew standing by; annotation arrows indicating areas Brown would evaluate (flaps, slats, undercarriage, cockpit layout)." class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/captured-aircraft-evaluation-schematic.svg" alt="Original schematic illustration of a captured aircraft evaluation on a test airfield (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm  mt-2 text-center italic">Data over drama: evaluations recorded exactly what pilots needed to know — cues, limits, and traps.</p>
     </div>
     <p>Brown’s influence persists in curricula, shipboard procedures, and airworthiness standards. His writing — exact without being obscure — set a tone for flight‑test communication that valued clarity over drama. Carrier operations for jets and helicopters matured around the practices he helped articulate. The standards for sightlines, stabilized approach parameters, and arrestment checks did not appear fully formed; they were forged by pilots like Brown who documented what worked and what did not, and by engineers who listened.</p>
@@ -231,7 +231,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Captain Eric Brown: The World Most Experienced Test Pilot`,
     description: `The extraordinary career of Captain Eric Brown, who flew more aircraft types than any pilot in history and pioneered carrier aviation.`,
-    images: ['/blog-images/test-pilot-biography-eric-brown-featured.jpg'],
+    images: [post.featuredImage.url],
     type: 'article'
   },
   alternates: {
@@ -258,6 +258,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/test-pilot-biography-eric-brown"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

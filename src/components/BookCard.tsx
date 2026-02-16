@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
 import { Book } from '@/types/book'
 
@@ -12,14 +14,28 @@ interface BookCardProps {
 
 export default function BookCard({ book, sourceContext }: BookCardProps) {
   const { addToCart, openBasket } = useCart();
+  const router = useRouter();
+  const [isAdding, setIsAdding] = useState(false);
+  const [isBuyingNow, setIsBuyingNow] = useState(false);
+
+  const handleAddToBasket = () => {
+    setIsAdding(true);
+    addToCart(book);
+    setTimeout(() => {
+      openBasket();
+      setIsAdding(false);
+    }, 250);
+  };
 
   const handleBuyNow = () => {
+    if (isBuyingNow) return;
+    setIsBuyingNow(true);
     addToCart(book);
-    openBasket();
+    router.push('/checkout?method=stripe');
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-slate-800 border border-blue-700/40 rounded-lg shadow-md overflow-hidden hover:border-blue-400/60 transition-all duration-300">
       {/* Book Cover - Now Clickable */}
       <div className="aspect-[3/4] relative bg-gray-100">
         <Link href={`/books/${book.id}`} className="block w-full h-full">
@@ -44,16 +60,16 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
 
       {/* Book Info */}
       <div className="p-4">
-        <h3 className="font-semibold text-lg mb-2 line-clamp-2 hover:text-blue-600">
+        <h3 className="font-semibold text-lg text-white mb-2 line-clamp-2 hover:text-blue-300">
           <Link href={`/books/${book.id}`}>
             {book.title}
           </Link>
         </h3>
 
-        <p className="text-sm text-gray-600 mb-2">{book.category}</p>
+        <p className="text-sm text-white/75 mb-2">{book.category}</p>
 
         {/* Key Details */}
-        <div className="text-xs text-gray-500 space-y-1 mb-3">
+        <div className="text-xs text-white/60 space-y-1 mb-3">
           {book.pageCount && <div>{book.pageCount} pages</div>}
           {book.isbn && <div>ISBN: {book.isbn}</div>}
           {book.publicationYear && <div>{book.publicationYear}</div>}
@@ -61,33 +77,47 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
         </div>
 
         {/* Price and Actions */}
-        <div className="flex items-center justify-between">
-          <div className="text-xl font-bold text-green-600">
-            £{book.price}
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <div className="text-2xl font-bold text-white">
+              £{book.price.toFixed(2)}
+            </div>
+            <div className="text-xs">
+              {book.inStock ? (
+                <span className="text-green-300 font-semibold">In stock</span>
+              ) : (
+                <span className="text-red-300 font-semibold">Out of stock</span>
+              )}
+            </div>
           </div>
-          <div className="flex gap-2">
+
+          <button
+            onClick={handleBuyNow}
+            disabled={!book.inStock || isBuyingNow}
+            className="w-full bg-white text-slate-900 py-2.5 px-3 rounded text-sm font-semibold hover:bg-gray-100 transition-colors border border-slate-900 disabled:opacity-60"
+          >
+            {isBuyingNow ? 'Opening checkout...' : 'Buy now (guest checkout)'}
+          </button>
+
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              onClick={handleAddToBasket}
+              disabled={!book.inStock || isAdding}
+              className="bg-slate-700 text-white px-3 py-2 rounded text-sm hover:bg-slate-600 transition-colors border border-white/20 disabled:opacity-60"
+            >
+              {isAdding ? 'Adding...' : 'Add to basket'}
+            </button>
             <Link
               href={`/books/${book.id}`}
-              className="bg-white text-slate-900 px-3 py-1 rounded text-sm hover:bg-gray-100 hover:underline transition-colors border border-slate-900"
+              className="bg-slate-800 text-white px-3 py-2 rounded text-sm text-center hover:bg-slate-700 transition-colors border border-white/25"
             >
-              View Details
+              View details
             </Link>
-            <button
-              onClick={handleBuyNow}
-              className="bg-white text-slate-900 px-3 py-1 rounded text-sm hover:bg-gray-100 hover:underline transition-colors border border-slate-900"
-            >
-              Buy Now
-            </button>
           </div>
-        </div>
 
-        {/* Stock Status */}
-        <div className="mt-2 text-xs">
-          {book.inStock ? (
-            <span className="text-green-600">✓ In Stock</span>
-          ) : (
-            <span className="text-red-600">Out of Stock</span>
-          )}
+          <p className="text-[11px] text-white/60 text-center">
+            Free UK shipping · 30-day returns · Secure card and PayPal
+          </p>
         </div>
       </div>
     </div>

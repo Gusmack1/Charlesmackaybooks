@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: 'Aviation News & Research Updates | Latest Discoveries | Charles E. MacKay',
   description:
     'Latest aviation history discoveries, research updates, museum exhibitions, and archaeological findings. Expert analysis and commentary by aviation historian Charles E. MacKay.',
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/news',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
   keywords: [
     'aviation news',
     'aviation history discoveries',

@@ -25,7 +25,7 @@ const post = {
       This Enhanced Edition examines the VS-300 as a complete system: origins in Igor Sikorsky's aviation experience, engineering challenges and solutions, rotor aerodynamics and articulation, control systems development, engine integration and specifications, test program and pilot technique, maintenance practice, comparisons with contemporaries, and lasting influence on helicopter development worldwide. Each aspect is presented with verified historical facts, technical details, and operational context to provide a complete understanding of how the VS-300 achieved its legendary status.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the Sikorsky VS-300 hovering low over grass in 1939-1940, showing Igor Sikorsky at the controls with a tether line visible, demonstrating the first controlled hover that established practical helicopter flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/sikorsky-vs300-helicopter.svg" alt="Original schematic illustration of a VS-300 style single-main-rotor helicopter layout (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Tethers to trust: controlled hover emerged from incremental testing and disciplined procedure.</p>
     </div>
 
@@ -89,7 +89,7 @@ const post = {
       Control coordination required pilots to learn how collective, cyclic, and pedal inputs interacted. Early training emphasized coordinated control movements to achieve stable hover and controlled flight. The comprehensive documentation of control coordination ensures that pilot training evolution is properly understood. Understanding control coordination provides valuable insights into how helicopter pilot skills developed.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A detailed diagrammatic view of VS-300 control systems showing collective pitch mechanism, cyclic pitch swashplate, and tail rotor control linkages, with arrows indicating control inputs and their effects on rotor disc attitude" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/vs300-control-linkages-schematic.svg" alt="Original schematic illustration of helicopter control linkages: collective, cyclic, and tail rotor (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Making sense of coupling: standardised control movements turned sensitivity into skill.</p>
     </div>
 
@@ -136,7 +136,7 @@ const post = {
       Pilot technique development required learning coordinated control movements that enabled stable hover and controlled flight. Early pilots developed techniques through systematic practice, establishing procedures that would become standard for helicopter operations. The comprehensive documentation of pilot technique development ensures that operational procedures are properly preserved. Understanding pilot technique development provides valuable insights into how helicopter operations evolved.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of the VS-300 during free flight testing in 1940, showing Igor Sikorsky piloting the aircraft in forward flight, demonstrating the breakthrough achievement of controlled helicopter flight beyond tethered operations" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/sikorsky-vs300-military-applications-schematic.svg" alt="Original schematic illustration of an early single-main-rotor helicopter in controlled flight (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">From tethered to free flight: systematic testing validated the VS-300 configuration.</p>
     </div>
 
@@ -167,7 +167,7 @@ const post = {
       Compared to other early helicopter attempts, the VS-300's success demonstrated that systematic engineering and disciplined testing could overcome technical challenges. Previous attempts had encountered fundamental problems that seemed insurmountable; the VS-300 demonstrated that these problems could be solved through careful engineering. The comprehensive documentation of success factors ensures that the VS-300's achievements are properly understood.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A comparative diagram showing the VS-300 single-main-rotor configuration alongside the Focke-Achgelis Fw 61 twin-rotor design and a Cierva autogyro, demonstrating different approaches to vertical flight" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/autogyro-vs-helicopter-comparison-schematic.svg" alt="Original schematic comparison of autogyro and helicopter configurations (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Convergence on a standard: single main rotor plus tail rotor proved the enduring solution.</p>
     </div>
 
@@ -185,7 +185,7 @@ const post = {
       Blade tracking and balance procedures ensured rotor system reliability and reduced vibration. These procedures required specialized equipment and trained personnel, establishing maintenance requirements that would become standard for helicopter operations. The comprehensive documentation of rotor maintenance ensures that maintenance procedures are properly understood. Understanding rotor maintenance provides valuable insights into how helicopter reliability was maintained.
 
     <div class="my-8">
-      <img src="/blog-images/default-generic.svg" alt="Insert image here: A black-and-white photograph of VS-300 maintenance scene with cowlings open, gearbox inspection underway, showing drip trays, tools laid out, and maintenance personnel demonstrating the systematic approach to helicopter maintenance established by the VS-300 program" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/vs300-maintenance-inspection-schematic.svg" alt="Original schematic illustration of rotorcraft maintenance inspection workflow (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Airworthiness by habit: inspection, lubrication, rigging, and blade tracking routines.</p>
     </div>
 
@@ -348,9 +348,9 @@ const post = {
   tags: ["sikorsky","vs300","helicopter","breakthrough","igor sikorsky","rotorcraft"],
   relatedBooks: getBooksData(['sycamore-seeds', 'captain-eric-brown']),
   relatedPosts: [
-    { id: 'helicopter-development-pioneers', title: 'Helicopter Development Pioneers: From Cierva\'s Autogyros to Modern Rotorcraft', excerpt: 'Comprehensive analysis of vertical flight evolution.', image: '/blog-images/default-generic.svg', readingTime: 14 },
-    { id: 'bristol-sycamore-helicopter-development', title: 'Bristol Sycamore: British Helicopter Development Pioneer', excerpt: 'Detailed coverage of how VS-300 principles influenced British helicopter design.', image: '/blog-images/default-generic.svg', readingTime: 14 },
-    { id: 'autogyro-vs-helicopter', title: 'Autogyro vs Helicopter: The Bridge to True Vertical Flight', excerpt: 'Technical comparison showing how autogyro technology contributed to helicopter development.', image: '/blog-images/default-generic.svg', readingTime: 12 }
+    { id: 'helicopter-development-pioneers', title: 'Helicopter Development Pioneers: From Cierva\'s Autogyros to Modern Rotorcraft', excerpt: 'Comprehensive analysis of vertical flight evolution.', image: '/blog-images/sikorsky-vs300-helicopter.svg', readingTime: 14 },
+    { id: 'bristol-sycamore-helicopter-development', title: 'Bristol Sycamore: British Helicopter Development Pioneer', excerpt: 'Detailed coverage of how VS-300 principles influenced British helicopter design.', image: '/blog-images/bristol-sycamore-schematic.svg', readingTime: 14 },
+    { id: 'autogyro-vs-helicopter', title: 'Autogyro vs Helicopter: The Bridge to True Vertical Flight', excerpt: 'Technical comparison showing how autogyro technology contributed to helicopter development.', image: '/blog-images/autogyro-vs-helicopter-comparison-schematic.svg', readingTime: 12 }
   ]
 }
 
@@ -361,7 +361,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sikorsky VS-300: The Helicopter Breakthrough - Enhanced Edition",
     description: "A comprehensive, research-backed account of Igor Sikorsky's VS-300: the first practical helicopter that established modern helicopter configuration.",
-    images: ['/blog-images/default-generic.svg'],
+    images: [post.featuredImage.url],
     type: 'article'
   },
   alternates: {
@@ -388,6 +388,7 @@ export default function BlogPost() {
         pageTitle={post.title}
         pageDescription={post.excerpt}
         pageUrl="/blog/sikorsky-vs300-helicopter-breakthrough"
+        pageImageUrl={post.featuredImage.url}
       />
       <EnhancedBlogSEO 
 

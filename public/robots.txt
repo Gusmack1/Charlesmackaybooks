@@ -2,9 +2,6 @@ User-agent: *
 Allow: /
 
 Disallow: /admin/
-Disallow: /api/
-Allow: /_next/static/media/
-Disallow: /_next/
 Disallow: /ai-prompt-system/
 
 Sitemap: https://charlesmackaybooks.com/sitemap.xml

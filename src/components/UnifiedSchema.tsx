@@ -321,12 +321,12 @@ export default function UnifiedSchema({
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
           applicableCountry: 'GB',
-          // Google expects a specific enum value here (e.g. MerchantReturnFiniteReturnWindow).
-          // Using schema.org MerchantReturnUnspecified triggers "Invalid enum value" in GSC.
-          returnPolicyCategory: 'MerchantReturnFiniteReturnWindow',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
           merchantReturnDays: 30,
           merchantReturnLink: `${BASE_URL}/returns`,
+          returnPolicyUrl: `${BASE_URL}/returns`,
           returnMethod: 'https://schema.org/ReturnByMail',
+          returnFees: 'https://schema.org/FreeReturn',
           // Returns page states return postage is covered when an item is not as described or arrives damaged.
           itemDefectReturnFee: 'https://schema.org/FreeReturn',
         },

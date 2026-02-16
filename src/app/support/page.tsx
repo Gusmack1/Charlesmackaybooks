@@ -84,22 +84,22 @@ export default function SupportPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-white/90">
               <div>
                 <div className="font-semibold text-white">UK</div>
-                <div>Free delivery</div>
+                <div>Free tracked delivery</div>
                 <div>1–3 business days</div>
               </div>
               <div>
                 <div className="font-semibold text-white">Europe</div>
-                <div>Tracked delivery</div>
+                <div>Free tracked delivery</div>
                 <div>5–10 business days</div>
               </div>
               <div>
                 <div className="font-semibold text-white">North America</div>
-                <div>Tracked delivery</div>
+                <div>Free tracked delivery</div>
                 <div>7–14 business days</div>
               </div>
               <div>
                 <div className="font-semibold text-white">Worldwide</div>
-                <div>Tracked delivery</div>
+                <div>Free tracked delivery</div>
                 <div>10–21 business days</div>
               </div>
             </div>

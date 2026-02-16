@@ -125,25 +125,25 @@ export default function ForResearchersPage() {
 
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold mb-2">150+</div>
-              <div className="text-lg mb-2">Academic Citations</div>
-              <p className="text-sm opacity-80">In scholarly papers and research</p>
+              <div className="text-4xl font-bold mb-2">📘</div>
+              <div className="text-lg mb-2">Citation-Ready Bibliographies</div>
+              <p className="text-sm opacity-80">Many titles include references, appendices, and source notes</p>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">25+</div>
-              <div className="text-lg mb-2">Research Institutions</div>
-              <p className="text-sm opacity-80">Using books as primary references</p>
+              <div className="text-4xl font-bold mb-2">🏫</div>
+              <div className="text-lg mb-2">Institutional Ordering Support</div>
+              <p className="text-sm opacity-80">Libraries and departments can request bulk and academic orders</p>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">12+</div>
-              <div className="text-lg mb-2">Museum Collections</div>
-              <p className="text-sm opacity-80">In aviation museums worldwide</p>
+              <div className="text-4xl font-bold mb-2">🛩️</div>
+              <div className="text-lg mb-2">Primary-Source Focus</div>
+              <p className="text-sm opacity-80">Research draws from archives, technical records, and period material</p>
             </div>
           </div>
 
           <div className="text-center mt-8">
             <p className="text-lg opacity-90">
-              Listed alongside Putnam and Jane's publications on the British Aviation Database
+              Use this page to support formal citations, course reading lists, and specialist research enquiries.
             </p>
           </div>
         </div>

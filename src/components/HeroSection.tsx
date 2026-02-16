@@ -46,16 +46,20 @@ export default function HeroSection() {
                 className="inline-flex items-center justify-center bg-white text-slate-900 border border-slate-900 hover:bg-gray-100 hover:underline px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-lg min-h-[60px]"
               >
                 <span className="mr-3 text-xl">🛒</span>
-                Shop Aviation Books
+                Buy books now
               </Link>
               <Link
-                href="/blog"
+                href="/books#bundles"
                 className="inline-flex items-center justify-center bg-white text-slate-900 border border-slate-900 hover:bg-gray-100 hover:underline px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-lg min-h-[60px]"
               >
-                <span className="mr-3 text-xl">📝</span>
-                Expert Insights
+                <span className="mr-3 text-xl">📦</span>
+                View bundle offers
               </Link>
             </div>
+
+            <p className="mt-4 text-sm text-white/85">
+              Guest checkout available - no account required. Pay by card, wallet, or PayPal.
+            </p>
           </div>
 
           {/* Professional Images Grid */}

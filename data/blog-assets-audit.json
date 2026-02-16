@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-11-21T16:01:15.335Z",
+  "generatedAt": "2026-01-12T19:40:17.568Z",
   "report": [
     {
       "slug": "adolf-rohrbach-metal-aircraft-construction",
@@ -33,7 +33,7 @@
     },
     {
       "slug": "arado-ar234-jet-bomber",
-      "featuredUrl": "/blog-images/arado-ar234-jet-bomber.jpg",
+      "featuredUrl": "/blog-images/arado-ar234-blitz-schematic.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
       "manifestCandidateCount": 4,
@@ -123,17 +123,17 @@
     },
     {
       "slug": "british-nuclear-deterrent-v-force",
-      "featuredUrl": "/blog-images/avro-vulcan-bomber.jpg",
+      "featuredUrl": "/blog-images/avro-vulcan-delta-wing-schematic.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 8,
+      "manifestCandidateCount": 10,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
     },
     {
       "slug": "clydeside-aviation-revolution",
-      "featuredUrl": "/blog-images/clydeside-aviation-dalmuir.jpg",
+      "featuredUrl": "/blog-images/clydeside-aviation-dalmuir.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
       "manifestCandidateCount": 4,
@@ -173,17 +173,17 @@
     },
     {
       "slug": "english-electric-lightning-development",
-      "featuredUrl": "/blog-images/english-electric-lightning-f6.jpg",
+      "featuredUrl": "/blog-images/english-electric-lightning-f6.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 6,
+      "manifestCandidateCount": 7,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
     },
     {
       "slug": "f86-sabre-cold-war-fighter",
-      "featuredUrl": "/blog-images/f86-sabre-cold-war-fighter.jpg",
+      "featuredUrl": "/blog-images/f86-sabre-formation-korea-schematic.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
       "manifestCandidateCount": 4,
@@ -193,7 +193,7 @@
     },
     {
       "slug": "german-aces-organization-wwi",
-      "featuredUrl": "/blog-images/fokker-dr1-triplane-replica.jpg",
+      "featuredUrl": "/blog-images/jagdgeschwader-organization-schematic.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
       "manifestCandidateCount": 4,
@@ -203,10 +203,10 @@
     },
     {
       "slug": "german-aircraft-great-war-development",
-      "featuredUrl": "/blog-images/albatros-dva-wwi-german.jpg",
+      "featuredUrl": "/blog-images/albatros-semi-monocoque-fuselage-schematic.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 10,
+      "manifestCandidateCount": 11,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -223,7 +223,7 @@
     },
     {
       "slug": "helicopter-development-pioneers",
-      "featuredUrl": "/blog-images/cierva-autogyro-c4.jpg",
+      "featuredUrl": "/blog-images/sikorsky-vs300-helicopter.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
       "manifestCandidateCount": 7,
@@ -233,20 +233,20 @@
     },
     {
       "slug": "hms-argus-first-aircraft-carrier",
-      "featuredUrl": "/blog-images/hms-argus-aircraft-carrier.jpg",
+      "featuredUrl": "/blog-images/hms-argus-flush-deck-schematic.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 7,
+      "manifestCandidateCount": 9,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
     },
     {
       "slug": "hms-argus-first-aircraft-carrier-operations",
-      "featuredUrl": "/blog-images/hms-argus-first-aircraft-carrier-operations.jpg",
+      "featuredUrl": "/blog-images/hms-argus-deck-operations-schematic.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 8,
+      "manifestCandidateCount": 6,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -263,10 +263,10 @@
     },
     {
       "slug": "korean-war-air-combat",
-      "featuredUrl": "/blog-images/korean-war-aviation.jpg",
+      "featuredUrl": "/blog-images/korean-war-air-combat-featured-schematic.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 6,
+      "manifestCandidateCount": 8,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -275,8 +275,8 @@
       "slug": "lucy-lady-houston-schneider-trophy",
       "featuredUrl": "/blog-images/lucy-lady-houston-portrait-schematic.svg",
       "featuredIsDefault": false,
-      "placeholdersInContent": 3,
-      "manifestCandidateCount": 7,
+      "placeholdersInContent": 0,
+      "manifestCandidateCount": 11,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -285,8 +285,8 @@
       "slug": "luftwaffe-1945-final-year",
       "featuredUrl": "/blog-images/fw190-d9-luftwaffe-1945.jpg",
       "featuredIsDefault": false,
-      "placeholdersInContent": 4,
-      "manifestCandidateCount": 8,
+      "placeholdersInContent": 0,
+      "manifestCandidateCount": 11,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -305,8 +305,8 @@
       "slug": "me262-jet-fighter-revolution",
       "featuredUrl": "/blog-images/me262-jet-fighter-historical.jpg",
       "featuredIsDefault": false,
-      "placeholdersInContent": 4,
-      "manifestCandidateCount": 8,
+      "placeholdersInContent": 0,
+      "manifestCandidateCount": 10,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -315,7 +315,7 @@
       "slug": "morris-furniture-war-work-aviation",
       "featuredUrl": "/blog-images/women-aircraft-workers.jpg",
       "featuredIsDefault": false,
-      "placeholdersInContent": 1,
+      "placeholdersInContent": 0,
       "manifestCandidateCount": 5,
       "approvedCount": 0,
       "requiredCount": 0,
@@ -326,44 +326,44 @@
       "featuredUrl": "/blog-images/hms-argus-aircraft-carrier.jpg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 4,
-      "approvedCount": 0,
-      "requiredCount": 0,
-      "pendingCount": 0
-    },
-    {
-      "slug": "percy-pilcher-scotland-aviation-pioneer",
-      "featuredUrl": "/blog-images/percy-pilcher-hawk-glider-scotland.jpg",
-      "featuredIsDefault": false,
-      "placeholdersInContent": 0,
-      "manifestCandidateCount": 6,
-      "approvedCount": 0,
-      "requiredCount": 0,
-      "pendingCount": 0
-    },
-    {
-      "slug": "rotorcraft-military-applications",
-      "featuredUrl": "/blog-images/bristol-sycamore.jpg",
-      "featuredIsDefault": false,
-      "placeholdersInContent": 0,
       "manifestCandidateCount": 7,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
     },
     {
-      "slug": "schneider-trophy-racing-development",
-      "featuredUrl": "/blog-images/schneider-s6b-systems-featured-schematic.svg",
+      "slug": "percy-pilcher-scotland-aviation-pioneer",
+      "featuredUrl": "/blog-images/percy-pilcher-hawk-glider.jpg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 6,
+      "manifestCandidateCount": 9,
+      "approvedCount": 0,
+      "requiredCount": 0,
+      "pendingCount": 0
+    },
+    {
+      "slug": "rotorcraft-military-applications",
+      "featuredUrl": "/blog-images/sikorsky-r4-helicopter.jpg",
+      "featuredIsDefault": false,
+      "placeholdersInContent": 0,
+      "manifestCandidateCount": 10,
+      "approvedCount": 0,
+      "requiredCount": 0,
+      "pendingCount": 0
+    },
+    {
+      "slug": "schneider-trophy-racing-development",
+      "featuredUrl": "/blog-images/schneider-trophy-1931.jpg",
+      "featuredIsDefault": false,
+      "placeholdersInContent": 0,
+      "manifestCandidateCount": 8,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
     },
     {
       "slug": "scottish-aviation-between-the-wars",
-      "featuredUrl": "/blog-images/scottish-interwar-air-routes-schematic.svg",
+      "featuredUrl": "/blog-images/clydeside-aviation-dalmuir-1928.jpg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
       "manifestCandidateCount": 9,
@@ -373,7 +373,7 @@
     },
     {
       "slug": "sikorsky-vs300-helicopter-breakthrough",
-      "featuredUrl": "/blog-images/sikorsky-vs300-helicopter.jpg",
+      "featuredUrl": "/blog-images/sikorsky-vs300-helicopter.svg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
       "manifestCandidateCount": 7,
@@ -396,7 +396,7 @@
       "featuredUrl": "/blog-images/spitfire-k5054-prototype.jpg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 4,
+      "manifestCandidateCount": 6,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0
@@ -416,7 +416,7 @@
       "featuredUrl": "/blog-images/sycamore-seeds-helicopter.jpg",
       "featuredIsDefault": false,
       "placeholdersInContent": 0,
-      "manifestCandidateCount": 10,
+      "manifestCandidateCount": 16,
       "approvedCount": 0,
       "requiredCount": 0,
       "pendingCount": 0

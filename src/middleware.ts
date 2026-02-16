@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 // Add X-Robots-Tag to internal tooling routes to avoid indexing
-const NOINDEX_PATHS = ['/ai-prompt-system']
+const NOINDEX_PATHS = ['/ai-prompt-system', '/checkout', '/order-complete', '/order-tracking', '/search']
 
 // No redirects - each page must be accessible at its own URL
 // Netlify handles SSL/HTTPS automatically, no need for redirects here
@@ -37,8 +37,19 @@ export function middleware(request: NextRequest) {
     })
   }
 
-  // Remove trailing slash via internal rewrite (NO redirect)
-  // This ensures both /path and /path/ return 200, while canonical tags still point at /path.
+  // Legacy newsroom path retired in favor of /aviation-news/*.
+  if (pathname === '/blog/scottish-aviation-news' || pathname.startsWith('/blog/scottish-aviation-news/')) {
+    return new NextResponse('Gone', {
+      status: 410,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'X-Robots-Tag': 'noindex, nofollow',
+      },
+    })
+  }
+
+  // Enforce unique URL shape: trailing-slash variants are treated as non-canonical.
+  // We intentionally avoid redirects and return 404 for slash-terminated duplicates.
   if (
     pathname.length > 1 &&
     pathname.endsWith('/') &&
@@ -55,9 +66,13 @@ export function middleware(request: NextRequest) {
     pathname !== '/manifest.json/' &&
     pathname !== '/offline.html/'
   ) {
-    const url = request.nextUrl.clone()
-    url.pathname = pathname.slice(0, -1)
-    return NextResponse.rewrite(url)
+    return new NextResponse('Not Found', {
+      status: 404,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'X-Robots-Tag': 'noindex, nofollow',
+      },
+    })
   }
 
   // Note: All redirects removed - pages must be accessible directly
@@ -66,6 +81,13 @@ export function middleware(request: NextRequest) {
 
   // Add X-Robots-Tag to internal tooling routes to avoid indexing
   if (NOINDEX_PATHS.some((p) => pathname.startsWith(p))) {
+    const response = NextResponse.next()
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow')
+    return response
+  }
+
+  // API endpoints should never be indexed.
+  if (pathname.startsWith('/api/')) {
     const response = NextResponse.next()
     response.headers.set('X-Robots-Tag', 'noindex, nofollow')
     return response

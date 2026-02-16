@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import OrderTrackingClient from '@/components/OrderTrackingClient';
 
 export const metadata: Metadata = {
@@ -16,6 +17,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Order Tracking | Charles E. MacKay Aviation Books',
     description: 'Track your aviation history book orders with real-time updates and delivery information.',
+  },
+  robots: {
+    index: false,
+    follow: false,
   },
   alternates: {
     canonical: 'https://charlesmackaybooks.com/order-tracking'
@@ -42,7 +47,15 @@ export default function OrderTrackingPage() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-0 md:py-1">
-        <OrderTrackingClient />
+        <Suspense
+          fallback={
+            <div className="min-h-[40vh] flex items-center justify-center text-white/80">
+              Loading order tracking...
+            </div>
+          }
+        >
+          <OrderTrackingClient />
+        </Suspense>
       </main>
     </div>
   );

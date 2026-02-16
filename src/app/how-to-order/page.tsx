@@ -58,12 +58,12 @@ export default function HowToOrderPage() {
               <div>
                 <div className="text-4xl mb-2">2️⃣</div>
                 <h3 className="font-bold mb-2">Choose Payment</h3>
-                <p className="text-sm opacity-90">eBay, PayPal Direct, or Add to Cart</p>
+                <p className="text-sm opacity-90">Website checkout (card or PayPal) or eBay checkout</p>
               </div>
               <div>
                 <div className="text-4xl mb-2">3️⃣</div>
                 <h3 className="font-bold mb-2">Fast Shipping</h3>
-                <p className="text-sm opacity-90">Ships within 1-2 days from Scotland</p>
+                <p className="text-sm opacity-90">Orders dispatch quickly from Scotland</p>
               </div>
             </div>
           </div>
@@ -98,23 +98,23 @@ export default function HowToOrderPage() {
             <div className="border border-white/15 bg-black/10 rounded-lg p-6">
               <div className="text-center mb-4">
                 <div className="text-4xl mb-2">💳</div>
-                <h3 className="text-xl font-bold text-primary">PayPal Direct</h3>
-                <p className="text-sm text-accent-blue font-semibold">Fastest</p>
+                <h3 className="text-xl font-bold text-primary">Guest Checkout</h3>
+                <p className="text-sm text-accent-blue font-semibold">Best for direct orders</p>
               </div>
               <ul className="space-y-2 text-sm opacity-90 mb-4">
-                <li>✓ Direct to Charles</li>
-                <li>✓ Personal service</li>
-                <li>✓ Custom requests welcome</li>
-                <li>✓ Bulk discounts available</li>
-                <li>✓ All currencies accepted</li>
+                <li>✓ No account required</li>
+                <li>✓ Card and PayPal available</li>
+                <li>✓ Fast checkout on this website</li>
+                <li>✓ Use basket for one or multiple books</li>
+                <li>✓ Order tracking available after purchase</li>
               </ul>
               <div className="text-center">
-                <a
-                  href="mailto:charlese1mackay@hotmail.com?subject=Book Order Inquiry"
-                  className="underline inline-block"
+                <Link
+                  href="/books"
+                  className="btn-books inline-block"
                 >
-                  Email for PayPal →
-                </a>
+                  Buy via Website →
+                </Link>
               </div>
             </div>
 
@@ -126,10 +126,11 @@ export default function HowToOrderPage() {
               </div>
               <ul className="space-y-2 text-sm opacity-90 mb-4">
                 <li>✓ Add multiple books</li>
-                <li>✓ Save for later (wishlist)</li>
-                <li>✓ Combined shipping</li>
-                <li>✓ Email checkout</li>
-                <li>✓ Academic discounts</li>
+                <li>✓ Edit quantities in basket</li>
+                <li>✓ Guest-first checkout</li>
+                <li>✓ Card and PayPal support</li>
+                <li>✓ Simple order tracking</li>
+                <li>✓ Ideal for multi-book orders</li>
               </ul>
               <div className="text-center">
                 <Link
@@ -150,33 +151,33 @@ export default function HowToOrderPage() {
               <div className="text-center">
                 <div className="text-3xl mb-3">🇬🇧</div>
                 <h3 className="font-bold mb-2">UK Shipping</h3>
-                <p className="text-sm opacity-90">Free delivery</p>
-                <p className="text-sm opacity-90">1-3 business days</p>
-                <p className="text-sm font-semibold">£0.00</p>
+                <p className="text-sm opacity-90">Free shipping</p>
+                <p className="text-sm opacity-90">Usually 1-3 business days</p>
+                <p className="text-sm font-semibold">Free</p>
               </div>
 
               <div className="text-center">
                 <div className="text-3xl mb-3">🇪🇺</div>
                 <h3 className="font-bold mb-2">Europe</h3>
                 <p className="text-sm opacity-90">Tracked delivery</p>
-                <p className="text-sm opacity-90">5-10 business days</p>
-                <p className="text-sm font-semibold">£4.95</p>
+                <p className="text-sm opacity-90">Usually 5-10 business days</p>
+                <p className="text-sm font-semibold">Free</p>
               </div>
 
               <div className="text-center">
                 <div className="text-3xl mb-3">🇺🇸</div>
                 <h3 className="font-bold mb-2">North America</h3>
                 <p className="text-sm opacity-90">Tracked delivery</p>
-                <p className="text-sm opacity-90">7-14 business days</p>
-                <p className="text-sm font-semibold">£8.95</p>
+                <p className="text-sm opacity-90">Usually 7-14 business days</p>
+                <p className="text-sm font-semibold">Free</p>
               </div>
 
               <div className="text-center">
                 <div className="text-3xl mb-3">🌍</div>
                 <h3 className="font-bold mb-2">Worldwide</h3>
                 <p className="text-sm opacity-90">Tracked delivery</p>
-                <p className="text-sm opacity-90">10-21 business days</p>
-                <p className="text-sm font-semibold">£12.95</p>
+                <p className="text-sm opacity-90">Usually 10-21 business days</p>
+                <p className="text-sm font-semibold">Free</p>
               </div>
             </div>
 
@@ -200,7 +201,7 @@ export default function HowToOrderPage() {
                 <li>• Bulk orders (5+ books): Special discounts</li>
                 <li>• Academic references: Citation support</li>
                 <li>• Research institutions: Extended payment terms</li>
-                <li>• Conference sales: Event discounts available</li>
+                <li>• Contact directly for institutional quotes</li>
               </ul>
               <div className="mt-4">
                 <a
@@ -215,11 +216,11 @@ export default function HowToOrderPage() {
             <div className="border border-white/15 bg-black/10 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-white mb-4">📚 Special Requests</h3>
               <ul className="space-y-2 text-sm">
-                <li>• Book signing: Personal messages available</li>
-                <li>• Gift wrapping: Free for holidays</li>
-                <li>• Express shipping: 2-3 day delivery</li>
-                <li>• Custom research: Consultation services</li>
-                <li>• Rare editions: Inquire about availability</li>
+                <li>• Ask about current stock and editions</li>
+                <li>• Request guidance for first-time buyers</li>
+                <li>• Ask about multi-book recommendations</li>
+                <li>• Contact for dispatch and tracking help</li>
+                <li>• Message for order support before checkout</li>
               </ul>
               <div className="mt-4">
                 <a
@@ -240,17 +241,17 @@ export default function HowToOrderPage() {
               <div className="space-y-6">
                 <div>
                   <h3 className="font-bold mb-2">How quickly do books ship?</h3>
-                  <p className="text-sm opacity-90">All books ship within 1-2 business days from Glasgow, Scotland. Charles personally handles all orders.</p>
+                  <p className="text-sm opacity-90">Orders are dispatched from Glasgow, Scotland and tracking is provided after dispatch.</p>
                 </div>
 
                 <div>
                   <h3 className="font-bold mb-2">What payment methods are accepted?</h3>
-                  <p className="text-sm opacity-90">PayPal, credit cards (via eBay), bank transfer, and checks. All major currencies accepted through PayPal.</p>
+                  <p className="text-sm opacity-90">On-site checkout supports card and PayPal. eBay checkout is also available on the official seller profile.</p>
                 </div>
 
                 <div>
                   <h3 className="font-bold mb-2">Are the books in good condition?</h3>
-                  <p className="text-sm opacity-90">Most books are in "New" or "Very Good" condition. Condition is clearly marked on each listing. All books are carefully inspected.</p>
+                  <p className="text-sm opacity-90">Condition is clearly shown on each product page so you can check before ordering.</p>
                 </div>
               </div>
 

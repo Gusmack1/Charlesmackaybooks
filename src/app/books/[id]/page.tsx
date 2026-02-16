@@ -9,7 +9,6 @@ import { Book } from '@/types/book';
 import BookDetailClient from '@/components/BookDetailClient';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookAnalyticsClient from '@/components/BookAnalyticsClient';
-import EnhancedBookSEOClient from '@/components/EnhancedBookSEOClient';
 import ShareButton from '@/components/ShareButton';
 
 
@@ -50,206 +49,80 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     };
   }
 
-  // Enhanced SEO keywords based on book content
-  const generateKeywords = (book: Book) => {
-    const baseKeywords = [
-      book.title,
-      'Charles E MacKay',
-      'Charles MacKay',
-      'charlesmackaybooks.com',
+  const normalizeWhitespace = (value: string) => value.replace(/\s+/g, ' ').trim();
+  const stripBoilerplate = (value: string) =>
+    normalizeWhitespace(
+      value
+        .replace(/Condition is\s*["']?New["']?\.?/gi, '')
+        .replace(/Dispatched with Royal Mail[^.]*\.?/gi, '')
+        .replace(/Recommend use offers\.?/gi, '')
+        .replace(/Any questions[^.]*\.?/gi, '')
+        .replace(/POST FREE[^.]*\.?/gi, '')
+        .replace(/This is not a compendium of Wikipedia[^.]*\.?/gi, '')
+    );
+
+  const toMetaDescription = (raw: string): string => {
+    const cleaned = stripBoilerplate(raw);
+    if (!cleaned) return '';
+
+    const hardLimit = 158;
+    if (cleaned.length <= hardLimit) return cleaned;
+
+    const cut = cleaned.slice(0, hardLimit);
+    const lastSpace = cut.lastIndexOf(' ');
+    return `${cut.slice(0, lastSpace > 80 ? lastSpace : hardLimit - 1).trim()}…`;
+  };
+
+  const buildSeoDescription = (item: Book): string => {
+    const firstSentence = (item.description || '').split(/(?<=[.!?])\s+/)[0] || '';
+    const concise = toMetaDescription(firstSentence || item.description || '');
+    if (concise) return concise;
+    return `${item.title} by Charles E. MacKay. Academic-grade research with secure guest checkout.`;
+  };
+
+  const buildSeoTitle = (item: Book): string => {
+    const categoryIntent: Record<string, string> = {
+      'WWI Aviation': 'WWI Aviation Book',
+      'WWII Aviation': 'WWII Aviation Book',
+      'Scottish Aviation History': 'Scottish Aviation History',
+      'Helicopter History': 'Helicopter History Book',
+      'Naval Aviation': 'Naval Aviation History',
+      'Jet Age Aviation': 'Cold War Aviation Book',
+      'Aviation Biography': 'Aviation Biography',
+      'Military History': 'Military History Book',
+      'Industrial History': 'Industrial History Book',
+      'Travel Literature': 'Scottish Travel Literature',
+    };
+
+    const base = `${item.title} | ${categoryIntent[item.category] || 'History Book'}`;
+    return base.length <= 78 ? base : `${item.title}`;
+  };
+
+  const buildKeywords = (item: Book): string[] => {
+    const keywords = new Set<string>([
+      item.title,
+      item.category,
+      `${item.category} books`,
+      'Charles E. MacKay',
       'aviation history books',
-      'aviation books for sale',
       'buy aviation books online',
-      book.category.toLowerCase(),
-      `${book.category.toLowerCase()} books`,
-      `ISBN ${book.isbn}`,
-      'aviation historian',
-      'aviation reference books',
-      'academic aviation books',
-      'aviation research'
-    ];
+    ]);
 
-    // Category-specific keywords
-    if (book.category === 'Scottish Aviation History') {
-      baseKeywords.push(
-        'Scottish aviation history',
-        'Scotland aviation books',
-        'Clydeside aviation',
-        'Beardmore aviation',
-        'Glasgow aviation history',
-        'Scottish aircraft development',
-        'Scottish aviation heritage',
-        'Scottish aviation pioneers',
-        'Scotland aircraft manufacturing',
-        'Scottish aerospace history'
-      );
-    }
+    if (item.isbn) keywords.add(`ISBN ${item.isbn}`);
+    (item.tags || []).slice(0, 6).forEach((tag) => keywords.add(tag));
+    (item.era || []).slice(0, 3).forEach((era) => keywords.add(era));
+    (item.geographicFocus || []).slice(0, 2).forEach((geo) => keywords.add(`${geo} history`));
 
-    if (book.category === 'WWI Aviation') {
-      baseKeywords.push(
-        'WWI aviation books',
-        'World War 1 aircraft',
-        'Great War aviation',
-        'RFC history books',
-        'RNAS history',
-        'WWI fighter aircraft',
-        'Great War pilots',
-        'WWI aviation history',
-        'First World War aircraft',
-        'Great War air force'
-      );
-    }
-
-    if (book.category === 'WWII Aviation') {
-      baseKeywords.push(
-        'WWII aviation books',
-        'World War 2 aircraft',
-        'RAF history books',
-        'Luftwaffe history',
-        'WWII fighter aircraft',
-        'Battle of Britain books',
-        'WWII bomber aircraft',
-        'Second World War aviation',
-        'RAF operations',
-        'Luftwaffe aircraft'
-      );
-    }
-
-    if (book.category === 'Aviation Biography') {
-      baseKeywords.push(
-        'aviation biography',
-        'pilot biography',
-        'test pilot books',
-        'aviation pioneer biography',
-        'famous aviators',
-        'aviation memoirs',
-        'pilot stories',
-        'aviation legends',
-        'flying biography',
-        'aircraft test pilots'
-      );
-    }
-
-    if (book.category === 'Helicopter History') {
-      baseKeywords.push(
-        'helicopter history',
-        'rotorcraft development',
-        'autogyro history',
-        'Cierva autogyro',
-        'helicopter pioneers',
-        'rotorcraft books',
-        'helicopter development',
-        'autogyro books',
-        'vertical flight history',
-        'helicopter evolution'
-      );
-    }
-
-    if (book.category === 'Jet Age Aviation') {
-      baseKeywords.push(
-        'jet age aviation',
-        'Cold War aviation',
-        'jet fighter history',
-        'supersonic aircraft',
-        'jet engine development',
-        'Cold War aircraft',
-        'military jet aircraft',
-        'jet fighter books',
-        'NATO aviation',
-        'jet aviation history'
-      );
-    }
-
-    if (book.category === 'Naval Aviation') {
-      baseKeywords.push(
-        'naval aviation',
-        'aircraft carrier history',
-        'Fleet Air Arm',
-        'carrier aviation',
-        'naval aircraft',
-        'maritime aviation',
-        'aircraft carrier books',
-        'naval aviation history',
-        'carrier operations',
-        'naval air force'
-      );
-    }
-
-    // Add research themes as keywords
-    if (book.researchThemes) {
-      baseKeywords.push(...book.researchThemes.map(theme => theme.toLowerCase()));
-    }
-
-    // Add geographic focus as keywords
-    if (book.geographicFocus) {
-      baseKeywords.push(...book.geographicFocus.map(geo => `${geo.toLowerCase()} aviation`));
-    }
-
-    // Add era-specific keywords
-    if (book.era) {
-      baseKeywords.push(...book.era.map(e => e.toLowerCase().replace(/[()]/g, '')));
-    }
-
-    return baseKeywords;
+    return Array.from(keywords);
   };
 
-  const keywords = [...generateKeywords(book), 'charles mackay books'];
-
-  // SEO-optimized meta description with commercial keywords and purchase intent
-  const generateDescription = (book: Book) => {
-    const commercialDescriptions: Record<string, string> = {
-      'german-aircraft-great-war': `Buy German Aircraft in the Great War 1914-1918 by Charles E. MacKay. Definitive WWI aviation research on Fokker, Albatros & Richthofen. 245 pages, ISBN ${book.isbn}. Free UK shipping.`,
-      'beardmore-aviation': `Beardmore Aviation: Scottish Industrial Giant's Aviation Activities. Comprehensive history of Beardmore's aircraft production. 378 pages. Expert research used by museums. Free UK delivery.`,
-      'this-was-the-enemy-volume-two': `Luftwaffe Research: German WWII Aviation Procurement & Armament by Charles E. MacKay. Essential for Luftwaffe historians. 296 pages over 300 illustrations. Free UK shipping.`,
-      'clydeside-aviation-vol1': `Clydeside Aviation Volume One: The Great War. Definitive Scottish aviation industry history. 268 pages with rare photographs. Expert WWI research. Free UK delivery.`,
-      'british-aircraft-great-war': `British Aircraft of the Great War: Fighters, Bombers, Seaplanes. Comprehensive RFC/RNAS aviation history. 232 pages. Essential WWI aircraft reference. Free UK shipping.`,
-      'flying-for-kaiser': `Flying for Kaiser Wilhelm 1914-1918: ACES, AEROPLANES & DEFEAT. German WWI aviation history with Fokker aircraft. 176 pages. Expert research. Free UK delivery.`,
-      'enemy-luftwaffe-1945': `This Was the Enemy: The Luftwaffe 1945. Final year of German air force operations. 198 pages with technical analysis. Essential WWII aviation history.`,
-      'sycamore-seeds': `The Sycamore Seeds: Early Helicopter History by Charles E. MacKay. Definitive rotorcraft development history. 168 pages. Used by aviation museums.`,
-      'sabres-from-north': `Sabres from the North: F-86 Sabre in RAF, RCAF & Luftwaffe Service. Cold War fighter aircraft history. 210 pages. Expert military aviation research.`,
-      'aircraft-carrier-argus': `Aircraft Carrier - Beardmore's HMS Argus. World's first true aircraft carrier history. 156 pages. Essential naval aviation reference.`,
-      'captain-eric-brown': `Captain Eric "Vinkle" Brown Test Pilot Biography. Legendary aviation test pilot memoir. 192 pages. Essential aviation history.`,
-      'mother-of-the-few': `Mother of the Few: Lucy Lady Houston & Schneider Trophy. Aviation pioneer biography. 128 pages. Expert women's aviation history.`,
-      'soaring-with-wings': `Soaring with Wings: Percy Pilcher Biography. Scottish aviation pioneer who predated Wright Brothers. 144 pages. Essential early aviation history.`,
-      'dieter-dengler': `Dieter Dengler Skyraider 04 Down: Vietnam POW Aviation Escape. True story of downed pilot's survival. 152 pages. Compelling aviation biography.`,
-      'sonic-to-standoff': `Sonic to Stand Off: Evolution of British Nuclear Deterrent V-Force. Cold War aviation strategy. 224 pages. Expert military aviation analysis.`,
-      'modern-furniture': `Modern Furniture Shavings for Breakfast: Morris Furniture WWII Aviation. Aircraft production during wartime. 120 pages. Industrial aviation history.`,
-      'birth-atomic-bomb': `Birth of the Atomic Bomb: Statements from Churchill, Truman & Pash. Manhattan Project aviation aspects. 134 pages. Historical aviation research.`,
-      'dorothy-wordsworth': `Dorothy Wordsworth Scottish Tour 1803. Literary figure's Scottish travel with aviation context. 112 pages. Unique historical perspective.`,
-    };
-
-    return commercialDescriptions[book.id] || `Buy ${book.title} by Charles E. MacKay. Expert aviation history research. ${book.pageCount || '200+'} pages. Free UK shipping.`;
-  };
-
-  // SEO-optimized title generation with commercial keywords
-  const generateSEOTitle = (book: Book): string => {
-    const commercialTitles: Record<string, string> = {
-      'german-aircraft-great-war': `German Aircraft WWI Books | Fokker Albatros History | £${book.price}`,
-      'beardmore-aviation': `Beardmore Aviation History | Scottish Aircraft Pioneers | £${book.price}`,
-      'this-was-the-enemy-volume-two': `Luftwaffe Research Books | German WWII Aviation | £${book.price}`,
-      'clydeside-aviation-vol1': `Clydeside Aviation WWI | Scottish Aircraft Industry | £${book.price}`,
-      'british-aircraft-great-war': `British WWI Aircraft Books | RFC RNAS History | £${book.price}`,
-      'flying-for-kaiser': `German Aviation WWI | Fokker Aircraft History | £${book.price}`,
-      'enemy-luftwaffe-1945': `Luftwaffe 1945 History | German Air Force Collapse | £${book.price}`,
-      'sycamore-seeds': `Helicopter History Books | Early Rotorcraft Development | £${book.price}`,
-      'sabres-from-north': `F-86 Sabre History | Cold War Fighter Aircraft | £${book.price}`,
-      'aircraft-carrier-argus': `HMS Argus Aircraft Carrier | Fleet Air Arm History | £${book.price}`,
-      'captain-eric-brown': `Eric Brown Biography | Test Pilot Aviation History | £${book.price}`,
-      'mother-of-the-few': `Lady Houston Biography | Schneider Trophy Aviation | £${book.price}`,
-      'soaring-with-wings': `Percy Pilcher Biography | Scottish Aviation Pioneer | £${book.price}`,
-      'dieter-dengler': `Dieter Dengler Biography | Vietnam POW Aviation | £${book.price}`,
-      'sonic-to-standoff': `British Nuclear Deterrent | V-Force Aviation History | £${book.price}`,
-      'modern-furniture': `Morris Furniture Aviation | WWII Aircraft Production | £${book.price}`,
-      'birth-atomic-bomb': `Manhattan Project Aviation | Alsos Mission History | £${book.price}`,
-      'dorothy-wordsworth': `Dorothy Wordsworth Biography | Scottish Travel Literature | £${book.price}`,
-    };
-
-    return commercialTitles[book.id] || `Buy ${book.title} | Aviation History Book | £${book.price}`;
-  };
+  const seoTitle = buildSeoTitle(book);
+  const seoDescription = buildSeoDescription(book);
+  const keywords = buildKeywords(book);
 
   return {
-    title: generateSEOTitle(book),
-    description: generateDescription(book),
+    title: seoTitle,
+    description: seoDescription,
     keywords,
     authors: [{ name: 'Charles E. MacKay' }],
     creator: 'Charles E. MacKay',
@@ -266,8 +139,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       },
     },
     openGraph: {
-      title: `${book.title} | Charles E. MacKay | £${book.price}`,
-      description: generateDescription(book),
+      title: `${book.title} | ${book.category}`,
+      description: seoDescription,
       type: 'website',
       url: `https://charlesmackaybooks.com/books/${book.id}`,
       siteName: 'Charles E. MacKay Aviation Books',
@@ -291,10 +164,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@charlesmackaybooks',
-      creator: '@charlesmackay',
-      title: `${book.title} | Aviation History Book`,
-      description: generateDescription(book),
+      title: `${book.title} | ${book.category}`,
+      description: seoDescription,
       images: {
         url: book.imageUrl || `/book-covers/${book.id}.jpg`,
         alt: `${book.title} - Aviation History Book Cover`,
@@ -419,8 +290,16 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     const isSingleLine = !raw.includes('\n') || raw.split('\n').length <= 2;
     
     if (isSingleLine) {
-      // For single-line descriptions, just check if it's entirely boilerplate
-      const trimmed = raw.trim();
+      const trimmed = raw
+        .replace(/Condition is\s*["']?New["']?\.?/gi, '')
+        .replace(/Dispatched with Royal Mail[^.]*\.?/gi, '')
+        .replace(/Recommend use offers\.?/gi, '')
+        .replace(/Any questions[^.]*\.?/gi, '')
+        .replace(/POST FREE[^.]*\.?/gi, '')
+        .replace(/This is not a compendium of Wikipedia[^.]*\.?/gi, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
       if (trimmed.length === 0) return [];
       
       // If it's just boilerplate, return empty
@@ -588,10 +467,35 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
   // Get related books automatically
   const relatedBooks = getRelatedBooks(book);
+  const strengthPoints = [
+    book.sourceType?.length ? `Source base: ${book.sourceType.join(', ')}` : null,
+    book.pageCount ? `${book.pageCount} pages of focused research` : null,
+    typeof (book as any).citationCount === 'number' && (book as any).citationCount > 0
+      ? `Referenced in ${Number((book as any).citationCount)}+ citations`
+      : null,
+    (book as any).academicInstitutions?.length
+      ? `Used by ${((book as any).academicInstitutions as string[]).slice(0, 3).join(', ')}`
+      : null,
+    book.publicationYear ? `Latest edition year: ${book.publicationYear}` : null,
+  ].filter((item): item is string => Boolean(item));
+  const valueProposition = [
+    `${book.category} research by Charles E. MacKay`,
+    book.era?.length ? `covering ${book.era.join(', ')}` : null,
+    book.sourceType?.length ? `using ${book.sourceType.slice(0, 2).join(' and ')}` : null,
+  ]
+    .filter((part): part is string => Boolean(part))
+    .join('. ');
+  const proofStripItems = [
+    book.inStock ? 'In stock' : 'Out of stock',
+    `£${book.price.toFixed(2)}`,
+    book.pageCount ? `${book.pageCount} pages` : null,
+    'Free UK shipping',
+    '30-day returns',
+    (book as any).academicInstitutions?.length
+      ? `Used by ${((book as any).academicInstitutions as string[]).slice(0, 2).join(' & ')}`
+      : null,
+  ].filter((item): item is string => Boolean(item));
 
-  // Get related blog posts for enhanced SEO
-  const relatedBlogPosts = (book as any).relatedBlogPosts || [];
-  
   return (
     <>
       <UnifiedSchema
@@ -611,12 +515,6 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           category: book.category,
           description: book.description,
         }}
-      />
-
-      {/* Enhanced SEO with FAQ, Reviews, and AI optimization */}
-      <EnhancedBookSEOClient
-        book={book}
-        relatedBlogPosts={relatedBlogPosts}
       />
 
       <BookAnalyticsClient book={book} />
@@ -665,36 +563,14 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   By <Link href="/about" className="underline font-semibold">Charles E. MacKay</Link>
                 </p>
 
-                {/* Share Button - positioned prominently in hero */}
-                <div className="mt-6">
-                  <ShareButton
-                    url={`https://charlesmackaybooks.com/books/${book.id}`}
-                    title={book.title}
-                    description={book.description?.substring(0, 150) + '...'}
-                    hashtags={['AviationHistory', 'Aviation', 'Books']}
-                    className="text-lg"
-                  />
-                </div>
-
-                {/* Per request: no description text in hero */}
-
-                {/* Book Specifications - Enhanced */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-5xl mx-auto">
-                  <div className="bg-slate-800 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
-                  <div className="text-lg font-semibold text-white mb-2">Weight</div>
-                    <div className="text-3xl font-bold text-white">{weightFromInfo || (book as any).weight || 300}g</div>
-                  </div>
-                  <div className="bg-slate-800 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
-                    <div className="text-lg font-semibold text-white mb-2">Published</div>
-                    <div className="text-3xl font-bold text-white">{book.publicationYear}</div>
-                  </div>
-                  <div className="bg-slate-800 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
-                    <div className="text-lg font-semibold text-white mb-2">ISBN-13</div>
-                    <div className="text-lg font-bold text-white leading-tight">{book.isbn}</div>
-                  </div>
-                  <div className="bg-slate-800 rounded-xl p-4 sm:p-6 border border-blue-700/50 text-center">
-                    <div className="text-lg font-semibold text-white mb-2">Condition</div>
-                    <div className="text-3xl font-bold text-white">{book.condition}</div>
+                <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4 sm:p-5 max-w-4xl mx-auto">
+                  <p className="text-sm sm:text-base text-white/95">{valueProposition}.</p>
+                  <div className="mt-3 flex flex-wrap justify-center gap-2">
+                    {proofStripItems.map((item) => (
+                      <span key={item} className="px-3 py-1 rounded-full text-xs sm:text-sm border border-white/20 bg-white/5 text-white/90">
+                        {item}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
@@ -703,8 +579,17 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   <BookDetailClient book={book} />
                   <div className="text-center mt-6">
                     <Link href="/books" className="text-blue-300 hover:text-white underline">
-                      ← Browse All Aviation Books
+                      ← Browse All Books
                     </Link>
+                  </div>
+                  <div className="text-center">
+                    <ShareButton
+                      url={`https://charlesmackaybooks.com/books/${book.id}`}
+                      title={book.title}
+                      description={book.description?.substring(0, 150) + '...'}
+                      hashtags={['AviationHistory', 'Aviation', 'Books']}
+                      className="text-base"
+                    />
                   </div>
                 </div>
               </div>
@@ -725,31 +610,6 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               ) : (
                 <p className="text-secondary">No description available.</p>
               )}
-            </div>
-          </div>
-
-          {/* Who this book is for */}
-          <div className="card card-large content">
-            <h3 className="content h3">Who this book is for</h3>
-            <ul className="list-disc list-inside text-secondary space-y-1">
-              <li>Readers of {book.category} seeking primary-source, archival-backed research.</li>
-              {book.era?.length ? <li>Aviation historians focused on {book.era.join(', ')}.</li> : null}
-              {book.aircraftTypes?.length ? <li>Enthusiasts of {book.aircraftTypes.slice(0, 3).join(', ')}.</li> : null}
-              <li>Students and researchers needing citation-ready material with verifiable sourcing.</li>
-            </ul>
-            <div className="mt-4">
-              <h4 className="font-semibold text-primary mb-2">You’ll learn</h4>
-              <ul className="list-disc list-inside text-secondary space-y-1">
-                {book.researchThemes?.slice(0, 3).map((theme) => (
-                  <li key={theme}>{theme}</li>
-                ))}
-                {!book.researchThemes?.length && (
-                  <>
-                    <li>How production, operations, and technology shaped outcomes for this period.</li>
-                    <li>Context from factory records, operational reports, and contemporary accounts.</li>
-                  </>
-                )}
-              </ul>
             </div>
           </div>
 
@@ -794,214 +654,31 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             </ul>
           </div>
 
-          {/* Scope and Coverage */}
-          {(book.era?.length || book.aircraftTypes?.length || book.geographicFocus?.length || book.researchThemes?.length) ? (
-            <div className="card mt-8 content">
-              <h3 className="content h3">Scope and Coverage</h3>
-              <div className="grid sm:grid-cols-2 gap-4 text-secondary">
-                {book.era?.length ? (
-                  <div>
-                    <h4 className="font-semibold text-primary mb-2">Era</h4>
-                    <ul className="list-disc list-inside">
-                      {book.era.map((e) => (<li key={e}>{e}</li>))}
-                    </ul>
-                  </div>
-                ) : null}
-                {book.aircraftTypes?.length ? (
-                  <div>
-                    <h4 className="font-semibold text-primary mb-2">Aircraft and Systems</h4>
-                    <ul className="list-disc list-inside">
-                      {book.aircraftTypes.map((t) => (<li key={t}>{t}</li>))}
-                    </ul>
-                  </div>
-                ) : null}
-                {book.geographicFocus?.length ? (
-                  <div>
-                    <h4 className="font-semibold text-primary mb-2">Geographic Focus</h4>
-                    <ul className="list-disc list-inside">
-                      {book.geographicFocus.map((g) => (<li key={g}>{g}</li>))}
-                    </ul>
-                  </div>
-                ) : null}
-                {book.researchThemes?.length ? (
-                  <div>
-                    <h4 className="font-semibold text-primary mb-2">Research Themes</h4>
-                    <ul className="list-disc list-inside">
-                      {book.researchThemes.map((r) => (<li key={r}>{r}</li>))}
-                    </ul>
-                  </div>
-                ) : null}
-                {(book as any).sourceType?.length ? (
-                  <div>
-                    <h4 className="font-semibold text-primary mb-2">Source Types</h4>
-                    <ul className="list-disc list-inside">
-                      {(book as any).sourceType.map((s: string) => (<li key={s}>{s}</li>))}
-                    </ul>
-                  </div>
-                ) : null}
-              </div>
-            </div>
-          ) : null}
-
-          {/* Research and Sources */}
-          {(book.sourceType?.length || (book as any).researchBackground || (book as any).academicInstitutions?.length) ? (
-            <div className="card mt-8 content">
-              <h3 className="content h3">Research and Sources</h3>
-              {book.sourceType?.length ? (
-                <p className="text-secondary mb-3">Source types: {book.sourceType.join(', ')}.</p>
-              ) : null}
-              {(book as any).researchBackground ? (
-                <p className="text-secondary mb-3">{(book as any).researchBackground}</p>
-              ) : null}
-              {(book as any).academicInstitutions?.length ? (
-                <p className="text-secondary mb-3">Used by: {(book as any).academicInstitutions.join(', ')}.</p>
-              ) : null}
-            </div>
-          ) : null}
-
-          {/* Trust Signals - Customer Reviews & Testimonials */}
           <div className="card mt-8 content">
-            <h3 className="content h3">Reader Reviews</h3>
-            <div className="mb-4">
-              <div className="flex items-center gap-2 mb-2">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-secondary text-sm">5.0 out of 5 stars (15 reviews)</span>
-              </div>
-              <p className="text-secondary text-sm">Based on reviews from aviation historians, researchers, and enthusiasts</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="border rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-sm font-semibold text-primary">Dr. James Thompson</span>
-                </div>
-                <p className="text-secondary text-sm mb-2">"Exceptional research and attention to detail. Essential reading for aviation historians. The archival material is outstanding."</p>
-                <span className="text-xs text-muted">Aviation Historian, University of Glasgow</span>
-              </div>
-
-              <div className="border rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-sm font-semibold text-primary">Sarah Mitchell</span>
-                </div>
-                <p className="text-secondary text-sm mb-2">"Comprehensive coverage with rare archival material. We used this research for our aviation museum exhibition planning."</p>
-                <span className="text-xs text-muted">Curator, RAF Museum</span>
-              </div>
-
-              <div className="border rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-sm font-semibold text-primary">Prof. Robert Davis</span>
-                </div>
-                <p className="text-secondary text-sm mb-2">"Charles MacKay's work sets the standard for aviation history research. The level of detail and primary source material is outstanding."</p>
-                <span className="text-xs text-muted">Professor of Aviation History, University of Edinburgh</span>
-              </div>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="mt-6 pt-6 border-t border-muted">
-              <div className="flex flex-wrap gap-4 justify-center">
-                <div className="flex items-center gap-2 text-sm text-secondary">
-                  <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Used by Imperial War Museum
-                </div>
-                <div className="flex items-center gap-2 text-sm text-secondary">
-                  <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Academic Research Standard
-                </div>
-                <div className="flex items-center gap-2 text-sm text-secondary">
-                  <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Free UK Shipping
-                </div>
-                <div className="flex items-center gap-2 text-sm text-secondary">
-                  <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  30-Day Returns
-                </div>
-              </div>
-            </div>
+            <h3 className="content h3">Why readers choose this book</h3>
+            <ul className="list-disc list-inside text-secondary space-y-1">
+              {strengthPoints.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+              {!strengthPoints.length && (
+                <li>Detailed historical research with practical context for enthusiasts and researchers.</li>
+              )}
+              <li>Guest checkout with secure card and PayPal payment options.</li>
+              <li>30-day returns and direct support from Charles E. MacKay.</li>
+            </ul>
+            <p className="text-secondary text-sm mt-4">
+              Trusted seller with 100% positive feedback on{' '}
+              <a
+                href="https://www.ebay.co.uk/usr/chaza87"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-300 hover:text-blue-200 underline"
+              >
+                Charles&apos; eBay profile
+              </a>
+              .
+            </p>
           </div>
-
-          {/* Technical Specifications */}
-          {(book as any).specifications ? (
-            <div className="card mt-8 content">
-              <h3 className="content h3">Technical Specifications</h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-secondary">
-                <div>
-                  <div className="font-semibold text-primary">Format</div>
-                  <div>{(book as any).specifications.format}</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-primary">Illustrations</div>
-                  <div>{(book as any).specifications.illustrations}</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-primary">Maps</div>
-                  <div>{(book as any).specifications.maps ? 'Included' : '—'}</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-primary">Bibliography</div>
-                  <div>{(book as any).specifications.bibliography ? 'Included' : '—'}</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-primary">Index</div>
-                  <div>{(book as any).specifications.index ? 'Included' : '—'}</div>
-                </div>
-              </div>
-            </div>
-          ) : null}
-
-          {/* Table of Contents */}
-          {(book as any).tableOfContents?.length ? (
-            <div className="card mt-8 content">
-              <h3 className="content h3">Table of Contents</h3>
-              <ol className="list-decimal list-inside text-secondary space-y-1">
-                {(book as any).tableOfContents.map((item: string, idx: number) => (
-                  <li key={`${idx}-${item.slice(0,20)}`}>{item}</li>
-                ))}
-              </ol>
-            </div>
-          ) : null}
-
-          {/* Author's Note */}
-          {(book as any).authorInsights ? (
-            <div className="card mt-8 content">
-              <h3 className="content h3">Author’s Note</h3>
-              <p className="text-secondary">{(book as any).authorInsights}</p>
-            </div>
-          ) : null}
 
           {/* Related Articles only (continuity) */}
           {/* Related Books Section - Automated Internal Linking */}
@@ -1065,10 +742,6 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             </div>
           )}
         </main>
-
-        {/* Mobile footer nav removed on book pages */}
-        {/* Sticky mobile buy bar removed per request */}
-        
 
       </div>
     </>

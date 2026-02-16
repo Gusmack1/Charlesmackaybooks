@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     default: 'Charles E. MacKay Aviation Books - Expert Aviation History | Scottish Aviation | WWI WWII Aircraft',
     template: '%s | Charles E. MacKay Aviation History Books'
   },
-  description: 'Buy authentic aviation history books by Charles E. MacKay. Expert on Scottish aviation, WWI/WWII aircraft, helicopter development, naval aviation. 19+ published books, 1,700+ satisfied customers worldwide. Free shipping.',
+  description: `Buy authentic aviation history books by Charles E. MacKay. Expert on Scottish aviation, WWI/WWII aircraft, helicopter development, and naval aviation. ${books.length} published books with secure guest checkout and worldwide shipping.`,
   keywords: [
     'Charles E MacKay aviation books',
     'Charles Mackay books',
@@ -117,7 +117,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Charles Mackay Books',
+  name: 'Charles E. MacKay Aviation Books',
   url: 'https://charlesmackaybooks.com',
   logo: 'https://charlesmackaybooks.com/logo.png',
   description: 'Expert aviation history books and research by Charles E. MacKay',
@@ -130,12 +130,11 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
-    email: 'contact@charlesmackaybooks.com',
+    email: 'charlese1mackay@hotmail.com',
     availableLanguage: 'English'
   },
   sameAs: [
-    'https://twitter.com/charlesmackaybooks',
-    'https://www.linkedin.com/company/charles-mackay-books'
+    'https://www.ebay.co.uk/usr/chaza87'
   ],
   address: {
     '@type': 'PostalAddress',
@@ -148,7 +147,7 @@ const organizationSchema = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Charles Mackay Books',
+  name: 'Charles E. MacKay Aviation Books',
   url: 'https://charlesmackaybooks.com',
   description: 'Expert aviation history books and research by Charles E. MacKay',
   author: {

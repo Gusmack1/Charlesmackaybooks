@@ -1,8 +1,10 @@
 import { Metadata } from 'next'
 import BookCard from '@/components/BookCard'
+import BundleOfferCard from '@/components/BundleOfferCard'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
 import Testimonials from '@/components/Testimonials'
+import type { Book } from '@/types/book'
 
 const quickFilters = [
   { label: 'WWI Aviation', slug: 'wwi-aviation' },
@@ -22,9 +24,33 @@ const staffPickIds = [
   'aircraft-carrier-argus',
 ]
 
+const bundleConfigs = [
+  {
+    id: 'clydeside-duo',
+    title: 'Clydeside Aviation Duo',
+    description: 'Volume One + Volume Two together for readers building a complete Clydeside reference set.',
+    badge: 'Best value',
+    bookIds: ['clydeside-aviation-vol1', 'clydeside-aviation-vol2'],
+  },
+  {
+    id: 'great-war-comparison',
+    title: 'Great War Air Power Set',
+    description: 'Compare both sides of WWI aviation with British and German aircraft development volumes.',
+    badge: 'Popular',
+    bookIds: ['british-aircraft-great-war', 'german-aircraft-great-war'],
+  },
+  {
+    id: 'enemy-two-volume',
+    title: 'This Was The Enemy Collection',
+    description: 'Pair both volumes for complete late-war Luftwaffe coverage and production context.',
+    badge: 'Research set',
+    bookIds: ['enemy-luftwaffe-1945', 'this-was-the-enemy-volume-two'],
+  },
+]
+
 export const metadata: Metadata = {
   title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
-  description: 'Browse the complete collection of aviation history books by Charles E. MacKay. 19+ books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.',
+  description: `Browse the complete collection of aviation history books by Charles E. MacKay. ${books.length} books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.`,
   alternates: {
     canonical: 'https://charlesmackaybooks.com/books'
   },
@@ -45,7 +71,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
-    description: 'Browse 19+ aviation history books by expert historian Charles E. MacKay. WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.',
+    description: `Browse ${books.length} aviation history books by expert historian Charles E. MacKay. WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.`,
     url: 'https://charlesmackaybooks.com/books',
     siteName: 'Charles E. MacKay Aviation Books',
     images: [
@@ -65,6 +91,15 @@ export default function BooksPage() {
     .slice(0, 6)
 
   const staffPicks = books.filter((b) => staffPickIds.includes(b.id))
+  const bookMap = new Map(books.map((book) => [book.id, book]))
+  const bundles = bundleConfigs
+    .map((bundle) => {
+      const bundleBooks = bundle.bookIds
+        .map((bookId) => bookMap.get(bookId))
+        .filter((book): book is Book => Boolean(book))
+      return { ...bundle, books: bundleBooks }
+    })
+    .filter((bundle) => bundle.books.length === bundle.bookIds.length)
 
   return (
     <div className="surface-dark relative -mx-0 bg-slate-900">
@@ -115,6 +150,25 @@ export default function BooksPage() {
             </p>
           </div>
 
+          <section className="mb-10">
+            <div className="rounded-xl border border-white/15 bg-slate-800/80 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+              <div>
+                <p className="text-sm font-semibold text-white">Trusted seller profile</p>
+                <p className="text-sm text-white/75">
+                  Charles' eBay profile shows 100% positive feedback. Buy direct here for guest checkout and bundle savings.
+                </p>
+              </div>
+              <a
+                href="https://www.ebay.co.uk/usr/chaza87"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-white text-slate-900 border border-slate-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                View eBay profile
+              </a>
+            </div>
+          </section>
+
           {/* Quick filters */}
           <div className="flex flex-wrap gap-2 mb-8 justify-center">
             {quickFilters.map((filter) => (
@@ -155,6 +209,28 @@ export default function BooksPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {staffPicks.map((book) => (
                   <BookCard key={`staff-${book.id}`} book={book} sourceContext="books-staff-picks" />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {bundles.length > 0 && (
+            <section id="bundles" className="mb-10">
+              <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                <h3 className="text-xl font-semibold text-white">Bundle offers</h3>
+                <span className="text-sm text-white/70">
+                  Add multiple books quickly and unlock automatic multi-book discount
+                </span>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
+                {bundles.map((bundle) => (
+                  <BundleOfferCard
+                    key={bundle.id}
+                    title={bundle.title}
+                    description={bundle.description}
+                    books={bundle.books}
+                    badge={bundle.badge}
+                  />
                 ))}
               </div>
             </section>

@@ -126,7 +126,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/hawker-hurricane-formation-flight.jpg" alt="Insert image here: A black-and-white photograph showing Hurricane formation flight during the Battle of Britain, demonstrating formation tactics and the aircraft's handling characteristics" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hawker-hurricane-formation-flight.jpg" alt="Hawker Hurricanes in formation flight during the Battle of Britain (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">Formation work: benign handling and predictable responses made the Hurricane an excellent squadron platform.</p>
     </div>
 
@@ -150,7 +150,7 @@ const post = {
     </p>
 
     <div class="my-8">
-      <img src="/blog-images/hawker-hurricane-professional.jpg" alt="Insert image here: A black-and-white photograph showing Hurricane on dispersal with ground crew, demonstrating maintenance access and operational procedures" class="w-full h-auto rounded-lg shadow-lg"/>
+      <img src="/blog-images/hawker-hurricane-professional.jpg" alt="Hawker Hurricane on dispersal with ground crew (photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
       <p class="text-sm mt-2 text-center italic">On dispersal: armourers and fitters exploited generous access to keep aircraft turnarounds short.</p>
     </div>
 

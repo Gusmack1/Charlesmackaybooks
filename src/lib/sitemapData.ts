@@ -20,7 +20,7 @@ const STATIC_PAGES: Array<{
   { path: '/for-researchers', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/aviation-bibliography', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/aviation-glossary', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/aviation-news', priority: 0.7, changeFrequency: 'weekly' },
+  { path: '/news', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/academic-resources', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/faq', priority: 0.65, changeFrequency: 'monthly' },
   { path: '/research-guides', priority: 0.75, changeFrequency: 'monthly' },
@@ -28,7 +28,6 @@ const STATIC_PAGES: Array<{
   { path: '/great-war-1914-1918', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/pioneer-era-1895-1914', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/scottish-aviation-timeline', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/timeline', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/categories', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/returns', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/support', priority: 0.6, changeFrequency: 'monthly' },
@@ -117,6 +116,43 @@ function getCategorySlugs(): string[] {
   return Array.from(derived);
 }
 
+function listJsonFiles(directory: string): string[] {
+  if (!fs.existsSync(directory)) return [];
+  const entries = fs.readdirSync(directory, { withFileTypes: true });
+  return entries.flatMap((entry) => {
+    const fullPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) return listJsonFiles(fullPath);
+    if (entry.isFile() && entry.name.endsWith('.json')) return [fullPath];
+    return [];
+  });
+}
+
+function getPublishedNewsEntries(): Array<{ slug: string; relativeFilePath: string }> {
+  const newsRoot = path.join(PROJECT_ROOT, 'data', 'news-articles');
+  if (!fs.existsSync(newsRoot)) return [];
+
+  const files = listJsonFiles(newsRoot);
+  const published: Array<{ slug: string; relativeFilePath: string }> = [];
+
+  files.forEach((filePath) => {
+    try {
+      const raw = fs.readFileSync(filePath, 'utf8');
+      const record = JSON.parse(raw) as { slug?: string; status?: string };
+      const status = record.status || 'draft';
+      if (record.slug && status !== 'draft') {
+        published.push({
+          slug: record.slug,
+          relativeFilePath: path.relative(PROJECT_ROOT, filePath),
+        });
+      }
+    } catch {
+      // Ignore invalid records and continue building the sitemap.
+    }
+  });
+
+  return published.sort((a, b) => a.slug.localeCompare(b.slug));
+}
+
 function buildStaticRoutes(): MetadataRoute.Sitemap {
   return STATIC_PAGES.map(({ path: routePath, changeFrequency, priority }) => {
     const file = guessStaticFile(routePath);
@@ -165,6 +201,15 @@ function buildCategoryRoutes(): MetadataRoute.Sitemap {
   }));
 }
 
+function buildPublishedNewsRoutes(): MetadataRoute.Sitemap {
+  return getPublishedNewsEntries().map(({ slug, relativeFilePath }) => ({
+    url: toAbsoluteUrl(`/aviation-news/${slug}`),
+    lastModified: getFileLastModified(relativeFilePath),
+    changeFrequency: 'daily' as const,
+    priority: 0.7,
+  }));
+}
+
 // Aircraft routes removed - content now served via blog posts only
 
 export function generateSitemapEntries(): MetadataRoute.Sitemap {
@@ -173,6 +218,7 @@ export function generateSitemapEntries(): MetadataRoute.Sitemap {
     ...buildBlogRoutes(),
     ...buildBookRoutes(),
     ...buildCategoryRoutes(),
+    ...buildPublishedNewsRoutes(),
   ];
 }
 
