@@ -49,7 +49,8 @@ export function middleware(request: NextRequest) {
   }
 
   // Enforce unique URL shape: trailing-slash variants are treated as non-canonical.
-  // We intentionally avoid redirects and return 404 for slash-terminated duplicates.
+  // IMPORTANT: trailing-slash variants often remain indexed for a long time.
+  // Redirecting preserves rankings and ensures search clicks don't land on 404s.
   if (
     pathname.length > 1 &&
     pathname.endsWith('/') &&
@@ -66,18 +67,15 @@ export function middleware(request: NextRequest) {
     pathname !== '/manifest.json/' &&
     pathname !== '/offline.html/'
   ) {
-    return new NextResponse('Not Found', {
-      status: 404,
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-        'X-Robots-Tag': 'noindex, nofollow',
-      },
-    })
+    const canonicalPath = pathname.replace(/\/+$/, '')
+    // Use the standard URL class to avoid NextURL re-applying trailing slashes.
+    const url = new URL(request.url)
+    url.pathname = canonicalPath || '/'
+    return NextResponse.redirect(url, 308)
   }
 
-  // Note: All redirects removed - pages must be accessible directly
-  // Each page has its own unique URL without redirects
-  // Old URL patterns will return 404 naturally if they don't exist
+  // Note: Aside from the canonical trailing-slash redirect above, we avoid redirects.
+  // Old URL patterns return 404/410 naturally if they don't exist.
 
   // Add X-Robots-Tag to internal tooling routes to avoid indexing
   if (NOINDEX_PATHS.some((p) => pathname.startsWith(p))) {

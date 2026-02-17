@@ -9,7 +9,9 @@ const nextConfig = {
   trailingSlash: false,
   // Disable Next.js URL normalization redirects; we handle trailing slashes via middleware rewrites (no redirect)
   skipTrailingSlashRedirect: true,
-  skipMiddlewareUrlNormalize: true,
+  // NOTE: `skipMiddlewareUrlNormalize` is deprecated; Next.js 16 expects `skipProxyUrlNormalize`.
+  // We keep URL normalization disabled because the site enforces canonical URLs in middleware.
+  skipProxyUrlNormalize: true,
   // Dynamic site configuration for Netlify with Next.js runtime
   output: undefined,
   distDir: '.next',
