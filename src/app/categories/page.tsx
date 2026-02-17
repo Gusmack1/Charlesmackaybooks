@@ -6,8 +6,9 @@ import { categoryNavLinks } from '@/config/navigation'
 import { books } from '@/data/books'
 
 export const metadata: Metadata = {
-  title: 'Aviation Book Categories',
-  description: 'Explore comprehensive aviation book categories covering WWI, WWII, Scottish aviation history, helicopter development, jet age aviation, and more. Expert research by Charles E. MacKay.',
+  title: 'Aviation Book Categories: WWI, WWII, Scottish Aviation and More',
+  description:
+    'Browse aviation book categories: WWI, WWII, Scottish aviation history, helicopters, naval aviation, jet age, and biographies. Buy direct with free worldwide shipping.',
   keywords: [
     'aviation book categories',
     'aviation history books',
@@ -24,8 +25,9 @@ export const metadata: Metadata = {
     canonical: 'https://charlesmackaybooks.com/categories'
   },
   openGraph: {
-    title: 'Aviation Book Categories',
-    description: 'Comprehensive aviation book categories covering all aspects of aviation history, from early flight to modern aviation.',
+    title: 'Aviation Book Categories: WWI, WWII, Scottish Aviation and More',
+    description:
+      'Browse WWI, WWII, Scottish aviation, helicopters, naval aviation, jet age, and biography categories. Free worldwide shipping.',
     type: 'website',
     url: 'https://charlesmackaybooks.com/categories'
   }

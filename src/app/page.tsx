@@ -10,7 +10,7 @@ import FAQSchema from '@/components/FAQSchema';
 import { books } from '@/data/books';
 
 export const metadata: Metadata = {
-  title: 'Aviation History Books by Charles E. MacKay | Buy Direct',
+  title: 'Aviation History Books by Charles E. MacKay | Free Worldwide Shipping',
   description:
     "Buy aviation history books by Charles E. MacKay: Scottish aviation, WWI/WWII aircraft, helicopters & naval ops. Free worldwide shipping with secure guest checkout.",
   keywords: [
