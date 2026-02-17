@@ -98,21 +98,13 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
             {isBuyingNow ? 'Opening checkout...' : 'Buy now (guest checkout)'}
           </button>
 
-          <div className="grid grid-cols-2 gap-2">
-            <button
-              onClick={handleAddToBasket}
-              disabled={!book.inStock || isAdding}
-              className="bg-slate-700 text-white px-3 py-2 rounded text-sm hover:bg-slate-600 transition-colors border border-white/20 disabled:opacity-60"
-            >
-              {isAdding ? 'Adding...' : 'Add to basket'}
-            </button>
-            <Link
-              href={`/books/${book.id}`}
-              className="bg-slate-800 text-white px-3 py-2 rounded text-sm text-center hover:bg-slate-700 transition-colors border border-white/25"
-            >
-              View details
-            </Link>
-          </div>
+          <button
+            onClick={handleAddToBasket}
+            disabled={!book.inStock || isAdding}
+            className="w-full bg-slate-700 text-white px-3 py-2.5 rounded text-sm hover:bg-slate-600 transition-colors border border-white/20 disabled:opacity-60"
+          >
+            {isAdding ? 'Adding...' : 'Add to basket'}
+          </button>
 
           <p className="text-[11px] text-white/60 text-center">
             Free UK shipping · 30-day returns · Secure card and PayPal
