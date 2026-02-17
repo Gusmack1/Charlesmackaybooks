@@ -6,7 +6,7 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import { getPublishedBookCountText, getTotalBookCountText, SITE_CONSTANTS } from '@/config/constants'
 
 export const metadata: Metadata = {
-  title: 'About Charles E. MacKay - Aviation Historian & Author | Charles E. MacKay Aviation Books',
+  title: 'About Charles E. MacKay (Aviation Historian & Author)',
   description: 'Meet Charles E. MacKay, renowned aviation historian specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history. Based in Glasgow, Scotland.',
   keywords: [
     'Charles E MacKay',

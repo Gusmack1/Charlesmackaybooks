@@ -33,8 +33,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_DOMAIN),
   title: {
-    default: 'Charles E. MacKay Aviation Books - Expert Aviation History | Scottish Aviation | WWI WWII Aircraft',
-    template: '%s | Charles E. MacKay Aviation History Books'
+    default: 'Charles Mackay Books | Aviation History Books by Charles E. MacKay',
+    template: '%s | Charles Mackay Books'
   },
   description: `Buy authentic aviation history books by Charles E. MacKay. Expert on Scottish aviation, WWI/WWII aircraft, helicopter development, and naval aviation. ${books.length} published books with secure guest checkout and worldwide shipping.`,
   keywords: [

@@ -10,8 +10,9 @@ import FAQSchema from '@/components/FAQSchema';
 import { books } from '@/data/books';
 
 export const metadata: Metadata = {
-  title: 'Aviation History Books by Charles E. MacKay | Expert Scottish Aviation Research | Buy Online',
-  description: 'Buy authentic aviation history books by Scotland\'s leading aviation historian. 20+ books on WWI/WWII aircraft, Scottish aviation, helicopters & military aviation. Free UK shipping. Expert research used by museums & universities.',
+  title: 'Aviation History Books by Charles E. MacKay | Buy Direct',
+  description:
+    "Buy aviation history books by Charles E. MacKay: Scottish aviation, WWI/WWII aircraft, helicopters & naval ops. Free worldwide shipping with secure guest checkout.",
   keywords: [
     'aviation history books',
     'Charles E MacKay',
@@ -32,8 +33,9 @@ export const metadata: Metadata = {
     canonical: 'https://charlesmackaybooks.com/'
   },
   openGraph: {
-    title: 'Aviation History Books by Charles E. MacKay | Expert Scottish Aviation Research',
-    description: 'Buy authentic aviation history books by Scotland\'s leading aviation historian. 20+ books on WWI/WWII aircraft, Scottish aviation, helicopters & military aviation. Free UK shipping. Expert research used by museums.',
+    title: 'Aviation History Books by Charles E. MacKay',
+    description:
+      'Buy aviation history books by Charles E. MacKay with free worldwide shipping and secure guest checkout.',
     url: 'https://charlesmackaybooks.com/',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [
@@ -48,7 +50,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Charles E. MacKay - Aviation History Books',
-    description: 'Authoritative aviation history books by expert historian Charles E. MacKay. WWI & WWII aircraft, Scottish aviation heritage, and military aviation.'
+    description:
+      'Authoritative aviation history books by Charles E. MacKay. Free worldwide shipping with secure guest checkout.'
   }
 }
 

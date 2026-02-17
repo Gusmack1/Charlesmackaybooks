@@ -4,8 +4,9 @@ import { books } from '@/data/books'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 
 export const metadata: Metadata = {
-  title: 'Academic Resources | Aviation History Research | Charles E. MacKay',
-  description: 'Comprehensive academic resources for aviation history research including bibliographies, primary sources, archival collections, and research methodologies for students and scholars.',
+  title: 'Free Aviation History Research Resources',
+  description:
+    'Free aviation history research resources: bibliography, glossary, research guides, and Scottish aviation timeline for students and researchers.',
   alternates: {
     canonical: 'https://charlesmackaybooks.com/academic-resources'
   },
@@ -24,8 +25,9 @@ export const metadata: Metadata = {
     'aviation academic citations'
   ],
   openGraph: {
-    title: 'Academic Resources | Aviation History Research',
-    description: 'Comprehensive academic resources for aviation history research including bibliographies, primary sources, and research methodologies.',
+    title: 'Free Aviation History Research Resources',
+    description:
+      'Free aviation history research resources: bibliography, glossary, research guides, and Scottish aviation timeline.',
     type: 'website',
     url: 'https://charlesmackaybooks.com/academic-resources'
   },

@@ -6,7 +6,7 @@ import { categoryNavLinks } from '@/config/navigation'
 import { books } from '@/data/books'
 
 export const metadata: Metadata = {
-  title: 'Aviation Book Categories | Charles E. MacKay Aviation Books',
+  title: 'Aviation Book Categories',
   description: 'Explore comprehensive aviation book categories covering WWI, WWII, Scottish aviation history, helicopter development, jet age aviation, and more. Expert research by Charles E. MacKay.',
   keywords: [
     'aviation book categories',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: 'https://charlesmackaybooks.com/categories'
   },
   openGraph: {
-    title: 'Aviation Book Categories | Charles E. MacKay Aviation Books',
+    title: 'Aviation Book Categories',
     description: 'Comprehensive aviation book categories covering all aspects of aviation history, from early flight to modern aviation.',
     type: 'website',
     url: 'https://charlesmackaybooks.com/categories'

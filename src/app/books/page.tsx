@@ -49,8 +49,8 @@ const bundleConfigs = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
-  description: `Browse the complete collection of aviation history books by Charles E. MacKay. ${books.length} books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.`,
+  title: 'Aviation History Books by Charles E. MacKay',
+  description: `Browse ${books.length} aviation history books by Charles E. MacKay. WWI/WWII aircraft, Scottish aviation, helicopters, and naval ops. Free worldwide shipping with secure guest checkout.`,
   alternates: {
     canonical: 'https://charlesmackaybooks.com/books'
   },
@@ -70,8 +70,8 @@ export const metadata: Metadata = {
     'naval aviation books'
   ],
   openGraph: {
-    title: 'Aviation History Books - Complete Collection | Charles E. MacKay',
-    description: `Browse ${books.length} aviation history books by expert historian Charles E. MacKay. WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more.`,
+    title: 'Aviation History Books by Charles E. MacKay',
+    description: `Browse ${books.length} aviation history books by Charles E. MacKay with free worldwide shipping and secure guest checkout.`,
     url: 'https://charlesmackaybooks.com/books',
     siteName: 'Charles E. MacKay Aviation Books',
     images: [
@@ -105,8 +105,8 @@ export default function BooksPage() {
     <div className="surface-dark relative -mx-0 bg-slate-900">
       <UnifiedSchema
         pageType="books"
-        pageTitle="Aviation History Books - Complete Collection | Charles E. MacKay"
-        pageDescription="Browse the complete collection of aviation history books by Charles E. MacKay. 20+ books covering WWI & WWII aircraft, Scottish aviation heritage, military aviation, and more."
+        pageTitle="Aviation History Books by Charles E. MacKay"
+        pageDescription={`Browse ${books.length} aviation history books by Charles E. MacKay with free worldwide shipping and secure guest checkout.`}
         pageUrl="/books"
         books={books}
       />
