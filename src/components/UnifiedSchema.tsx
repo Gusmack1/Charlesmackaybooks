@@ -277,7 +277,7 @@ export default function UnifiedSchema({
   if (pageType === 'book-detail' && bookData?.id) {
     const bookUrl = `${BASE_URL}/books/${bookData.id}`
     webPageNode.mainEntity = {
-      '@id': `${bookUrl}#book`,
+      '@id': `${bookUrl}#product`,
     }
     webPageNode.primaryImageOfPage = {
       '@type': 'ImageObject',
@@ -290,6 +290,19 @@ export default function UnifiedSchema({
     const validISBN = getValidISBN(bookData.isbn)
     const validGTIN13 = getValidGTIN13(bookData.isbn)
     const validSKU = getValidSKU(bookData.isbn, bookData.id)
+    const editorialReviewBody = (pageDescription || bookData.description || '').trim()
+    const editorialReview =
+      editorialReviewBody.length >= 20
+        ? {
+            '@type': 'Review',
+            '@id': `${bookUrl}#overview-review`,
+            name: `${bookData.title || 'Book'} overview`,
+            reviewBody: editorialReviewBody.slice(0, 2000),
+            author: {
+              '@id': `${BASE_URL}/#person`,
+            },
+          }
+        : null
 
     graph.push({
       '@type': 'Product',
@@ -310,6 +323,7 @@ export default function UnifiedSchema({
           unitCode: 'GRM',
         }
       }),
+      ...(editorialReview ? { review: [editorialReview] } : {}),
       offers: {
         '@type': 'Offer',
         price: bookData.price?.toFixed(2) || '15.95',
