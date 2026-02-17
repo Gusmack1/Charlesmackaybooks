@@ -86,7 +86,7 @@ export default function CartSidebar() {
                       <div className="flex items-center gap-2 mt-2">
                         <button
                           onClick={() => updateQuantity(item.book.id, item.quantity - 1)}
-                          className="w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full hover:bg-slate-600 text-sm"
+                          className="w-11 h-11 sm:w-9 sm:h-9 flex items-center justify-center bg-slate-700 rounded-full hover:bg-slate-600 text-base sm:text-sm"
                           disabled={item.quantity <= 1}
                         >
                           -
@@ -94,7 +94,7 @@ export default function CartSidebar() {
                         <span className="text-sm font-medium w-8 text-center text-white">{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
-                          className="w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full hover:bg-slate-600 text-sm"
+                          className="w-11 h-11 sm:w-9 sm:h-9 flex items-center justify-center bg-slate-700 rounded-full hover:bg-slate-600 text-base sm:text-sm"
                         >
                           +
                         </button>

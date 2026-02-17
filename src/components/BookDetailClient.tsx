@@ -75,7 +75,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               <button
                 onClick={handleBuyNow}
                 disabled={isBuyingNow}
-                className="w-full bg-white text-slate-900 py-3 px-4 disabled:opacity-60 text-base font-bold rounded-lg min-h-[48px] hover:bg-gray-100 transition-colors border border-slate-900"
+                className="hidden lg:block w-full bg-white text-slate-900 py-3 px-4 disabled:opacity-60 text-base font-bold rounded-lg min-h-[48px] hover:bg-gray-100 transition-colors border border-slate-900"
               >
                 {isBuyingNow ? 'Opening checkout...' : 'Buy now - secure checkout'}
               </button>
@@ -83,7 +83,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               <button
                 onClick={handleAddToCart}
                 disabled={isAddingToCart}
-                className="w-full bg-slate-700 text-white py-3 px-4 disabled:opacity-60 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-slate-600 transition-colors border border-white/20"
+                className="hidden lg:block w-full bg-slate-700 text-white py-3 px-4 disabled:opacity-60 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-slate-600 transition-colors border border-white/20"
               >
                 {isAddingToCart ? 'Adding...' : 'Add to basket'}
               </button>

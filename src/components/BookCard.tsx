@@ -13,18 +13,17 @@ interface BookCardProps {
 }
 
 export default function BookCard({ book, sourceContext }: BookCardProps) {
-  const { addToCart, openBasket } = useCart();
+  const { addToCart } = useCart();
   const router = useRouter();
   const [isAdding, setIsAdding] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
 
   const handleAddToBasket = () => {
+    if (isAdding) return;
     setIsAdding(true);
     addToCart(book);
-    setTimeout(() => {
-      openBasket();
-      setIsAdding(false);
-    }, 250);
+    // On listing grids, avoid auto-opening the basket (it interrupts browsing).
+    setTimeout(() => setIsAdding(false), 650);
   };
 
   const handleBuyNow = () => {
@@ -35,7 +34,7 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
   };
 
   return (
-    <div className="bg-slate-800 border border-blue-700/40 rounded-lg shadow-md overflow-hidden hover:border-blue-400/60 transition-all duration-300">
+    <div className="w-full bg-slate-800 border border-blue-700/40 rounded-lg shadow-md overflow-hidden hover:border-blue-400/60 transition-all duration-300">
       {/* Book Cover - Now Clickable */}
       <div className="aspect-[3/4] relative bg-gray-100">
         <Link href={`/books/${book.id}`} className="block w-full h-full">

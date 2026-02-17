@@ -508,14 +508,14 @@ function CheckoutContent() {
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => updateQuantity(item.book.id, Math.max(0, item.quantity - 1))}
-                            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold hover:bg-blue-700"
+                            className="w-11 h-11 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-base sm:text-sm font-bold hover:bg-blue-700"
                           >
                             -
                           </button>
                           <span className="w-6 sm:w-8 text-center text-white text-sm font-medium">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
-                            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold hover:bg-blue-700"
+                            className="w-11 h-11 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-base sm:text-sm font-bold hover:bg-blue-700"
                           >
                             +
                           </button>
@@ -931,8 +931,8 @@ function CheckoutContent() {
 
             {/* Trust & Security Badges are rendered globally via layout */}
 
-            {/* Customer Testimonials */}
-            <div className="mt-6">
+            {/* Customer Testimonials (desktop only to reduce mobile checkout friction) */}
+            <div className="mt-6 hidden lg:block">
               <CustomerTestimonials maxDisplay={2} />
             </div>
           </div>

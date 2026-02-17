@@ -41,13 +41,13 @@ export default function Header() {
       {/* Top Header Bar */}
       <div className="bg-slate-900">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
-        <div className="container max-w-7xl mx-auto px-4 py-3 md:py-4">
+        <div className="container max-w-7xl mx-auto px-4 py-2 md:py-4">
           <div className="flex justify-between items-center gap-4">
             {/* Logo and Author Info - Clickable */}
             <Link href="/" className="hover:opacity-90 transition-opacity cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 rounded">
-              <h1 className="font-bold text-white tracking-tight text-lg md:text-xl leading-none m-0">Charles E. MacKay</h1>
-              <p className="text-white text-sm md:text-base leading-none m-0">Aviation Historian & Author</p>
-              <p className="text-white/90 text-sm md:text-base leading-none m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
+              <h1 className="font-bold text-white tracking-tight text-base sm:text-lg md:text-xl leading-tight m-0">Charles E. MacKay</h1>
+              <p className="text-white text-xs sm:text-sm md:text-base leading-tight m-0">Aviation Historian & Author</p>
+              <p className="hidden md:block text-white/90 text-xs sm:text-sm md:text-base leading-tight m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
             </Link>
 
             {/* Actions */}
