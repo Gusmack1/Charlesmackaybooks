@@ -7,7 +7,7 @@ const nextConfig = {
   },
   // Disable trailing slashes to prevent redirects - each page should have its own URL
   trailingSlash: false,
-  // Disable Next.js URL normalization redirects; we handle trailing slashes via middleware rewrites (no redirect)
+  // Disable Next.js trailing slash redirects; the site enforces canonical URLs in middleware.
   skipTrailingSlashRedirect: true,
   // NOTE: `skipMiddlewareUrlNormalize` is deprecated; Next.js 16 expects `skipProxyUrlNormalize`.
   // We keep URL normalization disabled because the site enforces canonical URLs in middleware.

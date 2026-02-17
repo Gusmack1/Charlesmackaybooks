@@ -74,6 +74,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   };
 
   const buildSeoDescription = (item: Book): string => {
+    if (item.seoDescription && item.seoDescription.trim()) {
+      const concise = toMetaDescription(item.seoDescription);
+      if (concise) return concise;
+    }
     const firstSentence = (item.description || '').split(/(?<=[.!?])\s+/)[0] || '';
     const concise = toMetaDescription(firstSentence || item.description || '');
     if (concise) return concise;

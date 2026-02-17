@@ -7,6 +7,9 @@ export interface Book {
   condition: 'New' | 'Very Good' | 'Good';
   inStock: boolean;
   description: string;
+  // Optional SERP-focused description (kept strictly factual).
+  // When present, this is preferred for the page <meta name="description">.
+  seoDescription?: string;
   imageUrl?: string;
   ebayUrl?: string;
   tags?: string[];

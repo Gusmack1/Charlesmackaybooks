@@ -5,19 +5,21 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO'
 
 export const metadata: Metadata = {
-  title: `William Beardmore & Company: Scottish Aviation Pioneer | Charles E. MacKay`,
-  description: 'A source-based account of Beardmore\'s move from heavy industry into aircraft, engine, airship, and carrier-era aviation work.',
-  keywords: ["Beardmore","Scottish Aviation","Industrial History","Manufacturing","WWI"],
+  title: 'Beardmore Aviation: Tornado Engine, R101 and HMS Argus',
+  description:
+    'Source-based account of Beardmore\'s aviation work: HMS Argus carrier operations, airship production, and the Beardmore Tornado engine\'s role in the R101 project.',
+  keywords: ['Beardmore', 'Beardmore Tornado engine', 'R101', 'HMS Argus', 'Scottish aviation', 'airship production'],
   openGraph: {
-    title: `William Beardmore & Company: Scottish Aviation Pioneer`,
-    description: 'A source-based account of Beardmore\'s move into aircraft, engine, airship, and carrier-era aviation work.',
+    title: 'Beardmore Aviation: Tornado Engine, R101 and HMS Argus',
+    description:
+      'HMS Argus carrier operations, airship production, and the Beardmore Tornado engine\'s role in the R101 project (source-based).',
     url: 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [{
       url: '/blog-images/beardmore-parkhead-forge.jpg',
       width: 1200,
       height: 630,
-      alt: 'William Beardmore & Company: Scottish Aviation Pioneer'
+      alt: 'Beardmore Aviation: Tornado Engine, R101 and HMS Argus'
     }],
     locale: 'en_GB',
     type: 'article',
