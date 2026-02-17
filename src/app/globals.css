@@ -455,7 +455,7 @@
   textarea {
     color: #ffffff !important;
     background-color: rgba(2, 2, 33, 0.9) !important; /* Very dark blue */
-    border: 1px solid rgba(147, 197, 253, 0.3) !important; /* Light blue border */
+    border: 1px solid rgba(255, 255, 255, 0.35) !important; /* Thin white border */
     border-radius: var(--border-radius);
     padding: 0.75rem;
   }
@@ -466,9 +466,15 @@
   input[type="password"]:focus,
   select:focus,
   textarea:focus {
-    outline: 2px solid #60a5fa !important; /* Light blue outline */
-    border-color: #60a5fa !important;
+    outline: 1px solid #ffffff !important; /* Thin white outline for clarity */
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35) !important;
     background-color: rgba(2, 2, 33, 1) !important;
+  }
+
+  /* Dropdowns: keep the border thin and consistent on all states */
+  select {
+    border-color: rgba(255, 255, 255, 0.55) !important;
   }
   
   /* Select dropdown options should have dark background */

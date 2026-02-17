@@ -23,7 +23,7 @@ export default function BBCHeader() {
             <button
               onClick={openBasket}
               aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
-              className="relative bg-transparent border-2 border-white text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900"
+              className="relative bg-transparent border border-white/70 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900"
               title="Shopping Basket"
             >
               <span className="hidden sm:inline flex items-center">
@@ -60,9 +60,8 @@ export default function BBCHeader() {
             <button
               onClick={() => setMenuOpen((v) => !v)}
               aria-haspopup="menu"
-              aria-expanded={menuOpen}
               aria-controls="bbc-menu"
-              className="px-3 py-2 rounded bg-slate-900"
+              className="px-3 py-2 rounded bg-slate-900 border border-white/60 hover:bg-slate-800 transition-colors"
             >
               ☰ Menu
             </button>
@@ -72,7 +71,7 @@ export default function BBCHeader() {
             <button
               onClick={openBasket}
               aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
-              className="relative bg-transparent border-2 border-white text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900"
+              className="relative bg-transparent border border-white/70 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900"
               title="Shopping Basket"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,7 +86,7 @@ export default function BBCHeader() {
             <button
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Open menu"
-              className="px-3 py-2 rounded bg-slate-900"
+              className="px-3 py-2 rounded bg-slate-900 border border-white/60 hover:bg-slate-800 transition-colors"
             >
               ☰
             </button>
@@ -106,14 +105,13 @@ export default function BBCHeader() {
         </div>
       </nav>
       {menuOpen && (
-        <div id="bbc-menu" role="menu" ref={menuRef} className="absolute left-0 right-0 top-full z-[60] border-t border-slate-800 bg-slate-900 shadow-xl">
+        <div id="bbc-menu" role="navigation" aria-label="Expanded site menu" ref={menuRef} className="absolute left-0 right-0 top-full z-[60] border border-white/50 bg-slate-900 shadow-xl">
           <div className="max-w-7xl mx-auto px-4 py-3">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
               {primaryNavLinks.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
-                  role="menuitem"
                   className="px-3 py-2 rounded text-white hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
                   onClick={() => setMenuOpen(false)}
                 >

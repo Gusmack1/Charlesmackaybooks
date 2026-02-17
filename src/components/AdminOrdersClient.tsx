@@ -499,7 +499,7 @@ export default function AdminOrdersClient({}: AdminOrdersClientProps) {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="px-3 py-2 border border-slate-600 bg-slate-900 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-3 py-2 border border-white/55 bg-slate-900 text-white rounded-lg focus:ring-1 focus:ring-white/50 focus:border-white"
               aria-label="Filter orders by status"
             >
               <option value="all">All Status</option>

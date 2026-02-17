@@ -58,7 +58,7 @@ function CheckoutContent() {
   const searchParams = useSearchParams();
   const preferredPaymentMethod = searchParams.get('method') === 'paypal' ? 'paypal' : 'stripe';
   const { items, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
-  const [step, setStep] = useState<'basket' | 'address' | 'payment' | 'review'>('basket');
+  const [step, setStep] = useState<'basket' | 'address' | 'payment'>('basket');
   const [paymentMethod, setPaymentMethod] = useState<'stripe' | 'paypal'>(preferredPaymentMethod);
   const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
     firstName: '',
@@ -84,6 +84,17 @@ function CheckoutContent() {
     const profile = readSavedCustomerProfile();
     if (profile?.email) {
       setSavedProfile(profile);
+      setCustomerDetails((current) => {
+        const alreadyStarted = Boolean(
+          current.firstName ||
+          current.lastName ||
+          current.email ||
+          current.address1 ||
+          current.city ||
+          current.postcode
+        );
+        return alreadyStarted ? current : profile;
+      });
     }
   }, []);
 
@@ -186,6 +197,22 @@ function CheckoutContent() {
   const applySavedProfile = () => {
     if (!savedProfile) return;
     setCustomerDetails(savedProfile);
+    setErrors([]);
+  };
+
+  const handleSavedProfileExpressCheckout = () => {
+    if (!savedProfile) return;
+    const validationErrors = validateCustomerDetails(savedProfile);
+    if (validationErrors.length > 0) {
+      setCustomerDetails(savedProfile);
+      setErrors(validationErrors);
+      setStep('address');
+      return;
+    }
+    setCustomerDetails(savedProfile);
+    setErrors([]);
+    setPaymentMethod('stripe');
+    setStep('payment');
   };
 
   const persistCheckoutProfile = () => {
@@ -437,15 +464,15 @@ function CheckoutContent() {
               <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Basket</span>
             </div>
             <div className="w-4 sm:w-8 h-0.5 sm:h-1 bg-blue-800/50"></div>
-            <div className={`flex items-center ${step === 'address' || step === 'payment' || step === 'review' ? 'text-white' : 'text-white/60'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'address' || step === 'payment' || step === 'review' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
+            <div className={`flex items-center ${step === 'address' || step === 'payment' ? 'text-white' : 'text-white/60'}`}>
+              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'address' || step === 'payment' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
                 2
               </div>
               <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Address</span>
             </div>
             <div className="w-4 sm:w-8 h-0.5 sm:h-1 bg-blue-800/50"></div>
-            <div className={`flex items-center ${step === 'payment' || step === 'review' ? 'text-white' : 'text-white/60'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'payment' || step === 'review' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
+            <div className={`flex items-center ${step === 'payment' ? 'text-white' : 'text-white/60'}`}>
+              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'payment' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
                 3
               </div>
               <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Payment</span>
@@ -531,12 +558,22 @@ function CheckoutContent() {
                   )}
                   <p className="text-xs sm:text-sm text-white/80 mt-2">Free worldwide shipping included</p>
                 </div>
-                <button
-                  onClick={() => setStep('address')}
-                  className="w-full mt-4 bg-white text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base border border-slate-900"
-                >
-                  Continue to Address
-                </button>
+                <div className="mt-4 space-y-2">
+                  <button
+                    onClick={() => setStep('address')}
+                    className="w-full bg-white text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base border border-slate-900"
+                  >
+                    Continue to Address
+                  </button>
+                  {savedProfile?.email && (
+                    <button
+                      onClick={handleSavedProfileExpressCheckout}
+                      className="w-full bg-slate-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-slate-700 transition-colors text-sm sm:text-base border border-white/50"
+                    >
+                      Use saved details and continue to payment
+                    </button>
+                  )}
+                </div>
               </div>
             )}
 
@@ -679,9 +716,10 @@ function CheckoutContent() {
                     name="country"
                     title="Country"
                     aria-label="Country"
+                    autoComplete="country-name"
                     value={customerDetails.country}
                     onChange={(e) => handleInputChange('country', e.target.value)}
-                      className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-slate-800 focus:border-blue-400 focus:ring-1 focus:ring-blue-400"
+                    className="w-full p-2 sm:p-3 border border-white/55 rounded-lg text-white bg-slate-800 focus:border-white focus:ring-1 focus:ring-white/50"
                     required
                   >
                     <option value="GB">United Kingdom</option>
@@ -714,18 +752,34 @@ function CheckoutContent() {
                   />
                   Save my details on this device for faster guest checkout next time
                 </label>
-                <button
-                  onClick={handleAddressSubmit}
-                  className="w-full mt-4 bg-white text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base border border-slate-900"
-                >
-                  Continue to Payment
-                </button>
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setStep('basket')}
+                    className="w-full bg-slate-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-slate-700 transition-colors text-sm sm:text-base border border-white/50"
+                  >
+                    Back to Basket
+                  </button>
+                  <button
+                    onClick={handleAddressSubmit}
+                    className="w-full bg-white text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base border border-slate-900"
+                  >
+                    Continue to Payment
+                  </button>
+                </div>
               </div>
             )}
 
             {step === 'payment' && (
               <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4 sm:p-6">
                 <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Payment Method</h2>
+                <button
+                  type="button"
+                  onClick={() => setStep('address')}
+                  className="mb-4 inline-flex items-center rounded-lg border border-white/50 bg-slate-800 px-3 py-2 text-xs sm:text-sm font-medium text-white hover:bg-slate-700 transition-colors"
+                >
+                  ← Back to Address
+                </button>
                 
                 {/* Payment Method Selection */}
                 <div className="mb-4 sm:mb-6">

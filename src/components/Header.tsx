@@ -107,16 +107,15 @@ export default function Header() {
                   <button
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     aria-haspopup="menu"
-                    aria-expanded={mobileMenuOpen}
                     aria-controls="global-more-menu"
-                    className="bg-white text-slate-900 px-3 py-2 rounded min-h-[44px] min-w-[44px] text-sm hover:bg-gray-100 border border-slate-900"
+                    className="bg-slate-900 text-white px-3 py-2 rounded min-h-[44px] min-w-[44px] text-sm hover:bg-slate-800 border border-white/60 transition-colors"
                   >
                     ☰ More
                   </button>
                   {mobileMenuOpen && (
                   <div
                     id="global-more-menu"
-                    className="absolute right-0 mt-2 w-64 bg-white border border-slate-900 rounded-lg shadow-xl overflow-hidden z-50"
+                    className="absolute right-0 mt-2 w-64 bg-slate-900 border border-white/50 rounded-lg shadow-xl overflow-hidden z-50"
                   >
                     <nav className="flex flex-col p-1" aria-label="More navigation">
                         {/* Main navigation links in mobile menu */}
@@ -126,14 +125,14 @@ export default function Header() {
                             href={link.href}
                             role="menuitem"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="px-3 py-2 rounded bg-white text-slate-900 hover:bg-gray-100 hover:underline focus:bg-gray-100 focus:outline-none transition-colors"
+                            className="px-3 py-2 rounded bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-none border border-transparent hover:border-white/40 transition-colors"
                           >
                             {link.label}
                           </Link>
                         ))}
 
                         {/* Separator */}
-                        <div className="border-t border-slate-300 my-1"></div>
+                        <div className="border-t border-white/20 my-1"></div>
 
                         {/* More navigation links */}
                         {moreNavLinks.map(link => (
@@ -142,7 +141,7 @@ export default function Header() {
                             href={link.href}
                             role="menuitem"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="px-3 py-2 rounded bg-white text-slate-900 hover:bg-gray-100 hover:underline focus:bg-gray-100 focus:outline-none transition-colors"
+                            className="px-3 py-2 rounded bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-none border border-transparent hover:border-white/40 transition-colors"
                           >
                             {link.label}
                           </Link>
@@ -207,20 +206,19 @@ export default function Header() {
               <button
                 onClick={() => setDesktopMenuOpen(!desktopMenuOpen)}
                 aria-haspopup="menu"
-                aria-expanded={desktopMenuOpen}
-                className="px-3 py-2 rounded bg-white text-slate-900 hover:bg-gray-100 hover:underline border border-slate-900 flex items-center gap-1 transition-colors"
+                className="px-3 py-2 rounded bg-slate-900 text-white hover:bg-slate-800 hover:underline border border-white/60 flex items-center gap-1 transition-colors"
               >
                 More ▼
               </button>
               {desktopMenuOpen && (
-                <div className="absolute left-0 mt-1 w-56 bg-white border border-slate-900 rounded-lg shadow-xl overflow-hidden z-50">
+                <div className="absolute left-0 mt-1 w-56 bg-slate-900 border border-white/50 rounded-lg shadow-xl overflow-hidden z-50">
                   <nav className="flex flex-col py-1" aria-label="More navigation">
                     {moreNavLinks.map(link => (
                       <Link
                         key={link.href}
                         href={link.href}
                         onClick={() => setDesktopMenuOpen(false)}
-                        className="px-4 py-2 bg-white text-slate-900 hover:bg-gray-100 hover:underline focus:bg-gray-100 focus:outline-none transition-colors"
+                        className="px-4 py-2 bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-none border border-transparent hover:border-white/40 transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -237,29 +235,30 @@ export default function Header() {
       {/* Close pinned menu on outside click */}
       <script dangerouslySetInnerHTML={{ __html: '' }} />
       <style jsx>{`
-        /* Navigation links styling - white background, dark blue text, underline on hover */
+        /* Navigation links styling - dark background, thin white borders */
         .header-primary-nav a {
-          background-color: #ffffff !important;
-          color: #0f172a !important;
-          border: 1px solid #0f172a !important;
+          background-color: #0f172a !important;
+          color: #ffffff !important;
+          border: 1px solid rgba(255, 255, 255, 0.55) !important;
           text-decoration: none !important;
         }
         .header-primary-nav a:hover {
-          background-color: #f3f4f6 !important;
+          background-color: #1e293b !important;
           text-decoration: underline !important;
         }
         /* Dropdown menu styling */
         #global-more-menu {
-          background-color: #ffffff !important;
-          border-color: #0f172a !important;
+          background-color: #0f172a !important;
+          border: 1px solid rgba(255, 255, 255, 0.5) !important;
         }
         #global-more-menu a {
-          background-color: #ffffff !important;
-          color: #0f172a !important;
+          background-color: #0f172a !important;
+          color: #ffffff !important;
           text-decoration: none !important;
         }
         #global-more-menu a:hover {
-          background-color: #f3f4f6 !important;
+          background-color: #1e293b !important;
+          border-color: rgba(255, 255, 255, 0.4) !important;
           text-decoration: underline !important;
         }
       `}</style>

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { resolveRelatedBooks } from '@/utils/blogRelatedBooks';
 import { getImageCandidates } from '@/data/blogImageManifest';
 import { getApprovedFeatured, getApprovedInline } from '@/utils/approvedImageResolver';
+import { getStableBlogPublishedDate } from '@/utils/blogPublishedDate';
 import ShareButton from '@/components/ShareButton';
 
 interface BlogPost {
@@ -57,6 +58,7 @@ interface ComprehensiveBlogTemplateProps {
 
 export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTemplateProps) {
   type Reference = { title: string; url: string; source?: string; date?: string };
+  const stablePublishedDate = getStableBlogPublishedDate(post.id, post.publishedDate);
   const featured = getApprovedFeatured(post.id, post.featuredImage?.url, post.featuredImage?.alt)
   const approvedInline = getApprovedInline(post.id, 4)
   const resolvedRelatedBooks = resolveRelatedBooks(
@@ -477,8 +479,8 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                   name: 'Charles Mackay Books',
                   url: 'https://charlesmackaybooks.com/'
                 },
-                datePublished: post.publishedDate,
-                dateModified: post.publishedDate,
+                datePublished: stablePublishedDate,
+                dateModified: stablePublishedDate,
                 keywords: post.tags?.join(', '),
                 mainEntityOfPage: `https://charlesmackaybooks.com/blog/${post.id}`
               })

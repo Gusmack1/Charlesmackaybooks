@@ -1,5 +1,6 @@
 import { books } from '@/data/books';
 import { resolveRelatedBooks } from '@/utils/blogRelatedBooks';
+import { getStableBlogPublishedDate } from '@/utils/blogPublishedDate';
 
 interface BlogPost {
   id: string;
@@ -52,6 +53,7 @@ function toAbsoluteUrl(baseUrl: string, url?: string): string | undefined {
 export default function EnhancedBlogSEO({ post, relatedBooks = [], relatedPosts = [] }: EnhancedBlogSEOProps) {
   const baseUrl = 'https://charlesmackaybooks.com';
   const fullUrl = `${baseUrl}/blog/${post.id}`;
+  const stablePublishedDate = getStableBlogPublishedDate(post.id, post.publishedDate);
   const canonicalImage = toAbsoluteUrl(baseUrl, post.featuredImage?.url) || `${baseUrl}/blog-images/default-generic.svg`;
 
   const explicitRelatedBookInputs = [
@@ -104,7 +106,7 @@ export default function EnhancedBlogSEO({ post, relatedBooks = [], relatedPosts 
       name: `When was "${post.title}" published?`,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `This article was published on ${new Date(post.publishedDate).toLocaleDateString('en-GB', {
+        text: `This article was published on ${new Date(stablePublishedDate).toLocaleDateString('en-GB', {
           year: 'numeric',
           month: 'long',
           day: 'numeric',
@@ -153,8 +155,8 @@ export default function EnhancedBlogSEO({ post, relatedBooks = [], relatedPosts 
         url: `${baseUrl}/charles-mackay-logo.png`,
       },
     },
-    datePublished: post.publishedDate,
-    dateModified: post.publishedDate,
+    datePublished: stablePublishedDate,
+    dateModified: stablePublishedDate,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${fullUrl}#webpage`,
@@ -231,8 +233,8 @@ export default function EnhancedBlogSEO({ post, relatedBooks = [], relatedPosts 
     image: { '@type': 'ImageObject', url: canonicalImage },
     author: { '@id': `${baseUrl}/about#author` },
     publisher: { '@id': `${baseUrl}/#organization` },
-    datePublished: post.publishedDate,
-    dateModified: post.publishedDate,
+    datePublished: stablePublishedDate,
+    dateModified: stablePublishedDate,
     mainEntityOfPage: { '@id': `${fullUrl}#webpage` },
     articleSection: post.category,
     keywords: post.tags.join(', '),

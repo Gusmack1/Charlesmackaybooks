@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://charlesmackaybooks.com'),
+  metadataBase: new URL(SITE_DOMAIN),
   title: {
     default: 'Charles E. MacKay Aviation Books - Expert Aviation History | Scottish Aviation | WWI WWII Aircraft',
     template: '%s | Charles E. MacKay Aviation History Books'
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://charlesmackaybooks.com',
+    url: SITE_DOMAIN,
     siteName: 'Charles Mackay Books',
     title: 'Charles E. MacKay - Aviation History Books & Research',
     description: 'Expert aviation history books by Charles E. MacKay. Comprehensive research on Scottish aviation, World War aircraft, helicopter development, and military aviation history.',
@@ -105,6 +105,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s',
+  },
+  alternates: {
+    canonical: SITE_DOMAIN,
   },
   category: 'Books & Literature',
   classification: 'Aviation History',
@@ -204,10 +207,6 @@ export default function RootLayout({
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
         
-        {/* Font preconnects for optimized loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
         {/* Optimized Core Web Vitals Monitoring */}
         <script
           dangerouslySetInnerHTML={{
@@ -223,7 +222,7 @@ export default function RootLayout({
       </head>
       <ClientBody>
         <Header />
-        <main className="min-h-screen">
+        <main id="main-content" className="min-h-screen">
           {children}
         </main>
         <Footer />
