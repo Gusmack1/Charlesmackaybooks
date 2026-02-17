@@ -79,6 +79,8 @@ async function fetchWithTimeout(url, { timeoutMs = 15000 } = {}) {
     const res = await fetch(url, {
       signal: controller.signal,
       headers: { 'user-agent': USER_AGENT },
+      // We do not want any redirects in production SEO URLs.
+      redirect: 'manual',
     })
     return res
   } finally {
@@ -92,6 +94,10 @@ async function checkTarget(target) {
 
   try {
     const res = await fetchWithTimeout(url, { timeoutMs: target.timeoutMs ?? 15000 })
+    if (res.status >= 300 && res.status < 400) {
+      const location = res.headers.get('location')
+      throw new Error(`HTTP ${res.status} redirect${location ? ` to ${location}` : ''}`)
+    }
     if (!res.ok) {
       throw new Error(`HTTP ${res.status} ${res.statusText}`)
     }

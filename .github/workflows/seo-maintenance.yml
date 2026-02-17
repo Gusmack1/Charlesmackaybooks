@@ -1,35 +1,46 @@
 name: SEO Feeds Refresh & Ping
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '0 3 * * 1'  # Every Monday 03:00 UTC
-  push:
-    branches: [ main ]
+    - cron: '0 3 * * *'  # Daily 03:00 UTC
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-feeds-refresh-and-ping
+  cancel-in-progress: false
 
 jobs:
   refresh-and-ping:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      BASE: https://charlesmackaybooks.com
+      SITEMAP: https://charlesmackaybooks.com/sitemap.xml
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Feed health checks
-        run: npm run verify:feeds -- --base=https://charlesmackaybooks.com --verbose
-      - name: Ping sitemap and feeds
+      - name: Feed health checks (no redirects)
+        run: node scripts/verify-feeds.cjs --base="$BASE" --verbose
+      - name: Ping sitemap and feeds (warm cache)
         run: |
-          set -e
-          BASE="https://charlesmackaybooks.com"
-          curl -sS "$BASE/sitemap.xml" > /dev/null
-          curl -sS "$BASE/products.xml" > /dev/null
-          curl -sS "$BASE/merchant-feed.txt" > /dev/null
-          curl -sS "$BASE/shopping-actions.xml" > /dev/null
-      - name: Notify search engines
+          set -euo pipefail
+          for path in /sitemap.xml /sitemap-images.xml /products.xml /merchant-feed.txt /shopping-actions.xml; do
+            url="${BASE}${path}"
+            code="$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 --connect-timeout 10 --retry 2 --retry-delay 1 --retry-connrefused "$url")"
+            if [ "$code" != "200" ]; then
+              echo "Expected 200 from $url, got $code"
+              exit 1
+            fi
+          done
+      - name: Notify search engines (best effort)
         run: |
-          set -e
-          SITE="https://charlesmackaybooks.com/sitemap.xml"
-          # Google
-          curl -sS "https://www.google.com/ping?sitemap=${SITE}" > /dev/null || true
-          # Bing
-          curl -sS "https://www.bing.com/ping?sitemap=${SITE}" > /dev/null || true
+          set -euo pipefail
+          sitemap_enc="$(node -p "encodeURIComponent(process.argv[1])" "$SITEMAP")"
+          curl -sS --max-time 20 "https://www.google.com/ping?sitemap=${sitemap_enc}" > /dev/null || true
+          curl -sS --max-time 20 "https://www.bing.com/ping?sitemap=${sitemap_enc}" > /dev/null || true
 
