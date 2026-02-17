@@ -7,12 +7,12 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'bristol-fighter-f2b-brisfit',
   title: `Bristol Fighter F2B: The Brisfit's Combat Legacy`,
-  subtitle: `A research‑backed Enhanced Edition of the Brisfit — design, Falcon engine, armament, tactics, crew coordination, sustainment, and legacy.`,
+  subtitle: `A source-based study of Brisfit design, Falcon engine integration, crew coordination, combat employment, and sustainment.`,
   content: `
     <h2 id="introduction">Introduction: The Aggressive Two‑Seat Fighter</h2>
-    <p>The Bristol Fighter F.2B — the "Brisfit" — overturned assumptions about two‑seat aircraft in 1917. Properly flown, it fought like a single‑seat fighter while retaining reconnaissance power and observation. This Enhanced Edition provides a formal, research‑backed account of its conception, structure, engine and systems, armament, gunnery, crew coordination, maintenance and logistics, tactics, operational history, comparisons with contemporaries, and its long legacy in multi‑role doctrine. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
+    <p>The Bristol Fighter F.2B — the "Brisfit" — challenged assumptions about two-seat aircraft in 1917. Properly employed, it could fight offensively while retaining reconnaissance and observation capability. This article examines design, engine and systems integration, armament, crew procedures, maintenance, tactics, and operational outcomes using source-based material documented in Charles E. MacKay's 
       <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a>, 
-      this analysis presents the complete story of one of World War I's most successful two-seat fighters and its revolutionary impact on aerial combat doctrine.
+      with supporting comparative context from related works.
     </p>
     <p>
       The book <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a> provides comprehensive coverage of RFC and RNAS aircraft procurement, including detailed information on how squadrons were formed from 1914 to 1918. The 136-page A5 volume, filled with information from manufacturers and the Ministry of Munitions, includes Flying Boats, Trainers, Seaplanes, Bombers and Fighters. The book concentrates on aircraft supply and squadron supply of engines and airframes between 1914 and 1918, providing essential context for understanding the Bristol Fighter's place within British aviation development during the Great War.
@@ -208,7 +208,7 @@ const post = {
       The book's thorough research, detailed documentation, and careful analysis create an authoritative resource that does justice to the Bristol Fighter's achievements and contributions to aviation progress. This scholarly work ensures that the Bristol Fighter receives the recognition it deserves in aviation history. For the complete story of British aviation during the Great War, <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a> provides the definitive account.
     </p>
   `,
-  excerpt: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters, combining exceptional maneuverability with devastating firepower.`,
+  excerpt: `A source-based study of the Bristol Fighter F2B covering design, Falcon engine integration, crew tactics, combat service, and operational sustainment.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -219,7 +219,7 @@ const post = {
   readingTime: 12,
   featuredImage: {
     url: '/blog-images/bristol-fighter-f2b-flying.jpg',
-    alt: 'Bristol Fighter F.2B – Enhanced Edition',
+    alt: 'Bristol Fighter F2B Brisfit in WWI operational context',
     caption: 'The Brisfit re‑examined: design, tactics, sustainment, legacy.'
   },
   category: 'Aviation History',
@@ -235,11 +235,11 @@ const post = {
 
 export const metadata: Metadata = {
   title: `Bristol Fighter F2B: The Brisfit's Combat Legacy | Charles E. MacKay`,
-  description: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters. Expert research by aviation historian Charles E. MacKay.`,
+  description: `A source-based study of the Bristol Fighter F2B covering design, Falcon engine integration, crew tactics, combat service, and operational sustainment.`,
   keywords: 'bristol fighter f2b, brisfit, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history, Charles E. MacKay',
   openGraph: {
     title: `Bristol Fighter F2B: The Brisfit's Combat Legacy`,
-    description: `Comprehensive analysis of the Bristol Fighter F2B "Brisfit" - one of World War I's most successful two-seat fighters. Expert research by aviation historian Charles E. MacKay.`,
+    description: `A source-based study of Brisfit design, crew tactics, and combat service in the Great War.`,
     images: ['/blog-images/bristol-fighter-f2b-flying.jpg'],
     type: 'article'
   },

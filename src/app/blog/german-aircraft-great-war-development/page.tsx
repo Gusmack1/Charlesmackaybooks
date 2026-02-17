@@ -6,14 +6,14 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'german-aircraft-great-war-development',
-  title: `German Aircraft Great War Development - Enhanced Edition`,
-  subtitle: `A comprehensive, research-backed account of German aircraft development during World War I: from early Johannisthal airfield and Anthony Fokker's innovations to advanced Albatros and Fokker fighters, German Naval Air Arm operations, and the integrated air system that created air superiority episodes.`,
+  title: `German Aircraft in the Great War: Development and Operations`,
+  subtitle: `A source-based study of German military aviation in 1914-1918, from Johannisthal and Fokker development to supply systems, frontline fighters, and operational doctrine.`,
   content: `
     <h2 id="introduction">Introduction: German Aviation Innovation</h2>
     <p>
-      German aviation in the Great War progressed from pre‑war experimentation to a tightly integrated system of design, production, and operational doctrine. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
+      German aviation in the Great War moved from pre-war experimentation to an integrated system of design, production, training, and frontline deployment. Based on documented research in Charles E. MacKay's 
       <a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft in the Great War 1914-1918</a>, 
-      this Enhanced Edition provides a structured, research‑grounded account of that transformation: technical design, manufacturing practice, frontline employment, and the institutional learning that created air superiority episodes and informed post‑war aviation.
+      this article examines aircraft development, industrial supply, operational use, and the institutional learning that shaped German air power during 1914-1918.
     </p>
     <p>
       The book <a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft in the Great War</a> provides for the first time in print a complete breakdown of the organisation and the German system of supply. This comprehensive 256-page work with over 200 original black and white pictures and drawings commences with early German aviation to the opening of Johannisthal airfield in 1909 and the growth of Anthony Fokker and his aircraft. For the first time a complete and accurate account of the formation of German aviation and German military aviation which is based on Allied intelligence and newly translated archive documents. The industry reports are based on the inspections of the League of Nations Inter-Allied Control Commissions on aviation 1919 - 1926. This comprehensive documentation ensures that German aviation development is properly understood within the broader context of Great War aviation.
@@ -264,7 +264,7 @@ const post = {
     </p>
 
     <h2 id="further-reading">Further Reading and Related Works</h2>
-    <p>For comprehensive coverage of German aircraft development and related topics, explore these authoritative works by Charles E. MacKay:</p>
+    <p>For deeper reading, start with the core German Aircraft volume, then use the linked comparative titles below.</p>
     <ul>
       <li><a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft in the Great War 1914-1918</a> — Comprehensive 256-page work with over 200 original black and white pictures and drawings, providing for the first time in print a complete breakdown of the organisation and the German system of supply, including early German aviation, Johannisthal airfield 1909, Anthony Fokker growth, German Naval Air Arm (Marine-Fliegerabteilung), Flanders Flight air superiority, Riesenflugzeuge London raids, aces (Richthofen, Boelcke, Immelmann), Fraulein Mellie Beese, German aircraft industry, Amerika Programme, Hindenburg plan, orders of battle, training squadrons, Zeppelin Staaken airliner, Fokker D.VII fate, and Inter-Allied Control Commissions reports</li>
       <li><a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a> — Comparative Allied development</li>
@@ -278,7 +278,7 @@ const post = {
       <li><a href="/blog/sopwith-camel-wwi-fighter" class="underline">Sopwith Camel</a> — Counter‑point to Albatros and Dr.I experience</li>
     </ul>
   `,
-  excerpt: `A comprehensive, research-backed account of German aircraft development during World War I: from early Johannisthal airfield and Anthony Fokker's innovations to advanced Albatros and Fokker fighters, German Naval Air Arm operations, and the integrated air system that created air superiority episodes.`,
+  excerpt: `A source-based study of German military aviation in 1914-1918, including aircraft design, supply systems, fighter operations, and command development.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -289,12 +289,12 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/albatros-dva-in-flight-schematic.svg',
-    alt: 'German Aircraft Great War Development - Enhanced Edition',
+    alt: 'German Aircraft in the Great War: development and operations',
     caption: 'Original illustration (schematic): Albatros D.Va in-flight motif (diagrammatic).'
   },
   category: 'Aviation History',
   tags: ["german","aircraft","great","war","development","wwi","fighter"],
-  relatedBooks: getBooksData(['german-aircraft-great-war', 'british-aircraft-great-war', 'clydeside-aviation-vol1']),
+  relatedBooks: getBooksData(['german-aircraft-great-war', 'flying-for-kaiser', 'british-aircraft-great-war']),
   relatedPosts: [
     {
       id: 'sopwith-camel-wwi-fighter',
@@ -316,12 +316,12 @@ const post = {
 
 
 export const metadata: Metadata = {
-  title: `German Aircraft Great War Development - Enhanced Edition | Charles E. MacKay`,
-  description: `A comprehensive, research-backed account of German aircraft development during World War I: from early Johannisthal airfield and Anthony Fokker's innovations to advanced Albatros and Fokker fighters, German Naval Air Arm operations, and the integrated air system.`,
+  title: `German Aircraft in the Great War: Development and Operations | Charles E. MacKay`,
+  description: `A source-based study of German military aviation in 1914-1918, including aircraft design, supply systems, fighter operations, and command development.`,
   keywords: 'german, aircraft, great, war, development, aviation history, WWI, Fokker, Albatros, Richthofen, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: `German Aircraft Great War Development - Enhanced Edition`,
-    description: `A comprehensive, research-backed account of German aircraft development during World War I.`,
+    title: `German Aircraft in the Great War: Development and Operations`,
+    description: `A source-based study of German military aviation in 1914-1918.`,
     images: ['/blog-images/albatros-dva-in-flight-schematic.svg'],
     type: 'article'
   },
@@ -355,7 +355,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol1', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'flying-for-kaiser', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[
           { slug: 'sopwith-camel-wwi-fighter', title: '', excerpt: '' },

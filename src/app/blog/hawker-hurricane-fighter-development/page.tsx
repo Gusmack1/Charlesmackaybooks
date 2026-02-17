@@ -6,8 +6,8 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'hawker-hurricane-fighter-development',
-  title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain - Enhanced Edition',
-  subtitle: 'A comprehensive, research-backed account of the Hawker Hurricane: Sydney Camm\'s masterpiece that bore the brunt of the Battle of Britain, combining reliability, maintainability, and operational effectiveness in a fighter that saved Britain from invasion.',
+  title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
+  subtitle: 'A source-based study of Hurricane development, Battle of Britain service, production practicality, and operational use across the wider war.',
   content: `
     <h2 id="introduction">Introduction: The Forgotten Hero</h2>
     <p>
@@ -17,7 +17,7 @@ const post = {
       While the Spitfire captured headlines and public imagination with its graceful lines and exceptional performance, the Hurricane bore the burden of Britain's defense during its most critical hour. Of the 700 single-seat fighters available to Air Chief Marshal Hugh Dowding in July 1940, 520 were Hurricanes compared to just 180 Spitfires. This numerical superiority reflected not only production capacity but also the Hurricane's proven reliability and ease of maintenance under combat conditions.
     </p>
     <p>
-      This Enhanced Edition presents the complete story of the Hurricane's development, engineering trade-offs, production system, tactics, and worldwide service, drawing on verified historical facts and operational records. Understanding the Hurricane's development provides valuable insights into how operational systems determine aircraft effectiveness.
+      This article examines the Hurricane's development, production system, tactics, and service history using documented operational material.
     </p>
 
     <div class="my-8">
@@ -232,7 +232,7 @@ const post = {
       <li><a href="/blog/supermarine-spitfire-development-evolution" class="underline">Supermarine Spitfire: Development & Evolution</a> — Design pathway and operational roles</li>
     </ul>
   `,
-  excerpt: 'A comprehensive, research-backed account of the Hawker Hurricane: Sydney Camm\'s masterpiece that bore the brunt of the Battle of Britain, combining reliability, maintainability, and operational effectiveness in a fighter that saved Britain from invasion.',
+  excerpt: 'A source-based study of Hawker Hurricane development and service, with emphasis on Battle of Britain operations, maintainability, and production scale.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -248,7 +248,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ['hawker', 'hurricane', 'fighter', 'development', 'aviation history'],
-  relatedBooks: getBooksData(['british-aircraft-great-war', 'clydeside-aviation-vol2', 'beardmore-aviation', 'captain-eric-brown', 'aviation-manufacturing-wartime-production']),
+  relatedBooks: getBooksData(['british-aircraft-great-war', 'enemy-luftwaffe-1945', 'captain-eric-brown', 'beardmore-aviation']),
   relatedPosts: [
     { id: 'supermarine-spitfire-development-history', title: 'Supermarine Spitfire Development History', excerpt: 'Comprehensive analysis of Spitfire development and evolution', image: '/blog-images/supermarine-spitfire-development.jpg', readingTime: 14 },
     { id: 'test-pilot-biography-eric-brown', title: 'Test Pilot Perspectives: Eric Brown', excerpt: 'Insights into aircraft testing and pilot training', image: '/blog-images/eric-brown-official-portrait.jpg', readingTime: 12 },
@@ -262,19 +262,19 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain - Enhanced Edition | Charles E. MacKay',
-  description: 'A comprehensive, research-backed account of the Hawker Hurricane: Sydney Camm\'s masterpiece that bore the brunt of the Battle of Britain, combining reliability, maintainability, and operational effectiveness.',
+  title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain | Charles E. MacKay',
+  description: 'A source-based study of Hawker Hurricane development and service, with emphasis on Battle of Britain operations, maintainability, and production scale.',
   keywords: 'hawker hurricane, battle of britain, wwii fighter aircraft, charles e mackay, aviation history, british aircraft, Sydney Camm, RAF Fighter Command, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain - Enhanced Edition',
-    description: 'A comprehensive, research-backed account of the Hawker Hurricane: Sydney Camm\'s masterpiece that saved Britain.',
+    title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
+    description: 'A source-based study of Hurricane development and service in RAF operations.',
     url: 'https://charlesmackaybooks.com/blog/hawker-hurricane-fighter-development',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [{
       url: '/blog-images/hawker-hurricane-battle-of-britain.jpg',
       width: 1200,
       height: 630,
-      alt: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain - Enhanced Edition'
+      alt: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain'
     }],
     locale: 'en_GB',
     type: 'article',
@@ -309,7 +309,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol2', title: '', isbn: '', price: 0 }, { id: 'beardmore-aviation', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'aviation-manufacturing-wartime-production', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'beardmore-aviation', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[
           { slug: 'supermarine-spitfire-development-history', title: '', excerpt: '' },

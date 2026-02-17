@@ -6,15 +6,15 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'arado-ar234-jet-bomber',
-  title: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition",
-  subtitle: "A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.",
+  title: "Arado Ar 234: The World's First Operational Jet Bomber",
+  subtitle: "A source-based study of Ar 234 design, Jumo 004 constraints, reconnaissance and bombing operations, and late-war operational limits.",
   content: `
     <h2 id="introduction">Introduction: The World's First Operational Jet Bomber</h2>
     <p>
-      The Arado Ar 234 Blitz ('Lightning') was the first operational jet-powered bomber and a reconnaissance platform that arrived too late to influence the outcome of the Second World War, but early enough to demonstrate a new grammar of speed, altitude, and tactical surprise. Based on comprehensive research documented in Charles E. MacKay's authoritative works 
+      The Arado Ar 234 Blitz ('Lightning') was the first operational jet-powered bomber and one of the fastest reconnaissance platforms fielded in the war's final phase. Using source material documented in Charles E. MacKay's 
       <a href="/books/this-was-the-enemy-volume-two" class="underline font-medium">This Was the Enemy: Aeroplanes Guns Bombs Downfall Volume Two</a> 
       and <a href="/books/enemy-luftwaffe-1945" class="underline font-medium">This Was the Enemy: The Luftwaffe 1945</a>, 
-      this analysis presents the complete story of how the Ar 234's design choices—twin Junkers Jumo 004 axial-flow turbojets, a sleek high-mounted wing, and a compact, pressurised cockpit—created a fast aircraft that Allied piston-engined fighters struggled to intercept.
+      this article examines design choices, engine constraints, operational use, and the practical limits imposed by late-war fuel, logistics, and maintenance realities.
     </p>
     <p>
       The book <a href="/books/this-was-the-enemy-volume-two" class="underline font-medium">This Was the Enemy Volume Two</a> provides detailed analysis of German aviation development and the complete story of Luftwaffe technological advancement and collapse. This comprehensive 288-page work profusely illustrated with many unknown and rare illustrations provides detailed coverage of German jet aircraft development, including the development of the German piston aero-engine and Gas Turbines. This includes Jumo, BMW and Heinkel Hirth gas turbines. This comprehensive documentation ensures that the Ar 234's development and operations are properly understood within the broader context of late-war German aviation.
@@ -295,7 +295,7 @@ const post = {
       <li><a href="/blog/jet-age-aviation-cold-war-development" class="underline">Jet Age Aviation: Cold War Development</a> — Post-war jet evolution</li>
     </ul>
   `,
-  excerpt: "A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.",
+  excerpt: "A source-based study of the Arado Ar 234 covering design, engine constraints, reconnaissance and bombing operations, and late-war operational limits.",
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -306,24 +306,24 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/arado-ar234-blitz-schematic.svg',
-    alt: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition",
+    alt: "Arado Ar 234: world's first operational jet bomber",
     caption: "Original illustration (schematic): Arado Ar 234 Blitz motif (diagrammatic)."
   },
   category: 'WWII Aviation',
   tags: [
     'Arado Ar 234', 'Jet bomber', 'WWII Aviation', 'Reconnaissance', 'Jumo 004', 'charles mackay books'
   ],
-  relatedBooks: getBooksData(['this-was-the-enemy-volume-two', 'enemy-luftwaffe-1945']),
+  relatedBooks: getBooksData(['this-was-the-enemy-volume-two', 'enemy-luftwaffe-1945', 'german-aircraft-great-war']),
   relatedPosts: []
 }
 
 export const metadata: Metadata = {
-  title: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition | Charles E. MacKay",
-  description: "A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, comparison with contemporaries, Remagen Bridge missions, and its legacy as the world's first operational jet bomber.",
+  title: "Arado Ar 234: The World's First Operational Jet Bomber | Charles E. MacKay",
+  description: "A source-based study of the Arado Ar 234 covering design, engine constraints, reconnaissance and bombing operations, and late-war operational limits.",
   keywords: 'Arado Ar 234, jet bomber, WWII reconnaissance aircraft, Jumo 004 engines, Luftwaffe 1945, German jet bomber, Me 262 ecosystem, late-war aviation, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: "Arado Ar 234: The World's First Operational Jet Bomber - Enhanced Edition",
-    description: 'A comprehensive, research-backed account of the Arado Ar 234 Blitz: its revolutionary design, Jumo 004 engines, reconnaissance and bombing operations, and its legacy.',
+    title: "Arado Ar 234: The World's First Operational Jet Bomber",
+    description: 'A source-based study of Ar 234 design, operations, and late-war constraints.',
     images: ['/blog-images/arado-ar234-blitz-schematic.svg'],
     type: 'article'
   },
@@ -357,7 +357,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'this-was-the-enemy-volume-two', title: '', isbn: '', price: 0 }, { id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'this-was-the-enemy-volume-two', title: '', isbn: '', price: 0 }, { id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }, { id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

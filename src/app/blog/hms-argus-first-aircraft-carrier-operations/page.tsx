@@ -6,13 +6,13 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO'
 
 const post = {
   id: 'hms-argus-first-aircraft-carrier-operations',
-  title: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques - Enhanced Edition',
+  title: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques',
   subtitle:
-    "A structured account of the early procedures, deck choreography, and flight operations that grew around HMS Argus’s flush-deck layout — and how those practices became the operational template for later aircraft carriers.",
+    "A source-based account of early launch, recovery, deck-handling, and safety routines developed around HMS Argus’s flush-deck operations.",
   content: `
     <h2 id="introduction">Introduction: Operations Made the Design Real</h2>
     <p>
-      HMS Argus is remembered for her revolutionary flush, full-length flight deck, but it was the daily rhythm of operations that turned that architectural idea into a working naval aviation system. Aircraft handling, deck marking, launch and recovery cycles, and safety routines all had to be invented, tested, and repeated until they became doctrine. This Enhanced Edition focuses on those practical elements — the human choreography and procedural discipline that made early carrier aviation possible.
+      HMS Argus is remembered for her full-length flush flight deck, but it was daily operating practice that turned design into a working naval aviation system. Aircraft handling, launch and recovery cycles, and deck-safety procedures had to be developed, tested, and repeated until they became routine. This article focuses on those practical procedures and the discipline that made early carrier operations workable.
     </p>
     <p>
       This article is grounded in the research context of Charles E. MacKay’s detailed work
@@ -71,7 +71,7 @@ const post = {
     </p>
   `,
   excerpt:
-    'Operational procedures, deck handling choreography, and safety routines developed around HMS Argus’s flush-deck layout — forming the early template for carrier aviation.',
+    'A source-based account of launch, recovery, deck-handling, and safety routines developed around HMS Argus flush-deck operations.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -87,14 +87,14 @@ const post = {
   },
   category: 'Naval Aviation',
   tags: ['HMS Argus', 'Carrier Operations', 'Naval Aviation', 'Flight Deck Procedures'],
-  relatedBooks: getBooksData(['aircraft-carrier-argus']),
+  relatedBooks: getBooksData(['aircraft-carrier-argus', 'beardmore-aviation', 'british-aircraft-great-war']),
   relatedPosts: [],
 }
 
 export const metadata: Metadata = {
-  title: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques - Enhanced Edition | Charles E. MacKay',
+  title: 'HMS Argus Operations: Pioneering Carrier Aviation Techniques | Charles E. MacKay',
   description:
-    'Operational procedures, deck handling choreography, and safety routines developed around HMS Argus’s flush-deck layout — forming the early template for carrier aviation.',
+    'A source-based account of launch, recovery, deck-handling, and safety routines developed around HMS Argus flush-deck operations.',
   keywords:
     'HMS Argus operations, carrier aviation procedures, flight deck handling, Royal Navy carrier operations, naval aviation history, Charles E. MacKay, charles mackay books',
   openGraph: {

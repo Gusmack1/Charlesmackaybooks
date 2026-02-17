@@ -8,7 +8,7 @@ const post = {
   id: 'supermarine-spitfire-development-history',
   title: 'Supermarine Spitfire Development History',
   subtitle:
-    'A structured, site-based overview of the Spitfire’s development pathway, with curated links to related articles and resources on Charlesmackaybooks.com.',
+    'A source-based overview of Spitfire development themes, with direct links to deeper pages and related Charles E. MacKay book context.',
   content: `
     <h2 id="overview">Overview</h2>
     <p>
@@ -42,7 +42,7 @@ const post = {
     </p>
   `,
   excerpt:
-    'A structured, site-based overview of the Spitfire’s development pathway, linking to the deeper Spitfire evolution article and related context posts.',
+    'A source-based overview of Spitfire development themes, linking to deeper technical pages and related historical book context.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -58,8 +58,7 @@ const post = {
   },
   category: 'WWII Aviation',
   tags: ['spitfire', 'development', 'wwii', 'aviation history'],
-  // Keep relatedBooks empty unless there is a canonical matching book entry in src/data/books.ts
-  relatedBooks: getBooksData([]),
+  relatedBooks: getBooksData(['captain-eric-brown', 'clydeside-aviation-vol2', 'british-aircraft-great-war']),
   relatedPosts: [
     {
       id: 'supermarine-spitfire-development-evolution',
@@ -88,13 +87,13 @@ const post = {
 export const metadata: Metadata = {
   title: 'Supermarine Spitfire Development History | Charles E. MacKay',
   description:
-    'A structured, site-based overview of Spitfire development with curated links to related aviation history articles on charlesmackaybooks.com.',
+    'A source-based overview of Spitfire development themes with links to deeper technical pages and related historical book context.',
   keywords:
     'supermarine spitfire development history, spitfire development, aviation history, Charles E. MacKay, charles mackay books',
   openGraph: {
     title: 'Supermarine Spitfire Development History',
     description:
-      'A structured, site-based overview of Spitfire development with curated links to deeper articles on charlesmackaybooks.com.',
+      'A source-based overview of Spitfire development themes with links to deeper technical pages and related historical book context.',
     images: ['/blog-images/spitfire-k5054-prototype.jpg'],
     type: 'article',
   },
@@ -125,7 +124,20 @@ export default function BlogPost() {
         pageImageUrl={post.featuredImage.url}
       />
 
-      <EnhancedBlogSEO post={post} relatedBooks={[]} relatedPosts={[]} />
+      <EnhancedBlogSEO
+        post={post}
+        relatedBooks={(post.relatedBooks || []).map((b: any) => ({
+          id: b.id,
+          title: b.title || '',
+          isbn: '',
+          price: typeof b.price === 'number' ? b.price : 0,
+        }))}
+        relatedPosts={(post.relatedPosts || []).map((p: any) => ({
+          slug: p.id || '',
+          title: p.title || '',
+          excerpt: p.excerpt || '',
+        }))}
+      />
 
       <ComprehensiveBlogTemplate post={post} />
     </>

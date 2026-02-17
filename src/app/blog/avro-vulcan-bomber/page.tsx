@@ -7,14 +7,14 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'avro-vulcan-bomber',
-  title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition",
-  subtitle: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.",
+  title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent",
+  subtitle: "A source-based study of Vulcan design, Blue Steel integration, doctrinal shift from high altitude to low level, and service within the V-Force deterrent framework.",
   content: `
     <h2 id="introduction">Introduction: Britain's Delta-Wing Bomber</h2>
     <p>
-      The Avro Vulcan embodied the RAF's early Cold War deterrent: a high-altitude, high-speed delta-wing bomber designed to deliver Britain's strategic nuclear weapons. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
+      The Avro Vulcan was a central element of RAF Cold War deterrent planning: a delta-wing bomber developed for strategic delivery and later adapted to low-level penetration doctrine. This article draws on documented material in Charles E. MacKay's 
       <a href="/books/sonic-to-standoff" class="underline font-medium">Sonic to Standoff: The Evolution of the British Nuclear Deterrent</a>, 
-      this analysis presents the complete story of how the Vulcan's slender delta geometry conferred structural simplicity and high-speed stability, while its avionics and crew systems evolved from analogue bombing-navigation suites to terrain-following aids and ECM packages as doctrine shifted from high-altitude penetration to low-level tactics.
+      and examines Vulcan aerodynamics, systems evolution, and operational employment within the V-Force era.
     </p>
     <p>
       The book <a href="/books/sonic-to-standoff" class="underline font-medium">Sonic to Standoff</a> chronicles part of the development of the British Nuclear Defence Programme, tracing the evolution of the British Blue Steel standoff nuclear bomb. Included are the test phases in Australia and the work of Lord Penney. It covers the work of Tube Alloys and brings to light more information on the special relationship between the United Kingdom and the United States. The book describes the V Bombers, Victor Vulcan and Valiant. This comprehensive 224-page work provides detailed coverage of British nuclear deterrent development, including the Vulcan bomber and its weapons systems.
@@ -290,7 +290,7 @@ const post = {
       <li><a href="/blog/jet-age-aviation-cold-war-development" class="underline">Jet Age Aviation: Cold War Development</a> — The broader context of Cold War aviation</li>
     </ul>
   `,
-  excerpt: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.",
+  excerpt: "A source-based study of the Avro Vulcan, covering delta-wing design, systems integration, doctrinal changes, and V-Force deterrent service.",
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -301,24 +301,24 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/avro-vulcan-delta-wing-schematic.svg',
-    alt: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition",
+    alt: "Avro Vulcan: aerodynamics, systems, and Cold War deterrent role",
     caption: 'Original illustration (schematic): delta-wing planform with engine markers (diagrammatic).'
   },
   category: 'Cold War Aviation',
   tags: [
     'Avro Vulcan', 'V-Force', 'Cold War', 'Delta wing', 'Olympus', 'charles mackay books'
   ],
-  relatedBooks: getBooksData(['sonic-to-standoff']),
+  relatedBooks: getBooksData(['sonic-to-standoff', 'birth-atomic-bomb']),
   relatedPosts: []
 }
 
 export const metadata: Metadata = {
-  title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition | Charles E. MacKay",
-  description: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, evolution from high-altitude to low-level tactics, Black Buck operations, and its role in Britain's V-Force nuclear deterrent strategy.",
+  title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent | Charles E. MacKay",
+  description: "A source-based study of the Avro Vulcan, covering delta-wing design, systems integration, doctrinal changes, and V-Force deterrent service.",
   keywords: 'Avro Vulcan, RAF V-Force, Cold War bomber, delta wing bomber, Olympus engines, Blue Steel, British nuclear deterrent, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent - Enhanced Edition",
-    description: "A comprehensive, research-backed account of the Avro Vulcan delta-wing bomber: its revolutionary design, Blue Steel standoff missile integration, and its role in Britain's V-Force nuclear deterrent strategy.",
+    title: "Avro Vulcan: Aerodynamics, Systems, and Britain's Cold War Deterrent",
+    description: "A source-based study of Vulcan design, systems, and deterrent operations.",
     images: ['/blog-images/avro-vulcan-delta-wing-schematic.svg'],
     type: 'article'
   },
@@ -352,7 +352,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }, { id: 'birth-atomic-bomb', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

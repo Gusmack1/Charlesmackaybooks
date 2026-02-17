@@ -7,10 +7,10 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'supermarine-spitfire-development-evolution',
   title: `Supermarine Spitfire Development: Evolution of a Legend`,
-  subtitle: `Enhanced Edition: Elliptical aerodynamics, Merlin integration, marks evolution, combat comparisons, manufacturing, and legacy — precise and technical.`,
+  subtitle: `A source-based technical study of Spitfire evolution across aerodynamics, engine integration, marks development, production, and operational use.`,
   content: `
     <h2 id="introduction">Introduction: An Airframe Built to Grow</h2>
-    <p>Spitfire evolution is the story of a balanced airframe — elliptical wing efficiency, clean construction, and considered engine integration — scaled through power, armament, and equipment changes without losing handling quality. This Enhanced Edition maps the evolution in depth: racing lineage, aerodynamic discipline, engines and cooling, wing and structural development, marks and armament, manufacturing and industrial mobilization, combat doctrine with pilot accounts, comparisons with contemporaries (including Hurricane and Bf 109), and the aircraft’s lasting legacy. The emphasis is on precise, research‑backed detail: what changed, why it changed, and how the core virtues were retained.</p>
+    <p>Spitfire evolution is the story of a balanced airframe scaled through power, armament, and systems changes without losing core handling qualities. This article follows racing lineage, aerodynamic development, engine and cooling integration, marks progression, production realities, and operational use with a source-first focus on what changed, why it changed, and what remained consistent.</p>
 
     <h2 id="lineage">Racing Lineage and Aerodynamic Discipline</h2>
     <p>Supermarine’s Schneider experience delivered a culture of clean aerodynamics: tight cooling schemes, high surface quality, and efficient planforms. Racing seaplanes such as the S.6B demonstrated that drag could be systematically removed with flush rivets, careful fairings, and refined inlets and ducts. The elliptical wing — adopted for even lift distribution and low induced drag — gave the Spitfire headroom for growth. Early development paired aerodynamic discipline with practical access: gun bays and panels were integrated without compromising the essential cleanliness of the outer mold line.</p>
@@ -142,7 +142,7 @@ const post = {
     <h2 id="conclusion">Conclusion</h2>
     <p>Evolution was earned, not accidental. The Spitfire’s balanced starting point, disciplined integration, and manufacturing quality allowed power and capability to grow without breaking what made it special. Its legend rests on engineering discipline that pilots could feel — and results that history recorded.</p>
   `,
-  excerpt: `The complete development story of the Supermarine Spitfire, from R.J. Mitchell's racing seaplanes to the legendary fighter that became the symbol of British aerial victory.`,
+  excerpt: `A source-based technical study of Spitfire evolution from pre-war aerodynamic roots to late-war marks, operational doctrine, and industrial production.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -153,12 +153,12 @@ const post = {
   readingTime: 12,
   featuredImage: {
     url: '/blog-images/spitfire-k5054-prototype.jpg',
-    alt: 'Supermarine Spitfire – Evolution Enhanced Edition',
+    alt: 'Supermarine Spitfire development evolution',
     caption: 'A platform that grew: aerodynamic discipline meeting rising power and mission demands.'
   },
   category: 'Aviation History',
   tags: ["supermarine","spitfire","development","evolution","fighter","wwii"],
-  relatedBooks: getBooksData(['supermarine-spitfire-development', 'captain-eric-brown', 'british-aircraft-great-war']),
+  relatedBooks: getBooksData(['captain-eric-brown', 'clydeside-aviation-vol2', 'british-aircraft-great-war']),
   relatedPosts: [
     {
       id: 'supermarine-spitfire-development-history',
@@ -184,17 +184,13 @@ const post = {
   ]
 }
 
-const relatedBooks: any[] = []
-
-const relatedPosts: any[] = []
-
 export const metadata: Metadata = {
-  title: `Supermarine Spitfire Development Evolution | Charles E. MacKay`,
-  description: `Comprehensive analysis of supermarine spitfire development evolution with expert historical research and technical details.`,
+  title: `Supermarine Spitfire Development: Evolution of a Legend | Charles E. MacKay`,
+  description: `A source-based technical study of Spitfire evolution from pre-war aerodynamic roots to late-war marks, operational doctrine, and industrial production.`,
   keywords: 'supermarine, spitfire, development, evolution, aviation history',
   openGraph: {
-    title: `Supermarine Spitfire Development Evolution`,
-    description: `Comprehensive analysis of supermarine spitfire development evolution with expert historical research and technical details.`,
+    title: `Supermarine Spitfire Development: Evolution of a Legend`,
+    description: `A source-based technical study of Spitfire evolution, marks progression, and operational development.`,
     images: ['/blog-images/spitfire-k5054-prototype.jpg'],
     type: 'article'
   },
@@ -228,7 +224,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'supermarine-spitfire-development', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol2', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

@@ -389,7 +389,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               return (
                 <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
                   {mini.map((b) => (
-                    <Link key={b.id} href={`/books/${b.id}`} className="badge badge-blue px-5 py-3 rounded-lg font-semibold shadow text-white">
+                    <Link key={b.id} href={`/books/${b.id}`} className="btn-books px-5 py-3 shadow">
                       Explore: {b.title}
                     </Link>
                   ))}
@@ -520,7 +520,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                         }}
                       />
                     </div>
-                    <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{book.title}</h4>
+                    <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-1 group-hover:underline transition-colors">{book.title}</h4>
                     <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">By {book.author || 'Charles E. MacKay'}</p>
                     {typeof book.price === 'number' && (
                       <p className="text-sm font-semibold text-slate-900 dark:text-white mb-3">£{book.price.toFixed(2)}</p>

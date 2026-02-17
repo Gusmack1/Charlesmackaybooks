@@ -6,11 +6,11 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'sopwith-camel-wwi-fighter',
-  title: 'Sopwith Camel: The Most Deadly Fighter of World War I',
-  subtitle: 'The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.',
+  title: 'Sopwith Camel: WWI Fighter Development and Combat Service',
+  subtitle: 'A source-based study of Camel design, engines, handling, tactics, naval operations, and Great War combat performance.',
   content: `
     <h2 id="introduction">Introduction: The Camel's Reputation and Reality</h2>
-    <p>The Sopwith Camel became the most effective British fighter of the Great War by combining concentrated mass, heavy forward armament, and disciplined tactics. Designed under Herbert Smith at Sopwith, the Camel's reputation rests on measurable outcomes — over a thousand credited victories — and on a design grammar that privileged turning authority and fire concentration over raw straight‑line speed. This Enhanced Edition presents a formal, evidence‑based analysis: development lineage, structure and systems, engines and handling, pilot technique and combat accounts, comparisons with German contemporaries, naval operations, and enduring influence. For comprehensive coverage of British aircraft development during this period, see <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a> by Charles E. MacKay.</p>
+    <p>The Sopwith Camel was one of the Royal Flying Corps' and Royal Naval Air Service's most important late-war fighters. Designed under Herbert Smith at Sopwith, it combined concentrated forward armament with handling characteristics that rewarded disciplined pilot technique. This article examines development lineage, structure and systems, engines, combat doctrine, naval operations, and operational outcomes using source-based material. For wider context, see <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a> by Charles E. MacKay.</p>
 
     <div class="my-8">
       <img src="/blog-images/sopwith-camel-historical-1918.jpg" alt="Wartime Sopwith Camel in flight profile, twin Vickers cowl visible" class="w-full h-auto rounded-lg shadow-lg"/>
@@ -83,7 +83,7 @@ const post = {
     <h2 id="conclusion">Conclusion</h2>
     <p>The Sopwith Camel's enduring standing is earned: a coherent design executed with discipline, flown with technique, and supported by maintenance and tactics that made its strengths decisive. Its story is not of myth but of measured choices that produced results. For the complete story of British aviation during the Great War, <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a> provides the definitive account.</p>
   `,
-  excerpt: `The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.`,
+  excerpt: `A source-based study of the Sopwith Camel covering design, engines, handling, tactics, naval operations, and Great War combat service.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -94,7 +94,7 @@ const post = {
   readingTime: 15,
   featuredImage: {
     url: '/blog-images/sopwith-camel-historical-1918.jpg',
-    alt: 'Sopwith Camel – Enhanced Edition',
+    alt: 'Sopwith Camel WWI fighter in operational context',
     caption: 'Concentrated mass, twin Vickers, disciplined tactics — the British answer to 1917 air combat.'
   },
   category: 'Aviation History',
@@ -114,12 +114,12 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: `Sopwith Camel: The Most Deadly Fighter of World War I | Charles E. MacKay`,
-  description: `The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.`,
+  title: `Sopwith Camel: WWI Fighter Development and Combat Service | Charles E. MacKay`,
+  description: `A source-based study of the Sopwith Camel covering design, engines, handling, tactics, naval operations, and Great War combat service.`,
   keywords: 'sopwith camel, wwi fighter aircraft, british aircraft great war, charles e mackay, aviation history, great war fighter, Charles E. MacKay',
   openGraph: {
-    title: `Sopwith Camel: The Most Deadly Fighter of World War I`,
-    description: `The revolutionary British fighter that shot down more enemy aircraft than any other Allied aircraft during the Great War, with over 1,200 confirmed victories.`,
+    title: `Sopwith Camel: WWI Fighter Development and Combat Service`,
+    description: `A source-based study of Sopwith Camel design, tactics, and combat service in the Great War.`,
     images: ['/blog-images/sopwith-camel-historical-1918.jpg'],
     type: 'article'
   },

@@ -6,15 +6,15 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'me262-jet-fighter-revolution',
-  title: `Me 262: The Jet Fighter Revolution - Enhanced Edition`,
-  subtitle: `A comprehensive, research-backed account of the world's first operational jet fighter: its revolutionary design, Jumo 004 engines, operational deployment, pilot experiences, comparison with Allied fighters, and its lasting influence on post-war fighter development.`,
+  title: `Me 262: The Jet Fighter Revolution`,
+  subtitle: `A source-based study of the first operational jet fighter, covering design, Jumo 004 engine limits, combat deployment, and post-war influence.`,
   content: `
     <h2 id="introduction">Introduction: The World's First Operational Jet Fighter</h2>
     <p>
-      The Messerschmitt Me 262 was the world's first operational jet fighter. Its arrival in frontline service in 1944 changed the technical vocabulary of air power: brief, high‑speed, high‑energy attacks with concentrated destructive effect; acceleration under thrust rather than dive; and a doctrine that privileged dash speed over sustained turning. Based on comprehensive research documented in Charles E. MacKay's authoritative works 
+      The Messerschmitt Me 262 was the first operational jet fighter and marked a major shift in air combat speed and engagement geometry. This article uses documented material from Charles E. MacKay's 
       <a href="/books/this-was-the-enemy-volume-two" class="underline font-medium">This Was the Enemy: Aeroplanes Guns Bombs Downfall Volume Two</a> 
       and <a href="/books/enemy-luftwaffe-1945" class="underline font-medium">This Was the Enemy: The Luftwaffe 1945</a>, 
-      this Enhanced Edition presents the complete story of how the Me 262 revolutionized aerial combat and established the pattern for post‑war fighter development on both sides of the emerging Cold War.
+      focusing on design, engines, operational deployment, and the aircraft's legacy in post-war fighter development.
     </p>
     <p>
       The book <a href="/books/this-was-the-enemy-volume-two" class="underline font-medium">This Was the Enemy Volume Two</a> provides detailed analysis of German aviation development and the complete story of Luftwaffe technological advancement and collapse. This comprehensive 288-page work profusely illustrated with many unknown and rare illustrations provides detailed coverage of German jet aircraft development, including the development of the German piston aero-engine and Gas Turbines. This includes Jumo, BMW and Heinkel Hirth gas turbines. This comprehensive documentation ensures that the Me 262's development and operations are properly understood within the broader context of late-war German aviation.
@@ -269,7 +269,7 @@ const post = {
       <li><a href="/blog/jet-age-aviation-cold-war-development" class="underline">Jet Age Aviation: Cold War Development</a> — Post-war jet evolution</li>
     </ul>
   `,
-  excerpt: `A comprehensive, research-backed account of the world's first operational jet fighter: its revolutionary design, Jumo 004 engines, operational deployment, pilot experiences, comparison with Allied fighters, and its lasting influence on post-war fighter development.`,
+  excerpt: `A source-based study of the Me 262, including design, engine constraints, operational use, and post-war impact.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -280,7 +280,7 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/me262-jet-fighter-historical.jpg',
-    alt: 'Me 262: The Jet Fighter Revolution - Enhanced Edition',
+    alt: 'Me 262: the jet fighter revolution',
     caption: 'The first operational jet fighter — speed, energy, and systems integration writ large.'
   },
   category: 'Aviation History',
@@ -290,12 +290,12 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: `Messerschmitt Me 262: The World's First Operational Jet Fighter - Enhanced Edition | Charles E. MacKay`,
-  description: `A comprehensive, research-backed account of the world's first operational jet fighter: its revolutionary design, Jumo 004 engines, operational deployment, pilot experiences, and its lasting influence on post-war fighter development.`,
+  title: `Me 262: The Jet Fighter Revolution | Charles E. MacKay`,
+  description: `A source-based study of the Me 262, including design, engine constraints, operational use, and post-war impact.`,
   keywords: 'Me 262, Jet Fighter, Luftwaffe, WWII, Aviation Technology, Jumo 004, German jet aircraft, aviation history, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: `Messerschmitt Me 262: The World's First Operational Jet Fighter - Enhanced Edition`,
-    description: `A comprehensive, research-backed account of the world's first operational jet fighter: its revolutionary design, Jumo 004 engines, operational deployment, and legacy.`,
+    title: `Me 262: The Jet Fighter Revolution`,
+    description: `A source-based study of Me 262 design, operations, and legacy.`,
     images: ['/blog-images/me262-jet-fighter-historical.jpg'],
     type: 'article'
   },

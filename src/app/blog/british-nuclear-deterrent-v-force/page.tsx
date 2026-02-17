@@ -7,12 +7,12 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'british-nuclear-deterrent-v-force',
   title: 'British Nuclear Deterrent: The V-Force and Cold War Strategy',
-  subtitle: 'The development of Britain\'s nuclear deterrent through the V-Force bombers - Vulcan, Victor, and Valiant - that maintained the nuclear balance during the Cold War.',
+  subtitle: 'A source-based overview of Britain\'s V-Force deterrent era, including Valiant, Vulcan, Victor, and the move toward stand-off delivery doctrine.',
   content: `
     <h2 id="introduction">Introduction: The V-Force and Cold War Strategy</h2>
-    <p>Britain's V-Force represented one of the Cold War's most sophisticated nuclear deterrent systems - a trinity of advanced jet bombers designed to maintain Britain's position as a nuclear power and guarantee the nation's security through strategic deterrence. The Vickers Valiant, Avro Vulcan, and Handley Page Victor formed the backbone of British nuclear strategy from the 1950s through the 1980s. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
+    <p>Britain's V-Force combined the Vickers Valiant, Avro Vulcan, and Handley Page Victor in the core years of UK airborne nuclear deterrence. This article draws on Charles E. MacKay's documented research in 
       <a href="/books/sonic-to-standoff" class="underline font-medium">Sonic to Standoff: The Evolution of the British Nuclear Deterrent</a>, 
-      this analysis presents the complete story of how Britain developed and maintained its independent nuclear deterrent capability.
+      and focuses on doctrine, platforms, weapons integration, and strategic adaptation during the Cold War.
     </p>
     <p>
       The book <a href="/books/sonic-to-standoff" class="underline font-medium">Sonic to Standoff</a> chronicles part of the development of the British Nuclear Defence Programme, tracing the evolution of the British Blue Steel standoff nuclear bomb. Included are the test phases in Australia and the work of Lord Penney. It covers the work of Tube Alloys and brings to light more information on the special relationship between the United Kingdom and the United States. This comprehensive 224-page work provides detailed coverage of British nuclear deterrent development, including the V-Force bombers and their weapons systems.
@@ -354,7 +354,7 @@ const post = {
       <li><a href="/blog/jet-age-aviation-cold-war-development" class="underline">Jet Age Aviation: Cold War Development</a> — The broader context of Cold War aviation</li>
     </ul>
   `,
-  excerpt: 'The development of Britain\'s nuclear deterrent through the V-Force bombers - Vulcan, Victor, and Valiant - that maintained the nuclear balance during the Cold War.',
+  excerpt: 'A source-based overview of Britain\'s V-Force deterrent era, including Valiant, Vulcan, Victor, and the transition to stand-off strike doctrine.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -370,17 +370,17 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["british","nuclear","deterrent","v","force","cold","war","vulcan","victor","valiant"],
-  relatedBooks: getBooksData(['enemy-luftwaffe-1945', 'birth-atomic-bomb', 'sonic-to-standoff']),
+  relatedBooks: getBooksData(['sonic-to-standoff', 'birth-atomic-bomb', 'enemy-luftwaffe-1945']),
   relatedPosts: []
 }
 
 export const metadata: Metadata = {
-  title: `British Nuclear Deterrent V Force | Charles E. MacKay`,
-  description: `Comprehensive analysis of british nuclear deterrent v force with expert historical research and technical details.`,
+  title: `British Nuclear Deterrent: The V-Force and Cold War Strategy | Charles E. MacKay`,
+  description: `A source-based overview of Britain's V-Force deterrent era, including Valiant, Vulcan, Victor, and the transition to stand-off strike doctrine.`,
   keywords: 'british, nuclear, deterrent, v, force, aviation history',
   openGraph: {
-    title: `British Nuclear Deterrent V Force`,
-    description: `Comprehensive analysis of british nuclear deterrent v force with expert historical research and technical details.`,
+    title: `British Nuclear Deterrent: The V-Force and Cold War Strategy`,
+    description: `A source-based overview of V-Force development, doctrine, and deterrent operations.`,
     images: ['/blog-images/blue-steel-underwing-schematic.svg'],
     type: 'article'
   },
@@ -414,7 +414,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }, { id: 'birth-atomic-bomb', title: '', isbn: '', price: 0 }, { id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }, { id: 'birth-atomic-bomb', title: '', isbn: '', price: 0 }, { id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

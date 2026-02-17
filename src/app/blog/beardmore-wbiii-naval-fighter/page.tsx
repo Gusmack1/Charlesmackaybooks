@@ -7,17 +7,15 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'beardmore-wbiii-naval-fighter',
   title: 'Beardmore W.B.III and Clyde-Built Naval Fighters',
-  subtitle: 'From shipyard ingenuity to deck-landing realities: Scotland’s naval fighter contribution in WWI.',
+  subtitle: 'A source-based study of Beardmore W.B.III development, Clyde manufacturing, and early naval fighter operations in WWI.',
   content: `
     <h2 id="introduction">Introduction: Scottish Naval Aviation Innovation</h2>
     <p>
-      The Beardmore W.B.III represents a crucial chapter in the evolution of British naval aviation during the First World War. 
-      As William Beardmore & Company, a Scottish industrial giant, diversified into aviation manufacturing, their focus on naval 
-      requirements produced aircraft that blended shipyard engineering discipline with the emerging demands of carrier operations. 
-      This comprehensive analysis explores the W.B.III's development, engineering features, operational deployment, and lasting 
-      influence on naval aviation. Based on extensive archival research documented in Charles E. MacKay's authoritative work 
+      The Beardmore W.B.III sits within the formative phase of British naval aviation during the First World War. 
+      As William Beardmore & Company expanded from heavy engineering into aviation, naval requirements drove design choices around deck handling, structure, and maintainability. 
+      This article examines W.B.III development, engineering features, and operational context using source material documented in Charles E. MacKay's 
       <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a>, 
-      this article presents the complete story of how Scottish shipyard ingenuity met deck-landing realities in WWI.
+      with linked references to Argus and related naval aviation pages.
     </p>
 
     <div class="my-8">
@@ -477,7 +475,7 @@ const post = {
       <li><a href="/blog/british-aircraft-great-war-rfc-rnas" class="underline">British Aircraft Great War: RFC & RNAS Development</a> — The broader context of British naval aviation during the First World War</li>
     </ul>
   `,
-  excerpt: 'Beardmore W.B.III in the lineage of British naval fighters: Clyde-built engineering meeting deck-landing innovation.',
+  excerpt: 'A source-based study of Beardmore W.B.III development, Clyde-built naval aviation manufacturing, and early deck-operations context in WWI.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Scottish aviation historian with a focus on Clydeside industry and naval aviation.',
@@ -501,7 +499,7 @@ const post = {
 
 export const metadata: Metadata = {
   title: 'Beardmore W.B.III Naval Fighter | Charles E. MacKay',
-  description: 'Engineering and operational history of the Beardmore W.B.III and early British naval fighter development on the Clyde.',
+  description: 'A source-based study of Beardmore W.B.III development, Clyde-built naval aviation manufacturing, and early deck-operations context in WWI.',
   keywords: 'Beardmore W.B.III, Clyde-built naval fighter, HMS Argus carrier, WWI deck-landing, Clydeside aviation, William Beardmore, Charles E. MacKay, charles mackay books',
   openGraph: {
     title: 'Beardmore W.B.III and Clyde-Built Naval Fighters',

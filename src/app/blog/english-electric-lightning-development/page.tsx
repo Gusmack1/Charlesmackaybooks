@@ -7,14 +7,14 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'english-electric-lightning-development',
   title: `English Electric Lightning: Britain's Supersonic Interceptor`,
-  subtitle: `A comprehensive, research‑backed account of Britain's revolutionary point‑defence interceptor: from P.1A experimental origins through F.6 operational service, examining the stacked‑engine configuration, AI.23 radar integration, QRA doctrine, pilot experiences, and lasting influence on modern interceptor design.`,
+  subtitle: `A source-based study of Lightning development from P.1A trials to F.6 service, with focus on stacked-engine design, AI.23 radar, and RAF quick-reaction doctrine.`,
   content: `
     <h2 id="introduction">Introduction: Britain's Supersonic Revolution</h2>
     <p>
-      The English Electric Lightning represents one of the most audacious engineering achievements in British aviation history — a compact, vertically stacked twin‑engine interceptor designed to climb to 50,000 feet in under three minutes and intercept high‑speed intruders guided by ground radar. Conceived during the early Cold War when the Soviet Union's strategic bomber threat loomed large, the Lightning was Britain's answer to the challenge of defending national airspace against supersonic intruders. This comprehensive analysis traces the aircraft's development from experimental P.1A origins through operational F.6 service, examining the revolutionary configuration, advanced systems integration, and the operational doctrine that made it the backbone of Britain's air defence for over two decades.
+      The English Electric Lightning was built as a dedicated point-defence interceptor for early Cold War air defence. Its compact airframe, vertically stacked Avon engines, and radar-guided interception role reflected RAF quick-reaction requirements against high-speed intruders. This article follows the aircraft from P.1A experimentation to F.6 service, focusing on design, systems integration, and operational practice.
     </p>
     <p>
-      The Lightning's significance extends far beyond its impressive performance figures. It represented a fundamental shift in fighter design philosophy, prioritizing reaction time and climb performance over range and payload — a doctrine perfectly suited to Britain's compact geography and Quick Reaction Alert (QRA) requirements. The aircraft's vertically stacked Rolls‑Royce Avon engines, ventral intake with translating shock cone, and compact airframe created a configuration that would influence interceptor design for decades to come.
+      Lightning doctrine prioritized reaction time and climb performance over endurance. That trade-off matched Britain's geography and the RAF's alert posture, where rapid interception was often more important than long patrol range.
     </p>
 
     <div class="my-8">
@@ -252,7 +252,7 @@ const post = {
       <li><a href="/blog/f86-sabre-cold-war-fighter" class="underline">North American F-86 Sabre: Cold War Premier Fighter</a> — Contemporary American interceptor providing comparison context for understanding the Lightning's design philosophy</li>
     </ul>
   `,
-  excerpt: `A comprehensive, research‑backed history of Britain's revolutionary English Electric Lightning interceptor: from experimental P.1A origins through operational F.6 service, examining the stacked‑engine configuration, AI.23 radar integration, QRA doctrine, and lasting influence on modern interceptor design.`,
+  excerpt: `A source-based study of English Electric Lightning development, from P.1A origins to F.6 service, with emphasis on design, radar integration, and RAF interception doctrine.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -268,7 +268,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["english","electric","lightning","development","supersonic","interceptor","raf","cold-war"],
-  relatedBooks: getBooksData(['sonic-to-standoff', 'captain-eric-brown', 'british-aircraft-great-war']),
+  relatedBooks: getBooksData(['sonic-to-standoff', 'sabres-from-north', 'captain-eric-brown']),
   relatedPosts: [],
   references: [
     { title: 'English Electric Lightning Fact File', url: 'https://www.rafmuseum.org.uk/research/aircraft-history/english-electric-lightning/', source: 'Royal Air Force Museum' },
@@ -278,12 +278,12 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: `English Electric Lightning Development | Charles E. MacKay`,
-  description: `Comprehensive analysis of english electric lightning development with expert historical research and technical details.`,
+  title: `English Electric Lightning: Britain's Supersonic Interceptor | Charles E. MacKay`,
+  description: `A source-based study of English Electric Lightning development, from P.1A origins to F.6 service, with emphasis on design, radar integration, and RAF interception doctrine.`,
   keywords: 'english, electric, lightning, development, aviation history',
   openGraph: {
-    title: `English Electric Lightning Development`,
-    description: `Comprehensive analysis of english electric lightning development with expert historical research and technical details.`,
+    title: `English Electric Lightning: Britain's Supersonic Interceptor`,
+    description: `A source-based study of Lightning development, systems, and RAF interception doctrine.`,
     images: ['/blog-images/english-electric-lightning-f6.svg'],
     type: 'article'
   },
@@ -316,7 +316,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }, { id: 'sabres-from-north', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

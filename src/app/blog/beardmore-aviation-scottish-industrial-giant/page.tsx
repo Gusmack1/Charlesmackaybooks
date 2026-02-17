@@ -6,11 +6,11 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO'
 
 export const metadata: Metadata = {
   title: `William Beardmore & Company: Scottish Aviation Pioneer | Charles E. MacKay`,
-  description: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
+  description: 'A source-based account of Beardmore\'s move from heavy industry into aircraft, engine, airship, and carrier-era aviation work.',
   keywords: ["Beardmore","Scottish Aviation","Industrial History","Manufacturing","WWI"],
   openGraph: {
     title: `William Beardmore & Company: Scottish Aviation Pioneer`,
-    description: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
+    description: 'A source-based account of Beardmore\'s move into aircraft, engine, airship, and carrier-era aviation work.',
     url: 'https://charlesmackaybooks.com/blog/beardmore-aviation-scottish-industrial-giant',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [{
@@ -41,16 +41,13 @@ export const metadata: Metadata = {
 const post = {
   id: 'beardmore-aviation-scottish-industrial-giant',
   title: 'William Beardmore & Company: Scottish Aviation Pioneer',
-  subtitle: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
+  subtitle: 'How William Beardmore & Company moved from heavy industry into aircraft, engines, airships, and early carrier development.',
   content: `
     <h2 id="introduction">Introduction: From Shipbuilding to Aviation</h2>
     <p>
-      William Beardmore & Company stands as one of Scotland's most significant industrial enterprises, 
-      seamlessly transitioning from shipbuilding to aviation manufacturing during the crucial early decades 
-      of powered flight. This comprehensive analysis explores Beardmore's aviation achievements, from airship construction 
-      to fighter production, and their lasting impact on British aviation. Based on extensive archival research 
-      documented in Charles E. MacKay's authoritative work <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a>, 
-      this article presents the complete story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.
+      William Beardmore & Company was one of Scotland's major engineering firms and became an important aviation manufacturer in the early twentieth century. 
+      Drawing on archival research in <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a>, 
+      this article covers the transition from shipbuilding and steel production into aircraft, aero-engines, airships, and naval aviation projects.
     </p>
 
     <div class="my-8">
@@ -349,7 +346,7 @@ const post = {
     </p>
 
     <h2 id="further-reading">Further Reading and Related Works</h2>
-    <p>For comprehensive coverage of Beardmore's aviation history and related topics, explore these authoritative works by Charles E. MacKay:</p>
+    <p>To go deeper, start with the Beardmore book and then use the related titles below for wider Scottish and Great War context.</p>
     <ul>
       <li><a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a> — The definitive 238-page work with 61,000 words, profusely illustrated with many original images and accurate production figures from Beardmore archive records</li>
       <li><a href="/books/clydeside-aviation-vol1" class="underline font-medium">Clydeside Aviation Volume One: The Great War</a> — Comprehensive coverage of aircraft production across the Clyde region, including Beardmore's role in the broader Scottish aviation industry</li>
@@ -366,7 +363,7 @@ const post = {
       <li><a href="/blog/hms-argus-first-aircraft-carrier" class="underline">HMS Argus: The World's First Aircraft Carrier</a> — Detailed coverage of Beardmore's revolutionary naval aviation contribution</li>
     </ul>
   `,
-  excerpt: 'The remarkable story of how a Scottish shipbuilding company became a major force in early aviation manufacturing.',
+  excerpt: 'A source-based account of Beardmore\'s move from heavy industry into aircraft, engine, airship, and carrier-era aviation work.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development.',
@@ -382,7 +379,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ['Beardmore', 'Scottish Aviation', 'Industrial History', 'Manufacturing', 'WWI'],
-  relatedBooks: getBooksData(['beardmore-aviation', 'clydeside-aviation-vol1', 'british-aircraft-great-war']),
+  relatedBooks: getBooksData(['beardmore-aviation', 'aircraft-carrier-argus', 'clydeside-aviation-vol1']),
   relatedPosts: []
 }
 

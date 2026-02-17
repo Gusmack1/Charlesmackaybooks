@@ -6,13 +6,13 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'korean-war-air-combat',
-  title: `Korean War Air Combat: The Jet Age in Battle`,
-  subtitle: `Enhanced Edition: MiG Alley, F‑86 vs MiG‑15, transonic aerodynamics, gunnery, pilot accounts, tactics, logistics, and legacy — precise and research‑backed.`,
+  title: `Korean War Air Combat: The First Jet-vs-Jet Battles`,
+  subtitle: `MiG Alley combat between the F-86 and MiG-15, with focus on tactics, radar control, logistics, training, and operational lessons.`,
   content: `
     <h2 id="introduction">Introduction: First Sustained Jet‑vs‑Jet War</h2>
-    <p>The Korean War (1950–1953) delivered the first sustained jet‑vs‑jet fighting in history. Over the northwest of the Korean peninsula, in the sector that became known as MiG Alley, United Nations forces flying North American F‑86 Sabres met Soviet‑designed MiG‑15s flown by North Korean, Chinese, and, in key periods, Soviet pilots. The result was a proving ground for transonic aerodynamics, gunnery against swept‑wing targets, radar‑assisted ground control, and the logistics required to keep jet fighters in the air from forward bases. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
+    <p>The Korean War (1950-1953) produced the first sustained jet-versus-jet combat. In MiG Alley, UN forces flying F-86 Sabres fought MiG-15 units flown by North Korean, Chinese, and, at key stages, Soviet pilots. These engagements tested transonic handling, gunnery, radar-assisted control, and the maintenance systems needed to sustain operations from forward bases. This article draws on Charles E. MacKay's research in 
       <a href="/books/sabres-from-north" class="underline font-medium">Sabres from the North: F-86 Sabre in RAF, RCAF, Luftwaffe Service</a>, 
-      this analysis presents the complete story of jet air combat over Korea with verified historical accuracy.
+      alongside related source material.
     </p>
     <p>
       The book <a href="/books/sabres-from-north" class="underline font-medium">Sabres from the North</a> describes the evolution and deployment of the Canadair Sabre in Royal Air Force, Royal Canadian Air Force and in NATO service-includes the West German Air Force. RAF pilots flying the F-86 Sabre in operations over Korea are also illustrated. The MIG-15 is included as well as Soviet jet engine development. This comprehensive 210-page A5 work with over 300 pictures and drawings provides detailed coverage of Sabre operations during the Korean War, including RAF participation and the broader context of NATO operations.
@@ -30,9 +30,9 @@ const post = {
       <p class="text-sm  mt-2 text-center italic">Original illustration (schematic): radar‑assisted ranging and a computed sight solution improved brief firing windows (diagrammatic).</p>
     </div>
     
-    <p>This aerial confrontation between East and West introduced new tactical doctrines, technologies, and pilot training methods that would define air combat for the next half-century. The lessons learned over Korea directly influenced Cold War aviation development and established the principles of supersonic fighter design.</p>
+    <p>This confrontation established practical doctrine for jet combat: energy management, brief firing windows, disciplined formation work, and close integration with controllers and ground crews.</p>
 
-    <p>Korean War air combat proved that jet fighters would dominate future conflicts and demonstrated the critical importance of pilot training, aircraft performance, and technological superiority in determining air superiority. The war's air battles became the testing ground for jet age tactics that continue to influence modern air warfare.</p>
+    <p>The Korean air war also highlighted the link between aircraft performance and support systems: sorties depended on fuel quality, maintenance tempo, and training discipline as much as on airframe design.</p>
 
     <h2 id="context">Historical Context and Order of Battle</h2>
     <p>After early war phases dominated by piston types and ground attack, the arrival of the MiG‑15 in late 1950 posed a serious threat to high‑altitude UN bomber and reconnaissance operations. The F‑86 was fielded in strength to counter that threat. MiG Alley — roughly the area south of the Yalu River and west toward the Chongchon — became the principal arena for fighter combat. Ground‑controlled intercept (GCI) supported both sides: radar and radio nets vectoring formations toward advantageous positions, often at high altitude where transonic effects were prominent.</p>
@@ -193,7 +193,7 @@ const post = {
       which provides detailed analysis of Sabre operations, RAF participation, and the broader context of NATO operations during the Korean War era. The book's comprehensive coverage ensures that all aspects of Korean War air combat are properly documented and preserved for future generations.
     </p>
   `,
-  excerpt: `The intense aerial battles of the Korean War that proved the effectiveness of jet fighters in modern warfare.`,
+  excerpt: `A source-based analysis of the Korean War's jet battles in MiG Alley, including F-86 and MiG-15 tactics, control systems, and operational constraints.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -204,7 +204,7 @@ const post = {
   readingTime: 18,
   featuredImage: {
     url: '/blog-images/korean-war-air-combat-featured-schematic.svg',
-    alt: 'Korean War Air Combat — Enhanced Edition',
+    alt: 'Korean War Air Combat in MiG Alley',
     caption: 'Original illustration (schematic): MiG Alley jet combat motif (diagrammatic).'
   },
   category: 'Aviation History',
@@ -235,17 +235,13 @@ const post = {
   ]
 }
 
-const relatedBooks: any[] = []
-
-const relatedPosts: any[] = []
-
 export const metadata: Metadata = {
-  title: `Korean War Air Combat | Charles E. MacKay`,
-  description: `Comprehensive analysis of korean war air combat with expert historical research and technical details.`,
+  title: `Korean War Air Combat: The First Jet-vs-Jet Battles | Charles E. MacKay`,
+  description: `A source-based analysis of the Korean War's jet battles in MiG Alley, including F-86 and MiG-15 tactics, control systems, and operational constraints.`,
   keywords: 'korean, war, air, combat, aviation history',
   openGraph: {
-    title: `Korean War Air Combat`,
-    description: `Comprehensive analysis of korean war air combat with expert historical research and technical details.`,
+    title: `Korean War Air Combat: The First Jet-vs-Jet Battles`,
+    description: `A source-based analysis of MiG Alley combat, including F-86 and MiG-15 tactics, control systems, and operational constraints.`,
     images: ['/blog-images/korean-war-air-combat-featured-schematic.svg'],
     type: 'article'
   },

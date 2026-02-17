@@ -122,9 +122,15 @@
 
   /* Standardized primary books CTA button */
   .btn-books {
-    @apply bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 hover:from-slate-800 hover:via-blue-800 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors;
+    @apply bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold border border-transparent transition-colors;
     display: inline-block;
     color: #ffffff !important;
+  }
+  .btn-books:hover,
+  .btn-books:focus-visible {
+    background-color: #1d4ed8 !important;
+    border-color: #ffffff !important;
+    outline: none;
   }
   /* Ensure anchors styled as buttons remain white in blog/content areas */
   .content a.btn-books,
@@ -352,8 +358,14 @@
   }
   
   .badge-blue {
-    background-color: rgba(37, 99, 235, 0.8); /* blue-600 with transparency */
+    background-color: #1d4ed8;
     color: #ffffff !important;
+    border: 1px solid transparent;
+  }
+  .badge-blue:hover,
+  .badge-blue:focus-visible {
+    border-color: #ffffff !important;
+    outline: none;
   }
   
   .badge-amber {
@@ -578,11 +590,17 @@
 }
 
 .badge-blue { 
-  background-color: var(--color-accent-blue);
+  background-color: #1d4ed8;
   color: #ffffff !important;
+  border: 1px solid transparent;
 }
 .badge-blue * {
   color: #ffffff !important;
+}
+.badge-blue:hover,
+.badge-blue:focus-visible {
+  border-color: #ffffff !important;
+  outline: none;
 }
 .badge-green { 
   background-color: var(--color-accent-green);

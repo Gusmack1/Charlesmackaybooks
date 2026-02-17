@@ -6,14 +6,14 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'hms-argus-first-aircraft-carrier',
-  title: 'HMS Argus: The World\'s First True Aircraft Carrier - Enhanced Edition',
-  subtitle: 'A comprehensive, research-backed account of HMS Argus\'s revolutionary design: conversion from Italian liner Conte Rosso, the Marquis of Montrose\'s flush-deck concept, hangar integration, structural engineering, and how this pioneering carrier established the essential architecture for all future aircraft carriers.',
+  title: 'HMS Argus: The World\'s First True Aircraft Carrier',
+  subtitle: 'A source-based study of Argus design and conversion from Conte Rosso, including flush-deck architecture, hangar integration, and early carrier design principles.',
   content: `
     <h2 id="introduction">Introduction: The Revolutionary Design</h2>
     <p>
-      HMS Argus (commissioned September 1918) is widely regarded as the first aircraft carrier with a full-length, unobstructed flight deck—a decisive evolution from earlier seaplane carriers and flight-platform ships. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
+      HMS Argus (commissioned September 1918) is widely regarded as the first aircraft carrier with a full-length, unobstructed flight deck. Based on documented research in Charles E. MacKay's 
       <a href="/books/aircraft-carrier-argus" class="underline font-medium">Aircraft Carrier - Beardmore's HMS Argus - ex Conte Rosso</a>, 
-      this Enhanced Edition presents the complete story of how Argus's revolutionary design transformed naval aviation from experimental concept to practical operational capability. Converted from the incomplete Italian liner <em>Conte Rosso</em>, Argus brought hangar integration, lifts, and flush deck operations together in a single coherent design that established the carrier's essential architecture for the next century.
+      this article examines how Argus helped move naval aviation from experimentation toward repeatable operational practice. Converted from the incomplete Italian liner <em>Conte Rosso</em>, Argus combined hangar integration, lifts, and flush-deck operations in a single ship design.
     </p>
     <p>
       The book <a href="/books/aircraft-carrier-argus" class="underline font-medium">Aircraft Carrier - Beardmore's HMS Argus</a> is a 175-page highly detailed work with 330 illustrations, including restored ship covers, tracing her history and wartime record in the Royal Navy, to her demolition at Inverkeithing in 1947. This comprehensive documentation ensures that HMS Argus's revolutionary design achievements are properly recognized and preserved. The book includes details of commanding officers of the ship and the Fleet Air Arm as well as details of the various operations involving HMS Argus, providing essential context for understanding her design evolution.
@@ -22,7 +22,7 @@ const post = {
       Built as the emigrant carrier SS Conte Rosso for the Italian Line Lloyd Sabuado at Dalmuir, Scotland, in 1914, the vessel was ultimately bought by the Admiralty in 1916. She was launched in December 1917 as HMS Argus. By 1918 she was redesigned and sailed in September 1918 for Burntisland for trials with aircraft on the first carrier landings and take-offs with Sopwith aircraft including Pups. This comprehensive documentation demonstrates how HMS Argus's revolutionary design enabled carrier aviation operations that would influence naval warfare for decades.
     </p>
     <p>
-      Understanding HMS Argus's design provides valuable insights into how carrier architecture evolved from experimental concepts to practical operational capability. The comprehensive documentation of her design development ensures that the revolutionary nature of her flush-deck concept is properly understood and preserved. This Enhanced Edition draws on original archive material and official sources to present a complete picture of how HMS Argus's design established principles that continue to guide carrier design worldwide.
+      Understanding HMS Argus's design helps explain how carrier architecture evolved from trial concepts into practical naval systems. This article uses archive-based material and official sources to present that transition clearly.
     </p>
 
     <div class="my-8">
@@ -270,7 +270,7 @@ const post = {
       <li><a href="/blog/beardmore-aviation-scottish-industrial-giant" class="underline">Beardmore Aviation: Scottish Industrial Giant</a> — The industrial context of construction</li>
     </ul>
   `,
-  excerpt: 'A comprehensive, research-backed account of HMS Argus\'s revolutionary design: conversion from Italian liner Conte Rosso, the Marquis of Montrose\'s flush-deck concept, hangar integration, structural engineering, and how this pioneering carrier established the essential architecture for all future aircraft carriers.',
+  excerpt: 'A source-based study of HMS Argus design and conversion, covering flush-deck architecture, hangar integration, and early carrier development principles.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -281,7 +281,7 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/hms-argus-flush-deck-schematic.svg',
-    alt: 'HMS Argus — first true aircraft carrier with full-length flight deck - Enhanced Edition',
+    alt: 'HMS Argus first true aircraft carrier with full-length flight deck',
     caption: 'Original illustration (schematic): flush flight deck concept on a ship outline (diagrammatic).'
   },
   category: 'Naval Aviation',
@@ -300,12 +300,12 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: "HMS Argus: The World's First True Aircraft Carrier - Enhanced Edition | Charles E. MacKay",
-  description: "A comprehensive, research-backed account of HMS Argus's revolutionary design: conversion from Italian liner Conte Rosso, the Marquis of Montrose's flush-deck concept, hangar integration, structural engineering, and how this pioneering carrier established the essential architecture for all future aircraft carriers.",
+  title: "HMS Argus: The World's First True Aircraft Carrier | Charles E. MacKay",
+  description: "A source-based study of HMS Argus design and conversion, covering flush-deck architecture, hangar integration, and early carrier development principles.",
   keywords: 'HMS Argus, Aircraft Carrier, Naval Aviation, Royal Navy, Maritime History, Beardmore, Scottish Aviation, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: "HMS Argus: The World's First True Aircraft Carrier - Enhanced Edition",
-    description: "A comprehensive, research-backed account of HMS Argus's revolutionary design and how it established the essential architecture for all future aircraft carriers.",
+    title: "HMS Argus: The World's First True Aircraft Carrier",
+    description: "A source-based study of Argus design, conversion, and early carrier architecture.",
     images: ['/blog-images/hms-argus-flush-deck-schematic.svg'],
     type: 'article'
   },

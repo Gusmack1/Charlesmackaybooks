@@ -6,14 +6,14 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'f86-sabre-cold-war-fighter',
-  title: 'North American F-86 Sabre: Cold War Premier Fighter - Enhanced Edition',
-  subtitle: 'A comprehensive, research-backed account of the F-86 Sabre: its swept-wing design, Korean War operations, RAF/RCAF service, Canadair variants, and its legacy as the most successful fighter of the Korean War.',
+  title: 'North American F-86 Sabre: Cold War Fighter Development',
+  subtitle: 'A source-based study of the F-86 Sabre in Korean combat, RAF/RCAF service, and Canadair production, with emphasis on design, handling, and operational use.',
   content: `
     <h2 id="introduction">Introduction: Cold War Premier Fighter</h2>
     <p>
-      The North American F‑86 Sabre became the emblem of early jet‑age air combat. Mating a swept‑wing planform to a robust airframe and a reliable axial‑flow turbojet, the Sabre restored Allied parity over Korea and set handling and gunnery standards that influenced fighter design for a decade. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
+      The North American F-86 Sabre became one of the defining fighters of early jet combat. Its swept-wing layout, durable structure, and reliable turbojet gave it strong transonic performance in Korea and long service life in NATO and Commonwealth air forces. This article is based on Charles E. MacKay's research in 
       <a href="/books/sabres-from-north" class="underline font-medium">Sabres from the North: F-86 Sabre in RAF, RCAF, Luftwaffe Service</a> 
-      and related sources, this Enhanced Edition presents the complete story: industrial roots, aerodynamic breakthroughs, engine integration, Korean War operations, pilot perspectives, and the type's international legacy — including Canadair and Commonwealth variants that served with the Royal Air Force and allies worldwide.
+      and related sources, covering design evolution, Korean operations, and international deployment.
     </p>
     <p>
       The book <a href="/books/sabres-from-north" class="underline font-medium">Sabres from the North</a> describes the evolution and deployment of the Canadair Sabre in Royal Air Force, Royal Canadian Air Force and in NATO service-includes the West German Air Force. This comprehensive 210-page work with over 300 pictures and drawings provides detailed coverage of Sabre operations, including squadron histories of the Canadair Sabre in Royal Air Force Germany and Royal Air Force Fighter Command service. The book includes details of the Sabres being delivered over the North Atlantic in "Becher's Brook" and "Leap Frog" via Canada, Greenland, Iceland, Stornoway, Prestwick or Kinloss or Lossiemouth which is reflected in the title. This comprehensive documentation ensures that Sabre operations are properly understood within the broader context of Cold War aviation.
@@ -292,7 +292,7 @@ const post = {
       <li><a href="/blog/english-electric-lightning-development" class="underline">English Electric Lightning: Britain's Supersonic Interceptor Revolution</a> — A later British interceptor</li>
     </ul>
   `,
-  excerpt: 'A comprehensive, research-backed account of the F-86 Sabre: its swept-wing design, Korean War operations, RAF/RCAF service, Canadair variants, and its legacy as the most successful fighter of the Korean War.',
+  excerpt: 'A source-based study of F-86 Sabre development and operations in Korea, RAF/RCAF service, and Canadair production for NATO users.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -303,22 +303,22 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/f86-sabre-formation-korea-schematic.svg',
-    alt: 'North American F-86 Sabre: Cold War Premier Fighter - Enhanced Edition',
+    alt: 'North American F-86 Sabre formation in Korean War context',
     caption: 'Swept‑wing agility, reliable engines, and disciplined gunnery — the Sabre defined early jet‑age air combat.'
   },
   category: 'Cold War Aviation',
   tags: ["F-86 Sabre","Korean War","USAF","Cold War","Jet Fighter"],
-  relatedBooks: getBooksData(['sabres-from-north', 'korean-war-air-combat', 'sonic-to-standoff']),
+  relatedBooks: getBooksData(['sabres-from-north', 'sonic-to-standoff', 'enemy-luftwaffe-1945']),
   relatedPosts: []
 }
 
 export const metadata: Metadata = {
-  title: `North American F-86 Sabre: Cold War Premier Fighter - Enhanced Edition | Charles E. MacKay`,
-  description: `A comprehensive, research-backed account of the F-86 Sabre: its swept-wing design, Korean War operations, RAF/RCAF service, Canadair variants, and its legacy as the most successful fighter of the Korean War.`,
+  title: `North American F-86 Sabre: Cold War Fighter Development | Charles E. MacKay`,
+  description: `A source-based study of F-86 Sabre development and operations in Korea, RAF/RCAF service, and Canadair production for NATO users.`,
   keywords: 'F-86 Sabre, Korean War, USAF, Cold War, Jet Fighter, RAF Sabre, RCAF Sabre, Canadair Sabre, aviation history, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: `North American F-86 Sabre: Cold War Premier Fighter - Enhanced Edition`,
-    description: `A comprehensive, research-backed account of the F-86 Sabre: its swept-wing design, Korean War operations, RAF/RCAF service, and legacy.`,
+    title: `North American F-86 Sabre: Cold War Fighter Development`,
+    description: `A source-based study of F-86 development, Korean operations, and NATO service.`,
     images: ['/blog-images/f86-sabre-formation-korea-schematic.svg'],
     type: 'article'
   },
@@ -352,7 +352,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'sabres-from-north', title: '', isbn: '', price: 0 }, { id: 'korean-war-air-combat', title: '', isbn: '', price: 0 }, { id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'sabres-from-north', title: '', isbn: '', price: 0 }, { id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }, { id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

@@ -6,20 +6,20 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'british-aircraft-great-war-rfc-rnas',
-  title: 'British Aircraft Great War: RFC & RNAS Development - Enhanced Edition',
-  subtitle: 'A comprehensive, research-backed account of how the Royal Flying Corps and Royal Naval Air Service matured from reconnaissance to decisive air power: aircraft procurement, squadron formation, engine development, legendary fighters like the Sopwith Camel, Bristol Fighter, and S.E.5a, and the unification that created the Royal Air Force in 1918.',
+  title: 'British Aircraft of the Great War: RFC and RNAS Development',
+  subtitle: 'A source-based account of RFC and RNAS growth from 1914 to 1918, covering procurement, squadron formation, aircraft types, engine supply, and RAF unification.',
   content: `
     <h2 id="introduction">Introduction: The Birth of British Air Power</h2>
     <p>
-      Between 1914 and 1918, British aviation matured from reconnaissance to decisive air power through parallel paths pursued by the Royal Flying Corps (RFC) and Royal Naval Air Service (RNAS). Based on comprehensive research documented in Charles E. MacKay's authoritative work 
+      Between 1914 and 1918, British air power grew through the parallel development of the Royal Flying Corps (RFC) and Royal Naval Air Service (RNAS). Drawing on documented research in Charles E. MacKay's 
       <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War: Fighters, Bombers, Seaplanes, Trainers, Flying Boats</a>, 
-      this Enhanced Edition presents the complete story of how these two services built complementary capabilities—tactical support over the Western Front and maritime/expeditionary roles—before unifying as the Royal Air Force in April 1918. Their combined output in doctrine, design, training, and industrial organization shaped 20th-century air warfare and established principles that would guide British aviation through the Second World War.
+      this article examines how both services built complementary capabilities before their merger into the Royal Air Force in April 1918.
     </p>
     <p>
       The book <a href="/books/british-aircraft-great-war" class="underline font-medium">British Aircraft of the Great War</a> provides comprehensive coverage of the aircraft ordering procedures for the Royal Flying Corps, the Royal Naval Air Service and the Royal Air Force. The 136-page A5 volume, filled with information from manufacturers and the Ministry of Munitions, includes Flying Boats, Trainers, Seaplanes, Bombers and Fighters. It concentrates on aircraft supply and squadron supply of engines and airframes between 1914 and 1918, providing essential context for understanding how British aviation organization evolved during the Great War. The book describes how squadrons were formed from 1914 to 1918, including the heavy bomber squadrons equipped with the Handley Page 0/400 and the V1500, and details the process of procurement for the Ministry of Munitions who supplied the fighting services with munitions.
     </p>
     <p>
-      Understanding the development of RFC and RNAS capabilities provides valuable insights into how Britain established air superiority through industrial organization, tactical innovation, and technological development. The comprehensive documentation of procurement procedures, squadron formation, and aircraft supply chains ensures that the complete story of British air power development is properly preserved. This Enhanced Edition draws on original archive material and official sources to present a complete picture of how British aviation achieved operational effectiveness during the Great War.
+      Understanding RFC and RNAS development helps explain how Britain combined industrial organization, tactical innovation, and aircraft supply into effective wartime air power. This article uses original archive-based material and official sources to present that process clearly.
     </p>
 
     <div class="my-8">
@@ -254,7 +254,7 @@ const post = {
       <li><a href="/blog/beardmore-aviation-scottish-industrial-giant" class="underline">Beardmore Aviation: Scottish Industrial Giant</a> — Scottish manufacturing contributions</li>
     </ul>
   `,
-  excerpt: 'A comprehensive, research-backed account of how the Royal Flying Corps and Royal Naval Air Service matured from reconnaissance to decisive air power: aircraft procurement, squadron formation, engine development, legendary fighters like the Sopwith Camel, Bristol Fighter, and S.E.5a, and the unification that created the Royal Air Force in 1918.',
+  excerpt: 'A source-based account of RFC and RNAS development in 1914-1918, including procurement, squadron growth, aircraft supply, and RAF unification.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -265,12 +265,12 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/rfc-pilots-no32-squadron-1916.jpg',
-    alt: 'British Aircraft Great War: RFC & RNAS Development - Enhanced Edition',
+    alt: 'British Aircraft of the Great War: RFC and RNAS development',
     caption: 'RFC and RNAS development leading to RAF formation in 1918.'
   },
   category: 'Aviation History',
   tags: ["british","aircraft","great","war","rfc","rnas","royal flying corps","royal naval air service","royal air force"],
-  relatedBooks: getBooksData(['british-aircraft-great-war', 'clydeside-aviation-vol1', 'german-aircraft-great-war', 'beardmore-aviation', 'aircraft-carrier-argus', 'flying-for-kaiser']),
+  relatedBooks: getBooksData(['british-aircraft-great-war', 'german-aircraft-great-war', 'flying-for-kaiser', 'beardmore-aviation']),
   relatedPosts: [
     { id: 'bristol-fighter-f2b-brisfit', title: 'Bristol Fighter F2B: The Brisfit\'s Combat Legacy', excerpt: 'The two-seat fighter that redefined roles and tactics.', image: '/blog-images/bristol-fighter-f2b-flying.jpg', readingTime: 14 },
     { id: 'sopwith-camel-wwi-fighter', title: 'Sopwith Camel: WWI Fighter', excerpt: 'Strengths, pitfalls, and tactics of the legendary fighter.', image: '/blog-images/sopwith-camel-historical-1918.jpg', readingTime: 12 },
@@ -284,12 +284,12 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: "British Aircraft Great War: RFC & RNAS Development - Enhanced Edition | Charles E. MacKay",
-  description: "A comprehensive, research-backed account of how the Royal Flying Corps and Royal Naval Air Service matured from reconnaissance to decisive air power: aircraft procurement, squadron formation, engine development, legendary fighters, and the unification that created the Royal Air Force in 1918.",
+  title: "British Aircraft of the Great War: RFC and RNAS Development | Charles E. MacKay",
+  description: "A source-based account of RFC and RNAS development in 1914-1918, including procurement, squadron growth, aircraft supply, and RAF unification.",
   keywords: 'British Aircraft, Great War, RFC, RNAS, Royal Flying Corps, Royal Naval Air Service, Royal Air Force, WWI Aviation, Sopwith Camel, Bristol Fighter, S.E.5a, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: "British Aircraft Great War: RFC & RNAS Development - Enhanced Edition",
-    description: "A comprehensive, research-backed account of how the Royal Flying Corps and Royal Naval Air Service matured from reconnaissance to decisive air power.",
+    title: "British Aircraft of the Great War: RFC and RNAS Development",
+    description: "A source-based account of RFC and RNAS development in 1914-1918.",
     images: ['/blog-images/rfc-pilots-no32-squadron-1916.jpg'],
     type: 'article'
   },
@@ -323,7 +323,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'clydeside-aviation-vol1', title: '', isbn: '', price: 0 }, { id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'german-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'flying-for-kaiser', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

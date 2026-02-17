@@ -6,15 +6,15 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'jet-age-aviation-cold-war-development',
-  title: `Jet Age Aviation: Cold War Development - Enhanced Edition`,
-  subtitle: `A comprehensive, research-backed account of jet age aviation development during the Cold War: from late-war German jets to mature Cold War weapon systems, examining how technology and strategy co-evolved through the integration of aerodynamics, engines, sensors, and doctrine.`,
+  title: `Jet Age Aviation: Cold War Development`,
+  subtitle: `A source-based overview of jet-age military aviation from late-war German jets to mature Cold War systems, focused on aircraft, engines, sensors, doctrine, and operational use.`,
   content: `
     <h2 id="introduction">Introduction: The Jet Age and Cold War Imperative</h2>
     <p>
-      The Jet Age transformed air power from piston‑engine mass to turbine‑powered speed, altitude, and missile integration. From late‑WWII prototypes to mature Cold War weapon systems, the arc of development fused aerodynamics, engines, sensors, and doctrine. Based on comprehensive research documented in Charles E. MacKay's authoritative works including 
+      The Jet Age transformed air power from piston aircraft to turbine-powered speed, altitude, and guided-weapon integration. This article follows that shift from late-WWII prototypes to mature Cold War systems using documented material from Charles E. MacKay's research, including 
       <a href="/books/sonic-to-standoff" class="underline font-medium">Sonic to Standoff: The Evolution of the British Nuclear Deterrent</a>, 
       <a href="/books/enemy-luftwaffe-1945" class="underline font-medium">This Was the Enemy: The Luftwaffe 1945</a>, 
-      and related sources, this Enhanced Edition traces that arc with emphasis on British and allied experience — from Me 262 and Meteor to Sabre/MiG parity, then to supersonic interceptors like the English Electric Lightning — showing how technology and strategy co‑evolved.
+      and related sources. It concentrates on British and Allied experience from Me 262 and Meteor transitions, through Sabre/MiG combat parity, to supersonic interceptor doctrine.
     </p>
     <p>
       The book <a href="/books/sonic-to-standoff" class="underline font-medium">Sonic to Standoff</a> chronicles part of the development of the British Nuclear Defence Programme, tracing the evolution of the British Blue Steel standoff nuclear bomb. This comprehensive 224-page work provides detailed coverage of British nuclear deterrent development, including V-Force bombers and their weapons systems. The book covers the development of the German piston aero-engine and Gas Turbines, including Jumo, BMW and Heinkel Hirth gas turbines. This comprehensive coverage demonstrates how German jet engine development influenced post-war jet aircraft development.
@@ -352,7 +352,7 @@ const post = {
       <li><a href="/blog/british-nuclear-deterrent-v-force" class="underline">British Nuclear Deterrent: The V-Force and Cold War Strategy</a> — Britain's nuclear deterrent</li>
     </ul>
   `,
-  excerpt: `A comprehensive, research-backed account of jet age aviation development during the Cold War: from late-war German jets to mature Cold War weapon systems, examining how technology and strategy co-evolved through the integration of aerodynamics, engines, sensors, and doctrine.`,
+  excerpt: `A source-based overview of jet-age aviation development in the Cold War, from late-war jet origins to mature interceptor and deterrent systems.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -375,12 +375,12 @@ const post = {
 
 
 export const metadata: Metadata = {
-  title: `Jet Age Aviation: Cold War Development - Enhanced Edition | Charles E. MacKay`,
-  description: `A comprehensive, research-backed account of jet age aviation development during the Cold War: from late-war German jets to mature Cold War weapon systems, examining how technology and strategy co-evolved.`,
+  title: `Jet Age Aviation: Cold War Development | Charles E. MacKay`,
+  description: `A source-based overview of jet-age aviation development in the Cold War, from late-war jet origins to mature interceptor and deterrent systems.`,
   keywords: 'jet, age, aviation, cold, war, development, aviation history, jet aircraft, Cold War aviation, supersonic flight, fighter development, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: `Jet Age Aviation: Cold War Development - Enhanced Edition`,
-    description: `A comprehensive, research-backed account of jet age aviation development during the Cold War: from late-war German jets to mature Cold War weapon systems.`,
+    title: `Jet Age Aviation: Cold War Development`,
+    description: `A source-based overview of jet-age aviation development in the Cold War, from late-war jet origins to mature interceptor and deterrent systems.`,
     images: [post.featuredImage.url],
     type: 'article'
   },
@@ -414,7 +414,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }, { id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'sonic-to-standoff', title: '', isbn: '', price: 0 }, { id: 'sabres-from-north', title: '', isbn: '', price: 0 }, { id: 'enemy-luftwaffe-1945', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

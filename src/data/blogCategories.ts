@@ -17,7 +17,7 @@ export const blogCategories: BlogCategoryMap = {
     {
       title: 'Beardmore Aviation: Scottish Industrial Giant',
       slug: 'beardmore-aviation-scottish-industrial-giant',
-      excerpt: 'The remarkable story of William Beardmore and Company, the Scottish engineering conglomerate that revolutionized shipbuilding, steel production, and aviation from Glasgow and the Clyde.',
+      excerpt: 'A source-based account of how William Beardmore and Company moved from heavy engineering into aircraft, engines, airships, and carrier-era aviation work.',
       date: 'January 12, 2024',
       image: '/blog-images/beardmore-clyde-shipyard.jpg',
       tags: ['Scottish Aviation', 'Industrial History', 'Shipbuilding', 'Engineering'],
@@ -53,36 +53,36 @@ export const blogCategories: BlogCategoryMap = {
   ],
   'WWI Aviation': [
     {
-      title: 'Sopwith Camel: The WWI Fighter That Won Air Superiority',
+      title: 'Sopwith Camel: WWI Fighter Development and Combat Service',
       slug: 'sopwith-camel-wwi-fighter',
-      excerpt: 'The most successful Allied fighter of the Great War. Discover how this tricky but effective aircraft shot down more enemy planes than any other Allied fighter.',
+      excerpt: 'A source-based study of the Sopwith Camel covering design, engines, handling, tactics, naval operations, and Great War combat service.',
       date: 'January 30, 2025',
       image: '/blog-images/sopwith-camel-historical-1918.jpg',
       tags: ['WWI Aviation', 'Sopwith Camel', 'Fighter Aircraft', 'Great War'],
       readTime: '17 min'
     },
     {
-      title: 'Bristol Fighter F2B: The Legendary Brisfit of the Great War',
+      title: "Bristol Fighter F2B: The Brisfit's Combat Legacy",
       slug: 'bristol-fighter-f2b-brisfit',
-      excerpt: 'The two-seat fighter that became one of the most successful British aircraft of WWI, transforming from initial disaster to aerial supremacy.',
+      excerpt: 'A source-based study of the Bristol Fighter F2B covering design, engine integration, crew tactics, combat service, and sustainment.',
       date: 'January 25, 2025',
       image: '/blog-images/bristol-fighter-f2b-flying.jpg',
       tags: ['WWI Aviation', 'Bristol Fighter', 'F2B', 'British Aircraft'],
       readTime: '14 min'
     },
     {
-      title: 'British Aircraft Great War: RFC & RNAS Development',
+      title: 'British Aircraft of the Great War: RFC and RNAS Development',
       slug: 'british-aircraft-great-war-rfc-rnas',
-      excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters.',
+      excerpt: 'A source-based account of RFC and RNAS development in 1914-1918, including procurement, squadron growth, aircraft supply, and RAF unification.',
       date: 'January 15, 2024',
       image: '/blog-images/sopwith-camel-rfc.jpg',
       tags: ['WWI Aviation', 'RFC', 'RNAS', 'British Aircraft'],
       readTime: '14 min'
     },
     {
-      title: 'German Aircraft Great War Development',
+      title: 'German Aircraft in the Great War: Development and Operations',
       slug: 'german-aircraft-great-war-development',
-      excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.',
+      excerpt: 'A source-based study of German military aviation in 1914-1918, covering aircraft design, supply systems, and frontline operations.',
       date: 'January 18, 2024',
       image: '/blog-images/fokker-synchronization-gear-schematic.svg',
       tags: ['WWI Aviation', 'German Aircraft', 'Fighter Development', 'Luftstreitkräfte'],
@@ -111,16 +111,16 @@ export const blogCategories: BlogCategoryMap = {
     {
       title: 'Supermarine Spitfire Development History',
       slug: 'supermarine-spitfire-development-history',
-      excerpt: 'From racing seaplanes to fighter legend: R.J. Mitchell\'s masterpiece that saved Britain.',
+      excerpt: 'A source-based overview of Spitfire development themes with links to deeper technical pages and related historical book context.',
       date: 'January 25, 2024',
       image: '/blog-images/spitfire-k5054-prototype.jpg',
       tags: ['WWII Aviation', 'Spitfire', 'Fighter Aircraft', 'R.J. Mitchell'],
       readTime: '16 min'
     },
     {
-      title: 'Supermarine Spitfire Evolution: From Prototype to Legend',
+      title: 'Supermarine Spitfire Development: Evolution of a Legend',
       slug: 'supermarine-spitfire-development-evolution',
-      excerpt: 'The complete evolution of the Spitfire from K5054 prototype through all variants, examining how continuous development kept this fighter competitive throughout WWII.',
+      excerpt: 'A source-based technical study of Spitfire evolution from pre-war aerodynamic roots to late-war marks, doctrine, and production.',
       date: 'January 22, 2025',
       image: '/blog-images/spitfire-prototype-k5054-historical.jpg',
       tags: ['WWII Aviation', 'Spitfire Evolution', 'Aircraft Development', 'Fighter Variants'],
@@ -129,7 +129,7 @@ export const blogCategories: BlogCategoryMap = {
     {
       title: 'Hawker Hurricane: The Forgotten Hero of the Battle of Britain',
       slug: 'hawker-hurricane-fighter-development',
-      excerpt: 'The workhorse fighter that shot down more German aircraft than any other during the Battle of Britain.',
+      excerpt: 'A source-based study of Hurricane development and service, with emphasis on Battle of Britain operations, maintainability, and production scale.',
       date: 'January 25, 2024',
       image: '/blog-images/hawker-hurricane.svg',
       tags: ['WWII Aviation', 'Hurricane', 'Battle of Britain', 'Fighter Aircraft'],
@@ -138,7 +138,7 @@ export const blogCategories: BlogCategoryMap = {
     {
       title: 'Luftwaffe 1945: The Final Year',
       slug: 'luftwaffe-1945-final-year',
-      excerpt: 'The desperate final months of the German air force, from jet fighters to the collapse of the Third Reich.',
+      excerpt: 'A source-based study of Luftwaffe operations in 1945, where advanced aircraft were constrained by fuel, spares, training, and infrastructure.',
       date: 'January 20, 2024',
       image: '/blog-images/me262-luftwaffe.jpg',
       tags: ['WWII Aviation', 'Luftwaffe', 'German Aircraft', 'Jet Aircraft'],
@@ -147,7 +147,7 @@ export const blogCategories: BlogCategoryMap = {
     {
       title: 'Arado Ar 234: The World’s First Operational Jet Bomber',
       slug: 'arado-ar234-jet-bomber',
-      excerpt: 'Design, engines, operations, and legacy of the revolutionary German jet bomber that redefined late-war reconnaissance and strike.',
+      excerpt: 'A source-based study of the Arado Ar 234 covering design, engine constraints, reconnaissance and bombing operations, and late-war limits.',
       date: 'August 14, 2025',
       image: '/blog-images/arado-ar234-blitz-schematic.svg',
       tags: ['WWII Aviation', 'Arado Ar 234', 'Jet Bomber'],
@@ -156,18 +156,18 @@ export const blogCategories: BlogCategoryMap = {
   ],
   'Cold War Aviation': [
     {
-      title: 'Korean War Air Combat: The First Jet vs Jet Battles That Shaped Modern Aviation',
+      title: 'Korean War Air Combat: The First Jet-vs-Jet Battles',
       slug: 'korean-war-air-combat',
-      excerpt: 'F-86 Sabre vs MiG-15 battles over MiG Alley that established modern jet warfare principles and launched the supersonic age.',
+      excerpt: 'A source-based analysis of MiG Alley combat between F-86 and MiG-15 forces, including tactics, control systems, and operational constraints.',
       date: 'January 29, 2025',
       image: '/blog-images/korean-war-air-combat-featured-schematic.svg',
       tags: ['Korean War', 'F-86 Sabre', 'MiG-15', 'Jet Combat'],
       readTime: '11 min'
     },
     {
-      title: 'V-Force: Britain\'s Nuclear Deterrent Bombers That Defended the Free World',
+      title: 'British Nuclear Deterrent: The V-Force and Cold War Strategy',
       slug: 'british-nuclear-deterrent-v-force',
-      excerpt: 'The complete story of Britain\'s V-Force nuclear deterrent - Vulcan, Victor, and Valiant bombers that maintained Cold War peace.',
+      excerpt: 'A source-based overview of Britain\'s V-Force deterrent era, including Valiant, Vulcan, Victor, and the transition to stand-off strike doctrine.',
       date: 'January 29, 2025',
       image: '/blog-images/vulcan-bomber-formation.jpg',
       tags: ['Cold War', 'V-Force', 'Nuclear Deterrent', 'Strategic Bombers'],
@@ -176,7 +176,7 @@ export const blogCategories: BlogCategoryMap = {
     {
       title: 'Avro Vulcan: Aerodynamics, Systems, and Britain’s Cold War Deterrent',
       slug: 'avro-vulcan-bomber',
-      excerpt: 'Delta wings, high-altitude penetration, and the V-Force doctrine that shaped RAF nuclear and conventional strategy.',
+      excerpt: 'A source-based study of Avro Vulcan design, systems integration, doctrine changes, and service in the V-Force era.',
       date: 'August 14, 2025',
       image: '/blog-images/default-generic.svg',
       tags: ['Cold War', 'Avro Vulcan', 'V-Force'],
@@ -185,36 +185,36 @@ export const blogCategories: BlogCategoryMap = {
   ],
   'Jet Age Aviation': [
     {
-      title: 'English Electric Lightning: Britain\'s Supersonic Interceptor Revolution',
+      title: 'English Electric Lightning: Britain\'s Supersonic Interceptor',
       slug: 'english-electric-lightning-development',
-      excerpt: 'The extraordinary development of Britain\'s first supersonic fighter that could climb to 60,000 feet in under three minutes.',
+      excerpt: 'A source-based study of Lightning development from P.1A trials to F.6 service, focused on design, radar integration, and RAF interception doctrine.',
       date: 'January 29, 2025',
       image: '/blog-images/english-electric-lightning-f6.svg',
       tags: ['Jet Age', 'Lightning', 'Supersonic Fighter', 'Cold War'],
       readTime: '12 min'
     },
     {
-      title: 'Messerschmitt Me 262: Revolutionary Jet Fighter That Changed Aerial Warfare',
+      title: 'Me 262: The Jet Fighter Revolution',
       slug: 'me262-jet-fighter-revolution',
-      excerpt: 'The world\'s first operational jet fighter that introduced the jet age and transformed aerial combat during WWII\'s final phase.',
+      excerpt: 'A source-based study of the Me 262, covering design, Jumo 004 constraints, operational use, and post-war influence.',
       date: 'January 29, 2025',
       image: '/blog-images/me262-jet-fighter-historical.jpg',
       tags: ['WWII Aviation', 'Me 262', 'Jet Fighter', 'German Innovation'],
       readTime: '13 min'
     },
     {
-      title: 'The Jet Age Revolution: Cold War Aviation Development',
+      title: 'Jet Age Aviation: Cold War Development',
       slug: 'jet-age-aviation-cold-war-development',
-      excerpt: 'How the Cold War drove rapid jet development from primitive jets to supersonic fighters.',
+      excerpt: 'A source-based overview of jet-age military aviation, from late-war origins to mature Cold War interceptor and deterrent systems.',
       date: 'January 25, 2024',
       image: '/blog-images/lightning-f6-supersonic.svg',
       tags: ['Jet Age', 'Cold War', 'Supersonic Flight', 'Fighter Development'],
       readTime: '17 min'
     },
     {
-      title: 'F-86 Sabre: Cold War\'s Legendary Fighter',
+      title: 'North American F-86 Sabre: Cold War Fighter Development',
       slug: 'f86-sabre-cold-war-fighter',
-      excerpt: 'The swept-wing fighter that dominated MiG Alley and established Western air superiority.',
+      excerpt: 'A source-based study of F-86 Sabre development and operations in Korea, RAF/RCAF service, and Canadair production for NATO users.',
       date: 'January 17, 2024',
       image: '/blog-images/f86-sabre-formation-korea-schematic.svg',
       tags: ['Jet Age', 'F-86 Sabre', 'Cold War', 'Fighter Aircraft'],
@@ -328,9 +328,9 @@ export const blogCategories: BlogCategoryMap = {
   ],
   'Naval Aviation': [
     {
-      title: 'Naval Aviation History: From First Carrier Landings to Modern Fleet Operations',
+      title: 'Naval Aviation History: From Seaplanes to Supercarriers',
       slug: 'naval-aviation-history',
-      excerpt: 'The development of aircraft carriers and naval aviation from WWI to modern times.',
+      excerpt: 'A source-based overview of naval aviation development from early seaplane operations to modern carrier doctrine, systems, and strategy.',
       date: 'January 10, 2024',
       image: '/blog-images/hms-argus-aircraft-carrier.jpg',
       tags: ['Naval Aviation', 'Aircraft Carriers', 'Fleet Air Arm', 'Maritime Aviation'],
@@ -339,7 +339,7 @@ export const blogCategories: BlogCategoryMap = {
     {
       title: 'HMS Argus: The World\'s First True Aircraft Carrier',
       slug: 'hms-argus-first-aircraft-carrier',
-      excerpt: 'The pioneering aircraft carrier that established naval aviation principles and transformed maritime warfare forever.',
+      excerpt: 'A source-based study of HMS Argus conversion and design, including flush-deck architecture, hangar integration, and early carrier principles.',
       date: 'January 20, 2024',
       image: '/blog-images/hms-argus-flush-deck-schematic.svg',
       tags: ['Naval Aviation', 'HMS Argus', 'Aircraft Carriers', 'Naval History'],
@@ -348,7 +348,7 @@ export const blogCategories: BlogCategoryMap = {
     {
       title: 'HMS Argus Carrier Operations: Pioneering Naval Aviation Procedures',
       slug: 'hms-argus-first-aircraft-carrier-operations',
-      excerpt: 'Detailed examination of the operational procedures, deck operations, and pioneering flight operations that made HMS Argus the template for all future aircraft carriers.',
+      excerpt: 'A source-based account of launch, recovery, deck-handling, and safety routines developed around HMS Argus flush-deck operations.',
       date: 'January 18, 2025',
       image: '/blog-images/hms-argus-deck-operations-schematic.svg',
       tags: ['Naval Aviation', 'HMS Argus', 'Carrier Operations', 'Flight Deck Procedures'],
@@ -357,7 +357,7 @@ export const blogCategories: BlogCategoryMap = {
     {
       title: 'Beardmore W.B.III and Clyde-Built Naval Fighters',
       slug: 'beardmore-wbiii-naval-fighter',
-      excerpt: 'From shipyard ingenuity to deck-landing realities: Scotland’s naval fighter contribution in WWI.',
+      excerpt: 'A source-based study of Beardmore W.B.III development, Clyde-built naval aviation manufacturing, and early deck-operations context in WWI.',
       date: 'August 14, 2025',
       image: '/blog-images/default-generic.svg',
       tags: ['Naval Aviation', 'Beardmore', 'HMS Argus'],

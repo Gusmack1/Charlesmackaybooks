@@ -6,14 +6,14 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'naval-aviation-history',
-  title: 'Naval Aviation History: From Seaplanes to Supercarriers - Enhanced Edition',
-  subtitle: 'A comprehensive, research-backed account of naval aviation\'s evolution: from early seaplane experiments through the development of aircraft carriers, examining the technologies, procedures, operational doctrines, pilot testimonies, and strategic significance that transformed maritime air power from experimental concept to decisive naval capability.',
+  title: 'Naval Aviation History: From Seaplanes to Supercarriers',
+  subtitle: 'A source-based overview of naval aviation development from early seaplane operations to modern carrier doctrine, systems, and strategy.',
   content: `
     <h2 id="introduction">Introduction: The Maritime Air Revolution</h2>
     <p>
-      Naval aviation represents one of the most significant technological and operational revolutions in maritime warfare, transforming the fundamental nature of naval power projection and sea control. From the fragile seaplanes of the early 20th century to the nuclear-powered supercarriers of today, the integration of aircraft with naval operations has fundamentally altered the strategic calculus of maritime conflict. This comprehensive analysis traces the development of naval aviation from its experimental beginnings through the establishment of carrier-based air power as the dominant form of naval strike capability. Based on extensive archival research documented in Charles E. MacKay's authoritative work 
+      Naval aviation transformed maritime warfare by extending reconnaissance, strike range, and fleet protection beyond line-of-sight gunnery. From early seaplane operations to modern carrier air groups, this article traces the technical and operational progression that established carrier-based air power as a core naval capability. It draws on archival context documented in Charles E. MacKay's 
       <a href="/books/aircraft-carrier-argus" class="underline font-medium">Aircraft Carrier - Beardmore's HMS Argus - ex Conte Rosso</a>, 
-      this Enhanced Edition presents the complete story of naval aviation's evolution from early experiments to modern carriers.
+      with linked supporting pages for detailed case studies.
     </p>
     <p>
       The book <a href="/books/aircraft-carrier-argus" class="underline font-medium">Aircraft Carrier - Beardmore's HMS Argus</a> provides comprehensive coverage of HMS Argus, the world's first true aircraft carrier with a flat deck, this concept being planned by the Marquis of Montrose, a Beardmore director. Built as the emigrant carrier SS Conte Rosso for the Italian Line Lloyd Sabuado at Dalmuir, Scotland, in 1914, the vessel was ultimately bought by the Admiralty in 1916. She was launched in December 1917 as HMS Argus and by 1918 was redesigned and sailed in September 1918 for Burntisland for trials with aircraft on the first carrier landings and take-offs with Sopwith aircraft including Pups. This comprehensive documentation ensures that the foundational development of naval aviation is properly understood and preserved.
@@ -22,7 +22,7 @@ const post = {
       The journey from seaplane tenders to modern aircraft carriers involved not merely technological advancement, but the development of entirely new operational doctrines, training systems, and organizational structures. The aircraft carrier emerged not as a simple platform for launching aircraft, but as a complex system integrating propulsion, aviation fuel, weapons handling, maintenance, and human factors into a coherent operational capability. This transformation required decades of experimentation, refinement, and operational learning.
     </p>
     <p>
-      Understanding naval aviation's evolution provides valuable insights into how military technology and operational doctrine developed together to create new capabilities. The comprehensive documentation of this evolution ensures that the principles established through naval aviation development continue to guide maritime air power worldwide. This Enhanced Edition examines naval aviation as a complete system: technologies, procedures, doctrines, operational experiences, and strategic significance.
+      Understanding naval aviation evolution helps explain how technology, doctrine, and logistics combined to create repeatable carrier capability across different eras and fleets.
     </p>
 
     <h2 id="historical-context">Historical Context: Industrial Shifts and Maritime Requirements</h2>
@@ -278,7 +278,7 @@ const post = {
       <li><a href="/blog/british-aircraft-great-war-rfc-rnas" class="underline">British Aircraft of the Great War: RFC & RNAS Development</a> — The broader context of British naval aviation during the Great War</li>
     </ul>
   `,
-  excerpt: 'A comprehensive, research-backed history of naval aviation from early seaplane experiments through the development of modern aircraft carriers, examining the technologies, procedures, operational doctrines, pilot testimonies, and strategic significance that transformed maritime air power.',
+  excerpt: 'A source-based overview of naval aviation development from early seaplane operations to modern carrier doctrine, systems, and strategic use.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -289,7 +289,7 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/hms-argus-aircraft-carrier.jpg',
-    alt: 'Naval Aviation History: From Seaplanes to Supercarriers - Enhanced Edition',
+    alt: 'Naval aviation history from seaplanes to supercarriers',
     caption: 'The evolution of naval aviation: from experimental seaplanes to modern supercarriers.'
   },
   category: 'Aviation History',
@@ -314,12 +314,12 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: "Naval Aviation History: From Seaplanes to Supercarriers - Enhanced Edition | Charles E. MacKay",
-  description: "A comprehensive, research-backed history of naval aviation from early seaplane experiments through the development of modern aircraft carriers, examining the technologies, procedures, operational doctrines, pilot testimonies, and strategic significance that transformed maritime air power.",
+  title: "Naval Aviation History: From Seaplanes to Supercarriers | Charles E. MacKay",
+  description: "A source-based overview of naval aviation development from early seaplane operations to modern carrier doctrine, systems, and strategic use.",
   keywords: 'naval aviation, aircraft carrier, HMS Argus, maritime aviation, carrier operations, naval history, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: "Naval Aviation History: From Seaplanes to Supercarriers - Enhanced Edition",
-    description: "A comprehensive, research-backed history of naval aviation from early seaplane experiments through the development of modern aircraft carriers.",
+    title: "Naval Aviation History: From Seaplanes to Supercarriers",
+    description: "A source-based overview of naval aviation development from early seaplane operations to modern carrier doctrine and systems.",
     images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
     type: 'article'
   },

@@ -6,15 +6,15 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'luftwaffe-1945-final-year',
-  title: `Luftwaffe 1945: The Final Year - Enhanced Edition`,
-  subtitle: `A comprehensive, research-backed account of the Luftwaffe's final year: advanced jet and piston aircraft operating within a collapsing system constrained by fuel shortages, spares scarcity, pilot training limitations, and base defence challenges.`,
+  title: `Luftwaffe 1945: The Final Year`,
+  subtitle: `A source-based study of late-war Luftwaffe operations, where advanced aircraft were limited by fuel, spares, pilot availability, and base defence pressures.`,
   content: `
     <h2 id="introduction">Introduction: A Jet‑Age Paradox at War's End</h2>
     <p>
-      By early 1945 the Luftwaffe embodied a paradox: world‑leading aeronautical ambition in airframes and engines — the Me 262, Ar 234, Do 335, and Ta 152 — mated to a logistics, fuel, and training base that no longer supported sustained operations. Based on comprehensive research documented in Charles E. MacKay's authoritative works 
+      By early 1945 the Luftwaffe combined advanced aircraft design with a support system that could no longer sustain high sortie rates. Using documented material from Charles E. MacKay's 
       <a href="/books/this-was-the-enemy-volume-two" class="underline font-medium">This Was the Enemy: Aeroplanes Guns Bombs Downfall Volume Two</a> 
       and <a href="/books/enemy-luftwaffe-1945" class="underline font-medium">This Was the Enemy: The Luftwaffe 1945</a>, 
-      this Enhanced Edition examines the final year in a systems frame: aircraft, engines, airfields, fuel, maintenance, training, radar, tactics, and the operational arithmetic that post‑war investigators documented with clarity.
+      this article examines the final year through aircraft, engines, fuel, maintenance, training, radar, and command constraints.
     </p>
     <p>
       The book <a href="/books/this-was-the-enemy-volume-two" class="underline font-medium">This Was the Enemy Volume Two</a> provides detailed analysis of German aviation development and the complete story of Luftwaffe technological advancement and collapse. This comprehensive 288-page work profusely illustrated with many unknown and rare illustrations provides detailed coverage of German jet aircraft development, including the development of the German piston aero-engine and Gas Turbines. This includes Jumo, BMW and Heinkel Hirth gas turbines. This comprehensive documentation ensures that the Luftwaffe's final year operations are properly understood within the broader context of late-war German aviation.
@@ -267,7 +267,7 @@ const post = {
     </p>
 
     <h2 id="further-reading">Further Reading and Related Works</h2>
-    <p>For comprehensive coverage of the Luftwaffe's final year and related topics, explore these authoritative works by Charles E. MacKay:</p>
+    <p>For deeper study, begin with the two core volumes on Luftwaffe development and operations, then continue with the related articles below.</p>
     <ul>
       <li><a href="/books/this-was-the-enemy-volume-two" class="underline font-medium">This Was the Enemy: Aeroplanes Guns Bombs Downfall Volume Two</a> — Comprehensive 288-page work profusely illustrated with many unknown and rare illustrations, providing detailed analysis of German aviation development and the complete story of Luftwaffe technological advancement and collapse, including the development of the German piston aero-engine and Gas Turbines (Jumo, BMW and Heinkel Hirth gas turbines)</li>
       <li><a href="/books/enemy-luftwaffe-1945" class="underline font-medium">This Was the Enemy: The Luftwaffe 1945</a> — Focused coverage of the final year of Luftwaffe operations, documenting how German jet aircraft operated during the collapse of the Luftwaffe system</li>
@@ -284,7 +284,7 @@ const post = {
       <li><a href="/blog/jet-age-aviation-cold-war-development" class="underline">Jet Age Aviation: Cold War Development</a> — Post-war jet evolution</li>
     </ul>
   `,
-  excerpt: `A comprehensive, research-backed account of the Luftwaffe's final year: advanced jet and piston aircraft operating within a collapsing system constrained by fuel shortages, spares scarcity, pilot training limitations, and base defence challenges.`,
+  excerpt: `A source-based study of Luftwaffe operations in 1945, where advanced jet and piston aircraft faced severe limits in fuel, spares, training, and infrastructure.`,
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -295,7 +295,7 @@ const post = {
   readingTime: 28,
   featuredImage: {
     url: '/blog-images/fw190-d9-luftwaffe-1945.jpg',
-    alt: 'Luftwaffe 1945: The Final Year - Enhanced Edition',
+    alt: 'Luftwaffe 1945 final-year operations context',
     caption: 'Luftwaffe 1945: late-war operations under collapsing fuel, spares, and training systems.'
   },
   category: 'Aviation History',
@@ -329,12 +329,12 @@ const post = {
 
 
 export const metadata: Metadata = {
-  title: `Luftwaffe 1945: The Final Year - Enhanced Edition | Charles E. MacKay`,
-  description: `A comprehensive, research-backed account of the Luftwaffe's final year: advanced jet and piston aircraft operating within a collapsing system constrained by fuel shortages, spares scarcity, pilot training limitations, and base defence challenges.`,
+  title: `Luftwaffe 1945: The Final Year | Charles E. MacKay`,
+  description: `A source-based study of Luftwaffe operations in 1945, where advanced jet and piston aircraft faced severe limits in fuel, spares, training, and infrastructure.`,
   keywords: 'luftwaffe, 1945, final, year, aviation history, Me 262, Ar 234, German jet aircraft, Luftwaffe collapse, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: `Luftwaffe 1945: The Final Year - Enhanced Edition`,
-    description: `A comprehensive, research-backed account of the Luftwaffe's final year: advanced jet and piston aircraft operating within a collapsing system.`,
+    title: `Luftwaffe 1945: The Final Year`,
+    description: `A source-based study of late-war Luftwaffe operations under severe systemic constraints.`,
     images: ['/blog-images/fw190-d9-luftwaffe-1945.jpg'],
     type: 'article'
   },
