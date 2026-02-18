@@ -4,26 +4,42 @@ import type { NextRequest } from 'next/server'
 // Add X-Robots-Tag to internal tooling routes to avoid indexing
 const NOINDEX_PATHS = ['/ai-prompt-system', '/checkout', '/order-complete', '/order-tracking', '/search']
 
-// No redirects - each page must be accessible at its own URL
-// Netlify handles SSL/HTTPS automatically, no need for redirects here
+// Netlify handles SSL/HTTPS automatically, no need for HTTPS redirects here.
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Explicitly mark legacy sections as permanently removed (NO redirects).
-  // This helps Google drop old URLs faster than a generic 404.
-  if (
-    pathname === '/book' ||
-    pathname.startsWith('/book/') ||
-    pathname === '/aircraft' ||
-    pathname.startsWith('/aircraft/')
-  ) {
-    return new NextResponse('Gone', {
-      status: 410,
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-        'X-Robots-Tag': 'noindex, nofollow',
-      },
-    })
+  // Legacy URL migrations.
+  // Search Console still shows impressions/clicks for these old routes, so redirect them to the
+  // closest canonical equivalents to avoid wasting traffic on 410s.
+  if (pathname === '/book' || pathname === '/book/') {
+    const url = new URL(request.url)
+    url.pathname = '/books'
+    return NextResponse.redirect(url, 308)
+  }
+
+  if (pathname.startsWith('/book/')) {
+    const slug = pathname.replace(/^\/book\/+/, '').replace(/\/+$/, '')
+    const url = new URL(request.url)
+    url.pathname = slug ? `/books/${slug}` : '/books'
+    return NextResponse.redirect(url, 308)
+  }
+
+  if (pathname === '/aircraft' || pathname === '/aircraft/') {
+    const url = new URL(request.url)
+    url.pathname = '/blog'
+    return NextResponse.redirect(url, 308)
+  }
+
+  if (pathname.startsWith('/aircraft/')) {
+    const slug = pathname.replace(/^\/aircraft\/+/, '').replace(/\/+$/, '')
+    const aircraftRedirects: Record<string, string> = {
+      // Observed in Search Console exports.
+      'bristol-fighter': '/blog/bristol-fighter-f2b-brisfit',
+    }
+
+    const url = new URL(request.url)
+    url.pathname = aircraftRedirects[slug] || '/blog'
+    return NextResponse.redirect(url, 308)
   }
 
   // Explicitly removed legacy page (NO redirects)
