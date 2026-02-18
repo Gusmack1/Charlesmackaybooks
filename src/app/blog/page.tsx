@@ -5,7 +5,7 @@ import BBCPageTemplate from '@/components/BBCPageTemplate'
 import { blogCategories } from '@/data/blogCategories'
 
 export const metadata: Metadata = {
-  title: 'Aviation History Blog | Expert Insights by Charles E. MacKay | Charles E. MacKay Aviation Books',
+  title: 'Aviation History Blog: Scottish Aviation, WWI/WWII and Helicopters',
   description: 'Expert insights into Scottish aviation history, WWI & WWII aircraft, helicopter development, jet age aviation, and military aviation heritage by Charles E. MacKay.',
   alternates: {
     canonical: 'https://charlesmackaybooks.com/blog'

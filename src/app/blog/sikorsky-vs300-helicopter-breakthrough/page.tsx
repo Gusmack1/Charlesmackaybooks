@@ -355,12 +355,13 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: "Sikorsky VS-300: The Helicopter Breakthrough - Enhanced Edition | Charles E. MacKay",
-  description: "A comprehensive, research-backed account of Igor Sikorsky's VS-300: the first practical helicopter that established the single-main-rotor, anti-torque tail rotor configuration, control systems (collective, cyclic, pedals), rotor aerodynamics, engine specifications, test program, and its lasting influence on all subsequent helicopter development.",
+  title: 'Sikorsky VS-300: The First Practical Helicopter',
+  description:
+    "How Igor Sikorsky's VS-300 established the single main rotor + tail rotor configuration, collective/cyclic/pedals controls, and the test program that made helicopters practical.",
   keywords: 'Sikorsky VS-300, Igor Sikorsky, helicopter breakthrough, rotorcraft development, helicopter history, single main rotor, tail rotor, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: "Sikorsky VS-300: The Helicopter Breakthrough - Enhanced Edition",
-    description: "A comprehensive, research-backed account of Igor Sikorsky's VS-300: the first practical helicopter that established modern helicopter configuration.",
+    title: 'Sikorsky VS-300: The First Practical Helicopter',
+    description: 'How the VS-300 established the modern helicopter configuration and controls.',
     images: [post.featuredImage.url],
     type: 'article'
   },
