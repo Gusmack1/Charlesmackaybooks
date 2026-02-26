@@ -6,6 +6,7 @@ export const dynamic = 'force-static';
 const BRAND = 'Charles E. MacKay';
 const CURRENCY = 'GBP';
 const GOOGLE_PRODUCT_CATEGORY = 'Media > Books';
+const DEFAULT_SHIPPING_WEIGHT_GRAMS = 500;
 
 function toAbsoluteUrl(src?: string) {
   if (!src) return '';
@@ -29,6 +30,17 @@ function toMerchantCondition(condition: string) {
   return condition.toLowerCase() === 'new' ? 'new' : 'used';
 }
 
+function resolveShippingWeightGrams(weight?: number) {
+  if (Number.isFinite(weight) && Number(weight) > 0) {
+    return Math.round(Number(weight));
+  }
+  return DEFAULT_SHIPPING_WEIGHT_GRAMS;
+}
+
+function formatShippingWeight(weightGrams: number) {
+  return `${weightGrams} g`;
+}
+
 function normalizeIsbn13(value?: string | null) {
   if (!value) return '';
   const digits = value.replace(/[^0-9]/g, '');
@@ -49,6 +61,8 @@ export async function GET() {
     'gtin',
     'product_type',
     'google_product_category',
+    'shipping_weight',
+    'shipping',
   ].join('\t');
 
   const rows = books.map((book) => {
@@ -62,6 +76,8 @@ export async function GET() {
     const condition = toMerchantCondition(String(book.condition || 'New'));
     const price = formatPrice(Number(book.price));
     const productType = `Books > ${book.category || 'Aviation History'}`;
+    const shippingWeight = formatShippingWeight(resolveShippingWeightGrams(book.weight));
+    const shipping = 'GB:::0.00 GBP';
 
     return [
       sanitizeTsv(id),
@@ -76,6 +92,8 @@ export async function GET() {
       sanitizeTsv(gtin),
       sanitizeTsv(productType),
       sanitizeTsv(GOOGLE_PRODUCT_CATEGORY),
+      sanitizeTsv(shippingWeight),
+      sanitizeTsv(shipping),
     ].join('\t');
   });
 

@@ -6,6 +6,7 @@ export const dynamic = 'force-static';
 const BRAND = 'Charles E. MacKay';
 const STORE_NAME = 'Charles Mackay Books';
 const CURRENCY = 'GBP';
+const DEFAULT_SHIPPING_WEIGHT_GRAMS = 500;
 
 function toAbsoluteUrl(src?: string) {
   if (!src) return '';
@@ -44,6 +45,17 @@ function toMerchantCondition(condition: string) {
   return condition.toLowerCase() === 'new' ? 'new' : 'used';
 }
 
+function resolveShippingWeightGrams(weight?: number) {
+  if (Number.isFinite(weight) && Number(weight) > 0) {
+    return Math.round(Number(weight));
+  }
+  return DEFAULT_SHIPPING_WEIGHT_GRAMS;
+}
+
+function formatShippingWeight(weightGrams: number) {
+  return `${weightGrams} g`;
+}
+
 function normalizeIsbn13(value?: string | null) {
   if (!value) return null;
   const digits = value.replace(/[^0-9]/g, '');
@@ -65,6 +77,7 @@ export async function GET() {
       const availability = toMerchantAvailability(Boolean(book.inStock));
       const condition = toMerchantCondition(String(book.condition || 'New'));
       const price = formatPrice(Number(book.price));
+      const shippingWeight = formatShippingWeight(resolveShippingWeightGrams(book.weight));
 
       return `  <entry>
     <id>${escapeXml(productUrl)}</id>
@@ -78,6 +91,12 @@ export async function GET() {
     <g:availability>${escapeXml(availability)}</g:availability>
     <g:condition>${escapeXml(condition)}</g:condition>
     <g:price>${escapeXml(price)}</g:price>
+    <g:shipping_weight>${escapeXml(shippingWeight)}</g:shipping_weight>
+    <g:shipping>
+      <g:country>GB</g:country>
+      <g:service>Standard</g:service>
+      <g:price>0.00 ${escapeXml(CURRENCY)}</g:price>
+    </g:shipping>
     <g:brand>${escapeXml(BRAND)}</g:brand>
   </entry>`;
     })

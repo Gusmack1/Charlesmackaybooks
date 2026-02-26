@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ClientBody from './ClientBody'
 import { books } from '@/data/books'
+import { SITE_CONSTANTS } from '@/config/constants'
 
 const inter = Inter({
   subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext', 'greek', 'greek-ext', 'vietnamese'],
@@ -141,8 +142,11 @@ const organizationSchema = {
   ],
   address: {
     '@type': 'PostalAddress',
-    addressCountry: 'GB',
-    addressRegion: 'Scotland'
+    streetAddress: SITE_CONSTANTS.BUSINESS_STREET_ADDRESS,
+    addressLocality: SITE_CONSTANTS.BUSINESS_LOCALITY,
+    postalCode: SITE_CONSTANTS.BUSINESS_POSTAL_CODE,
+    addressRegion: 'Scotland',
+    addressCountry: SITE_CONSTANTS.BUSINESS_COUNTRY_CODE,
   }
 }
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
+import { SITE_CONSTANTS } from '@/config/constants'
 
 export const metadata: Metadata = {
   title: 'Support | Charles E. MacKay Aviation Books',
@@ -21,7 +22,15 @@ const supportSchema = {
       email: 'charlese1mackay@hotmail.com',
       areaServed: 'GB',
       availableLanguage: 'en-GB'
-    }
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: SITE_CONSTANTS.BUSINESS_STREET_ADDRESS,
+      addressLocality: SITE_CONSTANTS.BUSINESS_LOCALITY,
+      addressRegion: 'Scotland',
+      postalCode: SITE_CONSTANTS.BUSINESS_POSTAL_CODE,
+      addressCountry: SITE_CONSTANTS.BUSINESS_COUNTRY_CODE,
+    },
   }
 }
 
@@ -43,6 +52,9 @@ export default function SupportPage() {
             <h2 className="content h2 text-white">Contact</h2>
             <p className="text-white/90">
               Email: <a className="underline text-blue-300 hover:text-white" href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>
+            </p>
+            <p className="text-white/90">
+              Address: {SITE_CONSTANTS.BUSINESS_NAME}, {SITE_CONSTANTS.BUSINESS_STREET_ADDRESS}, {SITE_CONSTANTS.BUSINESS_LOCALITY}, {SITE_CONSTANTS.BUSINESS_POSTAL_CODE}, UK
             </p>
             <p className="text-white/90">Typical response time: 24–48 hours (Mon–Fri)</p>
           </div>

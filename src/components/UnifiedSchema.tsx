@@ -1,4 +1,5 @@
 import { getValidGTIN13, getValidISBN, getValidSKU } from '@/utils/isbn'
+import { SITE_CONSTANTS } from '@/config/constants'
 
 type PageType =
   | 'homepage'
@@ -160,15 +161,11 @@ export default function UnifiedSchema({
     sameAs: ['https://www.ebay.co.uk/usr/chaza87', 'https://www.paypal.com/paypalme/charlese1mackay'],
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Glasgow',
+      streetAddress: SITE_CONSTANTS.BUSINESS_STREET_ADDRESS,
+      addressLocality: SITE_CONSTANTS.BUSINESS_LOCALITY,
       addressRegion: 'Scotland',
-      addressCountry: 'GB',
-      postalCode: 'G1 1AA',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '55.8642',
-      longitude: '-4.2518',
+      postalCode: SITE_CONSTANTS.BUSINESS_POSTAL_CODE,
+      addressCountry: SITE_CONSTANTS.BUSINESS_COUNTRY_CODE,
     },
     areaServed: [
       { '@type': 'Country', name: 'United Kingdom' },
@@ -189,26 +186,13 @@ export default function UnifiedSchema({
     email: 'charlese1mackay@hotmail.com',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Glasgow',
+      streetAddress: SITE_CONSTANTS.BUSINESS_STREET_ADDRESS,
+      addressLocality: SITE_CONSTANTS.BUSINESS_LOCALITY,
       addressRegion: 'Scotland',
-      addressCountry: 'GB',
-      postalCode: 'G1 1AA',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '55.8642',
-      longitude: '-4.2518',
+      postalCode: SITE_CONSTANTS.BUSINESS_POSTAL_CODE,
+      addressCountry: SITE_CONSTANTS.BUSINESS_COUNTRY_CODE,
     },
     areaServed: [
-      {
-        '@type': 'GeoCircle',
-        geoMidpoint: {
-          '@type': 'GeoCoordinates',
-          latitude: '55.8642',
-          longitude: '-4.2518',
-        },
-        geoRadius: '50000',
-      },
       { '@type': 'Country', name: 'United Kingdom' },
     ],
     sameAs: [

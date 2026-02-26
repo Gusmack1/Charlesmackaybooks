@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SITE_CONSTANTS } from '@/config/constants'
 
 export default function Footer() {
   return (
@@ -59,7 +60,10 @@ export default function Footer() {
                 </a>
               </div>
               <div><strong>eBay Store:</strong> <span className="text-white">chaza87</span></div>
-              <div className="text-white"><strong>Location:</strong> Glasgow, Scotland</div>
+              <div className="text-white"><strong>Location:</strong> {SITE_CONSTANTS.BUSINESS_LOCALITY}, Scotland</div>
+              <div className="text-white">
+                <strong>Address:</strong> {SITE_CONSTANTS.BUSINESS_STREET_ADDRESS}, {SITE_CONSTANTS.BUSINESS_POSTAL_CODE}
+              </div>
               <div className="text-white"><strong>PayPal:</strong> Direct checkout available</div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
+import { SITE_CONSTANTS } from '@/config/constants'
 export const metadata: Metadata = {
   title: 'Contact Charles E. MacKay - Glasgow Aviation Historian & Author | Scottish Aviation Research',
   description: 'Contact Glasgow-based aviation historian Charles E. MacKay for academic collaboration, Scottish aviation research, bulk book orders, or historical consultancy. Expert in Scottish aerospace heritage.',
@@ -52,8 +53,11 @@ const structuredData = {
     "email": "charlese1mackay@hotmail.com",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Glasgow",
-      "addressCountry": "Scotland"
+      "streetAddress": SITE_CONSTANTS.BUSINESS_STREET_ADDRESS,
+      "addressLocality": SITE_CONSTANTS.BUSINESS_LOCALITY,
+      "addressRegion": "Scotland",
+      "postalCode": SITE_CONSTANTS.BUSINESS_POSTAL_CODE,
+      "addressCountry": SITE_CONSTANTS.BUSINESS_COUNTRY_CODE
     }
   }
 }
@@ -102,8 +106,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">Location</h3>
-                    <p>Glasgow, Scotland</p>
-                    <p className="text-sm opacity-80 mt-1">Available for local meetings and archive research</p>
+                    <p>{SITE_CONSTANTS.BUSINESS_NAME}</p>
+                    <p>{SITE_CONSTANTS.BUSINESS_STREET_ADDRESS}</p>
+                    <p>{SITE_CONSTANTS.BUSINESS_LOCALITY}, {SITE_CONSTANTS.BUSINESS_POSTAL_CODE}, UK</p>
+                    <p className="text-sm opacity-80 mt-1">Mailing address and base for archive research</p>
                   </div>
                 </div>
 

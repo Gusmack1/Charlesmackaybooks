@@ -23,6 +23,12 @@ export const SITE_CONSTANTS = {
   AUTHOR_EMAIL: 'charlese1mackay@hotmail.com',
   AUTHOR_LOCATION: 'Glasgow, Scotland',
   AUTHOR_ALMA_MATER: 'University of Glasgow',
+  BUSINESS_NAME: 'A MacKay Publisher',
+  BUSINESS_STREET_ADDRESS: '87 Auchenlarie Avenue',
+  BUSINESS_LOCALITY: 'Glasgow',
+  BUSINESS_POSTAL_CODE: 'G13 2DX',
+  BUSINESS_COUNTRY_CODE: 'GB',
+  BUSINESS_COUNTRY_NAME: 'United Kingdom',
 
   // SEO defaults
   DEFAULT_KEYWORDS: [
