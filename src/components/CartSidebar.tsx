@@ -37,10 +37,18 @@ export default function CartSidebar() {
   const discount = getBulkDiscount()
   const shipping = getShippingCost()
   const finalTotal = getFinalTotal()
+  const totalItems = getTotalItems()
+  const activeDiscountPercent = getBulkDiscountPercentage()
   const cartBookIds = new Set(items.map((item) => item.book.id))
   const addOnSuggestions = recentlyViewed
     .filter((book) => book.inStock && !cartBookIds.has(book.id))
     .slice(0, 3)
+  const discountNudgeText =
+    totalItems < 2
+      ? 'Add 1 more book to unlock 5% off your entire order.'
+      : totalItems < 3
+        ? 'Add 1 more book to upgrade to 10% off your entire order.'
+        : 'Maximum 10% multi-book discount unlocked.'
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
@@ -153,7 +161,7 @@ export default function CartSidebar() {
               <div className="flex items-center gap-3">
                 <div className="min-w-[92px]">
                   <p className="text-[11px] uppercase tracking-wide text-white/70">
-                    Total ({getTotalItems()})
+                    Total ({totalItems})
                   </p>
                   <p className="text-lg font-bold text-white">£{finalTotal.toFixed(2)}</p>
                 </div>
@@ -171,6 +179,15 @@ export default function CartSidebar() {
               >
                 Checkout with PayPal
               </button>
+
+              <div className="mt-2 rounded border border-blue-700/40 bg-slate-800/80 px-2.5 py-2 text-[11px] text-blue-100">
+                {discountNudgeText}
+                {activeDiscountPercent > 0 && (
+                  <span className="ml-1 text-green-300 font-semibold">
+                    ({activeDiscountPercent}% currently applied)
+                  </span>
+                )}
+              </div>
 
               <details className="mt-3">
                 <summary className="cursor-pointer select-none text-xs text-white/75 hover:text-white">
