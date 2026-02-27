@@ -40,7 +40,7 @@ const post = {
       The delta wing's structural advantages included excellent load distribution and high internal volume for fuel storage. The wing's wide centre-of-gravity envelope allowed for flexible payload configurations, essential for carrying various nuclear weapons and later conventional ordnance. The comprehensive documentation of delta wing development ensures that the Vulcan's aerodynamic achievements are properly understood.
     </p>
     <p>
-      At high altitude, the delta wing's characteristics supported efficient cruise performance, allowing the Vulcan to operate at altitudes above 50,000 feet. This high-altitude capability was essential for penetrating enemy airspace during the early Cold War period, when Soviet air defenses were less capable at extreme altitudes. The Vulcan's ability to operate at these altitudes demonstrated the effectiveness of delta wing design for strategic bombers.
+      At high altitude, the delta wing's characteristics supported efficient cruise performance, allowing the Vulcan to operate at altitudes above 50,000 feet. This high-altitude capability was essential for penetrating enemy airspace during the early Cold War period, when Soviet air defences were less capable at extreme altitudes. The Vulcan's ability to operate at these altitudes demonstrated the effectiveness of delta wing design for strategic bombers.
     </p>
     <p>
       The transition to low-level tactics required different aerodynamic characteristics. At low level, the delta wing demanded careful energy management but proved robust in handling the increased loads and turbulence encountered during low-level flight. The Vulcan's ability to adapt to low-level operations demonstrated the flexibility of delta wing design.
@@ -57,7 +57,7 @@ const post = {
       The comprehensive documentation of engine development ensures that the Vulcan's propulsion evolution is properly understood. Understanding engine development provides valuable insights into how the Vulcan's capabilities evolved throughout its service life. The transition from Avon to Olympus engines represented a significant enhancement in the Vulcan's capabilities.
     </p>
     <p>
-      Systems modernisation included inertial navigation systems that provided accurate position information without relying on external signals. Doppler radar systems enabled accurate ground speed and drift measurement, essential for navigation and bombing accuracy. Electronic countermeasures evolved continuously to counter improving Soviet air defenses.
+      Systems modernisation included inertial navigation systems that provided accurate position information without relying on external signals. Doppler radar systems enabled accurate ground speed and drift measurement, essential for navigation and bombing accuracy. Electronic countermeasures evolved continuously to counter improving Soviet air defences.
     </p>
     <p>
       Terrain-following procedures developed in later years minimized radar exposure during low-level operations. These procedures required sophisticated systems and extensive crew training to enable safe low-level flight. The comprehensive documentation of systems modernization ensures that the Vulcan's evolution is properly understood.
@@ -73,7 +73,7 @@ const post = {
       The book traces the evolution of the British Blue Steel standoff nuclear bomb. Included are the test phases in Australia and the work of Lord Penney. The book follows the development of the HWK rocket motor and its use in British airframes culminating in Blue Steel. Shows how the system was based on German technology, commences with the giant Paris Gun and then starts from Germany in 1919 with gliding and the German flying school in Russia, the inventors Lippisch, von Braun and Dornberger and the HWK rocket, the Me163 and its rocket motor in the Vickers Trans-Sonic missile of 1947.
     </p>
     <p>
-      Blue Steel integration enabled Vulcan aircraft to attack targets from safe distances beyond enemy air defenses, fundamentally changing British nuclear strategy. The missile used inertial guidance and could be programmed to follow complex flight paths to avoid enemy defenses. Blue Steel allowed V-Force aircraft to attack targets from safe distances beyond enemy air defenses.
+      Blue Steel integration enabled Vulcan aircraft to attack targets from safe distances beyond enemy air defences, fundamentally changing British nuclear strategy. The missile used inertial guidance and could be programmed to follow complex flight paths to avoid enemy defences. Blue Steel allowed V-Force aircraft to attack targets from safe distances beyond enemy air defences.
     </p>
     <p>
       The development of the Blue Steel missile was a significant technical achievement, requiring advances in guidance systems, propulsion, and nuclear weapon miniaturization. The comprehensive documentation of Blue Steel development ensures that this achievement is properly recognized. Understanding Blue Steel development provides valuable insights into how Britain adapted its nuclear deterrent strategy to changing threats.
@@ -89,10 +89,10 @@ const post = {
 
     <h2 id="doctrine-evolution">Doctrine Evolution: From High Altitude to Low Level</h2>
     <p>
-      Initially intended to transit and attack at high altitude, the Vulcan's survivability at those profiles diminished as Soviet SAMs matured. The RAF transformed doctrine toward low-level ingress, trading fuel economy for terrain masking. The Black Buck raids in the Falklands era demonstrated long-range conventional reach when supported by extensive air-to-air refuelling.
+      Initially intended to transit and attack at high altitude, the Vulcan's survivability at those profiles diminished as Soviet SAMs matured. The RAF transformed doctrine towards low-level ingress, trading fuel economy for terrain masking. The Black Buck raids in the Falklands era demonstrated long-range conventional reach when supported by extensive air-to-air refuelling.
     </p>
     <p>
-      The transition from high-altitude to low-level tactics represented a fundamental change in V-Force operations. Initially, the Vulcan was designed to operate at high altitudes above 50,000 feet, where it was relatively safe from most air defenses. This high-altitude strategy was effective against early Soviet air defense systems, allowing the Vulcan to penetrate enemy airspace with relative safety.
+      The transition from high-altitude to low-level tactics represented a fundamental change in V-Force operations. Initially, the Vulcan was designed to operate at high altitudes above 50,000 feet, where it was relatively safe from most air defences. This high-altitude strategy was effective against early Soviet air defence systems, allowing the Vulcan to penetrate enemy airspace with relative safety.
     </p>
     <p>
       The introduction of Soviet surface-to-air missiles in the late 1950s forced a fundamental change in V-Force tactics. High-altitude operations became increasingly dangerous as Soviet SAM systems improved. The V-Force was forced to develop low-level penetration tactics, flying at altitudes below 500 feet to avoid detection and interception.
@@ -109,7 +109,7 @@ const post = {
       Electronic countermeasures evolved continuously: receivers, jammers, and chaff/flare tactics layered survivability. Training emphasised crew resource management and navigation precision under fatigue and weather constraints—particularly during long-duration refuelled sorties.
     </p>
     <p>
-      Electronic countermeasures systems evolved continuously to counter improving Soviet air defenses. Receivers detected enemy radar signals, jammers disrupted enemy radar tracking, and chaff/flare tactics provided additional layers of survivability. The comprehensive documentation of ECM evolution ensures that the Vulcan's defensive capabilities are properly understood.
+      Electronic countermeasures systems evolved continuously to counter improving Soviet air defences. Receivers detected enemy radar signals, jammers disrupted enemy radar tracking, and chaff/flare tactics provided additional layers of survivability. The comprehensive documentation of ECM evolution ensures that the Vulcan's defensive capabilities are properly understood.
     </p>
     <p>
       Training emphasized crew resource management and navigation precision under fatigue and weather constraints. Long-duration refuelled sorties required extensive crew coordination and careful resource management. The comprehensive documentation of training procedures ensures that the Vulcan's operational capabilities are properly understood.
@@ -134,7 +134,7 @@ const post = {
       Progressively more powerful Olympus engines significantly improved the Vulcan's performance and payload capabilities. These engine improvements allowed the Vulcan to carry heavier payloads over longer ranges, enhancing its effectiveness as a nuclear deterrent. The comprehensive documentation of engine improvements ensures that the Vulcan's performance evolution is properly understood.
     </p>
     <p>
-      Blue Steel stand-off integration represented a major enhancement in the Vulcan's capabilities. The missile allowed the Vulcan to attack targets from safe distances beyond enemy air defenses, fundamentally changing British nuclear strategy. The comprehensive documentation of Blue Steel integration ensures that this enhancement is properly recognized.
+      Blue Steel stand-off integration represented a major enhancement in the Vulcan's capabilities. The missile allowed the Vulcan to attack targets from safe distances beyond enemy air defences, fundamentally changing British nuclear strategy. The comprehensive documentation of Blue Steel integration ensures that this enhancement is properly recognized.
     </p>
     <p>
       Avionics modernisation improved the Vulcan's navigation, bombing, and defensive capabilities. These improvements enabled the Vulcan to operate effectively in increasingly challenging environments. The comprehensive documentation of avionics modernization ensures that the Vulcan's systems evolution is properly understood.
@@ -147,13 +147,13 @@ const post = {
 
     <h2 id="historical-context">Historical Context: Britain's Nuclear Deterrent Requirement</h2>
     <p>
-      The Vulcan's development occurred during a crucial period in British defense policy, when maintaining an independent nuclear deterrent was seen as essential for national security. The emergence of Soviet nuclear weapons and long-range bombers created an urgent requirement for a British response. Understanding this historical context provides valuable insights into how strategic requirements influenced Vulcan development.
+      The Vulcan's development occurred during a crucial period in British defence policy, when maintaining an independent nuclear deterrent was seen as essential for national security. The emergence of Soviet nuclear weapons and long-range bombers created an urgent requirement for a British response. Understanding this historical context provides valuable insights into how strategic requirements influenced Vulcan development.
     </p>
     <p>
       The British government's decision to develop an independent nuclear deterrent reflected concerns about American reliability and the need for national control over nuclear weapons. The Vulcan's development demonstrated Britain's commitment to maintaining strategic independence while working within NATO's framework. The comprehensive documentation of historical context ensures that the Vulcan's strategic significance is properly understood.
     </p>
     <p>
-      The V-Force program represented a massive investment in Britain's defense capabilities, requiring new aircraft, weapons systems, and infrastructure. The Vulcan's development required coordination between multiple government departments, aircraft manufacturers, and engine builders. The comprehensive documentation of program development ensures that the Vulcan's development process is properly understood.
+      The V-Force programme represented a massive investment in Britain's defence capabilities, requiring new aircraft, weapons systems, and infrastructure. The Vulcan's development required coordination between multiple government departments, aircraft manufacturers, and engine builders. The comprehensive documentation of programme development ensures that the Vulcan's development process is properly understood.
     </p>
     <p>
       For comprehensive coverage of Britain's nuclear deterrent development, see 
@@ -175,13 +175,13 @@ const post = {
 
     <h2 id="pilot-testimonies">Pilot Testimonies and Crew Accounts</h2>
     <p>
-      Vulcan pilots praised the aircraft's exceptional high-altitude performance and stable handling characteristics. The delta wing's predictable behavior at high altitudes enabled confident operations above 50,000 feet, where the aircraft was designed to operate. The comprehensive documentation of pilot accounts ensures that operational experiences are properly preserved.
+      Vulcan pilots praised the aircraft's exceptional high-altitude performance and stable handling characteristics. The delta wing's predictable behaviour at high altitudes enabled confident operations above 50,000 feet, where the aircraft was designed to operate. The comprehensive documentation of pilot accounts ensures that operational experiences are properly preserved.
     </p>
     <p>
       Navigators emphasized the aircraft's sophisticated navigation systems, which enabled accurate long-range navigation without relying on external signals. Inertial navigation systems provided accurate position information throughout long-duration missions, essential for nuclear deterrent operations. The comprehensive documentation of navigator accounts ensures that systems effectiveness is properly understood.
     </p>
     <p>
-      Air Electronics Officers praised the aircraft's electronic countermeasures systems, which evolved continuously to counter improving Soviet air defenses. ECM systems provided multiple layers of defense, including jammers, receivers, and chaff/flare systems. The comprehensive documentation of ECM operations ensures that defensive capabilities are properly preserved.
+      Air Electronics Officers praised the aircraft's electronic countermeasures systems, which evolved continuously to counter improving Soviet air defences. ECM systems provided multiple layers of defence, including jammers, receivers, and chaff/flare systems. The comprehensive documentation of ECM operations ensures that defensive capabilities are properly preserved.
     </p>
     <p>
       Flight Engineers emphasized the aircraft's reliable systems and extensive fuel capacity, which enabled long-duration missions with multiple refuelling operations. The Vulcan's systems design prioritized reliability and maintainability, essential for nuclear deterrent operations. The comprehensive documentation of engineer accounts ensures that systems effectiveness is properly understood.

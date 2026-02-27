@@ -14,7 +14,7 @@ const post = {
     <p>
       HMS Argus (commissioned September 1918) is widely regarded as the first aircraft carrier with a full-length, unobstructed flight deck. Based on documented research in Charles E. MacKay's 
       <a href="/books/aircraft-carrier-argus" class="underline font-medium">Aircraft Carrier - Beardmore's HMS Argus - ex Conte Rosso</a>, 
-      this article examines how Argus helped move naval aviation from experimentation toward repeatable operational practice. Converted from the incomplete Italian liner <em>Conte Rosso</em>, Argus combined hangar integration, lifts, and flush-deck operations in a single ship design.
+      this article examines how Argus helped move naval aviation from experimentation towards repeatable operational practice. Converted from the incomplete Italian liner <em>Conte Rosso</em>, Argus combined hangar integration, lifts, and flush-deck operations in a single ship design.
     </p>
     <p>
       The book <a href="/books/aircraft-carrier-argus" class="underline font-medium">Aircraft Carrier - Beardmore's HMS Argus</a> is a 175-page highly detailed work with 330 illustrations, including restored ship covers, tracing her history and wartime record in the Royal Navy, to her demolition at Inverkeithing in 1947. This comprehensive documentation ensures that HMS Argus's revolutionary design achievements are properly recognized and preserved. The book includes details of commanding officers of the ship and the Fleet Air Arm as well as details of the various operations involving HMS Argus, providing essential context for understanding her design evolution.
@@ -57,7 +57,7 @@ const post = {
       The comprehensive documentation of Beardmore's role in HMS Argus's development demonstrates how Scottish industrial leadership contributed to naval aviation innovation. The Marquis of Montrose's concept reflected Beardmore's innovative approach to aviation challenges, demonstrating how industrial leadership could drive technological innovation. Understanding the Marquis of Montrose's concept provides valuable insights into how innovative design thinking solved fundamental carrier design challenges.
     </p>
     <p>
-      The flush-deck concept required fundamental rethinking of ship design principles, with navigation, exhaust routing, and wind management requiring innovative solutions. The comprehensive documentation of these design challenges ensures that the engineering innovation required for HMS Argus's design is properly understood. Understanding these design challenges provides valuable insights into how carrier design evolved to optimize aircraft operations.
+      The flush-deck concept required fundamental rethinking of ship design principles, with navigation, exhaust routing, and wind management requiring innovative solutions. The comprehensive documentation of these design challenges ensures that the engineering innovation required for HMS Argus's design is properly understood. Understanding these design challenges provides valuable insights into how carrier design evolved to optimise aircraft operations.
 
     <h2 id="conversion">Conversion and Design Philosophy: Structural Engineering Challenges</h2>
     <p>

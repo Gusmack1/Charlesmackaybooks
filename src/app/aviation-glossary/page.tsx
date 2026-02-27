@@ -172,7 +172,7 @@ const glossaryTerms: GlossaryTerm[] = [
   // G Terms
   {
     term: 'Glide Ratio',
-    definition: 'The ratio of horizontal distance traveled to vertical distance lost in unpowered flight, indicating aircraft efficiency.',
+    definition: 'The ratio of horizontal distance travelled to vertical distance lost in unpowered flight, indicating aircraft efficiency.',
     category: 'Flight Operations',
     relatedTerms: ['Gliding', 'Aerodynamic Efficiency', 'Emergency Procedures'],
     historicalContext: 'Fundamental concept in early gliding experiments that led to powered flight development.'

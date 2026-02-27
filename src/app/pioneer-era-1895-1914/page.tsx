@@ -223,7 +223,7 @@ export default function PioneerEraPage() {
                 <h3 className="text-2xl font-bold text-white ml-4">World Distance Record</h3>
               </div>
               <p className="text-white mb-4">
-                Percy Pilcher achieves a world distance record of 250 meters flying his glider "Hawk" at Stanford Hall.
+                Percy Pilcher achieves a world distance record of 250 metres flying his glider "Hawk" at Stanford Hall.
                 This achievement demonstrates the viability of controlled heavier-than-air flight and establishes gliding
                 as a practical approach to aviation development.
               </p>

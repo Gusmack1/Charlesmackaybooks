@@ -153,7 +153,7 @@ const post = {
       Accident reports show the safety culture maturing as weather and terrain lessons were absorbed into procedures. The comprehensive documentation of accident investigations ensures that the complete story of inter-war aviation safety is properly preserved. Understanding accident investigations provides valuable insights into how safety procedures were developed and refined.
     </p>
 
-    <h2 id="rearmament">Toward Rearmament: The Transition to Wartime</h2>
+    <h2 id="rearmament">Towards Rearmament: The Transition to Wartime</h2>
     <p>
       When procurement accelerated, Scotland's blended ecosystem—routes, clubs, and factories—converted quickly to service needs: ground crews familiar with civil inspection moved into RAF standards; pilots transitioned from club machines to trainers; civil aerodromes provided dispersal and training circuits. The inter‑war groundwork reduced conversion friction and time to readiness.
     </p>
@@ -180,7 +180,7 @@ const post = {
       Beyond 602 Squadron, Scotland hosted additional RAF squadrons that maintained military aviation capabilities during the inter-war period. <a href="/books/clydeside-aviation-vol2" class="underline font-medium">Clydeside Aviation Volume Two</a> provides detailed descriptions of 269 Squadron, 32 Squadron and 21 Squadrons at Abbotsinch, documenting how these units contributed to Scotland's military aviation presence. These squadrons operated various aircraft types, maintaining operational readiness while supporting Scotland's aviation infrastructure.
     </p>
     <p>
-      Abbotsinch airfield, which would later become Glasgow Airport, served as a crucial military aviation facility during the inter-war period. The presence of multiple squadrons at Abbotsinch demonstrated Scotland's strategic importance for British air defense and training. These squadrons maintained operational capabilities while supporting Scotland's broader aviation ecosystem, training pilots, maintaining aircraft, and developing operational procedures that would prove essential when war began.
+      Abbotsinch airfield, which would later become Glasgow Airport, served as a crucial military aviation facility during the inter-war period. The presence of multiple squadrons at Abbotsinch demonstrated Scotland's strategic importance for British air defence and training. These squadrons maintained operational capabilities while supporting Scotland's broader aviation ecosystem, training pilots, maintaining aircraft, and developing operational procedures that would prove essential when war began.
     </p>
     <p>
       The comprehensive documentation of these squadrons in Clydeside Aviation Volume Two ensures that the complete story of Scotland's inter-war military aviation presence is properly preserved. Understanding these squadron operations provides valuable insights into how Scotland maintained military aviation capabilities while transitioning to civilian aviation dominance. The relationships between these military units and Scotland's civilian aviation infrastructure created a unique aviation ecosystem that would prove strategically valuable when rearmament accelerated.
@@ -224,7 +224,7 @@ const post = {
       Air ambulance operations in Scotland during the inter-war period connected remote communities with medical facilities, demonstrating aviation's potential for serving social needs. These operations required specialized aircraft modifications, trained medical personnel, and operational procedures for medical emergencies. The comprehensive documentation of air ambulance operations ensures that the complete story of Scotland's medical aviation innovation is properly preserved.
     </p>
     <p>
-      The development of air ambulance services demonstrated how aviation could serve practical needs beyond transportation and defense. These operations established procedures for medical aviation, emergency response, and coordination between aviation and medical services that would prove valuable during wartime. The comprehensive documentation of air ambulance operations ensures that Scotland's contributions to medical aviation are properly recognized.
+      The development of air ambulance services demonstrated how aviation could serve practical needs beyond transportation and defence. These operations established procedures for medical aviation, emergency response, and coordination between aviation and medical services that would prove valuable during wartime. The comprehensive documentation of air ambulance operations ensures that Scotland's contributions to medical aviation are properly recognized.
     </p>
 
     <h2 id="first-british-helicopter">The First British Helicopter: Weir W5 and Raymond Pullin</h2>

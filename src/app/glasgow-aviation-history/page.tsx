@@ -104,7 +104,7 @@ export default function GlasgowAviationHistory() {
             <div className="timeline-marker">1930s</div>
             <div className="timeline-content">
               <h3>Inter-War Aviation Development</h3>
-              <p>Glasgow becomes a center for aviation research and development. Local engineers and designers
+              <p>Glasgow becomes a centre for aviation research and development. Local engineers and designers
               contribute to advances in aircraft technology, materials, and aerodynamics. The city hosts
               aviation exhibitions and demonstrations.</p>
             </div>
@@ -137,7 +137,7 @@ export default function GlasgowAviationHistory() {
             <div className="timeline-marker">1960s-1980s</div>
             <div className="timeline-content">
               <h3>Modern Aerospace Engineering</h3>
-              <p>Glasgow continues to be a center for aerospace engineering and research. Local universities
+              <p>Glasgow continues to be a centre for aerospace engineering and research. Local universities
               and research institutions contribute to aviation technology development, materials science,
               and aircraft design.</p>
             </div>
@@ -173,7 +173,7 @@ export default function GlasgowAviationHistory() {
 
           <div className="card">
             <h3>Aviation Researchers</h3>
-            <p>Glasgow's universities and research institutions have long been centers for aviation research.
+            <p>Glasgow's universities and research institutions have long been centres for aviation research.
             From aerodynamics studies to materials science, local researchers continue to advance aviation technology.</p>
           </div>
 
@@ -213,14 +213,14 @@ export default function GlasgowAviationHistory() {
 
         <p>
           Glasgow's contribution to aviation extends far beyond its industrial output. The city has been
-          a center for aviation innovation, research, and development for over a century. From the early
+          a centre for aviation innovation, research, and development for over a century. From the early
           experimental aircraft of Arrol-Johnston to the sophisticated aerospace engineering of today,
           Glasgow has consistently demonstrated its commitment to advancing aviation technology.
         </p>
 
         <p>
           The legacy of Glasgow aviation is preserved through historical research, museum collections,
-          and educational programs. Organizations like the Glasgow Aviation Society and local museums
+          and educational programmes. Organizations like the Glasgow Aviation Society and local museums
           continue to celebrate and document the city's remarkable aviation heritage.
         </p>
 
@@ -235,7 +235,7 @@ export default function GlasgowAviationHistory() {
 
           <div className="card">
             <h3>Scottish Aviation Historical Society</h3>
-            <p>Comprehensive archive and research center for Scottish aviation history, from pioneers to modern aerospace.</p>
+            <p>Comprehensive archive and research centre for Scottish aviation history, from pioneers to modern aerospace.</p>
             <p className="text-sm text-secondary mt-2">📍 Edinburgh & Glasgow</p>
           </div>
 

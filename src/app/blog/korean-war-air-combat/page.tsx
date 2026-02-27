@@ -36,7 +36,7 @@ const post = {
     <p>The Korean air war also highlighted the link between aircraft performance and support systems: sorties depended on fuel quality, maintenance tempo, and training discipline as much as on airframe design.</p>
 
     <h2 id="context">Historical Context and Order of Battle</h2>
-    <p>After early war phases dominated by piston types and ground attack, the arrival of the MiG‑15 in late 1950 posed a serious threat to high‑altitude UN bomber and reconnaissance operations. The F‑86 was fielded in strength to counter that threat. MiG Alley — roughly the area south of the Yalu River and west toward the Chongchon — became the principal arena for fighter combat. Ground‑controlled intercept (GCI) supported both sides: radar and radio nets vectoring formations toward advantageous positions, often at high altitude where transonic effects were prominent.</p>
+    <p>After early war phases dominated by piston types and ground attack, the arrival of the MiG‑15 in late 1950 posed a serious threat to high‑altitude UN bomber and reconnaissance operations. The F‑86 was fielded in strength to counter that threat. MiG Alley — roughly the area south of the Yalu River and west towards the Chongchon — became the principal arena for fighter combat. Ground‑controlled intercept (GCI) supported both sides: radar and radio nets vectoring formations towards advantageous positions, often at high altitude where transonic effects were prominent.</p>
 
     <h2 id="aircraft">Aircraft and Technical Profiles</h2>
     <h3 id="f86">North American F‑86 Sabre</h3>
@@ -74,7 +74,7 @@ const post = {
     <p>MiG Alley’s terrain and weather shaped tactics. Mountainous backdrops complicated visual acquisition; haze and winter light affected contrast at altitude. Pilots adjusted lookout patterns and relied on disciplined radio brevity to maintain formation integrity. Ground controllers compensated with radar geometry, vectoring flights to intercept lines that maximized time in favorable light.</p>
 
     <h2 id="radar-gci">Radar and Ground Control Integration</h2>
-    <p>GCI was not merely a locator; it was a timing instrument. Effective controllers sequenced merges to favor energy and sun angle, called aborts when geometry soured, and directed re‑attacks that preserved fuel and oxygen margins. Squadrons refined common language so that a few words sufficed to cue complex actions — a human factors achievement as important as any airframe upgrade.</p>
+    <p>GCI was not merely a locator; it was a timing instrument. Effective controllers sequenced merges to favour energy and sun angle, called aborts when geometry soured, and directed re‑attacks that preserved fuel and oxygen margins. Squadrons refined common language so that a few words sufficed to cue complex actions — a human factors achievement as important as any airframe upgrade.</p>
 
     <h2 id="training-pipeline">Training Pipeline and Crew Endurance</h2>
     <p>Conversion to jets at war pace demanded syllabi that emphasized energy management, sighting discipline, and oxygen procedures. Debriefs captured lessons in checklists and briefing cards; instructors graded not only outcomes but adherence to process. Endurance — thermal stress, hypoxia risk, and fatigue — was managed by procedure: hydration, oxygen checks, and cockpit flows that reduced cognitive load when it mattered most.</p>
@@ -132,12 +132,12 @@ const post = {
       The book includes MIG 15 flight test details in the appendix, providing technical data on MiG-15 performance characteristics. This comprehensive documentation ensures that technical comparisons between F-86 Sabre and MiG-15 are properly grounded in verified data. Understanding MiG-15 flight test results provides valuable insights into how aircraft performance influenced combat outcomes.
     </p>
 
-    <h2 id="mdap-nato">Mutual Defense Aid Program and NATO Operations</h2>
+    <h2 id="mdap-nato">Mutual Defence Aid Programme and NATO Operations</h2>
     <p>
-      There is a chapter on Mutual Defense Aid Program (MDAP) the evolution of NATO with the European Union and the Berlin Airlift all fully illustrated. The book describes the finance of the Sabre for MDAP production and the Sabres acquisition by the West German Air Force. Includes details of Skyraiders, Neptunes and Avengers which were supplied through MDAP together with aircraft types ordered and their destination within NATO (Probably for the first time.). This comprehensive coverage demonstrates how MDAP supported Korean War operations and broader NATO defense efforts.
+      There is a chapter on Mutual Defence Aid Programme (MDAP) the evolution of NATO with the European Union and the Berlin Airlift all fully illustrated. The book describes the finance of the Sabre for MDAP production and the Sabres acquisition by the West German Air Force. Includes details of Skyraiders, Neptunes and Avengers which were supplied through MDAP together with aircraft types ordered and their destination within NATO (Probably for the first time.). This comprehensive coverage demonstrates how MDAP supported Korean War operations and broader NATO defence efforts.
     </p>
     <p>
-      The Mutual Defense Aid Program provided essential aircraft and equipment to NATO allies, supporting Korean War operations and broader defense requirements. The comprehensive documentation of MDAP ensures that the complete story of international cooperation during the Korean War is properly preserved. Understanding MDAP provides valuable insights into how NATO allies supported each other during the Cold War.
+      The Mutual Defence Aid Programme provided essential aircraft and equipment to NATO allies, supporting Korean War operations and broader defence requirements. The comprehensive documentation of MDAP ensures that the complete story of international cooperation during the Korean War is properly preserved. Understanding MDAP provides valuable insights into how NATO allies supported each other during the Cold War.
     </p>
     <p>
       Includes the squadron histories of the Canadair Sabre in Royal Air Force Germany and Royal Air Force Fighter Command service. This comprehensive coverage ensures that the complete story of Sabre deployment in RAF service is properly documented. Understanding RAF Sabre squadron histories provides valuable insights into how Sabre operations were organized and conducted.
@@ -177,7 +177,7 @@ const post = {
     <p>Simple verdicts — one type universally superior — collapse under operational detail. Altitude band, block differences, pilot proficiency, and initial position confound single‑number judgements. Data‑grounded comparisons keep context in view: where each aircraft excelled; where tactics compensated; and how training and logistics shifted outcomes over time.</p>
 
     <h2 id="legacy">Legacy and Influence</h2>
-    <p>Korea clarified transonic fighter practice: conserve energy, fight from advantage, fire brief accurate bursts, and let ground control and maintenance extend pilot reach. Experience with Sabre and MiG informed next‑generation designs — higher‑thrust engines, wings with greater Mach margin — and a gradual move toward sensors that shifted detection and solution further from the merge. Procedures outlived hardware: disciplined briefs, checklists, and debriefs remained the backbone of effective air forces.</p>
+    <p>Korea clarified transonic fighter practice: conserve energy, fight from advantage, fire brief accurate bursts, and let ground control and maintenance extend pilot reach. Experience with Sabre and MiG informed next‑generation designs — higher‑thrust engines, wings with greater Mach margin — and a gradual move towards sensors that shifted detection and solution further from the merge. Procedures outlived hardware: disciplined briefs, checklists, and debriefs remained the backbone of effective air forces.</p>
     <p>
       The comprehensive documentation provided in Charles E. MacKay's <a href="/books/sabres-from-north" class="underline font-medium">Sabres from the North: F-86 Sabre in RAF, RCAF, Luftwaffe Service</a> 
       ensures that the complete story of Korean War air combat is preserved for future generations. The book's thorough research, detailed illustrations, and careful documentation create an authoritative resource that does justice to Korean War air combat achievements. This scholarly work ensures that Korean War air combat receives the recognition it deserves in aviation history.

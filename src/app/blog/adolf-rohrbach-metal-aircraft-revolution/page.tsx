@@ -162,7 +162,7 @@ const post = {
       demonstrating the commercial viability of advanced metal aircraft construction for commercial aviation applications.
     </p>
     <p>
-      The Beardmore Inflexible and Inverness, built under license in Britain, demonstrated how Rohrbach's construction techniques could be 
+      The Beardmore Inflexible and Inverness, built under licence in Britain, demonstrated how Rohrbach's construction techniques could be 
       applied internationally. These aircraft incorporated Rohrbach's metal construction principles while adapting to British manufacturing 
       capabilities and operational requirements. The licensing agreements that enabled these aircraft demonstrated how technical knowledge 
       transfer accelerated aircraft development internationally, establishing metal construction as the global standard for advanced aircraft design.
@@ -351,7 +351,7 @@ const post = {
       For insights into British aviation manufacturing and industrial development that incorporated Rohrbach innovations, see 
       <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's 
       Aviation Activities</a>, which provides comprehensive coverage of British aviation manufacturing processes and quality control systems. 
-      The Beardmore Inflexible and Inverness, built under license from Rohrbach, demonstrate how British manufacturers adapted Rohrbach's 
+      The Beardmore Inflexible and Inverness, built under licence from Rohrbach, demonstrate how British manufacturers adapted Rohrbach's 
       construction techniques to British manufacturing capabilities and operational requirements.
     </p>
 
@@ -404,7 +404,7 @@ const post = {
     <p>For comprehensive coverage of metal aircraft construction and related topics, explore these authoritative works by Charles E. MacKay:</p>
     <ul>
       <li><a href="/books/adolf-rohrbach" class="underline font-medium">Adolf Rohrbach's Metal Airplanes: Rohrbach Metall-Flugzeugbau GmbH</a> — The definitive 136-page work with over 200 photographs and drawings, many rare and obscure, including full details of every Rohrbach aeroplane and Rohrbach's design team, with rare drawings of projected aeroplanes</li>
-      <li><a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a> — Includes coverage of British license-built Rohrbach aircraft and British aviation manufacturing</li>
+      <li><a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a> — Includes coverage of British licence-built Rohrbach aircraft and British aviation manufacturing</li>
       <li><a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft in the Great War 1914-1918</a> — Provides context for German aviation engineering traditions that influenced Rohrbach's development</li>
       <li><a href="/blog/adolf-rohrbach-metal-aircraft-construction" class="underline font-medium">Adolf Rohrbach: Revolutionary Metal Aircraft Designer</a> — Detailed coverage of Rohrbach's metal construction techniques</li>
       <li><a href="/blog/aviation-manufacturing-wartime-production" class="underline font-medium">Aviation Manufacturing and Wartime Production</a> — Manufacturing context for metal aircraft construction development</li>
@@ -437,7 +437,7 @@ const post = {
     {
       id: 'german-aircraft-great-war-development',
       title: 'German Aircraft Great War Development',
-      excerpt: 'How German WWI aircraft programs evolved toward metal construction and influenced interwar designs.',
+      excerpt: 'How German WWI aircraft programs evolved towards metal construction and influenced interwar designs.',
       image: '/blog-images/albatros-dva-german-fighter.jpg',
       readingTime: 6,
     },

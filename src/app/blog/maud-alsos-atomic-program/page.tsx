@@ -7,12 +7,12 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'maud-alsos-atomic-program',
-  title: 'From MAUD to Alsos: Documents Behind the Allied Atomic Program - Enhanced Edition',
+  title: 'From MAUD to Alsos: Documents Behind the Allied Atomic Programme - Enhanced Edition',
   subtitle: 'Primary statements, inter-government agreements, and field intelligence that framed the bomb, 1940–1945. A comprehensive analysis of the documentary record from Churchill\'s Tube Alloys to the Alsos Mission assessments of German nuclear capabilities.',
   content: `
     <h2 id="introduction">Introduction: The Documentary Spine of the Atomic Age</h2>
     <p>
-      The Allied atomic program unfolded across laboratories, cabinet rooms, and battlefields in one of history's most remarkable 
+      The Allied atomic programme unfolded across laboratories, cabinet rooms, and battlefields in one of history's most remarkable 
       scientific-military endeavors. Documents—the MAUD reports, Quebec Agreement, Combined Policy Committee papers, and 1945 public 
       statements—trace the political‑scientific arc from theoretical possibility to operational weapon. The Alsos Mission's field 
       intelligence closed the loop, testing assumptions about German progress and securing people, papers, and materials. This 
@@ -20,7 +20,7 @@ const post = {
       participant accounts, comparative analysis with German efforts, and comprehensive examination of the modern legacy of the atomic 
       bomb's development. Based on comprehensive archival research documented in Charles E. MacKay's authoritative work 
       <a href="/books/birth-atomic-bomb" class="underline font-medium">Birth of the Atomic Bomb: Statements from Churchill, Truman, Pash etc. German Alsos</a>, 
-      this analysis presents the complete story of the atomic program's evolution with verified historical accuracy.
+      this analysis presents the complete story of the atomic programme's evolution with verified historical accuracy.
     </p>
 
     <div class="my-8">
@@ -33,7 +33,7 @@ const post = {
       192-page A5 volume includes 66 black and white pictures with three drawings including a three-view drawing of a B-29. The restored 
       documents provide essential context for understanding how the atomic bomb transformed from scientific theory to wartime reality,
       demonstrating the complex interplay between scientific research, political decision-making, and military necessity that characterized
-      the Allied atomic program.
+      the Allied atomic programme.
     </p>
 
     <h2 id="historical-context">Historical Context: Scientific Revolution and Wartime Imperative</h2>
@@ -47,26 +47,26 @@ const post = {
     <p>
       The industrial context of wartime production provided essential infrastructure for atomic weapons development. The massive scale of 
       wartime industrial mobilization—from aircraft production to shipbuilding—demonstrated how industrial capabilities could be 
-      redirected to support new technologies. The atomic program required industrial facilities on an unprecedented scale, with production 
+      redirected to support new technologies. The atomic programme required industrial facilities on an unprecedented scale, with production 
       plants consuming vast amounts of electricity, materials, and manpower. The transition from scientific research to industrial 
       production demonstrated how wartime requirements could accelerate technological development while creating new challenges in 
       coordination and resource allocation.
     </p>
     <p>
-      Wartime intelligence requirements drove much of the atomic program's urgency. The fear that Germany might develop atomic weapons 
+      Wartime intelligence requirements drove much of the atomic programme's urgency. The fear that Germany might develop atomic weapons 
       first created compelling strategic imperatives that accelerated Allied development. Intelligence assessments of German nuclear research 
       capabilities informed Allied decision-making, with documents revealing how assumptions about German progress influenced resource 
       allocation and technical priorities. The Alsos Mission's field intelligence, gathered as Allied forces advanced into Germany, 
-      provided definitive assessments of German nuclear capabilities that shaped post-war understanding of the atomic program's strategic 
+      provided definitive assessments of German nuclear capabilities that shaped post-war understanding of the atomic programme's strategic 
       context.
     </p>
 
     <h2 id="tube-alloys">Tube Alloys and Early Coordination: British Leadership</h2>
     <p>
-      Before the Manhattan Engineer District coalesced in the U.S., Britain's <em>Tube Alloys</em> program aggregated early scientific 
+      Before the Manhattan Engineer District coalesced in the U.S., Britain's <em>Tube Alloys</em> programme aggregated early scientific 
       assessments and policy memoranda. Cabinet notes and inter‑departmental minutes capture the move from theory to feasibility, as 
       officials debated timescales, costs, and security. These files also show the earliest mechanisms for UK–US scientific exchanges—restricted 
-      at first, then broadened as war imperatives deepened cooperation. The Tube Alloys program demonstrated Britain's early leadership in 
+      at first, then broadened as war imperatives deepened cooperation. The Tube Alloys programme demonstrated Britain's early leadership in 
       atomic research, with British scientists making crucial contributions to understanding atomic weapons feasibility.
     </p>
     <p>
@@ -170,7 +170,7 @@ const post = {
       Allied memoranda on raw materials policy led to the creation of mechanisms (including the Combined Development Trust) to secure uranium 
       ores and control their distribution. Correspondence and minutes show efforts to pre‑empt Axis access and to ensure steady supply for 
       pilot plants and full‑scale production. The documentary trail crosses commercial contracts, diplomatic cables, and military logistics 
-      orders—evidence of how resource security underpinned the technical program. Uranium procurement represented a crucial challenge for 
+      orders—evidence of how resource security underpinned the technical programme. Uranium procurement represented a crucial challenge for 
       atomic weapons development, requiring extensive international coordination and resource management.
     </p>
     <p>
@@ -182,16 +182,16 @@ const post = {
     <p>
       The procurement documents reveal the scale of uranium requirements for atomic weapons production. The amounts required for production 
       facilities exceeded previous industrial uses of uranium, creating new challenges in resource acquisition and management. The documents 
-      show how procurement efforts extended beyond immediate wartime needs to secure supplies for postwar atomic programs, demonstrating 
+      show how procurement efforts extended beyond immediate wartime needs to secure supplies for postwar atomic programmes, demonstrating 
       awareness of atomic weapons' long-term strategic significance.
     </p>
 
     <h2 id="alsos">Alsos Mission and Field Intelligence: Assessing German Capabilities</h2>
     <p>
       Alsos units followed advancing fronts to assess—and arrest—the German nuclear effort. Reports and captured papers indicated a smaller, 
-      more fragmented program than feared. Beyond neutralising risks, Alsos built a documentary record that shaped Allied historiography, 
+      more fragmented programme than feared. Beyond neutralising risks, Alsos built a documentary record that shaped Allied historiography, 
       clarifying what Germany did—and did not—achieve by 1945. The Alsos Mission's field intelligence provided definitive assessments of 
-      German nuclear capabilities that shaped post-war understanding of the atomic program's strategic context.
+      German nuclear capabilities that shaped post-war understanding of the atomic programme's strategic context.
     </p>
     <p>
       The book includes comprehensive coverage of the ALSOS Mission, including the inspection of Nazi Germany's capability to produce atomic 
@@ -199,7 +199,7 @@ const post = {
       and details of Joliet Currie, Heisenberg and the German scientists which are rarely published. The official conclusion of this chapter 
       is that the Nazis could never have produced an Atomic Bomb and prepares the reader for the post-war propaganda that the German scientists 
       tried to delay the Bomb's production or that one was in preparation for use. This assessment demonstrates how Alsos Mission intelligence 
-      shaped understanding of German nuclear capabilities while revealing the limitations of the German atomic program.
+      shaped understanding of German nuclear capabilities while revealing the limitations of the German atomic programme.
     </p>
     <p>
       Field teams combined scientists and counter‑intelligence. Their reporting cadence—situation summaries, interrogation notes, document 
@@ -233,7 +233,7 @@ const post = {
     <p>
       The word Silverplate refers to the modifications of the Superfortress to carry the atomic bomb. The book includes comprehensive 
       coverage of Silverplate—the development of the Atom bomb carrying B-29 Superfortress, their fate and deployment. The Silverplate 
-      program represented a crucial technical challenge, requiring extensive modifications to B-29 aircraft to enable atomic bomb delivery. 
+      programme represented a crucial technical challenge, requiring extensive modifications to B-29 aircraft to enable atomic bomb delivery. 
       The modifications included structural changes, electrical systems, and bomb bay modifications that transformed conventional bombers 
       into atomic delivery platforms.
     </p>
@@ -245,7 +245,7 @@ const post = {
     </p>
     <p>
       The Silverplate aircraft represented significant investments in atomic weapons delivery capability. The modifications required extensive 
-      testing and validation to ensure reliable operation under operational conditions. The Silverplate program demonstrated how atomic 
+      testing and validation to ensure reliable operation under operational conditions. The Silverplate programme demonstrated how atomic 
       weapons development extended beyond bomb design to include comprehensive delivery system development, requiring coordination between 
       aircraft manufacturers, weapons designers, and military operators.
     </p>
@@ -335,7 +335,7 @@ const post = {
       and resourced.
     </p>
 
-    <h2 id="comparisons">Comparative Analysis: Allied vs German Atomic Programs</h2>
+    <h2 id="comparisons">Comparative Analysis: Allied vs German Atomic Programmes</h2>
     <p>
       The Alsos Mission's assessments of German atomic capabilities provide essential context for understanding Allied atomic development. 
       The conclusion that the Nazis could never have produced an Atomic Bomb demonstrates how organizational, resource, and strategic factors 
@@ -344,7 +344,7 @@ const post = {
       strategic focus that the German program lacked.
     </p>
     <p>
-      The German atomic program's fragmentation and limited resources contrast sharply with the Allied program's comprehensive coordination 
+      The German atomic programme's fragmentation and limited resources contrast sharply with the Allied programme's comprehensive coordination 
       and extensive resources. The Alsos assessments reveal how German atomic research remained fragmented across multiple organizations, 
       lacking the centralized coordination that characterized Allied efforts. Resource limitations prevented German atomic weapons development, 
       with insufficient uranium, heavy water, and industrial facilities to support atomic weapons production. Strategic misjudgments further 
@@ -356,7 +356,7 @@ const post = {
       The atomic archive continues to inform debates on secrecy, alliance management, and civil–military relations. For students, reading 
       the documents themselves remains indispensable, restoring nuance sometimes lost in later summaries. The documents provide essential 
       primary sources for understanding atomic weapons development, revealing the complex interplay between scientific research, political 
-      decision-making, and military necessity that characterized the atomic program.
+      decision-making, and military necessity that characterized the atomic programme.
     </p>
     <p>
       For researchers, triangulating committee papers with production data and intelligence reporting guards against over‑reliance on any single 
@@ -365,7 +365,7 @@ const post = {
       revealing the human, technical, and strategic factors that shaped the atomic age.
     </p>
     <p>
-      The atomic program's legacy extends beyond immediate wartime results to influence subsequent nuclear policy, arms control, and 
+      The atomic programme's legacy extends beyond immediate wartime results to influence subsequent nuclear policy, arms control, and 
       international relations. The frameworks established during atomic weapons development—for scientific cooperation, resource management, 
       and strategic planning—continue to influence nuclear policy and international relations. The documents reveal how atomic weapons 
       development established patterns for nuclear policy that continue to shape international relations today.
@@ -374,7 +374,7 @@ const post = {
       The comprehensive documentation provided in Charles E. MacKay's <a href="/books/birth-atomic-bomb" class="underline font-medium">Birth 
       of the Atomic Bomb: Statements from Churchill, Truman, Pash etc. German Alsos</a> ensures that these essential documents are preserved 
       for future generations. The book's thorough research, careful documentation, and comprehensive coverage create an authoritative resource 
-      that does justice to the atomic program's historical significance. These documents are of great historical value since neither nation 
+      that does justice to the atomic programme's historical significance. These documents are of great historical value since neither nation 
       repeated their publication on the birth of the bomb, making the book an essential source for understanding atomic weapons development.
     </p>
 
@@ -402,7 +402,7 @@ const post = {
       <li><a href="/blog/aviation-manufacturing-wartime-production" class="underline">Aviation Manufacturing and Wartime Production</a> — Industrial context for atomic development</li>
     </ul>
   `,
-  excerpt: 'MAUD, Quebec Agreement, Alsos, and 1945 statements—the documentary spine of the Allied atomic program. A comprehensive analysis of primary documents from Churchill\'s Tube Alloys to the Alsos Mission assessments.',
+  excerpt: 'MAUD, Quebec Agreement, Alsos, and 1945 statements—the documentary spine of the Allied atomic programme. A comprehensive analysis of primary documents from Churchill\'s Tube Alloys to the Alsos Mission assessments.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation and defence historian focused on primary sources and technical policy.',
@@ -413,7 +413,7 @@ const post = {
   readingTime: 40,
   featuredImage: {
     url: '/blog-images/maud-to-alsos-documents-schematic.svg',
-    alt: 'MAUD, Alsos, and the Atomic Program - Wartime Scientific Research',
+    alt: 'MAUD, Alsos, and the Atomic Programme - Wartime Scientific Research',
     caption: 'Original illustration (schematic): MAUD to Alsos documentary record motif (diagrammatic).'
   },
   category: 'Military History',
@@ -437,7 +437,7 @@ export const metadata: Metadata = {
   description: 'A comprehensive primary‑source analysis from MAUD and the Quebec Agreement to the Alsos Mission and August 1945 statements, with deeper historical context and technical details.',
   keywords: 'MAUD Committee, Quebec Agreement, Alsos Mission, atomic bomb documents, primary sources, charles mackay books, Charles E. MacKay, Silverplate, Chickenpox, Peppermint',
   openGraph: {
-    title: 'From MAUD to Alsos: The Documents Behind the Allied Atomic Program - Enhanced Edition',
+    title: 'From MAUD to Alsos: The Documents Behind the Allied Atomic Programme - Enhanced Edition',
     description: 'How memoranda, agreements, and field intelligence framed the bomb, 1940–45. Comprehensive analysis with historical context and technical details.',
     images: ['/blog-images/maud-to-alsos-documents-schematic.svg'],
     type: 'article'

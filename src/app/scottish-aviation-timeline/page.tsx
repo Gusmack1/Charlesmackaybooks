@@ -37,7 +37,7 @@ const timelineEvents: TimelineEvent[] = [
     relatedBlogs: ['percy-pilcher-scotland-aviation-pioneer'],
     keyFigures: ['Percy Pilcher', 'Otto Lilienthal'],
     aircraftTypes: ['Gliders', 'Hang Gliders'],
-    technicalDetails: 'First controlled glider flights in Scotland, achieving flights of over 100 meters'
+    technicalDetails: 'First controlled glider flights in Scotland, achieving flights of over 100 metres'
   },
   {
     year: 1909,
@@ -62,7 +62,7 @@ const timelineEvents: TimelineEvent[] = [
     relatedBlogs: ['percy-pilcher-scotland-aviation-pioneer'],
     keyFigures: ['Percy Pilcher', 'Ella Pilcher'],
     aircraftTypes: ['Gliders'],
-    technicalDetails: 'Wingspan of 23 feet, weight 50 pounds, capable of flights over 250 meters'
+    technicalDetails: 'Wingspan of 23 feet, weight 50 pounds, capable of flights over 250 metres'
   },
   {
     year: 1913,

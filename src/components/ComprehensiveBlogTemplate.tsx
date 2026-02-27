@@ -265,7 +265,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
   // Replace generic placeholder caption text with approved captions (in order)
   const replaceGenericCaptions = (html: string): string => {
-    const generic = 'Where period photography is unavailable, we use curated placeholders and continue to source verified, license-compliant images for archival completeness.';
+    const generic = 'Where period photography is unavailable, we use curated placeholders and continue to source verified, licence-compliant images for archival completeness.';
     if (approvedInline.length === 0) return html;
     let useIndex = 0;
     return html.replace(new RegExp(generic.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), () => {

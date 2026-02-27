@@ -33,10 +33,10 @@ const post = {
       The F-86 Sabre's development occurred during the early Cold War period, when the United States needed a fighter capable of countering Soviet jet aircraft. The emergence of the MiG-15 in Korean War skies created an urgent requirement for a capable jet fighter. The Sabre's development demonstrated how rapid technological advancement could respond to operational requirements.
     </p>
     <p>
-      The book describes the evolution and deployment of the Canadair Sabre in Royal Air Force, Royal Canadian Air Force and in NATO service-includes the West German Air Force. This comprehensive coverage demonstrates how the Sabre became a cornerstone of NATO air defense. Understanding this historical context provides valuable insights into how the Sabre became operational.
+      The book describes the evolution and deployment of the Canadair Sabre in Royal Air Force, Royal Canadian Air Force and in NATO service-includes the West German Air Force. This comprehensive coverage demonstrates how the Sabre became a cornerstone of NATO air defence. Understanding this historical context provides valuable insights into how the Sabre became operational.
     </p>
     <p>
-      The Mutual Defense Aid Program (MDAP) facilitated Sabre deployment across NATO, demonstrating how international cooperation supported air defense requirements. The comprehensive documentation of MDAP deployment ensures that Sabre's international role is properly understood.
+      The Mutual Defence Aid Programme (MDAP) facilitated Sabre deployment across NATO, demonstrating how international cooperation supported air defence requirements. The comprehensive documentation of MDAP deployment ensures that Sabre's international role is properly understood.
     </p>
 
     <h2 id="industrial-context">Industrial Context and Design Lineage</h2>
@@ -148,7 +148,7 @@ const post = {
       The book includes squadron histories of the Canadair Sabre in Royal Air Force Germany and Royal Air Force Fighter Command service. RAF Sabre Mk.4 equipped numerous Fighter Command squadrons in the early 1950s, bridging the gap to later British types. The comprehensive documentation of RAF operations ensures that Sabre's British service is properly understood.
     </p>
     <p>
-      RAF Sabre operations demonstrated how American-designed aircraft could serve effectively in British air defense. The Sabre Mk.4's Canadair-built Orenda power and swept-wing agility bridged the gap to later British types like the Lightning. The comprehensive documentation of RAF operations ensures that Sabre's British role is properly preserved.
+      RAF Sabre operations demonstrated how American-designed aircraft could serve effectively in British air defence. The Sabre Mk.4's Canadair-built Orenda power and swept-wing agility bridged the gap to later British types like the Lightning. The comprehensive documentation of RAF operations ensures that Sabre's British role is properly preserved.
     </p>
     <p>
       The book includes details of the first Sabre deployment with the carrier HMCS Magnificent and the deployment to Renfrew airport in 1951-52. These deployments demonstrated how Sabre operations extended beyond land-based operations. The comprehensive documentation of these deployments ensures that Sabre versatility is properly recognized.
@@ -167,7 +167,7 @@ const post = {
       The air sea work of the SB-17G, Handley Page Hastings and the Grumman Albatross-the "Duck Buts" are included with illustrations and their control from Prestwick. This was for "Leapfrog" and "Bechers Brook." The comprehensive documentation of these operations ensures that Sabre delivery methods are properly understood.
     </p>
     <p>
-      RCAF Sabre operations across Europe demonstrated how Canadian-built aircraft contributed to NATO air defense. The comprehensive documentation of RCAF operations ensures that Sabre's Canadian role is properly preserved.
+      RCAF Sabre operations across Europe demonstrated how Canadian-built aircraft contributed to NATO air defence. The comprehensive documentation of RCAF operations ensures that Sabre's Canadian role is properly preserved.
     </p>
 
     <h2 id="scottish-aviation">Scottish Aviation and Sabre Refurbishment</h2>
@@ -203,7 +203,7 @@ const post = {
       The book includes details of the Burns-Templar agreement which paved the way for intelligence co-operation authorised at the highest political level between the United States and the United Kingdom. This comprehensive coverage demonstrates how Sabre operations supported broader intelligence cooperation. The comprehensive documentation of intelligence cooperation ensures that Sabre's role in Cold War operations is properly understood.
     </p>
     <p>
-      The West German Air Force operated Sabres as part of NATO air defense, demonstrating how Sabre operations supported German rearmament. The comprehensive documentation of German Sabre operations ensures that NATO integration is properly preserved.
+      The West German Air Force operated Sabres as part of NATO air defence, demonstrating how Sabre operations supported German rearmament. The comprehensive documentation of German Sabre operations ensures that NATO integration is properly preserved.
     </p>
 
     <h2 id="logistics">Logistics, Maintenance, and Field Support</h2>

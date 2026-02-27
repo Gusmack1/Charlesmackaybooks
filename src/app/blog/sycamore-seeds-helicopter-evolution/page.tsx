@@ -30,7 +30,7 @@ const post = {
     </p>
 
     <h2 id="design-origins">Design Origins and Development: From Experimental to Operational</h2>
-    <p>Work toward what became the Sycamore began during the final years of the war and accelerated in its aftermath, as the Bristol Aeroplane Company organized a rotorcraft effort under Raoul Hafner. The team studied contemporary practice—including early Sikorsky types that had proven basic helicopter utility in wartime—and set out to build a machine suitable for routine British service conditions. That meant more than lift and hover. It meant a rotor system that remained stable across weather and workload, systems that a squadron could diagnose and repair, and a structure that would tolerate the demands of everyday operations.</p>
+    <p>Work towards what became the Sycamore began during the final years of the war and accelerated in its aftermath, as the Bristol Aeroplane Company organized a rotorcraft effort under Raoul Hafner. The team studied contemporary practice—including early Sikorsky types that had proven basic helicopter utility in wartime—and set out to build a machine suitable for routine British service conditions. That meant more than lift and hover. It meant a rotor system that remained stable across weather and workload, systems that a squadron could diagnose and repair, and a structure that would tolerate the demands of everyday operations.</p>
     <p>
       The book covers the history of early British helicopter development, including the Denny Mumford helicopters up to 1914, providing foundational understanding of British rotorcraft experimentation. The history of the Autogiro is covered comprehensively, including the role of Juan de la Cierva to his death in an air crash. This coverage demonstrates how autogyro development established principles that would guide helicopter design, with Cierva's innovations in rotor articulation providing crucial insights for subsequent helicopter development.
     </p>
@@ -44,7 +44,7 @@ const post = {
     </p>
 
     <h3 id="first-flights">First Flights and Early Proving</h3>
-    <p>Early flight‑test work focused on fundamentals: hover stability in varying winds, translational lift behavior, pedal authority during side‑step manoeuvres, and autorotation characteristics with typical service weights. The rotor head’s articulation and damping were tuned to reduce ground resonance and to keep cockpit vibration within acceptable limits. These results guided refinements to blade construction and control linkage geometry before fleet introduction.</p>
+    <p>Early flight‑test work focused on fundamentals: hover stability in varying winds, translational lift behaviour, pedal authority during side‑step manoeuvres, and autorotation characteristics with typical service weights. The rotor head’s articulation and damping were tuned to reduce ground resonance and to keep cockpit vibration within acceptable limits. These results guided refinements to blade construction and control linkage geometry before fleet introduction.</p>
 
     <div class="my-8">
       <img src="/blog-images/bristol-sycamore-rotor-head-controls-schematic.svg" alt="Original schematic illustration of Bristol Sycamore rotor head and controls (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
@@ -135,7 +135,7 @@ const post = {
     </p>
 
     <h2 id="manufacturing">Manufacturing and Quality Assurance</h2>
-    <p>Even in modest production runs, quality is a manufacturing habit: jigs that preserve alignment, inspection notes that travel with each airframe, calibrated tools checked on schedule, and surface finishes maintained to prevent premature corrosion and vibration. The Sycamore program adopted these habits from fixed‑wing practice and adapted them to the unique demands of dynamic rotor systems. By doing so, it protected handling and reliability—the very attributes that defined the type in service.</p>
+    <p>Even in modest production runs, quality is a manufacturing habit: jigs that preserve alignment, inspection notes that travel with each airframe, calibrated tools checked on schedule, and surface finishes maintained to prevent premature corrosion and vibration. The Sycamore programme adopted these habits from fixed‑wing practice and adapted them to the unique demands of dynamic rotor systems. By doing so, it protected handling and reliability—the very attributes that defined the type in service.</p>
     <p>
       The book's comprehensive documentation of manufacturing processes and quality assurance demonstrates how British aviation industry standards were applied to helicopter production. The emphasis on precision manufacturing, documented inspection procedures, and quality control systems ensured that Sycamore helicopters met the reliability standards necessary for operational service. This manufacturing discipline contributed significantly to the aircraft's operational success and established standards for subsequent British helicopter production.
     </p>

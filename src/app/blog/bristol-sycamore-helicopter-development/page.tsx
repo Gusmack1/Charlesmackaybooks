@@ -112,9 +112,9 @@ const post = {
     <p>
       Systems integration required careful coordination between electrical, hydraulic, and mechanical systems. Systems design prioritized reliability and maintainability over complexity. The comprehensive documentation of systems integration ensures that helicopter systems are properly understood. Understanding systems integration provides valuable insights into how helicopter capabilities were achieved.
 
-    <h2 id="test-program">Test Program and Development: From Prototype to Production</h2>
+    <h2 id="test-program">Test Programme and Development: From Prototype to Production</h2>
     <p>
-      Early flight-test work focused on fundamentals: hover stability in varying winds, translational lift behavior, pedal authority during side-step manoeuvres, and autorotation characteristics with typical service weights. The rotor head's articulation and damping were tuned to reduce ground resonance and to keep cockpit vibration within acceptable limits. These results guided refinements to blade construction and control linkage geometry before fleet introduction.
+      Early flight-test work focused on fundamentals: hover stability in varying winds, translational lift behaviour, pedal authority during side-step manoeuvres, and autorotation characteristics with typical service weights. The rotor head's articulation and damping were tuned to reduce ground resonance and to keep cockpit vibration within acceptable limits. These results guided refinements to blade construction and control linkage geometry before fleet introduction.
     </p>
     <p>
       Prototype testing validated Sycamore design choices and identified areas requiring refinement. Systematic testing procedures enabled comprehensive evaluation of helicopter capabilities while maintaining safety. The comprehensive documentation of prototype testing ensures that development methodology is properly understood. Understanding prototype testing provides valuable insights into how helicopter capabilities were validated.

@@ -40,7 +40,7 @@ const post = {
       Allied bombing campaigns systematically targeted Germany's industrial infrastructure, creating shortages that limited Luftwaffe operations. Refineries and synthetic fuel plants were primary targets, as fuel shortages proved more decisive than aircraft losses. The comprehensive documentation of Allied bombing effects ensures that strategic context is properly understood.
     </p>
     <p>
-      Long-range escorts pushed deep into Germany, enabling sustained bombing campaigns that degraded infrastructure. Daylight raids pressed with mass and radar control, overwhelming German defenses. Night operations compounded pressure, maintaining constant operational tempo. The comprehensive documentation of Allied operations ensures that strategic pressure is properly understood.
+      Long-range escorts pushed deep into Germany, enabling sustained bombing campaigns that degraded infrastructure. Daylight raids pressed with mass and radar control, overwhelming German defences. Night operations compounded pressure, maintaining constant operational tempo. The comprehensive documentation of Allied operations ensures that strategic pressure is properly understood.
     </p>
     <p>
       The Luftwaffe's mission set narrowed to defence and reconnaissance under constant attrition. As resources dwindled, offensive operations became impossible, forcing focus on defensive missions. The comprehensive documentation of mission evolution ensures that operational constraints are properly understood.

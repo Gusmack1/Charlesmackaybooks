@@ -153,7 +153,7 @@ const faqItems: FAQItem[] = [
   // General Questions
   {
     question: 'How many books has Charles E. MacKay written?',
-    answer: 'Charles E. MacKay has published 19 books on aviation history, covering topics from Scottish aviation heritage to international military aviation development. His publications span from detailed company histories like Beardmore Aviation to comprehensive surveys of aircraft development during major conflicts. Each book represents years of primary source research and contributes unique insights to aviation historical knowledge. The complete catalog includes works on Scottish aviation, helicopter development, WWI and WWII aircraft, and aviation biography.',
+    answer: 'Charles E. MacKay has published 19 books on aviation history, covering topics from Scottish aviation heritage to international military aviation development. His publications span from detailed company histories like Beardmore Aviation to comprehensive surveys of aircraft development during major conflicts. Each book represents years of primary source research and contributes unique insights to aviation historical knowledge. The complete catalogue includes works on Scottish aviation, helicopter development, WWI and WWII aircraft, and aviation biography.',
     category: 'Book Information',
     relatedTopics: ['Publication List', 'Aviation History', 'Research Output'],
     relatedBooks: ['Complete Charles E. MacKay Catalog']

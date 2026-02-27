@@ -212,7 +212,7 @@ const post = {
       The procedures developed for early military helicopter operations continue to influence modern helicopter operations worldwide. Deck landing techniques, aircraft handling procedures, and operational doctrines all trace their origins to early military helicopter operations. The comprehensive documentation of these procedures ensures that the complete story of helicopter operational development is properly preserved.
     </p>
     <p>
-      As we look toward the future of military aviation, the lessons learned from military helicopter operations remain fundamentally important. The principles established through early helicopter operations continue to guide modern helicopter design and operations. Military helicopter operations have transformed warfare and will continue to influence military capabilities for decades to come.
+      As we look towards the future of military aviation, the lessons learned from military helicopter operations remain fundamentally important. The principles established through early helicopter operations continue to guide modern helicopter design and operations. Military helicopter operations have transformed warfare and will continue to influence military capabilities for decades to come.
     </p>
 
     <h2 id="further-reading">Further Reading and Related Works</h2>

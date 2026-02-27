@@ -78,7 +78,7 @@ const post = {
 
     <h2 id="operations">Operations: Reconnaissance First, Bombing Second</h2>
     <p>
-      Operational history skews toward reconnaissance sorties over the Western Front and the Ardennes, where the Ar 234's speed rendered interceptions rare. Bombing missions used externally mounted loads, including 500 kg weapons and occasionally the BT series. Without a bombsight optimised for high-speed jet profiles in the early versions, accuracy depended upon straight-and-level passes and pilot judgement. Later, the Peréz-style bombsight and autopilot coupling improved precision, but the aircraft remained a better eye than a fist.
+      Operational history skews towards reconnaissance sorties over the Western Front and the Ardennes, where the Ar 234's speed rendered interceptions rare. Bombing missions used externally mounted loads, including 500 kg weapons and occasionally the BT series. Without a bombsight optimised for high-speed jet profiles in the early versions, accuracy depended upon straight-and-level passes and pilot judgement. Later, the Peréz-style bombsight and autopilot coupling improved precision, but the aircraft remained a better eye than a fist.
     </p>
     <p>
       The Ar 234's speed advantage made it difficult for Allied piston-engine fighters to intercept. Operational reports emphasized how the aircraft's speed and altitude capabilities enabled reconnaissance missions that would have been impossible with piston-engine aircraft. The comprehensive documentation of operational advantages ensures that the Ar 234's effectiveness is properly recognized.
@@ -117,7 +117,7 @@ const post = {
       Camera systems were optimized for high-speed reconnaissance operations, with installations designed for rapid swap and secure mounting. The comprehensive documentation of camera systems ensures that the Ar 234's reconnaissance capabilities are properly recognized. Understanding camera systems provides valuable insights into how reconnaissance operations were conducted.
     </p>
 
-    <h2 id="countermeasures">Countermeasures and Survivability: Speed as Defense</h2>
+    <h2 id="countermeasures">Countermeasures and Survivability: Speed as Defence</h2>
     <p>
       Survivability derived primarily from speed and altitude. Defensive guns were minimal or absent on many reconnaissance fits, reflecting the aircraft's doctrine: avoid interception altogether. Where opposition was encountered, Allied fighters struggled to achieve positional advantage in time. Anti-aircraft fire remained a risk on ingress/egress and over targets, mitigated by profile planning and speed.
     </p>

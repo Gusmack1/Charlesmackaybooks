@@ -11,9 +11,9 @@ const post = {
   subtitle: `The remarkable story of Lucy Lady Houston, the wealthy patron who single-handedly funded Britain's 1931 Schneider Trophy victory.`,
   content: `
     <h2 id="introduction">Introduction: The Woman Who Saved the Schneider Trophy</h2>
-    <p>Lady Lucy Houston stands as one of aviation history's most remarkable patrons - a wealthy British widow whose personal intervention saved Britain's participation in the 1931 Schneider Trophy race and, in doing so, preserved the development program that would lead directly to the Supermarine Spitfire. When the government withdrew funding, Houston stepped forward with £100,000 to ensure British aviation supremacy. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
+    <p>Lady Lucy Houston stands as one of aviation history's most remarkable patrons - a wealthy British widow whose personal intervention saved Britain's participation in the 1931 Schneider Trophy race and, in doing so, preserved the development programme that would lead directly to the Supermarine Spitfire. When the government withdrew funding, Houston stepped forward with £100,000 to ensure British aviation supremacy. Based on comprehensive research documented in Charles E. MacKay's authoritative work 
       <a href="/books/mother-of-the-few" class="underline font-medium">Mother of the Few: The Aviation Interests of Lucy Lady Houston</a>, 
-      this analysis presents the complete story of how private patronage saved Britain's Schneider Trophy program and influenced aviation history.
+      this analysis presents the complete story of how private patronage saved Britain's Schneider Trophy programme and influenced aviation history.
     </p>
     <p>
       The book <a href="/books/mother-of-the-few" class="underline font-medium">Mother of the Few</a> is in three sections profusely illustrated with rare pictures and drawings, not a download of internet articles but carefully researched. The first section, Part One, deals with the life and loves of Lucy Houston, the second part examines the Schneider Trophy and the last part the Flight over Everest. The last two sections are supported by an appendix and supplement. This comprehensive 287-page A5 work with 78,000 words provides detailed coverage of Lucy Houston's aviation interests and their profound impact on British aviation development.
@@ -22,7 +22,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/lucy-lady-houston-portrait-schematic.svg" alt="Original schematic illustration: Lucy Lady Houston portrait motif (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm  mt-2 text-center italic">Lady Lucy Houston, the patriotic benefactor whose financial support saved Britain's Schneider Trophy program.</p>
+      <p class="text-sm  mt-2 text-center italic">Lady Lucy Houston, the patriotic benefactor whose financial support saved Britain's Schneider Trophy programme.</p>
     </div>
 
     <p>The story of Lady Houston and the Schneider Trophy illustrates how individual determination and vision can change the course of aviation history. Her decision to fund Britain's 1931 entry ultimately contributed to saving the nation during the Battle of Britain, as the Spitfire's development directly benefited from Schneider Trophy technology.</p>
@@ -32,7 +32,7 @@ const post = {
       Part two explores the Schneider Trophy with new information on Brinton and the fates of the aircrew and their seaplanes. 
       It shows the development of the "R" engine in relation to Stainforth the air race and how it was developed from the 
       Rolls-Royce Buzzard and became the Rolls-Royce Merlin. The fuels were a winner with the engine and they too are described. 
-      This comprehensive coverage demonstrates how the Schneider Trophy program drove engine development that would prove crucial 
+      This comprehensive coverage demonstrates how the Schneider Trophy programme drove engine development that would prove crucial 
       for wartime aircraft.
     </p>
     <p>
@@ -44,7 +44,7 @@ const post = {
     </p>
     <p>
       The development of the "R" engine from the Rolls-Royce Buzzard to become the Rolls-Royce Merlin represents one of aviation's 
-      most significant engine development stories. The Schneider Trophy program provided the testing ground for engine technologies 
+      most significant engine development stories. The Schneider Trophy programme provided the testing ground for engine technologies 
       that would prove essential for wartime aircraft. The comprehensive documentation of this engine evolution ensures that the 
       technical foundations of British aviation power are properly understood.
     </p>
@@ -68,14 +68,14 @@ const post = {
       and preserved.
     </p>
     <p>
-      Lucy Houston's decision to fund the Schneider Trophy program reflected her patriotic commitment and understanding of aviation's 
+      Lucy Houston's decision to fund the Schneider Trophy programme reflected her patriotic commitment and understanding of aviation's 
       strategic importance. Her £100,000 donation ensured that Britain could compete in the 1931 Schneider Trophy race, preserving 
       British aviation prestige and enabling continued technical development. This comprehensive documentation of her patronage ensures 
       that her crucial contribution to British aviation is properly recognized.
     </p>
     <p>
       The book's biographical coverage provides insights into Lucy Houston's motivations and interests, demonstrating how personal 
-      commitment to aviation could influence national aviation development. Her support for the Schneider Trophy program and the 
+      commitment to aviation could influence national aviation development. Her support for the Schneider Trophy programme and the 
       Mount Everest flight demonstrated her commitment to British aviation achievement and technological advancement.
     </p>
 
@@ -238,7 +238,7 @@ const post = {
 
     <h2 id="conclusion">Conclusion: Enduring Significance</h2>
     <p>
-      Lady Lucy Houston's intervention in saving Britain's Schneider Trophy program represents one of aviation history's most significant 
+      Lady Lucy Houston's intervention in saving Britain's Schneider Trophy programme represents one of aviation history's most significant 
       examples of private patronage supporting national aviation development. Her £100,000 donation ensured that Britain could compete in 
       the 1931 Schneider Trophy race, preserving British aviation prestige and enabling continued technical development that would prove 
       crucial for wartime aircraft.

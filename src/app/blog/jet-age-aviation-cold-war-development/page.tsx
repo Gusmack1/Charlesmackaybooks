@@ -102,7 +102,7 @@ const post = {
       IR missiles (Firestreak → Red Top; AIM‑9 Sidewinder) shifted the weapons mix from guns to guided weapons. Infrared missiles provided greater engagement ranges and kill probabilities than guns, fundamentally changing air combat tactics. The comprehensive documentation of missile development ensures that this transformation is properly understood.
     </p>
     <p>
-      NATO doctrine knitted ground control, datalinks, and onboard sensors into a coherent kill chain. Ground-based radar provided early warning and initial guidance, while datalinks enabled rapid target handoffs. Onboard sensors completed the engagement, creating an integrated air defense system. The comprehensive documentation of NATO doctrine ensures that this integration is properly understood.
+      NATO doctrine knitted ground control, datalinks, and onboard sensors into a coherent kill chain. Ground-based radar provided early warning and initial guidance, while datalinks enabled rapid target handoffs. Onboard sensors completed the engagement, creating an integrated air defence system. The comprehensive documentation of NATO doctrine ensures that this integration is properly understood.
     </p>
 
     <h2 id="doctrine">Doctrine: Point Defence vs Continental Shield</h2>
@@ -113,13 +113,13 @@ const post = {
       Britain's geography favoured point-defence interceptors with rapid climb and limited endurance. The English Electric Lightning exemplified this approach, optimized for Quick Reaction Alert operations with exceptional climb performance but limited range. This doctrine matched Britain's compact geography and the nature of the Soviet bomber threat. The comprehensive documentation of British air defence doctrine ensures that this approach is properly understood.
     </p>
     <p>
-      The U.S. and Canada built continental shields with heavier radars and longer legs. The F-102 Delta Dagger and F-106 Delta Dart interceptors, combined with BOMARC surface-to-air missiles, created a layered defense system optimized for continental geography. The comprehensive documentation of continental defense systems ensures that this approach is properly understood.
+      The U.S. and Canada built continental shields with heavier radars and longer legs. The F-102 Delta Dagger and F-106 Delta Dart interceptors, combined with BOMARC surface-to-air missiles, created a layered defence system optimized for continental geography. The comprehensive documentation of continental defence systems ensures that this approach is properly understood.
     </p>
     <p>
       France's Mirage III showed that a multirole supersonic fighter could satisfy export and national needs simultaneously. The Mirage III combined interception, ground attack, and reconnaissance capabilities in a single airframe, demonstrating design flexibility. The comprehensive documentation of Mirage III development ensures that this achievement is properly recognized.
     </p>
     <p>
-      Each solution optimized for threat, terrain, and budget constraints. Different nations developed different approaches based on their specific requirements and resources. The comprehensive documentation of these different approaches ensures that the complete story of Cold War air defense is properly preserved.
+      Each solution optimized for threat, terrain, and budget constraints. Different nations developed different approaches based on their specific requirements and resources. The comprehensive documentation of these different approaches ensures that the complete story of Cold War air defence is properly preserved.
     </p>
 
     <div class="my-8">
@@ -214,13 +214,13 @@ const post = {
       The Cold War strategic environment drove rapid jet aircraft development, with nuclear deterrence requirements creating urgent needs for high-performance interceptors and bombers. The emergence of Soviet jet aircraft created immediate requirements for Western responses, driving rapid technological advancement. Understanding this strategic context provides valuable insights into how Cold War requirements influenced jet aircraft development.
     </p>
     <p>
-      Nuclear deterrence requirements created needs for high-speed bombers capable of penetrating Soviet air defenses, while defensive requirements demanded interceptors capable of countering Soviet bomber threats. These competing requirements drove different approaches to jet aircraft design, with bombers emphasizing range and payload while interceptors emphasized speed and climb performance. The comprehensive documentation of strategic requirements ensures that Cold War context is properly understood.
+      Nuclear deterrence requirements created needs for high-speed bombers capable of penetrating Soviet air defences, while defensive requirements demanded interceptors capable of countering Soviet bomber threats. These competing requirements drove different approaches to jet aircraft design, with bombers emphasizing range and payload while interceptors emphasized speed and climb performance. The comprehensive documentation of strategic requirements ensures that Cold War context is properly understood.
     </p>
     <p>
       The Korean War demonstrated the urgency of jet fighter development, with F-86 Sabres and MiG-15s engaging in the first large-scale jet vs jet combat. These engagements revealed the importance of training, tactics, and aircraft design in determining combat effectiveness. The comprehensive documentation of Korean War air combat ensures that operational lessons are properly preserved.
     </p>
     <p>
-      NATO's defensive requirements drove standardization efforts while respecting national industrial capabilities. The comprehensive documentation of NATO requirements ensures that international cooperation factors are properly understood. Understanding NATO requirements provides valuable insights into how alliance defense needs influenced aircraft development.
+      NATO's defensive requirements drove standardization efforts while respecting national industrial capabilities. The comprehensive documentation of NATO requirements ensures that international cooperation factors are properly understood. Understanding NATO requirements provides valuable insights into how alliance defence needs influenced aircraft development.
 
     <h2 id="pilot-testimonies">Pilot Testimonies and Operational Accounts</h2>
     <p>
@@ -284,10 +284,10 @@ const post = {
       Jet aircraft transformed air combat capabilities, enabling operations at speeds and altitudes impossible with piston-engine aircraft. Korean War operations demonstrated jet fighters' effectiveness, while Cold War operations demonstrated the strategic importance of jet bombers and interceptors. The comprehensive documentation of operational impact ensures that jet aircraft significance is properly recognized.
     </p>
     <p>
-      Nuclear deterrence depended on jet bombers capable of penetrating defenses and jet interceptors capable of countering threats. The comprehensive documentation of strategic significance ensures that jet aircraft's role in Cold War strategy is properly understood. Understanding strategic significance provides valuable insights into how jet aircraft influenced international relations.
+      Nuclear deterrence depended on jet bombers capable of penetrating defences and jet interceptors capable of countering threats. The comprehensive documentation of strategic significance ensures that jet aircraft's role in Cold War strategy is properly understood. Understanding strategic significance provides valuable insights into how jet aircraft influenced international relations.
     </p>
     <p>
-      NATO air defense integration demonstrated how jet aircraft supported alliance defense requirements. The comprehensive documentation of NATO operations ensures that alliance defense achievements are properly preserved. Understanding NATO operations provides valuable insights into how jet aircraft supported international cooperation.
+      NATO air defence integration demonstrated how jet aircraft supported alliance defence requirements. The comprehensive documentation of NATO operations ensures that alliance defence achievements are properly preserved. Understanding NATO operations provides valuable insights into how jet aircraft supported international cooperation.
     </p>
     <p>
       Export operations demonstrated how jet aircraft supported international relationships and industrial development. Licensed production and international sales created economic and strategic benefits. The comprehensive documentation of export operations ensures that international jet aircraft operations are properly understood.

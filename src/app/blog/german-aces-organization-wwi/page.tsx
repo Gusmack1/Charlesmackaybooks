@@ -87,7 +87,7 @@ const post = {
 
     <h2 id="intelligence">Intelligence and the Learning Cycle: Adapting to Enemy Capabilities</h2>
     <p>
-      After-action reports, captured documents, and frontline observation refined tactics. Pilots compared turning circles, climb bands, and dive behaviours of enemy types; leaders adjusted patrol altitudes and attack axes accordingly. Signalers and observers fed route timings and balloon defenses into patrol planning, while photographic reconnaissance informed where fighter screens would be profitably placed.
+      After-action reports, captured documents, and frontline observation refined tactics. Pilots compared turning circles, climb bands, and dive behaviours of enemy types; leaders adjusted patrol altitudes and attack axes accordingly. Signalers and observers fed route timings and balloon defences into patrol planning, while photographic reconnaissance informed where fighter screens would be profitably placed.
     </p>
     <p>
       The learning cycle enabled rapid tactical adaptation as Allied capabilities improved. German units developed intelligence systems that fed operational observations back into tactical doctrine, ensuring that tactics evolved to match enemy capabilities. The comprehensive documentation of intelligence systems ensures that the complete story of German fighter adaptation is properly preserved.

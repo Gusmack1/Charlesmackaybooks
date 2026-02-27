@@ -72,7 +72,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/percy-pilcher-glider-series-schematic.svg" alt="Original schematic illustration of Pilcher’s Bat–Beetle–Gull–Hawk glider development sequence (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Original schematic: Pilcher’s Bat–Beetle–Gull–Hawk progression, emphasizing measured iteration toward controllability.</p>
+      <p class="text-sm mt-2 text-center italic">Original schematic: Pilcher’s Bat–Beetle–Gull–Hawk progression, emphasizing measured iteration towards controllability.</p>
     </div>
 
     <h2 id="international-influences">International Influences and Contacts</h2>
@@ -248,14 +248,14 @@ const post = {
     <p>
       The combination of academic knowledge and practical experimentation characterizes Pilcher's approach to aviation development. 
       His university lectures served as a bridge between theoretical understanding and practical application, enabling him to 
-      organize and communicate his experimental findings while engaging with broader scientific and engineering communities.
+      organise and communicate his experimental findings while engaging with broader scientific and engineering communities.
     </p>
 
     <h2 id="1899-accident">The 1899 Accident and Its Aftermath</h2>
     <p>
       Pilcher's fatal crash in September 1899 ended a trajectory of measured progress. Contemporary accounts describe structural 
       failure in adverse conditions during a demonstration flight, leading to unrecoverable descent. The shock reverberated through 
-      British aeronautical circles, delaying momentum toward powered tests and re‑centring focus on continental developments until 
+      British aeronautical circles, delaying momentum towards powered tests and re‑centring focus on continental developments until 
       the next decade.
     </p>
     <p>
@@ -272,7 +272,7 @@ const post = {
     </p>
     <p>
       The impact of Pilcher's death extended beyond personal tragedy to affect the broader course of British aviation development. 
-      The loss of such a promising pioneer delayed British progress toward powered flight and shifted attention to continental 
+      The loss of such a promising pioneer delayed British progress towards powered flight and shifted attention to continental 
       developments. The accident's documentation serves as a reminder of the risks inherent in experimental aviation and the importance 
       of safety considerations in flight development.
     </p>
@@ -311,7 +311,7 @@ const post = {
       Pilcher's achievements in glider development represent significant contributions to aviation progress even without powered 
       flight. His systematic approach to experimentation, documentation of results, and sharing of knowledge created valuable 
       foundations for subsequent aviation development. The influence of his work on the Wright Brothers demonstrates his important 
-      role in the cumulative progress toward powered flight.
+      role in the cumulative progress towards powered flight.
     </p>
 
     <h2 id="legacy">Legacy and Scottish Aviation</h2>
@@ -343,7 +343,7 @@ const post = {
       Pilcher's legacy extends beyond Scotland to influence international aviation development. His contributions to glider design, 
       his systematic approach to experimentation, and his documentation of results created valuable foundations for subsequent 
       aviation progress. The recognition of his achievements by contemporaries like the Wright Brothers demonstrates his important 
-      role in the cumulative progress toward powered flight.
+      role in the cumulative progress towards powered flight.
     </p>
 
     <h2 id="academic-recognition">Academic Recognition and Historical Importance</h2>

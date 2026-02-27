@@ -48,7 +48,7 @@ const post = {
 
     <h2 id="ecosystem">The Industrial Ecosystem: Steel, Shipyards, and Machine Shops</h2>
     <p>
-      Glasgow and the River Clyde integrated steel production, heavy machining, foundry capacity, and marine fabrication at a scale unmatched elsewhere in Britain. This ecosystem supported aviation by supplying materials, tooling, jigs, fixtures, and — critically — a culture of measurement and inspection. Rail, river, and road connected mills to machine shops and shops to airfields; skilled labour and foremen knew how to hit schedule without compromising tolerance. The result was not a simple substitution of one product for another, but the disciplined re‑targeting of a regional system toward air power.
+      Glasgow and the River Clyde integrated steel production, heavy machining, foundry capacity, and marine fabrication at a scale unmatched elsewhere in Britain. This ecosystem supported aviation by supplying materials, tooling, jigs, fixtures, and — critically — a culture of measurement and inspection. Rail, river, and road connected mills to machine shops and shops to airfields; skilled labour and foremen knew how to hit schedule without compromising tolerance. The result was not a simple substitution of one product for another, but the disciplined re‑targeting of a regional system towards air power.
     </p>
     <p>
       The book documents the industrial situation of spring 1915, the strikes and the conflict with the trade unions is fully explained. This is an insight into the beginnings of "Red Clydeside." This comprehensive coverage demonstrates how industrial relations influenced aviation production. Understanding these industrial relations provides valuable insights into how Scottish aviation manufacturing developed.

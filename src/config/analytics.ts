@@ -77,7 +77,7 @@ export const AVIATION_EVENTS = {
 
 // Audience Segments for Remarketing
 export const AUDIENCE_SEGMENTS = {
-  // Purchase behavior
+  // Purchase behaviour
   BOOK_PURCHASERS: 'book_purchasers',
   HIGH_VALUE_CUSTOMERS: 'high_value_customers', // £50+ total
   REPEAT_CUSTOMERS: 'repeat_customers',

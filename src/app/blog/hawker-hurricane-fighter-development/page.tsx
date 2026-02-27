@@ -15,7 +15,7 @@ const post = {
       The Hawker Hurricane was the Royal Air Force's backbone at the outbreak of the Second World War — a pragmatic fighter whose virtues were reliability, availability, and ease of repair. Designed under Sydney Camm, the Hurricane blended modern performance with familiar manufacturing practice. Though often overshadowed by the Spitfire in popular memory, operational records and pilot recollections emphasise how the Hurricane's robustness, stable gun platform, and distributed production kept squadrons serviceable during the most demanding phases of 1940–1942.
     </p>
     <p>
-      While the Spitfire captured headlines and public imagination with its graceful lines and exceptional performance, the Hurricane bore the burden of Britain's defense during its most critical hour. Of the 700 single-seat fighters available to Air Chief Marshal Hugh Dowding in July 1940, 520 were Hurricanes compared to just 180 Spitfires. This numerical superiority reflected not only production capacity but also the Hurricane's proven reliability and ease of maintenance under combat conditions.
+      While the Spitfire captured headlines and public imagination with its graceful lines and exceptional performance, the Hurricane bore the burden of Britain's defence during its most critical hour. Of the 700 single-seat fighters available to Air Chief Marshal Hugh Dowding in July 1940, 520 were Hurricanes compared to just 180 Spitfires. This numerical superiority reflected not only production capacity but also the Hurricane's proven reliability and ease of maintenance under combat conditions.
     </p>
     <p>
       This article examines the Hurricane's development, production system, tactics, and service history using documented operational material.
@@ -87,7 +87,7 @@ const post = {
 
     <h2 id="battle-britain">Battle of Britain: Mass, Method, and Maintainability</h2>
     <p>
-      During the Battle of Britain, Hurricane squadrons formed the backbone of Fighter Command's defense network. Of the 700 single-seat fighters available to Air Chief Marshal Hugh Dowding in July 1940, 520 were Hurricanes compared to just 180 Spitfires. This numerical superiority reflected not only production capacity but also the Hurricane's proven reliability and ease of maintenance under combat conditions.
+      During the Battle of Britain, Hurricane squadrons formed the backbone of Fighter Command's defence network. Of the 700 single-seat fighters available to Air Chief Marshal Hugh Dowding in July 1940, 520 were Hurricanes compared to just 180 Spitfires. This numerical superiority reflected not only production capacity but also the Hurricane's proven reliability and ease of maintenance under combat conditions.
     </p>
     <p>
       In the summer and autumn of 1940, tactics commonly paired Spitfire squadrons to engage enemy fighters while Hurricanes concentrated on breaking up bomber formations. The Hurricane's stable gun platform and sturdy landing gear suited quick scrambles and variable airfield conditions. Armourers could service the wing bays efficiently, and line crews learned damage patterns, panel by panel. Pilots praised honest handling: the aircraft would not bite without warning; it rolled smoothly into deflection shots and held sight pictures through turbulence.
@@ -109,7 +109,7 @@ const post = {
       The Hurricane served beyond 1940 as an interceptor, fighter‑bomber, tactical reconnaissance platform, and naval fighter. Tropical filters, field kits, and cannon‑armed variants broadened the envelope. Theatre conversions prioritised reliability in heat and dust, and the rugged undercarriage proved well‑suited to forward strips. In North Africa and the Far East, ease of maintenance under austere conditions preserved sortie generation where more delicate types struggled.
     </p>
     <p>
-      The Hurricane's operational versatility became apparent through service in every theater of World War II. In North Africa, Hurricane pilots of the Desert Air Force achieved remarkable success against Italian and German opposition, with the aircraft's robust construction proving ideal for harsh operating conditions. Sand and heat that challenged more delicate designs had minimal impact on Hurricane operations, while simplified maintenance procedures enabled sustained combat operations far from established bases.
+      The Hurricane's operational versatility became apparent through service in every theatre of World War II. In North Africa, Hurricane pilots of the Desert Air Force achieved remarkable success against Italian and German opposition, with the aircraft's robust construction proving ideal for harsh operating conditions. Sand and heat that challenged more delicate designs had minimal impact on Hurricane operations, while simplified maintenance procedures enabled sustained combat operations far from established bases.
     </p>
     <p>
       The Hurricane Mk IIC, armed with four 20mm Hispano cannons, proved particularly effective in the ground-attack role. These aircraft destroyed hundreds of German and Italian vehicles, aircraft, and installations throughout the North African campaign. The concentrated firepower of the cannon-armed Hurricanes could penetrate light armor and cause catastrophic damage to fuel and ammunition trucks essential to Axis logistics. Later marks evolved armament and protection to match ground‑attack roles without eroding the type's fundamental maintainability.
@@ -207,7 +207,7 @@ const post = {
 
     <h2 id="conclusion">Conclusion: The Hurricane's Enduring Significance</h2>
     <p>
-      The Hawker Hurricane's legacy transcends simple performance statistics or combat records. Sydney Camm's masterpiece represented the perfect balance of innovation and practicality, creating an aircraft that could be produced rapidly, maintained easily, and operated effectively by pilots of varying experience levels. While the Spitfire captured public imagination with its graceful lines and exceptional performance, the Hurricane bore the burden of Britain's defense during its most critical hour.
+      The Hawker Hurricane's legacy transcends simple performance statistics or combat records. Sydney Camm's masterpiece represented the perfect balance of innovation and practicality, creating an aircraft that could be produced rapidly, maintained easily, and operated effectively by pilots of varying experience levels. While the Spitfire captured public imagination with its graceful lines and exceptional performance, the Hurricane bore the burden of Britain's defence during its most critical hour.
     </p>
     <p>
       The Hurricane's story reminds us that technological superiority alone does not determine military success. Reliability, maintainability, and operational flexibility often prove more valuable than cutting-edge performance. In the summer of 1940, when the fate of Western civilization hung in the balance, it was the humble Hurricane that stood between Nazi Germany and total victory. For that alone, Sydney Camm's creation deserves recognition as one of history's most important military aircraft.

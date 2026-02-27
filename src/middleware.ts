@@ -53,7 +53,7 @@ export function middleware(request: NextRequest) {
     })
   }
 
-  // Legacy newsroom path retired in favor of /aviation-news/*.
+  // Legacy newsroom path retired in favour of /aviation-news/*.
   if (pathname === '/blog/scottish-aviation-news' || pathname.startsWith('/blog/scottish-aviation-news/')) {
     return new NextResponse('Gone', {
       status: 410,

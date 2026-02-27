@@ -8,7 +8,7 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'sikorsky-vs300-helicopter-breakthrough',
   title: 'Sikorsky VS-300: The Helicopter Breakthrough - Enhanced Edition',
-  subtitle: 'A comprehensive, research-backed account of Igor Sikorsky\'s VS-300: the first practical helicopter that established the single-main-rotor, anti-torque tail rotor configuration, control systems (collective, cyclic, pedals), rotor aerodynamics, engine specifications, test program, and its lasting influence on all subsequent helicopter development.',
+  subtitle: 'A comprehensive, research-backed account of Igor Sikorsky\'s VS-300: the first practical helicopter that established the single-main-rotor, anti-torque tail rotor configuration, control systems (collective, cyclic, pedals), rotor aerodynamics, engine specifications, test programme, and its lasting influence on all subsequent helicopter development.',
   content: `
     <h2 id="introduction">Introduction: The Breakthrough That Changed Aviation</h2>
     <p>
@@ -23,7 +23,7 @@ const post = {
       The VS-300's significance extends far beyond its immediate achievements. It established the fundamental configuration that would dominate helicopter design for decades: single main rotor, tail rotor for anti-torque, and three-axis control system. This configuration proved so successful that it became the standard for the vast majority of helicopters worldwide. Understanding the VS-300's development provides valuable insights into how systematic engineering and disciplined testing transformed vertical flight from dangerous experiment to practical capability.
     </p>
     <p>
-      This Enhanced Edition examines the VS-300 as a complete system: origins in Igor Sikorsky's aviation experience, engineering challenges and solutions, rotor aerodynamics and articulation, control systems development, engine integration and specifications, test program and pilot technique, maintenance practice, comparisons with contemporaries, and lasting influence on helicopter development worldwide. Each aspect is presented with verified historical facts, technical details, and operational context to provide a complete understanding of how the VS-300 achieved its legendary status.
+      This Enhanced Edition examines the VS-300 as a complete system: origins in Igor Sikorsky's aviation experience, engineering challenges and solutions, rotor aerodynamics and articulation, control systems development, engine integration and specifications, test programme and pilot technique, maintenance practice, comparisons with contemporaries, and lasting influence on helicopter development worldwide. Each aspect is presented with verified historical facts, technical details, and operational context to provide a complete understanding of how the VS-300 achieved its legendary status.
 
     <div class="my-8">
       <img src="/blog-images/sikorsky-vs300-helicopter.svg" alt="Original schematic illustration of a VS-300 style single-main-rotor helicopter layout (diagrammatic; not a photograph)." class="w-full h-auto rounded-lg shadow-lg"/>
@@ -65,7 +65,7 @@ const post = {
       Sikorsky's decision to use a single main rotor with tail rotor configuration reflected careful engineering analysis of helicopter requirements. The single main rotor provided efficient lift generation while maintaining structural simplicity. The tail rotor provided dedicated anti-torque authority, enabling stable yaw control without complex multi-rotor configurations. The comprehensive documentation of design philosophy ensures that the VS-300's configuration choices are properly understood.
     </p>
     <p>
-      The single main rotor configuration offered advantages in structural simplicity, power transmission efficiency, and pilot workload compared to multi-rotor designs. Sikorsky's engineering experience enabled him to recognize these advantages and develop a configuration that balanced performance, complexity, and reliability. The comprehensive documentation of configuration analysis ensures that the VS-300's design rationale is properly preserved.
+      The single main rotor configuration offered advantages in structural simplicity, power transmission efficiency, and pilot workload compared to multi-rotor designs. Sikorsky's engineering experience enabled him to recognise these advantages and develop a configuration that balanced performance, complexity, and reliability. The comprehensive documentation of configuration analysis ensures that the VS-300's design rationale is properly preserved.
     </p>
     <p>
       The tail rotor configuration provided dedicated anti-torque authority that could be controlled independently from main rotor operations. This separation of control functions enabled intuitive pilot handling once training was completed. The comprehensive documentation of tail rotor development ensures that this crucial innovation is properly recognized. Understanding tail rotor development provides valuable insights into how helicopter control systems evolved.
@@ -123,12 +123,12 @@ const post = {
     <p>
       Lubrication systems required careful design to ensure adequate lubrication under all operating conditions. Temperature monitoring enabled early detection of problems, while chip detection systems identified component wear before failures occurred. The comprehensive documentation of lubrication systems ensures that reliability engineering is properly understood. Understanding lubrication systems provides valuable insights into how helicopter reliability was achieved.
 
-    <h2 id="test-program">Test Program and Pilot Technique: From Tethered to Free Flight</h2>
+    <h2 id="test-program">Test Programme and Pilot Technique: From Tethered to Free Flight</h2>
     <p>
-      Incremental expansion under tethers reduced risk, enabling systematic evaluation of control effectiveness and aircraft behavior. Pilots practised pedal-collective coordination at hover, cyclic finesse in translation, and flare technique for landing. Flight cards recorded wind limits, vibration notes, and corrective rigging actions. The aircraft moved from fragile experiment to predictable machine through disciplined iteration.
+      Incremental expansion under tethers reduced risk, enabling systematic evaluation of control effectiveness and aircraft behaviour. Pilots practised pedal-collective coordination at hover, cyclic finesse in translation, and flare technique for landing. Flight cards recorded wind limits, vibration notes, and corrective rigging actions. The aircraft moved from fragile experiment to predictable machine through disciplined iteration.
     </p>
     <p>
-      Tethered flight testing enabled evaluation of control systems and aircraft behavior without the risks of free flight. Initial tethered flights demonstrated that the VS-300 could achieve controlled hover, validating Sikorsky's design approach. Progressive expansion of tethered flight envelope enabled systematic evaluation of control effectiveness. The comprehensive documentation of tethered testing ensures that test methodology is properly understood.
+      Tethered flight testing enabled evaluation of control systems and aircraft behaviour without the risks of free flight. Initial tethered flights demonstrated that the VS-300 could achieve controlled hover, validating Sikorsky's design approach. Progressive expansion of tethered flight envelope enabled systematic evaluation of control effectiveness. The comprehensive documentation of tethered testing ensures that test methodology is properly understood.
     </p>
     <p>
       Free flight testing demonstrated that the VS-300 could achieve controlled forward flight, hovering, and landing. These achievements validated the single-main-rotor, tail-rotor configuration and established procedures for helicopter operations. The comprehensive documentation of free flight testing ensures that breakthrough achievements are properly preserved. Understanding free flight testing provides valuable insights into how helicopter capabilities were demonstrated.
@@ -314,7 +314,7 @@ const post = {
     <h2 id="further-reading">Further Reading and Related Works</h2>
     <p>For comprehensive coverage of the Sikorsky VS-300 and related topics, explore these authoritative works by Charles E. MacKay:</p>
     <ul>
-      <li><a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a> — The definitive 219-page A5 work profusely illustrated with over 300 rare pictures and one colour, including unique drawings and illustrations published for the first time, covering helicopter development from Autogyros to 1950s helicopters, with comprehensive coverage of Sikorsky VS-300 development, test program, and influence on subsequent helicopter development</li>
+      <li><a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a> — The definitive 219-page A5 work profusely illustrated with over 300 rare pictures and one colour, including unique drawings and illustrations published for the first time, covering helicopter development from Autogyros to 1950s helicopters, with comprehensive coverage of Sikorsky VS-300 development, test programme, and influence on subsequent helicopter development</li>
       <li><a href="/blog/helicopter-development-pioneers" class="underline font-medium">Helicopter Development Pioneers: From Cierva's Autogyros to Modern Rotorcraft</a> — Comprehensive analysis of vertical flight evolution, rotor aerodynamics, control systems, and the procedures that transformed dangerous experiments into routine operations</li>
       <li><a href="/blog/autogyro-vs-helicopter" class="underline font-medium">Autogyro vs Helicopter: The Bridge to True Vertical Flight</a> — Detailed analysis of how autogyro technology contributed to helicopter development</li>
       <li><a href="/blog/bristol-sycamore-helicopter-development" class="underline font-medium">Bristol Sycamore: British Helicopter Development Pioneer</a> — Detailed coverage of how VS-300 principles influenced British helicopter design</li>
@@ -331,7 +331,7 @@ const post = {
       <li><a href="/blog/rotorcraft-military-applications" class="underline">Rotorcraft: Military Applications</a> — Analysis of helicopter military operations</li>
     </ul>
   `,
-  excerpt: 'A comprehensive, research-backed account of Igor Sikorsky\'s VS-300: the first practical helicopter that established the single-main-rotor, anti-torque tail rotor configuration, control systems (collective, cyclic, pedals), rotor aerodynamics, engine specifications, test program, and its lasting influence on all subsequent helicopter development.',
+  excerpt: 'A comprehensive, research-backed account of Igor Sikorsky\'s VS-300: the first practical helicopter that established the single-main-rotor, anti-torque tail rotor configuration, control systems (collective, cyclic, pedals), rotor aerodynamics, engine specifications, test programme, and its lasting influence on all subsequent helicopter development.',
   author: {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
@@ -358,7 +358,7 @@ const post = {
 export const metadata: Metadata = {
   title: 'Sikorsky VS-300: The First Practical Helicopter',
   description:
-    "How Igor Sikorsky's VS-300 established the single main rotor + tail rotor configuration, collective/cyclic/pedals controls, and the test program that made helicopters practical.",
+    "How Igor Sikorsky's VS-300 established the single main rotor + tail rotor configuration, collective/cyclic/pedals controls, and the test programme that made helicopters practical.",
   keywords: 'Sikorsky VS-300, Igor Sikorsky, helicopter breakthrough, rotorcraft development, helicopter history, single main rotor, tail rotor, Charles E. MacKay, charles mackay books',
   openGraph: {
     title: 'Sikorsky VS-300: The First Practical Helicopter',

@@ -61,7 +61,7 @@ const post = {
     <h2 id="operational-history">Operational History and Performance</h2>
     <p>The operational deployment of this aircraft marked a turning point in aviation history. From its first flights through its combat service, every aspect of its performance was closely monitored and analyzed. The data collected during these operations provided valuable insights that influenced future aircraft development.</p>
 
-    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing program was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
+    <p>Initial flight testing revealed both the promise and the challenges inherent in this revolutionary design. Test pilots reported exceptional performance in some areas while identifying issues that required immediate attention. The testing programme was comprehensive and methodical, establishing new standards for aircraft evaluation.</p>
 
     <p>Combat operations provided the ultimate test of the design's effectiveness. In the harsh environment of aerial warfare, theoretical performance gave way to practical reality. Pilots' reports from the front lines provided crucial feedback that led to ongoing improvements and modifications.</p>
 
@@ -74,7 +74,7 @@ const post = {
 
     <p>The chief designer brought a unique combination of theoretical knowledge and practical experience to the project. Their previous work had established a reputation for innovative thinking and attention to detail. The design philosophy they brought to this project would influence their entire career and the broader aviation industry.</p>
 
-    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing program.</p>
+    <p>Test pilots played a crucial role in the development process. Their willingness to risk their lives flying experimental aircraft provided the empirical data necessary to refine the design. Many of these pilots were experienced aviators who brought valuable operational experience to the testing programme.</p>
 
     <p>Government officials and military leaders made critical decisions that shaped the project's direction and priorities. Their understanding of strategic requirements and operational needs influenced design specifications and development timelines. The relationship between military requirements and engineering possibilities was often complex and sometimes contentious.</p>
 
@@ -85,7 +85,7 @@ const post = {
 
     <p>Technical innovations pioneered during this project became standard practice throughout the aviation industry. Design methodologies, testing procedures, and manufacturing techniques developed for this aircraft influenced countless subsequent projects. The technical legacy represents one of the most significant contributions to aviation progress.</p>
 
-    <p>The operational experience gained through this program influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
+    <p>The operational experience gained through this programme influenced military aviation doctrine for decades. Tactical innovations, training procedures, and operational concepts developed during its service provided the foundation for future military aviation strategy. The strategic implications extended well beyond the immediate conflict period.</p>
 
     <p>Educational institutions incorporated the lessons learned from this project into their curricula. Engineering schools used the technical challenges and solutions as case studies for teaching aircraft design principles. The academic legacy ensures that future generations of engineers will continue to benefit from these insights.</p>
 
@@ -100,7 +100,7 @@ const post = {
 
     <p>Understanding this history provides valuable perspective on contemporary aviation challenges. The parallels between historical and modern development programs offer insights that can inform current decision-making and strategic planning. History provides a roadmap for navigating the complexities of modern aviation development.</p>
 
-    <p>As we look toward the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
+    <p>As we look towards the future of aviation, the lessons learned from this remarkable chapter in aviation history remain remarkably relevant. The principles of innovation, perseverance, and excellence that characterized this development continue to drive aviation progress today and will undoubtedly influence the aircraft of tomorrow.</p>
   `,
   excerpt: `The engineering genius who pioneered all-metal aircraft construction and influenced modern aviation design principles.`,
   author: {

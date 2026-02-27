@@ -55,7 +55,7 @@ const post = {
     </p>
     <p>
       A single-bay bracing scheme saved weight; balancing lift distribution and structural margins became a persistent theme. The wing bracing design reflected careful consideration of structural requirements and weight constraints. 
-      The single-bay configuration reduced structural weight while maintaining necessary strength, demonstrating Albatros's engineering capability in optimizing design parameters.
+      The single-bay configuration reduced structural weight while maintaining necessary strength, demonstrating Albatros's engineering capability in optimising design parameters.
     </p>
     <p>
       The plywood construction techniques developed for the D.Va influenced subsequent aircraft designs. Carefully selected spruce, ash, and birch plywood, bonded with casein or emerging synthetic adhesives, produced shells capable 
@@ -175,7 +175,7 @@ const post = {
       units and maintenance personnel. However, fundamental structural limitations required design-level solutions that exceeded field modification capabilities.
     </p>
     <p>
-      The structural issues identified in the D.Va informed subsequent aircraft design. Lessons learned from the sesquiplane configuration's structural challenges influenced design choices in later aircraft, with designers moving toward more 
+      The structural issues identified in the D.Va informed subsequent aircraft design. Lessons learned from the sesquiplane configuration's structural challenges influenced design choices in later aircraft, with designers moving towards more 
       robust structural arrangements. This evolution demonstrates how operational experience informed aircraft development, creating a feedback loop between design and operations.
     </p>
 
@@ -231,7 +231,7 @@ const post = {
     <h2 id="legacy">Legacy and Historical Assessment</h2>
     <p>
       The D.Va's engineering trade-offs—stiff fuselage, delicate lower wing—illustrate the compression of innovation cycles in late-war aviation. Its semi-monocoque approach influenced later wood-fuselage craft; its limitations helped steer 
-      designers toward more robust biplane geometries and, eventually, cantilever monoplanes. The book documents the aftermath of the Armistice, including the Amerika Programme and the Hindenburg plan, providing context for understanding 
+      designers towards more robust biplane geometries and, eventually, cantilever monoplanes. The book documents the aftermath of the Armistice, including the Amerika Programme and the Hindenburg plan, providing context for understanding 
       the D.Va's place in aviation history.
     </p>
     <p>

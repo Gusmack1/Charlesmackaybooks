@@ -87,7 +87,7 @@ const post = {
       RAF Turnhouse served as a crucial training base for the Royal Air Force, playing a significant role in preparing pilots for service with front-line squadrons. The airfield's location near Edinburgh provided access to a variety of training areas, including coastal regions, mountainous terrain, and urban environments. This variety of training environments made Turnhouse particularly valuable for comprehensive pilot training.
     </p>
     <p>
-      Turnhouse's strategic location near Edinburgh provided advantages for training operations. The proximity to urban areas allowed student pilots to experience navigation in built-up environments, while the surrounding countryside provided open areas for basic flight training. The airfield's facilities supported comprehensive training programs covering all aspects of primary flight training.
+      Turnhouse's strategic location near Edinburgh provided advantages for training operations. The proximity to urban areas allowed student pilots to experience navigation in built-up environments, while the surrounding countryside provided open areas for basic flight training. The airfield's facilities supported comprehensive training programmes covering all aspects of primary flight training.
     </p>
     <p>
       The airfield's history includes connections to earlier aviation operations. The book <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation</a> covers the first aircraft carrier landings by Bell-Davis from RAF Turnhouse, demonstrating Turnhouse's long history of aviation operations. Understanding Turnhouse's historical context provides valuable insights into its role in British aviation training.
@@ -104,15 +104,15 @@ const post = {
       During its time at Turnhouse, WP808 would have been used for primary flight training, teaching student pilots the fundamental skills of flying. The aircraft's dual-control configuration allowed instructors to safely guide students through their first flights while maintaining the ability to take control if necessary. This dual-control capability was essential for safe training operations.
     </p>
     <p>
-      The training program at Turnhouse was comprehensive, covering not only basic flying skills but also navigation, formation flying, and emergency procedures. The Chipmunk's versatility made it suitable for all aspects of primary training, from basic circuits and landings to cross-country navigation exercises. This comprehensive training approach prepared pilots for subsequent training on more advanced aircraft.
+      The training programme at Turnhouse was comprehensive, covering not only basic flying skills but also navigation, formation flying, and emergency procedures. The Chipmunk's versatility made it suitable for all aspects of primary training, from basic circuits and landings to cross-country navigation exercises. This comprehensive training approach prepared pilots for subsequent training on more advanced aircraft.
     </p>
     <p>
-      Student pilots who trained on WP808 and other Chipmunks at Turnhouse would go on to fly a wide variety of aircraft, from transport aircraft to fighter jets. The solid foundation provided by the Chipmunk training program was essential for their success in more advanced aircraft. This training foundation demonstrates the Chipmunk's effectiveness as a primary trainer.
+      Student pilots who trained on WP808 and other Chipmunks at Turnhouse would go on to fly a wide variety of aircraft, from transport aircraft to fighter jets. The solid foundation provided by the Chipmunk training programme was essential for their success in more advanced aircraft. This training foundation demonstrates the Chipmunk's effectiveness as a primary trainer.
     </p>
 
     <h2 id="training-methods">Training Methods and Procedures</h2>
     <p>
-      The training methods developed using the Chipmunk became standard practice in the RAF and influenced training programs around the world. The aircraft's forgiving nature and excellent handling characteristics set a benchmark for what a good training aircraft should be. These training methods reflected lessons learned from wartime operations while adapting to peacetime requirements.
+      The training methods developed using the Chipmunk became standard practice in the RAF and influenced training programmes around the world. The aircraft's forgiving nature and excellent handling characteristics set a benchmark for what a good training aircraft should be. These training methods reflected lessons learned from wartime operations while adapting to peacetime requirements.
     </p>
     <p>
       Primary flight training on the Chipmunk emphasized fundamental skills: basic aircraft control, takeoff and landing procedures, and pattern work. These skills provided the foundation for all subsequent training. The Chipmunk's stable characteristics made it ideal for teaching these fundamentals safely and effectively.
@@ -160,7 +160,7 @@ const post = {
 
     <h2 id="key-figures">Key Figures: The People Behind WP808</h2>
     <p>
-      The story of WP808 at Turnhouse is inseparable from the people who flew and maintained the aircraft. The instructors who used WP808 to train student pilots were experienced aviators who had themselves learned to fly on similar aircraft. Their expertise and dedication were essential to the success of the training program.
+      The story of WP808 at Turnhouse is inseparable from the people who flew and maintained the aircraft. The instructors who used WP808 to train student pilots were experienced aviators who had themselves learned to fly on similar aircraft. Their expertise and dedication were essential to the success of the training programme.
     </p>
     <p>
       Student pilots who trained on WP808 represented the future of the Royal Air Force. Many of these young men and women would go on to have distinguished careers in aviation, flying everything from transport aircraft to fighter jets. The skills they learned on the Chipmunk provided the foundation for their entire aviation careers.
@@ -193,13 +193,13 @@ const post = {
 
     <h2 id="impact-legacy">Impact and Legacy: The Chipmunk's Enduring Influence</h2>
     <p>
-      The De Havilland Chipmunk's impact on British aviation extends far beyond its service as a training aircraft. The aircraft's success demonstrated the importance of well-designed training aircraft in developing skilled pilots. The lessons learned from the Chipmunk program influenced the design of subsequent training aircraft.
+      The De Havilland Chipmunk's impact on British aviation extends far beyond its service as a training aircraft. The aircraft's success demonstrated the importance of well-designed training aircraft in developing skilled pilots. The lessons learned from the Chipmunk programme influenced the design of subsequent training aircraft.
     </p>
     <p>
-      The training methods developed using the Chipmunk became standard practice in the RAF and influenced training programs around the world. The aircraft's forgiving nature and excellent handling characteristics set a benchmark for what a good training aircraft should be. These training methods continue to influence modern training programs.
+      The training methods developed using the Chipmunk became standard practice in the RAF and influenced training programmes around the world. The aircraft's forgiving nature and excellent handling characteristics set a benchmark for what a good training aircraft should be. These training methods continue to influence modern training programmes.
     </p>
     <p>
-      Many of the pilots who trained on Chipmunks at Turnhouse and other bases went on to have distinguished careers in aviation. Their success demonstrates the effectiveness of the training program and the quality of the aircraft used for training. This success demonstrates the Chipmunk's effectiveness as a training aircraft.
+      Many of the pilots who trained on Chipmunks at Turnhouse and other bases went on to have distinguished careers in aviation. Their success demonstrates the effectiveness of the training programme and the quality of the aircraft used for training. This success demonstrates the Chipmunk's effectiveness as a training aircraft.
     </p>
     <p>
       The Chipmunk's legacy continues today, with many aircraft still flying in private hands and with heritage organizations. These aircraft serve as flying museums, preserving the history of British aviation training and providing opportunities for people to experience the aircraft that trained so many pilots. This preservation ensures that the Chipmunk's legacy continues.
@@ -227,7 +227,7 @@ const post = {
       The Chipmunk's success as a training aircraft demonstrates the importance of good design in aviation. The aircraft's combination of reliability, performance, and handling characteristics made it ideal for its intended role. This success has influenced the design of training aircraft ever since.
     </p>
     <p>
-      As we look to the future of aviation, the lessons learned from the Chipmunk program remain relevant. The importance of good training aircraft, skilled instructors, and comprehensive training programs continues to be essential for the development of safe and competent pilots. The legacy of WP808 and the Chipmunk program serves as a reminder of these fundamental principles.
+      As we look to the future of aviation, the lessons learned from the Chipmunk programme remain relevant. The importance of good training aircraft, skilled instructors, and comprehensive training programmes continues to be essential for the development of safe and competent pilots. The legacy of WP808 and the Chipmunk programme serves as a reminder of these fundamental principles.
     </p>
     <p>
       The story of De Havilland Chipmunk WP808 at Turnhouse is not just about one aircraft or one airfield. It is about the people who designed, built, flew, and maintained the aircraft. It is about the students who learned to fly on it and the instructors who taught them. It is about the enduring legacy of British aviation training and the importance of preserving that legacy for future generations.

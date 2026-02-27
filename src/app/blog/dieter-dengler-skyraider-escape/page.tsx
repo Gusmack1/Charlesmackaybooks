@@ -35,7 +35,7 @@ const post = {
 
     <h2 id="emigration">Emigration and the American Dream (1956–1960)</h2>
     <p>
-      At 18, Dengler left postwar Germany for the United States with little money and no guarantees. He reached New York after a difficult journey, spent nights without lodging, and took odd jobs while searching for a pathway into aviation. He enlisted in the U.S. Air Force in 1957 and completed basic training at Lackland AFB. Although skilled and industrious—he worked as a mechanic and gunsmith—he found no path to the cockpit without a college degree. After his enlistment, he moved to the San Francisco Bay Area, studied aeronautics at San Francisco City College and the College of San Mateo, and continued the long, step‑by‑step climb toward pilot training.
+      At 18, Dengler left postwar Germany for the United States with little money and no guarantees. He reached New York after a difficult journey, spent nights without lodging, and took odd jobs while searching for a pathway into aviation. He enlisted in the U.S. Air Force in 1957 and completed basic training at Lackland AFB. Although skilled and industrious—he worked as a mechanic and gunsmith—he found no path to the cockpit without a college degree. After his enlistment, he moved to the San Francisco Bay Area, studied aeronautics at San Francisco City College and the College of San Mateo, and continued the long, step‑by‑step climb towards pilot training.
     </p>
     <p>
       Dengler's educational journey, including living in a van while pursuing his studies, demonstrates his determination and resourcefulness. This period of his life illustrates the challenges faced by immigrants seeking to achieve their dreams in America, and the persistence required to overcome obstacles. His success in eventually achieving his goal of becoming a pilot demonstrates how determination and hard work can overcome significant challenges.
@@ -48,7 +48,7 @@ const post = {
 
     <h2 id="naval-aviator">Navy Aviation Cadet to Fleet Pilot (1960–1965)</h2>
     <p>
-      Accepted into the U.S. Navy’s Aviation Cadet program, Dengler advanced through ground school and primary to advanced training—earning his wings in an era that demanded exacting standards and intense airmanship. He qualified on the Douglas A‑1 Skyraider, the last of the great piston attack aircraft, noted for its ruggedness, heavy weapons carriage, and extraordinary loiter time. By late 1965, he was assigned to Attack Squadron 145 (VA‑145), deploying aboard USS <em>Ranger</em> to the Western Pacific as U.S. operations escalated in Southeast Asia.
+      Accepted into the U.S. Navy’s Aviation Cadet programme, Dengler advanced through ground school and primary to advanced training—earning his wings in an era that demanded exacting standards and intense airmanship. He qualified on the Douglas A‑1 Skyraider, the last of the great piston attack aircraft, noted for its ruggedness, heavy weapons carriage, and extraordinary loiter time. By late 1965, he was assigned to Attack Squadron 145 (VA‑145), deploying aboard USS <em>Ranger</em> to the Western Pacific as U.S. operations escalated in Southeast Asia.
     </p>
     <p>
       The A‑1’s distinctive strengths shaped Dengler’s routine: long cycles in the cockpit, often in demanding weather, coordinating with strike packages, tankers, forward air controllers, and search‑and‑rescue (SAR) assets. The Skyraider’s ability to fly low and slow for extended periods made it ideal for SAR escort—“Sandy” missions—as well as for close air support against time‑sensitive targets.
@@ -56,7 +56,7 @@ const post = {
 
     <h2 id="naval-aviator">Navy Aviation Cadet to Fleet Pilot (1960–1965)</h2>
     <p>
-      Accepted into the U.S. Navy's Aviation Cadet program, Dengler advanced through ground school and primary to advanced training—earning his wings in an era that demanded exacting standards and intense airmanship. He qualified on the Douglas A‑1 Skyraider, the last of the great piston attack aircraft, noted for its ruggedness, heavy weapons carriage, and extraordinary loiter time. By late 1965, he was assigned to Attack Squadron 145 (VA‑145), deploying aboard USS <em>Ranger</em> to the Western Pacific as U.S. operations escalated in Southeast Asia.
+      Accepted into the U.S. Navy's Aviation Cadet programme, Dengler advanced through ground school and primary to advanced training—earning his wings in an era that demanded exacting standards and intense airmanship. He qualified on the Douglas A‑1 Skyraider, the last of the great piston attack aircraft, noted for its ruggedness, heavy weapons carriage, and extraordinary loiter time. By late 1965, he was assigned to Attack Squadron 145 (VA‑145), deploying aboard USS <em>Ranger</em> to the Western Pacific as U.S. operations escalated in Southeast Asia.
     </p>
     <p>
       The book <a href="/books/dieter-dengler" class="underline font-medium">Dieter Dengler, Skyraider 04 Down, the Man the Ship the Plane</a> provides comprehensive coverage of Dengler's life and times, including the history of the USS Ranger and her deployments off Vietnam. The book documents how Dengler flew the Douglas Skyraider and includes the aircraft history with Royal Navy service and service in Sweden, providing context for understanding the Skyraider's international significance and operational versatility.
@@ -117,13 +117,13 @@ const post = {
 
     <h2 id="escape">Escape into the Jungle (29 June 1966)</h2>
     <p>
-      On 29 June 1966, the prisoners executed their plan, overpowering guards and seizing weapons. The group split. Dengler moved with Lt. Duane W. Martin toward the Mekong basin, navigating by river courses and sun lines under the forest canopy. Their rations were negligible. They relied on foraged plants, occasional small game, and rainwater pooled in leaves or collected in improvised containers. Leech removal, foot care, and water discipline became as critical as avoiding pursuers.
+      On 29 June 1966, the prisoners executed their plan, overpowering guards and seizing weapons. The group split. Dengler moved with Lt. Duane W. Martin towards the Mekong basin, navigating by river courses and sun lines under the forest canopy. Their rations were negligible. They relied on foraged plants, occasional small game, and rainwater pooled in leaves or collected in improvised containers. Leech removal, foot care, and water discipline became as critical as avoiding pursuers.
     </p>
     <p>
       Dengler's was the first escape from Laos in 1966, making his achievement particularly significant in the context of POW operations during the Vietnam War. This historical distinction demonstrates the extraordinary nature of his escape and the challenges he overcame in achieving freedom. The book documents this achievement comprehensively, ensuring that Dengler's accomplishment receives proper recognition within the broader context of Vietnam War POW operations.
     </p>
     <p>
-      The escape was not only a test of endurance but of judgment under uncertainty—when to move versus hide, which ridge line to follow, whether a village represented help or mortal danger. In a tragic encounter, a villager killed Martin after an approach went wrong, forcing Dengler back into solo evasion. Malnourished, feverish, and with lacerated feet, he pressed on—driven by the will to survive and a disciplined focus on the fundamentals he could control: hydration, shelter, a signal plan if aircraft appeared, and incremental movement toward friendly lines.
+      The escape was not only a test of endurance but of judgment under uncertainty—when to move versus hide, which ridge line to follow, whether a village represented help or mortal danger. In a tragic encounter, a villager killed Martin after an approach went wrong, forcing Dengler back into solo evasion. Malnourished, feverish, and with lacerated feet, he pressed on—driven by the will to survive and a disciplined focus on the fundamentals he could control: hydration, shelter, a signal plan if aircraft appeared, and incremental movement towards friendly lines.
     </p>
     <p>
       Dengler's solo survival in the jungle represents one of the most remarkable achievements in survival literature. His ability to maintain discipline, make sound decisions under extreme stress, and persist despite overwhelming challenges demonstrates exceptional human resilience. The book's comprehensive documentation of this period ensures that Dengler's achievement is properly understood and recognized within the broader context of survival and escape literature.
@@ -164,7 +164,7 @@ const post = {
 
     <h2 id="personal">Personal Life, Health, and Final Years</h2>
     <p>
-      The psychological aftermath of captivity followed Dengler, as it did many former POWs. He spoke candidly about lingering effects—startle responses, nightmares, and the way scarcity imprints itself on habit. In 2000, he was honored in the Gathering of Eagles program, sharing professional lessons with military aviators. In 2001, after an ALS diagnosis, he took his own life on 7 February. Dengler was buried with military honors at Arlington National Cemetery. Friends, colleagues, and historians have emphasized not only his wartime endurance but his lifelong kindness, craftsmanship, and humility.
+      The psychological aftermath of captivity followed Dengler, as it did many former POWs. He spoke candidly about lingering effects—startle responses, nightmares, and the way scarcity imprints itself on habit. In 2000, he was honored in the Gathering of Eagles programme, sharing professional lessons with military aviators. In 2001, after an ALS diagnosis, he took his own life on 7 February. Dengler was buried with military honors at Arlington National Cemetery. Friends, colleagues, and historians have emphasized not only his wartime endurance but his lifelong kindness, craftsmanship, and humility.
     </p>
 
     <div class="my-8">
@@ -179,7 +179,7 @@ const post = {
 
     <h2 id="decorations">Decorations and Official Citations</h2>
     <p>
-      Dengler’s decorations reflect both combat performance and extraordinary conduct as a prisoner of war. Among them, the <strong>Navy Cross</strong> recognizes his conspicuous gallantry and intrepidity; the <strong>Distinguished Flying Cross</strong> and <strong>Air Medal</strong> attest to aviation skill and heroism; the <strong>Bronze Star Medal</strong> with combat “V” denotes valor under enemy action; and the <strong>Purple Heart</strong> acknowledges wounds sustained in service. Unit citations and theater campaign awards place his story within the wider coalition effort in Southeast Asia. Reading the verbatim award citations—where available—provides precise language around actions, dates, and circumstances.
+      Dengler’s decorations reflect both combat performance and extraordinary conduct as a prisoner of war. Among them, the <strong>Navy Cross</strong> recognizes his conspicuous gallantry and intrepidity; the <strong>Distinguished Flying Cross</strong> and <strong>Air Medal</strong> attest to aviation skill and heroism; the <strong>Bronze Star Medal</strong> with combat “V” denotes valor under enemy action; and the <strong>Purple Heart</strong> acknowledges wounds sustained in service. Unit citations and theatre campaign awards place his story within the wider coalition effort in Southeast Asia. Reading the verbatim award citations—where available—provides precise language around actions, dates, and circumstances.
     </p>
 
     <h2 id="sere">Survival, Evasion, Resistance, and Escape (SERE) Lessons</h2>
@@ -199,7 +199,7 @@ const post = {
 
     <h2 id="media-accuracy">On Screen Versus On the Record</h2>
     <p>
-      The documentary <em>Little Dieter Needs to Fly</em> remains the closest screen account to Dengler’s voice—focused on memory, detail, and moral tone. <em>Rescue Dawn</em> takes dramatic license, compressing timelines and character arcs for narrative momentum. Readers seeking the most accurate reconstruction should consult Dengler’s memoir and award citations, then use film as an interpretive layer rather than an archival substitute.
+      The documentary <em>Little Dieter Needs to Fly</em> remains the closest screen account to Dengler’s voice—focused on memory, detail, and moral tone. <em>Rescue Dawn</em> takes dramatic licence, compressing timelines and character arcs for narrative momentum. Readers seeking the most accurate reconstruction should consult Dengler’s memoir and award citations, then use film as an interpretive layer rather than an archival substitute.
     </p>
 
     <h2 id="aircraft-context">The A‑1 Skyraider in Context: International Service and Legacy</h2>

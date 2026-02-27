@@ -54,7 +54,7 @@ export default function HowToOrderPage() {
               <div>
                 <div className="text-4xl mb-2">1️⃣</div>
                 <h3 className="font-bold mb-2">Browse Books</h3>
-                <p className="text-sm opacity-90">Find your aviation history books in our catalog</p>
+                <p className="text-sm opacity-90">Find your aviation history books in our catalogue</p>
               </div>
               <div>
                 <div className="text-4xl mb-2">2️⃣</div>

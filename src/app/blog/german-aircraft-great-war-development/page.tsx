@@ -160,7 +160,7 @@ const post = {
       The Flanders Flight gaining air superiority over the English Channel demonstrated how German naval aviation could achieve localized advantages. The comprehensive documentation of naval aviation operations ensures that maritime contributions are properly recognized.
     </p>
     <p>
-      Naval aviation advanced seaplane operations, coastal patrol, and early deck handling, paralleling British efforts. Zeppelin reconnaissance provided strategic reach; coordination with aeroplanes for scouting and defense informed later doctrines of layered maritime air power. Though post‑war policy curtailed airship ambitions, the systems engineering lessons persisted.
+      Naval aviation advanced seaplane operations, coastal patrol, and early deck handling, paralleling British efforts. Zeppelin reconnaissance provided strategic reach; coordination with aeroplanes for scouting and defence informed later doctrines of layered maritime air power. Though post‑war policy curtailed airship ambitions, the systems engineering lessons persisted.
     </p>
 
     <h2 id="riesenflugzeuge">Riesenflugzeuge: Giant Bombers and London Raids</h2>

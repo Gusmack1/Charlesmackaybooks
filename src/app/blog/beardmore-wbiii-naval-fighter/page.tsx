@@ -268,7 +268,7 @@ const post = {
       technology. Understanding these comparisons illuminates the W.B.III's place within naval aviation development.
     </p>
     <p>
-      The Sopwith Pup and Sopwith Camel represented successful naval fighter designs, with Beardmore producing Camels under license. 
+      The Sopwith Pup and Sopwith Camel represented successful naval fighter designs, with Beardmore producing Camels under licence. 
       The evolution of these Sopwith aircraft included Camel operations off cruisers and the carriers Argus and Furious, demonstrating 
       the diversity of naval aviation operations and the range of aircraft types required. The W.B.III existed alongside these designs, 
       each addressing different aspects of naval aviation requirements.

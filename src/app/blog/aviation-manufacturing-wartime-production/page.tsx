@@ -21,7 +21,7 @@ const post = {
     <p>This Enhanced Edition frames the wartime production revolution through specific, verifiable practices: the Shadow Factory scheme and distributed manufacture; jigging and fixtures; metrology and traveller documentation; engine and airframe integration (for example, Rolls‑Royce Merlin with Spitfire and Hurricane lines); quality control under pressure; logistics and maintenance feedback; and the legacy those practices left to post‑war aerospace and industry more broadly.</p>
 
     <h2 id="historical-background">Historical Background and Context</h2>
-    <p>In the late 1930s and through the Second World War, aviation moved from limited‑run craftsmanship toward disciplined mass manufacture. Britain’s response included the Shadow Factory scheme and licensing across partner firms; the United States brought automotive assembly knowledge to aircraft; and the Commonwealth and Allied partners built complementary capacity. The central problem was the same everywhere: preserve aerodynamic and structural fidelity while multiplying output by orders of magnitude.</p>
+    <p>In the late 1930s and through the Second World War, aviation moved from limited‑run craftsmanship towards disciplined mass manufacture. Britain’s response included the Shadow Factory scheme and licensing across partner firms; the United States brought automotive assembly knowledge to aircraft; and the Commonwealth and Allied partners built complementary capacity. The central problem was the same everywhere: preserve aerodynamic and structural fidelity while multiplying output by orders of magnitude.</p>
 
     <p>Pre‑war single‑site assembly lines were augmented by distributed sub‑assembly: wings, fuselages, tailplanes, undercarriage, and systems arrived at final lines ready to mate with tolerances held by fixtures. Documentation tied each assembly to inspection steps, torque values, and gauge signatures. The result was not merely speed but repeatability — the defining requirement for combat reliability and maintainability.</p>
 
@@ -68,7 +68,7 @@ const post = {
     <h2 id="impact-legacy">Impact and Legacy</h2>
     <p>Wartime production’s most durable lesson is that quality and volume can reinforce each other when geometry and process are respected. The vocabulary — jigs, fixtures, travellers, gauge logs, standard work, calibrated tools — migrated into post‑war aerospace, automotive, and high‑reliability manufacturing. The workforce experience, including the expansion of skilled roles for women, reshaped industry expectations.</p>
 
-    <p>Today’s restoration shops replicate wartime methods because those methods still produce the desired behavior in flight: rigging that preserves control harmony, surfaces that protect drag assumptions, and systems routed for inspection. Museums teach with cut‑aways and fixtures because they make visible how disciplined manufacture produces reliable machines.</p>
+    <p>Today’s restoration shops replicate wartime methods because those methods still produce the desired behaviour in flight: rigging that preserves control harmony, surfaces that protect drag assumptions, and systems routed for inspection. Museums teach with cut‑aways and fixtures because they make visible how disciplined manufacture produces reliable machines.</p>
 
     <h2 id="timeline">Selected Timeline (Indicative)</h2>
     <ul>

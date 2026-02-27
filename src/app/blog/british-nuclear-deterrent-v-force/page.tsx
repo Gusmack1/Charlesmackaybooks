@@ -8,7 +8,7 @@ import EnhancedBlogSEO from '@/components/EnhancedBlogSEO';
 const post = {
   id: 'british-nuclear-deterrent-v-force',
   title: 'British Nuclear Deterrent: The V-Force and Cold War Strategy',
-  subtitle: 'A source-based overview of Britain\'s V-Force deterrent era, including Valiant, Vulcan, Victor, and the move toward stand-off delivery doctrine.',
+  subtitle: 'A source-based overview of Britain\'s V-Force deterrent era, including Valiant, Vulcan, Victor, and the move towards stand-off delivery doctrine.',
   content: `
     <h2 id="introduction">Introduction: The V-Force and Cold War Strategy</h2>
     <p>Britain's V-Force combined the Vickers Valiant, Avro Vulcan, and Handley Page Victor in the core years of UK airborne nuclear deterrence. This article draws on Charles E. MacKay's documented research in 
@@ -41,7 +41,7 @@ const post = {
     <h2 id="tube-alloys">Tube Alloys and British Nuclear Development</h2>
     <p>
       The book covers the work of Tube Alloys and brings to light more information on the special relationship between the United Kingdom 
-      and the United States. Tube Alloys was Britain's wartime nuclear weapons program, which later integrated with the American Manhattan 
+      and the United States. Tube Alloys was Britain's wartime nuclear weapons programme, which later integrated with the American Manhattan 
       Project. The comprehensive documentation of Tube Alloys ensures that Britain's contribution to nuclear weapons development is properly 
       recognized and preserved.
     </p>
@@ -109,9 +109,9 @@ const post = {
     <p>Powered by four Armstrong Siddeley Sapphire turbojet engines, the Victor could carry a 35,000-pound payload over a range of 4,000 miles. Its sophisticated wing design and advanced systems made it the most complex of the three aircraft to maintain, but also provided the best overall performance characteristics.</p>
 
     <h2 id="operational-history">Operational History: From High-Altitude to Low-Level</h2>
-    <p>The V-Force's operational history reflects the changing nature of strategic warfare during the Cold War. Initially designed for high-altitude bombing missions, the aircraft were forced to adapt to new threats and operational requirements as Soviet air defenses improved.</p>
+    <p>The V-Force's operational history reflects the changing nature of strategic warfare during the Cold War. Initially designed for high-altitude bombing missions, the aircraft were forced to adapt to new threats and operational requirements as Soviet air defences improved.</p>
 
-    <p>During the 1950s and early 1960s, the V-Force operated primarily at high altitudes, relying on speed and altitude to penetrate enemy airspace. The aircraft would fly at altitudes above 50,000 feet, where they were relatively safe from most air defenses. This high-altitude strategy was effective against early Soviet air defense systems.</p>
+    <p>During the 1950s and early 1960s, the V-Force operated primarily at high altitudes, relying on speed and altitude to penetrate enemy airspace. The aircraft would fly at altitudes above 50,000 feet, where they were relatively safe from most air defences. This high-altitude strategy was effective against early Soviet air defence systems.</p>
 
     <p>The introduction of Soviet surface-to-air missiles in the late 1950s forced a fundamental change in V-Force tactics. High-altitude operations became increasingly dangerous as Soviet SAM systems improved. The V-Force was forced to develop low-level penetration tactics, flying at altitudes below 500 feet to avoid detection and interception.</p>
 
@@ -127,7 +127,7 @@ const post = {
     <p>
       The development of the Blue Steel missile was a significant technical achievement, requiring advances in guidance systems, propulsion, 
       and nuclear weapon miniaturization. The missile used inertial guidance and could be programmed to follow complex flight paths to avoid 
-      enemy defenses. Blue Steel allowed V-Force aircraft to attack targets from safe distances beyond enemy air defenses, fundamentally 
+      enemy defences. Blue Steel allowed V-Force aircraft to attack targets from safe distances beyond enemy air defences, fundamentally 
       changing British nuclear strategy.
     </p>
     <p>
@@ -152,7 +152,7 @@ const post = {
 
     <div class="my-8">
       <img src="/blog-images/blue-steel-underwing-schematic.svg" alt="Original schematic illustration of a delta-wing aircraft with a single standoff missile shape beneath the centerline (diagrammatic)." class="w-full h-auto rounded-lg shadow-lg"/>
-      <p class="text-sm mt-2 text-center italic">Blue Steel standoff missile: enabled V-Force aircraft to attack targets from safe distances beyond enemy air defenses.</p>
+      <p class="text-sm mt-2 text-center italic">Blue Steel standoff missile: enabled V-Force aircraft to attack targets from safe distances beyond enemy air defences.</p>
     </div>
 
     <h2 id="we177-nuclear-weapons">WE177 Nuclear Devices and British Free-Fall Weapons</h2>
@@ -310,7 +310,7 @@ const post = {
     </p>
     <p>
       Most importantly, the V-Force successfully maintained Britain's nuclear deterrent capability for over three decades. During this period, 
-      the aircraft served as a visible symbol of Britain's commitment to its own defense and its role within the NATO alliance. The V-Force 
+      the aircraft served as a visible symbol of Britain's commitment to its own defence and its role within the NATO alliance. The V-Force 
       ensured that Britain remained a credible nuclear power, capable of independent action when necessary.
     </p>
     <p>

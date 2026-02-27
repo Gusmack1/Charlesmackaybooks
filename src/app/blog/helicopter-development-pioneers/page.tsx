@@ -71,7 +71,7 @@ const post = {
     <p>
       The post-war period brought different priorities: reliability, maintainability, and operational flexibility became paramount. 
       British helicopter development, exemplified by the Bristol Sycamore, emphasized conservative engineering and procedural discipline 
-      over headline performance. This approach reflected broader industrial shifts toward systems engineering and quality control, 
+      over headline performance. This approach reflected broader industrial shifts towards systems engineering and quality control, 
       principles that would become central to successful helicopter operations. The industrial infrastructure developed during wartime 
       production—precision manufacturing, quality assurance systems, and technical documentation—proved essential for helicopter 
       development, demonstrating how manufacturing capabilities enabled technological progress.

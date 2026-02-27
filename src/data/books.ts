@@ -176,7 +176,7 @@ Armament shows the work of Rheinmetall Borsig and Mauser. All classes of bombs a
       'Preface: Aviation Comes to the Clyde',
       'Chapter 1: Early Aviation Pioneers in Scotland (1909-1914)',
       'Chapter 2: The Royal Flying Corps Arrives',
-      'Chapter 3: RNAS Stations and Coastal Defense',
+      'Chapter 3: RNAS Stations and Coastal Defence',
       'Chapter 4: Aircraft Manufacturing on the Clyde',
       'Chapter 5: Training the Next Generation of Pilots',
       'Chapter 6: Combat Operations from Scottish Bases',

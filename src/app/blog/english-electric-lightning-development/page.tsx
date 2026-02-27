@@ -31,7 +31,7 @@ const post = {
       Britain's existing interceptor force, primarily composed of subsonic aircraft like the Hawker Hunter and Gloster Javelin, was inadequate for this new threat. The Royal Air Force needed an aircraft that could scramble from alert, climb rapidly to intercept altitude, and engage high‑speed targets in all weather conditions. This requirement drove the development of what would become the Lightning — a specialized point‑defence interceptor designed around the QRA concept.
     </p>
     <p>
-      The British aircraft industry was well‑positioned to meet this challenge. English Electric had gained valuable experience with the Canberra bomber program, while Rolls‑Royce had developed the powerful Avon turbojet. The combination of these capabilities, along with advances in radar technology and missile systems, created the foundation for a revolutionary interceptor design.
+      The British aircraft industry was well‑positioned to meet this challenge. English Electric had gained valuable experience with the Canberra bomber programme, while Rolls‑Royce had developed the powerful Avon turbojet. The combination of these capabilities, along with advances in radar technology and missile systems, created the foundation for a revolutionary interceptor design.
     </p>
 
     <h2 id="experimental-origins">Experimental Origins: P.1A and P.1B Breakthroughs</h2>
@@ -177,7 +177,7 @@ const post = {
 
     <h2 id="retirement-legacy">Retirement and Historical Legacy</h2>
     <p>
-      The Lightning's retirement from RAF service in 1988 marked the end of an era in British aviation. The aircraft had served for 28 years, a remarkable longevity that testified to the soundness of its design and the effectiveness of its operational concept. The Lightning's replacement by the Panavia Tornado F.3 represented a shift toward multi‑role aircraft, though the Tornado would never match the Lightning's climb performance.
+      The Lightning's retirement from RAF service in 1988 marked the end of an era in British aviation. The aircraft had served for 28 years, a remarkable longevity that testified to the soundness of its design and the effectiveness of its operational concept. The Lightning's replacement by the Panavia Tornado F.3 represented a shift towards multi‑role aircraft, though the Tornado would never match the Lightning's climb performance.
     </p>
     <p>
       The Lightning's legacy extends far beyond its operational service. The aircraft's configuration innovations, particularly the stacked‑engine arrangement and ventral intake design, influenced subsequent fighter designs. The Lightning's emphasis on climb performance and reaction time established principles that remain relevant to modern interceptor design.
