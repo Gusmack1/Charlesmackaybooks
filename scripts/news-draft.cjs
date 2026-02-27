@@ -121,7 +121,7 @@ function buildArticleRecord(items) {
       { keyword: 'Royal Air Force updates', primary: false },
       { keyword: 'Scottish aerospace industry', primary: false },
     ],
-    status: 'draft',
+    status: 'published',
     createdAt: new Date().toISOString(),
   }
 }
