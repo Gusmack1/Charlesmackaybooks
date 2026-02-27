@@ -6,6 +6,7 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import { books } from '@/data/books';
 import { Book } from '@/types/book';
+import { getNewsArticlesForBook } from '@/lib/newsroom';
 import BookDetailClient from '@/components/BookDetailClient';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookAnalyticsClient from '@/components/BookAnalyticsClient';
@@ -202,6 +203,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   if (!book) {
     notFound();
   }
+
+  const relatedNews = await getNewsArticlesForBook(id);
 
   // Consistent dark-blue hero across all book pages - solid dark blue
   const gradientClass = 'bg-slate-900';
@@ -618,7 +621,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 </div>
 
                 {/* Purchase Options */}
-                <div className="space-y-4 max-w-2xl mx-auto">
+                <div id="purchase" className="space-y-4 max-w-2xl mx-auto">
                   <BookDetailClient book={book} />
                   {quickPairings.length > 0 && (
                     <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4">
@@ -745,7 +748,65 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             </p>
           </div>
 
-          {/* Related Articles only (continuity) */}
+          {/* Related Aviation News - articles that mention this book */}
+          {relatedNews.length > 0 && (
+            <div className="card mt-8 content">
+              <h3 className="content h3">Related Aviation News</h3>
+              <p className="text-secondary mb-4">
+                Scottish aviation briefings that connect to this book. Read the full articles and add this volume to your basket.
+              </p>
+              <div className="space-y-4">
+                {relatedNews.map((article) => {
+                  const raw = article.sections?.[0]?.content || '';
+                  const excerpt = raw
+                    .split('\n')
+                    .map((l) => l.trim())
+                    .find((l) => l.length > 40 && !l.startsWith('-') && !l.startsWith('Daily digest'))
+                    || raw.slice(0, 180).trim()
+                    || article.title;
+                  const dateStr = article.createdAt
+                    ? new Date(article.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+                    : '';
+                  return (
+                    <div
+                      key={article.slug}
+                      className="border border-white/15 rounded-lg p-4 bg-slate-800/50 hover:border-white/25 transition-colors"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                        <div className="flex-1 min-w-0">
+                          <Link
+                            href={`/aviation-news/${article.slug}`}
+                            className="font-semibold text-primary hover:text-blue-300 block mb-1"
+                          >
+                            {article.title}
+                          </Link>
+                          {dateStr && (
+                            <p className="text-xs text-white/50 mb-2">{dateStr}</p>
+                          )}
+                          <p className="text-secondary text-sm line-clamp-2">{excerpt}</p>
+                        </div>
+                        <div className="flex flex-wrap gap-2 shrink-0">
+                          <Link
+                            href={`/aviation-news/${article.slug}`}
+                            className="px-4 py-2 rounded-lg border border-white/20 bg-white/5 text-white hover:bg-white/10 text-sm font-medium"
+                          >
+                            Read briefing
+                          </Link>
+                          <Link
+                            href={`/books/${id}#purchase`}
+                            className="px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold hover:bg-gray-100 text-sm"
+                          >
+                            Buy this book £{book.price.toFixed(2)}
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {/* Related Books Section - Automated Internal Linking */}
           {relatedBooks.length > 0 && (
             <div className="card mt-8 content">

@@ -53,6 +53,9 @@ jobs:
       - name: Draft newsroom article
         run: npm run news:draft
 
+      - name: Fix news articles (remove editor instructions, set titles)
+        run: npm run news:fix
+
       - name: Generate automation report
         run: npm run news:report -- --output reports/automation/latest.json
 

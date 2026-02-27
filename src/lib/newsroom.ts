@@ -154,6 +154,15 @@ export async function getPublishedNewsArticles(limit = 10): Promise<NewsArticleR
   return published.slice(0, limit)
 }
 
+/** Returns all published news articles that mention a given book (no limit). */
+export async function getNewsArticlesForBook(bookId: string): Promise<NewsArticleRecord[]> {
+  const ordered = await readAllArticles()
+  const published = ordered.filter((article) => (article.status || 'draft') !== 'draft')
+  return published.filter((article) =>
+    article.relatedBooks?.some((rb) => rb.bookId === bookId)
+  )
+}
+
 export async function getNewsArticleBySlug(slug: string): Promise<NewsArticleRecord | null> {
   const files = listArticleFiles(ARTICLES_DIR)
   const matchPath = files.find((file) => file.endsWith(`${slug}.json`))

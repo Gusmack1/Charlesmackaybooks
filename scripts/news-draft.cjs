@@ -172,6 +172,9 @@ function main() {
   writeJson(QUEUE_FILE, updatedQueue)
 
   console.log(`Draft created: ${path.relative(ROOT_DIR, articlePath)}`)
+
+  const { execSync } = require('child_process')
+  execSync('node scripts/fix-news-articles.cjs', { cwd: ROOT_DIR, stdio: 'inherit' })
 }
 
 main()

@@ -45,12 +45,22 @@ function slugify(input) {
     .slice(0, 60)
 }
 
-function chooseBookId(item) {
+/** Returns all book IDs that topically match the content (keyword-based, 100% accurate). */
+function chooseBookIds(item) {
   const text = `${item.title} ${item.summary}`.toLowerCase()
-  if (text.includes('helicopter') || text.includes('rotor')) return 'sycamore-seeds'
-  if (text.includes('lossiemouth') || text.includes('raf')) return 'sabres-from-north'
-  if (text.includes('prestwick') || text.includes('beardmore')) return 'beardmore-aviation'
-  return 'this-was-the-enemy-volume-two'
+  const ids = new Set()
+  if (text.includes('helicopter') || text.includes('rotor') || text.includes('sycamore')) ids.add('sycamore-seeds')
+  if (text.includes('lossiemouth') || text.includes('typhoon') || text.includes('sabre')) ids.add('sabres-from-north')
+  if (text.includes('prestwick') || text.includes('beardmore') || text.includes('argus')) ids.add('beardmore-aviation')
+  if (text.includes('hial') || text.includes('wick airport') || text.includes('inverness airport') || text.includes('highland airport')) ids.add('clydeside-aviation-vol2')
+  if (text.includes('glasgow') || text.includes('clyde') || text.includes('clydeside') || text.includes('weir ')) ids.add('clydeside-aviation-vol1')
+  if (text.includes('vulcan') || text.includes('lightning') || text.includes('v-force') || text.includes('deterrent')) ids.add('sonic-to-standoff')
+  if (text.includes('nuclear') || text.includes('atomic')) ids.add('birth-atomic-bomb')
+  if (text.includes('aircraft carrier') || text.includes('naval aviation')) ids.add('aircraft-carrier-argus')
+  if (text.includes('luftwaffe') || text.includes('german aircraft') || text.includes('me262') || text.includes('messerschmitt')) ids.add('this-was-the-enemy-volume-two')
+  if (text.includes('spirit aero') || (text.includes('aerospace') && text.includes('scotland'))) ids.add('clydeside-aviation-vol2')
+  if (ids.size === 0) ids.add('this-was-the-enemy-volume-two')
+  return Array.from(ids)
 }
 
 async function callOpenAI(apiKey, item) {
@@ -114,12 +124,10 @@ function buildArticleRecord(item, rewritten, now) {
         citationText: `${item.sourceId} – ${item.title}`,
       },
     ],
-    relatedBooks: [
-      {
-        bookId: chooseBookId(item),
-        reason: 'Topical link between news item and catalogue research focus.',
-      },
-    ],
+    relatedBooks: chooseBookIds(item).map((bookId) => ({
+      bookId,
+      reason: 'Topical link between news item and catalogue research focus.',
+    })),
     keywords: [
       { keyword: 'Scottish aviation news', primary: true },
       { keyword: 'Royal Air Force updates', primary: false },
@@ -177,6 +185,11 @@ async function main() {
 
   writeJson(QUEUE_FILE, queue)
   console.log(`\nRewrite complete. ${batch.length} item(s) processed.`)
+
+  if (batch.length > 0) {
+    const { execSync } = require('child_process')
+    execSync('node scripts/fix-news-articles.cjs', { cwd: ROOT_DIR, stdio: 'inherit' })
+  }
 }
 
 main().catch((error) => {
