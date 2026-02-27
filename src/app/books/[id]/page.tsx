@@ -471,6 +471,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
   // Get related books automatically
   const relatedBooks = getRelatedBooks(book);
+  const quickPairings = relatedBooks.slice(0, 3);
   const strengthPoints = [
     book.sourceType?.length ? `Source base: ${book.sourceType.join(', ')}` : null,
     book.pageCount ? `${book.pageCount} pages of focused research` : null,
@@ -499,6 +500,40 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       ? `Used by ${((book as any).academicInstitutions as string[]).slice(0, 2).join(' & ')}`
       : null,
   ].filter((item): item is string => Boolean(item));
+  const purchaseFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `Is ${book.title} in stock and ready to order?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: book.inStock
+            ? `${book.title} is currently in stock and available for secure guest checkout.`
+            : `${book.title} is currently out of stock. You can still contact us for availability updates.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer shipping and returns?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Yes. We offer free shipping and a 30-day returns policy. Full details are provided on our returns and support pages.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is there a discount for buying multiple books?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Yes. Checkout automatically applies 5% off when you buy 2 books and 10% off when you buy 3 or more books.',
+        },
+      },
+    ],
+  };
 
   return (
     <>
@@ -519,6 +554,10 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           category: book.category,
           description: book.description,
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(purchaseFaqSchema) }}
       />
 
       <BookAnalyticsClient book={book} />
@@ -581,6 +620,28 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 {/* Purchase Options */}
                 <div className="space-y-4 max-w-2xl mx-auto">
                   <BookDetailClient book={book} />
+                  {quickPairings.length > 0 && (
+                    <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4">
+                      <p className="text-sm font-semibold text-white mb-3">
+                        Pair this with these popular related titles
+                      </p>
+                      <div className="grid sm:grid-cols-3 gap-2">
+                        {quickPairings.map((relatedBook) => (
+                          <Link
+                            key={relatedBook.id}
+                            href={`/books/${relatedBook.id}`}
+                            className="rounded-lg border border-white/15 bg-slate-900/50 px-3 py-2 hover:border-blue-300/70 transition-colors"
+                          >
+                            <div className="text-xs text-white/80 line-clamp-2">{relatedBook.title}</div>
+                            <div className="text-sm font-semibold text-white mt-1">£{relatedBook.price.toFixed(2)}</div>
+                          </Link>
+                        ))}
+                      </div>
+                      <p className="text-xs text-blue-200 mt-3">
+                        Save 5% on 2 books or 10% on 3+ at checkout.
+                      </p>
+                    </div>
+                  )}
                   <div className="text-center mt-6">
                     <Link href="/books" className="text-blue-300 hover:text-white underline">
                       ← Browse All Books

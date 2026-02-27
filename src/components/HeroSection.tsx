@@ -60,6 +60,18 @@ export default function HeroSection() {
             <p className="mt-4 text-sm text-white/85">
               Guest checkout available - no account required. Pay by card, wallet, or PayPal.
             </p>
+            <p className="mt-2 text-sm text-blue-200">
+              Trusted seller with 100% positive feedback on{' '}
+              <a
+                href="https://www.ebay.co.uk/usr/chaza87"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white"
+              >
+                Charles&apos; eBay profile
+              </a>
+              .
+            </p>
           </div>
 
           {/* Professional Images Grid */}

@@ -158,6 +158,7 @@ function CheckoutContent() {
   const subtotal = getTotalPrice();
   const bulkDiscount = getBulkDiscount();
   const total = getFinalTotal(); // This includes bulk discounts and shipping
+  const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
   useEffect(() => {
     if (!items.length || checkoutCompleted) return;
@@ -452,6 +453,9 @@ function CheckoutContent() {
           <p className="text-white/90 text-sm sm:text-base">
             Guest checkout is enabled by default. Buy quickly with card, wallet, or PayPal.
           </p>
+          <div className="mt-3 rounded-lg border border-blue-700/50 bg-slate-800/70 px-3 py-2 text-xs sm:text-sm text-white/85">
+            Secure SSL payment • Free worldwide tracked shipping • 30-day returns
+          </div>
         </div>
 
         {/* Progress Steps - Mobile Friendly */}
@@ -538,7 +542,7 @@ function CheckoutContent() {
                     </div>
                     {bulkDiscount > 0 && (
                       <div className="flex justify-between text-green-400 font-semibold">
-                        <span className="text-xs sm:text-sm">Bulk Discount ({getBulkDiscountPercentage()}% off {items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
+                        <span className="text-xs sm:text-sm">Bulk Discount ({getBulkDiscountPercentage()}% off {totalItemsCount}+ books):</span>
                         <span className="text-xs sm:text-sm">-£{bulkDiscount.toFixed(2)}</span>
                       </div>
                     )}
@@ -557,6 +561,22 @@ function CheckoutContent() {
                     </p>
                   )}
                   <p className="text-xs sm:text-sm text-white/80 mt-2">Free worldwide shipping included</p>
+                  {totalItemsCount < 2 && (
+                    <p className="text-xs sm:text-sm text-blue-200 mt-2">
+                      Add 1 more book to unlock <strong>5% off</strong> your whole order.{' '}
+                      <Link href="/books" className="underline hover:text-white">
+                        Browse books
+                      </Link>
+                    </p>
+                  )}
+                  {totalItemsCount === 2 && (
+                    <p className="text-xs sm:text-sm text-blue-200 mt-2">
+                      Add 1 more book to unlock <strong>10% off</strong> your whole order.{' '}
+                      <Link href="/books" className="underline hover:text-white">
+                        Add one more title
+                      </Link>
+                    </p>
+                  )}
                 </div>
                 <div className="mt-4 space-y-2">
                   <button
@@ -773,6 +793,9 @@ function CheckoutContent() {
             {step === 'payment' && (
               <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4 sm:p-6">
                 <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Payment Method</h2>
+                <p className="text-xs sm:text-sm text-white/80 mb-4">
+                  Your payment is encrypted and processed securely by Stripe or PayPal.
+                </p>
                 <button
                   type="button"
                   onClick={() => setStep('address')}
@@ -899,7 +922,7 @@ function CheckoutContent() {
                 </div>
                 {bulkDiscount > 0 && (
                   <div className="flex justify-between text-green-400 font-semibold">
-                    <span className="text-xs">Bulk Discount ({getBulkDiscountPercentage()}% off {items.reduce((total, item) => total + item.quantity, 0)}+ books):</span>
+                    <span className="text-xs">Bulk Discount ({getBulkDiscountPercentage()}% off {totalItemsCount}+ books):</span>
                     <span className="text-xs">-£{bulkDiscount.toFixed(2)}</span>
                   </div>
                 )}

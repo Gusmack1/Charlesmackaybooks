@@ -89,6 +89,14 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
               )}
             </div>
           </div>
+          {book.inStock && (
+            <p className="text-[11px] text-green-200 -mt-2">
+              Dispatches quickly from the UK with tracked shipping.
+            </p>
+          )}
+          <p className="text-[11px] text-blue-200 -mt-1">
+            Save 5% on 2 books or 10% on 3+ at checkout.
+          </p>
 
           <button
             onClick={handleBuyNow}

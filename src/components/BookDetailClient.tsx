@@ -16,6 +16,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
   const { trackContactEmail, trackEbayRedirect } = useAnalytics();
+  const bulkDiscountHint = 'Buy 2+ books for 5% off, or 3+ books for 10% off at checkout.';
 
   const handleAddToCart = () => {
     setIsAddingToCart(true);
@@ -67,6 +68,11 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               {book.authorInsights.match(/Release date:?\s*([^\.]+)/i)?.[1] || 'Pre-order available'}
             </div>
           )}
+          {!isPreOrder && book.inStock && (
+            <div className="text-xs text-green-200 mt-2 font-medium">
+              Ready to dispatch. Free worldwide shipping.
+            </div>
+          )}
         </div>
 
         <div className="mt-4 grid gap-3">
@@ -75,7 +81,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               <button
                 onClick={handleBuyNow}
                 disabled={isBuyingNow}
-                className="hidden lg:block w-full bg-white text-slate-900 py-3 px-4 disabled:opacity-60 text-base font-bold rounded-lg min-h-[48px] hover:bg-gray-100 transition-colors border border-slate-900"
+                className="w-full bg-white text-slate-900 py-3 px-4 disabled:opacity-60 text-base font-bold rounded-lg min-h-[48px] hover:bg-gray-100 transition-colors border border-slate-900"
               >
                 {isBuyingNow ? 'Opening checkout...' : 'Buy now - secure checkout'}
               </button>
@@ -83,7 +89,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               <button
                 onClick={handleAddToCart}
                 disabled={isAddingToCart}
-                className="hidden lg:block w-full bg-slate-700 text-white py-3 px-4 disabled:opacity-60 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-slate-600 transition-colors border border-white/20"
+                className="w-full bg-slate-700 text-white py-3 px-4 disabled:opacity-60 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-slate-600 transition-colors border border-white/20"
               >
                 {isAddingToCart ? 'Adding...' : 'Add to basket'}
               </button>
@@ -112,6 +118,9 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
 
         <p className="mt-3 text-center text-xs text-white/70">
           No account required. Guest checkout is available, and PayPal is offered during checkout.
+        </p>
+        <p className="mt-2 text-center text-xs text-blue-200 font-medium">
+          {bulkDiscountHint}
         </p>
       </div>
 
