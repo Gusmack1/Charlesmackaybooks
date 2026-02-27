@@ -52,53 +52,58 @@ function formatDate(date = new Date()) {
   return date.toISOString().split('T')[0]
 }
 
-function chooseBookId(items) {
+/** Returns all book IDs that topically match the combined content (no limit, 100% keyword-based). */
+function chooseBookIds(items) {
   const text = items.map((item) => `${item.title} ${item.summary}`.toLowerCase()).join(' ')
-  if (text.includes('helicopter') || text.includes('rotor')) return 'sycamore-seeds'
-  if (text.includes('lossiemouth') || text.includes('raf')) return 'sabres-from-north'
-  if (text.includes('prestwick') || text.includes('beardmore')) return 'beardmore-aviation'
-  return 'this-was-the-enemy-volume-two'
+  const ids = new Set()
+  if (text.includes('helicopter') || text.includes('rotor') || text.includes('sycamore')) ids.add('sycamore-seeds')
+  if (text.includes('lossiemouth') || text.includes('typhoon') || text.includes('sabre')) ids.add('sabres-from-north')
+  if (text.includes('prestwick') || text.includes('beardmore') || text.includes('argus')) ids.add('beardmore-aviation')
+  if (text.includes('hial') || text.includes('wick airport') || text.includes('inverness airport') || text.includes('highland airport')) ids.add('clydeside-aviation-vol2')
+  if (text.includes('glasgow') || text.includes('clyde') || text.includes('clydeside') || text.includes('weir ')) ids.add('clydeside-aviation-vol1')
+  if (text.includes('vulcan') || text.includes('lightning') || text.includes('v-force') || text.includes('deterrent')) ids.add('sonic-to-standoff')
+  if (text.includes('nuclear') || text.includes('atomic')) ids.add('birth-atomic-bomb')
+  if (text.includes('aircraft carrier') || text.includes('naval aviation')) ids.add('aircraft-carrier-argus')
+  if (text.includes('luftwaffe') || text.includes('german aircraft') || text.includes('me262') || text.includes('messerschmitt')) ids.add('this-was-the-enemy-volume-two')
+  if (text.includes('spirit aero') || text.includes('aerospace') && text.includes('scotland')) ids.add('clydeside-aviation-vol2')
+  if (ids.size === 0) ids.add('this-was-the-enemy-volume-two')
+  return Array.from(ids)
 }
 
 function buildSections(items) {
-  const bulletList = items.map((item) => `- **${item.title}** — ${item.summary || 'Summary pending.'}`).join('\n')
+  const paragraphs = items
+    .map((item) => {
+      const title = (item.title || '').trim()
+      const summary = (item.summary || '').trim()
+      if (!title && !summary) return null
+      return summary ? `${title}. ${summary}` : title
+    })
+    .filter(Boolean)
+
+  const summaryContent =
+    paragraphs.length > 0
+      ? paragraphs.join('\n\n')
+      : 'Official releases from UK government and aviation bodies. Full citations are linked in the Sources section.'
+
+  const hasAviation = /airspace|aviation|airport|aircraft|raf|mod|flight/i.test(paragraphs.join(' '))
+  const contextContent = hasAviation
+    ? 'These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes.'
+    : 'Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes.'
+
+  const furtherContent =
+    'For deeper context on Scottish aviation history, industrial development, and operational heritage, explore the related titles in our catalogue. Each volume draws on archival research and primary sources.'
 
   return [
-    {
-      heading: 'Operational Snapshot',
-      content: [
-        'Daily digest of official releases touching Scottish and wider UK aviation activity:',
-        bulletList,
-        '',
-        '_Editors: verify figures/details against the primary sources linked below before expanding this section to the full narrative length._',
-      ].join('\n'),
-    },
-    {
-      heading: 'Technical & Industrial Notes',
-      content:
-        'Summarise the engineering, basing, and procurement implications highlighted across today’s releases. ' +
-        'Connect them to Scottish industrial capacity (Prestwick, Lossiemouth, Weir, Spirit AeroSystems) and quantify any fleet, workforce, or funding metrics disclosed. ' +
-        'Cite the relevant MOD transparency tables where applicable.',
-    },
-    {
-      heading: 'Historical Context & Lessons',
-      content:
-        'Relate the current developments back to Charles E. MacKay’s archival research—e.g., how modern readiness exercises echo WWII dispersal plans or how present-day logistics mirror Beardmore/Weir supply chains. ' +
-        'Draw on verified passages from the corresponding book to reinforce continuity across decades.',
-    },
-    {
-      heading: 'Modern Legacy & Book Recommendation',
-      content:
-        'Explain why this news matters for contemporary Scottish aviation readers, then steer them toward the recommended book for deeper study. ' +
-        'Include a call-to-action linking to the relevant `/books/<id>` page and highlight unique research materials in the volume.',
-    },
+    { heading: 'Summary', content: summaryContent },
+    { heading: 'Context', content: contextContent },
+    { heading: 'Further reading', content: furtherContent },
   ]
 }
 
 function buildArticleRecord(items) {
   const today = formatDate()
   const slug = `${today}-${slugify(items[0].title).slice(0, 40) || 'scottish-aviation-briefing'}`
-  const bookId = chooseBookId(items)
+  const bookIds = chooseBookIds(items)
   const sections = buildSections(items)
   const wordCount = sections.reduce((sum, section) => sum + section.content.split(/\s+/).filter(Boolean).length, 0)
 
@@ -115,7 +120,7 @@ function buildArticleRecord(items) {
       sourceUrl: item.sourceUrl,
       citationText: `${item.sourceId} – ${item.title}`,
     })),
-    relatedBooks: [{ bookId, reason: 'Topical link between news items and catalogue research focus.' }],
+    relatedBooks: bookIds.map((bookId) => ({ bookId, reason: 'Topical link between news items and catalogue research focus.' })),
     keywords: [
       { keyword: 'Scottish aviation news', primary: true },
       { keyword: 'Royal Air Force updates', primary: false },

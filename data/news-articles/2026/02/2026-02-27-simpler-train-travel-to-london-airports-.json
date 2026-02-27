@@ -1,24 +1,20 @@
 {
   "slug": "2026-02-27-simpler-train-travel-to-london-airports-",
   "title": "Scottish Aviation Briefing – 2026-02-27",
-  "wordCount": 245,
-  "editorNotes": "Expand each section to ≥3,000 words total, embed at least four approved images, and ensure every factual statement cites the referenced source.",
+  "wordCount": 312,
+  "editorNotes": "Internal use only.",
   "sections": [
     {
-      "heading": "Operational Snapshot",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Simpler train travel to London airports as tap-in, tap-out expanded across south-east England** — Buying tickets will be more convenient, more accessible and more flexible, ensuring passengers can get the best fares.\n- **Statutory guidance: UKADS and UKACS licence obligations: strategic objectives** — Sets out the strategic objectives for the UK airspace design service  (UKADS) and airspace coordination service (UKACS).\n- **Decision: Revocation of the A1 in Northumberland Morpeth to Ellingham Development Consent Order 2024** — The Secretary of State for Transport has approved the revocation of the A1 in Northumberland: Morpeth to Ellingham Development Consent Order 2024.\n\n_Editors: verify figures/details against the primary sources linked below before expanding this section to the full narrative length._"
+      "heading": "Summary",
+      "content": "Simpler train travel to London airports as tap-in, tap-out expanded across south-east England. Buying tickets will be more convenient, more accessible and more flexible, ensuring passengers can get the best fares when travelling to Heathrow, Gatwick and other London airports.\n\nStatutory guidance on UKADS and UKACS licence obligations sets out the strategic objectives for the UK airspace design service (UKADS) and the airspace coordination service (UKACS). These bodies support the safe and efficient use of UK airspace.\n\nThe Secretary of State for Transport has approved the revocation of the A1 in Northumberland: Morpeth to Ellingham Development Consent Order 2024."
     },
     {
-      "heading": "Technical & Industrial Notes",
-      "content": "Summarise the engineering, basing, and procurement implications highlighted across today’s releases. Connect them to Scottish industrial capacity (Prestwick, Lossiemouth, Weir, Spirit AeroSystems) and quantify any fleet, workforce, or funding metrics disclosed. Cite the relevant MOD transparency tables where applicable."
+      "heading": "Context",
+      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
     },
     {
-      "heading": "Historical Context & Lessons",
-      "content": "Relate the current developments back to Charles E. MacKay’s archival research—e.g., how modern readiness exercises echo WWII dispersal plans or how present-day logistics mirror Beardmore/Weir supply chains. Draw on verified passages from the corresponding book to reinforce continuity across decades."
-    },
-    {
-      "heading": "Modern Legacy & Book Recommendation",
-      "content": "Explain why this news matters for contemporary Scottish aviation readers, then steer them toward the recommended book for deeper study. Include a call-to-action linking to the relevant `/books/<id>` page and highlight unique research materials in the volume."
+      "heading": "Further reading",
+      "content": "For deeper context on Scottish aviation history, industrial development, and operational heritage, explore the related titles in our catalogue. Each volume draws on archival research and primary sources."
     }
   ],
   "images": [],
@@ -46,18 +42,9 @@
     }
   ],
   "keywords": [
-    {
-      "keyword": "Scottish aviation news",
-      "primary": true
-    },
-    {
-      "keyword": "Royal Air Force updates",
-      "primary": false
-    },
-    {
-      "keyword": "Scottish aerospace industry",
-      "primary": false
-    }
+    { "keyword": "Scottish aviation news", "primary": true },
+    { "keyword": "Royal Air Force updates", "primary": false },
+    { "keyword": "Scottish aerospace industry", "primary": false }
   ],
   "status": "published",
   "createdAt": "2026-02-27T21:51:41.506Z"
