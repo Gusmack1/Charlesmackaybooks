@@ -2,7 +2,7 @@ name: Newsroom Automation
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 */12 * * *'
   workflow_dispatch:
 
 env:
@@ -39,6 +39,16 @@ jobs:
 
       - name: Run news ingestion
         run: npm run news:ingest
+
+      - name: Search Scottish aviation news
+        env:
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY || '' }}
+        run: npm run news:search
+
+      - name: AI rewrite (factual, BBC style)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY || '' }}
+        run: npm run news:rewrite
 
       - name: Draft newsroom article
         run: npm run news:draft

@@ -6,9 +6,9 @@ import { trackedKeywords } from '@/data/keywordTracking'
 import { getPublishedNewsArticles } from '@/lib/newsroom'
 
 export const metadata: Metadata = {
-  title: 'Scottish Aviation Newsroom | Daily Briefings & Book Tie-ins',
+  title: 'Scottish Aviation Newsroom | Live Feed & Book Tie-ins',
   description:
-    'Auto-generated Scottish aviation briefings powered by MOD, RAF, HIAL, DfT, and AAIB sources—each linked to Charles E. MacKay research volumes.',
+    'Live Scottish aviation news—searched, fact-checked, and rewritten in BBC style. Updated every 12 hours from MOD, RAF, HIAL, and web sources. Each briefing linked to Charles E. MacKay research volumes.',
   alternates: {
     canonical: 'https://charlesmackaybooks.com/news',
   },
@@ -34,10 +34,16 @@ export default async function NewsPage() {
   return (
     <BBCPageTemplate
       title="Scottish Aviation Newsroom"
-      subtitle="Fully automated Scottish aviation briefings with citations, book tie-ins, and keyword coverage."
-      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Newsroom' }]}
+      subtitle="Live feed: Scottish aviation news searched, fact-checked, and rewritten in BBC style. Updated every 12 hours."
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Aviation News' }]}
     >
       <div className="max-w-6xl mx-auto px-6 py-2 space-y-6 bg-slate-900">
+        <div className="flex items-center justify-between text-sm text-white/60">
+          <span>Live feed · Updated every 12 hours</span>
+          {articles.length > 0 && (
+            <span>Latest: {formatDate(articles[0]?.createdAt)}</span>
+          )}
+        </div>
         {hero ? (
           <article className="grid gap-8 md:grid-cols-2 border border-white/10 rounded-2xl p-6 bg-slate-800/70">
             <div>
@@ -90,7 +96,10 @@ export default async function NewsPage() {
             </div>
           </article>
         ) : (
-          <p className="text-white/80">No briefings generated yet. Run the newsroom automation workflow to seed this page.</p>
+          <div className="border border-white/10 rounded-2xl p-8 bg-slate-800/50 text-center">
+            <p className="text-white/80 mb-2">No briefings yet. The newsroom automation runs every 12 hours.</p>
+            <p className="text-sm text-white/60">Configure SERPER_API_KEY and OPENAI_API_KEY in GitHub Secrets to enable web search and AI rewriting.</p>
+          </div>
         )}
 
         {secondary.length > 0 && (

@@ -18,6 +18,8 @@
     "verify:bookinfo": "node scripts/check-book-reference.cjs",
     "verify:feeds": "node scripts/verify-feeds.cjs",
     "news:ingest": "node scripts/news-ingest.cjs",
+    "news:search": "node scripts/news-search.cjs",
+    "news:rewrite": "node scripts/news-rewrite.cjs",
     "news:draft": "node scripts/news-draft.cjs",
     "news:report": "node scripts/news-automation-report.cjs",
     "keywords:report": "node scripts/keyword-rank-dashboard.cjs"
