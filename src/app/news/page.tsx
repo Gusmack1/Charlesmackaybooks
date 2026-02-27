@@ -2,13 +2,12 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import { books } from '@/data/books'
-import { trackedKeywords } from '@/data/keywordTracking'
 import { getPublishedNewsArticles } from '@/lib/newsroom'
 
 export const metadata: Metadata = {
-  title: 'Scottish Aviation Newsroom | Live Feed & Book Tie-ins',
+  title: 'Scottish Aviation News | Charles E. MacKay Books',
   description:
-    'Live Scottish aviation news—searched, fact-checked, and rewritten in BBC style. Updated every 12 hours from MOD, RAF, HIAL, and web sources. Each briefing linked to Charles E. MacKay research volumes.',
+    'Scottish aviation news and briefings, linked to our research volumes.',
   alternates: {
     canonical: 'https://charlesmackaybooks.com/news',
   },
@@ -16,9 +15,22 @@ export const metadata: Metadata = {
 
 const bookLookup = new Map(books.map((book) => [book.id, book]))
 
+function displayReason(reason: string | undefined): string {
+  const generic = 'Topical link between news items and catalogue research focus.'
+  if (!reason || reason === generic) return 'Recommended volume'
+  return reason
+}
+
 function formatDate(iso: string | undefined) {
   if (!iso) return 'Date pending'
   return new Date(iso).toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+}
+
+function getExcerpt(content: string | undefined, maxLength = 200) {
+  if (!content) return ''
+  const firstLine = content.split('\n').find((l) => l.trim().length > 20 && !l.trim().startsWith('-'))
+  const text = firstLine || content.replace(/\n/g, ' ').trim()
+  return text.length > maxLength ? `${text.slice(0, maxLength).trim()}…` : text
 }
 
 export default async function NewsPage() {
@@ -26,62 +38,44 @@ export default async function NewsPage() {
   const [hero, ...rest] = articles
   const secondary = rest.slice(0, 4)
   const remainder = rest.slice(4)
-  const keywordHighlights = trackedKeywords
-    .slice()
-    .sort((a, b) => (a.priority > b.priority ? 1 : -1))
-    .slice(0, 8)
 
   return (
     <BBCPageTemplate
       title="Scottish Aviation Newsroom"
-      subtitle="Live feed: Scottish aviation news searched, fact-checked, and rewritten in BBC style. Updated every 12 hours."
+      subtitle="Scottish aviation news and briefings"
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Aviation News' }]}
     >
-      <div className="max-w-6xl mx-auto px-6 py-2 space-y-6 bg-slate-900">
-        <div className="flex items-center justify-between text-sm text-white/60">
-          <span>Live feed · Updated every 12 hours</span>
-          {articles.length > 0 && (
-            <span>Latest: {formatDate(articles[0]?.createdAt)}</span>
-          )}
-        </div>
+      <div className="max-w-6xl mx-auto px-6 py-8 space-y-10">
+        {articles.length > 0 && (
+          <p className="text-sm text-white/60">
+            Latest: {formatDate(articles[0]?.createdAt)}
+          </p>
+        )}
         {hero ? (
-          <article className="grid gap-8 md:grid-cols-2 border border-white/10 rounded-2xl p-6 bg-slate-800/70">
+          <article className="grid gap-8 md:grid-cols-2 border border-white/10 rounded-2xl p-6 md:p-8 bg-slate-800/70">
             <div>
-              <p className="text-xs uppercase tracking-widest text-blue-300 mb-2">Lead briefing</p>
-              <h1 className="text-3xl font-bold text-white mb-3">{hero.title}</h1>
-              <p className="text-white/80 mb-4">
-                {hero.sections?.[0]?.content || 'Operational snapshot ready for 3,000-word expansion.'}
+              <p className="text-xs uppercase tracking-widest text-blue-300 mb-2">{formatDate(hero.createdAt)}</p>
+              <h1 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">{hero.title}</h1>
+              <p className="text-white/80 mb-6 leading-relaxed line-clamp-3">
+                {hero.sections?.[0]?.content?.split('\n')[0] || hero.sections?.[0]?.content || 'Operational snapshot.'}
               </p>
-              <div className="text-white/60 text-sm mb-6">{formatDate(hero.createdAt)}</div>
-              <div className="flex flex-wrap gap-3 text-sm text-white/70 mb-6">
-                {hero.keywords?.map((keyword) => (
-                  <span key={keyword.keyword} className="px-3 py-1 rounded-full bg-white/10 border border-white/15">
-                    #{keyword.keyword}
-                  </span>
-                ))}
-              </div>
-              <div className="space-y-3">
-                <Link
-                  href={`/aviation-news/${hero.slug}`}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white text-slate-900 font-semibold hover:bg-gray-100 hover:underline transition-colors border border-slate-900"
-                >
-                  Read briefing
-                  <span aria-hidden>→</span>
-                </Link>
-                <div className="text-xs text-white/60">
-                  Generated automatically from {hero.sourceReferences?.length ?? 0} official releases.
-                </div>
-              </div>
+              <Link
+                href={`/aviation-news/${hero.slug}`}
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Read full briefing
+                <span aria-hidden>→</span>
+              </Link>
             </div>
-            <div className="bg-slate-900/60 border border-white/10 rounded-xl p-5 space-y-4">
-              <h2 className="text-xl font-semibold text-white">Book tie-in</h2>
+            <div className="bg-slate-900/60 border border-white/10 rounded-xl p-5 md:p-6 space-y-4">
+              <h2 className="text-lg font-semibold text-white">Related book</h2>
               {hero.relatedBooks?.length ? (
                 hero.relatedBooks.map(({ bookId, reason }) => {
                   const book = bookLookup.get(bookId)
                   if (!book) return null
                   return (
                     <div key={book.id} className="border border-white/10 rounded-lg p-4 bg-slate-800/60">
-                      <p className="text-sm uppercase text-white/50 mb-1">{reason || 'Recommended volume'}</p>
+                      <p className="text-sm uppercase text-white/50 mb-1">{displayReason(reason)}</p>
                       <h3 className="text-lg font-semibold text-white mb-2">{book.title}</h3>
                       <p className="text-white/80 text-sm line-clamp-3">{book.description}</p>
                       <Link href={`/books/${book.id}`} className="text-blue-300 text-sm font-semibold mt-3 inline-flex gap-1">
@@ -91,39 +85,34 @@ export default async function NewsPage() {
                   )
                 })
               ) : (
-                <p className="text-white/70 text-sm">This briefing will be assigned a book CTA during editorial pass.</p>
+                <p className="text-white/70 text-sm">Explore our <Link href="/books" className="text-blue-300 hover:underline">aviation history books</Link> for related reading.</p>
               )}
             </div>
           </article>
         ) : (
-          <div className="border border-white/10 rounded-2xl p-8 bg-slate-800/50 text-center">
-            <p className="text-white/80 mb-2">No briefings yet. The newsroom automation runs every 12 hours.</p>
-            <p className="text-sm text-white/60">Configure SERPER_API_KEY and OPENAI_API_KEY in GitHub Secrets to enable web search and AI rewriting.</p>
+          <div className="border border-white/10 rounded-2xl p-12 md:p-16 bg-slate-800/50 text-center">
+            <h2 className="text-xl font-semibold text-white mb-4">No briefings yet</h2>
+            <p className="text-white/80 max-w-md mx-auto">
+              Scottish aviation news and briefings will appear here.
+            </p>
           </div>
         )}
 
         {secondary.length > 0 && (
           <section>
-            <h2 className="text-2xl font-semibold text-white mb-4">Latest briefings</h2>
-            <div className="grid gap-6 md:grid-cols-2">
+            <h2 className="text-xl font-semibold text-white mb-4">More briefings</h2>
+            <div className="grid gap-4 md:grid-cols-2">
               {secondary.map((article) => (
                 <Link
                   key={article.slug}
                   href={`/aviation-news/${article.slug}`}
-                  className="border border-white/10 rounded-xl p-5 bg-slate-800/60 hover:border-white/40 transition-colors"
+                  className="block border border-white/10 rounded-xl p-5 bg-slate-800/60 hover:border-white/30 transition-colors"
                 >
-                  <p className="text-xs text-white/60 mb-1">{formatDate(article.createdAt)}</p>
-                  <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">{article.title}</h3>
-                  <p className="text-sm text-white/80 line-clamp-3 mb-3">
-                    {article.sections?.[0]?.content || 'Operational snapshot awaiting expansion.'}
+                  <p className="text-xs text-white/60 mb-2">{formatDate(article.createdAt)}</p>
+                  <h3 className="font-semibold text-white mb-2 line-clamp-2">{article.title}</h3>
+                  <p className="text-sm text-white/80 line-clamp-2">
+                    {getExcerpt(article.sections?.[0]?.content, 120) || 'Scottish aviation briefing.'}
                   </p>
-                  <div className="text-xs text-white/60 flex flex-wrap gap-2">
-                    {(article.keywords || []).slice(0, 3).map((keyword) => (
-                      <span key={keyword.keyword} className="px-2 py-0.5 rounded bg-white/10">
-                        #{keyword.keyword}
-                      </span>
-                    ))}
-                  </div>
                 </Link>
               ))}
             </div>
@@ -132,66 +121,21 @@ export default async function NewsPage() {
 
         {remainder.length > 0 && (
           <section>
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-semibold text-white">Archive</h2>
-              <Link href="/aviation-news" className="text-blue-300 text-sm font-semibold hover:underline">
-                View all automated posts →
-              </Link>
-            </div>
-            <div className="space-y-3">
+            <h2 className="text-xl font-semibold text-white mb-4">Archive</h2>
+            <div className="space-y-2">
               {remainder.map((article) => (
-                <div key={article.slug} className="flex flex-col md:flex-row md:items-center justify-between border border-white/10 rounded-lg p-4">
-                  <div className="md:w-2/3">
-                    <p className="text-xs text-white/60">{formatDate(article.createdAt)}</p>
-                    <Link href={`/aviation-news/${article.slug}`} className="text-lg font-semibold text-white hover:underline">
-                      {article.title}
-                    </Link>
-                  </div>
-                  <div className="text-sm text-white/70 mt-3 md:mt-0">
-                    {(article.relatedBooks || []).length ? (
-                      <span>Book focus: {article.relatedBooks.map((entry) => entry.bookId).join(', ')}</span>
-                    ) : (
-                      <span>No book tie-in yet</span>
-                    )}
-                  </div>
-                </div>
+                <Link
+                  key={article.slug}
+                  href={`/aviation-news/${article.slug}`}
+                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-4 border-b border-white/10 last:border-0 hover:text-white/90"
+                >
+                  <span className="font-medium text-white">{article.title}</span>
+                  <span className="text-sm text-white/60">{formatDate(article.createdAt)}</span>
+                </Link>
               ))}
             </div>
           </section>
         )}
-
-        <section className="border border-white/10 rounded-2xl p-6 bg-slate-800/50">
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-            <h2 className="text-2xl font-semibold text-white">Keyword radar</h2>
-            <Link href="/search" className="text-blue-300 text-sm font-semibold hover:underline">
-              Search all content →
-            </Link>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="min-w-full text-sm">
-              <thead className="text-left text-white/70 border-b border-white/10">
-                <tr>
-                  <th className="py-2 pr-4 font-semibold">Keyword</th>
-                  <th className="py-2 pr-4 font-semibold">Priority</th>
-                  <th className="py-2 pr-4 font-semibold">Target page</th>
-                </tr>
-              </thead>
-              <tbody>
-                {keywordHighlights.map((entry) => (
-                  <tr key={entry.keyword} className="border-b border-white/5">
-                    <td className="py-2 pr-4">{entry.keyword}</td>
-                    <td className="py-2 pr-4 capitalize">{entry.priority.replace('-', ' ')}</td>
-                    <td className="py-2 pr-4">
-                      <a href={entry.targetUrl} className="text-blue-300 hover:underline" target="_blank" rel="noreferrer">
-                        {entry.targetUrl.replace('https://charlesmackaybooks.com', '') || '/'}
-                      </a>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
       </div>
     </BBCPageTemplate>
   )

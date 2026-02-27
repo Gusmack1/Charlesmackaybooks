@@ -48,6 +48,12 @@ function buildExcerpt(content?: string) {
 
 const bookMap = new Map(books.map((book) => [book.id, book]))
 
+function displayReason(reason: string | undefined): string {
+  const generic = 'Topical link between news items and catalogue research focus.'
+  if (!reason || reason === generic) return 'Related research volume.'
+  return reason
+}
+
 export default async function AviationNewsPage() {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -127,7 +133,7 @@ export default async function AviationNewsPage() {
                           {book.title}
                         </Link>
                         {' — '}
-                        {article.relatedBooks?.[0]?.reason || 'Related research volume.'}
+                        {displayReason(article.relatedBooks?.[0]?.reason)}
                       </div>
                     )}
                   </div>
