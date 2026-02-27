@@ -38,11 +38,15 @@
       "primary": true
     },
     {
-      "keyword": "Royal Air Force updates",
+      "keyword": "aviation news",
       "primary": false
     },
     {
-      "keyword": "Scottish aerospace industry",
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Guidance Dartmoor Firing Times",
       "primary": false
     }
   ],

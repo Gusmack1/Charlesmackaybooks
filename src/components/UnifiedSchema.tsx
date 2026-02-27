@@ -7,6 +7,7 @@ type PageType =
   | 'book-detail'
   | 'blog'
   | 'blog-post'
+  | 'news-article'
   | 'category'
   | 'page'
 
@@ -29,6 +30,11 @@ interface UnifiedSchemaProps {
   pageDescription?: string
   pageUrl?: string
   pageImageUrl?: string
+  datePublished?: string
+  dateModified?: string
+  articleSection?: string
+  wordCount?: number
+  articleBody?: string
   bookData?: BasicBookData | null
   books?: Array<{
     id: string
@@ -52,6 +58,11 @@ export default function UnifiedSchema({
   pageDescription,
   pageUrl,
   pageImageUrl,
+  datePublished,
+  dateModified,
+  articleSection = 'Aviation History',
+  wordCount,
+  articleBody,
   bookData = null,
   books = [],
 }: UnifiedSchemaProps) {
@@ -400,6 +411,60 @@ export default function UnifiedSchema({
 
     graph.push(articleNode)
     graph.push(breadcrumbNode)
+  }
+
+  if (pageType === 'news-article') {
+    webPageNode.contentType = 'Article'
+    webPageNode.audience = {
+      '@type': 'Audience',
+      audienceType: 'Aviation Historians, Researchers, and News Readers',
+    }
+
+    if (pageImageUrl) {
+      webPageNode.primaryImageOfPage = {
+        '@type': 'ImageObject',
+        url: absoluteImage(pageImageUrl),
+      }
+    }
+
+    const pubDate = datePublished ? new Date(datePublished).toISOString() : new Date().toISOString()
+    const modDate = dateModified ? new Date(dateModified).toISOString() : pubDate
+
+    const newsArticleNode = {
+      '@type': 'NewsArticle',
+      '@id': `${fullUrl}#article`,
+      headline: pageTitle || 'Scottish Aviation Briefing',
+      description: pageDescription || 'Scottish aviation news and briefings with links to research volumes.',
+      ...(pageImageUrl ? { image: [absoluteImage(pageImageUrl)] } : {}),
+      author: {
+        '@id': `${BASE_URL}/#person`,
+      },
+      publisher: {
+        '@id': `${BASE_URL}/#organization`,
+      },
+      datePublished: pubDate,
+      dateModified: modDate,
+      mainEntityOfPage: {
+        '@id': `${fullUrl}#webpage`,
+      },
+      articleSection: articleSection || 'Scottish Aviation News',
+      inLanguage: 'en-GB',
+      ...(wordCount ? { wordCount } : {}),
+      ...(articleBody ? { articleBody: articleBody.slice(0, 5000) } : {}),
+    }
+
+    const newsBreadcrumbNode = {
+      '@type': 'BreadcrumbList',
+      '@id': `${fullUrl}#breadcrumbs`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, item: { '@id': `${BASE_URL}/`, name: 'Home' } },
+        { '@type': 'ListItem', position: 2, item: { '@id': `${BASE_URL}/aviation-news`, name: 'Aviation News' } },
+        { '@type': 'ListItem', position: 3, item: { '@id': fullUrl, name: pageTitle || 'Briefing' } },
+      ],
+    }
+
+    graph.push(newsArticleNode)
+    graph.push(newsBreadcrumbNode)
   }
 
   graph.push(webPageNode)

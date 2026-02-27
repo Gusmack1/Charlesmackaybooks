@@ -38,11 +38,31 @@
       "primary": true
     },
     {
-      "keyword": "Royal Air Force updates",
+      "keyword": "aviation news",
       "primary": false
     },
     {
-      "keyword": "Scottish aerospace industry",
+      "keyword": "East West Rail",
+      "primary": false
+    },
+    {
+      "keyword": "NERL",
+      "primary": false
+    },
+    {
+      "keyword": "NATS",
+      "primary": false
+    },
+    {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
       "primary": false
     }
   ],

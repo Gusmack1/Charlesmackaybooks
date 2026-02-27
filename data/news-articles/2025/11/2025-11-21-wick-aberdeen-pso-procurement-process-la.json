@@ -1,6 +1,6 @@
 {
   "slug": "2025-11-21-wick-aberdeen-pso-procurement-process-la",
-  "title": "Wick–Aberdeen PSO procurement process launched",
+  "title": "Wick - Aberdeen PSO Procurement Process Launched",
   "wordCount": 225,
   "sections": [
     {
@@ -38,11 +38,23 @@
       "primary": true
     },
     {
-      "keyword": "Royal Air Force updates",
+      "keyword": "aviation news",
       "primary": false
     },
     {
-      "keyword": "Scottish aerospace industry",
+      "keyword": "HIAL",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Wick Aberdeen PSO Procurement",
       "primary": false
     }
   ],

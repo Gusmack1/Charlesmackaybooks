@@ -51,6 +51,48 @@ function citationToTitle(citationText) {
   return idx >= 0 ? citationText.slice(idx + 3).trim() : citationText
 }
 
+/** Derive SEO keywords from title and content for better search visibility. */
+function deriveKeywords(article) {
+  const text = [
+    article.title || '',
+    ...(article.sections || []).map((s) => s.content || ''),
+  ].join(' ').toLowerCase()
+
+  const knownTerms = [
+    'HIAL', 'Highlands and Islands Airports', 'Dundee Airport', 'Loganair',
+    'East West Rail', 'Oxford Cambridge', 'NERL', 'NATS', 'airspace',
+    'MOD', 'Ministry of Defence', 'RAF', 'Royal Air Force', 'Typhoon',
+    'Prestwick', 'Lossiemouth', 'Scottish aviation', 'aviation news',
+    'airport', 'aircraft', 'aviation', 'Scotland', 'UK government',
+  ]
+
+  const seen = new Set(['Scottish aviation news', 'aviation news', 'Scottish aerospace industry'])
+  const keywords = [
+    { keyword: 'Scottish aviation news', primary: true },
+    { keyword: 'aviation news', primary: false },
+  ]
+
+  for (const term of knownTerms) {
+    const lower = term.toLowerCase()
+    if (text.includes(lower) && !seen.has(term)) {
+      seen.add(term)
+      keywords.push({ keyword: term, primary: false })
+    }
+  }
+
+  // Add title-derived keyword (first meaningful phrase, max 4 words)
+  const titleWords = (article.title || '').split(/\s+/).filter((w) => w.length > 2).slice(0, 4)
+  if (titleWords.length >= 2) {
+    const titlePhrase = titleWords.join(' ')
+    if (!seen.has(titlePhrase)) {
+      seen.add(titlePhrase)
+      keywords.push({ keyword: titlePhrase, primary: false })
+    }
+  }
+
+  return keywords.slice(0, 8) // Cap at 8 for meta keywords
+}
+
 function listFiles(dir) {
   if (!fs.existsSync(dir)) return []
   const results = []
@@ -96,11 +138,15 @@ function fixArticle(filePath) {
       newTitle = fromSource
     }
   }
-  const changed = JSON.stringify(article.sections) !== JSON.stringify(cleanSections) ||
-    article.title !== newTitle
+  const newKeywords = deriveKeywords({ ...article, sections: cleanSections.length ? cleanSections : article.sections, title: newTitle })
+  const changed =
+    JSON.stringify(article.sections) !== JSON.stringify(cleanSections) ||
+    article.title !== newTitle ||
+    JSON.stringify(article.keywords) !== JSON.stringify(newKeywords)
 
   article.sections = cleanSections.length ? cleanSections : article.sections
   article.title = newTitle
+  article.keywords = newKeywords
   delete article.editorNotes
 
   if (changed) {

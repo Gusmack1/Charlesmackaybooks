@@ -67,12 +67,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const primaryBook = article.relatedBooks?.[0] ? bookMap.get(article.relatedBooks[0].bookId) : undefined
   const image = primaryBook?.imageUrl || FALLBACK_IMAGE
+  const imageUrl = image.startsWith('http') ? image : `${BASE_URL}${image.startsWith('/') ? '' : '/'}${image}`
   const description = buildDescription(article.sections?.[0]?.content, article.title)
   const canonical = `${BASE_URL}/aviation-news/${article.slug}`
+  const publishedTime: string = article.createdAt || new Date().toISOString()
+  const modifiedTime: string = (article.updatedAt as string | undefined) || publishedTime
+  const keywords = [
+    ...(article.keywords?.map((k) => k.keyword) || []),
+    'Scottish aviation',
+    'aviation news',
+    'Charles E. MacKay',
+    'aviation history',
+  ]
 
   return {
     title: `${article.title} | Scottish Aviation Briefing`,
     description,
+    keywords,
     alternates: {
       canonical,
     },
@@ -93,12 +104,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       url: canonical,
       siteName: 'Charles Mackay Books',
+      publishedTime: publishedTime as string,
+      modifiedTime: modifiedTime as string,
+      authors: ['Charles E. MacKay'],
       images: [
         {
-          url: image,
+          url: imageUrl,
           alt: article.title,
+          width: 1200,
+          height: 630,
         },
       ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${article.title} | Scottish Aviation Briefing`,
+      description,
+      images: [imageUrl],
     },
   }
 }
@@ -134,17 +156,24 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
       ]}
     >
       <UnifiedSchema
-        pageType="blog-post"
+        pageType="news-article"
         pageTitle={article.title}
         pageDescription={description}
         pageUrl={`/aviation-news/${article.slug}`}
         pageImageUrl={relatedBooks[0]?.imageUrl || FALLBACK_IMAGE}
+        datePublished={article.createdAt}
+        dateModified={(article as { updatedAt?: string }).updatedAt ?? article.createdAt ?? ''}
+        articleSection={article.keywords?.[0]?.keyword || 'Scottish Aviation News'}
+        wordCount={article.wordCount}
+        articleBody={article.sections?.map((s) => s.content).join('\n\n') ?? ''}
       />
 
       <div className="max-w-4xl mx-auto px-6 py-2 space-y-8 bg-slate-900">
         <article className="card p-6 md:p-8 space-y-6">
           <header className="space-y-3">
-            <p className="text-sm text-white/70">{formatDate(article.createdAt)}</p>
+            <time dateTime={article.createdAt} className="text-sm text-white/70">
+              {formatDate(article.createdAt)}
+            </time>
             {article.keywords?.length ? (
               <div className="flex flex-wrap gap-2">
                 {article.keywords.map((keyword) => (

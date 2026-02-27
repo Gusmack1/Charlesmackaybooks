@@ -38,11 +38,27 @@
       "primary": true
     },
     {
-      "keyword": "Royal Air Force updates",
+      "keyword": "aviation news",
       "primary": false
     },
     {
-      "keyword": "Scottish aerospace industry",
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Royal Air Force",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Transparency Data Military Court",
       "primary": false
     }
   ],

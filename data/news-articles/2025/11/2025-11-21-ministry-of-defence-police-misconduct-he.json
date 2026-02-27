@@ -38,11 +38,19 @@
       "primary": true
     },
     {
-      "keyword": "Royal Air Force updates",
+      "keyword": "aviation news",
       "primary": false
     },
     {
-      "keyword": "Scottish aerospace industry",
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Ministry Defence Police: misconduct",
       "primary": false
     }
   ],

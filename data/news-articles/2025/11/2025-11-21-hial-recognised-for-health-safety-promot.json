@@ -38,11 +38,31 @@
       "primary": true
     },
     {
-      "keyword": "Royal Air Force updates",
+      "keyword": "aviation news",
       "primary": false
     },
     {
-      "keyword": "Scottish aerospace industry",
+      "keyword": "HIAL",
+      "primary": false
+    },
+    {
+      "keyword": "Highlands and Islands Airports",
+      "primary": false
+    },
+    {
+      "keyword": "Dundee Airport",
+      "primary": false
+    },
+    {
+      "keyword": "Loganair",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
       "primary": false
     }
   ],

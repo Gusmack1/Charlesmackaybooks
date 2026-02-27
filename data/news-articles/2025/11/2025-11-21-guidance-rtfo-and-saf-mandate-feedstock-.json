@@ -1,6 +1,6 @@
 {
   "slug": "2025-11-21-guidance-rtfo-and-saf-mandate-feedstock-",
-  "title": "Guidance: RTFO and SAF Mandate feedstock materials",
+  "title": "Guidance: RTFO and SAF Mandate feedstock materials used for creating low carbon fuels",
   "wordCount": 238,
   "sections": [
     {
@@ -38,11 +38,19 @@
       "primary": true
     },
     {
-      "keyword": "Royal Air Force updates",
+      "keyword": "aviation news",
       "primary": false
     },
     {
-      "keyword": "Scottish aerospace industry",
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Guidance: RTFO and SAF",
       "primary": false
     }
   ],

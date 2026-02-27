@@ -1,6 +1,6 @@
 {
   "slug": "2026-02-27-simpler-train-travel-to-london-airports-",
-  "title": "Simpler train travel to London airports",
+  "title": "Simpler Train Travel To London Airports",
   "wordCount": 312,
   "sections": [
     {
@@ -42,11 +42,27 @@
       "primary": true
     },
     {
-      "keyword": "Royal Air Force updates",
+      "keyword": "aviation news",
       "primary": false
     },
     {
-      "keyword": "Scottish aerospace industry",
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aviation",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Simpler Train Travel London",
       "primary": false
     }
   ],
