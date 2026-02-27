@@ -7,14 +7,38 @@ The Scottish Aviation Newsroom is a live feed that:
 3. **Rewrites** articles in BBC style with 100% factuality (OpenAI)
 4. **Publishes** automatically every 12 hours
 
-## GitHub Secrets (Required for full automation)
+## Add GitHub Secrets (Required for full automation)
 
-Add these in **Settings → Secrets and variables → Actions**:
+### Step-by-step
 
-| Secret | Purpose |
-|--------|---------|
-| `SERPER_API_KEY` | Web search for Scottish aviation news. [Get free key](https://serper.dev) (2,500 searches/month). |
-| `OPENAI_API_KEY` | AI rewrite for BBC-style, factual articles. Required for auto-publishing. |
+1. Open your repo: **https://github.com/Gusmack1/Charlesmackaybooks**
+2. Go to **Settings** → **Secrets and variables** → **Actions**
+3. Click **New repository secret**
+4. Add each secret:
+
+| Secret name | Value | Where to get it |
+|-------------|-------|-----------------|
+| `SERPER_API_KEY` | Your Serper API key | [serper.dev](https://serper.dev) – sign up for 2,500 free searches/month |
+| `OPENAI_API_KEY` | Your OpenAI API key | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
+
+5. Click **Add secret** for each one.
+
+### Using the setup script (PowerShell)
+
+1. Install GitHub CLI: `winget install GitHub.cli`
+2. Log in: `gh auth login`
+3. Run: `.\scripts\setup-newsroom-secrets.ps1`
+4. Paste each API key when prompted
+
+### Using GitHub CLI manually
+
+```powershell
+# Serper (get key from https://serper.dev)
+"YOUR_SERPER_KEY" | gh secret set SERPER_API_KEY
+
+# OpenAI (get key from https://platform.openai.com/api-keys)
+"YOUR_OPENAI_KEY" | gh secret set OPENAI_API_KEY
+```
 
 ## Optional Secrets
 
