@@ -28,11 +28,6 @@ export default function TermsPage() {
               This website is operated by <strong>{SITE_CONSTANTS.BUSINESS_NAME}</strong>, trading as{' '}
               <strong>{SITE_CONSTANTS.BUSINESS_TRADING_NAME}</strong>.
             </p>
-            <p className="text-white/90">
-              Address: {SITE_CONSTANTS.BUSINESS_STREET_ADDRESS}, {SITE_CONSTANTS.BUSINESS_LOCALITY},{' '}
-              {SITE_CONSTANTS.BUSINESS_POSTAL_CODE}, United Kingdom.
-            </p>
-
             <h3 className="content h3 mt-6">Orders and Payment</h3>
             <ul className="list-disc list-inside text-white/90 space-y-1">
               <li>All product information and prices are listed in GBP unless otherwise stated.</li>

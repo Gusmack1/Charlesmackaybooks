@@ -53,10 +53,8 @@ const structuredData = {
     "email": "charlese1mackay@hotmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": SITE_CONSTANTS.BUSINESS_STREET_ADDRESS,
       "addressLocality": SITE_CONSTANTS.BUSINESS_LOCALITY,
       "addressRegion": "Scotland",
-      "postalCode": SITE_CONSTANTS.BUSINESS_POSTAL_CODE,
       "addressCountry": SITE_CONSTANTS.BUSINESS_COUNTRY_CODE
     }
   }
@@ -107,9 +105,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-2">Location</h3>
                     <p>{SITE_CONSTANTS.BUSINESS_NAME}</p>
-                    <p>{SITE_CONSTANTS.BUSINESS_STREET_ADDRESS}</p>
-                    <p>{SITE_CONSTANTS.BUSINESS_LOCALITY}, {SITE_CONSTANTS.BUSINESS_POSTAL_CODE}, UK</p>
-                    <p className="text-sm opacity-80 mt-1">Mailing address and base for archive research</p>
+                    <p>{SITE_CONSTANTS.BUSINESS_LOCALITY}, Scotland</p>
                   </div>
                 </div>
 

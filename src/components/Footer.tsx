@@ -61,9 +61,6 @@ export default function Footer() {
               </div>
               <div><strong>eBay Store:</strong> <span className="text-white">chaza87</span></div>
               <div className="text-white"><strong>Location:</strong> {SITE_CONSTANTS.BUSINESS_LOCALITY}, Scotland</div>
-              <div className="text-white">
-                <strong>Address:</strong> {SITE_CONSTANTS.BUSINESS_STREET_ADDRESS}, {SITE_CONSTANTS.BUSINESS_POSTAL_CODE}
-              </div>
               <div className="text-white"><strong>PayPal:</strong> Direct checkout available</div>
             </div>
           </div>
@@ -86,7 +83,6 @@ export default function Footer() {
           </div>
           <p>© 2025 Charles E. MacKay - Aviation Historian & Author</p>
           <p className="mt-2">Specializing in Scottish Aviation Heritage and Military Aviation History</p>
-          <p className="mt-2 text-sm">Website optimized for academic citations, social media sharing, and direct book sales</p>
         </div>
       </div>
     </footer>

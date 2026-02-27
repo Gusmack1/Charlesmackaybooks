@@ -167,10 +167,8 @@ export default function UnifiedSchema({
     sameAs: ['https://www.ebay.co.uk/usr/chaza87', 'https://www.paypal.com/paypalme/charlese1mackay'],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: SITE_CONSTANTS.BUSINESS_STREET_ADDRESS,
       addressLocality: SITE_CONSTANTS.BUSINESS_LOCALITY,
       addressRegion: 'Scotland',
-      postalCode: SITE_CONSTANTS.BUSINESS_POSTAL_CODE,
       addressCountry: SITE_CONSTANTS.BUSINESS_COUNTRY_CODE,
     },
     areaServed: [
@@ -193,10 +191,8 @@ export default function UnifiedSchema({
     email: 'charlese1mackay@hotmail.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: SITE_CONSTANTS.BUSINESS_STREET_ADDRESS,
       addressLocality: SITE_CONSTANTS.BUSINESS_LOCALITY,
       addressRegion: 'Scotland',
-      postalCode: SITE_CONSTANTS.BUSINESS_POSTAL_CODE,
       addressCountry: SITE_CONSTANTS.BUSINESS_COUNTRY_CODE,
     },
     areaServed: [

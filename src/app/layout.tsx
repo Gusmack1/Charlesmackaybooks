@@ -144,9 +144,7 @@ const organizationSchema = {
   ],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: SITE_CONSTANTS.BUSINESS_STREET_ADDRESS,
     addressLocality: SITE_CONSTANTS.BUSINESS_LOCALITY,
-    postalCode: SITE_CONSTANTS.BUSINESS_POSTAL_CODE,
     addressRegion: 'Scotland',
     addressCountry: SITE_CONSTANTS.BUSINESS_COUNTRY_CODE,
   }
