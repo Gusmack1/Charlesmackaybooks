@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
@@ -74,13 +75,25 @@ export default async function NewsPage() {
                   const book = bookLookup.get(bookId)
                   if (!book) return null
                   return (
-                    <div key={book.id} className="border border-white/10 rounded-lg p-4 bg-slate-800/60">
-                      <p className="text-sm uppercase text-white/50 mb-1">{displayReason(reason)}</p>
-                      <h3 className="text-lg font-semibold text-white mb-2">{book.title}</h3>
-                      <p className="text-white/80 text-sm line-clamp-3">{book.description}</p>
-                      <Link href={`/books/${book.id}`} className="text-blue-300 text-sm font-semibold mt-3 inline-flex gap-1">
-                        View book <span aria-hidden>↗</span>
-                      </Link>
+                    <div key={book.id} className="border border-white/10 rounded-lg p-4 bg-slate-800/60 flex gap-4">
+                      <div className="shrink-0 w-20 aspect-[3/4] rounded overflow-hidden bg-slate-700">
+                        <Image
+                          src={book.imageUrl || `/book-covers/${book.id}.jpg`}
+                          alt={book.title}
+                          width={80}
+                          height={107}
+                          className="w-full h-full object-cover"
+                          sizes="80px"
+                        />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className="text-sm uppercase text-white/50 mb-1">{displayReason(reason)}</p>
+                        <h3 className="text-lg font-semibold text-white mb-2">{book.title}</h3>
+                        <p className="text-white/80 text-sm line-clamp-3">{book.description}</p>
+                        <Link href={`/books/${book.id}`} className="text-blue-300 text-sm font-semibold mt-3 inline-flex gap-1">
+                          View book <span aria-hidden>↗</span>
+                        </Link>
+                      </div>
                     </div>
                   )
                 })

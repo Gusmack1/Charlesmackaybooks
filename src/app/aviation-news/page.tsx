@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
@@ -71,7 +72,7 @@ export default async function AviationNewsPage() {
     },
   }
 
-  const articles = await getPublishedNewsArticles(10)
+  const articles = await getPublishedNewsArticles(30)
 
   return (
     <>
@@ -128,13 +129,23 @@ export default async function AviationNewsPage() {
                       )}
                     </div>
                     {book && (
-                      <div className="text-sm text-secondary">
-                        <Link href={`/books/${book.id}`} className="text-accent-blue hover:underline">
-                          {book.title}
-                        </Link>
-                        {' — '}
-                        {displayReason(article.relatedBooks?.[0]?.reason)}
-                      </div>
+                      <Link href={`/books/${book.id}`} className="flex items-center gap-3 text-sm text-secondary hover:text-accent-blue transition-colors">
+                        <div className="shrink-0 w-14 aspect-[3/4] rounded overflow-hidden bg-slate-700">
+                          <Image
+                            src={book.imageUrl || `/book-covers/${book.id}.jpg`}
+                            alt={book.title}
+                            width={56}
+                            height={75}
+                            className="w-full h-full object-cover"
+                            sizes="56px"
+                          />
+                        </div>
+                        <div>
+                          <span className="font-medium text-primary">{book.title}</span>
+                          {' — '}
+                          {displayReason(article.relatedBooks?.[0]?.reason)}
+                        </div>
+                      </Link>
                     )}
                   </div>
                 </article>

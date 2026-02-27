@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
@@ -209,11 +210,23 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
                   <Link
                     key={book.id}
                     href={`/books/${book.id}`}
-                    className="border border-white/15 rounded-lg p-4 bg-slate-800/60 hover:border-white/35 transition-colors"
+                    className="border border-white/15 rounded-lg p-4 bg-slate-800/60 hover:border-white/35 transition-colors flex gap-4"
                   >
-                    <div className="font-semibold text-white mb-1">{book.title}</div>
-                    <div className="text-sm text-white/80 mb-2">£{book.price.toFixed(2)}</div>
-                    {reason ? <p className="text-sm text-white/75">{reason}</p> : null}
+                    <div className="shrink-0 w-24 aspect-[3/4] rounded overflow-hidden bg-slate-700">
+                      <Image
+                        src={book.imageUrl || `/book-covers/${book.id}.jpg`}
+                        alt={book.title}
+                        width={96}
+                        height={128}
+                        className="w-full h-full object-cover"
+                        sizes="96px"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-semibold text-white mb-1">{book.title}</div>
+                      <div className="text-sm text-white/80 mb-2">£{book.price.toFixed(2)}</div>
+                      {reason ? <p className="text-sm text-white/75">{reason}</p> : null}
+                    </div>
                   </Link>
                 )
               })}
