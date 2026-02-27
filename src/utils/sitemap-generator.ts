@@ -23,8 +23,7 @@ export function generateSitemap(): string {
     { url: '/academic-resources', changeFrequency: 'weekly', priority: 0.8 },
     { url: '/aviation-bibliography', changeFrequency: 'monthly', priority: 0.7 },
     { url: '/aviation-glossary', changeFrequency: 'monthly', priority: 0.6 },
-    { url: '/timeline', changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/scottish-aviation-timeline', changeFrequency: 'monthly', priority: 0.7 },
+    { url: '/scottish-aviation-timeline', changeFrequency: 'monthly', priority: 0.75 },
     { url: '/for-researchers', changeFrequency: 'monthly', priority: 0.8 },
     { url: '/research-guides', changeFrequency: 'monthly', priority: 0.7 },
 

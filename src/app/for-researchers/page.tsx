@@ -1,6 +1,7 @@
 import BBCPageTemplate from '@/components/BBCPageTemplate';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import type { Metadata } from 'next';
+import { SITE_CONSTANTS } from '@/config/constants';
 
 export const metadata: Metadata = {
   title: 'For Researchers & Academic Institutions | Charles E. MacKay Aviation Books',
@@ -110,7 +111,7 @@ export default function ForResearchersPage() {
 
             <div className="mt-6">
               <a
-                href="mailto:charlese1mackay@hotmail.com?subject=Research Collaboration Request"
+                href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Research Collaboration Request`}
                 className="underline font-semibold inline-block"
               >
                 📧 Request Research Collaboration
@@ -160,7 +161,7 @@ export default function ForResearchersPage() {
                 Academic libraries can acquire Charles's books for their aviation history collections and reference sections.
               </p>
               <a
-                href="mailto:charlese1mackay@hotmail.com?subject=University Library Bulk Order Inquiry"
+                href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=University Library Bulk Order Inquiry`}
                 className="underline font-semibold"
               >
                 Contact for Bulk Orders →
@@ -174,7 +175,7 @@ export default function ForResearchersPage() {
                 Researchers using Charles's books are encouraged to cite this website and link back for additional context.
               </p>
               <a
-                href="mailto:charlese1mackay@hotmail.com?subject=Research Citation Submission"
+                href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Research Citation Submission`}
                 className="underline font-semibold"
               >
                 Submit Your Citation →
@@ -188,7 +189,7 @@ export default function ForResearchersPage() {
                 Charles is available for guest lectures and presentations on Scottish aviation history and WWI/WWII aircraft.
               </p>
               <a
-                href="mailto:charlese1mackay@hotmail.com?subject=Guest Lecture/Presentation Booking"
+                href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Guest Lecture/Presentation Booking`}
                 className="underline font-semibold"
               >
                 Book a Presentation →
@@ -283,13 +284,13 @@ export default function ForResearchersPage() {
 
           <div className="space-y-4">
             <a
-              href="mailto:charlese1mackay@hotmail.com?subject=Academic Research Collaboration"
+              href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Academic Research Collaboration`}
               className="inline-block underline font-semibold mr-4"
             >
               📧 Research Collaboration
             </a>
             <a
-              href="mailto:charlese1mackay@hotmail.com?subject=Bulk Academic Order"
+              href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Bulk Academic Order`}
               className="inline-block underline font-semibold"
             >
               📚 Bulk Order Inquiry

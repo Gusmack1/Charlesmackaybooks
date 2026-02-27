@@ -53,10 +53,10 @@ export default function Footer() {
               <div>
                 <strong>Email:</strong>
                 <a
-                  href="mailto:charlese1mackay@hotmail.com"
+                  href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`}
                   className="text-white ml-1 break-all underline decoration-white/30 hover:decoration-white"
                 >
-                  charlese1mackay@hotmail.com
+                  {SITE_CONSTANTS.AUTHOR_EMAIL}
                 </a>
               </div>
               <div><strong>eBay Store:</strong> <span className="text-white">chaza87</span></div>

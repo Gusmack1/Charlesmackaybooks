@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SITE_CONSTANTS } from '@/config/constants';
 
 export const metadata: Metadata = {
   title: 'Imperial War Museum Partnership | Charles E. MacKay Aviation Research Collaboration',
@@ -431,7 +432,7 @@ export default function ImperialWarMuseumPartnershipPage() {
               <h3 className="font-semibold mb-2">Partnership Inquiry:</h3>
               <p className="text-purple-100">
                 For information about research collaboration opportunities with the IWM Partnership,
-                contact Charles E. MacKay Aviation Research at charlese1mackay@hotmail.com
+                contact Charles E. MacKay Aviation Research at {SITE_CONSTANTS.AUTHOR_EMAIL}
               </p>
             </div>
           </div>

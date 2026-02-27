@@ -961,6 +961,16 @@ function CheckoutContent() {
 
             {/* Trust & Security Badges are rendered globally via layout */}
 
+            {/* Sticky mobile order summary - always visible on small screens */}
+            <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-slate-900/98 backdrop-blur border-t border-blue-700/50 px-4 py-3 flex items-center justify-between gap-4">
+              <div>
+                <p className="text-xs text-white/70">Total ({totalItemsCount} items)</p>
+                <p className="text-xl font-bold text-white">£{total.toFixed(2)}</p>
+              </div>
+              <p className="text-xs text-green-400 font-medium">Free shipping</p>
+            </div>
+            <div className="h-20 lg:hidden" aria-hidden />
+
             {/* Customer Testimonials (desktop only to reduce mobile checkout friction) */}
             <div className="mt-6 hidden lg:block">
               <CustomerTestimonials maxDisplay={2} />

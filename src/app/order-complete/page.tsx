@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { getOrder, updateOrderStatus, generateEmailReceipt, sendReceiptToCustomer, Order } from '@/utils/orderUtils';
 import { useCart } from '@/context/CartContext';
+import { SITE_CONSTANTS } from '@/config/constants';
 
 function OrderCompleteContent() {
   const searchParams = useSearchParams();
@@ -262,8 +263,8 @@ function OrderCompleteContent() {
           <p className="mb-2">Questions about your order?</p>
           <p>
             Contact us at{' '}
-            <a href="mailto:charlese1mackay@hotmail.com" className="text-blue-300 hover:text-blue-200 underline">
-              charlese1mackay@hotmail.com
+            <a href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`} className="text-blue-300 hover:text-blue-200 underline">
+              {SITE_CONSTANTS.AUTHOR_EMAIL}
             </a>
           </p>
         </div>

@@ -16,7 +16,7 @@ export const mainNavLinks: NavLinkItem[] = [
 // Additional navigation items (in "More" dropdown)
 export const moreNavLinks: NavLinkItem[] = [
   { label: 'Categories', href: '/categories' },
-  { label: 'Newsroom', href: '/news' },
+  { label: 'Aviation News', href: '/news' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Returns', href: '/returns' },
   { label: 'Support', href: '/support' },

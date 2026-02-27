@@ -1,13 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { resolveRelatedBooks } from '@/utils/blogRelatedBooks';
+import { useCart } from '@/context/CartContext';
+import { books } from '@/data/books';
 import { getImageCandidates } from '@/data/blogImageManifest';
 import { getApprovedFeatured, getApprovedInline } from '@/utils/approvedImageResolver';
 import { getStableBlogPublishedDate } from '@/utils/blogPublishedDate';
 import ShareButton from '@/components/ShareButton';
+import { getPublishedBookCountText } from '@/config/constants';
 
 interface BlogPost {
   id: string;
@@ -58,6 +61,8 @@ interface ComprehensiveBlogTemplateProps {
 
 export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTemplateProps) {
   type Reference = { title: string; url: string; source?: string; date?: string };
+  const { addToCart, openBasket } = useCart();
+  const [addingId, setAddingId] = useState<string | null>(null);
   const stablePublishedDate = getStableBlogPublishedDate(post.id, post.publishedDate);
   const featured = getApprovedFeatured(post.id, post.featuredImage?.url, post.featuredImage?.alt)
   const approvedInline = getApprovedInline(post.id, 4)
@@ -509,7 +514,19 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 <Link href="/books" className="btn-books">Browse all books</Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {finalRelated.map((book) => (
+              {finalRelated.map((book) => {
+                const fullBook = books.find((b) => b.id === book.id);
+                const canAdd = fullBook?.inStock ?? false;
+                const handleAdd = (e: React.MouseEvent) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  if (!fullBook || addingId) return;
+                  setAddingId(book.id);
+                  addToCart(fullBook);
+                  openBasket();
+                  setTimeout(() => setAddingId(null), 500);
+                };
+                return (
                 <article key={book.id} className="bg-white dark:bg-slate-700 rounded-lg shadow-md border border-slate-200 dark:border-slate-600 p-5 hover:shadow-lg transition-shadow">
                   <Link href={`/books/${book.id}`} className="block group">
                     <div className="aspect-[3/4] w-full overflow-hidden rounded-md bg-slate-100 dark:bg-slate-800 mb-4">
@@ -527,12 +544,25 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                     {typeof book.price === 'number' && (
                       <p className="text-sm font-semibold text-slate-900 dark:text-white mb-3">£{book.price.toFixed(2)}</p>
                     )}
-                    <div className="flex items-center gap-3">
-                      <span className="btn-books text-sm px-4 py-2 text-white">View & Buy</span>
-                    </div>
                   </Link>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    <Link href={`/books/${book.id}`} className="btn-books text-sm px-4 py-2 inline-block">
+                      View details
+                    </Link>
+                    {canAdd && (
+                      <button
+                        type="button"
+                        onClick={handleAdd}
+                        disabled={!!addingId}
+                        className="bg-green-600 hover:bg-green-700 text-white text-sm px-4 py-2 rounded font-semibold disabled:opacity-60 transition-colors"
+                      >
+                        {addingId === book.id ? 'Adding...' : 'Add to basket'}
+                      </button>
+                    )}
+                  </div>
                 </article>
-              ))}
+              );
+              })}
             </div>
             {/* Related Books JSON-LD */}
             <script
@@ -579,7 +609,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               <div className="flex flex-wrap items-center gap-4 text-sm text-secondary">
                 <span>📧 {post.author.email}</span>
                 <span>📍 Glasgow, Scotland</span>
-                <span>📚 19+ Published Books</span>
+                <span>📚 {getPublishedBookCountText()}+ Published Books</span>
                 <span>🏛️ Referenced by Major Museums</span>
               </div>
             </div>
@@ -593,11 +623,22 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
 
       {/* Social Sharing Footer removed */}
 
-      {/* Sticky Buy Books (mobile) */}
+      {/* Sticky Buy Books (mobile) - purchase-focused when related books exist */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900/95 backdrop-blur border-t border-slate-700">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-          <span className="text-white text-sm">📚 Browse Charles’s aviation books</span>
-          <Link href="/books" className="btn-books px-4 py-2">Buy Books</Link>
+          {resolvedRelatedBooks.length > 0 ? (
+            <>
+              <span className="text-white text-sm truncate">
+                Buy {resolvedRelatedBooks[0].title.length > 28 ? resolvedRelatedBooks[0].title.slice(0, 25) + '…' : resolvedRelatedBooks[0].title} – £{resolvedRelatedBooks[0].price.toFixed(2)}
+              </span>
+              <Link href={`/books/${resolvedRelatedBooks[0].id}`} className="btn-books px-4 py-2 flex-shrink-0">Buy now</Link>
+            </>
+          ) : (
+            <>
+              <span className="text-white text-sm">📚 Browse Charles&apos;s aviation books</span>
+              <Link href="/books" className="btn-books px-4 py-2">Buy Books</Link>
+            </>
+          )}
         </div>
       </div>
 

@@ -5,6 +5,7 @@
 import { Book } from '@/types/book';
 
 import { getValidISBN, getValidGTIN13, getValidSKU } from '@/utils/isbn';
+import { SITE_CONSTANTS } from '@/config/constants';
 
 
 
@@ -320,7 +321,7 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
 
         '@type': 'ContactPoint',
 
-        email: 'charlese1mackay@hotmail.com',
+        email: SITE_CONSTANTS.AUTHOR_EMAIL,
 
         contactType: 'customer service'
 

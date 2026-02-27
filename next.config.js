@@ -5,6 +5,12 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
+  // Redirect /timeline to canonical Scottish Aviation Timeline
+  async redirects() {
+    return [
+      { source: '/timeline', destination: '/scottish-aviation-timeline', permanent: true },
+    ]
+  },
   // Disable trailing slashes to prevent redirects - each page should have its own URL
   trailingSlash: false,
   // Disable Next.js trailing slash redirects; the site enforces canonical URLs in middleware.

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SITE_CONSTANTS } from '@/config/constants'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
@@ -480,7 +481,7 @@ const post = {
     name: 'Charles E. MacKay',
     bio: 'Scottish aviation historian with a focus on Clydeside industry and naval aviation.',
     image: '/charles-mackay-aviation-historian.jpg',
-    email: 'charlese1mackay@hotmail.com'
+    email: SITE_CONSTANTS.AUTHOR_EMAIL
   },
   publishedDate: new Date().toISOString(),
   readingTime: 30,

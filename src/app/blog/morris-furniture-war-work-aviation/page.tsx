@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SITE_CONSTANTS } from '@/config/constants'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import BlogAuthorityEnhancer from '@/components/BlogAuthorityEnhancer'
 import { getBooksData } from '@/utils/bookUtils'
@@ -286,7 +287,7 @@ const post = {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
     image: '/charles-mackay-aviation-historian.jpg',
-    email: 'charlese1mackay@hotmail.com'
+    email: SITE_CONSTANTS.AUTHOR_EMAIL
   },
   publishedDate: new Date().toISOString(),
   readingTime: 28,

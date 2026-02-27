@@ -1,4 +1,5 @@
 import { loadStripe } from '@stripe/stripe-js';
+import { SITE_CONSTANTS } from './constants';
 
 // Stripe configuration for Charles Mackay Books
 export const stripeConfig = {
@@ -11,7 +12,7 @@ export const stripeConfig = {
   
   // Business information
   businessName: 'Charles E. MacKay Aviation Books',
-  businessEmail: 'charlese1mackay@hotmail.com',
+  businessEmail: SITE_CONSTANTS.AUTHOR_EMAIL,
   
   // Payment method settings
   paymentMethods: {

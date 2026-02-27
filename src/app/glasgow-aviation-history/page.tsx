@@ -277,7 +277,7 @@ export default function GlasgowAviationHistory() {
             <Link href="/books/clydeside-aviation-vol1" className="badge badge-primary">
               Clydeside Aviation Vol 1
             </Link>
-            <Link href="/timeline" className="badge badge-primary">
+            <Link href="/scottish-aviation-timeline" className="badge badge-primary">
               Full Aviation Timeline
             </Link>
             <Link href="/contact" className="badge badge-primary">

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import BBCPageTemplate from '@/components/BBCPageTemplate';
+import { SITE_CONSTANTS } from '@/config/constants';
 export const metadata: Metadata = {
   title: 'How to Order Aviation History Books | Charles E. MacKay Aviation Books',
   description: 'Multiple secure purchasing options with fast worldwide shipping from Glasgow, Scotland. Order Charles E. MacKay aviation history books via eBay, PayPal, or direct contact.',
@@ -205,7 +206,7 @@ export default function HowToOrderPage() {
               </ul>
               <div className="mt-4">
                 <a
-                  href="mailto:charlese1mackay@hotmail.com?subject=Academic Order Inquiry"
+                  href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Academic Order Inquiry`}
                   className="underline font-semibold"
                 >
                   Contact for Academic Pricing →
@@ -224,7 +225,7 @@ export default function HowToOrderPage() {
               </ul>
               <div className="mt-4">
                 <a
-                  href="mailto:charlese1mackay@hotmail.com?subject=Special Request"
+                  href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Special Request`}
                   className="underline font-semibold"
                 >
                   Make Special Request →
@@ -268,7 +269,7 @@ export default function HowToOrderPage() {
 
                 <div>
                   <h3 className="font-bold mb-2">What if I have questions?</h3>
-                  <p className="text-sm opacity-90">Charles personally responds to all inquiries within 24 hours. Email charlese1mackay@hotmail.com for any questions.</p>
+                  <p className="text-sm opacity-90">Charles personally responds to all inquiries within 24 hours. Email {SITE_CONSTANTS.AUTHOR_EMAIL} for any questions.</p>
                 </div>
               </div>
             </div>
@@ -288,7 +289,7 @@ export default function HowToOrderPage() {
                 📚 Browse Books
               </Link>
               <a
-                href="mailto:charlese1mackay@hotmail.com?subject=Book Order Inquiry"
+                href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Book Order Inquiry`}
                 className="underline font-semibold"
               >
                 📧 Email Charles

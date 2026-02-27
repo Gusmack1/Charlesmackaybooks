@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { Book } from '@/types/book';
 import { books } from '@/data/books';
+import { SITE_CONSTANTS } from '@/config/constants';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const ORDERS_FILE = path.join(DATA_DIR, 'orders.json');
@@ -184,7 +185,7 @@ export const emailTemplates = {
           
           <p>We'll send you another email once your order ships with tracking information.</p>
           
-          <p>If you have any questions, please contact us at charlese1mackay@hotmail.com</p>
+          <p>If you have any questions, please contact us at ${SITE_CONSTANTS.AUTHOR_EMAIL}</p>
           
           <p>Best regards,<br>Charles E. MacKay<br>Aviation Historian & Author</p>
         </div>
@@ -221,7 +222,7 @@ ${order.customer.address.country}
 
 We'll send you another email once your order ships with tracking information.
 
-If you have any questions, please contact us at charlese1mackay@hotmail.com
+If you have any questions, please contact us at ${SITE_CONSTANTS.AUTHOR_EMAIL}
 
 Best regards,
 Charles E. MacKay
@@ -556,7 +557,7 @@ export class EmailService {
         return true; // Server-side: just log
       }
       
-      const adminEmail = 'charlese1mackay@hotmail.com';
+      const adminEmail = SITE_CONSTANTS.AUTHOR_EMAIL;
       let subject: string;
       let body: string;
 

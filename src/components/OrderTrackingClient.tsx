@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { Order } from '@/utils/orderManagement';
 import { getOrder, getOrderHistory, Order as LegacyOrder } from '@/utils/orderUtils';
 import { readSavedCustomerProfile } from '@/utils/customerProfile';
+import { SITE_CONSTANTS } from '@/config/constants';
 
 type SearchMode = 'orderId' | 'email';
 
@@ -508,7 +509,7 @@ export default function OrderTrackingClient() {
         <div className="space-y-2 text-white/90">
           <p>• Order ID format: CM-XXXXXXXX-XXXXXX</p>
           <p>• You can track by order ID or by the checkout email address.</p>
-          <p>• For questions about your order, contact us at charlese1mackay@hotmail.com</p>
+          <p>• For questions about your order, contact us at {SITE_CONSTANTS.AUTHOR_EMAIL}</p>
           <p>• Shipping typically takes 3-5 business days for UK orders, 5-10 days internationally.</p>
         </div>
         <div className="mt-4">

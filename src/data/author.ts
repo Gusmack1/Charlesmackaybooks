@@ -1,8 +1,10 @@
+import { SITE_CONSTANTS } from '@/config/constants';
+
 export const authorData = {
   name: "Charles E. MacKay",
   fullName: "Charles Edward MacKay",
   title: "Aviation Historian & Author",
-  email: "charlese1mackay@hotmail.com",
+  email: SITE_CONSTANTS.AUTHOR_EMAIL,
   location: "Glasgow, Scotland",
   ebayStore: "chaza87",
   specialization: "Scottish Aviation History • WWI & WWII Aircraft",
@@ -72,7 +74,7 @@ export const authorData = {
   ],
   
   contact: {
-    email: "charlese1mackay@hotmail.com",
+    email: SITE_CONSTANTS.AUTHOR_EMAIL,
     location: "Glasgow, Scotland",
     ebayStore: "chaza87",
     website: "charlesmackaybooks.com"

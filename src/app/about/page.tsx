@@ -86,7 +86,7 @@ const structuredData = {
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "charlese1mackay@hotmail.com",
+    "email": SITE_CONSTANTS.AUTHOR_EMAIL,
     "contactType": "author"
   }
 }
@@ -218,7 +218,7 @@ export default function AboutPage() {
                 <div className="space-y-2 text-sm text-white/90">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
-                    <span>charlese1mackay@hotmail.com</span>
+                    <span>{SITE_CONSTANTS.AUTHOR_EMAIL}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span>📍</span>

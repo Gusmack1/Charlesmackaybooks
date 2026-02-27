@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SITE_CONSTANTS } from '@/config/constants'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import { getBooksData } from '@/utils/bookUtils'
 import UnifiedSchema from '@/components/UnifiedSchema'
@@ -218,7 +219,7 @@ const post = {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian focused on primary-source operational histories.',
     image: '/charles-mackay-aviation-historian.jpg',
-    email: 'charlese1mackay@hotmail.com'
+    email: SITE_CONSTANTS.AUTHOR_EMAIL
   },
   publishedDate: new Date().toISOString(),
   readingTime: 32,

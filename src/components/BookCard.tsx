@@ -48,7 +48,10 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAoACgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEB//EACUQAAIBAwMEAwEBAAAAAAAAAAECAwAEEQUSITFBURNhcZEigf/EABUBAFEAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8A4+iiigAooooAKKKKACiiigD/2Q=="
           />
         </Link>
-        <div className="absolute top-2 right-2">
+        <div className="absolute top-2 right-2 flex flex-col gap-1 items-end">
+          {['beardmore-aviation', 'clydeside-aviation-vol1', 'british-aircraft-great-war', 'german-aircraft-great-war', 'aircraft-carrier-argus'].includes(book.id) && (
+            <span className="px-2 py-0.5 text-[10px] font-bold rounded bg-amber-500 text-slate-900">Bestseller</span>
+          )}
           <span className={`px-2 py-1 text-xs font-semibold rounded ${
             book.condition === 'New' ? 'bg-green-500 text-white' : 'bg-blue-500 text-white'
           }`}>
@@ -115,7 +118,7 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
           </button>
 
           <p className="text-[11px] text-white/60 text-center">
-            Free worldwide shipping · 30-day returns · Secure card and PayPal
+            Guest checkout · Free worldwide shipping · 30-day returns
           </p>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 Auto-generated from `src/data/books.ts`. Update the TypeScript data first, then rerun `node scripts/export-book-reference.cjs` to refresh this reference.
 
-Last generated: 2026-02-17T00:16:11.572Z
+Last generated: 2026-02-27T21:18:49.922Z
 
 ## Summary (alphabetical by ID)
 

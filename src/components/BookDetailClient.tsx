@@ -6,6 +6,7 @@ import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { useRecentlyViewed } from '@/context/RecentlyViewedContext';
+import { SITE_CONSTANTS } from '@/config/constants';
 
 interface BookDetailClientProps {
   book: Book;
@@ -140,7 +141,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
 
       <div className="text-center pt-3 border-t border-white/10">
         <a
-          href="mailto:charlese1mackay@hotmail.com"
+          href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`}
           onClick={handleEmailClick}
           className="text-blue-300 hover:text-blue-200 text-sm font-medium"
         >

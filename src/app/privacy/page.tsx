@@ -64,8 +64,8 @@ export default function PrivacyPolicyPage() {
             <h3 className="content h3 mt-6">Contact</h3>
             <p className="text-white/90">
               Email:{' '}
-              <a className="underline" href="mailto:charlese1mackay@hotmail.com">
-                charlese1mackay@hotmail.com
+              <a className="underline" href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`}>
+                {SITE_CONSTANTS.AUTHOR_EMAIL}
               </a>
             </p>
             <p className="text-white/90">

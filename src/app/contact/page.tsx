@@ -50,7 +50,7 @@ const structuredData = {
     "@type": "Person",
     "name": "Charles E. MacKay",
     "jobTitle": "Aviation Historian & Author",
-    "email": "charlese1mackay@hotmail.com",
+    "email": SITE_CONSTANTS.AUTHOR_EMAIL,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": SITE_CONSTANTS.BUSINESS_LOCALITY,
@@ -93,7 +93,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">Email</h3>
-                    <p>charlese1mackay@hotmail.com</p>
+                    <p>{SITE_CONSTANTS.AUTHOR_EMAIL}</p>
                     <p className="text-sm opacity-80 mt-1">Response time: Usually within 24-48 hours</p>
                   </div>
                 </div>
@@ -138,28 +138,28 @@ export default function ContactPage() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:charlese1mackay@hotmail.com?subject=Research Inquiry&body=Dear Charles MacKay,%0D%0A%0D%0AI am interested in..."
+                  href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Research Inquiry&body=Dear Charles MacKay,%0D%0A%0D%0AI am interested in...`}
                   className="block w-full underline text-center py-3 font-semibold"
                 >
                   📧 Send Research Inquiry
                 </a>
 
                 <a
-                  href="mailto:charlese1mackay@hotmail.com?subject=Academic Collaboration&body=Dear Charles MacKay,%0D%0A%0D%0AI would like to discuss..."
+                  href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Academic Collaboration&body=Dear Charles MacKay,%0D%0A%0D%0AI would like to discuss...`}
                   className="block w-full underline text-center py-3 font-semibold"
                 >
                   🎓 Academic Collaboration
                 </a>
 
                 <a
-                  href="mailto:charlese1mackay@hotmail.com?subject=Bulk Book Order&body=Dear Charles MacKay,%0D%0A%0D%0AI am interested in ordering..."
+                  href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Bulk Book Order&body=Dear Charles MacKay,%0D%0A%0D%0AI am interested in ordering...`}
                   className="block w-full underline text-center py-3 font-semibold"
                 >
                   📚 Bulk Book Orders
                 </a>
 
                 <a
-                  href="mailto:charlese1mackay@hotmail.com?subject=General Inquiry&body=Dear Charles MacKay,%0D%0A%0D%0A"
+                  href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=General Inquiry&body=Dear Charles MacKay,%0D%0A%0D%0A`}
                   className="block w-full underline text-center py-3 font-semibold"
                 >
                   💬 General Inquiry
@@ -249,7 +249,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:charlese1mackay@hotmail.com"
+              href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`}
               className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:underline transition-colors text-center border border-slate-900"
             >
               📧 Send Email

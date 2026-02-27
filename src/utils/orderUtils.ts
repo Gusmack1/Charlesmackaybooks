@@ -1,3 +1,5 @@
+import { SITE_CONSTANTS } from '@/config/constants';
+
 export interface CustomerDetails {
   firstName: string;
   lastName: string;
@@ -141,7 +143,7 @@ export function generatePayPalUrl(order: Order): string {
   const params = [
     'cmd=_cart',
     'upload=1',
-    'business=charlese1mackay@hotmail.com',
+    `business=${SITE_CONSTANTS.AUTHOR_EMAIL}`,
     `invoice=${order.orderId}`,
     `custom=${order.orderId}`,
     'currency_code=GBP',
@@ -174,7 +176,7 @@ ${generateEmailReceipt(order)}
   `);
   
   // Open email client with pre-filled notification
-  window.open(`mailto:charlese1mackay@hotmail.com?subject=${subject}&body=${body}`);
+  window.open(`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=${subject}&body=${body}`);
 }
 
 // Function to automatically send receipt to customer
@@ -223,7 +225,7 @@ Thank you for your order!
 
 Charles E. MacKay
 Aviation Historian & Author
-charlese1mackay@hotmail.com
+${SITE_CONSTANTS.AUTHOR_EMAIL}
 Glasgow, Scotland
 `;
 }
@@ -286,7 +288,7 @@ export function generateReceipt(order: Order): string {
         <p><strong>Charles E. MacKay</strong><br>
         Aviation Historian & Author<br>
         Glasgow, Scotland<br>
-        Email: charlese1mackay@hotmail.com<br>
+        Email: ${SITE_CONSTANTS.AUTHOR_EMAIL}<br>
         VAT Registration Number: GB123456789</p>
     </div>
 
@@ -384,7 +386,7 @@ export function generateReceipt(order: Order): string {
     <script>
         function emailReceipt() {
             const subject = encodeURIComponent('VAT Receipt - Order ${order.orderId}');
-            const body = encodeURIComponent('Please find attached your VAT receipt for order ${order.orderId}. If you need any assistance, please contact us at charlese1mackay@hotmail.com');
+            const body = encodeURIComponent('Please find attached your VAT receipt for order ${order.orderId}. If you need any assistance, please contact us at ${SITE_CONSTANTS.AUTHOR_EMAIL}');
             window.location.href = 'mailto:${order.customerDetails.email}?subject=' + subject + '&body=' + body;
         }
     </script>

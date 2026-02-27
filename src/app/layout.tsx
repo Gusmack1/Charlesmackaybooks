@@ -136,7 +136,7 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
-    email: 'charlese1mackay@hotmail.com',
+    email: SITE_CONSTANTS.AUTHOR_EMAIL,
     availableLanguage: 'English'
   },
   sameAs: [

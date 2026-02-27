@@ -4,7 +4,7 @@ import { SITE_CONSTANTS } from '@/config/constants'
 
 export const metadata: Metadata = {
   title: 'Support | Charles E. MacKay Aviation Books',
-  description: 'Customer support for Charles E. MacKay Aviation Books. Get help with orders, shipping, returns & refunds, academic and bulk orders. Contact: charlese1mackay@hotmail.com',
+  description: `Customer support for Charles E. MacKay Aviation Books. Get help with orders, shipping, returns & refunds, academic and bulk orders. Contact: ${SITE_CONSTANTS.AUTHOR_EMAIL}`,
   alternates: { canonical: 'https://charlesmackaybooks.com/support' },
 }
 
@@ -19,7 +19,7 @@ const supportSchema = {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      email: 'charlese1mackay@hotmail.com',
+      email: SITE_CONSTANTS.AUTHOR_EMAIL,
       areaServed: 'GB',
       availableLanguage: 'en-GB'
     },
@@ -49,7 +49,7 @@ export default function SupportPage() {
           <div className="card content bg-slate-800 border border-white/15 rounded-lg p-6 text-white">
             <h2 className="content h2 text-white">Contact</h2>
             <p className="text-white/90">
-              Email: <a className="underline text-blue-300 hover:text-white" href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>
+              Email: <a className="underline text-blue-300 hover:text-white" href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`}>{SITE_CONSTANTS.AUTHOR_EMAIL}</a>
             </p>
             <p className="text-white/90">Typical response time: 24–48 hours (Mon–Fri)</p>
             <p className="text-white/90 mt-2">
@@ -73,7 +73,7 @@ export default function SupportPage() {
               <ul className="list-disc list-inside text-white/90 space-y-1">
                 <li>University libraries: purchase orders accepted</li>
                 <li>Bulk orders (5+): academic/volume pricing available</li>
-                <li>Contact: <a className="underline text-blue-300 hover:text-white" href="mailto:charlese1mackay@hotmail.com?subject=Academic%20or%20Bulk%20Order">email support</a></li>
+                <li>Contact: <a className="underline text-blue-300 hover:text-white" href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}?subject=Academic%20or%20Bulk%20Order`}>email support</a></li>
               </ul>
             </div>
           </div>

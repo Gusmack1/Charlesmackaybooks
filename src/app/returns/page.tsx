@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
+import { SITE_CONSTANTS } from '@/config/constants'
 
 export const metadata: Metadata = {
   title: 'Returns & Refunds Policy | Charles E. MacKay Aviation Books',
@@ -25,7 +26,7 @@ export default function ReturnsPage() {
 
             <h3 className="content h3 mt-6">How to start a return</h3>
             <ul className="list-disc list-inside text-secondary space-y-1">
-              <li>Email: <a href="mailto:charlese1mackay@hotmail.com" className="underline">charlese1mackay@hotmail.com</a></li>
+              <li>Email: <a href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`} className="underline">{SITE_CONSTANTS.AUTHOR_EMAIL}</a></li>
               <li>Include your order details (title, ISBN, date, and issue)</li>
               <li>Keep all packaging until we advise next steps</li>
             </ul>
@@ -42,7 +43,7 @@ export default function ReturnsPage() {
 
             <h3 className="content h3 mt-6">Contact</h3>
             <p className="text-secondary">
-              For any questions, please email <a href="mailto:charlese1mackay@hotmail.com" className="underline">charlese1mackay@hotmail.com</a>. We aim to reply within 24 hours.
+              For any questions, please email <a href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`} className="underline">{SITE_CONSTANTS.AUTHOR_EMAIL}</a>. We aim to reply within 24 hours.
             </p>
           </div>
         </div>

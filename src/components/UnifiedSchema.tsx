@@ -151,14 +151,14 @@ export default function UnifiedSchema({
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        email: 'charlese1mackay@hotmail.com',
+        email: SITE_CONSTANTS.AUTHOR_EMAIL,
         contactType: 'customer service',
         areaServed: 'Worldwide',
         availableLanguage: 'English',
       },
       {
         '@type': 'ContactPoint',
-        email: 'charlese1mackay@hotmail.com',
+        email: SITE_CONSTANTS.AUTHOR_EMAIL,
         contactType: 'sales',
         areaServed: ['GB', 'EU', 'US'],
         availableLanguage: 'English',
@@ -188,7 +188,7 @@ export default function UnifiedSchema({
     alternateName: 'Charles E. MacKay Aviation Books',
     description: 'Expert aviation history books by Scotland\'s leading aviation historian. Specializing in Scottish aviation, WWI & WWII aircraft, helicopter development, and military aviation history. Based in Glasgow, Scotland.',
     url: BASE_URL,
-    email: 'charlese1mackay@hotmail.com',
+    email: SITE_CONSTANTS.AUTHOR_EMAIL,
     address: {
       '@type': 'PostalAddress',
       addressLocality: SITE_CONSTANTS.BUSINESS_LOCALITY,
@@ -234,7 +234,7 @@ export default function UnifiedSchema({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'charlese1mackay@hotmail.com',
+      email: SITE_CONSTANTS.AUTHOR_EMAIL,
       contactType: 'author',
     },
   })

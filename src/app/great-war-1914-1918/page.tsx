@@ -473,7 +473,7 @@ export default function GreatWarPage() {
               Golden Age (1918-1939) →
             </Link>
             <Link
-              href="/timeline"
+              href="/scottish-aviation-timeline"
               className="border border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-700 transition-colors"
             >
               📅 View Complete Timeline

@@ -407,7 +407,7 @@ export default function PioneerEraPage() {
               ✈️ Great War Era (1914-1918) →
             </Link>
             <Link
-              href="/timeline"
+              href="/scottish-aviation-timeline"
               className="border border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-amber-700 transition-colors"
             >
               📅 View Complete Timeline

@@ -483,7 +483,7 @@ export default function GoldenAgePage() {
               World War II (1939-1945) →
             </Link>
             <Link
-              href="/timeline"
+              href="/scottish-aviation-timeline"
               className="border border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-700 transition-colors"
             >
               📅 View Complete Timeline

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SITE_CONSTANTS } from '@/config/constants'
 import ComprehensiveBlogTemplate from '@/components/ComprehensiveBlogTemplate'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import EnhancedBlogSEO from '@/components/EnhancedBlogSEO'
@@ -11,6 +12,9 @@ const post = {
     'A source-based overview of Spitfire development themes, with direct links to deeper pages and related Charles E. MacKay book context.',
   content: `
     <h2 id="overview">Overview</h2>
+    <p class="rounded-lg border border-blue-200 bg-blue-50 dark:bg-slate-800 dark:border-slate-600 p-4 mb-6">
+      <strong>Hub page:</strong> This overview links to deeper content. For the full technical study, read <a class="underline font-semibold" href="/blog/supermarine-spitfire-development-evolution">Supermarine Spitfire Development: Evolution of a Legend</a>.
+    </p>
     <p>
       This article is intentionally framed as a site-based overview: it summarises the major topics covered across related pages on this website and links you directly to the deeper treatments.
       Where images are used in this post, captions and alt text are kept deliberately conservative to avoid implying details beyond what is shown on the page.
@@ -47,7 +51,7 @@ const post = {
     name: 'Charles E. MacKay',
     bio: 'Aviation historian specializing in Scottish aviation heritage, military aviation history, and aircraft development. With over 19 published books and more than 1,700 satisfied customers worldwide.',
     image: '/charles-mackay-aviation-historian.jpg',
-    email: 'charlese1mackay@hotmail.com',
+    email: SITE_CONSTANTS.AUTHOR_EMAIL,
   },
   publishedDate: '2025-01-30T12:00:00.000Z',
   readingTime: 8,

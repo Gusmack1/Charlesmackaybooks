@@ -3,6 +3,7 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
+import { SITE_CONSTANTS } from '@/config/constants';
 
 export default function BookNotFound() {
   return (
@@ -29,7 +30,7 @@ export default function BookNotFound() {
             </Link>
 
             <div className="text-sm text-gray-500">
-              <p>Or contact Charles directly at <strong>charlese1mackay@hotmail.com</strong></p>
+              <p>Or contact Charles directly at <strong>{SITE_CONSTANTS.AUTHOR_EMAIL}</strong></p>
               <p>if you're looking for a specific aviation history book.</p>
             </div>
           </div>
