@@ -60,7 +60,7 @@ function CheckoutContent() {
   const preferredPaymentMethod = searchParams.get('method') === 'paypal' ? 'paypal' : 'stripe';
   const { items, addToCart, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
   const { recentlyViewed } = useRecentlyViewed();
-  const [step, setStep] = useState<'basket' | 'address' | 'payment'>('basket');
+  const [step, setStep] = useState<'basket' | 'delivery-payment'>('basket');
   const [paymentMethod, setPaymentMethod] = useState<'stripe' | 'paypal'>(preferredPaymentMethod);
   const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
     firstName: '',
@@ -213,13 +213,13 @@ function CheckoutContent() {
     if (validationErrors.length > 0) {
       setCustomerDetails(savedProfile);
       setErrors(validationErrors);
-      setStep('address');
+      setStep('delivery-payment');
       return;
     }
     setCustomerDetails(savedProfile);
     setErrors([]);
     setPaymentMethod('stripe');
-    setStep('payment');
+    setStep('delivery-payment');
   };
 
   const persistCheckoutProfile = () => {
@@ -231,19 +231,15 @@ function CheckoutContent() {
     saveCustomerProfile(customerDetails);
   };
 
-  const handleAddressSubmit = () => {
-    const validationErrors = validateCustomerDetails(customerDetails);
-    if (validationErrors.length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-    setErrors([]);
-    setStep('payment');
-  };
-
   const handlePaymentMethodSelect = (method: 'stripe' | 'paypal') => {
     setPaymentMethod(method);
+    setErrors([]);
     if (method === 'stripe') {
+      const validationErrors = validateCustomerDetails(customerDetails);
+      if (validationErrors.length > 0) {
+        setErrors(validationErrors);
+        return;
+      }
       createStripePaymentIntent();
     }
   };
@@ -292,7 +288,7 @@ function CheckoutContent() {
   }, [customerDetails.email, items, stripeReference, total]);
 
   useEffect(() => {
-    if (step === 'payment' && paymentMethod === 'stripe' && !clientSecret) {
+    if (step === 'delivery-payment' && paymentMethod === 'stripe' && !clientSecret) {
       createStripePaymentIntent();
     }
   }, [step, paymentMethod, clientSecret, createStripePaymentIntent]);
@@ -349,8 +345,14 @@ function CheckoutContent() {
   };
 
   const handlePayPalPayment = async () => {
+    const validationErrors = validateCustomerDetails(customerDetails);
+    if (validationErrors.length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
     try {
       setIsLoading(true);
+      setErrors([]);
       const customerInfo = buildCustomerInfoPayload();
       const orderItems = mapOrderItemsPayload();
 
@@ -464,7 +466,7 @@ function CheckoutContent() {
           </div>
         </div>
 
-        {/* Progress Steps - Mobile Friendly */}
+        {/* Progress Steps - Mobile Friendly (2 steps: Basket → Delivery & Payment) */}
         <div className="flex items-center justify-center mb-6 sm:mb-8 overflow-x-auto">
           <div className="flex items-center space-x-2 sm:space-x-4 min-w-max px-2">
             <div className={`flex items-center ${step === 'basket' ? 'text-white' : 'text-white/60'}`}>
@@ -474,18 +476,11 @@ function CheckoutContent() {
               <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Basket</span>
             </div>
             <div className="w-4 sm:w-8 h-0.5 sm:h-1 bg-blue-800/50"></div>
-            <div className={`flex items-center ${step === 'address' || step === 'payment' ? 'text-white' : 'text-white/60'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'address' || step === 'payment' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
+            <div className={`flex items-center ${step === 'delivery-payment' ? 'text-white' : 'text-white/60'}`}>
+              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'delivery-payment' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
                 2
               </div>
-              <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Address</span>
-            </div>
-            <div className="w-4 sm:w-8 h-0.5 sm:h-1 bg-blue-800/50"></div>
-            <div className={`flex items-center ${step === 'payment' ? 'text-white' : 'text-white/60'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'payment' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
-                3
-              </div>
-              <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Payment</span>
+              <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Delivery & Payment</span>
             </div>
           </div>
         </div>
@@ -608,10 +603,10 @@ function CheckoutContent() {
                 </div>
                 <div className="mt-4 space-y-2">
                   <button
-                    onClick={() => setStep('address')}
+                    onClick={() => setStep('delivery-payment')}
                     className="w-full bg-white text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base border border-slate-900"
                   >
-                    Continue to Address
+                    Continue to Delivery & Payment
                   </button>
                   {savedProfile?.email && (
                     <button
@@ -625,9 +620,9 @@ function CheckoutContent() {
               </div>
             )}
 
-            {step === 'address' && (
-              <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4 sm:p-6">
-                <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Shipping Address</h2>
+            {step === 'delivery-payment' && (
+              <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4 sm:p-6 space-y-6">
+                <h2 className="text-lg sm:text-xl font-bold text-white">Delivery & Payment</h2>
                 <div className="mb-4 rounded-lg border border-white/15 bg-slate-800/80 p-3 text-sm text-white/85">
                   <p className="font-semibold text-white">Guest checkout (fastest)</p>
                   <p className="text-white/70 text-xs sm:text-sm mt-1">
@@ -800,37 +795,20 @@ function CheckoutContent() {
                   />
                   Save my details on this device for faster guest checkout next time
                 </label>
-                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setStep('basket')}
-                    className="w-full bg-slate-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-slate-700 transition-colors text-sm sm:text-base border border-white/50"
-                  >
-                    Back to Basket
-                  </button>
-                  <button
-                    onClick={handleAddressSubmit}
-                    className="w-full bg-white text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base border border-slate-900"
-                  >
-                    Continue to Payment
-                  </button>
-                </div>
-              </div>
-            )}
+                <button
+                  type="button"
+                  onClick={() => setStep('basket')}
+                  className="w-full sm:w-auto bg-slate-800 text-white py-2 px-4 rounded-lg font-semibold hover:bg-slate-700 transition-colors text-sm border border-white/50"
+                >
+                  ← Back to Basket
+                </button>
 
-            {step === 'payment' && (
-              <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4 sm:p-6">
-                <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Payment Method</h2>
+                {/* Payment section - inline on same step */}
+                <div className="pt-4 border-t border-blue-700/50">
+                <h3 className="text-base sm:text-lg font-bold mb-3 text-white">Payment Method</h3>
                 <p className="text-xs sm:text-sm text-white/80 mb-4">
                   Your payment is encrypted and processed securely by Stripe or PayPal.
                 </p>
-                <button
-                  type="button"
-                  onClick={() => setStep('address')}
-                  className="mb-4 inline-flex items-center rounded-lg border border-white/50 bg-slate-800 px-3 py-2 text-xs sm:text-sm font-medium text-white hover:bg-slate-700 transition-colors"
-                >
-                  ← Back to Address
-                </button>
                 
                 {/* Payment Method Selection */}
                 <div className="mb-4 sm:mb-6">
@@ -881,7 +859,7 @@ function CheckoutContent() {
                       currency="GBP"
                       onSuccess={handleStripeSuccess}
                       onError={handleStripeError}
-                      onCancel={() => setStep('address')}
+                      onCancel={() => {}}
                       customerEmail={customerDetails.email}
                       orderId={stripeReference}
                       items={items}
@@ -914,6 +892,7 @@ function CheckoutContent() {
                     </ul>
                   </div>
                 )}
+                </div>
               </div>
             )}
           </div>

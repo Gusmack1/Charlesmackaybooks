@@ -115,7 +115,7 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
           </button>
 
           <p className="text-[11px] text-white/60 text-center">
-            Free UK shipping · 30-day returns · Secure card and PayPal
+            Free worldwide shipping · 30-day returns · Secure card and PayPal
           </p>
         </div>
       </div>
