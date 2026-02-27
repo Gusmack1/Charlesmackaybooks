@@ -984,5 +984,1605 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-10-02T09:05:46.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/uk-hosts-senior-nato-leaders-to-discuss-nuclear-deterrence#2026-02-27T17:00:01Z",
+    "title": "UK Hosts Senior NATO Leaders to discuss Nuclear Deterrence",
+    "sourceUrl": "https://www.gov.uk/government/news/uk-hosts-senior-nato-leaders-to-discuss-nuclear-deterrence",
+    "summary": "NATO officials discussed the Alliance's approach to nuclear deterrence and Euro-Atlantic security in flagship meeting on 27 February.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-27T17:00:01.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.052Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/his-majesty-the-king-visits-northwood-headquarters#2026-02-27T16:24:25Z",
+    "title": "His Majesty The King visits Northwood Headquarters",
+    "sourceUrl": "https://www.gov.uk/government/news/his-majesty-the-king-visits-northwood-headquarters",
+    "summary": "His Majesty The King today visited the Northwood military headquarters in north-west London, paying tribute to the dedication and service of personnel, whose 24/7 work keeps the UK and its allies safe.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-27T16:24:25.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/veterans-of-the-lgbt-ban-financial-recognition-scheme#2026-02-27T12:31:24Z",
+    "title": "Guidance: Veterans of the LGBT Ban: Financial Recognition Scheme",
+    "sourceUrl": "https://www.gov.uk/government/publications/veterans-of-the-lgbt-ban-financial-recognition-scheme",
+    "summary": "Guidance on the LGBT Financial Recognition Scheme for veterans who served under, and were impacted by, the Ban on LGBT personnel in HM Armed Forces from 1967 to 2000.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-27T12:31:24.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/veterans-of-the-lgbt-ban-qualification-of-administrative-discharge-and-restoration-of-rank#2026-02-27T12:30:24Z",
+    "title": "Guidance: Veterans of the LGBT Ban: Qualification of administrative discharge and restoration of rank",
+    "sourceUrl": "https://www.gov.uk/government/publications/veterans-of-the-lgbt-ban-qualification-of-administrative-discharge-and-restoration-of-rank",
+    "summary": "Guidance on the qualification of administrative discharge and restoration of rank for veterans who were administratively discharged and/or reduced in rank under the Ban, between 1967 and 2000.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-27T12:30:24.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025#2026-02-26T15:35:00Z",
+    "title": "Transparency data: Military Court Service sentencing remarks 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025",
+    "summary": "Transcripts of sentencing remarks from Service Court hearings in the Court Martial from 2025.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T15:35:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/kingsbury-ranges-firing-times#2026-02-26T15:34:25Z",
+    "title": "Guidance: Kingsbury ranges firing times",
+    "sourceUrl": "https://www.gov.uk/government/publications/kingsbury-ranges-firing-times",
+    "summary": "Warning notice of firing at Kingsbury ranges.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T15:34:25.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/whittington-ranges-firing-times#2026-02-26T15:28:46Z",
+    "title": "Guidance: Whittington ranges firing times",
+    "sourceUrl": "https://www.gov.uk/government/publications/whittington-ranges-firing-times",
+    "summary": "Warning notice of firing at Whittington ranges.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T15:28:46.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-court-centres-court-listings#2026-02-26T15:07:35Z",
+    "title": "Transparency data: Military court centres court listings",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-centres-court-listings",
+    "summary": "Court listings for the Military court centres.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T15:07:35.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/find-opportunities-to-become-a-supplier-with-the-ministry-of-defence#2026-02-26T14:39:23Z",
+    "title": "Promotional material: Find opportunities to become a supplier with the Ministry of Defence",
+    "sourceUrl": "https://www.gov.uk/government/publications/find-opportunities-to-become-a-supplier-with-the-ministry-of-defence",
+    "summary": "Leaflet explaining how suppliers can work with the Ministry of Defence (MOD).",
+    "categories": [
+      "Promotional material"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T14:39:23.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/service-inquiry-into-the-support-provided-to-army-victims-of-sexual-assault#2026-02-26T12:00:03Z",
+    "title": "Corporate report: Service Inquiry into the support provided to Army victims of sexual assault",
+    "sourceUrl": "https://www.gov.uk/government/publications/service-inquiry-into-the-support-provided-to-army-victims-of-sexual-assault",
+    "summary": "The Service Inquiry report into the support provided to Army victims of sexual assault.",
+    "categories": [
+      "Corporate report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T12:00:03.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/afghan-relocations-and-assistance-policy#2026-02-26T09:30:16Z",
+    "title": "Guidance: Afghan Relocations and Assistance Policy",
+    "sourceUrl": "https://www.gov.uk/government/publications/afghan-relocations-and-assistance-policy",
+    "summary": "Information and guidance on the Afghan Relocations and Assistance Policy.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T09:30:16.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/statistics/uk-armed-forces-biannual-diversity-statistics-october-2025#2026-02-26T09:30:15Z",
+    "title": "Accredited official statistics: UK armed forces biannual diversity statistics: October 2025",
+    "sourceUrl": "https://www.gov.uk/government/statistics/uk-armed-forces-biannual-diversity-statistics-october-2025",
+    "summary": "This is a biannual publication containing statistics on diversity declaration and representation of protected characteristics for military personnel employed by the Ministry of Defence.",
+    "categories": [
+      "Accredited official statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T09:30:15.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/new-drone-factory-opens-in-suffolk-to-boost-ukraines-armed-forces-against-russias-war#2026-02-26T00:01:00Z",
+    "title": "New drone factory opens in Suffolk to boost Ukraine's Armed Forces against Russia's war",
+    "sourceUrl": "https://www.gov.uk/government/news/new-drone-factory-opens-in-suffolk-to-boost-ukraines-armed-forces-against-russias-war",
+    "summary": "Ukraine’s Armed Forces will be able to better defend itself against Russia’s brutal attacks.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T00:01:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-low-flying-mod-sponsored-air-exercises#2026-02-25T15:52:42Z",
+    "title": "Guidance: Military low flying: MOD sponsored air exercises",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-low-flying-mod-sponsored-air-exercises",
+    "summary": "MOD sponsored low flying exercises within the UK low flying system.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-25T15:52:42.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable#2026-02-25T14:38:20Z",
+    "title": "Guidance: Military low flying: RAF operational low flying training timetable",
+    "sourceUrl": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable",
+    "summary": "Royal Air Force (RAF) operational low flying training timetables in 3 areas of the UK.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-25T14:38:20.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table#2026-02-25T10:54:26Z",
+    "title": "Regulation: Notice of authorised amendments (NAA) reference table",
+    "sourceUrl": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table",
+    "summary": "The NAA table provides information of changes in regulations and manuals and release date produced by the Military Aviation Authority (MAA).",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-25T10:54:26.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.053Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2026-documents#2026-02-25T10:53:55Z",
+    "title": "Regulation: Notice of authorised amendments (NAA) 2026 documents",
+    "sourceUrl": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2026-documents",
+    "summary": "Issuing of an NAA gives notice to the changes in regulations and manuals. Produced by the Military Aviation Authority (MAA).",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-25T10:53:55.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.054Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/manual-of-airworthiness-maintenance-documentation-mam-d#2026-02-25T10:53:15Z",
+    "title": "Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D)",
+    "sourceUrl": "https://www.gov.uk/government/publications/manual-of-airworthiness-maintenance-documentation-mam-d",
+    "summary": "The MAM-D is a comprehensive list of Defence Aviation Environment engineering documentation, processes and Instructions for Use.",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-25T10:53:15.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.054Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/statistics/defence-statistics-pre-release-access-list#2026-02-25T09:30:06Z",
+    "title": "Official Statistics: MOD statistics pre-release access list",
+    "sourceUrl": "https://www.gov.uk/government/statistics/defence-statistics-pre-release-access-list",
+    "summary": "The individuals who have 24-hour, pre-release access to Ministry of Defence's key Official and Accredited Official Statistics publications.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-25T09:30:06.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.054Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/final-piece-in-place-for-defence-support-transformation#2026-02-25T08:31:08Z",
+    "title": "Final piece in place for defence support transformation",
+    "sourceUrl": "https://www.gov.uk/government/news/final-piece-in-place-for-defence-support-transformation",
+    "summary": "The National Armaments Director (NAD) Group has awarded the third and final major contract within the Business Modernisation for Support (BMfS) programme.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-25T08:31:08.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.054Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/239/-outstanding-award-for-hial-security-training-team",
+    "title": "“Outstanding” Award for HIAL Security Training Team",
+    "sourceUrl": "https://www.hial.co.uk/news/article/239/-outstanding-award-for-hial-security-training-team",
+    "summary": "The security training team at HIAL have recently been awarded “Outstanding” in their assessment under the UK Civil Aviation Authority (CAA) Quality Assurance Framework.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-02-24T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/238/air-discount-scheme-extension-confirmed",
+    "title": "Air Discount Scheme extension confirmed",
+    "sourceUrl": "https://www.hial.co.uk/news/article/238/air-discount-scheme-extension-confirmed",
+    "summary": "The Scottish Government has confirmed that the Air Discount Scheme will be formally renewed from 1 April 2026 until at least 31 March 2027.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-02-18T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/237/hial-celebrates-apprenticeship-achievement-supporting-workforce-development",
+    "title": "HIAL celebrates apprenticeship achievement supporting workforce development",
+    "sourceUrl": "https://www.hial.co.uk/news/article/237/hial-celebrates-apprenticeship-achievement-supporting-workforce-development",
+    "summary": "Degree awarded as part of workplace based Graduate Apprenticeship Scheme for member of Dundee&#039;s airport team.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-02-05T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/236/stornoway-airport-hosts-charity-event-in-remembrance-of-the-iolaire",
+    "title": "Stornoway Airport hosts charity event in remembrance of the Iolaire",
+    "sourceUrl": "https://www.hial.co.uk/news/article/236/stornoway-airport-hosts-charity-event-in-remembrance-of-the-iolaire",
+    "summary": "Stornoway Airport was honoured to host a special charity event on 10 January, bringing the local community together in quiet reflection and remembrance on the anniversary of the Iolaire tragedy.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-01-16T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/235/direct-flights-to-dublin-return-from-inverness",
+    "title": "Direct flights to Dublin return from Inverness",
+    "sourceUrl": "https://www.hial.co.uk/news/article/235/direct-flights-to-dublin-return-from-inverness",
+    "summary": "Direct flights between Inverness and Dublin are set to return, and with new airline partner Aer Lingus Regional, exclusively operated by Emerald Airlines, launching a new service from 21 May 2026.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-01-15T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/234/wick-aberdeen-flights-recommence",
+    "title": "Wick - Aberdeen flights recommence",
+    "sourceUrl": "https://www.hial.co.uk/news/article/234/wick-aberdeen-flights-recommence",
+    "summary": "Representatives from the Highland Council, HIAL, Air Charter Scotland, local businesses and the Caithness community attended an launch event yesterday at Wick John O&#039;Groats airport.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-01-15T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/233/stornoway-airport-caf-update",
+    "title": "Stornoway Airport Café Update",
+    "sourceUrl": "https://www.hial.co.uk/news/article/233/stornoway-airport-caf-update",
+    "summary": "Closed for January holiday break.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-01-12T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/232/tickets-for-wick-aberdeen-service-now-sale",
+    "title": "Tickets for Wick - Aberdeen service now sale",
+    "sourceUrl": "https://www.hial.co.uk/news/article/232/tickets-for-wick-aberdeen-service-now-sale",
+    "summary": "The Highland Council have announced that tickets are now available to book for flights between Wick John O&#039;Groats and Aberdeen International Airport.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-01-08T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/231/successful-wick-aberdeen-air-service-operator-announced",
+    "title": "Successful Wick–Aberdeen Air Service Operator Announced",
+    "sourceUrl": "https://www.hial.co.uk/news/article/231/successful-wick-aberdeen-air-service-operator-announced",
+    "summary": "The Highland Council has confirmed that Air Charter Scotland has been appointed as the operator of the Wick–Aberdeen air service.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-12-24T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/230/hial-a-foillseachadh-aithisg-bhliadhnail-airson-2024-25",
+    "title": "HIAL a’ foillseachadh aithisg bhliadhnail airson 2024/25",
+    "sourceUrl": "https://www.hial.co.uk/news/article/230/hial-a-foillseachadh-aithisg-bhliadhnail-airson-2024-25",
+    "summary": "Tha Puirt-adhair na Gàidhealtachd ’s nan Eilean Earranta (HIAL) air a aithisg bhliadhnail is cunntasan as ùire fhoillseachadh airson na bliadhna ionmhais 2024/25.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2025-12-19T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.530Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/comparing-fuel-pumps-to-electric-vehicle-public-chargers#2026-02-27T00:01:04Z",
+    "title": "Research: Comparing fuel pumps to electric vehicle public chargers",
+    "sourceUrl": "https://www.gov.uk/government/publications/comparing-fuel-pumps-to-electric-vehicle-public-chargers",
+    "summary": "An analysis that shows there are more electric vehicle (EV) public chargers than fuel pumps across the UK.",
+    "categories": [
+      "Research"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-27T00:01:04.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/news/health-service-to-save-millions-with-boost-to-electrify-nhs-fleet#2026-02-27T00:01:00Z",
+    "title": "Health service to save millions with boost to electrify NHS fleet",
+    "sourceUrl": "https://www.gov.uk/government/news/health-service-to-save-millions-with-boost-to-electrify-nhs-fleet",
+    "summary": "Switching the NHS vehicle fleet to electric will save the health service millions and help to decarbonise 460 million miles of travel each year.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-27T00:01:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistics/electric-vehicle-public-charging-infrastructure-statistics-january-2026#2026-02-26T16:09:03Z",
+    "title": "Official Statistics: Electric vehicle public charging infrastructure statistics: January 2026",
+    "sourceUrl": "https://www.gov.uk/government/statistics/electric-vehicle-public-charging-infrastructure-statistics-january-2026",
+    "summary": "Quarterly statistics on the number of public electric vehicle chargers in the United Kingdom, including summaries by geography and charging power band.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:09:03.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/guidance/run-international-bus-or-coach-services-and-tours#2026-02-26T16:03:26Z",
+    "title": "Run international bus or coach services and tours",
+    "sourceUrl": "https://www.gov.uk/guidance/run-international-bus-or-coach-services-and-tours",
+    "summary": "What UK bus and coach operators need to do to provide services, tours, holidays and trips into the EU and other countries.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:03:26.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/hs2-vocational-qualifications-report-2023-to-2024#2026-02-26T16:00:27Z",
+    "title": "Corporate report: HS2 vocational qualifications report, 2023 to 2024",
+    "sourceUrl": "https://www.gov.uk/government/publications/hs2-vocational-qualifications-report-2023-to-2024",
+    "summary": "This report gives details of the vocational qualifications completed by people working on the construction of HS2.",
+    "categories": [
+      "Corporate report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:00:27.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/personal-safety-on-transport#2026-02-26T16:00:03Z",
+    "title": "Research: Personal safety on transport",
+    "sourceUrl": "https://www.gov.uk/government/publications/personal-safety-on-transport",
+    "summary": "Study exploring how safe people feel on the transport network and their experience of incidents impacting their personal safety.",
+    "categories": [
+      "Research"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:00:03.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/government-major-projects-portfolio-accounting-officer-assessments#2026-02-26T16:00:03Z",
+    "title": "Transparency data: Department for Transport’s accounting officer assessment summaries for the Government Major Projects Portfolio",
+    "sourceUrl": "https://www.gov.uk/government/publications/government-major-projects-portfolio-accounting-officer-assessments",
+    "summary": "Accounting officer assessment summaries for the Department for Transport’s (DfT) programmes and projects in the Government Major Projects Portfolio (GMPP).",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:00:03.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/rail-air-quality-policy-statement#2026-02-26T16:00:03Z",
+    "title": "Policy paper: Rail air quality policy statement",
+    "sourceUrl": "https://www.gov.uk/government/publications/rail-air-quality-policy-statement",
+    "summary": "Sets out the government’s approach to improving air quality across the passenger railway in England.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:00:03.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/rail-technical-standards-common-framework#2026-02-26T16:00:00Z",
+    "title": "Policy paper: Rail technical standards common framework",
+    "sourceUrl": "https://www.gov.uk/government/publications/rail-technical-standards-common-framework",
+    "summary": "Explains how the UK government and devolved governments propose to work together on rail technical standards.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/motor-insurance-common-framework#2026-02-26T16:00:00Z",
+    "title": "Policy paper: Motor insurance common framework",
+    "sourceUrl": "https://www.gov.uk/government/publications/motor-insurance-common-framework",
+    "summary": "Explains how the UK government and devolved governments propose to work together on motor insurance.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/commercial-transport-operator-licensing-common-framework#2026-02-26T16:00:00Z",
+    "title": "Policy paper: Commercial transport operator licensing common framework",
+    "sourceUrl": "https://www.gov.uk/government/publications/commercial-transport-operator-licensing-common-framework",
+    "summary": "Explains how the UK government and devolved governments propose to work together on commercial transport and operator licensing.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/driver-licensing-common-framework#2026-02-26T16:00:00Z",
+    "title": "Policy paper: Driver licensing common framework",
+    "sourceUrl": "https://www.gov.uk/government/publications/driver-licensing-common-framework",
+    "summary": "Explains how the UK government and devolved governments propose to work together on driver licensing.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T16:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/proposed-revocation-of-the-a47-wansford-to-sutton-development-consent-order-2023#2026-02-26T11:55:10Z",
+    "title": "Decision: Proposed revocation of the A47 Wansford to Sutton Development Consent Order 2023",
+    "sourceUrl": "https://www.gov.uk/government/publications/proposed-revocation-of-the-a47-wansford-to-sutton-development-consent-order-2023",
+    "summary": "The Secretary of State for Transport proposes to make an order to revoke the A47 Wansford to Sutton Development Consent Order 2023.",
+    "categories": [
+      "Decision"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T11:55:10.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/electric-vehicle-charging-device-statistics-information#2026-02-26T09:30:11Z",
+    "title": "Guidance: Electric vehicle charging infrastructure statistics information",
+    "sourceUrl": "https://www.gov.uk/government/publications/electric-vehicle-charging-device-statistics-information",
+    "summary": "Supporting documents for the electric vehicle charging infrastructure statistics collection.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T09:30:11.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/using-mobile-phone-data-when-evaluating-electric-vehicle-usage#2026-02-26T09:30:08Z",
+    "title": "Research: Using mobile phone data when evaluating electric vehicle usage",
+    "sourceUrl": "https://www.gov.uk/government/publications/using-mobile-phone-data-when-evaluating-electric-vehicle-usage",
+    "summary": "Analysis establishing the viability of using anonymised and aggregated mobile phone data to support evaluation and future study of electric vehicle usage.",
+    "categories": [
+      "Research"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T09:30:08.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistical-data-sets/electric-vehicle-charging-infrastructure-statistics-data-tables-evci#2026-02-26T09:30:00Z",
+    "title": "Electric vehicle charging infrastructure statistics: data tables (EVCI)",
+    "sourceUrl": "https://www.gov.uk/government/statistical-data-sets/electric-vehicle-charging-infrastructure-statistics-data-tables-evci",
+    "summary": "Data about electric vehicle charging infrastructure.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T09:30:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/dft-foi-and-eir-disclosure-log-2026#2026-02-26T09:19:34Z",
+    "title": "FOI release: DfT: FOI and EIR disclosure log 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/dft-foi-and-eir-disclosure-log-2026",
+    "summary": "List of responses to freedom of information and environmental information regulations requests made to the Department for Transport in 2026.",
+    "categories": [
+      "FOI release"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T09:19:34.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/dft-spending-over-25000-october-2025#2026-02-26T09:15:02Z",
+    "title": "Transparency data: DfT: spending over £25,000, October 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/dft-spending-over-25000-october-2025",
+    "summary": "Reports on departmental spending over £25,000.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T09:15:02.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/dft-spending-over-25000-november-2025#2026-02-26T09:15:02Z",
+    "title": "Transparency data: DfT: spending over £25,000, November 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/dft-spending-over-25000-november-2025",
+    "summary": "Reports on departmental spending over £25,000.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T09:15:02.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/train-operating-companies-passengers-charter-compensation#2026-02-26T09:00:03Z",
+    "title": "Transparency data: Train operating companies: Passenger’s Charter compensation",
+    "sourceUrl": "https://www.gov.uk/government/publications/train-operating-companies-passengers-charter-compensation",
+    "summary": "Compensation amounts paid by train operating companies to passengers through Passenger's Charter requirements.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-26T09:00:03.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.538Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/international-day-commemorating-air-crash-victims-and-their-families#2026-02-19T14:00:05Z",
+    "title": "International Day Commemorating Air Crash Victims and Their Families",
+    "sourceUrl": "https://www.gov.uk/government/news/international-day-commemorating-air-crash-victims-and-their-families",
+    "summary": "Friday 20 February 2026 is the International Day Commemorating Air Crash Victims and Their Families",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-19T14:00:05.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-north-yorkshire#2026-02-18T15:10:37Z",
+    "title": "The AAIB has sent a team to North Yorkshire",
+    "sourceUrl": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-north-yorkshire",
+    "summary": "An investigation into an accident involving a light aircraft has begun",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-18T15:10:37.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/publications/air-accident-monthly-bulletin-february-2026#2026-02-12T10:04:00Z",
+    "title": "Independent report: Air accident monthly bulletin February 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/air-accident-monthly-bulletin-february-2026",
+    "summary": "The AAIB Bulletin is a compilation of AAIB reports and is published on the second Thursday of the month.",
+    "categories": [
+      "Independent report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-12T10:04:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/publications/aaib-record-only-investigations-reviewed-november-december-2025#2026-02-12T10:03:25Z",
+    "title": "Independent report: AAIB Record-only investigations reviewed: November - December 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/aaib-record-only-investigations-reviewed-november-december-2025",
+    "summary": "This is a list of AAIB Record-only investigations that were reviewed during November - December 2025.",
+    "categories": [
+      "Independent report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-12T10:03:25.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-velos-v3-uas-registration-n-slash-a#2026-02-12T10:02:42Z",
+    "title": "AAIB investigation to Velos V3, (UAS registration N/A)",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-velos-v3-uas-registration-n-slash-a",
+    "summary": "Loss of control of UA, Onllwyn, Neath Port Talbot, 17 March 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-12T10:02:42.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-lak-17b-fes-mini-g-cltx#2026-02-12T10:02:14Z",
+    "title": "AAIB investigation to LAK-17B FES Mini, G-CLTX",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-lak-17b-fes-mini-g-cltx",
+    "summary": "Uncommanded airbrake deployment during winch launch, South Wales Gliding Club, Monmouthshire, 16 August 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-12T10:02:14.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-robinson-r66-g-wbrn#2026-02-12T10:01:42Z",
+    "title": "AAIB investigation to Robinson R66, G-WBRN",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-robinson-r66-g-wbrn",
+    "summary": "Rollover during precautionary landing, Chalfont St Peter, Buckinghamshire, 11 June 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-12T10:01:42.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-replica-percival-mew-gull-g-hekl#2026-02-12T10:01:09Z",
+    "title": "AAIB investigation to Replica Percival Mew Gull, G-HEKL",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-replica-percival-mew-gull-g-hekl",
+    "summary": "Engine failure, 1 mile north-west of Great Massingham Airfield, Norfolk, 18 April 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-12T10:01:09.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-siai-marchetti-s-dot-205-22-slash-r-modified-g-vela#2026-02-12T09:59:46Z",
+    "title": "AAIB investigation to Siai Marchetti S.205 22/R (Modified), G-VELA",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-siai-marchetti-s-dot-205-22-slash-r-modified-g-vela",
+    "summary": "Landing gear failed to extend due to a technical malfunction, Norwich Airport, Norfolk, 27 April 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-12T09:59:46.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-sonaca-200-g-lkdm#2026-02-12T09:59:10Z",
+    "title": "AAIB investigation to Sonaca 200, G-LKDM",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-sonaca-200-g-lkdm",
+    "summary": "Loss of control during takeoff, Blackbushe Airport, Surrey, 6 August 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-12T09:59:10.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/aaib-appoints-robert-balls-as-chief-inspector-of-air-accidents#2026-02-11T16:07:29Z",
+    "title": "AAIB appoints Robert Balls as Chief Inspector of Air Accidents",
+    "sourceUrl": "https://www.gov.uk/government/news/aaib-appoints-robert-balls-as-chief-inspector-of-air-accidents",
+    "summary": "The Air Accidents Investigation Branch is pleased to announce the appointment of Robert Balls as Chief Inspector of Air Accidents",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-11T16:07:29.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/anniversary-statement-boeing-747-433-g-onee--2#2026-02-06T10:01:58Z",
+    "title": "Anniversary Statement: Boeing 747-433, G-ONEE",
+    "sourceUrl": "https://www.gov.uk/government/news/anniversary-statement-boeing-747-433-g-onee--2",
+    "summary": "Electrical system failures during departure from London Heathrow Airport, 8 February 2024",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-06T10:01:58.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-rochdale-greater-manchester#2026-02-03T14:00:20Z",
+    "title": "The AAIB has sent a team to Rochdale, Greater Manchester",
+    "sourceUrl": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-rochdale-greater-manchester",
+    "summary": "An investigation into an accident involving a light aircraft has begun",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-03T14:00:20.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/anniversary-statement-atr-72-212-g-islm#2026-01-09T10:00:06Z",
+    "title": "Anniversary Statement: ATR-72-212, G-ISLM",
+    "sourceUrl": "https://www.gov.uk/government/news/anniversary-statement-atr-72-212-g-islm",
+    "summary": "Multiple electrical system failures on departure from Guernsey Airport on 10 January 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-01-09T10:00:06.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/publications/aaib-record-only-uas-investigations-reviewed-october-november-2025#2026-01-08T10:01:44Z",
+    "title": "Independent report: AAIB Record-only UAS investigations reviewed: October - November 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/aaib-record-only-uas-investigations-reviewed-october-november-2025",
+    "summary": "This is a list of AAIB Record-only UAS investigations that were reviewed during October - November 2025",
+    "categories": [
+      "Independent report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-01-08T10:01:44.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-jodel-d120-g-aygg#2026-01-08T10:00:54Z",
+    "title": "AAIB investigation to Jodel D120, G-AYGG",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-jodel-d120-g-aygg",
+    "summary": "Loss of control in-flight after reported engine failure, Belhus Woods Country Park, Essex, 7 September 2024",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-01-08T10:00:54.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-cameron-z-275-g-vbft#2026-01-08T10:00:12Z",
+    "title": "AAIB investigation to Cameron Z-275, G-VBFT",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-cameron-z-275-g-vbft",
+    "summary": "Balloon struck unseen power lines during landing, Earls Colne, Essex, 10 April 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-01-08T10:00:12.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-ikarus-c42-fb80-g-cgni#2026-01-08T09:59:40Z",
+    "title": "AAIB investigation to Ikarus C42 FB80, G-CGNI",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-ikarus-c42-fb80-g-cgni",
+    "summary": "Right wing not correctly installed, Yatesbury Airfield, Wiltshire, 9 May 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-01-08T09:59:40.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-airbus-a320-251n-g-uzef#2026-01-08T09:59:01Z",
+    "title": "AAIB investigation to Airbus A320-251N, G-UZEF",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-airbus-a320-251n-g-uzef",
+    "summary": "Aircraft did not pressurise, south-western UK airspace, 20 April 2025",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-01-08T09:59:01.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-airbus-a380-841-g-xlei#2026-01-08T09:58:16Z",
+    "title": "AAIB investigation to Airbus A380-841, G-XLEI",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-airbus-a380-841-g-xlei",
+    "summary": "Turbulence encounter over the Atlantic Ocean, south of Greenland, 6 December 2024",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-01-08T09:58:16.000Z",
+    "fetchedAt": "2026-02-27T21:51:36.553Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://fselite.net/content/blackbox-simulation-releases-scottish-aviation-twin-pioneer/",
+    "title": "BlackBox Simulation Releases Scottish Aviation Twin Pioneer",
+    "sourceUrl": "https://fselite.net/content/blackbox-simulation-releases-scottish-aviation-twin-pioneer/",
+    "summary": "BlackBox Simulation has released the Scottish Aviation Twin Pioneer for Microsoft Flight Simulator 2024, a 1950s British STOL transport...",
+    "categories": [
+      "FSElite"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.405Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://zeroavia.com/zeroavia-to-build-manufacturing-hub-in-scotland/",
+    "title": "ZeroAvia to Build Manufacturing Hub in Scotland",
+    "sourceUrl": "https://zeroavia.com/zeroavia-to-build-manufacturing-hub-in-scotland/",
+    "summary": "Zero-emission aviation leader will launch a Hydrogen Centre of Excellence and major manufacturing facility close to Glasgow Airport.",
+    "categories": [
+      "ZeroAvia"
+    ],
+    "publishedAt": "2025-05-21T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aviationbusinessnews.com/cabin/scottish-leather-group-switches-on-solar-array/",
+    "title": "Scottish Leather Group switches on solar array",
+    "sourceUrl": "https://www.aviationbusinessnews.com/cabin/scottish-leather-group-switches-on-solar-array/",
+    "summary": "Scottish Leather Group switches on solar array ... Seat fabric producer Scottish Leather Group (SLG) has switched on a new Solar PV array at its production...",
+    "categories": [
+      "Aviation Business News"
+    ],
+    "publishedAt": "2025-12-16T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/articles/cpv13gv4899o",
+    "title": "Airline for Wick to Aberdeen could be announced next week",
+    "sourceUrl": "https://www.bbc.com/news/articles/cpv13gv4899o",
+    "summary": "Eastern Airways had operated the subsidised flights before it entered administration.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2025-11-13T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.scotsman.com/news/transport/the-scottish-airline-that-has-become-number-1-for-punctuality-5365630",
+    "title": "The Scottish airline that has become number 1 for punctuality in 'hard won' accolade",
+    "sourceUrl": "https://www.scotsman.com/news/transport/the-scottish-airline-that-has-become-number-1-for-punctuality-5365630",
+    "summary": "Scottish airline Loganair has become the most punctual in the UK for the first time after turning the corner on its previously...",
+    "categories": [
+      "The Scotsman"
+    ],
+    "publishedAt": "2025-10-20T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ainonline.com/aviation-news/aerospace/2025-05-23/scotland-backs-zeroavias-hydrogen-propulsion-manufacturing-site",
+    "title": "Scotland Backs ZeroAvia's Hydrogen Propulsion Manufacturing Site in Glasgow",
+    "sourceUrl": "https://www.ainonline.com/aviation-news/aerospace/2025-05-23/scotland-backs-zeroavias-hydrogen-propulsion-manufacturing-site",
+    "summary": "The Scottish government has awarded £9 million ($12 million) in funding to support ZeroAvia's plans to manufacture its hydrogen-electric propulsion systems.",
+    "categories": [
+      "Aviation International News"
+    ],
+    "publishedAt": "2025-05-23T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dailyrecord.co.uk/news/scottish-news/scottish-airline-unveils-4-new-36729498",
+    "title": "Scottish airline unveils 4 new direct flights from one island airport",
+    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/scottish-airline-unveils-4-new-36729498",
+    "summary": "Loganair is also expanding capacity on its Jersey to Bristol route - here's what you should know. 0. News.",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/25607870.scottish-airline-unveils-new-route-airport-base-launch/",
+    "title": "Airline unveils new route and plans for new airport base launch",
+    "sourceUrl": "https://www.heraldscotland.com/news/25607870.scottish-airline-unveils-new-route-airport-base-launch/",
+    "summary": "An airline has unveiled a new route ahead of the launch of a new airport base.",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": "2025-11-09T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://travelweekly.co.uk/news/budget-airlines-ramp-up-scottish-services",
+    "title": "Updated: Budget airlines ramp up Scottish services",
+    "sourceUrl": "https://travelweekly.co.uk/news/budget-airlines-ramp-up-scottish-services",
+    "summary": "Wizz Air has started serving Rome and Milan from Glasgow airport while Edinburgh is being connected to Belfast City airport by a new easyJet...",
+    "categories": [
+      "Travel Weekly - Home"
+    ],
+    "publishedAt": "2025-10-27T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://vintageaviationnews.com/vintage-aviation/sophie-the-strutter-a-sopwith-1%C2%BD-strutter-comes-to-life-in-scotland.html",
+    "title": "‘Sophie’ the Strutter: A Sopwith 1½ Strutter Comes to Life in Scotland",
+    "sourceUrl": "https://vintageaviationnews.com/vintage-aviation/sophie-the-strutter-a-sopwith-1%C2%BD-strutter-comes-to-life-in-scotland.html",
+    "summary": "Scotland's East Lothian region is renowned for its rugged beauty—windswept coastlines, rolling hills, and storied castles steeped in history...",
+    "categories": [
+      "Vintage Aviation News"
+    ],
+    "publishedAt": "2025-05-08T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/25889305.unsafe-condition-warning-issued-planes-flying-scotland/",
+    "title": "'Unsafe condition' warning issued for planes flying to and from Scotland",
+    "sourceUrl": "https://www.heraldscotland.com/news/25889305.unsafe-condition-warning-issued-planes-flying-scotland/",
+    "summary": "New safety guidance has been issued for Boeing aeroplanes over a potential issue which could cause pilots to be incapacitated,...",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ainonline.com/aviation-news/air-transport/2026-01-15/air-charter-scotland-starts-first-scheduled-services",
+    "title": "Air Charter Scotland Starts First Scheduled Services",
+    "sourceUrl": "https://www.ainonline.com/aviation-news/air-transport/2026-01-15/air-charter-scotland-starts-first-scheduled-services",
+    "summary": "Starting March 1, this rout will be served by an 18-seat BAe Jetstream J32 operated and crewed by Dutch airline AIS Airlines, while Air Charter...",
+    "categories": [
+      "Aviation International News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.seedworld.com/europe/2025/11/06/camelina-identified-as-promising-crop-for-sustainable-aviation-fuel-in-scotland/",
+    "title": "Camelina Identified as Promising Crop for Sustainable Aviation Fuel in Scotland",
+    "sourceUrl": "https://www.seedworld.com/europe/2025/11/06/camelina-identified-as-promising-crop-for-sustainable-aviation-fuel-in-scotland/",
+    "summary": "Camelina Identified as Promising Crop for Sustainable Aviation Fuel in Scotland ... Scientists from The James Hutton Institute and SRUC have...",
+    "categories": [
+      "Seed World"
+    ],
+    "publishedAt": "2025-11-06T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://news.aa.com/news/news-details/2025/American-Airlines-unveils-first-international-route-for-the-Airbus-A321XLR-NET-RTS-10/default.aspx",
+    "title": "American Airlines unveils first international route for the game-changing Airbus A321XLR",
+    "sourceUrl": "https://news.aa.com/news/news-details/2025/American-Airlines-unveils-first-international-route-for-the-Airbus-A321XLR-NET-RTS-10/default.aspx",
+    "summary": "American will launch new seasonal service between New York (JFK) and Edinburgh, Scotland (EDI), in March 2026.",
+    "categories": [
+      "American Airlines Newsroom"
+    ],
+    "publishedAt": "2025-10-30T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.prnewswire.com/news-releases/united-adds-flights-to-new-cities-in-croatia-italy-scotland-and-spain-next-summer-302579651.html",
+    "title": "United Adds Flights to New Cities in Croatia, Italy, Scotland and Spain next Summer",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/united-adds-flights-to-new-cities-in-croatia-italy-scotland-and-spain-next-summer-302579651.html",
+    "summary": "Only airline with nonstops from Newark/New York to Split, Croatia; Glasgow, Scotland and Santiago de Compostela, Spain Only U.S. airline...",
+    "categories": [
+      "PR Newswire"
+    ],
+    "publishedAt": "2025-10-09T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://aerospaceglobalnews.com/news/loganair-64-years-scotlands-airline/",
+    "title": "Loganair at 64: How Scotland's airline became the UK's largest regional carrier",
+    "sourceUrl": "https://aerospaceglobalnews.com/news/loganair-64-years-scotlands-airline/",
+    "summary": "With over six decades of flying behind it and with new bases, routes and aircraft, the UK's largest regional airline keeps going from...",
+    "categories": [
+      "Aerospace Global News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.yahoo.com/news/articles/york-scotland-flight-got-way-105804152.html",
+    "title": "A New York to Scotland flight got all the way across the Atlantic before an air traffic control problem forced a diversion to Ireland",
+    "sourceUrl": "https://www.yahoo.com/news/articles/york-scotland-flight-got-way-105804152.html",
+    "summary": "A New York to Scotland flight got all the way across the Atlantic before an air traffic control problem forced a diversion to Ireland · A...",
+    "categories": [
+      "Yahoo"
+    ],
+    "publishedAt": "2025-12-05T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://avweb.com/aviation-news/scotland-plans-overhaul-of-1950s-airspace/",
+    "title": "Scotland Plans Overhaul of 1950s-Era Airspace",
+    "sourceUrl": "https://avweb.com/aviation-news/scotland-plans-overhaul-of-1950s-airspace/",
+    "summary": "... of 1950s-Era Airspace. Proposals aim to cut noise, reduce emissions and improve flight efficiency over Edinburgh and Glasgow.",
+    "categories": [
+      "AVweb"
+    ],
+    "publishedAt": "2025-10-22T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/articles/c5ylekkkyg2o",
+    "title": "Flight path shake-up plan for 'outdated' 1950s airspace over Scotland",
+    "sourceUrl": "https://www.bbc.com/news/articles/c5ylekkkyg2o",
+    "summary": "Flight path shake-up plan for 'outdated' 1950s airspace over Scotland · 20 October 2025 · Edinburgh and Glasgow airports could see the biggest...",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2025-10-20T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.zona-militar.com/en/2026/02/26/f-15e-and-f-35a-fighters-of-the-u-s-air-force-arrived-in-scotland-to-participate-in-exercise-point-blank/",
+    "title": "F-15E and F-35A fighters of the U.S. Air Force arrived in Scotland to participate in Exercise Point Blank",
+    "sourceUrl": "https://www.zona-militar.com/en/2026/02/26/f-15e-and-f-35a-fighters-of-the-u-s-air-force-arrived-in-scotland-to-participate-in-exercise-point-blank/",
+    "summary": "In parallel with the ongoing U.S. deployment to the Middle East, F-15E Strike Eagle fighters and fifth-generation F-35A Lightning II stealth...",
+    "categories": [
+      "Zona Militar"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.telegraph.co.uk/news/2026/02/25/raf-base-lossiemouth-scotland-fight-against-russia/",
+    "title": "Why a Scottish RAF base could become integral in fight against Russia",
+    "sourceUrl": "https://www.telegraph.co.uk/news/2026/02/25/raf-base-lossiemouth-scotland-fight-against-russia/",
+    "summary": "As fears grow over Moscow's attack plans, Lossiemouth is key to protecting UK from High North incursions.",
+    "categories": [
+      "The Telegraph"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dailyrecord.co.uk/news/scottish-news/body-walker-found-highlands-mountain-36789283",
+    "title": "Body of walker found on Highlands mountain after RAF called in to search for group",
+    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/body-walker-found-highlands-mountain-36789283",
+    "summary": "Volunteers from Dundonnell Mountain Rescue Team spent hours searching the slopes of An Teallach after three walkers called for help,...",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.reuters.com/world/uk-says-military-options-ready-russian-ship-uses-lasers-against-raf-pilots-2025-11-19/",
+    "title": "UK says 'military options' ready as Russian ship points lasers at RAF pilots",
+    "sourceUrl": "https://www.reuters.com/world/uk-says-military-options-ready-russian-ship-uses-lasers-against-raf-pilots-2025-11-19/",
+    "summary": "British defence minister John Healey said on Wednesday that \"military options\" are ready should the Russian spy ship Yantar become a threat...",
+    "categories": [
+      "Reuters"
+    ],
+    "publishedAt": "2025-11-19T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/articles/c04rg3l3y64o",
+    "title": "Ex-RAF test pilot says Chinook crashed on 'show flight'",
+    "sourceUrl": "https://www.bbc.com/news/articles/c04rg3l3y64o",
+    "summary": "A Chinook helicopter that crashed in Scotland more than 30 years ago, killing 29 people, was being flown as a \"show flight\" after safety...",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2025-08-15T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://people.com/king-charles-meets-crying-baby-raf-lossiemouth-scotland-11786017",
+    "title": "King Charles Laughs Off Baby's Less-Than-Thrilled Reaction to Meeting Him",
+    "sourceUrl": "https://people.com/king-charles-meets-crying-baby-raf-lossiemouth-scotland-11786017",
+    "summary": "King Charles was in military mode at his latest royal engagement; The King visited RAF Lossiemouth in Moray, Scotland, one of just two Quick...",
+    "categories": [
+      "People.com"
+    ],
+    "publishedAt": "2025-08-06T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.raf.mod.uk/news/articles/largest-ever-deployment-of-raf-poseidon-maritime-aircraft-supporting-nato-in-iceland/",
+    "title": "Largest ever deployment of RAF Poseidon Maritime Aircraft supporting NATO in Iceland",
+    "sourceUrl": "https://www.raf.mod.uk/news/articles/largest-ever-deployment-of-raf-poseidon-maritime-aircraft-supporting-nato-in-iceland/",
+    "summary": "P-8A Poseidon aircraft from 120 Squadron, based at RAF Lossiemouth, Scotland, deployed 3 of its P-8A Fleet to Keflavik Air Base in Iceland –...",
+    "categories": [
+      "Royal Air Force"
+    ],
+    "publishedAt": "2025-11-24T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.twz.com/sea/russian-spy-ship-targets-royal-air-force-jets-with-laser",
+    "title": "Russian Spy Ship Targets Royal Air Force Jets With Laser",
+    "sourceUrl": "https://www.twz.com/sea/russian-spy-ship-targets-royal-air-force-jets-with-laser",
+    "summary": "The Yantar, a notorious Russian spy ship, directed lasers at the crews of U.K. Royal Air Force aircraft in waters off the north of Scotland,...",
+    "categories": [
+      "The War Zone"
+    ],
+    "publishedAt": "2025-11-19T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://tvpworld.com/90105234/uk-says-russian-vessel-yantar-pointed-lasers-at-raf-pilots",
+    "title": "UK accuses Russian ship of pointing lasers at RAF pilots near Scotland",
+    "sourceUrl": "https://tvpworld.com/90105234/uk-says-russian-vessel-yantar-pointed-lasers-at-raf-pilots",
+    "summary": "UK accuses Russian ship of pointing lasers at RAF pilots near Scotland ·. · The vessel entered service in 2015 and is linked to a Russian...",
+    "categories": [
+      "TVP World - Poland"
+    ],
+    "publishedAt": "2025-11-19T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://english.radio.cz/memorial-czech-raf-pilot-frantisek-hekl-unveiled-scotland-8862133",
+    "title": "Memorial to Czech RAF pilot František Hekl unveiled in Scotland",
+    "sourceUrl": "https://english.radio.cz/memorial-czech-raf-pilot-frantisek-hekl-unveiled-scotland-8862133",
+    "summary": "Share on social media ... A memorial dedicated to Czech pilot František Hekl was unveiled on Sunday at Loch Doon in Scotland. During the Second...",
+    "categories": [
+      "Radio Prague International"
+    ],
+    "publishedAt": "2025-09-08T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ajot.com/news/glasgow-prestwick-airport-showcases-cool-chain-investment-to-indian-consul-general",
+    "title": "Glasgow Prestwick Airport showcases cool chain investment to Indian Consul General",
+    "sourceUrl": "https://www.ajot.com/news/glasgow-prestwick-airport-showcases-cool-chain-investment-to-indian-consul-general",
+    "summary": "Glasgow Prestwick Airport (PIK) welcomed the Consul General of India, Mr Siddharth Malik, to discuss UK-India trade and the airport's recent...",
+    "categories": [
+      "American Journal of Transportation"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://corporate.ryanair.com/news/ryanair-launches-summer-2026-schedule-at-glasgow-prestwick-with-flights-from-just-29-99/",
+    "title": "RYANAIR LAUNCHES SUMMER 2026 SCHEDULE AT GLASGOW PRESTWICK WITH FLIGHTS FROM JUST £29.99",
+    "sourceUrl": "https://corporate.ryanair.com/news/ryanair-launches-summer-2026-schedule-at-glasgow-prestwick-with-flights-from-just-29-99/",
+    "summary": "Ryanair, the UK's No.1 low-fares airline, today (Mon, 23 Feb) launched its Summer 2026 schedule for Glasgow Prestwick with 10 routes,...",
+    "categories": [
+      "Ryanair Corporate"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aviationbusinessnews.com/cargo/cargo-news/air-china-cargo-doubles-its-flights-from-glasgow-prestwick/",
+    "title": "Air China Cargo doubles its flights from Glasgow Prestwick",
+    "sourceUrl": "https://www.aviationbusinessnews.com/cargo/cargo-news/air-china-cargo-doubles-its-flights-from-glasgow-prestwick/",
+    "summary": "Eight weekly freighter services now link UK's premier air cargo hub with Guangzhou and Chengdu Shuangliu International Airport, China.",
+    "categories": [
+      "Aviation Business News"
+    ],
+    "publishedAt": "2025-11-22T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.travelandtourworld.com/news/article/scotland-spain-portugal-italy-travel-boost-as-ryanair-expands-at-glasgow-prestwick-airport-for-summer-2026/",
+    "title": "Scotland–Spain–Portugal–Italy Travel Boost as Ryanair Expands at Glasgow Prestwick Airport for Summer 2026",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/scotland-spain-portugal-italy-travel-boost-as-ryanair-expands-at-glasgow-prestwick-airport-for-summer-2026/",
+    "summary": "Ryanair launches Summer 2026 at Glasgow Prestwick with 10 routes to Spain, Portugal, and Italy, boosting Scotland's Mediterranean...",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aircargonews.net/cargo-airport/2026/02/glasgow-prestwick-airport-celebrates-e-commerce-milestone/",
+    "title": "Glasgow Prestwick Airport celebrates e-commerce milestone",
+    "sourceUrl": "https://www.aircargonews.net/cargo-airport/2026/02/glasgow-prestwick-airport-celebrates-e-commerce-milestone/",
+    "summary": "Glasgow Prestwick Airport's Terminal E facility has reached the milestone of handling 25m parcels following the Scottish airport's focus on...",
+    "categories": [
+      "Air Cargo News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://aviationa2z.com/index.php/2026/02/24/ryanair-summer-2026-expansion-at-glasgow-with-10-routes/",
+    "title": "Ryanair Unveils Major Summer 2026 Expansion at Glasgow Prestwick with 10 Routes",
+    "sourceUrl": "https://aviationa2z.com/index.php/2026/02/24/ryanair-summer-2026-expansion-at-glasgow-with-10-routes/",
+    "summary": "GLASGOW- Ryanair (FR) has launched its Summer 2026 schedule from Glasgow Prestwick Airport (PIK), offering 10 European routes.",
+    "categories": [
+      "Aviation A2Z"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ayradvertiser.com/news/25865678.december-figures-revealed-cargo-boom-prestwick-airport/",
+    "title": "Cargo boom at Prestwick Airport showing no signs of slowing down",
+    "sourceUrl": "https://www.ayradvertiser.com/news/25865678.december-figures-revealed-cargo-boom-prestwick-airport/",
+    "summary": "The cargo boom at Prestwick Airport is showing no signs of slowing down following the release of figures from the end of 2025.",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/opinion/25874793.edinburgh-airport-prestwick-airport-unexpected-headlines/",
+    "title": "Two major Scottish airports in headlines in perhaps unexpected ways",
+    "sourceUrl": "https://www.heraldscotland.com/opinion/25874793.edinburgh-airport-prestwick-airport-unexpected-headlines/",
+    "summary": "The two Scottish airports hit the headlines in perhaps unexpected ways.",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.asdnews.com/news/aerospace/2025/09/06/aeralis-glasgow-prestwick-international-airport-sign-strategic-agreement",
+    "title": "Aeralis & Glasgow Prestwick International Airport Sign Strat",
+    "sourceUrl": "https://www.asdnews.com/news/aerospace/2025/09/06/aeralis-glasgow-prestwick-international-airport-sign-strategic-agreement",
+    "summary": "AERALIS and Glasgow Prestwick International Airport have signed a Strategic Agreement today at the Ayrshire Festival of Flight,...",
+    "categories": [
+      "ASDNews"
+    ],
+    "publishedAt": "2025-09-06T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://uk.news.yahoo.com/scottish-greens-call-evict-us-180600199.html",
+    "title": "Scottish Greens' call to evict US military from Prestwick Airport slapped down",
+    "sourceUrl": "https://uk.news.yahoo.com/scottish-greens-call-evict-us-180600199.html",
+    "summary": "The Greens claimed that the airport is financially dependent on “ongoing and routine use by the military”, rather than commercial flights.",
+    "categories": [
+      "Yahoo News UK"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ainonline.com/aviation-news/business-aviation/2026-02-13/gama-aviation-adds-king-air-maintenance-training",
+    "title": "Gama Aviation Adds King Air Maintenance Training to Part 147 Program",
+    "sourceUrl": "https://www.ainonline.com/aviation-news/business-aviation/2026-02-13/gama-aviation-adds-king-air-maintenance-training",
+    "summary": "Enhances customer flexibility with classes in Bournemouth and Glasgow.",
+    "categories": [
+      "Aviation International News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ajot.com/news/glasgow-prestwick-airport-represents-uk-aviation-during-state-visit-to-china-as-trade-talks-progress",
+    "title": "Glasgow Prestwick Airport represents UK aviation during visit to China as trade talks progress",
+    "sourceUrl": "https://www.ajot.com/news/glasgow-prestwick-airport-represents-uk-aviation-during-state-visit-to-china-as-trade-talks-progress",
+    "summary": "Glasgow Prestwick Airport represented the UK aviation sector at an exclusive diplomatic reception in Beijing during the UK Prime Minister's...",
+    "categories": [
+      "American Journal of Transportation"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://travelradar.aero/police-and-forensics-teams-swarm-planes-at-glasgow-airport/",
+    "title": "Police and Forensics Teams Swarm Planes at Glasgow Airport",
+    "sourceUrl": "https://travelradar.aero/police-and-forensics-teams-swarm-planes-at-glasgow-airport/",
+    "summary": "Police and forensic teams investigate two aircraft at Glasgow Airport on 2 February 2026, with no disruption to flights or passenger safety.",
+    "categories": [
+      "Travel Radar"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://aviationsourcenews.com/united-airlines-boosts-glasgow-new-york-flights-for-summer-2026/",
+    "title": "United Airlines Boosts Glasgow-New York Flights for Summer 2026",
+    "sourceUrl": "https://aviationsourcenews.com/united-airlines-boosts-glasgow-new-york-flights-for-summer-2026/",
+    "summary": "United Airlines has announced a major boost to its new nonstop seasonal service between Glasgow and New York/Newark, increasing capacity by...",
+    "categories": [
+      "AviationSource News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://liveandletsfly.com/united-airlines-2026-new-routes/",
+    "title": "United Airlines Adds New Service To Bari, Glasgow, Split, And Santiago De Compostela",
+    "sourceUrl": "https://liveandletsfly.com/united-airlines-2026-new-routes/",
+    "summary": "United Airlines announced four new transatlantic routes set to launch in 2026, including destinations in Croatia, Italy, Scotland,...",
+    "categories": [
+      "Live and Let's Fly"
+    ],
+    "publishedAt": "2025-10-09T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.scottishfinancialnews.com/articles/glasgow-airport-and-new-york-united-once-again-with-return-of-direct-flights",
+    "title": "Glasgow Airport and New York united once again with return of direct flights",
+    "sourceUrl": "https://www.scottishfinancialnews.com/articles/glasgow-airport-and-new-york-united-once-again-with-return-of-direct-flights",
+    "summary": "United Airlines has confirmed it is to return to Glasgow Airport in 2026 to reinstate direct flights to its New York hub, Newark Liberty...",
+    "categories": [
+      "Scottish Financial News"
+    ],
+    "publishedAt": "2025-10-14T00:00:00.000Z",
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/25829540.direct-glasgow-new-york-flights-extended-united-airlines/",
+    "title": "Direct Glasgow to New York flights extended by United Airlines",
+    "sourceUrl": "https://www.heraldscotland.com/news/25829540.direct-glasgow-new-york-flights-extended-united-airlines/",
+    "summary": "United Airlines has announced that their Glasgow - New York service, set to launch on May 9, will now run until October 24, a month later...",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-27T21:51:40.406Z"
   }
 ]
