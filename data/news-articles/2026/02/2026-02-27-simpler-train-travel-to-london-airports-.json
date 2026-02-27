@@ -1,8 +1,7 @@
 {
   "slug": "2026-02-27-simpler-train-travel-to-london-airports-",
-  "title": "Scottish Aviation Briefing – 2026-02-27",
+  "title": "Simpler train travel to London airports",
   "wordCount": 312,
-  "editorNotes": "Internal use only.",
   "sections": [
     {
       "heading": "Summary",
@@ -11,10 +10,6 @@
     {
       "heading": "Context",
       "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
-    },
-    {
-      "heading": "Further reading",
-      "content": "For deeper context on Scottish aviation history, industrial development, and operational heritage, explore the related titles in our catalogue. Each volume draws on archival research and primary sources."
     }
   ],
   "images": [],
@@ -42,9 +37,18 @@
     }
   ],
   "keywords": [
-    { "keyword": "Scottish aviation news", "primary": true },
-    { "keyword": "Royal Air Force updates", "primary": false },
-    { "keyword": "Scottish aerospace industry", "primary": false }
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "Royal Air Force updates",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aerospace industry",
+      "primary": false
+    }
   ],
   "status": "published",
   "createdAt": "2026-02-27T21:51:41.506Z"

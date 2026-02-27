@@ -1,24 +1,11 @@
 {
   "slug": "2025-11-21-wick-aberdeen-pso-procurement-process-la",
-  "title": "Scottish Aviation Briefing – 2025-11-21",
+  "title": "Wick–Aberdeen PSO procurement process launched",
   "wordCount": 225,
-  "editorNotes": "Expand each section to ≥3,000 words total, embed at least four approved images, and ensure every factual statement cites the referenced source.",
   "sections": [
     {
-      "heading": "Operational Snapshot",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Wick - Aberdeen PSO Procurement Process Launched** — Highland Council have launched an emergency tender today to secure a new operator the Wick - Aberdeen PSO service.\n- **Update on flights at Wick John O&#039;Groats Airport** — The Highland Council have provided an update on the suspension of flights between Wick and Aberdeen by Eastern Airways.\n- **Update for Wick John O&#039;Groats Airport** — HIAL was made aware via press coverage that Eastern Airways has filed for administration.\n\n_Editors: verify figures/details against the primary sources linked below before expanding this section to the full narrative length._"
-    },
-    {
-      "heading": "Technical & Industrial Notes",
-      "content": "Summarise the engineering, basing, and procurement implications highlighted across today’s releases. Connect them to Scottish industrial capacity (Prestwick, Lossiemouth, Weir, Spirit AeroSystems) and quantify any fleet, workforce, or funding metrics disclosed. Cite the relevant MOD transparency tables where applicable."
-    },
-    {
-      "heading": "Historical Context & Lessons",
-      "content": "Relate the current developments back to Charles E. MacKay’s archival research—e.g., how modern readiness exercises echo WWII dispersal plans or how present-day logistics mirror Beardmore/Weir supply chains. Draw on verified passages from the corresponding book to reinforce continuity across decades."
-    },
-    {
-      "heading": "Modern Legacy & Book Recommendation",
-      "content": "Explain why this news matters for contemporary Scottish aviation readers, then steer them toward the recommended book for deeper study. Include a call-to-action linking to the relevant `/books/<id>` page and highlight unique research materials in the volume."
+      "heading": "Summary",
+      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Wick - Aberdeen PSO Procurement Process Launched** — Highland Council have launched an emergency tender today to secure a new operator the Wick - Aberdeen PSO service.\n- **Update on flights at Wick John O&#039;Groats Airport** — The Highland Council have provided an update on the suspension of flights between Wick and Aberdeen by Eastern Airways.\n- **Update for Wick John O&#039;Groats Airport** — HIAL was made aware via press coverage that Eastern Airways has filed for administration."
     }
   ],
   "images": [],

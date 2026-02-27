@@ -202,7 +202,10 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
 
         {relatedBooks.length ? (
           <section className="card p-6 md:p-8 space-y-4">
-            <h3 className="text-2xl font-bold text-white">Related books</h3>
+            <h3 className="text-2xl font-bold text-white">Related reading</h3>
+            <p className="text-white/80 text-sm">
+              For deeper context on the topics in this briefing, explore our research volumes.
+            </p>
             <div className="grid gap-4 md:grid-cols-2">
               {relatedBooks.map((book) => {
                 const reason = displayReason(book.reason)
