@@ -71,7 +71,7 @@ export default function Home() {
               📚 Aviation History Books - Ready to Ship
             </h2>
             <p className="text-center opacity-90 mb-4">
-              {filteredBooks.length} books available • Instant purchase with PayPal or eBay • FREE shipping worldwide
+              {filteredBooks.length} books available • Secure checkout with card, wallet, or PayPal • FREE shipping worldwide
             </p>
           </div>
 
