@@ -62,16 +62,18 @@ export default function Header() {
                   className="relative bg-white text-slate-900 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100 min-h-[40px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
                   title="Shopping Basket"
                 >
-                  <span className="hidden sm:inline">🛒 Basket</span>
+                  <span className="hidden sm:inline-flex items-center gap-1">
+                    <span>🛒 Basket</span>
+                    {activeBulkDiscount > 0 && (
+                      <span className="bg-green-600 text-white text-[10px] rounded px-1.5 py-0.5 font-bold leading-none" aria-hidden>
+                        {activeBulkDiscount}% off
+                      </span>
+                    )}
+                  </span>
                   <span className="sm:hidden">🛒</span>
                   {totalItems > 0 && (
                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold" aria-hidden>
                       {totalItems}
-                    </span>
-                  )}
-                  {activeBulkDiscount > 0 && (
-                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-green-600 text-white text-[10px] rounded px-1.5 py-0.5 font-bold leading-none" aria-hidden>
-                      {activeBulkDiscount}% off
                     </span>
                   )}
                 </button>
