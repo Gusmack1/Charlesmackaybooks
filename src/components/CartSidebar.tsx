@@ -2,12 +2,15 @@
 
 import { useRouter } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
+import { useRecentlyViewed } from '@/context/RecentlyViewedContext'
 import { X, ShoppingBag } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function CartSidebar() {
   const {
     items,
+    addToCart,
     removeFromCart,
     updateQuantity,
     getTotalPrice,
@@ -19,6 +22,7 @@ export default function CartSidebar() {
     getShippingCost,
     getFinalTotal
   } = useCart()
+  const { recentlyViewed } = useRecentlyViewed()
   const router = useRouter()
 
   const startCheckout = (method: 'stripe' | 'paypal' = 'stripe') => {
@@ -33,6 +37,10 @@ export default function CartSidebar() {
   const discount = getBulkDiscount()
   const shipping = getShippingCost()
   const finalTotal = getFinalTotal()
+  const cartBookIds = new Set(items.map((item) => item.book.id))
+  const addOnSuggestions = recentlyViewed
+    .filter((book) => book.inStock && !cartBookIds.has(book.id))
+    .slice(0, 3)
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
@@ -110,6 +118,30 @@ export default function CartSidebar() {
                     </div>
                   </div>
                 ))}
+                {addOnSuggestions.length > 0 && (
+                  <div className="rounded-lg border border-blue-700/50 bg-slate-800/80 p-3">
+                    <p className="text-xs font-semibold text-blue-200 mb-2">
+                      Add one more title to increase your savings
+                    </p>
+                    <div className="space-y-2">
+                      {addOnSuggestions.map((book) => (
+                        <div key={book.id} className="flex items-center gap-2 rounded border border-white/10 bg-slate-900/50 p-2">
+                          <Link href={`/books/${book.id}`} className="flex-1 min-w-0">
+                            <p className="text-xs text-white line-clamp-1">{book.title}</p>
+                            <p className="text-[11px] text-green-300">£{book.price.toFixed(2)}</p>
+                          </Link>
+                          <button
+                            onClick={() => addToCart(book)}
+                            className="bg-white text-slate-900 px-2.5 py-1.5 rounded text-xs font-semibold hover:bg-gray-100 border border-slate-900"
+                          >
+                            Add
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-[11px] text-white/70 mt-2">5% off 2 books • 10% off 3+ books</p>
+                  </div>
+                )}
               </div>
             )}
           </div>

@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
 import { useAnalytics } from '@/hooks/useAnalytics';
+import { useRecentlyViewed } from '@/context/RecentlyViewedContext';
 
 interface BookDetailClientProps {
   book: Book;
@@ -16,7 +17,12 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
   const { trackContactEmail, trackEbayRedirect } = useAnalytics();
+  const { addToRecentlyViewed } = useRecentlyViewed();
   const bulkDiscountHint = 'Buy 2+ books for 5% off, or 3+ books for 10% off at checkout.';
+
+  useEffect(() => {
+    addToRecentlyViewed(book);
+  }, [book, addToRecentlyViewed]);
 
   const handleAddToCart = () => {
     setIsAddingToCart(true);

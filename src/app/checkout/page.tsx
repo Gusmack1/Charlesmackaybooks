@@ -24,6 +24,7 @@ import {
 import CustomerTestimonials from '../../components/CustomerTestimonials';
 import { trackCartAbandonment } from '../../utils/abandonedCartRecovery';
 import { useSearchParams } from 'next/navigation';
+import { useRecentlyViewed } from '../../context/RecentlyViewedContext';
 
 interface CustomerInfoPayload {
   firstName: string;
@@ -57,7 +58,8 @@ interface CreateOrderRequest {
 function CheckoutContent() {
   const searchParams = useSearchParams();
   const preferredPaymentMethod = searchParams.get('method') === 'paypal' ? 'paypal' : 'stripe';
-  const { items, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
+  const { items, addToCart, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
+  const { recentlyViewed } = useRecentlyViewed();
   const [step, setStep] = useState<'basket' | 'address' | 'payment'>('basket');
   const [paymentMethod, setPaymentMethod] = useState<'stripe' | 'paypal'>(preferredPaymentMethod);
   const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
@@ -159,6 +161,10 @@ function CheckoutContent() {
   const bulkDiscount = getBulkDiscount();
   const total = getFinalTotal(); // This includes bulk discounts and shipping
   const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
+  const cartBookIds = new Set(items.map((item) => item.book.id));
+  const checkoutAddOnSuggestions = recentlyViewed
+    .filter((book) => book.inStock && !cartBookIds.has(book.id))
+    .slice(0, 3);
 
   useEffect(() => {
     if (!items.length || checkoutCompleted) return;
@@ -534,6 +540,28 @@ function CheckoutContent() {
                     </div>
                   ))}
                 </div>
+                {checkoutAddOnSuggestions.length > 0 && (
+                  <div className="mt-4 rounded-lg border border-blue-700/50 bg-slate-800/80 p-3">
+                    <p className="text-sm font-semibold text-blue-200 mb-2">Frequently added before checkout</p>
+                    <div className="space-y-2">
+                      {checkoutAddOnSuggestions.map((suggestedBook) => (
+                        <div key={suggestedBook.id} className="flex items-center justify-between gap-2 rounded border border-white/10 bg-slate-900/60 p-2">
+                          <Link href={`/books/${suggestedBook.id}`} className="min-w-0 flex-1">
+                            <p className="text-xs sm:text-sm text-white line-clamp-1">{suggestedBook.title}</p>
+                            <p className="text-xs text-green-300">£{suggestedBook.price.toFixed(2)}</p>
+                          </Link>
+                          <button
+                            onClick={() => addToCart(suggestedBook)}
+                            className="bg-white text-slate-900 px-3 py-1.5 rounded text-xs sm:text-sm font-semibold border border-slate-900 hover:bg-gray-100"
+                          >
+                            Add
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-xs text-white/75 mt-2">Adding one more title can unlock a larger basket discount.</p>
+                  </div>
+                )}
                 <div className="mt-4 sm:mt-6 pt-4 border-t border-blue-700/50">
                   <div className="space-y-2">
                     <div className="flex justify-between text-white">
