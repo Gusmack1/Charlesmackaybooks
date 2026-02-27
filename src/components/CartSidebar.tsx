@@ -1,6 +1,5 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import { useRecentlyViewed } from '@/context/RecentlyViewedContext'
 import { X, ShoppingBag } from 'lucide-react'
@@ -23,11 +22,8 @@ export default function CartSidebar() {
     getFinalTotal
   } = useCart()
   const { recentlyViewed } = useRecentlyViewed()
-  const router = useRouter()
 
-  const startCheckout = (method: 'stripe' | 'paypal' = 'stripe') => {
-    const url = method === 'paypal' ? '/checkout?method=paypal' : '/checkout?method=stripe'
-    router.push(url)
+  const handleCheckoutClick = () => {
     setIsCartOpen(false)
   }
 
@@ -52,9 +48,15 @@ export default function CartSidebar() {
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
-      <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setIsCartOpen(false)} />
-
-      <div className="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 text-white shadow-xl border-l border-blue-700/50">
+      <div
+        className="absolute inset-0 z-0 bg-black bg-opacity-50"
+        onClick={() => setIsCartOpen(false)}
+        aria-hidden
+      />
+      <div
+        className="absolute right-0 top-0 z-10 h-full w-full max-w-md bg-slate-900 text-white shadow-xl border-l border-blue-700/50"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="flex h-full flex-col">
           {/* Header */}
           <div className="flex items-center justify-between border-b border-blue-700/50 px-6 py-4">
@@ -165,20 +167,22 @@ export default function CartSidebar() {
                   </p>
                   <p className="text-lg font-bold text-white">£{finalTotal.toFixed(2)}</p>
                 </div>
-                <button
-                  onClick={() => startCheckout('stripe')}
-                  className="flex-1 bg-white text-slate-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors border border-slate-900"
+                <Link
+                  href="/checkout?method=stripe"
+                  onClick={handleCheckoutClick}
+                  className="flex-1 bg-white text-slate-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors border border-slate-900 text-center"
                 >
                   Checkout (card / wallet)
-                </button>
+                </Link>
               </div>
 
-              <button
-                onClick={() => startCheckout('paypal')}
-                className="mt-2 w-full bg-yellow-500 text-slate-900 py-2.5 rounded-lg font-semibold hover:bg-yellow-400 transition-colors"
+              <Link
+                href="/checkout?method=paypal"
+                onClick={handleCheckoutClick}
+                className="mt-2 w-full block bg-yellow-500 text-slate-900 py-2.5 rounded-lg font-semibold hover:bg-yellow-400 transition-colors text-center"
               >
                 Checkout with PayPal
-              </button>
+              </Link>
 
               <div className="mt-2 rounded border border-blue-700/40 bg-slate-800/80 px-2.5 py-2 text-[11px] text-blue-100">
                 {discountNudgeText}
