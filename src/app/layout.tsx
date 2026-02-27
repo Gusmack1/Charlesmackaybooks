@@ -122,6 +122,8 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Charles E. MacKay Aviation Books',
+  legalName: SITE_CONSTANTS.BUSINESS_NAME,
+  alternateName: [SITE_CONSTANTS.BUSINESS_TRADING_NAME, 'Charles E. MacKay Aviation Books'],
   url: 'https://charlesmackaybooks.com',
   logo: 'https://charlesmackaybooks.com/logo.png',
   description: 'Expert aviation history books and research by Charles E. MacKay',

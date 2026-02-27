@@ -24,6 +24,7 @@ export const SITE_CONSTANTS = {
   AUTHOR_LOCATION: 'Glasgow, Scotland',
   AUTHOR_ALMA_MATER: 'University of Glasgow',
   BUSINESS_NAME: 'A MacKay Publisher',
+  BUSINESS_TRADING_NAME: 'Charles Mackay Books',
   BUSINESS_STREET_ADDRESS: '87 Auchenlarie Avenue',
   BUSINESS_LOCALITY: 'Glasgow',
   BUSINESS_POSTAL_CODE: 'G13 2DX',

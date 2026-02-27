@@ -70,6 +70,20 @@ export default function Footer() {
         </div>
 
         <div className="text-center text-base text-white/90 mt-8 pt-8 border-t border-white/20">
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm mb-4">
+            <Link href="/support" className="underline decoration-white/30 hover:decoration-white">
+              Support
+            </Link>
+            <Link href="/returns" className="underline decoration-white/30 hover:decoration-white">
+              Returns
+            </Link>
+            <Link href="/privacy" className="underline decoration-white/30 hover:decoration-white">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="underline decoration-white/30 hover:decoration-white">
+              Terms and Conditions
+            </Link>
+          </div>
           <p>© 2025 Charles E. MacKay - Aviation Historian & Author</p>
           <p className="mt-2">Specializing in Scottish Aviation Heritage and Military Aviation History</p>
           <p className="mt-2 text-sm">Website optimized for academic citations, social media sharing, and direct book sales</p>

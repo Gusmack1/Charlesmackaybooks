@@ -98,7 +98,13 @@ export default function UnifiedSchema({
     '@type': ['Organization', 'LocalBusiness', 'BookStore'],
     '@id': `${BASE_URL}/#organization`,
     name: 'Charles E. MacKay Aviation Books',
-    alternateName: ['Charles MacKay Books', 'Charles Mackay Aviation History', 'MacKay Aviation Books'],
+    legalName: SITE_CONSTANTS.BUSINESS_NAME,
+    alternateName: [
+      SITE_CONSTANTS.BUSINESS_TRADING_NAME,
+      'Charles MacKay Books',
+      'Charles Mackay Aviation History',
+      'MacKay Aviation Books',
+    ],
     url: BASE_URL,
     logo: `${BASE_URL}/charles-mackay-logo.png`,
     description:
@@ -180,6 +186,7 @@ export default function UnifiedSchema({
     '@type': 'LocalBusiness',
     '@id': `${BASE_URL}#localbusiness`,
     name: 'Charles Mackay Aviation Books',
+    legalName: SITE_CONSTANTS.BUSINESS_NAME,
     alternateName: 'Charles E. MacKay Aviation Books',
     description: 'Expert aviation history books by Scotland\'s leading aviation historian. Specializing in Scottish aviation, WWI & WWII aircraft, helicopter development, and military aviation history. Based in Glasgow, Scotland.',
     url: BASE_URL,

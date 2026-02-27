@@ -57,6 +57,10 @@ export default function SupportPage() {
               Address: {SITE_CONSTANTS.BUSINESS_NAME}, {SITE_CONSTANTS.BUSINESS_STREET_ADDRESS}, {SITE_CONSTANTS.BUSINESS_LOCALITY}, {SITE_CONSTANTS.BUSINESS_POSTAL_CODE}, UK
             </p>
             <p className="text-white/90">Typical response time: 24–48 hours (Mon–Fri)</p>
+            <p className="text-white/90 mt-2">
+              Policies: <a className="underline text-blue-300 hover:text-white" href="/privacy">Privacy Policy</a> and{' '}
+              <a className="underline text-blue-300 hover:text-white" href="/terms">Terms and Conditions</a>
+            </p>
           </div>
 
           {/* Quick Help */}

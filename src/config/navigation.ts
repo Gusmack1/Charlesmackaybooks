@@ -19,6 +19,9 @@ export const moreNavLinks: NavLinkItem[] = [
   { label: 'Newsroom', href: '/news' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Returns', href: '/returns' },
+  { label: 'Support', href: '/support' },
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
   { label: 'Track Order', href: '/order-tracking' },
 ];
 

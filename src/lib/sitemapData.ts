@@ -31,6 +31,8 @@ const STATIC_PAGES: Array<{
   { path: '/categories', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/returns', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/support', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/privacy', priority: 0.55, changeFrequency: 'monthly' },
+  { path: '/terms', priority: 0.55, changeFrequency: 'monthly' },
   { path: '/partnerships/imperial-war-museum', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/glasgow-aviation-history', priority: 0.8, changeFrequency: 'monthly' },
 ];
