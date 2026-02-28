@@ -1,0 +1,71 @@
+{
+  "slug": "2026-02-28-guidance-uk-airspace-design-support-fund",
+  "title": "Guidance UK Airspace Design Support Fund",
+  "wordCount": 131,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Guidance: UK Airspace Design Support Fund rules and eligibility criteria. Who can apply to the UK Airspace Design Support Fund and fund administration rules.\n\nOfficial Statistics: Renewable Transport Fuel Obligation (RTFO) statistics 2025: Second provisional release. Supply of renewable fuels for January to December 2025.\n\nSustainable Aviation Fuel (SAF) Mandate statistics: data tables. Data on the supply of sustainable aviation fuel (SAF), as required under the Sustainable Aviation Fuel (SAF) Mandate."
+    },
+    {
+      "heading": "Context",
+      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/uk-airspace-design-support-fund-rules-and-eligibility-criteria",
+      "citationText": "dft-press-office – Guidance: UK Airspace Design Support Fund rules and eligibility criteria"
+    },
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/statistics/renewable-transport-fuel-obligation-rtfo-statistics-2025-second-provisional-release",
+      "citationText": "dft-press-office – Official Statistics: Renewable Transport Fuel Obligation (RTFO) statistics 2025: Second provisional release"
+    },
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/statistical-data-sets/sustainable-aviation-fuel-saf-mandate-statistics-data-tables",
+      "citationText": "dft-press-office – Sustainable Aviation Fuel (SAF) Mandate statistics: data tables"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aviation",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Guidance Airspace Design Support",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-02-28T12:27:21.550Z"
+}

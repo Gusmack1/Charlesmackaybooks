@@ -2714,5 +2714,96 @@
     ],
     "publishedAt": "2025-07-16T00:00:00.000Z",
     "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aviationbusinessnews.com/low-cost/scottish-island-airports-least-reliable-for-uk-air-travel/",
+    "title": "Scottish island airports ‘least reliable’ for UK air travel",
+    "sourceUrl": "https://www.aviationbusinessnews.com/low-cost/scottish-island-airports-least-reliable-for-uk-air-travel/",
+    "summary": "Scottish island airports 'least reliable' for UK air travel ... Remote Scottish island airports have been named the least reliable for UK air travel, with Barra...",
+    "categories": [
+      "Aviation Business News"
+    ],
+    "publishedAt": "2025-11-21T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T12:27:20.059Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.yahoo.com/news/articles/american-airlines-makes-history-a321xlrs-223046666.html",
+    "title": "American Airlines Makes History with A321XLR's First International Flight to Scotland",
+    "sourceUrl": "https://www.yahoo.com/news/articles/american-airlines-makes-history-a321xlrs-223046666.html",
+    "summary": "The Edinburgh launch represents more than just a new route, it's a glimpse into the future of aviation. By 2026, the A321XLR will connect the...",
+    "categories": [
+      "Yahoo"
+    ],
+    "publishedAt": "2025-11-03T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T12:27:20.059Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dailyrecord.co.uk/news/scottish-news/raf-police-mountain-rescue-team-36794296",
+    "title": "RAF and police mountain rescue team help hillwalker stuck on ridge for 20 hours",
+    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/raf-police-mountain-rescue-team-36794296",
+    "summary": "In total, 30 mountain rescue personnel were on the northeastern slopes of Sgurr Fiona at the height of the operation.",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-28T12:27:20.059Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.independent.co.uk/news/uk/home-news/the-king-charles-scotland-raf-cyprus-b2803042.html",
+    "title": "King visits Scotland’s main RAF base and thanks families for their sacrifices",
+    "sourceUrl": "https://www.independent.co.uk/news/uk/home-news/the-king-charles-scotland-raf-cyprus-b2803042.html",
+    "summary": "Charles visited RAF Lossiemouth in Moray, northern Scotland, on Wednesday, to attend the stand-up parade for Number 42 (Torpedo Bomber)...",
+    "categories": [
+      "The Independent"
+    ],
+    "publishedAt": "2025-08-06T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T12:27:20.059Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://simpleflying.com/united-airlines-4-new-european-routes/",
+    "title": "United Airlines Drops 4 Massive European Routes for Summer 2026!",
+    "sourceUrl": "https://simpleflying.com/united-airlines-4-new-european-routes/",
+    "summary": "United Airlines announces four new nonstop routes to Split, Bari, Glasgow, and Santiago de Compostela for Summer 2026, expanding its...",
+    "categories": [
+      "Simple Flying"
+    ],
+    "publishedAt": "2025-10-09T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T12:27:20.059Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://verticalmag.com/press-releases/precision-aviation-group-expands-into-the-emea-regionwith-acquisition-of-turner-aviation/",
+    "title": "Precision Aviation Group expands into the EMEA region with acquisition of Turner Aviation",
+    "sourceUrl": "https://verticalmag.com/press-releases/precision-aviation-group-expands-into-the-emea-regionwith-acquisition-of-turner-aviation/",
+    "summary": "PAG, a provider of maintenance, repair, and overhaul (MRO) services as well as value-added solutions to the global aerospace and defense industries,",
+    "categories": [
+      "Vertical Mag"
+    ],
+    "publishedAt": "2025-07-15T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T12:27:20.059Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://aerospaceglobalnews.com/news/scottish-airspace-modernisation-edinburgh-glasgow-airport/",
+    "title": "Scotland airspace modernisation: How flight paths change",
+    "sourceUrl": "https://aerospaceglobalnews.com/news/scottish-airspace-modernisation-edinburgh-glasgow-airport/",
+    "summary": "What Scottish Airspace Modernisation plans could mean for flight paths around Edinburgh and Glasgow airports.",
+    "categories": [
+      "Aerospace Global News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-28T12:27:20.059Z"
   }
 ]
