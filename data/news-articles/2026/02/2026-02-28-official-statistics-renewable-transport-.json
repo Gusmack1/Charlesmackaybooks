@@ -1,0 +1,71 @@
+{
+  "slug": "2026-02-28-official-statistics-renewable-transport-",
+  "title": "Official Statistics Renewable Transport",
+  "wordCount": 135,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Official Statistics: Renewable Transport Fuel Obligation (RTFO) statistics 2024: Final report. Supply of renewable fuels for January to December 2024.\n\nResearch: Measurement of emissions from brake and tyre wear. A research report on developing prototypes to measure brake and tyre wear emissions from road vehicles in real driving conditions.\n\nOfficial Statistics: Sustainable Aviation Fuel (SAF) Mandate statistics 2025: Second provisional release. Supply of sustainable aviation fuel under the SAF Mandate for January to December 2025."
+    },
+    {
+      "heading": "Context",
+      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/statistics/renewable-transport-fuel-obligation-rtfo-statistics-2024-final-report",
+      "citationText": "dft-press-office – Official Statistics: Renewable Transport Fuel Obligation (RTFO) statistics 2024: Final report"
+    },
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/measurement-of-emissions-from-brake-and-tyre-wear",
+      "citationText": "dft-press-office – Research: Measurement of emissions from brake and tyre wear"
+    },
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/statistics/sustainable-aviation-fuel-saf-mandate-statistics-2025-second-provisional-release",
+      "citationText": "dft-press-office – Official Statistics: Sustainable Aviation Fuel (SAF) Mandate statistics 2025: Second provisional release"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aviation",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Official Statistics Renewable Transport",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-02-28T01:07:48.579Z"
+}

@@ -2584,5 +2584,135 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-02-27T21:51:40.406Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ainonline.com/aviation-news/air-transport/2025-09-26/scotland-considers-electric-seagliders-replace-aging-ferries",
+    "title": "Scotland Considers Electric Seagliders to Replace Aging Ferries",
+    "sourceUrl": "https://www.ainonline.com/aviation-news/air-transport/2025-09-26/scotland-considers-electric-seagliders-replace-aging-ferries",
+    "summary": "Transportation officials in Scotland are evaluating the possibility of replacing aging ferries with seagliders being developed by U.S....",
+    "categories": [
+      "Aviation International News"
+    ],
+    "publishedAt": "2025-09-26T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://thepointsguy.com/news/american-airlines-new-route-airbus-a321xlr-scotland/",
+    "title": "American to launch new Scotland route with 'game-changing' new plane",
+    "sourceUrl": "https://thepointsguy.com/news/american-airlines-new-route-airbus-a321xlr-scotland/",
+    "summary": "American Airlines will debut new flights from New York to Edinburgh, Scotland in 2026 with the help of its brand-new Airbus A321XLR...",
+    "categories": [
+      "The Points Guy"
+    ],
+    "publishedAt": "2025-10-30T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://travelradar.aero/scotlands-airspace-set-for-major-flight-path-overhaul/",
+    "title": "Scotland’s Airspace Set for Major Flight Path Overhaul",
+    "sourceUrl": "https://travelradar.aero/scotlands-airspace-set-for-major-flight-path-overhaul/",
+    "summary": "Public Consultation to Shape Future Flight Paths for Scotland. The proposed redesign divides responsibility between the airports and NATS:...",
+    "categories": [
+      "Travel Radar"
+    ],
+    "publishedAt": "2025-10-22T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thescottishsun.co.uk/money/15886483/scottish-airline-goes-bust-halts-operations-liquidation/",
+    "title": "Scottish airline goes bust & halts operations as liquidators appointed",
+    "sourceUrl": "https://www.thescottishsun.co.uk/money/15886483/scottish-airline-goes-bust-halts-operations-liquidation/",
+    "summary": "A SCOTTISH airline has put a stop to its operations after the company collapsed into liquidation. The travel firm was launched in Edinburgh...",
+    "categories": [
+      "The Scottish Sun"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://aviationweek.com/air-transport/safety-ops-regulation/scottish-airspace-modernization-consultation-nears-end",
+    "title": "Scottish Airspace Modernization Consultation Nears End",
+    "sourceUrl": "https://aviationweek.com/air-transport/safety-ops-regulation/scottish-airspace-modernization-consultation-nears-end",
+    "summary": "The UK's main air traffic control provider, NATS, is pressing ahead with efforts to modernize air routes over Scotland, with the aim of...",
+    "categories": [
+      "Aviation Week"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thenational.scot/news/25784988.nato-military-exercise-involving-us-forces-take-place-scotland/",
+    "title": "Major Nato military exercise involving US forces to take place in Scotland next week",
+    "sourceUrl": "https://www.thenational.scot/news/25784988.nato-military-exercise-involving-us-forces-take-place-scotland/",
+    "summary": "A MAJOR Nato military exercise, including the United States Air Force, is set to take place in parts of Scotland next week ...",
+    "categories": [
+      "TheNational.scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.forcesnews.com/sport/rugby-union/raf-flying-officer-sarah-bonar-excited-ahead-second-rugby-world-cup-scotland",
+    "title": "RAF Flying Officer Sarah Bonar excited ahead of second Rugby World Cup with Scotland",
+    "sourceUrl": "https://www.forcesnews.com/sport/rugby-union/raf-flying-officer-sarah-bonar-excited-ahead-second-rugby-world-cup-scotland",
+    "summary": "This video is either unavailable or not supported in this browser ... Royal Air Force Flying Officer Sarah Bonar is excited to represent Scotland...",
+    "categories": [
+      "Forces News"
+    ],
+    "publishedAt": "2025-08-21T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://aircargoweek.com/glasgow-prestwick-airport-showcases-cool-chain-investment-to-indian-consul-general/",
+    "title": "Glasgow Prestwick Airport showcases cool chain investment to Indian Consul General",
+    "sourceUrl": "https://aircargoweek.com/glasgow-prestwick-airport-showcases-cool-chain-investment-to-indian-consul-general/",
+    "summary": "Glasgow Prestwick Airport (PIK) welcomed the Consul General of India, Mr Siddharth Malik, to discuss UK-India trade and the airport's recent...",
+    "categories": [
+      "Air Cargo Week"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ajot.com/news/glasgow-prestwick-airport-celebrates-processing-25-million-e-commerce-parcels",
+    "title": "Glasgow Prestwick Airport celebrates processing 25 million e-commerce parcels",
+    "sourceUrl": "https://www.ajot.com/news/glasgow-prestwick-airport-celebrates-processing-25-million-e-commerce-parcels",
+    "summary": "Partners gathered at the airport to celebrate the milestone and Chinese New Year after a year of sustained cargo growth, new routes,...",
+    "categories": [
+      "American Journal of Transportation"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://avitrader.com/2025/07/16/pag-expands-into-emea-with-acquisition-of-turner-aviation/",
+    "title": "PAG expands into EMEA with acquisition of Turner Aviation",
+    "sourceUrl": "https://avitrader.com/2025/07/16/pag-expands-into-emea-with-acquisition-of-turner-aviation/",
+    "summary": "PAG, a provider of MRO services and aerospace solutions, has announced its entry into the EMEA (Europe, Middle East and Africa) market through the acquisition...",
+    "categories": [
+      "AviTrader Aviation News"
+    ],
+    "publishedAt": "2025-07-16T00:00:00.000Z",
+    "fetchedAt": "2026-02-28T01:07:44.489Z"
   }
 ]
