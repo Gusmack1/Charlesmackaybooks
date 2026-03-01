@@ -946,7 +946,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-13T11:15:24.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-01-vacancy-inspector-of-air-accidents-human",
+    "articlePath": "data/news-articles/2026/03/2026-03-01-vacancy-inspector-of-air-accidents-human.json",
+    "draftedAt": "2026-03-01T12:29:17.465Z"
   },
   {
     "id": "47353185-311b-4106-857f-117b3c670af2",
@@ -962,7 +965,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-13T10:09:35.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-01-vacancy-inspector-of-air-accidents-human",
+    "articlePath": "data/news-articles/2026/03/2026-03-01-vacancy-inspector-of-air-accidents-human.json",
+    "draftedAt": "2026-03-01T12:29:17.465Z"
   },
   {
     "id": "816061c3-b0c5-413f-83ee-003675145732",
@@ -976,7 +982,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-13T10:02:32.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-01-vacancy-inspector-of-air-accidents-human",
+    "articlePath": "data/news-articles/2026/03/2026-03-01-vacancy-inspector-of-air-accidents-human.json",
+    "draftedAt": "2026-03-01T12:29:17.465Z"
   },
   {
     "id": "fc921ad6-f354-4c03-bf2a-ae0861334923",
@@ -3216,6 +3225,62 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-01T01:23:11.458Z",
+    "status": "new"
+  },
+  {
+    "id": "e24c99f0-d5b2-49b9-8994-eab2569b76a4",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.bbc.com/news/articles/c74wd23q77xo",
+    "title": "RAF Typhoon declares mid-air emergency during training flight",
+    "sourceUrl": "https://www.bbc.com/news/articles/c74wd23q77xo",
+    "summary": "The Typhoon, which had been operating out of RAF Lossiemouth in Moray, encountered a flight control issue at about 12:20.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T12:29:14.888Z",
+    "status": "new"
+  },
+  {
+    "id": "1513d977-e720-4dd1-a6b4-131c326e0cd8",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://aircargoweek.com/prestwick-airport-doubles-china-freighter-services-with-air-china-cargo/",
+    "title": "Prestwick Airport doubles weekly Air China Cargo flights",
+    "sourceUrl": "https://aircargoweek.com/prestwick-airport-doubles-china-freighter-services-with-air-china-cargo/",
+    "summary": "Glasgow Prestwick Airport (PIK) has significantly increased its China operations as carrier Air China Cargo doubled its weekly freighter...",
+    "categories": [
+      "Air Cargo Week"
+    ],
+    "publishedAt": "2025-11-24T00:00:00.000Z",
+    "fetchedAt": "2026-03-01T12:29:14.888Z",
+    "status": "new"
+  },
+  {
+    "id": "20712f00-8ddd-4c7c-9df1-03e899f47d5d",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.bbc.com/news/videos/cn0z06kzrxko",
+    "title": "Planespotters gather to catch glimpse of Air Force One",
+    "sourceUrl": "https://www.bbc.com/news/videos/cn0z06kzrxko",
+    "summary": "Thousands of people have gathered at Prestwick Airport to watch Donald Trump's arrival onboard Air Force One.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2025-07-25T00:00:00.000Z",
+    "fetchedAt": "2026-03-01T12:29:14.888Z",
+    "status": "new"
+  },
+  {
+    "id": "35c2ce87-3629-46a9-8436-7e68f0261fe2",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.thenational.scot/news/25856204.msps-vote-evicting-us-troops-prestwick-airport/",
+    "title": "MSPs to vote on banning Donald Trump's troops from using Scottish airports",
+    "sourceUrl": "https://www.thenational.scot/news/25856204.msps-vote-evicting-us-troops-prestwick-airport/",
+    "summary": "MSPs are to vote on whether to evict US military forces from Prestwick Airport, following continued military activity and reports of...",
+    "categories": [
+      "TheNational.scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T12:29:14.888Z",
     "status": "new"
   }
 ]

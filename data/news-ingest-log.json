@@ -2857,5 +2857,57 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-01T01:23:11.458Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/articles/c74wd23q77xo",
+    "title": "RAF Typhoon declares mid-air emergency during training flight",
+    "sourceUrl": "https://www.bbc.com/news/articles/c74wd23q77xo",
+    "summary": "The Typhoon, which had been operating out of RAF Lossiemouth in Moray, encountered a flight control issue at about 12:20.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T12:29:14.888Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://aircargoweek.com/prestwick-airport-doubles-china-freighter-services-with-air-china-cargo/",
+    "title": "Prestwick Airport doubles weekly Air China Cargo flights",
+    "sourceUrl": "https://aircargoweek.com/prestwick-airport-doubles-china-freighter-services-with-air-china-cargo/",
+    "summary": "Glasgow Prestwick Airport (PIK) has significantly increased its China operations as carrier Air China Cargo doubled its weekly freighter...",
+    "categories": [
+      "Air Cargo Week"
+    ],
+    "publishedAt": "2025-11-24T00:00:00.000Z",
+    "fetchedAt": "2026-03-01T12:29:14.888Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/videos/cn0z06kzrxko",
+    "title": "Planespotters gather to catch glimpse of Air Force One",
+    "sourceUrl": "https://www.bbc.com/news/videos/cn0z06kzrxko",
+    "summary": "Thousands of people have gathered at Prestwick Airport to watch Donald Trump's arrival onboard Air Force One.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2025-07-25T00:00:00.000Z",
+    "fetchedAt": "2026-03-01T12:29:14.888Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thenational.scot/news/25856204.msps-vote-evicting-us-troops-prestwick-airport/",
+    "title": "MSPs to vote on banning Donald Trump's troops from using Scottish airports",
+    "sourceUrl": "https://www.thenational.scot/news/25856204.msps-vote-evicting-us-troops-prestwick-airport/",
+    "summary": "MSPs are to vote on whether to evict US military forces from Prestwick Airport, following continued military activity and reports of...",
+    "categories": [
+      "TheNational.scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T12:29:14.888Z"
   }
 ]
