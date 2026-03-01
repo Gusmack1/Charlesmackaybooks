@@ -2805,5 +2805,57 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-02-28T12:27:20.059Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dailyrecord.co.uk/news/scottish-news/british-airways-flight-declares-mid-36796722",
+    "title": "British Airways flight declares mid-air emergency over Scotland",
+    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/british-airways-flight-declares-mid-36796722",
+    "summary": "During the flight's approach to Edinburgh, the pilot initiated a procedure known as squawking 7700.",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T01:23:11.458Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thescottishsun.co.uk/news/15979632/flights-scotland-dubai-cancelled-israel-us-iran-attacks/",
+    "title": "Flights between Scotland & Dubai AXED as Israel & US continue attacks on Iran",
+    "sourceUrl": "https://www.thescottishsun.co.uk/news/15979632/flights-scotland-dubai-cancelled-israel-us-iran-attacks/",
+    "summary": "FLIGHTS to and from Scottish airports and Dubai have been cancelled as Israel and the US unleashed Operation “Epic Fury” on Iran. Donald...",
+    "categories": [
+      "The Scottish Sun"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T01:23:11.458Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aerotime.aero/articles/uk-russia-yantar-spy-ship-laser-raf-scotland",
+    "title": "UK warns Russia after spy ship Yantar targets RAF pilots with lasers",
+    "sourceUrl": "https://www.aerotime.aero/articles/uk-russia-yantar-spy-ship-laser-raf-scotland",
+    "summary": "UK says Russian spy ship Yantar directed lasers at RAF pilots north of Scotland and warns Moscow it is ready to respond.",
+    "categories": [
+      "AeroTime"
+    ],
+    "publishedAt": "2025-11-20T00:00:00.000Z",
+    "fetchedAt": "2026-03-01T01:23:11.458Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.the-gazette.co.uk/news/25896208.emirates-flight-glasgow-airport-dubai-cancelled/",
+    "title": "Glasgow Airport flight cancelled after U.S and Israel attack Iran",
+    "sourceUrl": "https://www.the-gazette.co.uk/news/25896208.emirates-flight-glasgow-airport-dubai-cancelled/",
+    "summary": "A flight from Glasgow Airport has been cancelled after the United States and Israel launched military strikes on Iran.",
+    "categories": [
+      "Renfrewshire Gazette"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T01:23:11.458Z"
   }
 ]

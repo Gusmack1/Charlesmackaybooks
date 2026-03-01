@@ -1,0 +1,67 @@
+{
+  "slug": "2026-03-01-renewable-transport-fuel-obligation-stat",
+  "title": "Renewable Transport Fuel Obligation Stat",
+  "wordCount": 138,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Renewable Transport Fuel Obligation statistics: data tables. Data on the supply of renewable fuel, as required under the Renewable Transport Fuel Obligation (RTFO).\n\nMirror, signal, manoeuvres: Military driving examiners mobilised to cut test backlog. Partnership with the Ministry of Defence will see 36 defence driving examiners provide thousands of additional tests over the next year.\n\nPolicy paper: Memorandum of Understanding between the AAIB and the Royal Gibraltar Police. Memorandum of Understanding between the Air Accidents Investigation Branch and the Royal Gibraltar Police"
+    },
+    {
+      "heading": "Context",
+      "content": "Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/statistical-data-sets/renewable-fuel-statistics-data-tables",
+      "citationText": "dft-press-office – Renewable Transport Fuel Obligation statistics: data tables"
+    },
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/news/mirror-signal-manoeuvres-military-driving-examiners-mobilised-to-cut-test-backlog",
+      "citationText": "dft-press-office – Mirror, signal, manoeuvres: Military driving examiners mobilised to cut test backlog"
+    },
+    {
+      "sourceId": "aaib-bulletins",
+      "sourceUrl": "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-aaib-and-the-royal-gibraltar-police",
+      "citationText": "aaib-bulletins – Policy paper: Memorandum of Understanding between the AAIB and the Royal Gibraltar Police"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Renewable Transport Fuel Obligation",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-01T01:23:12.999Z"
+}

@@ -893,7 +893,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-13T09:30:08.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-01-renewable-transport-fuel-obligation-stat",
+    "articlePath": "data/news-articles/2026/03/2026-03-01-renewable-transport-fuel-obligation-stat.json",
+    "draftedAt": "2026-03-01T01:23:13.000Z"
   },
   {
     "id": "e8a36f0f-db7f-4ecf-b538-d1790f24bfca",
@@ -907,7 +910,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-12T11:54:37.000Z",
     "fetchedAt": "2025-11-21T19:47:14.093Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-01-renewable-transport-fuel-obligation-stat",
+    "articlePath": "data/news-articles/2026/03/2026-03-01-renewable-transport-fuel-obligation-stat.json",
+    "draftedAt": "2026-03-01T01:23:13.000Z"
   },
   {
     "id": "2abfd37a-6df6-4035-9e79-7dd870dfc319",
@@ -923,7 +929,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-20T15:28:38.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-01-renewable-transport-fuel-obligation-stat",
+    "articlePath": "data/news-articles/2026/03/2026-03-01-renewable-transport-fuel-obligation-stat.json",
+    "draftedAt": "2026-03-01T01:23:13.000Z"
   },
   {
     "id": "03b54b25-09b3-4a5c-b31e-1c79c46d48cb",
@@ -3151,6 +3160,62 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-02-28T12:27:20.059Z",
+    "status": "new"
+  },
+  {
+    "id": "711639ed-8720-487c-babc-fd316c0e7ec5",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.dailyrecord.co.uk/news/scottish-news/british-airways-flight-declares-mid-36796722",
+    "title": "British Airways flight declares mid-air emergency over Scotland",
+    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/british-airways-flight-declares-mid-36796722",
+    "summary": "During the flight's approach to Edinburgh, the pilot initiated a procedure known as squawking 7700.",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T01:23:11.458Z",
+    "status": "new"
+  },
+  {
+    "id": "eef6e46b-b529-4174-a7d0-7969ea8f98b8",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.thescottishsun.co.uk/news/15979632/flights-scotland-dubai-cancelled-israel-us-iran-attacks/",
+    "title": "Flights between Scotland & Dubai AXED as Israel & US continue attacks on Iran",
+    "sourceUrl": "https://www.thescottishsun.co.uk/news/15979632/flights-scotland-dubai-cancelled-israel-us-iran-attacks/",
+    "summary": "FLIGHTS to and from Scottish airports and Dubai have been cancelled as Israel and the US unleashed Operation “Epic Fury” on Iran. Donald...",
+    "categories": [
+      "The Scottish Sun"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T01:23:11.458Z",
+    "status": "new"
+  },
+  {
+    "id": "111418df-a91c-4599-9573-425f3d80c4a8",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.aerotime.aero/articles/uk-russia-yantar-spy-ship-laser-raf-scotland",
+    "title": "UK warns Russia after spy ship Yantar targets RAF pilots with lasers",
+    "sourceUrl": "https://www.aerotime.aero/articles/uk-russia-yantar-spy-ship-laser-raf-scotland",
+    "summary": "UK says Russian spy ship Yantar directed lasers at RAF pilots north of Scotland and warns Moscow it is ready to respond.",
+    "categories": [
+      "AeroTime"
+    ],
+    "publishedAt": "2025-11-20T00:00:00.000Z",
+    "fetchedAt": "2026-03-01T01:23:11.458Z",
+    "status": "new"
+  },
+  {
+    "id": "d2148c99-e0b1-4340-bed7-284782d9bb6d",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.the-gazette.co.uk/news/25896208.emirates-flight-glasgow-airport-dubai-cancelled/",
+    "title": "Glasgow Airport flight cancelled after U.S and Israel attack Iran",
+    "sourceUrl": "https://www.the-gazette.co.uk/news/25896208.emirates-flight-glasgow-airport-dubai-cancelled/",
+    "summary": "A flight from Glasgow Airport has been cancelled after the United States and Israel launched military strikes on Iran.",
+    "categories": [
+      "Renfrewshire Gazette"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-01T01:23:11.458Z",
     "status": "new"
   }
 ]
