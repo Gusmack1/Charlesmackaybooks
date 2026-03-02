@@ -999,7 +999,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-13T10:02:17.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-02-aaib-investigation-to-atr-72-212-a-g-iac",
+    "articlePath": "data/news-articles/2026/03/2026-03-02-aaib-investigation-to-atr-72-212-a-g-iac.json",
+    "draftedAt": "2026-03-02T01:15:26.365Z"
   },
   {
     "id": "218b9f69-478e-4845-ac02-cf53383b2bf9",
@@ -1015,7 +1018,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-13T00:00:00.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-02-aaib-investigation-to-atr-72-212-a-g-iac",
+    "articlePath": "data/news-articles/2026/03/2026-03-02-aaib-investigation-to-atr-72-212-a-g-iac.json",
+    "draftedAt": "2026-03-02T01:15:26.365Z"
   },
   {
     "id": "d9fea1f3-6ba3-425d-ba9c-03d56094905d",
@@ -1029,7 +1035,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-11-06T11:47:19.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-02-aaib-investigation-to-atr-72-212-a-g-iac",
+    "articlePath": "data/news-articles/2026/03/2026-03-02-aaib-investigation-to-atr-72-212-a-g-iac.json",
+    "draftedAt": "2026-03-02T01:15:26.365Z"
   },
   {
     "id": "6c958ea5-6c2d-428b-ae30-4909acccc730",
@@ -3281,6 +3290,90 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-01T12:29:14.888Z",
+    "status": "new"
+  },
+  {
+    "id": "415d9c5f-8bb1-4899-9052-2a3d60f6278d",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/news/passengers-save-millions-as-rail-fare-freeze-starts#2026-03-02T00:01:00Z",
+    "title": "Passengers save millions as rail fare freeze starts",
+    "sourceUrl": "https://www.gov.uk/government/news/passengers-save-millions-as-rail-fare-freeze-starts",
+    "summary": "Government freezes rail fares, saving passengers £600 million and easing cost‑of‑living pressures as it rebuilds a better, more reliable railway.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T00:01:00.000Z",
+    "fetchedAt": "2026-03-02T01:15:21.352Z",
+    "status": "new"
+  },
+  {
+    "id": "b69e79fd-0b29-42e6-9336-07f04144fe30",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.heraldscotland.com/news/25897570.raf-typhoon-jet-shoots-iranian-drone-heading-qatar/",
+    "title": "RAF Typhoon shoots down Iranian drone heading towards Qatari airspace",
+    "sourceUrl": "https://www.heraldscotland.com/news/25897570.raf-typhoon-jet-shoots-iranian-drone-heading-qatar/",
+    "summary": "A RAF Typhoon jet has shot down an Iranian drone heading toward Qatari airspace.",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-02T01:15:24.892Z",
+    "status": "new"
+  },
+  {
+    "id": "31744146-9cda-442f-9395-64ef0f9c6b82",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.independent.co.uk/news/uk/politics/russia-spy-ship-yantar-raf-b2869039.html",
+    "title": "Russian spy ship that targeted RAF pilots with lasers ‘threatens our way of life’",
+    "sourceUrl": "https://www.independent.co.uk/news/uk/politics/russia-spy-ship-yantar-raf-b2869039.html",
+    "summary": "Labour defence minister Al Carns told Moscow it faced 'the firmest of responses' if there was any attempt to damage UK infrastructure.",
+    "categories": [
+      "The Independent"
+    ],
+    "publishedAt": "2025-11-20T00:00:00.000Z",
+    "fetchedAt": "2026-03-02T01:15:24.892Z",
+    "status": "new"
+  },
+  {
+    "id": "efeb2b0e-b4ec-4f41-acac-f75da7c35f05",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://travelradar.aero/prestwick-airport-profit/",
+    "title": "Prestwick Airport marks sixth consecutive profitable year",
+    "sourceUrl": "https://travelradar.aero/prestwick-airport-profit/",
+    "summary": "Prestwick Airport has its sixth consecutive year of profit and an increase in its cargo operations, driven by e-commerce flights from China.",
+    "categories": [
+      "Travel Radar"
+    ],
+    "publishedAt": "2025-12-18T00:00:00.000Z",
+    "fetchedAt": "2026-03-02T01:15:24.892Z",
+    "status": "new"
+  },
+  {
+    "id": "f50b0297-625c-4ac3-a1cf-a2d691d30941",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://news.stv.tv/scotland/greens-call-for-ban-on-us-military-using-prestwick-airport",
+    "title": "Greens call for ban on US military using Prestwick Airport",
+    "sourceUrl": "https://news.stv.tv/scotland/greens-call-for-ban-on-us-military-using-prestwick-airport",
+    "summary": "The US military should be banned from using Glasgow Prestwick Airport, the Scottish Greens have said ahead of a debate at Holyrood this week...",
+    "categories": [
+      "STV News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-02T01:15:24.892Z",
+    "status": "new"
+  },
+  {
+    "id": "963106fb-3715-4aca-89af-231b0d4ea98b",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.unitetheunion.org/news-events/news/2026/february/unite-secures-inflation-beating-pay-rise-for-icts-screeners-at-glasgow-airport",
+    "title": "Unite secures inflation beating pay rise for ICTS screeners at Glasgow airport",
+    "sourceUrl": "https://www.unitetheunion.org/news-events/news/2026/february/unite-secures-inflation-beating-pay-rise-for-icts-screeners-at-glasgow-airport",
+    "summary": "Trade union delivers significant wage rises over recent years. Unite has secured an inflation beating pay rise for ICTS hold baggage...",
+    "categories": [
+      "Unite the Union"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-02T01:15:24.892Z",
     "status": "new"
   }
 ]

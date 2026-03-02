@@ -2909,5 +2909,83 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-01T12:29:14.888Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/news/passengers-save-millions-as-rail-fare-freeze-starts#2026-03-02T00:01:00Z",
+    "title": "Passengers save millions as rail fare freeze starts",
+    "sourceUrl": "https://www.gov.uk/government/news/passengers-save-millions-as-rail-fare-freeze-starts",
+    "summary": "Government freezes rail fares, saving passengers £600 million and easing cost‑of‑living pressures as it rebuilds a better, more reliable railway.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T00:01:00.000Z",
+    "fetchedAt": "2026-03-02T01:15:21.352Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/25897570.raf-typhoon-jet-shoots-iranian-drone-heading-qatar/",
+    "title": "RAF Typhoon shoots down Iranian drone heading towards Qatari airspace",
+    "sourceUrl": "https://www.heraldscotland.com/news/25897570.raf-typhoon-jet-shoots-iranian-drone-heading-qatar/",
+    "summary": "A RAF Typhoon jet has shot down an Iranian drone heading toward Qatari airspace.",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-02T01:15:24.892Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.independent.co.uk/news/uk/politics/russia-spy-ship-yantar-raf-b2869039.html",
+    "title": "Russian spy ship that targeted RAF pilots with lasers ‘threatens our way of life’",
+    "sourceUrl": "https://www.independent.co.uk/news/uk/politics/russia-spy-ship-yantar-raf-b2869039.html",
+    "summary": "Labour defence minister Al Carns told Moscow it faced 'the firmest of responses' if there was any attempt to damage UK infrastructure.",
+    "categories": [
+      "The Independent"
+    ],
+    "publishedAt": "2025-11-20T00:00:00.000Z",
+    "fetchedAt": "2026-03-02T01:15:24.892Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://travelradar.aero/prestwick-airport-profit/",
+    "title": "Prestwick Airport marks sixth consecutive profitable year",
+    "sourceUrl": "https://travelradar.aero/prestwick-airport-profit/",
+    "summary": "Prestwick Airport has its sixth consecutive year of profit and an increase in its cargo operations, driven by e-commerce flights from China.",
+    "categories": [
+      "Travel Radar"
+    ],
+    "publishedAt": "2025-12-18T00:00:00.000Z",
+    "fetchedAt": "2026-03-02T01:15:24.892Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://news.stv.tv/scotland/greens-call-for-ban-on-us-military-using-prestwick-airport",
+    "title": "Greens call for ban on US military using Prestwick Airport",
+    "sourceUrl": "https://news.stv.tv/scotland/greens-call-for-ban-on-us-military-using-prestwick-airport",
+    "summary": "The US military should be banned from using Glasgow Prestwick Airport, the Scottish Greens have said ahead of a debate at Holyrood this week...",
+    "categories": [
+      "STV News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-02T01:15:24.892Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.unitetheunion.org/news-events/news/2026/february/unite-secures-inflation-beating-pay-rise-for-icts-screeners-at-glasgow-airport",
+    "title": "Unite secures inflation beating pay rise for ICTS screeners at Glasgow airport",
+    "sourceUrl": "https://www.unitetheunion.org/news-events/news/2026/february/unite-secures-inflation-beating-pay-rise-for-icts-screeners-at-glasgow-airport",
+    "summary": "Trade union delivers significant wage rises over recent years. Unite has secured an inflation beating pay rise for ICTS hold baggage...",
+    "categories": [
+      "Unite the Union"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-02T01:15:24.892Z"
   }
 ]
