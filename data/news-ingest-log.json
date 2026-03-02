@@ -2987,5 +2987,115 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-02T01:15:24.892Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/south-east-training-estate-firing-times#2026-03-02T11:19:01Z",
+    "title": "Guidance: South East Training Estate firing times",
+    "sourceUrl": "https://www.gov.uk/government/publications/south-east-training-estate-firing-times",
+    "summary": "Firing and closure times for the South East Training Estate, including Aldershot, Ash, Barossa, Chilcomb, Hythe, Longmoor, Lydd, Moody's Down, Pirbright and Otmoor ranges.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T11:19:01.000Z",
+    "fetchedAt": "2026-03-02T12:37:04.062Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table#2026-03-02T09:28:20Z",
+    "title": "Regulation: Notice of proposed amendments (NPA) reference table",
+    "sourceUrl": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "summary": "The Military Aviation Authority (MAA) NPA table provides information of proposed changes in regulations and release date.",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T09:28:20.000Z",
+    "fetchedAt": "2026-03-02T12:37:04.062Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents#2026-03-02T09:27:56Z",
+    "title": "Regulation: Notice of proposed amendments (NPA) documents",
+    "sourceUrl": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "summary": "MAA issuing of an NPA allows a consultation period to be undertaken on a proposed amendment or the implementation of new regulation.",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T09:27:56.000Z",
+    "fetchedAt": "2026-03-02T12:37:04.062Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/dcdc-internship-programme#2026-03-02T09:00:03Z",
+    "title": "Defence Futures and Force Design internship programme",
+    "sourceUrl": "https://www.gov.uk/guidance/dcdc-internship-programme",
+    "summary": "Defence Futures and Force Design, part of the Military Strategic Headquarters, runs a paid internship programme open to individuals who are currently undertaking, or have recently completed, postgraduate studies.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T09:00:03.000Z",
+    "fetchedAt": "2026-03-02T12:37:04.062Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/billion-pound-helicopter-deal-secures-3300-british-jobs-boosts-battlefield-kit-and-unlocks-up-to-15billion-in-ukexports#2026-03-02T08:16:00Z",
+    "title": "Billion-pound helicopter deal secures 3,300 British jobs, boosts battlefield kit and unlocks up to £15 billion in UK exports",
+    "sourceUrl": "https://www.gov.uk/government/news/billion-pound-helicopter-deal-secures-3300-british-jobs-boosts-battlefield-kit-and-unlocks-up-to-15billion-in-ukexports",
+    "summary": "Leonardo UK selected for £1 billion contract for new medium helicopters (NMH) - which could work alongside uncrewed aircraft - to support defence operations around the globe.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T08:16:00.000Z",
+    "fetchedAt": "2026-03-02T12:37:04.062Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://travelweekly.co.uk/news/gatwick-aviation-development-chief-switches-to-scottish-airport",
+    "title": "Gatwick aviation development chief switches to Scottish airport",
+    "sourceUrl": "https://travelweekly.co.uk/news/gatwick-aviation-development-chief-switches-to-scottish-airport",
+    "summary": "Gatwick's head of aviation development is moving to Edinburgh airport as chief commercial officer. Stephanie Wear takes up her new position at Scotland's...",
+    "categories": [
+      "Travel Weekly - Home"
+    ],
+    "publishedAt": "2025-06-23T00:00:00.000Z",
+    "fetchedAt": "2026-03-02T12:37:08.024Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.gbnews.com/news/scotland-plane-crash-pilot-dies-passenger-hospitalised",
+    "title": "Pilot dies and passenger hospitalised after aircraft crashes in Scotland",
+    "sourceUrl": "https://www.gbnews.com/news/scotland-plane-crash-pilot-dies-passenger-hospitalised",
+    "summary": "A pilot has died and his passenger has been taken to hospital following a plane crash in southern Scotland.",
+    "categories": [
+      "GB News"
+    ],
+    "publishedAt": "2025-08-05T00:00:00.000Z",
+    "fetchedAt": "2026-03-02T12:37:08.025Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ajot.com/news/glasgow-prestwick-airport-doubles-weekly-air-china-cargo-flights",
+    "title": "Glasgow Prestwick Airport doubles weekly Air China Cargo flights",
+    "sourceUrl": "https://www.ajot.com/news/glasgow-prestwick-airport-doubles-weekly-air-china-cargo-flights",
+    "summary": "Glasgow Prestwick Airport (PIK) has significantly increased its China operations as carrier Air China Cargo doubled its weekly freighter...",
+    "categories": [
+      "American Journal of Transportation"
+    ],
+    "publishedAt": "2025-11-24T00:00:00.000Z",
+    "fetchedAt": "2026-03-02T12:37:08.025Z"
   }
 ]
