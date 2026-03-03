@@ -1156,7 +1156,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-10-09T09:06:54.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-03-independent-report-air-accident-monthly-",
+    "articlePath": "data/news-articles/2026/03/2026-03-03-independent-report-air-accident-monthly-.json",
+    "draftedAt": "2026-03-03T12:35:51.848Z"
   },
   {
     "id": "0f326c98-2844-4df6-89b5-29280409d960",
@@ -1170,7 +1173,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-10-09T09:03:40.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-03-independent-report-air-accident-monthly-",
+    "articlePath": "data/news-articles/2026/03/2026-03-03-independent-report-air-accident-monthly-.json",
+    "draftedAt": "2026-03-03T12:35:51.848Z"
   },
   {
     "id": "a3759df8-de6a-4665-990b-e0bda40a2276",
@@ -1184,7 +1190,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-10-09T09:03:29.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-03-independent-report-air-accident-monthly-",
+    "articlePath": "data/news-articles/2026/03/2026-03-03-independent-report-air-accident-monthly-.json",
+    "draftedAt": "2026-03-03T12:35:51.848Z"
   },
   {
     "id": "d77e7a5b-63f0-4233-9942-a1f94d7694b2",
@@ -3688,6 +3697,94 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-03T01:17:55.117Z",
+    "status": "new"
+  },
+  {
+    "id": "5b90fb9a-560c-43c6-a4c8-55d69924c750",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/reservist-employer-handbook#2026-03-03T12:03:53Z",
+    "title": "Guidance: Reservist employer handbook",
+    "sourceUrl": "https://www.gov.uk/government/publications/reservist-employer-handbook",
+    "summary": "This handbook provides guidance for reservist employees and their managers.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T12:03:53.000Z",
+    "fetchedAt": "2026-03-03T12:35:47.375Z",
+    "status": "new"
+  },
+  {
+    "id": "a8c27751-661c-4fb6-8333-a1edc1f2d0ab",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/news/271-million-to-clean-up-shipping-and-power-coastal-communities#2026-03-03T11:06:08Z",
+    "title": "£271 million to clean up shipping and power coastal communities",
+    "sourceUrl": "https://www.gov.uk/government/news/271-million-to-clean-up-shipping-and-power-coastal-communities",
+    "summary": "This funding will boost skilled jobs and coastal economies, and forms part of a £448 million commitment to clean maritime funding.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T11:06:08.000Z",
+    "fetchedAt": "2026-03-03T12:35:47.866Z",
+    "status": "new"
+  },
+  {
+    "id": "b4a4dfc9-7280-469d-8582-0aa36fe74087",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/future-commercial-contracts-for-dft-and-partners#2026-03-03T09:57:14Z",
+    "title": "Corporate report: Future commercial contracts for DfT and partners",
+    "sourceUrl": "https://www.gov.uk/government/publications/future-commercial-contracts-for-dft-and-partners",
+    "summary": "Listing of upcoming Department for Transport (DfT) and associated bodies commercial contracts – known as the commercial pipeline – for which bidders may apply.",
+    "categories": [
+      "Corporate report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T09:57:14.000Z",
+    "fetchedAt": "2026-03-03T12:35:47.866Z",
+    "status": "new"
+  },
+  {
+    "id": "724f2ccb-2f7d-4dda-addb-f4c6acc7daf6",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.bbc.com/news/articles/cx24028k7edo",
+    "title": "Russian spy ship pointed lasers at RAF pilots tracking it, says UK",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx24028k7edo",
+    "summary": "Healey said the laser incident took place whilst the Yantar was being followed by a Royal Navy frigate and RAF Poseidon P-8 planes deployed...",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2025-11-19T00:00:00.000Z",
+    "fetchedAt": "2026-03-03T12:35:50.721Z",
+    "status": "new"
+  },
+  {
+    "id": "b5e40ef7-10fb-464a-a398-560fce43f982",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.forcesnews.com/services/raf/what-quick-reaction-alert-and-how-do-they-work",
+    "title": "Quick Reaction Alert: How the RAF protects our skies 24 hours a day, 365 days a year",
+    "sourceUrl": "https://www.forcesnews.com/services/raf/what-quick-reaction-alert-and-how-do-they-work",
+    "summary": "Quick Reaction Alert, known as QRA, is a state of readiness and modus operandi of air defence maintained at all times by Nato allies.",
+    "categories": [
+      "Forces News"
+    ],
+    "publishedAt": "2025-10-02T00:00:00.000Z",
+    "fetchedAt": "2026-03-03T12:35:50.721Z",
+    "status": "new"
+  },
+  {
+    "id": "81c7e836-bc33-4740-bc7d-f1238531f3c4",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://simpleflying.com/emirates-second-daily-flight-glasgow/",
+    "title": "Emirates Eyes Second Daily Flight To This Iconic European Destination",
+    "sourceUrl": "https://simpleflying.com/emirates-second-daily-flight-glasgow/",
+    "summary": "Emirates is planning to return to a second daily frequency between its hub at Dubai International Airport (DXB) and Glasgow Airport (GLA),...",
+    "categories": [
+      "Simple Flying"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-03T12:35:50.721Z",
     "status": "new"
   }
 ]

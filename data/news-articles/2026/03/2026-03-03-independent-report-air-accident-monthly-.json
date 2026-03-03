@@ -1,0 +1,71 @@
+{
+  "slug": "2026-03-03-independent-report-air-accident-monthly-",
+  "title": "Independent Report Air Accident Monthly",
+  "wordCount": 133,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Independent report: Air accident monthly bulletin October 2025. The AAIB Bulletin is a compilation of AAIB reports and is published on the second Thursday of the month.\n\nAAIB investigation to Spitfire IXT, G-BMSB, 3 May 2025. Loss of engine power and forced landing, near Hythe, Kent, 3 May 2025\n\nAAIB investigation to Phoenix Wings Orca, (UAS reg n/a). Inadvertent in-flight shutdown leading to loss of control, Coombe Country Park, Warwickshire, 25 March 2025"
+    },
+    {
+      "heading": "Context",
+      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "aaib-bulletins",
+      "sourceUrl": "https://www.gov.uk/government/publications/air-accident-monthly-bulletin-october-2025",
+      "citationText": "aaib-bulletins – Independent report: Air accident monthly bulletin October 2025"
+    },
+    {
+      "sourceId": "aaib-bulletins",
+      "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-spitfire-ixt-g-bmsb-3-may-2025",
+      "citationText": "aaib-bulletins – AAIB investigation to Spitfire IXT, G-BMSB, 3 May 2025"
+    },
+    {
+      "sourceId": "aaib-bulletins",
+      "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-phoenix-wings-orca-uas-reg-n-slash-a",
+      "citationText": "aaib-bulletins – AAIB investigation to Phoenix Wings Orca, (UAS reg n/a)"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aviation",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Independent Report Air Accident",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-03T12:35:51.848Z"
+}

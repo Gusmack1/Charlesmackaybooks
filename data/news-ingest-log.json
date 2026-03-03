@@ -3263,5 +3263,87 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-03T01:17:55.117Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/reservist-employer-handbook#2026-03-03T12:03:53Z",
+    "title": "Guidance: Reservist employer handbook",
+    "sourceUrl": "https://www.gov.uk/government/publications/reservist-employer-handbook",
+    "summary": "This handbook provides guidance for reservist employees and their managers.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T12:03:53.000Z",
+    "fetchedAt": "2026-03-03T12:35:47.375Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/news/271-million-to-clean-up-shipping-and-power-coastal-communities#2026-03-03T11:06:08Z",
+    "title": "£271 million to clean up shipping and power coastal communities",
+    "sourceUrl": "https://www.gov.uk/government/news/271-million-to-clean-up-shipping-and-power-coastal-communities",
+    "summary": "This funding will boost skilled jobs and coastal economies, and forms part of a £448 million commitment to clean maritime funding.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T11:06:08.000Z",
+    "fetchedAt": "2026-03-03T12:35:47.866Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/future-commercial-contracts-for-dft-and-partners#2026-03-03T09:57:14Z",
+    "title": "Corporate report: Future commercial contracts for DfT and partners",
+    "sourceUrl": "https://www.gov.uk/government/publications/future-commercial-contracts-for-dft-and-partners",
+    "summary": "Listing of upcoming Department for Transport (DfT) and associated bodies commercial contracts – known as the commercial pipeline – for which bidders may apply.",
+    "categories": [
+      "Corporate report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T09:57:14.000Z",
+    "fetchedAt": "2026-03-03T12:35:47.866Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/articles/cx24028k7edo",
+    "title": "Russian spy ship pointed lasers at RAF pilots tracking it, says UK",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx24028k7edo",
+    "summary": "Healey said the laser incident took place whilst the Yantar was being followed by a Royal Navy frigate and RAF Poseidon P-8 planes deployed...",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2025-11-19T00:00:00.000Z",
+    "fetchedAt": "2026-03-03T12:35:50.721Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.forcesnews.com/services/raf/what-quick-reaction-alert-and-how-do-they-work",
+    "title": "Quick Reaction Alert: How the RAF protects our skies 24 hours a day, 365 days a year",
+    "sourceUrl": "https://www.forcesnews.com/services/raf/what-quick-reaction-alert-and-how-do-they-work",
+    "summary": "Quick Reaction Alert, known as QRA, is a state of readiness and modus operandi of air defence maintained at all times by Nato allies.",
+    "categories": [
+      "Forces News"
+    ],
+    "publishedAt": "2025-10-02T00:00:00.000Z",
+    "fetchedAt": "2026-03-03T12:35:50.721Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://simpleflying.com/emirates-second-daily-flight-glasgow/",
+    "title": "Emirates Eyes Second Daily Flight To This Iconic European Destination",
+    "sourceUrl": "https://simpleflying.com/emirates-second-daily-flight-glasgow/",
+    "summary": "Emirates is planning to return to a second daily frequency between its hub at Dubai International Airport (DXB) and Glasgow Airport (GLA),...",
+    "categories": [
+      "Simple Flying"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-03T12:35:50.721Z"
   }
 ]
