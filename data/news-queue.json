@@ -1103,7 +1103,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-10-30T10:03:01.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-03-aaib-report-discus-b-g-djmd-standard-cir",
+    "articlePath": "data/news-articles/2026/03/2026-03-03-aaib-report-discus-b-g-djmd-standard-cir.json",
+    "draftedAt": "2026-03-03T01:17:56.206Z"
   },
   {
     "id": "0c092294-f9da-41df-99a7-3f747ed97bf6",
@@ -1117,7 +1120,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-10-30T10:00:20.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-03-aaib-report-discus-b-g-djmd-standard-cir",
+    "articlePath": "data/news-articles/2026/03/2026-03-03-aaib-report-discus-b-g-djmd-standard-cir.json",
+    "draftedAt": "2026-03-03T01:17:56.206Z"
   },
   {
     "id": "555091ca-487c-417e-a1a2-f6d5df1efb27",
@@ -1131,7 +1137,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-10-28T10:41:18.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-03-aaib-report-discus-b-g-djmd-standard-cir",
+    "articlePath": "data/news-articles/2026/03/2026-03-03-aaib-report-discus-b-g-djmd-standard-cir.json",
+    "draftedAt": "2026-03-03T01:17:56.206Z"
   },
   {
     "id": "40d2eaf5-6925-4e23-a19e-1b0c9c70cd92",
@@ -3501,6 +3510,184 @@
     ],
     "publishedAt": "2025-11-24T00:00:00.000Z",
     "fetchedAt": "2026-03-02T12:37:08.025Z",
+    "status": "new"
+  },
+  {
+    "id": "fa295459-1c57-444b-a1b0-5b239d68c637",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/armed-forces-bill-2026-impact-assessments#2026-03-02T16:53:56Z",
+    "title": "Impact assessment: Armed Forces Bill 2026: impact assessments",
+    "sourceUrl": "https://www.gov.uk/government/publications/armed-forces-bill-2026-impact-assessments",
+    "summary": "Impact assessments of the Armed Forces Bill 2026.",
+    "categories": [
+      "Impact assessment"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T16:53:56.000Z",
+    "fetchedAt": "2026-03-03T01:17:50.268Z",
+    "status": "new"
+  },
+  {
+    "id": "afa6a8eb-e8ae-4100-871b-8cfed14d512f",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/list-of-maa-approved-organisations#2026-03-02T15:05:01Z",
+    "title": "Guidance: List of MAA approved organizations",
+    "sourceUrl": "https://www.gov.uk/government/publications/list-of-maa-approved-organisations",
+    "summary": "This is a consolidated list of approved organizations within the Military Aviation Authority (MAA) approval schemes.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T15:05:01.000Z",
+    "fetchedAt": "2026-03-03T01:17:50.268Z",
+    "status": "new"
+  },
+  {
+    "id": "9c1cd6cd-f70e-4bb4-92b0-8fbca16b91c2",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/competition-innovation-support-to-operations-phase-3-cycle-7#2026-03-02T14:14:56Z",
+    "title": "Notice: Competition: Innovation Support to Operations Phase 3 (Cycle 7)",
+    "sourceUrl": "https://www.gov.uk/government/publications/competition-innovation-support-to-operations-phase-3-cycle-7",
+    "summary": "This UKDI Themed Competition seeks innovative, cost competitive proposals that are designed for manufacture and scalable in twelve-months.",
+    "categories": [
+      "Notice"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T14:14:56.000Z",
+    "fetchedAt": "2026-03-03T01:17:50.268Z",
+    "status": "new"
+  },
+  {
+    "id": "27c96e25-59c1-4d7d-a791-31fbe5119d33",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/approved-explosive-detection-systems#2026-03-02T14:30:57Z",
+    "title": "Guidance: Explosive detection systems (EDS) for aviation security",
+    "sourceUrl": "https://www.gov.uk/government/publications/approved-explosive-detection-systems",
+    "summary": "Approved explosive detection systems to screen hold baggage and cargo.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-02T14:30:57.000Z",
+    "fetchedAt": "2026-03-03T01:17:51.393Z",
+    "status": "new"
+  },
+  {
+    "id": "417712d3-2955-4f42-b6f3-29e4b5599e9f",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/comparing-fuel-pumps-to-electric-vehicle-public-chargers#2026-02-27T00:01:00Z",
+    "title": "Research: Comparing fuel pumps to electric vehicle public chargers",
+    "sourceUrl": "https://www.gov.uk/government/publications/comparing-fuel-pumps-to-electric-vehicle-public-chargers",
+    "summary": "An analysis that shows there are more electric vehicle (EV) public chargers than fuel pumps across the UK.",
+    "categories": [
+      "Research"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-02-27T00:01:00.000Z",
+    "fetchedAt": "2026-03-03T01:17:51.393Z",
+    "status": "new"
+  },
+  {
+    "id": "cf8b92e7-336b-4985-9215-c1dd639414ef",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.ch-aviation.com/news/164382-air-charter-scotland-upgrades-acmi-for-wick-route",
+    "title": "Air Charter Scotland upgrades ACMI for Wick route",
+    "sourceUrl": "https://www.ch-aviation.com/news/164382-air-charter-scotland-upgrades-acmi-for-wick-route",
+    "summary": "Access the article “Air Charter Scotland upgrades ACMI for Wick route” and more exclusive aviation news. Subscribe now!",
+    "categories": [
+      "ch-aviation"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-03T01:17:55.117Z",
+    "status": "new"
+  },
+  {
+    "id": "35de19e6-47ea-49d6-b55e-850ce83842bc",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.travelandtourworld.com/news/article/fly-nonstop-across-the-atlantic-american-airlines-introduces-seasonal-new-york-to-edinburgh-flights-opening-scotland-to-global-tourists/",
+    "title": "Fly Nonstop Across the Atlantic: American Airlines Introduces Seasonal New York to Edinburgh Flights Opening Scotland to Global Tourists",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/fly-nonstop-across-the-atlantic-american-airlines-introduces-seasonal-new-york-to-edinburgh-flights-opening-scotland-to-global-tourists/",
+    "summary": "American Airlines launches seasonal New York to Edinburgh flights in 2026 using the A321XLR, offering direct, comfortable transatlantic...",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-03T01:17:55.117Z",
+    "status": "new"
+  },
+  {
+    "id": "27e88a80-7f0b-4eb5-8943-64a30f0d3b6a",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.lincolnshireworld.com/news/defence/typhoon-jets-based-at-raf-coningsby-playing-key-role-as-iran-conflict-escalates-5617251",
+    "title": "Typhoon jets based at RAF Coningsby playing key role as Iran conflict escalates",
+    "sourceUrl": "https://www.lincolnshireworld.com/news/defence/typhoon-jets-based-at-raf-coningsby-playing-key-role-as-iran-conflict-escalates-5617251",
+    "summary": "Military aircraft based at RAF Coningsby is playing an important role as the raging Iran conflict escalates across the Middle East.",
+    "categories": [
+      "LincolnshireWorld"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-03T01:17:55.117Z",
+    "status": "new"
+  },
+  {
+    "id": "454a2887-7bbf-4a38-a411-354c5624a88f",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://theaviationist.com/2025/11/19/russian-yantar-points-laser-at-raf-poseidon/",
+    "title": "Russian Spy Ship Yantar Points Laser at RAF P-8 Poseidon on the Edge of UK Waters",
+    "sourceUrl": "https://theaviationist.com/2025/11/19/russian-yantar-points-laser-at-raf-poseidon/",
+    "summary": "The UK Defense Secretary said the Russian ship pointed lasers at a RAF P-8 Poseidon while on the edge of UK waters off Scotland.",
+    "categories": [
+      "The Aviationist"
+    ],
+    "publishedAt": "2025-11-19T00:00:00.000Z",
+    "fetchedAt": "2026-03-03T01:17:55.117Z",
+    "status": "new"
+  },
+  {
+    "id": "e310a09f-b756-4cdb-95bb-eab6c15a9b85",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://greens.scot/news/greens-repeat-demand-to-ban-trump-s-troops-from-prestwick-following-iran-attacks",
+    "title": "Greens repeat demand to ban Trump’s troops from Prestwick, following Iran attacks",
+    "sourceUrl": "https://greens.scot/news/greens-repeat-demand-to-ban-trump-s-troops-from-prestwick-following-iran-attacks",
+    "summary": "Greens have urged the Scottish Government to end US military access to publicly-owned Prestwick airport.",
+    "categories": [
+      "Scottish Greens"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-03T01:17:55.117Z",
+    "status": "new"
+  },
+  {
+    "id": "db8e7db8-f9b4-41cb-9c1b-7c1087fc638d",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.scottishfinancialnews.com/articles/sixth-consecutive-year-of-profit-for-glasgow-prestwick-airport",
+    "title": "Sixth consecutive year of profit for Glasgow Prestwick Airport",
+    "sourceUrl": "https://www.scottishfinancialnews.com/articles/sixth-consecutive-year-of-profit-for-glasgow-prestwick-airport",
+    "summary": "The Airport has successfully established Prestwick Airport as an alternative UK cargo gateway for the Asian market. In May 25 two Chinese...",
+    "categories": [
+      "Scottish Financial News"
+    ],
+    "publishedAt": "2025-12-16T00:00:00.000Z",
+    "fetchedAt": "2026-03-03T01:17:55.117Z",
+    "status": "new"
+  },
+  {
+    "id": "71e726cf-93ce-4739-acae-9661aa64dbc5",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://aviationa2z.com/index.php/2026/02/07/emirates-can-launch-2nd-daily-flights-to-glasgow/",
+    "title": "Emirates Can Launch 2nd Daily Flights to This European Airport",
+    "sourceUrl": "https://aviationa2z.com/index.php/2026/02/07/emirates-can-launch-2nd-daily-flights-to-glasgow/",
+    "summary": "Emirates plans double daily Glasgow Dubai flights, boosting cargo exports and passenger connectivity via airport upgrades.",
+    "categories": [
+      "Aviation A2Z"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-03T01:17:55.117Z",
     "status": "new"
   }
 ]
