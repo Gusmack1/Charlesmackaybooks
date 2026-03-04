@@ -1260,7 +1260,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2025-10-02T09:05:46.000Z",
     "fetchedAt": "2025-11-21T19:47:14.165Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-04-aaib-report-sportstar-slm-g-cmgb",
+    "articlePath": "data/news-articles/2026/03/2026-03-04-aaib-report-sportstar-slm-g-cmgb.json",
+    "draftedAt": "2026-03-04T12:36:11.560Z"
   },
   {
     "id": "69d1fc96-9ccc-41b3-add3-86461addf153",
@@ -1274,7 +1277,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-27T17:00:01.000Z",
     "fetchedAt": "2026-02-27T21:51:36.052Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-04-aaib-report-sportstar-slm-g-cmgb",
+    "articlePath": "data/news-articles/2026/03/2026-03-04-aaib-report-sportstar-slm-g-cmgb.json",
+    "draftedAt": "2026-03-04T12:36:11.560Z"
   },
   {
     "id": "a1e7ba8f-8604-49d7-a0a6-87efecf91273",
@@ -1288,7 +1294,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-27T16:24:25.000Z",
     "fetchedAt": "2026-02-27T21:51:36.053Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-04-aaib-report-sportstar-slm-g-cmgb",
+    "articlePath": "data/news-articles/2026/03/2026-03-04-aaib-report-sportstar-slm-g-cmgb.json",
+    "draftedAt": "2026-03-04T12:36:11.560Z"
   },
   {
     "id": "35cd85b6-a6c4-49bd-9736-5b7843b2f40b",
@@ -3994,6 +4003,144 @@
     ],
     "publishedAt": "2025-09-19T00:00:00.000Z",
     "fetchedAt": "2026-03-04T01:13:37.880Z",
+    "status": "new"
+  },
+  {
+    "id": "6c3d154b-566e-4136-a725-cf00e552db29",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/mod-spending-over-25000-january-to-december-2026#2026-03-04T12:21:29Z",
+    "title": "Transparency data: MOD: spending over £25,000, January to December 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/mod-spending-over-25000-january-to-december-2026",
+    "summary": "Ministry of Defence reports on departmental spending over £25,000.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T12:21:29.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z",
+    "status": "new"
+  },
+  {
+    "id": "9ed6dc81-3172-4a49-9d31-9d088593dee1",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025#2026-03-04T10:11:02Z",
+    "title": "Transparency data: Military Court Service sentencing remarks 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025",
+    "summary": "Transcripts of sentencing remarks from Service Court hearings in the Court Martial from 2025.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T10:11:02.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z",
+    "status": "new"
+  },
+  {
+    "id": "f0a466e3-c05e-4383-ad0a-d6ed33f9a5ea",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/military-court-centres-court-listings#2026-03-04T09:57:04Z",
+    "title": "Transparency data: Military court centres court listings",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-centres-court-listings",
+    "summary": "Court listings for the Military court centres.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T09:57:04.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z",
+    "status": "new"
+  },
+  {
+    "id": "356eda72-406e-469c-85b5-b29476f8a16f",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/guidance/ministry-of-defence-police-misconduct-hearings#2026-03-04T09:56:44Z",
+    "title": "Ministry of Defence Police: misconduct hearings",
+    "sourceUrl": "https://www.gov.uk/guidance/ministry-of-defence-police-misconduct-hearings",
+    "summary": "Find out about misconduct hearings involving Ministry of Defence Police (MDP) officers and how to attend these public hearings.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T09:56:44.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z",
+    "status": "new"
+  },
+  {
+    "id": "78e4dd28-6f77-46c7-904c-783f8370a7c7",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/statistics/defence-statistics-pre-release-access-list#2026-03-04T09:30:02Z",
+    "title": "Official Statistics: MOD statistics pre-release access list",
+    "sourceUrl": "https://www.gov.uk/government/statistics/defence-statistics-pre-release-access-list",
+    "summary": "The individuals who have 24-hour, pre-release access to Ministry of Defence's key Official and Accredited Official Statistics publications.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T09:30:02.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z",
+    "status": "new"
+  },
+  {
+    "id": "99c2b3a7-69f9-4964-b94e-6b37ff9c82ce",
+    "sourceId": "hial-airports",
+    "guid": "https://www.hial.co.uk/news/article/240/minister-marks-hial-s-40th-anniversary-with-a-message",
+    "title": "Minister marks HIAL&#039;s 40th anniversary with a message",
+    "sourceUrl": "https://www.hial.co.uk/news/article/240/minister-marks-hial-s-40th-anniversary-with-a-message",
+    "summary": "Minister for Agriculture and Connectivity Jim Fairlie gave his thanks to staff past and present at Highlands and Islands Airports Ltd for their service to air passengers on its 40th anniversary.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-03-03T00:00:00.000Z",
+    "fetchedAt": "2026-03-04T12:36:04.028Z",
+    "status": "new"
+  },
+  {
+    "id": "27307eeb-894a-49e3-b7fe-51c01019627f",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/a249-trunk-road-highways-act-order-2026#2026-03-04T10:50:36Z",
+    "title": "Decision: A249 trunk road: Highways Act order 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/a249-trunk-road-highways-act-order-2026",
+    "summary": "Confirmation of a trunking order for the A249 Key Street slip road in Kent.",
+    "categories": [
+      "Decision"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T10:50:36.000Z",
+    "fetchedAt": "2026-03-04T12:36:04.721Z",
+    "status": "new"
+  },
+  {
+    "id": "5456631d-b9fb-4f2a-8537-c920ad3122c9",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.heraldscotland.com/news/25905080.clarity-sought-whether-aircraft-used-iran-stopped-scotland/",
+    "title": "Clarity sought on whether aircraft used in Iran stopped in Scotland",
+    "sourceUrl": "https://www.heraldscotland.com/news/25905080.clarity-sought-whether-aircraft-used-iran-stopped-scotland/",
+    "summary": "The Scottish Government has asked the UK Government if any military aircraft used in operations in Iran had stopovers in the country.",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T12:36:09.846Z",
+    "status": "new"
+  },
+  {
+    "id": "3f8d61e7-52ae-449c-9558-9ca7ae504b2a",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.aviationbusinessnews.com/cargo/cargo-news/glasgow-prestwick-showcases-cool-chain-capability-to-india/",
+    "title": "Glasgow Prestwick showcases cool chain capability to India",
+    "sourceUrl": "https://www.aviationbusinessnews.com/cargo/cargo-news/glasgow-prestwick-showcases-cool-chain-capability-to-india/",
+    "summary": "Glasgow Prestwick Airport (PIK) has underlined its ambitions to capture a greater share of UK-India trade flows after hosting the Consul...",
+    "categories": [
+      "Aviation Business News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T12:36:09.846Z",
     "status": "new"
   }
 ]

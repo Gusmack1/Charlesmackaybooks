@@ -1,0 +1,63 @@
+{
+  "slug": "2026-03-04-aaib-report-sportstar-slm-g-cmgb",
+  "title": "Aaib Report Sportstar Slm G Cmgb",
+  "wordCount": 139,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "AAIB Report: SportStar SLM, G-CMGB. Fatal accident involving a SportStar SLM, G-CMGB, Chesterfield, Derbyshire, 1 September 2024\n\nUK Hosts Senior NATO Leaders to discuss Nuclear Deterrence. NATO officials discussed the Alliance's approach to nuclear deterrence and Euro-Atlantic security in flagship meeting on 27 February.\n\nHis Majesty The King visits Northwood Headquarters. His Majesty The King today visited the Northwood military headquarters in north-west London, paying tribute to the dedication and service of personnel, whose 24/7 work keeps the UK and its allies safe."
+    },
+    {
+      "heading": "Context",
+      "content": "Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "aaib-bulletins",
+      "sourceUrl": "https://www.gov.uk/government/news/aaib-report-sportstar-slm-g-cmgb",
+      "citationText": "aaib-bulletins – AAIB Report: SportStar SLM, G-CMGB"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/news/uk-hosts-senior-nato-leaders-to-discuss-nuclear-deterrence",
+      "citationText": "mod-press-office – UK Hosts Senior NATO Leaders to discuss Nuclear Deterrence"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/news/his-majesty-the-king-visits-northwood-headquarters",
+      "citationText": "mod-press-office – His Majesty The King visits Northwood Headquarters"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "birth-atomic-bomb",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Aaib Report Sportstar Slm",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-04T12:36:11.559Z"
+}

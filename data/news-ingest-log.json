@@ -3531,5 +3531,134 @@
     ],
     "publishedAt": "2025-09-19T00:00:00.000Z",
     "fetchedAt": "2026-03-04T01:13:37.880Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/mod-spending-over-25000-january-to-december-2026#2026-03-04T12:21:29Z",
+    "title": "Transparency data: MOD: spending over £25,000, January to December 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/mod-spending-over-25000-january-to-december-2026",
+    "summary": "Ministry of Defence reports on departmental spending over £25,000.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T12:21:29.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025#2026-03-04T10:11:02Z",
+    "title": "Transparency data: Military Court Service sentencing remarks 2025",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025",
+    "summary": "Transcripts of sentencing remarks from Service Court hearings in the Court Martial from 2025.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T10:11:02.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-court-centres-court-listings#2026-03-04T09:57:04Z",
+    "title": "Transparency data: Military court centres court listings",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-centres-court-listings",
+    "summary": "Court listings for the Military court centres.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T09:57:04.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/ministry-of-defence-police-misconduct-hearings#2026-03-04T09:56:44Z",
+    "title": "Ministry of Defence Police: misconduct hearings",
+    "sourceUrl": "https://www.gov.uk/guidance/ministry-of-defence-police-misconduct-hearings",
+    "summary": "Find out about misconduct hearings involving Ministry of Defence Police (MDP) officers and how to attend these public hearings.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T09:56:44.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/statistics/defence-statistics-pre-release-access-list#2026-03-04T09:30:02Z",
+    "title": "Official Statistics: MOD statistics pre-release access list",
+    "sourceUrl": "https://www.gov.uk/government/statistics/defence-statistics-pre-release-access-list",
+    "summary": "The individuals who have 24-hour, pre-release access to Ministry of Defence's key Official and Accredited Official Statistics publications.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T09:30:02.000Z",
+    "fetchedAt": "2026-03-04T12:36:03.445Z"
+  },
+  {
+    "sourceId": "hial-airports",
+    "sourceName": "Highlands and Islands Airports Ltd",
+    "guid": "https://www.hial.co.uk/news/article/240/minister-marks-hial-s-40th-anniversary-with-a-message",
+    "title": "Minister marks HIAL&#039;s 40th anniversary with a message",
+    "sourceUrl": "https://www.hial.co.uk/news/article/240/minister-marks-hial-s-40th-anniversary-with-a-message",
+    "summary": "Minister for Agriculture and Connectivity Jim Fairlie gave his thanks to staff past and present at Highlands and Islands Airports Ltd for their service to air passengers on its 40th anniversary.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-03-03T00:00:00.000Z",
+    "fetchedAt": "2026-03-04T12:36:04.028Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/a249-trunk-road-highways-act-order-2026#2026-03-04T10:50:36Z",
+    "title": "Decision: A249 trunk road: Highways Act order 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/a249-trunk-road-highways-act-order-2026",
+    "summary": "Confirmation of a trunking order for the A249 Key Street slip road in Kent.",
+    "categories": [
+      "Decision"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T10:50:36.000Z",
+    "fetchedAt": "2026-03-04T12:36:04.721Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/25905080.clarity-sought-whether-aircraft-used-iran-stopped-scotland/",
+    "title": "Clarity sought on whether aircraft used in Iran stopped in Scotland",
+    "sourceUrl": "https://www.heraldscotland.com/news/25905080.clarity-sought-whether-aircraft-used-iran-stopped-scotland/",
+    "summary": "The Scottish Government has asked the UK Government if any military aircraft used in operations in Iran had stopovers in the country.",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T12:36:09.846Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aviationbusinessnews.com/cargo/cargo-news/glasgow-prestwick-showcases-cool-chain-capability-to-india/",
+    "title": "Glasgow Prestwick showcases cool chain capability to India",
+    "sourceUrl": "https://www.aviationbusinessnews.com/cargo/cargo-news/glasgow-prestwick-showcases-cool-chain-capability-to-india/",
+    "summary": "Glasgow Prestwick Airport (PIK) has underlined its ambitions to capture a greater share of UK-India trade flows after hosting the Consul...",
+    "categories": [
+      "Aviation Business News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T12:36:09.846Z"
   }
 ]
