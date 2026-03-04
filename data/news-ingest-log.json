@@ -3345,5 +3345,191 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-03T12:35:50.721Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/uk-sends-warship-and-drone-busting-helicopters-to-the-eastern-mediterranean-to-protect-brits-and-allies-in-the-region#2026-03-03T17:14:51Z",
+    "title": "UK sends warship and drone-busting helicopters to the Eastern Mediterranean to protect Brits and allies in the region",
+    "sourceUrl": "https://www.gov.uk/government/news/uk-sends-warship-and-drone-busting-helicopters-to-the-eastern-mediterranean-to-protect-brits-and-allies-in-the-region",
+    "summary": "HMS Dragon set to sail to the Eastern Mediterranean to defend British interests and support the collective self-defence of our allies.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T17:14:51.000Z",
+    "fetchedAt": "2026-03-04T01:13:32.910Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/global-support-organisation-overseas-guides-healthcare-central-european-practice#2026-03-03T14:06:03Z",
+    "title": "Guidance: Global Support Organisation overseas guides: Healthcare - Defence Global Practice",
+    "sourceUrl": "https://www.gov.uk/government/publications/global-support-organisation-overseas-guides-healthcare-central-european-practice",
+    "summary": "A Global Support Organisation guide giving information on how to access healthcare while at post.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T14:06:03.000Z",
+    "fetchedAt": "2026-03-04T01:13:32.910Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/speeches/statement-following-the-nepalese-supreme-courts-judgment-on-gurkha-pensions#2026-03-03T13:21:12Z",
+    "title": "Statement following the Nepalese Supreme Court's Judgment on Gurkha Pensions",
+    "sourceUrl": "https://www.gov.uk/government/speeches/statement-following-the-nepalese-supreme-courts-judgment-on-gurkha-pensions",
+    "summary": "Statement following the Nepalese Supreme Court's Judgment on Gurkha Pensions",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T13:21:12.000Z",
+    "fetchedAt": "2026-03-04T01:13:32.910Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/news/271-million-to-clean-up-shipping-and-power-coastal-communities#2026-03-03T11:06:00Z",
+    "title": "£271 million to clean up shipping and power coastal communities",
+    "sourceUrl": "https://www.gov.uk/government/news/271-million-to-clean-up-shipping-and-power-coastal-communities",
+    "summary": "This funding will boost skilled jobs and coastal economies, and forms part of a £448 million commitment to clean maritime funding.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T11:06:00.000Z",
+    "fetchedAt": "2026-03-04T01:13:34.205Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/publications/aaib-current-field-investigations#2026-03-03T14:47:13Z",
+    "title": "Corporate report: AAIB Current field investigations",
+    "sourceUrl": "https://www.gov.uk/government/publications/aaib-current-field-investigations",
+    "summary": "Accidents and incidents under investigation by AAIB listed by date, giving a description and status of investigation",
+    "categories": [
+      "Corporate report"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-03T14:47:13.000Z",
+    "fetchedAt": "2026-03-04T01:13:34.218Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thescottishsun.co.uk/news/15992508/moment-huge-military-aircraft-lands-major-scots-stadium/",
+    "title": "Moment military aircraft lands at Scots stadium as public warned of RAF activity",
+    "sourceUrl": "https://www.thescottishsun.co.uk/news/15992508/moment-huge-military-aircraft-lands-major-scots-stadium/",
+    "summary": "THIS is the moment a huge military aircraft landed near a major Scottish stadium amid an RAF training exercise.",
+    "categories": [
+      "The Scottish Sun"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T01:13:37.880Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.johnogroat-journal.co.uk/news/wick-aberdeen-flights-going-from-strength-to-strength-as-t-428710/",
+    "title": "Wick/Aberdeen flights ‘going from strength to strength’ as talks continue on funding",
+    "sourceUrl": "https://www.johnogroat-journal.co.uk/news/wick-aberdeen-flights-going-from-strength-to-strength-as-t-428710/",
+    "summary": "An 18-seat aircraft is now flying between Wick and Aberdeen, replacing the seven-seater that was brought in temporarily by Air Charter...",
+    "categories": [
+      "John O'Groat Journal"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T01:13:37.880Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.expressandstar.com/uk-news/2026/03/03/clarity-sought-on-whether-aircraft-used-in-iran-operations-stopped-in-scotland/",
+    "title": "Clarity sought on whether aircraft used in Iran operations stopped in Scotland",
+    "sourceUrl": "https://www.expressandstar.com/uk-news/2026/03/03/clarity-sought-on-whether-aircraft-used-in-iran-operations-stopped-in-scotland/",
+    "summary": "The Scottish Government is seeking clarity from the UK Government as some airports in the country are used as stopover points for air...",
+    "categories": [
+      "Express & Star"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T01:13:37.880Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thenational.scot/news/25900419.edinburgh-locals-warned-gunshots-murrayfield/",
+    "title": "Why locals may hear gunshots and see military helicopters in Edinburgh on Tuesday",
+    "sourceUrl": "https://www.thenational.scot/news/25900419.edinburgh-locals-warned-gunshots-murrayfield/",
+    "summary": "POLICE have warned the public not to be alarmed if they hear gunshots and see armed police or military helicopters in Edinburgh on Tuesday.",
+    "categories": [
+      "TheNational.scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T01:13:37.880Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thenational.scot/news/25903887.scottish-government-seeks-clarity-us-planes-using-scottish-airports/",
+    "title": "Scottish Government ‘doesn’t know’ if US used Scottish airports in strikes on Iran",
+    "sourceUrl": "https://www.thenational.scot/news/25903887.scottish-government-seeks-clarity-us-planes-using-scottish-airports/",
+    "summary": "THE Scottish Government has confirmed it has “no information” on whether US aircraft passing through Scottish airports were involved in...",
+    "categories": [
+      "TheNational.scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T01:13:37.880Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.glasgowlive.co.uk/news/glasgow-news/scottish-government-ask-aircraft-used-33524882",
+    "title": "Scottish Government ask if aircraft used in Iran operations stopped at Glasgow Prestwick",
+    "sourceUrl": "https://www.glasgowlive.co.uk/news/glasgow-news/scottish-government-ask-aircraft-used-33524882",
+    "summary": "Speaking in the chamber on Tuesday (March 30), External Affairs Secretary Angus Robertson confirmed the Government is seeking clarity that...",
+    "categories": [
+      "Glasgow Live"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T01:13:37.880Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aircargonews.net/interviews/2025/12/e-commerce-elevates-glasgow-prestwick/",
+    "title": "E-commerce elevates Glasgow Prestwick",
+    "sourceUrl": "https://www.aircargonews.net/interviews/2025/12/e-commerce-elevates-glasgow-prestwick/",
+    "summary": "Prestwick's rapid pivot to e-commerce handling has seen China Southern, Air China Cargo and Beijing Capital launch scheduled services...",
+    "categories": [
+      "Air Cargo News"
+    ],
+    "publishedAt": "2025-12-05T00:00:00.000Z",
+    "fetchedAt": "2026-03-04T01:13:37.880Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.traveldailynews.com/aviation/united-airlines-increases-seat-capacity-on-glasgow-new-york-newark-route-for-summer-2026/",
+    "title": "United Airlines increases seat capacity on Glasgow–New York/Newark route for Summer 2026",
+    "sourceUrl": "https://www.traveldailynews.com/aviation/united-airlines-increases-seat-capacity-on-glasgow-new-york-newark-route-for-summer-2026/",
+    "summary": "United Airlines increases seat capacity on the Glasgow–New York/Newark route by over 22 per cent and extends the seasonal service to 24...",
+    "categories": [
+      "Travel Daily News International"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-04T01:13:37.880Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.businesstraveller.com/business-travel/global-airlines-outlines-inaugural-flights-from-glasgow-and-manchester-to-new-york/",
+    "title": "Global Airlines outlines inaugural flights from Glasgow and Manchester to New York",
+    "sourceUrl": "https://www.businesstraveller.com/business-travel/global-airlines-outlines-inaugural-flights-from-glasgow-and-manchester-to-new-york/",
+    "summary": "Global Airlines outlines inaugural flights from Glasgow and Manchester to New York ... Start-up carrier Global Airlines has announced plans to fly from Glasgow...",
+    "categories": [
+      "Business Traveller"
+    ],
+    "publishedAt": "2025-09-19T00:00:00.000Z",
+    "fetchedAt": "2026-03-04T01:13:37.880Z"
   }
 ]
