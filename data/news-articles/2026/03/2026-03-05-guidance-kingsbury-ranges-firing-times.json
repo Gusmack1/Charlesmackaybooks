@@ -1,0 +1,63 @@
+{
+  "slug": "2026-03-05-guidance-kingsbury-ranges-firing-times",
+  "title": "Guidance Kingsbury Ranges Firing Times",
+  "wordCount": 94,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Guidance: Kingsbury ranges firing times. Warning notice of firing at Kingsbury ranges.\n\nGuidance: Whittington ranges firing times. Warning notice of firing at Whittington ranges.\n\nTransparency data: Military court centres court listings. Court listings for the Military court centres."
+    },
+    {
+      "heading": "Context",
+      "content": "Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/kingsbury-ranges-firing-times",
+      "citationText": "mod-press-office – Guidance: Kingsbury ranges firing times"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/whittington-ranges-firing-times",
+      "citationText": "mod-press-office – Guidance: Whittington ranges firing times"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/military-court-centres-court-listings",
+      "citationText": "mod-press-office – Transparency data: Military court centres court listings"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Guidance Kingsbury Ranges Firing",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-05T12:38:55.421Z"
+}

@@ -1370,7 +1370,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-26T15:34:25.000Z",
     "fetchedAt": "2026-02-27T21:51:36.053Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-05-guidance-kingsbury-ranges-firing-times",
+    "articlePath": "data/news-articles/2026/03/2026-03-05-guidance-kingsbury-ranges-firing-times.json",
+    "draftedAt": "2026-03-05T12:38:55.422Z"
   },
   {
     "id": "047557e0-765b-416a-82a6-f02eea2dde6e",
@@ -1386,7 +1389,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-26T15:28:46.000Z",
     "fetchedAt": "2026-02-27T21:51:36.053Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-05-guidance-kingsbury-ranges-firing-times",
+    "articlePath": "data/news-articles/2026/03/2026-03-05-guidance-kingsbury-ranges-firing-times.json",
+    "draftedAt": "2026-03-05T12:38:55.422Z"
   },
   {
     "id": "7cc7996f-259d-445f-a8dd-dec53fde5d79",
@@ -1402,7 +1408,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-26T15:07:35.000Z",
     "fetchedAt": "2026-02-27T21:51:36.053Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-05-guidance-kingsbury-ranges-firing-times",
+    "articlePath": "data/news-articles/2026/03/2026-03-05-guidance-kingsbury-ranges-firing-times.json",
+    "draftedAt": "2026-03-05T12:38:55.422Z"
   },
   {
     "id": "16018dcd-84bf-4e4c-9e53-df4a508d344a",
@@ -4326,6 +4335,168 @@
     ],
     "publishedAt": "2025-05-27T00:00:00.000Z",
     "fetchedAt": "2026-03-05T01:15:46.933Z",
+    "status": "new"
+  },
+  {
+    "id": "8c610b4e-682c-4baa-9a60-8994eeab8a35",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/guidance/mod-engagement-with-trade-associations#2026-03-05T10:39:22Z",
+    "title": "MOD engagement with trade associations",
+    "sourceUrl": "https://www.gov.uk/guidance/mod-engagement-with-trade-associations",
+    "summary": "Information on the trade associations that defence procurement works with and alongside.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T10:39:22.000Z",
+    "fetchedAt": "2026-03-05T12:38:46.659Z",
+    "status": "new"
+  },
+  {
+    "id": "2411e624-ea89-4369-afed-3e193b30ae89",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/the-defence-ordnance-munitions-and-explosives-safety-regulator-dosr-regulatory-notices#2026-03-05T10:17:11Z",
+    "title": "Guidance: The Defence Ordnance, Munitions and Explosives Safety Regulator (DOSR) - Regulatory Notices",
+    "sourceUrl": "https://www.gov.uk/government/publications/the-defence-ordnance-munitions-and-explosives-safety-regulator-dosr-regulatory-notices",
+    "summary": "DOSR Regulatory Notices may detail new or revised safety criteria or parameters for scenarios under the remit of the DOSR.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T10:17:11.000Z",
+    "fetchedAt": "2026-03-05T12:38:46.659Z",
+    "status": "new"
+  },
+  {
+    "id": "8330a976-fa95-40d1-ab70-aa168c8fce0b",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/women-in-defence-charter#2026-03-05T10:12:03Z",
+    "title": "Policy paper: Women in defence charter",
+    "sourceUrl": "https://www.gov.uk/government/publications/women-in-defence-charter",
+    "summary": "A commitment to improving gender balance in defence.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T10:12:03.000Z",
+    "fetchedAt": "2026-03-05T12:38:46.659Z",
+    "status": "new"
+  },
+  {
+    "id": "571f6703-1220-416e-99a2-14fcb7e556d6",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/guidance/ministry-of-defence-sanctuary-awards#2026-03-05T10:02:37Z",
+    "title": "Ministry of Defence Sanctuary Awards",
+    "sourceUrl": "https://www.gov.uk/guidance/ministry-of-defence-sanctuary-awards",
+    "summary": "The annual Sanctuary Awards recognise outstanding conservation and sustainability efforts across the Ministry of Defence (MOD) estate.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T10:02:37.000Z",
+    "fetchedAt": "2026-03-05T12:38:46.659Z",
+    "status": "new"
+  },
+  {
+    "id": "b3c00120-bb8b-4cc0-a6c5-6e55b3a43ff7",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/statistics/uk-defence-export-statistics-2024#2026-03-05T09:30:05Z",
+    "title": "Official Statistics: UK Defence Export Statistics 2024",
+    "sourceUrl": "https://www.gov.uk/government/statistics/uk-defence-export-statistics-2024",
+    "summary": "Information and trends on UK defence exports over the period from 2013 to 2024.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T09:30:05.000Z",
+    "fetchedAt": "2026-03-05T12:38:46.659Z",
+    "status": "new"
+  },
+  {
+    "id": "a39e8c45-bdbd-4155-b0c3-b9ee27da2269",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/concessionary-bus-travel-applications-proforma#2026-03-05T09:30:02Z",
+    "title": "Guidance: How bus operators can appeal concessionary fare scheme reimbursement levels",
+    "sourceUrl": "https://www.gov.uk/government/publications/concessionary-bus-travel-applications-proforma",
+    "summary": "Guidance for bus operators to appeal the level of reimbursement payments or participation in concessionary fare schemes.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T09:30:02.000Z",
+    "fetchedAt": "2026-03-05T12:38:47.699Z",
+    "status": "new"
+  },
+  {
+    "id": "7c4920c4-05ed-4e20-ae6e-4e34c8193e2c",
+    "sourceId": "aaib-bulletins",
+    "guid": "https://www.gov.uk/government/news/aaib-report-atr-42-500-g-lmrc#2026-03-05T10:00:49Z",
+    "title": "AAIB Report: ATR 42-500, G-LMRC",
+    "sourceUrl": "https://www.gov.uk/government/news/aaib-report-atr-42-500-g-lmrc",
+    "summary": "Loss of multiple flight deck displays, during climb 14 nm north-east of Aberdeen Airport, 27 August 2022",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T10:00:49.000Z",
+    "fetchedAt": "2026-03-05T12:38:47.940Z",
+    "status": "new"
+  },
+  {
+    "id": "c1ccec3d-ffe2-4396-a42b-94ea047d25b3",
+    "sourceId": "aaib-bulletins",
+    "guid": "https://www.gov.uk/aaib-reports/aaib-investigation-to-atr-42-500-g-lmrc#2026-03-05T10:00:09Z",
+    "title": "AAIB investigation to ATR 42-500, G-LMRC",
+    "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-atr-42-500-g-lmrc",
+    "summary": "ATR 42-500 (G-LMRC), loss of multiple flight deck displays, during climb 14 nm north-east of Aberdeen Airport, 27 August 2022",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T10:00:09.000Z",
+    "fetchedAt": "2026-03-05T12:38:47.940Z",
+    "status": "new"
+  },
+  {
+    "id": "6ca76210-dc7e-40b0-8b26-74382db96b83",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.heraldscotland.com/news/25910376.airline-move-daily-china-flights-scotland/",
+    "title": "Airline to move to daily China flights from Scotland",
+    "sourceUrl": "https://www.heraldscotland.com/news/25910376.airline-move-daily-china-flights-scotland/",
+    "summary": "An airline is set to grow its presence at a Scottish airport by adding more flights to China. Hainan Airlines operates direct flights...",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-05T12:38:53.521Z",
+    "status": "new"
+  },
+  {
+    "id": "0e813b21-8193-42e7-b5b9-ae16afe9048b",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://news.stv.tv/scotland/clarity-sought-on-whether-aircraft-used-in-iran-operations-stopped-in-scotland",
+    "title": "Clarity sought on whether aircraft used in Iran operations stopped in Scotland",
+    "sourceUrl": "https://news.stv.tv/scotland/clarity-sought-on-whether-aircraft-used-in-iran-operations-stopped-in-scotland",
+    "summary": "The Scottish Government is seeking clarity from the UK Government as some airports in the country are used as stopover points for air...",
+    "categories": [
+      "STV News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-05T12:38:53.521Z",
+    "status": "new"
+  },
+  {
+    "id": "4ee49343-5b4e-4bdc-90d2-5d926de71cdf",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.thescottishsun.co.uk/news/15999783/us-military-plane-scots-airport-iran-war/",
+    "title": "Huge US military planes stop at Scots airport amid war with Iran",
+    "sourceUrl": "https://www.thescottishsun.co.uk/news/15999783/us-military-plane-scots-airport-iran-war/",
+    "summary": "HUGE US military planes have been spotted landing at Prestwick amid the war with Iran. The Scots airport has been a major hub for American.",
+    "categories": [
+      "The Scottish Sun"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-05T12:38:53.521Z",
     "status": "new"
   }
 ]
