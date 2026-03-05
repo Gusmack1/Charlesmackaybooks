@@ -3660,5 +3660,169 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-04T12:36:09.846Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-low-flying-air-weapons-ranges-activity#2026-03-04T16:40:08Z",
+    "title": "Guidance: Military low flying: air weapons ranges activity",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-low-flying-air-weapons-ranges-activity",
+    "summary": "Notification of extended operating hours and low flying activities for UK air weapons ranges: Donna Nook, Holbeach, Pembrey Sands, Tain and Cape Wrath.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T16:40:08.000Z",
+    "fetchedAt": "2026-03-05T01:15:41.754Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-low-flying-mod-sponsored-air-exercises#2026-03-04T15:31:29Z",
+    "title": "Guidance: Military low flying: MOD sponsored air exercises",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-low-flying-mod-sponsored-air-exercises",
+    "summary": "MOD sponsored low flying exercises within the UK low flying system.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T15:31:29.000Z",
+    "fetchedAt": "2026-03-05T01:15:41.755Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable#2026-03-04T15:29:36Z",
+    "title": "Guidance: Military low flying: RAF operational low flying training timetable",
+    "sourceUrl": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable",
+    "summary": "Royal Air Force (RAF) operational low flying training timetables in 3 areas of the UK.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T15:29:36.000Z",
+    "fetchedAt": "2026-03-05T01:15:41.755Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/air-safety-management-system-overview-asmso#2026-03-04T14:59:48Z",
+    "title": "Guidance: Air safety management system overview (ASMsO)",
+    "sourceUrl": "https://www.gov.uk/government/publications/air-safety-management-system-overview-asmso",
+    "summary": "This course is the first step to understanding the topic of Air Safety Management Systems (SMS) and provides an introduction to their use and management.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-04T14:59:48.000Z",
+    "fetchedAt": "2026-03-05T01:15:41.755Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dailyrecord.co.uk/news/scottish-news/first-emirates-dubai-flight-arrive-36813832",
+    "title": "First Emirates Dubai flight to arrive in Scotland after tourists flee Iran drone strikes",
+    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/first-emirates-dubai-flight-arrive-36813832",
+    "summary": "The conflict between Iran and the US/Israel forced airlines to ground planes across the Middle East until today.",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-05T01:15:46.933Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/25906304.us-plane-went-middle-east-prestwick-airport-stop/",
+    "title": "US military plane uses Prestwick Airport before flying to the Middle East",
+    "sourceUrl": "https://www.heraldscotland.com/news/25906304.us-plane-went-middle-east-prestwick-airport-stop/",
+    "summary": "'Clear answers' have been demanded after a U.S military plane stopped at Prestwick Airport on the way to the Middle East amid the ongoing...",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-05T01:15:46.933Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ayradvertiser.com/news/25907464.military-aircraft-middle-east-prestwick-airport/",
+    "title": "Special military aircraft from Middle East turns heads at Prestwick Airport",
+    "sourceUrl": "https://www.ayradvertiser.com/news/25907464.military-aircraft-middle-east-prestwick-airport/",
+    "summary": "The United Arab Emirates Air Force C-17A Globemaster passed by our photographer Charlie Gilmour. The aircraft has been in service since 2012...",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-05T01:15:46.933Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aircargonews.net/cargo-airport/2025/11/air-china-cargo-adds-new-uk-freighter-flights/",
+    "title": "Air China Cargo adds new UK freighter flights",
+    "sourceUrl": "https://www.aircargonews.net/cargo-airport/2025/11/air-china-cargo-adds-new-uk-freighter-flights/",
+    "summary": "Scottish airport reports transformational year with three new cargo operators and 200 jobs created as China links strengthen across multiple...",
+    "categories": [
+      "Air Cargo News"
+    ],
+    "publishedAt": "2025-11-26T00:00:00.000Z",
+    "fetchedAt": "2026-03-05T01:15:46.933Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aviationbusinessnews.com/cargo/cargo-news/employment-boost-at-glasgow-prestwick-following-e-commerce-growth/",
+    "title": "Employment boost at Glasgow Prestwick following e-commerce growth",
+    "sourceUrl": "https://www.aviationbusinessnews.com/cargo/cargo-news/employment-boost-at-glasgow-prestwick-following-e-commerce-growth/",
+    "summary": "Glasgow Prestwick Airport (PIK) has reported a significant rise in job numbers following recent growth in e-commerce industry activity.",
+    "categories": [
+      "Aviation Business News"
+    ],
+    "publishedAt": "2025-08-15T00:00:00.000Z",
+    "fetchedAt": "2026-03-05T01:15:46.933Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://travelradar.aero/glasgow-prestwick-airport-named-air-freight-business-of-the-year/",
+    "title": "Glasgow Prestwick Airport Named Air Freight Business of the Year",
+    "sourceUrl": "https://travelradar.aero/glasgow-prestwick-airport-named-air-freight-business-of-the-year/",
+    "summary": "Glasgow Prestwick Airport has been named Air Freight Business of the Year after strengthening trade links and sustainable cargo growth.",
+    "categories": [
+      "Travel Radar"
+    ],
+    "publishedAt": "2025-12-14T00:00:00.000Z",
+    "fetchedAt": "2026-03-05T01:15:46.933Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://simpleflying.com/united-airlines-doubles-boeing-737-max-8-routes-to-europe-adds-new-longest-flights/",
+    "title": "United Airlines Doubles Boeing 737 MAX 8 Routes To Europe & Adds New Longest Flights",
+    "sourceUrl": "https://simpleflying.com/united-airlines-doubles-boeing-737-max-8-routes-to-europe-adds-new-longest-flights/",
+    "summary": "On October 9, United Airlines unveiled five new and returning European routes. They are all from its East Coast hubs.",
+    "categories": [
+      "Simple Flying"
+    ],
+    "publishedAt": "2025-10-10T00:00:00.000Z",
+    "fetchedAt": "2026-03-05T01:15:46.933Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/articles/cd90k201902o",
+    "title": "Summer strike threat at Glasgow and Edinburgh airports over pay",
+    "sourceUrl": "https://www.bbc.com/news/articles/cd90k201902o",
+    "summary": "Unite says industrial action is possible after ground crew rejected pay offers from Menzies Aviation.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2025-05-27T00:00:00.000Z",
+    "fetchedAt": "2026-03-05T01:15:46.933Z"
   }
 ]
