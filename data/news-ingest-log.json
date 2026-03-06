@@ -3975,5 +3975,243 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-05T12:38:53.521Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/veterans-news-and-communications-hub#2026-03-05T16:35:29Z",
+    "title": "Veterans News and Communications Hub",
+    "sourceUrl": "https://www.gov.uk/guidance/veterans-news-and-communications-hub",
+    "summary": "The Hub enables forces-friendly organisations across all sectors to showcase the continued value of the UK’s highly skilled veteran community.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T16:35:29.000Z",
+    "fetchedAt": "2026-03-06T01:19:16.351Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/global-support-organisation-overseas-guides-scandinavia#2026-03-05T16:13:24Z",
+    "title": "Guidance: Global Support Organisation overseas guides: Scandinavia",
+    "sourceUrl": "https://www.gov.uk/government/publications/global-support-organisation-overseas-guides-scandinavia",
+    "summary": "A Global Support Organisation location guide.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T16:13:24.000Z",
+    "fetchedAt": "2026-03-06T01:19:16.351Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/dartmoor-firing-programme#2026-03-05T12:59:43Z",
+    "title": "Guidance: Dartmoor firing times",
+    "sourceUrl": "https://www.gov.uk/government/publications/dartmoor-firing-programme",
+    "summary": "Information on Dartmoor Training Area's firing times.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-05T12:59:43.000Z",
+    "fetchedAt": "2026-03-06T01:19:16.351Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.travelandtourworld.com/news/article/ryanair-flight-boeing-737-800-from-pisa-to-scotland-sparks-alarm-after-emergency-landing-with-just-minutes-of-fuel-remaining-amid-powerful-winds-caused-by-storm-amy-investigation-results-are-here/",
+    "title": "Ryanair Flight Boeing 737-800 from Pisa to Scotland Sparks Alarm After Emergency Landing With Just Minutes of Fuel Remaining Amid Powerful Winds Caused By Storm Amy: Investigation Results are Here",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/ryanair-flight-boeing-737-800-from-pisa-to-scotland-sparks-alarm-after-emergency-landing-with-just-minutes-of-fuel-remaining-amid-powerful-winds-caused-by-storm-amy-investigation-results-are-here/",
+    "summary": "Ryanair Flight Boeing 737-800 from Pisa to Scotland has suddenly sparked alarm across the aviation world after an emergency landing with...",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.249Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.traveldailymedia.com/minister-celebrates-hials-40th-anniversary/",
+    "title": "Minister celebrates HIAL’s 40th anniversary",
+    "sourceUrl": "https://www.traveldailymedia.com/minister-celebrates-hials-40th-anniversary/",
+    "summary": "Highlands and Islands Airports Limited (HIAL) is marking its 40th anniversary, with Jim Fairlie extending his gratitude to the staff.",
+    "categories": [
+      "Travel Daily Media"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://uk.news.yahoo.com/airline-move-daily-china-flights-113209179.html",
+    "title": "Airline to move to daily China flights from Scotland",
+    "sourceUrl": "https://uk.news.yahoo.com/airline-move-daily-china-flights-113209179.html",
+    "summary": "An airline is set to grow its presence at a Scottish airport by adding more flights to China. Hainan Airlines operates direct flights...",
+    "categories": [
+      "Yahoo News UK"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thescottishsun.co.uk/travel/16001441/ryanair-flight-scotland-low-fuel-scare/",
+    "title": "Ryanair flight to Scotland suffers 'low fuel' scare, with minutes left on tank",
+    "sourceUrl": "https://www.thescottishsun.co.uk/travel/16001441/ryanair-flight-scotland-low-fuel-scare/",
+    "summary": "An investigation is underway after a plane that was diverted from two Scots airports landed with fuel levels below its 'final reserve'. The.",
+    "categories": [
+      "The Scottish Sun"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thetraveler.org/storm-amy-ryanair-fuel-scare-investigators-reveal-findings/",
+    "title": "Storm Amy Ryanair Fuel Scare: Investigators Reveal Findings",
+    "sourceUrl": "https://www.thetraveler.org/storm-amy-ryanair-fuel-scare-investigators-reveal-findings/",
+    "summary": "Investigators detail how a Ryanair Pisa–Scotland flight ended with minutes of fuel left after violent Storm Amy winds forced repeated...",
+    "categories": [
+      "https://www.thetraveler.org/"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ch-aviation.com/news/163381-air-charter-scotland-diversifies-into-turboprops",
+    "title": "Air Charter Scotland diversifies into turboprops",
+    "sourceUrl": "https://www.ch-aviation.com/news/163381-air-charter-scotland-diversifies-into-turboprops",
+    "summary": "Air Charter Scotland diversifies into turboprops · Air Charter Scotland wins PSO for maiden scheduled route · US DOT updates foreign air carrier permits,...",
+    "categories": [
+      "ch-aviation"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/25910806.raf-plane-flies-along-russian-border-leaving-scotland/",
+    "title": "RAF surveillance plane from Scotland conducts operations along Russian border",
+    "sourceUrl": "https://www.heraldscotland.com/news/25910806.raf-plane-flies-along-russian-border-leaving-scotland/",
+    "summary": "An RAF surveillance plane which took off from Scotland flew along the Russian border on Wednesday. A Boeing Poseidon MRA1 carried out...",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://uk.news.yahoo.com/us-military-planes-spotted-prestwick-131337783.html",
+    "title": "US military planes spotted at Prestwick airport amid war with Iran",
+    "sourceUrl": "https://uk.news.yahoo.com/us-military-planes-spotted-prestwick-131337783.html",
+    "summary": "The aircraft has been spotted landing at Glasgow Prestwick - which has previously been a major hub for American forces jetting across the...",
+    "categories": [
+      "Yahoo News UK"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thenational.scot/news/25910804.military-aircraft-middle-east-prestwick-airport/",
+    "title": "Special military aircraft from Middle East spotted at Prestwick Airport",
+    "sourceUrl": "https://www.thenational.scot/news/25910804.military-aircraft-middle-east-prestwick-airport/",
+    "summary": "The United Arab Emirates Air Force C-17A Globemaster passed by our photographer Charlie Gilmour. The aircraft has been in service since 2012...",
+    "categories": [
+      "TheNational.scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://greens.scot/news/scottish-government-urged-to-kick-trump-s-troops-out-of-prestwick-immediately",
+    "title": "Scottish Government urged to kick Trump’s troops out of Prestwick immediately",
+    "sourceUrl": "https://greens.scot/news/scottish-government-urged-to-kick-trump-s-troops-out-of-prestwick-immediately",
+    "summary": "The First Minister must ban Donald Trump's troops from using Prestwick and other government owned airports, says Scottish Green Co-leader...",
+    "categories": [
+      "Scottish Greens"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ayradvertiser.com/news/25911023.first-minister-urged-kick-us-troops-prestwick-airport/",
+    "title": "First Minister urged to kick US troops out of Prestwick Airport after Iran bombings",
+    "sourceUrl": "https://www.ayradvertiser.com/news/25911023.first-minister-urged-kick-us-troops-prestwick-airport/",
+    "summary": "The First Minister has once again been urged to kick US troops out of Prestwick Airport, following the country's bombing of Iran.",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.deadlinenews.co.uk/2026/03/05/greens-call-on-swinney-to-ban-us-military-from-prestwick-airport/",
+    "title": "Greens call on Swinney to ban US Military from Prestwick Airport",
+    "sourceUrl": "https://www.deadlinenews.co.uk/2026/03/05/greens-call-on-swinney-to-ban-us-military-from-prestwick-airport/",
+    "summary": "The Scottish Greens have called on John Swinney to ban the US military from using Prestwick Airport to launch its attacks against Iran.",
+    "categories": [
+      "Deadline News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thenational.scot/news/25911002.ross-greer-accuses-fm-sitting-hands-us-uses-prestwick/",
+    "title": "John Swinney accused of 'sitting on his hands' while US uses Prestwick Airport",
+    "sourceUrl": "https://www.thenational.scot/news/25911002.ross-greer-accuses-fm-sitting-hands-us-uses-prestwick/",
+    "summary": "JOHN Swinney has been urged to ban US troops from Scottish Government-owned airports amid the US-Israeli war on Iran ...",
+    "categories": [
+      "TheNational.scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://aviationsourcenews.com/aer-lingus-unveils-expanded-summer-schedule-for-cork/",
+    "title": "Aer Lingus Unveils Expanded Summer Schedule for Cork",
+    "sourceUrl": "https://aviationsourcenews.com/aer-lingus-unveils-expanded-summer-schedule-for-cork/",
+    "summary": "Aer Lingus will expand its summer scheduling from Cork, adding two new routes to Nice on the French Riveria and Santiago de Compostela in...",
+    "categories": [
+      "AviationSource News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.glasgowchamberofcommerce.com/news/news/2026/february/05/united-airlines-increases-seat-offer-on-glasgow-new-yorknewark-service-by-22-per-cent-for-summer-2026/",
+    "title": "United Airlines Increases Seat Offer on Glasgow - New York/Newark Service by 22 per cent for Summer 2026",
+    "sourceUrl": "https://www.glasgowchamberofcommerce.com/news/news/2026/february/05/united-airlines-increases-seat-offer-on-glasgow-new-yorknewark-service-by-22-per-cent-for-summer-2026/",
+    "summary": "05 Feb 2026. United Airlines today announced an extension of its new nonstop seasonal service between Glasgow and New York/Newark, offering a more than 22...",
+    "categories": [
+      "Glasgow Chamber of Commerce"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T01:19:21.250Z"
   }
 ]

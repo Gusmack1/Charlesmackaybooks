@@ -1,0 +1,75 @@
+{
+  "slug": "2026-03-06-promotional-material-find-opportunities-",
+  "title": "Promotional Material Find Opportunities",
+  "wordCount": 129,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Promotional material: Find opportunities to become a supplier with the Ministry of Defence. Leaflet explaining how suppliers can work with the Ministry of Defence (MOD).\n\nCorporate report: Service Inquiry into the support provided to Army victims of sexual assault. The Service Inquiry report into the support provided to Army victims of sexual assault.\n\nGuidance: Afghan Relocations and Assistance Policy. Information and guidance on the Afghan Relocations and Assistance Policy."
+    },
+    {
+      "heading": "Context",
+      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/find-opportunities-to-become-a-supplier-with-the-ministry-of-defence",
+      "citationText": "mod-press-office – Promotional material: Find opportunities to become a supplier with the Ministry of Defence"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/service-inquiry-into-the-support-provided-to-army-victims-of-sexual-assault",
+      "citationText": "mod-press-office – Corporate report: Service Inquiry into the support provided to Army victims of sexual assault"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/afghan-relocations-and-assistance-policy",
+      "citationText": "mod-press-office – Guidance: Afghan Relocations and Assistance Policy"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aviation",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-06T01:19:22.959Z"
+}
