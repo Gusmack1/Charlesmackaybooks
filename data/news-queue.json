@@ -1484,7 +1484,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-26T09:30:15.000Z",
     "fetchedAt": "2026-02-27T21:51:36.053Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-06-accredited-official-statistics-uk-armed-",
+    "articlePath": "data/news-articles/2026/03/2026-03-06-accredited-official-statistics-uk-armed-.json",
+    "draftedAt": "2026-03-06T12:34:44.114Z"
   },
   {
     "id": "66450304-ae6d-4585-86db-b68379099459",
@@ -1498,7 +1501,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-26T00:01:00.000Z",
     "fetchedAt": "2026-02-27T21:51:36.053Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-06-accredited-official-statistics-uk-armed-",
+    "articlePath": "data/news-articles/2026/03/2026-03-06-accredited-official-statistics-uk-armed-.json",
+    "draftedAt": "2026-03-06T12:34:44.114Z"
   },
   {
     "id": "7934b184-7cbd-4783-be6d-1c2833eba3dd",
@@ -1514,7 +1520,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-25T15:52:42.000Z",
     "fetchedAt": "2026-02-27T21:51:36.053Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-06-accredited-official-statistics-uk-armed-",
+    "articlePath": "data/news-articles/2026/03/2026-03-06-accredited-official-statistics-uk-armed-.json",
+    "draftedAt": "2026-03-06T12:34:44.114Z"
   },
   {
     "id": "0d573f51-9555-4a92-839e-a241e09182f5",
@@ -4762,6 +4771,106 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-06T01:19:21.250Z",
+    "status": "new"
+  },
+  {
+    "id": "d4d98b33-2c1b-4730-a343-1ae81ff7d23c",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/contractor-flying-approved-organizations-scheme-basic-remotely-piloted-air-systems-cfaosbr#2026-03-06T10:28:15Z",
+    "title": "Guidance: Contractor Flying Approved Organizations Scheme (Basic Uncrewed Air Systems) (CFAOS(BU))",
+    "sourceUrl": "https://www.gov.uk/government/publications/contractor-flying-approved-organizations-scheme-basic-remotely-piloted-air-systems-cfaosbr",
+    "summary": "Information about the Military Aviation Authority (MAA) contractor Flying Approved Organization Scheme (Basic Uncrewed Air Systems) (CFAOS(BU)).",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-06T10:28:15.000Z",
+    "fetchedAt": "2026-03-06T12:34:38.373Z",
+    "status": "new"
+  },
+  {
+    "id": "0a84286a-caa8-4a37-8294-b59a437a458f",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/guidance/cyber-security-model#2026-03-06T09:31:57Z",
+    "title": "Cyber Security Model",
+    "sourceUrl": "https://www.gov.uk/guidance/cyber-security-model",
+    "summary": "Information on the Ministry of Defence Cyber Security Model (CSM), including the standards and guidance for suppliers to meet CSM version 4.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-06T09:31:57.000Z",
+    "fetchedAt": "2026-03-06T12:34:38.373Z",
+    "status": "new"
+  },
+  {
+    "id": "2fc999d1-ed1c-4046-b852-a286e6ff7ada",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.businessairportinternational.com/news/air-charter-scotland-adds-capacity-on-wick-aberdeen-route.html",
+    "title": "Air Charter Scotland adds capacity on Wick-Aberdeen route",
+    "sourceUrl": "https://www.businessairportinternational.com/news/air-charter-scotland-adds-capacity-on-wick-aberdeen-route.html",
+    "summary": "Air Charter Scotland has increased capacity on the Wick-Aberdeen-Wick Public Service Obligation (PSO) route, introducing a Jetstream J32...",
+    "categories": [
+      "Business Airport International"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T12:34:42.969Z",
+    "status": "new"
+  },
+  {
+    "id": "37dccd3c-90be-452d-ad25-756ceeaafc68",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.laranews.net/air-charter-scotland-adds-extra-capacity-to-aberdeen-wick-pso-route/",
+    "title": "Air Charter Scotland adds extra capacity to Aberdeen-Wick PSO route",
+    "sourceUrl": "https://www.laranews.net/air-charter-scotland-adds-extra-capacity-to-aberdeen-wick-pso-route/",
+    "summary": "The J32, operating under a wet lease from AIS Airlines of the Netherlands, is now departing Wick-Aberdeen at 08:00 and Aberdeen-Wick at...",
+    "categories": [
+      "laranews.net"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T12:34:42.969Z",
+    "status": "new"
+  },
+  {
+    "id": "2e249347-5bf2-48f5-92e7-b4a67a1f38ce",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://travelweekly.co.uk/news/araises-capacity-on-scottish-lifeline-air-link",
+    "title": "Airline raises capacity on Scottish lifeline air link",
+    "sourceUrl": "https://travelweekly.co.uk/news/araises-capacity-on-scottish-lifeline-air-link",
+    "summary": "Air Charter Scotland has deployed a leased Jetstream aircraft on the Aberdeen-Wick route, operated under a Public Service Obligation (PSO)...",
+    "categories": [
+      "Travel Weekly - Home"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T12:34:42.969Z",
+    "status": "new"
+  },
+  {
+    "id": "e635b8af-f91d-4a6a-8029-b47c980b3c58",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.adsadvance.co.uk/air-charter-scotland-ups-aberdeen-wick-pso-route-capacity-with-jetstream-j32.html",
+    "title": "Air Charter Scotland ups Aberdeen-Wick PSO route capacity with Jetstream J32",
+    "sourceUrl": "https://www.adsadvance.co.uk/air-charter-scotland-ups-aberdeen-wick-pso-route-capacity-with-jetstream-j32.html",
+    "summary": "Air Charter Scotland has added 10 more seats daily (Monday to Friday and Sunday) on the Wick-Aberdeen-Wick Public Service Obligation route,...",
+    "categories": [
+      "ADS Advance"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T12:34:42.969Z",
+    "status": "new"
+  },
+  {
+    "id": "3bed8d06-07d4-45b6-b700-ce8e88a3b0f3",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.raf.mod.uk/news/articles/spitfire-flights-mark-90th-anniversary-of-first-flight/",
+    "title": "Spitfire Flights Mark 90th Anniversary of First Flight",
+    "sourceUrl": "https://www.raf.mod.uk/news/articles/spitfire-flights-mark-90th-anniversary-of-first-flight/",
+    "summary": "A series of commemorative flights will take place across the UK to mark 90 years since the first flight of the Supermarine Spitfire.",
+    "categories": [
+      "Royal Air Force"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-06T12:34:42.969Z",
     "status": "new"
   }
 ]

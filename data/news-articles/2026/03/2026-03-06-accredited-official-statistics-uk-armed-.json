@@ -1,0 +1,75 @@
+{
+  "slug": "2026-03-06-accredited-official-statistics-uk-armed-",
+  "title": "Accredited Official Statistics UK Armed",
+  "wordCount": 142,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Accredited official statistics: UK armed forces biannual diversity statistics: October 2025. This is a biannual publication containing statistics on diversity declaration and representation of protected characteristics for military personnel employed by the Ministry of Defence.\n\nNew drone factory opens in Suffolk to boost Ukraine's Armed Forces against Russia's war. Ukraine’s Armed Forces will be able to better defend itself against Russia’s brutal attacks.\n\nGuidance: Military low flying: MOD sponsored air exercises. MOD sponsored low flying exercises within the UK low flying system."
+    },
+    {
+      "heading": "Context",
+      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/statistics/uk-armed-forces-biannual-diversity-statistics-october-2025",
+      "citationText": "mod-press-office – Accredited official statistics: UK armed forces biannual diversity statistics: October 2025"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/news/new-drone-factory-opens-in-suffolk-to-boost-ukraines-armed-forces-against-russias-war",
+      "citationText": "mod-press-office – New drone factory opens in Suffolk to boost Ukraine's Armed Forces against Russia's war"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/military-low-flying-mod-sponsored-air-exercises",
+      "citationText": "mod-press-office – Guidance: Military low flying: MOD sponsored air exercises"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aviation",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-06T12:34:44.113Z"
+}
