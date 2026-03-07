@@ -1,0 +1,75 @@
+{
+  "slug": "2026-03-07-regulation-manual-of-airworthiness-maint",
+  "title": "Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D)",
+  "wordCount": 140,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D). The MAM-D is a comprehensive list of Defence Aviation Environment engineering documentation, processes and Instructions for Use.\n\nOfficial Statistics: MOD statistics pre-release access list. The individuals who have 24-hour, pre-release access to Ministry of Defence's key Official and Accredited Official Statistics publications.\n\nFinal piece in place for defence support transformation. The National Armaments Director (NAD) Group has awarded the third and final major contract within the Business Modernisation for Support (BMfS) programme."
+    },
+    {
+      "heading": "Context",
+      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/manual-of-airworthiness-maintenance-documentation-mam-d",
+      "citationText": "mod-press-office – Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D)"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/statistics/defence-statistics-pre-release-access-list",
+      "citationText": "mod-press-office – Official Statistics: MOD statistics pre-release access list"
+    },
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/news/final-piece-in-place-for-defence-support-transformation",
+      "citationText": "mod-press-office – Final piece in place for defence support transformation"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aviation",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-07T12:28:03.337Z"
+}

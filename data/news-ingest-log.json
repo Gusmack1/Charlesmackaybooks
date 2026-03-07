@@ -4418,5 +4418,122 @@
     ],
     "publishedAt": "2025-12-03T00:00:00.000Z",
     "fetchedAt": "2026-03-07T01:11:05.623Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.co.uk/news/articles/c3wl357038go",
+    "title": "New plane offers more seats on Wick to Aberdeen flights",
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c3wl357038go",
+    "summary": "The number of seats available on the \"lifeline\" service has increased from seven to 18.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-07T12:28:01.728Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/national/25913030.david-lammy-raf-jets-legally-strike-irans-missile-bases/",
+    "title": "David Lammy: RAF jets could legally strike Iran’s missile bases",
+    "sourceUrl": "https://www.heraldscotland.com/news/national/25913030.david-lammy-raf-jets-legally-strike-irans-missile-bases/",
+    "summary": "The Deputy Prime Minister's comments came after Defence Secretary John Healey refused to rule out expanding the RAF's role.",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-07T12:28:01.728Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.rafmuseum.org.uk/news/new-scottish-aviation-and-stem-website-launched/",
+    "title": "New Scottish Aviation and STEM Website launched",
+    "sourceUrl": "https://www.rafmuseum.org.uk/news/new-scottish-aviation-and-stem-website-launched/",
+    "summary": "The Scottish Aviation & STEM Trail is the result of over 3 years of work by the RAF in Scotland, including the Scottish University Air Squadrons, Air Cadets and...",
+    "categories": [
+      "RAF Museum"
+    ],
+    "publishedAt": "2025-05-07T00:00:00.000Z",
+    "fetchedAt": "2026-03-07T12:28:01.728Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.co.uk/news/articles/c62nqjj29jgo",
+    "title": "US planes land at Scottish airport during operation to seize tanker",
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c62nqjj29jgo",
+    "summary": "Three U-28A Dracos - used by the US Air Force special operations command - stopped at Scottish -government owned Wick airport before heading...",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2026-01-07T00:00:00.000Z",
+    "fetchedAt": "2026-03-07T12:28:01.728Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://nen.press/raf-benevolent-fund-launches-valentine-for-a-veteran-campaign/",
+    "title": "RAF Benevolent Fund launches ‘Valentine for a Veteran’ campaign – The NEN",
+    "sourceUrl": "https://nen.press/raf-benevolent-fund-launches-valentine-for-a-veteran-campaign/",
+    "summary": "The RAF Benevolent Fund has launched a new campaign in Scotland, Valentine for a Veteran, highlighting the impact of loneliness and...",
+    "categories": [
+      "The NEN - North Edinburgh News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-07T12:28:01.728Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/articles/cze0xj0n7jpo",
+    "title": "Swinney would 'consider' US military plane ban from Prestwick Airport",
+    "sourceUrl": "https://www.bbc.com/news/articles/cze0xj0n7jpo",
+    "summary": "The first minister says he wants clarity from the UK government about whether the planes were involved in the US-Israeli action in the...",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-07T12:28:01.728Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dailyrecord.co.uk/news/scottish-news/john-swinney-would-consider-banning-36831248",
+    "title": "John Swinney would 'consider' banning US military planes from Prestwick Airport",
+    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/john-swinney-would-consider-banning-36831248",
+    "summary": "\"We're seeking clarity from the United Kingdom government about the purpose of American flights that are coming in and out of Prestwick,...",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-07T12:28:01.728Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thenational.scot/news/25916781.john-swinney-may-consider-banning-us-military-prestwick-airport/",
+    "title": "John Swinney would 'consider' banning US military from Prestwick Airport",
+    "sourceUrl": "https://www.thenational.scot/news/25916781.john-swinney-may-consider-banning-us-military-prestwick-airport/",
+    "summary": "John Swinney has said he would 'consider' banning US military aircraft from using Prestwick Airport if it was confirmed they were involved...",
+    "categories": [
+      "Thenational Scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-07T12:28:01.728Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.glasgowtimes.co.uk/news/scottish-news/25916880.swinney-consider-banning-us-military-prestwick-airport/",
+    "title": "John Swinney would 'consider' banning US military aircraft from Prestwick Airport",
+    "sourceUrl": "https://www.glasgowtimes.co.uk/news/scottish-news/25916880.swinney-consider-banning-us-military-prestwick-airport/",
+    "summary": "First Minister John Swinney has said he would \"consider\" banning US military aircraft from using Prestwick Airport if it was confirmed…",
+    "categories": [
+      "Glasgow Times"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-07T12:28:01.728Z"
   }
 ]
