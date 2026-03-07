@@ -4306,5 +4306,117 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-06T12:34:42.969Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/uk-reveals-military-maintenance-facilities-in-ukraine-for-first-time#2026-03-07T00:01:04Z",
+    "title": "UK reveals military maintenance facilities in Ukraine for first time",
+    "sourceUrl": "https://www.gov.uk/government/news/uk-reveals-military-maintenance-facilities-in-ukraine-for-first-time",
+    "summary": "The UK has revealed for the first time its maintenance, repair and overhaul systems (MRO) facilities in Ukraine, with four operational and a fifth planned.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-07T00:01:04.000Z",
+    "fetchedAt": "2026-03-07T01:10:59.530Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/official-development-assistance-uk-integrated-security-fund-ukisf#2026-03-06T14:41:00Z",
+    "title": "Transparency data: Official Development Assistance:  UK Integrated Security Fund (UKISF)",
+    "sourceUrl": "https://www.gov.uk/government/publications/official-development-assistance-uk-integrated-security-fund-ukisf",
+    "summary": "This page provides financial data on Official Development Assistance (ODA) from April 2024 to September 2025 for each published UKISF programmes.  \n\nThe UKISF replaced the Conflict Stability and Security Fund (CSSF) from 01 April 2024.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-06T14:41:00.000Z",
+    "fetchedAt": "2026-03-07T01:10:59.530Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-court-centres-court-listings#2026-03-06T12:50:29Z",
+    "title": "Transparency data: Military court centres court listings",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-centres-court-listings",
+    "summary": "Court listings for the Military court centres.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-06T12:50:29.000Z",
+    "fetchedAt": "2026-03-07T01:10:59.530Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/management-of-health-and-safety-in-defence-chapter-11-management-of-hazardous-substances-jsp-375-volume-1#2026-03-06T12:49:44Z",
+    "title": "Guidance: Management of health and safety in defence – chapter 11: management of hazardous substances (JSP 375, volume 1)",
+    "sourceUrl": "https://www.gov.uk/government/publications/management-of-health-and-safety-in-defence-chapter-11-management-of-hazardous-substances-jsp-375-volume-1",
+    "summary": "Direction, guidance and good practice to help with the management and control of hazardous substances and materials in defence.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-06T12:49:44.000Z",
+    "fetchedAt": "2026-03-07T01:10:59.530Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/jsp-375-health-and-safety-handbook-safety-forms#2026-03-06T12:49:20Z",
+    "title": "Form: Management of health and safety in defence: safety forms (JSP 375)",
+    "sourceUrl": "https://www.gov.uk/government/publications/jsp-375-health-and-safety-handbook-safety-forms",
+    "summary": "Health and safety forms relating to the leaflets published in Joint Service Publication (JSP) 375.",
+    "categories": [
+      "Form"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-06T12:49:20.000Z",
+    "fetchedAt": "2026-03-07T01:10:59.530Z"
+  },
+  {
+    "sourceId": "aaib-bulletins",
+    "sourceName": "Air Accidents Investigation Branch",
+    "guid": "https://www.gov.uk/government/news/vacancy-aaib-operations-officer-closes-25-march-2026#2026-03-06T14:00:20Z",
+    "title": "Vacancy: AAIB Operations Officer - closes 25 March 2026",
+    "sourceUrl": "https://www.gov.uk/government/news/vacancy-aaib-operations-officer-closes-25-march-2026",
+    "summary": "Would you like to work as an Operations Officer in a high profile organisation, working with some of the world’s leading experts in air accident investigation?",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-06T14:00:20.000Z",
+    "fetchedAt": "2026-03-07T01:11:01.415Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.businessinsider.com/delta-flight-to-scotland-crossed-atlantic-then-diverted-to-ireland-2025-12",
+    "title": "A New York to Scotland flight got all the way across the Atlantic before diverting to Ireland",
+    "sourceUrl": "https://www.businessinsider.com/delta-flight-to-scotland-crossed-atlantic-then-diverted-to-ireland-2025-12",
+    "summary": "Delta Air Lines Flight 208 from New York to Edinburgh diverted to Dublin, after the Scottish capital's airport halted flights due to an IT...",
+    "categories": [
+      "Business Insider"
+    ],
+    "publishedAt": "2025-12-05T00:00:00.000Z",
+    "fetchedAt": "2026-03-07T01:11:05.623Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://simpleflying.com/7-most-remote-raf-bases-strategic-roles/",
+    "title": "The 7 Most Remote Royal Air Force Bases & Their Strategic Roles",
+    "sourceUrl": "https://simpleflying.com/7-most-remote-raf-bases-strategic-roles/",
+    "summary": "The Royal Air Force (RAF) operates a number of remote airbases around the world, although a lot fewer than it once did.",
+    "categories": [
+      "Simple Flying"
+    ],
+    "publishedAt": "2025-12-03T00:00:00.000Z",
+    "fetchedAt": "2026-03-07T01:11:05.623Z"
   }
 ]
