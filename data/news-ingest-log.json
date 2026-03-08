@@ -4600,5 +4600,70 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-08T01:16:41.299Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.yahoo.com/news/articles/swinney-consider-banning-us-military-082123654.html",
+    "title": "Swinney would 'consider' banning US military planes from Prestwick Airport",
+    "sourceUrl": "https://www.yahoo.com/news/articles/swinney-consider-banning-us-military-082123654.html",
+    "summary": "First Minister John Swinney has said he would consider banning US military aircraft from using Prestwick Airport if it was confirmed they...",
+    "categories": [
+      "Yahoo"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-08T12:29:15.142Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dailyrecord.co.uk/news/scottish-news/prestwick-airport-being-used-donald-36833208",
+    "title": "Prestwick Airport is being used by Donald Trump to bomb Iran says military intelligence expert",
+    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/prestwick-airport-being-used-donald-36833208",
+    "summary": "Hundreds of US air force flights have landed at the Scottish Government owned airport.",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-08T12:29:15.142Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thenational.scot/news/25917710.scottish-airport-being-used-donald-trump-bomb-iran/",
+    "title": "Scottish airport is being used by Donald Trump to bomb Iran, says military expert",
+    "sourceUrl": "https://www.thenational.scot/news/25917710.scottish-airport-being-used-donald-trump-bomb-iran/",
+    "summary": "PRESTWICK Airport is being used by Donald Trump to help facilitate the US bombing of Iran, according to a military intelligence expert ...",
+    "categories": [
+      "Thenational Scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-08T12:29:15.142Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://nz.news.yahoo.com/swinney-consider-banning-us-military-082123654.html",
+    "title": "Swinney would 'consider' US military plane ban from Prestwick Airport",
+    "sourceUrl": "https://nz.news.yahoo.com/swinney-consider-banning-us-military-082123654.html",
+    "summary": "First Minister John Swinney has said he would consider banning US military aircraft from using Prestwick Airport if it was confirmed they...",
+    "categories": [
+      "Yahoo News New Zealand"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-08T12:29:15.142Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.travelmole.com/news/glasgow-new-york-spring-2026/",
+    "title": "Glasgow and New York linked to each other again in 2026",
+    "sourceUrl": "https://www.travelmole.com/news/glasgow-new-york-spring-2026/",
+    "summary": "United Airlines returns to Glasgow in 2026 with daily Newark flights, boosting Scotland–U.S. travel and tourism.",
+    "categories": [
+      "TravelMole"
+    ],
+    "publishedAt": "2025-10-20T00:00:00.000Z",
+    "fetchedAt": "2026-03-08T12:29:15.142Z"
   }
 ]
