@@ -1651,7 +1651,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2026-02-24T00:00:00.000Z",
     "fetchedAt": "2026-02-27T21:51:36.530Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-08-outstanding-award-for-hial-security-trai",
+    "articlePath": "data/news-articles/2026/03/2026-03-08-outstanding-award-for-hial-security-trai.json",
+    "draftedAt": "2026-03-08T01:16:42.976Z"
   },
   {
     "id": "e02fc603-a087-4335-8337-fdc28f9aa5e1",
@@ -1667,7 +1670,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2026-02-18T00:00:00.000Z",
     "fetchedAt": "2026-02-27T21:51:36.530Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-08-outstanding-award-for-hial-security-trai",
+    "articlePath": "data/news-articles/2026/03/2026-03-08-outstanding-award-for-hial-security-trai.json",
+    "draftedAt": "2026-03-08T01:16:42.976Z"
   },
   {
     "id": "af9489bc-0093-4ea3-98fe-23674a421ba6",
@@ -1683,7 +1689,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2026-02-05T00:00:00.000Z",
     "fetchedAt": "2026-02-27T21:51:36.530Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-08-outstanding-award-for-hial-security-trai",
+    "articlePath": "data/news-articles/2026/03/2026-03-08-outstanding-award-for-hial-security-trai.json",
+    "draftedAt": "2026-03-08T01:16:42.976Z"
   },
   {
     "id": "84abe880-ed5c-41da-9d6f-fb6059536c65",
@@ -5135,6 +5144,76 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-07T12:28:01.728Z",
+    "status": "new"
+  },
+  {
+    "id": "6e97d586-22f4-4ec8-8b0e-039a745e7497",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.pressandjournal.co.uk/fp/news/6971566/raf-spitfires-dates-north-east-scotland/",
+    "title": "RAF reveals two dates you can see Spitfires flying over the north-east",
+    "sourceUrl": "https://www.pressandjournal.co.uk/fp/news/6971566/raf-spitfires-dates-north-east-scotland/",
+    "summary": "A series of commemorative flights will take place across the north-east to mark 90 years since the first flight of the Supermarine Spitfire.",
+    "categories": [
+      "Press and Journal"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-08T01:16:41.299Z",
+    "status": "new"
+  },
+  {
+    "id": "8c33c8b9-5522-4495-9d6f-803c48918770",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.bbc.co.uk/news/articles/cze0xj0n7jpo",
+    "title": "Swinney would 'consider' US military plane ban from Prestwick Airport",
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/cze0xj0n7jpo",
+    "summary": "First Minister John Swinney has said he would consider banning US military aircraft from using state-owned Prestwick Airport if it was...",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-08T01:16:41.299Z",
+    "status": "new"
+  },
+  {
+    "id": "08848e86-3d30-464d-8b35-0762a2464631",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.aol.com/articles/swinney-consider-banning-us-military-082123557.html",
+    "title": "Swinney would 'consider' US military plane ban from Prestwick Airport",
+    "sourceUrl": "https://www.aol.com/articles/swinney-consider-banning-us-military-082123557.html",
+    "summary": "First Minister John Swinney has said he would consider banning US military aircraft from using Prestwick Airport if it was confirmed they...",
+    "categories": [
+      "AOL.com"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-08T01:16:41.299Z",
+    "status": "new"
+  },
+  {
+    "id": "11eaf653-44ac-47d7-8d41-f7ceebe7b217",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.aberdeenlive.news/news/scottish-news/john-swinney-would-consider-prestwick-10853543.amp",
+    "title": "John Swinney would 'consider' Prestwick Airport ban for US military planes",
+    "sourceUrl": "https://www.aberdeenlive.news/news/scottish-news/john-swinney-would-consider-prestwick-10853543.amp",
+    "summary": "US military aircraft could be banned from using Prestwick Airport by First Minister John Swinney if it was confirmed they were involved in...",
+    "categories": [
+      "Aberdeen Live"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-08T01:16:41.299Z",
+    "status": "new"
+  },
+  {
+    "id": "b7e9c66f-3d70-4ca2-abda-8335c861c7ff",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.bbc.co.uk/news/videos/ce8npd5e481o",
+    "title": "US military plane takes off from Prestwick Airport",
+    "sourceUrl": "https://www.bbc.co.uk/news/videos/ce8npd5e481o",
+    "summary": "Updates from your News topics will appear in My News and in a collection on the News homepage. Prestwick Airport. Follow Prestwick Airport.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-08T01:16:41.299Z",
     "status": "new"
   }
 ]
