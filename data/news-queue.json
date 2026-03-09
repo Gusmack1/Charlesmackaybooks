@@ -1765,7 +1765,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2026-01-12T00:00:00.000Z",
     "fetchedAt": "2026-02-27T21:51:36.530Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-09-stornoway-airport-caf-update",
+    "articlePath": "data/news-articles/2026/03/2026-03-09-stornoway-airport-caf-update.json",
+    "draftedAt": "2026-03-09T01:16:37.233Z"
   },
   {
     "id": "73b18ad9-1b51-4054-ac12-06664cc81edf",
@@ -1781,7 +1784,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2026-01-08T00:00:00.000Z",
     "fetchedAt": "2026-02-27T21:51:36.530Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-09-stornoway-airport-caf-update",
+    "articlePath": "data/news-articles/2026/03/2026-03-09-stornoway-airport-caf-update.json",
+    "draftedAt": "2026-03-09T01:16:37.233Z"
   },
   {
     "id": "f765c01b-c8d6-464b-be94-7241dd82d8d3",
@@ -1797,7 +1803,10 @@
     "imagePolicy": "corporate",
     "publishedAt": "2025-12-24T00:00:00.000Z",
     "fetchedAt": "2026-02-27T21:51:36.530Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-09-stornoway-airport-caf-update",
+    "articlePath": "data/news-articles/2026/03/2026-03-09-stornoway-airport-caf-update.json",
+    "draftedAt": "2026-03-09T01:16:37.233Z"
   },
   {
     "id": "b527d106-c635-4b1c-b9a5-6056fd7150ae",
@@ -5293,6 +5302,48 @@
     ],
     "publishedAt": "2025-10-20T00:00:00.000Z",
     "fetchedAt": "2026-03-08T12:29:15.142Z",
+    "status": "new"
+  },
+  {
+    "id": "c4840bd1-9b86-4477-b46f-b226a77ea2c1",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.heraldscotland.com/news/25917706.swinney-explore-banning-us-flights-prestwick/",
+    "title": "Swinney considering ban on US military flights using Prestwick",
+    "sourceUrl": "https://www.heraldscotland.com/news/25917706.swinney-explore-banning-us-flights-prestwick/",
+    "summary": "First Minister John Swinney says he could ban US military flights from using Prestwick Airport if they are linked to offensive operations...",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-09T01:16:35.607Z",
+    "status": "new"
+  },
+  {
+    "id": "c917a4cb-5803-40c0-877b-55a30d35bbd8",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.ayradvertiser.com/news/25914245.royal-australian-air-force-plane-rare-visit-prestwick/",
+    "title": "Special aircraft from down under is rare visitor to Prestwick Airport",
+    "sourceUrl": "https://www.ayradvertiser.com/news/25914245.royal-australian-air-force-plane-rare-visit-prestwick/",
+    "summary": "A special aircraft from down under was a rare visitor to Prestwick Airport earlier this week.",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-09T01:16:35.608Z",
+    "status": "new"
+  },
+  {
+    "id": "310262a9-6011-4f4a-b9fb-908ade2c9494",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.gbnews.com/politics/john-swinney-accused-glasgow-prestwick",
+    "title": "John Swinney accused of putting UK's 'special relationship' with US in peril over use of Scottish airport for Iran war",
+    "sourceUrl": "https://www.gbnews.com/politics/john-swinney-accused-glasgow-prestwick",
+    "summary": "The SNP Leader is under pressure from the Scottish Greens to disclose the details around the use of Glasgow Prestwick Airport...",
+    "categories": [
+      "GB News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-09T01:16:35.608Z",
     "status": "new"
   }
 ]

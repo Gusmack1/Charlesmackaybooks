@@ -1,0 +1,75 @@
+{
+  "slug": "2026-03-09-stornoway-airport-caf-update",
+  "title": "Stornoway Airport Caf Update",
+  "wordCount": 125,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Stornoway Airport Café Update. Closed for January holiday break.\n\nTickets for Wick - Aberdeen service now sale. The Highland Council have announced that tickets are now available to book for flights between Wick John O&#039;Groats and Aberdeen International Airport.\n\nSuccessful Wick–Aberdeen Air Service Operator Announced. The Highland Council has confirmed that Air Charter Scotland has been appointed as the operator of the Wick–Aberdeen air service."
+    },
+    {
+      "heading": "Context",
+      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "hial-airports",
+      "sourceUrl": "https://www.hial.co.uk/news/article/233/stornoway-airport-caf-update",
+      "citationText": "hial-airports – Stornoway Airport Café Update"
+    },
+    {
+      "sourceId": "hial-airports",
+      "sourceUrl": "https://www.hial.co.uk/news/article/232/tickets-for-wick-aberdeen-service-now-sale",
+      "citationText": "hial-airports – Tickets for Wick - Aberdeen service now sale"
+    },
+    {
+      "sourceId": "hial-airports",
+      "sourceUrl": "https://www.hial.co.uk/news/article/231/successful-wick-aberdeen-air-service-operator-announced",
+      "citationText": "hial-airports – Successful Wick–Aberdeen Air Service Operator Announced"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish aviation",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Stornoway Airport Caf Update",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-09T01:16:37.233Z"
+}

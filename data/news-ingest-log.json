@@ -4665,5 +4665,44 @@
     ],
     "publishedAt": "2025-10-20T00:00:00.000Z",
     "fetchedAt": "2026-03-08T12:29:15.142Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/25917706.swinney-explore-banning-us-flights-prestwick/",
+    "title": "Swinney considering ban on US military flights using Prestwick",
+    "sourceUrl": "https://www.heraldscotland.com/news/25917706.swinney-explore-banning-us-flights-prestwick/",
+    "summary": "First Minister John Swinney says he could ban US military flights from using Prestwick Airport if they are linked to offensive operations...",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-09T01:16:35.607Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ayradvertiser.com/news/25914245.royal-australian-air-force-plane-rare-visit-prestwick/",
+    "title": "Special aircraft from down under is rare visitor to Prestwick Airport",
+    "sourceUrl": "https://www.ayradvertiser.com/news/25914245.royal-australian-air-force-plane-rare-visit-prestwick/",
+    "summary": "A special aircraft from down under was a rare visitor to Prestwick Airport earlier this week.",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-09T01:16:35.608Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.gbnews.com/politics/john-swinney-accused-glasgow-prestwick",
+    "title": "John Swinney accused of putting UK's 'special relationship' with US in peril over use of Scottish airport for Iran war",
+    "sourceUrl": "https://www.gbnews.com/politics/john-swinney-accused-glasgow-prestwick",
+    "summary": "The SNP Leader is under pressure from the Scottish Greens to disclose the details around the use of Glasgow Prestwick Airport...",
+    "categories": [
+      "GB News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-09T01:16:35.608Z"
   }
 ]
