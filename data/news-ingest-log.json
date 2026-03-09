@@ -4704,5 +4704,158 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-09T01:16:35.608Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/women-in-defence-charter#2026-03-09T12:02:42Z",
+    "title": "Policy paper: Women in Defence Charter",
+    "sourceUrl": "https://www.gov.uk/government/publications/women-in-defence-charter",
+    "summary": "A commitment to improving gender balance in Defence.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T12:02:42.000Z",
+    "fetchedAt": "2026-03-09T12:39:22.100Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/uk-support-to-ukraine-factsheet#2026-03-09T11:34:57Z",
+    "title": "Policy paper: UK support to Ukraine: factsheet",
+    "sourceUrl": "https://www.gov.uk/government/publications/uk-support-to-ukraine-factsheet",
+    "summary": "This factsheet summarises how the UK is supporting Ukraine following the Russian invasion.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T11:34:57.000Z",
+    "fetchedAt": "2026-03-09T12:39:22.101Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/service-prosecuting-authority#2026-03-09T09:43:44Z",
+    "title": "Service Prosecuting Authority",
+    "sourceUrl": "https://www.gov.uk/guidance/service-prosecuting-authority",
+    "summary": "The Service Prosecuting Authority is the principal prosecuting authority within the Service Justice System and is responsible for the prosecution of all service offences before the Service Courts.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T09:43:44.000Z",
+    "fetchedAt": "2026-03-09T12:39:22.101Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/dao-qualification-handbooks-level-3-courses#2026-03-09T08:51:06Z",
+    "title": "Guidance: DAO qualification specification: Level 3",
+    "sourceUrl": "https://www.gov.uk/government/publications/dao-qualification-handbooks-level-3-courses",
+    "summary": "Qualifications for Defence Awarding Organisation courses.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T08:51:06.000Z",
+    "fetchedAt": "2026-03-09T12:39:22.101Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/joint-prosecution-protocol#2026-03-09T08:39:29Z",
+    "title": "Guidance: Joint Prosecution Protocol - England and Wales",
+    "sourceUrl": "https://www.gov.uk/government/publications/joint-prosecution-protocol",
+    "summary": "Protocol regarding the exercise of criminal jurisdiction in England and Wales.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T08:39:29.000Z",
+    "fetchedAt": "2026-03-09T12:39:22.101Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/speeches/updating-light-dues-payment-rates#2026-03-09T11:20:01Z",
+    "title": "Updating light dues payment rates",
+    "sourceUrl": "https://www.gov.uk/government/speeches/updating-light-dues-payment-rates",
+    "summary": "For 2026 to 2027, the light dues rate will increase to 46 pence per tonne to support the high-quality service on which the maritime sector relies.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T11:20:01.000Z",
+    "fetchedAt": "2026-03-09T12:39:23.030Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/dft-major-projects-appointment-letters-for-senior-responsible-owners#2026-03-09T08:20:34Z",
+    "title": "Transparency data: DfT major projects: appointment letters for Senior Responsible Owners (SROs)",
+    "sourceUrl": "https://www.gov.uk/government/publications/dft-major-projects-appointment-letters-for-senior-responsible-owners",
+    "summary": "DfT appointment letters for Government Major Projects Portfolio (GMPP) Senior Responsible Owners.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T08:20:34.000Z",
+    "fetchedAt": "2026-03-09T12:39:23.030Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dailyrecord.co.uk/lifestyle/exceptional-scottish-airline-named-uks-36528327",
+    "title": "'Exceptional' Scottish airline named UK’s most punctual major carrier in 2025",
+    "sourceUrl": "https://www.dailyrecord.co.uk/lifestyle/exceptional-scottish-airline-named-uks-36528327",
+    "summary": "The airline had 81 percent of its flights on time, well above the UK average of 72 percent.",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": "2026-01-09T00:00:00.000Z",
+    "fetchedAt": "2026-03-09T12:39:27.224Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.yahoo.com/news/articles/why-far-flung-raf-could-171722694.html",
+    "title": "Why a Scottish RAF base could become integral in fight against Russia",
+    "sourceUrl": "https://www.yahoo.com/news/articles/why-far-flung-raf-could-171722694.html",
+    "summary": "The year is 2030. Relations between London and Moscow have deteriorated to a new low: ambassadors are being recalled, consulates are...",
+    "categories": [
+      "Yahoo"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-09T12:39:27.224Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aol.com/news/swinney-consider-banning-us-military-082123557.html",
+    "title": "Swinney would 'consider' US military plane ban from Prestwick Airport",
+    "sourceUrl": "https://www.aol.com/news/swinney-consider-banning-us-military-082123557.html",
+    "summary": "First Minister John Swinney has said he would consider banning US military aircraft from using state-owned Prestwick Airport if it was...",
+    "categories": [
+      "AOL.com"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-09T12:39:27.224Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/articles/c5ykknpvprno",
+    "title": "'I met Elvis on his one visit to Scotland - it was like a dream'",
+    "sourceUrl": "https://www.bbc.com/news/articles/c5ykknpvprno",
+    "summary": "Anne Murphy was 16 when she saw the King as he stopped over in Prestwick on 2 March 1960.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-09T12:39:27.224Z"
   }
 ]
