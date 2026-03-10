@@ -148,10 +148,19 @@ function fixArticle(filePath) {
     newTitle = existingTitle
   }
   const newKeywords = deriveKeywords({ ...article, sections: cleanSections.length ? cleanSections : article.sections, title: newTitle })
-  const changed =
+  const oldReason = /Topical link between news item(s)? and catalogue research focus\.?/i
+  let reasonChanged = false
+  for (const rb of article.relatedBooks || []) {
+    if (rb.reason && oldReason.test(rb.reason)) {
+      rb.reason = 'Related research volume'
+      reasonChanged = true
+    }
+  }
+  let changed =
     JSON.stringify(article.sections) !== JSON.stringify(cleanSections) ||
     article.title !== newTitle ||
-    JSON.stringify(article.keywords) !== JSON.stringify(newKeywords)
+    JSON.stringify(article.keywords) !== JSON.stringify(newKeywords) ||
+    reasonChanged
 
   article.sections = cleanSections.length ? cleanSections : article.sections
   article.title = newTitle
