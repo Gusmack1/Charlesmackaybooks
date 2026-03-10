@@ -58,8 +58,19 @@ The Scottish Aviation Newsroom is a live feed that:
 1. `news:ingest` – Fetch from RSS/GOV.UK/HIAL
 2. `news:search` – Serper web search (if `SERPER_API_KEY` set)
 3. `news:rewrite` – OpenAI rewrite & publish (if `OPENAI_API_KEY` set)
-4. `news:draft` – Create digest from remaining queue items
-5. `news:report` – Generate automation report
+4. `news:draft` – Create one article per queue item (focused, no bundling)
+5. `news:fix` – Strip editor instructions, set titles, derive keywords
+6. `news:report` – Generate automation report
+
+## Rewriting Existing Articles
+
+To rewrite all existing articles into coherent narratives (removes bundled unrelated stories, adds Scottish aviation context):
+
+```bash
+OPENAI_API_KEY=your_key npm run news:rewrite-existing
+```
+
+Use `--dry-run` to preview without writing.
 
 ## Output
 

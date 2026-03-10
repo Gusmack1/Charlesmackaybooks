@@ -22,6 +22,7 @@
     "news:rewrite": "node scripts/news-rewrite.cjs",
     "news:draft": "node scripts/news-draft.cjs",
     "news:fix": "node scripts/fix-news-articles.cjs",
+    "news:rewrite-existing": "node scripts/rewrite-news-articles.cjs",
     "news:report": "node scripts/news-automation-report.cjs",
     "keywords:report": "node scripts/keyword-rank-dashboard.cjs"
   },

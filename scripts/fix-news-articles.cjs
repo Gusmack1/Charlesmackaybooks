@@ -131,12 +131,16 @@ function fixArticle(filePath) {
   }
 
   let newTitle = slugToTitle(article.slug)
+  const existingTitle = (article.title || '').trim()
   const firstSource = article.sourceReferences?.[0]?.citationText
   if (firstSource) {
     const fromSource = citationToTitle(firstSource)
     if (fromSource && (newTitle.endsWith(' To T') || newTitle.endsWith(' He') || newTitle.endsWith(' Bo') || newTitle.endsWith(' La') || / Promot$| Maint$| Feedstock$/.test(newTitle))) {
       newTitle = fromSource
     }
+  }
+  if (existingTitle && (existingTitle.includes('&') || existingTitle.includes('–') || existingTitle.length > newTitle.length + 5)) {
+    newTitle = existingTitle
   }
   const newKeywords = deriveKeywords({ ...article, sections: cleanSections.length ? cleanSections : article.sections, title: newTitle })
   const changed =

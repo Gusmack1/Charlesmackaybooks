@@ -1,0 +1,164 @@
+#!/usr/bin/env node
+/**
+ * Rewrite existing news articles into coherent, focused narratives.
+ * Each article is rewritten to focus on its PRIMARY story (first source only).
+ * Removes bundled unrelated items and generic filler.
+ *
+ * Run: OPENAI_API_KEY=xxx node scripts/rewrite-news-articles.cjs
+ *      --dry-run  to preview without writing
+ */
+const fs = require('fs')
+const path = require('path')
+
+const ROOT_DIR = path.join(__dirname, '..')
+const ARTICLES_DIR = path.join(ROOT_DIR, 'data', 'news-articles')
+const OPENAI_URL = 'https://api.openai.com/v1/chat/completions'
+
+const REWRITE_PROMPT = `You are a factual news writer for Charles Mackay Books, an aviation history publisher in Scotland. Rewrite the following news excerpt into a single coherent article:
+
+RULES:
+- Keep ALL facts exactly as stated. Do not add, speculate, or invent.
+- Write in BBC News style: clear, neutral, factual.
+- Focus on the PRIMARY story only. Ignore any unrelated items bundled together.
+- Write 150–300 words. Use 2–3 short paragraphs.
+- Add a brief sentence linking to Scottish aviation heritage where relevant (e.g. "HIAL airports connect communities across the Highlands and Islands, where aviation has played a vital role since the inter-war period.").
+- Output JSON only: { "title": "Clear descriptive title", "content": "Paragraph 1...\\n\\nParagraph 2..." }`
+
+function listFiles(dir) {
+  if (!fs.existsSync(dir)) return []
+  const results = []
+  for (const name of fs.readdirSync(dir)) {
+    const full = path.join(dir, name)
+    const stat = fs.statSync(full)
+    if (stat.isDirectory()) results.push(...listFiles(full))
+    else if (name.endsWith('.json')) results.push(full)
+  }
+  return results
+}
+
+function readJson(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, 'utf8'))
+}
+
+function writeJson(filePath, data) {
+  fs.writeFileSync(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8')
+}
+
+function chooseBookIds(text) {
+  const lower = text.toLowerCase()
+  const ids = new Set()
+  if (lower.includes('helicopter') || lower.includes('rotor') || lower.includes('sycamore')) ids.add('sycamore-seeds')
+  if (lower.includes('lossiemouth') || lower.includes('typhoon') || lower.includes('sabre')) ids.add('sabres-from-north')
+  if (lower.includes('prestwick') || lower.includes('beardmore') || lower.includes('argus')) ids.add('beardmore-aviation')
+  if (lower.includes('hial') || lower.includes('wick airport') || lower.includes('inverness') || lower.includes('stornoway') || lower.includes('dundee airport')) ids.add('clydeside-aviation-vol2')
+  if (lower.includes('glasgow') || lower.includes('clyde') || lower.includes('clydeside')) ids.add('clydeside-aviation-vol1')
+  if (lower.includes('vulcan') || lower.includes('lightning') || lower.includes('v-force')) ids.add('sonic-to-standoff')
+  if (lower.includes('nuclear') || lower.includes('atomic')) ids.add('birth-atomic-bomb')
+  if (lower.includes('aircraft carrier') || lower.includes('naval aviation')) ids.add('aircraft-carrier-argus')
+  if (lower.includes('luftwaffe') || lower.includes('german aircraft') || lower.includes('me262')) ids.add('this-was-the-enemy-volume-two')
+  if (lower.includes('aaib') || lower.includes('air accident')) ids.add('this-was-the-enemy-volume-two')
+  if (ids.size === 0) ids.add('this-was-the-enemy-volume-two')
+  return Array.from(ids)
+}
+
+async function callOpenAI(apiKey, excerpt) {
+  const response = await fetch(OPENAI_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: REWRITE_PROMPT },
+        { role: 'user', content: excerpt },
+      ],
+      response_format: { type: 'json_object' },
+      max_tokens: 600,
+    }),
+  })
+
+  if (!response.ok) {
+    const err = await response.text()
+    throw new Error(`OpenAI API ${response.status}: ${err}`)
+  }
+
+  const data = await response.json()
+  const content = data?.choices?.[0]?.message?.content
+  if (!content) throw new Error('Unknown OpenAI response format')
+  return JSON.parse(content)
+}
+
+async function rewriteArticle(filePath, apiKey, dryRun) {
+  const article = readJson(filePath)
+  const primarySource = article.sourceReferences?.[0]
+  if (!primarySource) {
+    console.log(`Skip (no source): ${path.basename(filePath)}`)
+    return
+  }
+
+  const excerpt = `Title: ${primarySource.citationText}\n\nCurrent content:\n${(article.sections || []).map((s) => s.content).join('\n\n')}`
+
+  try {
+    const rewritten = await callOpenAI(apiKey, excerpt)
+    const newContent = (rewritten.content || '').trim()
+    const newTitle = (rewritten.title || article.title || primarySource.citationText).trim()
+
+    if (!newContent) {
+      console.log(`Skip (empty content): ${path.basename(filePath)}`)
+      return
+    }
+
+    const textForBooks = `${newTitle} ${newContent}`
+    const articleCopy = {
+      ...article,
+      title: newTitle,
+      sections: [{ heading: 'Summary', content: newContent }],
+      sourceReferences: [primarySource],
+      relatedBooks: chooseBookIds(textForBooks).map((bookId) => ({
+        bookId,
+        reason: 'Topical link between news item and catalogue research focus.',
+      })),
+    }
+
+    articleCopy.wordCount = newContent.split(/\s+/).filter(Boolean).length
+
+    if (dryRun) {
+      console.log(`[DRY] ${path.basename(filePath)} -> "${newTitle}" (${articleCopy.wordCount} words)`)
+      return
+    }
+
+    writeJson(filePath, articleCopy)
+    console.log(`Rewritten: ${path.basename(filePath)} -> "${newTitle}" (${articleCopy.wordCount} words)`)
+  } catch (err) {
+    console.error(`Failed ${path.basename(filePath)}: ${err.message}`)
+  }
+}
+
+async function main() {
+  const apiKey = process.env.OPENAI_API_KEY
+  const dryRun = process.argv.includes('--dry-run')
+
+  if (!apiKey) {
+    console.log('OPENAI_API_KEY not set. Set it to run the rewrite.')
+    process.exit(1)
+  }
+
+  const files = listFiles(ARTICLES_DIR)
+  console.log(`Found ${files.length} articles. ${dryRun ? '(Dry run – no changes)' : ''}\n`)
+
+  for (let i = 0; i < files.length; i++) {
+    await rewriteArticle(files[i], apiKey, dryRun)
+    if (!dryRun && i < files.length - 1) {
+      await new Promise((r) => setTimeout(r, 500))
+    }
+  }
+
+  console.log(`\nDone. ${files.length} articles processed.`)
+}
+
+main().catch((err) => {
+  console.error(err)
+  process.exit(1)
+})
