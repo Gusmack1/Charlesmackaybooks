@@ -349,7 +349,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       {/* Hero Section */}
       <div className="hero-section overflow-hidden bg-slate-900">
           {(featured.url || post.featuredImage?.url) && (
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 pointer-events-none" aria-hidden>
             <Image
               src={featured.url || post.featuredImage.url}
               alt={featured.alt || post.featuredImage.alt || post.title}

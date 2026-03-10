@@ -101,7 +101,7 @@ export default function PioneerEraPage() {
 
       {/* Hero Section */}
       <section className="relative bg-slate-900 text-white">
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" aria-hidden />
         <div className="relative max-w-7xl mx-auto px-6 py-32">
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
@@ -190,7 +190,7 @@ export default function PioneerEraPage() {
                 height={400}
                 className="rounded-xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl pointer-events-none" aria-hidden />
             </div>
           </div>
         </div>
