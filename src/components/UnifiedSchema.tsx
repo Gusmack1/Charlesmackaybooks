@@ -50,7 +50,7 @@ interface UnifiedSchemaProps {
   }>
 }
 
-const BASE_URL = 'https://charlesmackaybooks.com'
+const BASE_URL = SITE_CONSTANTS.BASE_URL
 
 export default function UnifiedSchema({
   pageType = 'homepage',

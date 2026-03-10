@@ -38,8 +38,8 @@ Referenced JPGs that do not exist in `public/blog-images/`. Either add the image
 | `bristol-fighter-technical-side.jpg` | bristol-fighter-f2b-brisfit |
 | `bristol-fighter-ground.jpg` | bristol-fighter-f2b-brisfit |
 | `bristol-f2b-fighter-replica.jpg` | bristol-fighter-f2b-brisfit |
-| `metal-aircraft-construction.jpg` | adolf-rohrbach-metal-aircraft-revolution, adolf-rohrbach-metal-aircraft-construction |
-| `curtiss-nc4-flying-boat.jpg` | adolf-rohrbach-metal-aircraft-revolution, adolf-rohrbach-metal-aircraft-construction |
+| `metal-aircraft-construction.jpg` | adolf-rohrbach-metal-aircraft-revolution |
+| `curtiss-nc4-flying-boat.jpg` | adolf-rohrbach-metal-aircraft-revolution |
 | `rfc-pilots-no32-squadron-1916.jpg` | british-aircraft-great-war-rfc-rnas, clydeside-aviation-revolution |
 | `aircraft-factory-assembly-line.jpg` | british-aircraft-great-war-rfc-rnas, adolf-rohrbach-metal-aircraft-revolution |
 | `se5a-royal-aircraft-factory.jpg` | british-aircraft-great-war-rfc-rnas |

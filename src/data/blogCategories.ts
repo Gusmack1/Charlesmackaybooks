@@ -375,15 +375,6 @@ export const blogCategories: BlogCategoryMap = {
       readTime: '17 min'
     },
     {
-      title: 'Adolf Rohrbach: Revolutionary Metal Aircraft Construction Pioneer',
-      slug: 'adolf-rohrbach-metal-aircraft-construction',
-      excerpt: 'The visionary engineer who transformed aviation through all-metal aircraft construction and stressed-skin monocoque design principles.',
-      date: 'January 15, 2024',
-      image: '/blog-images/rohrbach-roland.jpg',
-      tags: ['Industrial History', 'Aircraft Construction', 'Metal Aircraft', 'Engineering Innovation'],
-      readTime: '13 min'
-    },
-    {
       title: 'Adolf Rohrbach Metal Aircraft Revolution: Engineering the Future',
       slug: 'adolf-rohrbach-metal-aircraft-revolution',
       excerpt: 'How Adolf Rohrbach\'s innovative metal aircraft construction techniques revolutionized aviation manufacturing and influenced modern aircraft design principles.',

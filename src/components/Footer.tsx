@@ -27,7 +27,7 @@ export default function Footer() {
               <Link href="/faq" className="block text-white underline decoration-white/30 hover:decoration-white">
                 Frequently Asked Questions
               </Link>
-              <Link href="/for-researchers" className="block text-white underline decoration-white/30 hover:decoration-white">
+              <Link href="/academic-resources" className="block text-white underline decoration-white/30 hover:decoration-white">
                 Academic Resources
               </Link>
             </div>

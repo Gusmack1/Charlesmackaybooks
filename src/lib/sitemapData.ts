@@ -2,8 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { MetadataRoute } from 'next';
 import { books } from '@/data/books';
-
-const BASE_URL = 'https://charlesmackaybooks.com';
+import { SITE_CONSTANTS } from '@/config/constants';
 const GENERATED_AT = new Date().toISOString();
 
 const STATIC_PAGES: Array<{
@@ -55,10 +54,10 @@ const PROJECT_ROOT = process.cwd();
 
 function toAbsoluteUrl(route: string) {
   if (route === '/' || route === '') {
-    return `${BASE_URL}`;
+    return SITE_CONSTANTS.BASE_URL;
   }
   const normalized = route.startsWith('/') ? route : `/${route}`;
-  return `${BASE_URL}${normalized}`;
+  return `${SITE_CONSTANTS.BASE_URL}${normalized}`;
 }
 
 function getFileLastModified(relativePath: string): string {
@@ -224,6 +223,6 @@ export function generateSitemapEntries(): MetadataRoute.Sitemap {
   ];
 }
 
-export { BASE_URL };
+export const BASE_URL = SITE_CONSTANTS.BASE_URL;
 
 

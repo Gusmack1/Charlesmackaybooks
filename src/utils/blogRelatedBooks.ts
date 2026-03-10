@@ -41,7 +41,6 @@ const BLOG_TO_BOOKS: Record<string, string[]> = {
   'dorothy-wordsworth-scottish-tour-1803': ['dorothy-wordsworth'],
   'morris-furniture-war-work-aviation': ['modern-furniture', 'sycamore-seeds'],
   'adolf-rohrbach-metal-aircraft-revolution': ['adolf-rohrbach', 'beardmore-aviation', 'german-aircraft-great-war'],
-  'adolf-rohrbach-metal-aircraft-construction': ['adolf-rohrbach', 'beardmore-aviation', 'german-aircraft-great-war'],
   'clydeside-aviation-revolution': ['clydeside-aviation-vol1', 'clydeside-aviation-vol2', 'beardmore-aviation'],
 };
 

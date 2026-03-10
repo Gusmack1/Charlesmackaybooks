@@ -406,7 +406,6 @@ const post = {
       <li><a href="/books/adolf-rohrbach" class="underline font-medium">Adolf Rohrbach's Metal Airplanes: Rohrbach Metall-Flugzeugbau GmbH</a> — The definitive 136-page work with over 200 photographs and drawings, many rare and obscure, including full details of every Rohrbach aeroplane and Rohrbach's design team, with rare drawings of projected aeroplanes</li>
       <li><a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation: The Story of a Scottish Industrial Giant's Aviation Activities</a> — Includes coverage of British licence-built Rohrbach aircraft and British aviation manufacturing</li>
       <li><a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft in the Great War 1914-1918</a> — Provides context for German aviation engineering traditions that influenced Rohrbach's development</li>
-      <li><a href="/blog/adolf-rohrbach-metal-aircraft-construction" class="underline font-medium">Adolf Rohrbach: Revolutionary Metal Aircraft Designer</a> — Detailed coverage of Rohrbach's metal construction techniques</li>
       <li><a href="/blog/aviation-manufacturing-wartime-production" class="underline font-medium">Aviation Manufacturing and Wartime Production</a> — Manufacturing context for metal aircraft construction development</li>
     </ul>
 
@@ -447,13 +446,6 @@ const post = {
       excerpt: 'Industrial mobilization lessons from WWI/WWII that set the stage for stressed-skin production lines.',
       image: '/blog-images/aircraft-factory-assembly-line.jpg',
       readingTime: 7,
-    },
-    {
-      id: 'adolf-rohrbach-metal-aircraft-construction',
-      title: 'Adolf Rohrbach: Revolutionary Metal Aircraft Designer',
-      excerpt: 'Deeper dive on Rohrbach’s stressed-skin methods and their adoption across Europe and the US.',
-      image: '/blog-images/metal-aircraft-construction.jpg',
-      readingTime: 8,
     },
   ]
 }
@@ -502,7 +494,6 @@ export default function BlogPost() {
         relatedPosts={[
           { slug: 'german-aircraft-great-war-development', title: '', excerpt: '' },
           { slug: 'aviation-manufacturing-wartime-production', title: '', excerpt: '' },
-          { slug: 'adolf-rohrbach-metal-aircraft-construction', title: '', excerpt: '' },
         ]}
 
       />

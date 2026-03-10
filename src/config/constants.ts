@@ -15,6 +15,7 @@ export const SITE_CONSTANTS = {
   UNIVERSITY_COURSES: 15,
 
   // Site information
+  BASE_URL: 'https://charlesmackaybooks.com',
   SITE_NAME: 'Charles E. MacKay Aviation Books',
   SITE_DESCRIPTION: 'Authoritative aviation history books by expert historian Charles E. MacKay',
   AUTHOR_NAME: 'Charles E. MacKay',

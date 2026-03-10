@@ -6,8 +6,9 @@ import BBCPageTemplate from '@/components/BBCPageTemplate'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
 import { getNewsArticleBySlug, getPublishedNewsArticles } from '@/lib/newsroom'
+import { SITE_CONSTANTS } from '@/config/constants'
 
-const BASE_URL = 'https://charlesmackaybooks.com'
+const BASE_URL = SITE_CONSTANTS.BASE_URL
 const FALLBACK_IMAGE = '/charles-mackay-aviation-historian.jpg'
 const bookMap = new Map(books.map((book) => [book.id, book]))
 

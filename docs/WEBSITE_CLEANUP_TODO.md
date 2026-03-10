@@ -33,20 +33,20 @@
 ### 4. Duplicate / thin content
 | Page | Issue | Suggestion |
 |------|-------|-------------|
-| `/blog/adolf-rohrbach-metal-aircraft-construction` | Generic, placeholder-style copy; overlaps with `adolf-rohrbach-metal-aircraft-revolution` | Merge into revolution page and redirect, or rewrite with specific content |
-| `/blog/dorothy-wordsworth-scottish-tour-1803` | Travel/literature, off-topic for aviation site | Consider removal, relocation, or add aviation angle |
+| ~~`/blog/adolf-rohrbach-metal-aircraft-construction`~~ | ~~Generic, placeholder-style copy; overlaps with revolution~~ | **DONE** – Duplicate deleted; revolution page is canonical. No redirect. |
+| `/blog/dorothy-wordsworth-scottish-tour-1803` | Travel/literature | **Keep** – Links to Dorothy Wordsworth book we sell |
 | `/blog/supermarine-spitfire-development-history` | Thin hub page | Keep as hub (intentional) or redirect to evolution page |
 
 ### 5. Centralize BASE_URL
 | Location | Action |
 |----------|--------|
-| `src/config/constants.ts` | Add `BASE_URL: 'https://charlesmackaybooks.com'` |
-| `layout.tsx`, `HreflangLinks.tsx`, `UnifiedSchema.tsx`, `EnhancedBookSEO.tsx`, `aviation-news/[slug]`, `sitemapData.ts`, `sitemap-generator.ts` | Replace hardcoded URLs with `SITE_CONSTANTS.BASE_URL` or shared import |
+| ~~`src/config/constants.ts`~~ | **DONE** – Added `BASE_URL: 'https://charlesmackaybooks.com'` |
+| ~~`layout.tsx`, `HreflangLinks.tsx`, `UnifiedSchema.tsx`, `EnhancedBookSEO.tsx`, `aviation-news/[slug]`, `sitemapData.ts`~~ | **DONE** – Replaced hardcoded URLs with `SITE_CONSTANTS.BASE_URL` |
 
 ### 6. Remove dead sitemap generator
 | File | Action |
 |------|--------|
-| `src/utils/sitemap-generator.ts` | Remove (unused; `sitemapData.ts` + `sitemap.ts` are active) |
+| ~~`src/utils/sitemap-generator.ts`~~ | **DONE** – Removed (unused; `sitemapData.ts` + `sitemap.ts` are active) |
 
 ---
 
@@ -112,8 +112,8 @@
 ## Suggestions Summary
 
 1. **Quick wins:** Fix broken Spitfire links, add `blog-assets-audit.json` to gitignore, fix image-approvals paths.
-2. **SEO:** ~~Consolidate `/news` → `/aviation-news`~~ Done; fix or remove duplicate Rohrbach page.
-3. **Maintainability:** Add `BASE_URL` to constants; remove `sitemap-generator.ts`.
+2. **SEO:** ~~Consolidate `/news` → `/aviation-news`~~ Done; ~~fix or remove duplicate Rohrbach page~~ Done.
+3. **Maintainability:** ~~Add `BASE_URL` to constants; remove `sitemap-generator.ts`~~ Done.
 4. **Cleanup:** Audit dead components before removal (some may be for admin/future use).
 5. **Images:** Verify Spitfire/Hurricane images in `public/blog-images`; add missing or correct paths.
 

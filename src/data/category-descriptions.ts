@@ -77,7 +77,7 @@ These books also examine the human stories behind the aircraft - the pilots, obs
       'Charles E MacKay WWI aviation',
       'WWI aviation books'
     ],
-    featuredBooks: ['british-aircraft-great-war', 'german-aircraft-great-war', 'bristol-fighter-f2b-brisfit']
+    featuredBooks: ['british-aircraft-great-war', 'german-aircraft-great-war', 'flying-for-kaiser']
   },
   'wwii-aviation': {
     name: 'WWII Aviation',
@@ -101,7 +101,7 @@ These books also examine the industrial aspects of WWII aviation, including mass
       'Charles E MacKay WWII aviation',
       'WWII aviation books'
     ],
-    featuredBooks: ['hawker-hurricane-fighter-development', 'spitfire-development-history']
+    featuredBooks: ['mother-of-the-few', 'enemy-luftwaffe-1945']
   },
   'aviation-biography': {
     name: 'Aviation Biography',
@@ -173,7 +173,7 @@ The collection includes detailed technical analysis of jet engine systems and ai
       'jet age books',
       'jet aviation history'
     ],
-    featuredBooks: ['sabres-from-north', 'f86-sabre-cold-war-fighter']
+    featuredBooks: ['sabres-from-north', 'sonic-to-standoff']
   },
   'naval-aviation': {
     name: 'Naval Aviation',
@@ -197,7 +197,7 @@ The collection includes detailed technical analysis of naval aircraft systems an
       'maritime air power',
       'naval aviation technology'
     ],
-    featuredBooks: ['aircraft-carrier-argus', 'hms-argus-first-aircraft-carrier']
+    featuredBooks: ['aircraft-carrier-argus']
   },
   'industrial-history': {
     name: 'Industrial History',

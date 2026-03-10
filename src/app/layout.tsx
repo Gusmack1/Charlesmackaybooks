@@ -21,7 +21,6 @@ const playfair = Playfair_Display({
   variable: '--font-playfair'
 })
 
-const SITE_DOMAIN = 'https://charlesmackaybooks.com'
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WKRHZDSX'
 
 export const viewport: Viewport = {
@@ -34,7 +33,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_DOMAIN),
+  metadataBase: new URL(SITE_CONSTANTS.BASE_URL),
   title: {
     default: 'Charles Mackay Books | Aviation History Books by Charles E. MacKay',
     template: '%s | Charles Mackay Books'
@@ -75,7 +74,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: SITE_DOMAIN,
+    url: SITE_CONSTANTS.BASE_URL,
     siteName: 'Charles Mackay Books',
     title: 'Charles E. MacKay - Aviation History Books & Research',
     description: 'Expert aviation history books by Charles E. MacKay. Comprehensive research on Scottish aviation, World War aircraft, helicopter development, and military aviation history.',
@@ -110,7 +109,7 @@ export const metadata: Metadata = {
     google: 'GuJLIULWrnOetGcEUeS_o43Iqknv6ptnbmQ4rn8Hy-s',
   },
   alternates: {
-    canonical: SITE_DOMAIN,
+    canonical: SITE_CONSTANTS.BASE_URL,
   },
   category: 'Books & Literature',
   classification: 'Aviation History',
@@ -126,8 +125,8 @@ const organizationSchema = {
   name: 'Charles E. MacKay Aviation Books',
   legalName: SITE_CONSTANTS.BUSINESS_NAME,
   alternateName: [SITE_CONSTANTS.BUSINESS_TRADING_NAME, 'Charles E. MacKay Aviation Books'],
-  url: 'https://charlesmackaybooks.com',
-  logo: 'https://charlesmackaybooks.com/logo.png',
+  url: SITE_CONSTANTS.BASE_URL,
+  logo: `${SITE_CONSTANTS.BASE_URL}/logo.png`,
   description: 'Expert aviation history books and research by Charles E. MacKay',
   founder: {
     '@type': 'Person',
@@ -157,7 +156,7 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Charles E. MacKay Aviation Books',
-  url: 'https://charlesmackaybooks.com',
+  url: SITE_CONSTANTS.BASE_URL,
   description: 'Expert aviation history books and research by Charles E. MacKay',
   author: {
     '@type': 'Person',
@@ -168,7 +167,7 @@ const websiteSchema = {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://charlesmackaybooks.com/search?query={search_term_string}'
+      urlTemplate: `${SITE_CONSTANTS.BASE_URL}/search?query={search_term_string}`
     },
     'query-input': 'required name=search_term_string'
   }
@@ -215,18 +214,6 @@ export default function RootLayout({
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
         
-        {/* Optimized Core Web Vitals Monitoring */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Performance monitoring - removed missing file reference
-              // Performance is monitored via Google Analytics and Core Web Vitals
-              if (typeof window !== 'undefined' && window.location.hostname === 'charlesmackaybooks.com') {
-                // Core Web Vitals are tracked via Google Analytics automatically
-              }
-            `
-          }}
-        />
       </head>
       <ClientBody>
         <AnalyticsScripts />

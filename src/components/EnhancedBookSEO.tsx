@@ -35,7 +35,7 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
 
   const validSKU = getValidSKU(book.isbn, book.id);
 
-  const baseUrl = 'https://charlesmackaybooks.com';
+  const baseUrl = SITE_CONSTANTS.BASE_URL;
 
   const editorialReview = {
     '@type': 'Review',

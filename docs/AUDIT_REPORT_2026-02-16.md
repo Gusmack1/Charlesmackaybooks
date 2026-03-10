@@ -19,9 +19,9 @@
 |----------|-------|----------|
 | High | Missing blog JPG images | `public/blog-images/` |
 | Medium | Search schema URL param mismatch (`q` vs `query`) | `layout.tsx` lines 164–166 |
-| Medium | Duplicate Rohrbach pages | Merge or redirect |
-| Medium | Footer "Academic Resources" links to `/for-researchers` | `Footer.tsx` line 30 |
-| Low | Inline performance script (comment only) | `layout.tsx` lines 221–226 |
+| ~~Medium~~ | ~~Duplicate Rohrbach pages~~ | **DONE** – Duplicate deleted, no redirect |
+| ~~Medium~~ | ~~Footer "Academic Resources" links to `/for-researchers`~~ | **DONE** – Now links to `/academic-resources` |
+| ~~Low~~ | ~~Inline performance script (comment only)~~ | **DONE** – Removed empty script |
 | Low | `featuredBooks` mix of book IDs and blog slugs | `category-descriptions.ts` |
 
 ### 2. Sales Conversion Agent
@@ -79,10 +79,12 @@
 - ✅ 500ms delay – Removed from Add to basket in `BookDetailClient`
 - ✅ Browse books – Added to empty cart sidebar
 - ✅ Add to basket – Added to quick pairings and Related Books via `BookQuickAddCard`, `RelatedBookCard`
-- ✅ Blog image fallback – Created `BlogImage` component with inline placeholder; migrate blog pages gradually
+- ✅ Blog image fallback – `ComprehensiveBlogTemplate` adds `onerror` fallback to all `<img>` tags
+- ✅ Footer Academic Resources – Now links to `/academic-resources` (was `/for-researchers`)
+- ✅ Layout performance script – Removed empty no-op script
 
 ## Recommended Next Steps
 
 1. **Manual mobile test** – Checkout flow on real device (sticky bar CTA, Pay button)
 2. **Missing blog JPGs** – Many referenced in blog posts don't exist in `public/blog-images/`. Either add the images or migrate `<img>` to `<BlogImage>` for fallback. See `docs/BLOG_IMAGES_MISSING.md` for list.
-3. **Duplicate Rohrbach page** – Merge or redirect per WEBSITE_CLEANUP_TODO
+3. ~~**Duplicate Rohrbach page**~~ – Done: duplicate deleted, no redirect
