@@ -6,7 +6,7 @@
 
 ## Git Push
 
-- **Commit:** `0bbf79b` – Remove all redirects, update GSC sitemaps and removals, update docs
+- **Commit:** `23634c9` – Centralize BASE_URL, remove sitemap-generator, fix Footer link, Rohrbach cleanup
 - **Pushed to:** `origin/main`
 
 ---
@@ -18,7 +18,7 @@
 | Priority | Issue | Location |
 |----------|-------|----------|
 | High | Missing blog JPG images | `public/blog-images/` |
-| Medium | Search schema URL param mismatch (`q` vs `query`) | `layout.tsx` lines 164–166 |
+| ~~Medium~~ | ~~Search schema URL param mismatch~~ | **DONE** – Schema uses `query` (matches Header) |
 | ~~Medium~~ | ~~Duplicate Rohrbach pages~~ | **DONE** – Duplicate deleted, no redirect |
 | ~~Medium~~ | ~~Footer "Academic Resources" links to `/for-researchers`~~ | **DONE** – Now links to `/academic-resources` |
 | ~~Low~~ | ~~Inline performance script (comment only)~~ | **DONE** – Removed empty script |
