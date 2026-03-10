@@ -1,15 +1,11 @@
 {
   "slug": "2026-02-28-official-statistics-renewable-transport-",
-  "title": "Official Statistics Renewable Transport",
-  "wordCount": 135,
+  "title": "Renewable Transport Fuel Obligation Statistics for 2024 Released",
+  "wordCount": 93,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Official Statistics: Renewable Transport Fuel Obligation (RTFO) statistics 2024: Final report. Supply of renewable fuels for January to December 2024.\n\nResearch: Measurement of emissions from brake and tyre wear. A research report on developing prototypes to measure brake and tyre wear emissions from road vehicles in real driving conditions.\n\nOfficial Statistics: Sustainable Aviation Fuel (SAF) Mandate statistics 2025: Second provisional release. Supply of sustainable aviation fuel under the SAF Mandate for January to December 2025."
-    },
-    {
-      "heading": "Context",
-      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+      "content": "The Department for Transport has released its final report on the Renewable Transport Fuel Obligation (RTFO) statistics for 2024. This report details the supply of renewable fuels from January to December 2024, highlighting trends and progress in the UK's shift towards sustainable transportation options.\n\nThe RTFO plays a significant role in promoting the use of renewable fuels, which are essential in reducing carbon emissions in the transport sector. As Scotland continues to embrace sustainable aviation practices, the transition to renewable fuels is a crucial part of the nation’s broader commitment to environmental stewardship."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "dft-press-office",
       "sourceUrl": "https://www.gov.uk/government/statistics/renewable-transport-fuel-obligation-rtfo-statistics-2024-final-report",
       "citationText": "dft-press-office – Official Statistics: Renewable Transport Fuel Obligation (RTFO) statistics 2024: Final report"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/measurement-of-emissions-from-brake-and-tyre-wear",
-      "citationText": "dft-press-office – Research: Measurement of emissions from brake and tyre wear"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/statistics/sustainable-aviation-fuel-saf-mandate-statistics-2025-second-provisional-release",
-      "citationText": "dft-press-office – Official Statistics: Sustainable Aviation Fuel (SAF) Mandate statistics 2025: Second provisional release"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,23 +32,15 @@
       "primary": false
     },
     {
-      "keyword": "airspace",
-      "primary": false
-    },
-    {
-      "keyword": "Scottish aviation",
-      "primary": false
-    },
-    {
-      "keyword": "airport",
-      "primary": false
-    },
-    {
       "keyword": "aviation",
       "primary": false
     },
     {
-      "keyword": "Official Statistics Renewable Transport",
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Renewable Transport Fuel Obligation",
       "primary": false
     }
   ],

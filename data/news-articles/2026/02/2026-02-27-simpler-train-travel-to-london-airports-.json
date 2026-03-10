@@ -1,15 +1,11 @@
 {
   "slug": "2026-02-27-simpler-train-travel-to-london-airports-",
-  "title": "Simpler Train Travel To London Airports",
-  "wordCount": 312,
+  "title": "New Initiative to Simplify Train Travel to London Airports",
+  "wordCount": 95,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Simpler train travel to London airports as tap-in, tap-out expanded across south-east England. Buying tickets will be more convenient, more accessible and more flexible, ensuring passengers can get the best fares when travelling to Heathrow, Gatwick and other London airports.\n\nStatutory guidance on UKADS and UKACS licence obligations sets out the strategic objectives for the UK airspace design service (UKADS) and the airspace coordination service (UKACS). These bodies support the safe and efficient use of UK airspace.\n\nThe Secretary of State for Transport has approved the revocation of the A1 in Northumberland: Morpeth to Ellingham Development Consent Order 2024."
-    },
-    {
-      "heading": "Context",
-      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+      "content": "A new initiative is set to enhance train travel to London airports by expanding the tap-in, tap-out payment system across south-east England. This development aims to make ticket purchasing more convenient, accessible, and flexible for passengers traveling to airports such as Heathrow and Gatwick.\n\nThe improved system will help travelers secure the best fares while increasing the efficiency of their journeys. This initiative is part of broader efforts to modernize transport links across the UK, including connections to areas like Scotland's Highlands and Islands, where aviation has played a vital role since the inter-war period."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "dft-press-office",
       "sourceUrl": "https://www.gov.uk/government/news/simpler-train-travel-to-london-airports-as-tap-in-tap-out-expanded-across-south-east-england",
       "citationText": "dft-press-office – Simpler train travel to London airports as tap-in, tap-out expanded across south-east England"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/ukads-and-ukacs-licence-obligations-strategic-objectives",
-      "citationText": "dft-press-office – Statutory guidance: UKADS and UKACS licence obligations: strategic objectives"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/proposed-revocation-of-the-a1-in-northumberland-morpeth-to-ellingham-development-consent-order-2024",
-      "citationText": "dft-press-office – Decision: Revocation of the A1 in Northumberland Morpeth to Ellingham Development Consent Order 2024"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,11 +32,7 @@
       "primary": false
     },
     {
-      "keyword": "airspace",
-      "primary": false
-    },
-    {
-      "keyword": "Scottish aviation",
+      "keyword": "MOD",
       "primary": false
     },
     {
@@ -62,7 +44,11 @@
       "primary": false
     },
     {
-      "keyword": "Simpler Train Travel London",
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "New Initiative Simplify Train",
       "primary": false
     }
   ],

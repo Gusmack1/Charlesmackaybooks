@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-guidance-rtfo-and-saf-mandate-feedstock-",
   "title": "Guidance: RTFO and SAF Mandate feedstock materials used for creating low carbon fuels",
-  "wordCount": 238,
+  "wordCount": 105,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Guidance: RTFO and SAF Mandate feedstock materials used for creating low carbon fuels** — List of feedstock materials for making renewable fuels under the Renewable Transport Fuel Obligation (RTFO) scheme and Sustainable Aviation Fuel (SAF) mandate.\n- **New Sunderland-made Nissan LEAF qualifies for £3,750 discount under government’s EV grant in a boost for North East manufacturing** — There are now 39 models of electric vehicles eligible for the Electric Car Grant.\n- **Using a rental e-scooter** — How to safely use an electric scooter rented as part of a government trial."
+      "content": "The Department for Transport (DfT) has announced new guidance concerning the feedstock materials permitted for producing low carbon fuels as part of the Renewable Transport Fuel Obligation (RTFO) scheme. This guidance includes a detailed list of acceptable feedstock materials for creating renewable fuels within the RTFO framework and the Sustainable Aviation Fuel (SAF) mandate.\n\nThe emphasis on low carbon fuels is critical for sustainability in aviation, an industry with deep-rooted connections to Scottish heritage. The development of sustainable aviation fuel is essential for minimizing carbon emissions, supporting the continued evolution of aviation, and enhancing connectivity through airports operated by HIAL across the Highlands and Islands."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "dft-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/deleted-rtfo-and-saf-mandate-feedstock-materials-used-for-creating-low-carbon-fuels",
       "citationText": "dft-press-office – Guidance: RTFO and SAF Mandate feedstock materials used for creating low carbon fuels"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/news/new-sunderland-made-nissan-leaf-qualifies-for-3750-discount-under-governments-ev-grant-in-a-boost-for-north-east-manufacturing",
-      "citationText": "dft-press-office – New Sunderland-made Nissan LEAF qualifies for £3,750 discount under government’s EV grant in a boost for North East manufacturing"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/guidance/e-scooter-trials-guidance-for-users",
-      "citationText": "dft-press-office – Using a rental e-scooter"
     }
   ],
   "relatedBooks": [
     {
-      "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -42,7 +32,11 @@
       "primary": false
     },
     {
-      "keyword": "MOD",
+      "keyword": "HIAL",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
       "primary": false
     },
     {

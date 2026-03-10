@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-08-outstanding-award-for-hial-security-trai",
-  "title": "Outstanding Award For HIAL Security Trai",
-  "wordCount": 143,
+  "title": "HIAL Security Training Team Receives 'Outstanding' Award",
+  "wordCount": 83,
   "sections": [
     {
       "heading": "Summary",
-      "content": "“Outstanding” Award for HIAL Security Training Team. The security training team at HIAL have recently been awarded “Outstanding” in their assessment under the UK Civil Aviation Authority (CAA) Quality Assurance Framework.\n\nAir Discount Scheme extension confirmed. The Scottish Government has confirmed that the Air Discount Scheme will be formally renewed from 1 April 2026 until at least 31 March 2027.\n\nHIAL celebrates apprenticeship achievement supporting workforce development. Degree awarded as part of workplace based Graduate Apprenticeship Scheme for member of Dundee&#039;s airport team."
-    },
-    {
-      "heading": "Context",
-      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+      "content": "The security training team at Highlands and Islands Airports Limited (HIAL) has been recognised for their excellence in performance with an 'Outstanding' rating in their assessment conducted under the UK Civil Aviation Authority (CAA) Quality Assurance Framework. This accolade highlights the team's commitment to maintaining high standards of safety and security in aviation.\n\nThe HIAL airports are crucial hubs connecting communities across the Highlands and Islands, supporting the region's connectivity and development, where aviation has played a vital role since the inter-war period."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "hial-airports",
       "sourceUrl": "https://www.hial.co.uk/news/article/239/-outstanding-award-for-hial-security-training-team",
       "citationText": "hial-airports – “Outstanding” Award for HIAL Security Training Team"
-    },
-    {
-      "sourceId": "hial-airports",
-      "sourceUrl": "https://www.hial.co.uk/news/article/238/air-discount-scheme-extension-confirmed",
-      "citationText": "hial-airports – Air Discount Scheme extension confirmed"
-    },
-    {
-      "sourceId": "hial-airports",
-      "sourceUrl": "https://www.hial.co.uk/news/article/237/hial-celebrates-apprenticeship-achievement-supporting-workforce-development",
-      "citationText": "hial-airports – HIAL celebrates apprenticeship achievement supporting workforce development"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "clydeside-aviation-vol2",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -50,11 +36,7 @@
       "primary": false
     },
     {
-      "keyword": "airspace",
-      "primary": false
-    },
-    {
-      "keyword": "Scottish aviation",
+      "keyword": "Highlands and Islands Airports",
       "primary": false
     },
     {
@@ -66,7 +48,7 @@
       "primary": false
     },
     {
-      "keyword": "Outstanding Award For HIAL",
+      "keyword": "HIAL Security Training Team",
       "primary": false
     }
   ],

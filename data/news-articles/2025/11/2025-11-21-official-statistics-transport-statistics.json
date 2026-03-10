@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-official-statistics-transport-statistics",
-  "title": "Official Statistics Transport Statistics",
-  "wordCount": 225,
+  "title": "Transport Statistics Geography Portal Updated for November 2025",
+  "wordCount": 87,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Official Statistics: Transport Statistics Geography Portal: November 2025** — Quarterly update to the website that presents existing published official statistics, by the Department for Transport, in a geographical format.\n- **Guidance: Vehicle Emissions Trading Schemes: how to comply** — What participants need to do to meet their obligations under the Vehicle Emissions Trading Schemes (VETS) Order 2023.\n- **Statutory guidance: East West Rail safeguarding directions** — Safeguarding directions for the East West Rail project for local planning authorities."
+      "content": "The Department for Transport (DfT) has released a quarterly update to its Transport Statistics Geography Portal for November 2025. This update provides existing published official statistics in a geographical format, allowing for better analysis and understanding of transport trends across different regions.\n\nThe Transport Statistics Geography Portal supports informed decision-making in transport planning and policy, offering critical insights into the dynamics of transportation. Scottish aviation heritage is connected to this broader dataset, reflecting the vital role of aviation in enhancing connectivity across communities since the inter-war period."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "dft-press-office",
       "sourceUrl": "https://www.gov.uk/government/statistics/transport-statistics-geography-portal-november-2025",
       "citationText": "dft-press-office – Official Statistics: Transport Statistics Geography Portal: November 2025"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/vehicle-emissions-trading-schemes-how-to-comply",
-      "citationText": "dft-press-office – Guidance: Vehicle Emissions Trading Schemes: how to comply"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/east-west-rail-safeguarding-directions",
-      "citationText": "dft-press-office – Statutory guidance: East West Rail safeguarding directions"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -42,7 +32,7 @@
       "primary": false
     },
     {
-      "keyword": "East West Rail",
+      "keyword": "Scottish aviation",
       "primary": false
     },
     {
@@ -50,7 +40,7 @@
       "primary": false
     },
     {
-      "keyword": "Official Statistics Transport Statistics",
+      "keyword": "Transport Statistics Geography Portal",
       "primary": false
     }
   ],

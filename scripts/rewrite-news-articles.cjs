@@ -6,11 +6,23 @@
  *
  * Run: OPENAI_API_KEY=xxx node scripts/rewrite-news-articles.cjs
  *      --dry-run  to preview without writing
+ * Loads OPENAI_API_KEY from .env.local if not set.
  */
 const fs = require('fs')
 const path = require('path')
 
 const ROOT_DIR = path.join(__dirname, '..')
+const envPath = path.join(ROOT_DIR, '.env.local')
+if (fs.existsSync(envPath) && !process.env.OPENAI_API_KEY) {
+  const content = fs.readFileSync(envPath, 'utf8')
+  for (const line of content.split('\n')) {
+    const m = line.match(/^\s*OPENAI_API_KEY\s*=\s*(.+?)\s*$/)
+    if (m) {
+      process.env.OPENAI_API_KEY = m[1].replace(/^["']|["']$/g, '').trim()
+      break
+    }
+  }
+}
 const ARTICLES_DIR = path.join(ROOT_DIR, 'data', 'news-articles')
 const OPENAI_URL = 'https://api.openai.com/v1/chat/completions'
 
@@ -100,8 +112,23 @@ async function rewriteArticle(filePath, apiKey, dryRun) {
 
   const excerpt = `Title: ${primarySource.citationText}\n\nCurrent content:\n${(article.sections || []).map((s) => s.content).join('\n\n')}`
 
+  let rewritten
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      rewritten = await callOpenAI(apiKey, excerpt)
+      break
+    } catch (err) {
+      const isRateLimit = err.message?.includes('429') || err.message?.includes('rate_limit')
+      if (isRateLimit && attempt < 3) {
+        console.log(`Rate limited, waiting 25s before retry ${attempt + 1}/3...`)
+        await new Promise((r) => setTimeout(r, 25_000))
+      } else {
+        throw err
+      }
+    }
+  }
+
   try {
-    const rewritten = await callOpenAI(apiKey, excerpt)
     const newContent = (rewritten.content || '').trim()
     const newTitle = (rewritten.title || article.title || primarySource.citationText).trim()
 
@@ -148,10 +175,11 @@ async function main() {
   const files = listFiles(ARTICLES_DIR)
   console.log(`Found ${files.length} articles. ${dryRun ? '(Dry run – no changes)' : ''}\n`)
 
+  const delayMs = 25_000 // 25s between requests to stay under 3 RPM (free tier)
   for (let i = 0; i < files.length; i++) {
     await rewriteArticle(files[i], apiKey, dryRun)
     if (!dryRun && i < files.length - 1) {
-      await new Promise((r) => setTimeout(r, 500))
+      await new Promise((r) => setTimeout(r, delayMs))
     }
   }
 

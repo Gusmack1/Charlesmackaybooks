@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-east-west-rail-autumn-announcement-2025",
   "title": "East West Rail Autumn Announcement 2025",
-  "wordCount": 237,
+  "wordCount": 94,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **East West Rail autumn announcement 2025** — Latest proposals for East West Rail reflect government’s commitment to delivering improved connectivity for communities in the Oxford-Cambridge region.\n- **East West Rail unveils next phase for Oxford-Cambridge growth** — East West Rail confirms next phase of construction, boosting Oxford-Cambridge links with more frequent trains, new stations and major economic growth.\n- **UK airspace design service: proposed modifications to NERL licence terms** — Seeks views on the proposed modifications to terms of the national air traffic services (NATS) (En Route) plc (NERL) licence."
+      "content": "The UK government has unveiled the latest proposals for the East West Rail project, reaffirming its commitment to enhancing connectivity for communities in the Oxford-Cambridge region. The autumn announcement for 2025 outlines plans aimed at developing a more integrated transport network.\n\nThe initiative is expected to improve travel links and economic opportunities, reflecting the importance of transportation infrastructure in fostering regional growth. Such developments underscore the vital role of connectivity in local communities, similar to how HIAL airports connect regions in Scotland's Highlands and Islands, where aviation has been essential since the inter-war period."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "dft-press-office",
       "sourceUrl": "https://www.gov.uk/government/speeches/east-west-rail-autumn-announcement-2025",
       "citationText": "dft-press-office – East West Rail autumn announcement 2025"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/news/east-west-rail-unveils-next-phase-for-oxford-cambridge-growth",
-      "citationText": "dft-press-office – East West Rail unveils next phase for Oxford-Cambridge growth"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/consultations/uk-airspace-design-service-proposed-modifications-to-nerl-licence-terms",
-      "citationText": "dft-press-office – UK airspace design service: proposed modifications to NERL licence terms"
     }
   ],
   "relatedBooks": [
     {
-      "bookId": "sabres-from-north",
-      "reason": "Topical link between news items and catalogue research focus."
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -42,27 +32,27 @@
       "primary": false
     },
     {
+      "keyword": "HIAL",
+      "primary": false
+    },
+    {
       "keyword": "East West Rail",
       "primary": false
     },
     {
-      "keyword": "NERL",
+      "keyword": "airport",
       "primary": false
     },
     {
-      "keyword": "NATS",
+      "keyword": "aviation",
       "primary": false
     },
     {
-      "keyword": "airspace",
+      "keyword": "Scotland",
       "primary": false
     },
     {
-      "keyword": "MOD",
-      "primary": false
-    },
-    {
-      "keyword": "RAF",
+      "keyword": "UK government",
       "primary": false
     }
   ],

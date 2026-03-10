@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-uk-launches-military-esports-games-to-bo",
   "title": "UK launches military esports games to boost cyber skills",
-  "wordCount": 239,
+  "wordCount": 85,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **UK launches military esports games to boost cyber skills** — Military personnel from over 40 nations compete to sharpen cyber skills through gaming applying lessons from Ukraine's use of gaming technology in warfare.\n- **Gurkhas lay to rest unknown war hero** — The poignant burial of an unknown soldier of World War 2 took place today in Arezzo, Italy, with a bearer party from the Gurkhas carrying him to his final resting place.\n- **Transparency data: MOD: workforce management information January to December 2025** — Reports on departmental staff numbers and costs."
+      "content": "The UK has introduced military esports games aimed at enhancing cyber skills among military personnel. Competitors from more than 40 nations are participating in this initiative, which seeks to apply lessons learned from Ukraine's use of gaming technology in warfare.\n\nThis innovative approach highlights the growing intersection between gaming and military strategy, demonstrating how electronic platforms can be utilized for serious skills development. The initiative underscores the UK's commitment to adapting to modern warfare strategies, reflecting the importance of technological proficiency in contemporary military operations."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/government/news/uk-launches-military-esports-games-to-boost-cyber-skills",
       "citationText": "mod-press-office – UK launches military esports games to boost cyber skills"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/news/gurkhas-lay-to-rest-unknown-war-hero",
-      "citationText": "mod-press-office – Gurkhas lay to rest unknown war hero"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/mod-workforce-management-information-january-to-december-2025",
-      "citationText": "mod-press-office – Transparency data: MOD: workforce management information January to December 2025"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -43,10 +33,6 @@
     },
     {
       "keyword": "MOD",
-      "primary": false
-    },
-    {
-      "keyword": "aviation",
       "primary": false
     },
     {

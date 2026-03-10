@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-04-aaib-investigation-to-short-bros-sd3-60-",
-  "title": "Aaib Investigation To Short Bros Sd3 60",
-  "wordCount": 130,
+  "title": "AAIB Investigates Runway Undershoot Incident in British Virgin Islands",
+  "wordCount": 87,
   "sections": [
     {
       "heading": "Summary",
-      "content": "AAIB investigation to Short Bros SD3-60, N915GD. Runway undershoot at Terrance B. Lettsome International Airport, British Virgin Islands, 6 November 2024\n\nIndependent report: AAIB Record-only investigations reviewed: July - August 2025. This is a list of AAIB Record-only investigations that were reviewed during July - August 2025.\n\nAnniversary Statement: UAS CGT 50, (UAS reg n/a), 5 October 2023. Right wing separated from airframe in-flight, Radnor Range, Powys, 5 October 2023"
-    },
-    {
-      "heading": "Context",
-      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+      "content": "The UK Air Accidents Investigation Branch (AAIB) has launched an investigation into an incident involving a Short Bros SD3-60 aircraft, registered as N915GD. The occurrence was reported on 6 November 2024, at Terrance B. Lettsome International Airport, located in the British Virgin Islands.\n\nThe inquiry will examine the circumstances surrounding the runway undershoot to determine contributing factors and improve safety measures. This investigation underscores the importance of aviation safety standards, a concern that resonates strongly in Scotland, where HIAL airports connect communities across the Highlands and Islands."
     }
   ],
   "images": [],
@@ -18,22 +14,16 @@
       "sourceId": "aaib-bulletins",
       "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-short-bros-sd3-60-n915gd",
       "citationText": "aaib-bulletins – AAIB investigation to Short Bros SD3-60, N915GD"
-    },
-    {
-      "sourceId": "aaib-bulletins",
-      "sourceUrl": "https://www.gov.uk/government/publications/aaib-record-only-investigations-reviewed-july-august-2025",
-      "citationText": "aaib-bulletins – Independent report: AAIB Record-only investigations reviewed: July - August 2025"
-    },
-    {
-      "sourceId": "aaib-bulletins",
-      "sourceUrl": "https://www.gov.uk/government/news/anniversary-statement-uas-cgt-50-uas-reg-na-5-october-2023",
-      "citationText": "aaib-bulletins – Anniversary Statement: UAS CGT 50, (UAS reg n/a), 5 October 2023"
     }
   ],
   "relatedBooks": [
     {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Topical link between news item and catalogue research focus."
+    },
+    {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,11 +36,11 @@
       "primary": false
     },
     {
-      "keyword": "airspace",
+      "keyword": "HIAL",
       "primary": false
     },
     {
-      "keyword": "Scottish aviation",
+      "keyword": "RAF",
       "primary": false
     },
     {
@@ -58,11 +48,15 @@
       "primary": false
     },
     {
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
       "keyword": "aviation",
       "primary": false
     },
     {
-      "keyword": "Aaib Investigation Short Bros",
+      "keyword": "Scotland",
       "primary": false
     }
   ],

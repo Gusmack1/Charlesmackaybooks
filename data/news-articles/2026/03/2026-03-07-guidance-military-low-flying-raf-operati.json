@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-07-guidance-military-low-flying-raf-operati",
-  "title": "Guidance Military Low Flying Raf Operati",
-  "wordCount": 142,
+  "title": "RAF Operational Low Flying Training Timetable Released",
+  "wordCount": 118,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Guidance: Military low flying: RAF operational low flying training timetable. Royal Air Force (RAF) operational low flying training timetables in 3 areas of the UK.\n\nRegulation: Notice of authorised amendments (NAA) reference table. The NAA table provides information of changes in regulations and manuals and release date produced by the Military Aviation Authority (MAA).\n\nRegulation: Notice of authorised amendments (NAA) 2026 documents. Issuing of an NAA gives notice to the changes in regulations and manuals. Produced by the Military Aviation Authority (MAA)."
-    },
-    {
-      "heading": "Context",
-      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+      "content": "The Royal Air Force (RAF) has released its operational low flying training timetable, detailing schedules for training flights across three areas in the UK. This guidance is essential for those residing near designated low flying routes to remain informed and aware of scheduled activities.\n\nThe low flying operations are part of the RAF's training procedures, ensuring pilots gain the necessary experience in low altitude flying. The RAF plays a crucial role in the UK's aerial defense strategy, with these training exercises contributing to national and regional security. Aviation has been a significant aspect of Scotland's transport network, with HIAL airports connecting communities across the Highlands and Islands, where aviation has played a vital role since the inter-war period."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable",
       "citationText": "mod-press-office – Guidance: Military low flying: RAF operational low flying training timetable"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table",
-      "citationText": "mod-press-office – Regulation: Notice of authorised amendments (NAA) reference table"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2026-documents",
-      "citationText": "mod-press-office – Regulation: Notice of authorised amendments (NAA) 2026 documents"
     }
   ],
   "relatedBooks": [
     {
-      "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,7 +32,7 @@
       "primary": false
     },
     {
-      "keyword": "airspace",
+      "keyword": "HIAL",
       "primary": false
     },
     {
@@ -58,15 +44,15 @@
       "primary": false
     },
     {
-      "keyword": "Scottish aviation",
-      "primary": false
-    },
-    {
       "keyword": "airport",
       "primary": false
     },
     {
       "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
       "primary": false
     }
   ],

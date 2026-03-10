@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-06-promotional-material-find-opportunities-",
-  "title": "Promotional Material Find Opportunities",
-  "wordCount": 129,
+  "title": "Opportunities for Suppliers with the Ministry of Defence",
+  "wordCount": 86,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Promotional material: Find opportunities to become a supplier with the Ministry of Defence. Leaflet explaining how suppliers can work with the Ministry of Defence (MOD).\n\nCorporate report: Service Inquiry into the support provided to Army victims of sexual assault. The Service Inquiry report into the support provided to Army victims of sexual assault.\n\nGuidance: Afghan Relocations and Assistance Policy. Information and guidance on the Afghan Relocations and Assistance Policy."
-    },
-    {
-      "heading": "Context",
-      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+      "content": "The Ministry of Defence (MOD) is inviting potential suppliers to explore opportunities for collaboration. A new leaflet has been released, detailing how businesses can engage with the MOD and become part of its supply chain.\n\nThis initiative highlights the MOD's commitment to working with various suppliers as part of its operational strategy. Such partnerships are vital for the ongoing development and sustainability of UK defence capabilities. HIAL airports connect communities across the Highlands and Islands, where aviation has played a vital role since the inter-war period."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/find-opportunities-to-become-a-supplier-with-the-ministry-of-defence",
       "citationText": "mod-press-office – Promotional material: Find opportunities to become a supplier with the Ministry of Defence"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/service-inquiry-into-the-support-provided-to-army-victims-of-sexual-assault",
-      "citationText": "mod-press-office – Corporate report: Service Inquiry into the support provided to Army victims of sexual assault"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/afghan-relocations-and-assistance-policy",
-      "citationText": "mod-press-office – Guidance: Afghan Relocations and Assistance Policy"
     }
   ],
   "relatedBooks": [
     {
-      "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,7 +32,7 @@
       "primary": false
     },
     {
-      "keyword": "airspace",
+      "keyword": "HIAL",
       "primary": false
     },
     {
@@ -58,15 +44,15 @@
       "primary": false
     },
     {
-      "keyword": "Scottish aviation",
-      "primary": false
-    },
-    {
       "keyword": "airport",
       "primary": false
     },
     {
       "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Opportunities for Suppliers with",
       "primary": false
     }
   ],

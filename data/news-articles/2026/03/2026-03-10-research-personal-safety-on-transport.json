@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-10-research-personal-safety-on-transport",
-  "title": "Research Personal Safety On Transport",
-  "wordCount": 137,
+  "title": "Study Examines Personal Safety on Transport Network",
+  "wordCount": 91,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Research: Personal safety on transport. Study exploring how safe people feel on the transport network and their experience of incidents impacting their personal safety.\n\nTransparency data: Department for Transport’s accounting officer assessment summaries for the Government Major Projects Portfolio. Accounting officer assessment summaries for the Department for Transport’s (DfT) programmes and projects in the Government Major Projects Portfolio (GMPP).\n\nPolicy paper: Rail air quality policy statement. Sets out the government’s approach to improving air quality across the passenger railway in England."
-    },
-    {
-      "heading": "Context",
-      "content": "Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes."
+      "content": "A new study has been launched to explore how safe individuals feel while using the transport network, with a focus on their experiences related to personal safety incidents. The research aims to gather data on perceptions of safety and any events that may compromise personal security during transportation.\n\nThe findings of this study could contribute to enhancing safety measures and reassuring users of transport systems. As aviation has been integral to connecting communities in Scotland, ensuring safety within transport networks is vital for maintaining public confidence in travel across the region."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "dft-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/personal-safety-on-transport",
       "citationText": "dft-press-office – Research: Personal safety on transport"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/government-major-projects-portfolio-accounting-officer-assessments",
-      "citationText": "dft-press-office – Transparency data: Department for Transport’s accounting officer assessment summaries for the Government Major Projects Portfolio"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/rail-air-quality-policy-statement",
-      "citationText": "dft-press-office – Policy paper: Rail air quality policy statement"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,15 +32,15 @@
       "primary": false
     },
     {
-      "keyword": "airport",
-      "primary": false
-    },
-    {
       "keyword": "aviation",
       "primary": false
     },
     {
-      "keyword": "Research Personal Safety Transport",
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Study Examines Personal Safety",
       "primary": false
     }
   ],

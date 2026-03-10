@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-guidance-dartmoor-firing-times",
-  "title": "Guidance Dartmoor Firing Times",
-  "wordCount": 201,
+  "title": "Dartmoor Training Area Announces Military Firing Times",
+  "wordCount": 91,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Guidance: Dartmoor firing times** — Information on Dartmoor Training Area's firing times.\n- **Guidance: Sennybridge firing notice** — Monthly firing times for Sennybridge Training Area.\n- **Guidance: Introduction to BowTie methodology course** — This Military Aviation Authority Centre of Air Safety Training enables delegates to gain a basic awareness of BowTies and associated processes."
+      "content": "The Dartmoor Training Area has released guidance concerning its firing times for military exercises, an essential aspect for ensuring the safety of local residents and visitors. This information is crucial for those travelling through the area, allowing them to avoid times when live firing is occurring.\n\nScheduled firing times are designed to minimize disruption while facilitating necessary military training activities that are vital for operational readiness. The Dartmoor Training Area plays a significant role in military preparedness, highlighting the importance of such facilities within the framework of broader British defence initiatives."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/dartmoor-firing-programme",
       "citationText": "mod-press-office – Guidance: Dartmoor firing times"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/sennybridge-firing-notice",
-      "citationText": "mod-press-office – Guidance: Sennybridge firing notice"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/introduction-to-bowtie-methodology-course",
-      "citationText": "mod-press-office – Guidance: Introduction to BowTie methodology course"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -42,11 +32,7 @@
       "primary": false
     },
     {
-      "keyword": "aviation",
-      "primary": false
-    },
-    {
-      "keyword": "Guidance Dartmoor Firing Times",
+      "keyword": "Dartmoor Training Area Announces",
       "primary": false
     }
   ],

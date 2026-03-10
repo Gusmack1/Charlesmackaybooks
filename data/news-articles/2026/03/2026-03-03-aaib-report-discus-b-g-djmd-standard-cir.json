@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-03-aaib-report-discus-b-g-djmd-standard-cir",
-  "title": "Aaib Report Discus B G Djmd Standard Cir",
-  "wordCount": 144,
+  "title": "AAIB Report: Fatal Accident Involving Discus B and Standard Cirrus at Hinton-in-the-Hedges",
+  "wordCount": 88,
   "sections": [
     {
       "heading": "Summary",
-      "content": "AAIB Report: Discus B, G-DJMD / Standard Cirrus, G-DCTB. Fatal accident involving Discus B, G-DJMD and Standard Cirrus, G-DCTB, Hinton-in-the-Hedges Airfield, Northamptonshire, 25 May 2024\n\nAAIB investigation to Discus B, G-DJMD / Standard Cirrus, G-DCTB. Discus B (G-DJMD) and Standard Cirrus (G-DCTB), collided while landing at Hinton-in-the-Hedges Airfield,  Northamptonshire, 25 May 2024\n\nThe AAIB has sent a team to Portmoak, Kinross. A team of inspectors has been sent to Portmoak, Kinross, to begin investigating a light aircraft accident which occurred on Monday 27 October"
-    },
-    {
-      "heading": "Context",
-      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+      "content": "The Air Accidents Investigation Branch (AAIB) has released a report detailing a fatal accident involving a Discus B aircraft, registration G-DJMD, and a Standard Cirrus aircraft, registration G-DCTB. The incident occurred on 25 May 2024 at Hinton-in-the-Hedges Airfield in Northamptonshire.\n\nThe findings from the AAIB report highlight the circumstances surrounding the tragic event, emphasizing the need for ongoing safety measures in general aviation. Scotland's rich aviation heritage underlines the importance of safety in all flight operations, particularly as communities across the Highlands and Islands rely on air connectivity."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "aaib-bulletins",
       "sourceUrl": "https://www.gov.uk/government/news/aaib-report-discus-b-g-djmd-standard-cirrus-g-dctb",
       "citationText": "aaib-bulletins – AAIB Report: Discus B, G-DJMD / Standard Cirrus, G-DCTB"
-    },
-    {
-      "sourceId": "aaib-bulletins",
-      "sourceUrl": "https://www.gov.uk/aaib-reports/aaib-investigation-to-discus-b-g-djmd-slash-standard-cirrus-g-dctb",
-      "citationText": "aaib-bulletins – AAIB investigation to Discus B, G-DJMD / Standard Cirrus, G-DCTB"
-    },
-    {
-      "sourceId": "aaib-bulletins",
-      "sourceUrl": "https://www.gov.uk/government/news/the-aaib-has-sent-a-team-to-portmoak-kinross",
-      "citationText": "aaib-bulletins – The AAIB has sent a team to Portmoak, Kinross"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,19 +32,7 @@
       "primary": false
     },
     {
-      "keyword": "airspace",
-      "primary": false
-    },
-    {
       "keyword": "RAF",
-      "primary": false
-    },
-    {
-      "keyword": "Scottish aviation",
-      "primary": false
-    },
-    {
-      "keyword": "airport",
       "primary": false
     },
     {
@@ -67,6 +41,14 @@
     },
     {
       "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "AAIB Report: Fatal Accident",
       "primary": false
     }
   ],

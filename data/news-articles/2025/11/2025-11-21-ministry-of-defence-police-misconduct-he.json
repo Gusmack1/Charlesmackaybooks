@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-ministry-of-defence-police-misconduct-he",
-  "title": "Ministry of Defence Police: misconduct hearings",
-  "wordCount": 234,
+  "title": "Ministry of Defence Police Misconduct Hearings Announced",
+  "wordCount": 82,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Ministry of Defence Police: misconduct hearings** — Find out about misconduct hearings involving Ministry of Defence Police (MDP) officers and how to attend these public hearings.\n- **Regulation: Notice of authorised amendments (NAA) reference table** — The NAA table provides information of changes in regulations and manuals and release date produced by the Military Aviation Authority (MAA).\n- **Regulation: Notice of authorised amendments (NAA) 2025 documents** — Issuing of an NAA gives notice to the changes in regulations and manuals. Produced by the Military Aviation Authority (MAA)."
+      "content": "The Ministry of Defence Police (MDP) has announced upcoming misconduct hearings involving its officers. These hearings are designed to address allegations of misconduct within the police force that operates under the Ministry of Defence.\n\nMembers of the public are invited to attend these hearings, which aim to maintain transparency and accountability within the MDP. The hearings reflect the ongoing commitment to uphold high standards of conduct among policing personnel, which is crucial for ensuring trust in the forces that serve the nation."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/guidance/ministry-of-defence-police-misconduct-hearings",
       "citationText": "mod-press-office – Ministry of Defence Police: misconduct hearings"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table",
-      "citationText": "mod-press-office – Regulation: Notice of authorised amendments (NAA) reference table"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2025-documents",
-      "citationText": "mod-press-office – Regulation: Notice of authorised amendments (NAA) 2025 documents"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,11 +36,7 @@
       "primary": false
     },
     {
-      "keyword": "aviation",
-      "primary": false
-    },
-    {
-      "keyword": "Ministry Defence Police: misconduct",
+      "keyword": "Ministry Defence Police Misconduct",
       "primary": false
     }
   ],

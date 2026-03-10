@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-transparency-data-military-court-service",
-  "title": "Transparency Data Military Court Service",
-  "wordCount": 223,
+  "title": "Military Court Service Sentencing Remarks Transcripts Released for 2025",
+  "wordCount": 101,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Transparency data: Military Court Service sentencing remarks 2025** — Transcripts of sentencing remarks from Service Court hearings in the Court Martial from 2025.\n- **Official Statistics: MOD Diversity Dashboard: October 2025** — Statistics on the diversity declaration and representation of minority groups of civil servants employed by the MOD.\n- **Guidance: Military low flying: RAF operational low flying training timetable** — Royal Air Force (RAF) operational low flying training timetables in 3 areas of the UK."
+      "content": "The Ministry of Defence has published transparency data regarding sentencing remarks from the Military Court Service for the year 2025. This release includes transcripts of the sentencing remarks made during Service Court hearings in the Court Martial, providing insight into the proceedings and decisions made by military judges.\n\nThe disclosure of these transcripts aims to enhance transparency and accountability within the military justice system. Such records are vital for public understanding of how military discipline is upheld. As Scotland has a significant military history, insights into these legal proceedings reflect the robust governance in place for service personnel across the UK."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025",
       "citationText": "mod-press-office – Transparency data: Military Court Service sentencing remarks 2025"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/statistics/mod-diversity-dashboard-october-2025",
-      "citationText": "mod-press-office – Official Statistics: MOD Diversity Dashboard: October 2025"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable",
-      "citationText": "mod-press-office – Guidance: Military low flying: RAF operational low flying training timetable"
     }
   ],
   "relatedBooks": [
     {
-      "bookId": "sabres-from-north",
-      "reason": "Topical link between news items and catalogue research focus."
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -42,23 +32,15 @@
       "primary": false
     },
     {
-      "keyword": "MOD",
+      "keyword": "Ministry of Defence",
       "primary": false
     },
     {
-      "keyword": "RAF",
+      "keyword": "Scotland",
       "primary": false
     },
     {
-      "keyword": "Royal Air Force",
-      "primary": false
-    },
-    {
-      "keyword": "aviation",
-      "primary": false
-    },
-    {
-      "keyword": "Transparency Data Military Court",
+      "keyword": "Military Court Service Sentencing",
       "primary": false
     }
   ],

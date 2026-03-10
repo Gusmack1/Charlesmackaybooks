@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-09-hial-a-foillseachadh-aithisg-bhliadhnail",
   "title": "HIAL A Foillseachadh Aithisg Bhliadhnail",
-  "wordCount": 148,
+  "wordCount": 61,
   "sections": [
     {
       "heading": "Summary",
-      "content": "HIAL a’ foillseachadh aithisg bhliadhnail airson 2024/25. Tha Puirt-adhair na Gàidhealtachd ’s nan Eilean Earranta (HIAL) air a aithisg bhliadhnail is cunntasan as ùire fhoillseachadh airson na bliadhna ionmhais 2024/25.\n\nResearch: Comparing fuel pumps to electric vehicle public chargers. An analysis that shows there are more electric vehicle (EV) public chargers than fuel pumps across the UK.\n\nHealth service to save millions with boost to electrify NHS fleet. Switching the NHS vehicle fleet to electric will save the health service millions and help to decarbonise 460 million miles of travel each year."
-    },
-    {
-      "heading": "Context",
-      "content": "Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes."
+      "content": "Highlands and Islands Airports Limited (HIAL) has published its latest annual report and accounts for the financial year 2024/25. The report details the operations and financial performance of HIAL, which manages several airports across the region.\n\nHIAL airports play a crucial role in connecting communities across the Highlands and Islands, an area where aviation has been vital since the inter-war period."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "hial-airports",
       "sourceUrl": "https://www.hial.co.uk/news/article/230/hial-a-foillseachadh-aithisg-bhliadhnail-airson-2024-25",
       "citationText": "hial-airports – HIAL a’ foillseachadh aithisg bhliadhnail airson 2024/25"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/comparing-fuel-pumps-to-electric-vehicle-public-chargers",
-      "citationText": "dft-press-office – Research: Comparing fuel pumps to electric vehicle public chargers"
-    },
-    {
-      "sourceId": "dft-press-office",
-      "sourceUrl": "https://www.gov.uk/government/news/health-service-to-save-millions-with-boost-to-electrify-nhs-fleet",
-      "citationText": "dft-press-office – Health service to save millions with boost to electrify NHS fleet"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "clydeside-aviation-vol2",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -47,6 +33,10 @@
     },
     {
       "keyword": "HIAL",
+      "primary": false
+    },
+    {
+      "keyword": "Highlands and Islands Airports",
       "primary": false
     },
     {

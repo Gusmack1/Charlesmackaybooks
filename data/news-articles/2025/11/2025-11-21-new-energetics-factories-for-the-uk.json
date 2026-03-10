@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-new-energetics-factories-for-the-uk",
-  "title": "New Energetics Factories For The UK",
-  "wordCount": 264,
+  "title": "UK Defence Industry Invited to Propose New Energetics Factories",
+  "wordCount": 99,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **New energetics factories for the UK** — The defence industry is being invited to submit proposals to meet the Government’s requirements for bolstering munitions and energetics production in the UK.\n- **Boost for Armed Forces as new laser weapon takes down high-speed drones** — MBDA awarded £316 million contract to deliver new DragonFire systems to the Royal Navy from 2027, after achieving UK first in latest testing by shooting down high-speed drones with new laser system.\n- **Guidance: DSA03 OME: part 1 OME Acquisition** — DSA 03 OME part 1 provides guidance to ensure that the risks associated with Ordnance, Munitions and Explosives (OME) are as low as reasonably practicable when in use, stored, moved, and disposed."
+      "content": "The UK Government has opened a call for proposals from the defence industry aimed at enhancing munitions and energetics production within the country. This initiative is part of a broader strategy to strengthen the nation's defence capabilities.\n\nThe focus on developing new energetics factories aligns with the increasing demand for domestic production of critical defence materials. Such advancements are essential for ensuring the UK's security and responsiveness in a changing geopolitical landscape. Aviation plays a crucial role in this sector, with Scottish airports facilitating logistics and connectivity for the defence operations that date back to the early aviation developments."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/guidance/new-energetics-factories-for-the-uk",
       "citationText": "mod-press-office – New energetics factories for the UK"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/news/boost-for-armed-forces-as-new-laser-weapon-takes-down-high-speed-drones",
-      "citationText": "mod-press-office – Boost for Armed Forces as new laser weapon takes down high-speed drones"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/dsa03-ome-part-1-ome-acquisition",
-      "citationText": "mod-press-office – Guidance: DSA03 OME: part 1 OME Acquisition"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -42,11 +32,19 @@
       "primary": false
     },
     {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
       "keyword": "aviation",
       "primary": false
     },
     {
-      "keyword": "New Energetics Factories For",
+      "keyword": "UK government",
+      "primary": false
+    },
+    {
+      "keyword": "Defence Industry Invited Propose",
       "primary": false
     }
   ],

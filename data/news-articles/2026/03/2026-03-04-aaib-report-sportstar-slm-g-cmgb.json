@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-04-aaib-report-sportstar-slm-g-cmgb",
-  "title": "Aaib Report Sportstar Slm G Cmgb",
-  "wordCount": 139,
+  "title": "AAIB Reports on Fatal Accident Involving SportStar SLM, G-CMGB",
+  "wordCount": 85,
   "sections": [
     {
       "heading": "Summary",
-      "content": "AAIB Report: SportStar SLM, G-CMGB. Fatal accident involving a SportStar SLM, G-CMGB, Chesterfield, Derbyshire, 1 September 2024\n\nUK Hosts Senior NATO Leaders to discuss Nuclear Deterrence. NATO officials discussed the Alliance's approach to nuclear deterrence and Euro-Atlantic security in flagship meeting on 27 February.\n\nHis Majesty The King visits Northwood Headquarters. His Majesty The King today visited the Northwood military headquarters in north-west London, paying tribute to the dedication and service of personnel, whose 24/7 work keeps the UK and its allies safe."
-    },
-    {
-      "heading": "Context",
-      "content": "Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes."
+      "content": "The Air Accidents Investigation Branch (AAIB) has released a report concerning a fatal accident involving the SportStar SLM, registration G-CMGB. The incident occurred on 1 September 2024, in Chesterfield, Derbyshire.\n\nInvestigators are currently looking into the circumstances surrounding the accident. This report highlights the importance of safety and investigation in aviation, reflecting the ongoing commitment to improving flight safety across the industry. Scotland's aviation heritage, with its rich history and commitment to connecting communities, underscores the significance of understanding such incidents to prevent future tragedies."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "aaib-bulletins",
       "sourceUrl": "https://www.gov.uk/government/news/aaib-report-sportstar-slm-g-cmgb",
       "citationText": "aaib-bulletins – AAIB Report: SportStar SLM, G-CMGB"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/news/uk-hosts-senior-nato-leaders-to-discuss-nuclear-deterrence",
-      "citationText": "mod-press-office – UK Hosts Senior NATO Leaders to discuss Nuclear Deterrence"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/news/his-majesty-the-king-visits-northwood-headquarters",
-      "citationText": "mod-press-office – His Majesty The King visits Northwood Headquarters"
     }
   ],
   "relatedBooks": [
     {
-      "bookId": "birth-atomic-bomb",
-      "reason": "Topical link between news items and catalogue research focus."
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,15 +32,15 @@
       "primary": false
     },
     {
-      "keyword": "airport",
-      "primary": false
-    },
-    {
       "keyword": "aviation",
       "primary": false
     },
     {
-      "keyword": "Aaib Report Sportstar Slm",
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "AAIB Reports Fatal Accident",
       "primary": false
     }
   ],

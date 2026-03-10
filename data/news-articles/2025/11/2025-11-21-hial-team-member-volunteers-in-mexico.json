@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-hial-team-member-volunteers-in-mexico",
-  "title": "HIAL Team Member Volunteers In Mexico",
-  "wordCount": 239,
+  "title": "HIAL Team Member Completes Volunteer Mission in Mexico",
+  "wordCount": 77,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **HIAL team member volunteers in Mexico** — Gary Johnstone, Deputy Head of Fire and Airside Operations, recently completed his 14th international volunteering mission with the International Fire & Rescue Association.\n- **New Chair and Non-Executive Director sought for HIAL Board** — Scottish Ministers are looking to appoint a new Chair and Non-Executive Director to the Board of Highlands and Islands Airports Ltd (HIAL).\n- **First Minister visits Sumburgh Airport** — First Minister John Swinney, MSP visited Sumburgh Airport yesterday to thank the team for their hard work and continuing service to customers."
+      "content": "Gary Johnstone, Deputy Head of Fire and Airside Operations at HIAL, has recently completed his 14th international volunteering mission with the International Fire & Rescue Association in Mexico. This initiative underscores HIAL's commitment to supporting global firefighting and rescue efforts.\n\nHIAL operates airports that connect communities across the Highlands and Islands, where aviation has played a vital role since the inter-war period. Johnstone's experience contributes to the vital exchange of expertise and knowledge between international fire services."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "hial-airports",
       "sourceUrl": "https://www.hial.co.uk/news/article/214/hial-team-member-volunteers-in-mexico",
       "citationText": "hial-airports – HIAL team member volunteers in Mexico"
-    },
-    {
-      "sourceId": "hial-airports",
-      "sourceUrl": "https://www.hial.co.uk/news/article/212/new-chair-and-non-executive-director-sought-for-hial-board",
-      "citationText": "hial-airports – New Chair and Non-Executive Director sought for HIAL Board"
-    },
-    {
-      "sourceId": "hial-airports",
-      "sourceUrl": "https://www.hial.co.uk/news/article/211/first-minister-visits-sumburgh-airport",
-      "citationText": "hial-airports – First Minister visits Sumburgh Airport"
     }
   ],
   "relatedBooks": [
     {
-      "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,10 +36,6 @@
       "primary": false
     },
     {
-      "keyword": "Highlands and Islands Airports",
-      "primary": false
-    },
-    {
       "keyword": "airport",
       "primary": false
     },
@@ -58,7 +44,7 @@
       "primary": false
     },
     {
-      "keyword": "HIAL Team Member Volunteers",
+      "keyword": "HIAL Team Member Completes",
       "primary": false
     }
   ],

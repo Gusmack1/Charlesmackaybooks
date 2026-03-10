@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-hial-recognised-for-health-safety-promot",
   "title": "HIAL recognised for Health & Safety Promotion work",
-  "wordCount": 254,
+  "wordCount": 80,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **HIAL recognised for Health & Safety Promotion work** — Highlands and Islands Airports Ltd have been awarded Highly Commended in the Small Airport Category for their work for 2025 Airports UK Health & Safety Week.\n- **Dundee Airport Feature in Airport Operator Magazine** — The latest edition of Airport Operator, the magazine published by Airports UK includes a feature on Dundee Airport.\n- **Complete our survey for a chance to win** — Highlands & Islands Airports Ltd (HIAL) is asking passengers who use any of its 11 airports to complete an online survey. Entrants will have the option to be entered into a draw for Loganair flights."
+      "content": "Highlands and Islands Airports Ltd (HIAL) has received a Highly Commended award in the Small Airport Category for its efforts during the 2025 Airports UK Health & Safety Week. This accolade highlights the company's commitment to promoting health and safety standards within the aviation sector.\n\nHIAL airports connect communities across the Highlands and Islands, where aviation has played a vital role since the inter-war period. The recognition underscores the importance of prioritising safety in maintaining connectivity and supporting local economies."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "hial-airports",
       "sourceUrl": "https://www.hial.co.uk/news/article/216/hial-recognised-for-health-safety-promotion-work",
       "citationText": "hial-airports – HIAL recognised for Health & Safety Promotion work"
-    },
-    {
-      "sourceId": "hial-airports",
-      "sourceUrl": "https://www.hial.co.uk/news/article/215/dundee-airport-feature-in-airport-operator-magazine",
-      "citationText": "hial-airports – Dundee Airport Feature in Airport Operator Magazine"
-    },
-    {
-      "sourceId": "hial-airports",
-      "sourceUrl": "https://www.hial.co.uk/news/article/213/complete-our-survey-for-a-chance-to-win",
-      "citationText": "hial-airports – Complete our survey for a chance to win"
     }
   ],
   "relatedBooks": [
     {
-      "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -50,19 +40,15 @@
       "primary": false
     },
     {
-      "keyword": "Dundee Airport",
-      "primary": false
-    },
-    {
-      "keyword": "Loganair",
-      "primary": false
-    },
-    {
       "keyword": "airport",
       "primary": false
     },
     {
       "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "HIAL recognised for Health",
       "primary": false
     }
   ],

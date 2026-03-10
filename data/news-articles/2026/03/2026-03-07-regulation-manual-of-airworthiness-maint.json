@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-07-regulation-manual-of-airworthiness-maint",
   "title": "Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D)",
-  "wordCount": 140,
+  "wordCount": 81,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D). The MAM-D is a comprehensive list of Defence Aviation Environment engineering documentation, processes and Instructions for Use.\n\nOfficial Statistics: MOD statistics pre-release access list. The individuals who have 24-hour, pre-release access to Ministry of Defence's key Official and Accredited Official Statistics publications.\n\nFinal piece in place for defence support transformation. The National Armaments Director (NAD) Group has awarded the third and final major contract within the Business Modernisation for Support (BMfS) programme."
-    },
-    {
-      "heading": "Context",
-      "content": "These developments affect aviation connectivity, airspace management, and surface access to airports. Readers interested in Scottish aviation heritage may find parallels in the industrial and operational history documented in our research volumes."
+      "content": "The Manual of Airworthiness Maintenance – Documentation (MAM-D) has been officially released, providing a thorough guide to Defence Aviation Environment engineering documentation. This manual outlines the processes and instructions for use to ensure compliance with airworthiness standards.\n\nThe introduction of MAM-D is a significant development in aviation maintenance regulations, essential for maintaining operational safety and efficiency in military aviation. Scotland's aviation heritage, especially in the Highlands and Islands, underscores the importance of rigorous documentation and standards in ensuring safe air travel."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/manual-of-airworthiness-maintenance-documentation-mam-d",
       "citationText": "mod-press-office – Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D)"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/statistics/defence-statistics-pre-release-access-list",
-      "citationText": "mod-press-office – Official Statistics: MOD statistics pre-release access list"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/news/final-piece-in-place-for-defence-support-transformation",
-      "citationText": "mod-press-office – Final piece in place for defence support transformation"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,27 +32,15 @@
       "primary": false
     },
     {
-      "keyword": "airspace",
-      "primary": false
-    },
-    {
-      "keyword": "MOD",
-      "primary": false
-    },
-    {
-      "keyword": "Ministry of Defence",
-      "primary": false
-    },
-    {
-      "keyword": "Scottish aviation",
-      "primary": false
-    },
-    {
-      "keyword": "airport",
-      "primary": false
-    },
-    {
       "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Regulation: Manual Airworthiness Maintenance",
       "primary": false
     }
   ],

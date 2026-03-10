@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-05-guidance-veterans-of-the-lgbt-ban-financ",
-  "title": "Guidance Veterans Of The Lgbt Ban Financ",
-  "wordCount": 158,
+  "title": "Financial Recognition Scheme for Veterans Affected by LGBT Ban Announced",
+  "wordCount": 121,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Guidance: Veterans of the LGBT Ban: Financial Recognition Scheme. Guidance on the LGBT Financial Recognition Scheme for veterans who served under, and were impacted by, the Ban on LGBT personnel in HM Armed Forces from 1967 to 2000.\n\nGuidance: Veterans of the LGBT Ban: Qualification of administrative discharge and restoration of rank. Guidance on the qualification of administrative discharge and restoration of rank for veterans who were administratively discharged and/or reduced in rank under the Ban, between 1967 and 2000.\n\nTransparency data: Military Court Service sentencing remarks 2025. Transcripts of sentencing remarks from Service Court hearings in the Court Martial from 2025."
-    },
-    {
-      "heading": "Context",
-      "content": "Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes."
+      "content": "The UK government has launched the LGBT Financial Recognition Scheme aimed at supporting veterans who were affected by the Ban on LGBT personnel in HM Armed Forces, which was in place from 1967 to 2000. This initiative seeks to provide financial recognition to those who served during this period and faced discrimination due to their sexual orientation.\n\nThe scheme is part of the government’s ongoing commitment to address historical injustices faced by members of the armed forces. Veterans are encouraged to access guidance on the application process and eligibility criteria, ensuring they receive the acknowledgment they deserve. Scotland’s rich aviation heritage, including the participation of LGBT individuals in various roles within the military, highlights the importance of inclusivity in all sectors."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/veterans-of-the-lgbt-ban-financial-recognition-scheme",
       "citationText": "mod-press-office – Guidance: Veterans of the LGBT Ban: Financial Recognition Scheme"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/veterans-of-the-lgbt-ban-qualification-of-administrative-discharge-and-restoration-of-rank",
-      "citationText": "mod-press-office – Guidance: Veterans of the LGBT Ban: Qualification of administrative discharge and restoration of rank"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025",
-      "citationText": "mod-press-office – Transparency data: Military Court Service sentencing remarks 2025"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,15 +32,19 @@
       "primary": false
     },
     {
-      "keyword": "airport",
-      "primary": false
-    },
-    {
       "keyword": "aviation",
       "primary": false
     },
     {
-      "keyword": "Guidance Veterans The Lgbt",
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "UK government",
+      "primary": false
+    },
+    {
+      "keyword": "Financial Recognition Scheme for",
       "primary": false
     }
   ],

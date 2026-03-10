@@ -139,7 +139,12 @@ function fixArticle(filePath) {
       newTitle = fromSource
     }
   }
-  if (existingTitle && (existingTitle.includes('&') || existingTitle.includes('–') || existingTitle.length > newTitle.length + 5)) {
+  if (existingTitle && (
+    existingTitle.includes('&') || existingTitle.includes('–') || existingTitle.includes(':') ||
+    existingTitle.length > newTitle.length + 5 ||
+    /[àâäéèêëïîôùûüç']|Café|G-[A-Z0-9]+|N\d+[A-Z]*/i.test(existingTitle) ||
+    (existingTitle === newTitle)
+  )) {
     newTitle = existingTitle
   }
   const newKeywords = deriveKeywords({ ...article, sections: cleanSections.length ? cleanSections : article.sections, title: newTitle })

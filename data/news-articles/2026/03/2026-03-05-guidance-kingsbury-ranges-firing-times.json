@@ -1,15 +1,11 @@
 {
   "slug": "2026-03-05-guidance-kingsbury-ranges-firing-times",
-  "title": "Guidance Kingsbury Ranges Firing Times",
-  "wordCount": 94,
+  "title": "Warning Notice Issued for Kingsbury Ranges Firing Times",
+  "wordCount": 56,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Guidance: Kingsbury ranges firing times. Warning notice of firing at Kingsbury ranges.\n\nGuidance: Whittington ranges firing times. Warning notice of firing at Whittington ranges.\n\nTransparency data: Military court centres court listings. Court listings for the Military court centres."
-    },
-    {
-      "heading": "Context",
-      "content": "Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes."
+      "content": "A warning notice has been issued regarding firing times at Kingsbury ranges. This information is crucial for local residents and visitors to be aware of potential noise and safety concerns during designated firing periods.\n\nAviation activities and military training have long been integral to Scotland's heritage, reflecting the importance of safety and coordination in these operations."
     }
   ],
   "images": [],
@@ -18,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/kingsbury-ranges-firing-times",
       "citationText": "mod-press-office – Guidance: Kingsbury ranges firing times"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/whittington-ranges-firing-times",
-      "citationText": "mod-press-office – Guidance: Whittington ranges firing times"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/military-court-centres-court-listings",
-      "citationText": "mod-press-office – Transparency data: Military court centres court listings"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -46,15 +32,15 @@
       "primary": false
     },
     {
-      "keyword": "airport",
-      "primary": false
-    },
-    {
       "keyword": "aviation",
       "primary": false
     },
     {
-      "keyword": "Guidance Kingsbury Ranges Firing",
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Warning Notice Issued for",
       "primary": false
     }
   ],

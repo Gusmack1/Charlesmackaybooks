@@ -1,11 +1,11 @@
 {
   "slug": "2025-11-21-regulation-manual-of-airworthiness-maint",
   "title": "Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D)",
-  "wordCount": 207,
+  "wordCount": 73,
   "sections": [
     {
       "heading": "Summary",
-      "content": "Daily digest of official releases touching Scottish and wider UK aviation activity:\n- **Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D)** — The MAM-D is a comprehensive list of Defence Aviation Environment engineering documentation, processes and Instructions for Use.\n- **100 new jobs created as drone factory opens in Swindon** — Factory will build next-generation uncrewed systems and loitering munitions.\n- **Guidance: Chickerell firing times** — Warning notice of firing at Chickerell range."
+      "content": "The Ministry of Defence has issued the Manual of Airworthiness Maintenance – Documentation (MAM-D), providing a detailed list of engineering documentation, processes, and instructions for use within the Defence Aviation Environment.\n\nThis updated manual aims to improve aviation safety and regulatory compliance, reinforcing airworthiness standards in military operations. Such regulations are crucial for ensuring the safe operation of aircraft, especially in areas where aviation plays a key role, including Scotland's Highlands and Islands."
     }
   ],
   "images": [],
@@ -14,22 +14,12 @@
       "sourceId": "mod-press-office",
       "sourceUrl": "https://www.gov.uk/government/publications/manual-of-airworthiness-maintenance-documentation-mam-d",
       "citationText": "mod-press-office – Regulation: Manual of Airworthiness Maintenance – Documentation (MAM-D)"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/news/100-new-jobs-created-as-drone-factory-opens-in-swindon",
-      "citationText": "mod-press-office – 100 new jobs created as drone factory opens in Swindon"
-    },
-    {
-      "sourceId": "mod-press-office",
-      "sourceUrl": "https://www.gov.uk/government/publications/chickerell-firing-times",
-      "citationText": "mod-press-office – Guidance: Chickerell firing times"
     }
   ],
   "relatedBooks": [
     {
       "bookId": "this-was-the-enemy-volume-two",
-      "reason": "Topical link between news items and catalogue research focus."
+      "reason": "Topical link between news item and catalogue research focus."
     }
   ],
   "keywords": [
@@ -42,7 +32,23 @@
       "primary": false
     },
     {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
       "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
       "primary": false
     },
     {
