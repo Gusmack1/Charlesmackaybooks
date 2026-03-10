@@ -142,7 +142,7 @@ function fixArticle(filePath) {
   if (existingTitle && (
     existingTitle.includes('&') || existingTitle.includes('–') || existingTitle.includes(':') ||
     existingTitle.length > newTitle.length + 5 ||
-    /[àâäéèêëïîôùûüç']|Café|G-[A-Z0-9]+|N\d+[A-Z]*/i.test(existingTitle) ||
+    /[àâäéèêëïîôùûüç']|Café|HIAL's|G-[A-Z0-9]+|N\d+[A-Z]*/i.test(existingTitle) ||
     (existingTitle === newTitle)
   )) {
     newTitle = existingTitle
