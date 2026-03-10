@@ -28,31 +28,24 @@ export const metadata: Metadata = {
   },
 }
 
-function formatDate(input: string) {
-  return new Date(input).toLocaleDateString('en-GB', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
-
-function estimateReadMinutes(wordCount?: number) {
-  if (!wordCount) return 3
-  return Math.max(3, Math.round(wordCount / 225))
-}
-
-function buildExcerpt(content?: string) {
-  if (!content) return ''
-  const words = content.split(/\s+/).filter(Boolean)
-  return `${words.slice(0, 80).join(' ')}${words.length > 80 ? '…' : ''}`
-}
-
-const bookMap = new Map(books.map((book) => [book.id, book]))
+const bookLookup = new Map(books.map((book) => [book.id, book]))
 
 function displayReason(reason: string | undefined): string {
   const generic = /Topical link between news item(s)? and catalogue research focus\.?/i
-  if (!reason || generic.test(reason)) return 'Related research volume.'
+  if (!reason || generic.test(reason)) return 'Recommended volume'
   return reason
+}
+
+function formatDate(iso: string | undefined) {
+  if (!iso) return 'Date pending'
+  return new Date(iso).toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+}
+
+function getExcerpt(content: string | undefined, maxLength = 200) {
+  if (!content) return ''
+  const firstLine = content.split('\n').find((l) => l.trim().length > 20 && !l.trim().startsWith('-'))
+  const text = firstLine || content.replace(/\n/g, ' ').trim()
+  return text.length > maxLength ? `${text.slice(0, maxLength).trim()}…` : text
 }
 
 export default async function AviationNewsPage() {
@@ -73,6 +66,9 @@ export default async function AviationNewsPage() {
   }
 
   const articles = await getPublishedNewsArticles(30)
+  const [hero, ...rest] = articles
+  const secondary = rest.slice(0, 4)
+  const remainder = rest.slice(4)
 
   return (
     <>
@@ -84,93 +80,128 @@ export default async function AviationNewsPage() {
       />
 
       <BBCPageTemplate
-        title="Aviation News & Updates"
-        subtitle="Scottish aviation news and briefings, with links to our research volumes."
+        title="Scottish Aviation Newsroom"
+        subtitle="Scottish aviation news and briefings"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Aviation News' }]}
       >
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-primary mb-6">Latest briefings</h2>
-
-          {articles.length === 0 ? (
-            <div className="card border border-white/10 p-8 text-center text-white/80">
-              <p>Scottish aviation news and briefings will appear here.</p>
-              <Link href="/news" className="text-blue-300 hover:underline mt-2 inline-block">View news page →</Link>
-            </div>
-          ) : (
-          <div className="space-y-6">
-            {articles.map((article) => {
-              const firstSection = article.sections?.[0]
-              const bookLink = article.relatedBooks?.[0]
-              const book = bookLink ? bookMap.get(bookLink.bookId) : undefined
-              return (
-                <article key={article.slug} className="card p-6 border-l-4 border-accent-blue">
-                  <div className="mb-4">
-                    <h3 className="text-xl font-bold text-primary mb-1">{article.title}</h3>
-                    <div className="text-sm text-muted">{formatDate(article.createdAt)}</div>
-                  </div>
-
-                  <p className="text-secondary mb-4">
-                    {buildExcerpt(firstSection?.content) || 'Scottish aviation briefing.'}
-                  </p>
-
-                  <div className="flex flex-wrap gap-3 text-sm text-muted mb-4">
-                    <span>{estimateReadMinutes(article.wordCount)} min read</span>
-                  </div>
-
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex gap-3">
-                      <Link href={`/aviation-news/${article.slug}`} className="btn btn-primary px-5 py-2 text-sm font-semibold">
-                        Read full briefing
-                      </Link>
-                      {book && (
-                        <Link href={`/books/${book.id}`} className="btn btn-outline px-5 py-2 text-sm font-semibold">
-                          View related book
-                        </Link>
-                      )}
-                    </div>
-                    {book && (
-                      <Link href={`/books/${book.id}`} className="flex items-center gap-3 text-sm text-secondary hover:text-accent-blue transition-colors">
-                        <div className="shrink-0 w-20 min-w-[5rem] aspect-[2/3] rounded overflow-hidden bg-slate-700 self-start">
+        <div className="max-w-6xl mx-auto px-6 py-8 space-y-10">
+          {articles.length > 0 && (
+            <p className="text-sm text-white/60">
+              Latest: {formatDate(articles[0]?.createdAt)}
+            </p>
+          )}
+          {hero ? (
+            <article className="grid gap-8 md:grid-cols-2 border border-white/10 rounded-2xl p-6 md:p-8 bg-slate-800/70">
+              <div>
+                <p className="text-xs uppercase tracking-widest text-blue-300 mb-2">{formatDate(hero.createdAt)}</p>
+                <h1 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">{hero.title}</h1>
+                <p className="text-white/80 mb-6 leading-relaxed line-clamp-3">
+                  {hero.sections?.[0]?.content?.split('\n')[0] || hero.sections?.[0]?.content || 'Operational snapshot.'}
+                </p>
+                <Link
+                  href={`/aviation-news/${hero.slug}`}
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read full briefing
+                  <span aria-hidden>→</span>
+                </Link>
+              </div>
+              <div className="bg-slate-900/60 border border-white/10 rounded-xl p-5 md:p-6 space-y-4">
+                <h2 className="text-lg font-semibold text-white">Related book</h2>
+                {hero.relatedBooks?.length ? (
+                  hero.relatedBooks.map(({ bookId, reason }) => {
+                    const book = bookLookup.get(bookId)
+                    if (!book) return null
+                    return (
+                      <div key={book.id} className="border border-white/10 rounded-lg p-4 bg-slate-800/60 flex gap-4 items-start">
+                        <div className="shrink-0 w-28 min-w-[7rem] aspect-[2/3] rounded overflow-hidden bg-slate-700 self-start">
                           <Image
                             src={book.imageUrl || `/book-covers/${book.id}.jpg`}
                             alt={book.title}
-                            width={80}
-                            height={120}
+                            width={112}
+                            height={168}
                             className="object-cover w-full h-full"
-                            sizes="80px"
+                            sizes="112px"
                           />
                         </div>
-                        <div>
-                          <span className="font-medium text-primary">{book.title}</span>
-                          {' — '}
-                          {displayReason(article.relatedBooks?.[0]?.reason)}
+                        <div className="min-w-0 flex-1">
+                          <p className="text-sm uppercase text-white/50 mb-1">{displayReason(reason)}</p>
+                          <h3 className="text-lg font-semibold text-white mb-2">{book.title}</h3>
+                          <p className="text-white/80 text-sm line-clamp-3">{book.description}</p>
+                          <Link href={`/books/${book.id}`} className="text-blue-300 text-sm font-semibold mt-3 inline-flex gap-1">
+                            View book <span aria-hidden>↗</span>
+                          </Link>
                         </div>
-                      </Link>
-                    )}
-                  </div>
-                </article>
-              )
-            })}
-          </div>
+                      </div>
+                    )
+                  })
+                ) : (
+                  <p className="text-white/70 text-sm">Explore our <Link href="/books" className="text-blue-300 hover:underline">aviation history books</Link> for related reading.</p>
+                )}
+              </div>
+            </article>
+          ) : (
+            <div className="border border-white/10 rounded-2xl p-12 md:p-16 bg-slate-800/50 text-center">
+              <h2 className="text-xl font-semibold text-white mb-4">No briefings yet</h2>
+              <p className="text-white/80 max-w-md mx-auto">
+                Scottish aviation news and briefings will appear here.
+              </p>
+            </div>
           )}
-        </div>
 
-        <div className="mb-12 card p-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">Explore more</h2>
-          <p className="text-secondary mb-6">
-            Browse our aviation history books, research guides, and Scottish aviation timeline.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/books" className="btn btn-primary px-5 py-2 text-sm font-semibold">
-              All books
-            </Link>
-            <Link href="/news" className="btn btn-outline px-5 py-2 text-sm font-semibold">
-              News
-            </Link>
-            <Link href="/scottish-aviation-timeline" className="btn btn-outline px-5 py-2 text-sm font-semibold">
-              Scottish aviation timeline
-            </Link>
-          </div>
+          {secondary.length > 0 && (
+            <section>
+              <h2 className="text-xl font-semibold text-white mb-4">More briefings</h2>
+              <div className="grid gap-4 md:grid-cols-2">
+                {secondary.map((article) => (
+                  <Link
+                    key={article.slug}
+                    href={`/aviation-news/${article.slug}`}
+                    className="block border border-white/10 rounded-xl p-5 bg-slate-800/60 hover:border-white/30 transition-colors"
+                  >
+                    <p className="text-xs text-white/60 mb-2">{formatDate(article.createdAt)}</p>
+                    <h3 className="font-semibold text-white mb-2 line-clamp-2">{article.title}</h3>
+                    <p className="text-sm text-white/80 line-clamp-2">
+                      {getExcerpt(article.sections?.[0]?.content, 120) || 'Scottish aviation briefing.'}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {remainder.length > 0 && (
+            <section>
+              <h2 className="text-xl font-semibold text-white mb-4">Archive</h2>
+              <div className="space-y-2">
+                {remainder.map((article) => (
+                  <Link
+                    key={article.slug}
+                    href={`/aviation-news/${article.slug}`}
+                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-4 border-b border-white/10 last:border-0 hover:text-white/90"
+                  >
+                    <span className="font-medium text-white">{article.title}</span>
+                    <span className="text-sm text-white/60">{formatDate(article.createdAt)}</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <section className="border border-white/10 rounded-2xl p-6 md:p-8 bg-slate-800/50">
+            <h2 className="text-xl font-semibold text-white mb-4">Explore more</h2>
+            <p className="text-white/80 mb-6">
+              Browse our aviation history books, research guides, and Scottish aviation timeline.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/books" className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-gray-100 transition-colors">
+                All books
+              </Link>
+              <Link href="/scottish-aviation-timeline" className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors">
+                Scottish aviation timeline
+              </Link>
+            </div>
+          </section>
         </div>
       </BBCPageTemplate>
     </>

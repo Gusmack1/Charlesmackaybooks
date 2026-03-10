@@ -61,6 +61,7 @@ pids
 *.pid.lock
 data/dev-cart.json
 data/orders.json
+data/blog-assets-audit.json
 data/abandoned-carts.json
 reports/automation/
 reports/keywords/

@@ -20,7 +20,6 @@ const STATIC_PAGES: Array<{
   { path: '/for-researchers', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/aviation-bibliography', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/aviation-glossary', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/news', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/aviation-news', priority: 0.85, changeFrequency: 'daily' },
   { path: '/academic-resources', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/faq', priority: 0.65, changeFrequency: 'monthly' },

@@ -27,7 +27,7 @@ npm run start
 | `npm run docs:books` | Regenerates `Bookinfo.txt` from `src/data/books.ts`. Run whenever book metadata changes. |
 | `npm run audit:blogs` | Reports missing featured images/approvals for markdown posts. |
 | `npm run images:refresh` | Fetches Wikimedia candidates per blog slug (heavy). |
-| `npm run validate:images` | Validates licenses/sources/counts in `data/image-approvals.json`. |
+| `npm run validate:images` | Validates licenses/sources/counts in `src/data/image-approvals.json`. |
 | `npm run images:localize` | Downloads approved remote images into `public/blog-images/**` and rewrites manifest paths. |
 
 ## Feeds & SEO

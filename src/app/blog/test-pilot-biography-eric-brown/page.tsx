@@ -48,7 +48,7 @@ const post = {
     <h2 id="early-years">Early Years and Wartime Foundations</h2>
     <p>Brown's wartime foundation combined operational flying with increasingly specialized test duties. Selected for evaluation work on enemy aircraft late in the Second World War, he moved from the comfortable rituals of familiar types into the blunt reality of incomplete manuals, uncertain maintenance, and unknown handling. It was here that Brown refined the habits that would define his career: incremental envelope exploration, scrupulous note‑taking, and a relentless focus on what could be measured rather than what could be assumed.</p>
     <p>
-      The book documents Brown's escapades in pre-war Germany, providing context for understanding how his early experiences shaped his later achievements. These formative experiences established the foundation for his remarkable career, demonstrating how personal determination and skill development contributed to his eventual status as the world's most experienced test pilot. The documentation of these early years ensures that Brown's complete career trajectory is properly understood.
+      The book documents Brown's escapades in pre-war Germany, providing context for understanding how his early experiences shaped his later achievements. These formative experiences established the foundation for his remarkable career, demonstrating how personal determination and skill development contributed to his eventual status as the world's most experienced test pilot. The documentation of these early years ensures that Brown's complete career trajectory is documented.
     </p>
 
     <div class="my-8">
@@ -128,7 +128,7 @@ const post = {
     <h2 id="publications">Books, Reports, and Teaching</h2>
     <p>Brown's writing style mirrored his cockpit discipline: exact, unembellished, and focused on what a pilot must do. His published works and formal reports continue to be used in instruction for carrier operations and flight‑test methodology, preserving both the detail and the tone of a professional who valued clarity over anecdote.</p>
     <p>
-      The book includes valuable references to articles and books Brown published, ensuring that his written contributions are properly documented. These publications represent Brown's efforts to translate his test pilot experience into instructional materials and technical documentation that would benefit future generations of pilots and engineers. The comprehensive documentation of Brown's publications ensures that his written contributions are properly recognized and accessible.
+      The book includes valuable references to articles and books Brown published, ensuring that his written contributions are properly documented. These publications represent Brown's efforts to translate his test pilot experience into instructional materials and technical documentation that would benefit future generations of pilots and engineers. The documentation of Brown's publications ensures that his written contributions are properly recognized and accessible.
     </p>
     <p>
       Brown's lecture on Carrier Aviation to the United States Navy, included in the book and supported with rare illustrations, demonstrates his role as an instructor and knowledge transfer specialist. This lecture represents Brown's efforts to share British carrier aviation expertise with international partners, contributing to the development of carrier aviation doctrine worldwide. The lecture's inclusion ensures that Brown's instructional contributions are properly documented and preserved.
@@ -139,7 +139,7 @@ const post = {
 
     <h2 id="legacy-recognition">Academic Recognition and Research Value</h2>
     <p>
-      The book represents comprehensive original research documenting Brown's life and achievements. The over 50-page A5 format provides detailed coverage while remaining accessible to general readers. The book's comprehensive documentation of Brown's career, including his pre-war experiences, wartime test work, steam catapult development, and carrier aviation contributions, ensures that this remarkable story is preserved with factual accuracy and historical rigor.
+      The book represents comprehensive original research documenting Brown's life and achievements. The over 50-page A5 format provides detailed coverage while remaining accessible to general readers. The book's documentation of Brown's career, including his pre-war experiences, wartime test work, steam catapult development, and carrier aviation contributions, ensures that this remarkable story is preserved with factual accuracy and historical rigor.
     </p>
     <p>
       The book's value extends beyond individual biography to provide insights into test pilot techniques, carrier aviation development, and aircraft evaluation procedures. The comprehensive coverage of Brown's test pilot career and his contributions to carrier aviation provides valuable context for understanding aviation development during this crucial period. The documentation of Brown's work with captured enemy aircraft, steam catapult development, and carrier aviation instruction creates a comprehensive resource for understanding test pilot contributions to aviation progress.
@@ -167,7 +167,7 @@ const post = {
       <a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft in the Great War 1914-1918</a>, which provides foundational understanding of German aviation engineering traditions. The book's coverage of German aircraft development demonstrates how wartime requirements drove technical innovation and how post-war evaluation of these achievements informed subsequent Allied designs.
     </p>
     <p>
-      Brown's evaluation work extended beyond individual aircraft to encompass comprehensive analysis of German aviation technology and design philosophy. His systematic approach to evaluation ensured that valuable insights were captured and preserved for future use. The documentation of this evaluation work in the book ensures that Brown's contributions to understanding enemy technology are properly recognized and preserved.
+      Brown's evaluation work extended beyond individual aircraft to encompass comprehensive analysis of German aviation technology and design philosophy. His systematic approach to evaluation ensured that valuable insights were captured and preserved for future use. The documentation of this evaluation work in the book ensures that Brown's contributions to understanding enemy technology are documented.
     </p>
 
     <div class="my-8">
@@ -179,7 +179,7 @@ const post = {
     <h2 id="conclusion">Conclusion: Enduring Significance</h2>
     <p>Captain Eric "Winkle" Brown's career represents one of the most remarkable achievements in aviation history. His record of flying more aircraft types than any pilot in history, combined with his systematic approach to test flying and documentation, established standards that continue to influence aviation testing and carrier operations. Brown's contributions extend far beyond individual achievements to encompass carrier aviation development, aircraft evaluation procedures, and aviation safety improvements.</p>
 
-    <p>The comprehensive documentation provided in Charles E. MacKay's <a href="/books/captain-eric-brown" class="underline font-medium">Captain Eric "Winkle" Brown, Captain of the Clouds, Test Pilot: A Biography</a> ensures that this remarkable story is preserved for future generations. The book's thorough research, detailed illustrations, and careful documentation create an authoritative resource that does justice to Brown's achievements and contributions to aviation progress. This scholarly work ensures that the world's most experienced test pilot receives the recognition he deserves.</p>
+    <p>The documentation provided in Charles E. MacKay's <a href="/books/captain-eric-brown" class="underline font-medium">Captain Eric "Winkle" Brown, Captain of the Clouds, Test Pilot: A Biography</a> ensures that this remarkable story is recorded. The book's thorough research, detailed illustrations, and careful documentation create an authoritative resource that does justice to Brown's achievements and contributions to aviation progress. This scholarly work shows how the world's most experienced test pilot receives the recognition he deserves.</p>
 
     <p>Brown's influence persists in curricula, shipboard procedures, and airworthiness standards. His writing — exact without being obscure — set a tone for flight‑test communication that valued clarity over drama. Carrier operations for jets and helicopters matured around the practices he helped articulate. The standards for sightlines, stabilized approach parameters, and arrestment checks did not appear fully formed; they were forged by pilots like Brown who documented what worked and what did not, and by engineers who listened.</p>
 
@@ -219,7 +219,7 @@ const post = {
   },
   category: 'Test Pilot Biography',
   tags: ["eric","brown","test","pilot","carrier","aviation","flight","testing"],
-  relatedBooks: getBooksData(['captain-eric-brown', 'british-aircraft-great-war', 'supermarine-spitfire-development']),
+  relatedBooks: getBooksData(['captain-eric-brown', 'british-aircraft-great-war', 'mother-of-the-few']),
   relatedPosts: []
 }
 
@@ -265,7 +265,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'supermarine-spitfire-development', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }, { id: 'mother-of-the-few', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

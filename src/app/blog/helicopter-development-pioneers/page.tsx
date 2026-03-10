@@ -37,7 +37,7 @@ const post = {
       The book <a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds</a> traces helicopter development 
       from the Autogyros to the 1950s helicopters, providing comprehensive coverage of British rotorcraft evolution. The 219-page 
       A5 volume, profusely illustrated with over 300 rare pictures and one colour, includes unique drawings and illustrations 
-      published for the first time. This comprehensive documentation ensures that helicopter development history is properly 
+      published for the first time. This documentation ensures that helicopter development history is properly 
       understood, demonstrating how earlier experiments and developments contributed to subsequent successes. The book also keeps 
       track of contemporary foreign offerings from the US and Germany during the 1930s and 1940s, providing essential comparative 
       context for understanding helicopter development internationally.
@@ -180,7 +180,7 @@ const post = {
       Cierva's autogyro principles to true helicopter design. These early British helicopters incorporated articulated rotor systems 
       and established design principles that would influence subsequent British rotorcraft development. The Weir W5, first flown in 
       1938, featured a three-bladed articulated rotor powered by a 200 horsepower engine, demonstrating Britain's early engagement 
-      with practical helicopter technology. The comprehensive documentation of these early British helicopters ensures that Britain's 
+      with practical helicopter technology. The documentation of these early British helicopters ensures that Britain's 
       contribution to helicopter development is properly recognized, establishing Britain as a significant participant in helicopter 
       development from its earliest days.
     </p>
@@ -196,7 +196,7 @@ const post = {
       The evolution of the tailless rotor on the Cierva W.9, accurately explained based on company records of Weir, Cierva and Morris, 
       demonstrates the systematic approach to helicopter development taken by British engineers. This tailless rotor configuration 
       represented an alternative approach to anti-torque control, exploring different solutions to the fundamental helicopter design 
-      challenge. The comprehensive documentation of this development ensures that this significant British contribution is properly 
+      challenge. The documentation of this development ensures that this significant British contribution is properly 
       preserved, demonstrating how British engineers explored multiple design approaches in pursuit of practical helicopter solutions.
     </p>
 
@@ -218,7 +218,7 @@ const post = {
       The Air Horse's design incorporated multiple rotors and advanced engineering concepts, demonstrating the ambition of British helicopter 
       development. The aircraft's three-rotor configuration represented a bold attempt to solve helicopter design challenges through 
       innovative geometry. However, the complexity of this design, combined with insufficient understanding of rotor interaction dynamics, 
-      contributed to the aircraft's tragic failure. The comprehensive documentation of the Air Horse's development and eventual crash provides 
+      contributed to the aircraft's tragic failure. The documentation of the Air Horse's development and eventual crash provides 
       valuable insights into helicopter design challenges and the importance of systematic testing and safety procedures. This tragedy 
       reinforced the importance of incremental development and thorough testing in helicopter design, lessons that would influence subsequent 
       British helicopter development.
@@ -226,8 +226,8 @@ const post = {
     <p>
       The book includes a comprehensive bibliography and appendix with a biography of Jeep Cable and the rotorcraft he flew, ensuring that 
       the individuals involved in helicopter development are properly recognized. This biographical coverage demonstrates the human element 
-      of helicopter development, showing how individual engineers and pilots contributed to rotorcraft progress. The comprehensive documentation 
-      of these individuals ensures that their contributions are properly preserved, honoring those who made the ultimate sacrifice in pursuit 
+      of helicopter development, showing how individual engineers and pilots contributed to rotorcraft progress. The documentation 
+      of these individuals shows how their contributions are properly preserved, honoring those who made the ultimate sacrifice in pursuit 
       of vertical flight capabilities. Jeep Cable's experience and expertise in rotorcraft testing made his loss particularly significant, 
       demonstrating the human cost of technological advancement.
     </p>
@@ -251,13 +251,13 @@ const post = {
     <p>
       The book gives an explanation of helicopter patents and aeronautical research reports from NACA and the RAE. This is an insight into 
       how Focke patents were infringed, demonstrating the complex intellectual property issues that arose during helicopter development. 
-      The comprehensive documentation of patent disputes and research reports ensures that these aspects of helicopter development are properly 
+      The documentation of patent disputes and research reports shows how these aspects of helicopter development are properly 
       understood and preserved. The patent disputes reveal how technical knowledge was shared and contested during helicopter development, 
       demonstrating the international nature of technological progress and the challenges of intellectual property in rapidly evolving fields.
     </p>
     <p>
       Wartime German helicopter production influenced American and British helicopter development through technical intelligence and post-war 
-      evaluation of captured aircraft. The comprehensive documentation of this influence demonstrates how international developments shaped 
+      evaluation of captured aircraft. The documentation of this influence demonstrates how international developments shaped 
       helicopter progress, with German wartime achievements informing subsequent British and American designs. Post-war evaluation of captured 
       Fa 223 helicopters provided detailed technical data on twin-rotor configurations, rotor dynamics, and power transmission systems. This 
       international perspective demonstrates the collaborative nature of helicopter development, where insights from different nations contributed 
@@ -295,7 +295,7 @@ const post = {
       The setting up of the Joint Helicopter School at Floyd Bennett Field is included as are the anti-submarine test flights 
       on the MV Daghestan. This includes the development of the Sikorsky Hoverfly at sea and its use in the UK by the Royal Air 
       Force and Royal Navy. The Hoverfly unit was a combined Royal Navy/United States Coast Guard unit at Brooklyn airfield. 
-      Project Ivory Soap is detailed and the use of the Hoverfly off supply ships. This comprehensive documentation demonstrates 
+      Project Ivory Soap is detailed and the use of the Hoverfly off supply ships. This documentation demonstrates 
       how international cooperation contributed to helicopter development and operational employment. The Joint Helicopter School 
       established training procedures and operational techniques that would become standard for helicopter operations, demonstrating 
       how early operational experience shaped helicopter doctrine and procedures.
@@ -388,8 +388,8 @@ const post = {
     <p>
       The Bristol Sycamore's development demonstrated how British helicopter capabilities evolved from experimental types to 
       production aircraft. The aircraft's operational success validated British helicopter design approaches and established 
-      foundations for subsequent British rotorcraft development. The comprehensive documentation of Bristol Sycamore development 
-      ensures that Britain's post-war helicopter achievements are properly recognized and preserved. Operational accounts from 
+      foundations for subsequent British rotorcraft development. The documentation of Bristol Sycamore development 
+      ensures that Britain's post-war helicopter achievements are documented. Operational accounts from 
       Sycamore pilots emphasize the aircraft's reliability and predictable handling characteristics, with pilots describing 
       the helicopter as "honest" in its flight characteristics—responding predictably to control inputs and providing clear 
       feedback about its operating condition.
@@ -430,8 +430,8 @@ const post = {
       These different priorities produced different design solutions, each valid for their respective operational contexts.
     </p>
     <p>
-      The book's comprehensive coverage of international helicopter development ensures that these comparative perspectives are 
-      properly documented. Understanding how different nations approached helicopter development provides valuable insights into 
+      The book's comprehensive coverage of international helicopter development shows how these comparative perspectives are 
+      properly documented. how different nations approached helicopter development shows 
       rotorcraft design philosophy and the factors that influence technical choices. This international perspective demonstrates 
       the collaborative nature of helicopter development, where insights from different nations contributed to rotorcraft progress. 
       The exchange of technical knowledge through patent licensing, technical intelligence, and post-war evaluation of captured 
@@ -457,8 +457,8 @@ const post = {
       in helicopter development, showing how specialized manufacturing capabilities enabled rotorcraft progress.
     </p>
     <p>
-      The comprehensive documentation of manufacturing contributions ensures that the industrial aspects of helicopter development are 
-      properly recognized. Understanding how manufacturing capabilities supported helicopter development provides valuable insights into 
+      The documentation of manufacturing contributions shows how the industrial aspects of helicopter development are 
+      properly recognized. how manufacturing capabilities supported helicopter development shows 
       the relationship between industrial infrastructure and technological progress. This manufacturing context demonstrates how British 
       industrial capabilities enabled helicopter development achievements. The transition from experimental helicopters to production 
       aircraft required manufacturing capabilities that could produce consistent, reliable components in sufficient quantities to support 
@@ -587,8 +587,8 @@ const post = {
       today, demonstrating the enduring value of early helicopter development achievements.
     </p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's <a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a> 
-      ensures that this remarkable story is preserved for future generations. The book's thorough research, detailed illustrations, 
+      The documentation provided in Charles E. MacKay's <a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a> 
+      ensures that this remarkable story is recorded. The book's thorough research, detailed illustrations, 
       and careful documentation create an authoritative resource that does justice to helicopter development achievements. This 
       scholarly work ensures that helicopter development receives the recognition it deserves in aviation history. The book's 
       comprehensive coverage of helicopter development, from early experiments through post-war production types, provides 
@@ -606,8 +606,8 @@ const post = {
     <p>
       The book's comprehensive coverage of helicopter development, from early experiments through post-war production types, 
       creates a valuable resource for understanding rotorcraft evolution. The detailed documentation of British helicopter 
-      development, international comparisons, and manufacturing contributions ensures that the complete story of helicopter 
-      development is properly preserved. This comprehensive documentation demonstrates the value of original research in preserving 
+      development, international comparisons, and manufacturing contributions shows how the complete story of helicopter 
+      development is properly preserved. This documentation demonstrates the value of original research in preserving 
       aviation history. The preservation of helicopter development history ensures that future generations can understand and 
       appreciate the remarkable achievements of helicopter pioneers and the principles they established that continue to guide 
       rotorcraft development today.
@@ -626,7 +626,7 @@ const post = {
       The book's value extends beyond individual aircraft types to provide insights into helicopter development processes, 
       international comparisons, and manufacturing contributions. The comprehensive coverage of British helicopter development, 
       German wartime achievements, and American developments creates a valuable resource for understanding rotorcraft evolution. 
-      The detailed documentation of patents, research reports, and business aspects ensures that the complete context of helicopter 
+      The detailed documentation of patents, research reports, and business aspects shows how the complete context of helicopter 
       development is properly preserved. This comprehensive coverage provides essential context for understanding how helicopter 
       development occurred, revealing the factors that influenced technical choices and the processes that led to successful 
       helicopter designs.
@@ -634,7 +634,7 @@ const post = {
     <p>
       Reviews confirm the book's value: "Best history of autogyros I've come across" and "The Sycamore Seeds is essential for 
       understanding the early development of British helicopters." These endorsements demonstrate the book's recognition as an 
-      authoritative resource for helicopter development history. The comprehensive documentation and original research ensure that 
+      authoritative resource for helicopter development history. The documentation and original research ensure that 
       the book serves as an essential reference for academic researchers while remaining accessible to general readers. The book's 
       recognition as an authoritative source demonstrates the value of original research in preserving aviation history and ensuring 
       that helicopter development achievements receive proper recognition.
@@ -672,7 +672,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["helicopter","development","pioneers","cierva","sikorsky","autogyro","rotorcraft"],
-  relatedBooks: getBooksData(['sycamore-seeds', 'sikorsky-vs300', 'helicopter-development-pioneers']),
+  relatedBooks: getBooksData(['sycamore-seeds', 'captain-eric-brown', 'british-aircraft-great-war']),
   relatedPosts: [
     {
       title: 'Sikorsky VS‑300: The Breakthrough',
@@ -738,7 +738,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'sycamore-seeds', title: '', isbn: '', price: 0 }, { id: 'sikorsky-vs300', title: '', isbn: '', price: 0 }, { id: 'helicopter-development-pioneers', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'sycamore-seeds', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

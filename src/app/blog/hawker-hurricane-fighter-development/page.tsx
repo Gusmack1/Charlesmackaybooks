@@ -28,7 +28,7 @@ const post = {
 
     <h2 id="historical-background">Historical Background: The Inter-War Fighter Requirement</h2>
     <p>
-      The Hurricane's development occurred during a crucial period in British aviation history. The inter-war years saw rapid advances in aircraft design, with monoplane fighters replacing biplanes across major air forces. British aviation development during this period demonstrated how industrial capabilities influenced design choices. The comprehensive documentation of inter-war aviation development ensures that the Hurricane's origins are properly understood.
+      The Hurricane's development occurred during a crucial period in British aviation history. The inter-war years saw rapid advances in aircraft design, with monoplane fighters replacing biplanes across major air forces. British aviation development during this period demonstrated how industrial capabilities influenced design choices. The documentation of inter-war aviation development shows how the Hurricane's origins are properly understood.
     </p>
     <p>
       For comprehensive coverage of inter-war aviation development, see 
@@ -71,7 +71,7 @@ const post = {
       The Hurricane's powerplant development paralleled the aircraft's evolution. Early Hurricane marks used the Rolls-Royce Merlin II and III engines, providing 1,030 horsepower. Progressive improvements in boost, cooling, and reliability enabled performance enhancements without fundamental redesign. The Merlin's development demonstrated how engine technology influenced fighter capabilities.
     </p>
     <p>
-      The Merlin engine's reliability proved crucial during the Battle of Britain, when sustained operations demanded consistent performance. Engine management procedures developed during operational service ensured maximum reliability under combat conditions. The comprehensive documentation of engine development ensures that powerplant contributions are properly recognized.
+      The Merlin engine's reliability proved crucial during the Battle of Britain, when sustained operations demanded consistent performance. Engine management procedures developed during operational service ensured maximum reliability under combat conditions. The documentation of engine development ensures that powerplant contributions are properly recognized.
     </p>
 
     <h2 id="production-deployment">Production, Conversion, and Deployment</h2>
@@ -147,7 +147,7 @@ const post = {
       Against bomber formations, the Hurricane's stable gun platform and concentrated firepower provided decisive advantages. The aircraft's ability to absorb battle damage and continue flying demonstrated structural superiority. However, against single-seat fighters, particularly the Messerschmitt Bf 109E, the Hurricane faced significant performance disadvantages. The German fighter's higher speed, superior climb rate, and better high-altitude performance forced Hurricane pilots to rely on tactical skill and teamwork rather than aircraft superiority.
     </p>
     <p>
-      The comparison demonstrates how operational systems determine aircraft effectiveness. While the Spitfire and Bf 109 offered superior performance, the Hurricane's maintainability and reliability enabled sustained operations that proved strategically decisive. The comprehensive documentation of these comparisons ensures that aircraft effectiveness is properly understood.
+      The comparison demonstrates how operational systems determine aircraft effectiveness. While the Spitfire and Bf 109 offered superior performance, the Hurricane's maintainability and reliability enabled sustained operations that proved strategically decisive. The documentation of these comparisons ensures that aircraft effectiveness is documented.
     </p>
 
     <div class="my-8">
@@ -175,7 +175,7 @@ const post = {
       <footer class="text-right mt-2 not-italic text-sm text-white/80">— Squadron Leader James Lacey, 501 Squadron</footer>
     </blockquote>
     <p>
-      Another pilot recollection emphasizes: "Honest and predictable — exactly what you need when life depends on it." These testimonies demonstrate how the Hurricane's handling characteristics influenced combat effectiveness. The comprehensive documentation of pilot experiences ensures that operational realities are properly preserved.
+      Another pilot recollection emphasizes: "Honest and predictable — exactly what you need when life depends on it." These testimonies demonstrate how the Hurricane's handling characteristics influenced combat effectiveness. The documentation of pilot experiences ensures that operational realities are properly preserved.
     </p>
 
     <h2 id="battle-damage">Battle Damage and Structural Resilience</h2>
@@ -183,7 +183,7 @@ const post = {
       The Hurricane's ability to absorb battle damage and continue flying became legendary among pilots. Numerous accounts document Hurricanes returning to base despite severe structural damage that would have destroyed other aircraft. This structural resilience demonstrated how design choices influenced operational effectiveness.
     </p>
     <p>
-      The steel-tube fuselage provided damage tolerance that fabric-covered structures could not match. Fabric repairs aft could be executed quickly with standard methods, enabling rapid return to operations. The comprehensive documentation of battle damage experiences ensures that structural resilience is properly recognized.
+      The steel-tube fuselage provided damage tolerance that fabric-covered structures could not match. Fabric repairs aft could be executed quickly with standard methods, enabling rapid return to operations. The documentation of battle damage experiences ensures that structural resilience is properly recognized.
     </p>
 
     <h2 id="legacy-impact">Legacy and Impact</h2>
@@ -199,10 +199,10 @@ const post = {
 
     <h2 id="modern-legacy">Modern Legacy and Historical Significance</h2>
     <p>
-      The Hurricane's legacy continues in modern fighter design, where maintainability, reliability, and operational flexibility remain fundamental requirements. The principles established through Hurricane development — balancing performance with practicality, prioritizing operational effectiveness over peak performance — continue to influence aircraft design philosophy. The comprehensive documentation of this legacy ensures that the Hurricane's historical significance is properly preserved.
+      The Hurricane's legacy continues in modern fighter design, where maintainability, reliability, and operational flexibility remain fundamental requirements. The principles established through Hurricane development — balancing performance with practicality, prioritizing operational effectiveness over peak performance — continue to influence aircraft design philosophy. The documentation of this legacy shows how the Hurricane's historical significance is properly preserved.
     </p>
     <p>
-      Modern fighters continue to incorporate principles established by the Hurricane: maintainability, reliability, and operational flexibility. The comprehensive documentation of this continuity ensures that the Hurricane's influence on modern aviation is properly recognized.
+      Modern fighters continue to incorporate principles established by the Hurricane: maintainability, reliability, and operational flexibility. The documentation of this continuity shows how the Hurricane's influence on modern aviation is properly recognized.
     </p>
 
     <h2 id="conclusion">Conclusion: The Hurricane's Enduring Significance</h2>

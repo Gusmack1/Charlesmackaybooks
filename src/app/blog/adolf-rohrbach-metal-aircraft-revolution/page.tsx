@@ -26,7 +26,7 @@ const post = {
       The book <a href="/books/adolf-rohrbach" class="underline font-medium">Adolf Rohrbach's Metal Airplanes</a> presents newly researched 
       history with 136 pages and over 200 photographs and drawings, many rare and obscure. Full details of every Rohrbach aeroplane and 
       Rohrbach's design team are included, with rare drawings of Rohrbach's projected aeroplanes of 1931-32 which came to nothing. This 
-      comprehensive documentation ensures that Rohrbach's contributions to aviation development are properly understood, demonstrating how 
+      documentation ensures that Rohrbach's contributions to aviation development are properly understood, demonstrating how 
       his innovations influenced aircraft design worldwide and established manufacturing principles still used today.
     </p>
     <p>
@@ -376,7 +376,7 @@ const post = {
       engineering innovation can establish manufacturing standards that endure for generations.
     </p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's <a href="/books/adolf-rohrbach" class="underline font-medium">Adolf 
+      The documentation provided in Charles E. MacKay's <a href="/books/adolf-rohrbach" class="underline font-medium">Adolf 
       Rohrbach's Metal Airplanes: Rohrbach Metall-Flugzeugbau GmbH</a> ensures that Rohrbach's contributions to aviation development are 
       properly preserved. The book's thorough research, detailed illustrations, and careful documentation create an authoritative resource that 
       does justice to Rohrbach's achievements and contributions to aviation progress. This scholarly work ensures that Rohrbach's innovations 

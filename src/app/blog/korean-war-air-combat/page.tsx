@@ -101,10 +101,10 @@ const post = {
 
     <h2 id="raf-sabre-operations">RAF Sabre Operations Over Korea</h2>
     <p>
-      The book describes RAF pilots flying the F-86 Sabre in operations over Korea, providing comprehensive coverage of British participation in Korean War air combat. RAF pilots contributed to United Nations air operations, demonstrating how NATO allies supported the Korean War effort. The comprehensive documentation of RAF Sabre operations ensures that British contributions to Korean War air combat are properly recognized and preserved.
+      The book describes RAF pilots flying the F-86 Sabre in operations over Korea, providing comprehensive coverage of British participation in Korean War air combat. RAF pilots contributed to United Nations air operations, demonstrating how NATO allies supported the Korean War effort. The documentation of RAF Sabre operations ensures that British contributions to Korean War air combat are documented.
     </p>
     <p>
-      RAF Sabre operations over Korea demonstrated how British pilots adapted to American aircraft and tactics while contributing their own expertise to the air campaign. The comprehensive documentation of these operations ensures that the complete story of international participation in Korean War air combat is properly preserved. Understanding RAF Sabre operations provides valuable insights into how NATO allies collaborated during the Korean War.
+      RAF Sabre operations over Korea demonstrated how British pilots adapted to American aircraft and tactics while contributing their own expertise to the air campaign. The documentation of these operations shows how the complete story of international participation in Korean War air combat is properly preserved. RAF Sabre operations shows how NATO allies collaborated during the Korean War.
     </p>
 
     <h2 id="canadair-sabre">Canadair Sabre Development and Deployment</h2>
@@ -112,24 +112,24 @@ const post = {
       The book describes the evolution and deployment of the Canadair Sabre in Royal Air Force, Royal Canadian Air Force and in NATO service-includes the West German Air Force. Included is the development of Canadair aircraft, the Canadair North Star/Argonaut, Silver Star CT-33, the Avro CF-100 and the Argonaut's involvement with the royal accession of Queen Elizabeth II. This comprehensive coverage demonstrates how Canadian aircraft manufacturing contributed to NATO air power during the Korean War era.
     </p>
     <p>
-      The Canadair Sabre represented Canadian production of the F-86 design, demonstrating how NATO allies collaborated in aircraft production and deployment. The comprehensive documentation of Canadair Sabre development ensures that Canadian contributions to Korean War air power are properly recognized. Understanding Canadair Sabre production provides valuable insights into how international cooperation supported Korean War operations.
+      The Canadair Sabre represented Canadian production of the F-86 design, demonstrating how NATO allies collaborated in aircraft production and deployment. The documentation of Canadair Sabre development ensures that Canadian contributions to Korean War air power are properly recognized. Canadair Sabre production shows how international cooperation supported Korean War operations.
     </p>
     <p>
       Details of the first Sabre deployment with the carrier HMCS Magnificent are included and the deployment to Renfrew airport in 1951-52. Some aircraft were delivered through Stornoway. The involvement of Scottish Aviation, Airwork, Westland etc. is explained as well as the Sabre's fate at Church Crookham. This comprehensive coverage demonstrates how Scottish aviation industry supported Sabre operations and deployment.
     </p>
     <p>
-      A full description of the Sabres being delivered over the North Atlantic in "Becher's Brook" and "Leap Frog" via, Canada, Greenland, Iceland, Stornoway, Prestwick or Kinloss or Lossiemouth which is reflected in the title. These flights are rarely published. This comprehensive documentation ensures that the complete story of Sabre deployment to Europe is properly preserved. Understanding these delivery operations provides valuable insights into how aircraft were transported across the Atlantic during the Cold War.
+      A full description of the Sabres being delivered over the North Atlantic in "Becher's Brook" and "Leap Frog" via, Canada, Greenland, Iceland, Stornoway, Prestwick or Kinloss or Lossiemouth which is reflected in the title. These flights are rarely published. This documentation shows how the complete story of Sabre deployment to Europe is properly preserved. these delivery operations shows how aircraft were transported across the Atlantic during the Cold War.
     </p>
 
     <h2 id="mig15-development">MiG-15 Development and Soviet Jet Engine Technology</h2>
     <p>
-      The MIG-15 is included as well as Soviet jet engine development. A comprehensive appendix covering the Mig-15, RB-45, the Gloster Meteor etc. This comprehensive coverage ensures that the complete story of MiG-15 development and Soviet jet engine technology is properly documented and preserved.
+      The MIG-15 is included as well as Soviet jet engine development. A comprehensive appendix covering the Mig-15, RB-45, the Gloster Meteor etc. This comprehensive coverage shows how the complete story of MiG-15 development and Soviet jet engine technology is properly documented and preserved.
     </p>
     <p>
-      Understanding MiG-15 development provides valuable insights into how Soviet aircraft design influenced Korean War air combat. The comprehensive documentation of Soviet jet engine development ensures that the complete technical context of MiG-15 performance is properly understood. Understanding Soviet jet engine technology provides valuable insights into how MiG-15 capabilities were achieved.
+      MiG-15 development shows how Soviet aircraft design influenced Korean War air combat. The documentation of Soviet jet engine development documents the complete technical context of MiG-15 performance. Soviet jet engine technology shows how MiG-15 capabilities were achieved.
     </p>
     <p>
-      The book includes MIG 15 flight test details in the appendix, providing technical data on MiG-15 performance characteristics. This comprehensive documentation ensures that technical comparisons between F-86 Sabre and MiG-15 are properly grounded in verified data. Understanding MiG-15 flight test results provides valuable insights into how aircraft performance influenced combat outcomes.
+      The book includes MIG 15 flight test details in the appendix, providing technical data on MiG-15 performance characteristics. This documentation ensures that technical comparisons between F-86 Sabre and MiG-15 are properly grounded in verified data. MiG-15 flight test results shows how aircraft performance influenced combat outcomes.
     </p>
 
     <h2 id="mdap-nato">Mutual Defence Aid Programme and NATO Operations</h2>
@@ -137,10 +137,10 @@ const post = {
       There is a chapter on Mutual Defence Aid Programme (MDAP) the evolution of NATO with the European Union and the Berlin Airlift all fully illustrated. The book describes the finance of the Sabre for MDAP production and the Sabres acquisition by the West German Air Force. Includes details of Skyraiders, Neptunes and Avengers which were supplied through MDAP together with aircraft types ordered and their destination within NATO (Probably for the first time.). This comprehensive coverage demonstrates how MDAP supported Korean War operations and broader NATO defence efforts.
     </p>
     <p>
-      The Mutual Defence Aid Programme provided essential aircraft and equipment to NATO allies, supporting Korean War operations and broader defence requirements. The comprehensive documentation of MDAP ensures that the complete story of international cooperation during the Korean War is properly preserved. Understanding MDAP provides valuable insights into how NATO allies supported each other during the Cold War.
+      The Mutual Defence Aid Programme provided essential aircraft and equipment to NATO allies, supporting Korean War operations and broader defence requirements. The documentation of MDAP shows how the complete story of international cooperation during the Korean War is properly preserved. MDAP shows how NATO allies supported each other during the Cold War.
     </p>
     <p>
-      Includes the squadron histories of the Canadair Sabre in Royal Air Force Germany and Royal Air Force Fighter Command service. This comprehensive coverage ensures that the complete story of Sabre deployment in RAF service is properly documented. Understanding RAF Sabre squadron histories provides valuable insights into how Sabre operations were organized and conducted.
+      Includes the squadron histories of the Canadair Sabre in Royal Air Force Germany and Royal Air Force Fighter Command service. This comprehensive coverage shows how the complete story of Sabre deployment in RAF service is properly documented. RAF Sabre squadron histories shows how Sabre operations were organized and conducted.
     </p>
 
     <h2 id="scottish-aviation">Scottish Aviation and Sabre Refurbishment</h2>
@@ -148,10 +148,10 @@ const post = {
       The work of Scottish Aviation at Prestwick Airport and Renfrew Airport is also fully described and illustrated with regard to USAF and RCAF refurbishment contracts for the North American F-86E and the Canadair Sabre with the Avro CF-100. This comprehensive coverage demonstrates how Scottish aviation industry supported Korean War operations through aircraft refurbishment and maintenance.
     </p>
     <p>
-      Scottish Aviation's work on F-86E and Canadair Sabre refurbishment ensured that aircraft were maintained in operational condition for Korean War service. The comprehensive documentation of Scottish Aviation's work ensures that this aspect of Korean War support is properly recognized. Understanding Scottish Aviation's contribution provides valuable insights into how maintenance and refurbishment supported combat operations.
+      Scottish Aviation's work on F-86E and Canadair Sabre refurbishment ensured that aircraft were maintained in operational condition for Korean War service. The documentation of Scottish Aviation's work ensures that this aspect of Korean War support is properly recognized. Scottish Aviation's contribution shows how maintenance and refurbishment supported combat operations.
     </p>
     <p>
-      The air sea work of the SB-17G, Handley Page Hastings and the Grumman Albatross-the "Duck Buts" are included with illustrations and their control from Prestwick. This was for "Leapfrog" and "Bechers Brook." This comprehensive coverage demonstrates how search and rescue operations supported Sabre delivery flights across the Atlantic. Understanding these operations provides valuable insights into how support operations enabled Korean War air combat.
+      The air sea work of the SB-17G, Handley Page Hastings and the Grumman Albatross-the "Duck Buts" are included with illustrations and their control from Prestwick. This was for "Leapfrog" and "Bechers Brook." This comprehensive coverage demonstrates how search and rescue operations supported Sabre delivery flights across the Atlantic. these operations shows how support operations enabled Korean War air combat.
     </p>
 
     <h2 id="rb45-operations">RB-45 Operations and Intelligence Gathering</h2>
@@ -159,10 +159,10 @@ const post = {
       An additional chapter covers the Royal Air Force RB-45 operations over the Soviet Union in Jiu Jitsu and the integration of the Royal Air Force aircrew in U-2/Dragon Lady Operations in declassified operations in "Oldster" and "Jackson" and their Soviet Union overflights. Included are operations off aircraft carriers in the Pacific by British crews. There is an account of the first Royal Air Force Canberra flight over Kapustin Yar, the Soviet rocket test site, in 1952 and an explanation of what "Operation Robin" was. This comprehensive coverage demonstrates how reconnaissance operations supported Korean War intelligence gathering.
     </p>
     <p>
-      RB-45 operations over the Soviet Union represented critical intelligence gathering during the Korean War era. The comprehensive documentation of these operations ensures that the complete story of Cold War reconnaissance is properly preserved. Understanding RB-45 operations provides valuable insights into how intelligence gathering supported Korean War operations.
+      RB-45 operations over the Soviet Union represented critical intelligence gathering during the Korean War era. The documentation of these operations shows how the complete story of Cold War reconnaissance is properly preserved. RB-45 operations shows how intelligence gathering supported Korean War operations.
     </p>
     <p>
-      The first Royal Air Force Canberra flight over Kapustin Yar demonstrated how British aircraft contributed to intelligence gathering operations. The comprehensive documentation of this flight ensures that British contributions to Cold War intelligence are properly recognized. Understanding Canberra operations provides valuable insights into how reconnaissance aircraft supported strategic intelligence requirements.
+      The first Royal Air Force Canberra flight over Kapustin Yar demonstrated how British aircraft contributed to intelligence gathering operations. The documentation of this flight ensures that British contributions to Cold War intelligence are properly recognized. Canberra operations shows how reconnaissance aircraft supported strategic intelligence requirements.
     </p>
 
     <h2 id="intelligence-cooperation">Burns-Templar Agreement and Intelligence Cooperation</h2>
@@ -170,7 +170,7 @@ const post = {
       The author gives the first published account of the Burns-Templar agreement which paved the way for intelligence co-operation authorised at the highest political level between the United States and the United Kingdom. This comprehensive coverage demonstrates how Anglo-American intelligence cooperation was formalized during the Korean War era.
     </p>
     <p>
-      The Burns-Templar agreement established the framework for intelligence cooperation between the United States and United Kingdom, ensuring that intelligence sharing supported Korean War operations and broader Cold War requirements. The comprehensive documentation of this agreement ensures that the complete story of Anglo-American intelligence cooperation is properly preserved. Understanding the Burns-Templar agreement provides valuable insights into how intelligence cooperation supported Korean War operations.
+      The Burns-Templar agreement established the framework for intelligence cooperation between the United States and United Kingdom, ensuring that intelligence sharing supported Korean War operations and broader Cold War requirements. The documentation of this agreement shows how the complete story of Anglo-American intelligence cooperation is properly preserved. the Burns-Templar agreement shows how intelligence cooperation supported Korean War operations.
     </p>
 
     <h2 id="myths">Myths, Claims, and What the Data Support</h2>
@@ -179,19 +179,19 @@ const post = {
     <h2 id="legacy">Legacy and Influence</h2>
     <p>Korea clarified transonic fighter practice: conserve energy, fight from advantage, fire brief accurate bursts, and let ground control and maintenance extend pilot reach. Experience with Sabre and MiG informed next‑generation designs — higher‑thrust engines, wings with greater Mach margin — and a gradual move towards sensors that shifted detection and solution further from the merge. Procedures outlived hardware: disciplined briefs, checklists, and debriefs remained the backbone of effective air forces.</p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's <a href="/books/sabres-from-north" class="underline font-medium">Sabres from the North: F-86 Sabre in RAF, RCAF, Luftwaffe Service</a> 
-      ensures that the complete story of Korean War air combat is preserved for future generations. The book's thorough research, detailed illustrations, and careful documentation create an authoritative resource that does justice to Korean War air combat achievements. This scholarly work ensures that Korean War air combat receives the recognition it deserves in aviation history.
+      The documentation provided in Charles E. MacKay's <a href="/books/sabres-from-north" class="underline font-medium">Sabres from the North: F-86 Sabre in RAF, RCAF, Luftwaffe Service</a> 
+      shows how the complete story of Korean War air combat is recorded. The book's thorough research, detailed illustrations, and careful documentation create an authoritative resource that does justice to Korean War air combat achievements. This scholarly work ensures that Korean War air combat receives the recognition it deserves in aviation history.
     </p>
 
     <h2 id="conclusion">Conclusion</h2>
     <p>The Korean War set the grammar of jet air combat. The aircraft were capable; the system — pilots, controllers, maintainers, and instructors — made capability reliable. The enduring lessons are practical: arrive from advantage, keep energy in hand, fire briefly and precisely, and respect the limits that preserve judgement. They were true over MiG Alley and remain true wherever fighters meet at the edge of the envelope.</p>
     <p>
-      The comprehensive documentation of Korean War air combat reveals how international cooperation, technical innovation, and tactical adaptation shaped the first jet age conflict. RAF Sabre operations, Canadair production, MDAP support, and intelligence cooperation demonstrate how NATO allies collaborated to maintain air superiority. The lessons learned over Korea influenced subsequent Cold War aviation development and established principles that continue to guide modern air combat doctrine.
+      The documentation of Korean War air combat reveals how international cooperation, technical innovation, and tactical adaptation shaped the first jet age conflict. RAF Sabre operations, Canadair production, MDAP support, and intelligence cooperation demonstrate how NATO allies collaborated to maintain air superiority. The lessons learned over Korea influenced subsequent Cold War aviation development and established principles that continue to guide modern air combat doctrine.
     </p>
     <p>
       For comprehensive coverage of Korean War air combat and related topics, see 
       <a href="/books/sabres-from-north" class="underline font-medium">Sabres from the North: F-86 Sabre in RAF, RCAF, Luftwaffe Service</a>, 
-      which provides detailed analysis of Sabre operations, RAF participation, and the broader context of NATO operations during the Korean War era. The book's comprehensive coverage ensures that all aspects of Korean War air combat are properly documented and preserved for future generations.
+      which provides detailed analysis of Sabre operations, RAF participation, and the broader context of NATO operations during the Korean War era. The book's comprehensive coverage ensures that all aspects of Korean War air combat are properly documented and recorded.
     </p>
   `,
   excerpt: `A source-based analysis of the Korean War's jet battles in MiG Alley, including F-86 and MiG-15 tactics, control systems, and operational constraints.`,

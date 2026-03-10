@@ -58,7 +58,7 @@ const post = {
       His bracing, tail volume choices, and pilot suspension solutions reflected iterative learning rather than one‑off tinkering.
     </p>
     <p>
-      The book provides comprehensive documentation of each glider in the series, describing the evolution from the Bat through to 
+      The book provides documentation of each glider in the series, describing the evolution from the Bat through to 
       the celebrated Hawk. This progression demonstrates Pilcher's systematic approach to solving the fundamental problems of controlled 
       flight. Each glider built upon lessons learned from previous designs, incorporating incremental improvements that refined stability, 
       control, and structural efficiency.
@@ -118,7 +118,7 @@ const post = {
       Pilcher's sister was instrumental in building the wings, demonstrating how family support and practical assistance enabled 
       Pilcher's experimental work. This collaborative approach to construction illustrates the practical nature of early aviation 
       development, where family members and local craftsmen contributed to building experimental aircraft. The detailed documentation 
-      of construction techniques provides valuable insights into early aviation manufacturing methods.
+      of construction techniques shows early aviation manufacturing methods.
     </p>
     <p>
       The structural design of Pilcher's gliders incorporated principles that would become standard in later aircraft construction. 
@@ -222,7 +222,7 @@ const post = {
     <p>
       Pilcher's ownership of Gleam and Widow demonstrates his financial resources and commitment to maritime pursuits. These yachts 
       represented significant investments that enabled Pilcher to pursue his interests in both sailing and aviation. The detailed 
-      documentation of these yachts and their builders provides valuable insights into Pilcher's broader engineering interests 
+      documentation of these yachts and their builders shows Pilcher's broader engineering interests 
       and the maritime context of his aviation work.
     </p>
 
@@ -237,7 +237,7 @@ const post = {
       The lectures at Glasgow University enabled Pilcher to communicate his experimental results and theoretical insights to students 
       and colleagues. These presentations would have covered topics including glider design principles, flight control techniques, 
       structural engineering considerations, and the practical challenges of aviation experimentation. The documentation of these 
-      lectures provides valuable insights into how Pilcher organized and communicated his knowledge.
+      lectures shows how Pilcher organized and communicated his knowledge.
     </p>
     <p>
       Pilcher's academic position provided access to resources, facilities, and intellectual communities that supported his 
@@ -350,7 +350,7 @@ const post = {
     <p>
       The book <a href="/books/soaring-with-wings" class="underline font-medium">Soaring with Wings: Percy Pilcher wants to Fly</a> has been described as "a remarkable piece of scholarship 
       and does Percy justice" in recent reviews. The 171-page biography, profusely illustrated with many rare and interesting 
-      pictures and drawings, provides comprehensive documentation of Pilcher's four years of experimental flying. Printed on 
+      pictures and drawings, provides documentation of Pilcher's four years of experimental flying. Printed on 
       high quality paper making it very heavy, the book represents a highly recommended limited run publication that preserves 
       Pilcher's story for future generations.
     </p>
@@ -385,7 +385,7 @@ const post = {
       ensure that his legacy continues to inspire and inform aviation development.
     </p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's biography ensures that Pilcher's remarkable story is preserved 
+      The documentation provided in Charles E. MacKay's biography ensures that Pilcher's remarkable story is preserved 
       for future generations. The book's thorough research, detailed illustrations, and careful documentation create an authoritative 
       resource that does justice to Pilcher's achievements and contributions to aviation progress. This scholarly work ensures that 
       Scotland's forgotten aviation pioneer receives the recognition his achievements deserve.

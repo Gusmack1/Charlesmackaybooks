@@ -189,7 +189,7 @@ const post = {
       methods reflected German industrial capability and attention to production standards necessary for operational effectiveness.
     </p>
     <p>
-      Spares supply and logistics supported operational availability. The comprehensive documentation of spares production and supply systems demonstrates the importance of logistics in maintaining operational capability. Effective spare parts 
+      Spares supply and logistics supported operational availability. The documentation of spares production and supply systems demonstrates the importance of logistics in maintaining operational capability. Effective spare parts 
       provisioning enabled operational units to maintain aircraft availability despite combat damage and operational wear.
     </p>
     <p>
@@ -235,7 +235,7 @@ const post = {
       the D.Va's place in aviation history.
     </p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's <a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft in the Great War</a> book, with 256 pages and over 200 images, has proved an excellent 
+      The documentation provided in Charles E. MacKay's <a href="/books/german-aircraft-great-war" class="underline font-medium">German Aircraft in the Great War</a> book, with 256 pages and over 200 images, has proved an excellent 
       reference work for students, historians and general readers alike. For the first time in print a complete breakdown of the organisation and the German system of supply provides insights into the industrial and operational context that 
       enabled D.Va development and production.
     </p>
@@ -244,7 +244,7 @@ const post = {
       of these engineering achievements. The lessons learned from the D.Va's structural limitations informed subsequent design decisions, contributing to the evolution of aircraft structures.
     </p>
     <p>
-      Modern understanding of the D.Va benefits from comprehensive documentation and restoration efforts. Museum restorations reveal construction details and material choices that characterized German aircraft manufacturing during the Great War. 
+      Modern understanding of the D.Va benefits from documentation and restoration efforts. Museum restorations reveal construction details and material choices that characterized German aircraft manufacturing during the Great War. 
       These restoration efforts preserve crucial historical information and enable accurate historical assessment of the D.Va's place in aviation development.
     </p>
     <p>
@@ -255,7 +255,7 @@ const post = {
     <h2 id="academic-recognition">Academic Recognition and Research Value</h2>
     <p>
       The book is based on Allied intelligence and newly translated archive documents. The industry reports are based on the inspections of the League of Nations Inter-Allied Control Commissions on aviation 1919 - 1926. This rigorous source 
-      documentation ensures that the work meets academic standards while providing valuable insights into German aviation development during the Great War.
+      documentation shows how the work meets academic standards while providing valuable insights into German aviation development during the Great War.
     </p>
     <p>
       The comprehensive appendix and detailed documentation provide resources for researchers studying German aviation history, aircraft development, and Great War operations. The book's scholarly features ensure that it serves as an essential 
@@ -266,7 +266,7 @@ const post = {
       and operational employment creates a comprehensive resource for understanding early twentieth-century aviation development and military organization.
     </p>
     <p>
-      The D.Va's documentation contributes to understanding fighter development during the Great War. The comprehensive coverage of design, production, and operational aspects provides valuable insights into aircraft development processes and 
+      The D.Va's documentation contributes to understanding fighter development during the Great War. The comprehensive coverage of design, production, and operational aspects shows aircraft development processes and 
       operational employment. This documentation preserves crucial historical information for future researchers and historians.
     </p>
 
@@ -276,8 +276,8 @@ const post = {
       aircraft's development, production, and operational service illustrate the rapid pace of aviation development during the Great War and the engineering challenges faced in creating effective fighter aircraft.
     </p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's authoritative work ensures that this remarkable story is preserved for future generations. The book's thorough research, detailed illustrations, and careful documentation create 
-      an authoritative resource that does justice to the D.Va's achievements and contributions to aviation progress. This scholarly work ensures that the Albatros D.Va receives the recognition it deserves in aviation history.
+      The documentation provided in Charles E. MacKay's authoritative work ensures that this remarkable story is recorded. The book's thorough research, detailed illustrations, and careful documentation create 
+      an authoritative resource that does justice to the D.Va's achievements and contributions to aviation progress. This scholarly work shows how the Albatros D.Va receives the recognition it deserves in aviation history.
     </p>
     <p>
       The D.Va's legacy extends beyond individual achievements to influence broader aviation development. The aircraft's design features, operational experience, and manufacturing techniques contributed to subsequent aircraft development and 

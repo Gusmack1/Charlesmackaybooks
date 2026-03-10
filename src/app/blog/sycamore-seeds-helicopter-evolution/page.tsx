@@ -26,7 +26,7 @@ const post = {
     <h2 id="historical-context">Historical Context: Post‑War Needs and Industrial Shifts</h2>
     <p>The closing of the Second World War did not diminish the need for air mobility; it changed its character. Fixed‑wing types had proven decisive in combat, but post‑war requirements emphasized rescue, liaison, and short‑range access to difficult terrain—tasks for which helicopters were uniquely suited. Britain's aviation industry, experienced in stressed‑skin structures, engine integration, and production discipline, now had to transfer those habits to rotorcraft. The Sycamore belongs to this moment: a practical answer to a practical need, built by a workforce and a supply chain learning the specific demands of dynamic rotor systems.</p>
     <p>
-      The book <a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds</a> traces helicopter development from the Autogyros to the 1950s helicopters, providing comprehensive coverage of British rotorcraft evolution. The 219-page A5 volume, profusely illustrated with over 300 rare pictures and one colour, includes unique drawings and illustrations published for the first time. This comprehensive documentation ensures that the Sycamore's place within British helicopter development is properly understood, demonstrating how earlier experiments and developments contributed to its success.
+      The book <a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds</a> traces helicopter development from the Autogyros to the 1950s helicopters, providing comprehensive coverage of British rotorcraft evolution. The 219-page A5 volume, profusely illustrated with over 300 rare pictures and one colour, includes unique drawings and illustrations published for the first time. This documentation documents the Sycamore's place within British helicopter development, demonstrating how earlier experiments and developments contributed to its success.
     </p>
 
     <h2 id="design-origins">Design Origins and Development: From Experimental to Operational</h2>
@@ -137,7 +137,7 @@ const post = {
     <h2 id="manufacturing">Manufacturing and Quality Assurance</h2>
     <p>Even in modest production runs, quality is a manufacturing habit: jigs that preserve alignment, inspection notes that travel with each airframe, calibrated tools checked on schedule, and surface finishes maintained to prevent premature corrosion and vibration. The Sycamore programme adopted these habits from fixed‑wing practice and adapted them to the unique demands of dynamic rotor systems. By doing so, it protected handling and reliability—the very attributes that defined the type in service.</p>
     <p>
-      The book's comprehensive documentation of manufacturing processes and quality assurance demonstrates how British aviation industry standards were applied to helicopter production. The emphasis on precision manufacturing, documented inspection procedures, and quality control systems ensured that Sycamore helicopters met the reliability standards necessary for operational service. This manufacturing discipline contributed significantly to the aircraft's operational success and established standards for subsequent British helicopter production.
+      The book's documentation of manufacturing processes and quality assurance demonstrates how British aviation industry standards were applied to helicopter production. The emphasis on precision manufacturing, documented inspection procedures, and quality control systems ensured that Sycamore helicopters met the reliability standards necessary for operational service. This manufacturing discipline contributed significantly to the aircraft's operational success and established standards for subsequent British helicopter production.
     </p>
     <p>
       For insights into British aviation manufacturing and industrial development, see 
@@ -167,7 +167,7 @@ const post = {
     <h2 id="conclusion">Conclusion: Foundation and Method</h2>
     <p>The Bristol Sycamore marked a true beginning for British helicopters by showing how to integrate the rotary‑wing idea into everyday operations. It did so not by chasing extremes but by prioritizing balance: a stable rotor system, a proven engine, accessible systems, and a cabin that admitted multiple roles. It is remembered today not only because it was first, but because it was trustworthy. In that reliability lies its influence: a method of design and use that later British helicopters extended with more power and new materials without abandoning the habits that made the Sycamore succeed.</p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's <a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a> ensures that this remarkable story is preserved for future generations. The book's thorough research, detailed illustrations, and careful documentation create an authoritative resource that does justice to the Sycamore's achievements and contributions to helicopter progress. This scholarly work ensures that Britain's helicopter development receives the recognition it deserves.
+      The documentation provided in Charles E. MacKay's <a href="/books/sycamore-seeds" class="underline font-medium">The Sycamore Seeds: The Early History of the Helicopter</a> ensures that this remarkable story is recorded. The book's thorough research, detailed illustrations, and careful documentation create an authoritative resource that does justice to the Sycamore's achievements and contributions to helicopter progress. This scholarly work ensures that Britain's helicopter development receives the recognition it deserves.
     </p>
     <p>
       The Sycamore's legacy extends beyond individual achievements to influence broader helicopter development. The aircraft's design features, operational experience, and manufacturing techniques contributed to subsequent helicopter development and operational procedures. The fundamental principles demonstrated in the Sycamore continue to influence helicopter design, demonstrating the lasting significance of these early achievements.
@@ -211,7 +211,7 @@ const post = {
   },
   category: 'Aviation History',
   tags: ["bristol","sycamore","helicopter","british","aviation","rotorcraft"],
-  relatedBooks: getBooksData(['sycamore-seeds', 'helicopter-development-pioneers', 'captain-eric-brown']),
+  relatedBooks: getBooksData(['sycamore-seeds', 'captain-eric-brown', 'british-aircraft-great-war']),
   relatedPosts: []
 }
 
@@ -255,7 +255,7 @@ export default function BlogPost() {
 
         post={post}
 
-        relatedBooks={[{ id: 'sycamore-seeds', title: '', isbn: '', price: 0 }, { id: 'helicopter-development-pioneers', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }]}
+        relatedBooks={[{ id: 'sycamore-seeds', title: '', isbn: '', price: 0 }, { id: 'captain-eric-brown', title: '', isbn: '', price: 0 }, { id: 'british-aircraft-great-war', title: '', isbn: '', price: 0 }]}
 
         relatedPosts={[]}
 

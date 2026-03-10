@@ -371,8 +371,8 @@ const post = {
       development established patterns for nuclear policy that continue to shape international relations today.
     </p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's <a href="/books/birth-atomic-bomb" class="underline font-medium">Birth 
-      of the Atomic Bomb: Statements from Churchill, Truman, Pash etc. German Alsos</a> ensures that these essential documents are preserved 
+      The documentation provided in Charles E. MacKay's <a href="/books/birth-atomic-bomb" class="underline font-medium">Birth 
+      of the Atomic Bomb: Statements from Churchill, Truman, Pash etc. German Alsos</a> shows how these essential documents are preserved 
       for future generations. The book's thorough research, careful documentation, and comprehensive coverage create an authoritative resource 
       that does justice to the atomic programme's historical significance. These documents are of great historical value since neither nation 
       repeated their publication on the birth of the bomb, making the book an essential source for understanding atomic weapons development.

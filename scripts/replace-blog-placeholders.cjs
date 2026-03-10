@@ -15,7 +15,7 @@ const ts = require('typescript')
 
 const ROOT = process.cwd()
 const BLOG_DIR = path.join(ROOT, 'src', 'app', 'blog')
-const APPROVALS_PATH = path.join(ROOT, 'data', 'image-approvals.json')
+const APPROVALS_PATH = path.join(ROOT, 'src', 'data', 'image-approvals.json')
 const MANIFEST_PATH = path.join(ROOT, 'src', 'data', 'blogImageManifest.ts')
 const TARGET_SLUGS = process.argv.slice(2).map((arg) => arg.toLowerCase())
 

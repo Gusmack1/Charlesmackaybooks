@@ -126,7 +126,7 @@ const post = {
       The escape was not only a test of endurance but of judgment under uncertainty—when to move versus hide, which ridge line to follow, whether a village represented help or mortal danger. In a tragic encounter, a villager killed Martin after an approach went wrong, forcing Dengler back into solo evasion. Malnourished, feverish, and with lacerated feet, he pressed on—driven by the will to survive and a disciplined focus on the fundamentals he could control: hydration, shelter, a signal plan if aircraft appeared, and incremental movement towards friendly lines.
     </p>
     <p>
-      Dengler's solo survival in the jungle represents one of the most remarkable achievements in survival literature. His ability to maintain discipline, make sound decisions under extreme stress, and persist despite overwhelming challenges demonstrates exceptional human resilience. The book's comprehensive documentation of this period ensures that Dengler's achievement is properly understood and recognized within the broader context of survival and escape literature.
+      Dengler's solo survival in the jungle represents one of the most remarkable achievements in survival literature. His ability to maintain discipline, make sound decisions under extreme stress, and persist despite overwhelming challenges demonstrates exceptional human resilience. The book's documentation of this period ensures that Dengler's achievement is documented and recognized within the broader context of survival and escape literature.
     </p>
 
     <h2 id="historical-significance">Historical Significance and First Escape</h2>
@@ -256,12 +256,12 @@ const post = {
       U.S. Navy award citations and unit histories (VA‑145; USS <em>Ranger</em> deployments) provide authoritative documentation of Dengler's service and achievements. U.S. Air Force SAR accounts regarding 1966 Laos rescues and "Sandy" doctrine provide insights into the rescue operations that recovered Dengler and the operational procedures that made these rescues possible.
     </p>
     <p>
-      Note on sources: exact unit identifiers and sequences for the initial sighting and helicopter hoist can vary by account across official histories and memoir literature. This narrative follows the broad areas of agreement while avoiding contested micro‑details not settled by primary documentation. The book's use of CIA reports ensures that the account of capture, imprisonment and escape is grounded in authoritative intelligence documentation, providing reliable factual foundation for understanding Dengler's experience.
+      Note on sources: exact unit identifiers and sequences for the initial sighting and helicopter hoist can vary by account across official histories and memoir literature. This narrative follows the broad areas of agreement while avoiding contested micro‑details not settled by primary documentation. The book's use of CIA reports shows how the account of capture, imprisonment and escape is grounded in authoritative intelligence documentation, providing reliable factual foundation for understanding Dengler's experience.
     </p>
 
     <h2 id="academic-recognition">Academic Recognition and Research Value</h2>
     <p>
-      The book represents comprehensive original research documenting Dengler's life and achievements. The 102-page A5 format provides detailed coverage while remaining accessible to general readers. The book's comprehensive documentation of USS Ranger operations, Skyraider aircraft history, and Dengler's escape based on CIA reports ensures that this remarkable story is preserved with factual accuracy and historical rigor.
+      The book represents comprehensive original research documenting Dengler's life and achievements. The 102-page A5 format provides detailed coverage while remaining accessible to general readers. The book's documentation of USS Ranger operations, Skyraider aircraft history, and Dengler's escape based on CIA reports ensures that this remarkable story is preserved with factual accuracy and historical rigor.
     </p>
     <p>
       The book's value extends beyond individual biography to provide insights into carrier aviation operations, aircraft development, and POW operations during the Vietnam War. The comprehensive coverage of USS Ranger deployments and Skyraider operations provides valuable context for understanding naval aviation during this crucial period. The documentation of the Skyraider's international service, including Royal Navy and Swedish operations, demonstrates the aircraft's global significance and operational versatility.

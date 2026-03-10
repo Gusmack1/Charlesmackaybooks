@@ -389,7 +389,7 @@ const post = {
       training syllabi. Scotland's contribution lay not only in airframes but in the enabling infrastructure and doctrine.
     </p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation</a> book, with 238 pages profusely 
+      The documentation provided in Charles E. MacKay's <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation</a> book, with 238 pages profusely 
       illustrated in 61,000 words, has proved an excellent reference work for students, historians and general readers alike. 
       The book has been printed multiple times since 2012 and is now in continuous print due to demand, demonstrating its value 
       as a historical resource. The information contained within is not available in any other publication, making it essential 
@@ -434,7 +434,7 @@ const post = {
     </p>
     <p>
       The W.B.III's documentation contributes to understanding naval aviation development during the First World War. The comprehensive 
-      coverage of design, production, and operational aspects provides valuable insights into early carrier aviation and the evolution 
+      coverage of design, production, and operational aspects shows early carrier aviation and the evolution 
       of naval aircraft technology. This documentation preserves crucial historical information for future researchers and historians.
     </p>
 
@@ -446,8 +446,8 @@ const post = {
       complex aviation projects while maintaining engineering standards and meeting operational requirements.
     </p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's authoritative work ensures that this remarkable story is 
-      preserved for future generations. The book's thorough research, detailed illustrations, and careful documentation create an 
+      The documentation provided in Charles E. MacKay's authoritative work ensures that this remarkable story is 
+      recorded. The book's thorough research, detailed illustrations, and careful documentation create an 
       authoritative resource that does justice to Beardmore's achievements and contributions to naval aviation progress. This 
       scholarly work ensures that Scotland's naval aviation contribution receives the recognition it deserves.
     </p>

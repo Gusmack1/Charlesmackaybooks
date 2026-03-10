@@ -109,5 +109,5 @@ Use `--dry-run` to preview without writing.
 ## Output
 
 - **Published articles:** `data/news-articles/YYYY/MM/*.json`
-- **Display:** `/news` and `/aviation-news/[slug]`
+- **Display:** `/aviation-news` and `/aviation-news/[slug]`
 - **Style:** BBC News tone, Charles Mackay Books theme (slate-900, blue accents)

@@ -49,7 +49,7 @@ Checklist:
 Common sources of unwanted duplicates:
 - query parameters (search/filter)
 - trailing slash variants
-- legacy route patterns (e.g., `/book/...` vs `/books/...`)
+- legacy route patterns (e.g., `/book/`, `/timeline`, `/aircraft`) – redirects removed; canonical paths only
 
 ### 0.3 Structured data correctness (high priority)
 Maintain:

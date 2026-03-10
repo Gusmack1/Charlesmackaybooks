@@ -211,8 +211,8 @@ const post = {
     <p>
       The early military history of Renfrew Airport in the First World War to the foundation of the Auxiliary Air Force in the 
       twenties represents a crucial chapter in Scottish aviation history. The flying school established there would train generations 
-      of pilots and contribute significantly to Britain's aviation capability. The comprehensive documentation of aircraft types, 
-      accidents, and operational procedures provides valuable insights into early aviation training methods.
+      of pilots and contribute significantly to Britain's aviation capability. The documentation of aircraft types, 
+      accidents, and operational procedures shows early aviation training methods.
     </p>
     <p>
       Renfrew Airport's development by the Ministry of Munitions represents one of the earliest examples of government investment 
@@ -264,7 +264,7 @@ const post = {
       Beardmore's manufacturing processes incorporated quality control systems, precision jigs, and systematic production methods 
       that ensured consistent output. The company's ability to rapidly scale production while maintaining quality standards 
       demonstrated their industrial sophistication. The detailed documentation of production processes, preserved in company archives, 
-      provides valuable insights into early aviation manufacturing techniques.
+      shows early aviation manufacturing techniques.
     </p>
 
     <h2 id="armament-production">Armament Production and Technical Innovation</h2>
@@ -277,7 +277,7 @@ const post = {
     <p>
       The Beardmore Farquhar machine gun represents one of many technical innovations developed by the company. These contributions 
       to armament development demonstrate Beardmore's commitment to technical excellence and their ability to adapt existing 
-      manufacturing capabilities to new requirements. The detailed documentation of these projects provides valuable insights into 
+      manufacturing capabilities to new requirements. The detailed documentation of these projects shows 
       the technical challenges of early aviation armament.
     </p>
     <p>
@@ -295,7 +295,7 @@ const post = {
       airship construction, and aircraft carrier evolution left an indelible mark on British aviation history.
     </p>
     <p>
-      The comprehensive documentation provided in Charles E. MacKay's <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation</a> book, with 238 pages profusely 
+      The documentation provided in Charles E. MacKay's <a href="/books/beardmore-aviation" class="underline font-medium">Beardmore Aviation</a> book, with 238 pages profusely 
       illustrated in 61,000 words, has proved an excellent reference work for students, historians and general readers alike. 
       The book has been printed multiple times since 2012 and is now in continuous print due to demand, demonstrating its value 
       as a historical resource. The information contained within is not available in any other publication, making it essential 
@@ -336,8 +336,8 @@ const post = {
     </p>
     <p>
       The company's achievements in aircraft production, engine development, airship construction, and naval aviation innovation 
-      left a lasting legacy that continues to influence aviation manufacturing and research. The comprehensive documentation provided 
-      in Charles E. MacKay's authoritative work ensures that this remarkable story is preserved for future generations of historians, 
+      left a lasting legacy that continues to influence aviation manufacturing and research. The documentation provided 
+      in Charles E. MacKay's authoritative work ensures that this remarkable story is recorded of historians, 
       researchers, and aviation enthusiasts.
     </p>
     <p>

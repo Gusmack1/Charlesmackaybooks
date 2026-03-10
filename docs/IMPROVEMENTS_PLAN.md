@@ -29,7 +29,7 @@
 |---|--------|--------|--------|
 | 9 | Move hardcoded email to constants | Low | Done |
 | 10 | Fix book count consistency (use getPublishedBookCountText) | Low | Done |
-| 11 | Consolidate timeline routes (/timeline vs /scottish-aviation-timeline) | Low | Done |
+| 11 | Consolidate timeline routes (/timeline vs /scottish-aviation-timeline) | Low | Done – /timeline removed |
 | 12 | Replace generic placeholder images in blog posts | Medium | Done (audit: 0 found) |
 
 ## Future Improvements (from audit & GSC)
