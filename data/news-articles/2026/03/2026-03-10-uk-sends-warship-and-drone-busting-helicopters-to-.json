@@ -1,0 +1,41 @@
+{
+  "slug": "2026-03-10-uk-sends-warship-and-drone-busting-helicopters-to-",
+  "title": "UK sends warship and drone-busting helicopters to the Eastern Mediterranean to protect Brits and allies in the region",
+  "wordCount": 39,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "UK sends warship and drone-busting helicopters to the Eastern Mediterranean to protect Brits and allies in the region. HMS Dragon set to sail to the Eastern Mediterranean to defend British interests and support the collective self-defence of our allies."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "mod-press-office",
+      "sourceUrl": "https://www.gov.uk/government/news/uk-sends-warship-and-drone-busting-helicopters-to-the-eastern-mediterranean-to-protect-brits-and-allies-in-the-region",
+      "citationText": "mod-press-office – UK sends warship and drone-busting helicopters to the Eastern Mediterranean to protect Brits and allies in the region"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sycamore-seeds",
+      "reason": "Topical link between news item and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "sends warship and drone-busting",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-10T18:29:32.965Z"
+}

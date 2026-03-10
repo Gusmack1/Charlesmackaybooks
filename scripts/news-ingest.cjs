@@ -86,7 +86,7 @@ function normaliseRssItems(channel) {
     const guidValue = item.guid?.['#text'] || item.guid || item.link || item.title
     const summary = item.description || item['content:encoded'] || ''
     return {
-      guid: guidValue?.trim(),
+      guid: (typeof guidValue === 'string' ? guidValue : String(guidValue || '')).trim(),
       title: item.title?.trim() || 'Untitled',
       link: item.link || item.guid?.['#text'] || '',
       summary: summary.trim(),
@@ -102,12 +102,12 @@ function normaliseRssItems(channel) {
 function normaliseAtomEntries(feed) {
   const entries = ensureArray(feed.entry)
   return entries.map((entry) => {
-    const guidValue = entry.id || entry.link?.href || entry.title
+    const guidValue = entry.id || (Array.isArray(entry.link) ? entry.link.find((l) => l.rel === 'alternate')?.href : entry.link?.href) || entry.title
     const summary = entry.summary?.['#text'] || entry.summary || entry.content?.['#text'] || entry.content || ''
     const linkHref =
       (Array.isArray(entry.link) ? entry.link.find((l) => l.rel === 'alternate')?.href : entry.link?.href) || entry.id || ''
     return {
-      guid: guidValue?.trim(),
+      guid: (typeof guidValue === 'string' ? guidValue : String(guidValue || '')).trim(),
       title: (entry.title?.['#text'] || entry.title || 'Untitled').trim(),
       link: linkHref,
       summary: summary.trim(),

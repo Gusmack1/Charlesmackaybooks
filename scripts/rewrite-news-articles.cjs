@@ -26,10 +26,11 @@ if (fs.existsSync(envPath) && !process.env.OPENAI_API_KEY) {
 const ARTICLES_DIR = path.join(ROOT_DIR, 'data', 'news-articles')
 const OPENAI_URL = 'https://api.openai.com/v1/chat/completions'
 
-const REWRITE_PROMPT = `You are a factual news writer for Charles Mackay Books, an aviation history publisher in Scotland. Rewrite the following news excerpt into a single coherent article:
+const REWRITE_PROMPT = `You are a factual news writer for Charles Mackay Books, an aviation history publisher in Scotland. Rewrite the following news excerpt into a single coherent article.
 
-RULES:
-- Keep ALL facts exactly as stated. Do not add, speculate, or invent.
+CRITICAL – 100% ACCURACY:
+- Preserve ALL facts exactly as stated in the source. Do not add, speculate, or invent anything.
+- If a detail is unclear or missing, omit it rather than guess.
 - Write in BBC News style: clear, neutral, factual.
 - Focus on the PRIMARY story only. Ignore any unrelated items bundled together.
 - Write 150–300 words. Use 2–3 short paragraphs.

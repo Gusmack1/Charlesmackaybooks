@@ -21,7 +21,11 @@ const QUEUE_FILE = path.join(DATA_DIR, 'news-queue.json')
 const ARTICLES_DIR = path.join(DATA_DIR, 'news-articles')
 
 const OPENAI_URL = 'https://api.openai.com/v1/chat/completions'
-const REWRITE_PROMPT = `You are a factual news writer for Charles Mackay Books, an aviation history publisher. Rewrite the following article excerpt in BBC News style: clear, neutral, factual. PRESERVE ALL FACTS EXACTLY - do not add, speculate, or invent. Only paraphrase for clarity. Output JSON: { title, summary, sections: [{ heading, content }] }. Keep under 500 words total.`
+const REWRITE_PROMPT = `You are a factual news writer for Charles Mackay Books, an aviation history publisher. Rewrite the following article excerpt in BBC News style: clear, neutral, factual.
+
+CRITICAL – 100% ACCURACY: Preserve ALL facts exactly as stated. Do not add, speculate, or invent. If a detail is unclear, omit it. Only paraphrase for clarity.
+
+Output JSON: { title, summary, sections: [{ heading, content }] }. Keep under 500 words total.`
 
 function readJson(filePath, fallback) {
   try {
@@ -45,21 +49,23 @@ function slugify(input) {
     .slice(0, 60)
 }
 
-/** Returns all book IDs that topically match the content (keyword-based, 100% accurate). */
+const AVIATION_CTX = /aircraft|aviation|airport|airspace|flight|raf|hial|aaib|prestwick|lossiemouth|inverness|stornoway|wick|dundee|helicopter|rotorcraft|aerospace|airline|pilot|typhoon|sabre|vulcan|lightning|glasgow airport/i
+
+/** Returns book IDs that topically match. Empty = no relevant book; item should be skipped. */
 function chooseBookIds(item) {
-  const text = `${item.title} ${item.summary}`.toLowerCase()
+  const text = `${item.title} ${item.summary || ''}`.toLowerCase()
+  const hasAviation = AVIATION_CTX.test(text)
   const ids = new Set()
-  if (text.includes('helicopter') || text.includes('rotor') || text.includes('sycamore')) ids.add('sycamore-seeds')
+  if (text.includes('helicopter') || text.includes('rotorcraft') || text.includes('sycamore')) ids.add('sycamore-seeds')
   if (text.includes('lossiemouth') || text.includes('typhoon') || text.includes('sabre')) ids.add('sabres-from-north')
   if (text.includes('prestwick') || text.includes('beardmore') || text.includes('argus')) ids.add('beardmore-aviation')
-  if (text.includes('hial') || text.includes('wick airport') || text.includes('inverness airport') || text.includes('highland airport')) ids.add('clydeside-aviation-vol2')
-  if (text.includes('glasgow') || text.includes('clyde') || text.includes('clydeside') || text.includes('weir ')) ids.add('clydeside-aviation-vol1')
+  if (hasAviation && (text.includes('hial') || text.includes('wick airport') || text.includes('inverness airport') || text.includes('highland airport') || text.includes('stornoway') || text.includes('dundee airport'))) ids.add('clydeside-aviation-vol2')
+  if ((hasAviation && (text.includes('glasgow airport') || text.includes('clyde') || text.includes('clydeside') || text.includes('weir '))) || (text.includes('glasgow') && hasAviation)) ids.add('clydeside-aviation-vol1')
   if (text.includes('vulcan') || text.includes('lightning') || text.includes('v-force') || text.includes('deterrent')) ids.add('sonic-to-standoff')
   if (text.includes('nuclear') || text.includes('atomic')) ids.add('birth-atomic-bomb')
   if (text.includes('aircraft carrier') || text.includes('naval aviation')) ids.add('aircraft-carrier-argus')
   if (text.includes('luftwaffe') || text.includes('german aircraft') || text.includes('me262') || text.includes('messerschmitt')) ids.add('this-was-the-enemy-volume-two')
   if (text.includes('spirit aero') || (text.includes('aerospace') && text.includes('scotland'))) ids.add('clydeside-aviation-vol2')
-  if (ids.size === 0) ids.add('this-was-the-enemy-volume-two')
   return Array.from(ids)
 }
 
@@ -146,10 +152,23 @@ async function main() {
     process.exit(0)
   }
 
+  const SOURCE_PRIORITY = { 'bbc-scotland': 10, 'bbc-uk': 9, 'flightglobal': 8, 'hial-airports': 7, 'raf-mod-uk': 6, 'mod-press-office': 6, 'aaib-bulletins': 5, 'dft-press-office': 5, 'caa-gov-uk': 5, 'scotsman-news': 5, 'serper-scottish-aviation': 4 }
+  const aviationTerms = /aircraft|aviation|airport|airspace|flight|raf|hial|aaib|nerl|nats|prestwick|lossiemouth|inverness|stornoway|wick|dundee|glasgow|military aviation|naval aviation|helicopter|rotorcraft/i
   const queue = readJson(QUEUE_FILE, [])
-  const pending = queue.filter((item) => item.status === 'new')
+  const pending = queue
+    .filter((item) => item.status === 'new')
+    .filter((item) => aviationTerms.test(`${item.title} ${item.summary || ''}`))
+    .filter((item) => {
+      const bookIds = chooseBookIds(item)
+      if (bookIds.length === 0) {
+        console.log(`Skip (no relevant book): ${item.title?.slice(0, 50)}...`)
+        return false
+      }
+      return true
+    })
+    .sort((a, b) => (SOURCE_PRIORITY[b.sourceId] ?? 0) - (SOURCE_PRIORITY[a.sourceId] ?? 0))
   if (!pending.length) {
-    console.log('No new items to rewrite.')
+    console.log('No new items with a relevant book to promote.')
     process.exit(0)
   }
 

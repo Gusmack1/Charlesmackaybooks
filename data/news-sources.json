@@ -1,5 +1,65 @@
 [
   {
+    "id": "bbc-scotland",
+    "name": "BBC News Scotland",
+    "type": "primary",
+    "mode": "rss",
+    "feedUrl": "https://feeds.bbci.co.uk/news/scotland/rss.xml",
+    "licence": "bbc",
+    "attribution": "Source: BBC News (bbc.co.uk/news)",
+    "imagePolicy": "attribution-only",
+    "notes": "Scotland news including aviation, airports, transport. Attribution required per BBC Terms.",
+    "enabled": true
+  },
+  {
+    "id": "bbc-uk",
+    "name": "BBC News UK",
+    "type": "primary",
+    "mode": "rss",
+    "feedUrl": "https://feeds.bbci.co.uk/news/uk/rss.xml",
+    "licence": "bbc",
+    "attribution": "Source: BBC News (bbc.co.uk/news)",
+    "imagePolicy": "attribution-only",
+    "notes": "UK news including aviation, airports, RAF. Attribution required per BBC Terms.",
+    "enabled": true
+  },
+  {
+    "id": "flightglobal",
+    "name": "FlightGlobal",
+    "type": "primary",
+    "mode": "rss",
+    "feedUrl": "https://www.flightglobal.com/rss/news/",
+    "licence": "corporate",
+    "attribution": "Source: FlightGlobal",
+    "imagePolicy": "attribution-only",
+    "notes": "Aviation industry news. Filter to UK/Scotland aviation for relevance. RSS may return 404 – re-enable when feed is restored.",
+    "enabled": false
+  },
+  {
+    "id": "scotsman-news",
+    "name": "The Scotsman",
+    "type": "secondary",
+    "mode": "rss",
+    "feedUrl": "https://www.scotsman.com/news/rss",
+    "licence": "corporate",
+    "attribution": "Source: The Scotsman",
+    "imagePolicy": "attribution-only",
+    "notes": "Scotland's national newspaper. Filter to aviation/transport for relevance.",
+    "enabled": true
+  },
+  {
+    "id": "caa-gov-uk",
+    "name": "Civil Aviation Authority",
+    "type": "secondary",
+    "mode": "rss",
+    "feedUrl": "https://www.gov.uk/government/organisations/civil-aviation-authority.atom",
+    "licence": "ogl",
+    "attribution": "Source: Civil Aviation Authority (OGL v3.0)",
+    "imagePolicy": "crown",
+    "notes": "Aviation safety, regulation, licensing. UK-wide relevance.",
+    "enabled": true
+  },
+  {
     "id": "raf-mod-uk",
     "name": "Royal Air Force",
     "type": "primary",
@@ -20,7 +80,8 @@
     "licence": "ogl",
     "attribution": "Source: UK Ministry of Defence (OGL v3.0)",
     "imagePolicy": "crown",
-    "notes": "Filter to aviation topics via keyword matching (RAF, Fleet Air Arm, aerospace)."
+    "notes": "Filter to aviation topics via keyword matching (RAF, Fleet Air Arm, aerospace).",
+    "enabled": true
   },
   {
     "id": "hial-airports",
