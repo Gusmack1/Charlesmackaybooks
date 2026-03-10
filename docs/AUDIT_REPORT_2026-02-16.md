@@ -35,17 +35,17 @@
 
 - ✅ How-to-order – reordered so website checkout is first. eBay is now "Alternative option".
 
-**P2 (Medium) – Remaining**
+**P2 (Medium) – FIXED**
 
-- [ ] Reduce 500ms delay on Add to basket (`BookDetailClient.tsx`)
-- [ ] Add "Browse books" in empty cart sidebar (`CartSidebar.tsx`)
-- [ ] Demote eBay CTA on book detail (`BookDetailClient.tsx`)
+- ✅ Reduce 500ms delay on Add to basket (`BookDetailClient.tsx`)
+- ✅ Add "Browse books" in empty cart sidebar (`CartSidebar.tsx`)
+- ✅ Demote eBay CTA on book detail (`BookDetailClient.tsx`) – now small text link "Also available on eBay"
 
-**P3 (Low) – Remaining**
+**P3 (Low) – FIXED**
 
-- [ ] Add How to Order to nav (`navigation.ts`)
-- [ ] Add Add to basket on quick pairings (book detail)
-- [ ] Add Add to basket on Related Books cards
+- ✅ Add How to Order to nav (`navigation.ts` – in moreNavLinks)
+- ✅ Add Add to basket on quick pairings (book detail) – `BookQuickAddCard`
+- ✅ Add Add to basket on Related Books cards – `RelatedBookCard`
 
 ### 3. Mobile Browser
 

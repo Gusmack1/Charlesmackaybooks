@@ -26,10 +26,10 @@ The site has a solid foundation (guest checkout, cart persistence, bulk discount
 
 | Issue | Location | Suggested Fix |
 |-------|----------|---------------|
-| **eBay CTA competes with primary purchase** | Lines 103–112 | Move eBay link below primary CTAs or make it a smaller text link. Primary focus should be website checkout. |
+| ~~**eBay CTA competes with primary purchase**~~ | ~~Lines 103–112~~ | **DONE** – eBay demoted to small text link "Also available on eBay" |
 | **Add to basket is secondary (slate-700)** | Lines 95–100 | Consider making Add to basket more prominent (e.g. outline style) or equal visual weight so users see both options clearly. |
 | **500ms artificial delay on add** | Lines 28–34 | Remove or reduce `setTimeout(..., 500)` – adds perceived lag. Use immediate state update. |
-| **Mobile sticky bar "Add" is truncated** | Line 171 | Change label from "Add" to "Add to basket" for clarity (or "Add to cart" if space allows). |
+| ~~**Mobile sticky bar "Add" is truncated**~~ | ~~Line 171~~ | **DONE** – Changed to "Add to cart" |
 
 ### File: `src/app/books/[id]/page.tsx`
 

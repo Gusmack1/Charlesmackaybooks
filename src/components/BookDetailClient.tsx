@@ -99,15 +99,17 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
                 {isAddingToCart ? 'Adding...' : 'Add to basket'}
               </button>
 
-              <a
-                href="https://www.ebay.co.uk/usr/chaza87"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleEbayClick}
-                className="w-full bg-slate-800 text-white py-3 px-4 text-sm font-semibold rounded-lg min-h-[44px] hover:bg-slate-700 transition-colors flex items-center justify-center border border-white/25"
-              >
-                Trusted seller profile on eBay
-              </a>
+              <p className="text-center text-xs text-white/60 pt-1">
+                <a
+                  href="https://www.ebay.co.uk/usr/chaza87"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleEbayClick}
+                  className="underline hover:text-white/80 transition-colors"
+                >
+                  Also available on eBay
+                </a>
+              </p>
             </>
           )}
 
@@ -166,7 +168,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
               disabled={isAddingToCart}
               className="bg-slate-700 text-white py-2.5 px-3 rounded-lg text-sm font-semibold border border-white/20 disabled:opacity-60"
             >
-              {isAddingToCart ? 'Adding...' : 'Add'}
+              {isAddingToCart ? 'Adding...' : 'Add to cart'}
             </button>
           </div>
         </div>
