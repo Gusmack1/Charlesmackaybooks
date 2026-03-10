@@ -610,7 +610,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   By <Link href="/about" className="underline font-semibold">Charles E. MacKay</Link>
                 </p>
 
-                <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4 sm:p-5 max-w-4xl mx-auto">
+                <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4 sm:p-5 max-w-4xl mx-auto pointer-events-none">
                   <p className="text-sm sm:text-base text-white/95">{valueProposition}.</p>
                   <div className="mt-3 flex flex-wrap justify-center gap-2">
                     {proofStripItems.map((item) => (
@@ -621,8 +621,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   </div>
                 </div>
 
-                {/* Purchase Options */}
-                <div id="purchase" className="space-y-4 max-w-2xl mx-auto">
+                {/* Purchase Options - relative z-20 ensures buttons are above any overlapping elements */}
+                <div id="purchase" className="relative z-20 space-y-4 max-w-2xl mx-auto">
                   <BookDetailClient book={book} />
                   {quickPairings.length > 0 && (
                     <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4">
