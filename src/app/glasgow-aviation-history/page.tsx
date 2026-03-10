@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
+import UnifiedSchema from '@/components/UnifiedSchema'
 
 export const metadata: Metadata = {
   title: 'Glasgow Aviation History | Clyde Shipyards Aircraft | Scottish Aerospace Heritage | Charles E. MacKay',
@@ -46,7 +47,14 @@ export default function GlasgowAviationHistory() {
     <BBCPageTemplate
       title="Glasgow Aviation History"
       subtitle="From Clyde Shipyards to Modern Aerospace"
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Glasgow Aviation History' }]}
     >
+      <UnifiedSchema
+        pageType="page"
+        pageTitle="Glasgow Aviation History"
+        pageDescription="Glasgow aviation history from 1903-2023. Beardmore, Arrol-Johnston, Albion Motors aircraft production. RAF Abbotsinch, Renfrew Airport, Glasgow's aerospace legacy."
+        pageUrl="/glasgow-aviation-history"
+      />
       <div className="prose prose-invert max-w-none">
         <p className="lead">
           Glasgow's aviation history spans over a century of innovation, from pioneering aircraft manufacturers

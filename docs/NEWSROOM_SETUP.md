@@ -48,10 +48,44 @@ The Scottish Aviation Newsroom is a live feed that:
 | `NEWSROOM_SLACK_WEBHOOK` | Sends digest to Slack. |
 | `NEWSROOM_GSC_KEY` | Google Search Console for keyword reports. |
 
+## Automation
+
+### npm Scripts
+
+| Script | Steps | API keys |
+|--------|-------|----------|
+| `news:pipeline` | ingest → draft | None |
+| `news:pipeline:full` | ingest → search → rewrite → draft → fix | Serper, OpenAI |
+
+```bash
+# Minimal pipeline (no API keys)
+npm run news:pipeline
+
+# Full pipeline (requires SERPER_API_KEY, OPENAI_API_KEY)
+npm run news:pipeline:full
+```
+
+### GitHub Actions Workflows
+
+| Workflow | Schedule | Steps |
+|----------|----------|-------|
+| **Newsroom Automation** | Every 12 hours | ingest → search → rewrite → draft → fix → report → commit |
+| **News Pipeline (Daily)** | Daily 06:00 UTC | ingest → draft → commit |
+
+- **Newsroom Automation** (`newsroom-automation.yml`): Full pipeline with reports, Netlify deploy, Slack digest. Requires API keys for search/rewrite.
+- **News Pipeline (Daily)** (`news-pipeline-daily.yml`): Minimal run, no API keys. Commits new articles only.
+
+Both workflows commit and push new articles when any are generated. Manual runs: **Actions** → select workflow → **Run workflow**.
+
+### Netlify
+
+The Netlify build runs `npm run build` only; it does not run the news pipeline. New articles are deployed when GitHub Actions pushes to the repo and triggers a Netlify build, or when `NETLIFY_BUILD_HOOK` is configured in the Newsroom Automation workflow.
+
 ## Schedule
 
-- **Cron:** Every 12 hours (`0 */12 * * *` = 00:00 and 12:00 UTC)
-- **Manual:** Run via **Actions → Newsroom Automation → Run workflow**
+- **Full automation:** Every 12 hours (`0 */12 * * *` = 00:00 and 12:00 UTC)
+- **Minimal daily:** 06:00 UTC
+- **Manual:** Run via **Actions** → select workflow → **Run workflow**
 
 ## Pipeline Order
 

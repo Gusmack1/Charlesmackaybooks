@@ -359,6 +359,16 @@ export default function UnifiedSchema({
         },
       },
     })
+
+    graph.push({
+      '@type': 'BreadcrumbList',
+      '@id': `${bookUrl}#breadcrumbs`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, item: { '@id': `${BASE_URL}/`, name: 'Home' } },
+        { '@type': 'ListItem', position: 2, item: { '@id': `${BASE_URL}/books`, name: 'Books' } },
+        { '@type': 'ListItem', position: 3, item: { '@id': bookUrl, name: pageTitle || bookData.title || 'Book' } },
+      ],
+    })
   }
 
   if (pageType === 'blog-post') {
@@ -468,6 +478,17 @@ export default function UnifiedSchema({
   }
 
   graph.push(webPageNode)
+
+  if (pageType === 'page' && normalizedPath && normalizedPath !== '/') {
+    graph.push({
+      '@type': 'BreadcrumbList',
+      '@id': `${fullUrl}#breadcrumbs`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, item: { '@id': `${BASE_URL}/`, name: 'Home' } },
+        { '@type': 'ListItem', position: 2, item: { '@id': fullUrl, name: pageTitle || 'Page' } },
+      ],
+    })
+  }
 
   if (pageType === 'category') {
     graph.push({

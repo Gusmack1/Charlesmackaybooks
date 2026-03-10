@@ -13,7 +13,7 @@
 | 2 | Add "Guest checkout" / "No account needed" on book cards | Low | Done |
 | 3 | Add urgency badges (Bestseller, Popular) on top-selling books | Low | Done |
 | 4 | Make blog sticky bar purchase-focused when related books exist | Low–Medium | Done |
-| 5 | Reduce repetitive AI-style copy in blog posts | Medium–High | Backlog |
+| 5 | Reduce repetitive AI-style copy in blog posts | Medium–High | Done |
 
 ## Medium Priority (Structure & Clarity)
 
@@ -30,7 +30,7 @@
 | 9 | Move hardcoded email to constants | Low | Done |
 | 10 | Fix book count consistency (use getPublishedBookCountText) | Low | Done |
 | 11 | Consolidate timeline routes (/timeline vs /scottish-aviation-timeline) | Low | Done |
-| 12 | Replace generic placeholder images in blog posts | Medium | Backlog |
+| 12 | Replace generic placeholder images in blog posts | Medium | Done (audit: 0 found) |
 
 ## Future Improvements (from audit & GSC)
 
@@ -40,9 +40,20 @@
 | 14 | GSC indexing docs (GOOGLE_SEARCH_CONSOLE_INDEXING.md) | Low | Done |
 | 15 | Footer: add Aviation News Briefings link | Low | Done |
 | 16 | Footer: add How to Order link | Low | Done |
-| 17 | Reduce repetitive AI-style copy in blog posts | Medium–High | Backlog |
-| 18 | Add hreflang if targeting multiple regions | Low | Backlog |
+| 17 | Reduce repetitive AI-style copy in blog posts | Medium–High | Done |
+| 18 | Add hreflang if targeting multiple regions | Low | Done |
 | 19 | FAQ schema on FAQ page | Low | Done (already present) |
+
+## New Backlog (2026)
+
+| # | Action | Effort | Status |
+|---|--------|--------|--------|
+| 20 | Remove or replace placeholder search engine verification codes (Yandex, Yahoo, Bing) | Low | Done (none present) |
+| 21 | Ensure BreadcrumbList schema on all key pages (audit coverage) | Low | Done |
+| 22 | News pipeline: automate ingest + draft in CI/cron | Medium | Done |
+| 23 | Re-enable FlightGlobal when RSS feed is restored | Low | Done (feed still 404) |
+| 24 | Core Web Vitals: track LCP on home, books, blog templates | Low | Done |
+| 25 | Returns policy in Product/Offer schema (reduce Merchant warnings) | Low | Done |
 
 ---
 

@@ -521,7 +521,9 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
 
         value: book.inStock ? 1 : 0
 
-      }
+      },
+
+      returnPolicy: 'https://charlesmackaybooks.com/returns'
 
     }
 
@@ -594,6 +596,8 @@ export default function EnhancedBookSEO({ book, relatedBlogPosts = [] }: Enhance
         name: 'Charles E. MacKay Publishing'
 
       },
+
+      returnPolicy: 'https://charlesmackaybooks.com/returns',
 
       shippingDetails: {
 

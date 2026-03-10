@@ -21,6 +21,8 @@
     "news:search": "node scripts/news-search.cjs",
     "news:rewrite": "node scripts/news-rewrite.cjs",
     "news:draft": "node scripts/news-draft.cjs",
+    "news:pipeline": "npm run news:ingest && npm run news:draft",
+    "news:pipeline:full": "npm run news:ingest && npm run news:search && npm run news:rewrite && npm run news:draft && npm run news:fix",
     "news:fix": "node scripts/fix-news-articles.cjs",
     "news:rewrite-existing": "node scripts/rewrite-news-articles.cjs",
     "news:rewrite-existing-simple": "node scripts/rewrite-news-articles-simple.cjs",

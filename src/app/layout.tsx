@@ -4,6 +4,8 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ClientBody from './ClientBody'
+import AnalyticsScripts from '@/components/AnalyticsScripts'
+import HreflangLinks from '@/components/HreflangLinks'
 import { books } from '@/data/books'
 import { SITE_CONSTANTS } from '@/config/constants'
 
@@ -190,7 +192,9 @@ export default function RootLayout({
         {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        
+
+        <HreflangLinks />
+
         {/* Structured data */}
         <script
           type="application/ld+json"
@@ -225,6 +229,7 @@ export default function RootLayout({
         />
       </head>
       <ClientBody>
+        <AnalyticsScripts />
         <Header />
         <main id="main-content" className="min-h-screen">
           {children}

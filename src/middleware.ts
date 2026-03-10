@@ -114,7 +114,12 @@ export function middleware(request: NextRequest) {
     return response
   }
 
-  return NextResponse.next()
+  // Forward pathname for hreflang generation in layout
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set('x-pathname', pathname || '/')
+  return NextResponse.next({
+    request: { headers: requestHeaders },
+  })
 }
 
 export const config = {
