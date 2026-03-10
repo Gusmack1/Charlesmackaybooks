@@ -22,6 +22,7 @@ import {
   clearSavedCustomerProfile,
 } from '../../utils/customerProfile';
 import CustomerTestimonials from '../../components/CustomerTestimonials';
+import TrustSecurityBadges from '../../components/TrustSecurityBadges';
 import { trackCartAbandonment } from '../../utils/abandonedCartRecovery';
 import { useSearchParams } from 'next/navigation';
 import { useRecentlyViewed } from '../../context/RecentlyViewedContext';
@@ -804,7 +805,7 @@ function CheckoutContent() {
                 </button>
 
                 {/* Payment section - inline on same step */}
-                <div className="pt-4 border-t border-blue-700/50">
+                <div id="payment-section" className="pt-4 border-t border-blue-700/50">
                 <h3 className="text-base sm:text-lg font-bold mb-3 text-white">Payment Method</h3>
                 <p className="text-xs sm:text-sm text-white/80 mb-4">
                   Your payment is encrypted and processed securely by Stripe or PayPal.
@@ -959,7 +960,7 @@ function CheckoutContent() {
               </div>
             </div>
 
-            {/* Trust & Security Badges are rendered globally via layout */}
+            <TrustSecurityBadges />
 
             {/* Sticky mobile order summary - always visible on small screens */}
             <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-slate-900/98 backdrop-blur border-t border-blue-700/50 px-4 py-3 flex items-center justify-between gap-4">
@@ -967,7 +968,24 @@ function CheckoutContent() {
                 <p className="text-xs text-white/70">Total ({totalItemsCount} items)</p>
                 <p className="text-xl font-bold text-white">£{total.toFixed(2)}</p>
               </div>
-              <p className="text-xs text-green-400 font-medium">Free shipping</p>
+              {step === 'basket' ? (
+                <button
+                  type="button"
+                  onClick={() => setStep('delivery-payment')}
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm whitespace-nowrap"
+                >
+                  Continue to delivery
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => document.getElementById('payment-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm whitespace-nowrap"
+                >
+                  Pay £{total.toFixed(2)}
+                </button>
+              )}
+              <p className="text-xs text-green-400 font-medium hidden sm:inline">Free shipping</p>
             </div>
             <div className="h-20 lg:hidden" aria-hidden />
 

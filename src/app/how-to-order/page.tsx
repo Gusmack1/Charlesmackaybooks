@@ -69,38 +69,13 @@ export default function HowToOrderPage() {
             </div>
           </div>
 
-          {/* Payment Options */}
+          {/* Payment Options - Website first to drive on-site sales */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="border border-white/15 bg-black/10 rounded-lg p-6">
-              <div className="text-center mb-4">
-                <div className="text-4xl mb-2">🛒</div>
-                <h3 className="text-xl font-bold text-primary">eBay Purchase</h3>
-                <p className="text-sm text-accent-green font-semibold">Most Popular</p>
-              </div>
-              <ul className="space-y-2 text-sm opacity-90 mb-4">
-                <li>✓ 100% buyer protection</li>
-                <li>✓ 1,700+ positive reviews</li>
-                <li>✓ Instant purchase</li>
-                <li>✓ PayPal or card payment</li>
-                <li>✓ Automatic tracking</li>
-              </ul>
-              <div className="text-center">
-                <a
-                  href="https://www.ebay.co.uk/usr/chaza87"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline inline-block"
-                >
-                  Visit eBay Store →
-                </a>
-              </div>
-            </div>
-
             <div className="border border-white/15 bg-black/10 rounded-lg p-6">
               <div className="text-center mb-4">
                 <div className="text-4xl mb-2">💳</div>
                 <h3 className="text-xl font-bold text-primary">Guest Checkout</h3>
-                <p className="text-sm text-accent-blue font-semibold">Best for direct orders</p>
+                <p className="text-sm text-accent-green font-semibold">Recommended</p>
               </div>
               <ul className="space-y-2 text-sm opacity-90 mb-4">
                 <li>✓ No account required</li>
@@ -140,6 +115,31 @@ export default function HowToOrderPage() {
                 >
                   Browse Books →
                 </Link>
+              </div>
+            </div>
+
+            <div className="border border-white/15 bg-black/10 rounded-lg p-6">
+              <div className="text-center mb-4">
+                <div className="text-4xl mb-2">🛒</div>
+                <h3 className="text-xl font-bold text-primary">eBay Purchase</h3>
+                <p className="text-sm text-accent-blue font-semibold">Alternative option</p>
+              </div>
+              <ul className="space-y-2 text-sm opacity-90 mb-4">
+                <li>✓ 100% buyer protection</li>
+                <li>✓ 1,700+ positive reviews</li>
+                <li>✓ Instant purchase</li>
+                <li>✓ PayPal or card payment</li>
+                <li>✓ Automatic tracking</li>
+              </ul>
+              <div className="text-center">
+                <a
+                  href="https://www.ebay.co.uk/usr/chaza87"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline inline-block"
+                >
+                  Visit eBay Store →
+                </a>
               </div>
             </div>
           </div>
