@@ -610,7 +610,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   By <Link href="/about" className="underline font-semibold">Charles E. MacKay</Link>
                 </p>
 
-                <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4 sm:p-5 max-w-4xl mx-auto pointer-events-none">
+                <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4 sm:p-5 max-w-4xl mx-auto">
                   <p className="text-sm sm:text-base text-white/95">{valueProposition}.</p>
                   <div className="mt-3 flex flex-wrap justify-center gap-2">
                     {proofStripItems.map((item) => (
@@ -620,41 +620,43 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                     ))}
                   </div>
                 </div>
-
-                {/* Purchase Options - relative z-20 ensures buttons are above any overlapping elements */}
-                <div id="purchase" className="relative z-20 space-y-4 max-w-2xl mx-auto">
-                  <BookDetailClient book={book} />
-                  {quickPairings.length > 0 && (
-                    <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4">
-                      <p className="text-sm font-semibold text-white mb-3">
-                        Pair this with these popular related titles
-                      </p>
-                      <div className="grid sm:grid-cols-3 gap-2">
-                        {quickPairings.map((relatedBook) => (
-                          <BookQuickAddCard key={relatedBook.id} book={relatedBook} />
-                        ))}
-                      </div>
-                      <p className="text-xs text-blue-200 mt-3">
-                        Save 5% on 2 books or 10% on 3+ at checkout.
-                      </p>
-                    </div>
-                  )}
-                  <div className="text-center mt-6">
-                    <Link href="/books" className="text-blue-300 hover:text-white underline">
-                      ← Browse All Books
-                    </Link>
-                  </div>
-                  <div className="text-center">
-                    <ShareButton
-                      url={`https://charlesmackaybooks.com/books/${book.id}`}
-                      title={book.title}
-                      description={book.description?.substring(0, 150) + '...'}
-                      hashtags={['AviationHistory', 'Aviation', 'Books']}
-                      className="text-base"
-                    />
-                  </div>
-                </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Purchase section - outside hero to avoid any overlay/stacking issues */}
+        <div id="purchase" className={`${gradientClass} text-white py-8 px-6`}>
+          <div className="max-w-2xl mx-auto space-y-4">
+            <BookDetailClient book={book} />
+            {quickPairings.length > 0 && (
+              <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4">
+                <p className="text-sm font-semibold text-white mb-3">
+                  Pair this with these popular related titles
+                </p>
+                <div className="grid sm:grid-cols-3 gap-2">
+                  {quickPairings.map((relatedBook) => (
+                    <BookQuickAddCard key={relatedBook.id} book={relatedBook} />
+                  ))}
+                </div>
+                <p className="text-xs text-blue-200 mt-3">
+                  Save 5% on 2 books or 10% on 3+ at checkout.
+                </p>
+              </div>
+            )}
+            <div className="text-center mt-6">
+              <Link href="/books" className="text-blue-300 hover:text-white underline">
+                ← Browse All Books
+              </Link>
+            </div>
+            <div className="text-center">
+              <ShareButton
+                url={`https://charlesmackaybooks.com/books/${book.id}`}
+                title={book.title}
+                description={book.description?.substring(0, 150) + '...'}
+                hashtags={['AviationHistory', 'Aviation', 'Books']}
+                className="text-base"
+              />
             </div>
           </div>
         </div>
