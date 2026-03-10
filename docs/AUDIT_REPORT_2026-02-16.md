@@ -73,9 +73,16 @@
 
 ---
 
+## Remaining Items Completed (This Session)
+
+- ✅ Search schema – `urlTemplate` now uses `query` (matches Header)
+- ✅ 500ms delay – Removed from Add to basket in `BookDetailClient`
+- ✅ Browse books – Added to empty cart sidebar
+- ✅ Add to basket – Added to quick pairings and Related Books via `BookQuickAddCard`, `RelatedBookCard`
+- ✅ Blog image fallback – Created `BlogImage` component with inline placeholder; migrate blog pages gradually
+
 ## Recommended Next Steps
 
 1. **Manual mobile test** – Checkout flow on real device (sticky bar CTA, Pay button)
-2. **Missing blog images** – Add or verify JPGs in `public/blog-images/`
-3. **Search schema** – Align `urlTemplate` with `query` param in `layout.tsx`
-4. **P2/P3** – Implement remaining conversion fixes from `SALES_CONVERSION_AUDIT.md`
+2. **Missing blog JPGs** – Many referenced in blog posts don't exist in `public/blog-images/`. Either add the images or migrate `<img>` to `<BlogImage>` for fallback. See `docs/BLOG_IMAGES_MISSING.md` for list.
+3. **Duplicate Rohrbach page** – Merge or redirect per WEBSITE_CLEANUP_TODO

@@ -28,10 +28,8 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
   const handleAddToCart = () => {
     setIsAddingToCart(true);
     addToCart(book);
-    setTimeout(() => {
-      setIsAddingToCart(false);
-      openBasket(); // Open basket sidebar after adding item
-    }, 500);
+    openBasket();
+    setIsAddingToCart(false);
   };
 
   const handleBuyNow = () => {

@@ -8,6 +8,8 @@ import { books } from '@/data/books';
 import { Book } from '@/types/book';
 import { getNewsArticlesForBook } from '@/lib/newsroom';
 import BookDetailClient from '@/components/BookDetailClient';
+import BookQuickAddCard from '@/components/BookQuickAddCard';
+import RelatedBookCard from '@/components/RelatedBookCard';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookAnalyticsClient from '@/components/BookAnalyticsClient';
 import ShareButton from '@/components/ShareButton';
@@ -630,14 +632,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                       </p>
                       <div className="grid sm:grid-cols-3 gap-2">
                         {quickPairings.map((relatedBook) => (
-                          <Link
-                            key={relatedBook.id}
-                            href={`/books/${relatedBook.id}`}
-                            className="rounded-lg border border-white/15 bg-slate-900/50 px-3 py-2 hover:border-blue-300/70 transition-colors"
-                          >
-                            <div className="text-xs text-white/80 line-clamp-2">{relatedBook.title}</div>
-                            <div className="text-sm font-semibold text-white mt-1">£{relatedBook.price.toFixed(2)}</div>
-                          </Link>
+                          <BookQuickAddCard key={relatedBook.id} book={relatedBook} />
                         ))}
                       </div>
                       <p className="text-xs text-blue-200 mt-3">
@@ -814,27 +809,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               <p className="text-secondary mb-4">Explore similar aviation history titles by Charles E. MacKay</p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {relatedBooks.slice(0, 6).map((relatedBook) => (
-                  <Link
-                    key={relatedBook.id}
-                    href={`/books/${relatedBook.id}`}
-                    className="block border rounded-lg p-4 hover:border-secondary/50 hover:shadow-md transition-all"
-                  >
-                    <div className="aspect-[3/4] mb-3 bg-muted rounded overflow-hidden">
-                      <Image
-                        src={relatedBook.imageUrl || `/book-covers/${relatedBook.id}.jpg`}
-                        alt={relatedBook.title}
-                        width={200}
-                        height={267}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAoACgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEB//EACUQAAIBAwMEAwEBAAAAAAAAAAECAwAEEQUSITFBURNhcZEigf/EABUBAFEAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8A4+iiigAooooAKKKKACiiigD/2Q=="
-                      />
-                    </div>
-                    <div className="font-semibold text-primary mb-1 line-clamp-2">{relatedBook.title}</div>
-                    <div className="text-secondary text-sm mb-2">{relatedBook.category}</div>
-                    <div className="text-lg font-bold text-primary">£{relatedBook.price}</div>
-                  </Link>
+                  <RelatedBookCard key={relatedBook.id} book={relatedBook} />
                 ))}
               </div>
             </div>

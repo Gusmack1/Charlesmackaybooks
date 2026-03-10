@@ -82,7 +82,14 @@ export default function CartSidebar() {
               <div className="flex h-full flex-col items-center justify-center text-white/70">
                 <ShoppingBag className="h-12 w-12 mb-4" />
                 <p className="text-lg font-medium text-white">Your basket is empty</p>
-                <p className="text-sm">Add some books to get started!</p>
+                <p className="text-sm mb-4">Add some books to get started!</p>
+                <Link
+                  href="/books"
+                  onClick={() => setIsCartOpen(false)}
+                  className="btn-books"
+                >
+                  Browse books
+                </Link>
               </div>
             ) : (
               <div className="space-y-4">

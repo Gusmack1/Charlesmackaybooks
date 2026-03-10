@@ -168,7 +168,7 @@ const websiteSchema = {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://charlesmackaybooks.com/search?q={search_term_string}'
+      urlTemplate: 'https://charlesmackaybooks.com/search?query={search_term_string}'
     },
     'query-input': 'required name=search_term_string'
   }
