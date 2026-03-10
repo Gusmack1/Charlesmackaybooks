@@ -21,6 +21,9 @@ export default function Footer() {
               <Link href="/scottish-aviation-timeline" className="block text-white underline decoration-white/30 hover:decoration-white">
                 Scottish Aviation Timeline
               </Link>
+              <Link href="/aviation-news" className="block text-white underline decoration-white/30 hover:decoration-white">
+                Aviation News Briefings
+              </Link>
               <Link href="/faq" className="block text-white underline decoration-white/30 hover:decoration-white">
                 Frequently Asked Questions
               </Link>

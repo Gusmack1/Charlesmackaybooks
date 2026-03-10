@@ -32,6 +32,17 @@
 | 11 | Consolidate timeline routes (/timeline vs /scottish-aviation-timeline) | Low | Done |
 | 12 | Replace generic placeholder images in blog posts | Medium | Backlog |
 
+## Future Improvements (from audit & GSC)
+
+| # | Action | Effort | Status |
+|---|--------|--------|--------|
+| 13 | robots.txt: block _next, api, checkout, order paths | Low | Done |
+| 14 | GSC indexing docs (GOOGLE_SEARCH_CONSOLE_INDEXING.md) | Low | Done |
+| 15 | Footer: add Aviation News Briefings link | Low | Done |
+| 16 | Reduce repetitive AI-style copy in blog posts | Medium–High | Backlog |
+| 17 | Add hreflang if targeting multiple regions | Low | Backlog |
+| 18 | FAQ schema on more pages | Low | Backlog |
+
 ---
 
 ## Notes

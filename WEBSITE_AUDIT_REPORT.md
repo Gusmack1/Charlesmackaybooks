@@ -42,11 +42,11 @@
 **Impact:** Potential duplicate content issues, missing canonical signals
 **Fix:** Add metadata exports with canonical URLs to all blog posts
 
-### 7. **Robots.txt Missing Image Sitemap Reference**
+### 7. **Robots.txt Missing Image Sitemap Reference** ✅ FIXED
 **Issue:** `public/robots.txt` only references main sitemap, not image sitemap
 **Location:** `public/robots.txt` line 9
 **Impact:** Search engines may not discover image sitemap
-**Fix:** Add reference to `Sitemap: https://charlesmackaybooks.com/sitemap-images.xml`
+**Fix:** Added `Sitemap: https://charlesmackaybooks.com/sitemap-images.xml` and also `Disallow: /_next/`, `/api/`, etc. for crawl efficiency
 
 ## ✅ Positive Findings
 
