@@ -389,6 +389,31 @@
   .surface-dark .content, .surface-dark .content * { color: #ffffff !important; }
 }
 
+/* Next.js dev overlay: allow clicks to pass through when not showing error (prevents blocking clicks in dev) */
+nextjs-portal {
+  pointer-events: none;
+}
+nextjs-portal * {
+  pointer-events: auto;
+}
+
+/* Sticky header: allow clicks to pass through to content when header overlays page on scroll */
+header[role="banner"] {
+  pointer-events: none;
+}
+header[role="banner"] a,
+header[role="banner"] button,
+header[role="banner"] input,
+header[role="banner"] [role="menuitem"],
+header[role="banner"] #global-more-menu {
+  pointer-events: auto;
+}
+/* Header text inside links: let clicks pass through so overlay doesn't block page links */
+header[role="banner"] h1,
+header[role="banner"] p {
+  pointer-events: none;
+}
+
 /* HERO SECTIONS - Only place where colors change based on content */
 .hero-section {
   position: relative;
@@ -404,6 +429,20 @@
 /* Book page: value proposition must not block clicks - it overlaps purchase section when scrolled */
 .book-value-proposition {
   pointer-events: none !important;
+}
+
+/* Book page: hero must not block clicks - left-clicks were intercepted by hero divs; right-click "open in new window" worked */
+.book-page-hero {
+  pointer-events: none;
+}
+.book-page-hero a,
+.book-page-hero button {
+  pointer-events: auto;
+}
+/* Ensure all hero divs/spans pass through - only links and buttons receive clicks */
+.book-page-hero div,
+.book-page-hero span {
+  pointer-events: none;
 }
 
 /* Book page: hero content must not stack above purchase section - override .hero-section > * z-index */

@@ -13,6 +13,7 @@ export default function Header() {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const desktopMenuRef = useRef<HTMLDivElement | null>(null);
+  const logoRef = useRef<HTMLAnchorElement | null>(null);
   const router = useRouter();
   const [search, setSearch] = useState('');
   const totalItems = getTotalItems();
@@ -38,6 +39,18 @@ export default function Header() {
     };
   }, [mobileMenuOpen, desktopMenuOpen]);
 
+  // Toggle logo pointer-events based on scroll (pass-through when header overlays content)
+  useEffect(() => {
+    const updateLogoPointerEvents = () => {
+      if (logoRef.current) {
+        logoRef.current.style.pointerEvents = window.scrollY > 100 ? 'none' : 'auto';
+      }
+    };
+    updateLogoPointerEvents(); // set initial state
+    window.addEventListener('scroll', updateLogoPointerEvents, { passive: true });
+    return () => window.removeEventListener('scroll', updateLogoPointerEvents);
+  }, []);
+
   return (
     <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]" role="banner">
       {/* Top Header Bar */}
@@ -46,7 +59,7 @@ export default function Header() {
         <div className="container max-w-7xl mx-auto px-4 py-2 md:py-4">
           <div className="flex justify-between items-center gap-4">
             {/* Logo and Author Info - Clickable */}
-            <Link href="/" className="hover:opacity-90 transition-opacity cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 rounded">
+            <Link ref={logoRef} href="/" className="hover:opacity-90 transition-opacity cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 rounded">
               <h1 className="font-bold text-white tracking-tight text-base sm:text-lg md:text-xl leading-tight m-0">Charles E. MacKay</h1>
               <p className="text-white text-xs sm:text-sm md:text-base leading-tight m-0">Aviation Historian & Author</p>
               <p className="hidden md:block text-white/90 text-xs sm:text-sm md:text-base leading-tight m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
