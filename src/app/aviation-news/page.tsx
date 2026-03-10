@@ -50,8 +50,8 @@ function buildExcerpt(content?: string) {
 const bookMap = new Map(books.map((book) => [book.id, book]))
 
 function displayReason(reason: string | undefined): string {
-  const generic = 'Topical link between news items and catalogue research focus.'
-  if (!reason || reason === generic) return 'Related research volume.'
+  const generic = /Topical link between news item(s)? and catalogue research focus\.?/i
+  if (!reason || generic.test(reason)) return 'Related research volume.'
   return reason
 }
 
@@ -130,14 +130,14 @@ export default async function AviationNewsPage() {
                     </div>
                     {book && (
                       <Link href={`/books/${book.id}`} className="flex items-center gap-3 text-sm text-secondary hover:text-accent-blue transition-colors">
-                        <div className="shrink-0 w-14 aspect-[3/4] rounded overflow-hidden bg-slate-700">
+                        <div className="shrink-0 w-20 min-w-[5rem] aspect-[2/3] rounded overflow-hidden bg-slate-700 self-start">
                           <Image
                             src={book.imageUrl || `/book-covers/${book.id}.jpg`}
                             alt={book.title}
-                            width={56}
-                            height={75}
-                            className="w-full h-full object-cover"
-                            sizes="56px"
+                            width={80}
+                            height={120}
+                            className="object-cover w-full h-full"
+                            sizes="80px"
                           />
                         </div>
                         <div>

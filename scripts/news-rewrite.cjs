@@ -132,7 +132,7 @@ function buildArticleRecord(item, rewritten, now) {
     ],
     relatedBooks: chooseBookIds(item).map((bookId) => ({
       bookId,
-      reason: 'Topical link between news item and catalogue research focus.',
+      reason: 'Related research volume',
     })),
     keywords: [
       { keyword: 'Scottish aviation news', primary: true },

@@ -146,7 +146,7 @@ async function rewriteArticle(filePath, apiKey, dryRun) {
       sourceReferences: [primarySource],
       relatedBooks: chooseBookIds(textForBooks).map((bookId) => ({
         bookId,
-        reason: 'Topical link between news item and catalogue research focus.',
+        reason: 'Related research volume',
       })),
     }
 

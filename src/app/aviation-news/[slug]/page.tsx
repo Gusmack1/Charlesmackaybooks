@@ -12,8 +12,8 @@ const FALLBACK_IMAGE = '/charles-mackay-aviation-historian.jpg'
 const bookMap = new Map(books.map((book) => [book.id, book]))
 
 function displayReason(reason: string | undefined): string | null {
-  const generic = 'Topical link between news items and catalogue research focus.'
-  if (!reason || reason === generic) return null
+  const generic = /Topical link between news item(s)? and catalogue research focus\.?/i
+  if (!reason || generic.test(reason)) return null
   return reason
 }
 
@@ -242,16 +242,16 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
                   <Link
                     key={book.id}
                     href={`/books/${book.id}`}
-                    className="border border-white/15 rounded-lg p-4 bg-slate-800/60 hover:border-white/35 transition-colors flex gap-4"
+                    className="border border-white/15 rounded-lg p-4 bg-slate-800/60 hover:border-white/35 transition-colors flex gap-4 items-start"
                   >
-                    <div className="shrink-0 w-24 aspect-[3/4] rounded overflow-hidden bg-slate-700">
+                    <div className="shrink-0 w-28 min-w-[7rem] aspect-[2/3] rounded overflow-hidden bg-slate-700 self-start">
                       <Image
                         src={book.imageUrl || `/book-covers/${book.id}.jpg`}
                         alt={book.title}
-                        width={96}
-                        height={128}
-                        className="w-full h-full object-cover"
-                        sizes="96px"
+                        width={112}
+                        height={168}
+                        className="object-cover w-full h-full"
+                        sizes="112px"
                       />
                     </div>
                     <div className="min-w-0 flex-1">

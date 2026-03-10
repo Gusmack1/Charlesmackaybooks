@@ -113,7 +113,7 @@ function rewriteArticle(filePath, dryRun) {
     sourceReferences: [primarySource],
     relatedBooks: chooseBookIds(textForBooks).map((bookId) => ({
       bookId,
-      reason: 'Topical link between news item and catalogue research focus.',
+      reason: 'Related research volume',
     })),
   }
   articleCopy.wordCount = newContent.split(/\s+/).filter(Boolean).length

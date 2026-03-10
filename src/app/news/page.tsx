@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 const bookLookup = new Map(books.map((book) => [book.id, book]))
 
 function displayReason(reason: string | undefined): string {
-  const generic = 'Topical link between news items and catalogue research focus.'
-  if (!reason || reason === generic) return 'Recommended volume'
+  const generic = /Topical link between news item(s)? and catalogue research focus\.?/i
+  if (!reason || generic.test(reason)) return 'Recommended volume'
   return reason
 }
 
@@ -75,15 +75,15 @@ export default async function NewsPage() {
                   const book = bookLookup.get(bookId)
                   if (!book) return null
                   return (
-                    <div key={book.id} className="border border-white/10 rounded-lg p-4 bg-slate-800/60 flex gap-4">
-                      <div className="shrink-0 w-20 aspect-[3/4] rounded overflow-hidden bg-slate-700">
+                    <div key={book.id} className="border border-white/10 rounded-lg p-4 bg-slate-800/60 flex gap-4 items-start">
+                      <div className="shrink-0 w-28 min-w-[7rem] aspect-[2/3] rounded overflow-hidden bg-slate-700 self-start">
                         <Image
                           src={book.imageUrl || `/book-covers/${book.id}.jpg`}
                           alt={book.title}
-                          width={80}
-                          height={107}
-                          className="w-full h-full object-cover"
-                          sizes="80px"
+                          width={112}
+                          height={168}
+                          className="object-cover w-full h-full"
+                          sizes="112px"
                         />
                       </div>
                       <div className="min-w-0 flex-1">
