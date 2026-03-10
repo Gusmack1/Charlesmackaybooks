@@ -1,0 +1,63 @@
+{
+  "slug": "2026-03-10-official-statistics-electric-vehicle-pub",
+  "title": "Official Statistics Electric Vehicle Pub",
+  "wordCount": 144,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Official Statistics: Electric vehicle public charging infrastructure statistics: January 2026. Quarterly statistics on the number of public electric vehicle chargers in the United Kingdom, including summaries by geography and charging power band.\n\nRun international bus or coach services and tours. What UK bus and coach operators need to do to provide services, tours, holidays and trips into the EU and other countries.\n\nCorporate report: HS2 vocational qualifications report, 2023 to 2024. This report gives details of the vocational qualifications completed by people working on the construction of HS2."
+    },
+    {
+      "heading": "Context",
+      "content": "Transport and infrastructure decisions shape how passengers and freight reach Scottish and UK airports. For historical context on aviation infrastructure and industrial development, see the linked research volumes."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/statistics/electric-vehicle-public-charging-infrastructure-statistics-january-2026",
+      "citationText": "dft-press-office – Official Statistics: Electric vehicle public charging infrastructure statistics: January 2026"
+    },
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/guidance/run-international-bus-or-coach-services-and-tours",
+      "citationText": "dft-press-office – Run international bus or coach services and tours"
+    },
+    {
+      "sourceId": "dft-press-office",
+      "sourceUrl": "https://www.gov.uk/government/publications/hs2-vocational-qualifications-report-2023-to-2024",
+      "citationText": "dft-press-office – Corporate report: HS2 vocational qualifications report, 2023 to 2024"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "this-was-the-enemy-volume-two",
+      "reason": "Topical link between news items and catalogue research focus."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Official Statistics Electric Vehicle",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-10T01:10:46.807Z"
+}

@@ -1877,7 +1877,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-26T16:09:03.000Z",
     "fetchedAt": "2026-02-27T21:51:36.538Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-10-official-statistics-electric-vehicle-pub",
+    "articlePath": "data/news-articles/2026/03/2026-03-10-official-statistics-electric-vehicle-pub.json",
+    "draftedAt": "2026-03-10T01:10:46.807Z"
   },
   {
     "id": "30f18922-9d85-4944-95c9-346a899dea88",
@@ -1891,7 +1894,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-26T16:03:26.000Z",
     "fetchedAt": "2026-02-27T21:51:36.538Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-10-official-statistics-electric-vehicle-pub",
+    "articlePath": "data/news-articles/2026/03/2026-03-10-official-statistics-electric-vehicle-pub.json",
+    "draftedAt": "2026-03-10T01:10:46.807Z"
   },
   {
     "id": "b54c32c9-6cb3-44fd-bd9d-eef35cb95924",
@@ -1907,7 +1913,10 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-02-26T16:00:27.000Z",
     "fetchedAt": "2026-02-27T21:51:36.538Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-10-official-statistics-electric-vehicle-pub",
+    "articlePath": "data/news-articles/2026/03/2026-03-10-official-statistics-electric-vehicle-pub.json",
+    "draftedAt": "2026-03-10T01:10:46.807Z"
   },
   {
     "id": "a4730d1f-14e2-40ed-b114-71c197a537f9",
@@ -5517,6 +5526,164 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-09T12:39:27.224Z",
+    "status": "new"
+  },
+  {
+    "id": "a23018c7-969c-4f7e-b2ad-3a697f73b8a3",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/speeches/middle-east-update-oral-statement#2026-03-09T18:32:00Z",
+    "title": "Middle East Update Oral Statement",
+    "sourceUrl": "https://www.gov.uk/government/speeches/middle-east-update-oral-statement",
+    "summary": "Statement to update the House on the Middle East.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T18:32:00.000Z",
+    "fetchedAt": "2026-03-10T01:10:37.183Z",
+    "status": "new"
+  },
+  {
+    "id": "36d6df15-5f54-4932-9475-880b2a5b1fed",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/the-aviation-security-amendment-revocation-and-consequential-provision-regulations-2026#2026-03-09T16:50:39Z",
+    "title": "Statutory guidance: The Aviation Security (Amendment, Revocation and Consequential Provision) Regulations 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/the-aviation-security-amendment-revocation-and-consequential-provision-regulations-2026",
+    "summary": "This instrument amends existing legislation in the UK by revoking 6 items of secondary assimilated law (formerly known as retained EU law).",
+    "categories": [
+      "Statutory guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T16:50:39.000Z",
+    "fetchedAt": "2026-03-10T01:10:38.510Z",
+    "status": "new"
+  },
+  {
+    "id": "efa64125-9a81-4023-ace2-01eefe196332",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/the-merchant-shipping-international-safety-management-ism-code-regulations-2026#2026-03-09T16:50:29Z",
+    "title": "Statutory guidance: The Merchant Shipping (International Safety Management (ISM) Code) Regulations 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/the-merchant-shipping-international-safety-management-ism-code-regulations-2026",
+    "summary": "This instrument revokes and replaces the existing regulations to implement the ISM code within the Merchant Shipping (International Safety Management (ISM) Code) Regulations 2014 in the UK.",
+    "categories": [
+      "Statutory guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-09T16:50:29.000Z",
+    "fetchedAt": "2026-03-10T01:10:38.510Z",
+    "status": "new"
+  },
+  {
+    "id": "48d370de-b311-46d1-b4ce-7bffc52d4692",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://ftnnews.com/travel-news/sports/american-airlines-expands-golf-travel-with-new-scotland-route/",
+    "title": "American Airlines expands golf travel with new Scotland route",
+    "sourceUrl": "https://ftnnews.com/travel-news/sports/american-airlines-expands-golf-travel-with-new-scotland-route/",
+    "summary": "American Airlines is expanding travel options for golf fans with a new international route to Scotland and additional flights to Augusta,...",
+    "categories": [
+      "FTN news"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T01:10:43.567Z",
+    "status": "new"
+  },
+  {
+    "id": "a8f91dae-dc06-48ff-9063-24fe7a09aef8",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.travelandtourworld.com/news/article/american-airlines-boosts-edinburgh-airport-with-new-york-jfk-service-and-airbus-a321xlr-aircraft/",
+    "title": "American Airlines Boosts Edinburgh Airport with New York JFK Service and Airbus A321XLR Aircraft",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/american-airlines-boosts-edinburgh-airport-with-new-york-jfk-service-and-airbus-a321xlr-aircraft/",
+    "summary": "American Airlines has enhanced its presence at Edinburgh Airport by launching a daily summer service to New York's John F. Kennedy (JFK)...",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T01:10:43.567Z",
+    "status": "new"
+  },
+  {
+    "id": "4c5298e1-218b-48e4-99f4-22df68c4b6a7",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.travelandtourworld.com/news/article/unlock-the-ultimate-golf-travel-experience-american-airlines-takes-you-to-augusta-and-scotland-in-luxury/",
+    "title": "Unlock the Ultimate Golf Travel Experience: American Airlines Takes You to Augusta and Scotland in Luxury!",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/unlock-the-ultimate-golf-travel-experience-american-airlines-takes-you-to-augusta-and-scotland-in-luxury/",
+    "summary": "American Airlines enhances golf travel with luxurious flights to Edinburgh and expanded Augusta service, including exclusive PGA...",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T01:10:43.567Z",
+    "status": "new"
+  },
+  {
+    "id": "867c6e1e-3ea2-4b13-8f61-0cb101feacef",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://euro-sd.com/2025/11/major-news/47887/yantar-shines-lasers-at-raf/",
+    "title": "Russian surveillance ship directed lasers at pilots of RAF P-8s monitoring it",
+    "sourceUrl": "https://euro-sd.com/2025/11/major-news/47887/yantar-shines-lasers-at-raf/",
+    "summary": "The UK MoD has said that a Russian intelligence ship it has been monitoring near UK waters has directed lasers at RAF P-8 aircrew watching...",
+    "categories": [
+      "European Security & Defence"
+    ],
+    "publishedAt": "2025-11-19T00:00:00.000Z",
+    "fetchedAt": "2026-03-10T01:10:43.567Z",
+    "status": "new"
+  },
+  {
+    "id": "90632b2c-6ca7-4abb-9f9d-664a33666010",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.telegraph.co.uk/news/2026/03/08/scottish-airport-american-air-force-ban-considered/",
+    "title": "Scotland may ban US military planes from airport",
+    "sourceUrl": "https://www.telegraph.co.uk/news/2026/03/08/scottish-airport-american-air-force-ban-considered/",
+    "summary": "First minister considers move after American attack aircraft seen at Prestwick in run-up to Iran war.",
+    "categories": [
+      "The Telegraph"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T01:10:43.567Z",
+    "status": "new"
+  },
+  {
+    "id": "9a890f59-14d6-49bd-bbce-f0ef37c44ed3",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.thescottishsun.co.uk/news/16011961/donald-trump-scots-airport-bomb-iran-military-experts-warn/",
+    "title": "Donald Trump is using Scots airport to bomb Iran, military experts warns",
+    "sourceUrl": "https://www.thescottishsun.co.uk/news/16011961/donald-trump-scots-airport-bomb-iran-military-experts-warn/",
+    "summary": "A SCOTTISH airport is being used by the US military to assist its strikes on Iran amid Operation Epic Fury, it has been claimed. Chaos has.",
+    "categories": [
+      "The Scottish Sun"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T01:10:43.567Z",
+    "status": "new"
+  },
+  {
+    "id": "7306e6c8-fa2e-4e64-b863-17563369bfeb",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.jpost.com/international/article-876625",
+    "title": "Airbus A320 recall forces airlines to ground aircraft",
+    "sourceUrl": "https://www.jpost.com/international/article-876625",
+    "summary": "Airlines worked through the night after global regulators told them to remedy the problem before resuming flights.",
+    "categories": [
+      "The Jerusalem Post"
+    ],
+    "publishedAt": "2025-11-29T00:00:00.000Z",
+    "fetchedAt": "2026-03-10T01:10:43.567Z",
+    "status": "new"
+  },
+  {
+    "id": "e1fafcb1-e2e7-4cbd-9d3a-98ceb5127392",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.traveldailynews.com/aviation/united-airlines-to-resume-direct-glasgow-new-york-flights-in-may-2026/",
+    "title": "United Airlines to resume direct Glasgow – New York flights in May 2026",
+    "sourceUrl": "https://www.traveldailynews.com/aviation/united-airlines-to-resume-direct-glasgow-new-york-flights-in-may-2026/",
+    "summary": "United Airlines resumes Glasgow–New York flights from May to September 2026, enhancing Scotland's transatlantic links for tourism, trade, and inbound U.S....",
+    "categories": [
+      "Travel Daily News International"
+    ],
+    "publishedAt": "2025-10-13T00:00:00.000Z",
+    "fetchedAt": "2026-03-10T01:10:43.567Z",
     "status": "new"
   }
 ]
