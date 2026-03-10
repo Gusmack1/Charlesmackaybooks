@@ -570,7 +570,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       <div className="min-h-screen bg-slate-900">
 
         {/* Hero Section - refined for clarity and unique per-book presentation */}
-        <div className={`hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-16`}>
+        <div className={`book-page-hero hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-16`}>
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               {/* Book Cover */}
@@ -610,7 +610,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   By <Link href="/about" className="underline font-semibold">Charles E. MacKay</Link>
                 </p>
 
-                <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4 sm:p-5 max-w-4xl mx-auto pointer-events-none">
+                <div className="book-value-proposition rounded-xl border border-white/15 bg-slate-800/75 p-4 sm:p-5 max-w-4xl mx-auto" style={{ pointerEvents: 'none' }}>
                   <p className="text-sm sm:text-base text-white/95">{valueProposition}.</p>
                   <div className="mt-3 flex flex-wrap justify-center gap-2">
                     {proofStripItems.map((item) => (
@@ -625,8 +625,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           </div>
         </div>
 
-        {/* Purchase section - outside hero to avoid any overlay/stacking issues */}
-        <div id="purchase" className={`${gradientClass} text-white py-8 px-6`}>
+        {/* Purchase section - relative z-20 ensures it stacks above hero when overlapping; pt-24 for sticky header clearance */}
+        <div id="purchase" className={`${gradientClass} text-white pt-24 pb-8 px-6 scroll-mt-24 relative z-20`}>
           <div className="max-w-2xl mx-auto space-y-4">
             <BookDetailClient book={book} />
             {quickPairings.length > 0 && (

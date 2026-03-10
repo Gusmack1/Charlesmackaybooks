@@ -401,6 +401,22 @@
   display: none;
 }
 
+/* Book page: value proposition must not block clicks - it overlaps purchase section when scrolled */
+.book-value-proposition {
+  pointer-events: none !important;
+}
+
+/* Book page: hero content must not stack above purchase section - override .hero-section > * z-index */
+.book-page-hero.hero-section > * {
+  z-index: 0;
+}
+
+/* Book page: ensure purchase section stacks above hero so all links/buttons are clickable */
+#purchase {
+  position: relative;
+  z-index: 30;
+}
+
 .hero-section > * {
   position: relative;
   z-index: 2;
