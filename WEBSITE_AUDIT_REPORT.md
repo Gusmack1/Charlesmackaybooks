@@ -1,32 +1,29 @@
 # Website Audit Report - Charles Mackay Books
-**Date:** December 18, 2025
+**Date:** December 18, 2025 (Updated March 2026)
 **Website:** https://charlesmackaybooks.com
+
+## ✅ Resolved Issues
+
+### 1. **X-Frame-Options** — FIXED
+**Status:** X-Frame-Options is set via Netlify headers (`netlify.toml`), not meta tag. No meta tag in layout.
+
+### 2. **performanceMonitor.js** — FIXED
+**Status:** Layout uses inline script; `performanceMonitor` exists at `src/utils/performanceMonitor.ts` for components that import it.
+
+### 3. **Sitemap.xml Noindex** — FIXED
+**Status:** Middleware does NOT add noindex to sitemap.xml. Sitemap is indexable.
+
+### 4. **Robots.txt** — FIXED
+**Status:** robots.txt includes image sitemap, Disallow for `/_next/`, `/api/`, `/checkout/`, etc.
+
+---
 
 ## 🔴 Critical Issues Found
 
-### 1. **X-Frame-Options Meta Tag Warning**
-**Issue:** Console shows warning: "X-Frame-Options may only be set via an HTTP header sent along with a document. It may not be set inside <meta>."
-**Location:** `src/app/layout.tsx` line 208
-**Impact:** Browser console warnings, potential security header not working correctly
-**Fix:** Remove meta tag, configure via Netlify headers or Next.js headers
-
-### 2. **Missing performanceMonitor.js (404 Error)**
-**Issue:** Script tries to load `/utils/performanceMonitor.js` which doesn't exist
-**Location:** `src/app/layout.tsx` line 226
-**Impact:** 404 error in network requests, failed script load
-**Fix:** Remove the import or create the missing file
-
-### 3. **Sitemap.xml Incorrectly Set to Noindex**
-**Issue:** Middleware sets `X-Robots-Tag: noindex, nofollow` on `/sitemap.xml`
-**Location:** `src/middleware.ts` line 24-27
-**Impact:** Search engines may not index the sitemap, hurting SEO
-**Fix:** Remove sitemap.xml from noindex list (sitemaps should be indexable)
-
-### 4. **Search Page Not Indexed**
+### 4. **Search Page Not Indexed** (Intentional)
 **Issue:** Search page has `robots: { index: false }`
-**Location:** `src/app/search/page.tsx` line 29-30
-**Impact:** Search results pages won't appear in search engines (may be intentional)
-**Status:** Verify if intentional - if users should find search results, change to `index: true`
+**Location:** `src/app/search/page.tsx`
+**Status:** Intentional – search is an internal tool; noindex prevents thin/dynamic results from indexing.
 
 ## ⚠️ Medium Priority Issues
 
@@ -36,13 +33,10 @@
 **Impact:** Missing verification for these search engines
 **Fix:** Remove placeholders or add real verification codes if needed
 
-### 6. **Blog Posts May Lack Canonical URLs**
-**Issue:** Blog posts using `ComprehensiveBlogTemplate` don't export metadata with canonical URLs
-**Location:** Blog post pages (e.g., `src/app/blog/supermarine-spitfire-development-evolution/page.tsx`)
-**Impact:** Potential duplicate content issues, missing canonical signals
-**Fix:** Add metadata exports with canonical URLs to all blog posts
+### 6. **Blog Posts Canonical URLs** — FIXED
+**Status:** Blog posts export `alternates.canonical` in metadata. Verified across multiple blog pages.
 
-### 7. **Robots.txt Missing Image Sitemap Reference** ✅ FIXED
+### 7. **Robots.txt Image Sitemap** — FIXED
 **Issue:** `public/robots.txt` only references main sitemap, not image sitemap
 **Location:** `public/robots.txt` line 9
 **Impact:** Search engines may not discover image sitemap

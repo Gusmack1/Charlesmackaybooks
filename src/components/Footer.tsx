@@ -71,6 +71,9 @@ export default function Footer() {
 
         <div className="text-center text-base text-white/90 mt-8 pt-8 border-t border-white/20">
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm mb-4">
+            <Link href="/how-to-order" className="underline decoration-white/30 hover:decoration-white">
+              How to Order
+            </Link>
             <Link href="/support" className="underline decoration-white/30 hover:decoration-white">
               Support
             </Link>
@@ -84,7 +87,7 @@ export default function Footer() {
               Terms and Conditions
             </Link>
           </div>
-          <p>© 2025 Charles E. MacKay - Aviation Historian & Author</p>
+          <p>© 2026 Charles E. MacKay - Aviation Historian & Author</p>
           <p className="mt-2">Specializing in Scottish Aviation Heritage and Military Aviation History</p>
         </div>
       </div>

@@ -39,9 +39,10 @@
 | 13 | robots.txt: block _next, api, checkout, order paths | Low | Done |
 | 14 | GSC indexing docs (GOOGLE_SEARCH_CONSOLE_INDEXING.md) | Low | Done |
 | 15 | Footer: add Aviation News Briefings link | Low | Done |
-| 16 | Reduce repetitive AI-style copy in blog posts | Medium–High | Backlog |
-| 17 | Add hreflang if targeting multiple regions | Low | Backlog |
-| 18 | FAQ schema on more pages | Low | Backlog |
+| 16 | Footer: add How to Order link | Low | Done |
+| 17 | Reduce repetitive AI-style copy in blog posts | Medium–High | Backlog |
+| 18 | Add hreflang if targeting multiple regions | Low | Backlog |
+| 19 | FAQ schema on FAQ page | Low | Done (already present) |
 
 ---
 
