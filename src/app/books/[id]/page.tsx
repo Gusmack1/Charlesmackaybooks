@@ -571,8 +571,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
         {/* Hero Section - refined for clarity and unique per-book presentation */}
         <div className={`hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-16`}>
-          <div className="absolute inset-0 z-0 bg-black/20 pointer-events-none select-none" aria-hidden />
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               {/* Book Cover */}
               <div className="flex justify-center mb-4 sm:mb-6">
