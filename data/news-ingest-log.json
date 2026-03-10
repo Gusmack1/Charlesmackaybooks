@@ -5004,5 +5004,154 @@
     ],
     "publishedAt": "2025-10-13T00:00:00.000Z",
     "fetchedAt": "2026-03-10T01:10:43.567Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/cyber-security-model-question-sets#2026-03-10T12:20:10Z",
+    "title": "Cyber Security Model Question Sets",
+    "sourceUrl": "https://www.gov.uk/guidance/cyber-security-model-question-sets",
+    "summary": "Supplier Assurance Questionnaire (SAQ) and Flow Down Risk Assessment (RA) Question sets.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-10T12:20:10.000Z",
+    "fetchedAt": "2026-03-10T12:39:14.591Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/lulworth-firing-notice#2026-03-10T10:44:23Z",
+    "title": "Guidance: Lulworth firing times",
+    "sourceUrl": "https://www.gov.uk/government/publications/lulworth-firing-notice",
+    "summary": "Details of road closures and live firing for Lulworth ranges.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-10T10:44:23.000Z",
+    "fetchedAt": "2026-03-10T12:39:14.591Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/sanctions-enforcement-cross-government-approach-march-2026#2026-03-10T10:17:11Z",
+    "title": "Policy paper: Sanctions enforcement: cross-government approach, March 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/sanctions-enforcement-cross-government-approach-march-2026",
+    "summary": "An overview of the UK’s cross-government strategic approach to enforcing breaches of UK sanctions.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-10T10:17:11.000Z",
+    "fetchedAt": "2026-03-10T12:39:15.501Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/guidance/great-british-railways#2026-03-10T09:27:08Z",
+    "title": "Great British Railways and the public ownership programme",
+    "sourceUrl": "https://www.gov.uk/guidance/great-british-railways",
+    "summary": "Updates on the programme to transfer rail services into public ownership and establish GBR as the body responsible for passenger services and infrastructure.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-10T09:27:08.000Z",
+    "fetchedAt": "2026-03-10T12:39:15.501Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/historic-classic-vehicles-mot-exemption-criteria#2026-03-10T09:07:49Z",
+    "title": "Guidance: Historic (classic) vehicles: MOT exemption criteria",
+    "sourceUrl": "https://www.gov.uk/government/publications/historic-classic-vehicles-mot-exemption-criteria",
+    "summary": "Check if an historic vehicle qualifies for an MOT exemption due to its age.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-10T09:07:49.000Z",
+    "fetchedAt": "2026-03-10T12:39:15.501Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.traveldailynews.com/aviation/air-charter-scotland-adds-capacity-on-wick-aberdeen-pso-route/",
+    "title": "Air Charter Scotland adds capacity on Wick – Aberdeen PSO route",
+    "sourceUrl": "https://www.traveldailynews.com/aviation/air-charter-scotland-adds-capacity-on-wick-aberdeen-pso-route/",
+    "summary": "Air Charter Scotland increased capacity on the Wick–Aberdeen public service obligation route with the introduction of an 18-seat Jetstream...",
+    "categories": [
+      "Travel Daily News International"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T12:39:20.450Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.travelandtourworld.com/news/article/american-airlines-expands-scottish-network-with-direct-flight-from-edinburgh-to-new-york-jfk-get-the-details-here/",
+    "title": "American Airlines Expands Scottish Network with Direct Flight from Edinburgh to New York JFK, Get the Details Here",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/american-airlines-expands-scottish-network-with-direct-flight-from-edinburgh-to-new-york-jfk-get-the-details-here/",
+    "summary": "American Airlines has made public its latest move in announcing a new seasonal route between Edinburgh, Scotland, and New York's John F.",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T12:39:20.450Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.travelandtourworld.com/news/article/american-airlines-a321xlr-expansion-could-bring-direct-us-glasgow-flights-scotland-tourism-and-hospitality-industry-poised-for-explosive-growth/",
+    "title": "American Airlines’ A321XLR Expansion Could Bring Direct US‑Glasgow Flights — Scotland Tourism and Hospitality Industry Poised for Explosive Growth",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/american-airlines-a321xlr-expansion-could-bring-direct-us-glasgow-flights-scotland-tourism-and-hospitality-industry-poised-for-explosive-growth/",
+    "summary": "American Airlines' A321XLR expansion is poised to revolutionize the way travelers from the United States connect with Scotland, with direct...",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T12:39:20.450Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.traveldailymedia.com/air-charter-scotland-boosts-aberdeen-wick-route-capacity/",
+    "title": "Air Charter Scotland boosts Aberdeen-Wick route capacity",
+    "sourceUrl": "https://www.traveldailymedia.com/air-charter-scotland-boosts-aberdeen-wick-route-capacity/",
+    "summary": "Air Charter Scotland has increased capacity on the Wick-Aberdeen-Wick Public Service Obligation (PSO) route by adding 10 more seats daily.",
+    "categories": [
+      "Travel Daily Media"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T12:39:20.450Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ayradvertiser.com/news/25923116.kuwait-air-force-aircraft-spotted-prestwick-airport/",
+    "title": "Kuwait Air Force is latest military aircraft spotted at Prestwick Airport",
+    "sourceUrl": "https://www.ayradvertiser.com/news/25923116.kuwait-air-force-aircraft-spotted-prestwick-airport/",
+    "summary": "A Boeing C-17A Globemaster III from the Middle East country departed South Ayrshire for Dover Air Force Base in the US on Monday, March 9.",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-10T12:39:20.450Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.bbc.com/news/articles/ckgkl4x8z88o",
+    "title": "EasyJet marks 30 years: How the orange airline 'reshaped travel'",
+    "sourceUrl": "https://www.bbc.com/news/articles/ckgkl4x8z88o",
+    "summary": "We take a look at the history and impact of the budget airline based at Luton Airport.",
+    "categories": [
+      "BBC"
+    ],
+    "publishedAt": "2025-11-09T00:00:00.000Z",
+    "fetchedAt": "2026-03-10T12:39:20.450Z"
   }
 ]
