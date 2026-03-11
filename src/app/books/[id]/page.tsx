@@ -498,8 +498,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     book.inStock ? 'In stock' : 'Out of stock',
     `£${book.price.toFixed(2)}`,
     book.pageCount ? `${book.pageCount} pages` : null,
-    'Free UK shipping',
+    'Free worldwide tracked shipping',
     '30-day returns',
+    '100% positive feedback',
     (book as any).academicInstitutions?.length
       ? `Used by ${((book as any).academicInstitutions as string[]).slice(0, 2).join(' & ')}`
       : null,

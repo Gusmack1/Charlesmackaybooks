@@ -8,6 +8,7 @@ export interface NavLinkItem {
 export const mainNavLinks: NavLinkItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Shop Books', href: '/books' },
+  { label: 'How to Order', href: '/how-to-order' },
   { label: 'Blog', href: '/blog' },
   { label: 'About Charles', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -15,7 +16,6 @@ export const mainNavLinks: NavLinkItem[] = [
 
 // Additional navigation items (in "More" dropdown)
 export const moreNavLinks: NavLinkItem[] = [
-  { label: 'How to Order', href: '/how-to-order' },
   { label: 'Categories', href: '/categories' },
   { label: 'Aviation News', href: '/aviation-news' },
   { label: 'FAQ', href: '/faq' },

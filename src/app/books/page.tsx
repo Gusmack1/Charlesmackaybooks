@@ -134,6 +134,22 @@ export default function BooksPage() {
             <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-4xl mx-auto">
               Discover {books.length} authoritative aviation history books by Charles E. MacKay. From WWI fighters to modern jets, Scottish aviation heritage to global military aviation.
             </p>
+            <div className="mt-5 flex flex-wrap justify-center gap-2 text-sm">
+              {[
+                '100% positive feedback',
+                'Guest checkout',
+                'Free worldwide shipping',
+                '30-day returns',
+                'Used by researchers and institutions',
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-white/90"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -153,16 +169,19 @@ export default function BooksPage() {
           <section className="mb-10">
             <div className="rounded-xl border border-white/15 bg-slate-800/80 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
-                <p className="text-sm font-semibold text-white">Trusted seller profile</p>
+                <p className="text-sm font-semibold text-white">Buy direct with confidence</p>
                 <p className="text-sm text-white/75">
-                  Charles' eBay profile shows 100% positive feedback. Buy direct here for guest checkout and bundle savings.
+                  Secure guest checkout, free worldwide shipping, 30-day returns, and automatic multi-book discounts.
+                </p>
+                <p className="text-xs text-white/60 mt-1">
+                  Prefer marketplace proof? Charles&apos; eBay profile shows 100% positive feedback.
                 </p>
               </div>
               <a
                 href="https://www.ebay.co.uk/usr/chaza87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-white text-slate-900 border border-slate-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center justify-center bg-white/10 text-white border border-white/25 px-4 py-2 rounded-lg font-semibold hover:bg-white/15 transition-colors"
               >
                 View eBay profile
               </a>

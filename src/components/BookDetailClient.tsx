@@ -131,10 +131,11 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
       </div>
 
       <div className="mt-2 border border-white/10 rounded-lg bg-white/5 px-4 py-3 text-sm text-white/80">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center sm:text-left">
-          <div>Free UK shipping</div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center sm:text-left">
+          <div>Free worldwide tracked shipping</div>
           <div>30-day returns</div>
           <div>Secure card and PayPal</div>
+          <div>100% positive feedback</div>
         </div>
       </div>
 

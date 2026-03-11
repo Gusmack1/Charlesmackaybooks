@@ -155,6 +155,14 @@ export default function Header() {
                   )}
                 </div>
               </div>
+              <div className="hidden md:flex items-center justify-end gap-3 text-xs text-white/75">
+                <a href="/how-to-order" className="hover:text-white hover:underline">
+                  How to order
+                </a>
+                <a href="/order-tracking" className="hover:text-white hover:underline">
+                  Track order
+                </a>
+              </div>
             </div>
           </div>
         </div>

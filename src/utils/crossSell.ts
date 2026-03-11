@@ -30,17 +30,17 @@ export function getCrossSellSuggestions({
   const seenIds = new Set<string>()
   const suggestions: Book[] = []
 
-  for (const book of recentlyViewed) {
-    addUniqueBook(suggestions, seenIds, cartIds, book)
-    if (suggestions.length >= limit) return suggestions
-  }
-
   for (const cartBook of cartBooks) {
     for (const relatedId of cartBook.relatedBookIds || []) {
       const relatedBook = books.find((book) => book.id === relatedId)
       addUniqueBook(suggestions, seenIds, cartIds, relatedBook)
       if (suggestions.length >= limit) return suggestions
     }
+  }
+
+  for (const book of recentlyViewed) {
+    addUniqueBook(suggestions, seenIds, cartIds, book)
+    if (suggestions.length >= limit) return suggestions
   }
 
   const cartCategories = new Set(cartBooks.map((book) => book.category))

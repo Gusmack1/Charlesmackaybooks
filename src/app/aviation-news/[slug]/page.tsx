@@ -239,9 +239,8 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
               {relatedBooks.map((book) => {
                 const reason = displayReason(book.reason)
                 return (
-                  <a
+                  <div
                     key={book.id}
-                    href={`/books/${book.id}`}
                     className="border border-white/15 rounded-lg p-4 bg-slate-800/60 hover:border-white/35 transition-colors flex gap-4 items-start"
                   >
                     <div className="shrink-0 w-28 min-w-[7rem] aspect-[2/3] rounded overflow-hidden bg-slate-700 self-start">
@@ -255,11 +254,27 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className="font-semibold text-white mb-1">{book.title}</div>
+                      <a href={`/books/${book.id}`} className="font-semibold text-white mb-1 block hover:text-blue-300">
+                        {book.title}
+                      </a>
                       <div className="text-sm text-white/80 mb-2">£{book.price.toFixed(2)}</div>
                       {reason ? <p className="text-sm text-white/75">{reason}</p> : null}
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        <a
+                          href={`/books/${book.id}`}
+                          className="inline-flex items-center rounded-md border border-white/20 bg-white/5 px-3 py-1.5 text-sm font-semibold text-white hover:bg-white/10"
+                        >
+                          View book
+                        </a>
+                        <a
+                          href={`/books/${book.id}#purchase`}
+                          className="inline-flex items-center rounded-md bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-gray-100"
+                        >
+                          Buy this book
+                        </a>
+                      </div>
                     </div>
-                  </a>
+                  </div>
                 )
               })}
             </div>

@@ -650,6 +650,28 @@ function CheckoutContent() {
                     </button>
                   )}
                 </div>
+                {checkoutAddOnSuggestions.length > 0 && (
+                  <div className="rounded-lg border border-blue-700/50 bg-slate-800/80 p-3">
+                    <p className="text-sm font-semibold text-blue-200 mb-2">Complete your order before payment</p>
+                    <div className="space-y-2">
+                      {checkoutAddOnSuggestions.map((suggestedBook) => (
+                        <div key={suggestedBook.id} className="flex items-center justify-between gap-2 rounded border border-white/10 bg-slate-900/60 p-2">
+                          <Link href={`/books/${suggestedBook.id}`} className="min-w-0 flex-1">
+                            <p className="text-xs sm:text-sm text-white line-clamp-1">{suggestedBook.title}</p>
+                            <p className="text-xs text-green-300">£{suggestedBook.price.toFixed(2)}</p>
+                          </Link>
+                          <button
+                            onClick={() => addToCart(suggestedBook)}
+                            className="bg-white text-slate-900 px-3 py-1.5 rounded text-xs sm:text-sm font-semibold border border-slate-900 hover:bg-gray-100"
+                          >
+                            Add
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-xs text-white/75 mt-2">Adding one more title now can unlock a larger basket discount before you pay.</p>
+                  </div>
+                )}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium mb-1 text-white">First Name *</label>
