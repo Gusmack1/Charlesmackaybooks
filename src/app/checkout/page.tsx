@@ -551,14 +551,15 @@ function CheckoutContent() {
                   <div className="mt-4 rounded-lg border border-blue-700/50 bg-slate-800/80 p-3">
                     <p className="text-sm font-semibold text-blue-200 mb-2">Frequently added before checkout</p>
                     <div className="space-y-2">
-                      {checkoutAddOnSuggestions.map((suggestedBook) => (
-                        <div key={suggestedBook.id} className="flex items-center justify-between gap-2 rounded border border-white/10 bg-slate-900/60 p-2">
-                          <Link href={`/books/${suggestedBook.id}`} className="min-w-0 flex-1">
-                            <p className="text-xs sm:text-sm text-white line-clamp-1">{suggestedBook.title}</p>
-                            <p className="text-xs text-green-300">£{suggestedBook.price.toFixed(2)}</p>
+                      {checkoutAddOnSuggestions.map((suggestion) => (
+                        <div key={suggestion.book.id} className="flex items-center justify-between gap-2 rounded border border-white/10 bg-slate-900/60 p-2">
+                          <Link href={`/books/${suggestion.book.id}`} className="min-w-0 flex-1">
+                            <p className="text-[11px] text-blue-200 line-clamp-1">{suggestion.reason}</p>
+                            <p className="text-xs sm:text-sm text-white line-clamp-1">{suggestion.book.title}</p>
+                            <p className="text-xs text-green-300">£{suggestion.book.price.toFixed(2)}</p>
                           </Link>
                           <button
-                            onClick={() => addToCart(suggestedBook)}
+                            onClick={() => addToCart(suggestion.book)}
                             className="bg-white text-slate-900 px-3 py-1.5 rounded text-xs sm:text-sm font-semibold border border-slate-900 hover:bg-gray-100"
                           >
                             Add
@@ -654,14 +655,15 @@ function CheckoutContent() {
                   <div className="rounded-lg border border-blue-700/50 bg-slate-800/80 p-3">
                     <p className="text-sm font-semibold text-blue-200 mb-2">Complete your order before payment</p>
                     <div className="space-y-2">
-                      {checkoutAddOnSuggestions.map((suggestedBook) => (
-                        <div key={suggestedBook.id} className="flex items-center justify-between gap-2 rounded border border-white/10 bg-slate-900/60 p-2">
-                          <Link href={`/books/${suggestedBook.id}`} className="min-w-0 flex-1">
-                            <p className="text-xs sm:text-sm text-white line-clamp-1">{suggestedBook.title}</p>
-                            <p className="text-xs text-green-300">£{suggestedBook.price.toFixed(2)}</p>
+                      {checkoutAddOnSuggestions.map((suggestion) => (
+                        <div key={suggestion.book.id} className="flex items-center justify-between gap-2 rounded border border-white/10 bg-slate-900/60 p-2">
+                          <Link href={`/books/${suggestion.book.id}`} className="min-w-0 flex-1">
+                            <p className="text-[11px] text-blue-200 line-clamp-1">{suggestion.reason}</p>
+                            <p className="text-xs sm:text-sm text-white line-clamp-1">{suggestion.book.title}</p>
+                            <p className="text-xs text-green-300">£{suggestion.book.price.toFixed(2)}</p>
                           </Link>
                           <button
-                            onClick={() => addToCart(suggestedBook)}
+                            onClick={() => addToCart(suggestion.book)}
                             className="bg-white text-slate-900 px-3 py-1.5 rounded text-xs sm:text-sm font-semibold border border-slate-900 hover:bg-gray-100"
                           >
                             Add
@@ -672,6 +674,16 @@ function CheckoutContent() {
                     <p className="text-xs text-white/75 mt-2">Adding one more title now can unlock a larger basket discount before you pay.</p>
                   </div>
                 )}
+                <div className="rounded-lg border border-white/15 bg-slate-800/80 p-3 text-xs sm:text-sm text-white/80">
+                  <p className="font-semibold text-white">Need help before paying?</p>
+                  <p className="mt-1">
+                    <a href="/how-to-order" className="text-blue-300 hover:underline">How to order</a>
+                    {' '}·{' '}
+                    <a href="/order-tracking" className="text-blue-300 hover:underline">Track order</a>
+                    {' '}·{' '}
+                    <a href="/support" className="text-blue-300 hover:underline">Support</a>
+                  </p>
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium mb-1 text-white">First Name *</label>

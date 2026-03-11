@@ -109,7 +109,7 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
             disabled={!book.inStock || isBuyingNow}
             className="w-full bg-white text-slate-900 py-2.5 px-3 rounded text-sm font-semibold hover:bg-gray-100 transition-colors border border-slate-900 disabled:opacity-60"
           >
-            {isBuyingNow ? 'Opening checkout...' : 'Buy now (guest checkout)'}
+            {isBuyingNow ? 'Opening checkout...' : 'Buy now - secure checkout'}
           </button>
 
           <button

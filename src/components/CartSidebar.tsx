@@ -138,14 +138,15 @@ export default function CartSidebar() {
                       Add one more title to increase your savings
                     </p>
                     <div className="space-y-2">
-                      {addOnSuggestions.map((book) => (
-                        <div key={book.id} className="flex items-center gap-2 rounded border border-white/10 bg-slate-900/50 p-2">
-                          <a href={`/books/${book.id}`} className="flex-1 min-w-0">
-                            <p className="text-xs text-white line-clamp-1">{book.title}</p>
-                            <p className="text-[11px] text-green-300">£{book.price.toFixed(2)}</p>
+                      {addOnSuggestions.map((suggestion) => (
+                        <div key={suggestion.book.id} className="flex items-center gap-2 rounded border border-white/10 bg-slate-900/50 p-2">
+                          <a href={`/books/${suggestion.book.id}`} className="flex-1 min-w-0">
+                            <p className="text-[11px] text-blue-200 line-clamp-1">{suggestion.reason}</p>
+                            <p className="text-xs text-white line-clamp-1">{suggestion.book.title}</p>
+                            <p className="text-[11px] text-green-300">£{suggestion.book.price.toFixed(2)}</p>
                           </a>
                           <button
-                            onClick={() => addToCart(book)}
+                            onClick={() => addToCart(suggestion.book)}
                             className="bg-white text-slate-900 px-2.5 py-1.5 rounded text-xs font-semibold hover:bg-gray-100 border border-slate-900"
                           >
                             Add
