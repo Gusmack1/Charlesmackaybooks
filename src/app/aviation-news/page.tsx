@@ -2,7 +2,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import { books } from '@/data/books'
-import { getPublishedNewsArticles } from '@/lib/newsroom'
+import { getPublishedNewsArticles, getValidatedRelatedBooks } from '@/lib/newsroom'
 
 export const dynamic = 'force-dynamic'
 
@@ -68,6 +68,7 @@ export default async function AviationNewsPage() {
   const [hero, ...rest] = articles
   const secondary = rest.slice(0, 4)
   const remainder = rest.slice(4)
+  const heroRelatedBooks = hero ? getValidatedRelatedBooks(hero) : []
 
   return (
     <>
@@ -107,8 +108,8 @@ export default async function AviationNewsPage() {
               </div>
               <div className="bg-slate-900/60 border border-white/10 rounded-xl p-5 md:p-6 space-y-4">
                 <h2 className="text-lg font-semibold text-white">Related book</h2>
-                {hero.relatedBooks?.length ? (
-                  hero.relatedBooks.map(({ bookId, reason }) => {
+                {heroRelatedBooks.length ? (
+                  heroRelatedBooks.map(({ bookId, reason }) => {
                     const book = bookLookup.get(bookId)
                     if (!book) return null
                     return (

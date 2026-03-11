@@ -100,6 +100,103 @@ const DEFAULT_AUTHOR = {
 }
 const FALLBACK_IMAGE = '/charles-mackay-aviation-historian.jpg'
 const MIN_WORD_TARGET = 3000
+const STRONG_AVIATION_TERMS = [
+  'aviation',
+  'aircraft',
+  'airport',
+  'airspace',
+  'runway',
+  'airline',
+  'helicopter',
+  'rotorcraft',
+  'aerospace',
+  'airworthiness',
+  'aaib',
+  'raf',
+  'hial',
+  'naval aviation',
+  'aircraft carrier',
+  'flight operations',
+  'low flying',
+  'drone-busting',
+  'zeroavia',
+]
+
+function normalizeForMatching(value: string) {
+  return String(value || '').toLowerCase()
+}
+
+function includesAny(text: string, terms: string[]) {
+  return terms.some((term) => text.includes(term))
+}
+
+export function hasStrongAviationContext(value: string): boolean {
+  return includesAny(normalizeForMatching(value), STRONG_AVIATION_TERMS)
+}
+
+function chooseBookIdsFromText(value: string): string[] {
+  const text = normalizeForMatching(value)
+  const hasAviation = hasStrongAviationContext(text)
+  const ids = new Set<string>()
+
+  if (includesAny(text, ['helicopter', 'rotorcraft', 'autogyro', 'sycamore'])) ids.add('sycamore-seeds')
+  if (includesAny(text, ['lossiemouth', 'typhoon', 'sabre', 'fighter jet'])) ids.add('sabres-from-north')
+  if (includesAny(text, ['beardmore', 'clydebank', 'dalmuir', 'renfrew air school', 'r101', 'r34', 'r36'])) ids.add('beardmore-aviation')
+  if (includesAny(text, ['argus', 'aircraft carrier', 'fleet air arm', 'naval aviation'])) ids.add('aircraft-carrier-argus')
+  if (includesAny(text, ['vulcan', 'lightning', 'v-force', 'deterrent', 'nuclear deterrent'])) ids.add('sonic-to-standoff')
+  if (includesAny(text, ['nuclear', 'atomic', 'silverplate', 'manhattan project', 'maud'])) ids.add('birth-atomic-bomb')
+  if (includesAny(text, ['luftwaffe', 'me262', 'messerschmitt', 'reich air ministry', 'condor legion'])) ids.add('this-was-the-enemy-volume-two')
+  if (
+    hasAviation &&
+    includesAny(text, [
+      'hial',
+      'highlands and islands airports',
+      'inverness airport',
+      'stornoway airport',
+      'wick airport',
+      'dundee airport',
+      'prestwick airport',
+      'glasgow airport',
+      'zeroavia',
+    ])
+  ) {
+    ids.add('clydeside-aviation-vol2')
+  }
+  if (
+    hasAviation &&
+    includesAny(text, [
+      'clydeside',
+      'weir ',
+      'scottish aeronautical society',
+      'lanark meeting',
+      'renfrew airport',
+    ])
+  ) {
+    ids.add('clydeside-aviation-vol1')
+  }
+
+  return Array.from(ids)
+}
+
+function getArticleMatchText(article: NewsArticleRecord): string {
+  return normalizeForMatching([
+    article.title || '',
+    ...(article.sections || []).map((section) => section.content || ''),
+    ...(article.sourceReferences || []).map((source) => source.citationText || ''),
+  ].join(' '))
+}
+
+export function getValidatedRelatedBooks(article: NewsArticleRecord) {
+  const matchedBookIds = chooseBookIdsFromText(getArticleMatchText(article))
+  return matchedBookIds
+    .map((bookId) => {
+      const existing = (article.relatedBooks || []).find((entry) => entry.bookId === bookId)
+      return {
+        bookId,
+        reason: existing?.reason || 'Related research volume',
+      }
+    })
+}
 
 function listArticleFiles(dir: string): string[] {
   if (!fs.existsSync(dir)) return []
@@ -151,7 +248,8 @@ export async function getNewsArticles(limit = 10): Promise<NewsArticleRecord[]> 
 export async function getPublishedNewsArticles(limit = 10): Promise<NewsArticleRecord[]> {
   const ordered = await readAllArticles()
   const published = ordered.filter((article) => (article.status || 'draft') !== 'draft')
-  return published.slice(0, limit)
+  const relevant = published.filter((article) => getValidatedRelatedBooks(article).length > 0)
+  return relevant.slice(0, limit)
 }
 
 /** Returns all published news articles that mention a given book (no limit). */
@@ -159,7 +257,7 @@ export async function getNewsArticlesForBook(bookId: string): Promise<NewsArticl
   const ordered = await readAllArticles()
   const published = ordered.filter((article) => (article.status || 'draft') !== 'draft')
   return published.filter((article) =>
-    article.relatedBooks?.some((rb) => rb.bookId === bookId)
+    getValidatedRelatedBooks(article).some((rb) => rb.bookId === bookId)
   )
 }
 
@@ -413,7 +511,8 @@ export async function buildBlogPostPayload(slug: string): Promise<BlogTemplatePa
   const article = await getNewsArticleBySlug(slug)
   if (!article) return null
 
-  const primaryBookId = article.relatedBooks?.[0]?.bookId
+  const validatedRelatedBooks = getValidatedRelatedBooks(article)
+  const primaryBookId = validatedRelatedBooks[0]?.bookId
   const primaryBook = primaryBookId ? bookMap.get(primaryBookId) : undefined
   const highlightMap = buildHighlightMap(article.sections?.[0]?.content || '')
   const sections = article.sections?.length ? article.sections : [{ heading: 'Operational Snapshot', content: article.title }]
@@ -430,7 +529,7 @@ export async function buildBlogPostPayload(slug: string): Promise<BlogTemplatePa
       html += buildBookContextSection(primaryBook)
     }
     if (/modern/i.test(title) && primaryBook) {
-      html += buildBookApplicationParagraph(primaryBook, article.relatedBooks?.[0]?.reason)
+      html += buildBookApplicationParagraph(primaryBook, validatedRelatedBooks[0]?.reason)
     }
     htmlSections.push({ title, html })
   })
@@ -451,7 +550,7 @@ export async function buildBlogPostPayload(slug: string): Promise<BlogTemplatePa
   let wordCount = countWords(plainText)
 
   if (wordCount < MIN_WORD_TARGET && primaryBook) {
-    const padding = `<section id="extended-analysis"><h2>Extended Analysis</h2>${buildBookContextSection(primaryBook)}${buildBookApplicationParagraph(primaryBook, article.relatedBooks?.[0]?.reason)}</section>`
+    const padding = `<section id="extended-analysis"><h2>Extended Analysis</h2>${buildBookContextSection(primaryBook)}${buildBookApplicationParagraph(primaryBook, validatedRelatedBooks[0]?.reason)}</section>`
     content += padding
     plainText = toPlainText(content)
     wordCount = countWords(plainText)

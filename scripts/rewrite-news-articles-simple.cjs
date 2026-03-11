@@ -8,6 +8,7 @@
  */
 const fs = require('fs')
 const path = require('path')
+const { chooseBookIdsFromText } = require('./news-relevance.cjs')
 
 const ROOT_DIR = path.join(__dirname, '..')
 const ARTICLES_DIR = path.join(ROOT_DIR, 'data', 'news-articles')
@@ -43,23 +44,6 @@ function citationToTitle(citationText) {
   if (!citationText) return ''
   const idx = citationText.search(/\s[–-]\s/)
   return idx >= 0 ? citationText.slice(idx + 3).trim() : citationText
-}
-
-function chooseBookIds(text) {
-  const lower = text.toLowerCase()
-  const ids = new Set()
-  if (lower.includes('helicopter') || lower.includes('rotor') || lower.includes('sycamore')) ids.add('sycamore-seeds')
-  if (lower.includes('lossiemouth') || lower.includes('typhoon') || lower.includes('sabre')) ids.add('sabres-from-north')
-  if (lower.includes('prestwick') || lower.includes('beardmore') || lower.includes('argus')) ids.add('beardmore-aviation')
-  if (lower.includes('hial') || lower.includes('wick airport') || lower.includes('inverness') || lower.includes('stornoway') || lower.includes('dundee airport')) ids.add('clydeside-aviation-vol2')
-  if (lower.includes('glasgow') || lower.includes('clyde') || lower.includes('clydeside')) ids.add('clydeside-aviation-vol1')
-  if (lower.includes('vulcan') || lower.includes('lightning') || lower.includes('v-force')) ids.add('sonic-to-standoff')
-  if (lower.includes('nuclear') || lower.includes('atomic')) ids.add('birth-atomic-bomb')
-  if (lower.includes('aircraft carrier') || lower.includes('naval aviation')) ids.add('aircraft-carrier-argus')
-  if (lower.includes('luftwaffe') || lower.includes('german aircraft') || lower.includes('me262')) ids.add('this-was-the-enemy-volume-two')
-  if (lower.includes('aaib') || lower.includes('air accident')) ids.add('this-was-the-enemy-volume-two')
-  if (ids.size === 0) ids.add('this-was-the-enemy-volume-two')
-  return Array.from(ids)
 }
 
 /** Extract primary story content from first bullet/source. */
@@ -111,7 +95,7 @@ function rewriteArticle(filePath, dryRun) {
     title: newTitle,
     sections: [{ heading: 'Summary', content: newContent }],
     sourceReferences: [primarySource],
-    relatedBooks: chooseBookIds(textForBooks).map((bookId) => ({
+    relatedBooks: chooseBookIdsFromText(textForBooks).map((bookId) => ({
       bookId,
       reason: 'Related research volume',
     })),

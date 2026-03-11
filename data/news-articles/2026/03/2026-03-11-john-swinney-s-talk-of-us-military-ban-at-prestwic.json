@@ -18,10 +18,6 @@
   ],
   "relatedBooks": [
     {
-      "bookId": "beardmore-aviation",
-      "reason": "Related research volume"
-    },
-    {
       "bookId": "clydeside-aviation-vol2",
       "reason": "Related research volume"
     }

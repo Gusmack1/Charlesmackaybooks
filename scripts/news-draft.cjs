@@ -15,6 +15,7 @@
 
 const fs = require('fs')
 const path = require('path')
+const { hasStrongAviationContext, chooseBookIdsFromText } = require('./news-relevance.cjs')
 
 const ROOT_DIR = path.join(__dirname, '..')
 const DATA_DIR = path.join(ROOT_DIR, 'data')
@@ -62,32 +63,6 @@ function formatDate(date = new Date()) {
   return date.toISOString().split('T')[0]
 }
 
-const AVIATION_CTX = /aircraft|aviation|airport|airspace|flight|raf|hial|aaib|prestwick|lossiemouth|inverness|stornoway|wick|dundee|helicopter|rotorcraft|aerospace|airline|pilot|typhoon|sabre|vulcan|lightning|glasgow airport/i
-
-/**
- * Returns book IDs that topically match the content. Only returns matches when
- * there is a genuine link to a catalogue book. If no book is relevant, returns [].
- * Items with no match are SKIPPED (not drafted).
- * Location terms (glasgow, clyde) require aviation context to avoid non-aviation news.
- */
-function chooseBookIds(item) {
-  const text = `${item.title} ${item.summary || ''}`.toLowerCase()
-  const hasAviation = AVIATION_CTX.test(text)
-  const ids = new Set()
-  if (text.includes('helicopter') || text.includes('rotorcraft') || text.includes('sycamore')) ids.add('sycamore-seeds')
-  if (text.includes('lossiemouth') || text.includes('typhoon') || text.includes('sabre')) ids.add('sabres-from-north')
-  if (text.includes('prestwick') || text.includes('beardmore') || text.includes('argus')) ids.add('beardmore-aviation')
-  if (hasAviation && (text.includes('hial') || text.includes('wick airport') || text.includes('inverness airport') || text.includes('highland airport') || text.includes('stornoway') || text.includes('dundee airport'))) ids.add('clydeside-aviation-vol2')
-  if (hasAviation && (text.includes('glasgow airport') || text.includes('clyde') || text.includes('clydeside') || text.includes('weir '))) ids.add('clydeside-aviation-vol1')
-  if (text.includes('glasgow') && hasAviation) ids.add('clydeside-aviation-vol1')
-  if (text.includes('vulcan') || text.includes('lightning') || text.includes('v-force') || text.includes('deterrent')) ids.add('sonic-to-standoff')
-  if (text.includes('nuclear') || text.includes('atomic')) ids.add('birth-atomic-bomb')
-  if (text.includes('aircraft carrier') || text.includes('naval aviation')) ids.add('aircraft-carrier-argus')
-  if (text.includes('luftwaffe') || text.includes('german aircraft') || text.includes('me262') || text.includes('messerschmitt')) ids.add('this-was-the-enemy-volume-two')
-  if (text.includes('spirit aero') || (text.includes('aerospace') && text.includes('scotland'))) ids.add('clydeside-aviation-vol2')
-  return Array.from(ids)
-}
-
 /** Build a single focused section from one news item. */
 function buildSections(item) {
   const title = (item.title || '').trim()
@@ -100,7 +75,7 @@ function buildSections(item) {
 function buildArticleRecord(item) {
   const today = formatDate()
   const slug = `${today}-${slugify(item.title).slice(0, 50) || 'scottish-aviation-briefing'}`
-  const bookIds = chooseBookIds(item)
+  const bookIds = chooseBookIdsFromText(`${item.title} ${item.summary || ''}`)
   const sections = buildSections(item)
   const wordCount = sections.reduce((sum, section) => sum + section.content.split(/\s+/).filter(Boolean).length, 0)
 
@@ -135,12 +110,11 @@ function main() {
     process.exit(0)
   }
 
-  const aviationTerms = /aircraft|aviation|airport|airspace|flight|raf|hial|aaib|nerl|nats|prestwick|lossiemouth|inverness|stornoway|wick|dundee|glasgow|military aviation|naval aviation|helicopter|rotorcraft/i
   const pending = queue
     .filter((item) => item.status === 'new')
-    .filter((item) => aviationTerms.test(`${item.title} ${item.summary || ''}`))
+    .filter((item) => hasStrongAviationContext(`${item.title} ${item.summary || ''}`))
     .filter((item) => {
-      const bookIds = chooseBookIds(item)
+      const bookIds = chooseBookIdsFromText(`${item.title} ${item.summary || ''}`)
       if (bookIds.length === 0) {
         console.log(`Skip (no relevant book): ${item.title?.slice(0, 60)}...`)
         return false

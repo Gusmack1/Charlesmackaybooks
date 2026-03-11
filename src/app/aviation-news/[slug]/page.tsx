@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
-import { getNewsArticleBySlug, getPublishedNewsArticles } from '@/lib/newsroom'
+import { getNewsArticleBySlug, getPublishedNewsArticles, getValidatedRelatedBooks } from '@/lib/newsroom'
 import { SITE_CONSTANTS } from '@/config/constants'
 
 const BASE_URL = SITE_CONSTANTS.BASE_URL
@@ -65,7 +65,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
   }
 
-  const primaryBook = article.relatedBooks?.[0] ? bookMap.get(article.relatedBooks[0].bookId) : undefined
+  const validatedRelatedBooks = getValidatedRelatedBooks(article)
+  const primaryBook = validatedRelatedBooks[0] ? bookMap.get(validatedRelatedBooks[0].bookId) : undefined
   const image = primaryBook?.imageUrl || FALLBACK_IMAGE
   const imageUrl = image.startsWith('http') ? image : `${BASE_URL}${image.startsWith('/') ? '' : '/'}${image}`
   const description = buildDescription(article.sections?.[0]?.content, article.title)
@@ -134,7 +135,8 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
   }
 
   const description = buildDescription(article.sections?.[0]?.content, article.title)
-  const relatedBooks = (article.relatedBooks || [])
+  const validatedRelatedBooks = getValidatedRelatedBooks(article)
+  const relatedBooks = validatedRelatedBooks
     .map((entry) => {
       const book = bookMap.get(entry.bookId)
       if (!book) return null

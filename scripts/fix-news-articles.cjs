@@ -5,6 +5,7 @@
  */
 const fs = require('fs')
 const path = require('path')
+const { deriveRelatedBooks } = require('./news-relevance.cjs')
 
 const ARTICLES_DIR = path.join(__dirname, '..', 'data', 'news-articles')
 
@@ -148,6 +149,11 @@ function fixArticle(filePath) {
     newTitle = existingTitle
   }
   const newKeywords = deriveKeywords({ ...article, sections: cleanSections.length ? cleanSections : article.sections, title: newTitle })
+  const validatedRelatedBooks = deriveRelatedBooks({
+    ...article,
+    title: newTitle,
+    sections: cleanSections.length ? cleanSections : article.sections,
+  })
   const oldReason = /Topical link between news item(s)? and catalogue research focus\.?/i
   let reasonChanged = false
   for (const rb of article.relatedBooks || []) {
@@ -160,11 +166,13 @@ function fixArticle(filePath) {
     JSON.stringify(article.sections) !== JSON.stringify(cleanSections) ||
     article.title !== newTitle ||
     JSON.stringify(article.keywords) !== JSON.stringify(newKeywords) ||
+    JSON.stringify(article.relatedBooks || []) !== JSON.stringify(validatedRelatedBooks) ||
     reasonChanged
 
   article.sections = cleanSections.length ? cleanSections : article.sections
   article.title = newTitle
   article.keywords = newKeywords
+  article.relatedBooks = validatedRelatedBooks
   delete article.editorNotes
 
   if (changed) {
