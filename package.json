@@ -32,6 +32,9 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^5.6.1",
     "@stripe/stripe-js": "^8.9.0",
+    "@types/node": "^25.4.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.27",
     "fast-xml-parser": "^5.5.3",
     "googleapis": "^171.4.0",
@@ -50,9 +53,6 @@
   "devDependencies": {
     "@biomejs/biome": "^2.4.6",
     "@eslint/eslintrc": "^3.3.5",
-    "@types/node": "^25.4.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
     "baseline-browser-mapping": "^2.10.0",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.1.6",
