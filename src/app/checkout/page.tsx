@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useState, useEffect, useCallback } from 'react';
+import { Suspense, useState, useEffect, useCallback, useRef } from 'react';
 import { useCart } from '../../context/CartContext';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -27,6 +27,9 @@ import { trackCartAbandonment } from '../../utils/abandonedCartRecovery';
 import { useSearchParams } from 'next/navigation';
 import { useRecentlyViewed } from '../../context/RecentlyViewedContext';
 import { getCrossSellSuggestions } from '../../utils/crossSell';
+import { getBundleCompletionOffer } from '../../utils/bundles';
+import BundleCompletionCard from '../../components/BundleCompletionCard';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface CustomerInfoPayload {
   firstName: string;
@@ -63,6 +66,12 @@ function CheckoutContent() {
   const preferredPaymentMethod = searchParams.get('method') === 'paypal' ? 'paypal' : 'stripe';
   const { items, addToCart, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
   const { recentlyViewed } = useRecentlyViewed();
+  const {
+    trackBookPurchase,
+    trackCheckoutStart,
+    trackCheckoutStepView,
+    trackCheckoutPaymentSelection,
+  } = useAnalytics();
   const [step, setStep] = useState<'basket' | 'delivery-payment'>('basket');
   const [paymentMethod, setPaymentMethod] = useState<'stripe' | 'paypal'>(preferredPaymentMethod);
   const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
@@ -84,6 +93,10 @@ function CheckoutContent() {
   const [abandonmentTracked, setAbandonmentTracked] = useState(false);
   const [checkoutCompleted, setCheckoutCompleted] = useState(false);
   const [stripeReference] = useState(() => generateOrderId());
+  const hasTrackedBeginCheckout = useRef(false);
+  const lastTrackedStep = useRef<string | null>(null);
+  const lastTrackedPaymentMethod = useRef<string | null>(null);
+  const [isAddingBundleCompletion, setIsAddingBundleCompletion] = useState(false);
 
   useEffect(() => {
     const profile = readSavedCustomerProfile();
@@ -172,11 +185,19 @@ function CheckoutContent() {
   const total = getFinalTotal(); // This includes bulk discounts and shipping
   const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
   const cartBooks = items.map((item) => item.book);
+  const analyticsItems = items.map((item) => ({
+    id: item.book.id,
+    title: item.book.title,
+    category: item.book.category || 'Aviation Books',
+    quantity: item.quantity,
+    price: item.book.price,
+  }));
   const checkoutAddOnSuggestions = getCrossSellSuggestions({
     cartBooks,
     recentlyViewed,
     limit: 3,
   });
+  const bundleCompletion = getBundleCompletionOffer(cartBooks);
 
   useEffect(() => {
     if (!items.length || checkoutCompleted) return;
@@ -208,6 +229,32 @@ function CheckoutContent() {
       }
     };
   }, [items, customerDetails, subtotal, checkoutCompleted, abandonmentTracked]);
+
+  useEffect(() => {
+    if (!items.length || hasTrackedBeginCheckout.current) return;
+    trackCheckoutStart(analyticsItems, total, hasPreferredPaymentMethod ? `checkout-${preferredPaymentMethod}` : 'checkout-basket');
+    hasTrackedBeginCheckout.current = true;
+  }, [items.length, analyticsItems, total, trackCheckoutStart, hasPreferredPaymentMethod, preferredPaymentMethod]);
+
+  useEffect(() => {
+    if (!items.length || lastTrackedStep.current === step) return;
+    trackCheckoutStepView(step, total, totalItemsCount);
+    lastTrackedStep.current = step;
+  }, [step, items.length, total, totalItemsCount, trackCheckoutStepView]);
+
+  useEffect(() => {
+    if (step !== 'delivery-payment') return;
+    if (lastTrackedPaymentMethod.current === paymentMethod) return;
+    trackCheckoutPaymentSelection(paymentMethod, analyticsItems, total);
+    lastTrackedPaymentMethod.current = paymentMethod;
+  }, [step, paymentMethod, analyticsItems, total, trackCheckoutPaymentSelection]);
+
+  const handleAddBundleCompletion = () => {
+    if (!bundleCompletion || isAddingBundleCompletion) return;
+    setIsAddingBundleCompletion(true);
+    bundleCompletion.missingBooks.forEach((book) => addToCart(book));
+    setTimeout(() => setIsAddingBundleCompletion(false), 300);
+  };
 
   const handleInputChange = (field: keyof CustomerDetails, value: string) => {
     setCustomerDetails(prev => ({ ...prev, [field]: value }));
@@ -340,6 +387,13 @@ function CheckoutContent() {
         paypalTransactionId: paymentIntent.id
       };
       saveOrder(legacyOrder);
+      trackBookPurchase({
+        transactionId: order.id,
+        totalValue: total,
+        currency: 'GBP',
+        items: analyticsItems,
+        platform: 'website',
+      });
 
       setCheckoutCompleted(true);
       setAbandonmentTracked(true);
@@ -413,6 +467,13 @@ function CheckoutContent() {
               
               // Update legacy order status to paid
               updateOrderStatus(order.id, 'paid', event.data.transactionId);
+              trackBookPurchase({
+                transactionId: order.id,
+                totalValue: total,
+                currency: 'GBP',
+                items: analyticsItems,
+                platform: 'paypal',
+              });
               
               setCheckoutCompleted(true);
               setAbandonmentTracked(true);
@@ -568,6 +629,18 @@ function CheckoutContent() {
                       ))}
                     </div>
                     <p className="text-xs text-white/75 mt-2">Adding one more title can unlock a larger basket discount.</p>
+                  </div>
+                )}
+                {bundleCompletion && (
+                  <div className="mt-4">
+                    <BundleCompletionCard
+                      title={bundleCompletion.bundle.title}
+                      badge={bundleCompletion.bundle.badge}
+                      includedBooks={bundleCompletion.includedBooks}
+                      missingBooks={bundleCompletion.missingBooks}
+                      onAddMissing={handleAddBundleCompletion}
+                      isAdding={isAddingBundleCompletion}
+                    />
                   </div>
                 )}
                 <div className="mt-4 sm:mt-6 pt-4 border-t border-blue-700/50">

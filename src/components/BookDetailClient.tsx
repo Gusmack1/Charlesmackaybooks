@@ -15,7 +15,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
   const { addToCart, openBasket } = useCart();
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
-  const { trackContactEmail, trackEbayRedirect } = useAnalytics();
+  const { trackContactEmail, trackEbayRedirect, trackBuyNowIntent } = useAnalytics();
   const { addToRecentlyViewed } = useRecentlyViewed();
   const bulkDiscountHint = 'Buy 2+ books for 5% off, or 3+ books for 10% off at checkout.';
 
@@ -33,6 +33,12 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
   const handleBuyNow = () => {
     if (isBuyingNow) return;
     setIsBuyingNow(true);
+    trackBuyNowIntent({
+      id: book.id,
+      title: book.title,
+      category: book.category || 'Aviation Books',
+      price: book.price,
+    }, 'book-detail');
     addToCart(book);
     // Use window.location for reliable navigation; router.push can fail in some contexts
     setTimeout(() => {

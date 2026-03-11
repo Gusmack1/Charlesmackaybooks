@@ -12,6 +12,8 @@ import RelatedBookCard from '@/components/RelatedBookCard';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookAnalyticsClient from '@/components/BookAnalyticsClient';
 import ShareButton from '@/components/ShareButton';
+import BundleOfferCard from '@/components/BundleOfferCard';
+import { getBundleForBook } from '@/utils/bundles';
 
 
 // Simplified category gradient function - only used for hero backgrounds
@@ -476,6 +478,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   // Get related books automatically
   const relatedBooks = getRelatedBooks(book);
   const quickPairings = relatedBooks.slice(0, 3);
+  const featuredBundle = getBundleForBook(book.id);
   const strengthPoints = [
     book.sourceType?.length ? `Source base: ${book.sourceType.join(', ')}` : null,
     book.pageCount ? `${book.pageCount} pages of focused research` : null,
@@ -628,6 +631,14 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         {/* Purchase section - pt-24 for sticky header */}
         <div id="purchase" className={`${gradientClass} text-white pt-24 pb-8 px-6 scroll-mt-24 relative z-20`}>
           <div className="max-w-2xl mx-auto space-y-4">
+            {featuredBundle && (
+              <BundleOfferCard
+                title={featuredBundle.title}
+                description={featuredBundle.description}
+                books={featuredBundle.books}
+                badge={featuredBundle.badge}
+              />
+            )}
             {/* Quick pairings first so links stay above sticky bar on mobile */}
             {quickPairings.length > 0 && (
               <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4">

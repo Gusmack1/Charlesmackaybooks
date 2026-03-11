@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
 import { Book } from '@/types/book'
+import { useAnalytics } from '@/hooks/useAnalytics'
 
 interface BookCardProps {
   book: Book
@@ -15,6 +16,7 @@ interface BookCardProps {
 export default function BookCard({ book, sourceContext }: BookCardProps) {
   const { addToCart, openBasket } = useCart();
   const router = useRouter();
+  const { trackBuyNowIntent } = useAnalytics();
   const [isAdding, setIsAdding] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
   const [justAdded, setJustAdded] = useState(false);
@@ -32,6 +34,12 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
   const handleBuyNow = () => {
     if (isBuyingNow) return;
     setIsBuyingNow(true);
+    trackBuyNowIntent({
+      id: book.id,
+      title: book.title,
+      category: book.category || 'Aviation Books',
+      price: book.price,
+    }, sourceContext || 'book-card');
     addToCart(book);
     router.push('/checkout?method=stripe');
   };

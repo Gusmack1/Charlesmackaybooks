@@ -1,10 +1,14 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react'
 import { useCart } from '@/context/CartContext'
 import { useRecentlyViewed } from '@/context/RecentlyViewedContext'
 import { X, ShoppingBag } from 'lucide-react'
 import Image from 'next/image'
 import { getCrossSellSuggestions } from '@/utils/crossSell'
+import { getBundleCompletionOffer } from '@/utils/bundles'
+import BundleCompletionCard from '@/components/BundleCompletionCard'
+import { trackViewCart } from '@/components/GoogleAnalytics'
 
 export default function CartSidebar() {
   const {
@@ -22,8 +26,8 @@ export default function CartSidebar() {
     getFinalTotal
   } = useCart()
   const { recentlyViewed } = useRecentlyViewed()
-
-  if (!isCartOpen) return null
+  const [isAddingBundleCompletion, setIsAddingBundleCompletion] = useState(false)
+  const hasTrackedOpenRef = useRef(false)
 
   const subtotal = getTotalPrice()
   const discount = getBulkDiscount()
@@ -37,12 +41,42 @@ export default function CartSidebar() {
     recentlyViewed,
     limit: 3,
   })
+  const bundleCompletion = getBundleCompletionOffer(cartBooks)
   const discountNudgeText =
     totalItems < 2
       ? 'Add 1 more book to unlock 5% off your entire order.'
       : totalItems < 3
         ? 'Add 1 more book to upgrade to 10% off your entire order.'
         : 'Maximum 10% multi-book discount unlocked.'
+
+  useEffect(() => {
+    if (!isCartOpen) {
+      hasTrackedOpenRef.current = false
+      return
+    }
+    if (!items.length || hasTrackedOpenRef.current) return
+
+    trackViewCart({
+      value: finalTotal,
+      items: items.map((item) => ({
+        item_id: item.book.id,
+        item_name: item.book.title,
+        category: item.book.category || 'Aviation Books',
+        quantity: item.quantity,
+        price: item.book.price,
+      })),
+    })
+    hasTrackedOpenRef.current = true
+  }, [isCartOpen, items, finalTotal])
+
+  const handleAddBundleCompletion = () => {
+    if (!bundleCompletion || isAddingBundleCompletion) return
+    setIsAddingBundleCompletion(true)
+    bundleCompletion.missingBooks.forEach((book) => addToCart(book))
+    setTimeout(() => setIsAddingBundleCompletion(false), 300)
+  }
+
+  if (!isCartOpen) return null
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
@@ -132,6 +166,16 @@ export default function CartSidebar() {
                     </div>
                   </div>
                 ))}
+                {bundleCompletion && (
+                  <BundleCompletionCard
+                    title={bundleCompletion.bundle.title}
+                    badge={bundleCompletion.bundle.badge}
+                    includedBooks={bundleCompletion.includedBooks}
+                    missingBooks={bundleCompletion.missingBooks}
+                    onAddMissing={handleAddBundleCompletion}
+                    isAdding={isAddingBundleCompletion}
+                  />
+                )}
                 {addOnSuggestions.length > 0 && (
                   <div className="rounded-lg border border-blue-700/50 bg-slate-800/80 p-3">
                     <p className="text-xs font-semibold text-blue-200 mb-2">

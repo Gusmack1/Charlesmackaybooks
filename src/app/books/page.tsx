@@ -4,7 +4,7 @@ import BundleOfferCard from '@/components/BundleOfferCard'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
 import Testimonials from '@/components/Testimonials'
-import type { Book } from '@/types/book'
+import { getResolvedBundles } from '@/utils/bundles'
 
 const quickFilters = [
   { label: 'WWI Aviation', slug: 'wwi-aviation' },
@@ -22,30 +22,6 @@ const staffPickIds = [
   'british-aircraft-great-war',
   'german-aircraft-great-war',
   'aircraft-carrier-argus',
-]
-
-const bundleConfigs = [
-  {
-    id: 'clydeside-duo',
-    title: 'Clydeside Aviation Duo',
-    description: 'Volume One + Volume Two together for readers building a complete Clydeside reference set.',
-    badge: 'Best value',
-    bookIds: ['clydeside-aviation-vol1', 'clydeside-aviation-vol2'],
-  },
-  {
-    id: 'great-war-comparison',
-    title: 'Great War Air Power Set',
-    description: 'Compare both sides of WWI aviation with British and German aircraft development volumes.',
-    badge: 'Popular',
-    bookIds: ['british-aircraft-great-war', 'german-aircraft-great-war'],
-  },
-  {
-    id: 'enemy-two-volume',
-    title: 'This Was The Enemy Collection',
-    description: 'Pair both volumes for complete late-war Luftwaffe coverage and production context.',
-    badge: 'Research set',
-    bookIds: ['enemy-luftwaffe-1945', 'this-was-the-enemy-volume-two'],
-  },
 ]
 
 export const metadata: Metadata = {
@@ -91,15 +67,7 @@ export default function BooksPage() {
     .slice(0, 6)
 
   const staffPicks = books.filter((b) => staffPickIds.includes(b.id))
-  const bookMap = new Map(books.map((book) => [book.id, book]))
-  const bundles = bundleConfigs
-    .map((bundle) => {
-      const bundleBooks = bundle.bookIds
-        .map((bookId) => bookMap.get(bookId))
-        .filter((book): book is Book => Boolean(book))
-      return { ...bundle, books: bundleBooks }
-    })
-    .filter((bundle) => bundle.books.length === bundle.bookIds.length)
+  const bundles = getResolvedBundles()
 
   return (
     <div className="surface-dark relative mx-0 bg-slate-900">

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 import { Book } from '@/types/book';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 interface BundleOfferCardProps {
   title: string;
@@ -14,6 +15,7 @@ interface BundleOfferCardProps {
 
 export default function BundleOfferCard({ title, description, books, badge }: BundleOfferCardProps) {
   const { addToCart, openBasket } = useCart();
+  const { trackBundleAddToCart } = useAnalytics();
   const [isAddingBundle, setIsAddingBundle] = useState(false);
 
   const bundleTotal = books.reduce((total, book) => total + book.price, 0);
@@ -22,6 +24,18 @@ export default function BundleOfferCard({ title, description, books, badge }: Bu
   const handleAddBundle = () => {
     if (isAddingBundle) return;
     setIsAddingBundle(true);
+    trackBundleAddToCart(
+      title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+      title,
+      books.map((book) => ({
+        id: book.id,
+        title: book.title,
+        category: book.category || 'Aviation Books',
+        quantity: 1,
+        price: book.price,
+      })),
+      bundleTotal
+    );
     books.forEach((book) => addToCart(book));
     setTimeout(() => {
       openBasket();

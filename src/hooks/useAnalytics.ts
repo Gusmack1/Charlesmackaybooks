@@ -9,7 +9,13 @@ import {
   trackEbayClick,
   trackTimelineView,
   trackResourceDownload,
-  trackPurchase
+  trackPurchase,
+  trackBuyNowClick,
+  trackViewCart,
+  trackBeginCheckout,
+  trackCheckoutProgress,
+  trackAddPaymentInfo,
+  trackBundleAdd,
 } from '@/components/GoogleAnalytics'
 
 export interface BookAnalyticsData {
@@ -92,6 +98,76 @@ export function useAnalytics() {
     })
   }, [])
 
+  const trackBuyNowIntent = useCallback((book: BookAnalyticsData, sourceContext?: string) => {
+    trackBuyNowClick({
+      item_id: book.id,
+      item_name: book.title,
+      category: book.category,
+      price: book.price,
+      source_context: sourceContext,
+    })
+  }, [])
+
+  const trackCartView = useCallback((items: PurchaseData['items'], totalValue: number) => {
+    trackViewCart({
+      value: totalValue,
+      items: items.map((item) => ({
+        item_id: item.id,
+        item_name: item.title,
+        category: item.category,
+        quantity: item.quantity,
+        price: item.price,
+      })),
+    })
+  }, [])
+
+  const trackCheckoutStart = useCallback((items: PurchaseData['items'], totalValue: number, sourceContext?: string) => {
+    trackBeginCheckout({
+      value: totalValue,
+      source_context: sourceContext,
+      items: items.map((item) => ({
+        item_id: item.id,
+        item_name: item.title,
+        category: item.category,
+        quantity: item.quantity,
+        price: item.price,
+      })),
+    })
+  }, [])
+
+  const trackCheckoutStepView = useCallback((step: string, totalValue: number, itemCount: number) => {
+    trackCheckoutProgress(step, totalValue, itemCount)
+  }, [])
+
+  const trackCheckoutPaymentSelection = useCallback((paymentType: 'stripe' | 'paypal', items: PurchaseData['items'], totalValue: number) => {
+    trackAddPaymentInfo({
+      payment_type: paymentType,
+      value: totalValue,
+      items: items.map((item) => ({
+        item_id: item.id,
+        item_name: item.title,
+        category: item.category,
+        quantity: item.quantity,
+        price: item.price,
+      })),
+    })
+  }, [])
+
+  const trackBundleAddToCart = useCallback((bundleId: string, bundleName: string, items: PurchaseData['items'], totalValue: number) => {
+    trackBundleAdd({
+      bundle_id: bundleId,
+      bundle_name: bundleName,
+      value: totalValue,
+      items: items.map((item) => ({
+        item_id: item.id,
+        item_name: item.title,
+        category: item.category,
+        quantity: item.quantity,
+        price: item.price,
+      })),
+    })
+  }, [])
+
   // Track custom events for aviation-specific interactions
   const trackAviationEvent = useCallback((eventName: string, parameters: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
@@ -169,6 +245,12 @@ export function useAnalytics() {
     trackTimelineInteraction,
     trackResourceAccess,
     trackBookPurchase,
+    trackBuyNowIntent,
+    trackCartView,
+    trackCheckoutStart,
+    trackCheckoutStepView,
+    trackCheckoutPaymentSelection,
+    trackBundleAddToCart,
     trackAviationEvent,
     trackCategoryView,
     trackNewsletterSignup,
