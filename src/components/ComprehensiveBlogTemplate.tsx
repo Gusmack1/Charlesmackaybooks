@@ -529,7 +529,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                 return (
                 <article key={book.id} className="bg-white dark:bg-slate-700 rounded-lg shadow-md border border-slate-200 dark:border-slate-600 p-5 hover:shadow-lg transition-shadow">
                   <Link href={`/books/${book.id}`} className="block group">
-                    <div className="aspect-[3/4] w-full overflow-hidden rounded-md bg-slate-100 dark:bg-slate-800 mb-4">
+                    <div className="aspect-3/4 w-full overflow-hidden rounded-md bg-slate-100 dark:bg-slate-800 mb-4">
                       <img
                         src={book.cover || '/book-covers/default-placeholder.svg'}
                         alt={`${book.title} cover`}
@@ -596,7 +596,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
         {/* Author Bio */}
         <section className="mt-16 card p-8">
           <div className="flex flex-col md:flex-row items-start gap-6">
-            <div className="w-24 h-24 bg-accent-blue rounded-full flex items-center justify-center text-2xl font-bold text-white flex-shrink-0">
+            <div className="w-24 h-24 bg-accent-blue rounded-full flex items-center justify-center text-2xl font-bold text-white shrink-0">
               {post.author.name.split(' ').map(n => n[0]).join('')}
             </div>
             <div className="flex-1">
@@ -631,7 +631,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
               <span className="text-white text-sm truncate">
                 Buy {resolvedRelatedBooks[0].title.length > 28 ? resolvedRelatedBooks[0].title.slice(0, 25) + '…' : resolvedRelatedBooks[0].title} – £{resolvedRelatedBooks[0].price.toFixed(2)}
               </span>
-              <Link href={`/books/${resolvedRelatedBooks[0].id}`} className="btn-books px-4 py-2 flex-shrink-0">Buy now</Link>
+              <Link href={`/books/${resolvedRelatedBooks[0].id}`} className="btn-books px-4 py-2 shrink-0">Buy now</Link>
             </>
           ) : (
             <>
@@ -675,41 +675,59 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
         }
         
         .blog-content ul, .blog-content ol {
-          @apply mb-6 space-y-2;
+          margin-bottom: 1.5rem;
         }
         
         .blog-content li {
           color: var(--color-text-secondary) !important;
           font-size: 18px !important;
           line-height: 1.6 !important;
+          margin-bottom: 0.5rem;
         }
         
         .blog-content blockquote {
-          @apply border-l-4 border-accent-blue bg-secondary/5 p-6 my-8 italic text-primary;
+          border-left: 4px solid var(--color-accent-blue);
+          background-color: rgba(255, 255, 255, 0.04);
+          padding: 1.5rem;
+          margin: 2rem 0;
+          font-style: italic;
+          color: var(--color-text-primary) !important;
         }
         
         .blog-content .bg-amber-50,
         .blog-content .bg-blue-50,
         .blog-content .bg-green-50 {
-          @apply rounded-lg mb-8 bg-secondary/5;
+          border-radius: 0.5rem;
+          margin-bottom: 2rem;
+          background-color: rgba(255, 255, 255, 0.04);
         }
         
         .blog-content a {
-          @apply text-accent-blue hover:text-accent-blue underline;
+          color: var(--color-accent-blue) !important;
+          text-decoration: underline;
         }
         
         .blog-content img {
-          @apply rounded-lg shadow-md mx-auto block max-w-full h-auto;
-          width: 100%;
+          border-radius: 0.5rem;
+          box-shadow: var(--shadow-md);
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          max-width: 100%;
           height: auto;
+          width: 100%;
         }
 
         .blog-content img:first-child {
-          @apply mb-4;
+          margin-bottom: 1rem;
         }
 
         .blog-content .image-caption {
-          @apply text-sm text-center italic mt-2 mb-6;
+          font-size: 0.875rem;
+          text-align: center;
+          font-style: italic;
+          margin-top: 0.5rem;
+          margin-bottom: 1.5rem;
           color: var(--color-text-muted) !important;
         }
         

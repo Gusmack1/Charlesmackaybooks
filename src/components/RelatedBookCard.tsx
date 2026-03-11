@@ -21,7 +21,7 @@ export default function RelatedBookCard({ book }: RelatedBookCardProps) {
   return (
     <div className="border rounded-lg p-4 hover:border-secondary/50 hover:shadow-md transition-all bg-slate-800/50 border-white/15">
       <a href={`/books/${book.id}`} className="block">
-        <div className="aspect-[3/4] mb-3 bg-muted rounded overflow-hidden">
+        <div className="aspect-3/4 mb-3 bg-muted rounded overflow-hidden">
           <Image
             src={book.imageUrl || `/book-covers/${book.id}.jpg`}
             alt={book.title}

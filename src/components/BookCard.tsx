@@ -39,7 +39,7 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
   return (
     <div className="w-full bg-slate-800 border border-blue-700/40 rounded-lg shadow-md overflow-hidden hover:border-blue-400/60 transition-all duration-300">
       {/* Book Cover - Now Clickable */}
-      <div className="aspect-[3/4] relative bg-gray-100">
+      <div className="aspect-3/4 relative bg-gray-100">
         <Link href={`/books/${book.id}`} className="block w-full h-full">
           <Image
             src={book.imageUrl || `/book-covers/${book.id}.jpg`}

@@ -45,7 +45,7 @@ export default function Header() {
         <div className="container max-w-7xl mx-auto px-4 py-2 md:py-4">
           <div className="flex justify-between items-center gap-4">
             {/* Logo and Author Info - Clickable */}
-            <a href="/" className="hover:opacity-90 transition-opacity cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 rounded">
+            <a href="/" className="hover:opacity-90 transition-opacity cursor-pointer group focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 rounded">
               <h1 className="font-bold text-white tracking-tight text-base sm:text-lg md:text-xl leading-tight m-0">Charles E. MacKay</h1>
               <p className="text-white text-xs sm:text-sm md:text-base leading-tight m-0">Aviation Historian & Author</p>
               <p className="hidden md:block text-white/90 text-xs sm:text-sm md:text-base leading-tight m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
@@ -58,7 +58,7 @@ export default function Header() {
                 <button
                   onClick={openBasket}
                   aria-label={`Open basket${totalItems > 0 ? `, ${totalItems} items` : ''}`}
-                  className="relative bg-white text-slate-900 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100 min-h-[40px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
+                  className="relative bg-white text-slate-900 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100 min-h-[40px] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
                   title="Shopping Basket"
                 >
                   <span className="hidden sm:inline-flex items-center gap-1">
@@ -80,7 +80,7 @@ export default function Header() {
                 {/* Mobile Search Toggle */}
                 <button
                   onClick={() => setShowMobileSearch(!showMobileSearch)}
-                  className="md:hidden bg-slate-800 text-white px-3 py-2 rounded-lg min-h-[40px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                  className="md:hidden bg-slate-800 text-white px-3 py-2 rounded-lg min-h-[40px] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white/70"
                   aria-label="Toggle search"
                 >
                   🔍
@@ -93,7 +93,7 @@ export default function Header() {
                     id="site-search"
                     type="search"
                     placeholder="Search"
-                    className="rounded bg-slate-800 text-white placeholder-white/70 px-3 py-2 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="rounded bg-slate-800 text-white placeholder-white/70 px-3 py-2 border border-slate-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                     aria-label="Search site"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
@@ -131,7 +131,7 @@ export default function Header() {
                           <a
                             key={link.href}
                             href={link.href}
-                            className="px-3 py-2 rounded bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-none border border-transparent hover:border-white/40 transition-colors"
+                            className="px-3 py-2 rounded bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-hidden border border-transparent hover:border-white/40 transition-colors"
                           >
                             {link.label}
                           </a>
@@ -145,7 +145,7 @@ export default function Header() {
                           <a
                             key={link.href}
                             href={link.href}
-                            className="px-3 py-2 rounded bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-none border border-transparent hover:border-white/40 transition-colors"
+                            className="px-3 py-2 rounded bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-hidden border border-transparent hover:border-white/40 transition-colors"
                           >
                             {link.label}
                           </a>
@@ -167,7 +167,7 @@ export default function Header() {
             <input
               type="search"
               placeholder="Search books..."
-              className="flex-1 rounded bg-slate-700 text-white placeholder-white/70 px-3 py-2 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 rounded bg-slate-700 text-white placeholder-white/70 px-3 py-2 border border-slate-600 focus:outline-hidden focus:ring-2 focus:ring-blue-500"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={(e) => {
@@ -221,7 +221,7 @@ export default function Header() {
                       <a
                         key={link.href}
                         href={link.href}
-                        className="px-4 py-2 bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-none border border-transparent hover:border-white/40 transition-colors"
+                        className="px-4 py-2 bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-hidden border border-transparent hover:border-white/40 transition-colors"
                       >
                         {link.label}
                       </a>

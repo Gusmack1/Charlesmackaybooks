@@ -128,7 +128,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                   height={630}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 800px"
                   priority
-                  className="w-full aspect-[16/9] object-cover"
+                  className="w-full aspect-video object-cover"
                 />
               </div>
               {blog.featuredImage.caption && (
@@ -155,7 +155,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                           alt={book.title}
                           width={60}
                           height={84}
-                          className="rounded flex-shrink-0"
+                          className="rounded shrink-0"
                         />
                         <div className="flex-1">
                           <h4 className="font-semibold text-primary mb-2">{book.title}</h4>
@@ -189,7 +189,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                         alt={book.title}
                         width={64}
                         height={90}
-                        className="rounded flex-shrink-0"
+                        className="rounded shrink-0"
                       />
                       <div className="space-y-1">
                         <div className="font-semibold text-primary leading-tight">{book.title}</div>
@@ -206,7 +206,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
             <div className="card-compact bg-accent-blue text-white rounded-lg p-6 mb-8">
               <h3 className="text-xl font-semibold text-white mb-4">👨‍🎓 About the Author</h3>
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="w-16 h-16 bg-accent-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
                     {blog.author.name.split(' ').map(n => n[0]).join('')}
                   </div>
@@ -242,7 +242,7 @@ export default function BlogPostTemplate({ blog, relatedBooks, relatedPosts }: B
                           alt={post.title}
                           width={80}
                           height={60}
-                          className="rounded object-cover flex-shrink-0"
+                          className="rounded object-cover shrink-0"
                         />
                         <div className="flex-1">
                                                       <h4 className="font-semibold text-primary mb-2 line-clamp-2">{post.title}</h4>

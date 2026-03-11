@@ -506,7 +506,7 @@ function CheckoutContent() {
                 <div className="space-y-3 sm:space-y-4">
                   {items.map((item, index) => (
                     <div key={index} className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 border border-blue-700/50 rounded-lg bg-slate-800">
-                      <Link href={`/books/${item.book.id}`} className="hover:opacity-80 transition-opacity flex-shrink-0">
+                      <Link href={`/books/${item.book.id}`} className="hover:opacity-80 transition-opacity shrink-0">
                         <Image
                           src={item.book.imageUrl || `/book-covers/${item.book.id}.jpg`}
                           alt={item.book.title}
@@ -521,7 +521,7 @@ function CheckoutContent() {
                         </Link>
                         <p className="text-xs sm:text-sm text-white/90">£{item.book.price}</p>
                       </div>
-                      <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 flex-shrink-0">
+                      <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 shrink-0">
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => updateQuantity(item.book.id, Math.max(0, item.quantity - 1))}
@@ -941,7 +941,7 @@ function CheckoutContent() {
                     <Link href={`/books/${item.book.id}`} className="text-xs sm:text-sm hover:text-blue-300 transition-colors text-white flex-1 pr-2 line-clamp-2">
                       {item.book.title} (x{item.quantity})
                     </Link>
-                    <span className="text-xs sm:text-sm font-medium text-white flex-shrink-0">£{(item.book.price * item.quantity).toFixed(2)}</span>
+                    <span className="text-xs sm:text-sm font-medium text-white shrink-0">£{(item.book.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
               </div>
@@ -980,7 +980,7 @@ function CheckoutContent() {
               {/* Security Notice */}
               <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-slate-800 border border-blue-700/50 rounded-lg">
                 <div className="flex items-start">
-                  <svg className="h-4 w-4 sm:h-5 sm:w-5 text-blue-300 mt-0.5 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 text-blue-300 mt-0.5 mr-2 shrink-0" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                   </svg>
                   <div>

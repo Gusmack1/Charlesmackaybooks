@@ -330,7 +330,7 @@ export default function FAQPage() {
           </div>
 
           {/* About the Expert */}
-          <div className="mt-12 bg-gradient-to-r from-blue-900 to-blue-800 text-white rounded-xl p-8">
+          <div className="mt-12 bg-linear-to-r from-blue-900 to-blue-800 text-white rounded-xl p-8">
             <h2 className="text-3xl font-bold mb-6">About the Expert</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>

@@ -54,7 +54,7 @@ export default function BBCHeader() {
                   if (q) router.push(`/search?query=${encodeURIComponent(q)}`);
                 }
               }}
-              className="rounded bg-slate-900 text-white placeholder-white/70 px-3 py-2 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded bg-slate-900 text-white placeholder-white/70 px-3 py-2 border border-slate-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500"
               aria-label="Search site"
             />
             <button
@@ -105,14 +105,14 @@ export default function BBCHeader() {
         </div>
       </nav>
       {menuOpen && (
-        <div id="bbc-menu" role="navigation" aria-label="Expanded site menu" ref={menuRef} className="absolute left-0 right-0 top-full z-[60] border border-white/50 bg-slate-900 shadow-xl">
+        <div id="bbc-menu" role="navigation" aria-label="Expanded site menu" ref={menuRef} className="absolute left-0 right-0 top-full z-60 border border-white/50 bg-slate-900 shadow-xl">
           <div className="max-w-7xl mx-auto px-4 py-3">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
               {primaryNavLinks.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
-                  className="px-3 py-2 rounded text-white hover:bg-slate-800 focus:bg-slate-800 focus:outline-none"
+                  className="px-3 py-2 rounded text-white hover:bg-slate-800 focus:bg-slate-800 focus:outline-hidden"
                   onClick={() => setMenuOpen(false)}
                 >
                   {l.label}

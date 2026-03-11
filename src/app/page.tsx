@@ -60,7 +60,7 @@ export default function Home() {
   const filteredBooks = books;
 
   return (
-    <div className="surface-dark relative -mx-0 bg-slate-900">
+    <div className="surface-dark relative mx-0 bg-slate-900">
       <HeroSection />
 
       {/* Books Section */}

@@ -157,7 +157,7 @@ export default function GreatWarPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="#featured-books"
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="bg-linear-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 📚 Explore War Aviation Books
               </Link>
@@ -204,7 +204,7 @@ export default function GreatWarPage() {
                 height={400}
                 className="rounded-xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl pointer-events-none" aria-hidden />
+              <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent rounded-xl pointer-events-none" aria-hidden />
             </div>
           </div>
         </div>
@@ -359,7 +359,7 @@ export default function GreatWarPage() {
           <div className="text-center">
             <Link
               href="/books"
-              className="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-linear-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Browse Complete Book Collection
             </Link>
@@ -452,7 +452,7 @@ export default function GreatWarPage() {
       </section>
 
       {/* Next Era Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600 text-white">
+      <section className="py-20 bg-linear-to-r from-red-600 to-orange-600 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Continue Your Aviation Journey</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">

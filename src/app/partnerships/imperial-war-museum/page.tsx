@@ -397,7 +397,7 @@ export default function ImperialWarMuseumPartnershipPage() {
           </div>
 
           {/* Contact & Collaboration */}
-          <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-xl p-8">
+          <div className="bg-linear-to-r from-purple-600 to-purple-800 text-white rounded-xl p-8">
             <h2 className="text-3xl font-bold mb-6">Research Collaboration Opportunities</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>

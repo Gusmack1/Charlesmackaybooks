@@ -132,7 +132,7 @@ export default function AboutPage() {
                     alt="Charles E. MacKay with De Havilland Chipmunk WP808 at Turnhouse airfield, February 13, 1971"
                     width={120}
                     height={80}
-                    className="rounded shadow-lg flex-shrink-0"
+                    className="rounded shadow-lg shrink-0"
                   />
                   <div>
                     <p className="text-sm text-white mb-2">

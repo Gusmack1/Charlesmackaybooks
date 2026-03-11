@@ -517,7 +517,7 @@ export default function ScottishAviationTimelinePage() {
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                         {event.relatedBooks.map((bookId) => (
                           <Link key={bookId} href={`/books/${bookId}`} className="group block">
-                            <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden border border-white/15 bg-black/20">
+                            <div className="relative w-full aspect-3/4 rounded-lg overflow-hidden border border-white/15 bg-black/20">
                               <Image src={getBookCoverSrc(bookId)} alt={bookId} fill sizes="(max-width:768px) 50vw, 200px" className="object-cover group-hover:scale-[1.02] transition-transform" />
                             </div>
                             <div className="mt-2 underline">View Book →</div>

@@ -165,7 +165,7 @@ export default function GoldenAgePage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="#featured-books"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 📚 Explore Golden Age Books
               </Link>
@@ -212,7 +212,7 @@ export default function GoldenAgePage() {
                 height={400}
                 className="rounded-xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl pointer-events-none" aria-hidden />
+              <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent rounded-xl pointer-events-none" aria-hidden />
             </div>
           </div>
         </div>
@@ -371,7 +371,7 @@ export default function GoldenAgePage() {
           <div className="text-center">
             <Link
               href="/books"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Browse Complete Book Collection
             </Link>
@@ -462,7 +462,7 @@ export default function GoldenAgePage() {
       </section>
 
       {/* Next Era Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-linear-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Continue Your Aviation Journey</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">

@@ -102,7 +102,7 @@ export default function BooksPage() {
     .filter((bundle) => bundle.books.length === bundle.bookIds.length)
 
   return (
-    <div className="surface-dark relative -mx-0 bg-slate-900">
+    <div className="surface-dark relative mx-0 bg-slate-900">
       <UnifiedSchema
         pageType="books"
         pageTitle="Aviation History Books by Charles E. MacKay"

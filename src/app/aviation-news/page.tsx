@@ -114,7 +114,7 @@ export default async function AviationNewsPage() {
                     if (!book) return null
                     return (
                       <div key={book.id} className="border border-white/10 rounded-lg p-4 bg-slate-800/60 flex gap-4 items-start">
-                        <div className="shrink-0 w-28 min-w-[7rem] aspect-[2/3] rounded overflow-hidden bg-slate-700 self-start">
+                        <div className="shrink-0 w-28 min-w-28 aspect-2/3 rounded overflow-hidden bg-slate-700 self-start">
                           <Image
                             src={book.imageUrl || `/book-covers/${book.id}.jpg`}
                             alt={book.title}
