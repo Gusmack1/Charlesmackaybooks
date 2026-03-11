@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { mainNavLinks, moreNavLinks } from '@/config/navigation'
@@ -13,7 +12,6 @@ export default function Header() {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const desktopMenuRef = useRef<HTMLDivElement | null>(null);
-  const logoRef = useRef<HTMLAnchorElement | null>(null);
   const router = useRouter();
   const [search, setSearch] = useState('');
   const totalItems = getTotalItems();
@@ -39,18 +37,6 @@ export default function Header() {
     };
   }, [mobileMenuOpen, desktopMenuOpen]);
 
-  // Toggle logo pointer-events based on scroll (pass-through when header overlays content)
-  useEffect(() => {
-    const updateLogoPointerEvents = () => {
-      if (logoRef.current) {
-        logoRef.current.style.pointerEvents = window.scrollY > 100 ? 'none' : 'auto';
-      }
-    };
-    updateLogoPointerEvents(); // set initial state
-    window.addEventListener('scroll', updateLogoPointerEvents, { passive: true });
-    return () => window.removeEventListener('scroll', updateLogoPointerEvents);
-  }, []);
-
   return (
     <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]" role="banner">
       {/* Top Header Bar */}
@@ -59,11 +45,11 @@ export default function Header() {
         <div className="container max-w-7xl mx-auto px-4 py-2 md:py-4">
           <div className="flex justify-between items-center gap-4">
             {/* Logo and Author Info - Clickable */}
-            <Link ref={logoRef} href="/" className="hover:opacity-90 transition-opacity cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 rounded">
+            <a href="/" className="hover:opacity-90 transition-opacity cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 rounded">
               <h1 className="font-bold text-white tracking-tight text-base sm:text-lg md:text-xl leading-tight m-0">Charles E. MacKay</h1>
               <p className="text-white text-xs sm:text-sm md:text-base leading-tight m-0">Aviation Historian & Author</p>
               <p className="hidden md:block text-white/90 text-xs sm:text-sm md:text-base leading-tight m-0">Specializing in Scottish Aviation History • WWI & WWII Aircraft</p>
-            </Link>
+            </a>
 
             {/* Actions */}
             <div className="text-right">
@@ -142,15 +128,13 @@ export default function Header() {
                     <nav className="flex flex-col p-1" aria-label="More navigation">
                         {/* Main navigation links in mobile menu */}
                         {mainNavLinks.map(link => (
-                          <Link
+                          <a
                             key={link.href}
                             href={link.href}
-                            role="menuitem"
-                            onClick={() => setMobileMenuOpen(false)}
                             className="px-3 py-2 rounded bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-none border border-transparent hover:border-white/40 transition-colors"
                           >
                             {link.label}
-                          </Link>
+                          </a>
                         ))}
 
                         {/* Separator */}
@@ -158,15 +142,13 @@ export default function Header() {
 
                         {/* More navigation links */}
                         {moreNavLinks.map(link => (
-                          <Link
+                          <a
                             key={link.href}
                             href={link.href}
-                            role="menuitem"
-                            onClick={() => setMobileMenuOpen(false)}
                             className="px-3 py-2 rounded bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-none border border-transparent hover:border-white/40 transition-colors"
                           >
                             {link.label}
-                          </Link>
+                          </a>
                         ))}
                       </nav>
                     </div>
@@ -214,9 +196,9 @@ export default function Header() {
           <div className="flex flex-wrap items-center justify-start gap-1 md:gap-2 py-2 text-sm">
             {/* Main navigation links */}
             {mainNavLinks.map(link => (
-              <Link key={link.href} href={link.href} className="px-3 py-2 rounded bg-white text-slate-900 hover:bg-gray-100 hover:underline border border-slate-900 transition-colors">
+              <a key={link.href} href={link.href} className="px-3 py-2 rounded bg-white text-slate-900 hover:bg-gray-100 hover:underline border border-slate-900 transition-colors">
                 {link.label}
-              </Link>
+              </a>
             ))}
 
             {/* More dropdown */}
@@ -236,14 +218,13 @@ export default function Header() {
                 <div className="absolute left-0 mt-1 w-56 bg-slate-900 border border-white/50 rounded-lg shadow-xl overflow-hidden z-50">
                   <nav className="flex flex-col py-1" aria-label="More navigation">
                     {moreNavLinks.map(link => (
-                      <Link
+                      <a
                         key={link.href}
                         href={link.href}
-                        onClick={() => setDesktopMenuOpen(false)}
                         className="px-4 py-2 bg-slate-900 text-white hover:bg-slate-800 hover:underline focus:bg-slate-800 focus:outline-none border border-transparent hover:border-white/40 transition-colors"
                       >
                         {link.label}
-                      </Link>
+                      </a>
                     ))}
                   </nav>
                 </div>
