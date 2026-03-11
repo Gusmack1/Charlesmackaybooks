@@ -9,6 +9,7 @@ export const mainNavLinks: NavLinkItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Shop Books', href: '/books' },
   { label: 'How to Order', href: '/how-to-order' },
+  { label: 'Track Order', href: '/order-tracking' },
   { label: 'Blog', href: '/blog' },
   { label: 'About Charles', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -23,7 +24,6 @@ export const moreNavLinks: NavLinkItem[] = [
   { label: 'Support', href: '/support' },
   { label: 'Privacy', href: '/privacy' },
   { label: 'Terms', href: '/terms' },
-  { label: 'Track Order', href: '/order-tracking' },
 ];
 
 // Legacy primary nav links (kept for backward compatibility)
