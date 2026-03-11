@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
 import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
@@ -21,7 +20,7 @@ export default function RelatedBookCard({ book }: RelatedBookCardProps) {
 
   return (
     <div className="border rounded-lg p-4 hover:border-secondary/50 hover:shadow-md transition-all bg-slate-800/50 border-white/15">
-      <Link href={`/books/${book.id}`} className="block">
+      <a href={`/books/${book.id}`} className="block">
         <div className="aspect-[3/4] mb-3 bg-muted rounded overflow-hidden">
           <Image
             src={book.imageUrl || `/book-covers/${book.id}.jpg`}
@@ -37,7 +36,7 @@ export default function RelatedBookCard({ book }: RelatedBookCardProps) {
         <div className="font-semibold text-primary mb-1 line-clamp-2">{book.title}</div>
         <div className="text-secondary text-sm mb-2">{book.category}</div>
         <div className="text-lg font-bold text-primary">£{book.price}</div>
-      </Link>
+      </a>
       <button
         type="button"
         onClick={handleAddToBasket}

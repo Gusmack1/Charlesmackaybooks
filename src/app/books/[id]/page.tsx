@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import path from 'path';
@@ -590,9 +589,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               {/* Book Details */}
               <div className="space-y-6">
                 <div className="text-sm font-semibold text-white mb-4 flex items-center gap-3 justify-center flex-wrap">
-                  <Link href={`/category/${book.category.toLowerCase().replace(/\s+/g, '-')}`} className="badge badge-blue hover:bg-blue-600 transition-colors">
+                  <a href={`/category/${book.category.toLowerCase().replace(/\s+/g, '-')}`} className="badge badge-blue hover:bg-blue-600 transition-colors">
                     {book.category}
-                  </Link>
+                  </a>
                   {book.era && book.era[0] && (
                     <span className="badge badge-amber">{book.era[0]}</span>
                   )}
@@ -607,7 +606,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 </h1>
 
                 <p className="text-white/90 text-base sm:text-lg -mt-2">
-                  By <Link href="/about" className="underline font-semibold">Charles E. MacKay</Link>
+                  By <a href="/about" className="underline font-semibold">Charles E. MacKay</a>
                 </p>
 
                 <div className="book-value-proposition rounded-xl border border-white/15 bg-slate-800/75 p-4 sm:p-5 max-w-4xl mx-auto" style={{ pointerEvents: 'none' }}>
@@ -646,9 +645,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             )}
             <BookDetailClient book={book} />
             <div className="text-center mt-6">
-              <Link href="/books" className="text-blue-300 hover:text-white underline">
+              <a href="/books" className="text-blue-300 hover:text-white underline">
                 ← Browse All Books
-              </Link>
+              </a>
             </div>
             <div className="text-center">
               <ShareButton
@@ -771,30 +770,30 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                     >
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                         <div className="flex-1 min-w-0">
-                          <Link
+                          <a
                             href={`/aviation-news/${article.slug}`}
                             className="font-semibold text-primary hover:text-blue-300 block mb-1"
                           >
                             {article.title}
-                          </Link>
+                          </a>
                           {dateStr && (
                             <p className="text-xs text-white/50 mb-2">{dateStr}</p>
                           )}
                           <p className="text-secondary text-sm line-clamp-2">{excerpt}</p>
                         </div>
                         <div className="flex flex-wrap gap-2 shrink-0">
-                          <Link
+                          <a
                             href={`/aviation-news/${article.slug}`}
                             className="px-4 py-2 rounded-lg border border-white/20 bg-white/5 text-white hover:bg-white/10 text-sm font-medium"
                           >
                             Read briefing
-                          </Link>
-                          <Link
+                          </a>
+                          <a
                             href={`/books/${id}#purchase`}
                             className="px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold hover:bg-gray-100 text-sm"
                           >
                             Buy this book £{book.price.toFixed(2)}
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -822,10 +821,10 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               <h3 className="content h3">Related Articles</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {(book as any).relatedBlogPosts.slice(0, 6).map((p: any) => (
-                  <Link key={p.slug} href={`/blog/${p.slug}`} className="block border rounded-lg p-4 hover:border-secondary/50">
+                  <a key={p.slug} href={`/blog/${p.slug}`} className="block border rounded-lg p-4 hover:border-secondary/50">
                     <div className="font-semibold text-primary mb-1 line-clamp-2">{p.title}</div>
                     <div className="text-secondary text-sm line-clamp-3">{p.excerpt}</div>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
@@ -837,10 +836,10 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 const slug = inferRelatedBlogSlug(book);
                 if (slug) {
                   return (
-                    <Link href={`/blog/${slug}`} className="badge badge-blue inline-block">Read the related article →</Link>
+                    <a href={`/blog/${slug}`} className="badge badge-blue inline-block">Read the related article →</a>
                   );
                 }
-                return <Link href="/blog" className="badge badge-blue inline-block">Browse the Blog →</Link>;
+                return <a href="/blog" className="badge badge-blue inline-block">Browse the Blog →</a>;
               })()}
             </div>
           )}

@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
 
@@ -20,10 +19,10 @@ export default function BookQuickAddCard({ book }: BookQuickAddCardProps) {
 
   return (
     <div className="rounded-lg border border-white/15 bg-slate-900/50 px-3 py-2 hover:border-blue-300/70 transition-colors flex flex-col">
-      <Link href={`/books/${book.id}`} className="flex-1 min-w-0">
+      <a href={`/books/${book.id}`} className="flex-1 min-w-0">
         <div className="text-xs text-white/80 line-clamp-2">{book.title}</div>
         <div className="text-sm font-semibold text-white mt-1">£{book.price.toFixed(2)}</div>
-      </Link>
+      </a>
       <button
         type="button"
         onClick={handleAddToBasket}
