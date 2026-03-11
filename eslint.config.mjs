@@ -1,16 +1,9 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...nextCoreWebVitals,
+  ...nextTypescript,
   {
     languageOptions: {
       parserOptions: {
@@ -31,10 +24,11 @@ const eslintConfig = [
       "prefer-rest-params": "off",
       "prefer-const": "off",
       "react-hooks/exhaustive-deps": "off",
+      "react-hooks/set-state-in-effect": "off",
+      "react-hooks/purity": "off",
       "@next/next/no-html-link-for-pages": "off",
       "@next/next/next-script-for-ga": "off",
       "@next/next/no-page-custom-font": "off",
-      // Block reintroduction of top share bars
       "no-restricted-syntax": [
         "error",
         {
