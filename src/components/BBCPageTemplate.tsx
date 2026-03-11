@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import React from 'react';
 
 interface BreadcrumbItem {
@@ -28,9 +27,9 @@ export default function BBCPageTemplate({ title, subtitle, breadcrumbs = [], cen
                 {breadcrumbs.map((bc, idx) => (
                   <li key={`${bc.label}-${idx}`} className="flex items-center gap-2">
                     {bc.href ? (
-                      <Link href={bc.href} className="hover:underline text-white/90">
+                      <a href={bc.href} className="hover:underline text-white/90">
                         {bc.label}
-                      </Link>
+                      </a>
                     ) : (
                       <span className="text-white/90">{bc.label}</span>
                     )}

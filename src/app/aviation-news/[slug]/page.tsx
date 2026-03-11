@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import UnifiedSchema from '@/components/UnifiedSchema'
@@ -240,7 +239,7 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
               {relatedBooks.map((book) => {
                 const reason = displayReason(book.reason)
                 return (
-                  <Link
+                  <a
                     key={book.id}
                     href={`/books/${book.id}`}
                     className="border border-white/15 rounded-lg p-4 bg-slate-800/60 hover:border-white/35 transition-colors flex gap-4 items-start"
@@ -260,7 +259,7 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
                       <div className="text-sm text-white/80 mb-2">£{book.price.toFixed(2)}</div>
                       {reason ? <p className="text-sm text-white/75">{reason}</p> : null}
                     </div>
-                  </Link>
+                  </a>
                 )
               })}
             </div>

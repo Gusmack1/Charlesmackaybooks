@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import { books } from '@/data/books'
@@ -98,13 +97,13 @@ export default async function AviationNewsPage() {
                 <p className="text-white/80 mb-6 leading-relaxed line-clamp-3">
                   {hero.sections?.[0]?.content?.split('\n')[0] || hero.sections?.[0]?.content || 'Operational snapshot.'}
                 </p>
-                <Link
+                <a
                   href={`/aviation-news/${hero.slug}`}
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Read full briefing
                   <span aria-hidden>→</span>
-                </Link>
+                </a>
               </div>
               <div className="bg-slate-900/60 border border-white/10 rounded-xl p-5 md:p-6 space-y-4">
                 <h2 className="text-lg font-semibold text-white">Related book</h2>
@@ -128,15 +127,15 @@ export default async function AviationNewsPage() {
                           <p className="text-sm uppercase text-white/50 mb-1">{displayReason(reason)}</p>
                           <h3 className="text-lg font-semibold text-white mb-2">{book.title}</h3>
                           <p className="text-white/80 text-sm line-clamp-3">{book.description}</p>
-                          <Link href={`/books/${book.id}`} className="text-blue-300 text-sm font-semibold mt-3 inline-flex gap-1">
+                          <a href={`/books/${book.id}`} className="text-blue-300 text-sm font-semibold mt-3 inline-flex gap-1">
                             View book <span aria-hidden>↗</span>
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     )
                   })
                 ) : (
-                  <p className="text-white/70 text-sm">Explore our <Link href="/books" className="text-blue-300 hover:underline">aviation history books</Link> for related reading.</p>
+                  <p className="text-white/70 text-sm">Explore our <a href="/books" className="text-blue-300 hover:underline">aviation history books</a> for related reading.</p>
                 )}
               </div>
             </article>
@@ -154,7 +153,7 @@ export default async function AviationNewsPage() {
               <h2 className="text-xl font-semibold text-white mb-4">More briefings</h2>
               <div className="grid gap-4 md:grid-cols-2">
                 {secondary.map((article) => (
-                  <Link
+                  <a
                     key={article.slug}
                     href={`/aviation-news/${article.slug}`}
                     className="block border border-white/10 rounded-xl p-5 bg-slate-800/60 hover:border-white/30 transition-colors"
@@ -164,7 +163,7 @@ export default async function AviationNewsPage() {
                     <p className="text-sm text-white/80 line-clamp-2">
                       {getExcerpt(article.sections?.[0]?.content, 120) || 'Scottish aviation briefing.'}
                     </p>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </section>
@@ -175,14 +174,14 @@ export default async function AviationNewsPage() {
               <h2 className="text-xl font-semibold text-white mb-4">Archive</h2>
               <div className="space-y-2">
                 {remainder.map((article) => (
-                  <Link
+                  <a
                     key={article.slug}
                     href={`/aviation-news/${article.slug}`}
                     className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-4 border-b border-white/10 last:border-0 hover:text-white/90"
                   >
                     <span className="font-medium text-white">{article.title}</span>
                     <span className="text-sm text-white/60">{formatDate(article.createdAt)}</span>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </section>
@@ -194,12 +193,12 @@ export default async function AviationNewsPage() {
               Browse our aviation history books, research guides, and Scottish aviation timeline.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/books" className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-gray-100 transition-colors">
+              <a href="/books" className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-gray-100 transition-colors">
                 All books
-              </Link>
-              <Link href="/scottish-aviation-timeline" className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors">
+              </a>
+              <a href="/scottish-aviation-timeline" className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors">
                 Scottish aviation timeline
-              </Link>
+              </a>
             </div>
           </section>
         </div>
