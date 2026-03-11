@@ -2893,7 +2893,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-02-27T21:51:40.406Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-11-glasgow-prestwick-airport-showcases-cool-chain-inv",
+    "articlePath": "data/news-articles/2026/03/2026-03-11-glasgow-prestwick-airport-showcases-cool-chain-inv.json",
+    "draftedAt": "2026-03-11T21:58:35.388Z"
   },
   {
     "id": "d73a4c04-b4a9-4c34-9786-e7022729a049",
@@ -2935,7 +2938,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-02-27T21:51:40.406Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-11-scotland-spain-portugal-italy-travel-boost-as-ryan",
+    "articlePath": "data/news-articles/2026/03/2026-03-11-scotland-spain-portugal-italy-travel-boost-as-ryan.json",
+    "draftedAt": "2026-03-11T21:58:35.388Z"
   },
   {
     "id": "00936b91-0913-401f-b359-50ce8a7d9b8e",
@@ -2949,7 +2955,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-02-27T21:51:40.406Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-11-glasgow-prestwick-airport-celebrates-e-commerce-mi",
+    "articlePath": "data/news-articles/2026/03/2026-03-11-glasgow-prestwick-airport-celebrates-e-commerce-mi.json",
+    "draftedAt": "2026-03-11T21:58:35.388Z"
   },
   {
     "id": "d0167187-3efb-49a5-aa94-355e046db762",
@@ -2963,7 +2972,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-02-27T21:51:40.406Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-11-ryanair-unveils-major-summer-2026-expansion-at-gla",
+    "articlePath": "data/news-articles/2026/03/2026-03-11-ryanair-unveils-major-summer-2026-expansion-at-gla.json",
+    "draftedAt": "2026-03-11T21:58:35.388Z"
   },
   {
     "id": "156a7bbf-3359-4dc9-a64a-c4666633199b",
@@ -2977,7 +2989,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-02-27T21:51:40.406Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-11-cargo-boom-at-prestwick-airport-showing-no-signs-o",
+    "articlePath": "data/news-articles/2026/03/2026-03-11-cargo-boom-at-prestwick-airport-showing-no-signs-o.json",
+    "draftedAt": "2026-03-11T21:58:35.388Z"
   },
   {
     "id": "4e30bb9f-0122-4530-ae93-b1a15b52e685",
@@ -9411,6 +9426,78 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-11T21:47:10.368Z",
+    "status": "new"
+  },
+  {
+    "id": "baa62384-1591-4f6a-a48a-d8df1ed9cc2e",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c5y5r2qd81eo#0",
+    "title": "Missing Brazilian academic may have taken boat, UK police say",
+    "sourceUrl": "https://www.bbc.com/news/articles/c5y5r2qd81eo?at_medium=RSS&at_campaign=rss",
+    "summary": "Police believe the last sighting of Vitoria Figueiredo Barreto was on CCTV just after midnight on 3 March in Brightlingsea.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T21:29:26.000Z",
+    "fetchedAt": "2026-03-11T21:58:32.798Z",
+    "status": "new"
+  },
+  {
+    "id": "dcfbfb2f-e7ea-4085-aebe-1f71f31c4f53",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/czj18j09wvro#0",
+    "title": "'Misleading weather apps cost attractions thousands'",
+    "sourceUrl": "https://www.bbc.com/news/articles/czj18j09wvro?at_medium=RSS&at_campaign=rss",
+    "summary": "Chester Zoo is leading a call for a change in the way \"rain icons\" are used in weather forecasts.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T14:49:28.000Z",
+    "fetchedAt": "2026-03-11T21:58:32.798Z",
+    "status": "new"
+  },
+  {
+    "id": "adc29dce-071d-47d5-b388-3e58e817f84a",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cj0d378vq14o#1",
+    "title": "Army officers deny charges linked to soldier's death",
+    "sourceUrl": "https://www.bbc.com/news/articles/cj0d378vq14o?at_medium=RSS&at_campaign=rss",
+    "summary": "The two high-ranking officers failed to act when Gunner Jaysley Beck, 19, reported a sexual assault.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T15:18:42.000Z",
+    "fetchedAt": "2026-03-11T21:58:32.798Z",
+    "status": "new"
+  },
+  {
+    "id": "4be23a83-e72e-4a6b-9cb3-064319b15d3d",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/crl47zd7y8eo#1",
+    "title": "Quentin Tarantino to stage 'swashbuckling comedy' play in London",
+    "sourceUrl": "https://www.bbc.com/news/articles/crl47zd7y8eo?at_medium=RSS&at_campaign=rss",
+    "summary": "The film-maker will write and direct The Popinjay Cavalier, \"a rambunctious comedy\" set in 1830s Europe.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:23:44.000Z",
+    "fetchedAt": "2026-03-11T21:58:32.798Z",
+    "status": "new"
+  },
+  {
+    "id": "afec5092-0303-4feb-8c16-ab65cedfb6e1",
+    "sourceId": "scotsman-news",
+    "guid": "5629237",
+    "title": "Further collapse at fire-ravaged building",
+    "sourceUrl": "https://www.scotsman.com/news/further-collapse-at-fire-ravaged-building-5629237",
+    "summary": "<p>What remains of the Union Corner building is now  “seriously compromised”</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T21:50:53.000Z",
+    "fetchedAt": "2026-03-11T21:58:33.028Z",
     "status": "new"
   }
 ]

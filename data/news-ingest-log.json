@@ -8411,5 +8411,72 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-11T21:47:10.368Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c5y5r2qd81eo#0",
+    "title": "Missing Brazilian academic may have taken boat, UK police say",
+    "sourceUrl": "https://www.bbc.com/news/articles/c5y5r2qd81eo?at_medium=RSS&at_campaign=rss",
+    "summary": "Police believe the last sighting of Vitoria Figueiredo Barreto was on CCTV just after midnight on 3 March in Brightlingsea.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T21:29:26.000Z",
+    "fetchedAt": "2026-03-11T21:58:32.798Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/czj18j09wvro#0",
+    "title": "'Misleading weather apps cost attractions thousands'",
+    "sourceUrl": "https://www.bbc.com/news/articles/czj18j09wvro?at_medium=RSS&at_campaign=rss",
+    "summary": "Chester Zoo is leading a call for a change in the way \"rain icons\" are used in weather forecasts.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T14:49:28.000Z",
+    "fetchedAt": "2026-03-11T21:58:32.798Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cj0d378vq14o#1",
+    "title": "Army officers deny charges linked to soldier's death",
+    "sourceUrl": "https://www.bbc.com/news/articles/cj0d378vq14o?at_medium=RSS&at_campaign=rss",
+    "summary": "The two high-ranking officers failed to act when Gunner Jaysley Beck, 19, reported a sexual assault.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T15:18:42.000Z",
+    "fetchedAt": "2026-03-11T21:58:32.798Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/crl47zd7y8eo#1",
+    "title": "Quentin Tarantino to stage 'swashbuckling comedy' play in London",
+    "sourceUrl": "https://www.bbc.com/news/articles/crl47zd7y8eo?at_medium=RSS&at_campaign=rss",
+    "summary": "The film-maker will write and direct The Popinjay Cavalier, \"a rambunctious comedy\" set in 1830s Europe.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:23:44.000Z",
+    "fetchedAt": "2026-03-11T21:58:32.798Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5629237",
+    "title": "Further collapse at fire-ravaged building",
+    "sourceUrl": "https://www.scotsman.com/news/further-collapse-at-fire-ravaged-building-5629237",
+    "summary": "<p>What remains of the Union Corner building is now  “seriously compromised”</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T21:50:53.000Z",
+    "fetchedAt": "2026-03-11T21:58:33.028Z"
   }
 ]
