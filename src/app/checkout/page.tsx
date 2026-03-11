@@ -26,6 +26,7 @@ import TrustSecurityBadges from '../../components/TrustSecurityBadges';
 import { trackCartAbandonment } from '../../utils/abandonedCartRecovery';
 import { useSearchParams } from 'next/navigation';
 import { useRecentlyViewed } from '../../context/RecentlyViewedContext';
+import { getCrossSellSuggestions } from '../../utils/crossSell';
 
 interface CustomerInfoPayload {
   firstName: string;
@@ -58,6 +59,7 @@ interface CreateOrderRequest {
 
 function CheckoutContent() {
   const searchParams = useSearchParams();
+  const hasPreferredPaymentMethod = searchParams.has('method');
   const preferredPaymentMethod = searchParams.get('method') === 'paypal' ? 'paypal' : 'stripe';
   const { items, addToCart, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
   const { recentlyViewed } = useRecentlyViewed();
@@ -100,6 +102,13 @@ function CheckoutContent() {
       });
     }
   }, []);
+
+  useEffect(() => {
+    setPaymentMethod(preferredPaymentMethod);
+    if (items.length > 0 && hasPreferredPaymentMethod) {
+      setStep('delivery-payment');
+    }
+  }, [preferredPaymentMethod, hasPreferredPaymentMethod, items.length]);
 
   const buildCustomerInfoPayload = (): CustomerInfoPayload => ({
     firstName: customerDetails.firstName,
@@ -162,10 +171,12 @@ function CheckoutContent() {
   const bulkDiscount = getBulkDiscount();
   const total = getFinalTotal(); // This includes bulk discounts and shipping
   const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
-  const cartBookIds = new Set(items.map((item) => item.book.id));
-  const checkoutAddOnSuggestions = recentlyViewed
-    .filter((book) => book.inStock && !cartBookIds.has(book.id))
-    .slice(0, 3);
+  const cartBooks = items.map((item) => item.book);
+  const checkoutAddOnSuggestions = getCrossSellSuggestions({
+    cartBooks,
+    recentlyViewed,
+    limit: 3,
+  });
 
   useEffect(() => {
     if (!items.length || checkoutCompleted) return;
@@ -289,10 +300,10 @@ function CheckoutContent() {
   }, [customerDetails.email, items, stripeReference, total]);
 
   useEffect(() => {
-    if (step === 'delivery-payment' && paymentMethod === 'stripe' && !clientSecret) {
+    if (step === 'delivery-payment' && paymentMethod === 'stripe' && !clientSecret && customerDetails.email) {
       createStripePaymentIntent();
     }
-  }, [step, paymentMethod, clientSecret, createStripePaymentIntent]);
+  }, [step, paymentMethod, clientSecret, customerDetails.email, createStripePaymentIntent]);
 
   const handleStripeSuccess = async (paymentIntent: any) => {
     try {

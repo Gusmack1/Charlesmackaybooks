@@ -4,6 +4,7 @@ import { useCart } from '@/context/CartContext'
 import { useRecentlyViewed } from '@/context/RecentlyViewedContext'
 import { X, ShoppingBag } from 'lucide-react'
 import Image from 'next/image'
+import { getCrossSellSuggestions } from '@/utils/crossSell'
 
 export default function CartSidebar() {
   const {
@@ -30,10 +31,12 @@ export default function CartSidebar() {
   const finalTotal = getFinalTotal()
   const totalItems = getTotalItems()
   const activeDiscountPercent = getBulkDiscountPercentage()
-  const cartBookIds = new Set(items.map((item) => item.book.id))
-  const addOnSuggestions = recentlyViewed
-    .filter((book) => book.inStock && !cartBookIds.has(book.id))
-    .slice(0, 3)
+  const cartBooks = items.map((item) => item.book)
+  const addOnSuggestions = getCrossSellSuggestions({
+    cartBooks,
+    recentlyViewed,
+    limit: 3,
+  })
   const discountNudgeText =
     totalItems < 2
       ? 'Add 1 more book to unlock 5% off your entire order.'
@@ -182,6 +185,22 @@ export default function CartSidebar() {
               >
                 Checkout with PayPal
               </a>
+
+              <div className="mt-2 rounded border border-white/10 bg-slate-800/70 px-3 py-2 text-[11px] text-white/80">
+                <p className="font-semibold text-white">Trusted checkout</p>
+                <p className="mt-1">
+                  30-day returns, secure card and PayPal, plus{' '}
+                  <a
+                    href="https://www.ebay.co.uk/usr/chaza87"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-300 hover:underline"
+                  >
+                    100% positive eBay feedback
+                  </a>
+                  .
+                </p>
+              </div>
 
               <div className="mt-2 rounded border border-blue-700/40 bg-slate-800/80 px-2.5 py-2 text-[11px] text-blue-100">
                 {discountNudgeText}

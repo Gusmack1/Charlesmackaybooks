@@ -169,6 +169,19 @@ const faqItems: FAQItem[] = [
 
 const categories = [...new Set(faqItems.map(item => item.category))];
 
+const recommendedReadingLinks: Record<string, string> = {
+  'Beardmore Aviation': '/books/beardmore-aviation',
+  'Clydeside Aviation Vol 1': '/books/clydeside-aviation-vol1',
+  'Clydeside Aviation Vol 2': '/books/clydeside-aviation-vol2',
+  'The Sycamore Seeds': '/books/sycamore-seeds',
+  'British Aircraft of the Great War': '/books/british-aircraft-great-war',
+  'German Aircraft of the Great War': '/books/german-aircraft-great-war',
+  'All Charles E. MacKay Publications': '/books',
+  'Research methodology covered in all publications': '/books',
+  'Methodology discussed in all academic publications': '/books',
+  'Complete Charles E. MacKay Catalog': '/books',
+};
+
 export default function FAQPage() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -257,8 +270,16 @@ export default function FAQPage() {
                         {faq.relatedBooks && (
                           <div className="mt-4 bg-blue-900/50 border border-blue-700/50 text-white p-4 rounded-lg">
                             <h5 className="font-semibold text-white mb-2">Recommended Reading:</h5>
-                            <div className="text-sm text-white/90">
-                              {faq.relatedBooks.join(', ')}
+                            <div className="flex flex-wrap gap-2">
+                              {faq.relatedBooks.map((bookTitle) => (
+                                <a
+                                  key={bookTitle}
+                                  href={recommendedReadingLinks[bookTitle] || '/books'}
+                                  className="inline-flex items-center rounded-full border border-blue-400/40 bg-slate-900/60 px-3 py-1 text-sm text-white hover:bg-slate-800"
+                                >
+                                  {bookTitle}
+                                </a>
+                              ))}
                             </div>
                           </div>
                         )}

@@ -13,17 +13,20 @@ interface BookCardProps {
 }
 
 export default function BookCard({ book, sourceContext }: BookCardProps) {
-  const { addToCart } = useCart();
+  const { addToCart, openBasket } = useCart();
   const router = useRouter();
   const [isAdding, setIsAdding] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
+  const [justAdded, setJustAdded] = useState(false);
 
   const handleAddToBasket = () => {
     if (isAdding) return;
     setIsAdding(true);
     addToCart(book);
+    setJustAdded(true);
     // On listing grids, avoid auto-opening the basket (it interrupts browsing).
     setTimeout(() => setIsAdding(false), 650);
+    setTimeout(() => setJustAdded(false), 3000);
   };
 
   const handleBuyNow = () => {
@@ -116,6 +119,27 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
           >
             {isAdding ? 'Adding...' : 'Add to basket'}
           </button>
+
+          {justAdded && (
+            <div className="rounded-lg border border-green-400/30 bg-green-500/10 px-3 py-2">
+              <p className="text-xs font-semibold text-green-200">Added to basket.</p>
+              <div className="mt-1 flex items-center justify-between gap-3 text-xs">
+                <button
+                  type="button"
+                  onClick={openBasket}
+                  className="text-white underline underline-offset-2 hover:text-green-200"
+                >
+                  View basket
+                </button>
+                <a
+                  href="/checkout?method=stripe"
+                  className="text-white underline underline-offset-2 hover:text-green-200"
+                >
+                  Checkout now
+                </a>
+              </div>
+            </div>
+          )}
 
           <p className="text-[11px] text-white/60 text-center">
             Guest checkout · Free worldwide shipping · 30-day returns

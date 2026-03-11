@@ -127,9 +127,17 @@ export default async function AviationNewsPage() {
                           <p className="text-sm uppercase text-white/50 mb-1">{displayReason(reason)}</p>
                           <h3 className="text-lg font-semibold text-white mb-2">{book.title}</h3>
                           <p className="text-white/80 text-sm line-clamp-3">{book.description}</p>
-                          <a href={`/books/${book.id}`} className="text-blue-300 text-sm font-semibold mt-3 inline-flex gap-1">
-                            View book <span aria-hidden>↗</span>
-                          </a>
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            <a href={`/books/${book.id}`} className="text-blue-300 text-sm font-semibold inline-flex gap-1">
+                              View book <span aria-hidden>↗</span>
+                            </a>
+                            <a
+                              href={`/books/${book.id}#purchase`}
+                              className="inline-flex items-center rounded-md bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-gray-100"
+                            >
+                              Buy this book
+                            </a>
+                          </div>
                         </div>
                       </div>
                     )
