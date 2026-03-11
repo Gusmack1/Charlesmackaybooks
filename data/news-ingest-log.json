@@ -6733,5 +6733,1488 @@
     "imagePolicy": "attribution-only",
     "publishedAt": "2026-03-09T12:04:21.000Z",
     "fetchedAt": "2026-03-10T18:29:21.124Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cm28gvm12pzo#0",
+    "title": "Police chief criticises Celtic and Rangers after Old Firm disorder",
+    "sourceUrl": "https://www.bbc.com/news/articles/cm28gvm12pzo?at_medium=RSS&at_campaign=rss",
+    "summary": "Chief Constable Jo Farrell said that no-one from either club had come out to condemn the disorder at Sunday's match at Ibrox.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:21:59.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cgk24znge8zo#0",
+    "title": "School strikes in six areas may be avoided after deal reached",
+    "sourceUrl": "https://www.bbc.com/news/articles/cgk24znge8zo?at_medium=RSS&at_campaign=rss",
+    "summary": "Strike action could have impacted schools in Glasgow, East Renfrewshire, Dundee, Fife, Perth and Kinross and Moray.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:37:32.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c4gex41ww0lo#0",
+    "title": "Some Glasgow Central trains resume - but station remains closed after fire",
+    "sourceUrl": "https://www.bbc.com/news/articles/c4gex41ww0lo?at_medium=RSS&at_campaign=rss",
+    "summary": "The station's low level platforms, which serve the Argyle line north of the River Clyde, have been reopened after a full site assessment",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T16:38:49.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/crl472ggkd4o#0",
+    "title": "Council convener resigns after ban over unpaid tax",
+    "sourceUrl": "https://www.bbc.com/news/articles/crl472ggkd4o?at_medium=RSS&at_campaign=rss",
+    "summary": "It comes a day after Andrea Manson vowed to \"fight on\" as the civic head of Shetland Islands Council.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:42:42.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c3v70d1z2k6o#0",
+    "title": "Teenager injured in TRNSMT crowd crush wins four-figure payout",
+    "sourceUrl": "https://www.bbc.com/news/articles/c3v70d1z2k6o?at_medium=RSS&at_campaign=rss",
+    "summary": "Jessica Gatherer suffered a knee injury ahead of Becky Hill's headline set at TRNSMT in 2023.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T12:34:13.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cvg3w4xe24wo#0",
+    "title": "Missing police drug detection dog found after search",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg3w4xe24wo?at_medium=RSS&at_campaign=rss",
+    "summary": "Kilo was being exercised near Cairnie, Huntly, when he ran off after becoming unwell.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T16:11:29.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cpqw85zzn7xo#1",
+    "title": "Hotel stab threat 'not serious enough' for police report, inquiry hears",
+    "sourceUrl": "https://www.bbc.com/news/articles/cpqw85zzn7xo?at_medium=RSS&at_campaign=rss",
+    "summary": "Fellow hotel residents said Badreddin Abdalla Adam Bosh \"had not slept in months\" before the incident in June 2020.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:05:23.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/czx4e6zzlkdo#1",
+    "title": "Glen Sannox ferry needs £3.2m repairs after one year in service",
+    "sourceUrl": "https://www.bbc.com/news/articles/czx4e6zzlkdo?at_medium=RSS&at_campaign=rss",
+    "summary": "MSPs have been told the troubled CalMac vessel needs new propellors as part of multi-million pound repairs.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:58:12.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cx2lwkyl7pno#1",
+    "title": "Heating oil protection calls after 'shock' price rises",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx2lwkyl7pno?at_medium=RSS&at_campaign=rss",
+    "summary": "About 130,000 households in Scotland rely on the fuel to warm their homes.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T12:55:36.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c14m1gxnmgvo#1",
+    "title": "Teenager dies in custody at Polmont Young Offenders Institution",
+    "sourceUrl": "https://www.bbc.com/news/articles/c14m1gxnmgvo?at_medium=RSS&at_campaign=rss",
+    "summary": "The young offenders institution was heavily criticised last year following the deaths of Katie Allan and William Brown in 2018.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T14:32:09.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/cy7j4npegg6o#1",
+    "title": "'Hiding in plain sight' - but why have Aberdeen moved for Robinson now?",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/cy7j4npegg6o?at_medium=RSS&at_campaign=rss",
+    "summary": "All the signs were Aberdeen would wait until the summer to appoint a new manager - so why have they moved for Stephen Robinson now?",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T16:08:07.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.969Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cy0d7wpq07wo#1",
+    "title": "Police probe unexplained death of man after Glasgow flat fire",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy0d7wpq07wo?at_medium=RSS&at_campaign=rss",
+    "summary": "The Scottish Fire and Rescue Service (SFRS) was called to Carnoustie Street in the Tradeston area on Tuesday evening.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T14:36:23.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cx2rdxnzvlwo#1",
+    "title": "Man charged over fatal shooting in Motherwell",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx2rdxnzvlwo?at_medium=RSS&at_campaign=rss",
+    "summary": "Police Scotland said Gray, 26, was found dead at his home shortly after 22:30 on 14 December last year.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T15:22:40.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/weather/articles/cly877pe9l8o#1",
+    "title": "Weather warnings issued as gales set to batter parts of the UK",
+    "sourceUrl": "https://www.bbc.com/weather/articles/cly877pe9l8o?at_medium=RSS&at_campaign=rss",
+    "summary": "Strong winds are likely across many parts of the UK on Thursday before turning colder with some wintry showers at the end of the week, as Simon King explains.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T12:04:37.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c86y2xwn1pjo#1",
+    "title": "Special relationships shape the 2026 Edinburgh International Festival",
+    "sourceUrl": "https://www.bbc.com/news/articles/c86y2xwn1pjo?at_medium=RSS&at_campaign=rss",
+    "summary": "Nicola Benedetti's fourth festival marks the 250th anniversary of US independence with a diverse programme of theatre and music.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T12:05:07.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/czj188k3g3lo#1",
+    "title": "'I've been the voice of Edinburgh's hospital radio for six decades - and I'm not stopping yet'",
+    "sourceUrl": "https://www.bbc.com/news/articles/czj188k3g3lo?at_medium=RSS&at_campaign=rss",
+    "summary": "Malcolm Kirby was studying electrical engineering at Heriot-Watt University in the late 60s when he first got involved with hospital radio.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:23:59.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c6261p3dmglo#1",
+    "title": "How letters of support linked the women of Airdrie and Leningrad",
+    "sourceUrl": "https://www.bbc.com/news/articles/c6261p3dmglo?at_medium=RSS&at_campaign=rss",
+    "summary": "In autumn 1941 volunteers from the Airdrie branch of the Russia Today Society decided to send messages of support to women in Leningrad.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:23:50.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cy0d4e2wgrlo#2",
+    "title": "A scam impersonating dead people may cost us our home",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy0d4e2wgrlo?at_medium=RSS&at_campaign=rss",
+    "summary": "A BBC investigation has found multiple cases of John Sexton or his associates impersonating dead people to obtain titles.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:23:32.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cge8vln5pp5o#2",
+    "title": "From New Zealand to Orkney: Why we brought this classic car half way round the world",
+    "sourceUrl": "https://www.bbc.com/news/articles/cge8vln5pp5o?at_medium=RSS&at_campaign=rss",
+    "summary": "Dutchman Hans Compter travelled around the world to deliver the Austin to Cathleen Hourie in Orkney.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:23:42.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.co.uk/sounds/play/m002scvs#2",
+    "title": "Scotcast: Glasgow fire: who owns our historic buildings?",
+    "sourceUrl": "https://www.bbc.co.uk/sounds/play/m002scvs?at_medium=RSS&at_campaign=rss",
+    "summary": "Who is responsible for preserving our heritage – and are they doing enough?",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T17:00:00.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c8jg9kgz209o#2",
+    "title": "How could the assisted dying law work in Scotland?",
+    "sourceUrl": "https://www.bbc.com/news/articles/c8jg9kgz209o?at_medium=RSS&at_campaign=rss",
+    "summary": "The Scottish Parliament will soon decide whether to allow terminally-ill adults to end their lives.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T11:28:45.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c24dym3djv5o#2",
+    "title": "Glasgow fire: What we know so far",
+    "sourceUrl": "https://www.bbc.com/news/articles/c24dym3djv5o?at_medium=RSS&at_campaign=rss",
+    "summary": "A building next to Glasgow Central Station has partially collapsed after a huge blaze broke out on Sunday.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T12:04:26.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cre0499e0j8o#3",
+    "title": "Man dies after crash with parked car in East Lothian",
+    "sourceUrl": "https://www.bbc.com/news/articles/cre0499e0j8o?at_medium=RSS&at_campaign=rss",
+    "summary": "The 55-year-old driver was taken to the Royal Infirmary of Edinburgh where he later died.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T10:16:17.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cx2lwkyl7pno#3",
+    "title": "Heating oil protection calls after 'shock' price rises",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx2lwkyl7pno?at_medium=RSS&at_campaign=rss",
+    "summary": "About 130,000 households in Scotland rely on the fuel to warm their homes.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T12:55:36.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/crl472ggkd4o#3",
+    "title": "Council convener resigns after ban over unpaid tax",
+    "sourceUrl": "https://www.bbc.com/news/articles/crl472ggkd4o?at_medium=RSS&at_campaign=rss",
+    "summary": "It comes a day after Andrea Manson vowed to \"fight on\" as the civic head of Shetland Islands Council.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:42:42.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cvg379v1lx1o#3",
+    "title": "Legal challenge to Galloway power line project fails",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg379v1lx1o?at_medium=RSS&at_campaign=rss",
+    "summary": "The Scottish government gave the project the green light despite a reporter recommending refusal.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:24:11.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c14m1gxnmgvo#3",
+    "title": "Teenager dies in custody at Polmont Young Offenders Institution",
+    "sourceUrl": "https://www.bbc.com/news/articles/c14m1gxnmgvo?at_medium=RSS&at_campaign=rss",
+    "summary": "The young offenders institution was heavily criticised last year following the deaths of Katie Allan and William Brown in 2018.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T14:32:09.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cm28gvm12pzo#4",
+    "title": "Police chief criticises Celtic and Rangers after Old Firm disorder",
+    "sourceUrl": "https://www.bbc.com/news/articles/cm28gvm12pzo?at_medium=RSS&at_campaign=rss",
+    "summary": "Chief Constable Jo Farrell said that no-one from either club had come out to condemn the disorder at Sunday's match at Ibrox.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:21:59.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/cy7j4npegg6o#4",
+    "title": "'Hiding in plain sight' - but why have Aberdeen moved for Robinson now?",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/cy7j4npegg6o?at_medium=RSS&at_campaign=rss",
+    "summary": "All the signs were Aberdeen would wait until the summer to appoint a new manager - so why have they moved for Stephen Robinson now?",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T16:08:07.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/rugby-union/articles/c77egl1443jo#4",
+    "title": "Dempsey's rise from Wallabies cast-off to Scotland powerhouse",
+    "sourceUrl": "https://www.bbc.com/sport/rugby-union/articles/c77egl1443jo?at_medium=RSS&at_campaign=rss",
+    "summary": "Having been discarded by Australia for lacking physicality, number eight Jack Dempsey's \"explosive power\" now provides a point of difference for Scotland.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:44:37.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/articles/c4g065rlprko#4",
+    "title": "'Super excited' Kinghorn to miss Glasgow 2026 with baby due",
+    "sourceUrl": "https://www.bbc.com/sport/articles/c4g065rlprko?at_medium=RSS&at_campaign=rss",
+    "summary": "Sammi Kinghorn reveal pregnancy means she will not compete at the 2026 Glasgow Commonwealth Games.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T14:53:38.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/c3ewkn83l5yo#4",
+    "title": "Aberdeen given permission to talk to St Mirren boss Robinson",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/c3ewkn83l5yo?at_medium=RSS&at_campaign=rss",
+    "summary": "Aberdeen make an approach to Scottish Premiership rivals St Mirren for manager Stephen Robinson.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T10:46:17.000Z",
+    "fetchedAt": "2026-03-11T19:07:51.970Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cvg593l3yd5o#0",
+    "title": "Fuel tax hike plan to be kept under review over Iran, says PM",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg593l3yd5o?at_medium=RSS&at_campaign=rss",
+    "summary": "Fuel duty on petrol and diesel is due to rise from September, when a 5p cut is phased out.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:40:51.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c5yjdpy7vvro#0",
+    "title": "UK government loses appeal over quashed Kneecap terror charge",
+    "sourceUrl": "https://www.bbc.com/news/articles/c5yjdpy7vvro?at_medium=RSS&at_campaign=rss",
+    "summary": "Liam Óg Ó hAnnaidh, known as Mo Chara, had been accused of showing support for proscribed organisation Hezbollah following a gig in London in 2024.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T15:23:17.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cj0d378vq14o#0",
+    "title": "Army officers deny charges linked to soldier's death",
+    "sourceUrl": "https://www.bbc.com/news/articles/cj0d378vq14o?at_medium=RSS&at_campaign=rss",
+    "summary": "The two high-ranking officers failed to act when Gunner Jaysley Beck, 19, reported a sexual assault.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T15:18:42.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cn9enygvezeo#0",
+    "title": "Polanski stood by breast enlargement hypnosis claim",
+    "sourceUrl": "https://www.bbc.com/news/articles/cn9enygvezeo?at_medium=RSS&at_campaign=rss",
+    "summary": "A newly unearthed interview from 2013 casts doubt on the Green Party leader's claim to have apologised.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:15:16.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c15x1wnd7yqo#0",
+    "title": "Boy, 15, arrested after girl is stabbed at school",
+    "sourceUrl": "https://www.bbc.com/news/articles/c15x1wnd7yqo?at_medium=RSS&at_campaign=rss",
+    "summary": "Sources tell the BBC that pupils had to hide under their desks as the incident unfolded.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T19:04:38.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/crl47zd7y8eo#0",
+    "title": "Quentin Tarantino to stage 'swashbuckling comedy' play in London",
+    "sourceUrl": "https://www.bbc.com/news/articles/crl47zd7y8eo?at_medium=RSS&at_campaign=rss",
+    "summary": "The film-maker will write and direct The Popinjay Cavalier, \"a rambunctious comedy\" set in 1830s Europe.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:23:44.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/czj18j09wvro#1",
+    "title": "'Misleading weather apps cost attractions thousands'",
+    "sourceUrl": "https://www.bbc.com/news/articles/czj18j09wvro?at_medium=RSS&at_campaign=rss",
+    "summary": "Chester Zoo is leading a call for a change in the way \"rain icons\" are used in weather forecasts.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T14:49:28.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c24dm9vgrz7o#1",
+    "title": "Mortgage rates rise and deals pulled over Iran war turmoil",
+    "sourceUrl": "https://www.bbc.com/news/articles/c24dm9vgrz7o?at_medium=RSS&at_campaign=rss",
+    "summary": "Average mortgage rates hit highest since last August in the biggest upheaval since the mini-Budget.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T12:40:30.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cre04npdl17o#1",
+    "title": "British man admits encouraging suicide in US",
+    "sourceUrl": "https://www.bbc.com/news/articles/cre04npdl17o?at_medium=RSS&at_campaign=rss",
+    "summary": "Dylan Phelan admits encouraging the suicide of US citizen Travis Dyer in Louisiana in 2024.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T15:36:51.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cr5l9d1dv9eo#1",
+    "title": "Prison inmate charged with Huntley murder appears in court",
+    "sourceUrl": "https://www.bbc.com/news/articles/cr5l9d1dv9eo?at_medium=RSS&at_campaign=rss",
+    "summary": "Ian Huntley had been serving a life sentence with a minimum term of 40 years for the murders of 10-year-olds Holly Wells and Jessica Chapman.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T17:04:45.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cm28gmlvedro#1",
+    "title": "March organised by Iran-linked group banned after police request",
+    "sourceUrl": "https://www.bbc.com/news/articles/cm28gmlvedro?at_medium=RSS&at_campaign=rss",
+    "summary": "Organisers say it is a peaceful pro-Palestinian event but it has been criticised for representing the Iranian regime.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:18:46.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cy8gmk81x95o#1",
+    "title": "Gerry Adams was on IRA army council, claims intelligence officer",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy8gmk81x95o?at_medium=RSS&at_campaign=rss",
+    "summary": "Three IRA bombing victims are seeking a ruling that Adams is personally liable for decisions to plant car bombs in London and Manchester in 1973 and 1996.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T17:24:30.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c309478l04go#1",
+    "title": "Fan attends wrong football stadium 366 miles away",
+    "sourceUrl": "https://www.bbc.com/news/articles/c309478l04go?at_medium=RSS&at_campaign=rss",
+    "summary": "The supporter travelled from London to Exeter, instead of Newcastle.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:01:26.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cj6dw3r09x0o#3",
+    "title": "The Aldi-style disruptors who could be about to shake up the vets market",
+    "sourceUrl": "https://www.bbc.com/news/articles/cj6dw3r09x0o?at_medium=RSS&at_campaign=rss",
+    "summary": "As pet owners complain of rising prices, independent practices want to take on the big chains.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T10:49:39.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c5yg468rkw3o#3",
+    "title": "Meeting my death row pen pal after 20 years",
+    "sourceUrl": "https://www.bbc.com/news/articles/c5yg468rkw3o?at_medium=RSS&at_campaign=rss",
+    "summary": "Rhys Williams became friends with rapist and murderer Roderick Orme after the pair began exchanging letters.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-10T18:00:43.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c4g8ym890q7o#3",
+    "title": "'We deserve better after a year of all-out Birmingham bin strike'",
+    "sourceUrl": "https://www.bbc.com/news/articles/c4g8ym890q7o?at_medium=RSS&at_campaign=rss",
+    "summary": "Householders describe recycling piled up in homes, sporadic waste collections and rat problems.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T10:44:08.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cpd83zwqlvno#3",
+    "title": "Inside the Russian explosives plot that sent incendiary parcels to the UK",
+    "sourceUrl": "https://www.bbc.com/news/articles/cpd83zwqlvno?at_medium=RSS&at_campaign=rss",
+    "summary": "Aleksandr Suranovas, charged with carrying out an act of terrorism for Russia, speaks to the BBC.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:00:08.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cge8vln5pp5o#3",
+    "title": "From New Zealand to Orkney: Why we brought this classic car half way round the world",
+    "sourceUrl": "https://www.bbc.com/news/articles/cge8vln5pp5o?at_medium=RSS&at_campaign=rss",
+    "summary": "Dutchman Hans Compter travelled around the world to deliver the Austin to Cathleen Hourie in Orkney.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:23:42.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c15x1wnd7yqo#4",
+    "title": "Boy, 15, arrested after girl is stabbed at school",
+    "sourceUrl": "https://www.bbc.com/news/articles/c15x1wnd7yqo?at_medium=RSS&at_campaign=rss",
+    "summary": "Sources tell the BBC that pupils had to hide under their desks as the incident unfolded.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T19:04:38.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c309yem61q6o#4",
+    "title": "Home of family with newborn 'a biohazard' after oil theft as prices spiral",
+    "sourceUrl": "https://www.bbc.com/news/articles/c309yem61q6o?at_medium=RSS&at_campaign=rss",
+    "summary": "\"Absolute travesty\" for family targeted by thieves, as oil price rises - and reports of price gouging - prompt watchdog to act.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:36:13.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cm28gvm12pzo#4",
+    "title": "Police chief criticises Celtic and Rangers after Old Firm disorder",
+    "sourceUrl": "https://www.bbc.com/news/articles/cm28gvm12pzo?at_medium=RSS&at_campaign=rss",
+    "summary": "Chief Constable Jo Farrell said that no-one from either club had come out to condemn the disorder at Sunday's match at Ibrox.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:21:59.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cx2493e4927o#4",
+    "title": "'I was punched in the face for driving at 20mph'",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx2493e4927o?at_medium=RSS&at_campaign=rss",
+    "summary": "Christopher Lavis suffered a fractured cheek bone, a fractured eye socket and a broken nose when Christopher Shaw punched him for sticking to the speed limit.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T11:40:56.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.085Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5629159",
+    "title": "East Lothian man 'counting his blessings' after falling lorry narrowly misses him before bursting into flames",
+    "sourceUrl": "https://www.scotsman.com/news/emergency-incident/east-lothian-man-counting-his-blessings-after-falling-lorry-narrowly-misses-him-before-bursting-into-flames-5629159",
+    "summary": "<p>An East Lothian man is ‘counting his blessings’ after his van was almost hit by a falling lorry which then burst into flames. </p>",
+    "categories": [
+      "Emergency Incident",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:12:02.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628088",
+    "title": "Why it's time to restore Scotland’s own 'Statue of Liberty' in Kilmarnock",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/why-its-time-to-restore-scotlands-own-statue-of-liberty-in-kilmarnock-5628088",
+    "summary": "<h3>The Reformers’ Monument to those who campaigned to extend the right to vote should be restored to its former glory in time for the centenary of universal suffrage in 2028</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T16:45:56.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5626924",
+    "title": "John Swinney's talk of US military ban at Prestwick is worst kind of political grandstanding",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/john-swinneys-talk-of-potential-us-military-ban-at-prestwick-is-worst-kind-of-political-grandstanding-5626924",
+    "summary": "<h3>Martyn McLaughlin has long documented the US military’s use of Prestwick Airport and is unimpressed by the First Minister’s latest pronouncement</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T16:45:45.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5626510",
+    "title": "Why it's clear Farage and Badenoch would make UK subservient to Trump's America",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/why-its-clear-farage-and-badenoch-would-make-uk-subservient-to-trumps-america-5626510",
+    "summary": "<h3>Canadian Prime Minister Mark Carney has shown that standing up to Donald Trump can be a vote winner</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T16:45:09.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628892",
+    "title": "Mogwai announce two new Glasgow shows to celebrate 30th anniversary - here's how to get tickets and presale",
+    "sourceUrl": "https://www.scotsman.com/whats-on/mogwai-glasgow-30-years-2026-tickets-presale-prices-5628892",
+    "summary": "<p>Mogwai have announced two Glasgow shows to celebrate 30 years together. Here's everything you need to know about tickets, presale and prices. </p>",
+    "categories": [
+      "What&#039;s On"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T16:26:53.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628530",
+    "title": "Plan to partially re-open Glasgow Central Station if threat from fire-damaged building continues",
+    "sourceUrl": "https://www.scotsman.com/news/transport/plan-to-partially-re-open-glasgow-central-station-if-threat-from-fire-damaged-building-continues-5628530",
+    "summary": "<p>Firefighters are still dousing Union Corner building with water - three days after the huge blaze broke out</p>",
+    "categories": [
+      "Transport",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T15:27:54.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628855",
+    "title": "Edinburgh Zoo bosses say 'misleading' weather forecasts are costing it up to £40,000 per day",
+    "sourceUrl": "https://www.scotsman.com/news/weather/edinburgh-zoo-bosses-say-misleading-weather-forecasts-are-costing-it-up-to-ps40000-per-day-5628855",
+    "summary": "<p>The charity that runs Edinburgh Zoo has called on the Met Office to improve how forecasts are shown on weather apps, saying “misleading” forecasts are costing it up to £40,000 a day.</p>",
+    "categories": [
+      "Weather",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T15:18:15.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628417",
+    "title": "Knife incident at Inverness school branded a 'scandal' as parents 'kept in the dark'",
+    "sourceUrl": "https://www.scotsman.com/regions/inverness-highlands-and-islands/inverness-primary-school-knife-pupil-ness-castle-5628417",
+    "summary": "<p>Enquiries are ongoing.</p>",
+    "categories": [
+      "Inverness, Highlands and Islands",
+      "Regions"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T14:49:49.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628745",
+    "title": "Peter Mandelson requested £500k taxpayer payout when sacked as US ambassador",
+    "sourceUrl": "https://www.scotsman.com/news/politics/peter-mandelson-requested-ps500k-taxpayer-payout-when-sacked-as-us-ambassador-5628745",
+    "summary": "<p>Files released by the UK Government show that the disgraced peer asked the UK Treasury to give him £547,20.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T14:45:20.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628596",
+    "title": "'Concerns growing' for Scottish police dog who escaped kennels after seizure",
+    "sourceUrl": "https://www.scotsman.com/news/search-for-four-year-old-police-dog-who-escaped-kennels-after-seizure-5628596",
+    "summary": "<p>Kilo hasn’t been seen since Tuesday. </p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:20:13.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628554",
+    "title": "Nigel Farage urged to apologise for calling post-Dunblane handgun ban 'ludicrous'",
+    "sourceUrl": "https://www.scotsman.com/news/politics/nigel-farage-urged-to-apologise-for-calling-post-dunblane-handgun-ban-ludicrous-5628554",
+    "summary": "<p>The Reform UK leader said in 2014 that the gun controls brought in after the deadliest mass shooting in British history were a “knee-jerk reaction”.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T13:10:14.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628203",
+    "title": "When do the clocks change UK? Here's the exact time clocks go forward and British Summer Time begins in 2026",
+    "sourceUrl": "https://www.scotsman.com/lifestyle/when-do-the-clocks-change-uk-spring-2026-5628203",
+    "summary": "<p>The final Sunday in March will mark the beginning of British Summer Time. </p>",
+    "categories": [
+      "Lifestyle"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T12:09:02.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5618581",
+    "title": "Edinburgh International Festival 'back to full strength' with opening concert to honour Benedetti's husband",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/edinburgh-international-festival-back-to-full-strength-with-opening-concert-to-honour-nicola-benedettis-husband-5618581",
+    "summary": "<p>Newly-announced programme highlights for the EIF include a focus on America to mark 250 years since the Declaration of Independence.</p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T12:00:35.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628222",
+    "title": "TRNSMT: Teenage girl injured in crowd crush at Glasgow festival settles 'rare' legal case",
+    "sourceUrl": "https://www.scotsman.com/news/scottish-news/teenage-girl-injured-in-crowd-crush-at-trnsmt-wins-rare-legal-case-5628222",
+    "summary": "<p>The teenager said she was left ‘physically and emotionally shattered’ by the ordeal. </p>",
+    "categories": [
+      "Scottish News",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T11:28:56.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628265",
+    "title": "Kilmarnock Crime: Pensioner, 79, left ‘badly shaken’ after attempted robbery in broad daylight",
+    "sourceUrl": "https://www.scotsman.com/news/crime/kilmarnock-london-road-pensioner-robbery-suspect-police-5628265",
+    "summary": "<p>Enquiries are ongoing.</p>",
+    "categories": [
+      "Crime",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T11:19:47.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628188",
+    "title": "Trams services to Edinburgh Airport resumed following crash near airport earlier this morning",
+    "sourceUrl": "https://www.scotsman.com/news/traffic-and-travel/trams-services-to-edinburgh-airport-resumed-following-crash-near-airport-earlier-this-morning-5628188",
+    "summary": "<p>Trams to and from Edinburgh Airport have resumed following a crash earlier this morning (March 11). </p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T10:43:57.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5628058",
+    "title": "Scotland weather: Yellow warning for strong winds across Scotland - including Glasgow and Edinburgh",
+    "sourceUrl": "https://www.scotsman.com/news/weather/wind-warning-issued-for-southern-scotland-as-70mph-gusts-forecasted-5628058",
+    "summary": "<p>Winds of over 50mph are expected widely and while the forecasters say travel disruption is “likely”.</p>",
+    "categories": [
+      "Weather",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T10:38:28.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5626653",
+    "title": "Scotsman Obituaries: Ian McCrae, Scottish international rugby player",
+    "sourceUrl": "https://www.scotsman.com/news/people/scotsman-obituaries-ian-mccrae-scottish-international-rugby-player-5626653",
+    "summary": "Ian McCrae, Scottish rugby internationalist. Born: 19 May 1941 in Bucksburn, Aberdeen. Died: 7 January 2026, aged 84​",
+    "categories": [
+      "People",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T10:14:41.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627943",
+    "title": "Tragedy as man dies in East Lothian crash which saw road closed for hours",
+    "sourceUrl": "https://www.scotsman.com/news/tragedy-as-man-dies-following-crash-which-closed-road-for-hours-5627943",
+    "summary": "<p>A 55-year-old man has died following a crash in East Lothian which saw a busy road closed for hours.</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T09:27:19.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627949",
+    "title": "Trams to Edinburgh Airport suspended after reports of crash in area",
+    "sourceUrl": "https://www.scotsman.com/news/traffic-and-travel/trams-to-edinburgh-airport-suspended-this-morning-after-crash-5627949",
+    "summary": "<p>Tram services to and from Edinburgh Airport have been suspended this morning following reports of a crash.</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T09:23:03.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627874",
+    "title": "First Peter Mandelson files to be published on Wednesday",
+    "sourceUrl": "https://www.scotsman.com/news/politics/first-peter-mandelson-files-to-be-published-on-wednesday-5627874",
+    "summary": "<p>The documents are expected to detail the process of appointing Mandelson as the UK’s ambassador to the US.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T09:01:32.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627855",
+    "title": "Glasgow Central high level closed for rest of week as low level train services resume",
+    "sourceUrl": "https://www.scotsman.com/news/low-level-train-services-resume-at-glasgow-central-station-after-fire-5627855",
+    "summary": "<p>Services will call at Glasgow Central low level on Wednesday and all three entrances to the section,  one on Hope Street and two on Argyle Street, are open.</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T08:37:36.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627831",
+    "title": "Glasgow traffic: 'Heavy congestion' on M77, M74 and the M8 as drivers face rush hour delays",
+    "sourceUrl": "https://www.scotsman.com/regions/glasgow-and-strathclyde/rush-hour-delays-amid-heavy-congestion-on-major-glasgow-roads-5627831",
+    "summary": "<p>Several roads are seeing increased levels of traffic as travel disruption in the city continues. </p>",
+    "categories": [
+      "Glasgow and Strathclyde",
+      "Regions"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T08:29:02.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5621487",
+    "title": "Postgraduate study in Edinburgh: Discover the courses that could take your career further at ENU",
+    "sourceUrl": "https://www.scotsman.com/sponsored/postgraduate-study-in-edinburgh-discover-the-courses-that-could-take-your-career-further-at-enu-5621487",
+    "summary": "<p>Discover the postgrad courses that could take your career further with a week of online information sessions at Edinburgh Napier University.</p>",
+    "categories": [
+      "Sponsored"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T07:00:04.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627404",
+    "title": "AI is a life-saving technology that we should not be afraid to embrace",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/ai-is-a-life-saving-technology-that-we-should-not-be-afraid-to-embrace-5627404",
+    "summary": "<h3>AI may not be entirely trustworthy but it might just save your life</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:00:57.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627704",
+    "title": "Businesses call for urgent support to rebuild in aftermath of Glasgow fire",
+    "sourceUrl": "https://www.scotsman.com/news/businesses-call-for-urgent-support-to-rebuild-in-aftermath-of-glasgow-fire-5627704",
+    "summary": "<p>Glasgow Central high level station will remain closed for the rest of the work as safety checks continue around blaze site</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:00:52.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627344",
+    "title": "Assisted dying Scotland: MSPs poised to 'wrestle with their conscience' with crunch vote on knife-edge",
+    "sourceUrl": "https://www.scotsman.com/news/politics/assisted-dying-scotland-final-vote-liam-mcarthur-5627344",
+    "summary": "<p>MSPs will “wrestle with their conscience” over whether to support Scotland’s assisted dying legislation, the politician behind the bill has warned.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:00:43.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627047",
+    "title": "New festival to explore film genre described as 'folk, but off kilter'",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/new-festival-to-explore-film-genre-described-as-folk-but-off-kilter-5627047",
+    "summary": "<p>The festival will take place in Leith</p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:00:30.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627695",
+    "title": "Options to split Lord advocate's dual roles revealed after Peter Murrell memo row",
+    "sourceUrl": "https://www.scotsman.com/news/politics/lord-advocate-dual-roles-peter-murrell-snp-5627695",
+    "summary": "<p>The Scottish government had previously confirmed no decision on splitting the Lord Advocate’s roles will happen until after May’s Holyrood election.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:00:14.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627602",
+    "title": "Why Keir Starmer should enlist King Charles' help in dealing with Donald Trump",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/why-keir-starmer-should-enlist-king-charles-help-in-dealing-with-donald-trump-5627602",
+    "summary": "<h3>Keir Starmer may not be the ‘Trump whisperer’ any more but he will have a chance to rebuild relations next month with a little Royal Family magic</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:00:10.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627239",
+    "title": "Readers' Letters: Lack of NHS app for Scots typical of SNP government",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/letters/readers-letters-lack-of-nhs-app-for-scots-typical-of-snp-government-5627239",
+    "summary": "An insistence on ‘Scottishness’ lets NHS patients down, believes reader",
+    "categories": [
+      "Letters",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-10T14:51:46.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5626692",
+    "title": "Why the ‘earn while you learn’ model is a competitive necessity",
+    "sourceUrl": "https://www.scotsman.com/business/why-the-earn-while-you-learn-model-is-a-competitive-necessity-5626692",
+    "summary": "We need to start treating apprenticeships as one of Scotland’s main engines of economic growth, writes Sandy Begbie",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-10T11:26:21.000Z",
+    "fetchedAt": "2026-03-11T19:07:52.465Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/public-appointments#2026-03-11T16:37:01Z",
+    "title": "Guidance: Public appointments for Ministry of Defence",
+    "sourceUrl": "https://www.gov.uk/government/publications/public-appointments",
+    "summary": "The Ministry of Defence is responsible for making public appointments to a range of public bodies and public corporations.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T16:37:01.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-low-flying-mod-sponsored-air-exercises#2026-03-11T16:16:14Z",
+    "title": "Guidance: Military low flying: MOD sponsored air exercises",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-low-flying-mod-sponsored-air-exercises",
+    "summary": "MOD sponsored low flying exercises within the UK low flying system.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T16:16:14.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable#2026-03-11T16:14:45Z",
+    "title": "Guidance: Military low flying: RAF operational low flying training timetable",
+    "sourceUrl": "https://www.gov.uk/government/publications/operational-low-flying-training-timetable",
+    "summary": "Royal Air Force (RAF) operational low flying training timetables in 3 areas of the UK.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T16:14:45.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/dao-qualification-handbooks-level-3-courses#2026-03-11T15:11:16Z",
+    "title": "Guidance: DAO qualification specification: Level 3",
+    "sourceUrl": "https://www.gov.uk/government/publications/dao-qualification-handbooks-level-3-courses",
+    "summary": "Qualifications for Defence Awarding Organisation courses.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T15:11:16.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/toponymic-factfiles#2026-03-11T14:09:44Z",
+    "title": "Guidance: Toponymic factfiles",
+    "sourceUrl": "https://www.gov.uk/government/publications/toponymic-factfiles",
+    "summary": "Toponymic (place name) factfile papers produced by the Permanent Committee on Geographical Names (PCGN).",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T14:09:44.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/the-defence-ordnance-munitions-and-explosives-safety-regulator-dosr-regulatory-notices#2026-03-11T14:03:05Z",
+    "title": "Guidance: The Defence Ordnance, Munitions and Explosives Safety Regulator (DOSR) - Regulatory Notices",
+    "sourceUrl": "https://www.gov.uk/government/publications/the-defence-ordnance-munitions-and-explosives-safety-regulator-dosr-regulatory-notices",
+    "summary": "DOSR Regulatory Notices may detail new or revised safety criteria or parameters for scenarios under the remit of the DOSR.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T14:03:05.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/information-papers-by-country#2026-03-11T14:01:21Z",
+    "title": "Guidance: Information papers",
+    "sourceUrl": "https://www.gov.uk/government/publications/information-papers-by-country",
+    "summary": "Information papers produced by the Permanent Committee on Geographical Names (PCGN).",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T14:01:21.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/using-a-veteran-card-as-a-service-leaver#2026-03-11T11:55:06Z",
+    "title": "Using your HM Armed Forces Veteran Card",
+    "sourceUrl": "https://www.gov.uk/guidance/using-a-veteran-card-as-a-service-leaver",
+    "summary": "Find out more about the HM Armed Forces Veteran Card, including how to apply for one and how it can be used.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T11:55:06.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/dao-policies#2026-03-11T11:01:06Z",
+    "title": "Guidance: DAO policies",
+    "sourceUrl": "https://www.gov.uk/government/publications/dao-policies",
+    "summary": "Defence Awarding Organisation policies, including conflict of interest and equal opportunities.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T11:01:06.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/jsp-375-review-programme-and-feedback-form#2026-03-11T10:49:47Z",
+    "title": "Form: JSP 375 review programme and feedback form",
+    "sourceUrl": "https://www.gov.uk/government/publications/jsp-375-review-programme-and-feedback-form",
+    "summary": "Major review programme plan and current status for JSP 375: Management of Health and Safety in Defence.",
+    "categories": [
+      "Form"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T10:49:47.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/ministry-of-defence-police-misconduct-hearings#2026-03-11T10:43:23Z",
+    "title": "Ministry of Defence Police: misconduct hearings",
+    "sourceUrl": "https://www.gov.uk/guidance/ministry-of-defence-police-misconduct-hearings",
+    "summary": "Find out about misconduct hearings involving Ministry of Defence Police (MDP) officers and how to attend these public hearings.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T10:43:23.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/news/uk-convenes-jef-partners-to-disrupt-russias-shadow-fleet#2026-03-11T10:30:04Z",
+    "title": "UK convenes JEF partners to disrupt Russia's shadow fleet",
+    "sourceUrl": "https://www.gov.uk/government/news/uk-convenes-jef-partners-to-disrupt-russias-shadow-fleet",
+    "summary": "Defence Secretary and Attorney General met JEF legal representatives to address action against Russia's sanction-evading shadow fleet funding Ukraine war.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T10:30:04.000Z",
+    "fetchedAt": "2026-03-11T19:07:58.213Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/publications/developing-faster-indicators-of-transport-activity-information#2026-03-11T09:30:03Z",
+    "title": "Guidance: Developing faster indicators of transport activity information",
+    "sourceUrl": "https://www.gov.uk/government/publications/developing-faster-indicators-of-transport-activity-information",
+    "summary": "Methodology notes for the timelier transport activity indicators for topical issues relating to transport.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T09:30:03.000Z",
+    "fetchedAt": "2026-03-11T19:07:59.129Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistical-data-sets/shipping-fleet-statistics#2026-03-11T09:30:02Z",
+    "title": "Shipping fleet statistics: data tables (FLE)",
+    "sourceUrl": "https://www.gov.uk/government/statistical-data-sets/shipping-fleet-statistics",
+    "summary": "UK and world shipping fleet statistical tables, produced by Department for Transport from data mostly supplied by IHS Global.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T09:30:02.000Z",
+    "fetchedAt": "2026-03-11T19:07:59.129Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistical-data-sets/sea-passenger-statistics-spas#2026-03-11T09:30:01Z",
+    "title": "Sea passenger statistics: data tables (SPAS)",
+    "sourceUrl": "https://www.gov.uk/government/statistical-data-sets/sea-passenger-statistics-spas",
+    "summary": "Data on UK international and domestic sea passengers, produced by Department for Transport.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T09:30:01.000Z",
+    "fetchedAt": "2026-03-11T19:07:59.129Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistics/uk-international-sea-passengers-january-2026#2026-03-11T09:30:01Z",
+    "title": "Accredited official statistics: UK international sea passengers: January 2026",
+    "sourceUrl": "https://www.gov.uk/government/statistics/uk-international-sea-passengers-january-2026",
+    "summary": "Monthly statistics on UK international and domestic sea passengers.",
+    "categories": [
+      "Accredited official statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T09:30:01.000Z",
+    "fetchedAt": "2026-03-11T19:07:59.129Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistics/uk-ship-register-statistics-january-2026#2026-03-11T09:30:01Z",
+    "title": "Official Statistics: UK Ship Register Statistics: January 2026",
+    "sourceUrl": "https://www.gov.uk/government/statistics/uk-ship-register-statistics-january-2026",
+    "summary": "Monthly update to the UK Ship Register statistics on ships joining and leaving the UK Ship Register. The monthly statistics cover January 2015 to January 2026.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T09:30:01.000Z",
+    "fetchedAt": "2026-03-11T19:07:59.129Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistics/developing-faster-indicators-of-transport-activity#2026-03-11T09:30:01Z",
+    "title": "Official Statistics: Developing faster indicators of transport activity",
+    "sourceUrl": "https://www.gov.uk/government/statistics/developing-faster-indicators-of-transport-activity",
+    "summary": "To monitor transport activity on a timelier basis for topical issues relating to transport.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T09:30:01.000Z",
+    "fetchedAt": "2026-03-11T19:07:59.129Z"
+  },
+  {
+    "sourceId": "dft-press-office",
+    "sourceName": "Department for Transport",
+    "guid": "https://www.gov.uk/government/statistics/transport-use-during-the-coronavirus-covid-19-pandemic#2026-03-11T09:30:01Z",
+    "title": "Official Statistics: Daily domestic transport use by mode",
+    "sourceUrl": "https://www.gov.uk/government/statistics/transport-use-during-the-coronavirus-covid-19-pandemic",
+    "summary": "Daily usage of selected domestic transport by mode for Great Britain",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-11T09:30:01.000Z",
+    "fetchedAt": "2026-03-11T19:07:59.129Z"
   }
 ]

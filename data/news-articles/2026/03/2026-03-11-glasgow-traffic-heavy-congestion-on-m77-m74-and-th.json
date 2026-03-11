@@ -1,0 +1,45 @@
+{
+  "slug": "2026-03-11-glasgow-traffic-heavy-congestion-on-m77-m74-and-th",
+  "title": "Glasgow traffic: 'Heavy congestion' on M77, M74 and the M8 as drivers face rush hour delays",
+  "wordCount": 32,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Glasgow traffic: 'Heavy congestion' on M77, M74 and the M8 as drivers face rush hour delays. <p>Several roads are seeing increased levels of traffic as travel disruption in the city continues. </p>"
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "scotsman-news",
+      "sourceUrl": "https://www.scotsman.com/regions/glasgow-and-strathclyde/rush-hour-delays-amid-heavy-congestion-on-major-glasgow-roads-5627831",
+      "citationText": "scotsman-news – Glasgow traffic: 'Heavy congestion' on M77, M74 and the M8 as drivers face rush hour delays"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol1",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Glasgow traffic: 'Heavy congestion'",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-11T19:07:59.472Z"
+}
