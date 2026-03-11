@@ -4,7 +4,6 @@ import { useCart } from '@/context/CartContext'
 import { useRecentlyViewed } from '@/context/RecentlyViewedContext'
 import { X, ShoppingBag } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function CartSidebar() {
   const {
@@ -22,10 +21,6 @@ export default function CartSidebar() {
     getFinalTotal
   } = useCart()
   const { recentlyViewed } = useRecentlyViewed()
-
-  const handleCheckoutClick = () => {
-    setIsCartOpen(false)
-  }
 
   if (!isCartOpen) return null
 
@@ -83,13 +78,12 @@ export default function CartSidebar() {
                 <ShoppingBag className="h-12 w-12 mb-4" />
                 <p className="text-lg font-medium text-white">Your basket is empty</p>
                 <p className="text-sm mb-4">Add some books to get started!</p>
-                <Link
+                <a
                   href="/books"
-                  onClick={() => setIsCartOpen(false)}
                   className="btn-books"
                 >
                   Browse books
-                </Link>
+                </a>
               </div>
             ) : (
               <div className="space-y-4">
@@ -143,10 +137,10 @@ export default function CartSidebar() {
                     <div className="space-y-2">
                       {addOnSuggestions.map((book) => (
                         <div key={book.id} className="flex items-center gap-2 rounded border border-white/10 bg-slate-900/50 p-2">
-                          <Link href={`/books/${book.id}`} className="flex-1 min-w-0">
+                          <a href={`/books/${book.id}`} className="flex-1 min-w-0">
                             <p className="text-xs text-white line-clamp-1">{book.title}</p>
                             <p className="text-[11px] text-green-300">£{book.price.toFixed(2)}</p>
-                          </Link>
+                          </a>
                           <button
                             onClick={() => addToCart(book)}
                             className="bg-white text-slate-900 px-2.5 py-1.5 rounded text-xs font-semibold hover:bg-gray-100 border border-slate-900"
@@ -174,22 +168,20 @@ export default function CartSidebar() {
                   </p>
                   <p className="text-lg font-bold text-white">£{finalTotal.toFixed(2)}</p>
                 </div>
-                <Link
+                <a
                   href="/checkout?method=stripe"
-                  onClick={handleCheckoutClick}
                   className="flex-1 bg-white text-slate-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors border border-slate-900 text-center"
                 >
                   Checkout (card / wallet)
-                </Link>
+                </a>
               </div>
 
-              <Link
+              <a
                 href="/checkout?method=paypal"
-                onClick={handleCheckoutClick}
                 className="mt-2 w-full block bg-yellow-500 text-slate-900 py-2.5 rounded-lg font-semibold hover:bg-yellow-400 transition-colors text-center"
               >
                 Checkout with PayPal
-              </Link>
+              </a>
 
               <div className="mt-2 rounded border border-blue-700/40 bg-slate-800/80 px-2.5 py-2 text-[11px] text-blue-100">
                 {discountNudgeText}
