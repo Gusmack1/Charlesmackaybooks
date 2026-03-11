@@ -29,7 +29,7 @@ const USER_AGENT = 'CharlesMackayNewsBot/1.0 (+https://charlesmackaybooks.com/)'
 
 function readJson(filePath, fallback) {
   try {
-    const raw = fs.readFileSync(filePath, 'utf8')
+    const raw = fs.readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '')
     return JSON.parse(raw)
   } catch (error) {
     if (error.code === 'ENOENT') {
