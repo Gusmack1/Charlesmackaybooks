@@ -624,7 +624,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
       {/* Social Sharing Footer removed */}
 
       {/* Sticky Buy Books (mobile) - purchase-focused when related books exist */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900/95 backdrop-blur border-t border-slate-700">
+      <div className="sticky-bottom-bar fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900/95 backdrop-blur border-t border-slate-700">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
           {resolvedRelatedBooks.length > 0 ? (
             <>

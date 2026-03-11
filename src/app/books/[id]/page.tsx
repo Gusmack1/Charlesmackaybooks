@@ -625,8 +625,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           </div>
         </div>
 
-        {/* Purchase section - pt-24 for sticky header; pb-24 on mobile for sticky bar; quick pairings first so links stay above bar when scrolled */}
-        <div id="purchase" className={`${gradientClass} text-white pt-24 pb-24 lg:pb-8 px-6 scroll-mt-24 relative z-20`}>
+        {/* Purchase section - pt-24 for sticky header */}
+        <div id="purchase" className={`${gradientClass} text-white pt-24 pb-8 px-6 scroll-mt-24 relative z-20`}>
           <div className="max-w-2xl mx-auto space-y-4">
             {/* Quick pairings first so links stay above sticky bar on mobile */}
             {quickPairings.length > 0 && (
@@ -662,8 +662,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           </div>
         </div>
 
-        {/* Main description content - pb-24 on mobile for sticky bottom bar clearance */}
-        <main className="container mx-auto container-padding section-padding pb-24 lg:pb-0">
+        {/* Main description content */}
+        <main className="container mx-auto container-padding section-padding pb-8">
           {/* Overview */}
           <div className="card card-large content mb-8">
             <h2 className="content h2">Overview</h2>

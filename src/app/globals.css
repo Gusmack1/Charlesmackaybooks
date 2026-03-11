@@ -397,21 +397,19 @@ nextjs-portal * {
   pointer-events: auto;
 }
 
-/* Sticky header: allow clicks to pass through to content when header overlays page on scroll */
-header[role="banner"] {
+/* Sticky header: allow clicks to pass through to content when header overlays page on scroll.
+   Child divs/spans default to pointer-events: auto and were blocking all page links. */
+header[role="banner"],
+header[role="banner"] * {
   pointer-events: none;
 }
 header[role="banner"] a,
 header[role="banner"] button,
 header[role="banner"] input,
 header[role="banner"] [role="menuitem"],
-header[role="banner"] #global-more-menu {
+header[role="banner"] #global-more-menu,
+header[role="banner"] #global-more-menu * {
   pointer-events: auto;
-}
-/* Header text inside links: let clicks pass through so overlay doesn't block page links */
-header[role="banner"] h1,
-header[role="banner"] p {
-  pointer-events: none;
 }
 
 /* HERO SECTIONS - Only place where colors change based on content */
@@ -431,18 +429,14 @@ header[role="banner"] p {
   pointer-events: none !important;
 }
 
-/* Book page: hero must not block clicks - left-clicks were intercepted by hero divs; right-click "open in new window" worked */
-.book-page-hero {
+/* Book page: hero must not block clicks - h1, p, div, span all default to pointer-events: auto and block links */
+.book-page-hero,
+.book-page-hero * {
   pointer-events: none;
 }
 .book-page-hero a,
 .book-page-hero button {
   pointer-events: auto;
-}
-/* Ensure all hero divs/spans pass through - only links and buttons receive clicks */
-.book-page-hero div,
-.book-page-hero span {
-  pointer-events: none;
 }
 
 /* Book page: hero content must not stack above purchase section - override .hero-section > * z-index */
@@ -454,6 +448,16 @@ header[role="banner"] p {
 #purchase {
   position: relative;
   z-index: 30;
+}
+
+/* GLOBAL: Mobile sticky bottom bars block page links - pass through except their buttons/links */
+.sticky-bottom-bar,
+.sticky-bottom-bar * {
+  pointer-events: none;
+}
+.sticky-bottom-bar a,
+.sticky-bottom-bar button {
+  pointer-events: auto;
 }
 
 .hero-section > * {

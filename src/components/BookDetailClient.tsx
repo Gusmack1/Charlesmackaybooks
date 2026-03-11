@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
 import { useAnalytics } from '@/hooks/useAnalytics';
@@ -14,7 +13,6 @@ interface BookDetailClientProps {
 
 export default function BookDetailClient({ book }: BookDetailClientProps) {
   const { addToCart, openBasket } = useCart();
-  const router = useRouter();
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
   const { trackContactEmail, trackEbayRedirect } = useAnalytics();
@@ -36,9 +34,10 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
     if (isBuyingNow) return;
     setIsBuyingNow(true);
     addToCart(book);
+    // Use window.location for reliable navigation; router.push can fail in some contexts
     setTimeout(() => {
-      router.push('/checkout?method=stripe');
-    }, 250);
+      window.location.href = '/checkout?method=stripe';
+    }, 300);
   };
 
   const handleEmailClick = () => {
@@ -53,7 +52,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
   const isPreOrder = book.authorInsights?.toLowerCase().includes('pre-order') || book.authorInsights?.toLowerCase().includes('release date');
 
   return (
-    <div className="space-y-4 pb-24 lg:pb-0">
+    <div className="space-y-4 pb-8">
       <div className="rounded-xl border border-white/15 bg-slate-800/70 p-4 sm:p-5">
         <div className="text-center">
           <p className="text-xs uppercase tracking-wider text-white/70">Price</p>
@@ -148,31 +147,6 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
           Contact Charles for bulk orders
         </a>
       </div>
-
-      {(book.inStock || isPreOrder) && (
-        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/20 bg-slate-900/95 backdrop-blur lg:hidden">
-          <div className="mx-auto max-w-3xl px-3 py-3 flex items-center gap-2">
-            <div className="min-w-[74px]">
-              <p className="text-[10px] text-white/70 uppercase tracking-wide">Price</p>
-              <p className="text-lg font-bold text-white">£{book.price.toFixed(2)}</p>
-            </div>
-            <button
-              onClick={handleBuyNow}
-              disabled={isBuyingNow}
-              className="flex-1 bg-white text-slate-900 py-2.5 px-3 rounded-lg text-sm font-semibold border border-slate-900 disabled:opacity-60"
-            >
-              {isBuyingNow ? 'Opening...' : 'Buy now'}
-            </button>
-            <button
-              onClick={handleAddToCart}
-              disabled={isAddingToCart}
-              className="bg-slate-700 text-white py-2.5 px-3 rounded-lg text-sm font-semibold border border-white/20 disabled:opacity-60"
-            >
-              {isAddingToCart ? 'Adding...' : 'Add to cart'}
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
