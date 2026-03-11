@@ -5,7 +5,7 @@ import type { NextRequest } from 'next/server'
 const NOINDEX_PATHS = ['/ai-prompt-system', '/checkout', '/order-complete', '/order-tracking', '/search']
 
 // Netlify handles SSL/HTTPS automatically, no need for HTTPS redirects here.
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   // Explicitly removed pages (410 Gone)
