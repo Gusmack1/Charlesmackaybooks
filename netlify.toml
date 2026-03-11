@@ -5,6 +5,7 @@
 [build.environment]
   NODE_VERSION = "20"
   NEXT_TELEMETRY_DISABLED = "1"
+  NPM_FLAGS = "--include=dev"
 
 # SSL Configuration - Let Netlify handle SSL certificates automatically
 [context.production.environment]
