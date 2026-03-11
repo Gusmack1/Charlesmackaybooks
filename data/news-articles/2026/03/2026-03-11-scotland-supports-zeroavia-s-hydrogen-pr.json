@@ -1,0 +1,54 @@
+{
+  "slug": "2026-03-11-scotland-supports-zeroavia-s-hydrogen-pr",
+  "title": "Scotland Supports ZeroAvia's Hydrogen Propulsion Manufacturing in Glasgow",
+  "wordCount": 52,
+  "sections": [
+    {
+      "heading": "Government Funding Announcement",
+      "content": "The Scottish government announced a funding package of £9 million to bolster ZeroAvia's initiative to create a manufacturing plant for hydrogen-electric propulsion systems in Glasgow."
+    },
+    {
+      "heading": "ZeroAvia's Sustainable Aviation Goals",
+      "content": "ZeroAvia is focused on developing hydrogen-based technology aimed at reducing aviation emissions. The funding is expected to play a critical role in advancing this sustainable aviation project."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.ainonline.com/aviation-news/aerospace/2025-05-23/scotland-backs-zeroavias-hydrogen-propulsion-manufacturing-site",
+      "citationText": "serper-scottish-aviation – Scotland Backs ZeroAvia's Hydrogen Propulsion Manufacturing Site in Glasgow"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland Supports ZeroAvia's Hydrogen",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-11T21:47:10.552Z",
+  "publishedAt": "2026-03-11T21:47:10.552Z"
+}

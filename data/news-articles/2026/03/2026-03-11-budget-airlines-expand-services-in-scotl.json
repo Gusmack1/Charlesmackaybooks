@@ -1,0 +1,54 @@
+{
+  "slug": "2026-03-11-budget-airlines-expand-services-in-scotl",
+  "title": "Budget Airlines Expand Services In Scotl",
+  "wordCount": 59,
+  "sections": [
+    {
+      "heading": "Wizz Air's New Routes",
+      "content": "Wizz Air has launched its new routes from Glasgow Airport, offering direct flights to both Rome and Milan. This expansion is part of the airline's broader strategy to increase its presence in Scotland."
+    },
+    {
+      "heading": "easyJet's Edinburgh to Belfast Connection",
+      "content": "easyJet has announced a new service that links Edinburgh with Belfast City Airport. This addition aims to enhance travel options for passengers between the two cities."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://travelweekly.co.uk/news/budget-airlines-ramp-up-scottish-services",
+      "citationText": "serper-scottish-aviation – Updated: Budget airlines ramp up Scottish services"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Budget Airlines Expand Services",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-11T21:47:10.552Z",
+  "publishedAt": "2026-03-11T21:47:10.552Z"
+}

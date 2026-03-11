@@ -8216,5 +8216,200 @@
     "imagePolicy": "crown",
     "publishedAt": "2026-03-11T09:30:01.000Z",
     "fetchedAt": "2026-03-11T19:07:59.129Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/czj188k3g3lo#2",
+    "title": "'I've been the voice of Edinburgh's hospital radio for six decades - and I'm not stopping yet'",
+    "sourceUrl": "https://www.bbc.com/news/articles/czj188k3g3lo?at_medium=RSS&at_campaign=rss",
+    "summary": "Malcolm Kirby was studying electrical engineering at Heriot-Watt University in the late 60s when he first got involved with hospital radio.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:23:59.000Z",
+    "fetchedAt": "2026-03-11T21:47:02.717Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c6261p3dmglo#2",
+    "title": "How letters of support linked the women of Airdrie and Leningrad",
+    "sourceUrl": "https://www.bbc.com/news/articles/c6261p3dmglo?at_medium=RSS&at_campaign=rss",
+    "summary": "In autumn 1941 volunteers from the Airdrie branch of the Russia Today Society decided to send messages of support to women in Leningrad.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T06:23:50.000Z",
+    "fetchedAt": "2026-03-11T21:47:02.717Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/tennis/articles/cly09grr65xo#4",
+    "title": "Norrie wins and may face Alcaraz in quarter-final",
+    "sourceUrl": "https://www.bbc.com/sport/tennis/articles/cly09grr65xo?at_medium=RSS&at_campaign=rss",
+    "summary": "Great Britain's Cameron Norrie beats qualifier Rinky Hijikata at Indian Wells, with world number one Carlos Alcaraz a possible quarter-final opponent.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T21:06:39.000Z",
+    "fetchedAt": "2026-03-11T21:47:02.717Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/cx28v5qk4lwo#4",
+    "title": "Miller 'definitely better' after Udinese move & eager for World Cup",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/cx28v5qk4lwo?at_medium=RSS&at_campaign=rss",
+    "summary": "Scotland midfielder Lennon Miller believes he has \"definitely got better\" as a player since his move to Udinese.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T19:20:23.000Z",
+    "fetchedAt": "2026-03-11T21:47:02.717Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cd70lgywgqqo#0",
+    "title": "PM warned of 'reputational risk' over Mandelson's Epstein links",
+    "sourceUrl": "https://www.bbc.com/news/articles/cd70lgywgqqo?at_medium=RSS&at_campaign=rss",
+    "summary": "Documents also suggest the peer explored the possibility of a £500,000 severance payment after being sacked as US ambassador.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:30:20.000Z",
+    "fetchedAt": "2026-03-11T21:47:02.858Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/ckg893yd499o#3",
+    "title": "BBC decision to axe LGBTQ+ dating show is two steps back, say contestants",
+    "sourceUrl": "https://www.bbc.com/news/articles/ckg893yd499o?at_medium=RSS&at_campaign=rss",
+    "summary": "Former contestants of I Kissed A Boy and I Kissed A Girl speak out as show axed due to \"funding challenges\".",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:19:37.000Z",
+    "fetchedAt": "2026-03-11T21:47:02.858Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.heraldscotland.com/news/25740642.scottish-airline-launches-tenth-airport-base-new-routes/",
+    "title": "Scottish airline launches tenth airport base serving new routes",
+    "sourceUrl": "https://www.heraldscotland.com/news/25740642.scottish-airline-launches-tenth-airport-base-new-routes/",
+    "summary": "An airline has announced the launch of its tenth UK airport base serving new and existing routes. The Scottish airline, described as the...",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": "2026-01-05T00:00:00.000Z",
+    "fetchedAt": "2026-03-11T21:47:10.367Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.travelandtourworld.com/news/article/american-airlines-redefines-golf-travel-with-inaugural-airbus-a321xlr-flights-to-scotland-how-golfers-can-now-travel-in-luxury-to-edinburgh/",
+    "title": "American Airlines Redefines Golf Travel with Inaugural Airbus A321XLR Flights to Scotland: How Golfers Can Now Travel in Luxury to Edinburgh!",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/american-airlines-redefines-golf-travel-with-inaugural-airbus-a321xlr-flights-to-scotland-how-golfers-can-now-travel-in-luxury-to-edinburgh/",
+    "summary": "American Airlines enhances the golfing experience with premium flights to Augusta, Georgia, and Edinburgh, Scotland, offering luxury travel...",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-11T21:47:10.367Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thescottishsun.co.uk/news/16026501/jet2-flight-pilot-forgets-essential-item/",
+    "title": "Jet2 flight from Scotland to holiday hotspot delayed after PILOT forgets essential item",
+    "sourceUrl": "https://www.thescottishsun.co.uk/news/16026501/jet2-flight-pilot-forgets-essential-item/",
+    "summary": "A FLIGHT from Scotland to Turkey was delayed because the pilot due to fly the aircraft 'forgot his passport'. Holidaymakers were due to jet...",
+    "categories": [
+      "The Scottish Sun"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-11T21:47:10.367Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://travelweekly.co.uk/news/loganair-chief-issues-warning-over-scotlands-air-departure-tax",
+    "title": "Loganair chief issues warning over Scotland’s air departure tax",
+    "sourceUrl": "https://travelweekly.co.uk/news/loganair-chief-issues-warning-over-scotlands-air-departure-tax",
+    "summary": "Luke Farajallah says higher rates would curb airlines' operations.",
+    "categories": [
+      "Travel Weekly - Home"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-11T21:47:10.367Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dunfermlinepress.com/news/25925361.fife-raf-cadets-take-charity-kiltwalk-challenge/",
+    "title": "RAF cadets set for air ambulance charity challenge covering 80 miles",
+    "sourceUrl": "https://www.dunfermlinepress.com/news/25925361.fife-raf-cadets-take-charity-kiltwalk-challenge/",
+    "summary": "RAF Air Cadets from Dunfermline and Dalgety Bay tackle all four Scotland Kiltwalks to raise funds for Scotland's Charity Air Ambulance...",
+    "categories": [
+      "Dunfermline Press"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-11T21:47:10.367Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.scotsman.com/news/opinion/columnists/john-swinneys-talk-of-potential-us-military-ban-at-prestwick-is-worst-kind-of-political-grandstanding-5626924",
+    "title": "John Swinney's talk of potential US military ban at Prestwick is political grandstanding",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/john-swinneys-talk-of-potential-us-military-ban-at-prestwick-is-worst-kind-of-political-grandstanding-5626924",
+    "summary": "Martyn McLaughlin has long documented the US military's use of Prestwick Airport and is unimpressed by the First Minister's latest...",
+    "categories": [
+      "The Scotsman"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-11T21:47:10.368Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ayradvertiser.com/news/25922316.bbc-programme-elvis-presleys-stop-prestwick-airport/",
+    "title": "New programme on Elvis Presley's famous stop at Prestwick Airport",
+    "sourceUrl": "https://www.ayradvertiser.com/news/25922316.bbc-programme-elvis-presleys-stop-prestwick-airport/",
+    "summary": "In March 1960, the Rock n' Roll icon set foot on Scottish soil for the first and only time on his way back from military service in Germany.",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-11T21:47:10.368Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.thenational.scot/news/25917305.us-not-using-prestwick-airport-strike-iran-uk-government-says/",
+    "title": "Prestwick Airport 'not being used by US to launch strikes', says UK Government",
+    "sourceUrl": "https://www.thenational.scot/news/25917305.us-not-using-prestwick-airport-strike-iran-uk-government-says/",
+    "summary": "Prestwick Airport is not being used by the US to launch military strikes, the UK Government has said.",
+    "categories": [
+      "Thenational Scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-11T21:47:10.368Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://aviationa2z.com/index.php/2026/02/04/easyjet-begins-new-flights-from-glasgow-to-rome/",
+    "title": "easyJet Begins New Flights from Glasgow to This Famous European Capital",
+    "sourceUrl": "https://aviationa2z.com/index.php/2026/02/04/easyjet-begins-new-flights-from-glasgow-to-rome/",
+    "summary": "EasyJet Begins Glasgow to Rome Flights. The new service from Glasgow to Rome is set to operate four weekly flights, providing a seamless option...",
+    "categories": [
+      "Aviation A2Z"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-11T21:47:10.368Z"
   }
 ]

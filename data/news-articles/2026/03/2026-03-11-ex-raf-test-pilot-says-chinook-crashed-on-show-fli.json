@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-11-ex-raf-test-pilot-says-chinook-crashed-on-show-fli",
+  "title": "Ex-RAF test pilot says Chinook crashed on 'show flight'",
+  "wordCount": 33,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Ex-RAF test pilot says Chinook crashed on 'show flight'. A Chinook helicopter that crashed in Scotland more than 30 years ago, killing 29 people, was being flown as a \"show flight\" after safety..."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.bbc.com/news/articles/c04rg3l3y64o",
+      "citationText": "serper-scottish-aviation – Ex-RAF test pilot says Chinook crashed on 'show flight'"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sycamore-seeds",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Ex-RAF test pilot says",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-11T21:47:18.083Z"
+}
