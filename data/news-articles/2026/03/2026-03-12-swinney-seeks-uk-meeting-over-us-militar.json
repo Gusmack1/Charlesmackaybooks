@@ -1,0 +1,66 @@
+{
+  "slug": "2026-03-12-swinney-seeks-uk-meeting-over-us-militar",
+  "title": "Swinney Seeks UK Meeting Over US Military Use of Prestwick Airport",
+  "wordCount": 63,
+  "sections": [
+    {
+      "heading": "Call for Meeting",
+      "content": "Economy Secretary John Swinney has requested a meeting with UK officials regarding the military use of Prestwick Airport by American forces."
+    },
+    {
+      "heading": "Military Refuelling Operations",
+      "content": "Reports indicate that three US military refuelling aircraft that have previously utilised Prestwick Airport are involved in operations supporting airstrikes by the US and Israel."
+    },
+    {
+      "heading": "Concerns Raised",
+      "content": "Swinney’s request comes amid concerns about the implications of foreign military operations being conducted from UK facilities."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "bbc-scotland",
+      "sourceUrl": "https://www.bbc.com/news/articles/ce8wlr9k27wo?at_medium=RSS&at_campaign=rss",
+      "citationText": "bbc-scotland – Swinney seeks UK meeting over US military use of Prestwick Airport"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
+      "keyword": "Swinney Seeks Meeting Over",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-12T12:37:57.151Z",
+  "publishedAt": "2026-03-12T12:37:57.151Z"
+}

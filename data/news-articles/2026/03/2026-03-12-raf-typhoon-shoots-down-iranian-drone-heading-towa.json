@@ -1,0 +1,53 @@
+{
+  "slug": "2026-03-12-raf-typhoon-shoots-down-iranian-drone-heading-towa",
+  "title": "RAF Typhoon shoots down Iranian drone heading towards Qatari airspace",
+  "wordCount": 24,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "RAF Typhoon shoots down Iranian drone heading towards Qatari airspace. A RAF Typhoon jet has shot down an Iranian drone heading toward Qatari airspace."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.heraldscotland.com/news/25897570.raf-typhoon-jet-shoots-iranian-drone-heading-qatar/",
+      "citationText": "serper-scottish-aviation – RAF Typhoon shoots down Iranian drone heading towards Qatari airspace"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sabres-from-north",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Typhoon",
+      "primary": false
+    },
+    {
+      "keyword": "RAF Typhoon shoots down",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-12T12:38:07.480Z"
+}

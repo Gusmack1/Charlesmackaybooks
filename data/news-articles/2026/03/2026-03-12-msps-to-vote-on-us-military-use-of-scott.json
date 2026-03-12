@@ -1,0 +1,58 @@
+{
+  "slug": "2026-03-12-msps-to-vote-on-us-military-use-of-scott",
+  "title": "MSPs to Vote on US Military Use of Scottish Airports",
+  "wordCount": 54,
+  "sections": [
+    {
+      "heading": "Legislative Vote Scheduled",
+      "content": "The vote is focused on US military usage of Prestwick Airport amid reports of military operations involving US troops."
+    },
+    {
+      "heading": "Concerns Raised",
+      "content": "The motion reflects concerns among MSPs regarding the continued presence and activities of US forces at the airport."
+    },
+    {
+      "heading": "Implications of the Vote",
+      "content": "If passed, the motion would effectively prevent US military personnel from utilizing Prestwick Airport for their operations."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.thenational.scot/news/25856204.msps-vote-evicting-us-troops-prestwick-airport/",
+      "citationText": "serper-scottish-aviation – MSPs to vote on banning Donald Trump's troops from using Scottish airports"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "MSPs Vote Military Use",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-12T12:37:57.151Z",
+  "publishedAt": "2026-03-12T12:37:57.151Z"
+}
