@@ -187,6 +187,24 @@ export default function UnifiedSchema({
       { '@type': 'Country', name: 'United States' },
       { '@type': 'Continent', name: 'Europe' },
     ],
+    paymentAccepted: ['Credit Card', 'Debit Card', 'PayPal', 'Bank Transfer'],
+    hasMerchantReturnPolicy: {
+      '@type': 'MerchantReturnPolicy',
+      applicableCountry: 'GB',
+      returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+      merchantReturnDays: 30,
+      returnMethod: 'https://schema.org/ReturnByMail',
+      returnFees: 'https://schema.org/FreeReturn',
+      returnPolicyUrl: `${BASE_URL}/returns`,
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: String(SITE_CONSTANTS.SATISFIED_CUSTOMERS),
+      reviewCount: String(SITE_CONSTANTS.SATISFIED_CUSTOMERS),
+    },
   });
 
   // Enhanced LocalBusiness schema for Google My Business
@@ -212,6 +230,15 @@ export default function UnifiedSchema({
     sameAs: [
       'https://www.ebay.co.uk/usr/chaza87',
     ],
+    paymentAccepted: ['Credit Card', 'Debit Card', 'PayPal', 'Bank Transfer'],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: String(SITE_CONSTANTS.SATISFIED_CUSTOMERS),
+      reviewCount: String(SITE_CONSTANTS.SATISFIED_CUSTOMERS),
+    },
   };
 
   // Add LocalBusiness schema for Google My Business

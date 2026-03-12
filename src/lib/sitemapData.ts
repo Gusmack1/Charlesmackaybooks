@@ -29,6 +29,7 @@ const STATIC_PAGES: Array<{
   { path: '/scottish-aviation-timeline', priority: 0.75, changeFrequency: 'monthly' },
   { path: '/categories', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/returns', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/delivery', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/support', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/privacy', priority: 0.55, changeFrequency: 'monthly' },
   { path: '/terms', priority: 0.55, changeFrequency: 'monthly' },

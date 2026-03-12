@@ -21,6 +21,7 @@ export const moreNavLinks: NavLinkItem[] = [
   { label: 'Aviation News', href: '/aviation-news' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Returns', href: '/returns' },
+  { label: 'Delivery', href: '/delivery' },
   { label: 'Support', href: '/support' },
   { label: 'Privacy', href: '/privacy' },
   { label: 'Terms', href: '/terms' },

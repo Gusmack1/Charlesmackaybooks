@@ -80,6 +80,9 @@ export default function Footer() {
             <Link href="/returns" className="underline decoration-white/30 hover:decoration-white">
               Returns
             </Link>
+            <Link href="/delivery" className="underline decoration-white/30 hover:decoration-white">
+              Delivery
+            </Link>
             <Link href="/privacy" className="underline decoration-white/30 hover:decoration-white">
               Privacy Policy
             </Link>
