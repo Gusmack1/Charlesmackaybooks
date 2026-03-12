@@ -1,0 +1,45 @@
+{
+  "slug": "2026-03-12-glasgow-airport-flight-cancelled-after-u-s-and-isr",
+  "title": "Glasgow Airport flight cancelled after U.S and Israel attack Iran",
+  "wordCount": 29,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Glasgow Airport flight cancelled after U.S and Israel attack Iran. A flight from Glasgow Airport has been cancelled after the United States and Israel launched military strikes on Iran."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.the-gazette.co.uk/news/25896208.emirates-flight-glasgow-airport-dubai-cancelled/",
+      "citationText": "serper-scottish-aviation – Glasgow Airport flight cancelled after U.S and Israel attack Iran"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Glasgow Airport flight cancelled",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-12T07:02:47.465Z"
+}

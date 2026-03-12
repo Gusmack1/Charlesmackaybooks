@@ -1,0 +1,53 @@
+{
+  "slug": "2026-03-12-raf-typhoon-declares-mid-air-emergency-during-trai",
+  "title": "RAF Typhoon declares mid-air emergency during training flight",
+  "wordCount": 28,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "RAF Typhoon declares mid-air emergency during training flight. The Typhoon, which had been operating out of RAF Lossiemouth in Moray, encountered a flight control issue at about 12:20."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.bbc.com/news/articles/c74wd23q77xo",
+      "citationText": "serper-scottish-aviation – RAF Typhoon declares mid-air emergency during training flight"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sabres-from-north",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Typhoon",
+      "primary": false
+    },
+    {
+      "keyword": "Lossiemouth",
+      "primary": false
+    },
+    {
+      "keyword": "RAF Typhoon declares mid-air",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-12T07:02:47.465Z"
+}

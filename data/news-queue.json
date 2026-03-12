@@ -3391,7 +3391,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-02-28T12:27:20.059Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-12-scotland-airspace-modernisation-how-flight-paths-c",
+    "articlePath": "data/news-articles/2026/03/2026-03-12-scotland-airspace-modernisation-how-flight-paths-c.json",
+    "draftedAt": "2026-03-12T07:02:47.464Z"
   },
   {
     "id": "711639ed-8720-487c-babc-fd316c0e7ec5",
@@ -3447,7 +3450,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-01T01:23:11.458Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-12-glasgow-airport-flight-cancelled-after-u-s-and-isr",
+    "articlePath": "data/news-articles/2026/03/2026-03-12-glasgow-airport-flight-cancelled-after-u-s-and-isr.json",
+    "draftedAt": "2026-03-12T07:02:47.464Z"
   },
   {
     "id": "e24c99f0-d5b2-49b9-8994-eab2569b76a4",
@@ -3461,7 +3467,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-01T12:29:14.888Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-12-raf-typhoon-declares-mid-air-emergency-during-trai",
+    "articlePath": "data/news-articles/2026/03/2026-03-12-raf-typhoon-declares-mid-air-emergency-during-trai.json",
+    "draftedAt": "2026-03-12T07:02:47.464Z"
   },
   {
     "id": "1513d977-e720-4dd1-a6b4-131c326e0cd8",
@@ -3475,7 +3484,10 @@
     ],
     "publishedAt": "2025-11-24T00:00:00.000Z",
     "fetchedAt": "2026-03-01T12:29:14.888Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-12-prestwick-airport-doubles-weekly-air-china-cargo-f",
+    "articlePath": "data/news-articles/2026/03/2026-03-12-prestwick-airport-doubles-weekly-air-china-cargo-f.json",
+    "draftedAt": "2026-03-12T07:02:47.464Z"
   },
   {
     "id": "20712f00-8ddd-4c7c-9df1-03e899f47d5d",
@@ -3489,7 +3501,10 @@
     ],
     "publishedAt": "2025-07-25T00:00:00.000Z",
     "fetchedAt": "2026-03-01T12:29:14.888Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-12-planespotters-gather-to-catch-glimpse-of-air-force",
+    "articlePath": "data/news-articles/2026/03/2026-03-12-planespotters-gather-to-catch-glimpse-of-air-force.json",
+    "draftedAt": "2026-03-12T07:02:47.464Z"
   },
   {
     "id": "35c2ce87-3629-46a9-8436-7e68f0261fe2",
@@ -9885,6 +9900,235 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-12T01:08:32.510Z",
+    "status": "new"
+  },
+  {
+    "id": "93231196-f40a-42ef-99ff-14df64e76dfb",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c627x7g2l4vo#0",
+    "title": "Chris Mason: There may be no knockout blows from Mandelson files but it's far from over",
+    "sourceUrl": "https://www.bbc.com/news/articles/c627x7g2l4vo?at_medium=RSS&at_campaign=rss",
+    "summary": "This first digital document drop about the prime minister's decision to appoint Lord Mandelson as US ambassador is interesting, but not explosive.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T23:54:45.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.236Z",
+    "status": "new"
+  },
+  {
+    "id": "d9f2a903-f242-4ee5-972d-24439b01c0e7",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c2lrq2n7l9eo#0",
+    "title": "Liza Tarbuck leaves Radio 2 Saturday show after 14 years",
+    "sourceUrl": "https://www.bbc.com/news/articles/c2lrq2n7l9eo?at_medium=RSS&at_campaign=rss",
+    "summary": "Shaun Keaveny, host of The Rock Show, will stand in for her until the end of the end of the month.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T04:14:37.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.237Z",
+    "status": "new"
+  },
+  {
+    "id": "5ef2bafc-4964-4061-9abc-791060f95215",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c15x1wnd7yqo#1",
+    "title": "Boy, 15, arrested after girl is stabbed at school",
+    "sourceUrl": "https://www.bbc.com/news/articles/c15x1wnd7yqo?at_medium=RSS&at_campaign=rss",
+    "summary": "Sources tell the BBC that pupils had to hide under their desks as the incident unfolded.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T19:04:38.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.237Z",
+    "status": "new"
+  },
+  {
+    "id": "11ad1192-be5b-4c5e-9066-349f5961e35e",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cr5l9egglrro#1",
+    "title": "Starmer vows to crack down on 'profiteering' from fuel crisis",
+    "sourceUrl": "https://www.bbc.com/news/articles/cr5l9egglrro?at_medium=RSS&at_campaign=rss",
+    "summary": "The prime minister is in Northern Ireland and is expected to hold talks with party leaders and visit a community centre.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T00:00:21.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.237Z",
+    "status": "new"
+  },
+  {
+    "id": "eb6dfce4-895f-4a39-bb67-2d45931b341c",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c89kdn3e185o#3",
+    "title": "My identity was stolen and someone is using it to catfish men - it's terrifying",
+    "sourceUrl": "https://www.bbc.com/news/articles/c89kdn3e185o?at_medium=RSS&at_campaign=rss",
+    "summary": "For four years, Sasha-Jay’s photos have been stolen from social media to impersonate her online.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T06:09:52.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.237Z",
+    "status": "new"
+  },
+  {
+    "id": "2f56949f-6fd1-43aa-96a8-b7e49ab563c9",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cwy93p4dj8vo#3",
+    "title": "How a lost suitcase led to a two-year compensation battle with Ryanair",
+    "sourceUrl": "https://www.bbc.com/news/articles/cwy93p4dj8vo?at_medium=RSS&at_campaign=rss",
+    "summary": "Rosie McGrane says her case never arrived when she travelled from Edinburgh to Copenhagen with Ryanair in September 2023.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T06:25:39.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.237Z",
+    "status": "new"
+  },
+  {
+    "id": "1220fc5e-6a8e-4c66-a2b1-9170833b407e",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cm21g1lzll6o#3",
+    "title": "The Papers: 'Starmer did ignore Epstein warnings' and 'Record oil release'",
+    "sourceUrl": "https://www.bbc.com/news/articles/cm21g1lzll6o?at_medium=RSS&at_campaign=rss",
+    "summary": "Thursday's papers all lead with files released on Lord Mandelson's vetting for the US ambassador role.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T05:49:08.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.237Z",
+    "status": "new"
+  },
+  {
+    "id": "e9e53c38-25bd-40ba-b960-323bfce74925",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c0e5jx1d4dlo#4",
+    "title": "Secondary school due to reopen after pupil stabbed",
+    "sourceUrl": "https://www.bbc.com/news/articles/c0e5jx1d4dlo?at_medium=RSS&at_campaign=rss",
+    "summary": "The school says support is on site for students but it will respect those who do not feel ready to return.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T06:51:04.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.237Z",
+    "status": "new"
+  },
+  {
+    "id": "9d693262-e0e8-41dc-86ce-4a17e1d4977a",
+    "sourceId": "scotsman-news",
+    "guid": "5629047",
+    "title": "How Mandelson files have once again raised serious questions about Keir Starmer's lack of judgment",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/how-mandelson-files-have-once-again-raised-serious-questions-about-keir-starmers-lack-of-judgment-5629047",
+    "summary": "<h3>Ultimately, politicians stand or fall based on their ability to make the right calls</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T06:00:55.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.454Z",
+    "status": "new"
+  },
+  {
+    "id": "891165e2-b483-48aa-833b-78063d1e295e",
+    "sourceId": "scotsman-news",
+    "guid": "5629053",
+    "title": "Immediate improvements ordered at newly-nationalised Ardrossan harbour despite 'continually maintained' claim",
+    "sourceUrl": "https://www.scotsman.com/news/transport/immediate-improvements-ordered-at-newly-nationalised-ardrossan-harbour-despite-continually-maintained-claim-5629053",
+    "summary": "<p>Upgrades to improve CalMac ferry resilience to get underway </p>",
+    "categories": [
+      "Transport",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T06:00:36.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.454Z",
+    "status": "new"
+  },
+  {
+    "id": "524af3bb-a85b-43b8-8d80-cd1b730451c2",
+    "sourceId": "scotsman-news",
+    "guid": "5627542",
+    "title": "Loch Lomond venison on horizon as national park herbivore plan gathers momentum",
+    "sourceUrl": "https://www.scotsman.com/hays-way/loch-lomond-venison-on-horizon-as-national-park-herbivore-plan-gathers-momentum-5627542",
+    "summary": "<p>Investment in venison processing facilities is already underway. </p>",
+    "categories": [
+      "Hay&#039;s Way"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T06:00:23.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.454Z",
+    "status": "new"
+  },
+  {
+    "id": "ccfc837d-bbe3-4c14-afbc-bf19379ac04c",
+    "sourceId": "scotsman-news",
+    "guid": "5629034",
+    "title": "Edinburgh International Festival returns to 'full strength' with an inspiring message for the world",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/edinburgh-international-festival-returns-to-full-strength-with-an-inspiring-message-for-the-world-5629034",
+    "summary": "<h3>American jazz legend Wynton Marsalis and his internationally acclaimed Jazz at Lincoln Center Orchestra will take up a residency during this year’s Edinburgh International Festival</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T06:00:23.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.454Z",
+    "status": "new"
+  },
+  {
+    "id": "6e6a395f-15d0-48f8-ad61-97cf444d26cb",
+    "sourceId": "scotsman-news",
+    "guid": "5627570",
+    "title": "Scotland first country in EU and UK to introduce mandatory electronic monitoring on fishing vessels",
+    "sourceUrl": "https://www.scotsman.com/hays-way/scotland-first-country-in-eu-and-uk-to-introduce-mandatory-electronic-monitoring-on-fishing-vessels-5627570",
+    "summary": "<p>Campaigners are calling on the rest of the UK and the EU to follow suit. </p>",
+    "categories": [
+      "Hay&#039;s Way"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T06:00:07.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.454Z",
+    "status": "new"
+  },
+  {
+    "id": "26b9ded8-f43c-449a-bb98-94811ad04e06",
+    "sourceId": "scotsman-news",
+    "guid": "5629176",
+    "title": "What the current Middle East crisis could mean for Scottish agriculture",
+    "sourceUrl": "https://www.scotsman.com/business/what-the-current-middle-east-crisis-could-mean-for-scottish-agriculture-5629176",
+    "summary": "Over the past few years, Scottish farmers and crofters have had stark reminders that global events can quickly translate into local pressures.",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-11T18:32:34.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.454Z",
+    "status": "new"
+  },
+  {
+    "id": "76f80613-0d37-4b88-9d53-ceb52e97d510",
+    "sourceId": "scotsman-news",
+    "guid": "5626825",
+    "title": "Why prospective landlords must invest with their eyes open",
+    "sourceUrl": "https://www.scotsman.com/business/why-prospective-landlords-must-invest-with-their-eyes-open-5626825",
+    "summary": "Financing, regulation, legislation, timescale and taxation ​​are among the issues to be considered, writes David J Alexander",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-10T12:06:10.000Z",
+    "fetchedAt": "2026-03-12T07:02:43.454Z",
     "status": "new"
   }
 ]

@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-12-planespotters-gather-to-catch-glimpse-of-air-force",
+  "title": "Planespotters Gather To Catch Glimpse Of Air Force",
+  "wordCount": 26,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Planespotters gather to catch glimpse of Air Force One. Thousands of people have gathered at Prestwick Airport to watch Donald Trump's arrival onboard Air Force One."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.bbc.com/news/videos/cn0z06kzrxko",
+      "citationText": "serper-scottish-aviation – Planespotters gather to catch glimpse of Air Force One"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Planespotters Gather Catch Glimpse",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-12T07:02:47.466Z"
+}
