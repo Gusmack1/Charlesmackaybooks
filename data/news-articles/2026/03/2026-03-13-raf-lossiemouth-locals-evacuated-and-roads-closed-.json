@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-13-raf-lossiemouth-locals-evacuated-and-roads-closed-",
+  "title": "RAF Lossiemouth: Locals evacuated and roads closed as 'suspicious package' discovered at military base",
+  "wordCount": 19,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "RAF Lossiemouth: Locals evacuated and roads closed as 'suspicious package' discovered at military base. <p>The package has been removed.</p>"
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "scotsman-news",
+      "sourceUrl": "https://www.scotsman.com/news/emergency-incident/raf-lossiemouth-suspicious-package-police-5635863",
+      "citationText": "scotsman-news – RAF Lossiemouth: Locals evacuated and roads closed as 'suspicious package' discovered at military base"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sabres-from-north",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Lossiemouth",
+      "primary": false
+    },
+    {
+      "keyword": "RAF Lossiemouth: Locals evacuated",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-13T01:14:39.962Z"
+}
