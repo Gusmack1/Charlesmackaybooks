@@ -4509,7 +4509,10 @@
     ],
     "publishedAt": "2025-08-15T00:00:00.000Z",
     "fetchedAt": "2026-03-05T01:15:46.933Z",
-    "status": "new"
+    "status": "rewritten",
+    "articleSlug": "2026-03-13-employment-boost-at-glasgow-prestwick-fo",
+    "articlePath": "data/news-articles/2026/03/2026-03-13-employment-boost-at-glasgow-prestwick-fo.json",
+    "rewrittenAt": "2026-03-13T12:36:59.021Z"
   },
   {
     "id": "ea29d01f-ad6b-4ebe-bcea-56c984e988cd",
@@ -4523,7 +4526,10 @@
     ],
     "publishedAt": "2025-12-14T00:00:00.000Z",
     "fetchedAt": "2026-03-05T01:15:46.933Z",
-    "status": "new"
+    "status": "rewritten",
+    "articleSlug": "2026-03-13-glasgow-prestwick-airport-named-air-frei",
+    "articlePath": "data/news-articles/2026/03/2026-03-13-glasgow-prestwick-airport-named-air-frei.json",
+    "rewrittenAt": "2026-03-13T12:36:59.021Z"
   },
   {
     "id": "fb0e006c-06a6-4662-8c47-8e35dbf974b2",
@@ -4787,7 +4793,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-06T01:19:21.250Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-13-minister-celebrates-hial-s-40th-anniversary",
+    "articlePath": "data/news-articles/2026/03/2026-03-13-minister-celebrates-hial-s-40th-anniversary.json",
+    "draftedAt": "2026-03-13T12:37:08.210Z"
   },
   {
     "id": "2e447dc8-34f8-4bc0-b39d-47acc52f53db",
@@ -4871,7 +4880,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-06T01:19:21.250Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-13-us-military-planes-spotted-at-prestwick-airport-am",
+    "articlePath": "data/news-articles/2026/03/2026-03-13-us-military-planes-spotted-at-prestwick-airport-am.json",
+    "draftedAt": "2026-03-13T12:37:08.210Z"
   },
   {
     "id": "087ec8f6-147d-4f6a-a9bb-df4c1d68cd8e",
@@ -4885,7 +4897,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-06T01:19:21.250Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-13-special-military-aircraft-from-middle-east-spotted",
+    "articlePath": "data/news-articles/2026/03/2026-03-13-special-military-aircraft-from-middle-east-spotted.json",
+    "draftedAt": "2026-03-13T12:37:08.210Z"
   },
   {
     "id": "46599202-4bc1-4f19-a415-9b80dd9fbe60",
@@ -4913,7 +4928,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-06T01:19:21.250Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-13-first-minister-urged-to-kick-us-troops-out-of-pres",
+    "articlePath": "data/news-articles/2026/03/2026-03-13-first-minister-urged-to-kick-us-troops-out-of-pres.json",
+    "draftedAt": "2026-03-13T12:37:08.210Z"
   },
   {
     "id": "debafbd2-68a8-46eb-891e-0834bdc64f2f",
@@ -4927,7 +4945,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-06T01:19:21.250Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-13-greens-call-on-swinney-to-ban-us-military-from-pre",
+    "articlePath": "data/news-articles/2026/03/2026-03-13-greens-call-on-swinney-to-ban-us-military-from-pre.json",
+    "draftedAt": "2026-03-13T12:37:08.210Z"
   },
   {
     "id": "b37e3c46-d42e-48bb-9468-33fc3cdbc11a",
@@ -12778,6 +12799,617 @@
     "imagePolicy": "attribution-only",
     "publishedAt": "2026-03-12T17:06:14.000Z",
     "fetchedAt": "2026-03-13T07:01:21.840Z",
+    "status": "new"
+  },
+  {
+    "id": "7091dd15-7d2c-4204-b77e-f6942c252e94",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cx2gzlj72y0o#0",
+    "title": "Woman charged after 2024 fatal crash in Port Glasgow",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx2gzlj72y0o?at_medium=RSS&at_campaign=rss",
+    "summary": "Scott McFadden, 38, was a passenger in a Volkswagen Golf which struck an unoccupied parked car.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T10:12:38.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.144Z",
+    "status": "new"
+  },
+  {
+    "id": "e82091c7-f94d-4bc5-98db-a9fbe54ef02b",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/czx4zpxpewro#0",
+    "title": "Your pictures of Scotland",
+    "sourceUrl": "https://www.bbc.com/news/articles/czx4zpxpewro?at_medium=RSS&at_campaign=rss",
+    "summary": "A selection of photographs submitted to BBC Scotland News from around the country this week.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T11:23:25.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "a2b81edf-d93c-43c0-b926-61ff0fcb9687",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cx24zpw9nrno#0",
+    "title": "Parliament misconduct allegations reported to police",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx24zpw9nrno?at_medium=RSS&at_campaign=rss",
+    "summary": "Presiding Officer Alison Johnstone told MSPs that parliament police had been made aware of the report.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T11:42:32.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "28778e7d-69ee-4d72-a9f7-ffa47b78c1d7",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c2lr8pee58zo#0",
+    "title": "Councillor quits planning role after 'no more wind farms on Skye' comment",
+    "sourceUrl": "https://www.bbc.com/news/articles/c2lr8pee58zo?at_medium=RSS&at_campaign=rss",
+    "summary": "Drew Millar said it was made in \"error\" but felt it was best that he resigned as a committee chairman.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T10:19:21.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "b3d84346-59e7-4c8f-86b4-a9323c33981e",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cvg8ykl31x7o#1",
+    "title": "NHS Scotland chief executive Caroline Lamb to step down",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg8ykl31x7o?at_medium=RSS&at_campaign=rss",
+    "summary": "During the Covid pandemic she oversaw the Test and Protect contact tracing system and the vaccination programme.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T11:24:43.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "93f18d90-b384-41cd-81ec-23e0567f00bd",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cddnlzlyqyqo#1",
+    "title": "I turned down long-awaited knee surgery 160 miles from home",
+    "sourceUrl": "https://www.bbc.com/news/articles/cddnlzlyqyqo?at_medium=RSS&at_campaign=rss",
+    "summary": "Dorothy Thomson faces a wait for her operation after turning down a 300-mile round trip from Dumfries.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T06:13:34.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "937701c7-156c-460f-bd08-6f46cf274add",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cy03zg5928wo#1",
+    "title": "Vets issue fish hook danger warning to dog owners",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy03zg5928wo?at_medium=RSS&at_campaign=rss",
+    "summary": "They treated three dogs for fish hook injuries in just one month - including a spaniel called Chip from Stranraer.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T06:13:12.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "74605467-487a-4979-80e7-1d85f6217e1f",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cvg3wvqgl55o#1",
+    "title": "Trump's tariffs lead to production increase at Lochaber smelter",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg3wvqgl55o?at_medium=RSS&at_campaign=rss",
+    "summary": "The UK's only aluminium smelter has increased production by 10% to meet demand.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T08:51:27.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "f212aca2-df94-46ed-8aea-1df79d8d6d9b",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/weather/articles/c39we83jgydo#2",
+    "title": "How long will the cold weather last?",
+    "sourceUrl": "https://www.bbc.com/weather/articles/c39we83jgydo?at_medium=RSS&at_campaign=rss",
+    "summary": "Friday feels noticeably colder. Helen Willetts explains why there's been a change in temperature and looks at how long it may last.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T09:54:06.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "30377c92-5906-4ccc-b001-85a80b9e6a8a",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cy9gzpl25q0o#3",
+    "title": "Council spending on foreign trips causes division",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy9gzpl25q0o?at_medium=RSS&at_campaign=rss",
+    "summary": "Edinburgh councillors signed off on a number of trips, including to New York for Tartan Week.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T10:27:34.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "ad718fae-8a45-434f-ba5b-e60381344900",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cvg3wvqgl55o#3",
+    "title": "Trump's tariffs lead to production increase at Lochaber smelter",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg3wvqgl55o?at_medium=RSS&at_campaign=rss",
+    "summary": "The UK's only aluminium smelter has increased production by 10% to meet demand.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T08:51:27.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "ec5b9855-4792-42c7-9b5b-78f91bdadda6",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/cvg1y33zz30o#3",
+    "title": "Robinson has 'two-fold' plan to bring success back to Aberdeen",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/cvg1y33zz30o?at_medium=RSS&at_campaign=rss",
+    "summary": "New Aberdeen head coach Stephen Robinson vows to give the team an \"identity and stability\" to bring long-term success to Pittodrie - and has a two-phase plan to improve the Scottish Premiership side.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T19:30:11.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "799fbafc-6708-4915-9700-f7fd47da5cb1",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c20l7141kpko#3",
+    "title": "Angus Council rejects World Cup public holiday",
+    "sourceUrl": "https://www.bbc.com/news/articles/c20l7141kpko?at_medium=RSS&at_campaign=rss",
+    "summary": "Councillors voted against making 15 June an additional day off for employees.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T10:37:37.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "6ea2686f-06b4-4e75-86e8-547ed8a429fa",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/c23z53jr041o#4",
+    "title": "What's next in best title race in Europe?",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/c23z53jr041o?at_medium=RSS&at_campaign=rss",
+    "summary": "Following a fortnight off, what's the state of play in a captivating Scottish title fight as another blockbuster weekend looms?",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T11:27:18.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.145Z",
+    "status": "new"
+  },
+  {
+    "id": "0328278d-e5ee-4a16-8075-b98b750e545b",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c75e06e0kd7o#0",
+    "title": "UK economy flatlines in January as people cut back on eating out",
+    "sourceUrl": "https://www.bbc.com/news/articles/c75e06e0kd7o?at_medium=RSS&at_campaign=rss",
+    "summary": "Analysts had been expecting 0.2% growth for the UK economy at the beginning of the year.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T11:26:57.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "1abb1855-b3cc-4024-b460-134c827b2c4a",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cvg3yly7gxpo#0",
+    "title": "Starmer and Martin discuss cost-of-living and security at UK-Ireland summit",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg3yly7gxpo?at_medium=RSS&at_campaign=rss",
+    "summary": "The second summit follows the announcement of new Irish investment of more than £900m into the UK.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T11:00:33.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "df1e97fe-48aa-4358-895e-52668e674fa7",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c626mrzmv26o#0",
+    "title": "I was jailed while pregnant during Post Office scandal. I'm still waiting for compensation",
+    "sourceUrl": "https://www.bbc.com/news/articles/c626mrzmv26o?at_medium=RSS&at_campaign=rss",
+    "summary": "Seema Misra calls for accountability as a report by MPs raises concerns about ongoing delays.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T09:12:06.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "9d341170-fe05-4167-82a8-229a664e4a2e",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cvg1ye879r1o#1",
+    "title": "Romance conman posed as MI6 and BBC worker to scam women out of £50k",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg1ye879r1o?at_medium=RSS&at_campaign=rss",
+    "summary": "\"Selfish and narcissistic\" Rodney Ade Roberts is jailed for more than five years for scamming three women.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T08:56:20.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "94ce2388-545d-4e9b-a974-4067b966174b",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c5ygj315dx7o#1",
+    "title": "Man's blue skin A&E panic was just bed sheet dye",
+    "sourceUrl": "https://www.bbc.com/news/articles/c5ygj315dx7o?at_medium=RSS&at_campaign=rss",
+    "summary": "Tommy Lynch rushed to hospital when he woke with blue skin but it turned out to be from his sheets.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T06:15:37.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "e6010712-930e-4945-9150-20f139e42e33",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/videos/cvg8yp84mplo#1",
+    "title": "Churchill's granddaughter happy with his picture being replaced on £5 note",
+    "sourceUrl": "https://www.bbc.com/news/videos/cvg8yp84mplo?at_medium=RSS&at_campaign=rss",
+    "summary": "Emma Soames rejected Nigel Farage's statement that the currency change was \"wokery\".",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T02:00:04.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "bf0e1560-8aca-46cf-b2a6-28d999dbda50",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c14m142ze58o#1",
+    "title": "Mayor to consider new charges for SUVs in London",
+    "sourceUrl": "https://www.bbc.com/news/articles/c14m142ze58o?at_medium=RSS&at_campaign=rss",
+    "summary": "The plan is part the mayor's strategy to stop death and serious injury on London's roads by 2041.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T11:09:04.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "eba5aed4-4c6c-4002-8a6e-18c5f3b999f0",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cx247vd1v48o#1",
+    "title": "Boy charged over stabbing of teen girl at school",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx247vd1v48o?at_medium=RSS&at_campaign=rss",
+    "summary": "Armed police were sent to the scene and pictured as they entered classrooms.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T07:07:58.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "5515b1de-2a56-4811-a0e7-49e8a8ab922e",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cwykzg88x9ro#4",
+    "title": "Father criticises letter sent to non-verbal son about changes to care",
+    "sourceUrl": "https://www.bbc.com/news/articles/cwykzg88x9ro?at_medium=RSS&at_campaign=rss",
+    "summary": "Glynn Brown's son Aaron is unable to communicate and has round the clock support.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T06:19:20.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "04cb03ca-4ca7-41cd-969e-6bfbfbd43752",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/clygqnlpwero#4",
+    "title": "Woman found out she had terminal brain cancer after suitcase fell on her head",
+    "sourceUrl": "https://www.bbc.com/news/articles/clygqnlpwero?at_medium=RSS&at_campaign=rss",
+    "summary": "Lauren Macpherson was travelling home from a festival in London when her life changed forever.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T06:10:06.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.156Z",
+    "status": "new"
+  },
+  {
+    "id": "6b8c6e4c-3530-4e64-9911-51412651d91e",
+    "sourceId": "scotsman-news",
+    "guid": "5693382",
+    "title": "Hyndland Street: Fire crews tackle early hours blaze at restaurant in Glasgow West End tenement",
+    "sourceUrl": "https://www.scotsman.com/news/fire-crews-west-end-restaurant-5693382",
+    "summary": "<p>Fire crews rushed to the scene of a blaze at a West End restaurant in the early hours of Friday morning.</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T11:34:01.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.402Z",
+    "status": "new"
+  },
+  {
+    "id": "bf09a01f-9d56-4fbb-8210-602cf00fce95",
+    "sourceId": "scotsman-news",
+    "guid": "5687846",
+    "title": "Weekend of travel chaos for Scots travelling to England amid major works on the East Coast Main Line",
+    "sourceUrl": "https://www.scotsman.com/news/weekend-of-travel-chaos-for-scots-travelling-south-of-the-border-amid-major-works-on-the-east-coast-main-line-5687846",
+    "summary": "<p>LNER trains from Edinburgh to London will terminate at Peterborough on Sunday. </p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T10:38:36.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.402Z",
+    "status": "new"
+  },
+  {
+    "id": "96fedd32-ccff-4aca-a63b-064d451393cf",
+    "sourceId": "scotsman-news",
+    "guid": "5690124",
+    "title": "Scotsman Obituaries: Frank Hurley, journalist who meted out justice as The Judge",
+    "sourceUrl": "https://www.scotsman.com/news/people/scotsman-obituaries-frank-hurley-journalist-who-meted-out-justice-as-the-judge-5690124",
+    "summary": "Frank Hurley, newspaper reporter. Born: 3 October 1944 in Croydon, South London. Died: 27 January 2026, aged 81​",
+    "categories": [
+      "People",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T10:16:18.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.402Z",
+    "status": "new"
+  },
+  {
+    "id": "5a3a29bc-f494-4970-9056-21eaa7697c95",
+    "sourceId": "scotsman-news",
+    "guid": "5683795",
+    "title": "A9: Major road in Highland Perthshire partially closed after overnight lorry crash",
+    "sourceUrl": "https://www.scotsman.com/news/a9-major-road-in-highland-perthshire-partially-closed-after-overnight-lorry-crash-5683795",
+    "summary": "<p>The road was closed at around 1am. </p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T08:11:08.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.402Z",
+    "status": "new"
+  },
+  {
+    "id": "3ecea76c-cbb7-4c58-a96b-be57d248bd33",
+    "sourceId": "scotsman-news",
+    "guid": "5628290",
+    "title": "Thai food in the Highlands: Discover the secrets of the Croft Inn chef’s mouthwatering cooking",
+    "sourceUrl": "https://www.scotsman.com/sponsored/thai-food-in-the-highlands-discover-the-secrets-of-the-croft-inn-chefs-mouthwatering-cooking-5628290",
+    "summary": "<p>Everyone wants to know how they make their five-star food at this foodie favourite – and now you can see behind the scenes in Nat’s kitchen!</p>",
+    "categories": [
+      "Sponsored"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T07:00:33.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.402Z",
+    "status": "new"
+  },
+  {
+    "id": "3e720109-a07b-4895-bdf6-0531d612c91f",
+    "sourceId": "scotsman-news",
+    "guid": "5628349",
+    "title": "£15 million investment signals a new era for later-life living in Edinburgh: Winton Suites welcomes residents",
+    "sourceUrl": "https://www.scotsman.com/sponsored/ps15-million-investment-signals-a-new-era-for-later-life-living-in-edinburgh-winton-suites-welcomes-residents-5628349",
+    "summary": "<p>A £15 million investment by Northcare is set to reshape perceptions of later-life living in Edinburgh, as Winton Suites by Northcare has started to welcome its first residents.</p>",
+    "categories": [
+      "Sponsored"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T07:00:29.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.402Z",
+    "status": "new"
+  },
+  {
+    "id": "14a51b64-390c-4c09-82fc-84fe98ec9952",
+    "sourceId": "scotsman-news",
+    "guid": "5621156",
+    "title": "The rise of the bank of Mum and Dad: A practical guide to shared home buying for Edinburgh families",
+    "sourceUrl": "https://www.scotsman.com/sponsored/the-rise-of-the-bank-of-mum-and-dad-a-practical-guide-to-shared-home-buying-for-edinburgh-families-5621156",
+    "summary": "<p>It will come as no surprise to anyone watching the Edinburgh market that more first-time buyers are receiving help from family.</p>",
+    "categories": [
+      "Sponsored"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T07:00:07.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.402Z",
+    "status": "new"
+  },
+  {
+    "id": "45be2d56-6af6-47a4-ae19-0328768d61a5",
+    "sourceId": "scotsman-news",
+    "guid": "5642581",
+    "title": "Readers' Letters: Starmer's words on truth come back to haunt him",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/letters/readers-letters-starmers-words-on-truth-come-back-to-haunt-him-5642581",
+    "summary": "Reader is unimpressed by news Keir Starmer was warned of Peter Mandelson’s ‘particularly close relationship’ with Jeffrey Epstein",
+    "categories": [
+      "Letters",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T17:22:05.000Z",
+    "fetchedAt": "2026-03-13T12:36:53.402Z",
+    "status": "new"
+  },
+  {
+    "id": "23e6f23c-e119-42ca-967b-dc0448d1b92d",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/defence-employer-recognition-scheme#2026-03-13T11:45:16Z",
+    "title": "Guidance: Defence Employer Recognition Scheme",
+    "sourceUrl": "https://www.gov.uk/government/publications/defence-employer-recognition-scheme",
+    "summary": "The Employer Recognition Scheme (ERS) encourages employers to support defence and inspire other organisations to do the same.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-13T11:45:16.000Z",
+    "fetchedAt": "2026-03-13T12:36:54.173Z",
+    "status": "new"
+  },
+  {
+    "id": "56cdc970-4c98-44a5-af64-56947b0865fe",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/contractor-flying-approved-organizations-scheme-basic-remotely-piloted-air-systems-cfaosbr#2026-03-13T10:50:35Z",
+    "title": "Guidance: Contractor Flying Approved Organizations Scheme (Basic Uncrewed Air Systems) (CFAOS(BU))",
+    "sourceUrl": "https://www.gov.uk/government/publications/contractor-flying-approved-organizations-scheme-basic-remotely-piloted-air-systems-cfaosbr",
+    "summary": "Information about the Military Aviation Authority (MAA) contractor Flying Approved Organization Scheme (Basic Uncrewed Air Systems) (CFAOS(BU)).",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-13T10:50:35.000Z",
+    "fetchedAt": "2026-03-13T12:36:54.173Z",
+    "status": "new"
+  },
+  {
+    "id": "183e2dbe-e6f1-472d-a85d-61bec1636a1b",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/news/overhaul-of-nuclear-system-to-speed-up-building-and-cut-costs#2026-03-13T07:00:08Z",
+    "title": "Overhaul of nuclear system to speed up building and cut costs",
+    "sourceUrl": "https://www.gov.uk/government/news/overhaul-of-nuclear-system-to-speed-up-building-and-cut-costs",
+    "summary": "Plan to overhaul nuclear system will speed up building, strengthen national and energy security, and cut costs.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-13T07:00:08.000Z",
+    "fetchedAt": "2026-03-13T12:36:54.173Z",
+    "status": "new"
+  },
+  {
+    "id": "ecfa337d-88cb-497d-9e92-83ac28fca645",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.scottishconstructionnow.com/articles/hub-north-scotland-and-robertson-to-deliver-oban-business-park-project",
+    "title": "hub North Scotland and Robertson to deliver Oban business park project",
+    "sourceUrl": "https://www.scottishconstructionnow.com/articles/hub-north-scotland-and-robertson-to-deliver-oban-business-park-project",
+    "summary": "Plans for a new business park at Oban Airport are progressing as Argyll and Bute Council has signed a contract with hub North Scotland to...",
+    "categories": [
+      "Scottish Construction Now"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-13T12:36:58.832Z",
+    "status": "new"
+  },
+  {
+    "id": "1e8c3968-f502-489f-88d6-b4e5a51146ea",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.heraldscotland.com/news/25932384.edinburgh-airport-boss-gordon-dewar-music-club-plan-no-flight-fancy/",
+    "title": "Scottish airport chief reveals a very surprising departure",
+    "sourceUrl": "https://www.heraldscotland.com/news/25932384.edinburgh-airport-boss-gordon-dewar-music-club-plan-no-flight-fancy/",
+    "summary": "The outgoing chief executive of Edinburgh Airport has revealed his 'real hankering' to open a music club.",
+    "categories": [
+      "The Herald"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-13T12:36:58.832Z",
+    "status": "new"
+  },
+  {
+    "id": "f1aa7f21-be9e-400d-aee5-1c45dfdf4115",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.forcesnews.com/services/raf/preparing-worst-raf-lossiemouth-tests-response-airfield-emergency",
+    "title": "Preparing for the worst: RAF Lossiemouth tests response to airfield emergency",
+    "sourceUrl": "https://www.forcesnews.com/services/raf/preparing-worst-raf-lossiemouth-tests-response-airfield-emergency",
+    "summary": "RAF Lossiemouth has been testing its capability to deal with an emergency incident while continuing to protect the UK northern airspace.",
+    "categories": [
+      "Forces News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-13T12:36:58.832Z",
+    "status": "new"
+  },
+  {
+    "id": "3ed541bc-b58a-4b0e-bc51-945202147e1c",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://meyka.com/blog/raf-lossiemouth-alert-controlled-blast-finds-no-threat-march-13-1303/",
+    "title": "RAF Lossiemouth Alert: Controlled Blast Finds No Threat, March 13",
+    "sourceUrl": "https://meyka.com/blog/raf-lossiemouth-alert-controlled-blast-finds-no-threat-march-13-1303/",
+    "summary": "RAF Lossiemouth incident: bomb squad made a controlled explosion on a suspicious package, found no threat, and flights continued.",
+    "categories": [
+      "Meyka"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-13T12:36:58.832Z",
+    "status": "new"
+  },
+  {
+    "id": "1c319dbf-0a0d-43b2-8896-a0ee82f83992",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.scotsman.com/news/politics/prestwick-airport-john-swinney-seeking-uk-government-meeting-over-us-military-use-of-airport-5641305",
+    "title": "Prestwick Airport: Swinney seeks UK Government meeting on US military use of airport",
+    "sourceUrl": "https://www.scotsman.com/news/politics/prestwick-airport-john-swinney-seeking-uk-government-meeting-over-us-military-use-of-airport-5641305",
+    "summary": "Three US military planes stopped off at Prestwick Airport on their way to the Middle East.",
+    "categories": [
+      "The Scotsman"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-13T12:36:58.832Z",
+    "status": "new"
+  },
+  {
+    "id": "69363e2d-e82d-470b-8fbe-2d05db704992",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.ayradvertiser.com/news/25929557.opportunity-fly-rear-seat-spitfire-prestwick/",
+    "title": "Bids to fly in rear seat of Spitfire from Prestwick Airport reach £8k",
+    "sourceUrl": "https://www.ayradvertiser.com/news/25929557.opportunity-fly-rear-seat-spitfire-prestwick/",
+    "summary": "A one-in-a-lifetime opportunity to fly in the rear seat of a Spitfire from Prestwick Airport will cost at least £8000.",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-13T12:36:58.832Z",
+    "status": "new"
+  },
+  {
+    "id": "3daa8859-c76c-4aa8-8d44-e3307e252649",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "http://www.carrickherald.com/news/25922316.bbc-programme-elvis-presleys-stop-prestwick-airport/",
+    "title": "New programme on Elvis Presley's famous stop at Prestwick Airport",
+    "sourceUrl": "http://www.carrickherald.com/news/25922316.bbc-programme-elvis-presleys-stop-prestwick-airport/",
+    "summary": "In March 1960, the Rock n' Roll icon set foot on Scottish soil for the first and only time on his way back from military service in Germany.",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-13T12:36:58.832Z",
     "status": "new"
   }
 ]
