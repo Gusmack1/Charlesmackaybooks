@@ -5399,7 +5399,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-08T01:16:41.299Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-swinney-would-consider-us-military-plane-ban-from-",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-swinney-would-consider-us-military-plane-ban-from-.json",
+    "draftedAt": "2026-03-14T06:55:36.618Z"
   },
   {
     "id": "11eaf653-44ac-47d7-8d41-f7ceebe7b217",
@@ -5413,7 +5416,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-08T01:16:41.299Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-john-swinney-would-consider-prestwick-airport-ban-",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-john-swinney-would-consider-prestwick-airport-ban-.json",
+    "draftedAt": "2026-03-14T06:55:36.618Z"
   },
   {
     "id": "b7e9c66f-3d70-4ca2-abda-8335c861c7ff",
@@ -5427,7 +5433,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-08T01:16:41.299Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-us-military-plane-takes-off-from-prestwick-airport",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-us-military-plane-takes-off-from-prestwick-airport.json",
+    "draftedAt": "2026-03-14T06:55:36.618Z"
   },
   {
     "id": "820db526-d804-4196-a5c2-e2ab92d6aabb",
@@ -5441,7 +5450,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-08T12:29:15.142Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-swinney-would-consider-banning-us-military-planes-",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-swinney-would-consider-banning-us-military-planes-.json",
+    "draftedAt": "2026-03-14T06:55:36.618Z"
   },
   {
     "id": "ab22b000-39af-4519-9463-f20411fef375",
@@ -5455,7 +5467,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-08T12:29:15.142Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-prestwick-airport-is-being-used-by-donald-trump-to",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-prestwick-airport-is-being-used-by-donald-trump-to.json",
+    "draftedAt": "2026-03-14T06:55:36.618Z"
   },
   {
     "id": "a3057714-a04d-42e4-8b85-2f1a37a294b1",
@@ -14290,6 +14305,432 @@
     ],
     "publishedAt": "2026-01-13T00:00:00.000Z",
     "fetchedAt": "2026-03-14T01:13:33.888Z",
+    "status": "new"
+  },
+  {
+    "id": "7be72d8d-9507-4242-ac28-764cd7d6458c",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cvg3y9dpvxgo#0",
+    "title": "Chancellor to offer support over rising heating oil costs",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg3y9dpvxgo?at_medium=RSS&at_campaign=rss",
+    "summary": "Rachel Reeves says the Treasury is also looking at \"different options\" to help households most vulnerable to soaring energy bills.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T03:49:14.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "68dd66c1-436f-44bc-a4a2-c849e9f09f29",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cy57zv3l0nvo#0",
+    "title": "Ethics adviser rejects Tory call for inquiry into PM over Mandelson appointment",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy57zv3l0nvo?at_medium=RSS&at_campaign=rss",
+    "summary": "Sir Laurie Magnus said the relevant process appeared to have been followed when Lord Mandelson was made ambassador.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T22:17:38.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "24dcb076-5c87-4b71-95b2-7f895449ba00",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c89kjql73kqo#0",
+    "title": "Doomed hereditary peers spy chance to stay in the Lords",
+    "sourceUrl": "https://www.bbc.com/news/articles/c89kjql73kqo?at_medium=RSS&at_campaign=rss",
+    "summary": "The Tories are deciding which hereditary peers to keep after being offered 15 seats in a compromise deal.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T01:41:13.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "ced909b7-5c4f-449f-ab8f-376011955168",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c5yjm9zdn8no#0",
+    "title": "New Archbishop of Canterbury to walk 87 mile pilgrimage route ahead of installation",
+    "sourceUrl": "https://www.bbc.com/news/articles/c5yjm9zdn8no?at_medium=RSS&at_campaign=rss",
+    "summary": "Dame Sarah Mullally's six-day walk begins at Southwark Cathedral and travels along the Becket Way to Canterbury Cathedral.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T01:46:42.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "9f5fcb15-80ba-4733-99d3-e74b6f894930",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c6204d300ndo#0",
+    "title": "Son urges global leaders to help Iran detainees",
+    "sourceUrl": "https://www.bbc.com/news/articles/c6204d300ndo?at_medium=RSS&at_campaign=rss",
+    "summary": "Lindsay and Craig Foreman were detained in January 2025 and later sentenced to 10 years in prison.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T16:15:43.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "2921b242-8c77-4e27-bb89-62927460e454",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c98q05eygm3o#1",
+    "title": "Zoo celebrates first UK-born elephant shrews",
+    "sourceUrl": "https://www.bbc.com/news/articles/c98q05eygm3o?at_medium=RSS&at_campaign=rss",
+    "summary": "Hertfordshire Zoo says the newborns are a \"significant victory for the wider zoological community\".",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:15:18.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "8c5d802b-a048-4156-85de-a6d7f70adebe",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cy9gzynw3pjo#1",
+    "title": "Alliance leader says Stormont role 'should not be taken for granted'",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy9gzynw3pjo?at_medium=RSS&at_campaign=rss",
+    "summary": "The party's continued participation in Stormont's power-sharing government remains a \"balance\", she is expected to tell her party's annual conference.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:08:21.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "07466a71-d9a6-4c18-8d64-9ce15842ec03",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c1d6l9v3qk1o#1",
+    "title": "Trial starts in case of explosives sent to UK and Poland",
+    "sourceUrl": "https://www.bbc.com/news/articles/c1d6l9v3qk1o?at_medium=RSS&at_campaign=rss",
+    "summary": "The parcel plot is one of a wave of sabotage attacks across Europe which officials have linked to Russia.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T20:19:22.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "c97bb5b9-9499-45da-a444-2cc48390443a",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/crk83e2g65no#1",
+    "title": "Petrol retailers in row with government over 'rip off' accusations",
+    "sourceUrl": "https://www.bbc.com/news/articles/crk83e2g65no?at_medium=RSS&at_campaign=rss",
+    "summary": "They briefly threatened to pull out of a government meeting, accusing ministers of using \"inflammatory language\" over rising fuel prices.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T17:42:49.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "6bb1024c-137f-4f63-9cf2-ea24b7030ea5",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cj4zjk2l8xjo#3",
+    "title": "The Papers: Epstein files photo 'bombshell' and 'Iran war spirals'",
+    "sourceUrl": "https://www.bbc.com/news/articles/cj4zjk2l8xjo?at_medium=RSS&at_campaign=rss",
+    "summary": "The Middle East war and a photo Andrew Mountbatten-Windsor with Jeffrey Epstein and Peter Mandelson dominate Saturday's front pages.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T05:03:47.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.548Z",
+    "status": "new"
+  },
+  {
+    "id": "a79f8543-80e5-4af8-96a7-e0b46e866de3",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cq57x0nlnv9o#3",
+    "title": "Maya Jama: 'My dream acting role is to play a monster or villain'",
+    "sourceUrl": "https://www.bbc.com/news/articles/cq57x0nlnv9o?at_medium=RSS&at_campaign=rss",
+    "summary": "The Love Island host explains why she is keen to move into acting after joining the cast of The Gentlemen.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T03:59:10.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.549Z",
+    "status": "new"
+  },
+  {
+    "id": "2819ba19-5c77-47bc-a126-f64bbf8ecc98",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cdxz0enqykgo#3",
+    "title": "Why do Glasgow's historic buildings keep catching fire?",
+    "sourceUrl": "https://www.bbc.com/news/articles/cdxz0enqykgo?at_medium=RSS&at_campaign=rss",
+    "summary": "The fire that devastated a building on Union Street is the latest in a series of blazes to strike the city's historic sites.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T22:52:47.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.549Z",
+    "status": "new"
+  },
+  {
+    "id": "ce0d2bee-49b1-4d8a-89c3-be88144cdc72",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cr457nl34qro#4",
+    "title": "What should NI drivers expect as pump prices rise?",
+    "sourceUrl": "https://www.bbc.com/news/articles/cr457nl34qro?at_medium=RSS&at_campaign=rss",
+    "summary": "BBC News NI looks at what is going on at the pumps, whether there are shortages and if panic-buying is taking place.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T00:00:05.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.549Z",
+    "status": "new"
+  },
+  {
+    "id": "147ca0eb-e980-4125-acfc-11225e965aea",
+    "sourceId": "scotsman-news",
+    "guid": "5693196",
+    "title": "I would not take my son to an Old Firm game, says Swinney after latest disorder",
+    "sourceUrl": "https://www.scotsman.com/news/scottish-news/i-would-not-take-my-son-to-an-old-firm-game-says-swinney-after-latest-disorder-5693196",
+    "summary": "<p>Comments follow clash at Ibrox that saw fans of both clubs storm the pitch</p>",
+    "categories": [
+      "Scottish News",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:01:18.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "fdc2849c-b349-4b66-a3bf-566779b9a1f1",
+    "sourceId": "scotsman-news",
+    "guid": "5704746",
+    "title": "UK Government funds £14m Scots nuclear research involving 100 students",
+    "sourceUrl": "https://www.scotsman.com/news/politics/uk-government-funds-ps14m-scots-nuclear-research-involving-100-students-5704746",
+    "summary": "<p>Four annual cohorts of PhD students at Glasgow, Strathclyde, Edinburgh and Heriot-Watt universities will “work on the cutting edge future of nuclear technology.”</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:01:00.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "c55c8e62-a98c-46f9-9145-a3cc0f3e14ef",
+    "sourceId": "scotsman-news",
+    "guid": "5629842",
+    "title": "How Glasgow's Philistines, not just fires, have robbed the city of many architectural treasures",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/how-glasgows-philistines-not-just-fires-have-robbed-the-city-of-many-architectural-treasures-5629842",
+    "summary": "<h3>The ‘Union Corner’ fire has done in an evening what Glasgow Council and its Corporation forerunner have been doing for decades</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:59.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "21c549a5-0a56-4ba2-a57b-946f4a6180e0",
+    "sourceId": "scotsman-news",
+    "guid": "5640298",
+    "title": "From knitting underwear for Everest to Bingo hall gossip: the Borders stories brought to life on stage",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/from-knitting-underwear-for-everest-to-bingo-hall-gossip-the-borders-stories-brought-to-life-on-stage-5640298",
+    "summary": "<p>The project takes local stories to turn into plays</p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:50.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "604f3499-300d-4805-937e-c5e0bcf52b9f",
+    "sourceId": "scotsman-news",
+    "guid": "5708588",
+    "title": "Why the Six Nations is the best rugby tournament in the world",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/why-the-six-nations-is-the-best-rugby-tournament-in-the-world-5708588",
+    "summary": "<h3>It could hardly be more dramatic as Scotland, France and Ireland vie to be crowned Six Nations’ champions</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:49.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "9852e883-d712-4ce5-aebe-99e772ba7390",
+    "sourceId": "scotsman-news",
+    "guid": "5713683",
+    "title": "Grieving QEUH mother says Fiona McQueen resignation 'admission of guilt' over 'appalling Disneyland remarks",
+    "sourceUrl": "https://www.scotsman.com/news/politics/fiona-mcqueen-qeuh-infections-scandal-5713683",
+    "summary": "<p>A grieving mother who claims Fiona McQueen bribed her family after the death of her daughter has labelled her resignation from public office as “an admission of guilt”.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:48.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "42866dd9-c342-4fdd-8b7d-f38f23e5c9a9",
+    "sourceId": "scotsman-news",
+    "guid": "5712657",
+    "title": "UK energy transition 'lagging behind global rivals' amid North Sea row",
+    "sourceUrl": "https://www.scotsman.com/news/politics/uk-energy-transition-north-sea-oil-and-gas-5712657",
+    "summary": "<p>A global energy expert has warned an obsessive row over supply of power from the North Sea is risking the UK lagging behind other global powers in the transition</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:45.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "510af9c4-c2c6-4879-86da-d86c89af6e04",
+    "sourceId": "scotsman-news",
+    "guid": "5634250",
+    "title": "50 things that sum up Scotland? Here are a few suggestions",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/50-things-that-sum-up-scotland-here-are-a-few-suggestions-5634250",
+    "summary": "<h3>As English people ponder 50 objects that sum up their nation, Scotland should do the same, says Stephen Jardine</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:45.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "17e2dfb8-18a8-451b-bad1-b9ad3c7def81",
+    "sourceId": "scotsman-news",
+    "guid": "5687434",
+    "title": "How the Middle East oil crisis exposes SNP's false claims about independence",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/how-the-middle-east-oil-crisis-exposes-snps-false-claims-about-independence-5687434",
+    "summary": "<h3>Devolution can only work when Scotland’s two governments are prepared to work together, and the SNP’s antics show they are not</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:33.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "2c57ec31-4073-4436-9a10-f9b96e04ca39",
+    "sourceId": "scotsman-news",
+    "guid": "5629605",
+    "title": "How to make an ethical decision about going to war – or staying out of it",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/how-to-make-an-ethical-decision-about-going-to-war-or-staying-out-of-it-5629605",
+    "summary": "<h3>Without a legal basis and a plan for a peaceful transition of power in Iran, it is as foolish today as it was ten years ago to endorse military action, writes Stephen Gethins</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:11.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "4d5e8de6-74a6-4151-a5f8-109a1a1a4d60",
+    "sourceId": "scotsman-news",
+    "guid": "5690448",
+    "title": "How transgender debate has shattered Scotland's rape crisis centre network",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/how-transgender-debate-has-shattered-scotlands-rape-crisis-centre-network-5690448",
+    "summary": "<h3>Rape survivors need properly funded support services based on the immutable principle of single-sex provision</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:08.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "c654d715-4d59-4981-92f0-d5d0579317ae",
+    "sourceId": "scotsman-news",
+    "guid": "5701072",
+    "title": "Angus Robertson: 'Earlier intervention would not have saved leadership chaos at heritage quango'",
+    "sourceUrl": "https://www.scotsman.com/news/politics/angus-robertson-earlier-intervention-would-not-have-saved-leadership-chaos-at-heritage-quango-5701072",
+    "summary": "<p>Angus Robertson was questioned over ministerial involvement in Historic Environment Scotland</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:04.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "cf7e3335-8ad2-4c1c-bfc6-2fa555c29762",
+    "sourceId": "scotsman-news",
+    "guid": "5709204",
+    "title": "Unjust transition looms: How Scotland is falling behind in energy revolution as China steals a march",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/unjust-transition-looms-how-scotland-is-falling-behind-in-energy-revolution-as-china-steals-a-march-5709204",
+    "summary": "<h3>UK energy policy was once admired around the world, but other countries are speeding up the pace of their transitions to renewables</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:04.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "57e8b882-66f7-4ac9-875d-96d703a7069f",
+    "sourceId": "scotsman-news",
+    "guid": "5703634",
+    "title": "'People's senate' could strengthen Holyrood scrutiny, says new manifesto",
+    "sourceUrl": "https://www.scotsman.com/news/politics/peoples-senate-could-strengthen-holyrood-scrutiny-says-new-manifesto-5703634",
+    "summary": "<p>Scotland 2050 set out a range of reforms in a document sent to MSPs</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T06:00:01.000Z",
+    "fetchedAt": "2026-03-14T06:55:32.875Z",
     "status": "new"
   }
 ]

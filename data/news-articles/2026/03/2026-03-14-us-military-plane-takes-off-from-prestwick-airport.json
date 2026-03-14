@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-14-us-military-plane-takes-off-from-prestwick-airport",
+  "title": "Us Military Plane Takes Off From Prestwick Airport",
+  "wordCount": 31,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "US military plane takes off from Prestwick Airport. Updates from your News topics will appear in My News and in a collection on the News homepage. Prestwick Airport. Follow Prestwick Airport."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/ce8npd5e481o",
+      "citationText": "serper-scottish-aviation – US military plane takes off from Prestwick Airport"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Military Plane Takes Off",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-14T06:55:36.620Z"
+}
