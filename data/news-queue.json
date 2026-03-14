@@ -5484,7 +5484,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-08T12:29:15.142Z",
-    "status": "new"
+    "status": "rewritten",
+    "articleSlug": "2026-03-14-scottish-airport-allegedly-used-for-us-m",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-scottish-airport-allegedly-used-for-us-m.json",
+    "rewrittenAt": "2026-03-14T12:30:59.299Z"
   },
   {
     "id": "f4d8a8cc-7d97-4738-bc81-063017702157",
@@ -5498,7 +5501,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-08T12:29:15.142Z",
-    "status": "new"
+    "status": "rewritten",
+    "articleSlug": "2026-03-14-swinney-open-to-considering-ban-on-us-mi",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-swinney-open-to-considering-ban-on-us-mi.json",
+    "rewrittenAt": "2026-03-14T12:30:59.299Z"
   },
   {
     "id": "bf6c9985-72e6-453f-8ed8-af748f1d6e76",
@@ -5526,7 +5532,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-09T01:16:35.607Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-swinney-considering-ban-on-us-military-flights-usi",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-swinney-considering-ban-on-us-military-flights-usi.json",
+    "draftedAt": "2026-03-14T12:31:10.403Z"
   },
   {
     "id": "c917a4cb-5803-40c0-877b-55a30d35bbd8",
@@ -5540,7 +5549,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-09T01:16:35.608Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-special-aircraft-from-down-under-is-rare-visitor-t",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-special-aircraft-from-down-under-is-rare-visitor-t.json",
+    "draftedAt": "2026-03-14T12:31:10.403Z"
   },
   {
     "id": "310262a9-6011-4f4a-b9fb-908ade2c9494",
@@ -5554,7 +5566,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-09T01:16:35.608Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-john-swinney-accused-of-putting-uk-s-special-relat",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-john-swinney-accused-of-putting-uk-s-special-relat.json",
+    "draftedAt": "2026-03-14T12:31:10.403Z"
   },
   {
     "id": "31264eed-6ceb-4487-bddf-78e4ee7d602a",
@@ -5704,7 +5719,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-09T12:39:27.224Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-swinney-would-consider-us-military-plane-ban-from-",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-swinney-would-consider-us-military-plane-ban-from-.json",
+    "draftedAt": "2026-03-14T12:31:10.403Z"
   },
   {
     "id": "9278dd82-910b-4e78-8ea1-ba50dfa8444c",
@@ -6022,7 +6040,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-10T12:39:20.450Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-14-kuwait-air-force-is-latest-military-aircraft-spott",
+    "articlePath": "data/news-articles/2026/03/2026-03-14-kuwait-air-force-is-latest-military-aircraft-spott.json",
+    "draftedAt": "2026-03-14T12:31:10.403Z"
   },
   {
     "id": "a4465448-e17c-46a2-943a-d671e2c5b64b",
@@ -14731,6 +14752,343 @@
     "imagePolicy": "attribution-only",
     "publishedAt": "2026-03-14T06:00:01.000Z",
     "fetchedAt": "2026-03-14T06:55:32.875Z",
+    "status": "new"
+  },
+  {
+    "id": "1135a39c-d777-486c-af23-87dc5583c9dd",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cr5lymm4p4ro#0",
+    "title": "Motorcyclist killed in three-vehicle crash in South Ayrshire",
+    "sourceUrl": "https://www.bbc.com/news/articles/cr5lymm4p4ro?at_medium=RSS&at_campaign=rss",
+    "summary": "The collision happened shortly after 18:30 on Friday on the B7024 Alloway to Maybole road.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T10:21:56.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.739Z",
+    "status": "new"
+  },
+  {
+    "id": "27d93204-df6b-41be-9ef8-474ed3f9dcec",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c62gk9jgz1wo#0",
+    "title": "Scotland's Papers: 'Astonishing' Epstein photo and 'hero of Union Street'",
+    "sourceUrl": "https://www.bbc.com/news/articles/c62gk9jgz1wo?at_medium=RSS&at_campaign=rss",
+    "summary": "A review of the front page stories from the daily newspapers in Scotland.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T09:44:18.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.739Z",
+    "status": "new"
+  },
+  {
+    "id": "de7957e3-e76f-421f-837b-8dbe0c3cc5f9",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cvgky8ndjm4o#1",
+    "title": "Trans rapist who 'robbed' girls of innocence jailed for nine years",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvgky8ndjm4o?at_medium=RSS&at_campaign=rss",
+    "summary": "Serenity Francis Johnston, 34, was found guilty of assaulting three children in Livingston between 2006 and 2012.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T13:33:05.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.739Z",
+    "status": "new"
+  },
+  {
+    "id": "5293e559-ba94-45be-bb1d-99577026ec3e",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cnv6lpmv49lo#1",
+    "title": "MSP says assisted dying bill is 'bullet proof' after 175 amendments",
+    "sourceUrl": "https://www.bbc.com/news/articles/cnv6lpmv49lo?at_medium=RSS&at_campaign=rss",
+    "summary": "MSPs will vote next Tuesday on whether to allow terminally ill adults to seek medical help in ending their lives.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T20:18:07.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.739Z",
+    "status": "new"
+  },
+  {
+    "id": "5a092c61-0eef-4da7-9726-11da75588dc6",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/czx4zpxpewro#2",
+    "title": "Your pictures of Scotland",
+    "sourceUrl": "https://www.bbc.com/news/articles/czx4zpxpewro?at_medium=RSS&at_campaign=rss",
+    "summary": "A selection of photographs submitted to BBC Scotland News from around the country this week.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T11:23:25.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.739Z",
+    "status": "new"
+  },
+  {
+    "id": "34d9069b-6fb0-4494-a5a6-6d02d01a7ecd",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/sport/tennis/articles/cz9qzkynvjlo#4",
+    "title": "Norrie returns to British No.1 despite loss to Alcaraz",
+    "sourceUrl": "https://www.bbc.com/sport/tennis/articles/cz9qzkynvjlo?at_medium=RSS&at_campaign=rss",
+    "summary": "Jack Draper is penalised with a controversial hindrance call as Daniil Medvedev ends the Briton's Indian Wells title defence in the quarter-finals.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T07:01:53.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.739Z",
+    "status": "new"
+  },
+  {
+    "id": "80edd1af-0bd4-4d1b-a059-17af4506f008",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cwy9qvz3g15o#0",
+    "title": "Former Labour minister dies after cancer diagnosis",
+    "sourceUrl": "https://www.bbc.com/news/articles/cwy9qvz3g15o?at_medium=RSS&at_campaign=rss",
+    "summary": "The ex-Oldham MP Phil Woolas battled brain cancer for more than a year, his family says.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T11:59:00.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "a98a3b22-6f52-4bae-9baa-8c0627768b63",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cev7lepl9jgo#0",
+    "title": "My stalker tricked random men into turning up at house for sex",
+    "sourceUrl": "https://www.bbc.com/news/articles/cev7lepl9jgo?at_medium=RSS&at_campaign=rss",
+    "summary": "A family were visited by strange men, who had seen adverts created by Declan Guess for \"fun and sex\" online.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T04:00:59.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "faddb0c2-3332-4ea2-9af4-6883330d77f9",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cly859g0vmpo#0",
+    "title": "Public invited to pick Sycamore Gap tree artwork",
+    "sourceUrl": "https://www.bbc.com/news/articles/cly859g0vmpo?at_medium=RSS&at_campaign=rss",
+    "summary": "The winner will use half of the illegally-felled tree's timber, with voting open until 28 March.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T07:22:48.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "07637441-fdb5-45f9-b53c-9b9a35f6fff1",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c05v4gr58e8o#0",
+    "title": "William to attend Wales v Italy Six Nations match",
+    "sourceUrl": "https://www.bbc.com/news/articles/c05v4gr58e8o?at_medium=RSS&at_campaign=rss",
+    "summary": "Prince William will be cheering for Wales at the Principality Stadium when they take on Italy later.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T10:49:52.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "0cdf93c7-9a39-4b21-9bbd-547fc768d867",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/clyzjz8dp62o#1",
+    "title": "Wanted: 'Resourceful' tenants for croft on UK's remotest island",
+    "sourceUrl": "https://www.bbc.com/news/articles/clyzjz8dp62o?at_medium=RSS&at_campaign=rss",
+    "summary": "People with certain sets of skills have been sought for a tenancy on Fair Isle.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T08:59:48.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "8d26f9f0-8c45-4ebf-afbf-c571e97ad05f",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cr45v7ey91eo#1",
+    "title": "Pink Floyd guitar sold for record-breaking $14.6m",
+    "sourceUrl": "https://www.bbc.com/news/articles/cr45v7ey91eo?at_medium=RSS&at_campaign=rss",
+    "summary": "The guitar was used by David Gilmour on some of Pink Floyd's best-known albums, including Dark Side of the Moon.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T21:50:22.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "13cb728a-88ba-4c1c-ba5a-4c9f49081305",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c5yjm9zdn8no#1",
+    "title": "New Archbishop of Canterbury to walk 87 mile pilgrimage route ahead of installation",
+    "sourceUrl": "https://www.bbc.com/news/articles/c5yjm9zdn8no?at_medium=RSS&at_campaign=rss",
+    "summary": "Dame Sarah Mullally's six-day walk begins at Southwark Cathedral and travels along the Becket Way to Canterbury Cathedral.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T10:18:58.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "4adf2ab0-ef73-4e8d-8a9d-6ef3642c4d82",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cd709jel19xo#1",
+    "title": "Two more horses die on final day of Cheltenham",
+    "sourceUrl": "https://www.bbc.com/news/articles/cd709jel19xo?at_medium=RSS&at_campaign=rss",
+    "summary": "Envoi Allen and Saint Le Fort both died on Friday on the last day of Cheltenham Festival.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T19:02:58.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "8c7d628b-d1a9-42d0-aa82-a68d2670fe9e",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c626m01n40no#3",
+    "title": "I can no longer be buried with my little girl because of new crematorium rules",
+    "sourceUrl": "https://www.bbc.com/news/articles/c626m01n40no?at_medium=RSS&at_campaign=rss",
+    "summary": "People affected by the change at Margam Crematorium have described the situation as \"devastating\".",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T07:16:47.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "4ddb9b5d-e50a-49a8-9c82-400bcc655111",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cev7lepl9jgo#4",
+    "title": "'Stalker tricked random men into turning up at my house for sex'",
+    "sourceUrl": "https://www.bbc.com/news/articles/cev7lepl9jgo?at_medium=RSS&at_campaign=rss",
+    "summary": "A family were visited by strange men, who had seen adverts created by Declan Guess for \"fun and sex\" online.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T04:00:59.000Z",
+    "fetchedAt": "2026-03-14T12:30:51.916Z",
+    "status": "new"
+  },
+  {
+    "id": "18eaf969-c2db-4061-8ad2-e7914070bda4",
+    "sourceId": "scotsman-news",
+    "guid": "5769135",
+    "title": "Giant new Edinburgh Wetherspoons pub in city centre gets opening date",
+    "sourceUrl": "https://www.scotsman.com/news/edinburgh-wetherspoons-pub-city-centre-opening-date-5769135",
+    "summary": "<p>A brand new J D Wetherspoon pub is set to open in Scotland's capital city.</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T11:23:57.000Z",
+    "fetchedAt": "2026-03-14T12:30:52.144Z",
+    "status": "new"
+  },
+  {
+    "id": "e48c2d80-d8b3-4a2f-8f08-bddfc6cba245",
+    "sourceId": "scotsman-news",
+    "guid": "5759815",
+    "title": "13 brilliant photos as hundreds flock to Edinburgh's Legends bar to say final goodbye",
+    "sourceUrl": "https://www.scotsman.com/news/13-brilliant-photos-as-hundreds-flock-to-edinburghs-legends-bar-to-say-final-goodbye-5759815",
+    "summary": "<p>Edinburgh’s rock community came out in droves on Friday night to visit a popular alternative nightclub, possibly for the last time.</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T11:00:59.000Z",
+    "fetchedAt": "2026-03-14T12:30:52.144Z",
+    "status": "new"
+  },
+  {
+    "id": "c766e6a3-f8ac-4409-8c84-26c69e71a1d5",
+    "sourceId": "scotsman-news",
+    "guid": "5765634",
+    "title": "B7024 crash: Motorcyclist, 57, dies after three-vehicle road crash in South Ayrshire",
+    "sourceUrl": "https://www.scotsman.com/news/scottish-news/motorcyclist-57-dies-three-vehicle-road-crash-in-south-ayrshire-5765634",
+    "summary": "<p>Police are appealing for witnesses.</p>",
+    "categories": [
+      "Scottish News",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T10:06:02.000Z",
+    "fetchedAt": "2026-03-14T12:30:52.144Z",
+    "status": "new"
+  },
+  {
+    "id": "1a683cc1-cdf2-4256-bef9-437ba6636867",
+    "sourceId": "scotsman-news",
+    "guid": "5706420",
+    "title": "Edinburgh winner of BBC Garden of the Year in the running for ‘Best of the Best’ award",
+    "sourceUrl": "https://www.scotsman.com/news/edinburgh-winner-of-bbc-garden-of-the-year-in-the-running-for-best-of-the-best-award-5706420",
+    "summary": "<p>An Edinburgh resident whose jungle-themed garden was voted the best in the UK three years ago is hoping to reign supreme once again.</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T04:46:12.000Z",
+    "fetchedAt": "2026-03-14T12:30:52.144Z",
+    "status": "new"
+  },
+  {
+    "id": "2b00f766-4c60-4aba-9061-cace6b7e7285",
+    "sourceId": "scotsman-news",
+    "guid": "5704128",
+    "title": "Revealed: The Scotland 500 list of country's top performing companies",
+    "sourceUrl": "https://www.scotsman.com/business/revealed-the-scotland-500-list-of-countrys-top-performing-companies-5704128",
+    "summary": "<p>The inaugural Scotsman Insider 500 looks at the top performing companies in Scotland by profit and turnover</p>",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T00:01:27.000Z",
+    "fetchedAt": "2026-03-14T12:30:52.144Z",
+    "status": "new"
+  },
+  {
+    "id": "b572c050-ba19-49ea-bb0e-f9bd02b73103",
+    "sourceId": "scotsman-news",
+    "guid": "5709474",
+    "title": "Readers Letters: Is Scottish Government guilty of a culture of secrecy?",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/letters/readers-letters-is-scottish-government-guilty-of-a-culture-of-secrecy-5709474",
+    "summary": "The Scottish government’s dealings with the Information Commission don’t impress a reader",
+    "categories": [
+      "Letters",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T19:51:12.000Z",
+    "fetchedAt": "2026-03-14T12:30:52.144Z",
+    "status": "new"
+  },
+  {
+    "id": "c5261cee-3db8-415b-8001-efe2d70be39a",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.travelandtourworld.com/news/article/from-nyc-and-toronto-to-slovenia-and-san-sebastian-you-wont-believe-the-15-new-destinations-scotland-can-fly-to-direct-in-2026/",
+    "title": "From NYC and Toronto to Slovenia and San Sebastián: You Won’t Believe the 15+ New Destinations Scotland Can Fly to Direct in 2026!",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/from-nyc-and-toronto-to-slovenia-and-san-sebastian-you-wont-believe-the-15-new-destinations-scotland-can-fly-to-direct-in-2026/",
+    "summary": "Scotland's 2026 Aviation Boom: A Complete Guide to New Flights Description: Discover the verified list of new international and domestic...",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-14T12:30:59.133Z",
     "status": "new"
   }
 ]
