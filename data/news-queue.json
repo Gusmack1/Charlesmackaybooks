@@ -12310,7 +12310,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-13T01:14:27.431Z",
-    "status": "new"
+    "status": "rewritten",
+    "articleSlug": "2026-03-15-could-scotland-ban-us-military-planes-fr",
+    "articlePath": "data/news-articles/2026/03/2026-03-15-could-scotland-ban-us-military-planes-fr.json",
+    "rewrittenAt": "2026-03-15T12:33:01.615Z"
   },
   {
     "id": "1d31695a-1fba-494e-8b98-57c7d1984006",
@@ -12324,7 +12327,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-13T01:14:27.431Z",
-    "status": "new"
+    "status": "rewritten",
+    "articleSlug": "2026-03-15-scottish-government-urged-to-act-on-pres",
+    "articlePath": "data/news-articles/2026/03/2026-03-15-scottish-government-urged-to-act-on-pres.json",
+    "rewrittenAt": "2026-03-15T12:33:01.615Z"
   },
   {
     "id": "023aee7f-ca47-424c-8088-bf76751f643e",
@@ -12338,7 +12344,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-13T01:14:27.431Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-15-john-swinney-seeks-meeting-with-uk-government-over",
+    "articlePath": "data/news-articles/2026/03/2026-03-15-john-swinney-seeks-meeting-with-uk-government-over.json",
+    "draftedAt": "2026-03-15T12:33:11.778Z"
   },
   {
     "id": "76fc0771-81fd-40c9-9303-1cfda79705bc",
@@ -12352,7 +12361,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-13T01:14:27.431Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-15-first-minister-looks-for-meeting-over-us-military-",
+    "articlePath": "data/news-articles/2026/03/2026-03-15-first-minister-looks-for-meeting-over-us-military-.json",
+    "draftedAt": "2026-03-15T12:33:11.778Z"
   },
   {
     "id": "0a7789ef-507f-465e-a9d8-209a64a1e989",
@@ -12366,7 +12378,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-13T01:14:27.431Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-15-glasgow-prestwick-airport-is-being-used-by-trump-t",
+    "articlePath": "data/news-articles/2026/03/2026-03-15-glasgow-prestwick-airport-is-being-used-by-trump-t.json",
+    "draftedAt": "2026-03-15T12:33:11.778Z"
   },
   {
     "id": "a566dc6d-6709-4a32-b50e-9e165b93e2c0",
@@ -12380,7 +12395,10 @@
     ],
     "publishedAt": "2025-08-13T00:00:00.000Z",
     "fetchedAt": "2026-03-13T01:14:27.431Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-15-glasgow-prestwick-airport-e-commerce-employment-bo",
+    "articlePath": "data/news-articles/2026/03/2026-03-15-glasgow-prestwick-airport-e-commerce-employment-bo.json",
+    "draftedAt": "2026-03-15T12:33:11.778Z"
   },
   {
     "id": "042d1681-2910-4470-abd8-eb3fda47798f",
@@ -13444,7 +13462,10 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-13T12:36:58.832Z",
-    "status": "new"
+    "status": "drafted",
+    "articleSlug": "2026-03-15-preparing-for-the-worst-raf-lossiemouth-tests-resp",
+    "articlePath": "data/news-articles/2026/03/2026-03-15-preparing-for-the-worst-raf-lossiemouth-tests-resp.json",
+    "draftedAt": "2026-03-15T12:33:11.778Z"
   },
   {
     "id": "3ed541bc-b58a-4b0e-bc51-945202147e1c",
@@ -15961,6 +15982,379 @@
     "imagePolicy": "attribution-only",
     "publishedAt": "2026-03-14T17:33:46.000Z",
     "fetchedAt": "2026-03-15T07:04:38.978Z",
+    "status": "new"
+  },
+  {
+    "id": "5886e775-1b43-4f11-8611-c501ad9baddf",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/crl4ypd6802o#0",
+    "title": "Swinney tells UK government to 'get a move on' with heating oil support",
+    "sourceUrl": "https://www.bbc.com/news/articles/crl4ypd6802o?at_medium=RSS&at_campaign=rss",
+    "summary": "The first minister responds to Chancellor Rachel Reeves' promise of help with rising energy costs caused by war in the Middle East",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T12:11:50.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "2b8805ff-7241-449a-8b80-8eef2fb2fe16",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c07j30zerxgo#0",
+    "title": "Man, 87, dies and four in hospital after two-car crash in Fife",
+    "sourceUrl": "https://www.bbc.com/news/articles/c07j30zerxgo?at_medium=RSS&at_campaign=rss",
+    "summary": "The man was driving a red Dacia Sandero which collided with a blue Vauxhall Astra on the A92 north of Rathillet.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T09:52:53.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "1cf1a4cd-6efc-454d-bee8-df2425bb4d7b",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cz6e5eel7p5o#0",
+    "title": "Scotland's papers: Childcare overhaul and 'failure' over sex offender loophole",
+    "sourceUrl": "https://www.bbc.com/news/articles/cz6e5eel7p5o?at_medium=RSS&at_campaign=rss",
+    "summary": "John Swinney's pre-election gambit and claims of a \"cover up\" over drugs and alcohol monitoring of sex offenders make the front pages.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T08:40:30.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "35aa27d9-cfad-4885-ab68-b7abdd774c72",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cvg305geg7qo#0",
+    "title": "It was once part of Scotland's landscape - now it's been sold for £26m",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg305geg7qo?at_medium=RSS&at_campaign=rss",
+    "summary": "King and Queen by Henry Moore used to overlook a reservoir as part of a sculpture park near Dumfries.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T08:22:34.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "2edf8cae-7e20-49ff-a14b-77b6a3466fce",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/sport/rugby-union/articles/czj1x43y0p3o#0",
+    "title": "'Shot at history passes Scotland by amid Irish ferocity'",
+    "sourceUrl": "https://www.bbc.com/sport/rugby-union/articles/czj1x43y0p3o?at_medium=RSS&at_campaign=rss",
+    "summary": "BBC Sport Scotland's chief sportswriter Tom English picks through Scotland's failed bid to clinch the Six Nations with defeat in Ireland again.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T20:30:03.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "9038f8cf-5bc0-4caf-a1bb-1ed7fd91db34",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cx2rwjr4y59o#1",
+    "title": "Swinney promises £500m childcare boost and more GP walk-in clinics",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx2rwjr4y59o?at_medium=RSS&at_campaign=rss",
+    "summary": "The first minister told his party's spring conference he will extend childcare if re-elected in May.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T16:42:33.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "1b8ccdec-f73e-4c22-9339-60751d4a1751",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/cqlgn6vk6rxo#1",
+    "title": "'Sensational' Yang shows impact as Celtic keep believing",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/cqlgn6vk6rxo?at_medium=RSS&at_campaign=rss",
+    "summary": "Hyun-jun Yang sparked for Celtic against Motherwell, but how deep has his impact been?",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T21:21:55.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "18ba3c65-613b-4ff8-bfc4-0ade14769e57",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cr5lymm4p4ro#1",
+    "title": "Motorcyclist killed in three-vehicle crash in South Ayrshire",
+    "sourceUrl": "https://www.bbc.com/news/articles/cr5lymm4p4ro?at_medium=RSS&at_campaign=rss",
+    "summary": "The collision happened shortly after 18:30 on Friday on the B7024 Alloway to Maybole road.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T10:21:56.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "7854b678-bafd-4ed0-9fba-b8c58ef1e663",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cm2xr02d20po#1",
+    "title": "Historic Borders bridge secures £250,000 for restoration project",
+    "sourceUrl": "https://www.bbc.com/news/articles/cm2xr02d20po?at_medium=RSS&at_campaign=rss",
+    "summary": "The scheme will allow the suspension bridge to be safely used by cyclists and pedestrians.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T09:00:14.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "55484fdd-d9d8-4861-88b7-2e25379c681b",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cdxz0enqykgo#2",
+    "title": "Why do Glasgow's historic buildings keep catching fire?",
+    "sourceUrl": "https://www.bbc.com/news/articles/cdxz0enqykgo?at_medium=RSS&at_campaign=rss",
+    "summary": "The fire that devastated a building on Union Street is the latest in a series of blazes to strike the city's historic sites.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T08:58:06.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "8145fb6b-1c19-44ff-b012-c70940a64dd4",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c07j30zerxgo#3",
+    "title": "Man, 87, dies and four in hospital after two-car crash in Fife",
+    "sourceUrl": "https://www.bbc.com/news/articles/c07j30zerxgo?at_medium=RSS&at_campaign=rss",
+    "summary": "The man was driving a red Dacia Sandero which collided with a blue Vauxhall Astra on the A92 north of Rathillet.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T09:52:53.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "a42e339b-2d70-46b4-ae1e-28a72c219ba4",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cvg305geg7qo#3",
+    "title": "It was once part of Scotland's landscape - now it's been sold for £26m",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg305geg7qo?at_medium=RSS&at_campaign=rss",
+    "summary": "King and Queen by Henry Moore used to overlook a reservoir as part of a sculpture park near Dumfries.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T08:22:34.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "1179ea18-6d2b-451e-9e97-1608ce752771",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/c3dz3470ylyo#4",
+    "title": "Dundee derby, Chermiti & Rohl in spotlight",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/c3dz3470ylyo?at_medium=RSS&at_campaign=rss",
+    "summary": "The Dundee derby, Rangers striker Youssef Chermiti and manager Danny Rohl are all in the spotlight in Sunday's Scottish Premiership games.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-13T16:09:10.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.548Z",
+    "status": "new"
+  },
+  {
+    "id": "f24caee2-4152-4c17-9a73-320f654adbe0",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cgjz9zx3xl5o#0",
+    "title": "William shares unseen photo of Princess Diana for Mother's Day",
+    "sourceUrl": "https://www.bbc.com/news/articles/cgjz9zx3xl5o?at_medium=RSS&at_campaign=rss",
+    "summary": "The Prince of Wales captioned the previously unseen photo: \"remembering my mother, today and every day\".",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T11:00:27.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.727Z",
+    "status": "new"
+  },
+  {
+    "id": "b8884eda-6b75-4525-9dc4-3106cd639f0b",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c07j30zerxgo#0",
+    "title": "Man, 87, dies and four in hospital after two-car crash in Fife",
+    "sourceUrl": "https://www.bbc.com/news/articles/c07j30zerxgo?at_medium=RSS&at_campaign=rss",
+    "summary": "The man was driving a red Dacia Sandero which collided with a blue Vauxhall Astra on the A92 north of Rathillet.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T09:52:53.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.727Z",
+    "status": "new"
+  },
+  {
+    "id": "1170af50-c445-42d7-b158-12a5c768590b",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/ce8wl4rnprzo#1",
+    "title": "'An angel in the park': Customers rally around Iranian barista after attack",
+    "sourceUrl": "https://www.bbc.com/news/articles/ce8wl4rnprzo?at_medium=RSS&at_campaign=rss",
+    "summary": "The customers of a coffee stand say its owner, Diaco Yari, has gone above and beyond for his customers.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T08:04:08.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.727Z",
+    "status": "new"
+  },
+  {
+    "id": "59c62d20-bd7f-4894-9c33-7c6aa9e43511",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c3v7qpnx73yo#1",
+    "title": "Harry and Meghan accuse royal author of 'deranged conspiracy'",
+    "sourceUrl": "https://www.bbc.com/news/articles/c3v7qpnx73yo?at_medium=RSS&at_campaign=rss",
+    "summary": "Extracts from a new book about the Royals claim the Queen said Meghan had \"brainwashed\" Prince Harry.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T16:16:15.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.727Z",
+    "status": "new"
+  },
+  {
+    "id": "a07e4ed6-6245-4dce-aa1f-fe851e2bdb6d",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cn4gexxyzevo#1",
+    "title": "Body of man found in wheelie bin 'after being hit by car'",
+    "sourceUrl": "https://www.bbc.com/news/articles/cn4gexxyzevo?at_medium=RSS&at_campaign=rss",
+    "summary": "An urgent appeal has been issued by police to find out who the man is and how and where he died.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T12:20:02.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.727Z",
+    "status": "new"
+  },
+  {
+    "id": "ea88d0a3-469c-46d5-8004-c495ffd16047",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cvg305geg7qo#3",
+    "title": "It was once part of Scotland's landscape - now it's been sold for £26m",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvg305geg7qo?at_medium=RSS&at_campaign=rss",
+    "summary": "King and Queen by Henry Moore used to overlook a reservoir as part of a sculpture park near Dumfries.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T08:22:34.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.728Z",
+    "status": "new"
+  },
+  {
+    "id": "fd0025c3-d1e7-4bff-a993-f28e38dd7c4b",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/crrxvnnrvj8o#3",
+    "title": "What to say on Mother's Day after pregnancy or baby loss",
+    "sourceUrl": "https://www.bbc.com/news/articles/crrxvnnrvj8o?at_medium=RSS&at_campaign=rss",
+    "summary": "Navigating the loss of a pregnancy or newborn baby can be especially difficult on Mothering Sunday.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:20:14.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.728Z",
+    "status": "new"
+  },
+  {
+    "id": "cdfc8084-f017-48fa-a548-8c90fcc3a40a",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/crl4ypd6802o#4",
+    "title": "Swinney tells UK government to 'get a move on' with heating oil support",
+    "sourceUrl": "https://www.bbc.com/news/articles/crl4ypd6802o?at_medium=RSS&at_campaign=rss",
+    "summary": "The first minister responds to Chancellor Rachel Reeves' promise of help with rising energy costs caused by war in the Middle East",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T12:11:50.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.728Z",
+    "status": "new"
+  },
+  {
+    "id": "175cdd68-1534-4b8f-a9ef-a7debd2501ba",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cly85nqeylqo#4",
+    "title": "Council tax rises in Wales - see how your area compares",
+    "sourceUrl": "https://www.bbc.com/news/articles/cly85nqeylqo?at_medium=RSS&at_campaign=rss",
+    "summary": "Council tax bills in Wales will see an average rise of 4.9% from April after councils approved their budgets for the next financial year.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T07:16:18.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.728Z",
+    "status": "new"
+  },
+  {
+    "id": "3cf2c98c-d0e4-4bf9-9c9f-d0561064c6fb",
+    "sourceId": "scotsman-news",
+    "guid": "5852636",
+    "title": "Swinney: Information Commissioner attack over Salmond files 'a bit strange'",
+    "sourceUrl": "https://www.scotsman.com/news/politics/swinney-responds-after-information-watchdog-hits-out-over-salmond-files-5852636",
+    "summary": "<p>The First Minister said his government is ‘very good at handling freedom of information requests’</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T11:22:22.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.933Z",
+    "status": "new"
+  },
+  {
+    "id": "31c2a946-6c71-4b94-acfb-df06d14527a2",
+    "sourceId": "scotsman-news",
+    "guid": "5851143",
+    "title": "A71 at Dalmahoy Road closed after crash leaves three men in hospital",
+    "sourceUrl": "https://www.scotsman.com/news/emergency-incident/busy-edinburgh-road-closed-after-crash-leaves-three-men-in-hospital-5851143",
+    "summary": "<p>A busy road in Edinburgh has been closed for hours after a crash which saw three men taken to hospital.</p>",
+    "categories": [
+      "Emergency Incident",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T10:46:55.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.933Z",
+    "status": "new"
+  },
+  {
+    "id": "563972f9-f578-47ec-8c0e-10f2b767f71d",
+    "sourceId": "scotsman-news",
+    "guid": "5850278",
+    "title": "Man, 87, dies after two car crash on A92 in north Fife",
+    "sourceUrl": "https://www.scotsman.com/news/emergency-incident/man-87-dies-after-two-car-crash-on-a92-in-north-fife-5850278",
+    "summary": "An 87-year-old man has died following a two-car crash on the A92.",
+    "categories": [
+      "Emergency Incident",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T10:31:06.000Z",
+    "fetchedAt": "2026-03-15T12:32:55.933Z",
+    "status": "new"
+  },
+  {
+    "id": "350e8f02-1232-4135-a5f5-538905c34740",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.thenational.scot/news/25936251.military-expert-flags-concrete-proof-prestwick-helping-us-bomb-iran/",
+    "title": "Military expert flags 'concrete proof' Scottish airport is helping US bomb Iran",
+    "sourceUrl": "https://www.thenational.scot/news/25936251.military-expert-flags-concrete-proof-prestwick-helping-us-bomb-iran/",
+    "summary": "Glasgow Prestwick Airport is one of the airports used for military stopovers (Andrew Milligan/PA). USA Today logo.",
+    "categories": [
+      "Thenational Scot"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-15T12:33:01.410Z",
     "status": "new"
   }
 ]
