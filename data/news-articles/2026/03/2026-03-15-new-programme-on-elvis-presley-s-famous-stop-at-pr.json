@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-15-new-programme-on-elvis-presley-s-famous-stop-at-pr",
+  "title": "New programme on Elvis Presley's famous stop at Prestwick Airport",
+  "wordCount": 38,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "New programme on Elvis Presley's famous stop at Prestwick Airport. In March 1960, the Rock n' Roll icon set foot on Scottish soil for the first and only time on his way back from military service in Germany."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.ayradvertiser.com/news/25922316.bbc-programme-elvis-presleys-stop-prestwick-airport/",
+      "citationText": "serper-scottish-aviation – New programme on Elvis Presley's famous stop at Prestwick Airport"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "New programme Elvis Presley's",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-15T01:25:58.966Z"
+}

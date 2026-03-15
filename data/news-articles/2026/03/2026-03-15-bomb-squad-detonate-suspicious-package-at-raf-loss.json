@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-15-bomb-squad-detonate-suspicious-package-at-raf-loss",
+  "title": "Bomb squad detonate 'suspicious package' at RAF Lossiemouth",
+  "wordCount": 28,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Bomb squad detonate 'suspicious package' at RAF Lossiemouth. A cordon was put in place after the package was found during a routine security search at the Moray base."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.bbc.com/news/articles/c3v74x1evdno",
+      "citationText": "serper-scottish-aviation – Bomb squad detonate 'suspicious package' at RAF Lossiemouth"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sabres-from-north",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Lossiemouth",
+      "primary": false
+    },
+    {
+      "keyword": "Bomb squad detonate 'suspicious",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-15T01:25:58.967Z"
+}

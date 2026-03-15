@@ -1,0 +1,54 @@
+{
+  "slug": "2026-03-15-criticism-of-politician-s-remarks-on-us-",
+  "title": "Criticism of Politician's Remarks on US Military Use of Prestwick Airport",
+  "wordCount": 43,
+  "sections": [
+    {
+      "heading": "Background on US Military Activities",
+      "content": "Prestwick Airport has a documented history of being used by the US military, a matter extensively covered by journalist Martyn McLaughlin."
+    },
+    {
+      "heading": "Political Commentary",
+      "content": "McLaughlin critiques the First Minister's remarks, characterizing them as a form of political grandstanding rather than a sincere call for policy change."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/john-swinneys-talk-of-potential-us-military-ban-at-prestwick-is-worst-kind-of-political-grandstanding-5626924",
+      "citationText": "serper-scottish-aviation – John Swinney's talk of potential US military ban at Prestwick is political grandstanding"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Criticism Politician's Remarks Military",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-15T01:25:52.758Z",
+  "publishedAt": "2026-03-15T01:25:52.758Z"
+}

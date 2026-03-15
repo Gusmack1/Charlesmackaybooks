@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-15-bomb-squad-called-to-scottish-military-base-after-",
+  "title": "Bomb squad called to Scottish military base after 'suspicious package' found",
+  "wordCount": 31,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Bomb squad called to Scottish military base after 'suspicious package' found. A 200m cordon was put in place around RAF Lossiemouth on Thursday afternoon, with civilians asked to avoid the area."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.thenational.scot/news/25931596.bomb-squad-called-raf-lossiemouth-suspicious-package-found/",
+      "citationText": "serper-scottish-aviation – Bomb squad called to Scottish military base after 'suspicious package' found"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sabres-from-north",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Lossiemouth",
+      "primary": false
+    },
+    {
+      "keyword": "Bomb squad called Scottish",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-15T01:25:58.967Z"
+}

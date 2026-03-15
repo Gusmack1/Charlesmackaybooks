@@ -1,0 +1,54 @@
+{
+  "slug": "2026-03-15-scottish-police-investigate-laser-incide",
+  "title": "Scottish Police Investigate Laser Incident Involving Search and Rescue Helicopter",
+  "wordCount": 53,
+  "sections": [
+    {
+      "heading": "Incident Overview",
+      "content": "Scottish police have launched an investigation into an incident involving a search and rescue helicopter, during which a laser was reportedly shone at the aircraft. Authorities have described the act as reckless."
+    },
+    {
+      "heading": "Ongoing Enquiries",
+      "content": "Police are actively working to gather information and are appealing for witnesses to come forward as part of the ongoing enquiries."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "scotsman-news",
+      "sourceUrl": "https://www.scotsman.com/news/scottish-news/scottish-police-hunt-culprit-after-laser-shone-at-search-and-rescue-helicopter-in-reckless-act-5782268",
+      "citationText": "scotsman-news – Scottish police hunt culprit after laser shone at search and rescue helicopter in ‘reckless’ act"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sycamore-seeds",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
+      "keyword": "Scottish Police Investigate Laser",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-15T01:25:52.758Z",
+  "publishedAt": "2026-03-15T01:25:52.758Z"
+}
