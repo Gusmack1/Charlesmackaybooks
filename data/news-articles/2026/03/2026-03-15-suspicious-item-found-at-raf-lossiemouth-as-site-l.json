@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-15-suspicious-item-found-at-raf-lossiemouth-as-site-l",
+  "title": "'Suspicious item' found at RAF Lossiemouth as site locked down by police",
+  "wordCount": 37,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "'Suspicious item' found at RAF Lossiemouth as site locked down by police. A Scottish RAF base has been locked down after reports of the discovery of a suspicious package. Bomb squads raced to the base at RAF..."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/suspicious-item-found-raf-lossiemouth-36858072",
+      "citationText": "serper-scottish-aviation – 'Suspicious item' found at RAF Lossiemouth as site locked down by police"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sabres-from-north",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Lossiemouth",
+      "primary": false
+    },
+    {
+      "keyword": "'Suspicious item' found RAF",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-15T07:04:40.514Z"
+}

@@ -14010,5 +14010,306 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-15T01:25:52.554Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cd039n9vj3vo#0",
+    "title": "Trump urges UK and other nations to send warships to Strait of Hormuz",
+    "sourceUrl": "https://www.bbc.com/news/articles/cd039n9vj3vo?at_medium=RSS&at_campaign=rss",
+    "summary": "The US president says he hopes China, France, Japan and South Korea will also send ships to defend the key oil shipping route.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T20:33:34.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.820Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cy0dz1k0rr4o#0",
+    "title": "UK must build own nuclear missiles to end reliance on US, say Lib Dems",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy0dz1k0rr4o?at_medium=RSS&at_campaign=rss",
+    "summary": "Sir Ed Davey is calling on the government to start work on a \"fully independent British nuclear deterrent\".",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T05:59:31.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.820Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c8d5z7rd5mpo#0",
+    "title": "Police-style powers to tackle fly-tippers being considered",
+    "sourceUrl": "https://www.bbc.com/news/articles/c8d5z7rd5mpo?at_medium=RSS&at_campaign=rss",
+    "summary": "The move would allow officers to search premises without a warrant, seize assets and arrest those suspected of criminality.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T03:09:22.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.820Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cly859g0vmpo#1",
+    "title": "Public invited to pick Sycamore Gap tree artwork",
+    "sourceUrl": "https://www.bbc.com/news/articles/cly859g0vmpo?at_medium=RSS&at_campaign=rss",
+    "summary": "The winner will use half of the illegally-felled tree's timber, with voting open until 28 March.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T07:22:48.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.820Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cm2xr02d20po#1",
+    "title": "Historic Borders bridge secures £250,000 for restoration project",
+    "sourceUrl": "https://www.bbc.com/news/articles/cm2xr02d20po?at_medium=RSS&at_campaign=rss",
+    "summary": "The scheme will allow the suspension bridge to be safely used by cyclists and pedestrians.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T09:00:14.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.820Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/sport/rugby-union/articles/cn9er299387o#3",
+    "title": "Stellar showing and ultimate defeat increases intrigue around England",
+    "sourceUrl": "https://www.bbc.com/sport/rugby-union/articles/cn9er299387o?at_medium=RSS&at_campaign=rss",
+    "summary": "England put in a superb showing against France, only adding to the intrigue around a dismal Six Nations campaign overall",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T00:56:33.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.820Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5624696",
+    "title": "Glasgow band which supported The Clash after approaching them outside hotel record new album after 40 years",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/glasgow-band-which-supported-the-clash-after-approaching-them-outside-hotel-record-new-album-after-40-years-5624696",
+    "summary": "<p>The band has reformed after 40 years</p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:01:34.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5713312",
+    "title": "SNP urged to reconsider House of Lords membership",
+    "sourceUrl": "https://www.scotsman.com/news/politics/snp-urged-to-reconsider-house-of-lords-membership-5713312",
+    "summary": "<p>Lord Strathclyde said the Nationalists should ‘reconsider their ban’</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:58.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5719254",
+    "title": "Scotland assisted dying: Final pleas from campaigners as MSPs set for historic knife-edge vote",
+    "sourceUrl": "https://www.scotsman.com/news/politics/scotland-assisted-dying-liam-mcarthur-palliative-care-5719254",
+    "summary": "<p>MSPs will decide this week whether to legalise assisted death - in potentially the biggest decision in the history of the Scottish Parliament.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:49.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5638469",
+    "title": "'Isolated' Scottish dialect showcased in award-nominated folk album",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/isolated-scottish-dialect-showcased-in-award-nominated-folk-album-5638469",
+    "summary": "<p>The album is the only Scottish work to be nominated for the Folk Album of the Year Awards. </p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:40.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5696254",
+    "title": "Poor planning could see bills dropped or rushed through as Holyrood draws to a close",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/poor-planning-could-see-bills-dropped-or-rushed-through-as-holyrood-draws-to-a-close-5696254",
+    "summary": "<p>It is going to be a very busy week for MSPs - perhaps too busy for the legislation to be scrutinised properly.</p>",
+    "categories": [
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:36.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5700607",
+    "title": "Potholed Scotland: Deteriorating roads 'outpacing ability to fix them'",
+    "sourceUrl": "https://www.scotsman.com/news/transport/potholed-scotland-deteriorating-roads-outpacing-ability-to-fix-them-5700607",
+    "summary": "<p>Conditions have worsened for the second year in a row according to official figures  </p>",
+    "categories": [
+      "Transport",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:35.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5697822",
+    "title": "Why John Swinney is kidding himself about public 'confidence' in the SNP",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/why-john-swinney-is-kidding-himself-about-public-confidence-in-the-snp-5697822",
+    "summary": "<h3>The SNP may find themselves firmly in control of the Scottish Parliament after May’s election, but unpopular among the two-thirds of voters expected to vote for another party</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:31.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5630782",
+    "title": "Inside the national Moving Image Archive where silent movie festival Hippfest sources its material",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/inside-the-national-moving-image-archive-where-silent-movie-festival-hippfest-sources-its-material-5630782",
+    "summary": "<p>More than 50,000 clips which tell the stories of Scotland, its people and places are held in the archive</p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:29.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5714607",
+    "title": "Glasgow fire: Why historic places matter emotionally",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/glasgow-fire-why-historic-places-matter-emotionally-5714607",
+    "summary": "<p>The deep meaning we attach to ruptured historic buildings is part of a wider emotional landscape and often too needs repaired, writes Rebecca Madgin</p>",
+    "categories": [
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:28.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5719141",
+    "title": "How to ease the pressure points stalling Scotland's energy future",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/how-to-ease-the-pressure-points-stalling-scotlands-energy-future-5719141",
+    "summary": "<p>Scotland’s renewable ambitions have never been clearer - but the push to get the energy flowing is facing some fundamental obstaces, writes Richard Cockburn</p>",
+    "categories": [
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:26.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5635211",
+    "title": "Poverty is a political choice that Scotland's next government must change",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/poverty-is-a-political-choice-that-scotlands-next-government-must-change-5635211",
+    "summary": "<h3>In a just and compassionate Scotland, we need a government that’s prepared to tackle the hunger, hardship and hopelessness that afflicts far too many people</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:12.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5627439",
+    "title": "Labour targets Catholic voters as SNP and Reform 'abandon' faith schools",
+    "sourceUrl": "https://www.scotsman.com/news/politics/labour-targets-catholic-voters-as-snp-and-reform-abandon-faith-schools-5627439",
+    "summary": "<p>Catholic schools have recently become a hot topic again - and Labour could use this to its advantage.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:07.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5710116",
+    "title": "Highland photographer charts the life of the Spey in year-long journey",
+    "sourceUrl": "https://www.scotsman.com/hays-way/highland-photographer-charts-the-life-of-the-spey-in-year-long-journey-5710116",
+    "summary": "<p>A photographer’s year tracing the Spey reveals a river that shaped communities across the Highlands and north east</p>",
+    "categories": [
+      "Hay&#039;s Way"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T06:00:02.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5793571",
+    "title": "Euan McColm: Keith Brown and the SNP’s cynical grievances take their supporters for fools",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/euan-mccolm-keith-brown-and-the-snps-cynical-grievances-take-their-supporters-for-fools-5793571",
+    "summary": "Deputy leader’s latest claim that UK government spending ion Scotland is a ‘threat to devolution’ is nothing more than manufactured injustice",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T17:33:46.000Z",
+    "fetchedAt": "2026-03-15T07:04:38.978Z"
   }
 ]
