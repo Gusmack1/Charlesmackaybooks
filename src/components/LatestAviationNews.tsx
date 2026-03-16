@@ -1,4 +1,4 @@
-import { getAllPublishedNewsArticles } from '@/lib/newsroom'
+import { getIndexableNewsArticles } from '@/lib/newsroom'
 import type { NewsArticleRecord } from '@/lib/newsroom'
 
 function formatDate(iso: string | undefined): string {
@@ -22,7 +22,7 @@ function getExcerpt(article: NewsArticleRecord, maxLength = 120): string {
 }
 
 export default async function LatestAviationNews() {
-  const articles = await getAllPublishedNewsArticles(3)
+  const articles = await getIndexableNewsArticles(3)
 
   if (articles.length === 0) {
     return (

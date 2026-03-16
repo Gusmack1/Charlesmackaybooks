@@ -6,6 +6,7 @@
  *
  * Run: OPENAI_API_KEY=xxx node scripts/rewrite-news-articles.cjs
  *      --dry-run  to preview without writing
+ *      --slug=<slug-fragment> to rewrite only matching files (repeatable)
  * Loads OPENAI_API_KEY from .env.local if not set.
  */
 const fs = require('fs')
@@ -34,7 +35,7 @@ CRITICAL – 100% ACCURACY:
 - If a detail is unclear or missing, omit it rather than guess.
 - Write in BBC News style: clear, neutral, factual.
 - Focus on the PRIMARY story only. Ignore any unrelated items bundled together.
-- Write 150–300 words. Use 2–3 short paragraphs.
+- Write 180–320 words. Use 2–3 short paragraphs.
 - Add a brief sentence linking to Scottish aviation heritage where relevant (e.g. "HIAL airports connect communities across the Highlands and Islands, where aviation has played a vital role since the inter-war period.").
 - Output JSON only: { "title": "Clear descriptive title", "content": "Paragraph 1...\\n\\nParagraph 2..." }`
 
@@ -151,13 +152,21 @@ async function rewriteArticle(filePath, apiKey, dryRun) {
 async function main() {
   const apiKey = process.env.OPENAI_API_KEY
   const dryRun = process.argv.includes('--dry-run')
+  const slugFilters = process.argv
+    .filter((arg) => arg.startsWith('--slug='))
+    .map((arg) => arg.slice('--slug='.length))
+    .filter(Boolean)
 
   if (!apiKey) {
     console.log('OPENAI_API_KEY not set. Set it to run the rewrite.')
     process.exit(1)
   }
 
-  const files = listFiles(ARTICLES_DIR)
+  const files = listFiles(ARTICLES_DIR).filter((file) => {
+    if (!slugFilters.length) return true
+    const normalized = file.replace(/\\/g, '/')
+    return slugFilters.some((slug) => normalized.includes(slug))
+  })
   console.log(`Found ${files.length} articles. ${dryRun ? '(Dry run – no changes)' : ''}\n`)
 
   const delayMs = 25_000 // 25s between requests to stay under 3 RPM (free tier)

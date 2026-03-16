@@ -420,43 +420,6 @@ export default function UnifiedSchema({
         url: absoluteImage(pageImageUrl),
       }
     }
-
-    const articleNode = {
-      '@type': 'Article',
-      '@id': `${fullUrl}#article`,
-      headline: pageTitle || 'Aviation History Article',
-      description: pageDescription || 'Expert aviation history research and analysis',
-      ...(pageImageUrl ? { image: [absoluteImage(pageImageUrl)] } : {}),
-      author: {
-        '@id': `${BASE_URL}/#person`,
-      },
-      publisher: {
-        '@id': `${BASE_URL}/#organization`,
-      },
-      datePublished: new Date().toISOString(),
-      dateModified: new Date().toISOString(),
-      mainEntityOfPage: {
-        '@id': `${fullUrl}#webpage`,
-      },
-      articleSection: 'Aviation History',
-      inLanguage: 'en-GB',
-      wordCount: 2500,
-      additionalType: 'https://schema.org/BlogPosting',
-      category: 'Informational Content',
-    }
-
-    const breadcrumbNode = {
-      '@type': 'BreadcrumbList',
-      '@id': `${fullUrl}#breadcrumbs`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, item: { '@id': `${BASE_URL}/`, name: 'Home' } },
-        { '@type': 'ListItem', position: 2, item: { '@id': `${BASE_URL}/blog`, name: 'Blog' } },
-        { '@type': 'ListItem', position: 3, item: { '@id': fullUrl, name: pageTitle || 'Blog Post' } },
-      ],
-    }
-
-    graph.push(articleNode)
-    graph.push(breadcrumbNode)
   }
 
   if (pageType === 'news-article') {

@@ -323,7 +323,13 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "HMS Argus | World's First True Aircraft Carrier",
+    description: "Learn how HMS Argus became the world's first true aircraft carrier, from Beardmore conversion and flush-deck design to the trials that shaped carrier aviation.",
+    images: ['/blog-images/hms-argus-flush-deck-schematic.svg'],
+  },
 }
 
 export default function BlogPost() {

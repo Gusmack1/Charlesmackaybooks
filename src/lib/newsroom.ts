@@ -240,6 +240,20 @@ async function readAllArticles(): Promise<NewsArticleRecord[]> {
   return sortArticlesDesc(records)
 }
 
+export function isIndexableNewsArticle(
+  article: Pick<NewsArticleRecord, 'status' | 'wordCount' | 'sections'>
+): boolean {
+  const status = article.status || 'draft'
+  if (status === 'draft') return false
+
+  const sectionCount = (article.sections || []).filter((section) => section?.content?.trim().length).length
+  const derivedWordCount = countWords((article.sections || []).map((section) => section.content || '').join(' '))
+  const wordCount = article.wordCount || derivedWordCount
+
+  // Keep briefings that either have clear structure or enough depth to stand alone in search.
+  return wordCount >= 180 || (wordCount >= 100 && sectionCount >= 2)
+}
+
 export async function getNewsArticles(limit = 10): Promise<NewsArticleRecord[]> {
   const ordered = await readAllArticles()
   return ordered.slice(0, limit)
@@ -250,6 +264,12 @@ export async function getPublishedNewsArticles(limit = 10): Promise<NewsArticleR
   const published = ordered.filter((article) => (article.status || 'draft') !== 'draft')
   const relevant = published.filter((article) => getValidatedRelatedBooks(article).length > 0)
   return relevant.slice(0, limit)
+}
+
+export async function getIndexableNewsArticles(limit = 10): Promise<NewsArticleRecord[]> {
+  const ordered = await readAllArticles()
+  const indexable = ordered.filter((article) => isIndexableNewsArticle(article))
+  return indexable.slice(0, limit)
 }
 
 /** Returns all published news articles (no related-books filter). Use for homepage/news teasers. */

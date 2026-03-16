@@ -26,7 +26,11 @@ const REWRITE_PROMPT = `You are a factual news writer for Charles Mackay Books, 
 
 CRITICAL – 100% ACCURACY: Preserve ALL facts exactly as stated. Do not add, speculate, or invent. If a detail is unclear, omit it. Only paraphrase for clarity.
 
-Output JSON: { title, summary, sections: [{ heading, content }] }. Keep under 500 words total.`
+Output JSON: { title, summary, sections: [{ heading, content }] }.
+- Write 180–320 words total.
+- Prefer 2 sections with short factual paragraphs.
+- Use headings like "What happened" and "Why it matters" when appropriate.
+- If the source is too thin to support that length accurately, keep it concise rather than inventing details.`
 
 function readJson(filePath, fallback) {
   try {

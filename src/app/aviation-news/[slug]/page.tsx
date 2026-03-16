@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
-import { getNewsArticleBySlug, getPublishedNewsArticles, getValidatedRelatedBooks } from '@/lib/newsroom'
+import { getNewsArticleBySlug, getPublishedNewsArticles, getValidatedRelatedBooks, isIndexableNewsArticle } from '@/lib/newsroom'
 import { SITE_CONSTANTS } from '@/config/constants'
 
 const BASE_URL = SITE_CONSTANTS.BASE_URL
@@ -88,6 +88,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const metaTitle = buildMetaTitle(article.title)
   const description = buildDescription(article.sections?.[0]?.content, article.title)
   const canonical = `${BASE_URL}/aviation-news/${article.slug}`
+  const indexable = isIndexableNewsArticle(article)
   const publishedTime: string = article.createdAt || new Date().toISOString()
   const modifiedTime: string = (article.updatedAt as string | undefined) || publishedTime
   const keywords = [
@@ -106,10 +107,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       canonical,
     },
     robots: {
-      index: true,
+      index: indexable,
       follow: true,
       googleBot: {
-        index: true,
+        index: indexable,
         follow: true,
         'max-snippet': -1,
         'max-image-preview': 'large',
@@ -152,6 +153,7 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
   }
 
   const description = buildDescription(article.sections?.[0]?.content, article.title)
+  const indexable = isIndexableNewsArticle(article)
   const validatedRelatedBooks = getValidatedRelatedBooks(article)
   // Prefer article image, then related book cover, then fallback
   const schemaImage =
@@ -179,18 +181,20 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
         { label: article.title },
       ]}
     >
-      <UnifiedSchema
-        pageType="news-article"
-        pageTitle={article.title}
-        pageDescription={description}
-        pageUrl={`/aviation-news/${article.slug}`}
-        pageImageUrl={schemaImage}
-        datePublished={article.createdAt}
-        dateModified={(article as { updatedAt?: string }).updatedAt ?? article.createdAt ?? ''}
-        articleSection={article.keywords?.[0]?.keyword || 'Scottish Aviation News'}
-        wordCount={article.wordCount}
-        articleBody={article.sections?.map((s) => s.content).join('\n\n') ?? ''}
-      />
+      {indexable ? (
+        <UnifiedSchema
+          pageType="news-article"
+          pageTitle={article.title}
+          pageDescription={description}
+          pageUrl={`/aviation-news/${article.slug}`}
+          pageImageUrl={schemaImage}
+          datePublished={article.createdAt}
+          dateModified={(article as { updatedAt?: string }).updatedAt ?? article.createdAt ?? ''}
+          articleSection={article.keywords?.[0]?.keyword || 'Scottish Aviation News'}
+          wordCount={article.wordCount}
+          articleBody={article.sections?.map((s) => s.content).join('\n\n') ?? ''}
+        />
+      ) : null}
 
       <div className="max-w-4xl mx-auto px-6 py-2 space-y-8 bg-slate-900">
         <article className="card p-6 md:p-8 space-y-6">

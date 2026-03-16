@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
-import { getPublishedNewsArticles, getValidatedRelatedBooks } from '@/lib/newsroom'
+import { getIndexableNewsArticles, getValidatedRelatedBooks } from '@/lib/newsroom'
 
 export const dynamic = 'force-dynamic'
 
@@ -50,7 +50,7 @@ function getExcerpt(content: string | undefined, maxLength = 200) {
 }
 
 export default async function AviationNewsPage() {
-  const articles = await getPublishedNewsArticles(30)
+  const articles = await getIndexableNewsArticles(30)
   const [hero, ...rest] = articles
   const secondary = rest.slice(0, 4)
   const remainder = rest.slice(4)

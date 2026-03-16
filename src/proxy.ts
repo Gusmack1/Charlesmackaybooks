@@ -6,21 +6,35 @@ const NOINDEX_PATHS = ['/ai-prompt-system', '/checkout', '/order-complete', '/or
 
 // Netlify handles SSL/HTTPS automatically, no need for HTTPS redirects here.
 export function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl
+  const url = request.nextUrl.clone()
+  const { pathname } = url
+  let shouldRedirect = false
+
+  // Consolidate retired newsroom URLs into the current aviation-news path.
+  if (pathname === '/blog/scottish-aviation-news' || pathname.startsWith('/blog/scottish-aviation-news/')) {
+    const targetPath = pathname
+      .replace(/^\/blog\/scottish-aviation-news/, '/aviation-news')
+      .replace(/\/+$/, '')
+    url.pathname = targetPath || '/aviation-news'
+    shouldRedirect = true
+  }
+
+  if (!shouldRedirect && pathname !== '/' && pathname.endsWith('/')) {
+    url.pathname = pathname.replace(/\/+$/, '')
+    shouldRedirect = true
+  }
+
+  if (url.hostname === 'www.charlesmackaybooks.com') {
+    url.hostname = 'charlesmackaybooks.com'
+    shouldRedirect = true
+  }
+
+  if (shouldRedirect) {
+    return NextResponse.redirect(url, 308)
+  }
 
   // Explicitly removed pages (410 Gone)
   if (pathname === '/research-methodology') {
-    return new NextResponse('Gone', {
-      status: 410,
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-        'X-Robots-Tag': 'noindex, nofollow',
-      },
-    })
-  }
-
-  // Legacy newsroom path retired in favour of /aviation-news/*.
-  if (pathname === '/blog/scottish-aviation-news' || pathname.startsWith('/blog/scottish-aviation-news/')) {
     return new NextResponse('Gone', {
       status: 410,
       headers: {

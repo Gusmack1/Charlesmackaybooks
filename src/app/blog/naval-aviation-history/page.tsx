@@ -337,7 +337,13 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Naval Aviation History | HMS Argus to Supercarriers",
+    description: "Trace naval aviation from early shipboard aircraft to supercarriers, with HMS Argus, carrier operations, and maritime air power explained by Charles E. MacKay.",
+    images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
+  },
 }
 
 export default function BlogPost() {

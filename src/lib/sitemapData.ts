@@ -3,6 +3,7 @@ import path from 'path';
 import { MetadataRoute } from 'next';
 import { books } from '@/data/books';
 import { SITE_CONSTANTS } from '@/config/constants';
+import { isIndexableNewsArticle, type NewsArticleRecord } from '@/lib/newsroom';
 const GENERATED_AT = new Date().toISOString();
 
 const STATIC_PAGES: Array<{
@@ -139,9 +140,9 @@ function getPublishedNewsEntries(): Array<{ slug: string; relativeFilePath: stri
   files.forEach((filePath) => {
     try {
       const raw = fs.readFileSync(filePath, 'utf8');
-      const record = JSON.parse(raw) as { slug?: string; status?: string };
+      const record = JSON.parse(raw) as Partial<NewsArticleRecord>;
       const status = record.status || 'draft';
-      if (record.slug && status !== 'draft') {
+      if (record.slug && status !== 'draft' && isIndexableNewsArticle(record as NewsArticleRecord)) {
         published.push({
           slug: record.slug,
           relativeFilePath: path.relative(PROJECT_ROOT, filePath),
