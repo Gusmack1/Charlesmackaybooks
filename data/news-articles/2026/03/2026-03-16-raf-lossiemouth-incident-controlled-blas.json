@@ -1,0 +1,58 @@
+{
+  "slug": "2026-03-16-raf-lossiemouth-incident-controlled-blas",
+  "title": "RAF Lossiemouth Incident: Controlled Blast Reveals No Threat",
+  "wordCount": 68,
+  "sections": [
+    {
+      "heading": "Incident Overview",
+      "content": "On March 13, RAF Lossiemouth responded to a report concerning a suspicious package on the base. In response to the potential threat, a bomb disposal team was deployed."
+    },
+    {
+      "heading": "Controlled Explosion",
+      "content": "The bomb squad carried out a controlled explosion on the package. Following this operation, authorities confirmed that there was no threat to safety."
+    },
+    {
+      "heading": "Flight Operations",
+      "content": "Normal flight operations resumed promptly after the incident was assessed, ensuring that air traffic continued without disruption."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://meyka.com/blog/raf-lossiemouth-alert-controlled-blast-finds-no-threat-march-13-1303/",
+      "citationText": "serper-scottish-aviation – RAF Lossiemouth Alert: Controlled Blast Finds No Threat, March 13"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "sabres-from-north",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Lossiemouth",
+      "primary": false
+    },
+    {
+      "keyword": "RAF Lossiemouth Incident: Controlled",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-16T01:25:29.441Z",
+  "publishedAt": "2026-03-16T01:25:29.441Z"
+}
