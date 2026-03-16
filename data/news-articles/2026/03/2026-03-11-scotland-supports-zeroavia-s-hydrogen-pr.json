@@ -1,19 +1,15 @@
 {
   "slug": "2026-03-11-scotland-supports-zeroavia-s-hydrogen-pr",
   "title": "Scotland Backs ZeroAvia's Hydrogen Propulsion Manufacturing Site",
-  "wordCount": 52,
+  "wordCount": 83,
   "sections": [
     {
       "heading": "What happened",
-      "content": "$12 million in funding released to support Hydrogen Center of Excellence"
+      "content": "Scotland Backs ZeroAvia's Hydrogen Propulsion Manufacturing Site in Glasgow | Aviation International News ZeroAvia plans to produce hydrogen propulsion systems for aircraft near Glasgow Airport in Scotland. Molicel Batteries Will Power Vaeridion's Electric Microliner European group’s helicopter division makes strong contribution to 2025 financials Airlines and special-missions applications are in the Dutch start-up’s sights"
     },
     {
       "heading": "Key details",
-      "content": "Scotland Backs ZeroAvia's Hydrogen Propulsion Manufacturing Site in Glasgow | Aviation International News Scotland Backs ZeroAvia's Hydrogen Propulsion Manufacturing Site"
-    },
-    {
-      "heading": "Why it matters",
-      "content": "ZeroAvia plans to produce hydrogen propulsion systems for aircraft near Glasgow Airport in Scotland. Molicel Batteries Will Power Vaeridion's Electric Microliner"
+      "content": "Evolito Will Supply Propulsion Units for Vertical eVTOL Aircraft Ground tests will be done at either Changi or Seletar airports Experimental technology intended to complement existing engine nacelle capabilities"
     }
   ],
   "images": [],
@@ -25,6 +21,10 @@
     }
   ],
   "relatedBooks": [
+    {
+      "bookId": "sycamore-seeds",
+      "reason": "Related research volume"
+    },
     {
       "bookId": "clydeside-aviation-vol2",
       "reason": "Related research volume"

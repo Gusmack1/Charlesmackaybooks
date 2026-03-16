@@ -25,6 +25,7 @@ const NOISE_PATTERNS = [
   /^related posts$/i,
   /^more on this story$/i,
   /^more in /i,
+  /^more stories from/i,
   /^people powered politics$/i,
   /^join us today$/i,
   /^getty images$/i,
@@ -36,6 +37,15 @@ const NOISE_PATTERNS = [
   /^follow us/i,
   /^advertisement$/i,
   /^source:/i,
+  /^this article is brought to you by our exclusive subscriber partnership/i,
+  /^it does not necessarily reflect the view of the herald/i,
+  /^\d+ comments?$/i,
+  /^get involved with the news/i,
+  /^send your news/i,
+  /^piano meter debugger/i,
+  /^share\b/i,
+  /^save\b/i,
+  /^\(image:.*\)$/i,
 ]
 
 function listFiles(dir) {
@@ -110,29 +120,38 @@ function cleanTitle(title) {
 function dedupe(values) {
   const seen = new Set()
   return values.filter((value) => {
-    const key = value.toLowerCase()
+    const key = value.toLowerCase().replace(/\s+/g, ' ').trim()
     if (seen.has(key)) return false
     seen.add(key)
     return true
   })
 }
 
-function isNoiseParagraph(text) {
+function normalizeForCompare(text) {
+  return decodeHtmlEntities(text || '')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .replace(/[|:–—-]+/g, ' ')
+    .trim()
+}
+
+function isNoiseParagraph(text, minChars = MIN_PARAGRAPH_CHARS) {
   const cleaned = text.trim()
   if (!cleaned) return true
-  if (cleaned.length < MIN_PARAGRAPH_CHARS || cleaned.length > MAX_PARAGRAPH_CHARS) return true
+  if (cleaned.length < minChars || cleaned.length > MAX_PARAGRAPH_CHARS) return true
   if (NOISE_PATTERNS.some((pattern) => pattern.test(cleaned))) return true
   if (/^(facebook|twitter|x|instagram|linkedin)$/i.test(cleaned)) return true
   if (/^last updated/i.test(cleaned)) return true
   return false
 }
 
-function paragraphsFromText(text) {
+function paragraphsFromText(text, options = {}) {
+  const minChars = options.minChars ?? MIN_PARAGRAPH_CHARS
   return dedupe(
     text
       .split(/\n\s*\n/g)
       .map((paragraph) => paragraph.replace(/\s+/g, ' ').trim())
-      .filter((paragraph) => !isNoiseParagraph(paragraph))
+      .filter((paragraph) => !isNoiseParagraph(paragraph, minChars))
   )
 }
 
@@ -155,6 +174,34 @@ function sectionHeadings(count) {
   return ['What happened', 'Key details', 'Why it matters']
 }
 
+function chunkParagraphs(selected, sectionCount) {
+  const totalWords = selected.reduce((sum, paragraph) => sum + countWords(paragraph), 0)
+  const targetWords = Math.max(45, Math.ceil(totalWords / sectionCount))
+  const groups = []
+  let current = []
+  let currentWords = 0
+
+  for (const paragraph of selected) {
+    current.push(paragraph)
+    currentWords += countWords(paragraph)
+    const remainingGroups = sectionCount - groups.length - 1
+    const remainingParagraphs = selected.length - groups.reduce((sum, group) => sum + group.length, 0) - current.length
+    if (
+      groups.length < sectionCount - 1 &&
+      currentWords >= targetWords &&
+      remainingParagraphs >= remainingGroups
+    ) {
+      groups.push(current)
+      current = []
+      currentWords = 0
+    }
+  }
+
+  if (current.length) groups.push(current)
+
+  return groups
+}
+
 function buildSections(paragraphs, fallbackText) {
   let selected = []
   let selectedWords = 0
@@ -162,7 +209,7 @@ function buildSections(paragraphs, fallbackText) {
   for (const paragraph of paragraphs) {
     selected.push(paragraph)
     selectedWords += countWords(paragraph)
-    if (selected.length >= 7 || (selectedWords >= 220 && selected.length >= 3)) {
+    if (selected.length >= 8 || (selectedWords >= 260 && selected.length >= 3)) {
       break
     }
   }
@@ -179,20 +226,16 @@ function buildSections(paragraphs, fallbackText) {
     selected = splitSingleParagraph(selected[0])
   }
 
-  let groups
-  if (selected.length >= 5) {
-    groups = [selected[0], `${selected[1]} ${selected[2]}`.trim(), `${selected[3]} ${selected[4]}`.trim()]
-  } else if (selected.length === 4) {
-    groups = [selected[0], selected[1], `${selected[2]} ${selected[3]}`.trim()]
-  } else if (selected.length === 3) {
-    groups = [selected[0], selected[1], selected[2]]
-  } else {
-    groups = [selected[0], selected[1]]
-  }
+  const totalWords = selected.reduce((sum, paragraph) => sum + countWords(paragraph), 0)
+  const sectionCount = selected.length >= 3 && totalWords >= 135 ? 3 : 2
+  const groups = chunkParagraphs(selected, Math.min(sectionCount, selected.length))
 
   const headings = sectionHeadings(groups.length)
   return groups
-    .map((content, index) => ({ heading: headings[index] || `Section ${index + 1}`, content: (content || '').trim() }))
+    .map((content, index) => ({
+      heading: headings[index] || `Section ${index + 1}`,
+      content: Array.isArray(content) ? content.join(' ').trim() : (content || '').trim(),
+    }))
     .filter((section) => section.content)
 }
 
@@ -227,6 +270,23 @@ function extractBbcReadMoreUrl(html, sourceUrl) {
   return `${source.protocol}//${source.hostname}${relativeMatch[1]}`
 }
 
+function collectJsonLdCandidates(value, output = []) {
+  if (!value) return output
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectJsonLdCandidates(item, output))
+    return output
+  }
+  if (typeof value === 'object') {
+    output.push(value)
+    Object.values(value).forEach((child) => {
+      if (child && typeof child === 'object') {
+        collectJsonLdCandidates(child, output)
+      }
+    })
+  }
+  return output
+}
+
 function extractJsonLdParagraphs(html) {
   const matches = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
   const paragraphs = []
@@ -238,7 +298,7 @@ function extractJsonLdParagraphs(html) {
 
     try {
       const parsed = JSON.parse(raw)
-      const candidates = Array.isArray(parsed) ? parsed : [parsed]
+      const candidates = collectJsonLdCandidates(parsed, [])
       for (const candidate of candidates) {
         if (!title && typeof candidate?.headline === 'string') {
           title = cleanTitle(candidate.headline)
@@ -259,6 +319,53 @@ function extractJsonLdParagraphs(html) {
     title,
     paragraphs: dedupe(paragraphs.filter((paragraph) => !isNoiseParagraph(paragraph))),
   }
+}
+
+function collectGovUkText(value, options = {}, parentKey = '') {
+  const results = []
+  const allowedKeys = new Set([
+    'body',
+    'title',
+    'description',
+    'summary',
+    'caption',
+    'label',
+    'name',
+    'display_title',
+    'change_note',
+    'text',
+  ])
+
+  const walk = (node, key = '') => {
+    if (!node) return
+    if (typeof node === 'string') {
+      if (!key || allowedKeys.has(key)) results.push(node)
+      return
+    }
+    if (Array.isArray(node)) {
+      node.forEach((item) => walk(item, key))
+      return
+    }
+    if (typeof node === 'object') {
+      for (const [childKey, childValue] of Object.entries(node)) {
+        walk(childValue, childKey)
+      }
+    }
+  }
+
+  walk(value, parentKey)
+  return results
+}
+
+function buildAaibMetadataParagraph(metadata = {}) {
+  const parts = []
+  if (metadata.aircraft_type) parts.push(`The AAIB record identifies the aircraft as a ${metadata.aircraft_type}.`)
+  if (metadata.registration) parts.push(`The registration listed is ${metadata.registration}.`)
+  if (metadata.location) parts.push(`The occurrence location is given as ${metadata.location}.`)
+  if (metadata.date_of_occurrence) parts.push(`The date of occurrence is recorded as ${metadata.date_of_occurrence}.`)
+  if (metadata.report_type) parts.push(`The report type is ${metadata.report_type}.`)
+  if (metadata.aircraft_category) parts.push(`The aircraft category is ${metadata.aircraft_category}.`)
+  return parts.join(' ')
 }
 
 async function fetchText(url, accept) {
@@ -305,9 +412,21 @@ async function fetchGovUkArticle(sourceUrl) {
     if (part?.body) textParts.push(stripHtmlWithBreaks(part.body))
   }
 
+  textParts.push(...collectGovUkText(data.details?.documents))
+  textParts.push(...collectGovUkText(data.details?.featured_attachments))
+  textParts.push(...collectGovUkText(data.details?.attachments))
+  textParts.push(...collectGovUkText(data.details?.child_section_groups))
+  textParts.push(...collectGovUkText(data.details?.collection_groups))
+  textParts.push(...collectGovUkText(data.links?.documents))
+
+  const aaibParagraph = buildAaibMetadataParagraph(data.details?.metadata)
+  if (aaibParagraph) {
+    textParts.push(aaibParagraph)
+  }
+
   return {
     title,
-    paragraphs: paragraphsFromText(textParts.join('\n\n')),
+    paragraphs: paragraphsFromText(textParts.join('\n\n'), { minChars: 25 }),
     method: 'govuk-api',
   }
 }
@@ -333,12 +452,21 @@ async function fetchHtmlArticle(sourceUrl) {
   const title = jsonLd.title || cleanTitle(extractMetaContent(html, 'og:title')) || extractDocumentTitle(html)
   const textParagraphs = paragraphsFromText(stripHtmlWithBreaks(articleBlock))
   const fullPageParagraphs = countWords(textParagraphs.join(' ')) < 180 ? paragraphsFromText(stripHtmlWithBreaks(html)) : []
+  const titleKey = normalizeForCompare(title)
+  const metaKey = normalizeForCompare(metaDescription)
   const paragraphs = dedupe([
     ...(metaDescription && !isNoiseParagraph(metaDescription) ? [metaDescription] : []),
     ...jsonLd.paragraphs,
     ...textParagraphs,
     ...fullPageParagraphs,
-  ])
+  ]).filter((paragraph) => {
+    const key = normalizeForCompare(paragraph)
+    if (!key) return false
+    if (titleKey && key === titleKey) return false
+    if (metaKey && key === metaKey) return false
+    if (titleKey && key.startsWith(titleKey) && key.includes('|')) return false
+    return true
+  })
 
   return {
     title,
@@ -383,7 +511,10 @@ async function rewriteArticle(filePath, dryRun) {
     nextArticle.wordCount = sections.reduce((sum, section) => sum + countWords(section.content), 0)
 
     const currentWordCount = article.wordCount || countWords(fallbackText)
-    if (currentWordCount >= 180 && nextArticle.wordCount < currentWordCount) {
+    if (
+      (currentWordCount >= 180 && nextArticle.wordCount < currentWordCount) ||
+      (currentWordCount >= 90 && nextArticle.wordCount < 90)
+    ) {
       console.log(`Keep current (${currentWordCount} words): ${path.basename(filePath)}`)
       return { status: 'skip' }
     }

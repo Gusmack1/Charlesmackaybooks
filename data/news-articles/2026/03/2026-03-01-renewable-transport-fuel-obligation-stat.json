@@ -1,19 +1,15 @@
 {
   "slug": "2026-03-01-renewable-transport-fuel-obligation-stat",
   "title": "Renewable Transport Fuel Obligation statistics: data tables",
-  "wordCount": 97,
+  "wordCount": 110,
   "sections": [
     {
       "heading": "What happened",
-      "content": "Data on the supply of renewable fuel, as required under the Renewable Transport Fuel Obligation (RTFO)."
+      "content": "Data on the supply of renewable fuel, as required under the Renewable Transport Fuel Obligation (RTFO). Table RF_0103 revision note: The ‘still in existence’ values for 2023 and 2024 were not accounting for the use of certificates carried over from the previous obligation year. The incorrect calculation was: certificates still in existence = issued - revoked - redeemed"
     },
     {
       "heading": "Key details",
-      "content": "The ‘still in existence’ values for 2023 and 2024 were not accounting for the use of certificates carried over from the previous obligation year. certificates still in existence = issued - revoked - redeemed"
-    },
-    {
-      "heading": "Why it matters",
-      "content": "certificates still in existence = issued + carried over from previous year - revoked - redeemed Also, the 2022 ‘still in existence’ value was corrected as those certificates have since been used. This results in the ‘redeemed’ values for 2022 also being adjusted to the correct value."
+      "content": "This has been corrected to: certificates still in existence = issued + carried over from previous year - revoked - redeemed Also, the 2022 ‘still in existence’ value was corrected as those certificates have since been used. This results in the ‘redeemed’ values for 2022 also being adjusted to the correct value."
     }
   ],
   "images": [],

@@ -1,19 +1,15 @@
 {
   "slug": "2025-11-21-official-statistics-transport-statistics",
   "title": "Transport Statistics Geography Portal: November 2025",
-  "wordCount": 106,
+  "wordCount": 128,
   "sections": [
     {
       "heading": "What happened",
-      "content": "Quarterly update to the website that presents existing published official statistics, by the Department for Transport, in a geographical format."
+      "content": "Quarterly update to the website that presents existing published official statistics, by the Department for Transport, in a geographical format. The Department for Transport produces and publishes a range of Transport Statistics with a spatial component. This release covers the existing published official statistics, by the Department for Transport, in a geographical format for Road Casualty Collisions, Search and Rescue Helicopter Taskings, Licensed Vehicles, and Electric Vehicle Charging Infrastructure."
     },
     {
       "heading": "Key details",
-      "content": "The Department for Transport produces and publishes a range of Transport Statistics with a spatial component. This release covers the existing published official statistics, by the Department for Transport, in a geographical format for Road Casualty Collisions, Search and Rescue Helicopter Taskings, Licensed Vehicles, and Electric Vehicle Charging Infrastructure."
-    },
-    {
-      "heading": "Why it matters",
-      "content": "Geographic Information System (GIS) datasets are updated once the statistical datasets they are derived from have been officially published. To hear more about DfT statistical publications as they are released, follow us on X at DfTstats ."
+      "content": "Geographic Information System (GIS) datasets are updated once the statistical datasets they are derived from have been officially published. Roads Geography and GIS data To hear more about DfT statistical publications as they are released, follow us on X at DfTstats . </a></div> <div class=\"gem-c-attachment__details\"> <h2 class=\"gem-c-attachment__title\"> <a class=\"govuk-link\" target=\"_self\" data-ga4-link=\"{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;attachment&quot;}\" href=\"https://geoportal.dft.gov.uk\">Transport Statistics Geography Portal</a> </h2> <p class=\"gem-c-attachment__metadata\"><span class=\"gem-c-attachment__attribute\">https://geoportal.dft.gov.uk</span></p>"
     }
   ],
   "images": [],
