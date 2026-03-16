@@ -121,9 +121,9 @@ export const pageMeta = {
     keywords: 'aviation bibliography, aviation reference sources, aviation reading list, academic aviation sources, aviation research books'
   },
   'aviation-news': {
-    title: 'Aviation News & Updates | Latest Aviation History Discoveries | Charles E. MacKay',
-    description: 'Latest aviation news and historical discoveries by Charles E. MacKay. New research findings, book releases, aviation archaeology, and updates in aviation history scholarship.',
-    keywords: 'aviation news, aviation history discoveries, aviation research updates, new aviation books, aviation archaeology, flight history news'
+    title: 'Scottish Aviation News | Expert Briefings & Research Updates',
+    description: 'Stay informed with expert Scottish aviation news and briefings. Source-backed analysis linked to our research volumes. Glasgow-based aviation historian Charles E. MacKay.',
+    keywords: 'aviation news, Scottish aviation news, aviation history, aviation research, Charles E. MacKay'
   },
   'academic-resources': {
     title: 'Academic Aviation Resources | University Research | Charles E. MacKay',

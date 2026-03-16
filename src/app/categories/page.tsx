@@ -6,9 +6,9 @@ import { categoryNavLinks } from '@/config/navigation'
 import { books } from '@/data/books'
 
 export const metadata: Metadata = {
-  title: 'Aviation Book Categories: WWI, WWII, Scottish Aviation and More',
+  title: 'Aviation Book Categories | WWI, WWII & Scottish Aviation',
   description:
-    'Browse aviation book categories: WWI, WWII, Scottish aviation history, helicopters, naval aviation, jet age, and biographies. Buy direct with free worldwide shipping.',
+    `Browse ${books.length} aviation history books by category, from WWI and WWII aircraft to Scottish aviation, naval aviation, helicopters, and biographies.`,
   keywords: [
     'aviation book categories',
     'aviation history books',
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     canonical: 'https://charlesmackaybooks.com/categories'
   },
   openGraph: {
-    title: 'Aviation Book Categories: WWI, WWII, Scottish Aviation and More',
+    title: 'Aviation Book Categories | WWI, WWII & Scottish Aviation',
     description:
-      'Browse WWI, WWII, Scottish aviation, helicopters, naval aviation, jet age, and biography categories. Free worldwide shipping.',
+      `Browse ${books.length} aviation history books by category, from WWI and WWII aircraft to Scottish aviation, naval aviation, helicopters, and biographies.`,
     type: 'website',
     url: 'https://charlesmackaybooks.com/categories'
   }
@@ -89,6 +89,10 @@ export default function CategoriesPage() {
                   book.category === categoryDesc?.name ||
                   book.category.toLowerCase().replace(/\s+/g, '-') === categorySlug
                 )
+                const featuredBooks = (categoryDesc?.featuredBooks || [])
+                  .map((bookId) => books.find((book) => book.id === bookId))
+                  .filter((book): book is NonNullable<typeof book> => Boolean(book))
+                  .slice(0, 2)
 
                 if (!categoryDesc) return null
 
@@ -106,6 +110,23 @@ export default function CategoriesPage() {
                     <p className="text-white/90 mb-4 line-clamp-3">
                       {categoryDesc.description}
                     </p>
+
+                    {featuredBooks.length > 0 && (
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-sm text-white mb-2">Featured titles:</h4>
+                        <div className="space-y-1">
+                          {featuredBooks.map((book) => (
+                            <Link
+                              key={book.id}
+                              href={`/books/${book.id}`}
+                              className="block text-sm text-blue-300 underline hover:text-blue-200"
+                            >
+                              {book.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
                     <div className="mb-4">
                       <h4 className="font-semibold text-sm text-white mb-2">Featured Topics:</h4>

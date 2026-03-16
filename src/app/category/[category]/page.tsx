@@ -36,6 +36,36 @@ const categoryMappings: Record<string, string> = {
   'wwii-aviation': 'WWII Aviation'
 }
 
+function getCategoryBooks(category: string, categoryName: string) {
+  return books.filter(book =>
+    book.category === categoryName ||
+    book.category.toLowerCase().replace(/\s+/g, '-') === category
+  )
+}
+
+function trimMetaText(value: string, limit = 160) {
+  if (value.length <= limit) return value
+  const cut = value.slice(0, limit)
+  const lastSpace = cut.lastIndexOf(' ')
+  return `${cut.slice(0, lastSpace > 90 ? lastSpace : limit - 1).trim()}…`
+}
+
+function buildCategoryMetaDescription(category: string, categoryName: string, featuredBookIds: string[] = []) {
+  const categoryBooks = getCategoryBooks(category, categoryName)
+  const featuredTitles = featuredBookIds
+    .map((id) => books.find((book) => book.id === id)?.title)
+    .filter((title): title is string => Boolean(title))
+    .slice(0, 2)
+
+  const titleSegment = featuredTitles.length
+    ? ` including ${featuredTitles.join(' and ')}`
+    : ''
+
+  return trimMetaText(
+    `${categoryBooks.length} ${categoryName.toLowerCase()} books by Charles E. MacKay${titleSegment}. Free worldwide shipping and secure guest checkout.`
+  )
+}
+
 export async function generateStaticParams() {
   return Object.keys(categoryMappings).map((category) => ({
     category,
@@ -46,14 +76,10 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const { category } = await params
   const categoryName = categoryMappings[category] || category
   const categoryDesc = categoryDescriptions[category]
-
-  const baseDescription = categoryDesc?.description
-    ? categoryDesc.description.trim()
-    : `Browse ${categoryName} books by Charles E. MacKay with free worldwide shipping and secure guest checkout.`
-  const description = `${baseDescription.replace(/\.*\s*$/, '')}. Buy direct with free worldwide shipping.`
+  const description = buildCategoryMetaDescription(category, categoryName, categoryDesc?.featuredBooks || [])
 
   return {
-    title: `${categoryName} Books & Research`,
+    title: `${categoryName} Books`,
     description,
     ...(categoryDesc?.keywords?.length ? { keywords: categoryDesc.keywords } : {}),
     alternates: {
@@ -85,6 +111,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     notFound()
   }
 
+  const metaDescription = buildCategoryMetaDescription(category, categoryName, categoryDesc.featuredBooks)
+
   const longDescriptionParagraphs = categoryDesc.longDescription
     .split(/\n\s*\n/g)
     .map((p) => p.trim())
@@ -94,8 +122,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     <div className="min-h-screen bg-slate-900">
       <UnifiedSchema
         pageType="category"
-        pageTitle={`${categoryName} Books & Research`}
-        pageDescription={categoryDesc.description}
+        pageTitle={`${categoryName} Books`}
+        pageDescription={metaDescription}
         pageUrl={`/category/${category}`}
       />
       <div className="container mx-auto px-4 py-8">
@@ -123,6 +151,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             <div className="mt-4 flex flex-wrap justify-center gap-3 text-sm">
               <Link href="/books" className="underline text-blue-300 hover:text-blue-200">
                 Browse all books
+              </Link>
+              <Link href="/aviation-news" className="underline text-blue-300 hover:text-blue-200">
+                Scottish aviation news
               </Link>
               <Link href="/blog" className="underline text-blue-300 hover:text-blue-200">
                 Aviation history blog

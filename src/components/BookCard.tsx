@@ -13,6 +13,15 @@ interface BookCardProps {
   sourceContext?: string
 }
 
+function toCategorySlug(category?: string) {
+  if (!category) return null
+  return category
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
 export default function BookCard({ book, sourceContext }: BookCardProps) {
   const { addToCart, openBasket } = useCart();
   const router = useRouter();
@@ -20,6 +29,7 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
   const [isAdding, setIsAdding] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
   const [justAdded, setJustAdded] = useState(false);
+  const categorySlug = toCategorySlug(book.category);
 
   const handleAddToBasket = () => {
     if (isAdding) return;
@@ -79,7 +89,16 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
           </Link>
         </h3>
 
-        <p className="text-sm text-white/75 mb-2">{book.category}</p>
+        {categorySlug ? (
+          <Link
+            href={`/category/${categorySlug}`}
+            className="inline-block text-sm text-blue-200 mb-2 underline underline-offset-2 hover:text-blue-100"
+          >
+            {book.category}
+          </Link>
+        ) : (
+          <p className="text-sm text-white/75 mb-2">{book.category}</p>
+        )}
 
         {/* Key Details */}
         <div className="text-xs text-white/60 space-y-1 mb-3">

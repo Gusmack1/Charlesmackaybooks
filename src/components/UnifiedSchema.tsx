@@ -8,6 +8,7 @@ type PageType =
   | 'blog'
   | 'blog-post'
   | 'news-article'
+  | 'news-index'
   | 'category'
   | 'page'
 
@@ -48,6 +49,13 @@ interface UnifiedSchemaProps {
     description?: string
     weight?: number
   }>
+  newsArticles?: Array<{
+    slug: string
+    title: string
+    description?: string
+    datePublished?: string
+    imageUrl?: string
+  }>
 }
 
 const BASE_URL = SITE_CONSTANTS.BASE_URL
@@ -65,6 +73,7 @@ export default function UnifiedSchema({
   articleBody,
   bookData = null,
   books = [],
+  newsArticles = [],
 }: UnifiedSchemaProps) {
   const normalizedPath = normalizePath(pageUrl)
   const fullUrl = !normalizedPath || normalizedPath === '/' ? BASE_URL : `${BASE_URL}${normalizedPath}`
@@ -457,35 +466,74 @@ export default function UnifiedSchema({
       audienceType: 'Aviation Historians, Researchers, and News Readers',
     }
 
-    if (pageImageUrl) {
+    const newsImageUrl = pageImageUrl || undefined
+    if (newsImageUrl) {
       webPageNode.primaryImageOfPage = {
         '@type': 'ImageObject',
-        url: absoluteImage(pageImageUrl),
+        url: absoluteImage(newsImageUrl),
+        width: 1200,
+        height: 630,
       }
     }
 
     const pubDate = datePublished ? new Date(datePublished).toISOString() : new Date().toISOString()
     const modDate = dateModified ? new Date(dateModified).toISOString() : pubDate
 
+    // Google NewsArticle requirements: headline, image, datePublished, dateModified, author, publisher (with logo)
     const newsArticleNode = {
       '@type': 'NewsArticle',
       '@id': `${fullUrl}#article`,
       headline: pageTitle || 'Scottish Aviation Briefing',
       description: pageDescription || 'Scottish aviation news and briefings with links to research volumes.',
-      ...(pageImageUrl ? { image: [absoluteImage(pageImageUrl)] } : {}),
+      ...(newsImageUrl
+        ? {
+            image: [
+              {
+                '@type': 'ImageObject',
+                url: absoluteImage(newsImageUrl),
+                width: 1200,
+                height: 630,
+              },
+            ],
+          }
+        : {
+            image: [
+              {
+                '@type': 'ImageObject',
+                url: absoluteImage(),
+                width: 1200,
+                height: 630,
+              },
+            ],
+          }),
       author: {
+        '@type': 'Person',
         '@id': `${BASE_URL}/#person`,
+        name: 'Charles E. MacKay',
+        url: `${BASE_URL}/about`,
       },
       publisher: {
+        '@type': ['Organization', 'NewsMediaOrganization'],
         '@id': `${BASE_URL}/#organization`,
+        name: 'Charles E. MacKay Aviation Books',
+        url: BASE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${BASE_URL}/charles-mackay-logo.png`,
+          width: 600,
+          height: 60,
+        },
       },
       datePublished: pubDate,
       dateModified: modDate,
       mainEntityOfPage: {
+        '@type': 'WebPage',
         '@id': `${fullUrl}#webpage`,
+        url: fullUrl,
       },
       articleSection: articleSection || 'Scottish Aviation News',
       inLanguage: 'en-GB',
+      isAccessibleForFree: true,
       ...(wordCount ? { wordCount } : {}),
       ...(articleBody ? { articleBody: articleBody.slice(0, 5000) } : {}),
     }
@@ -502,6 +550,73 @@ export default function UnifiedSchema({
 
     graph.push(newsArticleNode)
     graph.push(newsBreadcrumbNode)
+  }
+
+  if (pageType === 'news-index') {
+    graph.push({
+      '@type': 'NewsMediaOrganization',
+      '@id': `${BASE_URL}/aviation-news#newsmedia`,
+      name: 'Charles E. MacKay Aviation News',
+      description: 'Scottish aviation news and briefings, with links to our research volumes',
+      url: `${BASE_URL}/aviation-news`,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}/charles-mackay-logo.png`,
+        width: 600,
+        height: 60,
+      },
+      publisher: {
+        '@id': `${BASE_URL}/#organization`,
+      },
+      author: {
+        '@type': 'Person',
+        '@id': `${BASE_URL}/#person`,
+        name: 'Charles E. MacKay',
+        url: `${BASE_URL}/about`,
+      },
+    })
+
+    graph.push({
+      '@type': 'CollectionPage',
+      '@id': `${fullUrl}#collection`,
+      url: fullUrl,
+      name: pageTitle || 'Aviation News & Briefings',
+      description: pageDescription || 'Scottish aviation news and briefings, with links to our research volumes.',
+      isPartOf: { '@id': `${BASE_URL}/#website` },
+      about: { '@id': `${BASE_URL}/aviation-news#newsmedia` },
+      inLanguage: 'en-GB',
+    })
+
+    if (newsArticles.length > 0) {
+      graph.push({
+        '@type': 'ItemList',
+        '@id': `${fullUrl}#itemlist`,
+        name: 'Aviation News Articles',
+        numberOfItems: newsArticles.length,
+        itemListElement: newsArticles.slice(0, 20).map((article, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          item: {
+            '@type': 'NewsArticle',
+            '@id': `${BASE_URL}/aviation-news/${article.slug}#article`,
+            headline: article.title,
+            description: article.description || 'Scottish aviation briefing',
+            url: `${BASE_URL}/aviation-news/${article.slug}`,
+            ...(article.datePublished && { datePublished: new Date(article.datePublished).toISOString() }),
+            ...(article.imageUrl && { image: [absoluteImage(article.imageUrl)] }),
+          },
+        })),
+      })
+    }
+
+    graph.push({
+      '@type': 'BreadcrumbList',
+      '@id': `${fullUrl}#breadcrumbs`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, item: { '@id': `${BASE_URL}/`, name: 'Home' } },
+        { '@type': 'ListItem', position: 2, item: { '@id': fullUrl, name: 'Aviation News' } },
+      ],
+    })
   }
 
   graph.push(webPageNode)

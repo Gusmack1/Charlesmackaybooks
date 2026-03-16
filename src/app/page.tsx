@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 import HeroSection from '@/components/HeroSection';
 import AcademicAuthority from '@/components/AcademicAuthority';
@@ -6,6 +7,7 @@ import BookCard from '@/components/BookCard';
 import Testimonials from '@/components/Testimonials';
 import AuthorSEOEnhancer from '@/components/AuthorSEOEnhancer';
 import FAQSchema from '@/components/FAQSchema';
+import LatestAviationNews from '@/components/LatestAviationNews';
 
 import { books } from '@/data/books';
 
@@ -63,6 +65,47 @@ export default function Home() {
     <div className="surface-dark relative mx-0 bg-slate-900">
       <HeroSection />
 
+      <section className="py-4 border-y border-white/10 bg-slate-900/80">
+        <div className="container mx-auto container-padding">
+          <div className="max-w-4xl mx-auto text-sm sm:text-base text-white/85">
+            Explore
+            {' '}
+            <Link href="/category/scottish-aviation-history" className="text-blue-300 underline hover:text-blue-200">
+              Scottish aviation history books
+            </Link>
+            ,
+            {' '}
+            <Link href="/category/wwi-aviation" className="text-blue-300 underline hover:text-blue-200">
+              WWI aircraft studies
+            </Link>
+            ,
+            {' '}
+            <Link href="/category/wwii-aviation" className="text-blue-300 underline hover:text-blue-200">
+              WWII aviation titles
+            </Link>
+            ,
+            {' '}
+            <Link href="/category/naval-aviation" className="text-blue-300 underline hover:text-blue-200">
+              naval aviation history
+            </Link>
+            ,
+            and
+            {' '}
+            <Link href="/category/aviation-biography" className="text-blue-300 underline hover:text-blue-200">
+              pilot biographies
+            </Link>
+            .
+            {' '}
+            If you want current context before choosing a book, start with the
+            {' '}
+            <Link href="/aviation-news" className="text-blue-300 underline hover:text-blue-200">
+              latest Scottish aviation news briefings
+            </Link>
+            .
+          </div>
+        </div>
+      </section>
+
       {/* Books Section */}
       <section className="py-6" id="books">
         <div className="container mx-auto container-padding">
@@ -81,6 +124,13 @@ export default function Home() {
               <BookCard key={book.id} book={book} sourceContext="homepage" />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Latest Aviation News */}
+      <section className="py-6" id="aviation-news-teaser">
+        <div className="container mx-auto container-padding">
+          <LatestAviationNews />
         </div>
       </section>
 

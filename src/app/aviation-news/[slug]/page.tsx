@@ -21,11 +21,27 @@ function normalizeText(value: string) {
   return value.replace(/\*\*/g, '').replace(/_/g, '').replace(/\s+/g, ' ').trim()
 }
 
+const FALLBACK_DESCRIPTION =
+  'Expert Scottish aviation briefing with source-backed analysis. Links to Charles E. MacKay research volumes. Glasgow-based aviation historian reporting on Scotland\'s aviation heritage.'
+
 function buildDescription(raw?: string, fallback?: string) {
   const cleaned = normalizeText(raw || fallback || '')
-  if (!cleaned) return 'Scottish aviation briefing with source-backed analysis and book tie-ins.'
+  if (!cleaned) return FALLBACK_DESCRIPTION
   if (cleaned.length <= 160) return cleaned
   return `${cleaned.slice(0, 157)}...`
+}
+
+const MAX_TITLE_LENGTH = 60
+const TITLE_SUFFIX = ' | Scottish Aviation News'
+
+function buildMetaTitle(articleTitle: string) {
+  const suffixLen = TITLE_SUFFIX.length
+  const maxArticleLen = MAX_TITLE_LENGTH - suffixLen
+  const truncated =
+    articleTitle.length > maxArticleLen
+      ? `${articleTitle.slice(0, maxArticleLen - 3).trim()}…`
+      : articleTitle
+  return `${truncated}${TITLE_SUFFIX}`
 }
 
 function formatDate(iso: string | undefined) {
@@ -69,6 +85,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const primaryBook = validatedRelatedBooks[0] ? bookMap.get(validatedRelatedBooks[0].bookId) : undefined
   const image = primaryBook?.imageUrl || FALLBACK_IMAGE
   const imageUrl = image.startsWith('http') ? image : `${BASE_URL}${image.startsWith('/') ? '' : '/'}${image}`
+  const metaTitle = buildMetaTitle(article.title)
   const description = buildDescription(article.sections?.[0]?.content, article.title)
   const canonical = `${BASE_URL}/aviation-news/${article.slug}`
   const publishedTime: string = article.createdAt || new Date().toISOString()
@@ -82,7 +99,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   ]
 
   return {
-    title: `${article.title} | Scottish Aviation Briefing`,
+    title: metaTitle,
     description,
     keywords,
     alternates: {
@@ -100,7 +117,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       },
     },
     openGraph: {
-      title: `${article.title} | Scottish Aviation Briefing`,
+      title: metaTitle,
       description,
       type: 'article',
       url: canonical,
@@ -119,7 +136,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${article.title} | Scottish Aviation Briefing`,
+      title: metaTitle,
       description,
       images: [imageUrl],
     },
@@ -136,6 +153,11 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
 
   const description = buildDescription(article.sections?.[0]?.content, article.title)
   const validatedRelatedBooks = getValidatedRelatedBooks(article)
+  // Prefer article image, then related book cover, then fallback
+  const schemaImage =
+    article.images?.[0]?.src ||
+    (validatedRelatedBooks[0] ? bookMap.get(validatedRelatedBooks[0].bookId)?.imageUrl : undefined) ||
+    FALLBACK_IMAGE
   const relatedBooks = validatedRelatedBooks
     .map((entry) => {
       const book = bookMap.get(entry.bookId)
@@ -162,7 +184,7 @@ export default async function AviationNewsArticlePage({ params }: { params: Prom
         pageTitle={article.title}
         pageDescription={description}
         pageUrl={`/aviation-news/${article.slug}`}
-        pageImageUrl={relatedBooks[0]?.imageUrl || FALLBACK_IMAGE}
+        pageImageUrl={schemaImage}
         datePublished={article.createdAt}
         dateModified={(article as { updatedAt?: string }).updatedAt ?? article.createdAt ?? ''}
         articleSection={article.keywords?.[0]?.keyword || 'Scottish Aviation News'}

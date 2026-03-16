@@ -301,12 +301,12 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: "HMS Argus: The World's First True Aircraft Carrier | Charles E. MacKay",
-  description: "A source-based study of HMS Argus design and conversion, covering flush-deck architecture, hangar integration, and early carrier development principles.",
+  title: "HMS Argus | World's First True Aircraft Carrier",
+  description: "Learn how HMS Argus became the world's first true aircraft carrier, from Beardmore conversion and flush-deck design to the trials that shaped carrier aviation.",
   keywords: 'HMS Argus, Aircraft Carrier, Naval Aviation, Royal Navy, Maritime History, Beardmore, Scottish Aviation, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: "HMS Argus: The World's First True Aircraft Carrier",
-    description: "A source-based study of Argus design, conversion, and early carrier architecture.",
+    title: "HMS Argus | World's First True Aircraft Carrier",
+    description: "Learn how HMS Argus became the world's first true aircraft carrier, from Beardmore conversion and flush-deck design to the trials that shaped carrier aviation.",
     images: ['/blog-images/hms-argus-flush-deck-schematic.svg'],
     type: 'article'
   },

@@ -315,12 +315,12 @@ const post = {
 }
 
 export const metadata: Metadata = {
-  title: "Naval Aviation History: From Seaplanes to Supercarriers | Charles E. MacKay",
-  description: "A source-based overview of naval aviation development from early seaplane operations to modern carrier doctrine, systems, and strategic use.",
+  title: "Naval Aviation History | HMS Argus to Supercarriers",
+  description: "Trace naval aviation from early shipboard aircraft to supercarriers, with HMS Argus, carrier operations, and maritime air power explained by Charles E. MacKay.",
   keywords: 'naval aviation, aircraft carrier, HMS Argus, maritime aviation, carrier operations, naval history, Charles E. MacKay, charles mackay books',
   openGraph: {
-    title: "Naval Aviation History: From Seaplanes to Supercarriers",
-    description: "A source-based overview of naval aviation development from early seaplane operations to modern carrier doctrine and systems.",
+    title: "Naval Aviation History | HMS Argus to Supercarriers",
+    description: "Trace naval aviation from early shipboard aircraft to supercarriers, with HMS Argus, carrier operations, and maritime air power explained by Charles E. MacKay.",
     images: ['/blog-images/hms-argus-aircraft-carrier.jpg'],
     type: 'article'
   },

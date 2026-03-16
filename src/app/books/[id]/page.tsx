@@ -10,6 +10,7 @@ import BookDetailClient from '@/components/BookDetailClient';
 import BookQuickAddCard from '@/components/BookQuickAddCard';
 import RelatedBookCard from '@/components/RelatedBookCard';
 import UnifiedSchema from '@/components/UnifiedSchema';
+import LatestAviationNews from '@/components/LatestAviationNews';
 import BookAnalyticsClient from '@/components/BookAnalyticsClient';
 import ShareButton from '@/components/ShareButton';
 import BundleOfferCard from '@/components/BundleOfferCard';
@@ -57,6 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const stripBoilerplate = (value: string) =>
     normalizeWhitespace(
       value
+        .replace(/Newly Published/gi, '')
         .replace(/Condition is\s*["']?New["']?\.?/gi, '')
         .replace(/Dispatched with Royal Mail[^.]*\.?/gi, '')
         .replace(/Recommend use offers\.?/gi, '')
@@ -82,8 +84,20 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       const concise = toMetaDescription(item.seoDescription);
       if (concise) return concise;
     }
-    const firstSentence = (item.description || '').split(/(?<=[.!?])\s+/)[0] || '';
-    const concise = toMetaDescription(firstSentence || item.description || '');
+    const firstSentence = stripBoilerplate((item.description || '').split(/(?<=[.!?])\s+/)[0] || '');
+    const summary =
+      firstSentence && firstSentence.length >= 24 && firstSentence.length <= 110
+        ? firstSentence
+        : `${item.category} research by Charles E. MacKay.`;
+    const editionBits = [
+      item.pageCount ? `${item.pageCount} pages` : '',
+      item.publicationYear ? `${item.publicationYear} edition` : '',
+      'free worldwide shipping',
+    ]
+      .filter(Boolean)
+      .join(', ');
+    const candidate = `${item.title} by Charles E. MacKay. ${summary} ${editionBits}. Secure guest checkout.`;
+    const concise = toMetaDescription(candidate);
     if (concise) return concise;
     return `${item.title} by Charles E. MacKay. Academic-grade research with secure guest checkout.`;
   };
@@ -102,8 +116,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       'Travel Literature': 'Scottish Travel Literature',
     };
 
+    const shortTitle = item.title.split(':')[0].trim();
+    const shortBase = `${shortTitle} | ${categoryIntent[item.category] || 'History Book'}`;
+    if (shortBase.length <= 68) return shortBase;
+
     const base = `${item.title} | ${categoryIntent[item.category] || 'History Book'}`;
-    return base.length <= 78 ? base : `${item.title}`;
+    if (base.length <= 78) return base;
+
+    return item.title.length <= 62 ? item.title : `${item.title.slice(0, 59).trim()}…`;
   };
 
   const buildKeywords = (item: Book): string[] => {
@@ -147,7 +167,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       },
     },
     openGraph: {
-      title: `${book.title} | ${book.category}`,
+      title: seoTitle,
       description: seoDescription,
       type: 'website',
       url: `https://charlesmackaybooks.com/books/${book.id}`,
@@ -172,7 +192,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${book.title} | ${book.category}`,
+      title: seoTitle,
       description: seoDescription,
       images: {
         url: book.imageUrl || `/book-covers/${book.id}.jpg`,
@@ -855,6 +875,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               })()}
             </div>
           )}
+
+          {/* Latest Aviation News - cross-link to news feed */}
+          <div className="mt-8">
+            <LatestAviationNews />
+          </div>
         </main>
 
       </div>

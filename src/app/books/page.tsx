@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import BookCard from '@/components/BookCard'
 import BundleOfferCard from '@/components/BundleOfferCard'
 import UnifiedSchema from '@/components/UnifiedSchema'
@@ -25,8 +26,8 @@ const staffPickIds = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Aviation History Books by Charles E. MacKay',
-  description: `Browse ${books.length} aviation history books by Charles E. MacKay. WWI/WWII aircraft, Scottish aviation, helicopters, and naval ops. Free worldwide shipping with secure guest checkout.`,
+  title: 'Aviation History Books for Sale',
+  description: `Shop ${books.length} aviation history books by Charles E. MacKay on Scottish aviation, WWI, WWII, naval aviation, and helicopters. Free worldwide shipping and guest checkout.`,
   alternates: {
     canonical: 'https://charlesmackaybooks.com/books'
   },
@@ -46,8 +47,8 @@ export const metadata: Metadata = {
     'naval aviation books'
   ],
   openGraph: {
-    title: 'Aviation History Books by Charles E. MacKay',
-    description: `Browse ${books.length} aviation history books by Charles E. MacKay with free worldwide shipping and secure guest checkout.`,
+    title: 'Aviation History Books for Sale',
+    description: `Shop ${books.length} aviation history books by Charles E. MacKay with free worldwide shipping and secure guest checkout.`,
     url: 'https://charlesmackaybooks.com/books',
     siteName: 'Charles E. MacKay Aviation Books',
     images: [
@@ -73,8 +74,8 @@ export default function BooksPage() {
     <div className="surface-dark relative mx-0 bg-slate-900">
       <UnifiedSchema
         pageType="books"
-        pageTitle="Aviation History Books by Charles E. MacKay"
-        pageDescription={`Browse ${books.length} aviation history books by Charles E. MacKay with free worldwide shipping and secure guest checkout.`}
+        pageTitle="Aviation History Books for Sale"
+        pageDescription={`Shop ${books.length} aviation history books by Charles E. MacKay with free worldwide shipping and secure guest checkout.`}
         pageUrl="/books"
         books={books}
       />
@@ -121,6 +122,43 @@ export default function BooksPage() {
           </div>
         </div>
       </div>
+
+      <section className="py-4 bg-slate-900">
+        <div className="container mx-auto container-padding">
+          <div className="max-w-4xl mx-auto rounded-xl border border-white/15 bg-slate-800/70 p-4 sm:p-5 text-sm sm:text-base text-white/85">
+            Start with
+            {' '}
+            <Link href="/category/scottish-aviation-history" className="text-blue-300 underline hover:text-blue-200">
+              Scottish aviation history books
+            </Link>
+            ,
+            {' '}
+            <Link href="/category/wwi-aviation" className="text-blue-300 underline hover:text-blue-200">
+              WWI aviation books
+            </Link>
+            ,
+            {' '}
+            <Link href="/category/naval-aviation" className="text-blue-300 underline hover:text-blue-200">
+              naval aviation titles
+            </Link>
+            ,
+            or
+            {' '}
+            <Link href="/category/aviation-biography" className="text-blue-300 underline hover:text-blue-200">
+              aviation biographies
+            </Link>
+            .
+            {' '}
+            You can also follow the
+            {' '}
+            <Link href="/aviation-news" className="text-blue-300 underline hover:text-blue-200">
+              latest aviation news
+            </Link>
+            {' '}
+            for briefing-led reading paths into the catalogue.
+          </div>
+        </div>
+      </section>
 
       {/* Books Section - Exact Match to Homepage */}
       <section className="py-2" id="books">

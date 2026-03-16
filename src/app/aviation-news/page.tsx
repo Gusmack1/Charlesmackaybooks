@@ -1,15 +1,16 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import BBCPageTemplate from '@/components/BBCPageTemplate'
+import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
 import { getPublishedNewsArticles, getValidatedRelatedBooks } from '@/lib/newsroom'
 
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Aviation News & Briefings | Charles E. MacKay Books',
+  title: 'Scottish Aviation News | Expert Briefings & Research Updates',
   description:
-    'Scottish aviation news and briefings, with links to our research volumes.',
+    'Stay informed with expert Scottish aviation news and briefings. Source-backed analysis linked to our research volumes. Glasgow-based aviation historian Charles E. MacKay.',
   alternates: {
     canonical: 'https://charlesmackaybooks.com/aviation-news',
   },
@@ -21,8 +22,9 @@ export const metadata: Metadata = {
     'Charles E. MacKay',
   ],
   openGraph: {
-    title: 'Aviation News & Briefings | Charles E. MacKay Books',
-    description: 'Scottish aviation news and briefings, with links to our research volumes.',
+    title: 'Scottish Aviation News | Expert Briefings & Research Updates',
+    description:
+      'Stay informed with expert Scottish aviation news and briefings. Source-backed analysis linked to our research volumes. Glasgow-based aviation historian Charles E. MacKay.',
     type: 'website',
   },
 }
@@ -48,35 +50,32 @@ function getExcerpt(content: string | undefined, maxLength = 200) {
 }
 
 export default async function AviationNewsPage() {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'NewsMediaOrganization',
-    name: 'Charles E. MacKay Aviation News',
-    description: 'Scottish aviation news and briefings, with links to our research volumes',
-    author: {
-      '@type': 'Person',
-      name: 'Charles E. MacKay',
-      url: 'https://charlesmackaybooks.com/about',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Charles E. MacKay Aviation Research',
-    },
-  }
-
   const articles = await getPublishedNewsArticles(30)
   const [hero, ...rest] = articles
   const secondary = rest.slice(0, 4)
   const remainder = rest.slice(4)
   const heroRelatedBooks = hero ? getValidatedRelatedBooks(hero) : []
 
+  const newsArticlesForSchema = articles.map((a) => {
+    const related = getValidatedRelatedBooks(a)
+    const book = related[0] ? bookLookup.get(related[0].bookId) : undefined
+    return {
+      slug: a.slug,
+      title: a.title,
+      description: getExcerpt(a.sections?.[0]?.content, 160),
+      datePublished: a.createdAt,
+      imageUrl: a.images?.[0]?.src || book?.imageUrl,
+    }
+  })
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
+      <UnifiedSchema
+        pageType="news-index"
+        pageTitle="Aviation News & Briefings | Charles E. MacKay Books"
+        pageDescription="Scottish aviation news and briefings, with links to our research volumes."
+        pageUrl="/aviation-news"
+        newsArticles={newsArticlesForSchema}
       />
 
       <BBCPageTemplate

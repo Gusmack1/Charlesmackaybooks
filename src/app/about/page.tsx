@@ -6,8 +6,8 @@ import UnifiedSchema from '@/components/UnifiedSchema'
 import { getPublishedBookCountText, getTotalBookCountText, SITE_CONSTANTS } from '@/config/constants'
 
 export const metadata: Metadata = {
-  title: 'About Charles E. MacKay (Aviation Historian & Author)',
-  description: 'Meet Charles E. MacKay, renowned aviation historian specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history. Based in Glasgow, Scotland.',
+  title: 'About Charles E. MacKay | Glasgow Aviation Historian',
+  description: `Learn about Charles E. MacKay, the Glasgow aviation historian behind ${getTotalBookCountText()} books on Scottish aviation, WWI, WWII, naval aviation, and aircraft development.`,
   keywords: [
     'Charles E MacKay',
     'aviation historian',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     canonical: 'https://charlesmackaybooks.com/about'
   },
   openGraph: {
-    title: 'About Charles E. MacKay - Aviation Historian & Author',
-    description: 'Meet Charles E. MacKay, renowned aviation historian specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history.',
+    title: 'About Charles E. MacKay | Glasgow Aviation Historian',
+    description: `Learn about Charles E. MacKay, the Glasgow aviation historian behind ${getTotalBookCountText()} books on Scottish aviation, WWI, WWII, naval aviation, and aircraft development.`,
     url: 'https://charlesmackaybooks.com/about',
     siteName: 'Charles E. MacKay - Aviation Historian',
     images: [
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Charles E. MacKay - Aviation Historian & Author',
-    description: 'Meet Charles E. MacKay, renowned aviation historian specializing in Scottish aviation heritage, WWI & WWII aircraft, and military aviation history.',
+    title: 'About Charles E. MacKay | Glasgow Aviation Historian',
+    description: `Learn about Charles E. MacKay, the Glasgow aviation historian behind ${getTotalBookCountText()} books on Scottish aviation, WWI, WWII, naval aviation, and aircraft development.`,
     images: ['https://charlesmackaybooks.com/charles-mackay-aviation-historian.jpg'],
   }
 }

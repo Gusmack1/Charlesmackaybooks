@@ -252,6 +252,13 @@ export async function getPublishedNewsArticles(limit = 10): Promise<NewsArticleR
   return relevant.slice(0, limit)
 }
 
+/** Returns all published news articles (no related-books filter). Use for homepage/news teasers. */
+export async function getAllPublishedNewsArticles(limit = 10): Promise<NewsArticleRecord[]> {
+  const ordered = await readAllArticles()
+  const published = ordered.filter((article) => (article.status || 'draft') !== 'draft')
+  return published.slice(0, limit)
+}
+
 /** Returns all published news articles that mention a given book (no limit). */
 export async function getNewsArticlesForBook(bookId: string): Promise<NewsArticleRecord[]> {
   const ordered = await readAllArticles()
