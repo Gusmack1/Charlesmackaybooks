@@ -16832,5 +16832,408 @@
     "publishedAt": null,
     "fetchedAt": "2026-03-16T01:25:29.248Z",
     "status": "new"
+  },
+  {
+    "id": "79c2f62a-75de-4ee4-a3d7-a0c40b75a82d",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cp854zygjjdo#0",
+    "title": "Assisted dying debate reaches final stages on eve of vote",
+    "sourceUrl": "https://www.bbc.com/news/articles/cp854zygjjdo?at_medium=RSS&at_campaign=rss",
+    "summary": "The long-running political battle over assisted dying comes to an end as MSPs get ready to vote.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:18:49.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.506Z",
+    "status": "new"
+  },
+  {
+    "id": "a3b29c7d-89b1-4c0b-958a-780b8624361d",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c1kgd1r9lm4o#0",
+    "title": "Commuters can use contactless payments for Glasgow subway",
+    "sourceUrl": "https://www.bbc.com/news/articles/c1kgd1r9lm4o?at_medium=RSS&at_campaign=rss",
+    "summary": "The change means people can tap credit cards, debit cards or mobile wallets on the ticket gates for entry.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:31:03.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.506Z",
+    "status": "new"
+  },
+  {
+    "id": "0856e952-076d-4f2a-a5cf-3cc21c74e36f",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cn5g049x5zdo#0",
+    "title": "Scotland's papers: 'Council tax nightmare' and school violence warning",
+    "sourceUrl": "https://www.bbc.com/news/articles/cn5g049x5zdo?at_medium=RSS&at_campaign=rss",
+    "summary": "A review of the front page stories from the daily newspapers in Scotland.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:42:52.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.506Z",
+    "status": "new"
+  },
+  {
+    "id": "c3bbc4e2-2984-48b3-bda4-572d5d2fed2d",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/cq6qn1el92qo#0",
+    "title": "Have Old Firm wrestled title momentum away from Hearts?",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/cq6qn1el92qo?at_medium=RSS&at_campaign=rss",
+    "summary": "After wins for Celtic and Rangers and a defeat for leaders Hearts, what next in the captivating Scottish Premiership title race?",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T19:07:48.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.506Z",
+    "status": "new"
+  },
+  {
+    "id": "61887391-eeb4-40e2-b0d6-ee6eb085dcab",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cp9mgpzn901o#0",
+    "title": "Starmer to set out support plan for heating oil costs",
+    "sourceUrl": "https://www.bbc.com/news/articles/cp9mgpzn901o?at_medium=RSS&at_campaign=rss",
+    "summary": "Households have faced a sharp rise in the cost of heating oil since the outbreak of the US-Israeli war with Iran.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T23:10:19.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.506Z",
+    "status": "new"
+  },
+  {
+    "id": "fb0a35e9-e52c-4aaa-bfac-43ef0cdef4f5",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c743prx9d2vo#1",
+    "title": "Council leader calls for more powers to protect Glasgow's buildings",
+    "sourceUrl": "https://www.bbc.com/news/articles/c743prx9d2vo?at_medium=RSS&at_campaign=rss",
+    "summary": "Susan Aitken wants Glasgow City Council to have greater powers in the wake of the Union Street fire.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T13:19:20.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.506Z",
+    "status": "new"
+  },
+  {
+    "id": "5ea29148-5c60-465b-9df5-33550525468d",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/clyzjz8dp62o#1",
+    "title": "Wanted: 'Resourceful' tenants for croft on UK's remotest island",
+    "sourceUrl": "https://www.bbc.com/news/articles/clyzjz8dp62o?at_medium=RSS&at_campaign=rss",
+    "summary": "People with certain sets of skills have been sought for a tenancy on Fair Isle.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T08:59:48.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.506Z",
+    "status": "new"
+  },
+  {
+    "id": "8a5cd50f-a4e1-4f25-99b0-6a92df24dd69",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/sport/rugby-union/articles/czj1x43y0p3o#1",
+    "title": "'Shot at history passes Scotland by amid Irish ferocity'",
+    "sourceUrl": "https://www.bbc.com/sport/rugby-union/articles/czj1x43y0p3o?at_medium=RSS&at_campaign=rss",
+    "summary": "BBC Sport Scotland's chief sportswriter Tom English picks through Scotland's failed bid to clinch the Six Nations with defeat in Ireland again.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-14T20:30:03.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.506Z",
+    "status": "new"
+  },
+  {
+    "id": "832da767-3bb4-43d3-811e-75f5c521d791",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cz9qdpzqnl2o#0",
+    "title": "Firms to be paid to hire unemployed young people",
+    "sourceUrl": "https://www.bbc.com/news/articles/cz9qdpzqnl2o?at_medium=RSS&at_campaign=rss",
+    "summary": "Payments of £3,000 for each 18-24 year old given a job are among proposals to tackle youth unemployment being announced later.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T04:31:50.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.617Z",
+    "status": "new"
+  },
+  {
+    "id": "ab222521-7e05-4a55-bcda-29e701aaa028",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/clyz0ep9g8lo#1",
+    "title": "Labour calls for tax investigation into Reform's Tice",
+    "sourceUrl": "https://www.bbc.com/news/articles/clyz0ep9g8lo?at_medium=RSS&at_campaign=rss",
+    "summary": "It follows a newspaper report that Tice had avoided corporation tax worth hundreds of thousands of pounds.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T23:36:36.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.617Z",
+    "status": "new"
+  },
+  {
+    "id": "51be9085-f845-4ddf-8249-115589b65ad5",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cwyxl65yz9yo#1",
+    "title": "We didn't view Dad's body after being told it had changed so much",
+    "sourceUrl": "https://www.bbc.com/news/articles/cwyxl65yz9yo?at_medium=RSS&at_campaign=rss",
+    "summary": "Ronald Parkin's case prompts calls from his family for the government to regulate the funeral sector.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T01:33:15.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.617Z",
+    "status": "new"
+  },
+  {
+    "id": "27265a96-c995-4111-9ed8-e765a4c585c6",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c363yylxjrxo#3",
+    "title": "Injuries, blown tyres and repair bills - frustration over 'spike' in potholes",
+    "sourceUrl": "https://www.bbc.com/news/articles/c363yylxjrxo?at_medium=RSS&at_campaign=rss",
+    "summary": "One woman who tripped over a \"dangerous\" pothole says she fears for the safety of other road users.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:11:28.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.617Z",
+    "status": "new"
+  },
+  {
+    "id": "9b4e57c8-1936-4c75-a9be-92cf2b9a2f4e",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cp854zygjjdo#4",
+    "title": "Assisted dying debate reaches final stages on eve of vote",
+    "sourceUrl": "https://www.bbc.com/news/articles/cp854zygjjdo?at_medium=RSS&at_campaign=rss",
+    "summary": "The long-running political battle over assisted dying comes to an end as MSPs get ready to vote.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:18:49.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.617Z",
+    "status": "new"
+  },
+  {
+    "id": "7f4a283b-6e44-4e37-b9bd-469bbeb44ee1",
+    "sourceId": "scotsman-news",
+    "guid": "5865756",
+    "title": "Starmer to set out heating oil support amid calls to 'stop dithering'",
+    "sourceUrl": "https://www.scotsman.com/news/politics/starmer-to-set-out-heating-oil-support-amid-calls-to-stop-dithering-5865756",
+    "summary": "<p>The package is expected to include specific funding for Scotland</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T07:08:22.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "f3562a45-9a38-487e-8bde-d5d609dc51c2",
+    "sourceId": "scotsman-news",
+    "guid": "5703258",
+    "title": "Sephora UK: Make up retailer to open two Scottish stores in Edinburgh and Glasgow this summer",
+    "sourceUrl": "https://www.scotsman.com/news/beauty-retailer-sephora-to-open-two-major-scottish-stores-this-summer-5703258",
+    "summary": "<p>The dates of the openings have not been confirmed, but the retailer said the city stores will opening ‘in quick succession’.  </p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:30:06.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "3e9a93d3-86ea-4cd8-8f1a-ba5d57e6afee",
+    "sourceId": "scotsman-news",
+    "guid": "5706124",
+    "title": "UK didn't attack Iran but we're still having to defend ourselves",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/uk-didnt-attack-iran-but-were-still-having-to-defend-ourselves-5706124",
+    "summary": "<h3>Iran’s tactic of economic warfare was predictable and is having global consequences</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:00:54.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "88c620ef-b774-4155-9687-12e7bad232d9",
+    "sourceId": "scotsman-news",
+    "guid": "5869486",
+    "title": "Teachers 'in eye of perfect storm', SNP Education Secretary warned",
+    "sourceUrl": "https://www.scotsman.com/news/politics/teachers-in-eye-of-perfect-storm-snp-education-secretary-warned-5869486",
+    "summary": "<p>An open letter to Jenny Gilruth said the situation in schools is ‘beyond critical’</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:00:50.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "450bce82-2cd7-4cfd-acb9-5c8ed17fa10c",
+    "sourceId": "scotsman-news",
+    "guid": "5849779",
+    "title": "UK’s oak trees facing multiple threats in ‘slow burn ecological disaster’",
+    "sourceUrl": "https://www.scotsman.com/news/environment/uks-oak-trees-facing-multiple-threats-in-slow-burn-ecological-disaster-5849779",
+    "summary": "<p>The emblematic trees are facing a litany of pressures</p>",
+    "categories": [
+      "Environment",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:00:19.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "5f19065d-01a5-46a2-bd3d-2d956abc1180",
+    "sourceId": "scotsman-news",
+    "guid": "5859529",
+    "title": "Encyclopedia firm synonymous with Scottish Enlightenment sues AI giant for 'cannibalising' content",
+    "sourceUrl": "https://www.scotsman.com/news/encyclopedia-firm-synonymous-with-scottish-enlightenment-sues-ai-giant-for-cannibalising-content-5859529",
+    "summary": "<p>Legal action highlights ongoing tensions over AI’s use of materials owned by legacy publishers</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T06:00:11.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "ee413ea9-6023-4998-b9db-395e9f894aa6",
+    "sourceId": "scotsman-news",
+    "guid": "5858220",
+    "title": "If MSPs pass Assisted Dying Bill, I fear the cost to us all will be too high",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/if-msps-pass-assisted-dying-bill-i-fear-the-cost-to-us-all-will-be-too-high-5858220",
+    "summary": "<p>I’m opposed not only to what I perceive to be a flawed bill; but to the principle of medically-assisted dying of any kind</p>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T04:30:57.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "7667462c-7de0-43c6-bd13-9f0c82b7f36c",
+    "sourceId": "scotsman-news",
+    "guid": "5882702",
+    "title": "Readers' Letters: Swinney will have to do better in next Parliament",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/letters/readers-letters-swinney-will-have-to-do-better-in-next-parliament-5882702",
+    "summary": "Readers react to John Swinney’s claim that ‘people in Scotland have a growing confidence in the SNP government’",
+    "categories": [
+      "Letters",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-15T19:58:23.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "d357c143-e660-4ac0-82ac-e09bc6187967",
+    "sourceId": "scotsman-news",
+    "guid": "5629936",
+    "title": "Why 'sustainable’ hospitality is not simple or cheap",
+    "sourceUrl": "https://www.scotsman.com/business/why-sustainable-hospitality-is-not-simple-or-cheap-5629936",
+    "summary": "The path to greener operations is a constant negotiation between ambition and practicality, writes Scott Mitchell",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T12:40:26.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "1068ce8e-2e77-4bcd-9674-47f9bb472955",
+    "sourceId": "scotsman-news",
+    "guid": "5629811",
+    "title": "Scotland’s investment and finance sector is full of real opportunities",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/scotlands-investment-and-finance-sector-is-full-of-real-opportunities-5629811",
+    "summary": "​Pamela McHarg relishes the market’s ‘micro-climate’ after a decade in London",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T11:49:08.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "ce30882f-c2a1-4ad6-bf89-9e76dc6acfb0",
+    "sourceId": "scotsman-news",
+    "guid": "5629813",
+    "title": "Finding answers when maternity care fails",
+    "sourceUrl": "https://www.scotsman.com/business/finding-answers-when-maternity-care-fails-5629813",
+    "summary": "Accountability can drive change, and save lives, writes Jonathan Howat​",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T11:47:45.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "0d8df547-ddae-4245-ac16-3c73791f45b9",
+    "sourceId": "scotsman-news",
+    "guid": "5629725",
+    "title": "How Scotland could become the UK's 'class action capital'",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/how-scotland-could-become-the-uks-class-action-capital-5629725",
+    "summary": "​Fiona MacGregor weighs up the pros and cons as Scotland moves towards the adoption of opt-out group proceedings",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T11:16:13.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
+  },
+  {
+    "id": "169d4873-eabd-433d-b096-b00aa22b0fb5",
+    "sourceId": "scotsman-news",
+    "guid": "5629703",
+    "title": "Domestic violence and the race to the police station",
+    "sourceUrl": "https://www.scotsman.com/business/domestic-violence-and-the-race-to-the-police-station-5629703",
+    "summary": "Officers must remember that break-ups are messy, says Douglas McConnell​",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-12T11:13:28.000Z",
+    "fetchedAt": "2026-03-16T07:25:24.852Z",
+    "status": "new"
   }
 ]
