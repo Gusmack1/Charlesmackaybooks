@@ -63,13 +63,59 @@ function formatDate(date = new Date()) {
   return date.toISOString().split('T')[0]
 }
 
-/** Build a single focused section from one news item. */
-function buildSections(item) {
+function sentenceSplit(text) {
+  return (text.match(/[^.!?]+(?:[.!?]+|$)/g) || [])
+    .map((sentence) => sentence.replace(/\s+/g, ' ').trim())
+    .filter(Boolean)
+}
+
+function buildDraftParagraphs(item) {
   const title = (item.title || '').trim()
-  const summary = (item.summary || '').trim()
-  const content = summary ? `${title}. ${summary}` : title
-  if (!content) return [{ heading: 'Summary', content: 'Official release. Full details available from the source.' }]
-  return [{ heading: 'Summary', content }]
+  const summary = (item.summary || '').replace(/\s+/g, ' ').trim()
+  const sentences = sentenceSplit(summary)
+
+  if (sentences.length >= 4) {
+    return [
+      sentences.slice(0, 2).join(' '),
+      sentences.slice(2, 4).join(' '),
+      sentences.slice(4).join(' '),
+    ].filter(Boolean)
+  }
+
+  if (sentences.length >= 2) {
+    return [sentences[0], sentences.slice(1).join(' ')].filter(Boolean)
+  }
+
+  if (summary) {
+    return [`${title}. ${summary}`.trim()]
+  }
+
+  return [title].filter(Boolean)
+}
+
+/** Build a structured article from one news item. */
+function buildSections(item) {
+  const paragraphs = buildDraftParagraphs(item)
+  if (!paragraphs.length) {
+    return [{ heading: 'Summary', content: 'Official release. Full details available from the source.' }]
+  }
+
+  if (paragraphs.length === 1) {
+    return [{ heading: 'Summary', content: paragraphs[0] }]
+  }
+
+  if (paragraphs.length === 2) {
+    return [
+      { heading: 'What happened', content: paragraphs[0] },
+      { heading: 'Key details', content: paragraphs[1] },
+    ]
+  }
+
+  return [
+    { heading: 'What happened', content: paragraphs[0] },
+    { heading: 'Key details', content: paragraphs[1] },
+    { heading: 'Why it matters', content: paragraphs[2] },
+  ]
 }
 
 function buildArticleRecord(item) {

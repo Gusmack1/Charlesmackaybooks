@@ -1,11 +1,19 @@
 {
   "slug": "2026-03-04-aaib-investigation-to-short-bros-sd3-60-",
-  "title": "AAIB Investigates Runway Undershoot Incident in British Virgin Islands",
-  "wordCount": 87,
+  "title": "AAIB investigation to Short Bros SD3-60, N915GD",
+  "wordCount": 227,
   "sections": [
     {
-      "heading": "Summary",
-      "content": "The UK Air Accidents Investigation Branch (AAIB) has launched an investigation into an incident involving a Short Bros SD3-60 aircraft, registered as N915GD. The occurrence was reported on 6 November 2024, at Terrance B. Lettsome International Airport, located in the British Virgin Islands.\n\nThe inquiry will examine the circumstances surrounding the runway undershoot to determine contributing factors and improve safety measures. This investigation underscores the importance of aviation safety standards, a concern that resonates strongly in Scotland, where HIAL airports connect communities across the Highlands and Islands."
+      "heading": "What happened",
+      "content": "Runway undershoot at Terrance B. Lettsome International Airport, British Virgin Islands, 6 November 2024"
+    },
+    {
+      "heading": "Key details",
+      "content": "On arrival at Terrance B Lettsome International Airport (TUPJ) in the British Virgin Islands, N915GD was likely affected by nearby thunderstorm activity, reportedly experiencing a downdraught on short finals. Despite the commander applying more power to “arrest the descent”, the aircraft initially touched down on the lip of Runway 07 (Rwy 07), approximately 150 m short of the threshold. It then bounced and touched down again close to the threshold. The airfield operations team later found a frangible runway light had been damaged by the aircraft when it undershot the runway."
+    },
+    {
+      "heading": "Why it matters",
+      "content": "While he knew the aircraft initially touched down in the undershoot, the commander was unaware that it had struck the light and did not file an occurrence report. The aircraft returned to its home base approximately one hour later. An initial incorrect assessment of the severity of this incident, contributed to a delay in this serious incident being notified to the AAIB. This delay, combined with a paucity of information about the circumstances and handling of the event, made it difficult for the investigation to gain a detailed understanding of what had happened. It is unclear whether the undershoot resulted from the commander attempting to rescue an unstable approach or whether his application of power was the initiation of an unsuccessful go-around."
     }
   ],
   "images": [],
@@ -16,12 +24,7 @@
       "citationText": "aaib-bulletins – AAIB investigation to Short Bros SD3-60, N915GD"
     }
   ],
-  "relatedBooks": [
-    {
-      "bookId": "clydeside-aviation-vol2",
-      "reason": "Related research volume"
-    }
-  ],
+  "relatedBooks": [],
   "keywords": [
     {
       "keyword": "Scottish aviation news",

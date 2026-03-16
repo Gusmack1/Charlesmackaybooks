@@ -1,11 +1,19 @@
 {
   "slug": "2026-03-13-greens-call-on-swinney-to-ban-us-military-from-pre",
   "title": "Greens call on Swinney to ban US Military from Prestwick Airport",
-  "wordCount": 34,
+  "wordCount": 105,
   "sections": [
     {
-      "heading": "Summary",
-      "content": "Greens call on Swinney to ban US Military from Prestwick Airport. The Scottish Greens have called on John Swinney to ban the US military from using Prestwick Airport to launch its attacks against Iran."
+      "heading": "What happened",
+      "content": "The Scottish Greens have called on John Swinney to ban the US military from using Prestwick Airport to launch its attacks against Iran."
+    },
+    {
+      "heading": "Key details",
+      "content": "Greens call on Swinney to ban US Military from Prestwick Airport THE Scottish Greens have called on John Swinney to ban the US military from using Glasgow Prestwick Airport to launch its attacks against Iran."
+    },
+    {
+      "heading": "Why it matters",
+      "content": "Prestwick Airport, located in South Ayrshire, has seen continued American military activity since before the start of the conflict. Israel and the United States began a bombing campaign against Iran after pulling out of nuclear talks, leading Iran to respond with drone strikes across the Middle East."
     }
   ],
   "images": [],
@@ -17,6 +25,10 @@
     }
   ],
   "relatedBooks": [
+    {
+      "bookId": "birth-atomic-bomb",
+      "reason": "Related research volume"
+    },
     {
       "bookId": "clydeside-aviation-vol2",
       "reason": "Related research volume"

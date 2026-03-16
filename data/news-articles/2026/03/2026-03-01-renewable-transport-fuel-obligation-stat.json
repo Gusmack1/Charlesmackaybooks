@@ -1,11 +1,19 @@
 {
   "slug": "2026-03-01-renewable-transport-fuel-obligation-stat",
-  "title": "Renewable Fuel Supply Statistics Released Under RTFO",
-  "wordCount": 90,
+  "title": "Renewable Transport Fuel Obligation statistics: data tables",
+  "wordCount": 97,
   "sections": [
     {
-      "heading": "Summary",
-      "content": "Statistics regarding the supply of renewable fuels under the Renewable Transport Fuel Obligation (RTFO) have been published. These data tables provide detailed insights into the current state of renewable fuel supply, showcasing progress and compliance with the obligation.\n\nThe RTFO is an important measure in promoting the use of cleaner fuels within the transport sector, reflecting a broader commitment to sustainability. As the aviation sector increasingly shifts towards renewable fuels, Scotland's commitment to aviation heritage and innovation remains vital, especially as HIAL airports connect communities across the Highlands and Islands."
+      "heading": "What happened",
+      "content": "Data on the supply of renewable fuel, as required under the Renewable Transport Fuel Obligation (RTFO)."
+    },
+    {
+      "heading": "Key details",
+      "content": "The ‘still in existence’ values for 2023 and 2024 were not accounting for the use of certificates carried over from the previous obligation year. certificates still in existence = issued - revoked - redeemed"
+    },
+    {
+      "heading": "Why it matters",
+      "content": "certificates still in existence = issued + carried over from previous year - revoked - redeemed Also, the 2022 ‘still in existence’ value was corrected as those certificates have since been used. This results in the ‘redeemed’ values for 2022 also being adjusted to the correct value."
     }
   ],
   "images": [],
@@ -16,12 +24,7 @@
       "citationText": "dft-press-office – Renewable Transport Fuel Obligation statistics: data tables"
     }
   ],
-  "relatedBooks": [
-    {
-      "bookId": "clydeside-aviation-vol2",
-      "reason": "Related research volume"
-    }
-  ],
+  "relatedBooks": [],
   "keywords": [
     {
       "keyword": "Scottish aviation news",

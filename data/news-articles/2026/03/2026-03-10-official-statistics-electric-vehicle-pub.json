@@ -1,11 +1,19 @@
 {
   "slug": "2026-03-10-official-statistics-electric-vehicle-pub",
-  "title": "UK Department for Transport Releases Electric Vehicle Charging Statistics for January 2026",
-  "wordCount": 102,
+  "title": "Electric vehicle public charging infrastructure statistics: January 2026",
+  "wordCount": 146,
   "sections": [
     {
-      "heading": "Summary",
-      "content": "The UK Department for Transport has published its quarterly statistics on public electric vehicle charging infrastructure for January 2026. The report details the number of public electric vehicle chargers across the United Kingdom, with data segmented by geography and charging power band.\n\nThis release highlights the ongoing efforts to monitor the growth of electric vehicle infrastructure, which is crucial for supporting the transition to sustainable transport solutions. As Scotland advocates for greener transport options, the enhancement of charging networks is particularly important for connecting communities, especially in the Highlands and Islands, where aviation has played a significant role since the inter-war period."
+      "heading": "What happened",
+      "content": "Quarterly statistics on the number of public electric vehicle chargers in the United Kingdom, including summaries by geography and charging power band."
+    },
+    {
+      "heading": "Key details",
+      "content": "Data tables for this publication can be found on the EVCI data tables page . As of February 2026, this publication now includes statistics on the number of public EV chargers ( EVSE ) in the United Kingdom. More information about this addition can be found in the publication and the frequently asked questions document."
+    },
+    {
+      "heading": "Why it matters",
+      "content": "Data is sourced from the electric vehicle charging point platform Zapmap . As of May 2026, the electric vehicle public charging infrastructure statistics and the electric vehicle charging device grant scheme statistics publication pages will be merged into a single publication page titled: electric vehicle charging infrastructure statistics. All content from both publications will be retained and the page will be updated with new statistics on a quarterly basis."
     }
   ],
   "images": [],

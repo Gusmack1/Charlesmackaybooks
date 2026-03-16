@@ -1,11 +1,19 @@
 {
   "slug": "2026-03-07-guidance-military-low-flying-raf-operati",
-  "title": "RAF Operational Low Flying Training Timetable Released",
-  "wordCount": 118,
+  "title": "Military low flying: RAF operational low flying training timetable",
+  "wordCount": 115,
   "sections": [
     {
-      "heading": "Summary",
-      "content": "The Royal Air Force (RAF) has released its operational low flying training timetable, detailing schedules for training flights across three areas in the UK. This guidance is essential for those residing near designated low flying routes to remain informed and aware of scheduled activities.\n\nThe low flying operations are part of the RAF's training procedures, ensuring pilots gain the necessary experience in low altitude flying. The RAF plays a crucial role in the UK's aerial defense strategy, with these training exercises contributing to national and regional security. Aviation has been a significant aspect of Scotland's transport network, with HIAL airports connecting communities across the Highlands and Islands, where aviation has played a vital role since the inter-war period."
+      "heading": "What happened",
+      "content": "Royal Air Force (RAF) operational low flying training timetables in 3 areas of the UK."
+    },
+    {
+      "heading": "Key details",
+      "content": "Timetables for operational low flying ( OLF ) training by RAF fast jets and Hercules aircraft. These timetables cover 3 tactical training areas ( TTA ) only. These are: LFA 20(T): the borders of southern Scotland and northern England"
+    },
+    {
+      "heading": "Why it matters",
+      "content": "When the TTA is not in use, there may be other flying activity in the area. The MOD is unable to provide a timetable for all low flying activity as the information can very quickly become outdated due to weather conditions and training requirements. Low flying military aircraft includes information about how to contact MOD about low flying in your area"
     }
   ],
   "images": [],
@@ -16,12 +24,7 @@
       "citationText": "mod-press-office – Guidance: Military low flying: RAF operational low flying training timetable"
     }
   ],
-  "relatedBooks": [
-    {
-      "bookId": "clydeside-aviation-vol2",
-      "reason": "Related research volume"
-    }
-  ],
+  "relatedBooks": [],
   "keywords": [
     {
       "keyword": "Scottish aviation news",

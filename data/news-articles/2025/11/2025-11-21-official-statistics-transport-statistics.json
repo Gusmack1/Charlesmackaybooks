@@ -1,11 +1,19 @@
 {
   "slug": "2025-11-21-official-statistics-transport-statistics",
-  "title": "Transport Statistics Geography Portal Updated for November 2025",
-  "wordCount": 87,
+  "title": "Transport Statistics Geography Portal: November 2025",
+  "wordCount": 106,
   "sections": [
     {
-      "heading": "Summary",
-      "content": "The Department for Transport (DfT) has released a quarterly update to its Transport Statistics Geography Portal for November 2025. This update provides existing published official statistics in a geographical format, allowing for better analysis and understanding of transport trends across different regions.\n\nThe Transport Statistics Geography Portal supports informed decision-making in transport planning and policy, offering critical insights into the dynamics of transportation. Scottish aviation heritage is connected to this broader dataset, reflecting the vital role of aviation in enhancing connectivity across communities since the inter-war period."
+      "heading": "What happened",
+      "content": "Quarterly update to the website that presents existing published official statistics, by the Department for Transport, in a geographical format."
+    },
+    {
+      "heading": "Key details",
+      "content": "The Department for Transport produces and publishes a range of Transport Statistics with a spatial component. This release covers the existing published official statistics, by the Department for Transport, in a geographical format for Road Casualty Collisions, Search and Rescue Helicopter Taskings, Licensed Vehicles, and Electric Vehicle Charging Infrastructure."
+    },
+    {
+      "heading": "Why it matters",
+      "content": "Geographic Information System (GIS) datasets are updated once the statistical datasets they are derived from have been officially published. To hear more about DfT statistical publications as they are released, follow us on X at DfTstats ."
     }
   ],
   "images": [],
@@ -16,7 +24,12 @@
       "citationText": "dft-press-office – Official Statistics: Transport Statistics Geography Portal: November 2025"
     }
   ],
-  "relatedBooks": [],
+  "relatedBooks": [
+    {
+      "bookId": "sycamore-seeds",
+      "reason": "Related research volume"
+    }
+  ],
   "keywords": [
     {
       "keyword": "Scottish aviation news",

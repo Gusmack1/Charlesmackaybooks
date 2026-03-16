@@ -1,11 +1,19 @@
 {
   "slug": "2026-02-28-official-statistics-renewable-transport-",
-  "title": "Renewable Transport Fuel Obligation Statistics for 2024 Released",
-  "wordCount": 93,
+  "title": "Renewable Transport Fuel Obligation (RTFO) statistics 2024: Final report",
+  "wordCount": 91,
   "sections": [
     {
-      "heading": "Summary",
-      "content": "The Department for Transport has released its final report on the Renewable Transport Fuel Obligation (RTFO) statistics for 2024. This report details the supply of renewable fuels from January to December 2024, highlighting trends and progress in the UK's shift towards sustainable transportation options.\n\nThe RTFO plays a significant role in promoting the use of renewable fuels, which are essential in reducing carbon emissions in the transport sector. As Scotland continues to embrace sustainable aviation practices, the transition to renewable fuels is a crucial part of the nation’s broader commitment to environmental stewardship."
+      "heading": "What happened",
+      "content": "The ‘still in existence’ values for 2023 and 2024 were not accounting for the use of certificates carried over from the previous obligation year."
+    },
+    {
+      "heading": "Key details",
+      "content": "certificates still in existence = issued - revoked - redeemed certificates still in existence = issued + carried over from previous year - revoked - redeemed"
+    },
+    {
+      "heading": "Why it matters",
+      "content": "Also, the 2022 ‘still in existence’ value was corrected as those certificates have since been used. This results in the ‘redeemed’ values for 2022 also being adjusted to the correct value. These values have been corrected in the following statistical tables:"
     }
   ],
   "images": [],
