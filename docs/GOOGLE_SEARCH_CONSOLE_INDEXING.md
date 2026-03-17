@@ -1,45 +1,22 @@
 # Google Search Console – Indexing
 
-This document explains GSC indexing statuses and how the site is configured.
+**See `docs/SEO_MASTER.md` for the full technical spec.** This doc covers GSC-specific notes.
 
-## Site configuration (brand new, no redirects)
+## Site configuration
 
-- **No redirects.** Legacy paths (`/news`, `/timeline`, `/book`, `/aircraft`, `/blog/supermarine-spitfire-development`) return 404. Use canonical URLs only.
-- **308 redirects** for retired newsroom: `/blog/scottish-aviation-news` → `/aviation-news` (preserves link equity).
-- **410 Gone** for explicitly removed page: `/research-methodology`.
-- **Sitemap:** `sitemap.xml` submitted in GSC. Canonical URLs only (no trailing slash).
-- **robots.txt** blocks `/_next/`, `/api/`, `/checkout/`, `/order-complete/`, `/order-tracking/`, `/search/` to preserve crawl budget.
+- **Legacy 404s:** `/news`, `/timeline`, `/book`, `/book/*`, `/aircraft`, `/aircraft/*`, `/blog/supermarine-spitfire-development`
+- **308 redirects:** `/blog/scottish-aviation-news` → `/aviation-news`
+- **410 Gone:** `/research-methodology`
+- **Sitemaps:** `sitemap.xml`, `sitemap-images.xml` submitted in GSC
 
 ## Crawled – currently not indexed
 
-**What it means:** Google crawled the URL but chose not to add it to the index. Common reasons: crawl budget, thin content, or low perceived value.
+Google crawled but chose not to index. Common causes: thin content, low perceived value, crawl budget.
 
-**Examples:**
-- `https://charlesmackaybooks.com/how-to-order`
-- `https://charlesmackaybooks.com/aviation-news`
-- `https://charlesmackaybooks.com/_next/static/media/*.woff2` (font files)
+**Actions:** Ensure unique content, internal links from high-value pages, no duplicates. News articles need ≥180 words (or ≥100 + 2 sections) to be sitemap-eligible.
 
-**Action for content pages:** Google decides indexing based on quality and relevance. Ensure:
-- Unique, useful content
-- Clear internal links from high-value pages
-- No duplicate or near-duplicate content
+## GSC maintenance
 
-## Canonical URLs
-
-All pages declare canonical URLs without trailing slashes, e.g.:
-- `https://charlesmackaybooks.com/books/clydeside-aviation-vol2`
-- `https://charlesmackaybooks.com/aviation-news`
-
-Internal links and the sitemap use these canonical forms only.
-
-## GSC updates completed
-
-- **Sitemaps:** `sitemap.xml` and `sitemap-images.xml` submitted.
-- **Removals:** Temporary removal requests submitted for legacy URLs:
-  - `/news` (URL only)
-  - `/timeline` (URL only)
-  - `/book` (prefix – all `/book/*`)
-  - `/aircraft` (prefix – all `/aircraft/*`)
-  - `/blog/supermarine-spitfire-development` (URL only)
-
-Removals last ~6 months; 404s will drop from the index as Google recrawls.
+- **Weekly:** Page indexing → Not indexed → review reasons
+- **Monthly:** Sitemaps → verify URL count; Core Web Vitals
+- **Removals:** Legacy URLs had temporary removals submitted (~6 months)

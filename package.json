@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -H 0.0.0.0 --turbopack",
-    "prebuild": "npm run docs:books",
+    "prebuild": "npm run docs:books && node scripts/generate-sitemap.cjs",
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint .",

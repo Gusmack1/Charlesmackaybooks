@@ -10,7 +10,7 @@ This document converts the “long‑term SEO prompt” into a **methodical, rep
 
 ### Current assets already in the repo (to build on)
 - **Keyword tracking**: `data/keyword-tracking.json` + `scripts/keyword-rank-dashboard.cjs` + `reports/keywords/`.
-- **Sitemaps**: `src/app/sitemap.ts` + `src/lib/sitemapData.ts`.
+- **Sitemaps**: `scripts/generate-sitemap.cjs` → `public/sitemap.xml` (build-time); `src/lib/sitemapData.ts` for images/feeds.
 - **Structured data**: `src/components/UnifiedSchema.tsx` (+ other SEO components).
 
 ---

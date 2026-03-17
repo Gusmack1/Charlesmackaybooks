@@ -65,7 +65,7 @@ export function proxy(request: NextRequest) {
     return response
   }
 
-  // Forward pathname for hreflang generation in layout
+  // Forward pathname for layout (e.g. breadcrumbs, metadata)
   const requestHeaders = new Headers(request.headers)
   requestHeaders.set('x-pathname', pathname || '/')
   return NextResponse.next({

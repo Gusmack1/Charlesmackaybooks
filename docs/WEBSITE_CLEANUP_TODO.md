@@ -46,7 +46,7 @@
 ### 6. Remove dead sitemap generator
 | File | Action |
 |------|--------|
-| ~~`src/utils/sitemap-generator.ts`~~ | **DONE** – Removed (unused; `sitemapData.ts` + `sitemap.ts` are active) |
+| ~~`src/utils/sitemap-generator.ts`~~ | **DONE** – Removed. Sitemap now: `scripts/generate-sitemap.cjs` → `public/sitemap.xml` |
 
 ---
 
@@ -105,7 +105,7 @@
 |-------|--------|
 | `/news`, `/timeline`, `/book`, `/book/*`, `/aircraft`, `/aircraft/*`, `/blog/supermarine-spitfire-development` | 404 (GSC removals submitted) ✓ |
 | `/research-methodology` | 410 Gone ✓ |
-| `/blog/scottish-aviation-news` | 410 Gone ✓ |
+| `/blog/scottish-aviation-news` | 308 → `/aviation-news` ✓ |
 
 ---
 

@@ -31,7 +31,10 @@ To see the full breakdown:
 
 Common reasons include: Crawled – currently not indexed, Discovered – currently not indexed, Duplicate without user-selected canonical, etc.
 
-## Fixes applied (Step 4)
+## Fixes applied (Step 4+)
 
-1. **Removed HreflangLinks** – `rel="alternate"` hreflang tags were creating "alternative page" signals on every page. For a single-language (en-GB) site, these are unnecessary and can cause validation issues.
-2. **Set canonical to self for checkout/order-complete** – These pages were inheriting layout canonical (homepage). Now they correctly point to themselves.
+1. **Removed HreflangLinks** – `rel="alternate"` hreflang tags were creating "alternative page" signals. For single-language site, unnecessary.
+2. **Set canonical to self for checkout/order-complete** – Were inheriting homepage canonical.
+3. **Sitemap 500 fix** – Netlify lacks fs at request time. Sitemap now generated at build (`scripts/generate-sitemap.cjs`) → `public/sitemap.xml`.
+4. **robots.txt** – Added `Disallow: /fonts/` to save crawl budget.
+5. **docs/SEO_MASTER.md** – Single source of truth for all SEO rules.
