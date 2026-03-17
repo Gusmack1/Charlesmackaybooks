@@ -23,7 +23,7 @@ function toCategorySlug(category?: string) {
 }
 
 export default function BookCard({ book, sourceContext }: BookCardProps) {
-  const { addToCart, openBasket } = useCart();
+  const { addToCart } = useCart();
   const router = useRouter();
   const { trackBuyNowIntent } = useAnalytics();
   const [isAdding, setIsAdding] = useState(false);
@@ -151,13 +151,12 @@ export default function BookCard({ book, sourceContext }: BookCardProps) {
             <div className="rounded-lg border border-green-400/30 bg-green-500/10 px-3 py-2">
               <p className="text-xs font-semibold text-green-200">Added to basket.</p>
               <div className="mt-1 flex items-center justify-between gap-3 text-xs">
-                <button
-                  type="button"
-                  onClick={openBasket}
+                <Link
+                  href="/checkout"
                   className="text-white underline underline-offset-2 hover:text-green-200"
                 >
                   View basket
-                </button>
+                </Link>
                 <a
                   href="/checkout?method=stripe"
                   className="text-white underline underline-offset-2 hover:text-green-200"

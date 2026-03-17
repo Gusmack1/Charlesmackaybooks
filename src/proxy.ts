@@ -75,7 +75,6 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Run for all routes except Next.js internals/static assets
     '/((?!_next/static|_next/image|favicon.ico).*)',
   ],
 }

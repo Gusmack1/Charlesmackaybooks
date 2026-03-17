@@ -11,7 +11,7 @@ interface BookOrderClientProps {
 }
 
 export default function BookOrderClient({ book, children, className }: BookOrderClientProps) {
-  const { addToCart, openBasket } = useCart()
+  const { addToCart } = useCart()
   const [isAddingToCart, setIsAddingToCart] = useState(false)
   
   // Check if this is a pre-order book (allow legacy labels without widening Book type)
@@ -24,19 +24,16 @@ export default function BookOrderClient({ book, children, className }: BookOrder
     setIsAddingToCart(true)
     addToCart(book)
     setTimeout(() => {
-      setIsAddingToCart(false)
-      openBasket()
-    }, 500)
+      window.location.href = '/checkout'
+    }, 300)
   }
 
   const handlePreOrder = () => {
-    // For pre-orders, we'll still add to cart but with different messaging
     setIsAddingToCart(true)
     addToCart(book)
     setTimeout(() => {
-      setIsAddingToCart(false)
-      openBasket()
-    }, 500)
+      window.location.href = '/checkout'
+    }, 300)
   }
 
   const handleEbayClick = () => {

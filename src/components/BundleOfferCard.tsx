@@ -14,7 +14,7 @@ interface BundleOfferCardProps {
 }
 
 export default function BundleOfferCard({ title, description, books, badge }: BundleOfferCardProps) {
-  const { addToCart, openBasket } = useCart();
+  const { addToCart } = useCart();
   const { trackBundleAddToCart } = useAnalytics();
   const [isAddingBundle, setIsAddingBundle] = useState(false);
 
@@ -38,8 +38,7 @@ export default function BundleOfferCard({ title, description, books, badge }: Bu
     );
     books.forEach((book) => addToCart(book));
     setTimeout(() => {
-      openBasket();
-      setIsAddingBundle(false);
+      window.location.href = '/checkout';
     }, 300);
   };
 

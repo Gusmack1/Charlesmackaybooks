@@ -61,7 +61,7 @@ interface ComprehensiveBlogTemplateProps {
 
 export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTemplateProps) {
   type Reference = { title: string; url: string; source?: string; date?: string };
-  const { addToCart, openBasket } = useCart();
+  const { addToCart } = useCart();
   const [addingId, setAddingId] = useState<string | null>(null);
   const stablePublishedDate = getStableBlogPublishedDate(post.id, post.publishedDate);
   const featured = getApprovedFeatured(post.id, post.featuredImage?.url, post.featuredImage?.alt)
@@ -523,8 +523,7 @@ export default function ComprehensiveBlogTemplate({ post }: ComprehensiveBlogTem
                   if (!fullBook || addingId) return;
                   setAddingId(book.id);
                   addToCart(fullBook);
-                  openBasket();
-                  setTimeout(() => setAddingId(null), 500);
+                  window.location.href = '/checkout';
                 };
                 return (
                 <article key={book.id} className="bg-white dark:bg-slate-700 rounded-lg shadow-md border border-slate-200 dark:border-slate-600 p-5 hover:shadow-lg transition-shadow">

@@ -12,7 +12,7 @@ interface BookDetailClientProps {
 }
 
 export default function BookDetailClient({ book }: BookDetailClientProps) {
-  const { addToCart, openBasket } = useCart();
+  const { addToCart } = useCart();
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
   const { trackContactEmail, trackEbayRedirect, trackBuyNowIntent } = useAnalytics();
@@ -26,8 +26,9 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
   const handleAddToCart = () => {
     setIsAddingToCart(true);
     addToCart(book);
-    openBasket();
-    setIsAddingToCart(false);
+    setTimeout(() => {
+      window.location.href = '/checkout';
+    }, 200);
   };
 
   const handleBuyNow = () => {

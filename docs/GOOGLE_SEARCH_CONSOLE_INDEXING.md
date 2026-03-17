@@ -4,8 +4,9 @@ This document explains GSC indexing statuses and how the site is configured.
 
 ## Site configuration (brand new, no redirects)
 
-- **No redirects.** Legacy paths (`/news`, `/timeline`, `/book`, `/aircraft`, `/blog/supermarine-spitfire-development`) and trailing-slash variants return 404. Use canonical URLs only.
-- **410 Gone** for explicitly removed pages: `/research-methodology`, `/blog/scottish-aviation-news`.
+- **No redirects.** Legacy paths (`/news`, `/timeline`, `/book`, `/aircraft`, `/blog/supermarine-spitfire-development`) return 404. Use canonical URLs only.
+- **308 redirects** for retired newsroom: `/blog/scottish-aviation-news` → `/aviation-news` (preserves link equity).
+- **410 Gone** for explicitly removed page: `/research-methodology`.
 - **Sitemap:** `sitemap.xml` submitted in GSC. Canonical URLs only (no trailing slash).
 - **robots.txt** blocks `/_next/`, `/api/`, `/checkout/`, `/order-complete/`, `/order-tracking/`, `/search/` to preserve crawl budget.
 

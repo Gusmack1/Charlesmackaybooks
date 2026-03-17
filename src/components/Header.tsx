@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { mainNavLinks, moreNavLinks } from '@/config/navigation'
 import { useCart } from '@/context/CartContext';
 
 export default function Header() {
-  const { getTotalItems, getBulkDiscountPercentage, openBasket } = useCart();
+  const { getTotalItems, getBulkDiscountPercentage } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
   const [showMobileSearch, setShowMobileSearch] = useState(false);
@@ -54,11 +55,11 @@ export default function Header() {
             {/* Actions */}
             <div className="text-right">
               <div className="flex items-center gap-2 md:gap-4 mb-1">
-                {/* Basket Button - Always visible, before search */}
-                <button
-                  onClick={openBasket}
-                  aria-label={`Open basket${totalItems > 0 ? `, ${totalItems} items` : ''}`}
-                  className="relative bg-white text-slate-900 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100 min-h-[40px] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
+                {/* Basket Button - Navigates to checkout page */}
+                <Link
+                  href="/checkout"
+                  aria-label={`View basket${totalItems > 0 ? `, ${totalItems} items` : ''}`}
+                  className="relative bg-white text-slate-900 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100 min-h-[40px] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 inline-flex items-center"
                   title="Shopping Basket"
                 >
                   <span className="hidden sm:inline-flex items-center gap-1">
@@ -75,7 +76,7 @@ export default function Header() {
                       {totalItems}
                     </span>
                   )}
-                </button>
+                </Link>
 
                 {/* Mobile Search Toggle */}
                 <button

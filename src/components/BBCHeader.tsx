@@ -7,7 +7,7 @@ import { primaryNavLinks } from '@/config/navigation';
 import { useCart } from '@/context/CartContext';
 
 export default function BBCHeader() {
-  const { getTotalItems, openBasket } = useCart();
+  const { getTotalItems } = useCart();
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState('');
   const router = useRouter();
@@ -19,11 +19,11 @@ export default function BBCHeader() {
         <div className="flex items-center justify-between py-3">
           <Link href="/" className="font-bold text-xl tracking-tight">Charles Mackay Books</Link>
           <div className="hidden md:flex items-center gap-2">
-            {/* Basket Button - White outline icon */}
-            <button
-              onClick={openBasket}
-              aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
-              className="relative bg-transparent border border-white/70 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900"
+            {/* Basket Button - Navigates to checkout page */}
+            <Link
+              href="/checkout"
+              aria-label={`View basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
+              className="relative bg-transparent border border-white/70 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900 inline-flex items-center"
               title="Shopping Basket"
             >
               <span className="hidden sm:inline flex items-center">
@@ -42,7 +42,7 @@ export default function BBCHeader() {
                   {getTotalItems()}
                 </span>
               )}
-            </button>
+            </Link>
             <input
               type="search"
               placeholder="Search"
@@ -68,10 +68,10 @@ export default function BBCHeader() {
           </div>
           <div className="md:hidden flex items-center gap-2">
             {/* Mobile Basket Button */}
-            <button
-              onClick={openBasket}
-              aria-label={`Open basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
-              className="relative bg-transparent border border-white/70 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900"
+            <Link
+              href="/checkout"
+              aria-label={`View basket${getTotalItems() > 0 ? `, ${getTotalItems()} items` : ''}`}
+              className="relative bg-transparent border border-white/70 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-white hover:text-slate-900 inline-flex items-center"
               title="Shopping Basket"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,7 +82,7 @@ export default function BBCHeader() {
                   {getTotalItems()}
                 </span>
               )}
-            </button>
+            </Link>
             <button
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Open menu"

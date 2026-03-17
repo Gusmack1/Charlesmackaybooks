@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import { CartProvider } from '../context/CartContext';
 import { RecentlyViewedProvider } from '../context/RecentlyViewedContext';
-import CartSidebar from '../components/CartSidebar';
 import MobileSSLFix from '../components/MobileSSLFix';
 import WebVitalsReporter from '../components/WebVitalsReporter';
 // LiveChat removed per request
@@ -26,7 +25,6 @@ export default function ClientBody({
       <RecentlyViewedProvider>
         <WebVitalsReporter />
         {children}
-        <CartSidebar />
       </RecentlyViewedProvider>
     </CartProvider>
   );

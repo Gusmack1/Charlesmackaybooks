@@ -8,13 +8,13 @@ interface BookQuickAddCardProps {
 }
 
 export default function BookQuickAddCard({ book }: BookQuickAddCardProps) {
-  const { addToCart, openBasket } = useCart();
+  const { addToCart } = useCart();
 
   const handleAddToBasket = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     addToCart(book);
-    openBasket();
+    window.location.href = '/checkout';
   };
 
   return (
