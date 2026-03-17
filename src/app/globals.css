@@ -737,6 +737,18 @@ header[role="banner"] #global-more-menu * {
   z-index: 0;
 }
 
+/* Book page: halve font sizes for book title and Description (overrides .hero-section typography) */
+.book-page-hero.hero-section h1 {
+  font-size: clamp(1.25rem, 3vw, 2rem) !important; /* was 40px-64px, now 20px-32px */
+}
+.book-page-hero.hero-section h2 {
+  font-size: clamp(0.875rem, 2vw, 1.25rem) !important; /* was 28px-40px, now 14px-20px */
+}
+.book-page-hero.hero-section .prose p,
+.book-page-hero.hero-section p {
+  font-size: clamp(0.75rem, 1.25vw, 0.875rem) !important; /* was 18px-24px, now 12px-14px */
+}
+
 /* Book page: ensure purchase section stacks above hero so all links/buttons are clickable */
 #purchase {
   position: relative;
