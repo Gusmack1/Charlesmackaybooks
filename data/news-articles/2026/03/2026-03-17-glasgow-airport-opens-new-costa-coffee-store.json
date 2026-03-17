@@ -1,0 +1,45 @@
+{
+  "slug": "2026-03-17-glasgow-airport-opens-new-costa-coffee-store",
+  "title": "Glasgow Airport Opens New Costa Coffee Store",
+  "wordCount": 25,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Glasgow Airport opens new Costa Coffee store. Glasgow Airport opens a new Costa Coffee store as part of its expanding retail and terminal development plans."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.traveldailynews.com/aviation/glasgow-airport-opens-new-costa-coffee-store/",
+      "citationText": "serper-scottish-aviation – Glasgow Airport opens new Costa Coffee store"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Glasgow Airport Opens New",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-17T12:48:14.551Z"
+}
