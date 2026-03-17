@@ -40,3 +40,4 @@ Full-page navigation (e.g. typing URL or using browser back) works correctly. Th
 1. **Manual retest** – After deploy, verify link clicks work on book detail, blog, and era pages.
 2. **Mobile viewport** – Test on real device; mobile sticky bars and cart overlay may behave differently.
 3. **Cart overlay** – CartSidebar overlay intentionally blocks clicks (to close on outside click); this is correct behavior.
+upgrade and updtate 
