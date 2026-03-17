@@ -39,7 +39,7 @@ export default function Header() {
   }, [mobileMenuOpen, desktopMenuOpen]);
 
   return (
-    <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]" role="banner">
+    <header className="bg-slate-900 text-white sticky top-0 z-[100] shadow-lg supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]" role="banner">
       {/* Top Header Bar */}
       <div className="bg-slate-900">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
@@ -55,8 +55,8 @@ export default function Header() {
             {/* Actions */}
             <div className="text-right">
               <div className="flex items-center gap-2 md:gap-4 mb-1">
-                {/* Basket Button - Navigates to checkout page */}
-                <Link
+                {/* Basket Button - Navigates to checkout page (plain anchor for reliable navigation from all pages) */}
+                <a
                   href="/checkout"
                   aria-label={`View basket${totalItems > 0 ? `, ${totalItems} items` : ''}`}
                   className="relative bg-white text-slate-900 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-gray-100 min-h-[40px] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 inline-flex items-center"
@@ -64,7 +64,7 @@ export default function Header() {
                 >
                   <span className="hidden sm:inline-flex items-center gap-1">
                     <span>🛒 Basket</span>
-                    {activeBulkDiscount > 0 && (
+                    {totalItems > 0 && activeBulkDiscount > 0 && (
                       <span className="bg-green-600 text-white text-[10px] rounded px-1.5 py-0.5 font-bold leading-none" aria-hidden>
                         {activeBulkDiscount}% off
                       </span>
@@ -76,7 +76,7 @@ export default function Header() {
                       {totalItems}
                     </span>
                   )}
-                </Link>
+                </a>
 
                 {/* Mobile Search Toggle */}
                 <button

@@ -14,15 +14,6 @@ const quickFilters = [
   { label: 'Biographies', slug: 'aviation-biography' },
 ]
 
-const staffPickIds = [
-  'beardmore-aviation',
-  'clydeside-aviation-vol1',
-  'clydeside-aviation-vol2',
-  'british-aircraft-great-war',
-  'german-aircraft-great-war',
-  'aircraft-carrier-argus',
-]
-
 export const metadata: Metadata = {
   title: 'Aviation History Books for Sale',
   description: `Shop ${books.length} aviation history books by Charles E. MacKay on Scottish aviation, WWI, WWII, naval aviation, and helicopters. Free worldwide shipping and guest checkout.`,
@@ -61,12 +52,6 @@ export const metadata: Metadata = {
 }
 
 export default function BooksPage() {
-  const newBooks = [...books]
-    .sort((a, b) => (b.publicationYear || 0) - (a.publicationYear || 0))
-    .slice(0, 6)
-
-  const staffPicks = books.filter((b) => staffPickIds.includes(b.id))
-
   return (
     <div className="surface-dark relative mx-0 bg-slate-900">
       <UnifiedSchema
@@ -169,22 +154,19 @@ export default function BooksPage() {
             </p>
           </div>
 
-          <section className="mb-10">
-            <div className="rounded-xl border border-white/15 bg-slate-800/80 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-              <div>
-                <p className="text-sm font-semibold text-white">Buy direct with confidence</p>
-                <p className="text-sm text-white/75">
-                  Secure guest checkout, free worldwide shipping, 30-day returns, and automatic multi-book discounts.
-                </p>
-                <p className="text-xs text-white/60 mt-1">
-                  Prefer marketplace proof? Charles&apos; eBay profile shows 100% positive feedback.
+          <section className="mb-6">
+            <div className="rounded-lg border border-white/15 bg-slate-800/80 px-3 py-2.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold text-white">Buy direct with confidence</p>
+                <p className="text-xs text-white/75 leading-snug">
+                  Secure guest checkout, free worldwide shipping, 30-day returns, and automatic multi-book discounts. Charles&apos; eBay profile: 100% positive feedback.
                 </p>
               </div>
               <a
                 href="https://www.ebay.co.uk/usr/chaza87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-white/10 text-white border border-white/25 px-4 py-2 rounded-lg font-semibold hover:bg-white/15 transition-colors"
+                className="inline-flex items-center justify-center bg-white/10 text-white border border-white/25 px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-white/15 transition-colors shrink-0"
               >
                 View eBay profile
               </a>
@@ -204,39 +186,7 @@ export default function BooksPage() {
             ))}
           </div>
 
-          {newBooks.length > 0 && (
-            <section className="mb-10">
-              <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-                <h3 className="text-xl font-semibold text-white">New &amp; notable</h3>
-                <span className="text-sm text-white/70">
-                  Recent releases and latest editions from Charles E. MacKay
-                </span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {newBooks.map((book) => (
-                  <BookCard key={`new-${book.id}`} book={book} sourceContext="books-new-notable" />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {staffPicks.length > 0 && (
-            <section className="mb-10">
-              <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-                <h3 className="text-xl font-semibold text-white">Staff picks</h3>
-                <span className="text-sm text-white/70">
-                  Foundational titles our readers return to again and again
-                </span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {staffPicks.map((book) => (
-                  <BookCard key={`staff-${book.id}`} book={book} sourceContext="books-staff-picks" />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Books Grid - Matching Homepage Layout */}
+          {/* Books Grid - 20 unique books */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {books.map(book => (
               <BookCard key={book.id} book={book} sourceContext="books-catalog" />

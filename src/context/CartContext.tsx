@@ -97,15 +97,21 @@ export function CartProvider({ children }: { children: ReactNode }) {
         price: book.price
       });
 
+      let newItems: CartItem[];
       if (existingItem) {
-        return currentItems.map(item =>
+        newItems = currentItems.map(item =>
           item.book.id === book.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       } else {
-        return [...currentItems, { book, quantity: 1 }];
+        newItems = [...currentItems, { book, quantity: 1 }];
       }
+      // Persist synchronously so navigation to checkout sees the updated cart
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('charles_mackay_cart', JSON.stringify(newItems));
+      }
+      return newItems;
     });
   };
 

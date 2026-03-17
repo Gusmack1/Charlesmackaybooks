@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white py-8 sm:py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8">
           {/* Research Resources */}
           <div className="text-center">
             <h3 className="text-lg md:text-xl font-bold mb-4 flex items-center justify-center gap-2">
@@ -33,24 +33,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Share This Page */}
-          <div className="text-center">
-            <h3 className="text-lg md:text-xl font-bold mb-4 flex items-center justify-center gap-2">
-              <span>⬢</span> Share This Page
-            </h3>
-            <p className="text-base text-white mb-4">
-              Perfect for social media: Facebook, Twitter, LinkedIn,<br className="hidden sm:inline" />
-              <span className="sm:hidden"> </span>aviation groups, academic forums
-            </p>
-            <div className="text-white text-base font-mono bg-white/20 p-3 rounded">
-              charlesmackaybooks.com
-            </div>
-          </div>
-
           {/* Direct Contact */}
           <div className="text-center">
             <h3 className="text-lg md:text-xl font-bold mb-4 flex items-center justify-center gap-2">
-              <span>⬢</span> Direct Contact
+              Direct Contact
             </h3>
             <div className="space-y-2 text-base">
               <div>

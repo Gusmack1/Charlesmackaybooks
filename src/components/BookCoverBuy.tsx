@@ -17,7 +17,10 @@ export default function BookCoverBuy({ book, width = 320, height = 480, classNam
   const handleClick = () => {
     if (!book.inStock) return;
     addToCart(book);
-    window.location.href = '/checkout?method=paypal';
+    // Same basket as Add to basket – go to checkout basket step first
+    setTimeout(() => {
+      window.location.href = '/checkout';
+    }, 200);
   };
 
   return (

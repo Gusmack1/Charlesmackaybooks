@@ -72,6 +72,8 @@ function parseLegacyBookinfo(text: string): Map<string, { description: string }>
 }
 
 // Strip only standalone ecommerce boilerplate lines; preserve all substantive content
+const MAX_PARAGRAPH_CHARS = 400;
+
 function toDisplayParagraphs(raw: string): string[] {
   if (!raw || !raw.trim()) return [];
 
@@ -90,12 +92,64 @@ function toDisplayParagraphs(raw: string): string[] {
 
   if (!text.trim()) return [raw.trim()];
 
-  const paragraphs = text
-    .split(/\n{2,}/)
-    .map((p) => p.trim())
-    .filter(Boolean);
+  // 1. Split on double newlines (existing behavior)
+  let blocks = text.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
 
-  return paragraphs.length > 0 ? paragraphs : [text];
+  // 2. Split each block on bullet points (· or •) so each bullet becomes its own paragraph
+  blocks = blocks.flatMap((block) => {
+    const bulletItems = block.split(/(?=[·•])/).map((s) => s.trim()).filter(Boolean);
+    return bulletItems.length > 1 ? bulletItems : [block];
+  });
+
+  // 3 & 4. For blocks longer than ~400 chars, split on single newlines (merging continuations)
+  //        and/or on sentence boundaries
+  const result: string[] = [];
+  for (const block of blocks) {
+    if (block.length <= MAX_PARAGRAPH_CHARS) {
+      result.push(block);
+      continue;
+    }
+    // Split on single newlines, then merge continuation lines (e.g. starting with lowercase)
+    const blockLines = block.split(/\n/).map((l) => l.trim()).filter(Boolean);
+    const merged: string[] = [];
+    let current = '';
+    for (const line of blockLines) {
+      const startsWithLowercase = line.length > 0 && /^[a-z]/.test(line);
+      const prevEndsMidSentence = current.length > 0 && !/[.!?]\s*$/.test(current);
+      const isContinuation =
+        (startsWithLowercase && current.length > 0) ||
+        (prevEndsMidSentence && line.length > 0 && /^[a-z"'(\[]/.test(line));
+      if (isContinuation && current.length > 0) {
+        current += ' ' + line;
+      } else {
+        if (current) merged.push(current);
+        current = line;
+      }
+    }
+    if (current) merged.push(current);
+
+    // For any merged segment still > 400 chars, split on sentence boundaries (~3-4 sentences)
+    for (const seg of merged) {
+      if (seg.length <= MAX_PARAGRAPH_CHARS) {
+        result.push(seg);
+        continue;
+      }
+      const sentences = seg.split(/(?<=[.!?])\s+/).filter(Boolean);
+      let chunk = '';
+      for (const sent of sentences) {
+        const wouldExceed = chunk.length + (chunk ? 1 : 0) + sent.length > MAX_PARAGRAPH_CHARS;
+        if (wouldExceed && chunk) {
+          result.push(chunk);
+          chunk = sent;
+        } else {
+          chunk += (chunk ? ' ' : '') + sent;
+        }
+      }
+      if (chunk) result.push(chunk);
+    }
+  }
+
+  return result.length > 0 ? result : [text];
 }
 
 // Generate comprehensive SEO metadata for each book
@@ -366,11 +420,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
       <div className="min-h-screen bg-slate-900">
         {/* Hero: cover (clickable), title, buy buttons, author */}
-        <div className={`book-page-hero hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-12`}>
-          <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
+        <div className={`book-page-hero hero-section relative ${gradientClass} text-white py-4 sm:py-6 lg:py-8`}>
+          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
-              <div className="flex justify-center items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
-                <BookCoverBuy book={book} />
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                <BookCoverBuy book={book} width={240} height={360} />
                 <ShareButton
                   url={`https://charlesmackaybooks.com/books/${book.id}`}
                   title={book.title}
@@ -381,14 +435,14 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               </div>
               <a
                 href={`/category/${book.category.toLowerCase().replace(/\s+/g, '-')}`}
-                className="inline-block text-sm font-semibold text-white/90 hover:text-white mb-2"
+                className="inline-block text-xs font-semibold text-white/90 hover:text-white mb-1"
               >
                 {book.category}
               </a>
-              <h1 className="text-base sm:text-lg lg:text-xl font-extrabold mb-2 leading-tight">
+              <h1 className="text-[10px] sm:text-xs lg:text-sm font-extrabold mb-1 leading-tight">
                 {book.title}
               </h1>
-              <p className="text-white/90 text-sm mb-6">
+              <p className="text-white/90 text-xs sm:text-sm mb-4">
                 By <a href="/about" className="underline font-semibold">Charles E. MacKay</a>
               </p>
               <div className="max-w-md mx-auto">
@@ -396,12 +450,12 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               </div>
 
               {/* Description - directly under book */}
-              <div className="mt-6 text-left max-w-2xl mx-auto space-y-4">
+              <div className="mt-4 text-left max-w-2xl mx-auto space-y-5">
                 <h2 className="text-lg font-semibold text-white">Description</h2>
-                <div className="prose prose-invert max-w-none">
+                <div className="prose prose-invert max-w-none space-y-5">
                   {finalParagraphs.length > 0 ? (
                     finalParagraphs.map((para, idx) => (
-                      <p key={idx} className="text-white/90 mb-4 leading-relaxed">
+                      <p key={idx} className="text-white/90 leading-relaxed">
                         {para}
                       </p>
                     ))
@@ -415,8 +469,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         </div>
 
         {/* Specs and trust badges */}
-        <div id="purchase" className={`${gradientClass} text-white pt-8 pb-12 px-6 scroll-mt-24`}>
-          <div className="max-w-2xl mx-auto space-y-6">
+        <div id="purchase" className={`${gradientClass} text-white pt-6 pb-10 px-4 sm:px-6 scroll-mt-24`}>
+          <div className="max-w-2xl mx-auto space-y-4">
             {/* Minimal specs */}
             <div className="flex flex-wrap gap-4 text-sm text-white/80 border-t border-white/15 pt-6">
               {book.isbn && <span>ISBN: {book.isbn}</span>}

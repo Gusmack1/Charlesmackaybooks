@@ -38,10 +38,10 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
       price: book.price,
     }, 'book-detail');
     addToCart(book);
-    // Use window.location for reliable navigation; router.push can fail in some contexts
+    // Same basket as Add to basket – go to checkout basket step first
     setTimeout(() => {
-      window.location.href = '/checkout?method=paypal';
-    }, 300);
+      window.location.href = '/checkout';
+    }, 200);
   };
 
   const handleEbayClick = () => {
