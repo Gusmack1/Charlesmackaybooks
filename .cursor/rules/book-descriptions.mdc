@@ -1,0 +1,60 @@
+---
+description: Source of truth for book descriptions - Book Info.csv
+globs: src/data/books.ts
+alwaysApply: false
+---
+
+# Book Descriptions – Source of Truth
+
+When updating book descriptions in `src/data/books.ts`, use the canonical source and **copy descriptions exactly** (do not rewrite or paraphrase).
+
+## Primary Source
+
+**Book Info.csv** – `docs/Book Info.csv` (in project) or `c:\Users\Gus\Downloads\Book Info.csv`  
+(Exported from: https://docs.google.com/spreadsheets/d/17P2OUf5m-d63pu3Q_Kk5Cq6dTgSlT_9JeE9Cz0cRJJo/edit?usp=sharing)
+
+Columns: `Book`, `eBay Item ID`, `description`, `link`  
+Copy the `description` column exactly for each book. Match by book name or eBay Item ID to the `id` in `books.ts`.
+
+## Book → ID mapping
+
+| CSV Book | books.ts id |
+|----------|-------------|
+| Aircraft Carrier - HMS Argus | aircraft-carrier-argus |
+| Mother of the Few (Lucy Lady Houston) | mother-of-the-few |
+| Captain Eric Brown | captain-eric-brown |
+| Sycamore Seeds | sycamore-seeds |
+| Dieter Dengler Skyraider | dieter-dengler |
+| This Was the Enemy Volume Two | this-was-the-enemy-volume-two |
+| Sabres from the North | sabres-from-north |
+| Soaring with Wings (Percy Pilcher) | soaring-with-wings |
+| Clydeside Aviation Vol 1 | clydeside-aviation-vol1 |
+| Dorothy Wordsworth | dorothy-wordsworth |
+| Clydeside Aviation Vol 2 | clydeside-aviation-vol2 |
+| This Was the Enemy Luftwaffe 1945 | enemy-luftwaffe-1945 |
+| Flying for Kaiser Wilhelm | flying-for-kaiser |
+| Modern Furniture (Morris) | modern-furniture |
+| Adolf Rohrbach | adolf-rohrbach |
+| German Aircraft Great War | german-aircraft-great-war |
+| British Aircraft Great War | british-aircraft-great-war |
+| Sonic to Stand Off | sonic-to-standoff |
+| Birth of the Atomic Bomb | birth-atomic-bomb |
+| Beardmore Aviation: Airships, Aeroplanes, Engines | beardmore-aviation |
+
+## Workflow
+
+1. Get the exact description from `Book Info.csv`.
+
+2. Update the `description` field in `src/data/books.ts` for the matching book (by `id`).
+
+3. Use template literals (backticks) for multi-line descriptions. Escape backticks inside the text as `\``.
+
+4. Run `node scripts/export-book-reference.cjs` to regenerate `Bookinfo.txt`.
+
+5. Run `npm run build` to verify.
+
+## Notes
+
+- Preserve paragraph breaks and formatting from the source.
+- Do not correct typos unless the user explicitly requests it.
+- In CSV, `""` is the escaped quote; in JS use `"` or `\"`.
