@@ -20,13 +20,17 @@
 | `www.charlesmackaybooks.com/*` | 308 → `charlesmackaybooks.com/*` |
 | `*/path/` (trailing slash) | 308 → `*/path` |
 | `/blog/scottish-aviation-news*` | 308 → `/aviation-news*` |
+| `/book/{slug}` | 308 → `/books/{id}` (slug→id via `LEGACY_BOOK_SLUG_TO_ID`) |
+| `/books/captain-clouds` | 308 → `/books/captain-eric-brown` |
+| `/aircraft/{slug}` | 308 → `/blog/{slug}` or `/blog` (via `LEGACY_AIRCRAFT_TO_BLOG`) |
+| `/ai-prompt-system` | 410 Gone |
 | `/research-methodology` | 410 Gone |
 
 ---
 
 ## 3. Noindex Paths
 
-**Proxy (X-Robots-Tag):** `/ai-prompt-system`, `/checkout`, `/order-complete`, `/order-tracking`, `/search`, `/api/*`, `/fonts/*`, `*.woff2`
+**Proxy (X-Robots-Tag):** `/checkout`, `/order-complete`, `/order-tracking`, `/search`, `/api/*`, `/fonts/*`, `*.woff2` (note: `/ai-prompt-system` returns 410)
 
 **robots.txt Disallow:** `/_next/`, `/api/`, `/admin/`, `/ai-prompt-system/`, `/checkout/`, `/order-complete/`, `/order-tracking/`, `/search/`, `/fonts/`
 

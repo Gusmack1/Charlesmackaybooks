@@ -48,13 +48,6 @@ export default function HeroSection() {
                 <span className="mr-3 text-xl">🛒</span>
                 Buy books now
               </Link>
-              <Link
-                href="/books#bundles"
-                className="inline-flex items-center justify-center bg-white text-slate-900 border border-slate-900 hover:bg-gray-100 hover:underline px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold transition-all duration-300 shadow-xl text-base sm:text-lg min-h-[52px] sm:min-h-[60px]"
-              >
-                <span className="mr-3 text-xl">📦</span>
-                View bundle offers
-              </Link>
             </div>
 
             <p className="mt-4 text-sm text-white/85">

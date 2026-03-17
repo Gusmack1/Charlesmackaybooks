@@ -5,41 +5,96 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import { books } from '@/data/books';
 import { Book } from '@/types/book';
-import { getNewsArticlesForBook } from '@/lib/newsroom';
 import BookDetailClient from '@/components/BookDetailClient';
-import BookQuickAddCard from '@/components/BookQuickAddCard';
-import RelatedBookCard from '@/components/RelatedBookCard';
 import UnifiedSchema from '@/components/UnifiedSchema';
-import LatestAviationNews from '@/components/LatestAviationNews';
 import BookAnalyticsClient from '@/components/BookAnalyticsClient';
 import ShareButton from '@/components/ShareButton';
-import BundleOfferCard from '@/components/BundleOfferCard';
-import { getBundleForBook } from '@/utils/bundles';
-
-
-// Simplified category gradient function - only used for hero backgrounds
-function getCategoryGradient(category: string): string {
-  const gradients: Record<string, string> = {
-    'Scottish Aviation History': 'from-slate-900 via-amber-900 to-slate-800',
-    'WWI Aviation': 'from-slate-900 via-red-900 to-slate-800',
-    'WWII Aviation': 'from-slate-900 via-blue-900 to-slate-800',
-    'Aviation Biography': 'from-slate-900 via-purple-900 to-slate-800',
-    'Helicopter History': 'from-slate-900 via-green-900 to-slate-800',
-    'Jet Age Aviation': 'from-slate-900 via-indigo-900 to-slate-800',
-    'Naval Aviation': 'from-slate-900 via-cyan-900 to-slate-800',
-    'Aviation History': 'from-slate-900 via-orange-900 to-slate-800',
-    'Military History': 'from-slate-900 via-gray-900 to-slate-800',
-    'Industrial History': 'from-slate-900 via-yellow-900 to-slate-800',
-    'Travel Literature': 'from-slate-900 via-emerald-900 to-slate-800'
-  };
-  return gradients[category] || 'from-slate-900 via-gray-900 to-slate-800';
-}
 
 // Generate static params for all books
 export async function generateStaticParams() {
   return books.map((book) => ({
     id: book.id,
   }));
+}
+
+// Parse Bookinfo.txt for Primary Description by book ID (markdown format)
+function parseBookinfoById(text: string): Map<string, string> {
+  const map = new Map<string, string>();
+  if (!text) return map;
+
+  const sections = text.split(/^##\s+/m).slice(1);
+
+  for (const section of sections) {
+    const idBlock = section.match(/\*\*ID:\*\*\s*`([^`]+)`/);
+    const id = idBlock?.[1];
+    if (!id) continue;
+
+    const primaryMatch = section.match(/\*\*Primary Description:\*\*\s*\n((?:>.*\n?)+)/);
+    if (primaryMatch) {
+      const desc = primaryMatch[1]
+        .split(/\n/)
+        .map((l) => l.replace(/^>\s*/, '').trim())
+        .filter(Boolean)
+        .join('\n')
+        .trim();
+      if (desc) map.set(id, desc);
+    }
+  }
+  return map;
+}
+
+// Fallback: parse legacy asterisk-separated format (e.g. user's Book info.txt)
+function parseLegacyBookinfo(text: string): Map<string, { description: string }> {
+  const map = new Map<string, { description: string }>();
+  if (!text) return map;
+
+  const sections = text.split(/\*{10,}/g).map((s) => s.trim()).filter(Boolean);
+  for (const section of sections) {
+    const lines = section.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+    const titleLine = lines[0] || '';
+    const isbnMatch = section.match(/ISBN\s*[:]?\s*([0-9Xx\-]+)/);
+    const body = lines.slice(1).join('\n').trim();
+    if (!body) continue;
+
+    const isbn = isbnMatch ? isbnMatch[1].replace(/[^0-9Xx]/g, '') : '';
+    const title = titleLine.replace(/\s+\.+$/, '').trim();
+
+    const book = books.find(
+      (b) =>
+        (b.isbn && isbn && (b.isbn.replace(/[^0-9Xx]/g, '') === isbn || b.isbn.replace(/[^0-9Xx]/g, '').endsWith(isbn.slice(-10)))) ||
+        b.title.toLowerCase().includes(title.toLowerCase()) ||
+        title.toLowerCase().includes(b.title.toLowerCase())
+    );
+    if (book) map.set(book.id, { description: body });
+  }
+  return map;
+}
+
+// Strip only standalone ecommerce boilerplate lines; preserve all substantive content
+function toDisplayParagraphs(raw: string): string[] {
+  if (!raw || !raw.trim()) return [];
+
+  const boilerplatePatterns = [
+    /^Condition is\s*["']?New["']?\.?\s*$/i,
+    /^Dispatched with Royal Mail[^.]*\.?\s*$/i,
+    /^Recommend use offers\.?\s*$/i,
+    /^Any questions[^.]*\.?\s*$/i,
+    /^POST FREE[^.]*\.?\s*$/i,
+    /^Post Free[^.]*\.?\s*$/i,
+  ];
+
+  const lines = raw.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  const filtered = lines.filter((l) => !boilerplatePatterns.some((p) => p.test(l)));
+  const text = filtered.join('\n');
+
+  if (!text.trim()) return [raw.trim()];
+
+  const paragraphs = text
+    .split(/\n{2,}/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+
+  return paragraphs.length > 0 ? paragraphs : [text];
 }
 
 // Generate comprehensive SEO metadata for each book
@@ -227,307 +282,26 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     notFound();
   }
 
-  const relatedNews = await getNewsArticlesForBook(id);
-
-  // Consistent dark-blue hero across all book pages - solid dark blue
   const gradientClass = 'bg-slate-900';
-
-  // Get proper book cover image path - use book.imageUrl with fallback
   const bookCoverSrc = book.imageUrl || `/book-covers/${book.id}.jpg`;
 
-  // Parse Bookinfo.txt to extract authoritative descriptions and weights
+  // Load description from Bookinfo.txt (source of truth) or fallback to books.ts
   const bookInfoPath = path.join(process.cwd(), 'Bookinfo.txt');
   let fileText = '';
   try {
     fileText = await fs.readFile(bookInfoPath, 'utf8');
   } catch {}
 
-  const parseEntries = (text: string) => {
-    const sections = text.split(/\*{10,}/g).map(s => s.trim()).filter(Boolean);
-    return sections.map(section => {
-      const lines = section.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
-      const titleLine = lines[0] || '';
-      const isbnMatch = section.match(/ISBN\s*[:]?\s*([0-9Xx\-]+)/);
-      const weightMatch = section.match(/(\d{2,4})\s*(?:gms|g)\b/i);
-      // Description: all lines after price/ISBN header block
-      // Find first blank line after first 2-3 lines, or fallback to remaining text
-      const body = lines.slice(1).join('\n');
-      return {
-        title: titleLine.replace(/\s+\.+$/, '').trim(),
-        isbn: isbnMatch ? isbnMatch[1].replace(/[^0-9Xx]/g, '') : '',
-        weightGrams: weightMatch ? parseInt(weightMatch[1], 10) : undefined,
-        description: body
-      };
-    });
-  };
+  const primaryById = parseBookinfoById(fileText);
+  const legacyById = parseLegacyBookinfo(fileText);
 
-  const entries = fileText ? parseEntries(fileText) : [];
+  const fromBookinfo = primaryById.get(book.id) || legacyById.get(book.id)?.description;
+  const preferredDescription = fromBookinfo || book.description || '';
 
-  // ISBN helpers: normalize and convert between 10/13 to generate match candidates
-  const normalizeIsbn = (s?: string) => (s ? s.replace(/[^0-9Xx]/g, '').toUpperCase() : '');
-  const computeIsbn13From10 = (isbn10?: string): string | undefined => {
-    const n = normalizeIsbn(isbn10);
-    if (!n || n.length !== 10) return undefined;
-    const core = n.slice(0, 9);
-    const prefixed = '978' + core;
-    const digits = prefixed.split('').map(d => parseInt(d, 10));
-    if (digits.some(Number.isNaN)) return undefined;
-    const sum = digits.reduce((acc, d, idx) => acc + d * (idx % 2 === 0 ? 1 : 3), 0);
-    const check = (10 - (sum % 10)) % 10;
-    return prefixed + String(check);
-  };
-  const computeIsbn10From13 = (isbn13?: string): string | undefined => {
-    const n = normalizeIsbn(isbn13);
-    if (!n || n.length !== 13 || (n.slice(0, 3) !== '978' && n.slice(0, 3) !== '979')) return undefined;
-    const core = n.slice(3, 12); // 9 digits
-    const digits = core.split('').map(d => parseInt(d, 10));
-    if (digits.some(Number.isNaN)) return undefined;
-    const sum = digits.reduce((acc, d, idx) => acc + d * (10 - idx), 0);
-    let checkVal = 11 - (sum % 11);
-    if (checkVal === 10) return core + 'X';
-    if (checkVal === 11) checkVal = 0;
-    return core + String(checkVal);
-  };
-  const generateIsbnCandidates = (raw?: string): string[] => {
-    const base = normalizeIsbn(raw);
-    if (!base) return [];
-    const candidates = new Set<string>();
-    candidates.add(base);
-    if (base.length === 10) {
-      const v13 = computeIsbn13From10(base);
-      if (v13) candidates.add(v13);
-    } else if (base.length === 13) {
-      const v10 = computeIsbn10From13(base);
-      if (v10) candidates.add(v10);
-    }
-    return Array.from(candidates);
-  };
+  const displayParagraphs = toDisplayParagraphs(preferredDescription);
+  const finalParagraphs = displayParagraphs.length > 0 ? displayParagraphs : (book.description ? [book.description] : []);
+  const metaDescriptionForSchema = finalParagraphs[0] || book.description || '';
 
-  const bookIsbnCandidates = generateIsbnCandidates(book.isbn);
-  const byIsbn = entries.find(e => !!e.isbn && bookIsbnCandidates.includes(normalizeIsbn(e.isbn)));
-  const byTitle = entries.find(e => e.title.toLowerCase().includes(book.title.toLowerCase()) || book.title.toLowerCase().includes(e.title.toLowerCase()));
-  const info = byIsbn || byTitle;
-
-  // Prefer curated summary from books.ts; fallback to sanitized Bookinfo.txt content
-  const preferredDescription = book.description || info?.description || '';
-  const weightFromInfo = info?.weightGrams;
-
-  // Remove legacy ecommerce boilerplate (price/ISBN/shipping) if present
-  function sanitizeDescription(raw: string): string[] {
-    if (!raw) return [];
-    
-    // Check if this is a single-line description (likely from books.ts)
-    const isSingleLine = !raw.includes('\n') || raw.split('\n').length <= 2;
-    
-    if (isSingleLine) {
-      const trimmed = raw
-        .replace(/Condition is\s*["']?New["']?\.?/gi, '')
-        .replace(/Dispatched with Royal Mail[^.]*\.?/gi, '')
-        .replace(/Recommend use offers\.?/gi, '')
-        .replace(/Any questions[^.]*\.?/gi, '')
-        .replace(/POST FREE[^.]*\.?/gi, '')
-        .replace(/This is not a compendium of Wikipedia[^.]*\.?/gi, '')
-        .replace(/\s+/g, ' ')
-        .trim();
-
-      if (trimmed.length === 0) return [];
-      
-      // If it's just boilerplate, return empty
-      if (/^£\s?\d/.test(trimmed) || /^Condition is/i.test(trimmed) || 
-          /^Dispatched with/i.test(trimmed) || /^ISBN[:\s]/i.test(trimmed)) {
-        return [];
-      }
-      
-      // Split by sentence endings and create paragraphs
-      const sentences = trimmed.split(/(?<=[.!?])\s+/).filter(s => s.trim().length > 0);
-      if (sentences.length > 0) {
-        // Group sentences into paragraphs of 2-3 sentences
-        const paragraphs: string[] = [];
-        for (let i = 0; i < sentences.length; i += 3) {
-          paragraphs.push(sentences.slice(i, i + 3).join(' '));
-        }
-        return paragraphs;
-      }
-      
-      return [trimmed];
-    }
-    
-    // Multi-line description - process line by line
-    const lines = raw
-      .split(/\r?\n+/)
-      .map(l => l.trim())
-      .filter(Boolean)
-      // Filter out ecommerce boilerplate but be less aggressive with ISBN mentions in content
-      .filter(l => !/^£\s?\d/.test(l)) // Price lines
-      .filter(l => !/^isbn[:\s]/i.test(l)) // Lines starting with ISBN
-      .filter(l => !/^Condition is/i.test(l))
-      .filter(l => !/^Dispatched with/i.test(l))
-      .filter(l => !/^Royal Mail/i.test(l))
-      .filter(l => !/^\bshipping\b/i.test(l))
-      .filter(l => !/Updated copy coming/i.test(l))
-      .filter(l => !/^Any questions/i.test(l))
-      .filter(l => !/^Highly recommended/i.test(l))
-      .filter(l => !/^POST FREE/i.test(l))
-      .filter(l => !/^Post Free/i.test(l))
-      .filter(l => !/recent (buyer|purchase|comment)/i.test(l))
-      .filter(l => !/\bEBay\b/i.test(l))
-      .filter(l => !/^".*"\s*(?:-|–)?\s*(?:buyer|review)/i.test(l))
-      .filter(l => !/\bRRHT\b/i.test(l));
-
-    // If we filtered out everything, try a less aggressive approach
-    if (lines.length === 0) {
-      // Split by paragraph breaks and preserve content
-      const paragraphs = raw.split(/\n{2,}/);
-      return paragraphs
-        .map(p => p.trim())
-        .filter(p => p.length > 0 && !/^£\s?\d/.test(p) && !/^Condition is/i.test(p))
-        .filter(Boolean);
-    }
-
-    // Merge back into paragraphs by double-breaks
-    const text = lines.join('\n');
-    const paragraphs = text
-      .split(/\n{2,}/)
-      .map(p => p.trim())
-      .filter(Boolean);
-    
-    // If we still have no paragraphs, create one from remaining lines
-    if (paragraphs.length === 0 && lines.length > 0) {
-      return [lines.join(' ')];
-    }
-    
-    return paragraphs;
-  }
-  const sanitizedParagraphs = sanitizeDescription(preferredDescription);
-  
-  // Fallback: if sanitization removed everything, use the original description as paragraphs
-  const finalParagraphs = sanitizedParagraphs.length > 0 
-    ? sanitizedParagraphs 
-    : (preferredDescription ? [preferredDescription] : []);
-
-  const metaDescriptionForSchema = sanitizedParagraphs[0] || book.description || '';
-
-  // Infer a best-fit blog article slug for "Explore More" when explicit related posts are missing
-  const inferRelatedBlogSlug = (b: Book): string | undefined => {
-    // Prefer the first explicit related post when present
-    const anyRel = (b as any).relatedBlogPosts?.[0]?.slug as string | undefined;
-    if (anyRel) return anyRel;
-
-    // Per-book direct mappings where a highly relevant article exists
-    const idToSlug: Record<string, string> = {
-      'adolf-rohrbach': 'adolf-rohrbach-metal-aircraft-revolution',
-      'german-aircraft-great-war': 'german-aircraft-great-war-development',
-      'british-aircraft-great-war': 'british-aircraft-great-war-rfc-rnas',
-      'aircraft-carrier-argus': 'hms-argus-first-aircraft-carrier',
-      'sycamore-seeds': 'sycamore-seeds-helicopter-evolution',
-      'soaring-with-wings': 'percy-pilcher-scotland-aviation-pioneer',
-      'mother-of-the-few': 'lucy-lady-houston-schneider-trophy',
-      'sonic-to-standoff': 'british-nuclear-deterrent-v-force',
-      'sabres-from-north': 'f86-sabre-cold-war-fighter',
-      'enemy-luftwaffe-1945': 'luftwaffe-1945-final-year',
-      'clydeside-aviation-vol2': 'clydeside-aviation-revolution',
-      'flying-for-kaiser': 'german-aircraft-great-war-development',
-      'dieter-dengler': 'dieter-dengler-skyraider-escape',
-      'modern-furniture': 'morris-furniture-war-work-aviation',
-      'birth-atomic-bomb': 'maud-alsos-atomic-program',
-      'dorothy-wordsworth': 'dorothy-wordsworth-scottish-tour-1803',
-    };
-    if ((b as any).id && idToSlug[(b as any).id as string]) return idToSlug[(b as any).id as string];
-
-    // Map common categories to cornerstone blog articles
-    const categoryToSlug: Record<string, string> = {
-      'WWI Aviation': 'british-aircraft-great-war-rfc-rnas',
-      'WWII Aviation': 'luftwaffe-1945-final-year',
-      'Scottish Aviation History': 'clydeside-aviation-revolution',
-      'Helicopter History': 'helicopter-development-pioneers',
-      'Jet Age Aviation': 'jet-age-aviation-cold-war-development',
-      'Naval Aviation': 'hms-argus-first-aircraft-carrier',
-      'Aviation Biography': 'test-pilot-biography-eric-brown',
-      'Aviation History': 'adolf-rohrbach-metal-aircraft-revolution',
-      'Military History': 'british-nuclear-deterrent-v-force',
-      'Industrial History': 'clydeside-aviation-revolution',
-    };
-    return categoryToSlug[b.category];
-  };
-
-  // Automated internal linking - find related books by category, era, and themes
-  const getRelatedBooks = (currentBook: Book) => {
-    return books
-      .filter(b => b.id !== currentBook.id) // Exclude current book
-      .filter(b => {
-        // Same category gets highest priority
-        if (b.category === currentBook.category) return true;
-
-        // Same era gets medium priority
-        if (currentBook.era && b.era && currentBook.era.some(era => b.era?.includes(era))) return true;
-
-        // Same geographic focus
-        if (currentBook.geographicFocus && b.geographicFocus &&
-            currentBook.geographicFocus.some(geo => b.geographicFocus?.includes(geo))) return true;
-
-        // Same research themes
-        if (currentBook.researchThemes && b.researchThemes &&
-            currentBook.researchThemes.some(theme => b.researchThemes?.includes(theme))) return true;
-
-        // Same aircraft types
-        if (currentBook.aircraftTypes && b.aircraftTypes &&
-            currentBook.aircraftTypes.some(type => b.aircraftTypes?.includes(type))) return true;
-
-        return false;
-      })
-      .sort((a, b) => {
-        // Sort by relevance: category > era > geography > themes > aircraft
-        const getRelevanceScore = (book: Book) => {
-          let score = 0;
-          if (book.category === currentBook.category) score += 100;
-          if (currentBook.era && book.era && currentBook.era.some(era => book.era?.includes(era))) score += 50;
-          if (currentBook.geographicFocus && book.geographicFocus &&
-              currentBook.geographicFocus.some(geo => book.geographicFocus?.includes(geo))) score += 25;
-          if (currentBook.researchThemes && book.researchThemes &&
-              currentBook.researchThemes.some(theme => book.researchThemes?.includes(theme))) score += 15;
-          if (currentBook.aircraftTypes && book.aircraftTypes &&
-              currentBook.aircraftTypes.some(type => book.aircraftTypes?.includes(type))) score += 10;
-          return score;
-        };
-
-        return getRelevanceScore(b) - getRelevanceScore(a);
-      })
-      .slice(0, 6); // Return top 6 related books
-  };
-
-  // Get related books automatically
-  const relatedBooks = getRelatedBooks(book);
-  const quickPairings = relatedBooks.slice(0, 3);
-  const featuredBundle = getBundleForBook(book.id);
-  const strengthPoints = [
-    book.sourceType?.length ? `Source base: ${book.sourceType.join(', ')}` : null,
-    book.pageCount ? `${book.pageCount} pages of focused research` : null,
-    typeof (book as any).citationCount === 'number' && (book as any).citationCount > 0
-      ? `Referenced in ${Number((book as any).citationCount)}+ citations`
-      : null,
-    (book as any).academicInstitutions?.length
-      ? `Used by ${((book as any).academicInstitutions as string[]).slice(0, 3).join(', ')}`
-      : null,
-    book.publicationYear ? `Latest edition year: ${book.publicationYear}` : null,
-  ].filter((item): item is string => Boolean(item));
-  const valueProposition = [
-    `${book.category} research by Charles E. MacKay`,
-    book.era?.length ? `covering ${book.era.join(', ')}` : null,
-    book.sourceType?.length ? `using ${book.sourceType.slice(0, 2).join(' and ')}` : null,
-  ]
-    .filter((part): part is string => Boolean(part))
-    .join('. ');
-  const proofStripItems = [
-    book.inStock ? 'In stock' : 'Out of stock',
-    `£${book.price.toFixed(2)}`,
-    book.pageCount ? `${book.pageCount} pages` : null,
-    'Free worldwide tracked shipping',
-    '30-day returns',
-    '100% positive feedback',
-    (book as any).academicInstitutions?.length
-      ? `Used by ${((book as any).academicInstitutions as string[]).slice(0, 2).join(' & ')}`
-      : null,
-  ].filter((item): item is string => Boolean(item));
   const purchaseFaqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -591,97 +365,66 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       <BookAnalyticsClient book={book} />
 
       <div className="min-h-screen bg-slate-900">
-
-        {/* Hero Section - refined for clarity and unique per-book presentation */}
-        <div className={`book-page-hero hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-16`}>
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              {/* Book Cover */}
+        {/* Hero: cover, title, author, category */}
+        <div className={`book-page-hero hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-12`}>
+          <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="max-w-2xl mx-auto text-center">
               <div className="flex justify-center mb-4 sm:mb-6">
-                <div className="relative">
-                  <Image
-                    src={bookCoverSrc}
-                    alt={`${book.title} by Charles E. MacKay`}
-                    width={400}
-                    height={600}
-                    className="rounded-xl shadow-2xl"
-                    priority
-                  />
-                </div>
+                <Image
+                  src={bookCoverSrc}
+                  alt={`${book.title} by Charles E. MacKay`}
+                  width={320}
+                  height={480}
+                  className="rounded-xl shadow-2xl"
+                  priority
+                />
               </div>
-
-              {/* Book Details */}
-              <div className="space-y-6">
-                <div className="text-sm font-semibold text-white mb-4 flex items-center gap-3 justify-center flex-wrap">
-                  <a href={`/category/${book.category.toLowerCase().replace(/\s+/g, '-')}`} className="badge badge-blue hover:bg-blue-600 transition-colors">
-                    {book.category}
-                  </a>
-                  {book.era && book.era[0] && (
-                    <span className="badge badge-amber">{book.era[0]}</span>
-                  )}
-                  {book.geographicFocus && book.geographicFocus[0] && (
-                    <span className="badge badge-green">{book.geographicFocus[0]}</span>
-                  )}
-                  {book.isbn && <span className="badge badge-gray">ISBN: {book.isbn}</span>}
-                </div>
-
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 leading-tight">
-                  {book.title}
-                </h1>
-
-                <p className="text-white/90 text-base sm:text-lg -mt-2">
-                  By <a href="/about" className="underline font-semibold">Charles E. MacKay</a>
-                </p>
-
-                <div className="book-value-proposition rounded-xl border border-white/15 bg-slate-800/75 p-4 sm:p-5 max-w-4xl mx-auto" style={{ pointerEvents: 'none' }}>
-                  <p className="text-sm sm:text-base text-white/95">{valueProposition}.</p>
-                  <div className="mt-3 flex flex-wrap justify-center gap-2">
-                    {proofStripItems.map((item) => (
-                      <span key={item} className="px-3 py-1 rounded-full text-xs sm:text-sm border border-white/20 bg-white/5 text-white/90">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <a
+                href={`/category/${book.category.toLowerCase().replace(/\s+/g, '-')}`}
+                className="inline-block text-sm font-semibold text-white/90 hover:text-white mb-2"
+              >
+                {book.category}
+              </a>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-2 leading-tight">
+                {book.title}
+              </h1>
+              <p className="text-white/90 text-base">
+                By <a href="/about" className="underline font-semibold">Charles E. MacKay</a>
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Purchase section - pt-24 for sticky header */}
-        <div id="purchase" className={`${gradientClass} text-white pt-24 pb-8 px-6 scroll-mt-24 relative z-20`}>
-          <div className="max-w-2xl mx-auto space-y-4">
-            {featuredBundle && (
-              <BundleOfferCard
-                title={featuredBundle.title}
-                description={featuredBundle.description}
-                books={featuredBundle.books}
-                badge={featuredBundle.badge}
-              />
-            )}
-            {/* Quick pairings first so links stay above sticky bar on mobile */}
-            {quickPairings.length > 0 && (
-              <div className="rounded-xl border border-white/15 bg-slate-800/75 p-4">
-                <p className="text-sm font-semibold text-white mb-3">
-                  Pair this with these popular related titles
-                </p>
-                <div className="grid sm:grid-cols-3 gap-2">
-                  {quickPairings.map((relatedBook) => (
-                    <BookQuickAddCard key={relatedBook.id} book={relatedBook} />
-                  ))}
-                </div>
-                <p className="text-xs text-blue-200 mt-3">
-                  Save 5% on 2 books or 10% on 3+ at checkout.
-                </p>
-              </div>
-            )}
+        {/* Purchase + description */}
+        <div id="purchase" className={`${gradientClass} text-white pt-12 pb-12 px-6 scroll-mt-24`}>
+          <div className="max-w-2xl mx-auto space-y-8">
             <BookDetailClient book={book} />
-            <div className="text-center mt-6">
-              <a href="/books" className="text-blue-300 hover:text-white underline">
-                ← Browse All Books
-              </a>
+
+            {/* Description - from Bookinfo.txt, 100% accurate */}
+            <div className="space-y-4">
+              <h2 className="text-lg font-semibold text-white">Description</h2>
+              <div className="prose prose-invert max-w-none">
+                {finalParagraphs.length > 0 ? (
+                  finalParagraphs.map((para, idx) => (
+                    <p key={idx} className="text-white/90 mb-4 leading-relaxed">
+                      {para}
+                    </p>
+                  ))
+                ) : (
+                  <p className="text-white/70">No description available.</p>
+                )}
+              </div>
             </div>
-            <div className="text-center">
+
+            {/* Minimal specs - condition always New per Bookinfo.txt */}
+            <div className="flex flex-wrap gap-4 text-sm text-white/80 border-t border-white/15 pt-6">
+              {book.isbn && <span>ISBN: {book.isbn}</span>}
+              {book.pageCount && <span>{book.pageCount} pages</span>}
+              {(book as any).weight && <span>{(book as any).weight}g</span>}
+            </div>
+
+            {/* Share */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/15 pt-6">
               <ShareButton
                 url={`https://charlesmackaybooks.com/books/${book.id}`}
                 title={book.title}
@@ -689,199 +432,12 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                 hashtags={['AviationHistory', 'Aviation', 'Books']}
                 className="text-base"
               />
+              <a href="/books" className="text-blue-300 hover:text-white underline text-sm">
+                ← Browse all books
+              </a>
             </div>
           </div>
         </div>
-
-        {/* Main description content */}
-        <main className="container mx-auto container-padding section-padding pb-8">
-          {/* Overview */}
-          <div className="card card-large content mb-8">
-            <h2 className="content h2">Overview</h2>
-            <div className="prose prose-invert max-w-none">
-              {finalParagraphs.length > 0 ? (
-                finalParagraphs.map((para, idx) => (
-                  <p key={idx} className="text-secondary mb-4">{para}</p>
-                ))
-              ) : (
-                <p className="text-secondary">No description available.</p>
-              )}
-            </div>
-          </div>
-
-          {/* At a Glance (derived only from existing fields) */}
-          <div className="card mt-8 content">
-            <h3 className="content h3">At a Glance</h3>
-            <ul className="list-disc list-inside text-secondary space-y-1">
-              <li><span className="font-semibold text-primary">Category:</span> {book.category}</li>
-              {book.pageCount ? (
-                <li><span className="font-semibold text-primary">Pages:</span> {book.pageCount}</li>
-              ) : null}
-              {book.publicationYear ? (
-                <li><span className="font-semibold text-primary">Publication Year:</span> {book.publicationYear}</li>
-              ) : null}
-              {book.isbn ? (
-                <li><span className="font-semibold text-primary">ISBN:</span> {book.isbn}</li>
-              ) : null}
-              <li><span className="font-semibold text-primary">Condition:</span> {book.condition}</li>
-              <li><span className="font-semibold text-primary">In Stock:</span> {book.inStock ? 'Yes' : 'No'}</li>
-              <li><span className="font-semibold text-primary">Price:</span> £{book.price}</li>
-              {(weightFromInfo || (book as any).weight) ? (
-                <li><span className="font-semibold text-primary">Weight:</span> {weightFromInfo || (book as any).weight}g</li>
-              ) : null}
-              {book.era && book.era.length ? (
-                <li><span className="font-semibold text-primary">Era:</span> {book.era.join(', ')}</li>
-              ) : null}
-              {book.aircraftTypes && book.aircraftTypes.length ? (
-                <li><span className="font-semibold text-primary">Aircraft / Systems:</span> {book.aircraftTypes.join(', ')}</li>
-              ) : null}
-              {book.geographicFocus && book.geographicFocus.length ? (
-                <li><span className="font-semibold text-primary">Geographic Focus:</span> {book.geographicFocus.join(', ')}</li>
-              ) : null}
-              {book.researchThemes && book.researchThemes.length ? (
-                <li><span className="font-semibold text-primary">Research Themes:</span> {book.researchThemes.join(', ')}</li>
-              ) : null}
-              {(book as any).academicInstitutions?.length ? (
-                <li><span className="font-semibold text-primary">Academic Use:</span> {(book as any).academicInstitutions.slice(0, 2).join(', ')}{((book as any).academicInstitutions.length > 2 ? '…' : '')}</li>
-              ) : null}
-              {Array.isArray((book as any).sourceType) && (book as any).sourceType.length ? (
-                <li><span className="font-semibold text-primary">Sources:</span> {(book as any).sourceType.join(', ')}</li>
-              ) : null}
-            </ul>
-          </div>
-
-          <div className="card mt-8 content">
-            <h3 className="content h3">Why readers choose this book</h3>
-            <ul className="list-disc list-inside text-secondary space-y-1">
-              {strengthPoints.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-              {!strengthPoints.length && (
-                <li>Detailed historical research with practical context for enthusiasts and researchers.</li>
-              )}
-              <li>Guest checkout with secure card and PayPal payment options.</li>
-              <li>30-day returns and direct support from Charles E. MacKay.</li>
-            </ul>
-            <p className="text-secondary text-sm mt-4">
-              Trusted seller with 100% positive feedback on{' '}
-              <a
-                href="https://www.ebay.co.uk/usr/chaza87"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-300 hover:text-blue-200 underline"
-              >
-                Charles&apos; eBay profile
-              </a>
-              .
-            </p>
-          </div>
-
-          {/* Related Aviation News - articles that mention this book */}
-          {relatedNews.length > 0 && (
-            <div className="card mt-8 content">
-              <h3 className="content h3">Related Aviation News</h3>
-              <p className="text-secondary mb-4">
-                Scottish aviation briefings that connect to this book. Read the full articles and add this volume to your basket.
-              </p>
-              <div className="space-y-4">
-                {relatedNews.map((article) => {
-                  const raw = article.sections?.[0]?.content || '';
-                  const excerpt = raw
-                    .split('\n')
-                    .map((l) => l.trim())
-                    .find((l) => l.length > 40 && !l.startsWith('-') && !l.startsWith('Daily digest'))
-                    || raw.slice(0, 180).trim()
-                    || article.title;
-                  const dateStr = article.createdAt
-                    ? new Date(article.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
-                    : '';
-                  return (
-                    <div
-                      key={article.slug}
-                      className="border border-white/15 rounded-lg p-4 bg-slate-800/50 hover:border-white/25 transition-colors"
-                    >
-                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-                        <div className="flex-1 min-w-0">
-                          <a
-                            href={`/aviation-news/${article.slug}`}
-                            className="font-semibold text-primary hover:text-blue-300 block mb-1"
-                          >
-                            {article.title}
-                          </a>
-                          {dateStr && (
-                            <p className="text-xs text-white/50 mb-2">{dateStr}</p>
-                          )}
-                          <p className="text-secondary text-sm line-clamp-2">{excerpt}</p>
-                        </div>
-                        <div className="flex flex-wrap gap-2 shrink-0">
-                          <a
-                            href={`/aviation-news/${article.slug}`}
-                            className="px-4 py-2 rounded-lg border border-white/20 bg-white/5 text-white hover:bg-white/10 text-sm font-medium"
-                          >
-                            Read briefing
-                          </a>
-                          <a
-                            href={`/books/${id}#purchase`}
-                            className="px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold hover:bg-gray-100 text-sm"
-                          >
-                            Buy this book £{book.price.toFixed(2)}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Related Books Section - Automated Internal Linking */}
-          {relatedBooks.length > 0 && (
-            <div className="card mt-8 content">
-              <h3 className="content h3">Related Books</h3>
-              <p className="text-secondary mb-4">Explore similar aviation history titles by Charles E. MacKay</p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {relatedBooks.slice(0, 6).map((relatedBook) => (
-                  <RelatedBookCard key={relatedBook.id} book={relatedBook} />
-                ))}
-              </div>
-            </div>
-          )}
-
-          {(book as any).relatedBlogPosts && (book as any).relatedBlogPosts.length > 0 ? (
-            <div className="card mt-8 content">
-              <h3 className="content h3">Related Articles</h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {(book as any).relatedBlogPosts.slice(0, 6).map((p: any) => (
-                  <a key={p.slug} href={`/blog/${p.slug}`} className="block border rounded-lg p-4 hover:border-secondary/50">
-                    <div className="font-semibold text-primary mb-1 line-clamp-2">{p.title}</div>
-                    <div className="text-secondary text-sm line-clamp-3">{p.excerpt}</div>
-                  </a>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="card mt-8 content">
-              <h3 className="content h3">Explore More</h3>
-              <p className="text-secondary mb-3">Read expert research that connects to this title.</p>
-              {(() => {
-                const slug = inferRelatedBlogSlug(book);
-                if (slug) {
-                  return (
-                    <a href={`/blog/${slug}`} className="badge badge-blue inline-block">Read the related article →</a>
-                  );
-                }
-                return <a href="/blog" className="badge badge-blue inline-block">Browse the Blog →</a>;
-              })()}
-            </div>
-          )}
-
-          {/* Latest Aviation News - cross-link to news feed */}
-          <div className="mt-8">
-            <LatestAviationNews />
-          </div>
-        </main>
-
       </div>
     </>
   );

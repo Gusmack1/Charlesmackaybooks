@@ -1,11 +1,9 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import BookCard from '@/components/BookCard'
-import BundleOfferCard from '@/components/BundleOfferCard'
 import UnifiedSchema from '@/components/UnifiedSchema'
 import { books } from '@/data/books'
 import Testimonials from '@/components/Testimonials'
-import { getResolvedBundles } from '@/utils/bundles'
 
 const quickFilters = [
   { label: 'WWI Aviation', slug: 'wwi-aviation' },
@@ -68,7 +66,6 @@ export default function BooksPage() {
     .slice(0, 6)
 
   const staffPicks = books.filter((b) => staffPickIds.includes(b.id))
-  const bundles = getResolvedBundles()
 
   return (
     <div className="surface-dark relative mx-0 bg-slate-900">
@@ -234,28 +231,6 @@ export default function BooksPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {staffPicks.map((book) => (
                   <BookCard key={`staff-${book.id}`} book={book} sourceContext="books-staff-picks" />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {bundles.length > 0 && (
-            <section id="bundles" className="mb-10">
-              <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-                <h3 className="text-xl font-semibold text-white">Bundle offers</h3>
-                <span className="text-sm text-white/70">
-                  Add multiple books quickly and unlock automatic multi-book discount
-                </span>
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
-                {bundles.map((bundle) => (
-                  <BundleOfferCard
-                    key={bundle.id}
-                    title={bundle.title}
-                    description={bundle.description}
-                    books={bundle.books}
-                    badge={bundle.badge}
-                  />
                 ))}
               </div>
             </section>
