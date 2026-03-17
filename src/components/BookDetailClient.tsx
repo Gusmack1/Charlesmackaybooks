@@ -43,7 +43,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
     addToCart(book);
     // Use window.location for reliable navigation; router.push can fail in some contexts
     setTimeout(() => {
-      window.location.href = '/checkout?method=stripe';
+      window.location.href = '/checkout?method=paypal';
     }, 300);
   };
 
@@ -130,7 +130,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         </div>
 
         <p className="mt-3 text-center text-xs text-white/70">
-          No account required. Guest checkout is available, and PayPal is offered during checkout.
+          No account required. Pay with PayPal at checkout.
         </p>
         <p className="mt-2 text-center text-xs text-blue-200 font-medium">
           {bulkDiscountHint}
@@ -141,7 +141,7 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center sm:text-left">
           <div>Free worldwide tracked shipping</div>
           <div>30-day returns</div>
-          <div>Secure card and PayPal</div>
+          <div>PayPal</div>
           <div>100% positive feedback</div>
         </div>
       </div>

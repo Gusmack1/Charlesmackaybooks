@@ -1,11 +1,11 @@
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import path from 'path';
 import { promises as fs } from 'fs';
 import { books } from '@/data/books';
 import { Book } from '@/types/book';
 import BookDetailClient from '@/components/BookDetailClient';
+import BookCoverBuy from '@/components/BookCoverBuy';
 import UnifiedSchema from '@/components/UnifiedSchema';
 import BookAnalyticsClient from '@/components/BookAnalyticsClient';
 import ShareButton from '@/components/ShareButton';
@@ -283,7 +283,6 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   }
 
   const gradientClass = 'bg-slate-900';
-  const bookCoverSrc = book.imageUrl || `/book-covers/${book.id}.jpg`;
 
   // Load description from Bookinfo.txt (source of truth) or fallback to books.ts
   const bookInfoPath = path.join(process.cwd(), 'Bookinfo.txt');
@@ -365,19 +364,12 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       <BookAnalyticsClient book={book} />
 
       <div className="min-h-screen bg-slate-900">
-        {/* Hero: cover, title, author, category */}
+        {/* Hero: cover (clickable), title, buy buttons, author */}
         <div className={`book-page-hero hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-12`}>
           <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
               <div className="flex justify-center mb-4 sm:mb-6">
-                <Image
-                  src={bookCoverSrc}
-                  alt={`${book.title} by Charles E. MacKay`}
-                  width={320}
-                  height={480}
-                  className="rounded-xl shadow-2xl"
-                  priority
-                />
+                <BookCoverBuy book={book} />
               </div>
               <a
                 href={`/category/${book.category.toLowerCase().replace(/\s+/g, '-')}`}
@@ -385,20 +377,22 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               >
                 {book.category}
               </a>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-2 leading-tight">
+              <h1 className="text-base sm:text-lg lg:text-xl font-extrabold mb-2 leading-tight">
                 {book.title}
               </h1>
-              <p className="text-white/90 text-base">
+              <p className="text-white/90 text-sm mb-6">
                 By <a href="/about" className="underline font-semibold">Charles E. MacKay</a>
               </p>
+              <div className="max-w-md mx-auto">
+                <BookDetailClient book={book} />
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Purchase + description */}
-        <div id="purchase" className={`${gradientClass} text-white pt-12 pb-12 px-6 scroll-mt-24`}>
+        {/* Description */}
+        <div id="purchase" className={`${gradientClass} text-white pt-8 pb-12 px-6 scroll-mt-24`}>
           <div className="max-w-2xl mx-auto space-y-8">
-            <BookDetailClient book={book} />
 
             {/* Description - from Bookinfo.txt, 100% accurate */}
             <div className="space-y-4">

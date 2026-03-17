@@ -4,9 +4,6 @@ import { Suspense, useState, useEffect, useCallback, useRef } from 'react';
 import { useCart } from '../../context/CartContext';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Elements } from '@stripe/react-stripe-js';
-import { stripePromise } from '../../config/stripe';
-import StripePaymentForm from '../../components/StripePaymentForm';
 import {
   CustomerDetails,
   generateOrderId,
@@ -25,10 +22,6 @@ import CustomerTestimonials from '../../components/CustomerTestimonials';
 import TrustSecurityBadges from '../../components/TrustSecurityBadges';
 import { trackCartAbandonment } from '../../utils/abandonedCartRecovery';
 import { useSearchParams } from 'next/navigation';
-import { useRecentlyViewed } from '../../context/RecentlyViewedContext';
-import { getCrossSellSuggestions } from '../../utils/crossSell';
-import { getBundleCompletionOffer } from '../../utils/bundles';
-import BundleCompletionCard from '../../components/BundleCompletionCard';
 import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface CustomerInfoPayload {
@@ -63,9 +56,8 @@ interface CreateOrderRequest {
 function CheckoutContent() {
   const searchParams = useSearchParams();
   const hasPreferredPaymentMethod = searchParams.has('method');
-  const preferredPaymentMethod = searchParams.get('method') === 'paypal' ? 'paypal' : 'stripe';
+  const preferredPaymentMethod = 'paypal';
   const { items, addToCart, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
-  const { recentlyViewed } = useRecentlyViewed();
   const {
     trackBookPurchase,
     trackCheckoutStart,
@@ -73,7 +65,7 @@ function CheckoutContent() {
     trackCheckoutPaymentSelection,
   } = useAnalytics();
   const [step, setStep] = useState<'basket' | 'delivery-payment'>('basket');
-  const [paymentMethod, setPaymentMethod] = useState<'stripe' | 'paypal'>(preferredPaymentMethod);
+  const [paymentMethod, setPaymentMethod] = useState<'paypal'>('paypal');
   const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
     firstName: '',
     lastName: '',
@@ -88,16 +80,12 @@ function CheckoutContent() {
   const [saveDetailsForNextTime, setSaveDetailsForNextTime] = useState(true);
   const [savedProfile, setSavedProfile] = useState<CustomerDetails | null>(null);
   const [errors, setErrors] = useState<string[]>([]);
-  const [clientSecret, setClientSecret] = useState<string>('');
   const [isLoading, setIsLoading] = useState(false);
   const [abandonmentTracked, setAbandonmentTracked] = useState(false);
   const [checkoutCompleted, setCheckoutCompleted] = useState(false);
-  const [stripeReference] = useState(() => generateOrderId());
   const hasTrackedBeginCheckout = useRef(false);
   const lastTrackedStep = useRef<string | null>(null);
   const lastTrackedPaymentMethod = useRef<string | null>(null);
-  const [isAddingBundleCompletion, setIsAddingBundleCompletion] = useState(false);
-
   useEffect(() => {
     const profile = readSavedCustomerProfile();
     if (profile?.email) {
@@ -184,7 +172,6 @@ function CheckoutContent() {
   const bulkDiscount = getBulkDiscount();
   const total = getFinalTotal(); // This includes bulk discounts and shipping
   const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
-  const cartBooks = items.map((item) => item.book);
   const analyticsItems = items.map((item) => ({
     id: item.book.id,
     title: item.book.title,
@@ -192,12 +179,6 @@ function CheckoutContent() {
     quantity: item.quantity,
     price: item.book.price,
   }));
-  const checkoutAddOnSuggestions = getCrossSellSuggestions({
-    cartBooks,
-    recentlyViewed,
-    limit: 3,
-  });
-  const bundleCompletion = getBundleCompletionOffer(cartBooks);
 
   useEffect(() => {
     if (!items.length || checkoutCompleted) return;
@@ -249,13 +230,6 @@ function CheckoutContent() {
     lastTrackedPaymentMethod.current = paymentMethod;
   }, [step, paymentMethod, analyticsItems, total, trackCheckoutPaymentSelection]);
 
-  const handleAddBundleCompletion = () => {
-    if (!bundleCompletion || isAddingBundleCompletion) return;
-    setIsAddingBundleCompletion(true);
-    bundleCompletion.missingBooks.forEach((book) => addToCart(book));
-    setTimeout(() => setIsAddingBundleCompletion(false), 300);
-  };
-
   const handleInputChange = (field: keyof CustomerDetails, value: string) => {
     setCustomerDetails(prev => ({ ...prev, [field]: value }));
   };
@@ -277,7 +251,6 @@ function CheckoutContent() {
     }
     setCustomerDetails(savedProfile);
     setErrors([]);
-    setPaymentMethod('stripe');
     setStep('delivery-payment');
   };
 
@@ -288,126 +261,6 @@ function CheckoutContent() {
     }
     if (!customerDetails.email || !customerDetails.firstName || !customerDetails.lastName) return;
     saveCustomerProfile(customerDetails);
-  };
-
-  const handlePaymentMethodSelect = (method: 'stripe' | 'paypal') => {
-    setPaymentMethod(method);
-    setErrors([]);
-    if (method === 'stripe') {
-      const validationErrors = validateCustomerDetails(customerDetails);
-      if (validationErrors.length > 0) {
-        setErrors(validationErrors);
-        return;
-      }
-      createStripePaymentIntent();
-    }
-  };
-
-  const createStripePaymentIntent = useCallback(async () => {
-    if (!customerDetails.email) {
-      setErrors(['Email is required for payment processing']);
-      return;
-    }
-
-    setIsLoading(true);
-    try {
-      const orderId = stripeReference;
-      const response = await fetch('/api/create-payment-intent', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          amount: total,
-          currency: 'gbp',
-          customerEmail: customerDetails.email,
-          orderId: orderId,
-          items: items.map(item => ({
-            id: item.book.id,
-            title: item.book.title,
-            price: item.book.price,
-            quantity: item.quantity,
-            isbn: item.book.isbn
-          }))
-        }),
-      });
-
-      const data = await response.json();
-      
-      if (data.error) {
-        setErrors([data.error]);
-      } else {
-        setClientSecret(data.clientSecret);
-      }
-    } catch (error) {
-      setErrors(['Failed to initialize payment. Please try again.']);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [customerDetails.email, items, stripeReference, total]);
-
-  useEffect(() => {
-    if (step === 'delivery-payment' && paymentMethod === 'stripe' && !clientSecret && customerDetails.email) {
-      createStripePaymentIntent();
-    }
-  }, [step, paymentMethod, clientSecret, customerDetails.email, createStripePaymentIntent]);
-
-  const handleStripeSuccess = async (paymentIntent: any) => {
-    try {
-      const customerInfo = buildCustomerInfoPayload();
-      const orderItems = mapOrderItemsPayload();
-
-      const order = await createServerOrder({
-        items: orderItems,
-        customer: customerInfo,
-        paymentMethod: 'stripe',
-        paymentIntentId: paymentIntent.id
-      });
-
-      await patchServerOrder(order.id, {
-        action: 'confirm_payment',
-        paymentIntentId: paymentIntent.id
-      });
-
-      const legacyOrder: Order = {
-        orderId: order.id,
-        customerDetails,
-        items: items.map(item => ({
-          id: item.book.id,
-          title: item.book.title,
-          price: item.book.price,
-          quantity: item.quantity,
-          isbn: item.book.isbn
-        })),
-        subtotal,
-        shippingCost,
-        total,
-        timestamp: new Date().toISOString(),
-        status: 'paid',
-        paypalTransactionId: paymentIntent.id
-      };
-      saveOrder(legacyOrder);
-      trackBookPurchase({
-        transactionId: order.id,
-        totalValue: total,
-        currency: 'GBP',
-        items: analyticsItems,
-        platform: 'website',
-      });
-
-      setCheckoutCompleted(true);
-      setAbandonmentTracked(true);
-      persistCheckoutProfile();
-      clearCart();
-      window.location.href = `/order-complete?orderId=${order.id}`;
-    } catch (error) {
-      console.error('Error creating order:', error);
-      setErrors(['Failed to create order. Please contact support.']);
-    }
-  };
-
-  const handleStripeError = (error: string) => {
-    setErrors([error]);
   };
 
   const handlePayPalPayment = async () => {
@@ -532,7 +385,7 @@ function CheckoutContent() {
         <div className="mb-6 sm:mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Secure Checkout</h1>
           <p className="text-white/90 text-sm sm:text-base">
-            Guest checkout is enabled by default. Buy quickly with card, wallet, or PayPal.
+            Guest checkout is enabled by default. Pay securely with PayPal.
           </p>
           <div className="mt-3 rounded-lg border border-blue-700/50 bg-slate-800/70 px-3 py-2 text-xs sm:text-sm text-white/85">
             Secure SSL payment • Free worldwide tracked shipping • 30-day returns
@@ -608,41 +461,6 @@ function CheckoutContent() {
                     </div>
                   ))}
                 </div>
-                {checkoutAddOnSuggestions.length > 0 && (
-                  <div className="mt-4 rounded-lg border border-blue-700/50 bg-slate-800/80 p-3">
-                    <p className="text-sm font-semibold text-blue-200 mb-2">Frequently added before checkout</p>
-                    <div className="space-y-2">
-                      {checkoutAddOnSuggestions.map((suggestion) => (
-                        <div key={suggestion.book.id} className="flex items-center justify-between gap-2 rounded border border-white/10 bg-slate-900/60 p-2">
-                          <Link href={`/books/${suggestion.book.id}`} className="min-w-0 flex-1">
-                            <p className="text-[11px] text-blue-200 line-clamp-1">{suggestion.reason}</p>
-                            <p className="text-xs sm:text-sm text-white line-clamp-1">{suggestion.book.title}</p>
-                            <p className="text-xs text-green-300">£{suggestion.book.price.toFixed(2)}</p>
-                          </Link>
-                          <button
-                            onClick={() => addToCart(suggestion.book)}
-                            className="bg-white text-slate-900 px-3 py-1.5 rounded text-xs sm:text-sm font-semibold border border-slate-900 hover:bg-gray-100"
-                          >
-                            Add
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-xs text-white/75 mt-2">Adding one more title can unlock a larger basket discount.</p>
-                  </div>
-                )}
-                {bundleCompletion && (
-                  <div className="mt-4">
-                    <BundleCompletionCard
-                      title={bundleCompletion.bundle.title}
-                      badge={bundleCompletion.bundle.badge}
-                      includedBooks={bundleCompletion.includedBooks}
-                      missingBooks={bundleCompletion.missingBooks}
-                      onAddMissing={handleAddBundleCompletion}
-                      isAdding={isAddingBundleCompletion}
-                    />
-                  </div>
-                )}
                 <div className="mt-4 sm:mt-6 pt-4 border-t border-blue-700/50">
                   <div className="space-y-2">
                     <div className="flex justify-between text-white">
@@ -724,29 +542,6 @@ function CheckoutContent() {
                     </button>
                   )}
                 </div>
-                {checkoutAddOnSuggestions.length > 0 && (
-                  <div className="rounded-lg border border-blue-700/50 bg-slate-800/80 p-3">
-                    <p className="text-sm font-semibold text-blue-200 mb-2">Complete your order before payment</p>
-                    <div className="space-y-2">
-                      {checkoutAddOnSuggestions.map((suggestion) => (
-                        <div key={suggestion.book.id} className="flex items-center justify-between gap-2 rounded border border-white/10 bg-slate-900/60 p-2">
-                          <Link href={`/books/${suggestion.book.id}`} className="min-w-0 flex-1">
-                            <p className="text-[11px] text-blue-200 line-clamp-1">{suggestion.reason}</p>
-                            <p className="text-xs sm:text-sm text-white line-clamp-1">{suggestion.book.title}</p>
-                            <p className="text-xs text-green-300">£{suggestion.book.price.toFixed(2)}</p>
-                          </Link>
-                          <button
-                            onClick={() => addToCart(suggestion.book)}
-                            className="bg-white text-slate-900 px-3 py-1.5 rounded text-xs sm:text-sm font-semibold border border-slate-900 hover:bg-gray-100"
-                          >
-                            Add
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-xs text-white/75 mt-2">Adding one more title now can unlock a larger basket discount before you pay.</p>
-                  </div>
-                )}
                 <div className="rounded-lg border border-white/15 bg-slate-800/80 p-3 text-xs sm:text-sm text-white/80">
                   <p className="font-semibold text-white">Need help before paying?</p>
                   <p className="mt-1">
@@ -922,85 +717,24 @@ function CheckoutContent() {
                   ← Back to Basket
                 </button>
 
-                {/* Payment section - inline on same step */}
+                {/* Payment section - PayPal only */}
                 <div id="payment-section" className="pt-4 border-t border-blue-700/50">
-                <h3 className="text-base sm:text-lg font-bold mb-3 text-white">Payment Method</h3>
+                <h3 className="text-base sm:text-lg font-bold mb-3 text-white">Payment</h3>
                 <p className="text-xs sm:text-sm text-white/80 mb-4">
-                  Your payment is encrypted and processed securely by Stripe or PayPal.
+                  Pay securely with PayPal.
                 </p>
-                
-                {/* Payment Method Selection */}
-                <div className="mb-4 sm:mb-6">
-                  <div className="space-y-3">
-                    <button
-                      type="button"
-                      onClick={() => handlePaymentMethodSelect('stripe')}
-                      className={`w-full p-3 sm:p-4 border rounded-lg text-left transition-colors ${
-                        paymentMethod === 'stripe'
-                          ? 'border-blue-500 bg-slate-800'
-                          : 'border-blue-700/50 hover:border-blue-600 bg-slate-800'
-                      }`}
-                    >
-                      <div className="flex items-center">
-                        <span className="text-xl sm:text-2xl mr-2 sm:mr-3">💳</span>
-                        <div>
-                          <div className="font-medium text-white text-sm sm:text-base">Credit or Debit Card</div>
-                          <div className="text-xs sm:text-sm text-white/80">Visa, Mastercard, American Express, Apple Pay, Google Pay</div>
-                        </div>
-                      </div>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => handlePaymentMethodSelect('paypal')}
-                      className={`w-full p-3 sm:p-4 border rounded-lg text-left transition-colors ${
-                        paymentMethod === 'paypal'
-                          ? 'border-blue-500 bg-slate-800'
-                          : 'border-blue-700/50 hover:border-blue-600 bg-slate-800'
-                      }`}
-                    >
-                      <div className="flex items-center">
-                        <span className="text-xl sm:text-2xl mr-2 sm:mr-3">🔵</span>
-                        <div>
-                          <div className="font-medium text-white text-sm sm:text-base">PayPal</div>
-                          <div className="text-xs sm:text-sm text-white/80">Pay with your PayPal account</div>
-                        </div>
-                      </div>
-                    </button>
-                  </div>
+                <div className="text-center">
+                  <button
+                    onClick={handlePayPalPayment}
+                    disabled={isLoading}
+                    className="w-full bg-blue-600 text-white py-3 px-4 sm:px-8 sm:py-4 rounded-lg text-sm sm:text-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
+                  >
+                    {isLoading ? 'Processing...' : 'Pay with PayPal'}
+                  </button>
+                  <p className="text-xs sm:text-sm text-white/80 mt-2">
+                    You'll be redirected to PayPal to complete your payment
+                  </p>
                 </div>
-
-                {/* Payment Forms */}
-                {paymentMethod === 'stripe' && clientSecret && (
-                  <Elements stripe={stripePromise} options={{ clientSecret }}>
-                    <StripePaymentForm
-                      amount={total}
-                      currency="GBP"
-                      onSuccess={handleStripeSuccess}
-                      onError={handleStripeError}
-                      onCancel={() => {}}
-                      customerEmail={customerDetails.email}
-                      orderId={stripeReference}
-                      items={items}
-                      clientSecret={clientSecret}
-                    />
-                  </Elements>
-                )}
-
-                {paymentMethod === 'paypal' && (
-                  <div className="text-center">
-                    <button
-                      onClick={handlePayPalPayment}
-                      disabled={isLoading}
-                      className="w-full bg-blue-600 text-white py-3 px-4 sm:px-8 sm:py-4 rounded-lg text-sm sm:text-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
-                    >
-                      {isLoading ? 'Processing...' : 'Pay with PayPal'}
-                    </button>
-                    <p className="text-xs sm:text-sm text-white/80 mt-2">
-                      You'll be redirected to PayPal to complete your payment
-                    </p>
-                  </div>
-                )}
 
                 {errors.length > 0 && (
                   <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-red-900/50 border border-red-700 rounded-lg">
@@ -1071,7 +805,7 @@ function CheckoutContent() {
                   <div>
                     <p className="text-xs sm:text-sm text-white font-medium">Secure Payment</p>
                     <p className="text-xs text-white/80 mt-1">
-                      Your payment is protected by SSL encryption and processed securely by Stripe/PayPal.
+                      Your payment is protected by SSL encryption and processed securely by PayPal.
                     </p>
                   </div>
                 </div>
