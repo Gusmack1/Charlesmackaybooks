@@ -4,8 +4,11 @@ export const metadata: Metadata = {
   title: 'Secure Checkout | Charles E. MacKay Aviation Books',
   description: 'Complete your order for Charles E. MacKay\'s aviation history books. Secure checkout with PayPal, worldwide shipping available.',
   robots: {
-    index: false, // Don't index checkout pages
+    index: false,
     follow: false,
+  },
+  alternates: {
+    canonical: 'https://charlesmackaybooks.com/checkout',
   },
   openGraph: {
     title: 'Secure Checkout | Charles E. MacKay Aviation Books',

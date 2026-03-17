@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     follow: false,
   },
   alternates: {
-    canonical: 'https://charlesmackaybooks.com/order-tracking'
-  }
+    canonical: 'https://charlesmackaybooks.com/order-tracking',
+  },
 };
 
 export default function OrderTrackingPage() {
