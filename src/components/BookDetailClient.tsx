@@ -5,7 +5,6 @@ import { Book } from '@/types/book';
 import { useCart } from '@/context/CartContext';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { useRecentlyViewed } from '@/context/RecentlyViewedContext';
-import { SITE_CONSTANTS } from '@/config/constants';
 
 interface BookDetailClientProps {
   book: Book;
@@ -15,10 +14,8 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
   const { addToCart } = useCart();
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
-  const { trackContactEmail, trackEbayRedirect, trackBuyNowIntent } = useAnalytics();
+  const { trackEbayRedirect, trackBuyNowIntent } = useAnalytics();
   const { addToRecentlyViewed } = useRecentlyViewed();
-  const bulkDiscountHint = 'Buy 2+ books for 5% off, or 3+ books for 10% off at checkout.';
-
   useEffect(() => {
     addToRecentlyViewed(book);
   }, [book, addToRecentlyViewed]);
@@ -45,11 +42,6 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
     setTimeout(() => {
       window.location.href = '/checkout?method=paypal';
     }, 300);
-  };
-
-  const handleEmailClick = () => {
-    // Track email click analytics
-    trackContactEmail();
   };
 
   const handleEbayClick = () => {
@@ -128,32 +120,6 @@ export default function BookDetailClient({ book }: BookDetailClientProps) {
             </button>
           )}
         </div>
-
-        <p className="mt-3 text-center text-xs text-white/70">
-          No account required. Pay with PayPal at checkout.
-        </p>
-        <p className="mt-2 text-center text-xs text-blue-200 font-medium">
-          {bulkDiscountHint}
-        </p>
-      </div>
-
-      <div className="mt-2 border border-white/10 rounded-lg bg-white/5 px-4 py-3 text-sm text-white/80">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center sm:text-left">
-          <div>Free worldwide tracked shipping</div>
-          <div>30-day returns</div>
-          <div>PayPal</div>
-          <div>100% positive feedback</div>
-        </div>
-      </div>
-
-      <div className="text-center pt-3 border-t border-white/10">
-        <a
-          href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`}
-          onClick={handleEmailClick}
-          className="text-blue-300 hover:text-blue-200 text-sm font-medium"
-        >
-          Contact Charles for bulk orders
-        </a>
       </div>
     </div>
   );

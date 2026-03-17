@@ -4,6 +4,7 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import { books } from '@/data/books';
 import { Book } from '@/types/book';
+import { SITE_CONSTANTS } from '@/config/constants';
 import BookDetailClient from '@/components/BookDetailClient';
 import BookCoverBuy from '@/components/BookCoverBuy';
 import UnifiedSchema from '@/components/UnifiedSchema';
@@ -368,8 +369,15 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         <div className={`book-page-hero hero-section relative ${gradientClass} text-white py-6 sm:py-8 lg:py-12`}>
           <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
-              <div className="flex justify-center mb-4 sm:mb-6">
+              <div className="flex justify-center items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                 <BookCoverBuy book={book} />
+                <ShareButton
+                  url={`https://charlesmackaybooks.com/books/${book.id}`}
+                  title={book.title}
+                  description={book.description?.substring(0, 150) + '...'}
+                  hashtags={['AviationHistory', 'Aviation', 'Books']}
+                  className="text-base shrink-0"
+                />
               </div>
               <a
                 href={`/category/${book.category.toLowerCase().replace(/\s+/g, '-')}`}
@@ -386,47 +394,55 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               <div className="max-w-md mx-auto">
                 <BookDetailClient book={book} />
               </div>
+
+              {/* Description - directly under book */}
+              <div className="mt-6 text-left max-w-2xl mx-auto space-y-4">
+                <h2 className="text-lg font-semibold text-white">Description</h2>
+                <div className="prose prose-invert max-w-none">
+                  {finalParagraphs.length > 0 ? (
+                    finalParagraphs.map((para, idx) => (
+                      <p key={idx} className="text-white/90 mb-4 leading-relaxed">
+                        {para}
+                      </p>
+                    ))
+                  ) : (
+                    <p className="text-white/70">No description available.</p>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Description */}
+        {/* Specs and trust badges */}
         <div id="purchase" className={`${gradientClass} text-white pt-8 pb-12 px-6 scroll-mt-24`}>
-          <div className="max-w-2xl mx-auto space-y-8">
-
-            {/* Description - from Bookinfo.txt, 100% accurate */}
-            <div className="space-y-4">
-              <h2 className="text-lg font-semibold text-white">Description</h2>
-              <div className="prose prose-invert max-w-none">
-                {finalParagraphs.length > 0 ? (
-                  finalParagraphs.map((para, idx) => (
-                    <p key={idx} className="text-white/90 mb-4 leading-relaxed">
-                      {para}
-                    </p>
-                  ))
-                ) : (
-                  <p className="text-white/70">No description available.</p>
-                )}
-              </div>
-            </div>
-
-            {/* Minimal specs - condition always New per Bookinfo.txt */}
+          <div className="max-w-2xl mx-auto space-y-6">
+            {/* Minimal specs */}
             <div className="flex flex-wrap gap-4 text-sm text-white/80 border-t border-white/15 pt-6">
               {book.isbn && <span>ISBN: {book.isbn}</span>}
               {book.pageCount && <span>{book.pageCount} pages</span>}
               {(book as any).weight && <span>{(book as any).weight}g</span>}
             </div>
 
-            {/* Share */}
+            {/* Trust badges + Contact Charles (where share used to be) */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/15 pt-6">
-              <ShareButton
-                url={`https://charlesmackaybooks.com/books/${book.id}`}
-                title={book.title}
-                description={book.description?.substring(0, 150) + '...'}
-                hashtags={['AviationHistory', 'Aviation', 'Books']}
-                className="text-base"
-              />
-              <a href="/books" className="text-blue-300 hover:text-white underline text-sm">
+              <div className="border border-white/10 rounded-lg bg-white/5 px-4 py-3 text-sm text-white/80">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center sm:text-left">
+                  <div>Free worldwide tracked shipping</div>
+                  <div>30-day returns</div>
+                  <div>PayPal</div>
+                  <div>100% positive feedback</div>
+                </div>
+                <div className="text-center pt-3 mt-3 border-t border-white/10">
+                  <a
+                    href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`}
+                    className="text-blue-300 hover:text-blue-200 text-sm font-medium"
+                  >
+                    Contact Charles for bulk orders
+                  </a>
+                </div>
+              </div>
+              <a href="/books" className="text-blue-300 hover:text-white underline text-sm shrink-0">
                 ← Browse all books
               </a>
             </div>
