@@ -40,19 +40,27 @@
       "primary": false
     },
     {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "Prestwick",
       "primary": false
     },
     {
       "keyword": "airport",
-      "primary": false
-    },
-    {
-      "keyword": "UK government",
-      "primary": false
-    },
-    {
-      "keyword": "Prestwick Airport: Swinney Requests",
       "primary": false
     }
   ],

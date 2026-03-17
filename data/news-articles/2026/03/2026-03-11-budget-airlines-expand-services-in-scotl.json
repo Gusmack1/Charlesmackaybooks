@@ -40,7 +40,15 @@
       "primary": false
     },
     {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
       "primary": false
     },
     {
@@ -48,7 +56,7 @@
       "primary": false
     },
     {
-      "keyword": "Budget Airlines Expand Services",
+      "keyword": "Updated&#x3a; Budget airlines ramp",
       "primary": false
     }
   ],

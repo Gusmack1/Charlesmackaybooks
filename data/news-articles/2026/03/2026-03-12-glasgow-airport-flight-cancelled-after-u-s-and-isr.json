@@ -1,6 +1,6 @@
 {
   "slug": "2026-03-12-glasgow-airport-flight-cancelled-after-u-s-and-isr",
-  "title": "Emirates flight from Glasgow Airport to Dubai cancelled",
+  "title": "Glasgow Airport Flight Cancelled After U S And Isr",
   "wordCount": 150,
   "sections": [
     {
@@ -40,11 +40,19 @@
       "primary": false
     },
     {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
       "keyword": "airport",
       "primary": false
     },
     {
-      "keyword": "Glasgow Airport flight cancelled",
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Glasgow Airport Flight Cancelled",
       "primary": false
     }
   ],

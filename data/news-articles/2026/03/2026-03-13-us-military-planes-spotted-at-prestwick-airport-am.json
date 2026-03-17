@@ -1,6 +1,6 @@
 {
   "slug": "2026-03-13-us-military-planes-spotted-at-prestwick-airport-am",
-  "title": "Your privacy choices",
+  "title": "Us Military Planes Spotted At Prestwick Airport Am",
   "wordCount": 269,
   "sections": [
     {
@@ -24,7 +24,12 @@
       "citationText": "serper-scottish-aviation – US military planes spotted at Prestwick airport amid war with Iran"
     }
   ],
-  "relatedBooks": [],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
   "keywords": [
     {
       "keyword": "Scottish aviation news",
@@ -32,10 +37,6 @@
     },
     {
       "keyword": "aviation news",
-      "primary": false
-    },
-    {
-      "keyword": "RAF",
       "primary": false
     },
     {
@@ -47,11 +48,7 @@
       "primary": false
     },
     {
-      "keyword": "aircraft",
-      "primary": false
-    },
-    {
-      "keyword": "military planes spotted Prestwick",
+      "keyword": "Military Planes Spotted Prestwick",
       "primary": false
     }
   ],

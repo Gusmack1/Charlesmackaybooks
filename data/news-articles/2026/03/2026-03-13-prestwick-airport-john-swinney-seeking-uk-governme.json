@@ -40,6 +40,14 @@
       "primary": false
     },
     {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "Prestwick",
       "primary": false
     },
@@ -48,11 +56,11 @@
       "primary": false
     },
     {
-      "keyword": "UK government",
+      "keyword": "aircraft",
       "primary": false
     },
     {
-      "keyword": "Prestwick Airport: John Swinney",
+      "keyword": "UK government",
       "primary": false
     }
   ],

@@ -31,15 +31,15 @@
       "primary": false
     },
     {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
       "keyword": "aviation",
       "primary": false
     },
     {
-      "keyword": "Scotland",
-      "primary": false
-    },
-    {
-      "keyword": "Regulation: Manual Airworthiness Maintenance",
+      "keyword": "Manual Airworthiness Maintenance Documentation",
       "primary": false
     }
   ],

@@ -40,7 +40,15 @@
       "primary": false
     },
     {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
       "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Typhoon",
       "primary": false
     },
     {
@@ -48,11 +56,11 @@
       "primary": false
     },
     {
-      "keyword": "Scotland",
+      "keyword": "aircraft",
       "primary": false
     },
     {
-      "keyword": "King visits Scotland’s main",
+      "keyword": "Scotland",
       "primary": false
     }
   ],

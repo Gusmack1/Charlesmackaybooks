@@ -31,15 +31,7 @@
       "primary": false
     },
     {
-      "keyword": "Ministry of Defence",
-      "primary": false
-    },
-    {
-      "keyword": "RAF",
-      "primary": false
-    },
-    {
-      "keyword": "aircraft",
+      "keyword": "MOD",
       "primary": false
     },
     {
@@ -47,11 +39,7 @@
       "primary": false
     },
     {
-      "keyword": "Scotland",
-      "primary": false
-    },
-    {
-      "keyword": "Regulation: Manual Airworthiness Maintenance",
+      "keyword": "Manual Airworthiness Maintenance Documentation",
       "primary": false
     }
   ],

@@ -40,6 +40,10 @@
       "primary": false
     },
     {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "Prestwick",
       "primary": false
     },
@@ -48,11 +52,15 @@
       "primary": false
     },
     {
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
       "keyword": "UK government",
       "primary": false
     },
     {
-      "keyword": "First Minister looks for",
+      "keyword": "First Minister wants meeting",
       "primary": false
     }
   ],

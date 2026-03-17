@@ -48,11 +48,19 @@
       "primary": false
     },
     {
+      "keyword": "Dundee Airport",
+      "primary": false
+    },
+    {
       "keyword": "airport",
       "primary": false
     },
     {
-      "keyword": "Minister marks HIAL's 40th",
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
       "primary": false
     }
   ],

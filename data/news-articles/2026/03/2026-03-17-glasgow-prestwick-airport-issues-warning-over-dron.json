@@ -1,0 +1,53 @@
+{
+  "slug": "2026-03-17-glasgow-prestwick-airport-issues-warning-over-dron",
+  "title": "Glasgow Prestwick Airport Issues Warning Over Dron",
+  "wordCount": 23,
+  "sections": [
+    {
+      "heading": "What happened",
+      "content": "Glasgow Prestwick Airport has issued a warning over drone use near the airfield."
+    },
+    {
+      "heading": "Key details",
+      "content": "Officials say there is a 5km restriction zone around the..."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.heraldscotland.com/news/25940388.drone-use-warning-issued-glasgow-prestwick-airport/",
+      "citationText": "serper-scottish-aviation – Glasgow Prestwick Airport issues warning over drone use"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Glasgow Prestwick Airport Issues",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-17T01:16:58.548Z"
+}

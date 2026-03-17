@@ -52,7 +52,11 @@
       "primary": false
     },
     {
-      "keyword": "Glasgow Prestwick Airport Represents",
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Glasgow Prestwick Airport represents",
       "primary": false
     }
   ],

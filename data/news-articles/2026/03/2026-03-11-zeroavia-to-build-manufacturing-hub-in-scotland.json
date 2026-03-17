@@ -1,6 +1,6 @@
 {
   "slug": "2026-03-11-zeroavia-to-build-manufacturing-hub-in-scotland",
-  "title": "ZeroAvia to Build Manufacturing Hub in Scotland",
+  "title": "Zeroavia To Build Manufacturing Hub In Scotland",
   "wordCount": 238,
   "sections": [
     {
@@ -40,7 +40,15 @@
       "primary": false
     },
     {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
       "primary": false
     },
     {
@@ -52,7 +60,7 @@
       "primary": false
     },
     {
-      "keyword": "Zeroavia Build Manufacturing Hub",
+      "keyword": "UK government",
       "primary": false
     }
   ],

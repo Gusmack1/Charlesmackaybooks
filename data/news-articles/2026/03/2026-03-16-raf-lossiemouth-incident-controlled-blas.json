@@ -40,7 +40,15 @@
       "primary": false
     },
     {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
       "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Typhoon",
       "primary": false
     },
     {
@@ -48,7 +56,11 @@
       "primary": false
     },
     {
-      "keyword": "RAF Lossiemouth Incident: Controlled",
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
       "primary": false
     }
   ],

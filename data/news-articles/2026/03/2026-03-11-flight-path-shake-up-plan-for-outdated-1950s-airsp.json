@@ -40,7 +40,19 @@
       "primary": false
     },
     {
+      "keyword": "NATS",
+      "primary": false
+    },
+    {
       "keyword": "airspace",
+      "primary": false
+    },
+    {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
       "primary": false
     },
     {
@@ -48,11 +60,7 @@
       "primary": false
     },
     {
-      "keyword": "Scotland",
-      "primary": false
-    },
-    {
-      "keyword": "Flight path shake-up plan",
+      "keyword": "aircraft",
       "primary": false
     }
   ],

@@ -31,7 +31,7 @@
       "primary": false
     },
     {
-      "keyword": "HIAL",
+      "keyword": "MOD",
       "primary": false
     },
     {
@@ -43,15 +43,15 @@
       "primary": false
     },
     {
-      "keyword": "airport",
-      "primary": false
-    },
-    {
-      "keyword": "aviation",
+      "keyword": "aircraft",
       "primary": false
     },
     {
       "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Military low flying: RAF",
       "primary": false
     }
   ],

@@ -40,6 +40,10 @@
       "primary": false
     },
     {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
       "keyword": "RAF",
       "primary": false
     },
@@ -57,10 +61,6 @@
     },
     {
       "keyword": "Scotland",
-      "primary": false
-    },
-    {
-      "keyword": "Could Scotland Ban Military",
       "primary": false
     }
   ],

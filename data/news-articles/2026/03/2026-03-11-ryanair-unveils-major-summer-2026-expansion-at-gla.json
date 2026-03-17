@@ -24,12 +24,7 @@
       "citationText": "serper-scottish-aviation – Ryanair Unveils Major Summer 2026 Expansion at Glasgow Prestwick with 10 Routes"
     }
   ],
-  "relatedBooks": [
-    {
-      "bookId": "clydeside-aviation-vol2",
-      "reason": "Related research volume"
-    }
-  ],
+  "relatedBooks": [],
   "keywords": [
     {
       "keyword": "Scottish aviation news",
@@ -40,11 +35,23 @@
       "primary": false
     },
     {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "Prestwick",
       "primary": false
     },
     {
       "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
       "primary": false
     },
     {

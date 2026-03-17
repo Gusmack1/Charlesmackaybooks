@@ -40,6 +40,18 @@
       "primary": false
     },
     {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "Prestwick",
       "primary": false
     },
@@ -48,7 +60,7 @@
       "primary": false
     },
     {
-      "keyword": "Military Plane Takes Off",
+      "keyword": "aircraft",
       "primary": false
     }
   ],

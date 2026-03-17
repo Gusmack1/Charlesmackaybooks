@@ -35,19 +35,15 @@
       "primary": false
     },
     {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
       "keyword": "Ministry of Defence",
       "primary": false
     },
     {
-      "keyword": "aviation",
-      "primary": false
-    },
-    {
-      "keyword": "Scotland",
-      "primary": false
-    },
-    {
-      "keyword": "Armed Forces Biannual Diversity",
+      "keyword": "armed forces biannual diversity",
       "primary": false
     }
   ],

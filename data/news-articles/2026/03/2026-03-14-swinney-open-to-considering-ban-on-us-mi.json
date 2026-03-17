@@ -1,6 +1,6 @@
 {
   "slug": "2026-03-14-swinney-open-to-considering-ban-on-us-mi",
-  "title": "Your privacy choices",
+  "title": "Swinney Open To Considering Ban On Us Mi",
   "wordCount": 269,
   "sections": [
     {
@@ -20,7 +20,12 @@
       "citationText": "serper-scottish-aviation – Swinney would 'consider' US military plane ban from Prestwick Airport"
     }
   ],
-  "relatedBooks": [],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
   "keywords": [
     {
       "keyword": "Scottish aviation news",
@@ -28,26 +33,6 @@
     },
     {
       "keyword": "aviation news",
-      "primary": false
-    },
-    {
-      "keyword": "RAF",
-      "primary": false
-    },
-    {
-      "keyword": "Prestwick",
-      "primary": false
-    },
-    {
-      "keyword": "airport",
-      "primary": false
-    },
-    {
-      "keyword": "aircraft",
-      "primary": false
-    },
-    {
-      "keyword": "Scotland",
       "primary": false
     },
     {

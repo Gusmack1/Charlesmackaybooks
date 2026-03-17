@@ -44,7 +44,15 @@
       "primary": false
     },
     {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
       "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Royal Air Force",
       "primary": false
     },
     {
@@ -52,7 +60,7 @@
       "primary": false
     },
     {
-      "keyword": "RAF Typhoon shoots down",
+      "keyword": "RAF Typhoon jet shoots",
       "primary": false
     }
   ],

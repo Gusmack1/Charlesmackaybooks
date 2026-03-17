@@ -40,11 +40,19 @@
       "primary": false
     },
     {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
       "keyword": "Prestwick",
       "primary": false
     },
     {
       "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
       "primary": false
     },
     {

@@ -40,6 +40,14 @@
       "primary": false
     },
     {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
       "keyword": "RAF",
       "primary": false
     },
@@ -48,11 +56,11 @@
       "primary": false
     },
     {
-      "keyword": "aircraft",
+      "keyword": "Lossiemouth",
       "primary": false
     },
     {
-      "keyword": "Typhoon jets based RAF",
+      "keyword": "aircraft",
       "primary": false
     }
   ],

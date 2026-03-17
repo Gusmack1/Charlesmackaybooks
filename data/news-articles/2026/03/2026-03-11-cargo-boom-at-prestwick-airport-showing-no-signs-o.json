@@ -40,6 +40,10 @@
       "primary": false
     },
     {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "Prestwick",
       "primary": false
     },
@@ -48,7 +52,15 @@
       "primary": false
     },
     {
-      "keyword": "Cargo boom Prestwick Airport",
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "December figures revealed for",
       "primary": false
     }
   ],

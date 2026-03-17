@@ -40,6 +40,10 @@
       "primary": false
     },
     {
+      "keyword": "MOD",
+      "primary": false
+    },
+    {
       "keyword": "RAF",
       "primary": false
     },
@@ -56,7 +60,7 @@
       "primary": false
     },
     {
-      "keyword": "Special aircraft from down",
+      "keyword": "Royal Australian Air Force",
       "primary": false
     }
   ],

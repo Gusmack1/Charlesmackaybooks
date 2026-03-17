@@ -40,11 +40,19 @@
       "primary": false
     },
     {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "Prestwick",
       "primary": false
     },
     {
       "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
       "primary": false
     },
     {

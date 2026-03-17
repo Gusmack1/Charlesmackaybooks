@@ -40,7 +40,19 @@
       "primary": false
     },
     {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
       "primary": false
     },
     {

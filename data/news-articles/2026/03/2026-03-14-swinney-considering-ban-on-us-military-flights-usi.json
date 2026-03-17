@@ -35,6 +35,14 @@
       "primary": false
     },
     {
+      "keyword": "Ministry of Defence",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
       "keyword": "Prestwick",
       "primary": false
     },
@@ -43,7 +51,7 @@
       "primary": false
     },
     {
-      "keyword": "Swinney considering ban military",
+      "keyword": "Swinney 'explore' banning flights",
       "primary": false
     }
   ],

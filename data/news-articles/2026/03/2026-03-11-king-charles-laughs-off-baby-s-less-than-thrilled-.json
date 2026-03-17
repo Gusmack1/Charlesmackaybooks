@@ -40,7 +40,7 @@
       "primary": false
     },
     {
-      "keyword": "MOD",
+      "keyword": "airspace",
       "primary": false
     },
     {
@@ -48,15 +48,19 @@
       "primary": false
     },
     {
+      "keyword": "Typhoon",
+      "primary": false
+    },
+    {
       "keyword": "Lossiemouth",
       "primary": false
     },
     {
-      "keyword": "Scotland",
+      "keyword": "aircraft",
       "primary": false
     },
     {
-      "keyword": "King Charles Laughs Off",
+      "keyword": "Scotland",
       "primary": false
     }
   ],

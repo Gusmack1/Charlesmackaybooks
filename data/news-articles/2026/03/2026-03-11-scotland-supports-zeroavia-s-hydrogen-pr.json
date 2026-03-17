@@ -40,6 +40,18 @@
       "primary": false
     },
     {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
       "keyword": "aviation",
       "primary": false
     },
@@ -48,7 +60,7 @@
       "primary": false
     },
     {
-      "keyword": "Scotland Supports ZeroAvia's Hydrogen",
+      "keyword": "Scotland Backs ZeroAvia's Hydrogen",
       "primary": false
     }
   ],

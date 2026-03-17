@@ -1,6 +1,6 @@
 {
   "slug": "2026-03-14-swinney-would-consider-us-military-plane-ban-from-",
-  "title": "Your privacy choices",
+  "title": "Swinney Would Consider Us Military Plane Ban From",
   "wordCount": 202,
   "sections": [
     {
@@ -20,7 +20,12 @@
       "citationText": "serper-scottish-aviation – Swinney would 'consider' US military plane ban from Prestwick Airport"
     }
   ],
-  "relatedBooks": [],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
   "keywords": [
     {
       "keyword": "Scottish aviation news",
@@ -31,23 +36,7 @@
       "primary": false
     },
     {
-      "keyword": "RAF",
-      "primary": false
-    },
-    {
-      "keyword": "Prestwick",
-      "primary": false
-    },
-    {
-      "keyword": "airport",
-      "primary": false
-    },
-    {
-      "keyword": "aircraft",
-      "primary": false
-    },
-    {
-      "keyword": "Swinney would 'consider' military",
+      "keyword": "Swinney Would Consider Military",
       "primary": false
     }
   ],

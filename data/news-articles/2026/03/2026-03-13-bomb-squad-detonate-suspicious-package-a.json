@@ -36,15 +36,23 @@
       "primary": false
     },
     {
+      "keyword": "airspace",
+      "primary": false
+    },
+    {
       "keyword": "RAF",
       "primary": false
     },
     {
-      "keyword": "Royal Air Force",
+      "keyword": "Typhoon",
       "primary": false
     },
     {
       "keyword": "Lossiemouth",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
       "primary": false
     },
     {
