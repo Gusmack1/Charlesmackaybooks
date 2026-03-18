@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-18-prestwick-airport-confirms-rail-services-to-resume",
+  "title": "Prestwick Airport confirms rail services to resume after Glasgow fire",
+  "wordCount": 31,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Prestwick Airport confirms rail services to resume after Glasgow fire. Glasgow Prestwick Airport has confirmed rail services to and from the terminal are set to resume as Glasgow Central partially reopens."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.ayrshire-today.co.uk/news/25944444.train-services-glasgow-prestwick-airport-resume/",
+      "citationText": "serper-scottish-aviation – Prestwick Airport confirms rail services to resume after Glasgow fire"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick Airport confirms rail",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-18T01:20:26.837Z"
+}
