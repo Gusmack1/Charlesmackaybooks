@@ -19233,5 +19233,393 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-18T01:20:17.193Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cjd9dnry4j4o#0",
+    "title": "Scotland's papers: Assisted dying law rejected and rugby star 'arrest'",
+    "sourceUrl": "https://www.bbc.com/news/articles/cjd9dnry4j4o?at_medium=RSS&at_campaign=rss",
+    "summary": "A review of the front page stories from the daily newspapers in Scotland.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:58:45.000Z",
+    "fetchedAt": "2026-03-18T07:07:46.983Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cd9g1918eeeo#0",
+    "title": "Glasgow Central Station partly reopens after Union Street fire",
+    "sourceUrl": "https://www.bbc.com/news/articles/cd9g1918eeeo?at_medium=RSS&at_campaign=rss",
+    "summary": "More than half of the platforms on the high level of the station have resumed service after the dramatic fire on Union Corner closed the station.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:28:31.000Z",
+    "fetchedAt": "2026-03-18T07:07:46.983Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/cd031lk3vljo#1",
+    "title": "I donated my kidney to help a stranger - for them it was 'lightning bolt' news",
+    "sourceUrl": "https://www.bbc.com/news/articles/cd031lk3vljo?at_medium=RSS&at_campaign=rss",
+    "summary": "The 58-year-old says he was inspired to donate after reading about people dying while on waiting lists.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:17:48.000Z",
+    "fetchedAt": "2026-03-18T07:07:46.984Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c33j3nd1kvko#0",
+    "title": "Scotland's assisted dying bill rejected after emotional debate",
+    "sourceUrl": "https://www.bbc.com/news/articles/c33j3nd1kvko?at_medium=RSS&at_campaign=rss",
+    "summary": "Scotland would have become the first part of the UK to legalise the process had MSPs backed the proposals.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T00:04:34.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.160Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cy0dxzz0pzro#0",
+    "title": "Dog owners to face unlimited fines if their pets attack livestock under new law",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy0dxzz0pzro?at_medium=RSS&at_campaign=rss",
+    "summary": "Police will have new powers to seize and detain dogs that have attacked or chased farm animals.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T02:26:55.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.160Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c7434xv1pmeo#0",
+    "title": "Rayner warns immigration reforms risk being 'un-British'",
+    "sourceUrl": "https://www.bbc.com/news/articles/c7434xv1pmeo?at_medium=RSS&at_campaign=rss",
+    "summary": "Most migrant workers will have to wait longer to qualify for permanent residence under the government's proposals.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T02:20:51.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.160Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cddn18v959qo#1",
+    "title": "Government admits adoption system 'needs to improve' after BBC investigation highlights failures",
+    "sourceUrl": "https://www.bbc.com/news/articles/cddn18v959qo?at_medium=RSS&at_campaign=rss",
+    "summary": "The children and families minister for England apologises to families who have received \"support from services that isn't good enough\".",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T05:57:25.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.160Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cedzqqp9x2do#1",
+    "title": "Nigeria president begins first UK state visit in 37 years",
+    "sourceUrl": "https://www.bbc.com/news/articles/cedzqqp9x2do?at_medium=RSS&at_campaign=rss",
+    "summary": "King Charles and senior royals will provide a ceremonial welcome for Nigeria's President Tinubu on his state visit.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T00:11:52.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.160Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cx2g8888q53o#1",
+    "title": "Ad for AI editing app which said it could 'remove anything' banned",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx2g8888q53o?at_medium=RSS&at_campaign=rss",
+    "summary": "The UK regulator said the ad condoned \"digitally altering and exposing women's bodies without their consent.\"",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T00:00:09.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.160Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c20z50xxv93o#1",
+    "title": "Blackpool, Ipswich, Milton Keynes among nine finalists for UK City of Culture 2029",
+    "sourceUrl": "https://www.bbc.com/news/articles/c20z50xxv93o?at_medium=RSS&at_campaign=rss",
+    "summary": "The nine-strong longlist of cities will receive a £60,000 boost of funding to develop a full bid plan.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T00:03:34.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.160Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/czr0zmzzp84o#1",
+    "title": "Higgs Boson breakthrough was UK triumph, but British physics faces 'catastrophic' cuts",
+    "sourceUrl": "https://www.bbc.com/news/articles/czr0zmzzp84o?at_medium=RSS&at_campaign=rss",
+    "summary": "Britain is preparing to cancel its contribution to one of the Large Hadron Collider's next major upgrades.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T01:57:13.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.161Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/ckg1gd7lnvdo#3",
+    "title": "The  Papers: 'First cracks' in Trump camp over Iran war and UK tackles meningitis outbreak",
+    "sourceUrl": "https://www.bbc.com/news/articles/ckg1gd7lnvdo?at_medium=RSS&at_campaign=rss",
+    "summary": "The ongoing US-Israeli conflict with Iran and the meningitis outbreak in the UK lead Wednesday's papers.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T05:33:16.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.161Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cwy8zl4ne44o#3",
+    "title": "Actress says being cast as Regina George is 'monumental'",
+    "sourceUrl": "https://www.bbc.com/news/articles/cwy8zl4ne44o?at_medium=RSS&at_campaign=rss",
+    "summary": "Vivian Panka is the first black actress to play the character full-time in in the UK production of Mean Girls.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T04:25:17.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.161Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cy0dxzz0pzro#4",
+    "title": "Dog owners to face unlimited fines if their pets attack livestock under new law",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy0dxzz0pzro?at_medium=RSS&at_campaign=rss",
+    "summary": "Police will have new powers to seize and detain dogs that have attacked or chased farm animals.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T02:26:55.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.161Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025854",
+    "title": "Scottish retailers 'to pay £54m more in rates' than English counterparts",
+    "sourceUrl": "https://www.scotsman.com/news/scottish-retailers-to-pay-ps54m-more-in-rates-than-english-counterparts-6025854",
+    "summary": "<p>Some shops will pay far higher rates than their counterparts south of the border come April</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:47.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025384",
+    "title": "Why I voted against Scotland's Assisted Dying Bill",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/why-i-voted-against-scotlands-assisted-dying-bill-6025384",
+    "summary": "<h3>The Assisted Dying Bill debate touched on many questions, including the role of medical staff, the definition of a terminal illness, and the risk of coercive control</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:45.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025684",
+    "title": "Rachel Reeves spells out 'the truth' about Brexit and the need to get closer to EU",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/rachel-reeves-spells-out-the-truth-about-brexit-and-the-need-to-get-closer-to-eu-6025684",
+    "summary": "<h3>The UK needs to make pragmatic decisions about aligning its rules and regulations with the EU’s, rather than engaging in flights of fancy about sovereignty</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:33.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025578",
+    "title": "Former tank commander turned lawyer takes on leading role in Scottish agriculture",
+    "sourceUrl": "https://www.scotsman.com/hays-way/former-tank-commander-turn-lawyer-takes-on-leading-role-in-scottish-agriculture-6025578",
+    "summary": "<p>The new appointment comes at a time ‘with new land reform legislation on the way and changes to taxation and regulation impacting many livelihoods’.</p>",
+    "categories": [
+      "Hay&#039;s Way"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:25.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5959558",
+    "title": "50 years of islands arts festival which started off 'on a sofa with a telephone'",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/the-50th-anniversary-of-the-islands-arts-festival-which-started-off-on-a-sofa-with-a-telephone-5959558",
+    "summary": "<p>The festival began in 1977</p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:21.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025821",
+    "title": "Inverness makes longlist for £10m City of Culture 2029 prize",
+    "sourceUrl": "https://www.scotsman.com/news/uk-news/inverness-makes-longlist-for-ps10m-city-of-culture-2029-prize-6025821",
+    "summary": "<p>The Highland capital is one of nine places to reach this stage of the competition </p>",
+    "categories": [
+      "UK News",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:18.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025618",
+    "title": "Save Berwick Rangers! Why Scotland and England can't let this historic club go under",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/save-berwick-rangers-why-scotland-and-england-cant-let-this-historic-club-go-under-6025618",
+    "summary": "<h3>Berwick Rangers, a club in England that plays in Scotland, is a beautiful anomaly and a symbol of friendship between the two countries</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:16.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025704",
+    "title": "Swinney says new working group will tackle 'evil' of antisemitism",
+    "sourceUrl": "https://www.scotsman.com/news/swinney-says-new-working-group-will-tackle-evil-of-antisemitism-6025704",
+    "summary": "<p>Group will focus on issues including education and security </p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:14.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6023872",
+    "title": "Historic Scots football club 'could close' due to 'being let down' by SFA and FA",
+    "sourceUrl": "https://www.scotsman.com/news/politics/historic-scots-football-club-could-close-due-to-being-let-down-by-sfa-and-fa-6023872",
+    "summary": "<p>Berwick Rangers has been unable to qualify for funding due to playing in Scotland but being based in England.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:13.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025799",
+    "title": "Chinese shipyard named 'lead bidder' to build Orkney and Shetland freight ferries for NorthLink",
+    "sourceUrl": "https://www.scotsman.com/news/transport/chinese-shipyard-named-lead-bidder-to-build-orkney-and-shetland-freight-ferries-for-northlink-6025799",
+    "summary": "<p>Guangzhou Shipyard International chosen ahead of other Chinese and Turkish yards</p>",
+    "categories": [
+      "Transport",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T06:00:11.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025907",
+    "title": "Readers' letters: Should schools pay for mobile phone ban?",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/letters/readers-letters-should-schools-pay-for-mobile-phone-ban-6025907",
+    "summary": "The Scotsman recently reported on the City of Edinburgh Council (CEC) survey on attitudes to smartphone use in schools (12 March). I remain troubled by a quiet but fundamental question that sits beneath the debate: are we really expecting schools to address the consequences of a technology ecosystem they neither created nor control?",
+    "categories": [
+      "Letters",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-17T20:52:53.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6025252",
+    "title": "Nature recovery growth boost as Fife tree nursery pioneer nets £3.3 million",
+    "sourceUrl": "https://www.scotsman.com/business/nature-recovery-growth-boost-as-fife-tree-nursery-pioneer-nets-ps33-million-6025252",
+    "summary": "“Together, these innovations will help accelerate the scale and quality of nature recovery projects across Scotland” – Renwick Drysdale, MD, Akre",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-17T13:11:24.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5956411",
+    "title": "Why agility will be the key to sustaining growth in 2026",
+    "sourceUrl": "https://www.scotsman.com/business/why-agility-will-be-the-key-to-sustaining-growth-in-2026-5956411",
+    "summary": "The level of confidence among Scottish businesses in the midst of challenging conditions is encouraging, writes ​Vishal Chopra",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-16T18:05:18.000Z",
+    "fetchedAt": "2026-03-18T07:07:47.398Z"
   }
 ]
