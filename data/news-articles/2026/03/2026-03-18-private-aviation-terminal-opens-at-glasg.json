@@ -1,0 +1,58 @@
+{
+  "slug": "2026-03-18-private-aviation-terminal-opens-at-glasg",
+  "title": "Private Aviation Terminal Opens at Glasgow Airport",
+  "wordCount": 80,
+  "sections": [
+    {
+      "heading": "What happened",
+      "content": "Signature Aviation, recognized as the world’s largest network of private aviation terminals, has opened a new facility at Glasgow Airport. This marks the company’s latest addition to its extensive range of services aimed at enhancing private air travel experiences."
+    },
+    {
+      "heading": "Why it matters",
+      "content": "The opening of this terminal is expected to provide improved services for private and executive aviation in Scotland. It underscores the growing demand for private air travel as well as Signature Aviation's commitment to expanding its infrastructure to meet this need."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.heraldscotland.com/news/25946784.private-aviation-terminal-opens-glasgow-airport/",
+      "citationText": "serper-scottish-aviation – Private aviation terminal opens at Glasgow Airport"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Private Aviation Terminal Opens",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-18T12:48:25.067Z",
+  "publishedAt": "2026-03-18T12:48:25.067Z"
+}
