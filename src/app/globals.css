@@ -818,8 +818,9 @@ header[role="banner"] #global-more-menu * {
   select,
   textarea {
     color: #ffffff !important;
-    background-color: rgba(2, 2, 33, 0.9) !important; /* Very dark blue */
-    border: 1px solid rgba(255, 255, 255, 0.35) !important; /* Thin white border */
+    -webkit-text-fill-color: #ffffff !important;
+    background-color: #1e293b !important; /* Solid slate-800 — no transparency so autofill can't bleed through */
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
     border-radius: var(--border-radius);
     padding: 0.75rem;
   }
@@ -830,10 +831,22 @@ header[role="banner"] #global-more-menu * {
   input[type="password"]:focus,
   select:focus,
   textarea:focus {
-    outline: 1px solid #ffffff !important; /* Thin white outline for clarity */
+    outline: 1px solid #ffffff !important;
     border-color: #ffffff !important;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35) !important;
-    background-color: rgba(2, 2, 33, 1) !important;
+    background-color: #1e293b !important;
+  }
+
+  /* Fix browser autofill overriding dark background with yellow/white */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0px 1000px #1e293b inset !important;
+    box-shadow: 0 0 0px 1000px #1e293b inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: #ffffff !important;
   }
 
   /* Dropdowns: keep the border thin and consistent on all states */
