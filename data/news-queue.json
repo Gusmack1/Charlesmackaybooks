@@ -23631,5 +23631,336 @@
     "articleSlug": "2026-03-19-new-state-of-the-art-terminal-opens-at-g",
     "articlePath": "data/news-articles/2026/03/2026-03-19-new-state-of-the-art-terminal-opens-at-g.json",
     "rewrittenAt": "2026-03-19T01:20:10.868Z"
+  },
+  {
+    "id": "15b66226-fe1b-46fb-8241-ee63d1ae01f0",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c8757y5yj7zo#3",
+    "title": "Greyhound racing outlawed in Scotland after MSPs back ban",
+    "sourceUrl": "https://www.bbc.com/news/articles/c8757y5yj7zo?at_medium=RSS&at_campaign=rss",
+    "summary": "The sport already faced extinction after the country's last track in Kirkcaldy, Fife, closed last year.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T21:22:55.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.706Z",
+    "status": "new"
+  },
+  {
+    "id": "265a18e4-9369-4311-99ac-549c6dcb54ff",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c4gjg8n40z7o#3",
+    "title": "Bereaved father wants suicide prevention training in every school",
+    "sourceUrl": "https://www.bbc.com/news/articles/c4gjg8n40z7o?at_medium=RSS&at_campaign=rss",
+    "summary": "John Gibson's 24-year-old son Cameron, who was a veterinary surgeon, died in October 2019.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:29:18.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.708Z",
+    "status": "new"
+  },
+  {
+    "id": "ab92e538-4da9-4055-a623-ccf449f49a90",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c8d5dee3ep8o#0",
+    "title": "Impact of Iran war expected to bring hold in interest rates",
+    "sourceUrl": "https://www.bbc.com/news/articles/c8d5dee3ep8o?at_medium=RSS&at_campaign=rss",
+    "summary": "Before the conflict began, analysts had expected a cut in the Bank rate at this meeting.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T00:10:32.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.724Z",
+    "status": "new"
+  },
+  {
+    "id": "985e212c-a4c2-476b-9445-1352b7122568",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cvgj22e7qwyo#1",
+    "title": "Child seen in sex abuse videos identified after researcher spots school badge",
+    "sourceUrl": "https://www.bbc.com/news/articles/cvgj22e7qwyo?at_medium=RSS&at_campaign=rss",
+    "summary": "An analyst tells the BBC how she tracked down a victim of child sexual abuse after years of searching.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T03:21:12.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.724Z",
+    "status": "new"
+  },
+  {
+    "id": "3c247c66-3d34-45ac-b099-6353caf647b6",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cy0dxexdd8xo#1",
+    "title": "World's longest coastal path opens in England",
+    "sourceUrl": "https://www.bbc.com/news/articles/cy0dxexdd8xo?at_medium=RSS&at_campaign=rss",
+    "summary": "The King Charles coastal path will allow walkers right of access to the entire coast for the first time.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T02:36:02.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.724Z",
+    "status": "new"
+  },
+  {
+    "id": "f05e45e4-cd4f-4bf8-ba57-bdfc3b5c6a37",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c87574wn93qo#1",
+    "title": "Extremist preacher Anjem Choudary loses challenge to overturn life sentence",
+    "sourceUrl": "https://www.bbc.com/news/articles/c87574wn93qo?at_medium=RSS&at_campaign=rss",
+    "summary": "The ruling means Choudary - considered by security chiefs to be one of the most dangerous men in Britain - cannot leave jail before he is 85.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T15:38:30.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.724Z",
+    "status": "new"
+  },
+  {
+    "id": "7d891c9e-fe96-487c-aa79-93cc27722093",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cwyx81517jxo#3",
+    "title": "'Designer' dog owners report more problem behaviours, vets warn",
+    "sourceUrl": "https://www.bbc.com/news/articles/cwyx81517jxo?at_medium=RSS&at_campaign=rss",
+    "summary": "The Royal Veterinary College says popular \"doodle\" dogs do not always behave as expected.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T01:53:52.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.724Z",
+    "status": "new"
+  },
+  {
+    "id": "11fc9d52-07fd-443c-a753-d09f5cae5f31",
+    "sourceId": "scotsman-news",
+    "guid": "6027214",
+    "title": "AI revolution is upon us but we can't let it replace human creativity",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/ai-revolution-is-upon-us-but-we-cant-let-it-replace-human-creativity-6027214",
+    "summary": "<h3>Working out how to make the best use of artificial intelligence, and avoid the problems it could bring, is a difficult task</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:45:44.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.987Z",
+    "status": "new"
+  },
+  {
+    "id": "0e4edcab-b7e2-4a13-a7c7-0e51efc83251",
+    "sourceId": "scotsman-news",
+    "guid": "6027364",
+    "title": "How Assisted Dying Bill can transform Scotland for the better despite being rejected by MSPs",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/how-assisted-dying-bill-can-transform-scotland-for-the-better-despite-being-rejected-by-msps-6027364",
+    "summary": "<h3>The ‘moral obligation’ to tackle the crisis in end-of-life care can no longer be ignored</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:58.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.987Z",
+    "status": "new"
+  },
+  {
+    "id": "1aafce99-6e99-41b0-8a66-d9faa4c60765",
+    "sourceId": "scotsman-news",
+    "guid": "6027130",
+    "title": "The complex checks underway before Glasgow Central can fully reopen",
+    "sourceUrl": "https://www.scotsman.com/news/transport/the-complex-checks-underway-before-glasgow-central-can-fully-reopen-6027130",
+    "summary": "<p>Some trains resume in main part of Scotland’s busiest station after ten-day closure</p>",
+    "categories": [
+      "Transport",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:58.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.987Z",
+    "status": "new"
+  },
+  {
+    "id": "1b177594-a322-41b3-baf9-fbd762f2f081",
+    "sourceId": "scotsman-news",
+    "guid": "6027377",
+    "title": "Work begins at new Scottish Center Parcs with promise of 1,200 jobs",
+    "sourceUrl": "https://www.scotsman.com/news/work-begins-at-new-scottish-center-parcs-with-promise-of-1200-jobs-6027377",
+    "summary": "<p>The resort is set to open in 2029</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:55.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "dc2a0390-1d12-435a-9a58-0422b07aee61",
+    "sourceId": "scotsman-news",
+    "guid": "6026710",
+    "title": "Two thirds of Scots more likely to vote for parties that back fishing, new polling shows",
+    "sourceUrl": "https://www.scotsman.com/hays-way/two-thirds-of-scots-more-likely-to-vote-for-parties-that-back-fishing-new-polling-shows-6026710",
+    "summary": "<p>The poll showed strong support for equating food production with energy security. </p>",
+    "categories": [
+      "Hay&#039;s Way"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:40.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "c11c4d4f-79d3-47de-9cae-0d2e1a4eb3c1",
+    "sourceId": "scotsman-news",
+    "guid": "6027391",
+    "title": "Charity warns end of life patients 'being written off' amid call for legal right to palliative care",
+    "sourceUrl": "https://www.scotsman.com/news/politics/palliative-care-marie-curie-assisted-dying-nhs-social-care-scotland-6027391",
+    "summary": "<p>The Scottish government is being urged to embed a right to palliative care into law following the assisted dying debate.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:33.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "0344baa0-d282-4e17-8990-ff769259eced",
+    "sourceId": "scotsman-news",
+    "guid": "6026594",
+    "title": "It is lambing season - and a little awareness and consideration go a long way",
+    "sourceUrl": "https://www.scotsman.com/business/it-is-lambing-season-and-a-little-awareness-and-consideration-go-a-long-way-6026594",
+    "summary": "<p>Livestock worrying continues to be a concern across Scotland</p>",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:28.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "6e091248-cc4d-4cf9-958d-e7fa9a84d201",
+    "sourceId": "scotsman-news",
+    "guid": "6026746",
+    "title": "Michelle McManus: Singing to Pope was 'one of the greatest honours of my life'",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/michelle-mcmanus-singing-to-pope-was-one-of-the-greatest-honours-of-my-life-6026746",
+    "summary": "<p>Michelle McManus travelled to Italy for a BBC Scotland documentary</p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:24.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "84cde1d7-1626-484a-8d1d-e9742c992047",
+    "sourceId": "scotsman-news",
+    "guid": "6027087",
+    "title": "Rosyth ferry: UK Government investment brings return of Scotland-Europe ferry link  a step closer",
+    "sourceUrl": "https://www.scotsman.com/news/traffic-and-travel/rosyth-ferry-uk-government-investment-brings-return-of-scotland-europe-ferry-link-a-step-closer-6027333",
+    "summary": "<p>It is 15 years since the last passenger service ended between Scotland and mainland Europe</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:11.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "a042a69d-c621-4b38-83e0-5c04220d3d13",
+    "sourceId": "scotsman-news",
+    "guid": "6026760",
+    "title": "One word a day: A fresh take on how to stop the decline of Gaelic",
+    "sourceUrl": "https://www.scotsman.com/hays-way/one-word-a-day-a-fresh-take-on-how-to-stop-the-decline-of-gaelic-6026760",
+    "summary": "<p>From listening to BBC Radio nan Gàidheal to just saying ‘halò’ in the street, everyone can get involved. </p>",
+    "categories": [
+      "Hay&#039;s Way"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:07.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "b2fa9dd0-907b-4998-b1e5-b7cffda16148",
+    "sourceId": "scotsman-news",
+    "guid": "6026494",
+    "title": "Visitors encouraged to take the 'slow road' around Scotland",
+    "sourceUrl": "https://www.scotsman.com/news/scotland/jean-johansson-take-the-slow-road-historic-environment-scotland-6026494",
+    "summary": "<p>New maps have been drawn up by Historic Environment Scotland to promote enjoyment of lesser-visited destinations</p>",
+    "categories": [
+      "Scotland",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:04.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "ae62bbf3-c922-4bfc-88da-7352e8847774",
+    "sourceId": "scotsman-news",
+    "guid": "6027415",
+    "title": "Kate Forbes makes final Holyrood speech on 'joy of dispute and debate'",
+    "sourceUrl": "https://www.scotsman.com/news/kate-forbes-makes-final-holyrood-speech-on-joy-of-dispute-and-debate-6027415",
+    "summary": "<p>Deputy First Minister Kate Forbes will not seek re-election this May</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T06:00:02.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "5d89e2b9-7dc4-4c5e-9ee2-af7856268ea8",
+    "sourceId": "scotsman-news",
+    "guid": "6027374",
+    "title": "Readers' Letters: My father, a minister, supported assisted dying. He was right",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/letters/readers-letters-my-father-a-minister-supported-assisted-dying-he-was-right-6027374",
+    "summary": "Readers remain divided on the merits of the Assisted Dying Bill voted down by MSPs this week",
+    "categories": [
+      "Letters",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T18:02:02.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
+  },
+  {
+    "id": "3bfe63e6-80cd-45c4-8aeb-8477e199e6e2",
+    "sourceId": "scotsman-news",
+    "guid": "6026519",
+    "title": "Why John Swinney’s ‘rent trap’ plan won’t solve the housing crisis",
+    "sourceUrl": "https://www.scotsman.com/news/why-john-swinneys-rent-trap-plan-wont-solve-the-housing-crisis-6026519",
+    "summary": "​David J Alexander says money underpinning the policy would be better spent on encouraging more housebuilding in Scotland",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-18T11:30:45.000Z",
+    "fetchedAt": "2026-03-19T07:04:08.988Z",
+    "status": "new"
   }
 ]
