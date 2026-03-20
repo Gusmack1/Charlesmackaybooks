@@ -1,0 +1,61 @@
+{
+  "slug": "2026-03-20-ryanair-announces-450-jobs-in-prestwick-airport-ai",
+  "title": "Ryanair announces 450 jobs in Prestwick Airport aircraft maintenance base expansion",
+  "wordCount": 23,
+  "sections": [
+    {
+      "heading": "What happened",
+      "content": "Third hangar to be built at South Ayrshire airport where airline started Scottish flights 32 years ago."
+    },
+    {
+      "heading": "Key details",
+      "content": "Sign up for the latest news..."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.scotsman.com/news/transport/ryanair-announces-450-jobs-in-prestwick-airport-aircraft-maintenance-base-expansion-6035578",
+      "citationText": "serper-scottish-aviation – Ryanair announces 450 jobs in Prestwick Airport aircraft maintenance base expansion"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "RAF",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aircraft",
+      "primary": false
+    },
+    {
+      "keyword": "Ryanair announces 450 jobs",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-20T12:37:38.549Z"
+}

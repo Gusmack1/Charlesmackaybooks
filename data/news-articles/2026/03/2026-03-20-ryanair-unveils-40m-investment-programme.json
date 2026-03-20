@@ -1,0 +1,58 @@
+{
+  "slug": "2026-03-20-ryanair-unveils-40m-investment-programme",
+  "title": "Ryanair Unveils £40m Investment Programme for Glasgow Prestwick",
+  "wordCount": 89,
+  "sections": [
+    {
+      "heading": "What happened",
+      "content": "Ryanair has announced a £40 million investment programme for Glasgow Prestwick Airport. This investment aims to develop the airport into the airline's largest maintenance base in Europe. The project is expected to enhance the operational capabilities and services offered at the facility."
+    },
+    {
+      "heading": "Why it matters",
+      "content": "The expansion at Glasgow Prestwick Airport signifies a significant commitment from Ryanair towards increasing its operational footprint in the UK. This development is anticipated to create jobs and bolster local economic growth, marking a notable moment for the airport's future and its role in the aviation sector."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "bbc-scotland",
+      "sourceUrl": "https://www.bbc.com/news/articles/ceqw5vjd8jyo?at_medium=RSS&at_campaign=rss",
+      "citationText": "bbc-scotland – Ryanair unveils £40m investment programme for Glasgow Prestwick"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Ryanair Unveils £40m Investment",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-20T12:37:28.322Z",
+  "publishedAt": "2026-03-20T12:37:28.322Z"
+}
