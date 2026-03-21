@@ -25801,5 +25801,296 @@
     ],
     "publishedAt": null,
     "fetchedAt": "2026-03-21T01:11:10.468Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6035722",
+    "title": "Why the BBC and Labour are a threat to the Free Press",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/why-the-bbc-and-labour-are-a-threat-to-the-free-press-6035722",
+    "summary": "<h3>Culture Secretary Lisa Nandy extols the merits of Press freedom – as long as it’s a state-blessed, self-improvement scheme</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:01:32.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6035677",
+    "title": "SNP 'failed to protect women' after shamed ex-minister allowed to attend party conference",
+    "sourceUrl": "https://www.scotsman.com/news/politics/snp-failed-to-protect-women-after-shamed-ex-minister-allowed-to-attend-party-conference-6035677",
+    "summary": "<p>Some women are said to be furious he was in attendance at SNP conference</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:59.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6034200",
+    "title": "We need to talk about Covid's nightmare after-effects, not keep schtum like WWI veterans",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/we-need-to-talk-about-covids-nightmare-after-effects-not-keep-schtum-like-wwi-veterans-6034200",
+    "summary": "<h3>With the Covid lockdowns having undermined the idea that school attendance is compulsory, nearly one in eight children are now missing a day at school each week</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:59.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6036405",
+    "title": "How Scots actress Jessica Hardwick is striking out on her own",
+    "sourceUrl": "https://www.scotsman.com/news/how-scots-actress-jessica-hardwick-is-striking-out-on-her-own-6036405",
+    "summary": "<p>Jessica Hardwick in the new season of Hijack plays a ghillie who may not be as friendly as she appears. Meanwhile she is about to return to the stage in one-woman play, GUSH, at the Traverse. The Borders-born actor talks about the two roles, the lure of the countryside and the school drama teacher who inspired her  </p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:58.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6042481",
+    "title": "The Scottish artist helping to keep the endangered art of puppet making alive",
+    "sourceUrl": "https://www.scotsman.com/news/scottish-news/the-scottish-artist-helping-to-keep-the-endangered-art-of-puppet-making-alive-6042481",
+    "summary": "<p>Expert hopes to keep craft alive as puppetry ‘is an entryway for most kids into theatre’</p>",
+    "categories": [
+      "Scottish News",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:54.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6046140",
+    "title": "As energy crisis grows and Donald Trump insults allies again, we should remember this WW2 slogan",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/as-energy-crisis-grows-and-donald-trump-insults-allies-again-we-should-remember-this-ww2-slogan-6046140",
+    "summary": "<h3>Advice to conserve oil adds to the sense that the energy crisis is about to get worse, but panicking won’t help anyone</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:48.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6046892",
+    "title": "Why we must not let puppet-making go extinct in the UK",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/why-we-must-not-let-puppet-making-go-extinct-in-the-uk-6046892",
+    "summary": "<h3>We all know there is something special about anything made with skill and care by human hands </h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:47.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6037892",
+    "title": "Politicians who make people 'happy'? Why France's 35,000 local mayors are so trusted",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/politicians-who-make-people-happy-why-frances-35000-local-mayors-are-so-trusted-6037892",
+    "summary": "<h3>Scotland could learn from local democracy in France where a large majority of people have confidence in their elected representatives</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:35.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6051456",
+    "title": "I’m happy to be the token Scottish boy in any sketch, says SNL UK’s Larry Dean",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/edinburgh-festivals/film-and-tv/im-happy-to-be-the-token-scottish-boy-in-any-sketch-says-snl-uks-larry-dean-6051456",
+    "summary": "<p>He’s a former Scottish Comedian of the Year</p>",
+    "categories": [
+      "Film and TV",
+      "Edinburgh Festivals",
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:28.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6040520",
+    "title": "It’s not North Sea oil vs renewables. The UK needs both",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/its-not-north-sea-oil-vs-renewables-the-uk-needs-both-6040520",
+    "summary": "<h3>The Middle East crisis should see pragmatism to prevail over the half-baked ideologies of many in the energy debate</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:21.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6037086",
+    "title": "40 years on, the stench of death in Ethiopian refugee camps remains with me. We must not cut overseas aid",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/40-years-on-the-stench-of-death-in-ethiopian-refugee-camps-remains-with-me-we-must-not-cut-overseas-aid-6037086",
+    "summary": "<h3>Former Labour MP Dennis Canavan urges people to join the campaign to reverse the UK’s cuts to overseas aid</h3>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:19.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6035616",
+    "title": "John Swinney 'undermining SNP's minimum unit pricing' with 'stupid' whisky tax comments",
+    "sourceUrl": "https://www.scotsman.com/news/politics/john-swinney-whisky-tax-snp-minimum-unit-pricing-6035616",
+    "summary": "<p>More people are killed from alcohol harm than drugs harm in Scotland.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:19.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6051306",
+    "title": "The Scottish areas named most and least affordable for first-time buyers",
+    "sourceUrl": "https://www.scotsman.com/property-0/the-scottish-areas-named-most-and-least-affordable-for-first-time-buyers-6051306",
+    "summary": "<p>Mortgage rates have been jumping in recent weeks amid changing market expectations</p>",
+    "categories": [],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:10.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6043321",
+    "title": "Campaigners condemn 'job-cutting' Peterhead gas plant plans",
+    "sourceUrl": "https://www.scotsman.com/news/politics/campaigners-condemn-job-cutting-peterhead-gas-plant-plans-6043321",
+    "summary": "<p>Friends of the Earth Scotland opposes plans for a new power station</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-21T06:00:08.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6047576",
+    "title": "Readers’ letters: Nicola Sturgeon's final speech was hypocritical",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/letters/readers-letters-nicola-sturgeons-final-speech-was-hypocritical-6047576",
+    "summary": "A reader is unimpressed with the former first minister’s last address to the Scottish Parliament",
+    "categories": [
+      "Letters",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-20T17:31:34.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.173Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6039405",
+    "title": "Obituary: Henry Spurway, larger-than-life theatrical impressario and bookmaker",
+    "sourceUrl": "https://www.scotsman.com/news/people/obituary-henry-spurway-larger-than-life-theatrical-impressario-and-bookmaker-6039405",
+    "summary": "Henry George Spurway. Born: 23 May, 1945 in Edinburgh. Died: 13 February, 2026 in Camilla House, Edinburgh, aged 80",
+    "categories": [
+      "People",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-20T12:20:39.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.174Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6036287",
+    "title": "Why ‘Build to Rent’ is set for a comeback across Scotland",
+    "sourceUrl": "https://www.scotsman.com/news/why-build-to-rent-is-set-for-a-comeback-across-scotland-6036287",
+    "summary": "The housing tenure has been slow to take root north of the Border but that is likely to change, says Dr John Boyle",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-20T10:12:34.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.174Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6034835",
+    "title": "Martyn James: How to plan for a holiday in challenging times",
+    "sourceUrl": "https://www.scotsman.com/lifestyle/money/martyn-james-how-to-plan-for-a-holiday-in-challenging-times-6034835",
+    "summary": "​Martyn James says you can still make a getaway as long as you do some careful planning ahead",
+    "categories": [
+      "Lifestyle"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-19T16:01:10.000Z",
+    "fetchedAt": "2026-03-21T06:52:38.174Z"
   }
 ]
