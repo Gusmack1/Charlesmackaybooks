@@ -1,0 +1,62 @@
+{
+  "slug": "2026-03-21-prestwick-airport-a-brief-overview",
+  "title": "Prestwick Airport: A Brief Overview",
+  "wordCount": 95,
+  "sections": [
+    {
+      "heading": "What is Prestwick Airport?",
+      "content": "Prestwick Airport, located in South Ayrshire, Scotland, serves as a key facility in the region's aviation sector. Established in 1935, it has a long history of servicing passenger and cargo flights. The airport has seen various operational changes over the years, adapting to evolving needs in air travel."
+    },
+    {
+      "heading": "Significance of Prestwick Airport",
+      "content": "Prestwick Airport plays a vital role in connecting Scotland with global destinations. Its strategic location makes it an important hub for international flights. Additionally, the airport has seen increasing interest from cargo operations, further enhancing its economic impact on the local community and the wider Scottish economy."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.infrastructure-now.co.uk/article/433566/tag-prestwick-airport",
+      "citationText": "serper-scottish-aviation – Tag: Prestwick Airport"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "aviation",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick Airport: Brief Overview",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-21T12:29:08.747Z",
+  "publishedAt": "2026-03-21T12:29:08.747Z"
+}
