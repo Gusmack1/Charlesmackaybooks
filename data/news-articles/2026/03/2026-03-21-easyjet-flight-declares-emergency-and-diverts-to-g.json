@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-21-easyjet-flight-declares-emergency-and-diverts-to-g",
+  "title": "easyJet flight declares emergency and diverts to Glasgow",
+  "wordCount": 27,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "easyJet flight declares emergency and diverts to Glasgow. An easyJet flight from London Gatwick bound declared an emergency over Scotland after failing to land at Inverness Airport."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.heraldscotland.com/news/25955568.easyjet-flight-declares-emergency-diverts-glasgow/",
+      "citationText": "serper-scottish-aviation – easyJet flight declares emergency and diverts to Glasgow"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Scotland",
+      "primary": false
+    },
+    {
+      "keyword": "easyJet flight declares emergency",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-21T01:11:22.354Z"
+}

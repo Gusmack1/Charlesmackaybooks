@@ -1,0 +1,49 @@
+{
+  "slug": "2026-03-21-ryanair-invests-40m-in-prestwick-airport-maintenan",
+  "title": "Ryanair invests £40m in Prestwick airport maintenance expansion",
+  "wordCount": 20,
+  "sections": [
+    {
+      "heading": "Summary",
+      "content": "Ryanair invests £40m in Prestwick airport maintenance expansion. The expansion project will make Prestwick Airport Ryanair's largest European maintenance base."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://www.bbc.com/news/articles/ceqw5vjd8jyo",
+      "citationText": "serper-scottish-aviation – Ryanair invests £40m in Prestwick airport maintenance expansion"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Ryanair invests £40m Prestwick",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-21T01:11:22.356Z"
+}
