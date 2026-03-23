@@ -28726,5 +28726,462 @@
     "imagePolicy": "attribution-only",
     "publishedAt": "2026-03-18T13:03:39.000Z",
     "fetchedAt": "2026-03-23T07:18:08.933Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c33le5p0zxjo#0",
+    "title": "Glasgow Central Station to fully reopen after Union Street fire",
+    "sourceUrl": "https://www.bbc.com/news/articles/c33le5p0zxjo?at_medium=RSS&at_campaign=rss",
+    "summary": "Network Rail said all ScotRail and cross-border routes would be restored at Scotland's busiest railway station.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T12:21:07.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.023Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c04xld9xl47o#0",
+    "title": "Two men arrested and charged after guga hunt protest",
+    "sourceUrl": "https://www.bbc.com/news/articles/c04xld9xl47o?at_medium=RSS&at_campaign=rss",
+    "summary": "It comes after a protest staged on the roof of NatureScot's headquarters in Inverness.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T11:22:01.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.023Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c4gl271g5q6o#1",
+    "title": "Scotland's papers: Public backs oil drilling and Middle East threats",
+    "sourceUrl": "https://www.bbc.com/news/articles/c4gl271g5q6o?at_medium=RSS&at_campaign=rss",
+    "summary": "A review of the front page stories from the daily newspapers in Scotland.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T07:01:00.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.024Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/news/articles/c4gj5k9pxzgo#1",
+    "title": "Army joins search for remains of mother and son killed 50 years ago",
+    "sourceUrl": "https://www.bbc.com/news/articles/c4gj5k9pxzgo?at_medium=RSS&at_campaign=rss",
+    "summary": "William MacDowell, 81, was convicted of the murders of Renee MacRae and her son Andrew in 2022 but their bodies have never been found.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-22T15:45:42.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.024Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/athletics/articles/czxrdl3vvnyo#4",
+    "title": "'I thought I was untouchable and would never lose again - but sport is brutal'",
+    "sourceUrl": "https://www.bbc.com/sport/athletics/articles/czxrdl3vvnyo?at_medium=RSS&at_campaign=rss",
+    "summary": "Josh Kerr thought he was \"untouchable\" but injury left him waiting for success and gave him a new attitude to athletics.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T08:19:45.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.024Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/cd6lv2y5d3po#4",
+    "title": "'If it's right for me, I'd love to stay' - Moore revels in Rangers loan",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/cd6lv2y5d3po?at_medium=RSS&at_campaign=rss",
+    "summary": "Mikey Moore insists he has \"loved every single second\" of his loan spell at Rangers, with the Tottenham Hotspur forward open to a return next season \"if it's right\" for the teenager.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T09:05:10.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.024Z"
+  },
+  {
+    "sourceId": "bbc-scotland",
+    "sourceName": "BBC News Scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/c1eq8e8xzexo#4",
+    "title": "'Bobadilla deal difficult for Celtic' - gossip",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/c1eq8e8xzexo?at_medium=RSS&at_campaign=rss",
+    "summary": "Celtic likely to miss out on Paraguayan target as Rangers loan star addresses potential return...",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T07:53:40.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.024Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cr51npez4yro#0",
+    "title": "Primary school with just one pupil could be closed for good",
+    "sourceUrl": "https://www.bbc.com/news/articles/cr51npez4yro?at_medium=RSS&at_campaign=rss",
+    "summary": "Fountainhall Primary in the Borders has capacity for 50 pupils but numbers attending fell sharply.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T06:20:51.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.136Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cx2v9wpkdero#1",
+    "title": "Men admit violent disorder outside asylum hotel",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx2v9wpkdero?at_medium=RSS&at_campaign=rss",
+    "summary": "Shaun Thompson, 38, and Luke Fleming, 21, will be sentenced at a later date.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T12:08:32.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.136Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/cx26glrw310o#1",
+    "title": "Scotland becomes first in UK to test newborns for rare genetic condition",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx26glrw310o?at_medium=RSS&at_campaign=rss",
+    "summary": "Spinal Muscular Atrophy (SMA) causes progressive muscle weakness and, without treatment, can limit life expectancy to just two years.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T02:55:52.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.136Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c0q9zvzjx7qo#4",
+    "title": "Community 'engulfed with shock and sadness' following woman's death",
+    "sourceUrl": "https://www.bbc.com/news/articles/c0q9zvzjx7qo?at_medium=RSS&at_campaign=rss",
+    "summary": "A man who was arrested on suspicion of the murder of Amy Doherty in Londonderry on Saturday is still being questioned by police.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T12:18:13.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.136Z"
+  },
+  {
+    "sourceId": "bbc-uk",
+    "sourceName": "BBC News UK",
+    "guid": "https://www.bbc.com/news/articles/c33le5p0zxjo#4",
+    "title": "Glasgow Central Station to fully reopen after Union Street fire",
+    "sourceUrl": "https://www.bbc.com/news/articles/c33le5p0zxjo?at_medium=RSS&at_campaign=rss",
+    "summary": "Network Rail said all ScotRail and cross-border routes would be restored at Scotland's busiest railway station.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T12:21:07.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.136Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6161319",
+    "title": "Moby Dick whale behaviour becomes reality, St Andrews University research confirms",
+    "sourceUrl": "https://www.scotsman.com/news/environment/moby-dick-whale-behaviour-becomes-reality-st-andrews-university-research-confirms-6161319",
+    "summary": "<p>Headbutting between these majestic ocean mammals has been scientifically proven. </p>",
+    "categories": [
+      "Environment",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T12:27:54.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.463Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6159391",
+    "title": "Glasgow fire: All platforms at Glasgow Central to reopen from Wednesday",
+    "sourceUrl": "https://www.scotsman.com/news/all-platforms-at-glasgow-central-to-reopen-from-wednesday-6159391",
+    "summary": "<p>ScotRail said its normal timetable is set to resume on Wednesday following a fortnight of disruption. </p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T11:48:50.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.463Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6159218",
+    "title": "M8 closed in both directions as emergency services attend vehicle fire near Harthill",
+    "sourceUrl": "https://www.scotsman.com/news/emergency-incident/m8-motorway-closed-vehicle-fire-6159218",
+    "summary": "<p>Emergency services remain on the scene.</p>",
+    "categories": [
+      "Emergency Incident",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T11:28:10.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.463Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "5621186",
+    "title": "How agentic AI will redefine legal work, not replace lawyers",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/how-agentic-ai-will-redefine-legal-work-not-replace-lawyers-5621186",
+    "summary": "The firms that harness this evolutionary leap will prosper,  writes ​​Rob Aberdein",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T10:45:53.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.463Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6153976",
+    "title": "Air Canada plane crash: Pilot and co-pilot dead after plane collides with fire truck at New York airport",
+    "sourceUrl": "https://www.scotsman.com/news/world/air-canada-plane-crash-new-york-6153976",
+    "summary": "<p>41 people were taken to hospital.</p>",
+    "categories": [
+      "World",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T09:20:45.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.463Z"
+  },
+  {
+    "sourceId": "scotsman-news",
+    "sourceName": "The Scotsman",
+    "guid": "6152075",
+    "title": "Car ‘failed to stop’ after crash that left motorcyclist in Edinburgh hospital",
+    "sourceUrl": "https://www.scotsman.com/regions/edinburgh-fife-and-lothians/west-lothian-crash-police-appeal-motorcyclist-car-6152075",
+    "summary": "<p>Enquiries are ongoing.</p>",
+    "categories": [
+      "Edinburgh, Fife and Lothians",
+      "Regions"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T08:45:08.000Z",
+    "fetchedAt": "2026-03-23T12:43:50.463Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025#2026-03-23T12:39:06Z",
+    "title": "Transparency data: Military Court Service sentencing remarks",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2025",
+    "summary": "Transcripts of sentencing remarks from Service Court hearings in the Court Martial.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-23T12:39:06.000Z",
+    "fetchedAt": "2026-03-23T12:43:51.606Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/mod-workforce-management-information-january-to-december-2026#2026-03-23T12:12:26Z",
+    "title": "Transparency data: MOD: workforce management information January to December 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/mod-workforce-management-information-january-to-december-2026",
+    "summary": "Reports on departmental staff numbers and costs.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-23T12:12:26.000Z",
+    "fetchedAt": "2026-03-23T12:43:51.606Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/publications/military-court-centres-court-listings#2026-03-23T11:02:52Z",
+    "title": "Transparency data: Military court centres court listings",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-centres-court-listings",
+    "summary": "Court listings for the military court centres.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-23T11:02:52.000Z",
+    "fetchedAt": "2026-03-23T12:43:51.606Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/guidance/mod-war-detectives-the-joint-casualty-and-compassionate-centre-commemorations-team-our-future-services-current-appeals-and-past-cases#2026-03-23T10:23:37Z",
+    "title": "MOD War Detectives (the Joint Casualty and Compassionate Centre Commemorations team): our future services, current appeals and past cases",
+    "sourceUrl": "https://www.gov.uk/guidance/mod-war-detectives-the-joint-casualty-and-compassionate-centre-commemorations-team-our-future-services-current-appeals-and-past-cases",
+    "summary": "Find out about future services and what current appeals are ongoing.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-23T10:23:37.000Z",
+    "fetchedAt": "2026-03-23T12:43:51.606Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/statistics/murder-manslaughter-sexual-offences-and-domestic-abuse-in-the-service-justice-system-2024#2026-03-23T10:12:13Z",
+    "title": "Official Statistics: Murder, manslaughter, sexual offences and domestic abuse in the Service Justice System: 2024",
+    "sourceUrl": "https://www.gov.uk/government/statistics/murder-manslaughter-sexual-offences-and-domestic-abuse-in-the-service-justice-system-2024",
+    "summary": "Statistics on murder, manslaughter, offences contrary to the Sexual Offences Act 2003, non-recent sexual offences and domestic abuse that are dealt with wholly within the Service Justice System.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-23T10:12:13.000Z",
+    "fetchedAt": "2026-03-23T12:43:51.606Z"
+  },
+  {
+    "sourceId": "mod-press-office",
+    "sourceName": "Ministry of Defence",
+    "guid": "https://www.gov.uk/government/statistics/murder-manslaughter-sexual-offences-and-domestic-abuse-in-the-service-justice-system-2023#2026-03-23T10:12:10Z",
+    "title": "Official Statistics: Murder, manslaughter, sexual offences and domestic abuse in the Service Justice System: 2023",
+    "sourceUrl": "https://www.gov.uk/government/statistics/murder-manslaughter-sexual-offences-and-domestic-abuse-in-the-service-justice-system-2023",
+    "summary": "Statistics on murder, manslaughter, offences contrary to the Sexual Offences Act 2003, non-recent sexual offences and domestic abuse that are dealt with wholly within the Service Justice System.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-23T10:12:10.000Z",
+    "fetchedAt": "2026-03-23T12:43:51.606Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://airportindustry-news.com/airports-in-scotland-enable-uks-first-electric-flight-demonstrations/",
+    "title": "Airports in Scotland Enable UK’s First Electric Flight Demonstrations",
+    "sourceUrl": "https://airportindustry-news.com/airports-in-scotland-enable-uks-first-electric-flight-demonstrations/",
+    "summary": "Loganair and BETA Technologies have commenced the UK's first real-world electric flight demonstrations on Royal Mail routes in Scotland.",
+    "categories": [
+      "Airport Industry-News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-23T12:43:57.503Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.traveldailynews.com/aviation/air-charter-scotland-extends-wick-aberdeen-pso-route-to-august-2026/",
+    "title": "Air Charter Scotland extends Wick-Aberdeen PSO route to August 2026",
+    "sourceUrl": "https://www.traveldailynews.com/aviation/air-charter-scotland-extends-wick-aberdeen-pso-route-to-august-2026/",
+    "summary": "Air Charter Scotland will continue operating the Wick-Aberdeen-Wick PSO route until 14 August 2026, following additional funding from the...",
+    "categories": [
+      "Travel Daily News International"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-23T12:43:57.503Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.travelandtourworld.com/news/article/scotlands-wick-aberdeen-air-service-now-extended-connecting-caithness-and-aberdeen/",
+    "title": "Scotland’s Wick-Aberdeen Air Service Now Extended, Connecting Caithness and Aberdeen",
+    "sourceUrl": "https://www.travelandtourworld.com/news/article/scotlands-wick-aberdeen-air-service-now-extended-connecting-caithness-and-aberdeen/",
+    "summary": "Air Charter Scotland announces an extension of the Wick-Aberdeen PSO route to August 2026, increasing capacity with new aircraft and...",
+    "categories": [
+      "Travel And Tour World"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-23T12:43:57.503Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.techbusinessnews.com.au/news/aviations-next-chapter-begins-with-fully-electric-mail-flight-demo-in-the-uk/",
+    "title": "Aviation’s Next Chapter Begins With Fully Electric Mail Demo Flight In The UK",
+    "sourceUrl": "https://www.techbusinessnews.com.au/news/aviations-next-chapter-begins-with-fully-electric-mail-flight-demo-in-the-uk/",
+    "summary": "The US-built Alia CX300 marks the UK's first electric mail flight demonstrations, heralding a new chapter in aviation with a 336 n/m range.",
+    "categories": [
+      "Technology News Australia"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-23T12:43:57.503Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.aviationbusinessnews.com/cargo/glasgow-prestwick-showcases-cool-chain-capability-to-india/",
+    "title": "Glasgow Prestwick showcases cool chain capability to India",
+    "sourceUrl": "https://www.aviationbusinessnews.com/cargo/glasgow-prestwick-showcases-cool-chain-capability-to-india/",
+    "summary": "Glasgow Prestwick Airport (PIK) has underlined its ambitions to capture a greater share of UK-India trade flows after hosting the Consul General of India,...",
+    "categories": [
+      "Aviation Business News"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-23T12:43:57.503Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.ayradvertiser.com/news/25958329.pictures-protest-us-use-prestwick-airport/",
+    "title": "PICTURES: Campaigners protest at Prestwick Airport over US military use",
+    "sourceUrl": "https://www.ayradvertiser.com/news/25958329.pictures-protest-us-use-prestwick-airport/",
+    "summary": "Campaigners from across Scotland travelled to Prestwick Airport to demonstrate against American military use of the site over the weekend.",
+    "categories": [
+      "Ayr Advertiser"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-23T12:43:57.503Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.dailyrecord.co.uk/news/scottish-news/woman-71-arrested-after-prestwick-36908884",
+    "title": "Woman, 71, arrested after Prestwick Airport anti-war protest",
+    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/woman-71-arrested-after-prestwick-36908884",
+    "summary": "The Stop the War Coalition joined the Ayrshire Campaign for Nuclear Disarmament and Ayrshire Global Justice to swarm the airport on Sunday.",
+    "categories": [
+      "Daily Record"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-23T12:43:57.503Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.msn.com/en-my/news/other/sparks-fly-airline-launches-britains-first-all-electric-flight-from-glasgow-to-dundee/ar-AA1Z0FzJ",
+    "title": "Sparks fly! Airline launches Britain's first all-electric flight from Glasgow to Dundee",
+    "sourceUrl": "https://www.msn.com/en-my/news/other/sparks-fly-airline-launches-britains-first-all-electric-flight-from-glasgow-to-dundee/ar-AA1Z0FzJ",
+    "summary": "It sounds more like something out of a futuristic sci-fi movie. But aviation history was made in Scotland yesterday when the UK's first all-electric...",
+    "categories": [
+      "MSN"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-23T12:43:57.503Z"
+  },
+  {
+    "sourceId": "serper-scottish-aviation",
+    "sourceName": "Serper Scottish Aviation Search",
+    "guid": "https://www.msn.com/en-nz/news/other/sparks-fly-airline-launches-britain-s-first-all-electric-flight-from-glasgow-to-dundee/ar-AA1Z1jco",
+    "title": "Sparks fly! Airline launches Britain's first all-electric flight from Glasgow to Dundee",
+    "sourceUrl": "https://www.msn.com/en-nz/news/other/sparks-fly-airline-launches-britain-s-first-all-electric-flight-from-glasgow-to-dundee/ar-AA1Z1jco",
+    "summary": "It sounds more like something out of a futuristic sci-fi movie. But aviation history was made in Scotland yesterday when the country's first...",
+    "categories": [
+      "MSN"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-23T12:43:57.503Z"
   }
 ]
