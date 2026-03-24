@@ -1,0 +1,53 @@
+{
+  "slug": "2026-03-24-ryanair-announces-40m-expansion-at-prestwick",
+  "title": "Ryanair Announces 40m Expansion At Prestwick",
+  "wordCount": 20,
+  "sections": [
+    {
+      "heading": "What happened",
+      "content": "Ryanair, Europe's No."
+    },
+    {
+      "heading": "Key details",
+      "content": "1 airline, today (Fri, 20 Mar) announced a £40M expansion of its maintenance facility at Prestwick Airport."
+    }
+  ],
+  "images": [],
+  "sourceReferences": [
+    {
+      "sourceId": "serper-scottish-aviation",
+      "sourceUrl": "https://aeromorning.com/en/ryanair-announces-40m-expansion-at-prestwick/",
+      "citationText": "serper-scottish-aviation – RYANAIR ANNOUNCES £40M EXPANSION AT PRESTWICK"
+    }
+  ],
+  "relatedBooks": [
+    {
+      "bookId": "clydeside-aviation-vol2",
+      "reason": "Related research volume"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "Scottish aviation news",
+      "primary": true
+    },
+    {
+      "keyword": "aviation news",
+      "primary": false
+    },
+    {
+      "keyword": "Prestwick",
+      "primary": false
+    },
+    {
+      "keyword": "airport",
+      "primary": false
+    },
+    {
+      "keyword": "Ryanair Announces 40m Expansion",
+      "primary": false
+    }
+  ],
+  "status": "published",
+  "createdAt": "2026-03-24T12:50:05.299Z"
+}

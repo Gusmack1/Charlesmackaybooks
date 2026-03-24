@@ -33396,5 +33396,939 @@
     "publishedAt": "2026-03-24T04:29:06.000Z",
     "fetchedAt": "2026-03-24T07:10:58.727Z",
     "status": "new"
+  },
+  {
+    "id": "256b01c3-02be-4dc8-bb77-4e5f1eeabd47",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/ce9mgle94g5o#0",
+    "title": "'Out of control' rapist who abducted teenage girl faces life sentence",
+    "sourceUrl": "https://www.bbc.com/news/articles/ce9mgle94g5o?at_medium=RSS&at_campaign=rss",
+    "summary": "Aaron Strachan pulled a knife on the 15-year-old in the city centre before marching her to a basement.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T12:27:46.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.875Z",
+    "status": "new"
+  },
+  {
+    "id": "b58ee51a-052d-451b-a516-aa41562abe86",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cgrl087d1qno#0",
+    "title": "Woman gets compensation from ex who tried to kill her in funeral home crash",
+    "sourceUrl": "https://www.bbc.com/news/articles/cgrl087d1qno?at_medium=RSS&at_campaign=rss",
+    "summary": "William McBurnie drove his car at Zoe Turnbull and her mother narrowly missing them in Jedburgh in 2022.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T11:50:40.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "4a8a4968-edd2-4581-9a51-8282818ef439",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c4g8x7q4l8go#0",
+    "title": "UK must back North Sea oil and gas drilling, says trade body",
+    "sourceUrl": "https://www.bbc.com/news/articles/c4g8x7q4l8go?at_medium=RSS&at_campaign=rss",
+    "summary": "The group says the country \"urgently\" needs to produce its own oil and gas to secure supplies.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T00:31:09.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "e05b6c10-53cc-452e-a406-9931ac6e3228",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cm2rm779p3ro#0",
+    "title": "Sarwar made last-minute decision to call for Starmer's resignation",
+    "sourceUrl": "https://www.bbc.com/news/articles/cm2rm779p3ro?at_medium=RSS&at_campaign=rss",
+    "summary": "The Scottish Labour leader says he only decided to speak out against the prime minister on the morning of his dramatic news conference.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T08:45:12.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "c9ec141a-fc31-4fcb-bc51-fa731525a75b",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c705426jxzko#0",
+    "title": "Primary school closed for 'immediate' work on structural problem",
+    "sourceUrl": "https://www.bbc.com/news/articles/c705426jxzko?at_medium=RSS&at_campaign=rss",
+    "summary": "About 180 pupils from St Cuthbert's RC Primary School will be decanted to a few primary schools nearby depending on their age group, the council said.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T11:17:41.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "4c805efe-eba0-431c-ac80-27d769cecfbc",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cm2rmw99303o#1",
+    "title": "Pain-free 'tripod' restraint brought in to Scottish jails",
+    "sourceUrl": "https://www.bbc.com/news/articles/cm2rmw99303o?at_medium=RSS&at_campaign=rss",
+    "summary": "The Scottish Prison Service (SPS) says the technique will reduce injuries among prison officers and inmates following three pilot schemes.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:34:05.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "58379c53-58a8-4069-a0ce-045c5d12d657",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cge0jlqpdwdo#1",
+    "title": "MSPs to vote on proposed 'modernised' crofting legislation",
+    "sourceUrl": "https://www.bbc.com/news/articles/cge0jlqpdwdo?at_medium=RSS&at_campaign=rss",
+    "summary": "The proposed bill affects the running of 21,000 crofts across parts of northern and western Scotland.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T11:59:57.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "7bd66d31-ec1c-410c-a99f-d4d23dcc9f75",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c4gj0w2dzw3o#1",
+    "title": "'It's an essential part of my life': Funding fears over elderly care service",
+    "sourceUrl": "https://www.bbc.com/news/articles/c4gj0w2dzw3o?at_medium=RSS&at_campaign=rss",
+    "summary": "Cumbernauld Action on Care for the Elderly (CACE), which provides transport, meals and social activities for older people, will lose about 35% of its annual budget.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:34:24.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "2bb8a556-fc5a-4472-b2e7-0685a9137a45",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c8ejky9jk2zo#1",
+    "title": "Police launch murder investigation after death of man, 49",
+    "sourceUrl": "https://www.bbc.com/news/articles/c8ejky9jk2zo?at_medium=RSS&at_campaign=rss",
+    "summary": "The body of David Smith was discovered last Tuesday evening at a property in Glenraith Square.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T17:21:25.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "a7385eb8-c2c3-4b55-9282-e93b69a77490",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cr41l5w0pddo#1",
+    "title": "Scotland's papers: Trump eases Iran threat and 200-year fix for NHS waits",
+    "sourceUrl": "https://www.bbc.com/news/articles/cr41l5w0pddo?at_medium=RSS&at_campaign=rss",
+    "summary": "A review of the front page stories from the daily newspapers in Scotland.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T07:08:32.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "f407809a-3fbc-4c7c-b32c-1e3c6b7f1c2c",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c98kdp0z9gyo#1",
+    "title": "Ex-teacher accused of Edinburgh school abuse found guilty of sex attack in South Africa",
+    "sourceUrl": "https://www.bbc.com/news/articles/c98kdp0z9gyo?at_medium=RSS&at_campaign=rss",
+    "summary": "A court in Cape Town found Iain Wares guilty of indecently assaulting a former student who accused him of sexual abuse in the 1980s.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T16:48:13.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "00323b56-9ff7-45ea-b9f2-97c573a50eb5",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/ce9mgle94g5o#3",
+    "title": "'Out of control' rapist who abducted teenage girl faces life sentence",
+    "sourceUrl": "https://www.bbc.com/news/articles/ce9mgle94g5o?at_medium=RSS&at_campaign=rss",
+    "summary": "Aaron Strachan pulled a knife on the 15-year-old in the city centre before marching her to a basement.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T12:27:46.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "b4bbcb47-6213-49ee-aac5-e179be3c39fb",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cge0jlqpdwdo#3",
+    "title": "MSPs to vote on proposed 'modernised' crofting legislation",
+    "sourceUrl": "https://www.bbc.com/news/articles/cge0jlqpdwdo?at_medium=RSS&at_campaign=rss",
+    "summary": "The proposed bill affects the running of 21,000 crofts across parts of northern and western Scotland.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T11:59:57.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "0c415b04-ea70-4e3b-9d5b-3566fd356390",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/c4g8x7q4l8go#3",
+    "title": "UK must back North Sea oil and gas drilling, says trade body",
+    "sourceUrl": "https://www.bbc.com/news/articles/c4g8x7q4l8go?at_medium=RSS&at_campaign=rss",
+    "summary": "The group says the country \"urgently\" needs to produce its own oil and gas to secure supplies.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T00:31:09.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "59cb7f01-1788-4fcf-8018-c93d9911429a",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/news/articles/cgrl087d1qno#3",
+    "title": "Woman gets compensation from ex who tried to kill her in funeral home crash",
+    "sourceUrl": "https://www.bbc.com/news/articles/cgrl087d1qno?at_medium=RSS&at_campaign=rss",
+    "summary": "William McBurnie drove his car at Zoe Turnbull and her mother narrowly missing them in Jedburgh in 2022.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T11:50:40.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "a07db4cd-ab6e-4a40-9cf1-9c184b298d04",
+    "sourceId": "bbc-scotland",
+    "guid": "https://www.bbc.com/sport/football/articles/cm2rm71xkgro#4",
+    "title": "Nawrocki permanent exit mooted as Just & Ashia linked with Glasgow moves - gossip",
+    "sourceUrl": "https://www.bbc.com/sport/football/articles/cm2rm71xkgro?at_medium=RSS&at_campaign=rss",
+    "summary": "Celtic defender could leave permanently as two players are linked with moves to Glasgow.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T07:17:39.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.876Z",
+    "status": "new"
+  },
+  {
+    "id": "5e407c97-031c-41e1-9b24-c4b94bbbd08d",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cj32d05x702o#0",
+    "title": "Vet prescription fees to be capped at £21",
+    "sourceUrl": "https://www.bbc.com/news/articles/cj32d05x702o?at_medium=RSS&at_campaign=rss",
+    "summary": "Vets will have to publish price lists for services under measures from the UK's competition watchdog.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T09:47:18.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.899Z",
+    "status": "new"
+  },
+  {
+    "id": "b45c25bf-c896-4080-9d42-327f151f7a9c",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cyv17r8l7n0o#0",
+    "title": "Meningitis vaccines offered to some Kent Year 11 pupils",
+    "sourceUrl": "https://www.bbc.com/news/articles/cyv17r8l7n0o?at_medium=RSS&at_campaign=rss",
+    "summary": "Year 11 pupils are to receive the vaccine in schools where it has already been offered.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T12:07:02.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.899Z",
+    "status": "new"
+  },
+  {
+    "id": "67023f83-78c9-4ccb-a2ff-67350aeb0257",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cr4105d93d3o#0",
+    "title": "Decline in migratory fish populations prompts fight for protection",
+    "sourceUrl": "https://www.bbc.com/news/articles/cr4105d93d3o?at_medium=RSS&at_campaign=rss",
+    "summary": "The UN assessment of the state of migratory freshwater fish revealed an 81% decline in the last 50 years.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T12:00:30.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.899Z",
+    "status": "new"
+  },
+  {
+    "id": "d289ac3b-2c5c-40d0-8615-534187ee105a",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/ckg9l87e4wyo#0",
+    "title": "Police investigating possible Iran link to attack on Jewish charity ambulances",
+    "sourceUrl": "https://www.bbc.com/news/articles/ckg9l87e4wyo?at_medium=RSS&at_campaign=rss",
+    "summary": "Met Police chief Sir Mark Rowley says the force is looking at \"an online claim of responsibility by an Islamist group\"",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T10:51:10.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.899Z",
+    "status": "new"
+  },
+  {
+    "id": "33ae37a7-af1b-4d1a-90e1-273f70c0e043",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/cx2rn250ddjo#1",
+    "title": "Transgender girls told to leave Girlguiding groups by September",
+    "sourceUrl": "https://www.bbc.com/news/articles/cx2rn250ddjo?at_medium=RSS&at_campaign=rss",
+    "summary": "It follows an announcement in December that transgender members would be banned from joining.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T12:25:44.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.899Z",
+    "status": "new"
+  },
+  {
+    "id": "ac8aaeaa-0b2f-4c09-8219-58cfb9a4fe53",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c2087v35p34o#1",
+    "title": "YouTube removes channels of man who murdered Natalie McNally",
+    "sourceUrl": "https://www.bbc.com/news/articles/c2087v35p34o?at_medium=RSS&at_campaign=rss",
+    "summary": "Natalie McNally was 15 weeks pregnant when she was murdered by McCullagh in her home in December 2022.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T08:45:04.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.899Z",
+    "status": "new"
+  },
+  {
+    "id": "1200a6bf-c2d6-418f-a783-5db7c78aa031",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/c98medpy422o#1",
+    "title": "Killer father called his baby son 'It' on 999 call",
+    "sourceUrl": "https://www.bbc.com/news/articles/c98medpy422o?at_medium=RSS&at_campaign=rss",
+    "summary": "Klevi Pirjani, who killed his three-month-old son, told a 999 operator: \"It just stopped breathing.\"",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:22:00.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.899Z",
+    "status": "new"
+  },
+  {
+    "id": "186c83e3-1aa7-4ea8-821c-f463f194561b",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/clyrj8rz6jno#3",
+    "title": "UK's transplant system was world-leading - now it lags behind other Western nations",
+    "sourceUrl": "https://www.bbc.com/news/articles/clyrj8rz6jno?at_medium=RSS&at_campaign=rss",
+    "summary": "The UK has failed to keep pace with the rest of the world. Can it regain its status, and how?",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:00:07.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.899Z",
+    "status": "new"
+  },
+  {
+    "id": "613a33df-ac08-4d50-910a-d74bb5f5b70f",
+    "sourceId": "bbc-uk",
+    "guid": "https://www.bbc.com/news/articles/ce9mgle94g5o#4",
+    "title": "'Out of control' rapist who abducted teenage girl faces life sentence",
+    "sourceUrl": "https://www.bbc.com/news/articles/ce9mgle94g5o?at_medium=RSS&at_campaign=rss",
+    "summary": "Aaron Strachan pulled a knife on the 15-year-old in the city centre before marching her to a basement.",
+    "categories": [],
+    "licence": "bbc",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T12:27:46.000Z",
+    "fetchedAt": "2026-03-24T12:49:48.899Z",
+    "status": "new"
+  },
+  {
+    "id": "1aed20fe-be27-42d5-8c2d-cdda97b3b906",
+    "sourceId": "scotsman-news",
+    "guid": "5433151",
+    "title": "April showers on the way: Brits are rushing to buy this “storm-proof” umbrella – now 43% off (aff)",
+    "sourceUrl": "https://www.scotsman.com/recommended/windproof-umbrella-stormproof-amazon-deal-5433151",
+    "summary": "<p>After months of wild weather and April showers still looming, shoppers are snapping up a heavily discounted windproof umbrella that promises not to flip inside out in strong gusts.</p>",
+    "categories": [
+      "Recommended"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T10:36:17.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "ea39a4de-c597-41d1-b576-61302823cc65",
+    "sourceId": "scotsman-news",
+    "guid": "6213073",
+    "title": "Drivers facing delays on the A720 Edinburgh City Bypass after rush hour crash",
+    "sourceUrl": "https://www.scotsman.com/news/traffic-and-travel/drivers-facing-delays-on-major-route-after-rush-hour-crash-6213073",
+    "summary": "<p>Drivers are facing delays on a major route in Edinburgh after a rush-hour crash left the road blocked.</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T09:54:23.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "4d379220-6fd7-48b9-b941-3dca432626c7",
+    "sourceId": "scotsman-news",
+    "guid": "6212939",
+    "title": "Anas Sarwar reveals his 'personal pain' at calling for Starmer resignation",
+    "sourceUrl": "https://www.scotsman.com/news/politics/anas-sarwar-reveals-his-personal-pain-at-calling-for-starmer-resignation-6212939",
+    "summary": "<p>Scottish leader decided to make resignation call as Mandelson scandal was overshadowing campaign</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T08:52:23.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "cc37fc22-cb21-4845-b19f-22d8c778cc7f",
+    "sourceId": "scotsman-news",
+    "guid": "6042309",
+    "title": "Island hopping made effortless: Making the most of your visit to the Outer Hebrides",
+    "sourceUrl": "https://www.scotsman.com/sponsored/island-hopping-made-effortless-making-the-most-of-your-visit-to-the-outer-hebrides-6042309",
+    "summary": "<p>If visiting the Outer Hebrides is on your bucket list then read on… here’s how to plan the perfect trip and make the most of your adventure.</p>",
+    "categories": [
+      "Sponsored"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T07:00:01.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "32e68372-9738-4d90-9321-40bda72e17e7",
+    "sourceId": "scotsman-news",
+    "guid": "6171805",
+    "title": "A&E waiting time crisis could take centuries to fix, frontline medics warn",
+    "sourceUrl": "https://www.scotsman.com/news/ae-waiting-time-crisis-could-take-centuries-to-fix-medics-warn-6171805",
+    "summary": "<p>Warning that issue will take generations to solve without ‘urgent’ reform</p>",
+    "categories": [
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:01:40.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "45e8e14e-9703-4709-aa53-fd18f7cfae5b",
+    "sourceId": "scotsman-news",
+    "guid": "6165586",
+    "title": "'Remarkable' discovery of ancient plant in northern Scotland not seen in 50 years",
+    "sourceUrl": "https://www.scotsman.com/hays-way/remarkable-discovery-of-ancient-plant-in-northern-scotland-not-seen-in-50-years-6165586",
+    "summary": "<p>The plant is distinctive and can be recognised by its highly symmetrical, architectural structure.</p>",
+    "categories": [
+      "Hay&#039;s Way"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:01:22.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "dd1ff60e-ff66-4696-90ba-6a1dad847c48",
+    "sourceId": "scotsman-news",
+    "guid": "6159967",
+    "title": "New images as Richard Gadd's Half Man announces launch date",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/new-images-as-richard-gadds-half-man-announces-launch-date-6159967",
+    "summary": "<p>The series will launch in April</p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:01:21.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "7c2e1cac-7f27-4846-b10e-2a4c0fd6971e",
+    "sourceId": "scotsman-news",
+    "guid": "6169759",
+    "title": "Tories to force Commons vote on new oil and gas projects",
+    "sourceUrl": "https://www.scotsman.com/news/politics/tories-to-force-commons-vote-on-new-oil-and-gas-projects-6169759",
+    "summary": "<p>The Conservatives will also use their opposition day debate to give <a href=\"/topic/mps\">MPs</a> a vote on ending the windfall tax on energy giants and to approve the Rosebank and Jackdaw oil fields. </p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:01:05.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "32919bee-717f-4fa5-8949-6519ebd4e175",
+    "sourceId": "scotsman-news",
+    "guid": "6159827",
+    "title": "We talk endlessly about doing things differently - but will not fund projects which are",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/we-talk-endlessly-about-doing-things-differently-but-will-not-fund-projects-which-are-6159827",
+    "summary": "<p> If we lose work like this for the sake of £50,000, then the problem isn’t that we do not understand trauma. It’s that we are willing only to speak about it</p>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:00:57.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "087f3cb8-4e61-4f26-b72e-a4552805a02f",
+    "sourceId": "scotsman-news",
+    "guid": "6173592",
+    "title": "Why Scotland should ignore the IFS if it is to ever prosper again",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/why-scotland-should-ignore-the-ifs-if-it-is-to-ever-prosper-again-6173592",
+    "summary": "<p>Ironically, the party so often accused of not having any policies was first to announce its plans</p>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:00:55.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "fdea84fe-8e2a-4356-8626-91779d29ecef",
+    "sourceId": "scotsman-news",
+    "guid": "6167795",
+    "title": "Business tax concerns reach five-year high as regime could threaten futures",
+    "sourceUrl": "https://www.scotsman.com/news/politics/business-tax-concerns-reach-five-year-high-as-regime-could-threaten-futures-6167795",
+    "summary": "<p>The Institute of Directors says business leaders are growing increasingly concerned about taxation in Scotland.</p>",
+    "categories": [
+      "Politics",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:00:54.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "184f51ee-da35-48eb-b637-bb2af5cceafe",
+    "sourceId": "scotsman-news",
+    "guid": "6160277",
+    "title": "For the sake of our sons, we must reclaim masculinity from the manosphere",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/for-the-sake-of-our-sons-we-must-reclaim-masculinity-from-the-manosphere-6160277",
+    "summary": "<p>We can build a Scotland where women and girls are safe and valued, and where boys can become the best of themselve</p>",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:00:54.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "eda77433-5e9b-4f42-a123-445b1aa0e5fc",
+    "sourceId": "scotsman-news",
+    "guid": "6168946",
+    "title": "Scottish musicians to benefit from fund to help plug rising post-Brexit tour costs",
+    "sourceUrl": "https://www.scotsman.com/arts-and-culture/scottish-musicians-to-benefit-from-fund-to-help-plug-rising-post-brexit-tour-costs-6168946",
+    "summary": "<p>The fund will be trialled for one year</p>",
+    "categories": [
+      "Arts and Culture"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-24T06:00:17.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "33d4d24a-0d09-4692-8484-fcc9635c3c4f",
+    "sourceId": "scotsman-news",
+    "guid": "6176128",
+    "title": "Readers' Letters: Most MSPs seem incapable of civilised debate",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/letters/readers-letters-most-msps-seem-incapable-of-civilised-debate-6176128",
+    "summary": "Never mind a heated debate, those at Holyrood are barely lukewarm, says reader",
+    "categories": [
+      "Letters",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T17:48:19.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "4c80421b-bf02-4c05-b96c-1b88a8ba6ec7",
+    "sourceId": "scotsman-news",
+    "guid": "6174102",
+    "title": "What it takes to lead in turbulent times like these",
+    "sourceUrl": "https://www.scotsman.com/business/what-it-takes-to-lead-in-turbulent-times-like-these-6174102",
+    "summary": "One of the most important roles of a leader today is to create hope, write ​Norman Drummond and Nikki Bridle",
+    "categories": [
+      "Business"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T16:59:18.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "86b32bab-0ce2-4585-ad65-e59e547c71a4",
+    "sourceId": "scotsman-news",
+    "guid": "6171630",
+    "title": "Scotsman leader: Does the political will exist to reform NHS?",
+    "sourceUrl": "https://www.scotsman.com/news/opinion/columnists/scotsman-leader-does-the-political-will-exist-to-reform-nhs-6171630",
+    "summary": "Are any politicians brave enough to introduce the sort of reform necessary?",
+    "categories": [
+      "Columnists",
+      "Opinion",
+      "News"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "attribution-only",
+    "publishedAt": "2026-03-23T16:03:36.000Z",
+    "fetchedAt": "2026-03-24T12:49:49.127Z",
+    "status": "new"
+  },
+  {
+    "id": "57d5301a-d2e0-4fa7-8688-0c8d9bd75469",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/consultations/consultation-on-the-ministry-of-defences-approach-to-safeguarding-the-eskdalemuir-seismological-array#2026-03-24T12:20:15Z",
+    "title": "MOD approach to safeguarding the Eskdalemuir Seismological Array",
+    "sourceUrl": "https://www.gov.uk/government/consultations/consultation-on-the-ministry-of-defences-approach-to-safeguarding-the-eskdalemuir-seismological-array",
+    "summary": "From 18 March 2026 the MOD adopted a new approach to safeguarding the Eskdalemuir Seismological Array.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T12:20:15.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.239Z",
+    "status": "new"
+  },
+  {
+    "id": "e8fcf3a7-8dbc-4c69-94bc-e10d7b8f7bc4",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/countering-illegal-use-of-uas-around-prisons-and-sensitive-sites#2026-03-24T12:08:03Z",
+    "title": "Notice: Countering Illegal Use of UAS Around Prisons and Sensitive Sites",
+    "sourceUrl": "https://www.gov.uk/government/publications/countering-illegal-use-of-uas-around-prisons-and-sensitive-sites",
+    "summary": "Seeking low-collateral solutions to counter hostile Uncrewed Aerial Systems (UAS), used for contraband delivery, surveillance near prisons and sensitive sites",
+    "categories": [
+      "Notice"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T12:08:03.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.240Z",
+    "status": "new"
+  },
+  {
+    "id": "bb14fcb1-c8b2-4e1b-833b-17f47933d8fd",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/desider-2026#2026-03-24T12:07:16Z",
+    "title": "Promotional material: desider 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/desider-2026",
+    "summary": "Magazine of Defence Equipment & Support (DE&S).",
+    "categories": [
+      "Promotional material"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T12:07:16.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.240Z",
+    "status": "new"
+  },
+  {
+    "id": "8632aa30-cd1e-4f4f-bcaa-10b9b8b4ca9b",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/defence-diplomacy-strategy#2026-03-24T11:00:05Z",
+    "title": "Policy paper: Defence Diplomacy Strategy",
+    "sourceUrl": "https://www.gov.uk/government/publications/defence-diplomacy-strategy",
+    "summary": "How UK Defence can deepen its international relationships with allies and partners to support defence and wider foreign policy.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T11:00:05.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.240Z",
+    "status": "new"
+  },
+  {
+    "id": "aefeaa52-c7c7-4fbc-895e-1fd0c922a727",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/news/ministry-of-defence-small-and-medium-sized-enterprise-engagement#2026-03-24T10:00:05Z",
+    "title": "Ministry of Defence small and medium-sized enterprise engagement",
+    "sourceUrl": "https://www.gov.uk/government/news/ministry-of-defence-small-and-medium-sized-enterprise-engagement",
+    "summary": "How the Ministry of Defence (MOD) is supporting small and medium-sized enterprises (SMEs) in advance of the SME Action Plan.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T10:00:05.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.240Z",
+    "status": "new"
+  },
+  {
+    "id": "cb8d3a17-6df8-43ec-962b-7a1171eda381",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2026#2026-03-24T09:38:40Z",
+    "title": "Transparency data: Military Court Service sentencing remarks 2026",
+    "sourceUrl": "https://www.gov.uk/government/publications/military-court-service-sentencing-remarks-2026",
+    "summary": "Transcripts of sentencing remarks from Service Court hearings in the Court Martial.",
+    "categories": [
+      "Transparency data"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T09:38:40.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.240Z",
+    "status": "new"
+  },
+  {
+    "id": "59b94b10-5f90-4419-8ee2-dced9a1cbab8",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table#2026-03-24T09:16:47Z",
+    "title": "Regulation: Notice of proposed amendments (NPA) reference table",
+    "sourceUrl": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "summary": "The Military Aviation Authority (MAA) NPA table provides information of proposed changes in regulations and release date.",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T09:16:47.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.240Z",
+    "status": "new"
+  },
+  {
+    "id": "f445545f-f311-4cff-9629-f131300ea35c",
+    "sourceId": "mod-press-office",
+    "guid": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents#2026-03-24T09:16:20Z",
+    "title": "Regulation: Notice of proposed amendments (NPA) documents",
+    "sourceUrl": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "summary": "MAA issuing of an NPA allows a consultation period to be undertaken on a proposed amendment or the implementation of new regulation.",
+    "categories": [
+      "Regulation"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T09:16:20.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.240Z",
+    "status": "new"
+  },
+  {
+    "id": "8e02fee9-843e-448b-81c5-4e837a66ed8e",
+    "sourceId": "hial-airports",
+    "guid": "https://www.hial.co.uk/news/article/244/lapland-from-inverness-returns-for-2026",
+    "title": "Lapland from Inverness returns for 2026",
+    "sourceUrl": "https://www.hial.co.uk/news/article/244/lapland-from-inverness-returns-for-2026",
+    "summary": "A popular festive charter flight from Inverness Airport to Finnish Lapland is set to return on 19 December, following the success of two sold-out trips in 2025.",
+    "categories": [
+      "HIAL"
+    ],
+    "licence": "corporate",
+    "imagePolicy": "corporate",
+    "publishedAt": "2026-03-24T00:00:00.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.903Z",
+    "status": "rewritten",
+    "articleSlug": "2026-03-24-inverness-to-lapland-charter-flights-sch",
+    "articlePath": "data/news-articles/2026/03/2026-03-24-inverness-to-lapland-charter-flights-sch.json",
+    "rewrittenAt": "2026-03-24T12:49:55.736Z"
+  },
+  {
+    "id": "cfb00731-ea45-456c-863d-2bb5ca1b0047",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/railways-bill-equalities-impact-assessment#2026-03-24T11:12:09Z",
+    "title": "Impact assessment: Railways Bill equalities impact assessment",
+    "sourceUrl": "https://www.gov.uk/government/publications/railways-bill-equalities-impact-assessment",
+    "summary": "This is the Department for Transport's equalities impact assessment of measures within the Railways Bill.",
+    "categories": [
+      "Impact assessment"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T11:12:09.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.910Z",
+    "status": "new"
+  },
+  {
+    "id": "77e239bf-0617-42b4-a6a2-ff2497c899ba",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/dft-small-and-medium-sized-enterprise-sme-action-plan-2025-to-2028#2026-03-24T11:07:02Z",
+    "title": "Policy paper: DfT small and medium-sized enterprise (SME) action plan: 2025 to 2028",
+    "sourceUrl": "https://www.gov.uk/government/publications/dft-small-and-medium-sized-enterprise-sme-action-plan-2025-to-2028",
+    "summary": "The Department for Transport (DfT) is backing your business by making it easier for small businesses to access public sector supply chains, removing unnecessary burdens and costs.",
+    "categories": [
+      "Policy paper"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T11:07:02.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.910Z",
+    "status": "new"
+  },
+  {
+    "id": "98be02d7-f212-4d54-9974-004d04168020",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/organisations/department-for-transport/about/statistics#2026-03-24T09:30:06Z",
+    "title": "Statistics at DfT",
+    "sourceUrl": "https://www.gov.uk/government/organisations/department-for-transport/about/statistics",
+    "summary": "Browse, search and learn about official statistics releases relating to the transport system across the United Kingdom.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T09:30:06.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.910Z",
+    "status": "new"
+  },
+  {
+    "id": "41a24338-ce38-4464-a275-f726419f1009",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/publications/buses-statistics-pre-release-access-list#2026-03-24T09:30:05Z",
+    "title": "Guidance: Bus and concessionary travel statistics: pre-release access",
+    "sourceUrl": "https://www.gov.uk/government/publications/buses-statistics-pre-release-access-list",
+    "summary": "Post holders given access to buses statistics up to 24 hours prior to release.",
+    "categories": [
+      "Guidance"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T09:30:05.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.910Z",
+    "status": "new"
+  },
+  {
+    "id": "039555b0-1d30-4963-9d97-d2326528fa29",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/statistics/annual-bus-statistics-year-ending-march-2025#2026-03-24T09:30:04Z",
+    "title": "Accredited official statistics: Annual bus statistics: year ending March 2025",
+    "sourceUrl": "https://www.gov.uk/government/statistics/annual-bus-statistics-year-ending-march-2025",
+    "summary": "Annual statistics on local buses in Great Britain for the year ending March 2025.",
+    "categories": [
+      "Accredited official statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T09:30:04.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.910Z",
+    "status": "new"
+  },
+  {
+    "id": "5540399c-e50e-4891-9dc2-7db43934b3d5",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/statistics/concessionary-travel-statistics-year-ending-march-2025#2026-03-24T09:30:04Z",
+    "title": "Official Statistics: Concessionary travel statistics: year ending, March 2025",
+    "sourceUrl": "https://www.gov.uk/government/statistics/concessionary-travel-statistics-year-ending-march-2025",
+    "summary": "Concessionary bus travel statistics in England about the number of passes, bus journeys, reimbursement and expenditure.",
+    "categories": [
+      "Official Statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T09:30:04.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.910Z",
+    "status": "new"
+  },
+  {
+    "id": "2da36358-d058-475d-8f51-bd017480c3e8",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/statistical-data-sets/bus-statistics-data-tables#2026-03-24T09:30:04Z",
+    "title": "Bus statistics data tables",
+    "sourceUrl": "https://www.gov.uk/government/statistical-data-sets/bus-statistics-data-tables",
+    "summary": "Data and statistics about the local bus sector in Great Britain.",
+    "categories": [],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T09:30:04.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.910Z",
+    "status": "new"
+  },
+  {
+    "id": "0502412e-e715-4777-9785-9bfb81c846ce",
+    "sourceId": "dft-press-office",
+    "guid": "https://www.gov.uk/government/statistics/quarterly-bus-fares-statistics-october-to-december-2025#2026-03-24T09:30:04Z",
+    "title": "Accredited official statistics: Quarterly bus fares statistics: October to December 2025",
+    "sourceUrl": "https://www.gov.uk/government/statistics/quarterly-bus-fares-statistics-october-to-december-2025",
+    "summary": "Local bus fares statistics in Great Britain for October to December 2025.",
+    "categories": [
+      "Accredited official statistics"
+    ],
+    "licence": "ogl",
+    "imagePolicy": "crown",
+    "publishedAt": "2026-03-24T09:30:04.000Z",
+    "fetchedAt": "2026-03-24T12:49:50.910Z",
+    "status": "new"
+  },
+  {
+    "id": "0b502180-b619-47ec-b794-c7afe942a8da",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.aerospacetestinginternational.com/news/royal-mail-trials-electric-aircraft-in-scotland.html",
+    "title": "Royal Mail trials electric aircraft in Scotland",
+    "sourceUrl": "https://www.aerospacetestinginternational.com/news/royal-mail-trials-electric-aircraft-in-scotland.html",
+    "summary": "Royal Mail has launched a series of electric flight demonstrations across Scotland using Beta Technologies' Alia all-electric fixed-wing...",
+    "categories": [
+      "Aerospace Testing International"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-24T12:49:55.526Z",
+    "status": "new"
+  },
+  {
+    "id": "87d6d2a6-fad8-4fb0-aa31-bedccf2cb609",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://www.gov.uk/government/news/half-a-a-billion-investment-to-upgrade-raf-typhoons-and-secure-1500-british-jobs",
+    "title": "Half a billion investment to upgrade RAF Typhoons and secure 1,500 British jobs",
+    "sourceUrl": "https://www.gov.uk/government/news/half-a-a-billion-investment-to-upgrade-raf-typhoons-and-secure-1500-british-jobs",
+    "summary": "The government has this week committed over £650 million to upgrade the RAF's Typhoon fighter jet fleet, securing over 1500 jobs across the...",
+    "categories": [
+      "GOV.UK"
+    ],
+    "publishedAt": "2026-01-22T00:00:00.000Z",
+    "fetchedAt": "2026-03-24T12:49:55.526Z",
+    "status": "rewritten",
+    "articleSlug": "2026-03-24-government-invests-650-million-to-upgrad",
+    "articlePath": "data/news-articles/2026/03/2026-03-24-government-invests-650-million-to-upgrad.json",
+    "rewrittenAt": "2026-03-24T12:49:55.736Z"
+  },
+  {
+    "id": "bad3eaeb-f8cf-422b-95f3-aba98ec7b7a7",
+    "sourceId": "serper-scottish-aviation",
+    "guid": "https://aeromorning.com/en/ryanair-announces-40m-expansion-at-prestwick/",
+    "title": "RYANAIR ANNOUNCES £40M EXPANSION AT PRESTWICK",
+    "sourceUrl": "https://aeromorning.com/en/ryanair-announces-40m-expansion-at-prestwick/",
+    "summary": "Ryanair, Europe's No.1 airline, today (Fri, 20 Mar) announced a £40M expansion of its maintenance facility at Prestwick Airport.",
+    "categories": [
+      "AeroMorning.com"
+    ],
+    "publishedAt": null,
+    "fetchedAt": "2026-03-24T12:49:55.526Z",
+    "status": "drafted",
+    "articleSlug": "2026-03-24-ryanair-announces-40m-expansion-at-prestwick",
+    "articlePath": "data/news-articles/2026/03/2026-03-24-ryanair-announces-40m-expansion-at-prestwick.json",
+    "draftedAt": "2026-03-24T12:50:05.298Z"
   }
 ]
