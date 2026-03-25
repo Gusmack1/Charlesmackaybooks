@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useCart } from '@/context/CartContext';
 
 const links = [
   { href: '/', label: 'Home' },
@@ -12,6 +13,8 @@ const links = [
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { getTotalItems, openBasket } = useCart();
+  const count = getTotalItems();
 
   return (
     <nav style={{ position: 'sticky', top: 0, zIndex: 100, background: 'var(--navy)', borderBottom: '1px solid rgba(200,169,81,0.2)' }}>
@@ -28,16 +31,19 @@ export default function Nav() {
         {/* Links — desktop */}
         <ul style={{ display: 'flex', gap: 32, listStyle: 'none' }} className="nav-links-desktop">
           {links.map(l => (
-            <li key={l.href}><Link href={l.href} style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 500, letterSpacing: 0.3, transition: 'color 0.2s' }} onMouseOver={e => (e.currentTarget.style.color = 'var(--gold)')} onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.75)')}>{l.label}</Link></li>
+            <li key={l.href}><Link href={l.href} style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 500, letterSpacing: 0.3, transition: 'color 0.2s', textDecoration: 'none' }} onMouseOver={e => (e.currentTarget.style.color = 'var(--gold)')} onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.75)')}>{l.label}</Link></li>
           ))}
         </ul>
 
         {/* Actions */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           <input type="text" placeholder="Search books..." className="nav-search-input" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, padding: '6px 14px', color: 'white', fontSize: 13, width: 180, outline: 'none' }} />
-          <Link href="/checkout" style={{ position: 'relative', background: 'none', border: 'none', color: 'white', padding: 4 }}>
+          <button onClick={openBasket} style={{ position: 'relative', background: 'none', border: 'none', color: 'white', padding: 4, cursor: 'pointer' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} style={{ width: 22, height: 22 }}><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          </Link>
+            {count > 0 && (
+              <span style={{ position: 'absolute', top: -4, right: -6, background: 'var(--gold)', color: 'var(--navy)', fontSize: 10, fontWeight: 700, width: 18, height: 18, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{count}</span>
+            )}
+          </button>
           {/* Mobile menu btn */}
           <button onClick={() => setMenuOpen(!menuOpen)} className="mobile-menu-btn" style={{ display: 'none', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: 4 }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} style={{ width: 24, height: 24 }}><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -47,7 +53,7 @@ export default function Nav() {
       {menuOpen && (
         <div style={{ background: 'var(--navy)', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '8px 24px' }} className="mobile-menu">
           {links.map(l => (
-            <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)} style={{ display: 'block', padding: '10px 0', color: 'rgba(255,255,255,0.75)', fontSize: 14 }}>{l.label}</Link>
+            <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)} style={{ display: 'block', padding: '10px 0', color: 'rgba(255,255,255,0.75)', fontSize: 14, textDecoration: 'none' }}>{l.label}</Link>
           ))}
         </div>
       )}

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { books } from '@/data/books';
 import BookCard from '@/components/BookCard';
+import AddToBasketButton from '@/components/AddToBasketButton';
 
 export function generateStaticParams() {
   return books.map(b => ({ id: b.id }));
@@ -46,7 +47,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               In stock — ships free worldwide
             </span>
           </div>
-          <button style={{ padding: '16px 32px', background: 'var(--gold)', color: 'var(--navy)', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 16, fontWeight: 700, cursor: 'pointer', marginBottom: 32 }}>Add to basket</button>
+          <div style={{ marginBottom: 32 }}><AddToBasketButton book={book} variant="primary" /></div>
           <div style={{ marginBottom: 32 }}>
             <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 12 }}>About this book</h3>
             <div style={{ fontSize: 14, color: 'var(--text-body)', lineHeight: 1.8, whiteSpace: 'pre-line' }}>{book.description}</div>

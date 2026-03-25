@@ -12,7 +12,7 @@ export default function AboutPage() {
       <section style={{ background: 'linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%)', padding: '64px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '280px 1fr', gap: 48, alignItems: 'start' }} className="about-hero-inner">
           <div style={{ width: 280, height: 340, background: 'var(--navy-mid)', border: '3px solid rgba(200,169,81,0.3)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', position: 'relative' }}>
-            <Image src="/blog-images/eric-brown.jpg" alt="Charles E. MacKay" fill style={{ objectFit: 'cover' }} />
+            <Image src="/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg" alt="Charles E. MacKay at Turnhouse, 1971" fill style={{ objectFit: 'cover' }} />
           </div>
           <div>
             <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 36, color: 'var(--white)', marginBottom: 8 }}>Charles E. MacKay</h1>
