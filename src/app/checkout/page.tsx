@@ -1,872 +1,125 @@
 'use client';
-
-import { Suspense, useState, useEffect, useCallback, useRef } from 'react';
-import { useCart } from '../../context/CartContext';
-import Link from 'next/link';
 import Image from 'next/image';
-import {
-  CustomerDetails,
-  generateOrderId,
-  saveOrder,
-  generatePayPalUrl,
-  validateCustomerDetails,
-  updateOrderStatus,
-  Order
-} from '../../utils/orderUtils';
-import {
-  readSavedCustomerProfile,
-  saveCustomerProfile,
-  clearSavedCustomerProfile,
-} from '../../utils/customerProfile';
-import CustomerTestimonials from '../../components/CustomerTestimonials';
-import TrustSecurityBadges from '../../components/TrustSecurityBadges';
-import { trackCartAbandonment } from '../../utils/abandonedCartRecovery';
-import { useSearchParams } from 'next/navigation';
-import { useAnalytics } from '../../hooks/useAnalytics';
+import Link from 'next/link';
+import { useCart } from '@/context/CartContext';
 
-interface CustomerInfoPayload {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone?: string;
-  address: {
-    line1: string;
-    line2?: string;
-    city: string;
-    state: string;
-    postalCode: string;
-    country: string;
-  };
-}
+export default function CheckoutPage() {
+  const { items, removeFromCart, updateQuantity, getTotalItems, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal } = useCart();
 
-interface OrderItemPayload {
-  bookId: string;
-  quantity: number;
-  price: number;
-}
-
-interface CreateOrderRequest {
-  items: OrderItemPayload[];
-  customer: CustomerInfoPayload;
-  paymentMethod: 'stripe' | 'paypal' | 'bank_transfer';
-  paymentIntentId?: string;
-  paypalOrderId?: string;
-}
-
-function CheckoutContent() {
-  const searchParams = useSearchParams();
-  const hasPreferredPaymentMethod = searchParams.has('method');
-  const preferredPaymentMethod = 'paypal';
-  const { items, addToCart, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal, removeFromCart, updateQuantity, clearCart } = useCart();
-  const {
-    trackBookPurchase,
-    trackCheckoutStart,
-    trackCheckoutStepView,
-    trackCheckoutPaymentSelection,
-  } = useAnalytics();
-  const [step, setStep] = useState<'basket' | 'delivery-payment'>('basket');
-  const [paymentMethod, setPaymentMethod] = useState<'paypal'>('paypal');
-  const [customerDetails, setCustomerDetails] = useState<CustomerDetails>({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    address1: '',
-    address2: '',
-    city: '',
-    postcode: '',
-    country: 'GB'
-  });
-  const [saveDetailsForNextTime, setSaveDetailsForNextTime] = useState(true);
-  const [savedProfile, setSavedProfile] = useState<CustomerDetails | null>(null);
-  const [errors, setErrors] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [abandonmentTracked, setAbandonmentTracked] = useState(false);
-  const [checkoutCompleted, setCheckoutCompleted] = useState(false);
-  const hasTrackedBeginCheckout = useRef(false);
-  const lastTrackedStep = useRef<string | null>(null);
-  const lastTrackedPaymentMethod = useRef<string | null>(null);
-  useEffect(() => {
-    const profile = readSavedCustomerProfile();
-    if (profile?.email) {
-      setSavedProfile(profile);
-      setCustomerDetails((current) => {
-        const alreadyStarted = Boolean(
-          current.firstName ||
-          current.lastName ||
-          current.email ||
-          current.address1 ||
-          current.city ||
-          current.postcode
-        );
-        return alreadyStarted ? current : profile;
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    setPaymentMethod(preferredPaymentMethod);
-    if (items.length > 0 && hasPreferredPaymentMethod) {
-      setStep('delivery-payment');
-    }
-  }, [preferredPaymentMethod, hasPreferredPaymentMethod, items.length]);
-
-  const buildCustomerInfoPayload = (): CustomerInfoPayload => ({
-    firstName: customerDetails.firstName,
-    lastName: customerDetails.lastName,
-    email: customerDetails.email,
-    phone: customerDetails.phone,
-    address: {
-      line1: customerDetails.address1,
-      line2: customerDetails.address2,
-      city: customerDetails.city,
-      state: customerDetails.postcode,
-      postalCode: customerDetails.postcode,
-      country: customerDetails.country
-    }
-  });
-
-  const mapOrderItemsPayload = (): OrderItemPayload[] =>
-    items.map(item => ({
-      bookId: item.book.id,
-      quantity: item.quantity,
-      price: item.book.price
-    }));
-
-  const createServerOrder = async (payload: CreateOrderRequest) => {
-    const response = await fetch('/api/orders', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-
-    const data = await response.json();
-    if (!response.ok || !data?.order) {
-      throw new Error(data?.error || 'Failed to create order');
-    }
-    return data.order as { id: string };
-  };
-
-  const patchServerOrder = async (orderId: string, body: Record<string, unknown>) => {
-    const response = await fetch(`/api/orders/${orderId}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    });
-
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData?.error || 'Failed to update order');
-    }
-
-    return response.json().catch(() => ({}));
-  };
-
-  // Calculate total weight of all items
-  const totalWeight = items.reduce((total, item) => {
-    return total + (((item.book as any).weight || 300) * item.quantity);
-  }, 0);
-  
-  const shippingCost = 0; // Free worldwide shipping
+  const totalItems = getTotalItems();
   const subtotal = getTotalPrice();
-  const bulkDiscount = getBulkDiscount();
-  const total = getFinalTotal(); // This includes bulk discounts and shipping
-  const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
-  const analyticsItems = items.map((item) => ({
-    id: item.book.id,
-    title: item.book.title,
-    category: item.book.category || 'Aviation Books',
-    quantity: item.quantity,
-    price: item.book.price,
-  }));
-
-  useEffect(() => {
-    if (!items.length || checkoutCompleted) return;
-
-    const maybeTrackAbandonment = () => {
-      if (abandonmentTracked) return;
-      if (!customerDetails.email) return;
-      const cartPayload = items.map((cartItem) => ({
-        bookId: cartItem.book.id,
-        quantity: cartItem.quantity,
-        book: cartItem.book,
-      }));
-      const customerName = `${customerDetails.firstName || ''} ${customerDetails.lastName || ''}`.trim() || undefined;
-      trackCartAbandonment(customerDetails.email, customerName, cartPayload, subtotal).finally(() => {
-        setAbandonmentTracked(true);
-      });
-    };
-
-    const handleBeforeUnload = () => {
-      maybeTrackAbandonment();
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      if (!checkoutCompleted) {
-        maybeTrackAbandonment();
-      }
-    };
-  }, [items, customerDetails, subtotal, checkoutCompleted, abandonmentTracked]);
-
-  useEffect(() => {
-    if (!items.length || hasTrackedBeginCheckout.current) return;
-    trackCheckoutStart(analyticsItems, total, hasPreferredPaymentMethod ? `checkout-${preferredPaymentMethod}` : 'checkout-basket');
-    hasTrackedBeginCheckout.current = true;
-  }, [items.length, analyticsItems, total, trackCheckoutStart, hasPreferredPaymentMethod, preferredPaymentMethod]);
-
-  useEffect(() => {
-    if (!items.length || lastTrackedStep.current === step) return;
-    trackCheckoutStepView(step, total, totalItemsCount);
-    lastTrackedStep.current = step;
-  }, [step, items.length, total, totalItemsCount, trackCheckoutStepView]);
-
-  useEffect(() => {
-    if (step !== 'delivery-payment') return;
-    if (lastTrackedPaymentMethod.current === paymentMethod) return;
-    trackCheckoutPaymentSelection(paymentMethod, analyticsItems, total);
-    lastTrackedPaymentMethod.current = paymentMethod;
-  }, [step, paymentMethod, analyticsItems, total, trackCheckoutPaymentSelection]);
-
-  const handleInputChange = (field: keyof CustomerDetails, value: string) => {
-    setCustomerDetails(prev => ({ ...prev, [field]: value }));
-  };
-
-  const applySavedProfile = () => {
-    if (!savedProfile) return;
-    setCustomerDetails(savedProfile);
-    setErrors([]);
-  };
-
-  const handleSavedProfileExpressCheckout = () => {
-    if (!savedProfile) return;
-    const validationErrors = validateCustomerDetails(savedProfile);
-    if (validationErrors.length > 0) {
-      setCustomerDetails(savedProfile);
-      setErrors(validationErrors);
-      setStep('delivery-payment');
-      return;
-    }
-    setCustomerDetails(savedProfile);
-    setErrors([]);
-    setStep('delivery-payment');
-  };
-
-  const persistCheckoutProfile = () => {
-    if (!saveDetailsForNextTime) {
-      clearSavedCustomerProfile();
-      return;
-    }
-    if (!customerDetails.email || !customerDetails.firstName || !customerDetails.lastName) return;
-    saveCustomerProfile(customerDetails);
-  };
-
-  const handlePayPalPayment = async () => {
-    const validationErrors = validateCustomerDetails(customerDetails);
-    if (validationErrors.length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-    try {
-      setIsLoading(true);
-      setErrors([]);
-      const customerInfo = buildCustomerInfoPayload();
-      const orderItems = mapOrderItemsPayload();
-
-      const order = await createServerOrder({
-        items: orderItems,
-        customer: customerInfo,
-        paymentMethod: 'paypal'
-      });
-
-      const legacyOrder: Order = {
-        orderId: order.id,
-        customerDetails,
-        items: items.map(item => ({
-          id: item.book.id,
-          title: item.book.title,
-          price: item.book.price,
-          quantity: item.quantity,
-          isbn: item.book.isbn
-        })),
-        subtotal,
-        shippingCost,
-        total,
-        timestamp: new Date().toISOString(),
-        status: 'pending',
-        paymentMethod: 'paypal' // Explicitly set payment method
-      };
-
-      saveOrder(legacyOrder);
-      const paypalUrl = generatePayPalUrl(legacyOrder);
-
-      const popup = window.open(
-        paypalUrl,
-        'paypal_checkout',
-        'width=900,height=700,scrollbars=yes,resizable=yes,toolbar=no,location=no,status=no'
-      );
-
-      if (popup) {
-        const messageListener = async (event: MessageEvent) => {
-          if (event.origin !== window.location.origin && !event.origin.includes('paypal.com')) {
-            return;
-          }
-
-          if (event.data.type === 'PAYPAL_PAYMENT_SUCCESS') {
-            try {
-              await patchServerOrder(order.id, { action: 'confirm_payment' });
-              
-              // Update legacy order status to paid
-              updateOrderStatus(order.id, 'paid', event.data.transactionId);
-              trackBookPurchase({
-                transactionId: order.id,
-                totalValue: total,
-                currency: 'GBP',
-                items: analyticsItems,
-                platform: 'paypal',
-              });
-              
-              setCheckoutCompleted(true);
-              setAbandonmentTracked(true);
-              persistCheckoutProfile();
-              clearCart();
-              window.location.href = `/order-complete?orderId=${order.id}`;
-            } catch (error) {
-              console.error('Error confirming PayPal payment:', error);
-              alert('Payment received but order confirmation failed. Please contact support.');
-            }
-          } else if (event.data.type === 'PAYPAL_PAYMENT_CANCELLED') {
-            alert('Payment was cancelled. You can try again or contact us for assistance.');
-          } else if (event.data.type === 'PAYPAL_PAYMENT_ERROR') {
-            alert('Payment failed. Please try again or contact us for assistance.');
-          }
-        };
-
-        window.addEventListener('message', messageListener);
-        
-        const checkClosed = setInterval(() => {
-          if (popup.closed) {
-            clearInterval(checkClosed);
-            window.removeEventListener('message', messageListener);
-          }
-        }, 1000);
-      } else {
-        alert('Popup blocked. Redirecting to PayPal...');
-        window.location.href = paypalUrl;
-      }
-    } catch (error) {
-      console.error('Error creating PayPal order:', error);
-      setErrors(['Failed to create order. Please try again.']);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const discount = getBulkDiscount();
+  const discountPct = getBulkDiscountPercentage();
+  const finalTotal = getFinalTotal();
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4 text-white">Your basket is empty</h1>
-          <p className="text-white/90 mb-6">Add some books to your basket to proceed with checkout.</p>
-          <Link href="/books" className="btn-books">
-            Browse Books
-          </Link>
-        </div>
-      </div>
+      <section style={{ padding: '80px 24px', maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} style={{ width: 64, height: 64, margin: '0 auto 24px', color: 'var(--text-muted)', opacity: 0.4 }}><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 12 }}>Your basket is empty</h1>
+        <p style={{ color: 'var(--text-muted)', fontSize: 15, marginBottom: 24 }}>Browse our collection of aviation history books.</p>
+        <Link href="/books" style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--gold)', color: 'var(--navy)', borderRadius: 'var(--radius-md)', fontSize: 15, fontWeight: 700, textDecoration: 'none' }}>Browse books</Link>
+      </section>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-900">
-      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
-        {/* Header */}
-        <div className="mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Secure Checkout</h1>
-          <p className="text-white/90 text-sm sm:text-base">
-            Guest checkout is enabled by default. Pay securely with PayPal.
+    <>
+      <div style={{ background: 'var(--navy)', padding: '32px 24px', textAlign: 'center' }}>
+        <h1 style={{ fontFamily: 'var(--font-serif)', color: 'white', fontSize: 28, marginBottom: 4 }}>Checkout</h1>
+        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>{totalItems} item{totalItems !== 1 ? 's' : ''} in your basket</p>
+      </div>
+
+      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '48px 24px', display: 'grid', gridTemplateColumns: '1fr 360px', gap: 48, alignItems: 'start' }} className="contact-layout">
+        {/* Cart items */}
+        <div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 24 }}>Order Summary</h2>
+          {items.map(item => (
+            <div key={item.book.id} style={{ display: 'flex', gap: 20, padding: '20px 0', borderBottom: '1px solid var(--border)' }}>
+              <div style={{ width: 80, height: 107, borderRadius: 'var(--radius-sm)', overflow: 'hidden', position: 'relative', flexShrink: 0, background: 'var(--cream-dark)', border: '1px solid var(--border)' }}>
+                <Image src={item.book.imageUrl || `/book-covers/${item.book.id}.jpg`} alt={item.book.title} fill style={{ objectFit: 'cover' }} />
+              </div>
+              <div style={{ flex: 1 }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontWeight: 700, color: 'var(--text-dark)', lineHeight: 1.3, marginBottom: 4 }}>{item.book.title}</h3>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 12 }}>{item.book.category}</div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <button onClick={() => updateQuantity(item.book.id, item.quantity - 1)} style={{ width: 32, height: 32, borderRadius: 'var(--radius-sm)', border: '1px solid var(--border)', background: 'var(--cream)', cursor: 'pointer', fontSize: 16 }}>-</button>
+                    <span style={{ fontSize: 15, fontWeight: 600, minWidth: 24, textAlign: 'center' }}>{item.quantity}</span>
+                    <button onClick={() => updateQuantity(item.book.id, item.quantity + 1)} style={{ width: 32, height: 32, borderRadius: 'var(--radius-sm)', border: '1px solid var(--border)', background: 'var(--cream)', cursor: 'pointer', fontSize: 16 }}>+</button>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                    <span style={{ fontSize: 17, fontWeight: 700, color: 'var(--text-dark)' }}>£{(item.book.price * item.quantity).toFixed(2)}</span>
+                    <button onClick={() => removeFromCart(item.book.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--error)', fontSize: 12, fontWeight: 500 }}>Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          <div style={{ marginTop: 24 }}>
+            <Link href="/books" style={{ color: 'var(--gold-dark)', fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>← Continue shopping</Link>
+          </div>
+        </div>
+
+        {/* Payment summary */}
+        <div style={{ background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: 24, position: 'sticky', top: 100 }}>
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 20 }}>Payment Summary</h3>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12, fontSize: 14, color: 'var(--text-body)' }}>
+            <span>Subtotal ({totalItems} item{totalItems !== 1 ? 's' : ''})</span>
+            <span>£{subtotal.toFixed(2)}</span>
+          </div>
+
+          {discountPct > 0 && (
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12, fontSize: 14 }}>
+              <span style={{ color: 'var(--success)', fontWeight: 600 }}>Multi-buy discount ({discountPct}%)</span>
+              <span style={{ color: 'var(--success)', fontWeight: 600 }}>-£{discount.toFixed(2)}</span>
+            </div>
+          )}
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12, fontSize: 14, color: 'var(--text-body)' }}>
+            <span>Shipping</span>
+            <span style={{ color: 'var(--success)', fontWeight: 600 }}>Free</span>
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: 16, marginTop: 16, borderTop: '2px solid var(--border)', fontFamily: 'var(--font-serif)', fontSize: 22, fontWeight: 700, color: 'var(--text-dark)' }}>
+            <span>Total</span>
+            <span>£{finalTotal.toFixed(2)}</span>
+          </div>
+
+          {totalItems < 2 && (
+            <div style={{ background: 'rgba(200,169,81,0.1)', border: '1px solid rgba(200,169,81,0.3)', borderRadius: 'var(--radius-sm)', padding: '10px 14px', marginTop: 16, fontSize: 13, color: 'var(--gold-dark)', textAlign: 'center' }}>
+              Add {2 - totalItems} more book{2 - totalItems > 1 ? 's' : ''} to save 5%!
+            </div>
+          )}
+          {totalItems === 2 && (
+            <div style={{ background: 'rgba(200,169,81,0.1)', border: '1px solid rgba(200,169,81,0.3)', borderRadius: 'var(--radius-sm)', padding: '10px 14px', marginTop: 16, fontSize: 13, color: 'var(--gold-dark)', textAlign: 'center' }}>
+              Add 1 more book to save 10% instead of 5%!
+            </div>
+          )}
+
+          {/* PayPal Button */}
+          <a
+            href={`https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=charlese1mackay@hotmail.com&currency_code=GBP&amount=${finalTotal.toFixed(2)}&item_name=${encodeURIComponent(`Charles E. MacKay Books (${totalItems} items)`)}&shipping=0`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: 'block', width: '100%', padding: '16px 0', marginTop: 20, background: '#0070BA', color: 'white', borderRadius: 'var(--radius-md)', fontSize: 16, fontWeight: 700, cursor: 'pointer', textAlign: 'center', textDecoration: 'none' }}
+          >
+            Pay with PayPal
+          </a>
+
+          <p style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 12, textAlign: 'center', lineHeight: 1.5 }}>
+            Secure checkout via PayPal. You can pay with your PayPal account or debit/credit card.
           </p>
-          <div className="mt-3 rounded-lg border border-blue-700/50 bg-slate-800/70 px-3 py-2 text-xs sm:text-sm text-white/85">
-            Secure SSL payment • Free worldwide tracked shipping • 30-day returns
-          </div>
-        </div>
 
-        {/* Progress Steps - Mobile Friendly (2 steps: Basket → Delivery & Payment) */}
-        <div className="flex items-center justify-center mb-6 sm:mb-8 overflow-x-auto">
-          <div className="flex items-center space-x-2 sm:space-x-4 min-w-max px-2">
-            <div className={`flex items-center ${step === 'basket' ? 'text-white' : 'text-white/60'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'basket' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
-                1
-              </div>
-              <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Basket</span>
-            </div>
-            <div className="w-4 sm:w-8 h-0.5 sm:h-1 bg-blue-800/50"></div>
-            <div className={`flex items-center ${step === 'delivery-payment' ? 'text-white' : 'text-white/60'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step === 'delivery-payment' ? 'bg-blue-800 text-white' : 'bg-blue-800/50 text-white/60'}`}>
-                2
-              </div>
-              <span className="ml-1 sm:ml-2 font-medium text-xs sm:text-sm">Delivery & Payment</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-4 sm:gap-8">
-          {/* Left Column - Form */}
-          <div>
-            {step === 'basket' && (
-              <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4 sm:p-6">
-                <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Your Basket</h2>
-                <div className="space-y-3 sm:space-y-4">
-                  {items.map((item, index) => (
-                    <div key={index} className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 border border-blue-700/50 rounded-lg bg-slate-800">
-                      <Link href={`/books/${item.book.id}`} className="hover:opacity-80 transition-opacity shrink-0">
-                        <Image
-                          src={item.book.imageUrl || `/book-covers/${item.book.id}.jpg`}
-                          alt={item.book.title}
-                          width={50}
-                          height={65}
-                          className="rounded cursor-pointer sm:w-[60px] sm:h-[80px]"
-                        />
-                      </Link>
-                      <div className="flex-1 min-w-0">
-                        <Link href={`/books/${item.book.id}`} className="hover:text-blue-300 transition-colors">
-                          <h3 className="font-semibold cursor-pointer text-white text-sm sm:text-base line-clamp-2">{item.book.title}</h3>
-                        </Link>
-                        <p className="text-xs sm:text-sm text-white/90">£{item.book.price}</p>
-                      </div>
-                      <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 shrink-0">
-                        <div className="flex items-center space-x-2">
-                          <button
-                            onClick={() => updateQuantity(item.book.id, Math.max(0, item.quantity - 1))}
-                            className="w-11 h-11 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-base sm:text-sm font-bold hover:bg-blue-700"
-                          >
-                            -
-                          </button>
-                          <span className="w-6 sm:w-8 text-center text-white text-sm font-medium">{item.quantity}</span>
-                          <button
-                            onClick={() => updateQuantity(item.book.id, item.quantity + 1)}
-                            className="w-11 h-11 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-base sm:text-sm font-bold hover:bg-blue-700"
-                          >
-                            +
-                          </button>
-                        </div>
-                        <button
-                          onClick={() => removeFromCart(item.book.id)}
-                          className="text-red-400 hover:text-red-300 text-xs sm:text-sm font-medium"
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-4 sm:mt-6 pt-4 border-t border-blue-700/50">
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-white">
-                      <span className="text-sm sm:text-base">Subtotal:</span>
-                      <span className="text-sm sm:text-base font-medium">£{subtotal.toFixed(2)}</span>
-                    </div>
-                    {bulkDiscount > 0 && (
-                      <div className="flex justify-between text-green-400 font-semibold">
-                        <span className="text-xs sm:text-sm">Bulk Discount ({getBulkDiscountPercentage()}% off {totalItemsCount}+ books):</span>
-                        <span className="text-xs sm:text-sm">-£{bulkDiscount.toFixed(2)}</span>
-                      </div>
-                    )}
-                    <div className="flex justify-between text-green-400">
-                      <span className="text-sm sm:text-base">Shipping:</span>
-                      <span className="text-sm sm:text-base font-medium">FREE</span>
-                    </div>
-                    <div className="flex justify-between text-base sm:text-lg font-semibold border-t border-blue-700/50 pt-2 text-white">
-                      <span>Total:</span>
-                      <span>£{total.toFixed(2)}</span>
-                    </div>
-                  </div>
-                  {bulkDiscount > 0 && (
-                    <p className="text-xs sm:text-sm text-green-400 mt-2">
-                      🎉 You've saved £{bulkDiscount.toFixed(2)} with {getBulkDiscountPercentage()}% bulk discount!
-                    </p>
-                  )}
-                  <p className="text-xs sm:text-sm text-white/80 mt-2">Free worldwide shipping included</p>
-                  {totalItemsCount < 2 && (
-                    <p className="text-xs sm:text-sm text-blue-200 mt-2">
-                      Add 1 more book to unlock <strong>5% off</strong> your whole order.{' '}
-                      <Link href="/books" className="underline hover:text-white">
-                        Browse books
-                      </Link>
-                    </p>
-                  )}
-                  {totalItemsCount === 2 && (
-                    <p className="text-xs sm:text-sm text-blue-200 mt-2">
-                      Add 1 more book to unlock <strong>10% off</strong> your whole order.{' '}
-                      <Link href="/books" className="underline hover:text-white">
-                        Add one more title
-                      </Link>
-                    </p>
-                  )}
-                </div>
-                <div className="mt-4 space-y-2">
-                  <button
-                    onClick={() => setStep('delivery-payment')}
-                    className="w-full bg-white text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base border border-slate-900"
-                  >
-                    Continue to Delivery & Payment
-                  </button>
-                  {savedProfile?.email && (
-                    <button
-                      onClick={handleSavedProfileExpressCheckout}
-                      className="w-full bg-slate-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-slate-700 transition-colors text-sm sm:text-base border border-white/50"
-                    >
-                      Use saved details and continue to payment
-                    </button>
-                  )}
-                </div>
-              </div>
-            )}
-
-            {step === 'delivery-payment' && (
-              <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4 sm:p-6 space-y-6">
-                <h2 className="text-lg sm:text-xl font-bold text-white">Delivery & Payment</h2>
-                <div className="mb-4 rounded-lg border border-white/15 bg-slate-800/80 p-3 text-sm text-white/85">
-                  <p className="font-semibold text-white">Guest checkout (fastest)</p>
-                  <p className="text-white/70 text-xs sm:text-sm mt-1">
-                    No account required. Enter your details once and check out securely.
-                  </p>
-                  {savedProfile?.email && (
-                    <button
-                      type="button"
-                      onClick={applySavedProfile}
-                      className="mt-2 text-blue-300 hover:text-blue-200 underline text-xs sm:text-sm"
-                    >
-                      Use saved details for {savedProfile.email}
-                    </button>
-                  )}
-                </div>
-                <div className="rounded-lg border border-white/15 bg-slate-800/80 p-3 text-xs sm:text-sm text-white/80">
-                  <p className="font-semibold text-white">Need help before paying?</p>
-                  <p className="mt-1">
-                    <a href="/how-to-order" className="text-blue-300 hover:underline">How to order</a>
-                    {' '}·{' '}
-                    <a href="/order-tracking" className="text-blue-300 hover:underline">Track order</a>
-                    {' '}·{' '}
-                    <a href="/support" className="text-blue-300 hover:underline">Support</a>
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium mb-1 text-white">First Name *</label>
-                    <input
-                      id="firstName"
-                      name="firstName"
-                      type="text"
-                      autoComplete="given-name"
-                      placeholder="First name"
-                      value={customerDetails.firstName}
-                      onChange={(e) => handleInputChange('firstName', e.target.value)}
-                      className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-slate-800 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium mb-1 text-white">Last Name *</label>
-                    <input
-                      id="lastName"
-                      name="lastName"
-                      type="text"
-                      autoComplete="family-name"
-                      placeholder="Last name"
-                      value={customerDetails.lastName}
-                      onChange={(e) => handleInputChange('lastName', e.target.value)}
-                      className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-slate-800 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="mt-3 sm:mt-4">
-                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-white">Email *</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="you@example.com"
-                    value={customerDetails.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
-                    required
-                  />
-                </div>
-                <div className="mt-3 sm:mt-4">
-                  <label htmlFor="phone" className="block text-sm font-medium mb-1 text-white">Phone</label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    autoComplete="tel"
-                    placeholder="Optional phone number"
-                    value={customerDetails.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
-                  />
-                </div>
-                <div className="mt-3 sm:mt-4">
-                  <label htmlFor="address1" className="block text-sm font-medium mb-1 text-white">Address Line 1 *</label>
-                  <input
-                    id="address1"
-                    name="address1"
-                    type="text"
-                    autoComplete="address-line1"
-                    placeholder="Street address"
-                    value={customerDetails.address1}
-                    onChange={(e) => handleInputChange('address1', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
-                    required
-                  />
-                </div>
-                <div className="mt-3 sm:mt-4">
-                  <label htmlFor="address2" className="block text-sm font-medium mb-1 text-white">Address Line 2</label>
-                  <input
-                    id="address2"
-                    name="address2"
-                    type="text"
-                    autoComplete="address-line2"
-                    placeholder="Apartment, suite, etc. (optional)"
-                    value={customerDetails.address2}
-                    onChange={(e) => handleInputChange('address2', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-blue-900/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
-                  />
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-3 sm:mt-4">
-                  <div>
-                    <label htmlFor="city" className="block text-sm font-medium mb-1 text-white">City *</label>
-                    <input
-                      id="city"
-                      name="city"
-                      type="text"
-                      autoComplete="address-level2"
-                      placeholder="City"
-                      value={customerDetails.city}
-                      onChange={(e) => handleInputChange('city', e.target.value)}
-                      className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-slate-800 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="postcode" className="block text-sm font-medium mb-1 text-white">Postcode *</label>
-                    <input
-                      id="postcode"
-                      name="postcode"
-                      type="text"
-                      autoComplete="postal-code"
-                      placeholder="Postcode"
-                      value={customerDetails.postcode}
-                      onChange={(e) => handleInputChange('postcode', e.target.value)}
-                      className="w-full p-2 sm:p-3 border border-blue-600 rounded-lg text-white bg-slate-800 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 placeholder:text-white/50"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="mt-3 sm:mt-4">
-                  <label htmlFor="country" className="block text-sm font-medium mb-1 text-white">Country *</label>
-                  <select
-                    id="country"
-                    name="country"
-                    title="Country"
-                    aria-label="Country"
-                    autoComplete="country-name"
-                    value={customerDetails.country}
-                    onChange={(e) => handleInputChange('country', e.target.value)}
-                    className="w-full p-2 sm:p-3 border border-white/55 rounded-lg text-white bg-slate-800 focus:border-white focus:ring-1 focus:ring-white/50"
-                    required
-                  >
-                    <option value="GB">United Kingdom</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="AU">Australia</option>
-                    <option value="DE">Germany</option>
-                    <option value="FR">France</option>
-                    <option value="IT">Italy</option>
-                    <option value="ES">Spain</option>
-                    <option value="NL">Netherlands</option>
-                    <option value="BE">Belgium</option>
-                  </select>
-                </div>
-                {errors.length > 0 && (
-                  <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-red-900/50 border border-red-700 rounded-lg">
-                    <ul className="text-red-200 text-xs sm:text-sm">
-                      {errors.map((error, index) => (
-                        <li key={index}>• {error}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                <label className="mt-4 flex items-start gap-2 text-xs sm:text-sm text-white/80">
-                  <input
-                    type="checkbox"
-                    checked={saveDetailsForNextTime}
-                    onChange={(e) => setSaveDetailsForNextTime(e.target.checked)}
-                    className="mt-0.5 h-4 w-4 rounded border-blue-500 bg-slate-800 text-blue-500"
-                  />
-                  Save my details on this device for faster guest checkout next time
-                </label>
-                <button
-                  type="button"
-                  onClick={() => setStep('basket')}
-                  className="w-full sm:w-auto bg-slate-800 text-white py-2 px-4 rounded-lg font-semibold hover:bg-slate-700 transition-colors text-sm border border-white/50"
-                >
-                  ← Back to Basket
-                </button>
-
-                {/* Payment section - PayPal only */}
-                <div id="payment-section" className="pt-4 border-t border-blue-700/50">
-                <h3 className="text-base sm:text-lg font-bold mb-3 text-white">Payment</h3>
-                <p className="text-xs sm:text-sm text-white/80 mb-4">
-                  Pay securely with PayPal.
-                </p>
-                <div className="text-center">
-                  <button
-                    onClick={handlePayPalPayment}
-                    disabled={isLoading}
-                    className="w-full bg-blue-600 text-white py-3 px-4 sm:px-8 sm:py-4 rounded-lg text-sm sm:text-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
-                  >
-                    {isLoading ? 'Processing...' : 'Pay with PayPal'}
-                  </button>
-                  <p className="text-xs sm:text-sm text-white/80 mt-2">
-                    You'll be redirected to PayPal to complete your payment
-                  </p>
-                </div>
-
-                {errors.length > 0 && (
-                  <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-red-900/50 border border-red-700 rounded-lg">
-                    <ul className="text-red-200 text-xs sm:text-sm">
-                      {errors.map((error, index) => (
-                        <li key={index}>• {error}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Right Column - Order Summary */}
-          <div className="lg:sticky lg:top-8 space-y-4 sm:space-y-6">
-              <div className="bg-slate-800 border border-blue-700/50 rounded-lg p-4 sm:p-6">
-              <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-white">Order Summary</h3>
-              <div className="space-y-2 sm:space-y-3">
-                {items.map((item, index) => (
-                  <div key={index} className="flex justify-between items-start">
-                    <Link href={`/books/${item.book.id}`} className="text-xs sm:text-sm hover:text-blue-300 transition-colors text-white flex-1 pr-2 line-clamp-2">
-                      {item.book.title} (x{item.quantity})
-                    </Link>
-                    <span className="text-xs sm:text-sm font-medium text-white shrink-0">£{(item.book.price * item.quantity).toFixed(2)}</span>
-                  </div>
-                ))}
-              </div>
-              {bulkDiscount > 0 && (
-                <div className="mt-3 sm:mt-4 p-2 sm:p-3 bg-green-900/30 border border-green-700/50 rounded-lg">
-                  <div className="flex items-center">
-                    <span className="text-green-400 mr-2 text-sm">🎉</span>
-                    <div className="text-xs sm:text-sm">
-                      <p className="font-semibold text-green-400">Bulk Discount Applied!</p>
-                      <p className="text-green-300">You've saved £{bulkDiscount.toFixed(2)} with {getBulkDiscountPercentage()}% discount</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div className="border-t border-blue-700/50 mt-3 sm:mt-4 pt-3 sm:pt-4 space-y-2">
-                <div className="flex justify-between text-white">
-                  <span className="text-xs sm:text-sm">Subtotal:</span>
-                  <span className="text-xs sm:text-sm font-medium">£{subtotal.toFixed(2)}</span>
-                </div>
-                {bulkDiscount > 0 && (
-                  <div className="flex justify-between text-green-400 font-semibold">
-                    <span className="text-xs">Bulk Discount ({getBulkDiscountPercentage()}% off {totalItemsCount}+ books):</span>
-                    <span className="text-xs">-£{bulkDiscount.toFixed(2)}</span>
-                  </div>
-                )}
-                <div className="flex justify-between text-white">
-                  <span className="text-xs sm:text-sm">Shipping:</span>
-                  <span className="text-xs sm:text-sm font-medium text-green-400">FREE</span>
-                </div>
-                <div className="flex justify-between font-bold text-sm sm:text-lg text-white border-t border-blue-700/50 pt-2">
-                  <span>Total:</span>
-                  <span>£{total.toFixed(2)}</span>
-                </div>
-              </div>
-              
-              {/* Security Notice */}
-              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-slate-800 border border-blue-700/50 rounded-lg">
-                <div className="flex items-start">
-                  <svg className="h-4 w-4 sm:h-5 sm:w-5 text-blue-300 mt-0.5 mr-2 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-                  </svg>
-                  <div>
-                    <p className="text-xs sm:text-sm text-white font-medium">Secure Payment</p>
-                    <p className="text-xs text-white/80 mt-1">
-                      Your payment is protected by SSL encryption and processed securely by PayPal.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <TrustSecurityBadges />
-
-            {/* Sticky mobile order summary - always visible on small screens */}
-            <div className="sticky-bottom-bar fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-slate-900/98 backdrop-blur border-t border-blue-700/50 px-4 py-3 flex items-center justify-between gap-4">
-              <div>
-                <p className="text-xs text-white/70">Total ({totalItemsCount} items)</p>
-                <p className="text-xl font-bold text-white">£{total.toFixed(2)}</p>
-              </div>
-              {step === 'basket' ? (
-                <button
-                  type="button"
-                  onClick={() => setStep('delivery-payment')}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm whitespace-nowrap"
-                >
-                  Continue to delivery
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => document.getElementById('payment-section')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm whitespace-nowrap"
-                >
-                  Pay £{total.toFixed(2)}
-                </button>
-              )}
-              <p className="text-xs text-green-400 font-medium hidden sm:inline">Free shipping</p>
-            </div>
-            <div className="h-20 lg:hidden" aria-hidden />
-
-            {/* Customer Testimonials (desktop only to reduce mobile checkout friction) */}
-            <div className="mt-6 hidden lg:block">
-              <CustomerTestimonials maxDisplay={2} />
-            </div>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 12, marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--border)' }}>
+            {['Free shipping', '30-day returns', 'Secure payment'].map(t => (
+              <span key={t} style={{ fontSize: 10, color: 'var(--text-muted)', fontWeight: 500, textTransform: 'uppercase' as const, letterSpacing: 0.5 }}>{t}</span>
+            ))}
           </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-function CheckoutLoading() {
-  return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-      <div className="text-center text-white/80 space-y-2">
-        <p className="text-lg font-semibold">Preparing checkout…</p>
-        <p className="text-sm text-white/60">Loading your basket and available payment options.</p>
-      </div>
-    </div>
-  );
-}
-
-export default function CheckoutPage() {
-  return (
-    <Suspense fallback={<CheckoutLoading />}>
-      <CheckoutContent />
-    </Suspense>
+    </>
   );
 }
