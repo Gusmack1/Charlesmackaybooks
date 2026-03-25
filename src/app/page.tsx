@@ -22,11 +22,6 @@ const testimonials = [
   { text: "I ordered three books and they arrived in perfect condition within days. The free shipping worldwide is genuinely free — no hidden costs.", author: 'Michael Torres', role: 'Collector, New York' },
 ];
 
-const blogPosts = [
-  { slug: 'forgotten-airfields', cat: 'Scottish Aviation', title: 'The Forgotten Airfields of the Scottish Highlands', excerpt: "A look at the wartime airfields scattered across Scotland's remote landscapes, many of which have been reclaimed by nature.", img: '/blog-images/spitfire.jpg' },
-  { slug: 'scotlands-first-pilots', cat: 'WWI Aviation', title: "Scotland's First Military Pilots: 1914–1918", excerpt: 'Tracing the stories of the first Scottish men to take to the skies in service during the Great War.', img: '/blog-images/sopwith-camel.jpg' },
-  { slug: 'rolls-royce-hillington', cat: 'Industrial History', title: 'Inside the Rolls-Royce Factory at Hillington', excerpt: "How Glasgow's Hillington factory produced thousands of Merlin engines that powered Spitfires and Lancasters.", img: '/blog-images/beardmore-shipyard.jpg' },
-];
 
 export default function HomePage() {
   return (
@@ -126,28 +121,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BLOG */}
-      <section style={{ padding: '64px 24px', maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ marginBottom: 40 }}>
-          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase' as const, color: 'var(--gold-dark)', marginBottom: 8 }}>From the Blog</div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 8 }}>Aviation Research &amp; Stories</h2>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }} className="blog-grid">
-          {blogPosts.map(post => (
-            <div key={post.slug} style={{ background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
-              <div style={{ aspectRatio: '16/9', background: 'var(--cream-dark)', overflow: 'hidden', position: 'relative' }}>
-                <Image src={post.img} alt={post.title} fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div style={{ padding: 20 }}>
-                <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--gold-dark)', textTransform: 'uppercase' as const, letterSpacing: 1, marginBottom: 8 }}>{post.cat}</div>
-                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--text-dark)', lineHeight: 1.3, marginBottom: 8 }}>{post.title}</h3>
-                <p style={{ fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: 12, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' as const, overflow: 'hidden' }}>{post.excerpt}</p>
-                <Link href={`/blog/${post.slug}`} style={{ fontSize: 13, fontWeight: 600, color: 'var(--navy)', textDecoration: 'none' }}>Read article →</Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* NEWSLETTER */}
       <section style={{ padding: '0 24px 64px' }}>

@@ -1,10 +1,36 @@
 'use client';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 
 export default function CheckoutPage() {
   const { items, removeFromCart, updateQuantity, getTotalItems, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal } = useCart();
+  const [loading, setLoading] = useState(false);
+
+  const handleStripeCheckout = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          items: items.map(i => ({ bookId: i.book.id, quantity: i.quantity })),
+          discountPct: getBulkDiscountPercentage(),
+        }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert('Checkout error: ' + (data.error || 'Unknown error'));
+        setLoading(false);
+      }
+    } catch {
+      alert('Network error — please try again.');
+      setLoading(false);
+    }
+  };
 
   const totalItems = getTotalItems();
   const subtotal = getTotalPrice();
@@ -99,18 +125,17 @@ export default function CheckoutPage() {
             </div>
           )}
 
-          {/* PayPal Button */}
-          <a
-            href={`https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=charlese1mackay@hotmail.com&currency_code=GBP&amount=${finalTotal.toFixed(2)}&item_name=${encodeURIComponent(`Charles E. MacKay Books (${totalItems} items)`)}&shipping=0`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: 'block', width: '100%', padding: '16px 0', marginTop: 20, background: '#0070BA', color: 'white', borderRadius: 'var(--radius-md)', fontSize: 16, fontWeight: 700, cursor: 'pointer', textAlign: 'center', textDecoration: 'none' }}
+          {/* Stripe Checkout */}
+          <button
+            onClick={handleStripeCheckout}
+            disabled={loading}
+            style={{ display: 'block', width: '100%', padding: '16px 0', marginTop: 20, background: loading ? '#999' : 'var(--navy)', color: 'white', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 16, fontWeight: 700, cursor: loading ? 'default' : 'pointer', textAlign: 'center' }}
           >
-            Pay with PayPal
-          </a>
+            {loading ? 'Redirecting…' : 'Secure Checkout'}
+          </button>
 
           <p style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 12, textAlign: 'center', lineHeight: 1.5 }}>
-            Secure checkout via PayPal. You can pay with your PayPal account or debit/credit card.
+            Secure checkout powered by Stripe. Pay with debit/credit card.
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: 12, marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--border)' }}>
