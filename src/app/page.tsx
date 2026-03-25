@@ -77,7 +77,7 @@ export default function HomePage() {
       <div style={{ background: 'var(--white)', borderBottom: '1px solid var(--border)', padding: '16px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'center', gap: 48, flexWrap: 'wrap' }}>
           {[
-            { icon: '☑', strong: 'Secure checkout', text: ' — PayPal & card' },
+            { icon: '☑', strong: 'Secure checkout', text: ' — Stripe payments' },
             { icon: '✈', strong: 'Free shipping', text: ' — worldwide from Glasgow' },
             { icon: '↺', strong: '30-day returns', text: ' — no questions asked' },
             { icon: '★', strong: '1,700+ happy', text: ' readers & counting' },
