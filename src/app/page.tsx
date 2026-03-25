@@ -1,153 +1,165 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-
-import HeroSection from '@/components/HeroSection';
-import AcademicAuthority from '@/components/AcademicAuthority';
+import Link from 'next/link';
+import Image from 'next/image';
 import BookCard from '@/components/BookCard';
-import Testimonials from '@/components/Testimonials';
-import AuthorSEOEnhancer from '@/components/AuthorSEOEnhancer';
-import FAQSchema from '@/components/FAQSchema';
-import LatestAviationNews from '@/components/LatestAviationNews';
-
 import { books } from '@/data/books';
 
-export const metadata: Metadata = {
-  title: 'Aviation History Books by Charles E. MacKay | Free Worldwide Shipping',
-  description:
-    "Buy aviation history books by Charles E. MacKay: Scottish aviation, WWI/WWII aircraft, helicopters & naval ops. Free worldwide shipping with secure guest checkout.",
-  keywords: [
-    'aviation history books',
-    'Charles E MacKay',
-    'Charles E. MacKay',
-    'Charles E. MacKay Books',
-    'Charles E. MacKay Aviation',
-    'WWI aircraft books',
-    'WWII aviation history',
-    'Scottish aviation heritage',
-    'military aviation books',
-    'helicopter development history',
-    'jet age aviation',
-    'naval aviation books',
-    'aircraft development books',
-    'aviation biography books'
-  ],
-  alternates: {
-    canonical: 'https://charlesmackaybooks.com/'
-  },
-  openGraph: {
-    title: 'Aviation History Books by Charles E. MacKay',
-    description:
-      'Buy aviation history books by Charles E. MacKay with free worldwide shipping and secure guest checkout.',
-    url: 'https://charlesmackaybooks.com/',
-    siteName: 'Charles E. MacKay - Aviation Historian',
-    images: [
-      {
-        url: 'https://charlesmackaybooks.com/charles-mackay-aviation-books.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Charles E. MacKay Aviation History Books Collection'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Charles E. MacKay - Aviation History Books',
-    description:
-      'Authoritative aviation history books by Charles E. MacKay. Free worldwide shipping with secure guest checkout.'
-  }
-}
+const featuredBooks = [
+  books.find(b => b.id === 'beardmore-aviation'),
+  books.find(b => b.id === 'this-was-the-enemy-volume-two'),
+  books.find(b => b.id === 'clydeside-aviation-vol1'),
+  books.find(b => b.id === 'german-aircraft-great-war'),
+].filter(Boolean);
 
-export default function Home() {
-  // Show all books - no search filtering
-  const filteredBooks = books;
+const heroBooks = [
+  { id: 'beardmore-aviation', title: 'Beardmore Aviation', price: 12.91, img: '/book-covers/beardmore-aviation.jpg' },
+  { id: 'clydeside-aviation-vol1', title: 'Clydeside Aviation Volume One', price: 16.08, img: '/book-covers/clydeside-aviation-vol1.jpg' },
+  { id: 'this-was-the-enemy-volume-two', title: 'This Was the Enemy Volume Two', price: 15.95, img: '/book-covers/this-was-the-enemy-volume-two.jpg' },
+];
 
+const testimonials = [
+  { text: "Absolutely superb research. MacKay has uncovered details about Scottish aviation factories that I've never seen published anywhere else.", author: 'Dr. James Mitchell', role: 'Aviation Historian' },
+  { text: "These books are essential reading for anyone interested in Scotland's contribution to military aviation. Meticulously sourced and beautifully written.", author: 'Robert Campbell', role: 'RAF Museum Volunteer' },
+  { text: "I ordered three books and they arrived in perfect condition within days. The free shipping worldwide is genuinely free — no hidden costs.", author: 'Michael Torres', role: 'Collector, New York' },
+];
+
+const blogPosts = [
+  { slug: 'forgotten-airfields', cat: 'Scottish Aviation', title: 'The Forgotten Airfields of the Scottish Highlands', excerpt: "A look at the wartime airfields scattered across Scotland's remote landscapes, many of which have been reclaimed by nature.", img: '/blog-images/spitfire.jpg' },
+  { slug: 'scotlands-first-pilots', cat: 'WWI Aviation', title: "Scotland's First Military Pilots: 1914–1918", excerpt: 'Tracing the stories of the first Scottish men to take to the skies in service during the Great War.', img: '/blog-images/sopwith-camel.jpg' },
+  { slug: 'rolls-royce-hillington', cat: 'Industrial History', title: 'Inside the Rolls-Royce Factory at Hillington', excerpt: "How Glasgow's Hillington factory produced thousands of Merlin engines that powered Spitfires and Lancasters.", img: '/blog-images/beardmore-shipyard.jpg' },
+];
+
+export default function HomePage() {
   return (
-    <div className="surface-dark relative mx-0 bg-slate-900">
-      <HeroSection />
-
-      <section className="py-4 border-y border-white/10 bg-slate-900/80">
-        <div className="container mx-auto container-padding">
-          <div className="max-w-4xl mx-auto text-sm sm:text-base text-white/85">
-            Explore
-            {' '}
-            <Link href="/category/scottish-aviation-history" className="text-blue-300 underline hover:text-blue-200">
-              Scottish aviation history books
-            </Link>
-            ,
-            {' '}
-            <Link href="/category/wwi-aviation" className="text-blue-300 underline hover:text-blue-200">
-              WWI aircraft studies
-            </Link>
-            ,
-            {' '}
-            <Link href="/category/wwii-aviation" className="text-blue-300 underline hover:text-blue-200">
-              WWII aviation titles
-            </Link>
-            ,
-            {' '}
-            <Link href="/category/naval-aviation" className="text-blue-300 underline hover:text-blue-200">
-              naval aviation history
-            </Link>
-            ,
-            and
-            {' '}
-            <Link href="/category/aviation-biography" className="text-blue-300 underline hover:text-blue-200">
-              pilot biographies
-            </Link>
-            .
-            {' '}
-            If you want current context before choosing a book, start with the
-            {' '}
-            <Link href="/aviation-news" className="text-blue-300 underline hover:text-blue-200">
-              latest Scottish aviation news briefings
-            </Link>
-            .
-          </div>
-        </div>
-      </section>
-
-      {/* Books Section */}
-      <section className="py-6" id="books">
-        <div className="container mx-auto container-padding">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold">
-              📚 Aviation History Books - Ready to Ship
-            </h2>
-            <p className="text-center opacity-90 mb-4">
-              {filteredBooks.length} books available • Secure checkout with card, wallet, or PayPal • FREE shipping worldwide
+    <>
+      {/* HERO */}
+      <section style={{ background: 'linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--navy-mid) 100%)', position: 'relative', overflow: 'hidden', padding: '80px 24px 72px' }}>
+        <div style={{ position: 'absolute', top: 0, right: 0, width: '50%', height: '100%', backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8A951' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")", backgroundRepeat: 'repeat', opacity: 0.5 }} />
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center', position: 'relative', zIndex: 1 }}>
+          <div>
+            <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: 2.5, textTransform: 'uppercase' as const, color: 'var(--gold)', marginBottom: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ width: 24, height: 1, background: 'var(--gold)', display: 'inline-block' }} />
+              25+ Years of Aviation Research
+            </div>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 44, lineHeight: 1.2, color: 'var(--white)', marginBottom: 20, fontWeight: 700 }}>
+              Definitive histories of <em style={{ fontStyle: 'italic', color: 'var(--gold-light)' }}>Scottish aviation</em> &amp; military aircraft
+            </h1>
+            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'rgba(255,255,255,0.7)', marginBottom: 32, maxWidth: 480 }}>
+              Meticulously researched books covering Scotland&apos;s aviation heritage, wartime aircraft, and the people who built them. Trusted by historians, collectors, and aviation enthusiasts worldwide.
             </p>
+            <div style={{ display: 'flex', gap: 12, marginBottom: 40 }}>
+              <Link href="/books" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 28px', background: 'var(--gold)', color: 'var(--navy)', fontWeight: 600, fontSize: 14, border: 'none', borderRadius: 'var(--radius-md)', textDecoration: 'none' }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                Browse all 20 books
+              </Link>
+              <Link href="/about" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 28px', background: 'transparent', color: 'var(--white)', fontWeight: 500, fontSize: 14, border: '1px solid rgba(255,255,255,0.2)', borderRadius: 'var(--radius-md)', textDecoration: 'none' }}>
+                Meet the author
+              </Link>
+            </div>
+            <div style={{ display: 'flex', gap: 32 }}>
+              {[{ num: '1,700+', label: 'Readers worldwide' }, { num: '20', label: 'Published titles' }, { num: 'Free', label: 'Worldwide shipping' }].map(s => (
+                <div key={s.label}>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--white)' }}>{s.num}</div>
+                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase' as const, letterSpacing: 1, marginTop: 2 }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-
-          {/* Books Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {filteredBooks.map(book => (
-              <BookCard key={book.id} book={book} sourceContext="homepage" />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }} className="hero-featured-grid">
+            {heroBooks.map(b => (
+              <Link key={b.id} href={`/books/${b.id}`} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--radius-lg)', padding: 12, textAlign: 'center', textDecoration: 'none', display: 'block' }}>
+                <div style={{ width: '100%', aspectRatio: '3/4', position: 'relative', borderRadius: 'var(--radius-sm)', overflow: 'hidden', marginBottom: 10, background: 'var(--navy-mid)' }}>
+                  <Image src={b.img} alt={b.title} fill style={{ objectFit: 'cover' }} />
+                </div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--white)', lineHeight: 1.3, marginBottom: 4, overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' as const }}>{b.title}</div>
+                <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--gold)' }}>£{b.price.toFixed(2)}</div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Latest Aviation News */}
-      <section className="py-6" id="aviation-news-teaser">
-        <div className="container mx-auto container-padding">
-          <LatestAviationNews />
+      {/* TRUST BAR */}
+      <div style={{ background: 'var(--white)', borderBottom: '1px solid var(--border)', padding: '16px 24px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'center', gap: 48, flexWrap: 'wrap' }}>
+          {[
+            { icon: '☑', strong: 'Secure checkout', text: ' — PayPal & card' },
+            { icon: '✈', strong: 'Free shipping', text: ' — worldwide from Glasgow' },
+            { icon: '↺', strong: '30-day returns', text: ' — no questions asked' },
+            { icon: '★', strong: '1,700+ happy', text: ' readers & counting' },
+          ].map(t => (
+            <div key={t.strong} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: 'var(--text-muted)' }}>
+              <div style={{ width: 32, height: 32, background: 'var(--cream)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15, flexShrink: 0 }}>{t.icon}</div>
+              <span><strong style={{ color: 'var(--text-dark)', fontWeight: 600 }}>{t.strong}</strong>{t.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* FEATURED BOOKS */}
+      <section style={{ padding: '64px 24px', maxWidth: 1200, margin: '0 auto' }}>
+        <div style={{ marginBottom: 40 }}>
+          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase' as const, color: 'var(--gold-dark)', marginBottom: 8 }}>New &amp; Popular</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 8 }}>Featured Books</h2>
+          <p style={{ fontSize: 15, color: 'var(--text-muted)', maxWidth: 560 }}>Our most popular aviation history titles, chosen by readers.</p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }} className="books-grid">
+          {featuredBooks.map(book => book && <BookCard key={book.id} book={book} />)}
         </div>
       </section>
 
-      {/* Author SEO Enhancement */}
-      <div className="container mx-auto container-padding py-12">
-        <AuthorSEOEnhancer />
-      </div>
+      {/* TESTIMONIALS */}
+      <section style={{ background: 'var(--navy)', padding: '64px 24px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div style={{ marginBottom: 40 }}>
+            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase' as const, color: 'var(--gold)', marginBottom: 8 }}>Reader Reviews</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--white)', marginBottom: 8 }}>What readers are saying</h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }} className="testimonial-grid">
+            {testimonials.map(t => (
+              <div key={t.author} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 'var(--radius-lg)', padding: 28 }}>
+                <div style={{ color: 'var(--gold)', fontSize: 14, letterSpacing: 2, marginBottom: 12 }}>★★★★★</div>
+                <p style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontStyle: 'italic', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 16 }}>&ldquo;{t.text}&rdquo;</p>
+                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}><strong style={{ color: 'rgba(255,255,255,0.8)', fontWeight: 600 }}>{t.author}</strong> — {t.role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* Customer Testimonials */}
-      <div className="container mx-auto container-padding py-12">
-        <Testimonials />
-      </div>
+      {/* BLOG */}
+      <section style={{ padding: '64px 24px', maxWidth: 1200, margin: '0 auto' }}>
+        <div style={{ marginBottom: 40 }}>
+          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase' as const, color: 'var(--gold-dark)', marginBottom: 8 }}>From the Blog</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 8 }}>Aviation Research &amp; Stories</h2>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }} className="blog-grid">
+          {blogPosts.map(post => (
+            <div key={post.slug} style={{ background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
+              <div style={{ aspectRatio: '16/9', background: 'var(--cream-dark)', overflow: 'hidden', position: 'relative' }}>
+                <Image src={post.img} alt={post.title} fill style={{ objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: 20 }}>
+                <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--gold-dark)', textTransform: 'uppercase' as const, letterSpacing: 1, marginBottom: 8 }}>{post.cat}</div>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--text-dark)', lineHeight: 1.3, marginBottom: 8 }}>{post.title}</h3>
+                <p style={{ fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: 12, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' as const, overflow: 'hidden' }}>{post.excerpt}</p>
+                <Link href={`/blog/${post.slug}`} style={{ fontSize: 13, fontWeight: 600, color: 'var(--navy)', textDecoration: 'none' }}>Read article →</Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      {/* FAQ Schema for rich snippets */}
-      <FAQSchema />
-
-      {/* Trust & Security Badges moved to global layout */}
-    </div>
+      {/* NEWSLETTER */}
+      <section style={{ padding: '0 24px 64px' }}>
+        <div style={{ background: 'var(--cream-dark)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: 48, textAlign: 'center', margin: '0 auto', maxWidth: 640 }}>
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, color: 'var(--text-dark)', marginBottom: 8 }}>Stay in the loop</h3>
+          <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 24 }}>New book announcements, research articles, and exclusive reader discounts.</p>
+          <div style={{ display: 'flex', gap: 8, maxWidth: 420, margin: '0 auto' }}>
+            <input type="email" placeholder="Your email address" style={{ flex: 1, padding: '12px 16px', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, background: 'var(--white)' }} />
+            <button style={{ padding: '12px 24px', background: 'var(--navy)', color: 'var(--white)', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 13, fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

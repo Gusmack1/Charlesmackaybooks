@@ -1,83 +1,47 @@
 import Link from 'next/link';
-import { SITE_CONSTANTS } from '@/config/constants'
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white py-8 sm:py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8">
-          {/* Research Resources */}
-          <div className="text-center">
-            <h3 className="text-lg md:text-xl font-bold mb-4 flex items-center justify-center gap-2">
-              <span>📚</span> Research Resources
-            </h3>
-            <div className="space-y-2 text-base">
-              <Link href="/research-guides" className="block text-white underline decoration-white/30 hover:decoration-white">
-                Aviation Research Guides
-              </Link>
-              <Link href="/aviation-glossary" className="block text-white underline decoration-white/30 hover:decoration-white">
-                Aviation Glossary
-              </Link>
-              <Link href="/scottish-aviation-timeline" className="block text-white underline decoration-white/30 hover:decoration-white">
-                Scottish Aviation Timeline
-              </Link>
-              <Link href="/aviation-news" className="block text-white underline decoration-white/30 hover:decoration-white">
-                Aviation News Briefings
-              </Link>
-              <Link href="/faq" className="block text-white underline decoration-white/30 hover:decoration-white">
-                Frequently Asked Questions
-              </Link>
-              <Link href="/academic-resources" className="block text-white underline decoration-white/30 hover:decoration-white">
-                Academic Resources
-              </Link>
-            </div>
+    <footer style={{ background: 'var(--navy)', padding: '48px 24px 24px', color: 'rgba(255,255,255,0.6)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40, marginBottom: 40 }}>
+        <div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
+            <div style={{ width: 32, height: 32, background: 'var(--gold)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 14, color: 'var(--navy)' }}>CM</div>
+            <span style={{ fontFamily: 'var(--font-serif)', fontSize: 14, fontWeight: 700, color: 'white' }}>Charles E. MacKay</span>
           </div>
-
-          {/* Direct Contact */}
-          <div className="text-center">
-            <h3 className="text-lg md:text-xl font-bold mb-4 flex items-center justify-center gap-2">
-              Direct Contact
-            </h3>
-            <div className="space-y-2 text-base">
-              <div>
-                <strong>Email:</strong>
-                <a
-                  href={`mailto:${SITE_CONSTANTS.AUTHOR_EMAIL}`}
-                  className="text-white ml-1 break-all underline decoration-white/30 hover:decoration-white"
-                >
-                  {SITE_CONSTANTS.AUTHOR_EMAIL}
-                </a>
-              </div>
-              <div><strong>eBay Store:</strong> <span className="text-white">chaza87</span></div>
-              <div className="text-white"><strong>Location:</strong> {SITE_CONSTANTS.BUSINESS_LOCALITY}, Scotland</div>
-              <div className="text-white"><strong>PayPal:</strong> Direct checkout available</div>
-            </div>
-          </div>
+          <p style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 280 }}>Scotland&apos;s foremost aviation historian. 20+ meticulously researched books on aviation heritage.</p>
         </div>
-
-        <div className="text-center text-base text-white/90 mt-8 pt-8 border-t border-white/20">
-          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm mb-4">
-            <Link href="/how-to-order" className="underline decoration-white/30 hover:decoration-white">
-              How to Order
-            </Link>
-            <Link href="/support" className="underline decoration-white/30 hover:decoration-white">
-              Support
-            </Link>
-            <Link href="/returns" className="underline decoration-white/30 hover:decoration-white">
-              Returns
-            </Link>
-            <Link href="/delivery" className="underline decoration-white/30 hover:decoration-white">
-              Delivery
-            </Link>
-            <Link href="/privacy" className="underline decoration-white/30 hover:decoration-white">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="underline decoration-white/30 hover:decoration-white">
-              Terms and Conditions
-            </Link>
-          </div>
-          <p>© 2026 Charles E. MacKay - Aviation Historian & Author</p>
-          <p className="mt-2">Specializing in Scottish Aviation Heritage and Military Aviation History</p>
+        <div>
+          <h4 style={{ fontSize: 12, fontWeight: 600, textTransform: 'uppercase' as const, letterSpacing: 1.5, color: 'var(--gold)', marginBottom: 16 }}>Books</h4>
+          <ul style={{ listStyle: 'none' }}>
+            {['All Books', 'Scottish Aviation', 'WWI Aviation', 'WWII Aviation'].map(t => (
+              <li key={t} style={{ marginBottom: 10 }}><Link href="/books" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>{t}</Link></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4 style={{ fontSize: 12, fontWeight: 600, textTransform: 'uppercase' as const, letterSpacing: 1.5, color: 'var(--gold)', marginBottom: 16 }}>Help</h4>
+          <ul style={{ listStyle: 'none' }}>
+            {['How to Order', 'Shipping Info', 'Returns', 'Contact'].map(t => (
+              <li key={t} style={{ marginBottom: 10 }}><Link href="/contact" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>{t}</Link></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4 style={{ fontSize: 12, fontWeight: 600, textTransform: 'uppercase' as const, letterSpacing: 1.5, color: 'var(--gold)', marginBottom: 16 }}>About</h4>
+          <ul style={{ listStyle: 'none' }}>
+            {['About Charles', 'Blog', 'Research Guides'].map(t => (
+              <li key={t} style={{ marginBottom: 10 }}><Link href="/about" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>{t}</Link></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div style={{ maxWidth: 1200, margin: '0 auto', paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 12 }}>
+        <span>&copy; 2025 Charles E. MacKay. All rights reserved.</span>
+        <div style={{ display: 'flex', gap: 8 }}>
+          {['Visa', 'MC', 'PayPal', 'Stripe'].map(p => (
+            <span key={p} style={{ background: 'rgba(255,255,255,0.08)', borderRadius: 4, padding: '4px 8px', fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.5)' }}>{p}</span>
+          ))}
         </div>
       </div>
     </footer>
