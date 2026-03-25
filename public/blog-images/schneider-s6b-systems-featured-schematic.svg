@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Schneider Trophy Systems Overview (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing a simplified racing seaplane silhouette with labeled callouts for powerplant, cooling, fuel, aerodynamics, and water operations constraints.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .hot{fill:none;stroke:#fb7185;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .ok{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Schneider Trophy programme: systems overview (schematic)</text>
+  <text class="small" x="90" y="152">Airframe + powerplant + cooling + fuel + water operations as one integrated constraint set (diagrammatic)</text>
+
+  <!-- simplified seaplane -->
+  <g transform="translate(190,215)">
+    <!-- wing -->
+    <path class="ink" d="M60 170 Q260 85 460 170" />
+    <path class="accent" d="M90 210 Q260 155 430 210" />
+    <!-- fuselage -->
+    <path class="ink" d="M210 150 Q260 135 310 150 Q360 165 420 170" />
+    <path class="ink" d="M210 150 Q200 185 220 220 Q260 245 310 220 Q330 205 420 200" />
+    <!-- prop -->
+    <circle cx="455" cy="185" r="36" class="accent"/>
+    <path class="accent" d="M455 150 V220" />
+    <path class="accent" d="M420 185 H490" />
+    <!-- floats -->
+    <path class="ink" d="M150 285 Q260 260 370 285" />
+    <path class="accent" d="M170 310 Q260 295 350 310" />
+    <path class="ink" d="M200 230 L170 280" />
+    <path class="ink" d="M320 230 L350 280" />
+  </g>
+
+  <!-- callouts -->
+  <g>
+    <path class="hot" d="M620 250 C560 240 540 220 520 205" />
+    <text class="small" x="640" y="250">cooling / heat margin</text>
+
+    <path class="ok" d="M620 290 C560 300 540 310 520 330" />
+    <text class="small" x="640" y="292">fuel / mixture discipline</text>
+
+    <path class="accent" d="M620 330 C560 350 540 370 520 400" />
+    <text class="small" x="640" y="334">drag bookkeeping</text>
+
+    <path class="accent" d="M620 370 C560 410 540 430 520 470" />
+    <text class="small" x="640" y="376">water operations constraint</text>
+  </g>
+
+  <!-- legend box -->
+  <g>
+    <rect class="panel" x="760" y="200" width="350" height="320" rx="14"/>
+    <text class="label" x="785" y="242">Integrated constraints</text>
+    <text class="small" x="785" y="278">- Power → heat → cooling drag</text>
+    <text class="small" x="785" y="308">- Fuel chemistry → knock margin</text>
+    <text class="small" x="785" y="338">- Surface finish → drag + spray</text>
+    <text class="small" x="785" y="368">- Float loads → structure + weight</text>
+    <text class="small" x="785" y="398">- Verification → logs + limits</text>
+    <text class="mono" x="785" y="450">diagrammatic / not to scale</text>
+  </g>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; used for explanatory context rather than depicting a specific photograph or exact cutaway.</text>
+</svg>

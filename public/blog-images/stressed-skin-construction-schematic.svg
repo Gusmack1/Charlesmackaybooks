@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a semi-monocoque fuselage cross-section with frames, stringers, and a stressed skin layer (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f2a44"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Cross-section ring -->
+  <g transform="translate(220,110)">
+    <!-- outer skin -->
+    <ellipse cx="380" cy="230" rx="360" ry="180" fill="none" stroke="#93c5fd" stroke-width="14" opacity="0.95"/>
+    <!-- inner frames -->
+    <ellipse cx="380" cy="230" rx="310" ry="150" fill="none" stroke="#cbd5e1" stroke-width="8" opacity="0.85"/>
+    <ellipse cx="380" cy="230" rx="260" ry="125" fill="none" stroke="#cbd5e1" stroke-width="6" opacity="0.7"/>
+
+    <!-- stringers -->
+    <g stroke="#22c55e" stroke-width="6" opacity="0.85">
+      <line x1="60" y1="230" x2="700" y2="230"/>
+      <line x1="380" y1="60" x2="380" y2="400"/>
+      <line x1="130" y1="120" x2="630" y2="340"/>
+      <line x1="130" y1="340" x2="630" y2="120"/>
+    </g>
+
+    <!-- rivet dots on skin (stylized) -->
+    <g fill="#93c5fd" opacity="0.55">
+      <circle cx="380" cy="50" r="5"/>
+      <circle cx="550" cy="80" r="5"/>
+      <circle cx="650" cy="170" r="5"/>
+      <circle cx="650" cy="290" r="5"/>
+      <circle cx="550" cy="380" r="5"/>
+      <circle cx="380" cy="410" r="5"/>
+      <circle cx="210" cy="380" r="5"/>
+      <circle cx="110" cy="290" r="5"/>
+      <circle cx="110" cy="170" r="5"/>
+      <circle cx="210" cy="80" r="5"/>
+    </g>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#e5e7eb">
+    <text x="70" y="90" font-size="52" font-weight="800">Stressed-skin construction (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: frames + stringers supporting a load-bearing outer skin</text>
+
+    <g font-size="20" opacity="0.95">
+      <text x="820" y="290">Outer skin (load-bearing)</text>
+      <text x="820" y="330">Frames (ring formers)</text>
+      <text x="820" y="370">Stringers (longitudinal)</text>
+    </g>
+
+    <g stroke="#93c5fd" stroke-width="5" opacity="0.9">
+      <line x1="780" y1="282" x2="730" y2="265"/>
+    </g>
+    <g stroke="#cbd5e1" stroke-width="5" opacity="0.85">
+      <line x1="780" y1="322" x2="715" y2="300"/>
+    </g>
+    <g stroke="#22c55e" stroke-width="5" opacity="0.85">
+      <line x1="780" y1="362" x2="700" y2="335"/>
+    </g>
+  </g>
+</svg>

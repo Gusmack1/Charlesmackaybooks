@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a medal and laurel motif representing ace culture and awards (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#2a1230"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Ace culture & awards (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: medal + laurel motif (diagrammatic)</text>
+  </g>
+
+  <!-- Ribbon -->
+  <rect x="520" y="220" width="160" height="90" rx="20" fill="#93c5fd" opacity="0.7"/>
+
+  <!-- Medal disc -->
+  <circle cx="600" cy="380" r="92" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="600" cy="380" r="70" fill="none" stroke="#0b1220" stroke-width="10" opacity="0.65"/>
+
+  <!-- Laurel -->
+  <g fill="none" stroke="#e5e7eb" stroke-width="8" opacity="0.85" stroke-linecap="round">
+    <path d="M460 420 C470 470, 520 510, 580 520"/>
+    <path d="M740 420 C730 470, 680 510, 620 520"/>
+  </g>
+</svg>
+

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: Arado Ar 234 Blitz motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; opacity:.75; fill:none; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="140" y="140" width="1320" height="620" rx="26" fill="#0a1020" opacity=".55"/>
+
+  <!-- Runway / horizon lines (diagrammatic speed/altitude motif) -->
+  <path class="muted" d="M180 700 H1420"/>
+  <path class="muted" d="M220 740 H1380"/>
+  <path class="muted" d="M260 780 H1340"/>
+
+  <!-- Simplified Ar 234 silhouette (diagrammatic, not to scale) -->
+  <!-- Fuselage -->
+  <path class="fill" d="M360 520
+    C470 470, 620 445, 760 442
+    C900 440, 1020 458, 1115 485
+    C1205 510, 1280 530, 1310 540
+    C1330 546, 1336 560, 1332 575
+    C1326 595, 1310 610, 1288 612
+    C1215 618, 1120 644, 1005 676
+    C890 708, 770 722, 660 718
+    C560 715, 475 694, 410 660
+    C380 644, 360 620, 350 598
+    C338 572, 344 538, 360 520 Z"/>
+
+  <!-- Glazed nose / cockpit motif -->
+  <path class="line" d="M420 540 C485 505, 565 492, 635 494 C590 560, 505 585, 440 585"/>
+  <path class="thin" d="M470 548 L615 510"/>
+  <path class="thin" d="M458 566 L630 525"/>
+
+  <!-- High-mounted wing -->
+  <path class="line" d="M760 520 L560 640 L610 675 L820 548 Z"/>
+  <path class="line" d="M860 520 L1055 640 L1015 675 L800 548 Z"/>
+
+  <!-- Twin engine nacelles (Jumo 004 motif) -->
+  <g>
+    <path class="fill" d="M900 600 C940 592, 990 592, 1028 604 C1040 640, 1032 675, 1008 702 C966 710, 920 706, 886 694 C875 662, 882 630, 900 600 Z"/>
+    <circle cx="920" cy="650" r="22" class="thin"/>
+    <path class="thin" d="M940 635 L1010 635"/>
+  </g>
+  <g>
+    <path class="fill" d="M660 600 C700 592, 750 592, 788 604 C800 640, 792 675, 768 702 C726 710, 680 706, 646 694 C635 662, 642 630, 660 600 Z"/>
+    <circle cx="680" cy="650" r="22" class="thin"/>
+    <path class="thin" d="M700 635 L770 635"/>
+  </g>
+
+  <!-- Tricycle gear hint (diagrammatic) -->
+  <path class="thin" d="M610 720 V780"/>
+  <circle cx="610" cy="804" r="16" class="thin"/>
+  <path class="thin" d="M1040 700 V780"/>
+  <circle cx="1040" cy="804" r="16" class="thin"/>
+  <path class="thin" d="M520 690 V770"/>
+  <circle cx="520" cy="794" r="14" class="thin"/>
+
+  <!-- Speed lines -->
+  <path class="thin" d="M240 420 H420"/>
+  <path class="thin" d="M220 460 H410"/>
+  <path class="thin" d="M260 500 H435"/>
+
+  <!-- Title -->
+  <text x="180" y="210" class="text small">Arado Ar 234 Blitz — high-speed reconnaissance / light bombing motif (original schematic)</text>
+  <text x="180" y="250" class="text tiny" opacity=".8">Diagrammatic silhouette + twin nacelle blocks (not a photograph; not to scale)</text>
+</svg>
+

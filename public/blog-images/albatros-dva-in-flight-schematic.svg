@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a WWI biplane fighter in side view (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#061a2a"/>
+      <stop offset="1" stop-color="#0b3a63"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Simple biplane silhouette -->
+  <g transform="translate(180,250)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- wings -->
+    <path d="M80 40 H840" stroke="#e5e7eb" stroke-width="18" opacity="0.95"/>
+    <path d="M120 120 H820" stroke="#e5e7eb" stroke-width="16" opacity="0.9"/>
+    <!-- fuselage -->
+    <path d="M140 90 C260 35, 520 35, 690 70 C780 88, 830 98, 870 112 C830 128, 780 140, 690 150 C520 178, 260 175, 140 120 Z"
+          fill="#f8fafc" opacity="0.92" stroke="#cbd5e1" stroke-width="6"/>
+    <!-- tailplane -->
+    <path d="M150 92 L70 70" stroke="#e5e7eb" stroke-width="12" opacity="0.9"/>
+    <path d="M150 114 L62 140" stroke="#e5e7eb" stroke-width="10" opacity="0.85"/>
+    <!-- struts -->
+    <g stroke="#93c5fd" stroke-width="10" opacity="0.85">
+      <line x1="280" y1="55" x2="300" y2="112"/>
+      <line x1="420" y1="55" x2="440" y2="112"/>
+      <line x1="560" y1="55" x2="580" y2="112"/>
+      <line x1="700" y1="55" x2="720" y2="112"/>
+    </g>
+    <!-- wheels -->
+    <g stroke="#0f172a" stroke-width="10" opacity="0.95">
+      <circle cx="560" cy="190" r="34" fill="#e5e7eb"/>
+      <circle cx="640" cy="190" r="34" fill="#e5e7eb"/>
+      <line x1="600" y1="150" x2="600" y2="178" stroke="#e5e7eb" stroke-width="10"/>
+    </g>
+    <!-- prop -->
+    <g stroke="#fbbf24" stroke-width="10" opacity="0.9">
+      <line x1="900" y1="95" x2="950" y2="60"/>
+      <line x1="900" y1="95" x2="950" y2="130"/>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">WWI biplane fighter (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: simplified biplane layout with wings, struts, wheels, and prop</text>
+  </g>
+</svg>
+

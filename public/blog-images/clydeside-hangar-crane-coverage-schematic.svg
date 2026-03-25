@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a hangar interior with an overhead crane and a long-span structure outline (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#2a1230"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Hangar + crane coverage (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: hangar bay with overhead crane and long-span outline</text>
+  </g>
+
+  <!-- Hangar outline -->
+  <rect x="140" y="210" width="920" height="360" rx="22" fill="#111827" opacity="0.9" stroke="#cbd5e1" stroke-width="6"/>
+
+  <!-- Overhead crane beam -->
+  <rect x="180" y="250" width="840" height="26" rx="10" fill="#cbd5e1" opacity="0.35"/>
+  <rect x="560" y="276" width="80" height="36" rx="10" fill="#cbd5e1" opacity="0.35"/>
+  <line x1="600" y1="312" x2="600" y2="380" stroke="#cbd5e1" stroke-width="6" opacity="0.35"/>
+  <circle cx="600" cy="390" r="10" fill="#cbd5e1" opacity="0.35"/>
+
+  <!-- Long-span structure outline -->
+  <path d="M220 440 C340 380, 860 380, 980 440 C860 500, 340 500, 220 440 Z"
+        fill="none" stroke="#93c5fd" stroke-width="10" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+

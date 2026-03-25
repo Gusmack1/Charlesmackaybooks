@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: radar command and control plotting motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .panel { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.92; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e5e7eb" opacity=".9"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="160" y="190" class="text small">Command &amp; control — radar plotting and vectoring motif (original schematic)</text>
+  <text x="160" y="230" class="text tiny" opacity=".85">Diagrammatic: sector board + tracks + alert vector (not a photo)</text>
+
+  <!-- Sector board -->
+  <rect x="180" y="300" width="920" height="520" rx="24" class="panel"/>
+  <circle cx="640" cy="560" r="210" class="thin"/>
+  <circle cx="640" cy="560" r="120" class="thin"/>
+  <path class="thin" d="M640 340 V780"/>
+  <path class="thin" d="M420 560 H860"/>
+
+  <!-- Tracks -->
+  <circle cx="540" cy="520" r="10" fill="#e5e7eb" opacity=".9"/>
+  <circle cx="760" cy="640" r="10" fill="#e5e7eb" opacity=".9"/>
+  <path class="line" d="M540 520 C580 540, 615 550, 640 560"/>
+  <path class="line" d="M760 640 C730 615, 690 590, 640 560"/>
+
+  <!-- Vector arrow -->
+  <path class="line" d="M640 560 L820 450" marker-end="url(#arrow)"/>
+  <text x="840" y="450" class="text label">vector</text>
+
+  <!-- Status board -->
+  <rect x="1140" y="380" width="300" height="220" rx="22" class="fill"/>
+  <path class="thin" d="M1170 430 H1410"/>
+  <path class="thin" d="M1170 480 H1410"/>
+  <path class="thin" d="M1170 530 H1350"/>
+  <text x="1160" y="650" class="text tiny">alerts / readiness (schematic)</text>
+</svg>
+

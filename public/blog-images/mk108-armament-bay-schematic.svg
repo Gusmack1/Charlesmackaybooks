@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: four-cannon armament bay motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .panel { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.92; }
+      .box { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:28px; opacity:.92; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="140" y="150" width="1320" height="600" rx="28" class="panel"/>
+
+  <text x="190" y="220" class="text small">Armament bay — concentrated firepower motif (original schematic)</text>
+  <text x="190" y="260" class="text tiny" opacity=".85">Diagrammatic: four guns + feed paths (not a photo; not to scale)</text>
+
+  <!-- Bay outline -->
+  <rect x="240" y="320" width="1120" height="380" rx="28" class="box"/>
+
+  <!-- Four cannon blocks -->
+  <rect x="320" y="420" width="180" height="70" rx="18" class="box"/>
+  <rect x="520" y="420" width="180" height="70" rx="18" class="box"/>
+  <rect x="720" y="420" width="180" height="70" rx="18" class="box"/>
+  <rect x="920" y="420" width="180" height="70" rx="18" class="box"/>
+
+  <!-- Feed chutes (schematic) -->
+  <path class="thin" d="M410 420 C410 380, 380 370, 360 360"/>
+  <path class="thin" d="M610 420 C610 380, 580 370, 560 360"/>
+  <path class="thin" d="M810 420 C810 380, 780 370, 760 360"/>
+  <path class="thin" d="M1010 420 C1010 380, 980 370, 960 360"/>
+
+  <text x="320" y="560" class="text label">4× cannon blocks</text>
+  <text x="320" y="600" class="text tiny">seconds-long firing windows (schematic)</text>
+</svg>
+

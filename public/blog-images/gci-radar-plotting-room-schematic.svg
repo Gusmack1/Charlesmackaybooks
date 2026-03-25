@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: ground-controlled intercept radar plotting motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .panel { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.9; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="160" y="190" class="text small">GCI — radar plotting and vectoring motif (original schematic)</text>
+  <text x="160" y="230" class="text tiny" opacity=".8">Diagrammatic: sector board + tracks + controller vector (not a photo)</text>
+
+  <!-- Sector board -->
+  <rect x="180" y="300" width="900" height="520" rx="24" class="panel"/>
+  <circle cx="630" cy="560" r="210" class="thin"/>
+  <circle cx="630" cy="560" r="120" class="thin"/>
+  <path class="thin" d="M630 340 V780"/>
+  <path class="thin" d="M410 560 H850"/>
+  <path class="muted" d="M260 420 H1000"/>
+  <path class="muted" d="M260 700 H1000"/>
+
+  <!-- Tracks -->
+  <circle cx="520" cy="500" r="10" fill="#e5e7eb" opacity=".9"/>
+  <circle cx="720" cy="620" r="10" fill="#e5e7eb" opacity=".9"/>
+  <path class="line" d="M520 500 C560 520, 600 545, 630 560"/>
+  <path class="line" d="M720 620 C690 600, 660 580, 630 560"/>
+
+  <!-- Vector arrow -->
+  <path class="line" d="M630 560 L780 470"/>
+  <path class="line" d="M765 455 L780 470 L760 478"/>
+  <text x="790" y="470" class="text label">vector</text>
+
+  <!-- Controller console block -->
+  <rect x="1120" y="420" width="300" height="260" rx="22" class="fill"/>
+  <path class="thin" d="M1160 470 H1380"/>
+  <path class="thin" d="M1160 520 H1380"/>
+  <path class="thin" d="M1160 570 H1320"/>
+  <text x="1140" y="720" class="text tiny">controller / comms (schematic)</text>
+</svg>
+

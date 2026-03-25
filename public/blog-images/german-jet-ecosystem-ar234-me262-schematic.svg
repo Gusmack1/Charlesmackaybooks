@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: late-war German jet ecosystem motif with reconnaissance and interceptor roles (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .card { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.9; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="160" y="190" class="text small">Late‑war jet ecosystem — reconnaissance + interception roles (original schematic)</text>
+  <text x="160" y="230" class="text tiny" opacity=".8">Diagrammatic: role blocks and arrows (not a photo; not to scale)</text>
+
+  <!-- Cards -->
+  <rect x="170" y="300" width="560" height="420" rx="22" class="card"/>
+  <rect x="870" y="300" width="560" height="420" rx="22" class="card"/>
+
+  <!-- Left: Ar 234 (recon) -->
+  <text x="210" y="360" class="text label">Ar 234 — reconnaissance priority</text>
+  <path class="fill" d="M250 520 C340 480, 470 468, 585 490 C640 502, 680 512, 710 520 C720 522, 725 530, 724 540 C722 553, 710 560, 695 560 C650 560, 595 575, 530 600 C450 628, 365 640, 290 625 C260 618, 242 602, 236 585 C230 564, 235 537, 250 520 Z"/>
+  <path class="thin" d="M420 510 L330 575 L360 595 L450 535 Z"/>
+  <circle cx="300" cy="560" r="30" class="thin"/>
+  <path class="muted" d="M240 650 H690"/>
+  <text x="210" y="690" class="text tiny">Sensors → imagery → tasking</text>
+
+  <!-- Right: Me 262 (interceptor) -->
+  <text x="910" y="360" class="text label">Me 262 — interceptor / air defence</text>
+  <path class="fill" d="M960 540 C1040 510, 1160 500, 1260 520 C1330 535, 1370 560, 1400 585 C1410 594, 1410 608, 1398 616 C1360 642, 1310 660, 1240 675 C1155 694, 1070 690, 995 670 C960 660, 940 642, 934 625 C926 601, 936 566, 960 540 Z"/>
+  <path class="thin" d="M1130 545 L1005 620 L1040 645 L1168 568 Z"/>
+  <path class="thin" d="M1200 535 L1325 610 L1290 642 L1162 565 Z"/>
+  <path class="muted" d="M940 650 H1410"/>
+  <text x="910" y="690" class="text tiny">Intercept → engage → protect nodes</text>
+
+  <!-- Arrow between them -->
+  <path class="line" d="M730 510 C780 510, 820 510, 870 510"/>
+  <path class="line" d="M850 492 L870 510 L850 528"/>
+  <text x="740" y="470" class="text tiny">recon informs defence</text>
+</svg>
+

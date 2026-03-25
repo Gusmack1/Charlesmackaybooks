@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Inter-war Commercial Aviation Ground Operations (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing a small aircraft on an apron with simplified passenger figures, luggage handling, fueling, and a timetable block to represent schedule discipline.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .ok{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .warn{fill:none;stroke:#fbbf24;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Commercial air travel: ground operations (schematic)</text>
+  <text class="small" x="90" y="152">Passengers, handling, fueling, and timetable discipline (diagrammatic)</text>
+
+  <!-- aircraft -->
+  <g transform="translate(160,250)">
+    <path class="ink" d="M80 210 H520" />
+    <path class="ink" d="M200 210 C250 140 350 140 400 210" />
+    <path class="ink" d="M300 130 V210" />
+    <path class="accent" d="M260 130 H340" />
+    <path class="accent" d="M520 210 L600 170" />
+    <path class="accent" d="M520 210 L600 250" />
+    <text class="mono" x="70" y="245">apron / taxi area</text>
+  </g>
+
+  <!-- passengers -->
+  <g transform="translate(650,270)">
+    <circle cx="40" cy="30" r="14" fill="#e5e7eb"/>
+    <path class="ink" d="M40 48 V95" />
+    <path class="ink" d="M15 65 H65" />
+    <circle cx="120" cy="30" r="14" fill="#e5e7eb"/>
+    <path class="ink" d="M120 48 V95" />
+    <path class="ink" d="M95 65 H145" />
+    <circle cx="200" cy="30" r="14" fill="#e5e7eb"/>
+    <path class="ink" d="M200 48 V95" />
+    <path class="ink" d="M175 65 H225" />
+    <text class="small" x="0" y="135">passengers</text>
+  </g>
+
+  <!-- luggage handling -->
+  <g transform="translate(650,430)">
+    <rect class="panel" x="0" y="0" width="120" height="80" rx="10"/>
+    <rect class="panel" x="140" y="10" width="120" height="80" rx="10"/>
+    <path class="ok" d="M90 -10 V-40" />
+    <path class="ok" d="M90 -40 H220" />
+    <path class="ok" d="M220 -40 L208 -52" />
+    <path class="ok" d="M220 -40 L208 -28" />
+    <text class="small" x="0" y="120">luggage / handling</text>
+  </g>
+
+  <!-- fueling + checks -->
+  <g transform="translate(160,520)">
+    <path class="warn" d="M0 0 H260" />
+    <path class="warn" d="M260 0 L242 -12" />
+    <path class="warn" d="M260 0 L242 12" />
+    <text class="small" x="0" y="-15">fuel + checks</text>
+  </g>
+
+  <!-- timetable -->
+  <g transform="translate(890,250)">
+    <rect class="panel" x="0" y="0" width="250" height="260" rx="14"/>
+    <text class="label" x="20" y="45">Timetable</text>
+    <path class="accent" d="M20 75 H230" />
+    <path class="accent" d="M20 110 H230" />
+    <path class="accent" d="M20 145 H230" />
+    <path class="accent" d="M20 180 H230" />
+    <path class="accent" d="M20 215 H180" />
+    <text class="mono" x="20" y="250">schedule discipline</text>
+  </g>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; represents typical ground flow rather than a specific airline photograph.</text>
+</svg>

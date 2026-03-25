@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Scottish Engineering Heritage Motif (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic motif showing workshop tools, measurement marks, and a simplified glider wing outline to represent Scottish engineering context behind early aviation experiments.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.95}
+      .muted{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Scottish engineering heritage motif (schematic, diagrammatic)</text>
+  <text class="small" x="90" y="152">Workshop practice + measured iteration supporting early aviation experiments</text>
+
+  <!-- measurement grid -->
+  <g opacity="0.35">
+    <path class="muted" d="M120 190 H1140" />
+    <path class="muted" d="M120 250 H1140" />
+    <path class="muted" d="M120 310 H1140" />
+    <path class="muted" d="M120 370 H1140" />
+    <path class="muted" d="M120 430 H1140" />
+    <path class="muted" d="M120 490 H1140" />
+    <path class="muted" d="M120 550 H1140" />
+  </g>
+
+  <!-- simplified glider wing -->
+  <path class="ink" d="M180 420 Q410 280 640 420" />
+  <path class="accent" d="M220 470 Q410 390 600 470" />
+  <path class="ink" d="M410 330 L410 520" />
+
+  <!-- tools: wrench -->
+  <g transform="translate(760,240)">
+    <path class="ink" d="M40 20 Q20 45 40 70 Q55 85 75 78 L105 108 Q112 115 105 122 L92 135 Q85 142 78 135 L48 105 Q55 85 40 70 Q20 45 40 20 Z" />
+    <path class="accent" d="M105 108 L78 135" />
+    <text class="small" x="0" y="170">workshop tools</text>
+  </g>
+
+  <!-- tools: calipers -->
+  <g transform="translate(920,240)">
+    <path class="ink" d="M40 10 L40 150" />
+    <path class="ink" d="M40 60 L90 20" />
+    <path class="ink" d="M40 90 L90 130" />
+    <path class="accent" d="M40 150 L80 150" />
+    <path class="accent" d="M80 150 L90 140" />
+    <text class="small" x="-10" y="170">measurement</text>
+  </g>
+
+  <!-- annotation arrows -->
+  <path class="muted" d="M650 410 C730 390 740 360 780 340" />
+  <path class="muted" d="M780 340 L770 330" />
+  <path class="muted" d="M780 340 L768 344" />
+
+  <text class="small" x="180" y="585">Note: diagrammatic motif; used to illustrate context rather than depict a specific photograph or artefact.</text>
+</svg>

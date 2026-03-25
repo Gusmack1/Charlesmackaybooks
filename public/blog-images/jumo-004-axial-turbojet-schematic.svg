@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: axial-flow turbojet section motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="140" y="150" width="1320" height="600" rx="26" fill="#0a1020" opacity=".55"/>
+
+  <!-- Engine outer case -->
+  <path class="fill" d="M300 470
+    C350 430, 430 410, 520 410
+    H1120
+    C1210 410, 1290 430, 1340 470
+    C1360 486, 1360 514, 1340 530
+    C1290 570, 1210 590, 1120 590
+    H520
+    C430 590, 350 570, 300 530
+    C280 514, 280 486, 300 470 Z"/>
+
+  <!-- Intake -->
+  <circle cx="520" cy="500" r="74" class="line"/>
+  <circle cx="520" cy="500" r="46" class="thin"/>
+
+  <!-- Axial compressor stages (diagrammatic blades as chevrons) -->
+  <g>
+    <path class="thin" d="M610 455 L650 500 L610 545"/>
+    <path class="thin" d="M670 455 L710 500 L670 545"/>
+    <path class="thin" d="M730 455 L770 500 L730 545"/>
+    <path class="thin" d="M790 455 L830 500 L790 545"/>
+    <path class="thin" d="M850 455 L890 500 L850 545"/>
+  </g>
+
+  <!-- Combustor block (annular motif) -->
+  <path class="line" d="M930 445 H1040 C1065 445 1085 465 1085 490 V510 C1085 535 1065 555 1040 555 H930 C905 555 885 535 885 510 V490 C885 465 905 445 930 445 Z"/>
+  <path class="muted" d="M915 500 H1055"/>
+
+  <!-- Turbine stages -->
+  <g>
+    <path class="thin" d="M1125 455 L1085 500 L1125 545"/>
+    <path class="thin" d="M1185 455 L1145 500 L1185 545"/>
+    <path class="thin" d="M1245 455 L1205 500 L1245 545"/>
+  </g>
+
+  <!-- Exhaust -->
+  <path class="line" d="M1340 470 C1390 490, 1390 510, 1340 530"/>
+  <path class="muted" d="M1405 470 C1460 500, 1460 500, 1405 530"/>
+  <path class="muted" d="M1465 470 C1525 500, 1525 500, 1465 530"/>
+
+  <!-- Labels -->
+  <text x="180" y="210" class="text small">Jumo 004 — axial-flow turbojet concept (original schematic illustration)</text>
+  <text x="180" y="250" class="text tiny" opacity=".8">Diagrammatic section motif: intake → compressor → combustor → turbine → exhaust</text>
+
+  <text x="500" y="660" class="text label">Intake</text>
+  <text x="660" y="660" class="text label">Axial compressor (stages)</text>
+  <text x="930" y="660" class="text label">Combustor</text>
+  <text x="1120" y="660" class="text label">Turbine</text>
+  <text x="1360" y="660" class="text label">Exhaust</text>
+</svg>
+

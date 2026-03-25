@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Pylon Turn: Systems Load (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic of a race-course pylon turn: curved flight path around a pylon marker with callouts showing combined aerodynamic load, engine thermal margin, fuel/mixture discipline, and pilot workload.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .path{fill:none;stroke:#60a5fa;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+      .hot{fill:none;stroke:#fb7185;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .fuel{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .pilot{fill:none;stroke:#fbbf24;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Pylon turn: compressed constraints (schematic)</text>
+  <text class="small" x="90" y="152">Turn geometry + heat margin + fuel/boost discipline + pilot workload (diagrammatic)</text>
+
+  <!-- pylon -->
+  <g transform="translate(520,250)">
+    <rect class="panel" x="0" y="0" width="160" height="260" rx="16"/>
+    <path class="ink" d="M80 40 V210" />
+    <path class="ink" d="M50 70 H110" />
+    <path class="ink" d="M50 110 H110" />
+    <path class="ink" d="M50 150 H110" />
+    <text class="mono" x="35" y="240">pylon</text>
+  </g>
+
+  <!-- flight path -->
+  <path class="path" d="M210 470 C300 330 420 260 540 250 C690 238 820 330 910 470" />
+  <path class="path" d="M910 470 L892 456" />
+  <path class="path" d="M910 470 L890 480" />
+  <text class="small" x="880" y="520">course</text>
+
+  <!-- tiny aircraft marker -->
+  <g transform="translate(310,370)">
+    <path class="ink" d="M-40 0 H40" />
+    <path class="ink" d="M0 0 V20" />
+    <path class="ink" d="M-18 28 Q0 18 18 28 Q20 40 0 44 Q-20 40 -18 28 Z" />
+  </g>
+
+  <!-- callouts -->
+  <path class="hot" d="M370 310 C330 260 290 235 240 215" />
+  <text class="small" x="120" y="210">thermal margin</text>
+
+  <path class="fuel" d="M720 310 C770 260 820 235 880 220" />
+  <text class="small" x="900" y="220">fuel / mixture</text>
+
+  <path class="pilot" d="M520 520 C520 560 500 585 470 600" />
+  <text class="small" x="320" y="620">pilot workload</text>
+
+  <path class="pilot" d="M600 520 C600 570 640 595 690 615" />
+  <text class="small" x="700" y="620">G + timing</text>
+
+  <!-- legend -->
+  <g>
+    <rect class="panel" x="90" y="280" width="310" height="220" rx="14"/>
+    <text class="label" x="115" y="320">At the turn</text>
+    <text class="small" x="115" y="355">- Sustained load</text>
+    <text class="small" x="115" y="385">- Cooling headroom</text>
+    <text class="small" x="115" y="415">- Fuel feed stability</text>
+    <text class="small" x="115" y="445">- Precision timing</text>
+  </g>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; not a representation of a specific race photograph or a measured course map.</text>
+</svg>

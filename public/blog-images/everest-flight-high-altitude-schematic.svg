@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: high-altitude flight over Everest motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e5e7eb" opacity=".9"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="150" y="170" class="text small">High‑altitude flight over Everest — navigation + survival motif (original schematic)</text>
+  <text x="150" y="210" class="text tiny" opacity=".85">Diagrammatic: mountain profile, flight path, camera and clothing icons (not a photo)</text>
+
+  <!-- Mountain range -->
+  <path class="fill" d="M150 770 L360 560 L470 650 L620 470 L740 610 L880 420 L980 560 L1120 460 L1280 640 L1450 520 L1450 770 Z"/>
+  <path class="thin" d="M360 560 L430 610"/>
+  <path class="thin" d="M620 470 L690 540"/>
+  <path class="thin" d="M880 420 L950 500"/>
+  <text x="885" y="400" class="text tiny">Everest peak motif</text>
+
+  <!-- Flight path -->
+  <path class="line" d="M220 420 C420 330, 650 320, 860 280 C1030 250, 1240 250, 1400 230" marker-end="url(#arrow)"/>
+  <text x="260" y="350" class="text label">flight path</text>
+
+  <!-- Camera icon -->
+  <rect x="260" y="260" width="140" height="90" rx="16" class="fill"/>
+  <circle cx="330" cy="305" r="22" class="thin"/>
+  <path class="thin" d="M280 260 L310 240 H360 L380 260"/>
+  <text x="420" y="312" class="text tiny">mapping / photography</text>
+
+  <!-- Clothing icon -->
+  <path class="fill" d="M1120 280 C1140 250, 1180 250, 1200 280 L1225 320 C1235 340, 1225 360, 1205 360 H1115 C1095 360, 1085 340, 1095 320 Z"/>
+  <path class="thin" d="M1158 360 V420"/>
+  <text x="1240" y="330" class="text tiny">high‑altitude clothing</text>
+</svg>
+

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: fuel logistics at forest strip motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .equip { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.92; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="160" y="190" class="text small">Fuel logistics — forest strip gravity feed motif (original schematic)</text>
+  <text x="160" y="230" class="text tiny" opacity=".85">Diagrammatic: bowser, drums, drip trays and a hose line (not a photo)</text>
+
+  <!-- Forest edge -->
+  <path class="muted" d="M140 720 H1460"/>
+  <path class="thin" d="M220 660 V720 M220 680 L200 700 M220 680 L240 700"/>
+  <path class="thin" d="M280 650 V720 M280 675 L260 695 M280 675 L300 695"/>
+  <path class="thin" d="M1340 650 V720 M1340 675 L1320 695 M1340 675 L1360 695"/>
+
+  <!-- Bowser -->
+  <rect x="260" y="470" width="420" height="150" rx="24" class="equip"/>
+  <circle cx="340" cy="640" r="28" class="line"/>
+  <circle cx="600" cy="640" r="28" class="line"/>
+  <text x="300" y="560" class="text label">fuel bowser</text>
+
+  <!-- Drums -->
+  <rect x="760" y="520" width="80" height="140" rx="18" class="fill"/>
+  <rect x="860" y="520" width="80" height="140" rx="18" class="fill"/>
+  <rect x="960" y="520" width="80" height="140" rx="18" class="fill"/>
+  <text x="760" y="490" class="text tiny">drums</text>
+
+  <!-- Hose line -->
+  <path class="line" d="M680 555 C720 555, 740 560, 760 585 C800 635, 900 660, 1060 660"/>
+  <text x="1080" y="670" class="text tiny">to aircraft</text>
+
+  <!-- Drip trays -->
+  <rect x="1040" y="700" width="180" height="30" rx="10" class="equip"/>
+  <rect x="840" y="700" width="180" height="30" rx="10" class="equip"/>
+</svg>
+

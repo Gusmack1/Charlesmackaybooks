@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Early British Helicopter Testing in Glasgow (Schematic)</title>
+  <desc id="desc">Diagrammatic schematic showing a simplified early helicopter silhouette with marked test points, stability checks, and safety margins around a test area.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#0f1a2b;stroke:#2a3a55;stroke-width:2}
+      .ink{fill:none;stroke:#e5e7eb;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .accent{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .ok{fill:none;stroke:#34d399;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .warn{fill:none;stroke:#fbbf24;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:28px;font-weight:700}
+      .small{fill:#cbd5e1;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;font-size:18px}
+      .mono{fill:#cbd5e1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="panel" x="60" y="70" width="1080" height="535" rx="18"/>
+
+  <text class="label" x="90" y="120">Prototype rotorcraft test programme (schematic)</text>
+  <text class="small" x="90" y="152">Test points, safety margins, and stability checks (diagrammatic)</text>
+
+  <!-- test area boundary -->
+  <g transform="translate(160,210)">
+    <rect class="panel" x="0" y="0" width="720" height="360" rx="16"/>
+    <path class="warn" d="M40 40 H680 V320 H40 Z" />
+    <text class="mono" x="20" y="-10">test area (concept)</text>
+
+    <!-- helicopter icon -->
+    <g transform="translate(340,170)">
+      <path class="ink" d="M-120 0 H120" />
+      <path class="accent" d="M0 -16 V16" />
+      <path class="ink" d="M0 0 V44" />
+      <path class="ink" d="M-40 55 Q0 30 40 55 Q46 85 0 95 Q-46 85 -40 55 Z" />
+      <path class="ok" d="M-55 115 H55" />
+      <path class="ink" d="M40 70 H150" />
+      <path class="accent" d="M150 55 V85" />
+      <text class="mono" x="-45" y="145">prototype</text>
+    </g>
+
+    <!-- test points -->
+    <circle cx="120" cy="110" r="10" fill="#34d399"/>
+    <circle cx="600" cy="110" r="10" fill="#34d399"/>
+    <circle cx="120" cy="270" r="10" fill="#34d399"/>
+    <circle cx="600" cy="270" r="10" fill="#34d399"/>
+
+    <path class="ok" d="M120 110 C220 80 260 70 320 80" />
+    <path class="ok" d="M600 110 C520 80 470 70 400 80" />
+    <text class="small" x="90" y="95">hover checks</text>
+
+    <path class="accent" d="M120 270 C260 300 320 310 360 315" />
+    <path class="accent" d="M600 270 C520 300 460 310 420 315" />
+    <text class="small" x="90" y="290">handling</text>
+  </g>
+
+  <!-- side legend -->
+  <g transform="translate(910,220)">
+    <rect class="panel" x="0" y="0" width="230" height="300" rx="14"/>
+    <text class="label" x="20" y="45">Checklist</text>
+    <text class="small" x="20" y="85">- Stability</text>
+    <text class="small" x="20" y="115">- Controls</text>
+    <text class="small" x="20" y="145">- Power margin</text>
+    <text class="small" x="20" y="175">- Ground crew</text>
+    <text class="small" x="20" y="205">- Abort criteria</text>
+  </g>
+
+  <text class="small" x="90" y="595">Note: diagrammatic schematic; represents test workflow rather than a specific photograph of a named airframe.</text>
+</svg>

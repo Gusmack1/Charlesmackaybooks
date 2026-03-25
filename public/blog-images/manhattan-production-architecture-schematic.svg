@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: Manhattan production architecture motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .panel { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.92; }
+      .box { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:28px; opacity:.92; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e5e7eb" opacity=".9"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="140" y="150" width="1320" height="600" rx="28" class="panel"/>
+
+  <text x="190" y="220" class="text small">Manhattan Project — production architecture motif (original schematic)</text>
+  <text x="190" y="260" class="text tiny" opacity=".85">Diagrammatic: parallel enrichment paths + plutonium route (not a photo)</text>
+
+  <!-- Input -->
+  <rect x="220" y="360" width="260" height="120" rx="22" class="box"/>
+  <text x="250" y="430" class="text label">Uranium feed</text>
+
+  <!-- Parallel paths -->
+  <rect x="560" y="300" width="320" height="120" rx="22" class="box"/>
+  <text x="590" y="370" class="text label">Y‑12 (EM)</text>
+  <rect x="560" y="450" width="320" height="120" rx="22" class="box"/>
+  <text x="590" y="520" class="text label">K‑25 (Diffusion)</text>
+
+  <rect x="980" y="300" width="320" height="120" rx="22" class="box"/>
+  <text x="1010" y="370" class="text label">S‑50 (Thermal)</text>
+  <rect x="980" y="450" width="320" height="120" rx="22" class="box"/>
+  <text x="1010" y="520" class="text label">Hanford (Pu)</text>
+
+  <!-- Output -->
+  <rect x="1320" y="390" width="220" height="120" rx="22" class="box"/>
+  <text x="1340" y="460" class="text label">Weapon cores</text>
+
+  <!-- Arrows -->
+  <path class="line" d="M480 420 H560" marker-end="url(#arrow)"/>
+  <path class="line" d="M480 420 C520 420, 540 390, 560 360" marker-end="url(#arrow)"/>
+  <path class="line" d="M480 420 C520 420, 540 510, 560 510" marker-end="url(#arrow)"/>
+
+  <path class="line" d="M880 360 H980" marker-end="url(#arrow)"/>
+  <path class="line" d="M880 510 H980" marker-end="url(#arrow)"/>
+
+  <path class="line" d="M1300 360 H1320" marker-end="url(#arrow)"/>
+  <path class="line" d="M1300 510 H1320" marker-end="url(#arrow)"/>
+
+  <path class="muted" d="M190 720 H1410"/>
+</svg>
+

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a straightedge checking flush rivets on a panel with a checklist beside it (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#2a1b3b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Rivet flushness check (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: straightedge over a riveted panel with a simple checklist</text>
+  </g>
+
+  <!-- Panel -->
+  <rect x="120" y="230" width="760" height="320" rx="18" fill="#111827" opacity="0.85" stroke="#cbd5e1" stroke-width="6"/>
+
+  <!-- Rivet dots -->
+  <g fill="#93c5fd" opacity="0.7">
+    <circle cx="200" cy="300" r="5"/><circle cx="260" cy="300" r="5"/><circle cx="320" cy="300" r="5"/><circle cx="380" cy="300" r="5"/><circle cx="440" cy="300" r="5"/><circle cx="500" cy="300" r="5"/><circle cx="560" cy="300" r="5"/><circle cx="620" cy="300" r="5"/><circle cx="680" cy="300" r="5"/><circle cx="740" cy="300" r="5"/>
+    <circle cx="200" cy="360" r="5"/><circle cx="260" cy="360" r="5"/><circle cx="320" cy="360" r="5"/><circle cx="380" cy="360" r="5"/><circle cx="440" cy="360" r="5"/><circle cx="500" cy="360" r="5"/><circle cx="560" cy="360" r="5"/><circle cx="620" cy="360" r="5"/><circle cx="680" cy="360" r="5"/><circle cx="740" cy="360" r="5"/>
+    <circle cx="200" cy="420" r="5"/><circle cx="260" cy="420" r="5"/><circle cx="320" cy="420" r="5"/><circle cx="380" cy="420" r="5"/><circle cx="440" cy="420" r="5"/><circle cx="500" cy="420" r="5"/><circle cx="560" cy="420" r="5"/><circle cx="620" cy="420" r="5"/><circle cx="680" cy="420" r="5"/><circle cx="740" cy="420" r="5"/>
+  </g>
+
+  <!-- Straightedge -->
+  <g stroke="#fbbf24" stroke-width="12" opacity="0.9" stroke-linecap="round">
+    <line x1="160" y1="330" x2="840" y2="310"/>
+  </g>
+
+  <!-- Checklist -->
+  <rect x="920" y="250" width="220" height="280" rx="18" fill="#e5e7eb" opacity="0.9"/>
+  <g fill="#0b1220" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial">
+    <text x="1030" y="300" font-size="22" font-weight="800" text-anchor="middle">Checklist</text>
+    <text x="950" y="345" font-size="18">☐ panel line</text>
+    <text x="950" y="380" font-size="18">☐ rivet flush</text>
+    <text x="950" y="415" font-size="18">☐ gauge log</text>
+    <text x="950" y="450" font-size="18">☐ sign‑off</text>
+  </g>
+</svg>
+

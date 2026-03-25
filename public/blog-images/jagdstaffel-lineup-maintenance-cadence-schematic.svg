@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: Jagdstaffel lineup and maintenance cadence motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .card { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.9; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="160" y="190" class="text small">Jagdstaffel operations — lineup + serviceability rhythm (original schematic)</text>
+  <text x="160" y="230" class="text tiny" opacity=".8">Diagrammatic: aircraft blocks + maintenance/armourer cadence (not a photo; not to scale)</text>
+
+  <!-- Flight line -->
+  <path class="muted" d="M180 680 H1420"/>
+  <path class="muted" d="M220 720 H1380"/>
+
+  <!-- Aircraft blocks -->
+  <g>
+    <rect x="260" y="520" width="240" height="120" rx="20" class="fill"/>
+    <path class="thin" d="M300 580 H460"/>
+    <path class="thin" d="M380 520 V640"/>
+    <text x="300" y="690" class="text tiny">aircraft</text>
+  </g>
+  <g>
+    <rect x="560" y="520" width="240" height="120" rx="20" class="fill"/>
+    <path class="thin" d="M600 580 H760"/>
+    <path class="thin" d="M680 520 V640"/>
+  </g>
+  <g>
+    <rect x="860" y="520" width="240" height="120" rx="20" class="fill"/>
+    <path class="thin" d="M900 580 H1060"/>
+    <path class="thin" d="M980 520 V640"/>
+  </g>
+  <g>
+    <rect x="1160" y="520" width="240" height="120" rx="20" class="fill"/>
+    <path class="thin" d="M1200 580 H1360"/>
+    <path class="thin" d="M1280 520 V640"/>
+  </g>
+
+  <!-- Cadence cards -->
+  <rect x="220" y="280" width="360" height="180" rx="22" class="card"/>
+  <rect x="620" y="280" width="360" height="180" rx="22" class="card"/>
+  <rect x="1020" y="280" width="360" height="180" rx="22" class="card"/>
+
+  <text x="260" y="330" class="text label">Armourers</text>
+  <path class="line" d="M260 380 H520"/>
+  <path class="thin" d="M290 410 H490"/>
+  <text x="260" y="440" class="text tiny">guns / belts / checks</text>
+
+  <text x="660" y="330" class="text label">Mechanics</text>
+  <path class="line" d="M660 380 H920"/>
+  <path class="thin" d="M690 410 H890"/>
+  <text x="660" y="440" class="text tiny">engine hours / rigging</text>
+
+  <text x="1060" y="330" class="text label">Operations</text>
+  <path class="line" d="M1060 380 H1320"/>
+  <path class="thin" d="M1090 410 H1290"/>
+  <text x="1060" y="440" class="text tiny">patrol timing / fuel</text>
+
+  <!-- Arrows to lineup -->
+  <path class="line" d="M400 460 C380 500, 360 510, 340 520"/>
+  <path class="line" d="M800 460 C780 500, 760 510, 640 520"/>
+  <path class="line" d="M1200 460 C1180 500, 1160 510, 940 520"/>
+</svg>
+

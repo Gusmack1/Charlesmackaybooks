@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: late-war logistics constraints motif (fuel, engines, transport disruption) (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .card { fill:#0a1020; stroke:#cbd5e1; stroke-width:4; opacity:.9; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .label { font-size:24px; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="160" y="190" class="text small">Operational constraints — supporting system bottlenecks (original schematic)</text>
+  <text x="160" y="230" class="text tiny" opacity=".8">Diagrammatic icons: fuel, engine life, transport disruption (not a photo)</text>
+
+  <!-- Three constraint cards -->
+  <rect x="170" y="310" width="400" height="420" rx="22" class="card"/>
+  <rect x="600" y="310" width="400" height="420" rx="22" class="card"/>
+  <rect x="1030" y="310" width="400" height="420" rx="22" class="card"/>
+
+  <!-- Fuel icon -->
+  <text x="210" y="365" class="text label">Fuel</text>
+  <path class="line" d="M290 430 H390 C415 430 435 450 435 475 V625 C435 650 415 670 390 670 H290 C265 670 245 650 245 625 V475 C245 450 265 430 290 430 Z"/>
+  <path class="thin" d="M330 430 V390 C330 370 350 355 368 362 C388 370 392 392 378 404"/>
+  <path class="muted" d="M270 540 H410"/>
+  <path class="muted" d="M270 590 H410"/>
+  <path class="thin" d="M410 470 L460 500 V610 L410 640"/>
+
+  <!-- Engine life icon -->
+  <text x="640" y="365" class="text label">Engine life</text>
+  <circle cx="800" cy="540" r="120" class="line"/>
+  <path class="thin" d="M800 540 L880 495"/>
+  <path class="thin" d="M800 430 V460"/>
+  <path class="thin" d="M800 620 V650"/>
+  <path class="thin" d="M690 540 H720"/>
+  <path class="thin" d="M880 540 H910"/>
+  <path class="muted" d="M735 610 L865 610"/>
+  <text x="700" y="690" class="text tiny">maintenance hours / spares</text>
+
+  <!-- Transport disruption icon -->
+  <text x="1070" y="365" class="text label">Transport nodes</text>
+  <path class="line" d="M1120 640 C1200 520, 1270 520, 1350 640"/>
+  <path class="line" d="M1120 640 H1350"/>
+  <path class="thin" d="M1180 640 V560"/>
+  <path class="thin" d="M1290 640 V560"/>
+  <path class="line" d="M1205 520 L1265 520"/>
+  <!-- "Break" X on the bridge -->
+  <path class="line" d="M1235 485 L1275 555"/>
+  <path class="line" d="M1275 485 L1235 555"/>
+  <path class="muted" d="M1080 700 H1400"/>
+  <text x="1080" y="740" class="text tiny">disruption reduces sortie tempo</text>
+</svg>
+

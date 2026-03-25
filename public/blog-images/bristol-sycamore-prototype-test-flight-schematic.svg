@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a helicopter above a runway line with test markers and a clipboard icon (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#3a2410"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Prototype flight test (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: helicopter over runway line with test/notes icon</text>
+  </g>
+
+  <!-- Runway/field line -->
+  <line x1="120" y1="500" x2="1080" y2="500" stroke="#23314f" stroke-width="8" opacity="0.75"/>
+  <g stroke="#93c5fd" stroke-width="8" opacity="0.6">
+    <line x1="260" y1="500" x2="260" y2="470"/>
+    <line x1="600" y1="500" x2="600" y2="470"/>
+    <line x1="940" y1="500" x2="940" y2="470"/>
+  </g>
+
+  <!-- Helicopter (generic) -->
+  <g transform="translate(260,250)" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <line x1="340" y1="-60" x2="740" y2="-60" stroke="#93c5fd" stroke-width="14"/>
+    <line x1="540" y1="-60" x2="540" y2="20" stroke="#93c5fd" stroke-width="10"/>
+    <path d="M160 60 C260 20, 420 20, 540 45 C600 58, 640 80, 660 100 C620 120, 560 130, 490 138 C380 150, 240 148, 180 115 Z"
+          fill="#e5e7eb" stroke="#cbd5e1" stroke-width="6"/>
+    <line x1="640" y1="96" x2="880" y2="60" stroke="#e5e7eb" stroke-width="14"/>
+    <circle cx="900" cy="58" r="22" stroke="#fbbf24" stroke-width="8"/>
+  </g>
+
+  <!-- Clipboard icon -->
+  <g transform="translate(900,280)" fill="#e5e7eb" opacity="0.9">
+    <rect x="0" y="0" width="180" height="220" rx="18"/>
+    <rect x="55" y="-18" width="70" height="40" rx="12" fill="#cbd5e1"/>
+  </g>
+  <g fill="#0b1220" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" opacity="0.9">
+    <text x="990" y="340" text-anchor="middle" font-size="18" font-weight="800">test notes</text>
+    <text x="920" y="375" font-size="16">✓ hover</text>
+    <text x="920" y="405" font-size="16">✓ climb</text>
+    <text x="920" y="435" font-size="16">✓ autorotation</text>
+  </g>
+</svg>
+

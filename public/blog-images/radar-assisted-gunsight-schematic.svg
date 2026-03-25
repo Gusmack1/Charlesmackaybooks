@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: radar-assisted gunsight reticle motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+      .hud { stroke:#e5e7eb; stroke-width:4; fill:none; opacity:.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="140" y="140" width="1320" height="620" rx="26" fill="#0a1020" opacity=".55"/>
+
+  <text x="180" y="210" class="text small">Radar‑assisted gunsight — reticle + lead cue motif (original schematic)</text>
+  <text x="180" y="250" class="text tiny" opacity=".8">Diagrammatic: ranging circle, pipper, and target silhouette (not a photo)</text>
+
+  <!-- Reticle -->
+  <circle cx="800" cy="480" r="210" class="hud"/>
+  <circle cx="800" cy="480" r="90" class="thin"/>
+  <path class="hud" d="M800 250 V710"/>
+  <path class="hud" d="M570 480 H1030"/>
+  <circle cx="800" cy="480" r="10" fill="#e5e7eb" opacity=".9"/>
+
+  <!-- Lead-computing pipper (offset) -->
+  <circle cx="915" cy="420" r="16" fill="none" stroke="#e5e7eb" stroke-width="5" opacity=".9"/>
+  <path class="thin" d="M880 450 L915 420 L950 390"/>
+
+  <!-- Target silhouette (diagrammatic) -->
+  <path class="line" d="M990 420 C1010 410, 1035 410, 1055 420 C1075 430, 1075 450, 1055 460 C1035 470, 1010 470, 990 460 C970 450, 970 430, 990 420 Z"/>
+  <path class="thin" d="M1022 410 V470"/>
+  <path class="thin" d="M980 440 H1065"/>
+
+  <!-- Simple instrument ticks -->
+  <path class="muted" d="M200 700 H1400"/>
+  <text x="220" y="740" class="text tiny">brief window → accurate burst (schematic)</text>
+</svg>
+

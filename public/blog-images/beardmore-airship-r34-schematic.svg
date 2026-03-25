@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Original schematic illustration of a rigid airship silhouette above a hangar outline (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#2a1b3b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#f9fafb">
+    <text x="70" y="92" font-size="52" font-weight="800">Inchinnan airship programme (schematic)</text>
+    <text x="70" y="140" font-size="26" opacity="0.9">Original illustration: rigid airship silhouette + simplified hangar block (diagrammatic)</text>
+  </g>
+
+  <!-- Airship -->
+  <g fill="none" stroke="#93c5fd" stroke-width="10" opacity="0.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M220 300 C360 235, 840 235, 980 300 C840 365, 360 365, 220 300 Z"/>
+    <path d="M960 300 L1030 270"/>
+    <path d="M960 300 L1030 330"/>
+  </g>
+
+  <!-- Hangar -->
+  <g fill="#111827" opacity="0.9" stroke="#cbd5e1" stroke-width="6">
+    <rect x="260" y="420" width="680" height="140" rx="18"/>
+  </g>
+  <g fill="#e5e7eb" opacity="0.85">
+    <rect x="320" y="455" width="560" height="30" rx="10"/>
+    <rect x="320" y="505" width="560" height="30" rx="10"/>
+  </g>
+
+  <g fill="#fbbf24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" opacity="0.95">
+    <text x="600" y="598" text-anchor="middle" font-size="18">Diagrammatic: airship + hangar motif for context</text>
+  </g>
+</svg>
+

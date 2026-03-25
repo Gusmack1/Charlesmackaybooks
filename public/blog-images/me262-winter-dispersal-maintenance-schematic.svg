@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Original schematic illustration: Me 262 winter dispersal maintenance motif (diagrammatic).">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .line { stroke:#e5e7eb; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.95; }
+      .thin { stroke:#cbd5e1; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:.75; }
+      .muted { stroke:#94a3b8; stroke-width:3; opacity:.55; fill:none; }
+      .fill { fill:#0b1220; stroke:#e5e7eb; stroke-width:6; opacity:.98; }
+      .text { fill:#e5e7eb; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+      .small { font-size:26px; opacity:.9; }
+      .tiny { font-size:22px; opacity:.85; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="160" y="190" class="text small">Me 262 — winter dispersal and engine inspection motif (original schematic)</text>
+  <text x="160" y="230" class="text tiny" opacity=".85">Diagrammatic: revetment, canvas cover, and twin-jet silhouette (not a photo)</text>
+
+  <!-- Revetment / snow bands -->
+  <path class="muted" d="M140 760 H1460"/>
+  <path class="muted" d="M180 720 H1420"/>
+
+  <!-- Trees as dispersal edge -->
+  <path class="thin" d="M260 660 V720 M260 680 L240 700 M260 680 L280 700"/>
+  <path class="thin" d="M320 650 V720 M320 675 L300 695 M320 675 L340 695"/>
+  <path class="thin" d="M1380 650 V720 M1380 675 L1360 695 M1380 675 L1400 695"/>
+
+  <!-- Me 262 simplified silhouette -->
+  <path class="fill" d="M420 560 C520 520, 700 500, 880 520 C1040 538, 1160 575, 1240 615 C1260 628, 1260 650, 1242 660 C1130 725, 980 760, 800 770 C650 778, 520 758, 440 720 C390 695, 360 665, 352 630 C342 585, 375 575, 420 560 Z"/>
+  <path class="line" d="M720 610 L560 700 L610 740 L780 632 Z"/>
+  <path class="line" d="M820 610 L980 700 L930 740 L760 632 Z"/>
+  <!-- Engine nacelles -->
+  <circle cx="600" cy="675" r="34" class="line"/>
+  <circle cx="920" cy="675" r="34" class="line"/>
+
+  <!-- Canvas cover hint -->
+  <path class="thin" d="M545 635 C565 610, 620 610, 650 635"/>
+  <path class="thin" d="M865 635 C885 610, 940 610, 970 635"/>
+</svg>
+
