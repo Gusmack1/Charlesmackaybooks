@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
+import PayPalButton from '@/components/PayPalButton';
 
 export default function CheckoutPage() {
   const { items, removeFromCart, updateQuantity, getTotalItems, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal } = useCart();
@@ -131,11 +132,24 @@ export default function CheckoutPage() {
             disabled={loading}
             style={{ display: 'block', width: '100%', padding: '16px 0', marginTop: 20, background: loading ? '#999' : 'var(--navy)', color: 'white', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 16, fontWeight: 700, cursor: loading ? 'default' : 'pointer', textAlign: 'center' }}
           >
-            {loading ? 'Redirecting…' : 'Secure Checkout'}
+            {loading ? 'Redirecting…' : '💳 Pay with Card'}
           </button>
 
-          <p style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 12, textAlign: 'center', lineHeight: 1.5 }}>
-            Secure checkout powered by Stripe. Pay with debit/credit card.
+          <p style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 8, textAlign: 'center', lineHeight: 1.5 }}>
+            Secure checkout powered by Stripe.
+          </p>
+
+          {/* Divider */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '16px 0' }}>
+            <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
+            <span style={{ fontSize: 12, color: 'var(--text-muted)', fontWeight: 500 }}>or</span>
+            <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
+          </div>
+
+          {/* PayPal with Pay Later */}
+          <PayPalButton />
+          <p style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 8, textAlign: 'center', lineHeight: 1.5 }}>
+            Pay now or spread the cost with PayPal Pay Later.
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: 12, marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--border)' }}>
