@@ -11,7 +11,6 @@ export interface Book {
   // When present, this is preferred for the page <meta name="description">.
   seoDescription?: string;
   imageUrl?: string;
-  ebayUrl?: string;
   tags?: string[];
   // Enhanced content for detailed pages
   tableOfContents?: string[];

@@ -26,7 +26,7 @@ export default function ContactPage() {
             {[
               { icon: '✉', title: 'Email', main: 'charlese1mackay@hotmail.com', sub: 'Usually responds within 24–48 hours' },
               { icon: '⚑', title: 'Location', main: 'Glasgow, Scotland', sub: 'Ships worldwide from Glasgow' },
-              { icon: '☑', title: 'eBay Store', main: 'Also available on eBay as "chaza87"', sub: 'Secure worldwide shipping with tracking' },
+              { icon: '🛒', title: 'Online Shop', main: 'charlesmackaybooks.com/books', sub: 'Browse all 20 titles with free worldwide shipping' },
             ].map(m => (
               <div key={m.title} style={{ display: 'flex', gap: 16, alignItems: 'start' }}>
                 <div style={{ width: 44, height: 44, background: 'var(--cream)', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: 18 }}>{m.icon}</div>
