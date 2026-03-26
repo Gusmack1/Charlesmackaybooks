@@ -12,4 +12,3 @@ Disallow: /search/
 Disallow: /fonts/
 
 Sitemap: https://charlesmackaybooks.com/sitemap.xml
-Sitemap: https://charlesmackaybooks.com/sitemap-images.xml
