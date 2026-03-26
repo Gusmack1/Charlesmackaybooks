@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Returns & Refunds Policy',
-  description: 'Returns and refunds policy for charlesmackaybooks.com. 30-day returns on all aviation history books. Full refund or replacement if your book arrives damaged.',
+  description: 'Returns and refunds policy for charlesmackaybooks.com. 30-day money-back guarantee on all books. Return for any reason — change of mind, damaged, or unwanted. Full refund guaranteed.',
   alternates: { canonical: '/returns' },
   openGraph: {
     title: 'Returns & Refunds — Charles E. MacKay Books',
-    description: '30-day returns policy. Full refund or replacement for damaged items.',
+    description: '30-day returns policy. Return books for any reason — change of mind, unwanted, or damaged. Full refund guaranteed.',
     url: 'https://charlesmackaybooks.com/returns',
   },
 };
@@ -19,7 +19,7 @@ const faqLd = {
     {
       '@type': 'Question',
       name: 'What is your returns policy?',
-      acceptedAnswer: { '@type': 'Answer', text: 'You may return any book within 30 days of delivery for a full refund. Books must be returned in the same condition they were received — unused and undamaged.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'We accept returns for any reason within 30 days of delivery. Whether you changed your mind, the book was not what you expected, or it arrived damaged — simply return it in its original condition for a full refund.' },
     },
     {
       '@type': 'Question',
@@ -49,9 +49,9 @@ export default function ReturnsPage() {
       </div>
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 24px' }}>
         <section style={{ marginBottom: 40 }}>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>30-Day Returns</h2>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>30-Day Money-Back Guarantee — Any Reason</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            If you are not completely satisfied with your purchase, you may return any book within 30 days of delivery for a full refund. Books must be returned in the same condition they were received — unused and undamaged.
+            We accept returns for any reason within 30 days of delivery. Whether you changed your mind, the book was not what you expected, or you simply no longer need it — return it in its original condition for a full refund. No questions asked. This applies to both new and non-defective products as well as damaged or faulty items.
           </p>
         </section>
 
