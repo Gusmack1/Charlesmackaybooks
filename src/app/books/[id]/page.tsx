@@ -47,7 +47,58 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     ],
   };
 
-  const jsonLd = {
+  const productLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: book.title,
+    image: `https://charlesmackaybooks.com${book.imageUrl || `/book-covers/${book.id}.jpg`}`,
+    description: book.description.substring(0, 300),
+    brand: { '@type': 'Brand', name: 'Charles E. MacKay Books' },
+    gtin13: book.isbn,
+    category: 'Media > Books > Non-Fiction > History',
+    offers: {
+      '@type': 'Offer',
+      price: book.price.toFixed(2),
+      priceCurrency: 'GBP',
+      availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      url: `https://charlesmackaybooks.com/books/${book.id}`,
+      itemCondition: 'https://schema.org/NewCondition',
+      seller: { '@type': 'Organization', name: 'Charles E. MacKay Books' },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'GB',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
+        returnPolicySeasonalOverride: undefined,
+      },
+      shippingDetails: [
+        {
+          '@type': 'OfferShippingDetails',
+          shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'GBP' },
+          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'GB' },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'd' },
+            transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 4, unitCode: 'd' },
+          },
+        },
+        {
+          '@type': 'OfferShippingDetails',
+          shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'GBP' },
+          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'US' },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'd' },
+            transitTime: { '@type': 'QuantitativeValue', minValue: 7, maxValue: 14, unitCode: 'd' },
+          },
+        },
+      ],
+    },
+  };
+
+  const bookLd = {
     '@context': 'https://schema.org',
     '@type': 'Book',
     name: book.title,
@@ -59,25 +110,15 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     description: book.description.substring(0, 300),
     publisher: { '@type': 'Organization', name: 'A Mackay (Publisher) Ltd' },
     inLanguage: 'en',
-    offers: {
-      '@type': 'Offer',
-      price: book.price.toFixed(2),
-      priceCurrency: 'GBP',
-      availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-      url: `https://charlesmackaybooks.com/books/${book.id}`,
-      seller: { '@type': 'Organization', name: 'Charles E. MacKay Books' },
-      shippingDetails: {
-        '@type': 'OfferShippingDetails',
-        shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'GBP' },
-        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'GB' },
-      },
-    },
+    bookFormat: 'https://schema.org/Paperback',
+    url: `https://charlesmackaybooks.com/books/${book.id}`,
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookLd) }} />
       <div style={{ background: 'var(--navy)', padding: '16px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>
           <Link href="/" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Home</Link>

@@ -12,9 +12,37 @@ export const metadata: Metadata = {
   },
 };
 
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is shipping really free worldwide?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every order ships completely free worldwide — no minimum order, no hidden charges. All orders are dispatched from Glasgow, Scotland.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does delivery take?',
+      acceptedAnswer: { '@type': 'Answer', text: 'UK: 2-4 working days via Royal Mail First Class. Europe: 5-10 working days. USA & Canada: 7-14 working days. Australia & NZ: 10-21 working days. Rest of World: 7-21 working days.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer order tracking?',
+      acceptedAnswer: { '@type': 'Answer', text: 'UK orders sent via Royal Mail First Class include tracking where available. International orders are sent via Royal Mail International Standard, which may include tracking depending on the destination country.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How are the books packaged?',
+      acceptedAnswer: { '@type': 'Answer', text: 'All books are carefully packaged in sturdy cardboard mailers to ensure they arrive in perfect condition. Multi-book orders are bundled securely together.' },
+    },
+  ],
+};
+
 export default function ShippingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div style={{ background: 'var(--navy)', padding: '32px 24px', textAlign: 'center' }}>
         <h1 style={{ fontFamily: 'var(--font-serif)', color: 'white', fontSize: 28, marginBottom: 4 }}>Shipping Information</h1>
         <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>Free worldwide delivery on every order</p>

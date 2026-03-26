@@ -12,9 +12,37 @@ export const metadata: Metadata = {
   },
 };
 
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is your returns policy?',
+      acceptedAnswer: { '@type': 'Answer', text: 'You may return any book within 30 days of delivery for a full refund. Books must be returned in the same condition they were received — unused and undamaged.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if my book arrives damaged?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Contact us within 14 days with a photo of the damage. We will send a replacement free of charge or issue a full refund — whichever you prefer.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long do refunds take?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Refunds are processed within 5 working days of receiving the returned book, to your original payment method (Stripe or PayPal).' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I cancel my order?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — email us before dispatch and we will cancel and refund in full. Once posted, the standard returns process applies.' },
+    },
+  ],
+};
+
 export default function ReturnsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div style={{ background: 'var(--navy)', padding: '32px 24px', textAlign: 'center' }}>
         <h1 style={{ fontFamily: 'var(--font-serif)', color: 'white', fontSize: 28, marginBottom: 4 }}>Returns &amp; Refunds</h1>
         <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>Your satisfaction is guaranteed</p>
