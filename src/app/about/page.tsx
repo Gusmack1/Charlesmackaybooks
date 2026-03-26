@@ -1,4 +1,16 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Charles E. MacKay',
+  description: 'Charles E. MacKay is a Scottish aviation historian with over 25 years of research into Scotland\'s aviation heritage, military aircraft, and industrial history.',
+  alternates: { canonical: '/about' },
+  openGraph: {
+    title: 'About Charles E. MacKay — Aviation Historian',
+    description: 'Over 25 years researching Scotland\'s aviation heritage. Author of 20 definitive titles on Scottish aviation, WWI/WWII aircraft, and military history.',
+    url: 'https://charlesmackaybooks.com/about',
+  },
+};
 
 const expertise = [
   { title: 'Scottish Aviation', desc: "Comprehensive histories of Scotland's airfields, aircraft factories, and the people who built and flew from them." },

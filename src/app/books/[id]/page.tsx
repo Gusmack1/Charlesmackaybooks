@@ -1,12 +1,33 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { books } from '@/data/books';
 import BookCard from '@/components/BookCard';
 import AddToBasketButton from '@/components/AddToBasketButton';
 
 export function generateStaticParams() {
   return books.map(b => ({ id: b.id }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const book = books.find(b => b.id === id);
+  if (!book) return {};
+  const desc = book.seoDescription || book.description.substring(0, 155).replace(/\n/g, ' ') + '…';
+  return {
+    title: book.title,
+    description: desc,
+    alternates: { canonical: `/books/${book.id}` },
+    openGraph: {
+      title: book.title,
+      description: desc,
+      type: 'website',
+      url: `https://charlesmackaybooks.com/books/${book.id}`,
+      images: [{ url: book.imageUrl || `/book-covers/${book.id}.jpg`, width: 600, height: 800, alt: book.title }],
+    },
+    twitter: { card: 'summary_large_image', title: book.title, description: desc },
+  };
 }
 
 export default async function BookDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -16,8 +37,36 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
   const related = (book.relatedBookIds || []).map(rid => books.find(b => b.id === rid)).filter(Boolean).slice(0, 3);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Book',
+    name: book.title,
+    author: { '@type': 'Person', name: 'Charles E. MacKay' },
+    isbn: book.isbn,
+    numberOfPages: book.pageCount,
+    datePublished: book.publicationYear ? `${book.publicationYear}` : undefined,
+    image: `https://charlesmackaybooks.com${book.imageUrl || `/book-covers/${book.id}.jpg`}`,
+    description: book.description.substring(0, 300),
+    publisher: { '@type': 'Organization', name: 'A Mackay (Publisher) Ltd' },
+    inLanguage: 'en',
+    offers: {
+      '@type': 'Offer',
+      price: book.price.toFixed(2),
+      priceCurrency: 'GBP',
+      availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      url: `https://charlesmackaybooks.com/books/${book.id}`,
+      seller: { '@type': 'Organization', name: 'Charles E. MacKay Books' },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'GBP' },
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'GB' },
+      },
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div style={{ background: 'var(--navy)', padding: '16px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>
           <Link href="/" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Home</Link>

@@ -23,9 +23,34 @@ const testimonials = [
 ];
 
 
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Charles E. MacKay Books',
+  url: 'https://charlesmackaybooks.com',
+  logo: 'https://charlesmackaybooks.com/og-image.jpg',
+  description: 'Aviation history books by Charles E. MacKay — 20 titles covering Scottish aviation, WWI/WWII aircraft, and military history.',
+  founder: { '@type': 'Person', name: 'Charles E. MacKay' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Glasgow', addressCountry: 'GB' },
+};
+
+const webSiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Charles E. MacKay — Aviation History Books',
+  url: 'https://charlesmackaybooks.com',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://charlesmackaybooks.com/books?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }} />
       {/* HERO */}
       <section style={{ background: 'linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--navy-mid) 100%)', position: 'relative', overflow: 'hidden', padding: '80px 24px 72px' }}>
         <div style={{ position: 'absolute', top: 0, right: 0, width: '50%', height: '100%', backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8A951' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")", backgroundRepeat: 'repeat', opacity: 0.5 }} />

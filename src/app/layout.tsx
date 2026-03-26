@@ -6,9 +6,38 @@ import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import BasketDrawer from "@/components/BasketDrawer";
 
+const siteUrl = 'https://charlesmackaybooks.com';
+
 export const metadata: Metadata = {
-  title: "Charles E. MacKay — Aviation History Books",
-  description: "Buy aviation history books by Charles E. MacKay. Scottish aviation, WWI/WWII aircraft, helicopters & naval ops. Free worldwide shipping.",
+  title: {
+    default: 'Charles E. MacKay — Aviation History Books',
+    template: '%s | Charles E. MacKay Books',
+  },
+  description: 'Buy aviation history books by Charles E. MacKay. Scottish aviation, WWI/WWII aircraft, helicopters & naval ops. Free worldwide shipping.',
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: siteUrl,
+    siteName: 'Charles E. MacKay — Aviation History Books',
+    title: 'Charles E. MacKay — Aviation History Books',
+    description: 'Definitive histories of Scottish aviation and military aircraft. 20 titles, 25+ years of research. Free worldwide shipping.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Charles E. MacKay Aviation History Books' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Charles E. MacKay — Aviation History Books',
+    description: 'Definitive histories of Scottish aviation and military aircraft. Free worldwide shipping.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
+  },
+  verification: {
+    google: 'G-RJS2CCBSJP',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

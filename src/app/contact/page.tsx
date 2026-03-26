@@ -1,3 +1,16 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Get in touch with Charles E. MacKay for book enquiries, research questions, bulk orders, or aviation history discussions. Ships worldwide from Glasgow.',
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Contact Charles E. MacKay',
+    description: 'Questions about books, research enquiries, or bulk orders. Ships worldwide from Glasgow, Scotland.',
+    url: 'https://charlesmackaybooks.com/contact',
+  },
+};
+
 export default function ContactPage() {
   return (
     <>
