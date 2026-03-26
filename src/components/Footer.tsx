@@ -22,8 +22,12 @@ export default function Footer() {
         <div>
           <h4 style={{ fontSize: 12, fontWeight: 600, textTransform: 'uppercase' as const, letterSpacing: 1.5, color: 'var(--gold)', marginBottom: 16 }}>Help</h4>
           <ul style={{ listStyle: 'none' }}>
-            {['How to Order', 'Shipping Info', 'Returns', 'Contact'].map(t => (
-              <li key={t} style={{ marginBottom: 10 }}><Link href="/contact" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>{t}</Link></li>
+            {[
+              { label: 'Shipping Info', href: '/shipping' },
+              { label: 'Returns & Refunds', href: '/returns' },
+              { label: 'Contact', href: '/contact' },
+            ].map(t => (
+              <li key={t.href} style={{ marginBottom: 10 }}><Link href={t.href} style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>{t.label}</Link></li>
             ))}
           </ul>
         </div>
