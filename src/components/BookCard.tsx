@@ -18,7 +18,7 @@ export default function BookCard({ book }: { book: Book }) {
     <div style={{ background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', transition: 'all 0.2s', cursor: 'pointer' }} className="book-card">
       <Link href={`/books/${book.id}`}>
         <div style={{ aspectRatio: '3/4', background: 'var(--cream-dark)', position: 'relative', overflow: 'hidden' }}>
-          <Image src={book.imageUrl || `/book-covers/${book.id}.jpg`} alt={book.title} fill style={{ objectFit: 'cover' }} />
+          <Image src={book.imageUrl || `/book-covers/${book.id}.jpg`} alt={book.title} fill sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" style={{ objectFit: 'cover' }} />
           {book.category && (
             <span style={{ position: 'absolute', top: 12, left: 12, background: 'var(--gold)', color: 'var(--navy)', fontSize: 10, fontWeight: 700, padding: '3px 8px', borderRadius: 4, textTransform: 'uppercase', letterSpacing: 0.5, zIndex: 2 }}>{book.category}</span>
           )}

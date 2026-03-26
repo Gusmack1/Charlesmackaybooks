@@ -123,7 +123,7 @@ export default function HomePage() {
             {heroBooks.map(b => (
               <Link key={b.id} href={`/books/${b.id}`} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--radius-lg)', padding: 12, textAlign: 'center', textDecoration: 'none', display: 'block' }}>
                 <div style={{ width: '100%', aspectRatio: '3/4', position: 'relative', borderRadius: 'var(--radius-sm)', overflow: 'hidden', marginBottom: 10, background: 'var(--navy-mid)' }}>
-                  <Image src={b.img} alt={b.title} fill style={{ objectFit: 'cover' }} />
+                  <Image src={b.img} alt={b.title} fill sizes="(max-width: 1024px) 0px, 180px" style={{ objectFit: 'cover' }} loading="eager" />
                 </div>
                 <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--white)', lineHeight: 1.3, marginBottom: 4, overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' as const }}>{b.title}</div>
                 <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--gold)' }}>£{b.price.toFixed(2)}</div>

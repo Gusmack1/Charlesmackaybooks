@@ -90,12 +90,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <CartProvider>
+          <a href="#main-content" className="skip-link">Skip to content</a>
           {/* Discount banner */}
           <div style={{ background: 'var(--gold)', color: 'var(--navy)', textAlign: 'center', padding: '8px 16px', fontSize: 13, fontWeight: 600 }}>
             Save 5% on 2 books or 10% on 3+ — Free worldwide shipping on every order
           </div>
           <Nav />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <Footer />
           <BasketDrawer />
         </CartProvider>
