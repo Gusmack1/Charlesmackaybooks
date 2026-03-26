@@ -33,6 +33,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/me262-luftwaffe.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/arado-ar234-jet-bomber.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -64,6 +67,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/beardmore-clyde-shipyard.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/beardmore-aircraft-engine.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -95,6 +101,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/clydeside-aviation-dalmuir-1928.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/rfc-pilots-no32-squadron-1916.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -126,6 +135,8 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/clydeside-aircraft-factory.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -157,6 +168,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/fokker-dr1-triplane-replica.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/fokker-dvii-museum.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -188,6 +202,8 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/sopwith-camel-historical-1918.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -220,6 +236,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/helicopter-development-timeline.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/cierva-autogyro-historical.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -251,6 +270,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/eric-brown-seafire-carrier.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/sopwith-pup-carrier-landing.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -281,6 +303,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/f86-sabre-cold-war-fighter.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/rcaf-sabre-formation-golden-hawks.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -312,6 +337,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/me262-jet-fighter-historical.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/wwii-aircraft-factory-production.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -343,6 +371,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/fokker-triplane-wwi.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/fokker-dr1-red-baron-replica.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -374,6 +405,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/percy-pilcher-hawk-glider-scotland.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/percy-pilcher-glider-experiments.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -405,6 +439,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/schneider-trophy-1931.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/hawker-hurricane-battle-of-britain.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -436,6 +473,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/de-havilland-chipmunk-formation.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/boeing-b17-assembly-line.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -466,6 +506,8 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/beardmore-parkhead-forge.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -497,6 +539,8 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/vickers-valiant-bomber.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -528,6 +572,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/hms-argus-dazzle-camouflage.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/carrier-evolution-diagram.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -558,6 +605,8 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/historical-scotland-map.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -589,6 +638,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
@@ -620,6 +670,9 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/sr71-blackbird-spy-plane.jpg</g:additional_image_link>
+        <g:additional_image_link>https://charlesmackaybooks.com/blog-images/vulcan-bomber-single.jpg</g:additional_image_link>
+    <g:shipping_label>standard</g:shipping_label>
     <g:return_policy_label>standard</g:return_policy_label>
   </item>
 </channel>
