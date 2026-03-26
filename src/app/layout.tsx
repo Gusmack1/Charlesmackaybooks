@@ -10,10 +10,10 @@ const siteUrl = 'https://charlesmackaybooks.com';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Charles E. MacKay — Aviation History Books',
+    default: 'Charles E. MacKay Books — Buy Scottish Aviation History Books Online',
     template: '%s | Charles E. MacKay Books',
   },
-  description: 'Buy aviation history books by Charles E. MacKay. Scottish aviation, WWI/WWII aircraft, helicopters & naval ops. Free worldwide shipping.',
+  description: 'Buy 20 aviation history books by Charles E. MacKay. Scottish aviation, Beardmore, Clydeside, WWI/WWII aircraft, Luftwaffe, helicopters. Free worldwide shipping from Glasgow.',
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
   openGraph: {

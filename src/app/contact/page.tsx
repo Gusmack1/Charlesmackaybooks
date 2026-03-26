@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Get in touch with Charles E. MacKay for book enquiries, research questions, bulk orders, or aviation history discussions. Ships worldwide from Glasgow.',
+  title: 'Contact Charles E. MacKay — Book Orders & Research Enquiries',
+  description: 'Contact Charles E. MacKay for book orders, aviation history research questions, bulk purchases, or collaboration. Ships free worldwide from Glasgow, Scotland.',
   alternates: { canonical: '/contact' },
   openGraph: {
     title: 'Contact Charles E. MacKay',

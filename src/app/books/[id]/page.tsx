@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   if (!book) return {};
   const desc = book.seoDescription || book.description.substring(0, 155).replace(/\n/g, ' ') + '…';
   return {
-    title: book.title,
+    title: `Buy ${book.title} — Aviation History Book by Charles E. MacKay`,
     description: desc,
     alternates: { canonical: `/books/${book.id}` },
     openGraph: {
@@ -36,6 +36,16 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   if (!book) notFound();
 
   const related = (book.relatedBookIds || []).map(rid => books.find(b => b.id === rid)).filter(Boolean).slice(0, 3);
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://charlesmackaybooks.com' },
+      { '@type': 'ListItem', position: 2, name: 'Books', item: 'https://charlesmackaybooks.com/books' },
+      { '@type': 'ListItem', position: 3, name: book.title, item: `https://charlesmackaybooks.com/books/${book.id}` },
+    ],
+  };
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -66,6 +76,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div style={{ background: 'var(--navy)', padding: '16px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>

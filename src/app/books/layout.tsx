@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'All Books',
-  description: 'Browse all 20 aviation history books by Charles E. MacKay. Scottish aviation, WWI & WWII aircraft, helicopters, naval ops, and more. Free worldwide shipping.',
+  title: 'Buy Aviation History Books — 20 Titles from £9.95',
+  description: 'Buy 20 aviation history books by Charles E. MacKay. Scottish aviation, Beardmore, Clydeside, WWI & WWII aircraft, Luftwaffe, helicopters. Free worldwide shipping.',
   alternates: { canonical: '/books' },
   openGraph: {
     title: 'Aviation History Books by Charles E. MacKay',

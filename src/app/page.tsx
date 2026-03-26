@@ -23,6 +23,19 @@ const testimonials = [
 ];
 
 
+const itemListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Aviation History Books by Charles E. MacKay',
+  numberOfItems: books.length,
+  itemListElement: books.map((book, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://charlesmackaybooks.com/books/${book.id}`,
+    name: book.title,
+  })),
+};
+
 const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -49,6 +62,7 @@ const webSiteJsonLd = {
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }} />
       {/* HERO */}
