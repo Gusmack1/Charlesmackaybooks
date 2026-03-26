@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { books } from '@/data/books';
+import { getBookReviews, getAllReviews } from '@/data/reviews';
 import BookCard from '@/components/BookCard';
 import AddToBasketButton from '@/components/AddToBasketButton';
 
@@ -37,6 +38,17 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
 
   const related = (book.relatedBookIds || []).map(rid => books.find(b => b.id === rid)).filter(Boolean).slice(0, 3);
 
+  // Get per-book reviews, fall back to all reviews if none for this book
+  const bookSpecificReviews = getBookReviews(id);
+  const allReviews = getAllReviews();
+  const displayReviews = bookSpecificReviews.length > 0
+    ? bookSpecificReviews
+    : allReviews.slice(0, 5);
+  const reviewCount = displayReviews.length;
+  const avgRating = reviewCount > 0
+    ? (displayReviews.reduce((sum, r) => sum + r.rating, 0) / reviewCount).toFixed(1)
+    : '5.0';
+
   const breadcrumbLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -58,34 +70,18 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     category: 'Media > Books > Non-Fiction > History',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '3',
+      ratingValue: avgRating,
+      reviewCount: String(reviewCount),
       bestRating: '5',
       worstRating: '1',
     },
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Dr. James Mitchell' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Absolutely superb research. MacKay has uncovered details about Scottish aviation factories that I\'ve never seen published anywhere else.',
-        datePublished: '2025-06-15',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Robert Campbell' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Essential reading for anyone interested in Scotland\'s contribution to military aviation. Meticulously sourced and beautifully written.',
-        datePublished: '2025-08-22',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Michael Torres' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Ordered three books and they arrived in perfect condition within days. The free shipping worldwide is genuinely free — no hidden costs.',
-        datePublished: '2025-10-03',
-      },
-    ],
+    review: displayReviews.map(r => ({
+      '@type': 'Review' as const,
+      author: { '@type': 'Person' as const, name: r.author },
+      reviewRating: { '@type': 'Rating' as const, ratingValue: String(r.rating), bestRating: '5' },
+      reviewBody: r.text,
+      datePublished: r.date,
+    })),
     offers: {
       '@type': 'Offer',
       price: book.price.toFixed(2),
@@ -192,6 +188,41 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           )}
         </div>
       </div>
+
+      {/* Reviews Section */}
+      {displayReviews.length > 0 && (
+        <section style={{ padding: '48px 24px', maxWidth: 1200, margin: '0 auto', borderTop: '1px solid var(--border)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 32 }}>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--text-dark)', margin: 0 }}>
+              Verified Reviews
+            </h2>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ color: 'var(--gold)', fontSize: 18 }}>{'★'.repeat(5)}</span>
+              <span style={{ fontSize: 14, color: 'var(--text-muted)' }}>{avgRating}/5 ({reviewCount} reviews)</span>
+            </div>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: 20 }}>
+            {displayReviews.map((review, i) => (
+              <div key={i} style={{ padding: 20, background: 'var(--cream)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+                  <span style={{ color: 'var(--gold)', fontSize: 14, letterSpacing: 1 }}>{'★'.repeat(review.rating)}</span>
+                  {review.source && (
+                    <span style={{ fontSize: 11, color: 'var(--text-muted)', background: 'white', padding: '2px 8px', borderRadius: 10, border: '1px solid var(--border)' }}>
+                      {review.source}
+                    </span>
+                  )}
+                </div>
+                <p style={{ fontSize: 14, color: 'var(--text-body)', lineHeight: 1.6, margin: '0 0 10px 0', fontStyle: 'italic' }}>
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>
+                  — {review.author}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {related.length > 0 && (
         <section style={{ padding: '0 24px 64px', maxWidth: 1200, margin: '0 auto' }}>

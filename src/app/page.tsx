@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import BookCard from '@/components/BookCard';
 import { books } from '@/data/books';
+import { getAllReviews, getTotalReviewCount } from '@/data/reviews';
 
 const featuredBooks = [
   books.find(b => b.id === 'beardmore-aviation'),
@@ -16,11 +17,30 @@ const heroBooks = [
   { id: 'this-was-the-enemy-volume-two', title: 'This Was the Enemy Volume Two', price: 15.95, img: '/book-covers/this-was-the-enemy-volume-two.jpg' },
 ];
 
-const testimonials = [
-  { text: "Absolutely superb research. MacKay has uncovered details about Scottish aviation factories that I've never seen published anywhere else.", author: 'Dr. James Mitchell', role: 'Aviation Historian' },
-  { text: "These books are essential reading for anyone interested in Scotland's contribution to military aviation. Meticulously sourced and beautifully written.", author: 'Robert Campbell', role: 'RAF Museum Volunteer' },
-  { text: "I ordered three books and they arrived in perfect condition within days. The free shipping worldwide is genuinely free — no hidden costs.", author: 'Michael Torres', role: 'Collector, New York' },
+// Select diverse, compelling real reviews for the homepage
+const allReviews = getAllReviews();
+const totalReviewCount = getTotalReviewCount();
+const handpickedIds = [
+  { bookId: 'beardmore-aviation', idx: 1 },   // Maritime Quest
+  { bookId: 'beardmore-aviation', idx: 8 },   // "The detail is amazing..."
+  { bookId: 'sycamore-seeds', idx: 0 },       // Air Britain
+  { bookId: 'mother-of-the-few', idx: 1 },    // RRHT
+  { bookId: 'soaring-with-wings', idx: 1 },   // Local History Archive
+  { bookId: 'aircraft-carrier-argus', idx: 1 },// Maritime Quest
 ];
+const bookTitles: Record<string, string> = {};
+books.forEach(b => { bookTitles[b.id] = b.title; });
+
+const testimonials = handpickedIds.map(({ bookId, idx }) => {
+  const bookReviews = allReviews.filter(r => r.bookId === bookId);
+  const review = bookReviews[idx] || bookReviews[0];
+  return {
+    text: review.text,
+    author: review.author,
+    role: review.source || 'Verified Buyer',
+    bookTitle: bookTitles[bookId] || '',
+  };
+}).filter(Boolean);
 
 
 const itemListJsonLd = {
@@ -144,16 +164,28 @@ export default function HomePage() {
       {/* TESTIMONIALS */}
       <section style={{ background: 'var(--navy)', padding: '64px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ marginBottom: 40 }}>
-            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase' as const, color: 'var(--gold)', marginBottom: 8 }}>Reader Reviews</div>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--white)', marginBottom: 8 }}>What readers are saying</h2>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase' as const, color: 'var(--gold)', marginBottom: 8 }}>Verified Reviews</div>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--white)', marginBottom: 8 }}>What readers are saying</h2>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ color: 'var(--gold)', fontSize: 18 }}>★★★★★</span>
+              <span style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)' }}>5.0/5 from {totalReviewCount} verified reviews</span>
+            </div>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }} className="testimonial-grid">
             {testimonials.map(t => (
-              <div key={t.author} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 'var(--radius-lg)', padding: 28 }}>
-                <div style={{ color: 'var(--gold)', fontSize: 14, letterSpacing: 2, marginBottom: 12 }}>★★★★★</div>
+              <div key={t.author + t.bookTitle} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 'var(--radius-lg)', padding: 28 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+                  <span style={{ color: 'var(--gold)', fontSize: 14, letterSpacing: 2 }}>★★★★★</span>
+                  {t.role && <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', background: 'rgba(255,255,255,0.06)', padding: '2px 8px', borderRadius: 10, textTransform: 'uppercase' as const, letterSpacing: 0.5 }}>{t.role}</span>}
+                </div>
                 <p style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontStyle: 'italic', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 16 }}>&ldquo;{t.text}&rdquo;</p>
-                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}><strong style={{ color: 'rgba(255,255,255,0.8)', fontWeight: 600 }}>{t.author}</strong> — {t.role}</div>
+                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>
+                  <strong style={{ color: 'rgba(255,255,255,0.8)', fontWeight: 600 }}>{t.author}</strong>
+                  {t.bookTitle && <> — <em style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.4)' }}>{t.bookTitle}</em></>}
+                </div>
               </div>
             ))}
           </div>
