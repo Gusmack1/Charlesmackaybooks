@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics (gtag.js) */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-RJS2CCBSJP" strategy="afterInteractive" />
+        <Script id="ga-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RJS2CCBSJP');
+          gtag('config', 'GT-MR8KZP58');
+          gtag('config', 'GT-WKRHZDSX');
+        `}</Script>
+      </head>
       <body>
         <CartProvider>
           {/* Discount banner */}
