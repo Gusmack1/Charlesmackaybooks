@@ -550,7 +550,7 @@ BEFORE making a best offer could you please contact me first because there is a 
     difficulty: 'Introductory',
     citationCount: 20,
     academicInstitutions: ['Helicopter Museum', 'Imperial War Museum'],
-    relatedBookIds: []
+    relatedBookIds: ['soaring-with-wings', 'captain-eric-brown', 'beardmore-aviation']
   },
 
   {
@@ -603,7 +603,7 @@ ISBN 9780957344365`,
     difficulty: 'Introductory',
     citationCount: 10,
     academicInstitutions: [],
-    relatedBookIds: [],
+    relatedBookIds: ['soaring-with-wings', 'mother-of-the-few', 'dieter-dengler'],
     relatedBlogPosts: [
       {
         slug: 'test-pilot-biography-eric-brown',
@@ -865,7 +865,7 @@ It was good value and an interesting read" recent purchase`,
     difficulty: 'Introductory',
     citationCount: 5,
     academicInstitutions: [],
-    relatedBookIds: []
+    relatedBookIds: ['captain-eric-brown', 'soaring-with-wings', 'british-aircraft-great-war']
   },
 
   {
@@ -897,7 +897,7 @@ Any questions promptly answered.
     difficulty: 'Introductory',
     citationCount: 7,
     academicInstitutions: [],
-    relatedBookIds: []
+    relatedBookIds: ['captain-eric-brown', 'soaring-with-wings', 'mother-of-the-few']
   },
 
   {
@@ -958,7 +958,7 @@ This is not a compilation of internet articles or a print on demand book. Shavin
     difficulty: 'Introductory',
     citationCount: 3,
     academicInstitutions: [],
-    relatedBookIds: []
+    relatedBookIds: ['beardmore-aviation', 'clydeside-aviation-vol1', 'birth-atomic-bomb']
   },
 
   {
@@ -1050,7 +1050,7 @@ These are the source documents for all atomic bomb publications and were part of
     difficulty: 'Intermediate',
     citationCount: 12,
     academicInstitutions: [],
-    relatedBookIds: []
+    relatedBookIds: ['sonic-to-standoff', 'enemy-luftwaffe-1945', 'this-was-the-enemy-volume-two']
   },
 
   {
@@ -1145,7 +1145,7 @@ Due to the popularity of Recollections of a Tour Made in Scotland its now in its
     difficulty: 'Introductory',
     citationCount: 2,
     academicInstitutions: [],
-    relatedBookIds: []
+    relatedBookIds: ['beardmore-aviation', 'clydeside-aviation-vol1', 'british-aircraft-great-war']
   },
 
   {
