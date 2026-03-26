@@ -66,6 +66,7 @@ export default function PayPalButton() {
         });
         const data = await res.json();
         if (data.id) return data.id;
+        console.error('PayPal create order response:', data);
         throw new Error(data.error || 'Failed to create order');
       },
       onApprove: async (data: { orderID: string }) => {

@@ -3,9 +3,13 @@ import { NextRequest, NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
 
 async function getAccessToken() {
-  const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!;
-  const secret = process.env.PAYPAL_SECRET!;
+  const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
+  const secret = process.env.PAYPAL_SECRET;
   const base = process.env.PAYPAL_API_BASE || 'https://api-m.paypal.com';
+
+  if (!clientId || !secret) {
+    throw new Error(`PayPal credentials missing: clientId=${!!clientId}, secret=${!!secret}`);
+  }
 
   const res = await fetch(`${base}/v1/oauth2/token`, {
     method: 'POST',
@@ -16,6 +20,10 @@ async function getAccessToken() {
     body: 'grant_type=client_credentials',
   });
   const data = await res.json();
+  if (!data.access_token) {
+    console.error('PayPal auth failed:', JSON.stringify(data));
+    throw new Error(`PayPal auth failed: ${data.error_description || data.error || 'unknown'}`);
+  }
   return data.access_token;
 }
 
@@ -83,7 +91,8 @@ export async function POST(req: NextRequest) {
     if (order.id) {
       return NextResponse.json({ id: order.id });
     }
-    return NextResponse.json({ error: order.message || 'Failed to create PayPal order' }, { status: 500 });
+    console.error('PayPal create order failed:', JSON.stringify(order));
+    return NextResponse.json({ error: order.message || order.error_description || 'Failed to create PayPal order', details: order }, { status: 500 });
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : 'Unknown error';
     console.error('PayPal create order error:', message);
