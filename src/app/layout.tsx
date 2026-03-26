@@ -1,10 +1,25 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Inter, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import BasketDrawer from "@/components/BasketDrawer";
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-serif',
+  display: 'swap',
+});
 
 const siteUrl = 'https://charlesmackaybooks.com';
 
@@ -16,6 +31,14 @@ export const metadata: Metadata = {
   description: 'Buy 20 aviation history books by Charles E. MacKay. Scottish aviation, Beardmore, Clydeside, WWI/WWII aircraft, Luftwaffe, helicopters. Free worldwide shipping from Glasgow.',
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/manifest.json',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
@@ -35,14 +58,11 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  verification: {
-    google: 'G-RJS2CCBSJP',
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${libreBaskerville.variable}`}>
       <head>
         {/* Google Analytics (gtag.js) */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-RJS2CCBSJP" strategy="afterInteractive" />

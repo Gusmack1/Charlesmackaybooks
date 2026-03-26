@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useCart } from '@/context/CartContext';
+import SearchBar from '@/components/SearchBar';
 
 const links = [
   { href: '/', label: 'Home' },
@@ -36,7 +37,7 @@ export default function Nav() {
 
         {/* Actions */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <input type="text" placeholder="Search books..." className="nav-search-input" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, padding: '6px 14px', color: 'white', fontSize: 13, width: 180, outline: 'none' }} />
+          <SearchBar />
           <button onClick={openBasket} style={{ position: 'relative', background: 'none', border: 'none', color: 'white', padding: 4, cursor: 'pointer' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} style={{ width: 22, height: 22 }}><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
             {count > 0 && (
@@ -60,6 +61,7 @@ export default function Nav() {
         @media (max-width: 768px) {
           .nav-links-desktop { display: none !important; }
           .nav-search-input { display: none !important; }
+          [class*="SearchBar"] { display: none !important; }
           .mobile-menu-btn { display: block !important; }
         }
       `}</style>

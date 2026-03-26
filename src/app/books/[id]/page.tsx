@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     openGraph: {
       title: book.title,
       description: desc,
-      type: 'website',
+      type: 'book',
       url: `https://charlesmackaybooks.com/books/${book.id}`,
       images: [{ url: book.imageUrl || `/book-covers/${book.id}.jpg`, width: 600, height: 800, alt: book.title }],
     },
@@ -97,7 +97,6 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         merchantReturnDays: 30,
         returnMethod: 'https://schema.org/ReturnByMail',
         returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
-        returnPolicySeasonalOverride: undefined,
       },
       shippingDetails: [
         {

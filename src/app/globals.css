@@ -1,5 +1,4 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+/* Fonts loaded via next/font in layout.tsx for better performance */
 
 :root {
   --navy: #0C1B33; --navy-light: #142642; --navy-mid: #1A3050;
