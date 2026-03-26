@@ -3,6 +3,7 @@ import Image from 'next/image';
 import BookCard from '@/components/BookCard';
 import { books } from '@/data/books';
 import { getAllReviews, getTotalReviewCount } from '@/data/reviews';
+import NewsletterForm from '@/components/NewsletterForm';
 
 const featuredBooks = [
   books.find(b => b.id === 'beardmore-aviation'),
@@ -198,11 +199,7 @@ export default function HomePage() {
         <div style={{ background: 'var(--cream-dark)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: 48, textAlign: 'center', margin: '0 auto', maxWidth: 640 }}>
           <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, color: 'var(--text-dark)', marginBottom: 8 }}>Stay in the loop</h3>
           <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 24 }}>New book announcements, research articles, and exclusive reader discounts.</p>
-          <form name="newsletter" method="POST" data-netlify="true" action="/newsletter-thanks" style={{ display: 'flex', gap: 8, maxWidth: 420, margin: '0 auto' }}>
-            <input type="hidden" name="form-name" value="newsletter" />
-            <input type="email" name="email" required placeholder="Your email address" style={{ flex: 1, padding: '12px 16px', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, background: 'var(--white)' }} />
-            <button type="submit" style={{ padding: '12px 24px', background: 'var(--navy)', color: 'var(--white)', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 13, fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>
-          </form>
+          <NewsletterForm />
         </div>
       </section>
     </>
