@@ -71,6 +71,19 @@
   [headers.values]
     Cache-Control = "public, max-age=3600, s-maxage=3600"
 
+# Prevent stale CDN cache on checkout pages (fixes 404 from cached prerender)
+[[headers]]
+  for = "/checkout"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Netlify-CDN-Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/checkout/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Netlify-CDN-Cache-Control = "public, max-age=0, must-revalidate"
+
 # Ensure updated Next.js static assets (CSS/JS) are not served stale from cache
 [[headers]]
   for = "/_next/static/*"
