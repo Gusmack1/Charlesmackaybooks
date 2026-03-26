@@ -33,6 +33,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344303</g:id>
@@ -63,6 +64,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344389</g:id>
@@ -93,6 +95,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344372</g:id>
@@ -123,6 +126,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9781838056742</g:id>
@@ -153,6 +157,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9781838056704</g:id>
@@ -183,6 +188,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344334</g:id>
@@ -191,6 +197,7 @@
     <link>https://charlesmackaybooks.com/books/sycamore-seeds</link>
     <g:image_link>https://charlesmackaybooks.com/book-covers/sycamore-seeds.jpg</g:image_link>
     <g:additional_image_link>https://charlesmackaybooks.com/blog-images/sycamore-seeds-nature-inspiration.jpg</g:additional_image_link>
+    <g:additional_image_link>https://charlesmackaybooks.com/blog-images/percy-pilcher-bat-gull-glider.jpg</g:additional_image_link>
     <g:additional_image_link>https://charlesmackaybooks.com/blog-images/sikorsky-vs300-test.jpg</g:additional_image_link>
     <g:availability>in_stock</g:availability>
     <g:price>12.86 GBP</g:price>
@@ -213,6 +220,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344365</g:id>
@@ -243,6 +251,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9781838056735</g:id>
@@ -272,6 +281,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9781838056780</g:id>
@@ -302,6 +312,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9781838056759</g:id>
@@ -332,6 +343,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9781838056766</g:id>
@@ -362,6 +374,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9781838056711</g:id>
@@ -392,6 +405,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9781838056773</g:id>
@@ -422,6 +436,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344310</g:id>
@@ -451,6 +466,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344396</g:id>
@@ -481,6 +497,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344358</g:id>
@@ -511,6 +528,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344327</g:id>
@@ -540,6 +558,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9781838056728</g:id>
@@ -570,6 +589,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
   <item>
     <g:id>9780957344341</g:id>
@@ -600,6 +620,7 @@
       <g:min_transit_time>7</g:min_transit_time>
       <g:max_transit_time>14</g:max_transit_time>
     </g:shipping>
+    <g:return_policy_label>standard</g:return_policy_label>
   </item>
 </channel>
 </rss>

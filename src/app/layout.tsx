@@ -54,6 +54,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('config', 'GT-MR8KZP58');
           gtag('config', 'GT-WKRHZDSX');
         `}</Script>
+        {/* Google Customer Reviews */}
+        <Script src="https://apis.google.com/js/platform.js?onload=renderBadge" strategy="afterInteractive" />
+        <Script id="gcr-badge" strategy="afterInteractive">{`
+          window.renderBadge = function() {
+            var ratingBadgeContainer = document.getElementById("gcr-badge");
+            if (ratingBadgeContainer && window.gapi) {
+              window.gapi.load('ratingbadge', function() {
+                window.gapi.ratingbadge.render(ratingBadgeContainer, {"merchant_id": 5631213189, "position": "BOTTOM_RIGHT"});
+              });
+            }
+          };
+          if (window.gapi) { window.renderBadge(); }
+        `}</Script>
       </head>
       <body>
         <CartProvider>

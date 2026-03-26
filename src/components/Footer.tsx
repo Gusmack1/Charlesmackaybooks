@@ -42,7 +42,9 @@ export default function Footer() {
       </div>
       <div style={{ maxWidth: 1200, margin: '0 auto', paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 12 }}>
         <span>&copy; 2026 Charles E. MacKay. All rights reserved.</span>
-        <div style={{ display: 'flex', gap: 8 }}>
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          {/* Google Customer Reviews badge */}
+          <div id="gcr-badge" style={{ marginRight: 8 }} />
           {['Visa', 'MC', 'PayPal', 'Stripe'].map(p => (
             <span key={p} style={{ background: 'rgba(255,255,255,0.08)', borderRadius: 4, padding: '4px 8px', fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.5)' }}>{p}</span>
           ))}
