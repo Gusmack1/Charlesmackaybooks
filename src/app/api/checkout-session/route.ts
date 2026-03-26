@@ -3,7 +3,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import { stripePriceMap } from '@/data/stripe-prices';
 
 function getStripe() {
-  return new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) {
+    throw new Error('STRIPE_SECRET_KEY is not configured');
+  }
+  return new Stripe(key, {
     apiVersion: '2026-02-25.clover',
   });
 }
