@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
 
 async function getAccessToken() {
-  const clientId = process.env.PAYPAL_CLIENT_ID!;
+  const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!;
   const secret = process.env.PAYPAL_SECRET!;
   const base = process.env.PAYPAL_API_BASE || 'https://api-m.paypal.com';
 
