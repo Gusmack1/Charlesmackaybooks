@@ -92,7 +92,7 @@ export default function BasketDrawer() {
                 Add {2 - totalItems} more book{2 - totalItems > 1 ? 's' : ''} to save 5%
               </div>
             )}
-            <Link href="/basket" onClick={closeBasket} style={{ display: 'block', width: '100%', padding: '14px 0', background: 'var(--gold)', color: 'var(--navy)', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 15, fontWeight: 700, cursor: 'pointer', textAlign: 'center', textDecoration: 'none' }}>
+            <Link href="/checkout" onClick={closeBasket} style={{ display: 'block', width: '100%', padding: '14px 0', background: 'var(--gold)', color: 'var(--navy)', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 15, fontWeight: 700, cursor: 'pointer', textAlign: 'center', textDecoration: 'none' }}>
               Proceed to checkout
             </Link>
             <button onClick={closeBasket} style={{ display: 'block', width: '100%', padding: '10px 0', marginTop: 8, background: 'none', border: 'none', color: 'var(--text-muted)', fontSize: 13, cursor: 'pointer' }}>

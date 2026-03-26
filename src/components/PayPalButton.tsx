@@ -78,7 +78,7 @@ export default function PayPalButton() {
         const result = await res.json();
         if (result.status === 'COMPLETED') {
           clearCart();
-          window.location.href = '/basket/success';
+          window.location.href = '/checkout/success';
         } else {
           alert('Payment failed. Please try again.');
         }
