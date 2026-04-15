@@ -95,10 +95,10 @@ export default async function OrderDetailPage({
   const supabase = await createClient();
 
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     return null;
   }
 
@@ -106,8 +106,8 @@ export default async function OrderDetailPage({
     .from('orders')
     .select('*')
     .eq('id', params.id)
-    .eq('user_id', session.user.id)
-    .single();
+    .eq('user_id', user.id)
+    .maybeSingle();
 
   if (!order) {
     notFound();

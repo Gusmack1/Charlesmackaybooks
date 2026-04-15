@@ -49,10 +49,11 @@ export default async function AccountLayout({
 }) {
   const supabase = await createClient();
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (userError || !user) {
     redirect('/login?redirect_to=/account');
   }
 

@@ -76,34 +76,35 @@ export default async function AccountPage() {
   const supabase = await createClient();
 
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     return null;
   }
+  const session = { user };
 
   // Get profile
   const { data: profile } = await supabase
     .from('profiles')
     .select('*')
-    .eq('id', session.user.id)
-    .single();
+    .eq('id', user.id)
+    .maybeSingle();
 
   // Get order count
   const { data: orders, count: orderCount } = await supabase
     .from('orders')
     .select('*', { count: 'exact' })
-    .eq('user_id', session.user.id);
+    .eq('user_id', user.id);
 
   // Get last order
   const { data: lastOrder } = await supabase
     .from('orders')
     .select('*')
-    .eq('user_id', session.user.id)
+    .eq('user_id', user.id)
     .order('created_at', { ascending: false })
     .limit(1)
-    .single();
+    .maybeSingle();
 
   // Get last order items if exists
   let lastOrderItems: any[] = [];
