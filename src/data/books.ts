@@ -579,7 +579,7 @@ Any questions will be promptly answered
     difficulty: 'Introductory',
     citationCount: 15,
     academicInstitutions: [],
-    relatedBookIds: [],
+    relatedBookIds: ['sonic-to-standoff', 'enemy-luftwaffe-1945'],
     relatedBlogPosts: [
       {
         slug: 'f86-sabre-cold-war-fighter',
@@ -1006,7 +1006,7 @@ Purchased July 2025`,
     difficulty: 'Intermediate',
     citationCount: 22,
     academicInstitutions: ['Imperial War Museum'],
-    relatedBookIds: ['beardmore-aviation'],
+    relatedBookIds: ['beardmore-aviation', 'sonic-to-standoff'],
     relatedBlogPosts: [
       {
         slug: 'beardmore-aviation-scottish-industrial-giant',
@@ -1151,7 +1151,7 @@ The source documents are available from this website.
     difficulty: 'Advanced',
     citationCount: 35,
     academicInstitutions: ['Royal United Services Institute', 'King\'s College London', 'Imperial War Museum'],
-    relatedBookIds: ['sabres-from-north', 'enemy-luftwaffe-1945']
+    relatedBookIds: ['sabres-from-north', 'enemy-luftwaffe-1945', 'birth-atomic-bomb', 'aircraft-carrier-argus']
   }
 ];
 
