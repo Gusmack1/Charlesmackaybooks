@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
+import { books } from '@/data/books';
 
 const styles = {
   heading: {
@@ -93,10 +94,10 @@ export default async function WishlistPage() {
     .eq('user_id', user.id)
     .order('created_at', { ascending: false });
 
-  const formatCurrency = (pennies: number) =>
-    `£${(pennies / 100).toFixed(2)}`;
+  const formatPrice = (price: number) => `£${price.toFixed(2)}`;
 
   const items = wishlistItems || [];
+  const bookIndex = new Map(books.map((b) => [b.id, b]));
 
   return (
     <div>
@@ -116,14 +117,38 @@ export default async function WishlistPage() {
       ) : (
         <div style={styles.grid}>
           {items.map((item) => {
-            const book = (item as any).books;
-            if (!book) return null;
+            const book = bookIndex.get(item.book_id);
+            if (!book) {
+              return (
+                <div key={item.id} style={styles.card}>
+                  <div style={styles.bookTitle}>Book unavailable</div>
+                  <div style={styles.bookAuthor}>ID: {item.book_id}</div>
+                  <div style={styles.buttonGroup}>
+                    <form
+                      action={async () => {
+                        'use server';
+                        const sb = await createClient();
+                        await sb.from('wishlist').delete().eq('id', item.id);
+                      }}
+                      style={{ display: 'inline' }}
+                    >
+                      <button
+                        type="submit"
+                        style={{ ...styles.button, ...styles.buttonDanger }}
+                      >
+                        Remove
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              );
+            }
             return (
               <div key={item.id} style={styles.card}>
                 <div style={styles.bookTitle}>{book.title}</div>
-                <div style={styles.bookAuthor}>{book.author}</div>
+                <div style={styles.bookAuthor}>Charles E. MacKay</div>
                 <div style={styles.bookPrice}>
-                  {formatCurrency(book.price_pennies)}
+                  {formatPrice(book.price)}
                 </div>
                 <div style={styles.buttonGroup}>
                   <Link href={`/books/${book.id}`}>
