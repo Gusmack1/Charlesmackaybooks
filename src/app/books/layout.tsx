@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { books } from '@/data/books';
 
 export const metadata: Metadata = {
   title: 'Buy Aviation History Books — 20 Titles from £9.95',
@@ -12,5 +13,36 @@ export const metadata: Metadata = {
 };
 
 export default function BooksLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  const collectionLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Aviation History Books by Charles E. MacKay',
+    url: 'https://charlesmackaybooks.com/books',
+    description: 'Definitive histories of Scottish aviation and military aircraft.',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: books.length,
+      itemListElement: books.map((b, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://charlesmackaybooks.com/books/${b.id}`,
+        name: b.title,
+      })),
+    },
+  };
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://charlesmackaybooks.com' },
+      { '@type': 'ListItem', position: 2, name: 'Books', item: 'https://charlesmackaybooks.com/books' },
+    ],
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      {children}
+    </>
+  );
 }

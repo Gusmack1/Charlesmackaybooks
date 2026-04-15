@@ -64,6 +64,45 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${libreBaskerville.variable}`}>
       <head>
+        {/* Organization + Website JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': `${siteUrl}/#organization`,
+                  name: 'Charles E. MacKay Books',
+                  url: siteUrl,
+                  logo: `${siteUrl}/icon-192x192.png`,
+                  description: 'Aviation history books by Charles E. MacKay — Scottish aviation, WWI/WWII aircraft, military history.',
+                  sameAs: ['https://charlesmackaybooks.com'],
+                  contactPoint: {
+                    '@type': 'ContactPoint',
+                    contactType: 'customer service',
+                    email: 'charlese1mackay@hotmail.com',
+                    areaServed: 'Worldwide',
+                    availableLanguage: 'English',
+                  },
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': `${siteUrl}/#website`,
+                  url: siteUrl,
+                  name: 'Charles E. MacKay Books',
+                  publisher: { '@id': `${siteUrl}/#organization` },
+                  potentialAction: {
+                    '@type': 'SearchAction',
+                    target: `${siteUrl}/books?q={search_term_string}`,
+                    'query-input': 'required name=search_term_string',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
         {/* Google Analytics (gtag.js) */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-RJS2CCBSJP" strategy="afterInteractive" />
         <Script id="ga-init" strategy="afterInteractive">{`
