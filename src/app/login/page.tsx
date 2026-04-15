@@ -34,7 +34,7 @@ export default function LoginPage() {
     try {
       const { error: magicError } = await supabase.auth.signInWithOtp({
         email: magicLinkEmail,
-        options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
+        options: { emailRedirectTo: 'https://charlesmackaybooks.com/auth/callback' },
       });
       if (magicError) throw magicError;
       setMagicLinkSent(true);
