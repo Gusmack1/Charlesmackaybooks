@@ -63,6 +63,38 @@ const nextConfig = {
   compress: true,
 
   // Headers will be handled by netlify.toml
+
+  // Legacy route cleanup — force redirects to fix GSC coverage
+  async redirects() {
+    return [
+      // Legacy blog/news/taxonomy paths — permanently gone, 301 to home
+      { source: '/blog', destination: '/', permanent: true },
+      { source: '/blog/:slug*', destination: '/', permanent: true },
+      { source: '/blog-:rest*', destination: '/', permanent: true },
+      { source: '/aircraft/:slug*', destination: '/', permanent: true },
+      { source: '/aviation-news/:slug*', destination: '/', permanent: true },
+      { source: '/aviation-bibliography', destination: '/', permanent: true },
+      { source: '/academic-resources', destination: '/', permanent: true },
+      { source: '/academic-resources/:slug*', destination: '/', permanent: true },
+      { source: '/research/:slug*', destination: '/', permanent: true },
+      { source: '/tag/:slug*', destination: '/', permanent: true },
+      { source: '/category/:slug*', destination: '/books', permanent: true },
+      { source: '/author/:slug*', destination: '/about', permanent: true },
+
+      // Renamed canonical paths
+      { source: '/book/:slug', destination: '/books/:slug', permanent: true },
+      { source: '/books/', destination: '/books', permanent: true },
+      { source: '/checkout', destination: '/books', permanent: true },
+      { source: '/basket', destination: '/books', permanent: true },
+
+      // Trailing slash cleanup
+      { source: '/about/', destination: '/about', permanent: true },
+      { source: '/contact/', destination: '/contact', permanent: true },
+      { source: '/shipping/', destination: '/shipping', permanent: true },
+      { source: '/returns/', destination: '/returns', permanent: true },
+      { source: '/books/:slug/', destination: '/books/:slug', permanent: true },
+    ]
+  },
 }
 
 export default nextConfig
