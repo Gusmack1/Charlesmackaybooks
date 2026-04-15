@@ -108,13 +108,11 @@ const nextConfig = {
       { source: '/partnerships/:slug*', destination: '/about', permanent: true },
       { source: '/research-guides', destination: '/about', permanent: true },
       { source: '/research-guides/:slug*', destination: '/about', permanent: true },
-      { source: '/blog-images/:slug*', destination: '/', permanent: true },
-
       // Renamed canonical paths
       { source: '/book/:slug', destination: '/books/:slug', permanent: true },
       { source: '/books/', destination: '/books', permanent: true },
-      { source: '/checkout', destination: '/books', permanent: true },
       { source: '/basket', destination: '/books', permanent: true },
+      { source: '/newsletter-thanks', destination: '/', permanent: true },
 
       // Trailing slash cleanup
       { source: '/about/', destination: '/about', permanent: true },

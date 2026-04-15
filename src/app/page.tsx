@@ -3,7 +3,6 @@ import Image from 'next/image';
 import BookCard from '@/components/BookCard';
 import { books } from '@/data/books';
 import { getAllReviews, getTotalReviewCount } from '@/data/reviews';
-import NewsletterForm from '@/components/NewsletterForm';
 
 const featuredBooks = [
   books.find(b => b.id === 'beardmore-aviation'),
@@ -193,15 +192,6 @@ export default function HomePage() {
         </div>
       </section>
 
-
-      {/* NEWSLETTER */}
-      <section style={{ padding: '0 24px 64px' }}>
-        <div style={{ background: 'var(--cream-dark)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: 48, textAlign: 'center', margin: '0 auto', maxWidth: 640 }}>
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, color: 'var(--text-dark)', marginBottom: 8 }}>Stay in the loop</h3>
-          <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 24 }}>New book announcements, research articles, and exclusive reader discounts.</p>
-          <NewsletterForm />
-        </div>
-      </section>
     </>
   );
 }

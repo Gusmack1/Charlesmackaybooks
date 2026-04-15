@@ -38,7 +38,6 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
-  manifest: '/manifest.json',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
