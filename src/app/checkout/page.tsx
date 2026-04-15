@@ -3,17 +3,20 @@ import CheckoutClient from './CheckoutClient';
 
 export default async function CheckoutPage() {
   const supabase = await createClient();
-  const { data: { session } } = await supabase.auth.getSession();
+  const { data: { user } } = await supabase.auth.getUser();
 
   let defaultAddress = null;
-  if (session?.user) {
+  let session = null;
+  if (user) {
     const { data } = await supabase
       .from('addresses')
       .select('*')
-      .eq('user_id', session.user.id)
+      .eq('user_id', user.id)
       .eq('is_default', true)
-      .single();
+      .maybeSingle();
     defaultAddress = data;
+    // Build minimal session shape for client component (only email used)
+    session = { user: { id: user.id, email: user.email } } as never;
   }
 
   return <CheckoutClient session={session} defaultAddress={defaultAddress} />;
