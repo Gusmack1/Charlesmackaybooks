@@ -11,9 +11,37 @@ export const metadata: Metadata = {
   },
 };
 
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Do you ship internationally?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — every order ships free worldwide from Glasgow, Scotland. UK orders typically arrive in 1–4 business days; international orders 7–14 days.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are bulk or trade orders available?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — multi-buy discounts apply automatically (5% on 2 books, 10% on 3+). For larger trade or library orders please contact Charles directly.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I return a book?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — books may be returned within 30 days of receipt for a refund. See the returns page for details.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How quickly will my order ship?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Orders dispatch from Glasgow within 1–2 business days of payment.' },
+    },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div style={{ background: 'var(--navy)', padding: '32px 24px', textAlign: 'center' }}>
         <h1 style={{ fontFamily: 'var(--font-serif)', color: 'white', fontSize: 28, marginBottom: 4 }}>Get in Touch</h1>
         <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>Questions about books, research enquiries, or bulk orders</p>

@@ -46,7 +46,7 @@ export default function SearchBar() {
               style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 14px', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}
             >
               <div style={{ width: 36, height: 48, background: 'var(--cream-dark)', borderRadius: 3, flexShrink: 0, overflow: 'hidden', position: 'relative' }}>
-                <Image src={book.imageUrl || `/book-covers/${book.id}.jpg`} alt="" fill sizes="36px" style={{ objectFit: 'cover' }} />
+                <Image src={book.imageUrl || `/book-covers/${book.id}.jpg`} alt={`${book.title} book cover`} fill sizes="36px" style={{ objectFit: 'cover' }} />
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-dark)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{book.title}</div>

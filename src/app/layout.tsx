@@ -64,6 +64,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${libreBaskerville.variable}`}>
       <head>
+        {/* Performance: dns-prefetch + preconnect for third parties */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://apis.google.com" />
+        <link rel="dns-prefetch" href="https://www.paypal.com" />
+        <link rel="dns-prefetch" href="https://js.stripe.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         {/* Organization + Website JSON-LD */}
         <script
           type="application/ld+json"

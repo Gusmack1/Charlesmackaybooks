@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 import { createClient } from '@/lib/supabase/server';
@@ -65,7 +66,7 @@ export default async function AccountLayout({
   return (
     <div style={styles.container}>
       <nav style={styles.nav}>
-        <a
+        <Link
           href="/account"
           style={{
             ...styles.navLink,
@@ -74,8 +75,8 @@ export default async function AccountLayout({
           }}
         >
           Dashboard
-        </a>
-        <a
+        </Link>
+        <Link
           href="/account/orders"
           style={{
             ...styles.navLink,
@@ -84,8 +85,8 @@ export default async function AccountLayout({
           }}
         >
           Orders
-        </a>
-        <a
+        </Link>
+        <Link
           href="/account/addresses"
           style={{
             ...styles.navLink,
@@ -94,8 +95,8 @@ export default async function AccountLayout({
           }}
         >
           Addresses
-        </a>
-        <a
+        </Link>
+        <Link
           href="/account/wishlist"
           style={{
             ...styles.navLink,
@@ -104,7 +105,7 @@ export default async function AccountLayout({
           }}
         >
           Wishlist
-        </a>
+        </Link>
         <form
           action={async () => {
             'use server';
