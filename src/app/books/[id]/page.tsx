@@ -123,6 +123,11 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     },
   };
 
+  // Derive bookFormat from specifications.format
+  const formatString = book.specifications?.format || 'Paperback';
+  const formatType = formatString.includes('Hardcover') ? 'Hardcover' : 'Paperback';
+  const bookFormat = `https://schema.org/${formatType}`;
+
   const bookLd = {
     '@context': 'https://schema.org',
     '@type': 'Book',
@@ -135,7 +140,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     description: book.description.substring(0, 300),
     publisher: { '@type': 'Organization', name: 'A Mackay (Publisher) Ltd' },
     inLanguage: 'en',
-    bookFormat: 'https://schema.org/Paperback',
+    bookFormat,
     url: `https://charlesmackaybooks.com/books/${book.id}`,
   };
 
