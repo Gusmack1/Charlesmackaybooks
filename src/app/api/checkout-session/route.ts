@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
   try {
     const stripe = getStripe();
     const supabase = await createClient();
-    const { data: { session } } = await supabase.auth.getSession();
+    const { data: { user } } = await supabase.auth.getUser();
     const { items, discountPct } = await req.json();
 
     // Build line items from cart
@@ -58,9 +58,9 @@ export async function POST(req: NextRequest) {
       cancel_url: `${origin}/checkout`,
     };
 
-    if (session?.user) {
-      sessionParams.metadata = { user_id: session.user.id };
-      sessionParams.customer_email = session.user.email;
+    if (user) {
+      sessionParams.metadata = { user_id: user.id };
+      sessionParams.customer_email = user.email;
     }
 
     const checkoutSession = await stripe.checkout.sessions.create(sessionParams);
