@@ -5,10 +5,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
-  skipTrailingSlashRedirect: true,
-  // NOTE: `skipMiddlewareUrlNormalize` is deprecated; Next.js 16 expects `skipProxyUrlNormalize`.
-  // We keep URL normalization disabled because the site enforces canonical URLs in middleware.
-  skipProxyUrlNormalize: true,
   // Dynamic site configuration for Netlify with Next.js runtime
   output: undefined,
   distDir: '.next',
@@ -110,16 +106,8 @@ const nextConfig = {
       { source: '/research-guides/:slug*', destination: '/about', permanent: true },
       // Renamed canonical paths
       { source: '/book/:slug', destination: '/books/:slug', permanent: true },
-      { source: '/books/', destination: '/books', permanent: true },
       { source: '/basket', destination: '/books', permanent: true },
       { source: '/newsletter-thanks', destination: '/', permanent: true },
-
-      // Trailing slash cleanup
-      { source: '/about/', destination: '/about', permanent: true },
-      { source: '/contact/', destination: '/contact', permanent: true },
-      { source: '/shipping/', destination: '/shipping', permanent: true },
-      { source: '/returns/', destination: '/returns', permanent: true },
-      { source: '/books/:slug/', destination: '/books/:slug', permanent: true },
     ]
   },
 }
