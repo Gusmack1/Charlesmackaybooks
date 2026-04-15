@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@/lib/supabase/server';
 
 export const dynamic = 'force-dynamic';
 
@@ -29,6 +30,8 @@ async function getAccessToken() {
 
 export async function POST(req: NextRequest) {
   try {
+    const supabase = await createClient();
+    const { data: { session } } = await supabase.auth.getSession();
     const { items, discountPct, totalAmount } = await req.json();
     const base = process.env.PAYPAL_API_BASE || 'https://api-m.paypal.com';
     const token = await getAccessToken();
@@ -71,6 +74,7 @@ export async function POST(req: NextRequest) {
               breakdown,
             },
             items: paypalItems,
+            ...(session?.user && { custom_id: session.user.id }),
           },
         ],
         payment_source: {

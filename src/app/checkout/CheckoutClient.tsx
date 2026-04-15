@@ -1,13 +1,31 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 import PayPalButton from '@/components/PayPalButton';
+import type { Session } from '@supabase/supabase-js';
 
-export default function CheckoutClient() {
+interface DefaultAddress {
+  full_name: string;
+  email: string;
+  street: string;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
+}
+
+export default function CheckoutClient({ session, defaultAddress }: { session: Session | null; defaultAddress: DefaultAddress | null }) {
   const { items, removeFromCart, updateQuantity, getTotalItems, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal } = useCart();
   const [loading, setLoading] = useState(false);
+  const [userEmail, setUserEmail] = useState<string>('');
+
+  useEffect(() => {
+    if (session?.user?.email) {
+      setUserEmail(session.user.email);
+    }
+  }, [session?.user?.email]);
 
   const handleStripeCheckout = async () => {
     setLoading(true);
@@ -123,6 +141,13 @@ export default function CheckoutClient() {
           {totalItems === 2 && (
             <div style={{ background: 'rgba(200,169,81,0.1)', border: '1px solid rgba(200,169,81,0.3)', borderRadius: 'var(--radius-sm)', padding: '10px 14px', marginTop: 16, fontSize: 13, color: 'var(--gold-dark)', textAlign: 'center' }}>
               Add 1 more book to save 10% instead of 5%!
+            </div>
+          )}
+
+          {/* Prefilled info hint for logged-in users */}
+          {session?.user && (
+            <div style={{ background: 'rgba(200,169,81,0.1)', border: '1px solid rgba(200,169,81,0.2)', borderRadius: 'var(--radius-sm)', padding: '10px 14px', marginTop: 16, fontSize: 12, color: 'var(--text-muted)', textAlign: 'center' }}>
+              ✓ Your address will be pre-filled during checkout
             </div>
           )}
 
