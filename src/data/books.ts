@@ -195,7 +195,7 @@ The book from Charles MacKay was especially useful in filling in the gaps and cl
     researchBackground: 'Primary sources include the Beardmore company archives held at the Mitchell Library, Glasgow; Admiralty records at The National Archives, Kew; and the Imperial War Museum\'s extensive photographic collection. Personal testimonies were gathered from the families of former Beardmore employees.',
     academicValue: 'Cited as Reference #1 in the British Aviation Database alongside Putnam and Jane\'s publications. Used by researchers at the Royal Aeronautical Society, Imperial War Museum, and aviation history departments at UK universities.',
     specifications: {
-      format: 'Hardcover, 312 pages',
+      format: 'Paperback, 312 pages',
       illustrations: '150+ photographs, 30 technical drawings',
       maps: true,
       bibliography: true,
