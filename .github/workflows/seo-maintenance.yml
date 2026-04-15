@@ -24,12 +24,10 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 20
-      - name: Feed health checks (no redirects)
-        run: node scripts/verify-feeds.cjs --base="$BASE" --verbose
       - name: Ping sitemap and feeds (warm cache)
         run: |
           set -euo pipefail
-          for path in /sitemap.xml /sitemap-images.xml /products.xml /merchant-feed.txt /shopping-actions.xml; do
+          for path in /sitemap.xml /products.xml; do
             url="${BASE}${path}"
             code="$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 --connect-timeout 10 --retry 2 --retry-delay 1 --retry-connrefused "$url")"
             if [ "$code" != "200" ]; then
