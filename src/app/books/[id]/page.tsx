@@ -4,8 +4,10 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { books } from '@/data/books';
 import { getBookReviews, getAllReviews } from '@/data/reviews';
+import { createClient } from '@/lib/supabase/server';
 import BookCard from '@/components/BookCard';
 import AddToBasketButton from '@/components/AddToBasketButton';
+import WishlistButton from '@/components/WishlistButton';
 
 export function generateStaticParams() {
   return books.map(b => ({ id: b.id }));
@@ -35,6 +37,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   const { id } = await params;
   const book = books.find(b => b.id === id);
   if (!book) notFound();
+
+  const supabase = await createClient();
+  const { data: { session } } = await supabase.auth.getSession();
 
   const related = (book.relatedBookIds || []).map(rid => books.find(b => b.id === rid)).filter(Boolean).slice(0, 3);
 
@@ -176,7 +181,10 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
               In stock — ships free worldwide
             </span>
           </div>
-          <div style={{ marginBottom: 32 }}><AddToBasketButton book={book} variant="primary" /></div>
+          <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 32 }}>
+            <AddToBasketButton book={book} variant="primary" />
+            <WishlistButton bookId={book.id} session={session} />
+          </div>
           <div style={{ marginBottom: 32 }}>
             <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 12 }}>About this book</h3>
             <div style={{ fontSize: 14, color: 'var(--text-body)', lineHeight: 1.8, whiteSpace: 'pre-line' }}>{book.description}</div>

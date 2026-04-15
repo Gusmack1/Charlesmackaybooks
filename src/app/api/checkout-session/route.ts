@@ -1,6 +1,7 @@
 import Stripe from 'stripe';
 import { NextRequest, NextResponse } from 'next/server';
 import { stripePriceMap } from '@/data/stripe-prices';
+import { createClient } from '@/lib/supabase/server';
 
 function getStripe() {
   const key = process.env.STRIPE_SECRET_KEY;
@@ -17,6 +18,8 @@ export const dynamic = 'force-dynamic';
 export async function POST(req: NextRequest) {
   try {
     const stripe = getStripe();
+    const supabase = await createClient();
+    const { data: { session } } = await supabase.auth.getSession();
     const { items, discountPct } = await req.json();
 
     // Build line items from cart
@@ -41,7 +44,7 @@ export async function POST(req: NextRequest) {
 
     const origin = req.headers.get('origin') || 'https://charlesmackaybooks.com';
 
-    const session = await stripe.checkout.sessions.create({
+    const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: 'payment',
       line_items: lineItems,
       discounts,
@@ -53,9 +56,16 @@ export async function POST(req: NextRequest) {
       },
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/checkout`,
-    });
+    };
 
-    return NextResponse.json({ url: session.url });
+    if (session?.user) {
+      sessionParams.metadata = { user_id: session.user.id };
+      sessionParams.customer_email = session.user.email;
+    }
+
+    const checkoutSession = await stripe.checkout.sessions.create(sessionParams);
+
+    return NextResponse.json({ url: checkoutSession.url });
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : 'Unknown error';
     console.error('Stripe checkout error:', message);

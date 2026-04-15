@@ -1,0 +1,156 @@
+import Link from 'next/link';
+import { createClient } from '@/lib/supabase/server';
+
+const styles = {
+  heading: {
+    fontFamily: 'var(--font-serif)',
+    fontSize: 28,
+    fontWeight: 700,
+    color: 'var(--navy)',
+    marginBottom: 24,
+  } as React.CSSProperties,
+  grid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: 24,
+    marginBottom: 32,
+  } as React.CSSProperties,
+  card: {
+    border: '1px solid var(--border)',
+    borderRadius: 'var(--radius-lg)',
+    padding: 24,
+    background: 'var(--white)',
+    position: 'relative' as const,
+  } as React.CSSProperties,
+  bookTitle: {
+    fontFamily: 'var(--font-serif)',
+    fontSize: 16,
+    fontWeight: 700,
+    color: 'var(--navy)',
+    marginBottom: 8,
+  } as React.CSSProperties,
+  bookAuthor: {
+    fontSize: 14,
+    color: 'var(--text-muted)',
+    marginBottom: 12,
+  } as React.CSSProperties,
+  bookPrice: {
+    fontSize: 18,
+    fontWeight: 700,
+    color: 'var(--gold)',
+    marginBottom: 16,
+  } as React.CSSProperties,
+  buttonGroup: {
+    display: 'flex',
+    gap: 8,
+    fontSize: 12,
+  } as React.CSSProperties,
+  button: {
+    background: 'none',
+    border: 'none',
+    color: 'var(--gold)',
+    fontWeight: 600,
+    cursor: 'pointer',
+    padding: 0,
+    fontSize: 13,
+  } as React.CSSProperties,
+  buttonDanger: {
+    color: 'var(--error)',
+  } as React.CSSProperties,
+  empty: {
+    textAlign: 'center' as const,
+    padding: 40,
+    color: 'var(--text-muted)',
+  } as React.CSSProperties,
+};
+
+type WishlistItem = {
+  id: string;
+  book_id: string;
+  created_at: string;
+  book?: {
+    id: string;
+    title: string;
+    author: string;
+    price_pennies: number;
+  };
+};
+
+export default async function WishlistPage() {
+  const supabase = await createClient();
+
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+
+  if (!session) {
+    return null;
+  }
+
+  const { data: wishlistItems } = await supabase
+    .from('wishlist')
+    .select('id, book_id, created_at, books:book_id(id, title, author, price_pennies)')
+    .eq('user_id', session.user.id)
+    .order('created_at', { ascending: false });
+
+  const formatCurrency = (pennies: number) =>
+    `£${(pennies / 100).toFixed(2)}`;
+
+  const items = wishlistItems || [];
+
+  return (
+    <div>
+      <h1 style={styles.heading}>Wishlist</h1>
+
+      {items.length === 0 ? (
+        <div style={styles.empty}>
+          <p>
+            No wishlist items yet —{' '}
+            <Link href="/books">
+              <span style={{ color: 'var(--gold)', fontWeight: 600, textDecoration: 'none' }}>
+                browse the library →
+              </span>
+            </Link>
+          </p>
+        </div>
+      ) : (
+        <div style={styles.grid}>
+          {items.map((item) => {
+            const book = (item as any).books;
+            if (!book) return null;
+            return (
+              <div key={item.id} style={styles.card}>
+                <div style={styles.bookTitle}>{book.title}</div>
+                <div style={styles.bookAuthor}>{book.author}</div>
+                <div style={styles.bookPrice}>
+                  {formatCurrency(book.price_pennies)}
+                </div>
+                <div style={styles.buttonGroup}>
+                  <Link href={`/books/${book.id}`}>
+                    <span style={styles.button}>View</span>
+                  </Link>
+                  <span style={{ color: 'var(--border)' }}>•</span>
+                  <form
+                    action={async () => {
+                      'use server';
+                      const sb = await createClient();
+                      await sb.from('wishlist').delete().eq('id', item.id);
+                    }}
+                    style={{ display: 'inline' }}
+                  >
+                    <button
+                      type="submit"
+                      style={{ ...styles.button, ...styles.buttonDanger }}
+                    >
+                      Remove
+                    </button>
+                  </form>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}

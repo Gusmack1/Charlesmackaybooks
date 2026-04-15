@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useCart } from '@/context/CartContext';
+import { useSession } from '@/components/SessionProvider';
 import SearchBar from '@/components/SearchBar';
 
 const links = [
@@ -14,6 +15,7 @@ const links = [
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { getTotalItems, openBasket } = useCart();
+  const { user, loading } = useSession();
   const count = getTotalItems();
 
   return (
@@ -46,6 +48,18 @@ export default function Nav() {
               <span style={{ position: 'absolute', top: -4, right: -6, background: 'var(--gold)', color: 'var(--navy)', fontSize: 10, fontWeight: 700, width: 18, height: 18, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{count}</span>
             )}
           </button>
+          {!loading && (
+            user ? (
+              <Link href="/account" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 500, textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={e => (e.currentTarget.style.color = 'var(--gold)')} onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.75)')}>
+                <div style={{ width: 28, height: 28, background: 'var(--gold)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 12, color: 'var(--navy)' }}>
+                  {user.email?.[0].toUpperCase() || 'A'}
+                </div>
+                <span>Account</span>
+              </Link>
+            ) : (
+              <Link href="/login" style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 500, letterSpacing: 0.3, transition: 'color 0.2s', textDecoration: 'none' }} onMouseOver={e => (e.currentTarget.style.color = 'var(--gold)')} onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.75)')}>Sign in</Link>
+            )
+          )}
           {/* Mobile menu btn */}
           <button onClick={() => setMenuOpen(!menuOpen)} className="mobile-menu-btn" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: 4 }}>
             {menuOpen ? (
@@ -64,6 +78,18 @@ export default function Nav() {
           <Link href="/checkout" onClick={() => setMenuOpen(false)} style={{ display: 'block', padding: '12px 0', color: 'var(--gold)', fontSize: 15, fontWeight: 600, textDecoration: 'none' }}>
             View Basket {count > 0 && `(${count})`}
           </Link>
+          {!loading && (
+            user ? (
+              <>
+                <Link href="/account" onClick={() => setMenuOpen(false)} style={{ display: 'block', padding: '12px 0', color: 'rgba(255,255,255,0.85)', fontSize: 15, fontWeight: 500, textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>Account</Link>
+                <form action="/auth/signout" method="POST" onClick={() => setMenuOpen(false)}>
+                  <button type="submit" style={{ width: '100%', textAlign: 'left', padding: '12px 0', color: 'rgba(255,255,255,0.85)', fontSize: 15, fontWeight: 500, background: 'none', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.06)', cursor: 'pointer', fontFamily: 'inherit' }}>Sign out</button>
+                </form>
+              </>
+            ) : (
+              <Link href="/login" onClick={() => setMenuOpen(false)} style={{ display: 'block', padding: '12px 0', color: 'var(--gold)', fontSize: 15, fontWeight: 600, textDecoration: 'none' }}>Sign in</Link>
+            )
+          )}
         </div>
       )}
       <style>{`
