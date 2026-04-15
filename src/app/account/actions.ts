@@ -14,16 +14,16 @@ type Address = {
 export async function addAddress(formData: Address) {
   const supabase = await createClient();
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     throw new Error('Unauthorized');
   }
 
   const { error } = await supabase.from('addresses').insert({
     ...formData,
-    user_id: session.user.id,
+    user_id: user.id,
   });
 
   if (error) throw error;
@@ -35,10 +35,10 @@ export async function addAddress(formData: Address) {
 export async function updateAddress(id: string, formData: Address) {
   const supabase = await createClient();
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     throw new Error('Unauthorized');
   }
 
@@ -46,7 +46,7 @@ export async function updateAddress(id: string, formData: Address) {
     .from('addresses')
     .update(formData)
     .eq('id', id)
-    .eq('user_id', session.user.id);
+    .eq('user_id', user.id);
 
   if (error) throw error;
 
@@ -57,10 +57,10 @@ export async function updateAddress(id: string, formData: Address) {
 export async function deleteAddress(id: string) {
   const supabase = await createClient();
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     throw new Error('Unauthorized');
   }
 
@@ -68,7 +68,7 @@ export async function deleteAddress(id: string) {
     .from('addresses')
     .delete()
     .eq('id', id)
-    .eq('user_id', session.user.id);
+    .eq('user_id', user.id);
 
   if (error) throw error;
 
@@ -79,10 +79,10 @@ export async function deleteAddress(id: string) {
 export async function setDefaultAddress(id: string) {
   const supabase = await createClient();
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     throw new Error('Unauthorized');
   }
 
@@ -90,14 +90,14 @@ export async function setDefaultAddress(id: string) {
   await supabase
     .from('addresses')
     .update({ is_default: false })
-    .eq('user_id', session.user.id);
+    .eq('user_id', user.id);
 
   // Set new default
   const { error } = await supabase
     .from('addresses')
     .update({ is_default: true })
     .eq('id', id)
-    .eq('user_id', session.user.id);
+    .eq('user_id', user.id);
 
   if (error) throw error;
 
@@ -108,10 +108,10 @@ export async function setDefaultAddress(id: string) {
 export async function removeFromWishlist(wishlistId: string) {
   const supabase = await createClient();
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     throw new Error('Unauthorized');
   }
 
@@ -119,7 +119,7 @@ export async function removeFromWishlist(wishlistId: string) {
     .from('wishlist')
     .delete()
     .eq('id', wishlistId)
-    .eq('user_id', session.user.id);
+    .eq('user_id', user.id);
 
   if (error) throw error;
 
@@ -133,17 +133,17 @@ export async function updateProfile(updates: {
 }) {
   const supabase = await createClient();
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     throw new Error('Unauthorized');
   }
 
   const { error } = await supabase
     .from('profiles')
     .update(updates)
-    .eq('id', session.user.id);
+    .eq('id', user.id);
 
   if (error) throw error;
 
