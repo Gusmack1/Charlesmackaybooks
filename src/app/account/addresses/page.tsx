@@ -169,19 +169,22 @@ export default function AddressesPage() {
     postcode: '',
     country: '',
   });
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [saving, setSaving] = useState(false);
 
   // Load addresses on mount
   const loadAddresses = async () => {
     setLoading(true);
     const {
-      data: { session },
-    } = await supabase.auth.getSession();
-    if (session) {
-      const { data } = await supabase
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (user) {
+      const { data, error } = await supabase
         .from('addresses')
         .select('*')
-        .eq('user_id', session.user.id)
+        .eq('user_id', user.id)
         .order('is_default', { ascending: false });
+      if (error) setErrorMsg(error.message);
       setAddresses(data || []);
     }
     setLoading(false);
@@ -190,30 +193,32 @@ export default function AddressesPage() {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMsg(null);
+    setSaving(true);
     const {
-      data: { session },
-    } = await supabase.auth.getSession();
-    if (!session) return;
-
-    try {
-      if (editingId) {
-        await supabase
-          .from('addresses')
-          .update(formData)
-          .eq('id', editingId);
-      } else {
-        await supabase.from('addresses').insert({
-          ...formData,
-          user_id: session.user.id,
-        });
-      }
-      setShowModal(false);
-      setEditingId(null);
-      setFormData({ line1: '', line2: '', city: '', postcode: '', country: '' });
-      loadAddresses();
-    } catch (error: any) {
-      console.error('Error saving address:', error);
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) {
+      setErrorMsg('Not signed in. Please refresh the page.');
+      setSaving(false);
+      return;
     }
+
+    const { error } = editingId
+      ? await supabase.from('addresses').update(formData).eq('id', editingId)
+      : await supabase
+          .from('addresses')
+          .insert({ ...formData, user_id: user.id });
+
+    setSaving(false);
+    if (error) {
+      setErrorMsg(error.message || 'Failed to save address.');
+      return;
+    }
+    setShowModal(false);
+    setEditingId(null);
+    setFormData({ line1: '', line2: '', city: '', postcode: '', country: '' });
+    loadAddresses();
   };
 
   // Handle delete
@@ -354,6 +359,11 @@ export default function AddressesPage() {
             <h2 style={styles.modalTitle}>
               {editingId ? 'Edit Address' : 'Add Address'}
             </h2>
+            {errorMsg && (
+              <div style={{ background: '#fee', color: '#900', padding: 12, borderRadius: 6, marginBottom: 16, fontSize: 13 }}>
+                {errorMsg}
+              </div>
+            )}
             <form onSubmit={handleSubmit}>
               <div style={styles.formGroup}>
                 <label style={styles.label}>Address Line 1 *</label>
@@ -414,8 +424,8 @@ export default function AddressesPage() {
                   }
                 />
               </div>
-              <button type="submit" style={styles.submitButton}>
-                {editingId ? 'Update Address' : 'Add Address'}
+              <button type="submit" style={styles.submitButton} disabled={saving}>
+                {saving ? 'Saving…' : editingId ? 'Update Address' : 'Add Address'}
               </button>
             </form>
           </div>
