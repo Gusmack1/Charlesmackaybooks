@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { createClient } from '@/lib/supabase/server';
 import { books } from '@/data/books';
 
@@ -22,6 +23,17 @@ const styles = {
     padding: 24,
     background: 'var(--white)',
     position: 'relative' as const,
+    display: 'flex',
+    flexDirection: 'column' as const,
+  } as React.CSSProperties,
+  cover: {
+    width: '100%',
+    aspectRatio: '3 / 4',
+    position: 'relative' as const,
+    marginBottom: 16,
+    borderRadius: 'var(--radius-md)',
+    overflow: 'hidden' as const,
+    background: 'var(--cream)',
   } as React.CSSProperties,
   bookTitle: {
     fontFamily: 'var(--font-serif)',
@@ -141,8 +153,20 @@ export default async function WishlistPage() {
                 </div>
               );
             }
+            const cover = book.imageUrl || `/book-covers/${book.id}.jpg`;
             return (
               <div key={item.book_id} style={styles.card}>
+                <Link href={`/books/${book.id}`}>
+                  <div style={styles.cover}>
+                    <Image
+                      src={cover}
+                      alt={book.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </Link>
                 <div style={styles.bookTitle}>{book.title}</div>
                 <div style={styles.bookAuthor}>Charles E. MacKay</div>
                 <div style={styles.bookPrice}>
