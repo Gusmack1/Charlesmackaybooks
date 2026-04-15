@@ -19,9 +19,6 @@ export interface Book {
     title: string;
     excerpt: string;
   }[];
-  authorInsights?: string;
-  researchBackground?: string;
-  academicValue?: string;
   pageCount?: number;
   publicationYear?: number;
   // Shipping and logistics
