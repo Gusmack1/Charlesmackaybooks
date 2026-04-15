@@ -1,21 +1,30 @@
 'use client';
 import { useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
-import type { Session } from '@supabase/supabase-js';
 
-export default function WishlistButton({ bookId, session }: { bookId: string; session: Session | null }) {
+export default function WishlistButton({
+  bookId,
+  isAuthenticated,
+  initialInWishlist = false,
+}: {
+  bookId: string;
+  isAuthenticated: boolean;
+  initialInWishlist?: boolean;
+}) {
   const router = useRouter();
   const pathname = usePathname();
-  const [isInWishlist, setIsInWishlist] = useState(false);
+  const [isInWishlist, setIsInWishlist] = useState(initialInWishlist);
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const handleClick = async () => {
-    if (!session?.user) {
+    if (!isAuthenticated) {
       router.push(`/login?redirect_to=${encodeURIComponent(pathname)}`);
       return;
     }
 
     setLoading(true);
+    setErrorMsg(null);
     try {
       const res = await fetch('/api/wishlist/toggle', {
         method: 'POST',
@@ -23,19 +32,23 @@ export default function WishlistButton({ bookId, session }: { bookId: string; se
         body: JSON.stringify({ bookId }),
       });
       const data = await res.json();
-      if (data.in_wishlist !== undefined) {
+      if (res.ok && typeof data.in_wishlist === 'boolean') {
         setIsInWishlist(data.in_wishlist);
       } else {
-        console.error('Wishlist error:', data.error);
+        setErrorMsg(data.error || 'Failed to update wishlist');
       }
     } catch (err) {
-      console.error('Wishlist request failed:', err);
+      setErrorMsg(err instanceof Error ? err.message : 'Network error');
     } finally {
       setLoading(false);
     }
   };
 
   return (
+    <>
+    {errorMsg && (
+      <div style={{ color: '#900', fontSize: 12, marginBottom: 6 }}>{errorMsg}</div>
+    )}
     <button
       onClick={handleClick}
       disabled={loading}
@@ -57,5 +70,6 @@ export default function WishlistButton({ bookId, session }: { bookId: string; se
       <span style={{ fontSize: 16 }}>{isInWishlist ? '♥' : '♡'}</span>
       {isInWishlist ? 'Saved' : 'Save'}
     </button>
+    </>
   );
 }

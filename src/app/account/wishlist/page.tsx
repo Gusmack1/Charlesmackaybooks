@@ -66,15 +66,9 @@ const styles = {
 };
 
 type WishlistItem = {
-  id: string;
+  user_id: string;
   book_id: string;
-  created_at: string;
-  book?: {
-    id: string;
-    title: string;
-    author: string;
-    price_pennies: number;
-  };
+  added_at: string;
 };
 
 export default async function WishlistPage() {
@@ -90,9 +84,9 @@ export default async function WishlistPage() {
 
   const { data: wishlistItems } = await supabase
     .from('wishlist')
-    .select('id, book_id, created_at')
+    .select('user_id, book_id, added_at')
     .eq('user_id', user.id)
-    .order('created_at', { ascending: false });
+    .order('added_at', { ascending: false });
 
   const formatPrice = (price: number) => `£${price.toFixed(2)}`;
 
@@ -118,20 +112,24 @@ export default async function WishlistPage() {
         <div style={styles.grid}>
           {items.map((item) => {
             const book = bookIndex.get(item.book_id);
+            const removeAction = async () => {
+              'use server';
+              const sb = await createClient();
+              const { data: { user: u } } = await sb.auth.getUser();
+              if (!u) return;
+              await sb
+                .from('wishlist')
+                .delete()
+                .eq('user_id', u.id)
+                .eq('book_id', item.book_id);
+            };
             if (!book) {
               return (
-                <div key={item.id} style={styles.card}>
+                <div key={item.book_id} style={styles.card}>
                   <div style={styles.bookTitle}>Book unavailable</div>
                   <div style={styles.bookAuthor}>ID: {item.book_id}</div>
                   <div style={styles.buttonGroup}>
-                    <form
-                      action={async () => {
-                        'use server';
-                        const sb = await createClient();
-                        await sb.from('wishlist').delete().eq('id', item.id);
-                      }}
-                      style={{ display: 'inline' }}
-                    >
+                    <form action={removeAction} style={{ display: 'inline' }}>
                       <button
                         type="submit"
                         style={{ ...styles.button, ...styles.buttonDanger }}
@@ -144,7 +142,7 @@ export default async function WishlistPage() {
               );
             }
             return (
-              <div key={item.id} style={styles.card}>
+              <div key={item.book_id} style={styles.card}>
                 <div style={styles.bookTitle}>{book.title}</div>
                 <div style={styles.bookAuthor}>Charles E. MacKay</div>
                 <div style={styles.bookPrice}>
@@ -155,14 +153,7 @@ export default async function WishlistPage() {
                     <span style={styles.button}>View</span>
                   </Link>
                   <span style={{ color: 'var(--border)' }}>•</span>
-                  <form
-                    action={async () => {
-                      'use server';
-                      const sb = await createClient();
-                      await sb.from('wishlist').delete().eq('id', item.id);
-                    }}
-                    style={{ display: 'inline' }}
-                  >
+                  <form action={removeAction} style={{ display: 'inline' }}>
                     <button
                       type="submit"
                       style={{ ...styles.button, ...styles.buttonDanger }}

@@ -39,7 +39,18 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   if (!book) notFound();
 
   const supabase = await createClient();
-  const { data: { session } } = await supabase.auth.getSession();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  let initialInWishlist = false;
+  if (user) {
+    const { data: existing } = await supabase
+      .from('wishlist')
+      .select('book_id')
+      .eq('user_id', user.id)
+      .eq('book_id', id)
+      .maybeSingle();
+    initialInWishlist = !!existing;
+  }
 
   const related = (book.relatedBookIds || []).map(rid => books.find(b => b.id === rid)).filter(Boolean).slice(0, 3);
 
@@ -183,7 +194,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
           </div>
           <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 32 }}>
             <AddToBasketButton book={book} variant="primary" />
-            <WishlistButton bookId={book.id} session={session} />
+            <WishlistButton bookId={book.id} isAuthenticated={!!user} initialInWishlist={initialInWishlist} />
           </div>
           <div style={{ marginBottom: 32 }}>
             <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 12 }}>About this book</h3>
