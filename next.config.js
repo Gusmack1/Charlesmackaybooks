@@ -70,7 +70,7 @@ const nextConfig = {
       // Legacy blog/news/taxonomy paths — permanently gone, 301 to home
       { source: '/blog', destination: '/', permanent: true },
       { source: '/blog/:slug*', destination: '/', permanent: true },
-      { source: '/blog-:rest*', destination: '/', permanent: true },
+      { source: '/blog-:rest', destination: '/', permanent: true },
       { source: '/aircraft/:slug*', destination: '/', permanent: true },
       { source: '/aviation-news/:slug*', destination: '/', permanent: true },
       { source: '/aviation-bibliography', destination: '/', permanent: true },
