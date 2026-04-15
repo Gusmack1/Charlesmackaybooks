@@ -2,13 +2,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/client';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Create Account — Charles E. MacKay Books',
-  description: 'Sign up for an account to track your orders and manage your profile.',
-  alternates: { canonical: '/signup' },
-};
 
 export default function SignupPage() {
   const [email, setEmail] = useState('');

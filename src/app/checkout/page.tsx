@@ -1,7 +1,5 @@
 import { createClient } from '@/lib/supabase/server';
-import dynamic from 'next/dynamic';
-
-const CheckoutClient = dynamic(() => import('./CheckoutClient'), { ssr: false });
+import CheckoutClient from './CheckoutClient';
 
 export default async function CheckoutPage() {
   const supabase = await createClient();
