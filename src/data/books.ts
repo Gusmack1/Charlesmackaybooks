@@ -51,7 +51,7 @@ Armament shows the work of Rheinmetall Borsig and Mauser with the company histor
         title: 'German Aircraft Great War Development',
         excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.'
       }
-    ],
+    ]
   },
 
   {
@@ -158,43 +158,7 @@ The book from Charles MacKay was especially useful in filling in the gaps and cl
         title: 'Clydeside Aviation Revolution',
         excerpt: 'How Glasgow\'s mighty shipyards transformed into aviation powerhouses during two world wars.'
       }
-    ],
-    tableOfContents: [
-      'Foreword and Acknowledgments',
-      'Chapter 1: The Origins of Beardmore Aviation (1913-1914)',
-      'Chapter 2: Early Aircraft Development and the Beardmore W.B.III',
-      'Chapter 3: The Great War Years - Military Aircraft Production',
-      'Chapter 4: Airship Development - From Coastal Patrol to R101',
-      'Chapter 5: Post-War Commercial Aviation Ventures',
-      'Chapter 6: The Inflexible and Other Naval Aircraft',
-      'Chapter 7: Engine Development - The Beardmore Halford Pullinger',
-      'Chapter 8: International Contracts and Export Success',
-      'Chapter 9: Financial Challenges and Corporate Restructuring',
-      'Chapter 10: The Final Years (1925-1930)',
-      'Chapter 11: Technical Legacy and Historical Assessment',
-      'Appendices: Aircraft Specifications and Production Numbers',
-      'Bibliography and Primary Sources',
-      'Index'
-    ],
-    sampleContent: [
-      {
-        chapter: 'Chapter 1',
-        title: 'The Origins of Beardmore Aviation (1913-1914)',
-        excerpt: 'The story of Beardmore Aviation begins not with aviation at all, but with the industrial might of William Beardmore & Company, one of Scotland\'s most powerful engineering firms. By 1913, the company had established itself as a major shipbuilder and steel manufacturer on the River Clyde. However, it was William Beardmore\'s personal fascination with the emerging field of aviation that would lead the company into an entirely new realm of engineering...'
-      },
-      {
-        chapter: 'Chapter 4',
-        title: 'Airship Development - From Coastal Patrol to R101',
-        excerpt: 'Beardmore\'s entry into airship construction represented one of the most ambitious chapters in British aviation history. The company\'s expertise in large-scale engineering and metalwork made it a natural choice for the Admiralty\'s airship program. The first Beardmore airship, designated No. 23r, took to the skies in 1917 and immediately demonstrated the potential of these magnificent flying machines for maritime patrol duties...'
-      }
-    ],
-    specifications: {
-      format: 'Paperback, 312 pages',
-      illustrations: '150+ photographs, 30 technical drawings',
-      maps: true,
-      bibliography: true,
-      index: true
-    }
+    ]
   },
 
   {
@@ -283,37 +247,7 @@ Recommend use offers
         title: 'British Aircraft Great War: RFC & RNAS Development',
         excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters.'
       }
-    ],
-    tableOfContents: [
-      'Preface: Aviation Comes to the Clyde',
-      'Chapter 1: Early Aviation Pioneers in Scotland (1909-1914)',
-      'Chapter 2: The Royal Flying Corps Arrives',
-      'Chapter 3: RNAS Stations and Coastal Defence',
-      'Chapter 4: Aircraft Manufacturing on the Clyde',
-      'Chapter 5: Training the Next Generation of Pilots',
-      'Chapter 6: Combat Operations from Scottish Bases',
-      'Chapter 7: The Home Defence Squadrons',
-      'Chapter 8: Industrial Mobilization and Production',
-      'Chapter 9: Casualties and Memorials',
-      'Chapter 10: Legacy of the Great War in Scottish Aviation',
-      'Appendices: Squadron Histories and Aircraft Types',
-      'Bibliography and Sources',
-      'Index'
-    ],
-    sampleContent: [
-      {
-        chapter: 'Chapter 2',
-        title: 'The Royal Flying Corps Arrives',
-        excerpt: 'The establishment of RFC training facilities in Scotland marked a turning point in the region\'s aviation history. The first site was selected at Montrose in 1913, chosen for its favorable coastal winds and vast open spaces. What began as a modest flying training school would soon become one of the most important pilot training centers in the British Empire...'
-      }
-    ],
-    specifications: {
-      format: 'Paperback, 268 pages',
-      illustrations: '80+ photographs, period maps',
-      maps: true,
-      bibliography: true,
-      index: true
-    }
+    ]
   },
 
   {
@@ -355,30 +289,7 @@ The cover is of the first practical British helicopter, the Weir W5, flown by Ra
     difficulty: 'Intermediate',
     citationCount: 60,
     academicInstitutions: ['University of Glasgow', 'Imperial War Museum'],
-    relatedBookIds: ['beardmore-aviation', 'clydeside-aviation-vol1'],
-    tableOfContents: [
-      'Introduction: The Dawn of Civilian Aviation',
-      'Chapter 1: Demobilization and the Return to Peace (1918-1920)',
-      'Chapter 2: The Birth of Commercial Aviation in Scotland',
-      'Chapter 3: Flying Clubs and Private Aviation',
-      'Chapter 4: The Rise of Imperial Airways',
-      'Chapter 5: Aircraft Manufacturing in the 1920s',
-      'Chapter 6: The Great Depression and Aviation',
-      'Chapter 7: Preparations for War (1935-1939)',
-      'Chapter 8: Training the Next Generation',
-      'Chapter 9: Technical Innovation and Development',
-      'Chapter 10: The End of an Era',
-      'Appendices: Aircraft Registration Records',
-      'Bibliography and Sources',
-      'Index'
-    ],
-    specifications: {
-      format: 'Paperback, 294 pages',
-      illustrations: '100+ photographs, route maps',
-      maps: true,
-      bibliography: true,
-      index: true
-    }
+    relatedBookIds: ['beardmore-aviation', 'clydeside-aviation-vol1']
   },
 
   {
@@ -1176,41 +1087,7 @@ A limited run published from 21 June 2021 highly sought after few remain.
     difficulty: 'Intermediate',
     citationCount: 25,
     academicInstitutions: ['Deutsches Technikmuseum', 'Imperial War Museum', 'Royal Aeronautical Society'],
-    relatedBookIds: ['german-aircraft-great-war'],
-    tableOfContents: [
-      'Foreword and Acknowledgments',
-      'Chapter 1: Adolf Rohrbach - Engineering Visionary',
-      'Chapter 2: Early Career and Technical Foundation',
-      'Chapter 3: The Metal Aircraft Revolution',
-      'Chapter 4: Stressed-Skin Monocoque Innovation',
-      'Chapter 5: Rohrbach Ro I - First All-Metal Aircraft',
-      'Chapter 6: Roland Flying Boats - Maritime Aviation',
-      'Chapter 7: Manufacturing Techniques and Quality Control',
-      'Chapter 8: International Influence and Legacy',
-      'Chapter 9: Technical Specifications and Production Data',
-      'Appendices: Aircraft Specifications and Technical Drawings',
-      'Bibliography and Primary Sources',
-      'Index'
-    ],
-    sampleContent: [
-      {
-        chapter: 'Chapter 3',
-        title: 'The Metal Aircraft Revolution',
-        excerpt: 'Adolf Rohrbach\'s breakthrough came with his recognition that aluminum alloys could provide superior strength-to-weight ratios compared to traditional aircraft materials. While other designers viewed metal as too heavy or difficult to work with, Rohrbach saw its potential for creating aircraft that were both stronger and more durable than their wood-and-fabric counterparts...'
-      },
-      {
-        chapter: 'Chapter 4',
-        title: 'Stressed-Skin Monocoque Innovation',
-        excerpt: 'Perhaps Rohrbach\'s most significant contribution to aviation was his development of stressed-skin monocoque construction, a technique that transformed the aircraft\'s outer covering from a simple weather barrier into an integral structural component. This approach represented a radical departure from conventional thinking about aircraft design...'
-      }
-    ],
-    specifications: {
-      format: 'Paperback, 140 pages',
-      illustrations: '80+ photographs, technical diagrams, manufacturing drawings',
-      maps: true,
-      bibliography: true,
-      index: true
-    }
+    relatedBookIds: ['german-aircraft-great-war']
   },
 
   {
@@ -1274,41 +1151,7 @@ The source documents are available from this website.
     difficulty: 'Advanced',
     citationCount: 35,
     academicInstitutions: ['Royal United Services Institute', 'King\'s College London', 'Imperial War Museum'],
-    relatedBookIds: ['sabres-from-north', 'enemy-luftwaffe-1945'],
-    tableOfContents: [
-      'Foreword and Acknowledgments',
-      'Chapter 1: The Genesis of British Nuclear Strategy (1945-1952)',
-      'Chapter 2: From Sonic to Supersonic - Early Nuclear Delivery Systems',
-      'Chapter 3: The V-Force Era - Vulcan, Victor, and Valiant',
-      'Chapter 4: Blue Steel and the Standoff Revolution',
-      'Chapter 5: Polaris and the Submarine Deterrent',
-      'Chapter 6: Trident and Modern Nuclear Strategy',
-      'Chapter 7: NATO Integration and Nuclear Sharing',
-      'Chapter 8: Technology Transfer and International Cooperation',
-      'Chapter 9: The Future of British Nuclear Deterrence',
-      'Appendices: Aircraft Specifications and Weapon Systems',
-      'Bibliography and Classified Sources',
-      'Index'
-    ],
-    sampleContent: [
-      {
-        chapter: 'Chapter 2',
-        title: 'From Sonic to Supersonic - Early Nuclear Delivery Systems',
-        excerpt: 'The transition from conventional to nuclear warfare capabilities represented the most significant shift in British military doctrine since the advent of radar. As the Royal Air Force grappled with the challenges of nuclear weapon delivery, aircraft design evolved rapidly from subsonic bombers to supersonic strike platforms capable of penetrating increasingly sophisticated air defences...'
-      },
-      {
-        chapter: 'Chapter 4',
-        title: 'Blue Steel and the Standoff Revolution',
-        excerpt: 'The development of the Blue Steel standoff missile marked a revolutionary moment in British nuclear strategy. No longer would RAF bombers need to overfly their targets, exposing crews to devastating air defences. Instead, these sophisticated weapons could be launched from safe distances, fundamentally changing the calculus of nuclear warfare...'
-      }
-    ],
-    specifications: {
-      format: 'Paperback, 224 pages',
-      illustrations: '60+ photographs, technical diagrams, maps',
-      maps: true,
-      bibliography: true,
-      index: true
-    }
+    relatedBookIds: ['sabres-from-north', 'enemy-luftwaffe-1945']
   }
 ];
 

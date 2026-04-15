@@ -12,24 +12,10 @@ export interface Book {
   seoDescription?: string;
   imageUrl?: string;
   tags?: string[];
-  // Enhanced content for detailed pages
-  tableOfContents?: string[];
-  sampleContent?: {
-    chapter: string;
-    title: string;
-    excerpt: string;
-  }[];
   pageCount?: number;
   publicationYear?: number;
   // Shipping and logistics
   weight?: number;
-  specifications?: {
-    format?: string;
-    illustrations?: string;
-    maps?: boolean;
-    bibliography?: boolean;
-    index?: boolean;
-  };
   // Advanced academic features
   academicLevel?: (
     'Undergraduate' |
@@ -118,8 +104,6 @@ export interface SearchFilters {
   pageCountRange?: [number, number];
   publicationYearRange?: [number, number];
   difficulty?: string;
-  hasTableOfContents?: boolean;
-  hasSampleContent?: boolean;
   inStock?: boolean;
 }
 

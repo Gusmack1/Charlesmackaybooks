@@ -123,10 +123,8 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     },
   };
 
-  // Derive bookFormat from specifications.format
-  const formatString = book.specifications?.format || 'Paperback';
-  const formatType = formatString.includes('Hardcover') ? 'Hardcover' : 'Paperback';
-  const bookFormat = `https://schema.org/${formatType}`;
+  // Default to paperback format
+  const bookFormat = 'https://schema.org/Paperback';
 
   const bookLd = {
     '@context': 'https://schema.org',
