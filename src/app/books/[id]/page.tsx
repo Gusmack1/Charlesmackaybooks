@@ -18,8 +18,19 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const book = books.find(b => b.id === id);
   if (!book) return {};
   const desc = book.seoDescription || book.description.substring(0, 155).replace(/\n/g, ' ') + '…';
+
+  // SERP-safe title: hard cap at 60 chars; bypass layout template via title.absolute so " | Charles E. MacKay Books" isn't appended.
+  const HARD_CAP = 60;
+  const shortTitle = book.title.split(':')[0].trim() || book.title;
+  let seoTitle = shortTitle;
+  if (seoTitle.length > HARD_CAP) {
+    const cut = seoTitle.slice(0, HARD_CAP - 1);
+    const lastSpace = cut.lastIndexOf(' ');
+    seoTitle = `${cut.slice(0, lastSpace > 30 ? lastSpace : HARD_CAP - 1).trim()}…`;
+  }
+
   return {
-    title: `Buy ${book.title} — Aviation History Book by Charles E. MacKay`,
+    title: { absolute: seoTitle },
     description: desc,
     alternates: { canonical: `/books/${book.id}` },
     openGraph: {

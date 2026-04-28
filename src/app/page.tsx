@@ -192,6 +192,25 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* INTERNAL NAV HUBS — surfaces category filters and reference pages for crawlers and readers */}
+      <section style={{ background: 'var(--cream)', borderTop: '1px solid var(--border)', padding: '48px 24px' }} aria-label="Explore the catalogue">
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 20, textAlign: 'center' }}>Explore by topic</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, maxWidth: 1000, margin: '0 auto' }}>
+            {Array.from(new Set(books.map(b => b.category))).filter(Boolean).map(cat => (
+              <Link key={cat} href={`/books?category=${encodeURIComponent(cat)}`} style={{ display: 'block', padding: '12px 16px', background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, color: 'var(--text-body)', textDecoration: 'none', textAlign: 'center', fontWeight: 500 }}>
+                {cat}
+              </Link>
+            ))}
+            <Link href="/books" style={{ display: 'block', padding: '12px 16px', background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, color: 'var(--text-body)', textDecoration: 'none', textAlign: 'center', fontWeight: 500 }}>All Books</Link>
+            <Link href="/about" style={{ display: 'block', padding: '12px 16px', background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, color: 'var(--text-body)', textDecoration: 'none', textAlign: 'center', fontWeight: 500 }}>About the Author</Link>
+            <Link href="/shipping" style={{ display: 'block', padding: '12px 16px', background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, color: 'var(--text-body)', textDecoration: 'none', textAlign: 'center', fontWeight: 500 }}>Shipping Info</Link>
+            <Link href="/returns" style={{ display: 'block', padding: '12px 16px', background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, color: 'var(--text-body)', textDecoration: 'none', textAlign: 'center', fontWeight: 500 }}>Returns</Link>
+            <Link href="/contact" style={{ display: 'block', padding: '12px 16px', background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, color: 'var(--text-body)', textDecoration: 'none', textAlign: 'center', fontWeight: 500 }}>Contact</Link>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }
