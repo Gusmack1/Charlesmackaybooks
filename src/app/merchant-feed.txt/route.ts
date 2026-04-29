@@ -74,8 +74,8 @@ export async function GET(): Promise<Response> {
       'new',
       'Charles E. MacKay',
       book.isbn ?? '',
-      'Media > Books > Non-Fiction Books',
-      'Media > Books > Non-Fiction > History',
+      '784',
+      'Aviation History > Books',
       shipping,
       'royal_mail_tracked',
     ].join('\t');
