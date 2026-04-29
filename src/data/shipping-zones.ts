@@ -106,7 +106,9 @@ const WORLD3: ShippingZone = {
   countries: [
     'AU', 'NZ', 'JP', 'KR', 'CN', 'HK', 'TW', 'SG', 'MY', 'TH', 'VN', 'ID',
     'PH', 'BN', 'TL', 'PG', 'FJ', 'NC', 'PF', 'WS', 'TO', 'VU', 'SB', 'KI',
-    'TV', 'MH', 'FM', 'PW', 'NR',
+    'TV', 'NR',
+    // Note: FM (Micronesia), MH (Marshall Islands), PW (Palau) excluded —
+    // not in Stripe Checkout shipping_address_collection.allowed_countries enum.
   ],
 };
 
