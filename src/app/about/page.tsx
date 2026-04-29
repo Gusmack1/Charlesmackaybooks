@@ -76,7 +76,7 @@ export default function AboutPage() {
               His books have been praised by historians, museum curators, and aviation enthusiasts worldwide for their meticulous research, primary source material, and readable narrative style.
             </p>
             <div style={{ display: 'flex', gap: 32, marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-              {[{ num: '20+', label: 'Books published' }, { num: '40+', label: 'Years research' }, { num: '1,700+', label: 'Readers' }].map(s => (
+              {[{ num: '20+', label: 'Books published' }, { num: '40+', label: 'Years research' }, { num: 'Worldwide', label: 'Readership' }].map(s => (
                 <div key={s.label}>
                   <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gold)' }}>{s.num}</div>
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase' as const, letterSpacing: 1 }}>{s.label}</div>

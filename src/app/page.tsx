@@ -133,7 +133,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="hero-stat-row" style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-              {[{ num: '1,700+', label: 'Readers worldwide' }, { num: '20', label: 'Published titles' }, { num: 'Tracked', label: 'Worldwide shipping' }].map(s => (
+              {[{ num: 'Worldwide', label: 'Aviation enthusiasts & historians' }, { num: '20', label: 'Published titles' }, { num: 'Tracked', label: 'Worldwide shipping' }].map(s => (
                 <div key={s.label}>
                   <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--white)' }}>{s.num}</div>
                   <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase' as const, letterSpacing: 1, marginTop: 2 }}>{s.label}</div>
@@ -162,7 +162,7 @@ export default function HomePage() {
             { icon: '☑', strong: 'Secure checkout', text: ', Card via Stripe' },
             { icon: '✈', strong: 'Worldwide shipping', text: ', Royal Mail Tracked from Glasgow' },
             { icon: '↺', strong: '30-day returns', text: ', no questions asked' },
-            { icon: '★', strong: '1,700+ happy', text: ' readers & counting' },
+            { icon: '★', strong: 'Read worldwide', text: ' by aviation enthusiasts & historians' },
           ].map(t => (
             <div key={t.strong} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: 'var(--text-muted)' }}>
               <div style={{ width: 32, height: 32, background: 'var(--cream)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15, flexShrink: 0 }}>{t.icon}</div>
