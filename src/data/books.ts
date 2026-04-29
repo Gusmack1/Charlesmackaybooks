@@ -146,7 +146,7 @@ The book from Charles MacKay was especially useful in filling in the gaps and cl
     difficulty: 'Advanced',
     citationCount: 150,
     academicInstitutions: ['Imperial War Museum', 'Royal Aeronautical Society', 'Glasgow University', 'Edinburgh University'],
-    relatedBookIds: ['clydeside-aviation-vol1', 'clydeside-aviation-vol2', 'aircraft-carrier-argus'],
+    relatedBookIds: ['clydeside-aviation-vol1', 'clydeside-aviation-vol2', 'modern-furniture', 'aircraft-carrier-argus'],
     relatedBlogPosts: [
       {
         slug: 'beardmore-aviation-scottish-industrial-giant',
@@ -235,7 +235,7 @@ Recommend use offers
     difficulty: 'Intermediate',
     citationCount: 95,
     academicInstitutions: ['RAF Museum', 'Imperial War Museum', 'University of Glasgow', 'Stirling University'],
-    relatedBookIds: ['beardmore-aviation', 'clydeside-aviation-vol2', 'british-aircraft-great-war'],
+    relatedBookIds: ['beardmore-aviation', 'clydeside-aviation-vol2', 'modern-furniture', 'british-aircraft-great-war'],
     relatedBlogPosts: [
       {
         slug: 'clydeside-aviation-revolution',
@@ -450,7 +450,7 @@ BEFORE making a best offer could you please contact me first because there is a 
     difficulty: 'Introductory',
     citationCount: 20,
     academicInstitutions: ['Helicopter Museum', 'Imperial War Museum'],
-    relatedBookIds: ['soaring-with-wings', 'captain-eric-brown', 'beardmore-aviation']
+    relatedBookIds: ['soaring-with-wings', 'captain-eric-brown', 'modern-furniture', 'beardmore-aviation']
   },
 
   {

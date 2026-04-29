@@ -146,6 +146,26 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   // Default to paperback format
   const bookFormat = 'https://schema.org/Paperback';
 
+  // Per-book FAQ blocks (currently only modern-furniture, the non-aviation outlier, to lift it out of "Crawled, currently not indexed" by adding unique structured content).
+  const perBookFaqs: Record<string, { q: string; a: string }[]> = {
+    'modern-furniture': [
+      { q: 'What does "Shavings for Breakfast" cover?', a: 'The book covers the Morris Furniture Company of Glasgow from 1914 to 1975, including its furnishing of the Queen Mary, Queen Elizabeth, the Royal Yacht Britannia and Gleneagles Hotel, plus its wartime aircraft and helicopter work on the Mosquito, Hurricane, Spitfire, Highball and Upkeep, Cierva Air Horse, Rotachute and the Vickers Transonic Missile.' },
+      { q: 'Is this book about furniture or aviation?', a: 'Both. Morris Furniture was a major Glasgow industrial supplier whose work spanned ocean liners, hotels, royal yachts and wartime aircraft. The book documents the rare crossover where a furniture company supplied balsa plywood for the Mosquito, rotor blades for early helicopters, and model work for the Bouncing Bomb.' },
+      { q: 'Who is the publisher and is this book in print?', a: 'Published by A Mackay (Publisher) Ltd in Glasgow. The book is in its fourth reprint and remains the only source book for Morris Furniture manufacturing from 1884 to 1975.' },
+      { q: 'How is this book shipped?', a: 'Royal Mail tracked shipping worldwide from Glasgow. UK orders dispatched within one to two business days. International rates calculated at checkout.' },
+    ],
+  };
+  const faqList = perBookFaqs[book.id];
+  const faqLd = faqList ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqList.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  } : null;
+
   const bookLd = {
     '@context': 'https://schema.org',
     '@type': 'Book',
@@ -167,6 +187,9 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookLd) }} />
+      {faqLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      )}
       <div style={{ background: 'var(--navy)', padding: '16px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>
           <Link href="/" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Home</Link>
@@ -204,6 +227,17 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 12 }}>About this book</h3>
             <div style={{ fontSize: 14, color: 'var(--text-body)', lineHeight: 1.8, whiteSpace: 'pre-line' }}>{book.description}</div>
           </div>
+          {faqList && (
+            <div style={{ marginBottom: 32 }}>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 12 }}>Frequently asked questions</h3>
+              {faqList.map((f, i) => (
+                <details key={i} style={{ borderTop: '1px solid var(--border)', padding: '12px 0' }}>
+                  <summary style={{ fontSize: 14, fontWeight: 600, color: 'var(--text-dark)', cursor: 'pointer' }}>{f.q}</summary>
+                  <p style={{ fontSize: 14, color: 'var(--text-body)', lineHeight: 1.7, margin: '8px 0 0 0' }}>{f.a}</p>
+                </details>
+              ))}
+            </div>
+          )}
           {book.tags && book.tags.length > 0 && (
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 32 }}>
               {book.tags.map(tag => (
