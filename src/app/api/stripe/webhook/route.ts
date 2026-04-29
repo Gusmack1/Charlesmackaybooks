@@ -2,6 +2,8 @@ import Stripe from 'stripe';
 import { NextRequest, NextResponse } from 'next/server';
 import { createServiceClient } from '@/lib/supabase/server';
 import { bookIdFromPriceId } from '@/data/stripe-prices';
+import { getZoneForCountry } from '@/data/shipping-zones';
+import { renderOrderConfirmation, type OrderEmailItem } from '@/lib/email/order-confirmation';
 
 export const dynamic = 'force-dynamic';
 
@@ -247,6 +249,7 @@ export async function POST(req: NextRequest) {
       // Best-effort retroactive link: if no metadata.user_id but a profile
       // already exists for this email, attribute the order to them so it
       // shows up in /account/orders. Safe — RLS still gates SELECT to owner.
+      let attributedUserId: string | null = userIdFromMetadata;
       if (!userIdFromMetadata && customerEmail) {
         const { data: existingProfile } = await supabase
           .from('profiles')
@@ -260,6 +263,96 @@ export async function POST(req: NextRequest) {
             .update({ user_id: existingProfile.id })
             .eq('provider_order_id', session.id)
             .is('user_id', null);
+          attributedUserId = existingProfile.id;
+        }
+      }
+
+      // Send order confirmation email via Resend (REST API, no SDK).
+      // Best-effort: failure does NOT block the webhook (order is already saved).
+      if (customerEmail && process.env.RESEND_API_KEY) {
+        try {
+          const country = (shipAddr?.country || 'GB').toUpperCase();
+          const zone = getZoneForCountry(country);
+          const items: OrderEmailItem[] = (fullSession.line_items?.data || []).map((item) => {
+            const product = item.price?.product as Stripe.Product | null;
+            const priceId = typeof item.price === 'string' ? item.price : item.price?.id;
+            const bookId =
+              product?.metadata?.bookId ||
+              bookIdFromPriceId(priceId) ||
+              product?.id ||
+              'unknown';
+            return {
+              id: bookId,
+              title: item.description || product?.name || 'Untitled',
+              qty: item.quantity || 1,
+              unitPricePence: item.price?.unit_amount || 0,
+            };
+          });
+          const firstName = customerName?.trim().split(/\s+/)[0] || 'there';
+          const orderShortId = session.id.slice(-8).toUpperCase();
+          const orderDate = new Date((fullSession.created || Date.now() / 1000) * 1000).toLocaleDateString(
+            'en-GB',
+            { day: 'numeric', month: 'long', year: 'numeric' }
+          );
+          // Discounts are passed as Stripe coupons (multibuy 5%/10%); approximate from totals.
+          const discountPence = Math.max(
+            0,
+            (fullSession.total_details?.amount_discount as number | undefined) || 0
+          );
+          const orderStatusUrl =
+            attributedUserId && orderResult.data?.id
+              ? `https://charlesmackaybooks.com/account/orders/${orderResult.data.id}`
+              : null;
+
+          const { subject, html, text } = renderOrderConfirmation({
+            customerFirstName: firstName,
+            orderNumber: orderShortId,
+            orderDate,
+            items,
+            subtotalPence: subtotalPennies,
+            discountPence,
+            shippingPence: shippingPennies,
+            totalPence: totalPennies,
+            shippingZoneName: zone?.displayName || 'Royal Mail Tracked',
+            shippingMinDays: zone?.minDays || 2,
+            shippingMaxDays: zone?.maxDays || 7,
+            shippingAddress: {
+              name: shipName || '',
+              line1: shipAddr?.line1 || '',
+              line2: shipAddr?.line2 || '',
+              city: shipAddr?.city || '',
+              state: shipAddr?.state || '',
+              postcode: shipAddr?.postal_code || '',
+              country: shipAddr?.country || '',
+            },
+            orderStatusUrl,
+          });
+
+          const resendResp = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+              Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              from: 'Charles Mackay Books <orders@charlesmackaybooks.com>',
+              to: [customerEmail],
+              reply_to: 'info@charlesmackaybooks.com',
+              subject,
+              html,
+              text,
+              headers: {
+                'List-Unsubscribe': '<mailto:info@charlesmackaybooks.com?subject=unsubscribe>',
+              },
+            }),
+          });
+          if (!resendResp.ok) {
+            const errBody = await resendResp.text().catch(() => '');
+            console.error(`Resend send failed: HTTP ${resendResp.status} ${errBody}`);
+          }
+        } catch (emailErr: unknown) {
+          const msg = emailErr instanceof Error ? emailErr.message : 'unknown';
+          console.error('Order confirmation email skipped:', msg);
         }
       }
     }
