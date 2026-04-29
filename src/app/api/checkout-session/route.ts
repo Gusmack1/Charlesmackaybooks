@@ -16,6 +16,86 @@ function getStripe() {
 
 export const dynamic = 'force-dynamic';
 
+// --- Hardening (V2 #7 input validation, V2 #8 origin allowlist, V2 #44 coupon clamp) ---
+
+// Set of valid book slug ids — built once at module scope from the canonical
+// stripe-prices.ts mapping. stripe-prices.ts is hand-aligned with src/data/books.ts.
+const VALID_BOOK_IDS: ReadonlySet<string> = new Set(Object.keys(stripePriceMap));
+
+// Allowed discount tiers (V2 #44). Anything else → 400.
+const ALLOWED_DISCOUNT_PCTS: ReadonlySet<number> = new Set([0, 5, 10]);
+
+// Origin allowlist (V2 #8). Allow exact prod, any Netlify deploy preview for this site,
+// and bypass-flag for local debug.
+const PROD_ORIGIN = 'https://charlesmackaybooks.com';
+const NETLIFY_PREVIEW_RE = /^https:\/\/[a-z0-9-]+--charlesmackaybooks\.netlify\.app$/;
+
+function isAllowedOrigin(origin: string | null): boolean {
+  if (process.env.ALLOW_ORIGINLESS_CHECKOUT === 'true') return true;
+  if (!origin) return false;
+  if (origin === PROD_ORIGIN) return true;
+  if (NETLIFY_PREVIEW_RE.test(origin)) return true;
+  return false;
+}
+
+type ValidatedPayload = {
+  items: Array<{ bookId: string; quantity: number }>;
+  discountPct: 0 | 5 | 10;
+  country: string;
+  marketingOptIn: boolean;
+};
+
+class BadRequestError extends Error {}
+
+function assertValidPayload(body: unknown): ValidatedPayload {
+  if (!body || typeof body !== 'object') throw new BadRequestError('bad body');
+  const b = body as Record<string, unknown>;
+
+  // items
+  if (!Array.isArray(b.items) || b.items.length < 1 || b.items.length > 50) {
+    throw new BadRequestError('items');
+  }
+  const items: Array<{ bookId: string; quantity: number }> = [];
+  for (const raw of b.items) {
+    if (!raw || typeof raw !== 'object') throw new BadRequestError('item');
+    const it = raw as Record<string, unknown>;
+    const bookId = it.bookId;
+    const quantity = it.quantity;
+    if (typeof bookId !== 'string' || !VALID_BOOK_IDS.has(bookId)) {
+      throw new BadRequestError('bookId');
+    }
+    if (typeof quantity !== 'number' || !Number.isInteger(quantity) || quantity < 1 || quantity > 20) {
+      throw new BadRequestError('quantity');
+    }
+    items.push({ bookId, quantity });
+  }
+
+  // discountPct
+  let discountPct: 0 | 5 | 10 = 0;
+  if (b.discountPct !== undefined && b.discountPct !== null) {
+    if (typeof b.discountPct !== 'number' || !ALLOWED_DISCOUNT_PCTS.has(b.discountPct)) {
+      throw new BadRequestError('discountPct');
+    }
+    discountPct = b.discountPct as 0 | 5 | 10;
+  }
+
+  // country
+  let country = 'GB';
+  if (b.country !== undefined && b.country !== null) {
+    if (typeof b.country !== 'string') throw new BadRequestError('country');
+    const upper = b.country.toUpperCase();
+    if (!(ALLOWED_COUNTRIES as readonly string[]).includes(upper)) {
+      throw new BadRequestError('country');
+    }
+    country = upper;
+  }
+
+  // marketingOptIn
+  const marketingOptIn = b.marketingOptIn === true;
+
+  return { items, discountPct, country, marketingOptIn };
+}
+
 /**
  * Build Stripe shipping_options[] from our zone definitions.
  *
@@ -77,38 +157,71 @@ export async function GET(req: NextRequest) {
   }
 }
 
+/**
+ * Idempotent coupon creator. Uses a deterministic id (cmb_pct_5 / cmb_pct_10)
+ * so retries / parallel checkouts don't pile up new coupon objects.
+ */
+async function getOrCreatePctCoupon(stripe: Stripe, pct: 5 | 10): Promise<string> {
+  const id = `cmb_pct_${pct}`;
+  try {
+    await stripe.coupons.create({
+      id,
+      percent_off: pct,
+      duration: 'once',
+      name: `Multi-buy ${pct}% off`,
+    });
+  } catch (err: unknown) {
+    // Stripe returns 400 "Coupon already exists" on retry — that's the happy path.
+    const code = (err as { code?: string } | null)?.code;
+    const msg = err instanceof Error ? err.message : '';
+    if (code !== 'resource_already_exists' && !/already exists/i.test(msg)) {
+      throw err;
+    }
+  }
+  return id;
+}
+
 export async function POST(req: NextRequest) {
+  // Origin gate (V2 #8) — runs before ANY parsing or Stripe call.
+  const origin = req.headers.get('origin');
+  if (!isAllowedOrigin(origin)) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+
+  // Parse + validate body. Any malformed input → generic 400 (no Stripe leak).
+  let payload: ValidatedPayload;
+  try {
+    const raw = await req.json();
+    payload = assertValidPayload(raw);
+  } catch (err) {
+    if (!(err instanceof BadRequestError)) {
+      console.error('checkout-session validation error:', err);
+    }
+    return NextResponse.json({ error: 'Bad request' }, { status: 400 });
+  }
+
   try {
     const stripe = getStripe();
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
-    const { items, discountPct, country, marketingOptIn } = await req.json();
-    const requestedCountry: string | null = typeof country === 'string' ? country.toUpperCase() : null;
-    const matchedZone = requestedCountry ? getZoneForCountry(requestedCountry) : null;
-    // Strict-boolean coerce for downstream metadata. Default false (UK GDPR — no implicit consent).
-    const marketingOptInBool: boolean = marketingOptIn === true;
 
-    // Build line items from cart
-    const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map(
-      (item: { bookId: string; quantity: number }) => {
-        const priceId = stripePriceMap[item.bookId];
-        if (!priceId) throw new Error(`No Stripe price for book: ${item.bookId}`);
-        return { price: priceId, quantity: item.quantity };
-      }
-    );
+    const { items, discountPct, country, marketingOptIn } = payload;
+    const matchedZone = getZoneForCountry(country);
 
-    // Build discount coupon on the fly if multi-buy applies
+    const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map((item) => {
+      // Safe: bookId already validated against VALID_BOOK_IDS.
+      const priceId = stripePriceMap[item.bookId];
+      return { price: priceId, quantity: item.quantity };
+    });
+
+    // Coupon clamp (V2 #44): only when discountPct ∈ {5, 10}, idempotent ids.
     let discounts: Stripe.Checkout.SessionCreateParams.Discount[] = [];
-    if (discountPct > 0) {
-      const coupon = await stripe.coupons.create({
-        percent_off: discountPct,
-        duration: 'once',
-        name: `Multi-buy ${discountPct}% off`,
-      });
-      discounts = [{ coupon: coupon.id }];
+    if (discountPct === 5 || discountPct === 10) {
+      const couponId = await getOrCreatePctCoupon(stripe, discountPct);
+      discounts = [{ coupon: couponId }];
     }
 
-    const origin = req.headers.get('origin') || 'https://charlesmackaybooks.com';
+    const successOrigin = origin || PROD_ORIGIN;
 
     const allowedCountries: readonly string[] = matchedZone ? matchedZone.countries : ALLOWED_COUNTRIES;
     const shippingOptions: Stripe.Checkout.SessionCreateParams.ShippingOption[] = matchedZone
@@ -128,11 +241,11 @@ export async function POST(req: NextRequest) {
         allowed_countries: [...allowedCountries] as Stripe.Checkout.SessionCreateParams.ShippingAddressCollection.AllowedCountry[],
       },
       shipping_options: shippingOptions,
-      success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/checkout`,
+      success_url: `${successOrigin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${successOrigin}/checkout`,
       // Marketing opt-in is preserved as Stripe metadata so the webhook can
       // persist it onto the order row (and onto profiles for logged-in users).
-      metadata: { marketing_opt_in: marketingOptInBool ? 'true' : 'false' },
+      metadata: { marketing_opt_in: marketingOptIn ? 'true' : 'false' },
     };
 
     if (user) {
@@ -147,8 +260,11 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ url: checkoutSession.url });
   } catch (err: unknown) {
-    const message = err instanceof Error ? err.message : 'Unknown error';
-    console.error('Stripe checkout error:', message);
-    return NextResponse.json({ error: message }, { status: 500 });
+    // Server-side: log full Stripe error. Client-side: generic message only.
+    console.error('Stripe checkout error:', err);
+    return NextResponse.json(
+      { error: 'Could not create checkout session. Please try again.' },
+      { status: 500 },
+    );
   }
 }
