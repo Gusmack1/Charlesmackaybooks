@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Charles E. MacKay, Book Orders & Research Enquiries',
@@ -70,39 +71,7 @@ export default function ContactPage() {
             <p style={{ fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.6 }}>Libraries, museums, and educational institutions can request bulk pricing. Select &ldquo;Institutional enquiry&rdquo; in the form.</p>
           </div>
         </div>
-        <div style={{ background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: 32 }}>
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, color: 'var(--text-dark)', marginBottom: 4 }}>Send a message</h3>
-          <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 24 }}>Fill in the form below and Charles will get back to you.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }} className="form-row">
-            <div>
-              <label style={{ display: 'block', fontSize: 13, fontWeight: 500, color: 'var(--text-dark)', marginBottom: 6 }}>First name</label>
-              <input type="text" placeholder="Your first name" style={{ width: '100%', padding: '10px 14px', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, fontFamily: 'var(--font-sans)', color: 'var(--text-body)' }} />
-            </div>
-            <div>
-              <label style={{ display: 'block', fontSize: 13, fontWeight: 500, color: 'var(--text-dark)', marginBottom: 6 }}>Last name</label>
-              <input type="text" placeholder="Your last name" style={{ width: '100%', padding: '10px 14px', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, fontFamily: 'var(--font-sans)', color: 'var(--text-body)' }} />
-            </div>
-          </div>
-          <div style={{ marginBottom: 16 }}>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 500, color: 'var(--text-dark)', marginBottom: 6 }}>Email address</label>
-            <input type="email" placeholder="you@example.com" style={{ width: '100%', padding: '10px 14px', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, fontFamily: 'var(--font-sans)', color: 'var(--text-body)' }} />
-          </div>
-          <div style={{ marginBottom: 16 }}>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 500, color: 'var(--text-dark)', marginBottom: 6 }}>Enquiry type</label>
-            <select style={{ width: '100%', padding: '10px 14px', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, fontFamily: 'var(--font-sans)', color: 'var(--text-body)', background: 'var(--white)' }}>
-              <option>General question</option>
-              <option>Book enquiry</option>
-              <option>Research collaboration</option>
-              <option>Bulk / institutional order</option>
-              <option>Press &amp; media</option>
-            </select>
-          </div>
-          <div style={{ marginBottom: 16 }}>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 500, color: 'var(--text-dark)', marginBottom: 6 }}>Message</label>
-            <textarea placeholder="How can Charles help you?" style={{ width: '100%', padding: '10px 14px', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 14, fontFamily: 'var(--font-sans)', color: 'var(--text-body)', resize: 'vertical', minHeight: 120 }} />
-          </div>
-          <button style={{ width: '100%', padding: 14, background: 'var(--gold)', color: 'var(--navy)', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>Send message</button>
-        </div>
+        <ContactForm />
       </div>
     </>
   );
