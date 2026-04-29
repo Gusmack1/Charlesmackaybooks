@@ -58,52 +58,77 @@ const nextConfig = {
   // Compression
   compress: true,
 
-  // Headers will be handled by netlify.toml
+  // Security headers — V2 #6 (Audit A §7). Native next.config headers()
+  // because netlify.toml [[headers]] for "/*" is bypassed by
+  // @netlify/plugin-nextjs (failure-mode: brain ship-c-redo). CSP shipped in
+  // REPORT-ONLY mode for first 24h per R4; flip to enforce in follow-up bd
+  // issue after reviewing violation reports.
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=(self "https://checkout.stripe.com")',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'Content-Security-Policy-Report-Only',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://www.google-analytics.com",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              "img-src 'self' data: blob: https://*.charlesmackaybooks.com https://www.googletagmanager.com https://www.google-analytics.com",
+              "font-src 'self' data: https://fonts.gstatic.com",
+              "connect-src 'self' https://api.stripe.com https://*.supabase.co https://api.resend.com https://www.googletagmanager.com https://www.google-analytics.com",
+              "frame-src 'self' https://js.stripe.com https://checkout.stripe.com https://hooks.stripe.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self' https://checkout.stripe.com",
+              "frame-ancestors 'none'",
+              "upgrade-insecure-requests",
+            ].join('; '),
+          },
+        ],
+      },
+    ]
+  },
 
-  // Legacy route cleanup — force redirects to fix GSC coverage
+  // Legacy route cleanup — non-ghost redirects only.
+  // GHOST routes (/blog, /aviation-news, /aviation-bibliography,
+  // /aviation-glossary, /research-guides, /scottish-aviation-timeline,
+  // /golden-age-1918-1939, /great-war-1914-1918, /pioneer-era-1895-1914,
+  // /for-researchers, /categories) are now handled by src/middleware.ts
+  // returning 410 Gone (V2 #4).
   async redirects() {
     return [
-      // Legacy blog/news/taxonomy paths — permanently gone, 301 to home
-      { source: '/blog', destination: '/', permanent: true },
-      { source: '/blog/:slug*', destination: '/', permanent: true },
       { source: '/blog-:rest', destination: '/', permanent: true },
       { source: '/aircraft/:slug*', destination: '/', permanent: true },
-      { source: '/aviation-news/:slug*', destination: '/', permanent: true },
-      { source: '/aviation-bibliography', destination: '/', permanent: true },
       { source: '/academic-resources', destination: '/', permanent: true },
       { source: '/academic-resources/:slug*', destination: '/', permanent: true },
       { source: '/research/:slug*', destination: '/', permanent: true },
       { source: '/tag/:slug*', destination: '/', permanent: true },
       { source: '/category/:slug*', destination: '/books', permanent: true },
       { source: '/author/:slug*', destination: '/about', permanent: true },
-
-      // Additional legacy prefixes (slim-down 2026-04-15)
-      { source: '/categories', destination: '/books', permanent: true },
-      { source: '/categories/:slug*', destination: '/books', permanent: true },
-      { source: '/for-researchers', destination: '/about', permanent: true },
-      { source: '/for-researchers/:slug*', destination: '/about', permanent: true },
       { source: '/how-to-order', destination: '/shipping', permanent: true },
       { source: '/how-to-order/:slug*', destination: '/shipping', permanent: true },
-      { source: '/scottish-aviation-timeline', destination: '/', permanent: true },
-      { source: '/scottish-aviation-timeline/:slug*', destination: '/', permanent: true },
       { source: '/timeline', destination: '/', permanent: true },
       { source: '/timeline/:slug*', destination: '/', permanent: true },
-      { source: '/aviation-glossary', destination: '/', permanent: true },
-      { source: '/aviation-glossary/:slug*', destination: '/', permanent: true },
       { source: '/faq', destination: '/contact', permanent: true },
       { source: '/faq/:slug*', destination: '/contact', permanent: true },
       { source: '/glasgow-aviation-history', destination: '/', permanent: true },
       { source: '/glasgow-aviation-history/:slug*', destination: '/', permanent: true },
-      { source: '/golden-age-1918-1939', destination: '/', permanent: true },
-      { source: '/golden-age-1918-1939/:slug*', destination: '/', permanent: true },
-      { source: '/great-war-1914-1918', destination: '/', permanent: true },
-      { source: '/great-war-1914-1918/:slug*', destination: '/', permanent: true },
       { source: '/order-complete', destination: '/books', permanent: true },
       { source: '/order-complete/:slug*', destination: '/books', permanent: true },
       { source: '/partnerships', destination: '/about', permanent: true },
       { source: '/partnerships/:slug*', destination: '/about', permanent: true },
-      { source: '/research-guides', destination: '/about', permanent: true },
-      { source: '/research-guides/:slug*', destination: '/about', permanent: true },
       // Renamed canonical paths
       { source: '/book/:slug', destination: '/books/:slug', permanent: true },
       { source: '/basket', destination: '/books', permanent: true },
