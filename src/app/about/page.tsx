@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About the Author, Charles E. MacKay, Scottish Aviation Historian',
-  description: 'Charles E. MacKay is a Glasgow-based aviation historian. 40+ years researching Scotland\'s aviation heritage, Beardmore, Clydeside factories, and military aircraft history.',
+  description: 'Charles E. MacKay, Glasgow aviation historian. 40+ years on Scotland\'s aviation heritage: Beardmore, Clydeside, and military aircraft history.',
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Charles E. MacKay, Aviation Historian',

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     default: 'Charles E. MacKay Books, Scottish Aviation History',
     template: '%s | Charles E. MacKay Books',
   },
-  description: 'Aviation history books by Charles E. MacKay (aviation historian). 40+ years researching Scotland\'s aviation heritage. Royal Mail tracked shipping worldwide from Glasgow.',
+  description: 'Aviation history books by Charles E. MacKay. 40+ years on Scotland\'s aviation heritage. Royal Mail tracked shipping worldwide from Glasgow.',
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
   icons: {
