@@ -181,3 +181,35 @@ export async function updateProfile(updates: {
   revalidatePath('/account');
   return { success: true };
 }
+
+/**
+ * Toggle the customer's marketing opt-in state. UK GDPR: withdrawing consent
+ * must be as easy as giving it; no challenge / re-confirm flow. Records the
+ * timestamp + source on every change so we have an audit trail of when
+ * consent was given or withdrawn.
+ */
+export async function setMarketingOptIn(optIn: boolean) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    throw new Error('Unauthorized');
+  }
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({
+      marketing_opt_in: optIn,
+      marketing_opt_in_ts: new Date().toISOString(),
+      marketing_opt_in_source: 'account-page',
+    })
+    .eq('id', user.id);
+
+  if (error) throw error;
+
+  revalidatePath('/account/marketing');
+  revalidatePath('/account');
+  return { success: true, optIn };
+}

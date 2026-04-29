@@ -82,9 +82,11 @@ export async function POST(req: NextRequest) {
     const stripe = getStripe();
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
-    const { items, discountPct, country } = await req.json();
+    const { items, discountPct, country, marketingOptIn } = await req.json();
     const requestedCountry: string | null = typeof country === 'string' ? country.toUpperCase() : null;
     const matchedZone = requestedCountry ? getZoneForCountry(requestedCountry) : null;
+    // Strict-boolean coerce for downstream metadata. Default false (UK GDPR — no implicit consent).
+    const marketingOptInBool: boolean = marketingOptIn === true;
 
     // Build line items from cart
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map(
@@ -128,10 +130,16 @@ export async function POST(req: NextRequest) {
       shipping_options: shippingOptions,
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/checkout`,
+      // Marketing opt-in is preserved as Stripe metadata so the webhook can
+      // persist it onto the order row (and onto profiles for logged-in users).
+      metadata: { marketing_opt_in: marketingOptInBool ? 'true' : 'false' },
     };
 
     if (user) {
-      sessionParams.metadata = { user_id: user.id };
+      sessionParams.metadata = {
+        ...sessionParams.metadata,
+        user_id: user.id,
+      };
       sessionParams.customer_email = user.email;
     }
 

@@ -50,6 +50,8 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
   const { items, removeFromCart, updateQuantity, getTotalItems, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getShippingCost, getFinalTotal, shippingCountry, setShippingCountry } = useCart();
   const [loading, setLoading] = useState(false);
   const [userEmail, setUserEmail] = useState<string>('');
+  // UK GDPR: marketing opt-in MUST be unchecked by default. No pre-tick.
+  const [marketingOptIn, setMarketingOptIn] = useState(false);
 
   useEffect(() => {
     if (session?.user?.email) {
@@ -75,6 +77,7 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
           items: items.map(i => ({ bookId: i.book.id, quantity: i.quantity })),
           discountPct: getBulkDiscountPercentage(),
           country: shippingCountry || 'GB',
+          marketingOptIn,
         }),
       });
       const data = await res.json();
@@ -213,11 +216,43 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
             </div>
           )}
 
+          {/* Marketing opt-in (UK GDPR / PECR compliant — unchecked by default) */}
+          <label
+            htmlFor="marketing-opt-in"
+            style={{
+              display: 'flex',
+              gap: 10,
+              alignItems: 'flex-start',
+              marginTop: 20,
+              padding: '12px 14px',
+              background: 'var(--cream)',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--radius-sm)',
+              fontSize: 12,
+              lineHeight: 1.5,
+              color: 'var(--text-body)',
+              cursor: 'pointer',
+            }}
+          >
+            <input
+              id="marketing-opt-in"
+              type="checkbox"
+              checked={marketingOptIn}
+              onChange={e => setMarketingOptIn(e.target.checked)}
+              style={{ marginTop: 2, flexShrink: 0, cursor: 'pointer' }}
+            />
+            <span>
+              Yes, send me the occasional update from Charles Mackay Books — new titles,
+              behind-the-scenes notes from the workshop. No spam, unsubscribe any time.
+              See our <Link href="/privacy" style={{ color: 'var(--gold-dark)', textDecoration: 'underline' }}>Privacy Policy</Link> for what we do with your email.
+            </span>
+          </label>
+
           {/* Stripe Checkout */}
           <button
             onClick={handleStripeCheckout}
             disabled={loading}
-            style={{ display: 'block', width: '100%', padding: '16px 0', marginTop: 20, background: loading ? '#999' : 'var(--navy)', color: 'white', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 16, fontWeight: 700, cursor: loading ? 'default' : 'pointer', textAlign: 'center' }}
+            style={{ display: 'block', width: '100%', padding: '16px 0', marginTop: 16, background: loading ? '#999' : 'var(--navy)', color: 'white', border: 'none', borderRadius: 'var(--radius-md)', fontSize: 16, fontWeight: 700, cursor: loading ? 'default' : 'pointer', textAlign: 'center' }}
           >
             {loading ? 'Redirecting…' : '💳 Pay with Card'}
           </button>

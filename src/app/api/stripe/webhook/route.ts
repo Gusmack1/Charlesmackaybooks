@@ -109,6 +109,10 @@ export async function POST(req: NextRequest) {
       };
 
       const userIdFromMetadata = fullSession.metadata?.user_id || null;
+      // Marketing consent flag captured at checkout — UK GDPR requires explicit opt-in.
+      // Default false; metadata.marketing_opt_in is the only path to true.
+      const marketingOptIn =
+        fullSession.metadata?.marketing_opt_in === 'true';
 
       // Upsert order with all the new structured shipping fields.
       // shipping_address JSONB is preserved as the audit copy.
@@ -137,6 +141,7 @@ export async function POST(req: NextRequest) {
             shipping_state: shipAddr?.state ?? null,
             shipping_postal_code: shipAddr?.postal_code ?? null,
             shipping_country: shipAddr?.country ?? null,
+            marketing_opt_in_at_checkout: marketingOptIn,
           },
           { onConflict: 'provider_order_id' }
         )
@@ -217,6 +222,25 @@ export async function POST(req: NextRequest) {
             country: shipAddr.country,
             is_default: (count ?? 0) === 0,
           });
+        }
+      }
+
+      // If logged-in customer ticked the marketing box at checkout, propagate
+      // the consent to their profile. Only ever set TRUE here — never silently
+      // flip a profile back to FALSE if they unticked at checkout (UK GDPR:
+      // withdrawing consent must be a deliberate act on /account/marketing,
+      // not a side-effect of a future un-ticked checkout).
+      if (userIdFromMetadata && marketingOptIn) {
+        const { error: profileOptInErr } = await supabase
+          .from('profiles')
+          .update({
+            marketing_opt_in: true,
+            marketing_opt_in_ts: new Date().toISOString(),
+            marketing_opt_in_source: 'checkout',
+          })
+          .eq('id', userIdFromMetadata);
+        if (profileOptInErr) {
+          console.error('Profile marketing opt-in update failed:', profileOptInErr);
         }
       }
 

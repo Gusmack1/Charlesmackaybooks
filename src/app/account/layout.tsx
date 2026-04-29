@@ -106,6 +106,16 @@ export default async function AccountLayout({
         >
           Wishlist
         </Link>
+        <Link
+          href="/account/marketing"
+          style={{
+            ...styles.navLink,
+            color: 'var(--navy)',
+            fontWeight: 600,
+          }}
+        >
+          Marketing
+        </Link>
         <form
           action={async () => {
             'use server';
