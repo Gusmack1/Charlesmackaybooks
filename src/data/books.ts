@@ -4,7 +4,7 @@ const sourceBooks: Book[] = [
   {
     id: 'this-was-the-enemy-volume-two',
     title: 'This Was the Enemy: Aeroplanes Guns Bombs Downfall Volume Two',
-    price: 15.95,
+    price: 12.89,
     isbn: '9781838056797',
     category: 'WWII Aviation',
     condition: 'New',
@@ -164,7 +164,7 @@ The book from Charles MacKay was especially useful in filling in the gaps and cl
   {
     id: 'clydeside-aviation-vol1',
     title: 'Clydeside Aviation Volume One: The Great War',
-    price: 16.08,
+    price: 12.89,
     isbn: '9780957344389',
     category: 'Scottish Aviation History',
     condition: 'New',
@@ -253,7 +253,7 @@ Recommend use offers
   {
     id: 'clydeside-aviation-vol2',
     title: 'Clydeside Aviation Volume Two: Between the Wars',
-    price: 15.54,
+    price: 12.89,
     isbn: '9780957344372',
     category: 'Scottish Aviation History',
     condition: 'New',
@@ -295,7 +295,7 @@ The cover is of the first practical British helicopter, the Weir W5, flown by Ra
   {
     id: 'german-aircraft-great-war',
     title: 'German Aircraft in the Great War 1914-1918',
-    price: 13.93,
+    price: 12.89,
     isbn: '9781838056742',
     category: 'WWI Aviation',
     condition: 'New',
@@ -597,7 +597,7 @@ Any questions will be promptly answered
   {
     id: 'enemy-luftwaffe-1945',
     title: 'This Was the Enemy: The Luftwaffe 1945',
-    price: 16.08,
+    price: 12.89,
     isbn: '9781838056780',
     category: 'WWII Aviation',
     condition: 'New',
@@ -678,7 +678,7 @@ A limited run. A5 Paperback highly detailed, 180 pages profusely illustrated wit
   {
     id: 'soaring-with-wings',
     title: 'Soaring with Wings: Percy Pilcher wants to Fly- Biography',
-    price: 15.01,
+    price: 12.89,
     isbn: '9781838056766',
     category: 'Aviation Biography',
     condition: 'New',
@@ -719,7 +719,7 @@ Any questions promptly answered.
   {
     id: 'mother-of-the-few',
     title: 'Mother of the Few-Lucy Lady Houston, Schneider Trophy Mount Everest Flight',
-    price: 14.52,
+    price: 12.89,
     isbn: '9781838056711',
     category: 'Aviation Biography',
     condition: 'New',
@@ -1019,7 +1019,7 @@ Purchased July 2025`,
   {
     id: 'dorothy-wordsworth',
     title: 'Dorothy Wordsworth Recollections of a Tour Made in Scotland 1803',
-    price: 7.55,
+    price: 8.65,
     isbn: '9780957344327',
     category: 'Travel Literature',
     condition: 'New',
