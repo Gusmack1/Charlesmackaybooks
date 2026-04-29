@@ -12,7 +12,7 @@
  * rates mid-year. If a customer reports a mismatch, update `amountPence` here.
  */
 
-export type ZoneKey = 'UK' | 'EU1' | 'EU2' | 'WORLD1' | 'WORLD2' | 'WORLD3';
+export type ZoneKey = 'UK' | 'EUROPE' | 'WORLD1' | 'WORLD2' | 'WORLD3';
 
 export interface ShippingZone {
   key: ZoneKey;
@@ -33,30 +33,23 @@ const UK: ShippingZone = {
   countries: ['GB'],
 };
 
-// Europe Zone 1 — EEA + Switzerland + most-used Western Europe.
-const EU1: ShippingZone = {
-  key: 'EU1',
+// Europe — merged from prior EU1 + EU2 to keep zones <= 5 (Stripe Checkout
+// shipping_options array maximum). Use Zone 2 price (£15.55) as the higher
+// of the two so Charles is not under-quoted on Eastern Europe destinations.
+const EUROPE: ShippingZone = {
+  key: 'EUROPE',
   displayName: 'Royal Mail International Tracked - Europe',
-  amountPence: 1440,
+  amountPence: 1555,
   minDays: 5,
-  maxDays: 10,
+  maxDays: 14,
   countries: [
+    // Western Europe / EEA
     'IE', 'FR', 'DE', 'NL', 'BE', 'LU', 'AT', 'CH', 'IT', 'ES', 'PT',
     'SE', 'NO', 'DK', 'FI', 'IS', 'LI', 'MC', 'AD', 'SM', 'VA', 'MT',
     'GR', 'CY',
-  ],
-};
-
-// Europe Zone 2 — Eastern Europe / EU peripherals.
-const EU2: ShippingZone = {
-  key: 'EU2',
-  displayName: 'Royal Mail International Tracked - Europe (Zone 2)',
-  amountPence: 1555,
-  minDays: 7,
-  maxDays: 14,
-  countries: [
+    // Eastern Europe / EU peripherals
     'PL', 'CZ', 'SK', 'HU', 'RO', 'BG', 'SI', 'HR', 'EE', 'LV', 'LT',
-    'AL', 'BA', 'ME', 'MK', 'XK', // Western Balkans
+    'AL', 'BA', 'ME', 'MK', 'XK',
     'TR', 'MD', 'GE', 'AM', 'AZ',
   ],
 };
@@ -112,7 +105,7 @@ const WORLD3: ShippingZone = {
   ],
 };
 
-export const SHIPPING_ZONES: readonly ShippingZone[] = [UK, EU1, EU2, WORLD1, WORLD2, WORLD3];
+export const SHIPPING_ZONES: readonly ShippingZone[] = [UK, EUROPE, WORLD1, WORLD2, WORLD3];
 
 /**
  * All ISO-3166 alpha-2 codes the site ships to.
