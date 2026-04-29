@@ -225,7 +225,7 @@ export default async function OrderDetailPage({
           <div style={styles.section}>
             <h2 style={styles.sectionTitle}>Payment Method</h2>
             <div style={{ fontSize: 14, color: 'var(--text-body)' }}>
-              {order.provider === 'stripe' ? 'Stripe' : 'PayPal'}
+              {order.provider === 'stripe' ? 'Stripe' : order.provider}
             </div>
             <div
               style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 8 }}

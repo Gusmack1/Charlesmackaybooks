@@ -29,7 +29,7 @@ const faqLd = {
     {
       '@type': 'Question',
       name: 'How long do refunds take?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Refunds are processed within 5 working days of receiving the returned book, to your original payment method (Stripe or PayPal).' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Refunds are processed within 5 working days of receiving the returned book, to your original payment method (card via Stripe).' },
     },
     {
       '@type': 'Question',
@@ -84,7 +84,7 @@ export default function ReturnsPage() {
         <section style={{ marginBottom: 40 }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Refund Processing</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            Refunds are issued to the original payment method (credit/debit card via Stripe, or PayPal). Please allow up to 5 working days for the refund to appear in your account after we confirm receipt of the returned book.
+            Refunds are issued to the original payment method (credit/debit card via Stripe). Please allow up to 5 working days for the refund to appear in your account after we confirm receipt of the returned book.
           </p>
         </section>
 

@@ -45,7 +45,7 @@ export default function Footer() {
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
           {/* Google Customer Reviews badge */}
           <div id="gcr-badge" style={{ marginRight: 8 }} />
-          {['Visa', 'MC', 'PayPal', 'Stripe'].map(p => (
+          {['Visa', 'MC', 'Stripe'].map(p => (
             <span key={p} style={{ background: 'rgba(255,255,255,0.08)', borderRadius: 4, padding: '4px 8px', fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.5)' }}>{p}</span>
           ))}
         </div>

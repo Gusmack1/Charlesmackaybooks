@@ -114,7 +114,7 @@ export default async function OrdersPage() {
   };
 
   const getProviderBadge = (provider: string) => {
-    const providerName = provider === 'stripe' ? 'Stripe' : 'PayPal';
+    const providerName = provider === 'stripe' ? 'Stripe' : provider;
     return (
       <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>
         via {providerName}
