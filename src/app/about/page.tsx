@@ -194,6 +194,33 @@ export default function AboutPage() {
           <li style={{ marginBottom: 10 }}>The one story you tell most often that you want preserved exactly as you tell it.</li>
           <li style={{ marginBottom: 10 }}>What do you most want your grandchildren to know about you, in your own words?</li>
         </ol>
+
+        <h3 id="sources" style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 48, marginBottom: 12 }}>Sources &amp; Verification</h3>
+        <p style={{ fontSize: 14, color: 'var(--text-muted)', lineHeight: 1.7, marginBottom: 12 }}>
+          The biographical and corporate facts on this page can be checked against the following authoritative public records.
+        </p>
+        <ul style={{ paddingLeft: 24, fontSize: 14, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 8 }}>
+            Companies House,{' '}
+            <a href="https://find-and-update.company-information.service.gov.uk/company/SC858624" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-dark)', textDecoration: 'underline' }}>A Mackay (Publisher) Ltd, SC858624</a>
+            {' '}(active publisher of record).
+          </li>
+          <li style={{ marginBottom: 8 }}>
+            Companies House,{' '}
+            <a href="https://find-and-update.company-information.service.gov.uk/company/SC005175" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-dark)', textDecoration: 'underline' }}>Robert Gibson &amp; Sons Glasgow, Limited, SC005175</a>
+            {' '}(incorporated 12 September 1902, dissolved 23 August 2022).
+          </li>
+          <li style={{ marginBottom: 8 }}>
+            UK National Archives Discovery,{' '}
+            <a href="https://discovery.nationalarchives.gov.uk/details/c/F270555" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-dark)', textDecoration: 'underline' }}>Robert Gibson &amp; Sons (F270555)</a>
+            {' '}corporate records catalogue.
+          </li>
+          <li style={{ marginBottom: 8 }}>
+            Wikidata,{' '}
+            <a href="https://www.wikidata.org/wiki/Q96824767" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-dark)', textDecoration: 'underline' }}>Charles E. MacKay (Q96824767)</a>
+            {' '}structured author entity.
+          </li>
+        </ul>
       </section>
     </>
   );
