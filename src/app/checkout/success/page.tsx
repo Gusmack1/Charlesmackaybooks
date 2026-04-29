@@ -56,7 +56,7 @@ function SuccessContent() {
           Thank you for your purchase. A confirmation email has been sent to you.
         </p>
         <p style={{ color: 'var(--text-muted)', fontSize: 14, marginBottom: 32, lineHeight: 1.6 }}>
-          Your books will be posted with free worldwide shipping.
+          Your books will be posted by Royal Mail tracked service.
         </p>
         <Link href="/books" style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--gold)', color: 'var(--navy)', borderRadius: 'var(--radius-md)', fontSize: 15, fontWeight: 700, textDecoration: 'none' }}>
           Continue browsing

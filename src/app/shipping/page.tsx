@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SHIPPING_ZONES } from '@/data/shipping-zones';
 
 export const metadata: Metadata = {
-  title: 'Shipping Information — Free Worldwide Delivery',
-  description: 'Free worldwide shipping on all aviation history books by Charles E. MacKay. Ships from Glasgow, Scotland. Delivery times: UK 2-4 days, Europe 5-10 days, worldwide 7-21 days.',
+  title: 'Shipping Information — Royal Mail Tracked Worldwide',
+  description: 'Royal Mail Tracked shipping on all aviation history books by Charles E. MacKay. Ships from Glasgow, Scotland. Postage calculated at checkout. UK 2-4 days, Europe 5-14 days, worldwide 7-21 days.',
   alternates: { canonical: '/shipping' },
   openGraph: {
-    title: 'Free Worldwide Shipping — Charles E. MacKay Books',
-    description: 'Every order ships free worldwide from Glasgow, Scotland. No minimum order required.',
+    title: 'Shipping — Charles E. MacKay Books',
+    description: 'Royal Mail Tracked shipping worldwide. Postage calculated at checkout. Ships from Glasgow, Scotland.',
     url: 'https://charlesmackaybooks.com/shipping',
   },
 };
@@ -18,23 +19,28 @@ const faqLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is shipping really free worldwide?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every order ships completely free worldwide — no minimum order, no hidden charges. All orders are dispatched from Glasgow, Scotland.' },
+      name: 'How is shipping calculated?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Shipping is calculated at checkout based on your delivery destination. UK orders ship via Royal Mail Tracked 48; international orders via Royal Mail International Tracked. Exact postage is shown before payment.' },
     },
     {
       '@type': 'Question',
       name: 'How long does delivery take?',
-      acceptedAnswer: { '@type': 'Answer', text: 'UK: 2-4 working days via Royal Mail First Class. Europe: 5-10 working days. USA & Canada: 7-14 working days. Australia & NZ: 10-21 working days. Rest of World: 7-21 working days.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'UK: 2-4 working days via Royal Mail Tracked 48. Europe: 5-14 working days. USA & Canada: 7-14 working days. Australia, NZ & Far East: 10-21 working days. Rest of World: 10-21 working days.' },
     },
     {
       '@type': 'Question',
       name: 'Do you offer order tracking?',
-      acceptedAnswer: { '@type': 'Answer', text: 'UK orders sent via Royal Mail First Class include tracking where available. International orders are sent via Royal Mail International Standard, which may include tracking depending on the destination country.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — every order ships via a Royal Mail tracked service with online delivery confirmation. UK Tracked 48 and International Tracked both include end-to-end tracking.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will I have to pay import duty or VAT?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A Mackay (Publisher) Ltd is not VAT registered and does not collect VAT at checkout. Customers outside the United Kingdom may be liable for import duty, sales tax, or VAT collected by their local courier or postal service. These charges (where applicable) are the responsibility of the recipient.' },
     },
     {
       '@type': 'Question',
       name: 'How are the books packaged?',
-      acceptedAnswer: { '@type': 'Answer', text: 'All books are carefully packaged in sturdy cardboard mailers to ensure they arrive in perfect condition. Multi-book orders are bundled securely together.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'All books are packaged in sturdy cardboard mailers. Multi-book orders are bundled securely together to prevent damage in transit.' },
     },
   ],
 };
@@ -45,46 +51,53 @@ export default function ShippingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div style={{ background: 'var(--navy)', padding: '32px 24px', textAlign: 'center' }}>
         <h1 style={{ fontFamily: 'var(--font-serif)', color: 'white', fontSize: 28, marginBottom: 4 }}>Shipping Information</h1>
-        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>Free worldwide delivery on every order</p>
+        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>Royal Mail Tracked, calculated at checkout</p>
       </div>
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 24px' }}>
         <section style={{ marginBottom: 40 }}>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Free Worldwide Shipping</h2>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Royal Mail Tracked Shipping</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            Every book ordered from charlesmackaybooks.com ships completely free — no minimum order, no hidden charges, no matter where you are in the world. All orders are dispatched from Glasgow, Scotland by Charles E. MacKay personally.
+            Every book ordered from charlesmackaybooks.com ships from Glasgow, Scotland by Royal Mail Tracked services. Postage is calculated at checkout based on your delivery destination — the exact amount is shown before you pay. All orders are packed and dispatched personally by Charles E. MacKay.
           </p>
         </section>
 
         <section style={{ marginBottom: 40 }}>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 16 }}>Estimated Delivery Times</h2>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 16 }}>Postage by Destination</h2>
+          <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 16, lineHeight: 1.6 }}>
+            Indicative rates for a single hardcover book (~600g). Multi-book orders use the same zone rate up to 750g; heavier orders are quoted at checkout.
+          </p>
           <div style={{ border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
-            {[
-              { region: 'United Kingdom', time: '2–4 working days', method: 'Royal Mail First Class' },
-              { region: 'Europe', time: '5–10 working days', method: 'Royal Mail International Standard' },
-              { region: 'USA & Canada', time: '7–14 working days', method: 'Royal Mail International Standard' },
-              { region: 'Australia & New Zealand', time: '10–21 working days', method: 'Royal Mail International Standard' },
-              { region: 'Rest of World', time: '7–21 working days', method: 'Royal Mail International Standard' },
-            ].map((r, i) => (
-              <div key={r.region} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16, padding: '14px 20px', borderBottom: i < 4 ? '1px solid var(--border)' : 'none', background: i % 2 === 0 ? 'var(--cream)' : 'var(--white)' }}>
-                <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--text-dark)' }}>{r.region}</span>
-                <span style={{ fontSize: 14, color: 'var(--text-body)' }}>{r.time}</span>
-                <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>{r.method}</span>
+            {SHIPPING_ZONES.map((z, i) => (
+              <div
+                key={z.key}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '2fr 1fr 1fr',
+                  gap: 16,
+                  padding: '14px 20px',
+                  borderBottom: i < SHIPPING_ZONES.length - 1 ? '1px solid var(--border)' : 'none',
+                  background: i % 2 === 0 ? 'var(--cream)' : 'var(--white)',
+                }}
+              >
+                <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--text-dark)' }}>{z.displayName.replace('Royal Mail Tracked - ', '').replace('Royal Mail International Tracked - ', '')}</span>
+                <span style={{ fontSize: 14, color: 'var(--text-body)' }}>£{(z.amountPence / 100).toFixed(2)}</span>
+                <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>{z.minDays}–{z.maxDays} working days</span>
               </div>
             ))}
           </div>
         </section>
 
         <section style={{ marginBottom: 40 }}>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Packaging</h2>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Import Duty &amp; VAT (international orders)</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            All books are carefully packaged in sturdy cardboard mailers to ensure they arrive in perfect condition. Multi-book orders are bundled securely together to prevent damage during transit.
+            A Mackay (Publisher) Ltd is <strong>not VAT registered</strong> and does not collect VAT at checkout. Customers outside the United Kingdom may be liable for import duty, sales tax, or local VAT collected by their courier or national postal service on delivery. Where applicable, these charges are the responsibility of the recipient.
           </p>
         </section>
 
         <section style={{ marginBottom: 40 }}>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Order Tracking</h2>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Packaging &amp; Tracking</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            You will receive an email confirmation when your order is placed. UK orders sent via Royal Mail First Class include tracking where available. International orders are sent via Royal Mail International Standard, which may include tracking depending on the destination country.
+            All books are packaged in sturdy cardboard mailers; multi-book orders are bundled securely together. Every order ships with a Royal Mail tracking number — UK Tracked 48 and International Tracked both include end-to-end delivery confirmation. Tracking details are sent by email once your order is dispatched (usually within 1-2 working days of payment).
           </p>
         </section>
 

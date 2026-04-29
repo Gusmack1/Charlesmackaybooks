@@ -1,6 +1,7 @@
 import Stripe from 'stripe';
 import { NextRequest, NextResponse } from 'next/server';
 import { stripePriceMap } from '@/data/stripe-prices';
+import { ALLOWED_COUNTRIES, SHIPPING_ZONES } from '@/data/shipping-zones';
 import { createClient } from '@/lib/supabase/server';
 
 function getStripe() {
@@ -14,6 +15,35 @@ function getStripe() {
 }
 
 export const dynamic = 'force-dynamic';
+
+/**
+ * Build Stripe shipping_options[] from our zone definitions.
+ *
+ * Stripe Checkout doesn't natively filter shipping_options by destination
+ * country at session-create time, so we present every zone and rely on:
+ *   (a) the customer self-selecting the zone matching their address, and
+ *   (b) `shipping_address_collection.allowed_countries` to block ship-to
+ *       countries we don't service.
+ *
+ * The display_name on each rate makes the zone obvious ("Europe", "USA /
+ * Canada", "Australia / Far East"). Future improvement: switch to the
+ * `permissions.update_shipping_details=server_only` flow to dynamically
+ * show only the zone that matches the entered address.
+ */
+function buildShippingOptions(): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
+  return SHIPPING_ZONES.map((zone) => ({
+    shipping_rate_data: {
+      type: 'fixed_amount' as const,
+      fixed_amount: { amount: zone.amountPence, currency: 'gbp' },
+      display_name: zone.displayName,
+      delivery_estimate: {
+        minimum: { unit: 'business_day' as const, value: zone.minDays },
+        maximum: { unit: 'business_day' as const, value: zone.maxDays },
+      },
+      metadata: { zone: zone.key },
+    },
+  }));
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -49,11 +79,9 @@ export async function POST(req: NextRequest) {
       line_items: lineItems,
       discounts,
       shipping_address_collection: {
-        allowed_countries: [
-          'GB', 'US', 'CA', 'AU', 'NZ', 'IE', 'DE', 'FR', 'NL', 'BE',
-          'AT', 'CH', 'IT', 'ES', 'PT', 'SE', 'NO', 'DK', 'FI', 'PL',
-        ],
+        allowed_countries: [...ALLOWED_COUNTRIES] as Stripe.Checkout.SessionCreateParams.ShippingAddressCollection.AllowedCountry[],
       },
+      shipping_options: buildShippingOptions(),
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/checkout`,
     };

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     default: 'Charles E. MacKay Books — Buy Scottish Aviation History Books Online',
     template: '%s | Charles E. MacKay Books',
   },
-  description: 'Buy 20 aviation history books by Charles E. MacKay. Scottish aviation, Beardmore, Clydeside, WWI/WWII aircraft, Luftwaffe, helicopters. Free worldwide shipping from Glasgow.',
+  description: 'Buy 20 aviation history books by Charles E. MacKay. Scottish aviation, Beardmore, Clydeside, WWI/WWII aircraft, Luftwaffe, helicopters. Royal Mail tracked shipping worldwide from Glasgow.',
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
   icons: {
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'Charles E. MacKay — Aviation History Books',
     title: 'Charles E. MacKay — Aviation History Books',
-    description: 'Definitive histories of Scottish aviation and military aircraft. 20 titles, 25+ years of research. Free worldwide shipping.',
+    description: 'Definitive histories of Scottish aviation and military aircraft. 20 titles, 25+ years of research. Royal Mail tracked shipping worldwide.',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Charles E. MacKay Aviation History Books' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Charles E. MacKay — Aviation History Books',
-    description: 'Definitive histories of Scottish aviation and military aircraft. Free worldwide shipping.',
+    description: 'Definitive histories of Scottish aviation and military aircraft. Royal Mail tracked shipping worldwide.',
   },
   robots: {
     index: true,
@@ -138,7 +138,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="#main-content" className="skip-link">Skip to content</a>
             {/* Discount banner */}
             <div style={{ background: 'var(--gold)', color: 'var(--navy)', textAlign: 'center', padding: '8px 16px', fontSize: 13, fontWeight: 600 }}>
-              Save 5% on 2 books or 10% on 3+ — Free worldwide shipping on every order
+              Save 5% on 2 books or 10% on 3+ — Royal Mail tracked shipping calculated at checkout
             </div>
             <Nav />
             <main id="main-content">{children}</main>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact Charles E. MacKay — Book Orders & Research Enquiries',
-  description: 'Contact Charles E. MacKay for book orders, aviation history research questions, bulk purchases, or collaboration. Ships free worldwide from Glasgow, Scotland.',
+  description: 'Contact Charles E. MacKay for book orders, aviation history research questions, bulk purchases, or collaboration. Ships worldwide from Glasgow, Scotland via Royal Mail tracked services.',
   alternates: { canonical: '/contact' },
   openGraph: {
     title: 'Contact Charles E. MacKay',
@@ -18,7 +18,7 @@ const faqLd = {
     {
       '@type': 'Question',
       name: 'Do you ship internationally?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — every order ships free worldwide from Glasgow, Scotland. UK orders typically arrive in 1–4 business days; international orders 7–14 days.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — orders ship worldwide from Glasgow, Scotland via Royal Mail tracked services. Postage is calculated at checkout based on destination. UK orders typically arrive in 2–4 working days; international orders 7–21 days.' },
     },
     {
       '@type': 'Question',
@@ -54,7 +54,7 @@ export default function ContactPage() {
             {[
               { icon: '✉', title: 'Email', main: 'charlese1mackay@hotmail.com', sub: 'Usually responds within 24–48 hours' },
               { icon: '⚑', title: 'Location', main: 'Glasgow, Scotland', sub: 'Ships worldwide from Glasgow' },
-              { icon: '🛒', title: 'Online Shop', main: 'charlesmackaybooks.com/books', sub: 'Browse all 20 titles with free worldwide shipping' },
+              { icon: '🛒', title: 'Online Shop', main: 'charlesmackaybooks.com/books', sub: 'Browse all 20 titles — Royal Mail tracked worldwide' },
             ].map(m => (
               <div key={m.title} style={{ display: 'flex', gap: 16, alignItems: 'start' }}>
                 <div style={{ width: 44, height: 44, background: 'var(--cream)', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: 18 }}>{m.icon}</div>

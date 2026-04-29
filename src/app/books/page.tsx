@@ -26,7 +26,7 @@ export default function ShopPage() {
     <>
       <div style={{ background: 'var(--navy)', padding: '32px 24px', textAlign: 'center' }}>
         <h1 style={{ fontFamily: 'var(--font-serif)', color: 'white', fontSize: 28, marginBottom: 4 }}>Buy Aviation History Books by Charles E. MacKay</h1>
-        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, maxWidth: 640, margin: '8px auto 0', lineHeight: 1.6 }}>Browse 20 meticulously researched titles covering Scottish aviation, Beardmore &amp; Clydeside factories, WWI &amp; WWII aircraft, the Luftwaffe, helicopters, and naval aviation. Every book ships free worldwide from Glasgow.</p>
+        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, maxWidth: 640, margin: '8px auto 0', lineHeight: 1.6 }}>Browse 20 meticulously researched titles covering Scottish aviation, Beardmore &amp; Clydeside factories, WWI &amp; WWII aircraft, the Luftwaffe, helicopters, and naval aviation. Royal Mail tracked shipping worldwide from Glasgow.</p>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '240px 1fr', gap: 32, maxWidth: 1200, margin: '0 auto', padding: '40px 24px' }} className="shop-layout">
         <aside>
