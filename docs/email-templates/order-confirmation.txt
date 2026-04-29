@@ -7,9 +7,9 @@ Aviation history, written and posted from Glasgow.
 
 Thank you, {{customer_first_name}}.
 
-Your order is in. Charles writes the books; I (Gus, his son) do the
-wrapping and posting from our wee corner of Glasgow. We are glad one
-of his titles is on its way to you.
+Your order is in. My dad Charles wrote the book; he hand-wraps and
+posts every order himself from our wee corner of Glasgow. We are
+glad one of his titles is on its way to you.
 
 Order #{{order_number}}
 Placed {{order_date}}
@@ -49,7 +49,7 @@ WHEN TO EXPECT IT
 WHAT HAPPENS NEXT
 ----------------------------------------------------------------------
 
-I will hand-wrap and dispatch your parcel within 1-2 business days.
+Charles will hand-wrap and post your parcel within 1-2 business days.
 {{tracking_link_placeholder}}
 
 Check your order status: {{order_status_url}}
@@ -59,8 +59,9 @@ IF ANYTHING GOES WRONG
 ----------------------------------------------------------------------
 
 Books can take a knock in the post. If yours arrives damaged or
-faulty within 30 days, just hit reply with a photo. We will send a
-fresh copy or a refund -- your call.
+faulty within 30 days, just hit reply with a photo. We will write
+back with the return address -- once the book is back with us, you
+can pick a fresh copy or a full refund, your call.
 
 ----------------------------------------------------------------------
 
@@ -69,7 +70,7 @@ gets a kick out of hearing what readers think. If you have a moment
 when you finish, hit reply -- I read every one and pass them on.
 
 Safe flights,
-Charles & Gus MacKay
+Charles & Angus MacKay
 
 ----------------------------------------------------------------------
 A MACKAY (PUBLISHER) LTD
