@@ -1,0 +1,79 @@
+Subject: Thank you, {{customer_first_name}} -- your books are on the way
+
+----------------------------------------------------------------------
+CHARLES MACKAY BOOKS
+Aviation history, written and posted from Glasgow.
+----------------------------------------------------------------------
+
+Thank you, {{customer_first_name}}.
+
+Your order is in. Charles writes the books; I (Gus, his son) do the
+wrapping and posting from our wee corner of Glasgow. We are glad one
+of his titles is on its way to you.
+
+Order #{{order_number}}
+Placed {{order_date}}
+
+----------------------------------------------------------------------
+WHAT YOU ORDERED
+----------------------------------------------------------------------
+
+{{#each book_list}}
+  {{title}}
+  Qty {{qty}}                                              {{price}}
+  https://charlesmackaybooks.com/books/{{id}}
+
+{{/each}}
+
+  Subtotal                                       {{subtotal}}
+{{#if discount_amount}}
+  Multibuy discount                             -{{discount_amount}}
+{{/if}}
+  Shipping ({{shipping_zone_name}})              {{shipping_cost}}
+  ----
+  Total                                          {{total}}
+
+----------------------------------------------------------------------
+POSTING TO
+----------------------------------------------------------------------
+
+{{shipping_address_block}}
+
+----------------------------------------------------------------------
+WHEN TO EXPECT IT
+----------------------------------------------------------------------
+
+{{shipping_estimate}}
+
+----------------------------------------------------------------------
+WHAT HAPPENS NEXT
+----------------------------------------------------------------------
+
+I will hand-wrap and dispatch your parcel within 1-2 business days.
+{{tracking_link_placeholder}}
+
+Check your order status: {{order_status_url}}
+
+----------------------------------------------------------------------
+IF ANYTHING GOES WRONG
+----------------------------------------------------------------------
+
+Books can take a knock in the post. If yours arrives damaged or
+faulty within 30 days, just hit reply with a photo. We will send a
+fresh copy or a refund -- your call.
+
+----------------------------------------------------------------------
+
+Charles has spent 21 years writing aviation history, and he still
+gets a kick out of hearing what readers think. If you have a moment
+when you finish, hit reply -- I read every one and pass them on.
+
+Safe flights,
+Charles & Gus MacKay
+
+----------------------------------------------------------------------
+A MACKAY (PUBLISHER) LTD
+Registered in Scotland, Company No. SC858624
+Registered office: 87 Knightscliffe Avenue, Glasgow, G13 2RX
+Questions? Reply to this email or visit charlesmackaybooks.com
+----------------------------------------------------------------------

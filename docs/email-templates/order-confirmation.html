@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="x-apple-disable-message-reformatting">
+    <title>Thank you, {{customer_first_name}} — your books are on the way</title>
+    <!--[if mso]>
+    <style type="text/css">
+      table, td, div, h1, h2, p { font-family: Georgia, 'Times New Roman', serif; }
+    </style>
+    <![endif]-->
+  </head>
+  <body style="margin:0; padding:0; background:#f7f3ea; font-family:Arial, Helvetica, sans-serif; color:#1a2a44;">
+    <!-- Preheader (hidden in inbox preview only) -->
+    <div style="display:none; font-size:1px; color:#f7f3ea; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden;">
+      Hand-wrapped in Glasgow and on its way to you. Tracking arrives by email when Royal Mail collects.
+    </div>
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f7f3ea;">
+      <tr>
+        <td align="center" style="padding:24px 12px;">
+
+          <!-- Container -->
+          <table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:640px; background:#ffffff; border:1px solid #e6dfce;">
+
+            <!-- Header bar -->
+            <tr>
+              <td style="background:#1a2a44; padding:24px 32px; text-align:left;">
+                <p style="margin:0; font-family:Georgia, 'Times New Roman', serif; font-size:22px; line-height:28px; color:#C8A951; letter-spacing:0.5px;">
+                  Charles MacKay Books
+                </p>
+                <p style="margin:4px 0 0 0; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; color:#f7f3ea;">
+                  Aviation history, written and posted from Glasgow.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Greeting -->
+            <tr>
+              <td style="padding:32px 32px 8px 32px;">
+                <h1 style="margin:0 0 16px 0; font-family:Georgia, 'Times New Roman', serif; font-size:24px; line-height:30px; font-weight:normal; color:#1a2a44;">
+                  Thank you, {{customer_first_name}}.
+                </h1>
+                <p style="margin:0 0 12px 0; font-size:16px; line-height:24px; color:#1a2a44;">
+                  Your order is in. Charles writes the books; I (Gus, his son) do the wrapping and posting from our wee corner of Glasgow. We are glad one of his titles is on its way to you.
+                </p>
+                <p style="margin:0; font-size:14px; line-height:22px; color:#5a6172;">
+                  Order <strong style="color:#1a2a44;">#{{order_number}}</strong> &middot; placed {{order_date}}
+                </p>
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr>
+              <td style="padding:24px 32px 0 32px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr><td style="border-top:1px solid #e6dfce; font-size:0; line-height:0;">&nbsp;</td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- What you ordered -->
+            <tr>
+              <td style="padding:24px 32px 0 32px;">
+                <h2 style="margin:0 0 16px 0; font-family:Georgia, 'Times New Roman', serif; font-size:18px; line-height:24px; font-weight:normal; color:#1a2a44;">
+                  What you ordered
+                </h2>
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                  <thead>
+                    <tr>
+                      <th align="left" style="padding:8px 8px 8px 0; font-size:12px; line-height:16px; color:#5a6172; text-transform:uppercase; letter-spacing:0.5px; border-bottom:1px solid #e6dfce; font-weight:normal;">Title</th>
+                      <th align="center" style="padding:8px; font-size:12px; line-height:16px; color:#5a6172; text-transform:uppercase; letter-spacing:0.5px; border-bottom:1px solid #e6dfce; font-weight:normal;">Qty</th>
+                      <th align="right" style="padding:8px 0 8px 8px; font-size:12px; line-height:16px; color:#5a6172; text-transform:uppercase; letter-spacing:0.5px; border-bottom:1px solid #e6dfce; font-weight:normal;">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each book_list}}
+                    <tr>
+                      <td align="left" style="padding:14px 8px 14px 0; font-size:15px; line-height:22px; color:#1a2a44; border-bottom:1px solid #f0ead9;">
+                        <a href="https://charlesmackaybooks.com/books/{{id}}" style="color:#1a2a44; text-decoration:underline;">{{title}}</a>
+                      </td>
+                      <td align="center" style="padding:14px 8px; font-size:15px; line-height:22px; color:#1a2a44; border-bottom:1px solid #f0ead9;">
+                        {{qty}}
+                      </td>
+                      <td align="right" style="padding:14px 0 14px 8px; font-size:15px; line-height:22px; color:#1a2a44; border-bottom:1px solid #f0ead9;">
+                        {{price}}
+                      </td>
+                    </tr>
+                    {{/each}}
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Totals -->
+            <tr>
+              <td style="padding:16px 32px 0 32px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td align="right" style="padding:4px 0; font-size:14px; line-height:20px; color:#5a6172;">Subtotal</td>
+                    <td align="right" width="100" style="padding:4px 0 4px 16px; font-size:14px; line-height:20px; color:#1a2a44;">{{subtotal}}</td>
+                  </tr>
+                  {{#if discount_amount}}
+                  <tr>
+                    <td align="right" style="padding:4px 0; font-size:14px; line-height:20px; color:#5a6172;">Multibuy discount</td>
+                    <td align="right" style="padding:4px 0 4px 16px; font-size:14px; line-height:20px; color:#1a2a44;">&minus;{{discount_amount}}</td>
+                  </tr>
+                  {{/if}}
+                  <tr>
+                    <td align="right" style="padding:4px 0; font-size:14px; line-height:20px; color:#5a6172;">Shipping ({{shipping_zone_name}})</td>
+                    <td align="right" style="padding:4px 0 4px 16px; font-size:14px; line-height:20px; color:#1a2a44;">{{shipping_cost}}</td>
+                  </tr>
+                  <tr>
+                    <td align="right" style="padding:12px 0 0 0; border-top:1px solid #e6dfce; font-family:Georgia, 'Times New Roman', serif; font-size:16px; line-height:22px; color:#1a2a44;">
+                      <strong>Total</strong>
+                    </td>
+                    <td align="right" style="padding:12px 0 0 16px; border-top:1px solid #e6dfce; font-family:Georgia, 'Times New Roman', serif; font-size:16px; line-height:22px; color:#1a2a44;">
+                      <strong>{{total}}</strong>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Where it's going -->
+            <tr>
+              <td style="padding:32px 32px 0 32px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td valign="top" width="50%" style="padding:0 8px 0 0;">
+                      <h2 style="margin:0 0 8px 0; font-family:Georgia, 'Times New Roman', serif; font-size:16px; line-height:22px; font-weight:normal; color:#1a2a44;">
+                        Posting to
+                      </h2>
+                      <p style="margin:0; font-size:14px; line-height:21px; color:#1a2a44; white-space:pre-line;">{{shipping_address_block}}</p>
+                    </td>
+                    <td valign="top" width="50%" style="padding:0 0 0 8px;">
+                      <h2 style="margin:0 0 8px 0; font-family:Georgia, 'Times New Roman', serif; font-size:16px; line-height:22px; font-weight:normal; color:#1a2a44;">
+                        When to expect it
+                      </h2>
+                      <p style="margin:0; font-size:14px; line-height:21px; color:#1a2a44;">
+                        {{shipping_estimate}}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- What happens next -->
+            <tr>
+              <td style="padding:32px 32px 0 32px;">
+                <h2 style="margin:0 0 12px 0; font-family:Georgia, 'Times New Roman', serif; font-size:18px; line-height:24px; font-weight:normal; color:#1a2a44;">
+                  What happens next
+                </h2>
+                <p style="margin:0 0 12px 0; font-size:15px; line-height:22px; color:#1a2a44;">
+                  I will hand-wrap and dispatch your parcel within 1&ndash;2 business days. {{tracking_link_placeholder}}
+                </p>
+                <p style="margin:0; font-size:14px; line-height:21px;">
+                  <a href="{{order_status_url}}" style="color:#1a2a44; text-decoration:underline;">Check your order status</a>
+                </p>
+              </td>
+            </tr>
+
+            <!-- Guarantee -->
+            <tr>
+              <td style="padding:32px 32px 0 32px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f7f3ea; border:1px solid #e6dfce;">
+                  <tr>
+                    <td style="padding:20px 24px;">
+                      <h2 style="margin:0 0 8px 0; font-family:Georgia, 'Times New Roman', serif; font-size:16px; line-height:22px; font-weight:normal; color:#1a2a44;">
+                        If anything goes wrong
+                      </h2>
+                      <p style="margin:0; font-size:14px; line-height:21px; color:#1a2a44;">
+                        Books can take a knock in the post. If yours arrives damaged or faulty within 30 days, just hit reply with a photo. We will send a fresh copy or a refund &mdash; your call.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Personal sign-off -->
+            <tr>
+              <td style="padding:32px 32px 32px 32px;">
+                <p style="margin:0 0 12px 0; font-size:15px; line-height:22px; color:#1a2a44;">
+                  Charles has spent 21 years writing aviation history, and he still gets a kick out of hearing what readers think. If you have a moment when you finish, hit reply &mdash; I read every one and pass them on.
+                </p>
+                <p style="margin:0; font-family:Georgia, 'Times New Roman', serif; font-size:15px; line-height:22px; color:#1a2a44;">
+                  Safe flights,<br>
+                  Charles &amp; Gus MacKay
+                </p>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="background:#f7f3ea; padding:20px 32px; border-top:1px solid #e6dfce;">
+                <p style="margin:0 0 6px 0; font-size:11px; line-height:16px; color:#5a6172;">
+                  A MACKAY (PUBLISHER) LTD &middot; Registered in Scotland, Company No. SC858624
+                </p>
+                <p style="margin:0 0 6px 0; font-size:11px; line-height:16px; color:#5a6172;">
+                  Registered office: 87 Knightscliffe Avenue, Glasgow, Scotland, G13 2RX
+                </p>
+                <p style="margin:0; font-size:11px; line-height:16px; color:#5a6172;">
+                  Questions? Reply to this email or visit
+                  <a href="https://charlesmackaybooks.com" style="color:#5a6172; text-decoration:underline;">charlesmackaybooks.com</a>
+                </p>
+              </td>
+            </tr>
+
+          </table>
+          <!-- /Container -->
+
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
