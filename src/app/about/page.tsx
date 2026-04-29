@@ -17,7 +17,7 @@ const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Charles E. MacKay',
-  alternateName: 'Charles Edward MacKay',
+  alternateName: ['Charles Edward MacKay', 'Charles E. MacKay (aviation historian)'],
   birthDate: '1951-04-01',
   birthPlace: {
     '@type': 'Place',

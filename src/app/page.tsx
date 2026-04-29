@@ -67,7 +67,7 @@ const orgJsonLd = {
   url: 'https://charlesmackaybooks.com',
   logo: 'https://charlesmackaybooks.com/og-image.jpg',
   description: 'Aviation history books by Charles E. MacKay (aviation historian). 20 titles covering Scottish aviation, WWI and WWII aircraft, and military history.',
-  founder: { '@type': 'Person', name: 'Charles E. MacKay', url: 'https://charlesmackaybooks.com/about' },
+  founder: { '@type': 'Person', name: 'Charles E. MacKay', alternateName: ['Charles Edward MacKay', 'Charles E. MacKay (aviation historian)'], url: 'https://charlesmackaybooks.com/about', sameAs: ['https://www.wikidata.org/wiki/Q96824767'] },
   address: { '@type': 'PostalAddress', addressLocality: 'Glasgow', addressCountry: 'GB' },
   contactPoint: {
     '@type': 'ContactPoint',

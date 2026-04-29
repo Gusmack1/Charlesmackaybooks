@@ -88,7 +88,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   founder: {
                     '@type': 'Person',
                     name: 'Charles E. MacKay',
+                    alternateName: ['Charles Edward MacKay', 'Charles E. MacKay (aviation historian)'],
                     url: `${siteUrl}/about`,
+                    sameAs: ['https://www.wikidata.org/wiki/Q96824767'],
                   },
                   sameAs: [
                     'https://www.wikidata.org/wiki/Q96824767',
