@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { books } from '@/data/books';
 
 export const metadata: Metadata = {
-  title: 'Buy Aviation History Books — 20 Titles from £9.95',
+  title: 'Buy Aviation History Books, 20 Titles from £9.95',
   description: 'Buy 20 aviation history books by Charles E. MacKay. Scottish aviation, Beardmore, Clydeside, WWI & WWII aircraft, Luftwaffe, helicopters. Royal Mail tracked shipping worldwide.',
   alternates: { canonical: '/books' },
   openGraph: {

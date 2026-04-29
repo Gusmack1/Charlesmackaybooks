@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
 };
 
+// NOTE: object-style "@media" keys do NOT work in React inline-style objects.
+// Responsive overrides for .account-layout / .account-nav live in globals.css.
 const styles = {
   container: {
     minHeight: 'calc(100vh - 200px)',
@@ -22,7 +24,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column' as const,
     gap: '8px',
-  },
+    minWidth: 0,
+  } as React.CSSProperties,
   navLink: {
     padding: '12px 16px',
     borderRadius: 'var(--radius-md)',
@@ -33,19 +36,8 @@ const styles = {
   },
   content: {
     minHeight: 400,
-  },
-  '@media (max-width: 768px)': {
-    container: {
-      gridTemplateColumns: '1fr',
-      gap: '24px',
-    },
-    nav: {
-      flexDirection: 'row' as const,
-      gap: '8px',
-      borderBottom: '1px solid var(--border)',
-      paddingBottom: '16px',
-    },
-  },
+    minWidth: 0,
+  } as React.CSSProperties,
 };
 
 export default async function AccountLayout({
@@ -64,8 +56,8 @@ export default async function AccountLayout({
   }
 
   return (
-    <div style={styles.container}>
-      <nav style={styles.nav}>
+    <div className="account-layout" style={styles.container}>
+      <nav className="account-nav" style={styles.nav}>
         <Link
           href="/account"
           style={{

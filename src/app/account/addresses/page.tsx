@@ -288,7 +288,7 @@ export default function AddressesPage() {
           </p>
         </div>
       ) : (
-        <div style={styles.grid}>
+        <div className="addresses-grid" style={styles.grid}>
           {addresses.map((addr) => (
             <div
               key={addr.id}

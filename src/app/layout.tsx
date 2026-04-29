@@ -27,7 +27,7 @@ const siteUrl = 'https://charlesmackaybooks.com';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Charles E. MacKay Books — Buy Scottish Aviation History Books Online',
+    default: 'Charles E. MacKay Books, Scottish Aviation History Books Online',
     template: '%s | Charles E. MacKay Books',
   },
   description: 'Buy 20 aviation history books by Charles E. MacKay. Scottish aviation, Beardmore, Clydeside, WWI/WWII aircraft, Luftwaffe, helicopters. Royal Mail tracked shipping worldwide from Glasgow.',
@@ -44,14 +44,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     url: siteUrl,
-    siteName: 'Charles E. MacKay — Aviation History Books',
-    title: 'Charles E. MacKay — Aviation History Books',
+    siteName: 'Charles E. MacKay, Aviation History Books',
+    title: 'Charles E. MacKay, Aviation History Books',
     description: 'Definitive histories of Scottish aviation and military aircraft. 20 titles, 25+ years of research. Royal Mail tracked shipping worldwide.',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Charles E. MacKay Aviation History Books' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Charles E. MacKay — Aviation History Books',
+    title: 'Charles E. MacKay, Aviation History Books',
     description: 'Definitive histories of Scottish aviation and military aircraft. Royal Mail tracked shipping worldwide.',
   },
   robots: {
@@ -117,8 +117,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <CartProvider>
             <a href="#main-content" className="skip-link">Skip to content</a>
             {/* Discount banner */}
-            <div style={{ background: 'var(--gold)', color: 'var(--navy)', textAlign: 'center', padding: '8px 16px', fontSize: 13, fontWeight: 600 }}>
-              Save 5% on 2 books or 10% on 3+ — Royal Mail tracked shipping calculated at checkout
+            <div className="promo-bar" style={{ background: 'var(--gold)', color: 'var(--navy)', textAlign: 'center', padding: '8px 16px', fontSize: 13, fontWeight: 600 }}>
+              Save 5% on 2 books or 10% on 3+. Royal Mail tracked shipping calculated at checkout.
             </div>
             <Nav />
             <main id="main-content">{children}</main>

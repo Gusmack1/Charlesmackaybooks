@@ -251,7 +251,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       {related.length > 0 && (
         <section style={{ padding: '0 24px 64px', maxWidth: 1200, margin: '0 auto' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 24 }}>You may also like</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          <div className="related-grid books-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             {related.map(r => r && <BookCard key={r.id} book={r} />)}
           </div>
         </section>

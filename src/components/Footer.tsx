@@ -4,7 +4,7 @@ import CookiePreferencesButton from './CookiePreferencesButton';
 export default function Footer() {
   return (
     <footer style={{ background: 'var(--navy)', padding: '48px 24px 24px', color: 'rgba(255,255,255,0.6)' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr', gap: 40, marginBottom: 40 }}>
+      <div className="footer-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr', gap: 40, marginBottom: 40 }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
             <div style={{ width: 32, height: 32, background: 'var(--gold)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 14, color: 'var(--navy)' }}>CM</div>
@@ -54,7 +54,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div style={{ maxWidth: 1200, margin: '0 auto', paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 12, gap: 16, flexWrap: 'wrap' }}>
+      <div className="footer-bottom" style={{ maxWidth: 1200, margin: '0 auto', paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 12, gap: 16, flexWrap: 'wrap' }}>
         <span style={{ maxWidth: 600 }}>
           &copy; 2026 A MACKAY (PUBLISHER) LTD trading as Charles Mackay Books. Registered in Scotland (SC858624) at 87 Knightscliffe Avenue, Glasgow G13 2RX.
         </span>

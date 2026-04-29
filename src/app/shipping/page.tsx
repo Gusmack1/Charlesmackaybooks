@@ -70,6 +70,7 @@ export default function ShippingPage() {
             {SHIPPING_ZONES.map((z, i) => (
               <div
                 key={z.key}
+                className="shipping-rate-row"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: '2fr 1fr 1fr',

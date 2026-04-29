@@ -145,7 +145,7 @@ export default async function AccountPage() {
       </p>
 
       {/* Stats Cards */}
-      <div style={styles.grid}>
+      <div className="account-stats-grid" style={styles.grid}>
         <div style={styles.card}>
           <h3 style={styles.cardTitle}>Orders</h3>
           <div style={styles.cardValue}>{orderCount || 0}</div>
@@ -174,7 +174,7 @@ export default async function AccountPage() {
         <div style={styles.section}>
           <h2 style={styles.sectionTitle}>Last Order</h2>
           <div style={styles.orderSummary}>
-            <div style={styles.orderRow}>
+            <div className="account-order-row" style={styles.orderRow}>
               <div>
                 <div style={{ fontSize: 13, color: 'var(--text-muted)' }}>
                   Order ID
@@ -237,7 +237,7 @@ export default async function AccountPage() {
         <div style={styles.section}>
           <div style={styles.orderSummary}>
             <p style={{ color: 'var(--text-muted)' }}>
-              No orders yet —{' '}
+              No orders yet.{' '}
               <Link href="/books">
                 <span style={{ color: 'var(--gold)', fontWeight: 600, textDecoration: 'none', cursor: 'pointer' }}>
                   browse the library →

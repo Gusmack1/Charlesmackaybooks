@@ -128,7 +128,7 @@ export default async function OrdersPage() {
         <h1 style={styles.heading}>Orders</h1>
         <div style={styles.empty}>
           <p>
-            No orders yet —{' '}
+            No orders yet.{' '}
             <Link href="/books">
               <span style={{ color: 'var(--gold)', fontWeight: 600, textDecoration: 'none' }}>
                 browse the library →
@@ -146,7 +146,7 @@ export default async function OrdersPage() {
       <div>
         {orders.map((order) => (
           <Link key={order.id} href={`/account/orders/${order.id}`}>
-            <div style={styles.orderRow}>
+            <div className="account-order-row" style={styles.orderRow}>
               <span style={styles.idCell}>
                 {order.id.substring(0, 8).toUpperCase()}
               </span>

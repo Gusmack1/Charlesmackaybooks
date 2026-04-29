@@ -136,7 +136,7 @@ export default async function OrderDetailPage({
       <h1 style={styles.heading}>Order {order.id.substring(0, 8).toUpperCase()}</h1>
       <p style={styles.subtext}>{formatDate(order.created_at)}</p>
 
-      <div style={styles.grid}>
+      <div className="order-detail-grid" style={styles.grid}>
         {/* Left Column: Items & Address */}
         <div>
           {/* Items */}

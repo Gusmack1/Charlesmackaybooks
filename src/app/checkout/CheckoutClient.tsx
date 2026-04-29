@@ -119,7 +119,7 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
         <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>{totalItems} item{totalItems !== 1 ? 's' : ''} in your basket</p>
       </div>
 
-      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '48px 24px', display: 'grid', gridTemplateColumns: '1fr 360px', gap: 48, alignItems: 'start' }} className="contact-layout">
+      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '48px 24px', display: 'grid', gridTemplateColumns: '1fr 360px', gap: 48, alignItems: 'start' }} className="checkout-grid contact-layout">
         {/* Cart items */}
         <div>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 24 }}>Order Summary</h2>

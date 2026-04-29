@@ -112,7 +112,7 @@ export default async function WishlistPage() {
       {items.length === 0 ? (
         <div style={styles.empty}>
           <p>
-            No wishlist items yet —{' '}
+            No wishlist items yet.{' '}
             <Link href="/books">
               <span style={{ color: 'var(--gold)', fontWeight: 600, textDecoration: 'none' }}>
                 browse the library →
@@ -121,7 +121,7 @@ export default async function WishlistPage() {
           </p>
         </div>
       ) : (
-        <div style={styles.grid}>
+        <div className="wishlist-grid" style={styles.grid}>
           {items.map((item) => {
             const book = bookIndex.get(item.book_id);
             const removeAction = async () => {

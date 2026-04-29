@@ -22,7 +22,7 @@ export default function Nav() {
     <nav style={{ position: 'sticky', top: 0, zIndex: 100, background: 'var(--navy)', borderBottom: '1px solid rgba(200,169,81,0.2)' }} role="navigation" aria-label="Main navigation">
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
         {/* Brand */}
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'var(--white)', textDecoration: 'none' }} aria-label="Charles E. MacKay Books — Home">
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'var(--white)', textDecoration: 'none' }} aria-label="Charles E. MacKay Books, Home">
           <div style={{ width: 36, height: 36, background: 'var(--gold)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 16, color: 'var(--navy)' }}>CM</div>
           <div>
             <span style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontWeight: 700, letterSpacing: 0.3, display: 'block', color: 'var(--white)' }}>Charles E. MacKay</span>

@@ -4,7 +4,7 @@ import { createClient } from '@/lib/supabase/server';
 import { setMarketingOptIn } from '../actions';
 
 export const metadata: Metadata = {
-  title: 'Marketing preferences — Charles Mackay Books',
+  title: 'Marketing preferences, Charles Mackay Books',
   robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
 };
 
