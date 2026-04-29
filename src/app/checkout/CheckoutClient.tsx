@@ -88,7 +88,7 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
         setLoading(false);
       }
     } catch {
-      alert('Network error — please try again.');
+      alert('Network error. Please try again.');
       setLoading(false);
     }
   };
@@ -189,7 +189,7 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
           </div>
           {activeZone && (
             <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 12, lineHeight: 1.4 }}>
-              {activeZone.displayName} — {activeZone.minDays}–{activeZone.maxDays} business days
+              {activeZone.displayName}, {activeZone.minDays} to {activeZone.maxDays} business days
             </div>
           )}
 
@@ -242,7 +242,7 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
               style={{ marginTop: 2, flexShrink: 0, cursor: 'pointer' }}
             />
             <span>
-              Yes, send me the occasional update from Charles Mackay Books — new titles,
+              Yes, send me the occasional update from Charles Mackay Books: new titles,
               behind-the-scenes notes from the workshop. No spam, unsubscribe any time.
               See our <Link href="/privacy" style={{ color: 'var(--gold-dark)', textDecoration: 'underline' }}>Privacy Policy</Link> for what we do with your email.
             </span>

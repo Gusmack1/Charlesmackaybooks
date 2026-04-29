@@ -52,7 +52,7 @@ export default function ShopPage() {
               <option value="popular">Sort by: Popularity</option>
               <option value="price-asc">Price: Low to High</option>
               <option value="price-desc">Price: High to Low</option>
-              <option value="title">Title: A–Z</option>
+              <option value="title">Title: A to Z</option>
             </select>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }} className="shop-grid">

@@ -182,7 +182,7 @@ function SuccessContent() {
                   lineHeight: 1.5,
                 }}
               >
-                Check your email — we've sent a sign-in link to{' '}
+                Check your email. We have sent a sign-in link to{' '}
                 <strong>{signupEmail}</strong>. Click it to access your
                 account and view this order.
               </div>

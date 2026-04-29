@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'Privacy Policy for charlesmackaybooks.com — how A Mackay (Publisher) Ltd collects, uses, and protects your personal data under UK GDPR and the Data Protection Act 2018.',
+    'Privacy Policy for charlesmackaybooks.com. How A Mackay (Publisher) Ltd collects, uses, and protects your personal data under UK GDPR and the Data Protection Act 2018.',
   alternates: { canonical: '/privacy' },
   robots: { index: true, follow: true },
 };
@@ -70,23 +70,23 @@ export default function PrivacyPage() {
       <h2 style={h2}>2. Personal data we collect</h2>
       <ul style={ul}>
         <li>
-          <strong>Order data</strong> &mdash; name, billing and delivery address, email address, phone number (optional),
+          <strong>Order data</strong>: name, billing and delivery address, email address, phone number (optional),
           order contents and order history.
         </li>
         <li>
-          <strong>Account data</strong> (if you create one) &mdash; email address, hashed password (or magic-link token),
+          <strong>Account data</strong> (if you create one): email address, hashed password (or magic-link token),
           saved addresses and wishlist.
         </li>
         <li>
-          <strong>Payment metadata</strong> &mdash; we do not see or store your full card number. Card payments are
+          <strong>Payment metadata</strong>: we do not see or store your full card number. Card payments are
           processed by Stripe Payments UK Limited; we receive only a transaction reference, the last four digits, the
           card brand and country, and the billing postcode.
         </li>
         <li>
-          <strong>Communications</strong> &mdash; the content of any email or contact-form message you send us.
+          <strong>Communications</strong>: the content of any email or contact-form message you send us.
         </li>
         <li>
-          <strong>Technical data</strong> &mdash; IP address, browser, device, referrer, and usage statistics, collected
+          <strong>Technical data</strong>: IP address, browser, device, referrer, and usage statistics, collected
           via cookies and similar technologies (see <Link href="/cookies">Cookie Policy</Link>) only with your consent
           where consent is required.
         </li>
@@ -95,19 +95,19 @@ export default function PrivacyPage() {
       <h2 style={h2}>3. Legal bases for processing</h2>
       <ul style={ul}>
         <li>
-          <strong>Contract (UK GDPR Article 6(1)(b))</strong> &mdash; to take and fulfil your order, deliver your books,
+          <strong>Contract (UK GDPR Article 6(1)(b))</strong>: to take and fulfil your order, deliver your books,
           and handle returns.
         </li>
         <li>
-          <strong>Legal obligation (Article 6(1)(c))</strong> &mdash; to keep tax and accounting records as required by
+          <strong>Legal obligation (Article 6(1)(c))</strong>: to keep tax and accounting records as required by
           HMRC.
         </li>
         <li>
-          <strong>Consent (Article 6(1)(a))</strong> &mdash; for non-essential cookies (analytics, marketing) and for any
+          <strong>Consent (Article 6(1)(a))</strong>: for non-essential cookies (analytics, marketing) and for any
           marketing emails. You can withdraw consent at any time.
         </li>
         <li>
-          <strong>Legitimate interests (Article 6(1)(f))</strong> &mdash; for security, fraud prevention, and aggregated
+          <strong>Legitimate interests (Article 6(1)(f))</strong>: for security, fraud prevention, and aggregated
           internal reporting. Our legitimate interests are balanced against your rights and freedoms.
         </li>
       </ul>
@@ -119,7 +119,7 @@ export default function PrivacyPage() {
         <li>Maintain your account and wishlist (if you have created one).</li>
         <li>Comply with tax, accounting, and consumer-protection law.</li>
         <li>Improve the site and detect fraud or abuse.</li>
-        <li>Send marketing emails &mdash; only if you have explicitly opted in.</li>
+        <li>Send marketing emails, only if you have explicitly opted in.</li>
       </ul>
 
       <h2 style={h2}>5. Recipients and sub-processors</h2>
@@ -128,21 +128,21 @@ export default function PrivacyPage() {
       </p>
       <ul style={ul}>
         <li>
-          <strong>Stripe Payments UK Limited</strong> (United Kingdom; Stripe, Inc. in the United States) &mdash; payment
+          <strong>Stripe Payments UK Limited</strong> (United Kingdom; Stripe, Inc. in the United States): payment
           processing.
         </li>
         <li>
-          <strong>Royal Mail Group Limited</strong> (United Kingdom) &mdash; shipping and tracking.
+          <strong>Royal Mail Group Limited</strong> (United Kingdom): shipping and tracking.
         </li>
         <li>
-          <strong>Supabase Inc.</strong> (data hosted in EU &mdash; eu-west region) &mdash; database, authentication and
+          <strong>Supabase Inc.</strong> (data hosted in EU, eu-west region): database, authentication and
           file storage.
         </li>
         <li>
-          <strong>Netlify, Inc.</strong> (United States) &mdash; website hosting and CDN.
+          <strong>Netlify, Inc.</strong> (United States): website hosting and CDN.
         </li>
         <li>
-          <strong>Google LLC / Google Ireland Limited</strong> (Ireland and United States) &mdash; Google Analytics 4 and
+          <strong>Google LLC / Google Ireland Limited</strong> (Ireland and United States): Google Analytics 4 and
           Google Customer Reviews, only if you have consented to analytics cookies.
         </li>
       </ul>

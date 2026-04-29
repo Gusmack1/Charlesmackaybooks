@@ -62,7 +62,7 @@ const orgJsonLd = {
   name: 'Charles E. MacKay Books',
   url: 'https://charlesmackaybooks.com',
   logo: 'https://charlesmackaybooks.com/og-image.jpg',
-  description: 'Aviation history books by Charles E. MacKay — 20 titles covering Scottish aviation, WWI/WWII aircraft, and military history.',
+  description: 'Aviation history books by Charles E. MacKay. 20 titles covering Scottish aviation, WWI/WWII aircraft, and military history.',
   founder: { '@type': 'Person', name: 'Charles E. MacKay' },
   address: { '@type': 'PostalAddress', addressLocality: 'Glasgow', addressCountry: 'GB' },
 };
@@ -70,7 +70,7 @@ const orgJsonLd = {
 const webSiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Charles E. MacKay — Aviation History Books',
+  name: 'Charles E. MacKay, Aviation History Books',
   url: 'https://charlesmackaybooks.com',
   potentialAction: {
     '@type': 'SearchAction',
@@ -136,9 +136,9 @@ export default function HomePage() {
       <div style={{ background: 'var(--white)', borderBottom: '1px solid var(--border)', padding: '16px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'center', gap: 48, flexWrap: 'wrap' }}>
           {[
-            { icon: '☑', strong: 'Secure checkout', text: ' — Card via Stripe' },
-            { icon: '✈', strong: 'Worldwide shipping', text: ' — Royal Mail Tracked from Glasgow' },
-            { icon: '↺', strong: '30-day returns', text: ' — no questions asked' },
+            { icon: '☑', strong: 'Secure checkout', text: ', Card via Stripe' },
+            { icon: '✈', strong: 'Worldwide shipping', text: ', Royal Mail Tracked from Glasgow' },
+            { icon: '↺', strong: '30-day returns', text: ', no questions asked' },
             { icon: '★', strong: '1,700+ happy', text: ' readers & counting' },
           ].map(t => (
             <div key={t.strong} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: 'var(--text-muted)' }}>
@@ -184,7 +184,7 @@ export default function HomePage() {
                 <p style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontStyle: 'italic', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 16 }}>&ldquo;{t.text}&rdquo;</p>
                 <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>
                   <strong style={{ color: 'rgba(255,255,255,0.8)', fontWeight: 600 }}>{t.author}</strong>
-                  {t.bookTitle && <> — <em style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.4)' }}>{t.bookTitle}</em></>}
+                  {t.bookTitle && <>, <em style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.4)' }}>{t.bookTitle}</em></>}
                 </div>
               </div>
             ))}

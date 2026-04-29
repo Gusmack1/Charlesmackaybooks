@@ -5,7 +5,7 @@ import CookiePreferencesButton from '@/components/CookiePreferencesButton';
 export const metadata: Metadata = {
   title: 'Cookie Policy',
   description:
-    'Cookie Policy for charlesmackaybooks.com — what cookies we use, why, and how to control them under the Privacy and Electronic Communications Regulations 2003 (PECR) and UK GDPR.',
+    'Cookie Policy for charlesmackaybooks.com. What cookies we use, why, and how to control them under the Privacy and Electronic Communications Regulations 2003 (PECR) and UK GDPR.',
   alternates: { canonical: '/cookies' },
   robots: { index: true, follow: true },
 };
@@ -174,7 +174,7 @@ export default function CookiesPage() {
       </p>
       <ul style={{ marginBottom: 14, paddingLeft: 22, fontSize: 15 }}>
         <li>
-          <CookiePreferencesButton /> &mdash; re-opens our banner so you can update your choices.
+          <CookiePreferencesButton />: re-opens our banner so you can update your choices.
         </li>
         <li>
           You can also clear cookies and site data through your browser settings (Chrome, Firefox, Safari, Edge all

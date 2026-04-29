@@ -1,12 +1,13 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About the Author — Charles E. MacKay, Scottish Aviation Historian',
+  title: 'About the Author, Charles E. MacKay, Scottish Aviation Historian',
   description: 'Charles E. MacKay is a Glasgow-based aviation historian with 25+ years researching Scotland\'s aviation heritage, Beardmore, Clydeside factories, and military aircraft history.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About Charles E. MacKay — Aviation Historian',
+    title: 'About Charles E. MacKay, Aviation Historian',
     description: 'Over 25 years researching Scotland\'s aviation heritage. Author of 20 definitive titles on Scottish aviation, WWI/WWII aircraft, and military history.',
     url: 'https://charlesmackaybooks.com/about',
   },
@@ -60,6 +61,94 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section style={{ padding: '0 24px 80px', maxWidth: 820, margin: '0 auto' }}>
+        <div style={{ marginBottom: 32 }}>
+          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase' as const, color: 'var(--gold-dark)', marginBottom: 8 }}>Living biography</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--text-dark)', marginBottom: 16 }}>Questions Charles is being asked</h2>
+          <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+            This page is a living biography. Charles has 60+ years of stories that have not made it into print. Angus is putting these questions to him, and the answers will land here as they come back. If you are a reader, a family member, or a fellow aviation buff and have a question Charles should answer, drop a line via the <Link href="/contact" style={{ color: 'var(--gold-dark)', textDecoration: 'underline' }}>contact page</Link>.
+          </p>
+        </div>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>Origins &amp; childhood</h3>
+        <ol start={1} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>Where and when in Glasgow were you born? Tell me about the neighbourhood and the family home.</li>
+          <li style={{ marginBottom: 10 }}>What did your parents do, and what kind of childhood did they give you?</li>
+          <li style={{ marginBottom: 10 }}>Brothers and sisters: names, ages, what each of them did.</li>
+          <li style={{ marginBottom: 10 }}>Earliest memory you can place exactly in time.</li>
+        </ol>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>School &amp; early years</h3>
+        <ol start={5} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>Which primary and secondary schools, and what were the best and worst things about each?</li>
+          <li style={{ marginBottom: 10 }}>Subjects you loved, subjects you hated, and the teacher who shaped you most.</li>
+          <li style={{ marginBottom: 10 }}>When did aviation first catch your eye? A specific moment, an air show, a model, a relative who flew?</li>
+          <li style={{ marginBottom: 10 }}>What did you do straight after school: work, college, national service, other?</li>
+        </ol>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>Working life before publishing</h3>
+        <ol start={9} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>The jobs you held in your 20s. What did each one teach you?</li>
+          <li style={{ marginBottom: 10 }}>Did you ever fly yourself, or hold a licence? Hours? Aircraft?</li>
+          <li style={{ marginBottom: 10 }}>People you worked with who left a mark, good or bad, and why.</li>
+        </ol>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>The first article (1982, Airfix Magazine)</h3>
+        <ol start={12} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>What was that first Airfix Magazine article about: which aircraft, what angle?</li>
+          <li style={{ marginBottom: 10 }}>How did you submit it? Cold pitch, contact, commission?</li>
+          <li style={{ marginBottom: 10 }}>What was the editor&apos;s reaction? Did they pay you?</li>
+          <li style={{ marginBottom: 10 }}>Scots Magazine after that: same approach, or different?</li>
+        </ol>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>Robert Gibson &amp; Sons (1985 onwards)</h3>
+        <ol start={16} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>How did Gibson find you, or did you find them?</li>
+          <li style={{ marginBottom: 10 }}>The 211 St Vincent Street office: what was it like? Who else worked there?</li>
+          <li style={{ marginBottom: 10 }}>The first book you wrote for them: title, year, what it was about, how long it took.</li>
+          <li style={{ marginBottom: 10 }}>The editor at Gibson who championed you most. What did you learn from them?</li>
+          <li style={{ marginBottom: 10 }}>The Hodder Headline acquisition in 2002: how did that change things, and when did you eventually move on?</li>
+        </ol>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>The books, method, and craft</h3>
+        <ol start={21} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>Of the 20 titles, which was hardest to write, and which are you proudest of?</li>
+          <li style={{ marginBottom: 10 }}>Walk me through your research process: archives you used, libraries, personal collections.</li>
+          <li style={{ marginBottom: 10 }}>Pilots, designers, or veterans you interviewed personally. Names worth keeping.</li>
+          <li style={{ marginBottom: 10 }}>What is a book you wish you had written but never got to?</li>
+          <li style={{ marginBottom: 10 }}>What is a topic you still want to write before you stop?</li>
+        </ol>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>Family</h3>
+        <ol start={26} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>How did you and Mum meet, and where?</li>
+          <li style={{ marginBottom: 10 }}>Wedding day: date, place, anything memorable.</li>
+          <li style={{ marginBottom: 10 }}>What kind of dad were you trying to be? What do you think you got right, what would you do differently?</li>
+          <li style={{ marginBottom: 10 }}>The places you took us as kids that mattered to you.</li>
+        </ol>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>Glasgow &amp; Scotland</h3>
+        <ol start={30} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>Your favourite places in Glasgow: pubs, parks, libraries, viewpoints. Why each one.</li>
+          <li style={{ marginBottom: 10 }}>What has changed most about the city since you were young?</li>
+        </ol>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>Beliefs, advice, regrets</h3>
+        <ol start={32} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>Best piece of advice you were ever given, and who gave it to you.</li>
+          <li style={{ marginBottom: 10 }}>Best advice you would give a young aviation enthusiast starting out today.</li>
+          <li style={{ marginBottom: 10 }}>Anything you regret not doing or not asking, while there was still time?</li>
+        </ol>
+
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>Legacy</h3>
+        <ol start={35} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 10 }}>The archive: photos, manuscripts, correspondence, letters from readers. What is in it, where is it, what should never be thrown out.</li>
+          <li style={{ marginBottom: 10 }}>Anyone outside the family, friend, mentor, character, who should be remembered after you have gone.</li>
+          <li style={{ marginBottom: 10 }}>The one story you tell most often that you want preserved exactly as you tell it.</li>
+          <li style={{ marginBottom: 10 }}>What do you most want your grandchildren to know about you, in your own words?</li>
+        </ol>
       </section>
     </>
   );

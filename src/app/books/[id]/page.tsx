@@ -192,7 +192,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
             <span style={{ fontFamily: 'var(--font-serif)', fontSize: 36, fontWeight: 700, color: 'var(--text-dark)' }}>£{book.price.toFixed(2)}</span>
             <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--success)', display: 'flex', alignItems: 'center', gap: 6 }}>
               <span style={{ width: 8, height: 8, background: 'var(--success)', borderRadius: '50%', display: 'inline-block' }} />
-              In stock — Royal Mail tracked shipping
+              In stock. Royal Mail tracked shipping
             </span>
           </div>
           <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 32 }}>
@@ -240,7 +240,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
                   &ldquo;{review.text}&rdquo;
                 </p>
                 <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>
-                  — {review.author}
+                  by {review.author}
                 </div>
               </div>
             ))}

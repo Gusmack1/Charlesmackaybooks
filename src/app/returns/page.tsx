@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Returns & Refunds Policy',
-  description: 'Returns and refunds policy for charlesmackaybooks.com. 30-day money-back guarantee on all books. Return for any reason — change of mind, damaged, or unwanted. Full refund guaranteed.',
+  description: 'Returns and refunds policy for charlesmackaybooks.com. 30-day money-back guarantee on all books. Return for any reason: change of mind, damaged, or unwanted. Full refund guaranteed.',
   alternates: { canonical: '/returns' },
   openGraph: {
-    title: 'Returns & Refunds — Charles E. MacKay Books',
-    description: '30-day returns policy. Return books for any reason — change of mind, unwanted, or damaged. Full refund guaranteed.',
+    title: 'Returns & Refunds, Charles E. MacKay Books',
+    description: '30-day returns policy. Return books for any reason: change of mind, unwanted, or damaged. Full refund guaranteed.',
     url: 'https://charlesmackaybooks.com/returns',
   },
 };
@@ -19,12 +19,12 @@ const faqLd = {
     {
       '@type': 'Question',
       name: 'What is your returns policy?',
-      acceptedAnswer: { '@type': 'Answer', text: 'We accept returns for any reason within 30 days of delivery. Whether you changed your mind, the book was not what you expected, or it arrived damaged — simply return it in its original condition for a full refund.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'We accept returns for any reason within 30 days of delivery. Whether you changed your mind, the book was not what you expected, or it arrived damaged, simply return it in its original condition for a full refund.' },
     },
     {
       '@type': 'Question',
       name: 'What if my book arrives damaged?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Contact us within 14 days with a photo of the damage. We will reply with the return address. Once the book is back with us, you can choose a replacement copy or a full refund — your call. Return postage on damaged or faulty items is at our expense.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Contact us within 14 days with a photo of the damage. We will reply with the return address. Once the book is back with us, you can choose a replacement copy or a full refund. Return postage on damaged or faulty items is at our expense.' },
     },
     {
       '@type': 'Question',
@@ -34,7 +34,7 @@ const faqLd = {
     {
       '@type': 'Question',
       name: 'Can I cancel my order?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — email us before dispatch and we will cancel and refund in full. Once posted, the standard returns process applies.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Email us before dispatch and we will cancel and refund in full. Once posted, the standard returns process applies.' },
     },
   ],
 };
@@ -49,16 +49,16 @@ export default function ReturnsPage() {
       </div>
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 24px' }}>
         <section style={{ marginBottom: 40 }}>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>30-Day Money-Back Guarantee — Any Reason</h2>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>30-Day Money-Back Guarantee, Any Reason</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            We accept returns for any reason within 30 days of delivery. Whether you changed your mind, the book was not what you expected, or you simply no longer need it — return it in its original condition for a full refund. No questions asked. This applies to both new and non-defective products as well as damaged or faulty items.
+            We accept returns for any reason within 30 days of delivery. Whether you changed your mind, the book was not what you expected, or you simply no longer need it, return it in its original condition for a full refund. No questions asked. This applies to both new and non-defective products as well as damaged or faulty items.
           </p>
         </section>
 
         <section style={{ marginBottom: 40 }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Damaged or Faulty Items</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            If your book arrives damaged or faulty, email us within 14 days of delivery with a photo of the damage. We&apos;ll reply with the return address. Once the book is back with us, you can choose a replacement copy or a full refund &mdash; your call. Return postage on damaged or faulty items is at our expense.
+            If your book arrives damaged or faulty, email us within 14 days of delivery with a photo of the damage. We will reply with the return address. Once the book is back with us, you can choose a replacement copy or a full refund. Return postage on damaged or faulty items is at our expense.
           </p>
         </section>
 

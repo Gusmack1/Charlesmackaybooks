@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { SHIPPING_ZONES } from '@/data/shipping-zones';
 
 export const metadata: Metadata = {
-  title: 'Shipping Information — Royal Mail Tracked Worldwide',
+  title: 'Shipping Information, Royal Mail Tracked Worldwide',
   description: 'Royal Mail Tracked shipping on all aviation history books by Charles E. MacKay. Ships from Glasgow, Scotland. Postage calculated at checkout. UK 2-4 days, Europe 5-14 days, worldwide 7-21 days.',
   alternates: { canonical: '/shipping' },
   openGraph: {
-    title: 'Shipping — Charles E. MacKay Books',
+    title: 'Shipping, Charles E. MacKay Books',
     description: 'Royal Mail Tracked shipping worldwide. Postage calculated at checkout. Ships from Glasgow, Scotland.',
     url: 'https://charlesmackaybooks.com/shipping',
   },
@@ -30,7 +30,7 @@ const faqLd = {
     {
       '@type': 'Question',
       name: 'Do you offer order tracking?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — every order ships via a Royal Mail tracked service with online delivery confirmation. UK Tracked 48 and International Tracked both include end-to-end tracking.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every order ships via a Royal Mail tracked service with online delivery confirmation. UK Tracked 48 and International Tracked both include end-to-end tracking.' },
     },
     {
       '@type': 'Question',
@@ -57,7 +57,7 @@ export default function ShippingPage() {
         <section style={{ marginBottom: 40 }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Royal Mail Tracked Shipping</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            Every book ordered from charlesmackaybooks.com ships from Glasgow, Scotland by Royal Mail Tracked services. Postage is calculated at checkout based on your delivery destination — the exact amount is shown before you pay. All orders are packed and dispatched personally by Charles E. MacKay.
+            Every book ordered from charlesmackaybooks.com ships from Glasgow, Scotland by Royal Mail Tracked services. Postage is calculated at checkout based on your delivery destination. The exact amount is shown before you pay. All orders are packed and dispatched personally by Charles E. MacKay.
           </p>
         </section>
 
@@ -81,7 +81,7 @@ export default function ShippingPage() {
               >
                 <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--text-dark)' }}>{z.displayName.replace('Royal Mail Tracked - ', '').replace('Royal Mail International Tracked - ', '')}</span>
                 <span style={{ fontSize: 14, color: 'var(--text-body)' }}>£{(z.amountPence / 100).toFixed(2)}</span>
-                <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>{z.minDays}–{z.maxDays} working days</span>
+                <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>{z.minDays} to {z.maxDays} working days</span>
               </div>
             ))}
           </div>
@@ -97,7 +97,7 @@ export default function ShippingPage() {
         <section style={{ marginBottom: 40 }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Packaging &amp; Tracking</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            All books are packaged in sturdy cardboard mailers; multi-book orders are bundled securely together. Every order ships with a Royal Mail tracking number — UK Tracked 48 and International Tracked both include end-to-end delivery confirmation. Tracking details are sent by email once your order is dispatched (usually within 1-2 working days of payment).
+            All books are packaged in sturdy cardboard mailers; multi-book orders are bundled securely together. Every order ships with a Royal Mail tracking number. UK Tracked 48 and International Tracked both include end-to-end delivery confirmation. Tracking details are sent by email once your order is dispatched (usually within 1 to 2 working days of payment).
           </p>
         </section>
 

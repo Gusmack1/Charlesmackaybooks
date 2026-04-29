@@ -96,7 +96,7 @@ export default function TermsPage() {
       <ul style={ul}>
         <li>UK (Royal Mail Tracked 48): &pound;3.95</li>
         <li>Europe (International Tracked): &pound;15.55</li>
-        <li>Worldwide (International Tracked): &pound;25.95&ndash;&pound;27.00</li>
+        <li>Worldwide (International Tracked): &pound;25.95 to &pound;27.00</li>
       </ul>
       <p style={p}>
         Live rates and full zone detail are shown on our <Link href="/shipping">Delivery</Link> page and at checkout.
@@ -158,7 +158,7 @@ export default function TermsPage() {
       <h2 style={h2}>8. Voluntary returns policy</h2>
       <p style={p}>
         In addition to your statutory rights, we offer a 30-day voluntary returns window for unwanted books in original
-        condition &mdash; see our <Link href="/returns">Returns &amp; Refunds page</Link>.
+        condition. See our <Link href="/returns">Returns &amp; Refunds page</Link>.
       </p>
 
       <h2 style={h2}>9. Liability</h2>
@@ -195,7 +195,7 @@ export default function TermsPage() {
 
       <h2 style={h2}>13. Complaints and dispute resolution</h2>
       <p style={p}>
-        We aim to resolve any complaint quickly &mdash; please email{' '}
+        We aim to resolve any complaint quickly. Please email{' '}
         <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>. If we cannot resolve a dispute,
         the European Commission&apos;s Online Dispute Resolution platform is available at{' '}
         <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">

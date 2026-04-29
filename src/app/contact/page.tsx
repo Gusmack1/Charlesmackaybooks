@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Charles E. MacKay — Book Orders & Research Enquiries',
+  title: 'Contact Charles E. MacKay, Book Orders & Research Enquiries',
   description: 'Contact Charles E. MacKay for book orders, aviation history research questions, bulk purchases, or collaboration. Ships worldwide from Glasgow, Scotland via Royal Mail tracked services.',
   alternates: { canonical: '/contact' },
   openGraph: {
@@ -18,22 +18,22 @@ const faqLd = {
     {
       '@type': 'Question',
       name: 'Do you ship internationally?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — orders ship worldwide from Glasgow, Scotland via Royal Mail tracked services. Postage is calculated at checkout based on destination. UK orders typically arrive in 2–4 working days; international orders 7–21 days.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Orders ship worldwide from Glasgow, Scotland via Royal Mail tracked services. Postage is calculated at checkout based on destination. UK orders typically arrive in 2 to 4 working days; international orders 7 to 21 days.' },
     },
     {
       '@type': 'Question',
       name: 'Are bulk or trade orders available?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — multi-buy discounts apply automatically (5% on 2 books, 10% on 3+). For larger trade or library orders please contact Charles directly.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Multi-buy discounts apply automatically (5% on 2 books, 10% on 3+). For larger trade or library orders please contact Charles directly.' },
     },
     {
       '@type': 'Question',
       name: 'Can I return a book?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — books may be returned within 30 days of receipt for a refund. See the returns page for details.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Books may be returned within 30 days of receipt for a refund. See the returns page for details.' },
     },
     {
       '@type': 'Question',
       name: 'How quickly will my order ship?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Orders dispatch from Glasgow within 1–2 business days of payment.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Orders dispatch from Glasgow within 1 to 2 business days of payment.' },
     },
   ],
 };
@@ -52,9 +52,9 @@ export default function ContactPage() {
           <p style={{ fontSize: 15, color: 'var(--text-muted)', marginBottom: 32 }}>Whether you have a question about a specific book, want to discuss a research collaboration, or need to place a bulk order, Charles is happy to hear from you.</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {[
-              { icon: '✉', title: 'Email', main: 'charlese1mackay@hotmail.com', sub: 'Usually responds within 24–48 hours' },
+              { icon: '✉', title: 'Email', main: 'charlese1mackay@hotmail.com', sub: 'Usually responds within 24 to 48 hours' },
               { icon: '⚑', title: 'Location', main: 'Glasgow, Scotland', sub: 'Ships worldwide from Glasgow' },
-              { icon: '🛒', title: 'Online Shop', main: 'charlesmackaybooks.com/books', sub: 'Browse all 20 titles — Royal Mail tracked worldwide' },
+              { icon: '🛒', title: 'Online Shop', main: 'charlesmackaybooks.com/books', sub: 'Browse all 20 titles, Royal Mail tracked worldwide' },
             ].map(m => (
               <div key={m.title} style={{ display: 'flex', gap: 16, alignItems: 'start' }}>
                 <div style={{ width: 44, height: 44, background: 'var(--cream)', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: 18 }}>{m.icon}</div>
