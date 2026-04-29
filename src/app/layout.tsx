@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Inter, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -7,6 +6,8 @@ import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import BasketDrawer from "@/components/BasketDrawer";
 import { SessionProvider } from "@/components/SessionProvider";
+import CookieBanner from "@/components/CookieBanner";
+import ConsentGate from "@/components/ConsentGate";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -108,29 +109,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
-        {/* Google Analytics (gtag.js) */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-RJS2CCBSJP" strategy="afterInteractive" />
-        <Script id="ga-init" strategy="afterInteractive">{`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RJS2CCBSJP');
-          gtag('config', 'GT-MR8KZP58');
-          gtag('config', 'GT-WKRHZDSX');
-        `}</Script>
-        {/* Google Customer Reviews */}
-        <Script src="https://apis.google.com/js/platform.js?onload=renderBadge" strategy="afterInteractive" />
-        <Script id="gcr-badge" strategy="afterInteractive">{`
-          window.renderBadge = function() {
-            var ratingBadgeContainer = document.getElementById("gcr-badge");
-            if (ratingBadgeContainer && window.gapi) {
-              window.gapi.load('ratingbadge', function() {
-                window.gapi.ratingbadge.render(ratingBadgeContainer, {"merchant_id": 5631213189, "position": "BOTTOM_RIGHT"});
-              });
-            }
-          };
-          if (window.gapi) { window.renderBadge(); }
-        `}</Script>
+        {/* Analytics + Customer Reviews are loaded by <ConsentGate /> below,
+            only after the visitor accepts analytics cookies via <CookieBanner />. */}
       </head>
       <body>
         <SessionProvider>
@@ -144,6 +124,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main id="main-content">{children}</main>
             <Footer />
             <BasketDrawer />
+            <CookieBanner />
+            <ConsentGate />
           </CartProvider>
         </SessionProvider>
       </body>

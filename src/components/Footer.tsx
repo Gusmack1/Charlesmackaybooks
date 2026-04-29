@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import CookiePreferencesButton from './CookiePreferencesButton';
 
 export default function Footer() {
   return (
     <footer style={{ background: 'var(--navy)', padding: '48px 24px 24px', color: 'rgba(255,255,255,0.6)' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40, marginBottom: 40 }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr', gap: 40, marginBottom: 40 }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
             <div style={{ width: 32, height: 32, background: 'var(--gold)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 14, color: 'var(--navy)' }}>CM</div>
@@ -39,9 +40,24 @@ export default function Footer() {
             ))}
           </ul>
         </div>
+        <div>
+          <h4 style={{ fontSize: 12, fontWeight: 600, textTransform: 'uppercase' as const, letterSpacing: 1.5, color: 'var(--gold)', marginBottom: 16 }}>Legal</h4>
+          <ul style={{ listStyle: 'none' }}>
+            <li style={{ marginBottom: 10 }}><Link href="/privacy" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>Privacy Policy</Link></li>
+            <li style={{ marginBottom: 10 }}><Link href="/terms" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>Terms &amp; Conditions</Link></li>
+            <li style={{ marginBottom: 10 }}><Link href="/cookies" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>Cookie Policy</Link></li>
+            <li style={{ marginBottom: 10 }}>
+              <CookiePreferencesButton style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, textDecoration: 'none' }}>
+                Cookie preferences
+              </CookiePreferencesButton>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div style={{ maxWidth: 1200, margin: '0 auto', paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 12 }}>
-        <span>&copy; 2026 Charles E. MacKay. All rights reserved.</span>
+      <div style={{ maxWidth: 1200, margin: '0 auto', paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 12, gap: 16, flexWrap: 'wrap' }}>
+        <span style={{ maxWidth: 600 }}>
+          &copy; 2026 A MACKAY (PUBLISHER) LTD trading as Charles Mackay Books. Registered in Scotland (SC858624) at 87 Knightscliffe Avenue, Glasgow G13 2RX.
+        </span>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
           {/* Google Customer Reviews badge */}
           <div id="gcr-badge" style={{ marginRight: 8 }} />
