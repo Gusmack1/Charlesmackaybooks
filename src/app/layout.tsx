@@ -27,10 +27,10 @@ const siteUrl = 'https://charlesmackaybooks.com';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Charles E. MacKay Books, Scottish Aviation History Books Online',
+    default: 'Charles E. MacKay Books, Scottish Aviation History',
     template: '%s | Charles E. MacKay Books',
   },
-  description: 'Buy 20 aviation history books by Charles E. MacKay. Scottish aviation, Beardmore, Clydeside, WWI/WWII aircraft, Luftwaffe, helicopters. Royal Mail tracked shipping worldwide from Glasgow.',
+  description: 'Aviation history books by Charles E. MacKay (aviation historian). 40+ years researching Scotland\'s aviation heritage. Royal Mail tracked shipping worldwide from Glasgow.',
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
   icons: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'Charles E. MacKay, Aviation History Books',
     title: 'Charles E. MacKay, Aviation History Books',
-    description: 'Definitive histories of Scottish aviation and military aircraft. 20 titles, 25+ years of research. Royal Mail tracked shipping worldwide.',
+    description: 'Definitive histories of Scottish aviation and military aircraft by Charles E. MacKay. 20 titles, 40+ years of research. Royal Mail tracked shipping worldwide.',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Charles E. MacKay Aviation History Books' }],
   },
   twitter: {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${libreBaskerville.variable}`}>
+    <html lang="en-GB" className={`${inter.variable} ${libreBaskerville.variable}`}>
       <head>
         {/* Performance: dns-prefetch + preconnect for third parties */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -81,14 +81,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   '@type': 'Organization',
                   '@id': `${siteUrl}/#organization`,
                   name: 'Charles E. MacKay Books',
+                  alternateName: 'A Mackay (Publisher) Ltd',
                   url: siteUrl,
                   logo: `${siteUrl}/icon-192x192.png`,
-                  description: 'Aviation history books by Charles E. MacKay — Scottish aviation, WWI/WWII aircraft, military history.',
-                  sameAs: ['https://charlesmackaybooks.com'],
+                  description: 'Aviation history books by Charles E. MacKay (aviation historian). Scottish aviation, WWI and WWII aircraft, military history.',
+                  founder: {
+                    '@type': 'Person',
+                    name: 'Charles E. MacKay',
+                    url: `${siteUrl}/about`,
+                  },
+                  sameAs: [
+                    'https://www.wikidata.org/wiki/Q96824767',
+                    'https://find-and-update.company-information.service.gov.uk/company/SC858624',
+                  ],
                   contactPoint: {
                     '@type': 'ContactPoint',
                     contactType: 'customer service',
-                    email: 'charlese1mackay@hotmail.com',
+                    email: 'info@charlesmackaybooks.com',
                     areaServed: 'Worldwide',
                     availableLanguage: 'English',
                   },

@@ -4,13 +4,51 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About the Author, Charles E. MacKay, Scottish Aviation Historian',
-  description: 'Charles E. MacKay is a Glasgow-based aviation historian with 25+ years researching Scotland\'s aviation heritage, Beardmore, Clydeside factories, and military aircraft history.',
+  description: 'Charles E. MacKay is a Glasgow-based aviation historian. 40+ years researching Scotland\'s aviation heritage, Beardmore, Clydeside factories, and military aircraft history.',
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Charles E. MacKay, Aviation Historian',
-    description: 'Over 25 years researching Scotland\'s aviation heritage. Author of 20 definitive titles on Scottish aviation, WWI/WWII aircraft, and military history.',
+    description: '40+ years researching Scotland\'s aviation heritage. Author of 20 definitive titles on Scottish aviation, WWI and WWII aircraft, and military history.',
     url: 'https://charlesmackaybooks.com/about',
   },
+};
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Charles E. MacKay',
+  alternateName: 'Charles Edward MacKay',
+  birthDate: '1951-04-01',
+  birthPlace: {
+    '@type': 'Place',
+    name: 'Glasgow, Scotland',
+    address: { '@type': 'PostalAddress', addressLocality: 'Glasgow', addressCountry: 'GB' },
+  },
+  nationality: 'British',
+  jobTitle: 'Aviation historian',
+  description: 'Scottish aviation historian. 40+ years researching Scotland\'s aviation heritage, from a 1982 first article in Airfix Magazine through 20 published titles.',
+  url: 'https://charlesmackaybooks.com/about',
+  image: 'https://charlesmackaybooks.com/blog-images/charles-mackay-chipmunk-wp808-turnhouse-1971.jpg',
+  affiliation: [
+    {
+      '@type': 'Organization',
+      name: 'A Mackay (Publisher) Ltd',
+      identifier: 'SC858624',
+      url: 'https://find-and-update.company-information.service.gov.uk/company/SC858624',
+    },
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'A Mackay (Publisher) Ltd',
+    identifier: 'SC858624',
+  },
+  alumniOf: { '@type': 'Place', name: 'Glasgow, Scotland' },
+  sameAs: [
+    'https://www.wikidata.org/wiki/Q96824767',
+    'https://find-and-update.company-information.service.gov.uk/company/SC858624',
+    'https://find-and-update.company-information.service.gov.uk/company/SC005175',
+    'https://discovery.nationalarchives.gov.uk/details/c/F270555',
+  ],
 };
 
 const expertise = [
@@ -22,6 +60,7 @@ const expertise = [
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
       <section style={{ background: 'linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%)', padding: '64px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '280px 1fr', gap: 48, alignItems: 'start' }} className="about-hero-inner">
           <div style={{ width: 280, height: 340, background: 'var(--navy-mid)', border: '3px solid rgba(200,169,81,0.3)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', position: 'relative' }}>
@@ -31,13 +70,13 @@ export default function AboutPage() {
             <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 36, color: 'var(--white)', marginBottom: 8 }}>Charles E. MacKay</h1>
             <span style={{ fontSize: 14, color: 'var(--gold)', fontWeight: 500, marginBottom: 20, display: 'block' }}>Aviation Historian &amp; Author · Glasgow, Scotland</span>
             <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', marginBottom: 16 }}>
-              Charles E. MacKay is one of Scotland&apos;s foremost aviation historians, with over 25 years of dedicated research into the nation&apos;s rich aviation heritage. His work spans two World Wars, the Cold War era, and Scotland&apos;s industrial contribution to aircraft manufacturing.
+              Charles E. MacKay is one of Scotland&apos;s foremost aviation historians. From a first article in Airfix Magazine in 1982 to 20 published titles today, he has spent over 40 years researching the nation&apos;s aviation heritage. His work spans two World Wars, the Cold War era, and Scotland&apos;s industrial contribution to aircraft manufacturing.
             </p>
             <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', marginBottom: 16 }}>
               His books have been praised by historians, museum curators, and aviation enthusiasts worldwide for their meticulous research, primary source material, and readable narrative style.
             </p>
             <div style={{ display: 'flex', gap: 32, marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-              {[{ num: '20+', label: 'Books published' }, { num: '25+', label: 'Years research' }, { num: '1,700+', label: 'Readers' }].map(s => (
+              {[{ num: '20+', label: 'Books published' }, { num: '40+', label: 'Years research' }, { num: '1,700+', label: 'Readers' }].map(s => (
                 <div key={s.label}>
                   <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gold)' }}>{s.num}</div>
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase' as const, letterSpacing: 1 }}>{s.label}</div>
@@ -103,7 +142,13 @@ export default function AboutPage() {
           <li style={{ marginBottom: 10 }}>Scots Magazine after that: same approach, or different?</li>
         </ol>
 
-        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>Robert Gibson &amp; Sons (1985 onwards)</h3>
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--text-dark)', marginTop: 32, marginBottom: 12 }}>Robert Gibson &amp; Sons Glasgow Limited (1985 onwards)</h3>
+        <p style={{ fontSize: 14, color: 'var(--text-muted)', lineHeight: 1.7, marginBottom: 12 }}>
+          Robert Gibson &amp; Sons Glasgow Limited (Companies House{' '}
+          <a href="https://find-and-update.company-information.service.gov.uk/company/SC005175" style={{ color: 'var(--gold-dark)', textDecoration: 'underline' }} rel="noopener">SC005175</a>,
+          incorporated 12 September 1902, dissolved 23 August 2022). Gibson holdings are catalogued by the{' '}
+          <a href="https://discovery.nationalarchives.gov.uk/details/c/F270555" style={{ color: 'var(--gold-dark)', textDecoration: 'underline' }} rel="noopener">UK National Archives (F270555)</a>.
+        </p>
         <ol start={16} style={{ paddingLeft: 24, fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
           <li style={{ marginBottom: 10 }}>How did Gibson find you, or did you find them?</li>
           <li style={{ marginBottom: 10 }}>The 211 St Vincent Street office: what was it like? Who else worked there?</li>

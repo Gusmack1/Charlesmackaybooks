@@ -60,11 +60,16 @@ const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Charles E. MacKay Books',
+  alternateName: 'A Mackay (Publisher) Ltd',
   url: 'https://charlesmackaybooks.com',
   logo: 'https://charlesmackaybooks.com/og-image.jpg',
-  description: 'Aviation history books by Charles E. MacKay. 20 titles covering Scottish aviation, WWI/WWII aircraft, and military history.',
-  founder: { '@type': 'Person', name: 'Charles E. MacKay' },
+  description: 'Aviation history books by Charles E. MacKay (aviation historian). 20 titles covering Scottish aviation, WWI and WWII aircraft, and military history.',
+  founder: { '@type': 'Person', name: 'Charles E. MacKay', url: 'https://charlesmackaybooks.com/about' },
   address: { '@type': 'PostalAddress', addressLocality: 'Glasgow', addressCountry: 'GB' },
+  sameAs: [
+    'https://www.wikidata.org/wiki/Q96824767',
+    'https://find-and-update.company-information.service.gov.uk/company/SC858624',
+  ],
 };
 
 const webSiteJsonLd = {
@@ -92,7 +97,7 @@ export default function HomePage() {
           <div>
             <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: 2.5, textTransform: 'uppercase' as const, color: 'var(--gold)', marginBottom: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
               <span style={{ width: 24, height: 1, background: 'var(--gold)', display: 'inline-block' }} />
-              25+ Years of Aviation Research
+              40+ Years of Aviation Research
             </div>
             <h1 className="hero-h1" style={{ fontFamily: 'var(--font-serif)', fontSize: 44, lineHeight: 1.2, color: 'var(--white)', marginBottom: 20, fontWeight: 700 }}>
               Definitive histories of <em style={{ fontStyle: 'italic', color: 'var(--gold-light)' }}>Scottish aviation</em> &amp; military aircraft
