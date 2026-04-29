@@ -65,7 +65,7 @@ export default function PrivacyPage() {
         <li>Postal address available on request via <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a>.</li>
         <li>
           Contact:{' '}
-          <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>
+          <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a>
         </li>
       </ul>
       <p style={p}>
@@ -188,7 +188,7 @@ export default function PrivacyPage() {
       </ul>
       <p style={p}>
         To exercise any of these rights, email us at{' '}
-        <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>. We will respond within one month.
+        <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a>. We will respond within one month.
       </p>
 
       <h2 style={h2}>9. Cookies</h2>

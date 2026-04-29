@@ -66,7 +66,7 @@ export default function ReturnsPage() {
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 16 }}>How to Return</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             {[
-              { step: '1', title: 'Contact us', desc: 'Email charlese1mackay@hotmail.com with your order number and reason for return.' },
+              { step: '1', title: 'Contact us', desc: 'Email info@charlesmackaybooks.com with your order number and reason for return.' },
               { step: '2', title: 'Post the book back', desc: 'Send the book to the return address provided. We recommend using a tracked service. Return postage is at the buyer\'s expense unless the item arrived damaged.' },
               { step: '3', title: 'Receive your refund', desc: 'Once we receive the book, your refund will be processed within 5 working days to your original payment method.' },
             ].map(s => (

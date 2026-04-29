@@ -68,7 +68,7 @@ export default function TermsPage() {
         <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a>.
       </p>
       <p style={p}>
-        Contact: <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>.
+        Contact: <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a>.
       </p>
 
       <h2 style={h2}>2. Acceptance of these Terms</h2>
@@ -114,7 +114,7 @@ export default function TermsPage() {
         Under the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 you have the
         right to cancel a distance-sale contract within 14 days of receiving the goods, without giving any reason. To
         exercise the right, send us a clear written statement (by email to{' '}
-        <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>) before the 14-day period expires.
+        <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a>) before the 14-day period expires.
         You must return the goods to us within 14 days of telling us you wish to cancel; the cost of return is yours
         unless the goods are faulty or mis-described. We will refund the price you paid, including the cheapest standard
         delivery cost we offer, within 14 days of receiving the goods back (or evidence that you have sent them).
@@ -126,7 +126,7 @@ export default function TermsPage() {
         <strong>Model Cancellation Form</strong>
         <br />
         To: A Mackay (Publisher) Ltd. Email:{' '}
-        charlese1mackay@hotmail.com (postal address available on request via info@charlesmackaybooks.com)
+        info@charlesmackaybooks.com (postal address available on request via info@charlesmackaybooks.com)
         <br />
         I/We [*] hereby give notice that I/We [*] cancel my/our [*] contract of sale of the following goods [*]/for the
         supply of the following service [*],
@@ -155,7 +155,7 @@ export default function TermsPage() {
         <li>a price reduction or final right to reject if a replacement still does not conform.</li>
       </ul>
       <p style={p}>
-        Email <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a> within 14 days of delivery
+        Email <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a> within 14 days of delivery
         with your order number and a photograph of the damage. We will reply with the return address; once the book is
         back with us, you may choose a replacement copy or a full refund. Return postage on faulty or mis-described
         goods is at our expense.
@@ -202,7 +202,7 @@ export default function TermsPage() {
       <h2 style={h2}>13. Complaints and dispute resolution</h2>
       <p style={p}>
         We aim to resolve any complaint quickly. Please email{' '}
-        <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>. If we cannot resolve a dispute, you
+        <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a>. If we cannot resolve a dispute, you
         may contact Citizens Advice (<a href="https://www.citizensadvice.org.uk/" target="_blank" rel="noopener noreferrer">citizensadvice.org.uk</a>, 0800 144 8848) or Trading Standards via your local council. UK ICO complaints path remains at{' '}
         <a href="https://ico.org.uk/make-a-complaint" target="_blank" rel="noopener noreferrer">ico.org.uk/make-a-complaint</a>.
       </p>
