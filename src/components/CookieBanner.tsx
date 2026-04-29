@@ -9,27 +9,53 @@ export type CookieConsent = {
 };
 
 const STORAGE_KEY = 'cookie_consent';
+const ONE_YEAR_SECONDS = 60 * 60 * 24 * 365;
 
+// Read consent from a first-party cookie. Cookie is preferred over localStorage
+// because UK PECR/GDPR auditors expect a single, inspectable consent record that
+// also travels with SSR requests if needed. Old localStorage values are migrated
+// transparently.
 export function readConsent(): CookieConsent | null {
-  if (typeof window === 'undefined') return null;
+  if (typeof document === 'undefined') return null;
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as CookieConsent;
-    if (typeof parsed.analytics !== 'boolean' || typeof parsed.marketing !== 'boolean') return null;
-    return parsed;
+    const match = document.cookie
+      .split('; ')
+      .find((row) => row.startsWith(STORAGE_KEY + '='));
+    if (match) {
+      const raw = decodeURIComponent(match.split('=').slice(1).join('='));
+      const parsed = JSON.parse(raw) as CookieConsent;
+      if (typeof parsed.analytics === 'boolean' && typeof parsed.marketing === 'boolean') {
+        return parsed;
+      }
+    }
+    // Migrate any legacy localStorage value, then drop it.
+    if (typeof window !== 'undefined') {
+      const legacy = window.localStorage.getItem(STORAGE_KEY);
+      if (legacy) {
+        const parsed = JSON.parse(legacy) as CookieConsent;
+        if (typeof parsed.analytics === 'boolean' && typeof parsed.marketing === 'boolean') {
+          window.localStorage.removeItem(STORAGE_KEY);
+          writeConsent(parsed);
+          return parsed;
+        }
+      }
+    }
+    return null;
   } catch {
     return null;
   }
 }
 
 function writeConsent(consent: CookieConsent) {
+  if (typeof document === 'undefined') return;
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(consent));
+    const value = encodeURIComponent(JSON.stringify(consent));
+    const secure = typeof window !== 'undefined' && window.location.protocol === 'https:' ? '; Secure' : '';
+    document.cookie = `${STORAGE_KEY}=${value}; Max-Age=${ONE_YEAR_SECONDS}; Path=/; SameSite=Lax${secure}`;
     // Notify the rest of the app (ConsentGate) without a full reload.
     window.dispatchEvent(new CustomEvent('cookie-consent-change', { detail: consent }));
   } catch {
-    // ignore quota / disabled storage
+    // ignore disabled storage
   }
 }
 

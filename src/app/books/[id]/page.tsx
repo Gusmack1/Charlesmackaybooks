@@ -96,20 +96,20 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
     brand: { '@type': 'Brand', name: 'Charles E. MacKay Books' },
     gtin13: book.isbn,
     category: 'Media > Books > Non-Fiction > History',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: avgRating,
-      reviewCount: String(reviewCount),
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: displayReviews.map(r => ({
-      '@type': 'Review' as const,
-      author: { '@type': 'Person' as const, name: r.author },
-      reviewRating: { '@type': 'Rating' as const, ratingValue: String(r.rating), bestRating: '5' },
-      reviewBody: r.text,
-      datePublished: r.date,
-    })),
+    // AggregateRating only: per-Review markup removed because the underlying
+    // reviewers (eBay buyer pseudonyms) cannot be verified to Google's review
+    // snippet guidelines. Aggregate is substantiated by reviewCount > 0.
+    ...(reviewCount > 0
+      ? {
+          aggregateRating: {
+            '@type': 'AggregateRating' as const,
+            ratingValue: avgRating,
+            reviewCount: String(reviewCount),
+            bestRating: '5',
+            worstRating: '1',
+          },
+        }
+      : {}),
     offers: {
       '@type': 'Offer',
       price: book.price.toFixed(2),
