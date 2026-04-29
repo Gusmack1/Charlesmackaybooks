@@ -53,9 +53,16 @@ export default function PrivacyPage() {
         The data controller is:
       </p>
       <ul style={ul}>
-        <li>A MACKAY (PUBLISHER) LTD (trading as Charles Mackay Books)</li>
-        <li>Companies House registration: SC858624 (Scotland)</li>
-        <li>Registered office: 87 Knightscliffe Avenue, Glasgow, Scotland, G13 2RX</li>
+        {/* V2 #1: registered postal address pending Angus PO Box/accountant/virtual-office choice */}
+        <li>A Mackay (Publisher) Ltd (trading as Charles Mackay Books)</li>
+        <li>
+          Companies House registration: SC858624 (registered in Scotland).{' '}
+          <a href="https://find-and-update.company-information.service.gov.uk/company/SC858624" target="_blank" rel="noopener noreferrer">
+            View public company record
+          </a>
+          .
+        </li>
+        <li>Postal address available on request via <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a>.</li>
         <li>
           Contact:{' '}
           <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>

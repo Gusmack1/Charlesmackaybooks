@@ -56,10 +56,16 @@ export default function TermsPage() {
       </p>
 
       <h2 style={h2}>1. Who we are</h2>
+      {/* V2 #1: registered postal address pending Angus PO Box/accountant/virtual-office choice */}
       <p style={p}>
-        The Site is operated by A MACKAY (PUBLISHER) LTD, a private limited company incorporated in Scotland on 11
-        August 2025 under company number SC858624, with registered office at 87 Knightscliffe Avenue, Glasgow, Scotland,
-        G13 2RX. We trade as Charles Mackay Books.
+        The Site is operated by A Mackay (Publisher) Ltd, a private limited company incorporated in Scotland on 11
+        August 2025 under company number SC858624. We trade as Charles Mackay Books. Our public company record is
+        available on Companies House:{' '}
+        <a href="https://find-and-update.company-information.service.gov.uk/company/SC858624" target="_blank" rel="noopener noreferrer">
+          SC858624
+        </a>
+        . Postal address available on request via{' '}
+        <a href="mailto:info@charlesmackaybooks.com">info@charlesmackaybooks.com</a>.
       </p>
       <p style={p}>
         Contact: <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>.
@@ -119,8 +125,8 @@ export default function TermsPage() {
       <div style={box}>
         <strong>Model Cancellation Form</strong>
         <br />
-        To: A MACKAY (PUBLISHER) LTD, 87 Knightscliffe Avenue, Glasgow, Scotland, G13 2RX. Email:{' '}
-        charlese1mackay@hotmail.com
+        To: A Mackay (Publisher) Ltd. Email:{' '}
+        charlese1mackay@hotmail.com (postal address available on request via info@charlesmackaybooks.com)
         <br />
         I/We [*] hereby give notice that I/We [*] cancel my/our [*] contract of sale of the following goods [*]/for the
         supply of the following service [*],

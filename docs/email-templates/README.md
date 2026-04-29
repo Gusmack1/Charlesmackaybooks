@@ -187,8 +187,8 @@ When adding new templates or editing existing ones, hold the line on tone:
 Mandatory in every customer-facing email:
 
 ```
-A MACKAY (PUBLISHER) LTD · Registered in Scotland, Company No. SC858624
-Registered office: 87 Knightscliffe Avenue, Glasgow, G13 2RX
+A Mackay (Publisher) Ltd · Registered in Scotland, Company No. SC858624
+Charles wraps and posts from Glasgow.
 ```
 
 Source: Companies House (SC858624).

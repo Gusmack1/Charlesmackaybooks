@@ -56,7 +56,8 @@ export default function Footer() {
       </div>
       <div className="footer-bottom" style={{ maxWidth: 1200, margin: '0 auto', paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 12, gap: 16, flexWrap: 'wrap' }}>
         <span style={{ maxWidth: 600 }}>
-          &copy; 2026 A MACKAY (PUBLISHER) LTD trading as Charles Mackay Books. Registered in Scotland (SC858624) at 87 Knightscliffe Avenue, Glasgow G13 2RX.
+          {/* V2 #1: registered postal address pending Angus PO Box/accountant/virtual-office choice */}
+          &copy; 2026 A Mackay (Publisher) Ltd trading as Charles Mackay Books. Registered in Scotland (SC858624). Contact info@charlesmackaybooks.com.
         </span>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
           {/* Google Customer Reviews badge */}

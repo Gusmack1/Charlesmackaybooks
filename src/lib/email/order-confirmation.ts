@@ -113,9 +113,10 @@ export function renderOrderConfirmationText(d: OrderEmailData): string {
   lines.push('Cheers,', 'Charles & Angus', '');
   lines.push(
     sep,
-    'A MACKAY (PUBLISHER) LTD',
+    // V2 #1: registered postal address pending Angus PO Box/accountant/virtual-office choice
+    'A Mackay (Publisher) Ltd',
     'Registered in Scotland, Company No. SC858624',
-    'Registered office: 87 Knightscliffe Avenue, Glasgow, G13 2RX',
+    'Charles wraps and posts from Glasgow.',
     'Questions? Reply to this email or visit charlesmackaybooks.com',
     sep
   );
@@ -208,8 +209,8 @@ export function renderOrderConfirmationHtml(d: OrderEmailData): string {
             <p style="margin:0; font-family:Georgia, 'Times New Roman', serif; font-size:15px; line-height:22px; color:#1a2a44;">Cheers,<br>Charles &amp; Angus</p>
           </td></tr>
           <tr><td style="background:#f7f3ea; padding:20px 32px; border-top:1px solid #e6dfce;">
-            <p style="margin:0 0 6px 0; font-size:11px; line-height:16px; color:#5a6172;">A MACKAY (PUBLISHER) LTD &middot; Registered in Scotland, Company No. SC858624</p>
-            <p style="margin:0 0 6px 0; font-size:11px; line-height:16px; color:#5a6172;">Registered office: 87 Knightscliffe Avenue, Glasgow, Scotland, G13 2RX</p>
+            <p style="margin:0 0 6px 0; font-size:11px; line-height:16px; color:#5a6172;">A Mackay (Publisher) Ltd &middot; Registered in Scotland, Company No. SC858624</p>
+            <p style="margin:0 0 6px 0; font-size:11px; line-height:16px; color:#5a6172;">Charles wraps and posts from Glasgow.</p>
             <p style="margin:0; font-size:11px; line-height:16px; color:#5a6172;">Questions? Reply to this email or visit <a href="https://charlesmackaybooks.com" style="color:#5a6172; text-decoration:underline;">charlesmackaybooks.com</a></p>
           </td></tr>
         </table>
