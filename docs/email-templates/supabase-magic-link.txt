@@ -1,0 +1,44 @@
+Subject: Sign in to Charles Mackay Books -- one-click link
+
+----------------------------------------------------------------------
+CHARLES MACKAY BOOKS
+Aviation history, written and posted from Glasgow.
+----------------------------------------------------------------------
+
+Sign in with one click.
+
+Click the link below to sign in to Charles Mackay Books. It saves your
+details so next time you order, your address fills itself in and you
+can track your books from the moment Charles posts them.
+
+----------------------------------------------------------------------
+CONTINUE TO CHARLESMACKAYBOOKS.COM
+----------------------------------------------------------------------
+
+{{ .ConfirmationURL }}
+
+If the link above doesn't open as a button in your email client, copy
+and paste it into your browser address bar.
+
+----------------------------------------------------------------------
+
+This link is valid for 1 hour. If you didn't request it, you can
+ignore this email -- nothing happens until you click.
+
+----------------------------------------------------------------------
+
+Charles has been writing aviation history since 1982 -- first
+article in Airfix Magazine, then Scots Magazine, joined Gibson in
+1985. The website is the easiest way to get a copy posted to your
+door, and signing in just saves you typing your address again next
+time.
+
+Safe flights,
+Charles & Angus MacKay
+
+----------------------------------------------------------------------
+A MACKAY (PUBLISHER) LTD
+Registered in Scotland, Company No. SC858624
+Registered office: 87 Knightscliffe Avenue, Glasgow, G13 2RX
+Questions? Reply to this email or visit charlesmackaybooks.com
+----------------------------------------------------------------------

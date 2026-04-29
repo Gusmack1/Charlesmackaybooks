@@ -20,6 +20,34 @@ canonical record of this rule.
 |---|---|---|
 | `order-confirmation.html` | Customer-facing order receipt (HTML) | `checkout.session.completed` webhook |
 | `order-confirmation.txt` | Plain-text twin for clients that disable HTML | Same webhook, `multipart/alternative` |
+| `supabase-magic-link.html` | Magic-link sign-in email (HTML) | Supabase Auth, **Magic Link** template slot |
+| `supabase-magic-link.txt` | Plain-text twin for the magic-link email | Same Supabase slot (used as text fallback by senders that send `multipart/alternative`) |
+
+### Supabase Auth Email Templates — where to paste
+
+Supabase project `iakuafpxuicisqbtmjbf` (the **site** Supabase, distinct from
+`claude_brain` rhhsaphcqxgrptrpvljm).
+
+Dashboard path:
+`https://supabase.com/dashboard/project/iakuafpxuicisqbtmjbf/auth/templates`
+
+| Template slot in Supabase | Paste this file | Subject line to set |
+|---|---|---|
+| **Magic Link** | `supabase-magic-link.html` body | `Sign in to Charles Mackay Books — one-click link` |
+
+Supabase uses **Go template** placeholder syntax (`{{ .ConfirmationURL }}`) —
+not Handlebars `{{name}}`. The magic-link template MUST keep
+`{{ .ConfirmationURL }}` exactly as written; Supabase substitutes the full
+sign-in URL (with the embedded one-time code) at send time. Other available
+placeholders: `{{ .Email }}`, `{{ .Token }}`, `{{ .TokenHash }}`,
+`{{ .SiteURL }}`, `{{ .RedirectTo }}`.
+
+Wiring context: an unauthenticated customer hitting `/checkout/success` after a
+Stripe purchase is invited to "save your details for next time" via magic
+link. They click → this email arrives → click the confirmation URL → land back
+on the site authenticated → their just-placed order auto-links to the new
+account (per `supabase/migrations/0001_accounts.sql` — `orders.user_id` is
+nullable so guest checkout works, then post-auth backfill links the row).
 
 ## Required placeholders
 
