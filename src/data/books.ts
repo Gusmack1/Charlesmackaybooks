@@ -52,6 +52,14 @@ Armament shows the work of Rheinmetall Borsig and Mauser with the company histor
         excerpt: 'Revolutionary German aviation development from Albatros to Fokker that challenged Allied air superiority.'
       }
     ]
+  ,
+    faqs: [
+      { q: 'What does Volume Two of This Was the Enemy cover?', a: 'Volume Two follows the German Aeronautical and Armaments Industry from its rise in 1934 to its collapse in 1945, including aircraft procurement, underground factories, front-line Luftwaffe types, and armament work by Rheinmetall Borsig and Mauser.' },
+      { q: 'Is this volume connected to Volume One?', a: 'Yes. Volume Two is a direct continuation of This Was the Enemy: The Luftwaffe 1945, focused on procurement, production, and armament rather than operations.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -159,6 +167,14 @@ The book from Charles MacKay was especially useful in filling in the gaps and cl
         excerpt: 'How Glasgow\'s mighty shipyards transformed into aviation powerhouses during two world wars.'
       }
     ]
+  ,
+    faqs: [
+      { q: 'What does Beardmore Aviation cover?', a: 'The book documents William Beardmore and Co Ltd\'s aviation activities from 1913 to 1930 at Dalmuir, Clydebank and Parkhead in Glasgow, including aircraft, aero-engines, airships, and the first aircraft carrier HMS Argus.' },
+      { q: 'Does it include the R101 airship and the Beardmore Tornado engine?', a: 'Yes. The aero-engine section covers the Beardmore Tornado and its role in the R101 airship disaster, alongside the Beardmore 120/160 hp engine and the BHP / Siddeley Puma lineage.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -248,6 +264,13 @@ Recommend use offers
         excerpt: 'From the Royal Flying Corps to RAF formation, pioneering aerial warfare with legendary fighters.'
       }
     ]
+  ,
+    faqs: [
+      { q: 'What does Clydeside Aviation Volume One cover?', a: 'Volume One covers aviation on the Clyde during the Great War (1914 to 1918), including production at Beardmore, Barr and Stroud, and the Royal Flying Corps and Royal Naval Air Service activity in the West of Scotland.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -290,6 +313,13 @@ The cover is of the first practical British helicopter, the Weir W5, flown by Ra
     citationCount: 60,
     academicInstitutions: ['University of Glasgow', 'Imperial War Museum'],
     relatedBookIds: ['beardmore-aviation', 'clydeside-aviation-vol1']
+  ,
+    faqs: [
+      { q: 'What does Clydeside Aviation Volume Two cover?', a: 'Volume Two covers Clyde aviation between the wars (1918 to 1939), including civil aviation, the Auxiliary Air Force, Renfrew and Abbotsinch, and the run-up to wartime production.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -330,6 +360,13 @@ Any Questions promptly answered-thanks for looking`,
     citationCount: 75,
     academicInstitutions: ['RAF Museum', 'Deutsches Technikmuseum', 'Imperial War Museum'],
     relatedBookIds: ['british-aircraft-great-war', 'flying-for-kaiser', 'clydeside-aviation-vol1']
+  ,
+    faqs: [
+      { q: 'What does German Aircraft in the Great War cover?', a: 'The book is a reference work on German military aircraft from 1914 to 1918, with type histories, production, and operational use across the major manufacturers.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -373,6 +410,13 @@ This book has best offer option.
     citationCount: 60,
     academicInstitutions: ['Imperial War Museum', 'RAF Museum'],
     relatedBookIds: ['german-aircraft-great-war', 'clydeside-aviation-vol1']
+  ,
+    faqs: [
+      { q: 'What does British Aircraft of the Great War cover?', a: 'The book documents British fighters, bombers, seaplanes, trainers, and flying boats of 1914 to 1918, drawing on archival production figures and contemporary photographs.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -451,6 +495,13 @@ BEFORE making a best offer could you please contact me first because there is a 
     citationCount: 20,
     academicInstitutions: ['Helicopter Museum', 'Imperial War Museum'],
     relatedBookIds: ['soaring-with-wings', 'captain-eric-brown', 'modern-furniture', 'beardmore-aviation']
+  ,
+    faqs: [
+      { q: 'What does The Sycamore Seeds cover?', a: 'The Sycamore Seeds is a history of early helicopter development, from autogyros and rotor experiments through to the first practical helicopters.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -510,6 +561,13 @@ ISBN 9780957344365`,
         title: 'Captain Eric Brown: Britain\'s Greatest Test Pilot',
         excerpt: 'The extraordinary life of the test pilot who flew 487 different aircraft types.'
       }
+    ]
+  ,
+    faqs: [
+      { q: 'Who was Captain Eric Brown?', a: 'Captain Eric Melrose Brown CBE DSC AFC was a Royal Navy test pilot who flew 487 aircraft types, more than any pilot in history, and made the first carrier landings of jet and turboprop aircraft.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
     ]
   },
 
@@ -592,6 +650,13 @@ Any questions will be promptly answered
         excerpt: 'How the Cold War drove rapid jet development from primitive jets to supersonic fighters.'
       }
     ]
+  ,
+    faqs: [
+      { q: 'What does Sabres from the North cover?', a: 'The book covers F-86 Sabre service with the RAF, RCAF, and Luftwaffe, including Canadair-built variants delivered to Europe under the Mutual Defence Aid Programme.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -628,6 +693,13 @@ Highly recommended for the enthusiast and general reader alike. (Use offers)`,
     citationCount: 30,
     academicInstitutions: ['Imperial War Museum'],
     relatedBookIds: ['this-was-the-enemy-volume-two', 'german-aircraft-great-war']
+  ,
+    faqs: [
+      { q: 'What does The Luftwaffe 1945 cover?', a: 'The book covers the final year of the Luftwaffe, including jet and late-war piston fighters operating in a system collapsing for lack of fuel, spares, pilots, and bases.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -673,6 +745,13 @@ A limited run. A5 Paperback highly detailed, 180 pages profusely illustrated wit
     citationCount: 18,
     academicInstitutions: [],
     relatedBookIds: ['german-aircraft-great-war']
+  ,
+    faqs: [
+      { q: 'What does Flying for Kaiser Wilhelm cover?', a: 'The book covers German aces, aeroplanes, and the eventual defeat of the Imperial German Air Service from 1914 to 1918.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -714,6 +793,13 @@ Any questions promptly answered.
     citationCount: 8,
     academicInstitutions: [],
     relatedBookIds: []
+  ,
+    faqs: [
+      { q: 'Who was Percy Pilcher?', a: 'Percy Pilcher was a British aviation pioneer who built and flew gliders in the 1890s and was on the verge of powered flight before his fatal crash in 1899.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -766,6 +852,13 @@ It was good value and an interesting read" recent purchase`,
     citationCount: 5,
     academicInstitutions: [],
     relatedBookIds: ['captain-eric-brown', 'soaring-with-wings', 'british-aircraft-great-war']
+  ,
+    faqs: [
+      { q: 'Who was Lucy, Lady Houston?', a: 'Lucy, Lady Houston DBE funded the British Schneider Trophy team in 1931 and the Houston Mount Everest Flight Expedition of 1933, making her a key but often overlooked figure in 1930s British aviation.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -798,6 +891,13 @@ Any questions promptly answered.
     citationCount: 7,
     academicInstitutions: [],
     relatedBookIds: ['captain-eric-brown', 'soaring-with-wings', 'mother-of-the-few']
+  ,
+    faqs: [
+      { q: 'Who was Dieter Dengler?', a: 'Dieter Dengler was a US Navy attack pilot shot down over Laos in 1966 flying a Douglas A-1H Skyraider. The book covers the man, the ship USS Ranger, and the aircraft, supported by archival research.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -859,6 +959,14 @@ This is not a compilation of internet articles or a print on demand book. Shavin
     citationCount: 3,
     academicInstitutions: [],
     relatedBookIds: ['beardmore-aviation', 'clydeside-aviation-vol1', 'birth-atomic-bomb']
+  ,
+    faqs: [
+      { q: 'What does Shavings for Breakfast cover?', a: 'The book covers the Morris Furniture Company of Glasgow from 1914 to 1975, including its furnishing of the Queen Mary, Queen Elizabeth, the Royal Yacht Britannia, and Gleneagles Hotel, plus its wartime aircraft and helicopter work on the Mosquito, Hurricane, Spitfire, Highball and Upkeep, Cierva Air Horse, Rotachute, and the Vickers Transonic Missile.' },
+      { q: 'Is this book about furniture or aviation?', a: 'Both. Morris Furniture was a major Glasgow industrial supplier whose work spanned ocean liners, hotels, royal yachts, and wartime aircraft. The book documents the rare crossover where a furniture company supplied balsa plywood for the Mosquito, rotor blades for early helicopters, and model work for the Bouncing Bomb.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -951,6 +1059,13 @@ These are the source documents for all atomic bomb publications and were part of
     citationCount: 12,
     academicInstitutions: [],
     relatedBookIds: ['sonic-to-standoff', 'enemy-luftwaffe-1945', 'this-was-the-enemy-volume-two']
+  ,
+    faqs: [
+      { q: 'What does Birth of the Atomic Bomb cover?', a: 'The book draws on statements from Churchill, Truman, Pash, and the German Alsos mission to document the wartime race for the atomic bomb.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -1014,6 +1129,13 @@ Purchased July 2025`,
         excerpt: 'How a Scottish shipbuilder transformed into Britain\'s most ambitious aviation manufacturer.'
       }
     ]
+  ,
+    faqs: [
+      { q: 'What is HMS Argus?', a: 'HMS Argus was the world\'s first aircraft carrier with a full-length flight deck. Converted from the Italian liner Conte Rosso at Beardmore\'s Dalmuir yard, she served from 1918 to 1946, including Operations Torch and Harpoon in WWII.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -1046,6 +1168,13 @@ Due to the popularity of Recollections of a Tour Made in Scotland its now in its
     citationCount: 2,
     academicInstitutions: [],
     relatedBookIds: ['beardmore-aviation', 'clydeside-aviation-vol1', 'british-aircraft-great-war']
+  ,
+    faqs: [
+      { q: 'What is this edition of Dorothy Wordsworth\'s Recollections?', a: 'This is an edited edition of Dorothy Wordsworth\'s journal from her 1803 tour of Scotland with her brother William Wordsworth and Samuel Taylor Coleridge.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -1088,6 +1217,13 @@ A limited run published from 21 June 2021 highly sought after few remain.
     citationCount: 25,
     academicInstitutions: ['Deutsches Technikmuseum', 'Imperial War Museum', 'Royal Aeronautical Society'],
     relatedBookIds: ['german-aircraft-great-war']
+  ,
+    faqs: [
+      { q: 'Who was Adolf Rohrbach?', a: 'Adolf Rohrbach was a German aircraft designer who pioneered stressed-skin all-metal construction at Rohrbach Metall-Flugzeugbau GmbH in the 1920s, influencing later aircraft worldwide.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   },
 
   {
@@ -1152,6 +1288,13 @@ The source documents are available from this website.
     citationCount: 35,
     academicInstitutions: ['Royal United Services Institute', 'King\'s College London', 'Imperial War Museum'],
     relatedBookIds: ['sabres-from-north', 'enemy-luftwaffe-1945', 'birth-atomic-bomb', 'aircraft-carrier-argus']
+  ,
+    faqs: [
+      { q: 'What does Sonic to Stand Off cover?', a: 'The book traces the evolution of the British nuclear deterrent from early sonic-speed bombers through the V-force to standoff weapons, drawing on archival research.' },
+      { q: 'Who is Charles E. MacKay?', a: 'Charles E. MacKay is a Glasgow-based aviation historian active for over 40 years (1982 to present). His work was originally published by Robert Gibson and Sons Glasgow Limited (SC005175) from 1985, and from 2025 by his own imprint A Mackay (Publisher) Ltd (SC858624).' },
+      { q: 'Who publishes this book?', a: 'A Mackay (Publisher) Ltd, registered in Scotland (SC858624). The earlier imprint Robert Gibson and Sons Glasgow Limited (SC005175) handled titles from 1985 onward; A Mackay (Publisher) Ltd took over from 2025.' },
+      { q: 'How is the book shipped?', a: 'Royal Mail Tracked. UK orders are dispatched within 1 to 2 business days. International tracked shipping is available to selected zones; rates are calculated at checkout.' }
+    ]
   }
 ];
 

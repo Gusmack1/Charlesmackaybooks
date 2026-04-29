@@ -67,6 +67,10 @@ export interface Book {
     title: string;
     excerpt: string;
   }[];
+  // Optional FAQ entries used to render an FAQPage JSON-LD block and a visible
+  // <details> accordion on the book detail page. Strings must avoid em/en-dashes
+  // because they render in Google snippets (Brain #894 tone rule).
+  faqs?: { q: string; a: string }[];
 }
 
 // Academic testimonial type

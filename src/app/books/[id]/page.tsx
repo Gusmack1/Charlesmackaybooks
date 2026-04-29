@@ -146,16 +146,10 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
   // Default to paperback format
   const bookFormat = 'https://schema.org/Paperback';
 
-  // Per-book FAQ blocks (currently only modern-furniture, the non-aviation outlier, to lift it out of "Crawled, currently not indexed" by adding unique structured content).
-  const perBookFaqs: Record<string, { q: string; a: string }[]> = {
-    'modern-furniture': [
-      { q: 'What does "Shavings for Breakfast" cover?', a: 'The book covers the Morris Furniture Company of Glasgow from 1914 to 1975, including its furnishing of the Queen Mary, Queen Elizabeth, the Royal Yacht Britannia and Gleneagles Hotel, plus its wartime aircraft and helicopter work on the Mosquito, Hurricane, Spitfire, Highball and Upkeep, Cierva Air Horse, Rotachute and the Vickers Transonic Missile.' },
-      { q: 'Is this book about furniture or aviation?', a: 'Both. Morris Furniture was a major Glasgow industrial supplier whose work spanned ocean liners, hotels, royal yachts and wartime aircraft. The book documents the rare crossover where a furniture company supplied balsa plywood for the Mosquito, rotor blades for early helicopters, and model work for the Bouncing Bomb.' },
-      { q: 'Who is the publisher and is this book in print?', a: 'Published by A Mackay (Publisher) Ltd in Glasgow. The book is in its fourth reprint and remains the only source book for Morris Furniture manufacturing from 1884 to 1975.' },
-      { q: 'How is this book shipped?', a: 'Royal Mail tracked shipping worldwide from Glasgow. UK orders dispatched within one to two business days. International rates calculated at checkout.' },
-    ],
-  };
-  const faqList = perBookFaqs[book.id];
+  // Data-driven FAQ block. Source of truth is `book.faqs` in src/data/books.ts;
+  // when present, we render an FAQPage JSON-LD object plus a visible <details>
+  // accordion. When absent, both gracefully degrade to nothing.
+  const faqList = book.faqs && book.faqs.length > 0 ? book.faqs : null;
   const faqLd = faqList ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
