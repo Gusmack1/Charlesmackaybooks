@@ -12,10 +12,10 @@ const featuredBooks = [
 ].filter(Boolean);
 
 const heroBooks = [
-  { id: 'beardmore-aviation', title: 'Beardmore Aviation', price: 12.91, img: '/book-covers/beardmore-aviation.jpg' },
-  { id: 'clydeside-aviation-vol1', title: 'Clydeside Aviation Volume One', price: 16.08, img: '/book-covers/clydeside-aviation-vol1.jpg' },
-  { id: 'this-was-the-enemy-volume-two', title: 'This Was the Enemy Volume Two', price: 15.95, img: '/book-covers/this-was-the-enemy-volume-two.jpg' },
-];
+  { id: 'beardmore-aviation', title: 'Beardmore Aviation', img: '/book-covers/beardmore-aviation.jpg' },
+  { id: 'clydeside-aviation-vol1', title: 'Clydeside Aviation Volume One', img: '/book-covers/clydeside-aviation-vol1.jpg' },
+  { id: 'this-was-the-enemy-volume-two', title: 'This Was the Enemy Volume Two', img: '/book-covers/this-was-the-enemy-volume-two.jpg' },
+].map(meta => ({ ...meta, price: books.find(b => b.id === meta.id)!.price }));
 
 // Select diverse, compelling real reviews for the homepage
 const allReviews = getAllReviews();
