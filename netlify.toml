@@ -45,21 +45,21 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache control for feeds and sitemaps
+# Cache control for feeds and sitemaps (1h to track price refresh cadence)
 [[headers]]
   for = "/products.xml"
   [headers.values]
-    Cache-Control = "public, max-age=86400, s-maxage=86400"
+    Cache-Control = "public, max-age=3600, s-maxage=3600"
 
 [[headers]]
   for = "/merchant-feed.txt"
   [headers.values]
-    Cache-Control = "public, max-age=86400, s-maxage=86400"
+    Cache-Control = "public, max-age=3600, s-maxage=3600"
 
 [[headers]]
   for = "/shopping-actions.xml"
   [headers.values]
-    Cache-Control = "public, max-age=86400, s-maxage=86400"
+    Cache-Control = "public, max-age=3600, s-maxage=3600"
 
 [[headers]]
   for = "/sitemap.xml"
