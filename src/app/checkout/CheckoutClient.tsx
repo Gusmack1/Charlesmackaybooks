@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
+import { SHIPPING_ZONES, getZoneForCountry } from '@/data/shipping-zones';
 import type { Session } from '@supabase/supabase-js';
 
 interface DefaultAddress {
@@ -15,8 +16,38 @@ interface DefaultAddress {
   country: string;
 }
 
+const COUNTRY_OPTIONS: { code: string; name: string }[] = [
+  // UK first
+  { code: 'GB', name: 'United Kingdom' },
+  // Europe
+  { code: 'IE', name: 'Ireland' }, { code: 'FR', name: 'France' }, { code: 'DE', name: 'Germany' },
+  { code: 'NL', name: 'Netherlands' }, { code: 'BE', name: 'Belgium' }, { code: 'LU', name: 'Luxembourg' },
+  { code: 'AT', name: 'Austria' }, { code: 'CH', name: 'Switzerland' }, { code: 'IT', name: 'Italy' },
+  { code: 'ES', name: 'Spain' }, { code: 'PT', name: 'Portugal' }, { code: 'SE', name: 'Sweden' },
+  { code: 'NO', name: 'Norway' }, { code: 'DK', name: 'Denmark' }, { code: 'FI', name: 'Finland' },
+  { code: 'IS', name: 'Iceland' }, { code: 'PL', name: 'Poland' }, { code: 'CZ', name: 'Czech Republic' },
+  { code: 'GR', name: 'Greece' }, { code: 'HU', name: 'Hungary' }, { code: 'RO', name: 'Romania' },
+  { code: 'BG', name: 'Bulgaria' }, { code: 'HR', name: 'Croatia' }, { code: 'SK', name: 'Slovakia' },
+  { code: 'SI', name: 'Slovenia' }, { code: 'EE', name: 'Estonia' }, { code: 'LV', name: 'Latvia' },
+  { code: 'LT', name: 'Lithuania' }, { code: 'MT', name: 'Malta' }, { code: 'CY', name: 'Cyprus' },
+  // North America
+  { code: 'US', name: 'United States' }, { code: 'CA', name: 'Canada' },
+  // Far East / Oceania
+  { code: 'AU', name: 'Australia' }, { code: 'NZ', name: 'New Zealand' }, { code: 'JP', name: 'Japan' },
+  { code: 'KR', name: 'South Korea' }, { code: 'CN', name: 'China' }, { code: 'HK', name: 'Hong Kong' },
+  { code: 'TW', name: 'Taiwan' }, { code: 'SG', name: 'Singapore' }, { code: 'MY', name: 'Malaysia' },
+  { code: 'TH', name: 'Thailand' }, { code: 'VN', name: 'Vietnam' }, { code: 'ID', name: 'Indonesia' },
+  { code: 'PH', name: 'Philippines' },
+  // Rest of World
+  { code: 'IN', name: 'India' }, { code: 'PK', name: 'Pakistan' }, { code: 'BD', name: 'Bangladesh' },
+  { code: 'AE', name: 'United Arab Emirates' }, { code: 'SA', name: 'Saudi Arabia' }, { code: 'IL', name: 'Israel' },
+  { code: 'ZA', name: 'South Africa' }, { code: 'KE', name: 'Kenya' }, { code: 'NG', name: 'Nigeria' },
+  { code: 'EG', name: 'Egypt' }, { code: 'MX', name: 'Mexico' }, { code: 'BR', name: 'Brazil' },
+  { code: 'AR', name: 'Argentina' }, { code: 'CL', name: 'Chile' }, { code: 'CO', name: 'Colombia' },
+];
+
 export default function CheckoutClient({ session, defaultAddress }: { session: Session | null; defaultAddress: DefaultAddress | null }) {
-  const { items, removeFromCart, updateQuantity, getTotalItems, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal } = useCart();
+  const { items, removeFromCart, updateQuantity, getTotalItems, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getShippingCost, getFinalTotal, shippingCountry, setShippingCountry } = useCart();
   const [loading, setLoading] = useState(false);
   const [userEmail, setUserEmail] = useState<string>('');
 
@@ -25,6 +56,14 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
       setUserEmail(session.user.email);
     }
   }, [session?.user?.email]);
+
+  useEffect(() => {
+    if (!shippingCountry) {
+      const seed = defaultAddress?.country?.toUpperCase() || 'GB';
+      if (getZoneForCountry(seed)) setShippingCountry(seed);
+      else setShippingCountry('GB');
+    }
+  }, [defaultAddress?.country, shippingCountry, setShippingCountry]);
 
   const handleStripeCheckout = async () => {
     setLoading(true);
@@ -35,6 +74,7 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
         body: JSON.stringify({
           items: items.map(i => ({ bookId: i.book.id, quantity: i.quantity })),
           discountPct: getBulkDiscountPercentage(),
+          country: shippingCountry || 'GB',
         }),
       });
       const data = await res.json();
@@ -54,7 +94,9 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
   const subtotal = getTotalPrice();
   const discount = getBulkDiscount();
   const discountPct = getBulkDiscountPercentage();
+  const shipping = getShippingCost();
   const finalTotal = getFinalTotal();
+  const activeZone = shippingCountry ? getZoneForCountry(shippingCountry) : null;
 
   if (items.length === 0) {
     return (
@@ -122,12 +164,33 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
             </div>
           )}
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12, fontSize: 14, color: 'var(--text-body)' }}>
-            <span>Shipping</span>
-            <span style={{ color: 'var(--success)', fontWeight: 600 }}>Free</span>
+          <div style={{ marginBottom: 12 }}>
+            <label htmlFor="ship-country" style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 6 }}>
+              Ship to country
+            </label>
+            <select
+              id="ship-country"
+              value={shippingCountry || 'GB'}
+              onChange={e => setShippingCountry(e.target.value)}
+              style={{ width: '100%', padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 'var(--radius-sm)', background: 'var(--white)', fontSize: 14, color: 'var(--text-dark)', cursor: 'pointer' }}
+            >
+              {COUNTRY_OPTIONS.map(c => (
+                <option key={c.code} value={c.code}>{c.name}</option>
+              ))}
+            </select>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: 16, marginTop: 16, borderTop: '2px solid var(--border)', fontFamily: 'var(--font-serif)', fontSize: 22, fontWeight: 700, color: 'var(--text-dark)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4, fontSize: 14, color: 'var(--text-body)' }}>
+            <span>Shipping</span>
+            <span style={{ fontWeight: 600 }}>£{shipping.toFixed(2)}</span>
+          </div>
+          {activeZone && (
+            <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 12, lineHeight: 1.4 }}>
+              {activeZone.displayName} — {activeZone.minDays}–{activeZone.maxDays} business days
+            </div>
+          )}
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: 16, marginTop: 4, borderTop: '2px solid var(--border)', fontFamily: 'var(--font-serif)', fontSize: 22, fontWeight: 700, color: 'var(--text-dark)' }}>
             <span>Total</span>
             <span>£{finalTotal.toFixed(2)}</span>
           </div>
@@ -164,7 +227,7 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: 12, marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--border)' }}>
-            {['Free shipping', '30-day returns', 'Secure payment'].map(t => (
+            {['Worldwide shipping', '30-day returns', 'Secure payment'].map(t => (
               <span key={t} style={{ fontSize: 10, color: 'var(--text-muted)', fontWeight: 500, textTransform: 'uppercase' as const, letterSpacing: 0.5 }}>{t}</span>
             ))}
           </div>

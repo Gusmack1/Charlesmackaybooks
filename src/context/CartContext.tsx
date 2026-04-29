@@ -1,8 +1,9 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 import { Book } from '@/types/book';
 import { trackAddToCart } from '@/components/GoogleAnalytics';
+import { getZoneForCountry } from '@/data/shipping-zones';
 
 interface CartItem {
   book: Book;
@@ -23,6 +24,8 @@ interface CartContextType {
   getBulkDiscountPercentage: () => number;
   getShippingCost: (country?: string) => number;
   getFinalTotal: () => number;
+  shippingCountry: string | null;
+  setShippingCountry: (country: string | null) => void;
   isBasketOpen: boolean;
   isCartOpen: boolean;
   openBasket: () => void;
@@ -36,6 +39,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isBasketOpen, setIsBasketOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const [shippingCountry, setShippingCountryState] = useState<string | null>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -51,8 +55,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
           console.error('Error loading cart from localStorage:', error);
         }
       }
+      const savedCountry = localStorage.getItem('charles_mackay_shipping_country');
+      if (savedCountry) setShippingCountryState(savedCountry);
     }
   }, [isClient]);
+
+  const setShippingCountry = useCallback((country: string | null) => {
+    setShippingCountryState(country);
+    if (typeof window !== 'undefined') {
+      if (country) localStorage.setItem('charles_mackay_shipping_country', country);
+      else localStorage.removeItem('charles_mackay_shipping_country');
+    }
+  }, []);
 
   useEffect(() => {
     if (isClient && typeof window !== 'undefined') {
@@ -144,9 +158,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
     return 0;
   };
 
-  const getShippingCost = (country: string = 'GB') => {
-    // Free shipping worldwide
-    return 0;
+  const getShippingCost = (country?: string) => {
+    const c = country ?? shippingCountry;
+    if (!c) return 0;
+    const zone = getZoneForCountry(c);
+    return zone ? zone.amountPence / 100 : 0;
   };
 
   const getFinalTotal = () => {
@@ -189,6 +205,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
         getBulkDiscountPercentage,
         getShippingCost,
         getFinalTotal,
+        shippingCountry,
+        setShippingCountry,
         isBasketOpen,
         isCartOpen: isBasketOpen,
         openBasket,
@@ -219,6 +237,8 @@ export function useCart() {
         getBulkDiscountPercentage: () => 0,
         getShippingCost: (country?: string) => 0,
         getFinalTotal: () => 0,
+        shippingCountry: null,
+        setShippingCountry: () => {},
         isBasketOpen: false,
         isCartOpen: false,
         openBasket: () => {},

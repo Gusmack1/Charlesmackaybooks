@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 
 export default function BasketDrawer() {
-  const { items, isBasketOpen, closeBasket, removeFromCart, updateQuantity, getTotalItems, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getFinalTotal } = useCart();
+  const { items, isBasketOpen, closeBasket, removeFromCart, updateQuantity, getTotalItems, getTotalPrice, getBulkDiscount, getBulkDiscountPercentage, getShippingCost, getFinalTotal, shippingCountry } = useCart();
 
   if (!isBasketOpen) return null;
 
@@ -12,6 +12,7 @@ export default function BasketDrawer() {
   const subtotal = getTotalPrice();
   const discount = getBulkDiscount();
   const discountPct = getBulkDiscountPercentage();
+  const shipping = getShippingCost();
   const finalTotal = getFinalTotal();
 
   return (
@@ -81,7 +82,9 @@ export default function BasketDrawer() {
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4, fontSize: 13, color: 'var(--text-muted)' }}>
               <span>Shipping</span>
-              <span style={{ color: 'var(--success)', fontWeight: 600 }}>Free</span>
+              <span style={{ fontWeight: 600 }}>
+                {shippingCountry ? `£${shipping.toFixed(2)}` : 'Calculated at checkout'}
+              </span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 16, paddingTop: 12, borderTop: '1px solid var(--border)', fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--text-dark)' }}>
               <span>Total</span>

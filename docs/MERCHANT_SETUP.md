@@ -18,7 +18,7 @@ This repository already exposes all required backend feeds and metadata. Follow 
 - Website: https://charlesmackaybooks.com (verify via Search Console link).
 
 ## 3) Set shipping/tax
-- Shipping: Free UK shipping (GB, Standard, �0.00)
+- Shipping: UK Royal Mail Tracked £3.95 (GB); Europe £15.55; USA/Canada £27.00; Australia/Far East £25.95; Rest of World £26.10. Canonical rates: `src/data/shipping-zones.ts`.
 - Tax: Configure UK VAT if applicable (or leave inclusive pricing).
 
 ## 4) Register feeds
@@ -34,7 +34,7 @@ To address [Merchant opportunities](https://search.google.com/search-console/mer
 1. Go to **Settings** ? **Business information** ? **Delivery and returns**
 2. Add a delivery policy:
    - **URL:** https://charlesmackaybooks.com/delivery
-   - **Description:** Free worldwide tracked shipping. UK 1�3 days, Europe 5�10 days, worldwide 10�21 days. Dispatched from Glasgow within 1�2 business days.
+   - **Description:** Worldwide Royal Mail Tracked shipping. UK £3.95 (2–4 business days), Europe £15.55 (5–14 days), USA/Canada £27.00 (7–14 days), Australia/Far East £25.95 (10–21 days), Rest of World £26.10 (10–21 days). Dispatched from Glasgow within 1–2 business days.
 
 ### Add return policy
 1. In the same **Delivery and returns** section

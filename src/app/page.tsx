@@ -110,7 +110,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div style={{ display: 'flex', gap: 32 }}>
-              {[{ num: '1,700+', label: 'Readers worldwide' }, { num: '20', label: 'Published titles' }, { num: 'Free', label: 'Worldwide shipping' }].map(s => (
+              {[{ num: '1,700+', label: 'Readers worldwide' }, { num: '20', label: 'Published titles' }, { num: 'Tracked', label: 'Worldwide shipping' }].map(s => (
                 <div key={s.label}>
                   <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--white)' }}>{s.num}</div>
                   <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase' as const, letterSpacing: 1, marginTop: 2 }}>{s.label}</div>
@@ -137,7 +137,7 @@ export default function HomePage() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'center', gap: 48, flexWrap: 'wrap' }}>
           {[
             { icon: '☑', strong: 'Secure checkout', text: ' — Card via Stripe' },
-            { icon: '✈', strong: 'Free shipping', text: ' — worldwide from Glasgow' },
+            { icon: '✈', strong: 'Worldwide shipping', text: ' — Royal Mail Tracked from Glasgow' },
             { icon: '↺', strong: '30-day returns', text: ' — no questions asked' },
             { icon: '★', strong: '1,700+ happy', text: ' readers & counting' },
           ].map(t => (

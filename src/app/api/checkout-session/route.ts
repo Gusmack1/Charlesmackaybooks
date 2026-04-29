@@ -1,7 +1,7 @@
 import Stripe from 'stripe';
 import { NextRequest, NextResponse } from 'next/server';
 import { stripePriceMap } from '@/data/stripe-prices';
-import { ALLOWED_COUNTRIES, SHIPPING_ZONES } from '@/data/shipping-zones';
+import { ALLOWED_COUNTRIES, SHIPPING_ZONES, getZoneForCountry, type ShippingZone } from '@/data/shipping-zones';
 import { createClient } from '@/lib/supabase/server';
 
 function getStripe() {
@@ -19,19 +19,15 @@ export const dynamic = 'force-dynamic';
 /**
  * Build Stripe shipping_options[] from our zone definitions.
  *
- * Stripe Checkout doesn't natively filter shipping_options by destination
- * country at session-create time, so we present every zone and rely on:
- *   (a) the customer self-selecting the zone matching their address, and
- *   (b) `shipping_address_collection.allowed_countries` to block ship-to
- *       countries we don't service.
+ * If a country is supplied (from the cart-side selector), we only emit the
+ * single matching zone — Stripe Checkout then auto-applies it with no
+ * customer choice. Allowed_countries is also constrained to that zone so
+ * a different shipping address on Stripe can't trigger a price mismatch.
  *
- * The display_name on each rate makes the zone obvious ("Europe", "USA /
- * Canada", "Australia / Far East"). Future improvement: switch to the
- * `permissions.update_shipping_details=server_only` flow to dynamically
- * show only the zone that matches the entered address.
+ * Fallback: if no country / unknown country, present all zones (legacy).
  */
-function buildShippingOptions(): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
-  return SHIPPING_ZONES.map((zone) => ({
+function zoneToShippingOption(zone: ShippingZone): Stripe.Checkout.SessionCreateParams.ShippingOption {
+  return {
     shipping_rate_data: {
       type: 'fixed_amount' as const,
       fixed_amount: { amount: zone.amountPence, currency: 'gbp' },
@@ -42,7 +38,7 @@ function buildShippingOptions(): Stripe.Checkout.SessionCreateParams.ShippingOpt
       },
       metadata: { zone: zone.key },
     },
-  }));
+  };
 }
 
 export async function POST(req: NextRequest) {
@@ -50,7 +46,9 @@ export async function POST(req: NextRequest) {
     const stripe = getStripe();
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
-    const { items, discountPct } = await req.json();
+    const { items, discountPct, country } = await req.json();
+    const requestedCountry: string | null = typeof country === 'string' ? country.toUpperCase() : null;
+    const matchedZone = requestedCountry ? getZoneForCountry(requestedCountry) : null;
 
     // Build line items from cart
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map(
@@ -74,14 +72,19 @@ export async function POST(req: NextRequest) {
 
     const origin = req.headers.get('origin') || 'https://charlesmackaybooks.com';
 
+    const allowedCountries: readonly string[] = matchedZone ? matchedZone.countries : ALLOWED_COUNTRIES;
+    const shippingOptions: Stripe.Checkout.SessionCreateParams.ShippingOption[] = matchedZone
+      ? [zoneToShippingOption(matchedZone)]
+      : SHIPPING_ZONES.map(zoneToShippingOption);
+
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: 'payment',
       line_items: lineItems,
       discounts,
       shipping_address_collection: {
-        allowed_countries: [...ALLOWED_COUNTRIES] as Stripe.Checkout.SessionCreateParams.ShippingAddressCollection.AllowedCountry[],
+        allowed_countries: [...allowedCountries] as Stripe.Checkout.SessionCreateParams.ShippingAddressCollection.AllowedCountry[],
       },
-      shipping_options: buildShippingOptions(),
+      shipping_options: shippingOptions,
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/checkout`,
     };

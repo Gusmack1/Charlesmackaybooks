@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { books } from '@/data/books';
 import { getBookReviews, getAllReviews } from '@/data/reviews';
 import { createClient } from '@/lib/supabase/server';
+import { SHIPPING_ZONES } from '@/data/shipping-zones';
 import BookCard from '@/components/BookCard';
 import AddToBasketButton from '@/components/AddToBasketButton';
 import WishlistButton from '@/components/WishlistButton';
@@ -125,48 +126,19 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
         returnMethod: 'https://schema.org/ReturnByMail',
         returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
       },
-      shippingDetails: [
-        {
-          '@type': 'OfferShippingDetails',
-          shippingRate: { '@type': 'MonetaryAmount', value: '3.95', currency: 'GBP' },
-          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'GB' },
-          deliveryTime: {
-            '@type': 'ShippingDeliveryTime',
-            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'd' },
-            transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 4, unitCode: 'd' },
-          },
+      shippingDetails: SHIPPING_ZONES.map(zone => ({
+        '@type': 'OfferShippingDetails' as const,
+        shippingRate: { '@type': 'MonetaryAmount' as const, value: (zone.amountPence / 100).toFixed(2), currency: 'GBP' },
+        shippingDestination: {
+          '@type': 'DefinedRegion' as const,
+          addressCountry: zone.countries.length === 1 ? zone.countries[0] : [...zone.countries],
         },
-        {
-          '@type': 'OfferShippingDetails',
-          shippingRate: { '@type': 'MonetaryAmount', value: '14.40', currency: 'GBP' },
-          shippingDestination: { '@type': 'DefinedRegion', addressCountry: ['IE', 'FR', 'DE', 'NL', 'BE', 'IT', 'ES', 'PT', 'SE', 'NO', 'DK', 'FI', 'AT', 'CH'] },
-          deliveryTime: {
-            '@type': 'ShippingDeliveryTime',
-            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'd' },
-            transitTime: { '@type': 'QuantitativeValue', minValue: 5, maxValue: 10, unitCode: 'd' },
-          },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime' as const,
+          handlingTime: { '@type': 'QuantitativeValue' as const, minValue: 1, maxValue: 2, unitCode: 'd' },
+          transitTime: { '@type': 'QuantitativeValue' as const, minValue: zone.minDays, maxValue: zone.maxDays, unitCode: 'd' },
         },
-        {
-          '@type': 'OfferShippingDetails',
-          shippingRate: { '@type': 'MonetaryAmount', value: '27.00', currency: 'GBP' },
-          shippingDestination: { '@type': 'DefinedRegion', addressCountry: ['US', 'CA'] },
-          deliveryTime: {
-            '@type': 'ShippingDeliveryTime',
-            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'd' },
-            transitTime: { '@type': 'QuantitativeValue', minValue: 7, maxValue: 14, unitCode: 'd' },
-          },
-        },
-        {
-          '@type': 'OfferShippingDetails',
-          shippingRate: { '@type': 'MonetaryAmount', value: '25.95', currency: 'GBP' },
-          shippingDestination: { '@type': 'DefinedRegion', addressCountry: ['AU', 'NZ', 'JP', 'SG', 'HK'] },
-          deliveryTime: {
-            '@type': 'ShippingDeliveryTime',
-            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'd' },
-            transitTime: { '@type': 'QuantitativeValue', minValue: 10, maxValue: 21, unitCode: 'd' },
-          },
-        },
-      ],
+      })),
     },
   };
 
