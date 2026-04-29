@@ -4,7 +4,7 @@ import { SHIPPING_ZONES } from '@/data/shipping-zones';
 
 export const metadata: Metadata = {
   title: 'Shipping Information, Royal Mail Tracked Worldwide',
-  description: 'Royal Mail Tracked shipping on all aviation history books by Charles E. MacKay. Ships from Glasgow, Scotland. Postage calculated at checkout. UK 2-4 days, Europe 5-14 days, worldwide 7-21 days.',
+  description: 'Royal Mail Tracked shipping on all aviation history books by Charles E. MacKay. Ships from Glasgow, Scotland. Postage calculated at checkout. UK 2 to 4 days, Europe 5 to 14 days, worldwide 7 to 21 days.',
   alternates: { canonical: '/shipping' },
   openGraph: {
     title: 'Shipping, Charles E. MacKay Books',

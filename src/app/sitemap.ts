@@ -16,6 +16,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/contact`, lastModified: BUILD_TIME, changeFrequency: 'yearly', priority: 0.5 },
     { url: `${SITE}/shipping`, lastModified: BUILD_TIME, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${SITE}/returns`, lastModified: BUILD_TIME, changeFrequency: 'yearly', priority: 0.4 },
+    { url: `${SITE}/privacy`, lastModified: BUILD_TIME, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${SITE}/terms`, lastModified: BUILD_TIME, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${SITE}/cookies`, lastModified: BUILD_TIME, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
   const bookPages: MetadataRoute.Sitemap = books.map((b) => ({

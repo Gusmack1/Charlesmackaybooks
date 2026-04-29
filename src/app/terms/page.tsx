@@ -202,12 +202,9 @@ export default function TermsPage() {
       <h2 style={h2}>13. Complaints and dispute resolution</h2>
       <p style={p}>
         We aim to resolve any complaint quickly. Please email{' '}
-        <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>. If we cannot resolve a dispute,
-        the European Commission&apos;s Online Dispute Resolution platform is available at{' '}
-        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">
-          ec.europa.eu/consumers/odr
-        </a>{' '}
-        for cross-border disputes.
+        <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a>. If we cannot resolve a dispute, you
+        may contact Citizens Advice (<a href="https://www.citizensadvice.org.uk/" target="_blank" rel="noopener noreferrer">citizensadvice.org.uk</a>, 0800 144 8848) or Trading Standards via your local council. UK ICO complaints path remains at{' '}
+        <a href="https://ico.org.uk/make-a-complaint" target="_blank" rel="noopener noreferrer">ico.org.uk/make-a-complaint</a>.
       </p>
 
       <h2 style={h2}>14. Changes to these Terms</h2>

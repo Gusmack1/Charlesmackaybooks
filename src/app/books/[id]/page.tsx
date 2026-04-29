@@ -114,6 +114,7 @@ export default async function BookDetailPage({ params }: { params: Promise<{ id:
       '@type': 'Offer',
       price: book.price.toFixed(2),
       priceCurrency: 'GBP',
+      priceValidUntil: '2027-04-29',
       availability: book.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
       url: `https://charlesmackaybooks.com/books/${book.id}`,
       itemCondition: 'https://schema.org/NewCondition',
