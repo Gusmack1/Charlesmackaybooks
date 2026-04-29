@@ -24,7 +24,7 @@ const faqLd = {
     {
       '@type': 'Question',
       name: 'What if my book arrives damaged?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Contact us within 14 days with a photo of the damage. We will send a replacement free of charge or issue a full refund — whichever you prefer.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Contact us within 14 days with a photo of the damage. We will reply with the return address. Once the book is back with us, you can choose a replacement copy or a full refund — your call. Return postage on damaged or faulty items is at our expense.' },
     },
     {
       '@type': 'Question',
@@ -58,7 +58,7 @@ export default function ReturnsPage() {
         <section style={{ marginBottom: 40 }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--text-dark)', marginBottom: 12 }}>Damaged or Faulty Items</h2>
           <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.8 }}>
-            If your book arrives damaged or faulty, please contact us within 14 days of delivery with a photo of the damage. We will send a replacement copy free of charge, or issue a full refund — whichever you prefer.
+            If your book arrives damaged or faulty, email us within 14 days of delivery with a photo of the damage. We&apos;ll reply with the return address. Once the book is back with us, you can choose a replacement copy or a full refund &mdash; your call. Return postage on damaged or faulty items is at our expense.
           </p>
         </section>
 

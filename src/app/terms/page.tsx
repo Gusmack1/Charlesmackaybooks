@@ -150,8 +150,9 @@ export default function TermsPage() {
       </ul>
       <p style={p}>
         Email <a href="mailto:charlese1mackay@hotmail.com">charlese1mackay@hotmail.com</a> within 14 days of delivery
-        with your order number and a photograph of the damage and we will arrange a replacement or refund. Return
-        postage on faulty goods is at our expense.
+        with your order number and a photograph of the damage. We will reply with the return address; once the book is
+        back with us, you may choose a replacement copy or a full refund. Return postage on faulty or mis-described
+        goods is at our expense.
       </p>
 
       <h2 style={h2}>8. Voluntary returns policy</h2>
