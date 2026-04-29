@@ -3,6 +3,20 @@
 // Previous mapping was on acct_1TCzCd (Grid Social) cross-wired per brain #856 — fixed
 // Brain refs: #880 (CMB Stripe wiring resolved), #856 (architecture)
 
+// Reverse map: price_id → book_id (slug). Built lazily from stripePriceMap.
+// Used by the Stripe webhook to record book_id on order_items rows.
+let _reverseMap: Record<string, string> | null = null;
+export function bookIdFromPriceId(priceId: string | null | undefined): string | null {
+  if (!priceId) return null;
+  if (!_reverseMap) {
+    _reverseMap = {};
+    for (const [bookId, pId] of Object.entries(stripePriceMap)) {
+      _reverseMap[pId] = bookId;
+    }
+  }
+  return _reverseMap[priceId] ?? null;
+}
+
 export const stripePriceMap: Record<string, string> = {
   'this-was-the-enemy-volume-two': 'price_1TEzWQRp5sxFkGylIoQyzVnN',
   'beardmore-aviation': 'price_1TEzWSRp5sxFkGylgmzbkTlt',

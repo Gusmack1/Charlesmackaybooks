@@ -41,6 +41,42 @@ function zoneToShippingOption(zone: ShippingZone): Stripe.Checkout.SessionCreate
   };
 }
 
+/**
+ * GET /api/checkout-session?session_id=cs_...
+ * Used by /checkout/success to render order details + pre-fill the
+ * post-purchase signup email. Returns minimal, non-sensitive fields.
+ */
+export async function GET(req: NextRequest) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const sessionId = searchParams.get('session_id');
+    if (!sessionId) {
+      return NextResponse.json({ error: 'Missing session_id' }, { status: 400 });
+    }
+    // Stripe Checkout session IDs always start with "cs_". Reject anything else
+    // to prevent abuse of this endpoint as a generic Stripe object reader.
+    if (!/^cs_[A-Za-z0-9_]+$/.test(sessionId)) {
+      return NextResponse.json({ error: 'Invalid session_id' }, { status: 400 });
+    }
+
+    const stripe = getStripe();
+    const session = await stripe.checkout.sessions.retrieve(sessionId);
+
+    return NextResponse.json({
+      email: session.customer_details?.email ?? session.customer_email ?? null,
+      name: session.customer_details?.name ?? null,
+      amount_total: session.amount_total,
+      currency: session.currency,
+      payment_status: session.payment_status,
+      country: session.customer_details?.address?.country ?? null,
+    });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : 'Unknown error';
+    console.error('Checkout session GET error:', message);
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const stripe = getStripe();
@@ -81,6 +117,11 @@ export async function POST(req: NextRequest) {
       mode: 'payment',
       line_items: lineItems,
       discounts,
+      // Always create a Stripe Customer so we can stash stripe_customer_id
+      // on the order for future repeat-purchase / reconciliation.
+      customer_creation: 'always',
+      // Capture phone for delivery contact (Royal Mail tracked).
+      phone_number_collection: { enabled: true },
       shipping_address_collection: {
         allowed_countries: [...allowedCountries] as Stripe.Checkout.SessionCreateParams.ShippingAddressCollection.AllowedCountry[],
       },
