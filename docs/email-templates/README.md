@@ -6,10 +6,10 @@ sender (Resend, Mailgun, Postmark, AWS SES, Stripe customer email customisation,
 or a custom Netlify function calling SendGrid).
 
 Brand tone is small-press / family-business: Charles writes the books AND
-hand-wraps + posts every order from Glasgow. Angus runs the digital backend
+wraps and posts every order from Glasgow. Angus runs the digital backend
 (website, Stripe, the email account behind the warm voice). Customer-facing
 copy must use the name "Angus" not "Gus", and must attribute the physical
-wrap+post to Charles — never to Angus. Avoid corporate language ("we value
+wrap and post to Charles, never to Angus. Avoid corporate language ("we value
 your business", "your purchase has been processed"). See
 `order-confirmation.html` for the established voice. Brain fact #890 is the
 canonical record of this rule.
@@ -165,17 +165,17 @@ HTML into [Litmus](https://litmus.com) or [Email on Acid](https://emailonacid.co
 
 When adding new templates or editing existing ones, hold the line on tone:
 
-- Charles writes the books AND hand-wraps + posts every order. Angus runs
-  the digital side. Mention the Charles wrap+post somewhere — it is the
+- Charles writes the books AND wraps and posts every order. Angus runs
+  the digital side. Mention the Charles wrap and post somewhere, it is the
   whole point of the brand. NEVER write "I wrap" or "we wrap" in Angus's
-  voice; the wrap+post is always Charles's. Use "Angus" not "Gus" in
+  voice; the wrap and post is always Charles's. Use "Angus" not "Gus" in
   customer-facing copy.
 - Returns flow when something arrives damaged: customer replies with photo
   → we send return address → on receipt, customer picks fresh copy OR
   refund. Do NOT promise instant replacement on photo alone.
 - Refer to the books as objects of care — Charles spent years researching them.
-- Glasgow / Scotland is the location, lean into it ("our wee corner of Glasgow",
-  "hand-wrapped and posted from Glasgow").
+- Glasgow / Scotland is the location, lean into it ("based in Glasgow",
+  "wrapped and posted from Glasgow").
 - No emoji.
 - No corporate boilerplate ("we value your business", "thank you for your
   purchase", "your order has been received and is being processed").

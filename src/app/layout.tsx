@@ -125,10 +125,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SessionProvider>
           <CartProvider>
             <a href="#main-content" className="skip-link">Skip to content</a>
-            {/* Discount banner */}
+            {/* Discount banner — hidden on small screens to reduce sticky header height */}
             <div className="promo-bar" style={{ background: 'var(--gold)', color: 'var(--navy)', textAlign: 'center', padding: '8px 16px', fontSize: 13, fontWeight: 600 }}>
               Save 5% on 2 books or 10% on 3+. Royal Mail tracked shipping calculated at checkout.
             </div>
+            <style>{`@media (max-width: 767px) { .promo-bar { display: none !important; } }`}</style>
             <Nav />
             <main id="main-content">{children}</main>
             <Footer />

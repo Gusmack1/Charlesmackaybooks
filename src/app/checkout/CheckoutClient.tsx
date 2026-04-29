@@ -133,9 +133,9 @@ export default function CheckoutClient({ session, defaultAddress }: { session: S
                 <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 12 }}>{item.book.category}</div>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <button onClick={() => updateQuantity(item.book.id, item.quantity - 1)} style={{ width: 32, height: 32, borderRadius: 'var(--radius-sm)', border: '1px solid var(--border)', background: 'var(--cream)', cursor: 'pointer', fontSize: 16 }}>-</button>
+                    <button aria-label="Decrease quantity" onClick={() => updateQuantity(item.book.id, item.quantity - 1)} style={{ width: 44, height: 44, borderRadius: 'var(--radius-sm)', border: '1px solid var(--border)', background: 'var(--cream)', cursor: 'pointer', fontSize: 18, lineHeight: 1 }}>-</button>
                     <span style={{ fontSize: 15, fontWeight: 600, minWidth: 24, textAlign: 'center' }}>{item.quantity}</span>
-                    <button onClick={() => updateQuantity(item.book.id, item.quantity + 1)} style={{ width: 32, height: 32, borderRadius: 'var(--radius-sm)', border: '1px solid var(--border)', background: 'var(--cream)', cursor: 'pointer', fontSize: 16 }}>+</button>
+                    <button aria-label="Increase quantity" onClick={() => updateQuantity(item.book.id, item.quantity + 1)} style={{ width: 44, height: 44, borderRadius: 'var(--radius-sm)', border: '1px solid var(--border)', background: 'var(--cream)', cursor: 'pointer', fontSize: 18, lineHeight: 1 }}>+</button>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                     <span style={{ fontSize: 17, fontWeight: 700, color: 'var(--text-dark)' }}>£{(item.book.price * item.quantity).toFixed(2)}</span>

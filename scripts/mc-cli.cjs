@@ -7,6 +7,7 @@
  *   node scripts/mc-cli.cjs account-status        # full accountstatuses payload
  *   node scripts/mc-cli.cjs product-issues        # summarise per-product issues
  *   node scripts/mc-cli.cjs list-products         # list active products
+ *   node scripts/mc-cli.cjs datafeed-status       # last fetch + error count per feed
  */
 
 'use strict';
@@ -123,10 +124,35 @@ async function summariseProductIssues(token) {
   };
 }
 
+async function datafeedStatuses(token) {
+  return mcFetch(token, `/${MERCHANT_ID}/datafeedstatuses`);
+}
+
+async function summariseDatafeedStatus(token) {
+  const res = await datafeedStatuses(token);
+  if (!res.ok) return { error: res };
+  const feeds = res.body.resources || [];
+  return {
+    feedCount: feeds.length,
+    feeds: feeds.map((f) => ({
+      datafeedId: f.datafeedId,
+      country: f.country,
+      language: f.language,
+      lastUploadDate: f.lastUploadDate || null,
+      processingStatus: f.processingStatus || null,
+      itemsTotal: f.itemsTotal || 0,
+      itemsValid: f.itemsValid || 0,
+      errorCount: (f.errors || []).reduce((s, e) => s + (e.count || 0), 0),
+      errors: (f.errors || []).map((e) => ({ code: e.code, count: e.count, examples: (e.examples || []).slice(0, 2) })),
+      warningCount: (f.warnings || []).reduce((s, w) => s + (w.count || 0), 0),
+    })),
+  };
+}
+
 async function main() {
   const [, , cmd] = process.argv;
   if (!cmd) {
-    console.error('Usage: mc-cli.cjs <account-status|product-issues|list-products>');
+    console.error('Usage: mc-cli.cjs <account-status|product-issues|list-products|datafeed-status>');
     process.exit(2);
   }
   const token = await getAccessToken();
@@ -138,6 +164,8 @@ async function main() {
       result = await summariseProductIssues(token); break;
     case 'list-products':
       result = await listProducts(token); break;
+    case 'datafeed-status':
+      result = await summariseDatafeedStatus(token); break;
     default:
       console.error(`Unknown command: ${cmd}`);
       process.exit(2);

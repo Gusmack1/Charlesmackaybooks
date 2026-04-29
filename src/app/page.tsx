@@ -20,6 +20,9 @@ const heroBooks = [
 // Select diverse, compelling real reviews for the homepage
 const allReviews = getAllReviews();
 const totalReviewCount = getTotalReviewCount();
+const aggregateAvg = allReviews.length
+  ? Math.round((allReviews.reduce((s, r) => s + (r.rating || 0), 0) / allReviews.length) * 10) / 10
+  : 0;
 const handpickedIds = [
   { bookId: 'beardmore-aviation', idx: 1 },   // Maritime Quest
   { bookId: 'beardmore-aviation', idx: 8 },   // "The detail is amazing..."
@@ -72,6 +75,20 @@ const orgJsonLd = {
   ],
 };
 
+const brandJsonLd = aggregateAvg >= 4.0 && totalReviewCount >= 5 ? {
+  '@context': 'https://schema.org',
+  '@type': 'Brand',
+  name: 'Charles E. MacKay Books',
+  url: 'https://charlesmackaybooks.com',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: aggregateAvg.toFixed(1),
+    reviewCount: totalReviewCount,
+    bestRating: '5',
+    worstRating: '1',
+  },
+} : null;
+
 const webSiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -89,6 +106,7 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+      {brandJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandJsonLd) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }} />
       {/* HERO */}
       <section className="hero-section" style={{ background: 'linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--navy-mid) 100%)', position: 'relative', overflow: 'hidden', padding: '80px 24px 72px' }}>

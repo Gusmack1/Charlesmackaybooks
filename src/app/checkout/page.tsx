@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
 import { createClient } from '@/lib/supabase/server';
 import CheckoutClient from './CheckoutClient';
+
+export const metadata: Metadata = {
+  title: 'Checkout',
+  robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
+};
 
 export default async function CheckoutPage() {
   const supabase = await createClient();
