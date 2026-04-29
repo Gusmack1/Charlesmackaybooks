@@ -67,6 +67,52 @@ function shippingBlocks(): string {
   return blocks.join('\n');
 }
 
+// Classify a book's primary era for custom_label_0 segmentation
+function eraLabel(book: (typeof books)[number]): string {
+  const eras = book.era ?? [];
+  const join = eras.join(' ');
+  if (/Cold War/i.test(join)) return 'Cold War';
+  if (/WWII|World War II/i.test(join)) return 'WWII';
+  if (/WWI|World War I/i.test(join)) return 'WWI';
+  if (/Inter-?War/i.test(join)) return 'Inter-War';
+  if (/Pre-?WWI|Early/i.test(join)) return 'Early Aviation';
+  if (/Postwar/i.test(join)) return 'Postwar';
+  return 'Scottish Aviation';
+}
+
+// Derive 3 to 5 selling-bullets for Google Shopping product_highlight from book metadata
+function productHighlights(book: (typeof books)[number]): string[] {
+  const highlights: string[] = [];
+  const era = eraLabel(book);
+
+  // 1. Author brand + research credibility
+  highlights.push('By Charles E. MacKay, Glasgow aviation historian since 1982');
+
+  // 2. Length + scope
+  if (book.pageCount && book.pageCount > 0) {
+    highlights.push(`${book.pageCount} pages of original research, photographs and technical drawings`);
+  }
+
+  // 3. Era + geographic focus
+  const geo = (book.geographicFocus ?? []).slice(0, 2).join(' and ');
+  if (geo) {
+    highlights.push(`${era} aviation, ${geo}`);
+  } else {
+    highlights.push(`${era} aviation history`);
+  }
+
+  // 4. Aircraft types covered
+  const types = (book.aircraftTypes ?? []).slice(0, 3).join(', ');
+  if (types) {
+    highlights.push(`Covers ${types}`);
+  }
+
+  // 5. Shipping promise
+  highlights.push('Posted by Charles from Glasgow, Royal Mail tracked, 1 to 2 business days');
+
+  return highlights.slice(0, 5);
+}
+
 function buildItem(book: (typeof books)[number]): string {
   const id = book.isbn ?? book.id;
   const link = `${SITE}/books/${book.id}`;
@@ -75,6 +121,8 @@ function buildItem(book: (typeof books)[number]): string {
     : `${SITE}/book-covers/${book.id}.jpg`;
   const description = cleanDescription(book.description ?? '');
   const availability = book.inStock ? 'in_stock' : 'out_of_stock';
+  const era = eraLabel(book);
+  const highlights = productHighlights(book);
 
   return [
     '    <item>',
@@ -89,8 +137,12 @@ function buildItem(book: (typeof books)[number]): string {
     '      <g:brand>Charles E. MacKay</g:brand>',
     book.isbn ? `      <g:gtin>${escapeXml(book.isbn)}</g:gtin>` : '',
     `      <g:identifier_exists>${book.isbn ? 'yes' : 'no'}</g:identifier_exists>`,
-    '      <g:product_type>Aviation History &gt; Books</g:product_type>',
+    `      <g:product_type>${escapeXml(`Aviation History > ${era}`)}</g:product_type>`,
     '      <g:google_product_category>784</g:google_product_category>',
+    `      <g:custom_label_0>${escapeXml(era)}</g:custom_label_0>`,
+    '      <g:custom_label_1>Charles E. MacKay (aviation historian)</g:custom_label_1>',
+    book.publicationYear ? `      <g:custom_label_2>${book.publicationYear}</g:custom_label_2>` : '',
+    ...highlights.map(h => `      <g:product_highlight>${escapeXml(h)}</g:product_highlight>`),
     '      <g:min_handling_time>1</g:min_handling_time>',
     '      <g:max_handling_time>2</g:max_handling_time>',
     shippingBlocks(),
