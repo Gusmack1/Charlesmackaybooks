@@ -69,6 +69,13 @@ const orgJsonLd = {
   description: 'Aviation history books by Charles E. MacKay (aviation historian). 20 titles covering Scottish aviation, WWI and WWII aircraft, and military history.',
   founder: { '@type': 'Person', name: 'Charles E. MacKay', url: 'https://charlesmackaybooks.com/about' },
   address: { '@type': 'PostalAddress', addressLocality: 'Glasgow', addressCountry: 'GB' },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'info@charlesmackaybooks.com',
+    contactType: 'customer service',
+    areaServed: 'Worldwide',
+    availableLanguage: 'English',
+  },
   sameAs: [
     'https://www.wikidata.org/wiki/Q96824767',
     'https://find-and-update.company-information.service.gov.uk/company/SC858624',

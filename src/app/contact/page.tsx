@@ -53,7 +53,7 @@ export default function ContactPage() {
           <p style={{ fontSize: 15, color: 'var(--text-muted)', marginBottom: 32 }}>Whether you have a question about a specific book, want to discuss a research collaboration, or need to place a bulk order, Charles is happy to hear from you.</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {[
-              { icon: '✉', title: 'Email', main: 'charlese1mackay@hotmail.com', sub: 'Usually responds within 24 to 48 hours' },
+              { icon: '✉', title: 'Email', main: 'info@charlesmackaybooks.com', sub: 'Charles wraps and posts orders from Glasgow. Replies usually within 24 to 48 hours.' },
               { icon: '⚑', title: 'Location', main: 'Glasgow, Scotland', sub: 'Ships worldwide from Glasgow' },
               { icon: '🛒', title: 'Online Shop', main: 'charlesmackaybooks.com/books', sub: 'Browse all 20 titles, Royal Mail tracked worldwide' },
             ].map(m => (
