@@ -229,20 +229,20 @@ export default function AddressesPage() {
     }
   };
 
-  // Handle set default
+  // Handle set default — atomic via SECURITY DEFINER RPC (single tx).
   const handleSetDefault = async (id: string) => {
     const {
       data: { session },
     } = await supabase.auth.getSession();
     if (!session) return;
-
-    await supabase
-      .from('addresses')
-      .update({ is_default: false })
-      .eq('user_id', session.user.id);
-
-    await supabase.from('addresses').update({ is_default: true }).eq('id', id);
-
+    const { error } = await supabase.rpc('set_default_address', {
+      uid: session.user.id,
+      aid: id,
+    });
+    if (error) {
+      setErrorMsg(error.message || 'Could not update default address.');
+      return;
+    }
     loadAddresses();
   };
 
