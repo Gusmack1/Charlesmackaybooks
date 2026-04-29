@@ -73,11 +73,25 @@ export async function POST(req: NextRequest) {
 
       // Newer Stripe API surfaces shipping on collected_information.shipping_details;
       // older sessions used shipping_details directly. Fall back to customer_details.address.
-      const sd =
-        // @ts-expect-error - collected_information typings vary across API versions
-        fullSession.collected_information?.shipping_details ??
-        // @ts-expect-error - shipping_details deprecated but still present on some sessions
-        fullSession.shipping_details ??
+      // Cast to a permissive shape because these fields vary across Stripe API versions.
+      type ShippingShape = {
+        name?: string | null;
+        address?: {
+          line1?: string | null;
+          line2?: string | null;
+          city?: string | null;
+          state?: string | null;
+          postal_code?: string | null;
+          country?: string | null;
+        } | null;
+      };
+      const sessionAny = fullSession as unknown as {
+        collected_information?: { shipping_details?: ShippingShape | null } | null;
+        shipping_details?: ShippingShape | null;
+      };
+      const sd: ShippingShape | null =
+        sessionAny.collected_information?.shipping_details ??
+        sessionAny.shipping_details ??
         null;
 
       const shipAddr =
