@@ -30,6 +30,10 @@ const SITE = process.env.GSC_SITE || 'sc-domain:charlesmackaybooks.com';
 const SCOPE = 'https://www.googleapis.com/auth/webmasters';
 const TOKEN_URI = 'https://oauth2.googleapis.com/token';
 const API_ROOT = 'https://searchconsole.googleapis.com/webmasters/v3';
+const INSPECT_ROOT = 'https://searchconsole.googleapis.com/v1/urlInspection/index:inspect';
+// URL Inspection API requires the URL-prefix property form, not sc-domain.
+// Override via env GSC_INSPECT_SITE if your property differs.
+const INSPECT_SITE = process.env.GSC_INSPECT_SITE || 'https://charlesmackaybooks.com/';
 
 function loadServiceAccount() {
   const b64 = process.env.GSC_SERVICE_ACCOUNT_JSON;
@@ -133,6 +137,21 @@ async function listSites(token) {
   return gscFetch(token, '/sites');
 }
 
+async function inspectUrl(token, inspectionUrl, siteUrl = INSPECT_SITE) {
+  const res = await fetch(INSPECT_ROOT, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ inspectionUrl, siteUrl, languageCode: 'en-GB' }),
+  });
+  const text = await res.text();
+  let parsed = null;
+  try { parsed = text ? JSON.parse(text) : null; } catch { parsed = text; }
+  return { status: res.status, ok: res.ok, body: parsed };
+}
+
 function md(strings, ...values) { return String.raw({ raw: strings }, ...values); }
 
 async function audit() {
@@ -202,7 +221,7 @@ async function audit() {
 async function main() {
   const [, , cmd, ...args] = process.argv;
   if (!cmd) {
-    console.error('Usage: gsc-cli.cjs <list-sitemaps|submit-sitemap <url>|sitemap-status <url>|search-analytics <start> <end>|audit>');
+    console.error('Usage: gsc-cli.cjs <list-sitemaps|submit-sitemap <url>|sitemap-status <url>|search-analytics <start> <end>|inspect-url <url> [siteUrl]|audit>');
     process.exit(2);
   }
   if (cmd === 'audit') {
@@ -222,6 +241,8 @@ async function main() {
       result = await searchAnalytics(token, args[0], args[1]); break;
     case 'list-sites':
       result = await listSites(token); break;
+    case 'inspect-url':
+      result = await inspectUrl(token, args[0], args[1]); break;
     default:
       console.error(`Unknown command: ${cmd}`);
       process.exit(2);
